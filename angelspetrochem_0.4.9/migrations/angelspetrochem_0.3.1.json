@@ -1,0 +1,12 @@
+{
+  "item":
+  [
+    ["air-filter", "angels-air-filter"],
+    ["air-filter-2", "angels-air-filter-2"]
+  ], 
+  "entity":
+  [
+    ["air-filter", "angels-air-filter"],
+    ["air-filter-2", "angels-air-filter-2"]
+  ] 
+}

@@ -1,0 +1,12 @@
+{
+  "item":
+  [
+    ["catalyst-carrier", "catalyst-metal-carrier"],
+    ["catalyst-aluminium", "catalyst-metal-green"],
+    ["catalyst-cobalt", "catalyst-metal-blue"],
+    ["catalyst-iron", "catalyst-metal-red"],
+    ["catalyst-platinum", "catalyst-metal-yellow"],
+    ["catalyst-silver", "catalyst-metal-green"],
+    ["catalyst-titan", "catalyst-metal-blue"]
+  ] 
+}

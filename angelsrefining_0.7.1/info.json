@@ -1,0 +1,17 @@
+{
+  "name": "angelsrefining",
+  "version": "0.7.1",
+  "factorio_version": "0.15",
+  "title": "Angel's Refining",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "https://forums.factorio.com/viewforum.php?f=185",
+  "description": "With AngelsInfiniteOres it adds ore refining to the game. Compound ores have to be refined before you are able to smelt and cast them into plates. Works best in conjunction with Bobmods and supports additional mods like Yuoki Industries, Uranium Power and Nucular.",
+  "dependencies": [
+	"base >= 0.15.0",
+	"? bobplates >= 0.14.0", 
+	"? Yuoki >= 0.4.0", 
+	"? UraniumPower >= 0.6.4", 
+	"? Nucular >= 0.2.0"
+	]
+}
