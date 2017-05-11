@@ -1,3 +1,7 @@
+--0.6.8
+-fixed some internal logic issues due to the shift to using mod options
+-added options for fluid requirement to infinite ores
+
 ---0.6.5
 -fixed yields for gas wells and fissures
 

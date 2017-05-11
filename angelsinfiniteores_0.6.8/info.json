@@ -1,6 +1,6 @@
 {
   "name": "angelsinfiniteores",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "factorio_version": "0.15",
   "title": "Angel's Infinite Ores",
   "author": "Arch666Angel",
@@ -10,8 +10,8 @@
   "dependencies": [
 	"base >= 0.15.0", 
 	"? rso-mod >= 2.3.3", 
-	"? angelsrefining >= 0.7.0", 
-	"? angelspetrochem >= 0.5.0",
+	"? angelsrefining >= 0.7.7", 
+	"? angelspetrochem >= 0.5.3",
 	"? angelscomponents >= 0.1.0",
 	"? bobores >= 0.15.0", 
 	"? bobplates >= 0.15.0", 
