@@ -1,0 +1,181 @@
+--0.5.3
+-removed the code to disable the crude oil barreling recipes.
+-disabled double barreling recipes for overridden bobs and vanilla chemicals
+-added migration for lubricant and ferric chloride barrels
+-added fix for valve rotation
+
+--0.5.2
+-fixed acid override option
+
+--0.5.1
+-moved heavy pump entity to refining
+
+--0.5.0
+-update to 0.15
+-converted trigger mods to mod options
+
+--0.4.9
+-removed double recipe unlock for hydrochloric acid
+-internal fix for flare-stack not crafting with handyhands mod
+
+--0.4.8
+-added productivity for plastic, resin and rubber recipes
+-added coal processing prerequisites to sodium processing
+
+--0.4.7
+-added fluorite override for UP
+
+--0.4.6
+-added sodium sulfate separation recipe
+
+--0.4.5
+-fix for empty barrel recipe
+
+---0.4.4
+-small fixes
+
+---0.4.3
+-added sodium processing tech and recipes
+-added support for smelting 0.2
+-replaced some gfx with high-res variants
+
+---0.4.2
+-fixed icon for dimethylhydrazine
+-added recipe for separating HCl into H + Cl
+-increased chlorine amount produced by molten salt electrolysis to 20
+-increased output of compressed air by the air filter to 20
+-changed rocket fuel recipe to 30 hydrazine, 30 dimethylhydrazine, 10 nitric acid
+-changed/buffed solid fuel recipes
+-added crude oil barrel empty/fill recipes
+-removed vanilla crude oil empty/fill recipes
+-added vanilla mode (dependecies: angelsinfiniteores, angelsrefining)
+
+---0.4.1
+-converter recipes "converted" to using functions
+
+---0.4.0
+-added ferric chloride barrel
+-fixed grouping order for some recipes
+-moved refineries and chemical plants to the petrochem tab
+-small internal restructure to be in line with refining
+
+---0.3.5
+-changed sulfuric acid recipes to use purified water instead of hydrogen (that was an error)
+-adjusted fluid colors
+-fixed the order for some recipes in the crafting menu
+
+---0.3.4
+-changed machine for the lubricant recipe from steam-cracker to chemical plant
+-added module slots to flare stack
+
+---0.3.1-0.3.3
+-migration fixes
+
+---0.3.0
+-added barreling
+-moved fluid control and tanks group to new barreling and fluid control tab
+-added molten salt electrolysis recipe
+-fixed coke to carbon recipe
+-tweaked solid fuel recipes
+-added oil residual to oil-refinery recipes
+-added heavy-pump back in as barreling machine
+
+---0.2.2
+-fixed barrel stack sizes
+-added missing flare stack/void recipe for crude oil
+-fixed missing shadow for oil-tank
+-added description to tanks
+-renamed air filter internally to fix a conflict with air filtering mod
+-increased crafting time for compressed air
+-added residual gas to additional steam cracking recipes, also added oil residual to oil processing
+
+---0.2.1
+-added trigger to disable the acid override for refining
+-added basic chemistry 2
+-added chemical plant unlock to basic chemistry 2
+-moved water electrolysis to basic chemistry 2
+-moved purified water synthesis to basic chemistry 2
+-moved calcium chloride recipe to basic chemistry 2
+
+---0.2.0
+-increased sulfur from hydrogen sulfide recipe
+-added tie in for refining to use the other acids avaiable with petrochem
+-added earlier recipe for yellow waste water from crushed coal
+
+---0.1.15
+-fixed a typo
+-moved catalyst recipes to tech unlocks
+-added recipe products to localization strings of multiple output recipes
+-added dirt water electrolysis recipe
+-added sulfur processing 2 technology
+-changed requirement for sulfur processing 1 to red science
+-added recipe chain to produce perchloric acid (no use yet)
+-added chlorine processing 3
+-changed requirements for chlorine processing 1 and 2
+
+---0.1.14
+-added dependecy for bobelectronics because of issues with carbon recipes
+
+---0.1.13
+-added coal processing 2 technology
+-moved coke pellet recipe to coal processing 2
+-moved carbon-monoxide recipe to coal processing 2
+-removed global override for lubricant, lubricant has to be mad from mineral oil again
+
+---0.1.12
+-added bobgreenhouse as optional dependency
+-added a dedicated lubricant recipe to oil processing
+-change catalysts to be 4 generic ones, which have to be refilled after use
+
+---0.1.11
+-replaced bobs liquid-air with petrochem compressed air
+-removed bobs air to nitrogen recipe
+-re-ordered placement of building recipes in the crafting menu
+
+---0.1.10
+-changed optional dependency on angels refining and bob plates to fixed dependency
+-added optional dependency for bio industries and marathon to fix issues with load order and overrides
+-added aluminium catalyst recipe back in
+
+---0.1.9
+-fixed an override issue
+-moved liquifier mk2 to advanced chemistry tech
+-added unlocks for liquifier mk3 and mk4
+
+---0.1.8
+-added rocket fuel chain and solid fuel from hydrazine
+-changed production times (increased, 2 sec basic chemistry, 4 sec advanced chemistry and cracking, 6 sec fractioning and refining) on most recipes from the setup value of (1)
+-overrides should now be complete
+-updated splitter and flare stack recipes
+
+---0.1.7
+-added solid fuel recipes
+-added purified water from hydrogen and oxygen recipe
+-added synthesis gas from hydrogen and carbon-monoxide recipe
+
+---0.1.6
+-added specific icons for glycerol recipes
+-changed another override
+-added missing recipes to flare stack
+
+---0.1.5
+-fixed an error with the overrides it produced because of replacing sulfur processing
+-added more localization strings
+
+---0.1.4
+-added overrides to bobs
+-moved heavy-pump to addon mod along with the full barrel recipes
+-added small coal processing line
+-added electrolyser
+-added new recipes along the bob override
+
+---0.1.3
+-added technologies
+-added heavy-pump
+
+---0.1.2
+-changed splitter to work in stop mode
+-added temporary barrel recipes for all fluids
+
+---0.1.1
+-initial release

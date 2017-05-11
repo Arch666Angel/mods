@@ -1,0 +1,22 @@
+{
+  "item":
+  [
+    ["angels-plate-iron", "iron-plate"],
+    ["angels-plate-copper", "copper-plate"],
+    ["angels-plate-steel", "steel-plate"],
+	["angels-plate-aluminium", "aluminium-plate"],
+	["angels-plate-cobalt", "cobalt-plate"],
+	["angels-plate-gold", "gold-plate"],
+	["angels-plate-lead", "lead-plate"],
+	["angels-plate-nickel", "nickel-plate"],
+	["angels-plate-silicon", "silicon"],
+	["angels-plate-silver", "silver-plate"],
+	["angels-plate-tin", "tin-plate"],
+	["angels-plate-titanium", "nickel-plate"],
+	["angels-plate-tungsten", "nickel-plate"],
+	["angels-plate-zinc", "nickel-plate"],
+	["angels-wire-copper", "copper-cable"],
+	["angels-wire-tin", "tinned-copper-cable"],
+	["angels-wire-gold", "gilded-copper-cable"]
+  ]
+}

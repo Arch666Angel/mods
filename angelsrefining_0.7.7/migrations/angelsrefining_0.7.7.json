@@ -1,0 +1,101 @@
+{
+  "item":
+  [
+    ["angels-barrel-thermal-water", "thermal-water-barrel"],
+    ["angels-barrel-mineral-sludge", "mineral-sludge-barrel"],
+    ["angels-barrel-slag-slurry", "slag-slurry-barrel"],
+    ["angels-barrel-crystal-slurry", "-crystal-slurry-barrel"],
+    ["angels-barrel-crystal-seedling", "crystal-seedling-barrel"],
+    ["angels-barrel-crystal-matrix", "crystal-matrix-barrel"],
+    ["angels-barrel-water", "water-barrel"],
+    ["angels-barrel-water-purified", "water-purified-barrel"],
+    ["angels-barrel-water-saline", "water-saline-barrel"],
+    ["angels-barrel-water-mineralized", "water-mineralized-barrel"],
+    ["angels-barrel-water-yellow-waste", "water-yellow-waste-barrel"],
+    ["angels-barrel-water-red-waste", "water-red-waste-barrel"],
+    ["angels-barrel-water-green-waste", "water-green-wastev"],
+    ["angels-barrel-water-greenyellow-waste", "water-greenyellow-waste-barrel"],
+    ["angels-barrel-water-muddy", "water-muddy-barrel"],
+    ["angels-barrel-water-concentrated-muddy", "water-concentrated-muddy-barrel"],
+    ["angels-barrel-nodule-slurry", "nodule-slurry-barrel"],
+    ["angels-barrel-nodule-concentrated-slurry", "nodule-concentrated-slurry-barrel"],
+    ["angels-barrel-nodule-sludge", "nodule-sludge-barrel"],
+	
+    ["angels-barrel-gas-compressed-air", "gas-compressed-air-barrel"],
+    ["angels-barrel-gas-hydrogen", "gas-hydrogen-barrel"],
+    ["angels-barrel-gas-oxygen", "gas-oxygen-barrel"],
+    ["angels-barrel-gas-carbon-monoxide", "gas-carbon-monoxide-barrel"],
+    ["angels-barrel-gas-carbon-dioxide", "gas-carbon-dioxide-barrel"],
+    ["angels-barrel-liquid-hydrofluoric-acid", "liquid-hydrofluoric-acid-barrel"],
+	
+    ["angels-barrel-gas-chlorine", "gas-chlorine-barrel"],
+    ["angels-barrel-gas-hydrogen-chloride", "gas-hydrogen-chloride-barrel"],
+    ["angels-barrel-liquid-hydrochloric-acid","liquid-hydrochloric-acid-barrel"],
+    ["angels-barrel-gas-allylchlorid", "gas-allylchlorid-barrel"],
+    ["angels-barrel-gas-epichlorhydrin", "gas-epichlorhydrin-barrel"],
+    ["angels-barrel-gas-chlor-methane","gas-chlor-methane-barrel"],
+    ["angels-barrel-liquid-perchloric-acid", "liquid-perchloric-acid-barrel"],
+	
+    ["angels-barrel-gas-nitrogen", "gas-nitrogen-barrel"],
+    ["angels-barrel-gas-ammonia", "gas-ammonia-barrel"],
+    ["angels-barrel-gas-nitrogen-dioxide", "gas-nitrogen-dioxide-barrel"],
+    ["angels-barrel-gas-ammonium-chloride", "gas-ammonium-chloride-barrel"],
+    ["angels-barrel-gas-urea", "gas-urea-barrel"],
+    ["angels-barrel-gas-melamine", "gas-melamine-barrel"],
+    ["angels-barrel-liquid-nitric-acid", "liquid-nitric-acid-barrel"],
+    ["angels-barrel-gas-monochloramine", "gas-monochloramine-barrel"],
+    ["angels-barrel-gas-hydrazine", "gas-hydrazine-barrel"],
+	
+    ["angels-barrel-gas-methylamine", "gas-methylamine-barrel"],
+    ["angels-barrel-gas-dimethylamine", "gas-dimethylamine-barrel"],
+    ["angels-barrel-gas-dimethylhydrazine", "gas-dimethylhydrazine-barrel"],
+	
+    ["angels-barrel-gas-natural-1", "gas-natural-1-barrel"],
+    ["angels-barrel-liquid-multi-phase-oil", "liquid-multi-phase-oil-barrel"],
+	["angels-barrel-crude-oil", "crude-oil-barrel"],
+    ["angels-barrel-gas-raw-1", "gas-raw-1-barrel"],
+    ["angels-barrel-liquid-condensates", "liquid-condensates-barrel"],
+    ["angels-barrel-liquid-ngl", "liquid-ngl-barrel"],
+    ["angels-barrel-gas-residual", "gas-residual-barrel"],
+	["angels-barrel-lubricant", "lubricant-barrel"],
+	
+    ["angels-barrel-gas-methane", "gas-methane-barrel"],
+    ["angels-barrel-gas-ethane", "gas-ethane-barrel"],
+    ["angels-barrel-gas-butane", "gas-butane-barrel"],
+    ["angels-barrel-gas-propene", "gas-propene-barrel"],
+    ["angels-barrel-liquid-naphtha", "liquid-naphtha-barrel"],
+    ["angels-barrel-liquid-mineral-oil", "liquid-mineral-oil-barrel"],
+    ["angels-barrel-liquid-fuel-oil", "liquid-fuel-oil-barrel"],
+    ["angels-barrel-gas-methanol", "gas-methanol-barrel"],
+    ["angels-barrel-gas-ethylene", "gas-ethylene-barrel"],
+    ["angels-barrel-gas-benzene", "gas-benzene-barrel"],
+	
+    ["angels-barrel-gas-synthesis", "gas-synthesis-barrel"],
+    ["angels-barrel-gas-butadiene", "gas-butadiene-barrel"],
+    ["angels-barrel-gas-phenol", "gas-phenol-barrel"],
+    ["angels-barrel-gas-ethylbenzene", "gas-ethylbenzene-barrel"],
+    ["angels-barrel-gas-styrene", "gas-styrene-barrel"],
+    ["angels-barrel-gas-formaldehyde", "gas-formaldehyde-barrel"],
+    ["angels-barrel-gas-polyethylene", "gas-polyethylene-barrel"],
+    ["angels-barrel-gas-glycerol", "gas-glycerol-barrel"],
+	
+    ["angels-barrel-gas-acid", "gas-acid-barrel"],
+    ["angels-barrel-gas-hydrogen-sulfide", "gas-hydrogen-sulfide-barrel"],
+    ["angels-barrel-gas-sulfur-dioxide", "gas-sulfur-dioxide-barrel"],
+    ["angels-barrel-liquid-sulfuric-acid", "liquid-sulfuric-acid-barrel"],
+	
+    ["angels-barrel-liquid-chlorauric-acid", "liquid-chlorauric-acid-barrel"],
+    ["angels-barrel-liquid-hexafluorosilicic-acid", "liquid-hexafluorosilicic-acid-barrel"],
+    ["angels-barrel-liquid-hexachloroplatinic-acid", "liquid-hexachloroplatinic-acid-barrel"],
+    ["angels-barrel-gas-silane", "gas-silane-barrel"],
+    ["angels-barrel-liquid-trichlorosilane", "liquid-trichlorosilane-barrel"],
+    ["angels-barrel-liquid-titanium-tetrachloride", "liquid-titanium-tetrachloride-barrel"],
+    ["angels-barrel-gas-tungsten-hexafluoride", "gas-tungsten-hexafluoride-barrel"],
+	
+    ["angels-barrel-ferric-chloride-solution", "ferric-chloride-solution-barrel"]
+  ],
+  "entity":
+  [
+    ["heavy-pump", "barreling-pump"]
+  ] 
+}

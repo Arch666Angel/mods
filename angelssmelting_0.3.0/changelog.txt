@@ -1,0 +1,34 @@
+--0.3.0
+-update to 0.15
+
+--0.2.4
+-added tech prerequisites (from petrochem and refining)
+-fixed blast furnace 1 and 2 recipes
+-hid additional items when used with bobs
+
+--0.2.3
+-changed plate icons
+-added some missing powder recipes
+
+---0.2.2
+-added localization string for steel, solder technologies, chemical furnace
+-changed all coil cutting recipes to only craftable in an assembler
+-added powder mixer machine
+-fixed some of the recipes mentioned here
+-tweaking the chains and changed some recipes to diferent machines
+
+---0.2.1
+-changed the overrides for the plates back
+-added recipes for coils to plates
+
+---0.2.0
+-rework to 0.2
+
+---0.1.4
+-small fix to make it work with latest refining/petrochem
+
+---0.1.2
+-fixed silica smelting chain
+-tweaked numbers for the recipes to be more like a 1 to 1 resource conversion
+-decreased power usage for blast furnace
+-increase polution for blast furnace
