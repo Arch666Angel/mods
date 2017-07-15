@@ -1,0 +1,15 @@
+{
+  "name": "angelscomponents",
+  "version": "0.2.0",
+  "factorio_version": "0.15",
+  "title": "Angel's Components and Tech [BETA]",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "",
+  "description": "Adds components, equipment and tech overhaul as a base for other Angelsmods. [BETA]",
+  "dependencies": [
+  "base >= 0.15.0",
+  "angelsrefining >= 0.7.0",
+  "? bobplates >= 0.15.0"
+  ]
+}

@@ -1,0 +1,9 @@
+---0.1.3
+-changed gfx for logistic zone expander
+-added logistic zone expander 2
+-added early construction robots
+
+---0.1.2
+-reduced weight for the crawler
+-removed ghost-layer from the zone expander, it now respects collision again
+-changed gfx for 2x2 chests

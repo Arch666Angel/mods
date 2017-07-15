@@ -1,0 +1,14 @@
+{
+  "name": "angelsaddons-oresilos",
+  "version": "0.3.1",
+  "factorio_version": "0.15",
+  "title": "Angel's Addons - Ore Silos",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
+  "description": "Adds ore silos for Angels Refining.",
+  "dependencies": [
+	"base >= 0.15.0",
+	"? angelsrefining >= 0.3.0"
+	]
+}
