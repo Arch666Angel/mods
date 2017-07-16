@@ -34,7 +34,8 @@ data:extend(
           name = "thermal-water",
           amount_min = 20,
           amount_max = 20,
-          probability = 1
+          probability = 1,
+		  temperature = 100,
         },
       }
     },

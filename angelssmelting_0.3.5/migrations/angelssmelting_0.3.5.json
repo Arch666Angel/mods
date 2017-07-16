@@ -1,0 +1,12 @@
+{
+  "item":
+  [
+    ["angels-plate-brass", "brass-alloy"],
+    ["angels-plate-bronze", "bronze-alloy"],
+    ["angels-plate-electrum", "electrum-alloy"],
+    ["angels-plate-gunmetal", "gunmetal-alloy"],
+    ["angels-plate-invar", "invar-alloy"],
+    ["angels-plate-nitinol", "nitinol-alloy"],
+    ["angels-plate-cobalt-steel", "cobalt-steel-alloy"],
+  ]
+}
