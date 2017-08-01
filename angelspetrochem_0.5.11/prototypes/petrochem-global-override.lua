@@ -11,8 +11,32 @@ local OV = angelsmods.functions.OV
 
 	data.raw["item"]["chemical-plant"].subgroup = "petrochem-vanilla"
 	data.raw["item"]["chemical-plant"].order = "a"
+	if data.raw["item"]["chemical-plant"].icon then data.raw["item"]["chemical-plant"].icon = nil end
+	data.raw["item"]["chemical-plant"].icons = {
+		{
+			icon = "__base__/graphics/icons/chemical-plant.png",
+		},
+		{
+			icon = "__angelsrefining__/graphics/icons/num_1.png",
+			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			scale = 0.32,
+			shift = {-12, -12},
+		}
+	}
 	data.raw["item"]["oil-refinery"].subgroup = "petrochem-vanilla"
-	data.raw["item"]["oil-refinery"].order = "e" 
+	data.raw["item"]["oil-refinery"].order = "e"
+	if data.raw["item"]["oil-refinery"].icon then data.raw["item"]["oil-refinery"].icon = nil end
+	data.raw["item"]["oil-refinery"].icons = {
+		{
+			icon = "__base__/graphics/icons/oil-refinery.png",
+		},
+		{
+			icon = "__angelsrefining__/graphics/icons/num_1.png",
+			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			scale = 0.32,
+			shift = {-12, -12},
+		}
+	}
 
 	OV.disable_recipe({ "plastic-bar" })
 

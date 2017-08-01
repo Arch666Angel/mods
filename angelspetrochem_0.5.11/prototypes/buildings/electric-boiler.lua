@@ -37,7 +37,6 @@ data:extend(
         percent = 30
       }
     },
-
     target_temperature = 165,
     fluid_box =
     {
@@ -78,9 +77,10 @@ data:extend(
 	energy_source =
 	{
 	  type = "electric",
+	  effectivity = 0.8,
 	  input_priority = "secondary",
 	  usage_priority = "secondary-input",
-	  emissions = 0.1 / 9.5
+	  emissions = 0.1 / 4.5
 	},
     working_sound =
     {

@@ -55,7 +55,7 @@ data:extend(
       usage_priority = "secondary-input",
       emissions = 0.02 / 2
     },
-    energy_usage = "150kW",
+    energy_usage = "300kW",
     ingredient_count = 3,
 	animation =
     {
@@ -197,7 +197,7 @@ data:extend(
       usage_priority = "secondary-input",
       emissions = 0.02 / 2
     },
-    energy_usage = "200kW",
+    energy_usage = "350kW",
     ingredient_count = 3,
 	animation =
     {
@@ -339,7 +339,7 @@ data:extend(
       usage_priority = "secondary-input",
       emissions = 0.02 / 2
     },
-    energy_usage = "250kW",
+    energy_usage = "400kW",
     ingredient_count = 3,
 	animation =
     {
@@ -481,7 +481,7 @@ data:extend(
       usage_priority = "secondary-input",
       emissions = 0.02 / 2
     },
-    energy_usage = "300kW",
+    energy_usage = "450kW",
     ingredient_count = 3,
 	animation =
     {

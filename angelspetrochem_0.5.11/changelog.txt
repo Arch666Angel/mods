@@ -1,3 +1,8 @@
+--0.5.12
+-tweaked some recipes for buildings
+-added expensive recipes for all buildings
+-adjusted electric boiler efficiency down to 80%
+
 --0.5.11
 -added electric boiler
 -fixed animation on small gas refinery
