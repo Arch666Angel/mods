@@ -1,3 +1,11 @@
+---0.2.1
+-changed cargo bots mk1 speed to 0.02 (doubled)
+-changed cargo bots mk1 max cargo to 100
+-added cargo bots mk2 (speed 0.04, max cargo 200)
+
+---0.2.0
+-0.15 update
+
 ---0.1.3
 -changed gfx for logistic zone expander
 -added logistic zone expander 2

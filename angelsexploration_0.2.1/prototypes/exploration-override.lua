@@ -19,43 +19,15 @@
 -- end
 
 --ADD RESISTANCES
--- if data.raw.unit["small-biter"] then
--- data.raw.unit["small-biter"].resistances = { {type = "physical", decrease = 0, percent = 0}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 10, percent = 40}, {type = "laser", decrease = 10, percent = 40}, {type = "plasma", decrease = 10, percent = 40} }
--- data.raw.unit["small-biter"].max_health = 100
---data.raw.unit["small-biter"].resistances
--- end
--- if data.raw.unit["medium-biter"] then
--- data.raw.unit["medium-biter"].resistances = { {type = "physical", decrease = 10, percent = 40}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 0, percent = 0}, {type = "laser", decrease = 10, percent = 40}, {type = "plasma", decrease = 10, percent = 40} }
--- data.raw.unit["medium-biter"].max_health = 200
---data.raw.unit["medium-biter"].resistances 
--- end
--- if data.raw.unit["big-biter"] then
--- data.raw.unit["big-biter"].resistances = { {type = "physical", decrease = 0, percent = 0}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 10, percent = 40}, {type = "laser", decrease = 0, percent = 0}, {type = "plasma", decrease = 10, percent = 40} }
--- data.raw.unit["big-biter"].max_health = 300
---data.raw.unit["big-biter"].resistances
--- end
--- if data.raw.unit["behemoth-biter"] then
--- data.raw.unit["behemoth-biter"].resistances = { {type = "physical", decrease = 0, percent = 0}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 10, percent = 40}, {type = "laser", decrease = 0, percent = 0}, {type = "plasma", decrease = 0, percent = 0} }
--- data.raw.unit["behemoth-biter"].max_health = 400
---data.raw.unit["behemoth-biter"].resistances
--- end
+angelsmods.functions.update_alien(small_biter)
+angelsmods.functions.update_alien(medium_biter)
+angelsmods.functions.update_alien(big_biter)
+angelsmods.functions.update_alien(behemoth_biter)
 
--- if data.raw.unit["small-spitter"] then
--- data.raw.unit["small-spitter"].resistances = { {type = "physical", decrease = 0, percent = 0}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 10, percent = 40}, {type = "laser", decrease = 10, percent = 40}, {type = "plasma", decrease = 10, percent = 40} }
--- data.raw.unit["small-spitter"].max_health = 50
--- end
--- if data.raw.unit["medium-spitter"] then
--- data.raw.unit["medium-spitter"].resistances = { {type = "physical", decrease = 10, percent = 40}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 0, percent = 0}, {type = "laser", decrease = 10, percent = 40}, {type = "plasma", decrease = 10, percent = 40} }
--- data.raw.unit["medium-spitter"].max_health = 100
--- end
--- if data.raw.unit["big-spitter"] then
--- data.raw.unit["big-spitter"].resistances = { {type = "physical", decrease = 0, percent = 0}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 10, percent = 40}, {type = "laser", decrease = 0, percent = 0}, {type = "plasma", decrease = 10, percent = 40} }
--- data.raw.unit["big-spitter"].max_health = 150
--- end
--- if data.raw.unit["behemoth-spitter"] then
--- data.raw.unit["behemoth-spitter"].resistances = { {type = "physical", decrease = 0, percent = 0}, {type = "explosion", decrease = 0, percent = 0}, {type = "fire", decrease = 10, percent = 40}, {type = "laser", decrease = 0, percent = 0}, {type = "plasma", decrease = 0, percent = 0} }
--- data.raw.unit["behemoth-spitter"].max_health = 200
--- end
+angelsmods.functions.update_alien(small_spitter)
+angelsmods.functions.update_alien(medium_spitter)
+angelsmods.functions.update_alien(big_spitter)
+angelsmods.functions.update_alien(behemoth_spitter)
 
 --SHOW RESISTANCES
 for _, unit in pairs(data.raw.unit) do

@@ -54,7 +54,11 @@ data:extend(
       },
 	  {
         type = "unlock-recipe",
-        recipe = "cannon-turret-shell"
+        recipe = "cannon-turret-shell-1"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "cannon-turret-shell-2"
       },
     },
     unit =

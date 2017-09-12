@@ -147,6 +147,7 @@ data:extend(
     enabled = false,
     energy_required = 5,
     ingredients ={
+	  {"cargo-robot", 1},
 	  {"steel-plate", 5},
       {"iron-gear-wheel", 5},
 	  {"electric-engine-unit", 5},

@@ -7,16 +7,22 @@ if not angelsmods.exploration then angelsmods.exploration = {} end
 --LOAD PROTOTYPES	
 require("prototypes.exploration-category")
 
---VEHICLES
+--LOAD FUNCTIONS
+if angelsmods.functions then
+	require("prototypes.entities.biter-builder")
+end
+
+--PROTOTYPES
 require("prototypes.entities.ammo-projectiles")
+require("prototypes.entities.guns")
+
 require("prototypes.entities.vehicles")
 
 require("prototypes.entities.cannon-turret")
 require("prototypes.entities.rocket-turret")
 
-require("prototypes.entities.biter-functions")
+require("prototypes.entities.biter-definitions")
 require("prototypes.entities.biter")
-
 
 require("prototypes.recipes.vehicles-recipes")
 

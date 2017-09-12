@@ -60,16 +60,31 @@ data:extend(
     },
 	{
     type = "recipe",
-    name = "cannon-turret-shell",
+    name = "cannon-turret-shell-1",
     energy_required = 2,
 	enabled = "false",
     ingredients ={
-		{"steel-plate", 4},
-		{"iron-plate", 2},
+		{"iron-plate", 4},
 		{"coal", 2},
 	},
     results = {
-		{"cannon-turret-shell", 2},
+		{"cannon-turret-shell-1", 1},
+	},
+	order = "a"
+    },
+	{
+    type = "recipe",
+    name = "cannon-turret-shell-2",
+    energy_required = 2,
+	enabled = "false",
+    ingredients ={
+		{"cannon-turret-shell-1", 1},
+		{"steel-plate", 2},
+		{"copper-plate", 2},
+		{"coal", 2},
+	},
+    results = {
+		{"cannon-turret-shell-2", 1},
 	},
 	order = "a"
     },

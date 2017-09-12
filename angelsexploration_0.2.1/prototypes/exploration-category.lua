@@ -5,10 +5,18 @@ data:extend(
     type = "ammo-category",
     name = "cannon-turret"
   },
+  {
+    type = "ammo-category",
+    name = "bio"
+  },
 --DAMAGE TYPE
   {
     type = "damage-type",
     name = "plasma"
+  },
+  {
+    type = "damage-type",
+    name = "bio"
   },
   {
     type = "item-group",
