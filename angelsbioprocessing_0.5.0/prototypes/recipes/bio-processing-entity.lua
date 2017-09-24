@@ -32,6 +32,36 @@ data:extend(
 	},
     result= "crop-farm",
    },
+   {
+    type = "recipe",
+    name = "temperate-farm",
+    energy_required = 5,
+	enabled = "true",
+    ingredients ={
+	{"iron-plate", 1},
+	},
+    result= "temperate-farm",
+   },
+   {
+    type = "recipe",
+    name = "desert-farm",
+    energy_required = 5,
+	enabled = "true",
+    ingredients ={
+	{"iron-plate", 1},
+	},
+    result= "desert-farm",
+   },
+   {
+    type = "recipe",
+    name = "swamp-farm",
+    energy_required = 5,
+	enabled = "true",
+    ingredients ={
+	{"iron-plate", 1},
+	},
+    result= "swamp-farm",
+   },
 --COMPOSTER
    {
     type = "recipe",
@@ -64,6 +94,17 @@ data:extend(
 	{"iron-plate", 1},
 	},
     result= "bio-press",
+   },
+--PROCESSOR
+   {
+    type = "recipe",
+    name = "bio-processor",
+    energy_required = 5,
+	enabled = "true",
+    ingredients ={
+	{"iron-plate", 1},
+	},
+    result= "bio-processor",
    },
 }
 )

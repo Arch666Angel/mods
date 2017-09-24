@@ -14,7 +14,7 @@ data:extend(
   },
   {
     type = "recipe-category",
-    name = "water-farming",
+    name = "swamp-farming",
   },
   {
     type = "recipe-category",
@@ -26,7 +26,15 @@ data:extend(
   },
   {
     type = "recipe-category",
+    name = "bio-processor",
+  },
+  {
+    type = "recipe-category",
     name = "bio-pressing",
+  },
+  {
+    type = "recipe-category",
+    name = "nutrient-extractor",
   },
   {
     type = "recipe-category",
@@ -120,9 +128,27 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "farming-water",
+    name = "farming-swamp",
+	group = "bio-processing",
+	order = "o",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processor-uncommon",
 	group = "bio-processing",
 	order = "p",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processor-common",
+	group = "bio-processing",
+	order = "q",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processor-rare",
+	group = "bio-processing",
+	order = "r",
   },
   {
     type = "item-subgroup",

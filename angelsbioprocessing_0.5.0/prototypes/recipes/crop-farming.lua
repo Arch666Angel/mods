@@ -13,11 +13,11 @@ data:extend(
 	},
     results=
     {
-      {type="item", name="temperate-1", amount=1, probability = 0.8},
-	  {type="item", name="temperate-2", amount=1, probability = 0.6},
-	  {type="item", name="temperate-3", amount=1, probability = 0.4},
-	  {type="item", name="temperate-4", amount=1, probability = 0.2},
-	  {type="item", name="temperate-5", amount=1, probability = 0.1},
+      {type="item", name="temperate-1-seed", amount=5, probability = 0.8},
+	  {type="item", name="temperate-2-seed", amount=5, probability = 0.6},
+	  {type="item", name="temperate-3-seed", amount=5, probability = 0.4},
+	  {type="item", name="temperate-4-seed", amount=5, probability = 0.2},
+	  {type="item", name="temperate-5-seed", amount=5, probability = 0.1},
     },
     icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
     order = "aa",
@@ -52,11 +52,11 @@ data:extend(
 	},
     results=
     {
-      {type="item", name="desert-1", amount=1, probability = 0.8},
-	  {type="item", name="desert-2", amount=1, probability = 0.6},
-	  {type="item", name="desert-3", amount=1, probability = 0.4},
-	  {type="item", name="desert-4", amount=1, probability = 0.2},
-	  {type="item", name="desert-5", amount=1, probability = 0.1},
+      {type="item", name="desert-1-seed", amount=5, probability = 0.8},
+	  {type="item", name="desert-2-seed", amount=5, probability = 0.6},
+	  {type="item", name="desert-3-seed", amount=5, probability = 0.4},
+	  {type="item", name="desert-4-seed", amount=5, probability = 0.2},
+	  {type="item", name="desert-5-seed", amount=5, probability = 0.1},
     },
     icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
     order = "ba",
@@ -81,41 +81,41 @@ data:extend(
     },
     {
     type = "recipe",
-    name = "water-garden",
+    name = "swamp-garden",
     category = "seed-extractor",
 	subgroup = "farming-gardens",
 	enabled = "true",
     energy_required = 300,
     ingredients ={
-	  {type="item", name="water-garden", amount=1},
+	  {type="item", name="swamp-garden", amount=1},
 	},
     results=
     {
-      {type="item", name="water-1", amount=1, probability = 0.8},
-      {type="item", name="water-2", amount=1, probability = 0.6},
-	  {type="item", name="water-3", amount=1, probability = 0.4},
-	  {type="item", name="water-4", amount=1, probability = 0.2},
-	  {type="item", name="water-5", amount=1, probability = 0.1},
+      {type="item", name="swamp-1-seed", amount=5, probability = 0.8},
+      {type="item", name="swamp-2-seed", amount=5, probability = 0.6},
+	  {type="item", name="swamp-3-seed", amount=5, probability = 0.4},
+	  {type="item", name="swamp-4-seed", amount=5, probability = 0.2},
+	  {type="item", name="swamp-5-seed", amount=5, probability = 0.1},
     },
-    icon = "__angelsbioprocessing__/graphics/icons/water-garden.png",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     order = "ca",
     },
     {
     type = "recipe",
-    name = "water-garden-cultivating",
+    name = "swamp-garden-cultivating",
     category = "seed-extractor",
 	subgroup = "farming-gardens",
 	enabled = "true",
     energy_required = 300,
     ingredients ={
-	  {type="item", name="water-garden", amount=1},
+	  {type="item", name="swamp-garden", amount=1},
 	},
     results=
     {
-	  {type="item", name="water-garden", amount=1},
-	  {type="item", name="water-garden", amount=1, probability = 0.05},
+	  {type="item", name="swamp-garden", amount=1},
+	  {type="item", name="swamp-garden", amount=1, probability = 0.05},
     },
-    icon = "__angelsbioprocessing__/graphics/icons/water-garden.png",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     order = "cb",
     },
 --FARMING
@@ -145,7 +145,7 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="temperate-1-seed", amount=10},
+	  {type="item", name="temperate-1-seed", amount=5},
 	  {type="item", name="solid-soil", amount=5},
 	  {type="fluid", name="water", amount=50},
 	},
@@ -154,7 +154,7 @@ data:extend(
       {type="item", name="temperate-1", amount_min=40, amount_max=60},
     },
 	main_product = "temperate-1",
-    order = "aa",
+    order = "a",
 	crafting_machine_tint =
     {
       primary = {r = 222/255, g = 209/255, b = 95/255, a = 1},
@@ -169,13 +169,13 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "temperate-1", amount= 1}
+	  {type= item, name= "temperate-1", amount= 10}
 	},
 	results=
 	{
-	  {type="item", name= "temperate-1-seed", amount=1},
+	  {type="item", name= "temperate-1-seed", amount_min=5, amount_max=6},
 	},
-	order = "ab",
+	order = "b",
 	},
     {
     type = "recipe",
@@ -185,7 +185,7 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="temperate-2-seed", amount=10},
+	  {type="item", name="temperate-2-seed", amount=5},
 	  {type="item", name="solid-soil", amount=5},
 	  {type="fluid", name="water", amount=50},
 	},
@@ -194,7 +194,7 @@ data:extend(
       {type="item", name="temperate-2", amount_min=40, amount_max=60},
     },
 	main_product = "temperate-2",
-    order = "ba",
+    order = "c",
 	crafting_machine_tint =
     {
       primary = {r = 190/255, g = 190/255, b = 190/255, a = 1},
@@ -209,13 +209,13 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "temperate-2", amount= 1}
+	  {type= item, name= "temperate-2", amount= 10}
 	},
 	results=
 	{
-	  {type="item", name= "temperate-2-seed", amount=1},
+	  {type="item", name= "temperate-2-seed", amount_min=5, amount_max=6},
 	},
-	order = "bb",
+	order = "d",
 	},
     {
     type = "recipe",
@@ -225,16 +225,17 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="temperate-3-seed", amount=10},
+	  {type="item", name="temperate-3-seed", amount=5},
 	  {type="item", name="solid-soil", amount=5},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
       {type="item", name="temperate-3", amount_min=40, amount_max=60},
+	  {type="item", name="temperate-3-seed-dormant", amount=5},
     },
 	main_product = "temperate-3",
-    order = "ca",
+    order = "e",
 	crafting_machine_tint =
     {
       primary = {r = 65/255, g = 83/255, b = 39/255, a = 1},
@@ -249,13 +250,15 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "temperate-3", amount= 1}
+	  {type="item", name="temperate-3-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "temperate-3-seed", amount=1},
+	  {type="item", name= "temperate-3-seed", amount=5},
+	  {type="item", name= "temperate-3-seed", amount=1, probability=0.05},
 	},
-	order = "cb",
+	main_product = "temperate-3-seed",
+	order = "f",
 	},
     {
     type = "recipe",
@@ -265,16 +268,17 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="temperate-4-seed", amount=10},
+	  {type="item", name="temperate-4-seed", amount=5},
 	  {type="item", name="solid-soil", amount=5},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
       {type="item", name="temperate-4", amount_min=40, amount_max=60},
+	  {type="item", name="temperate-4-seed-dormant", amount=5},
     },
 	main_product = "temperate-4",
-    order = "da",
+    order = "g",
 	crafting_machine_tint =
     {
       primary = {r = 63/255, g = 101/255, b = 4/255, a = 1},
@@ -289,13 +293,15 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "temperate-4", amount= 1}
+	  {type= item, name= "temperate-4-seed-dormant", amount= 5}
 	},
 	results=
 	{
-	  {type="item", name= "temperate-4-seed", amount=1},
+	  {type="item", name= "temperate-4-seed", amount=5},
+	  {type="item", name= "temperate-4-seed", amount=1, probability=0.05},
 	},
-	order = "db",
+	main_product = "temperate-4-seed",
+	order = "h",
 	},
     {
     type = "recipe",
@@ -305,16 +311,17 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="temperate-5-seed", amount=10},
+	  {type="item", name="temperate-5-seed", amount=5},
 	  {type="item", name="solid-soil", amount=5},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
       {type="item", name="temperate-5", amount_min=40, amount_max=60},
+	  {type="item", name="temperate-5-seed-dormant", amount=5},
     },
 	main_product = "temperate-5",
-    order = "ea",
+    order = "i",
 	crafting_machine_tint =
     {
       primary = {r = 109/255, g = 173/255, b = 74/255, a = 1},
@@ -329,13 +336,15 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "temperate-5", amount= 1}
+	  {type= item, name= "temperate-5-seed-dormant", amount= 5}
 	},
 	results=
 	{
-	  {type="item", name= "temperate-5-seed", amount=1},
+	  {type="item", name= "temperate-5-seed", amount=5},
+	  {type="item", name= "temperate-5-seed", amount=1, probability=0.05},
 	},
-	order = "eb",
+	main_product = "temperate-5-seed",
+	order = "j",
 	},
 	--DESERT
     {
@@ -346,7 +355,7 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="desert-1-seed", amount=10},
+	  {type="item", name="desert-1-seed", amount=5},
 	  {type="item", name="solid-sand", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
@@ -355,7 +364,7 @@ data:extend(
       {type="item", name="desert-1", amount_min=30, amount_max=40},
     },
 	main_product = "desert-1",
-    order = "aa",
+    order = "a",
 	crafting_machine_tint =
     {
       primary = {r = 240/255, g = 157/255, b = 14/255, a = 1},
@@ -370,13 +379,13 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "desert-1", amount= 1}
+	  {type= item, name= "desert-1", amount= 10}
 	},
 	results=
 	{
-	  {type="item", name= "desert-1-seed", amount=1},
+	  {type="item", name= "desert-1-seed", amount_min=5, amount_max=6},
 	},
-	order = "ab",
+	order = "b",
 	},
     {
     type = "recipe",
@@ -386,7 +395,7 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="desert-2-seed", amount=10},
+	  {type="item", name="desert-2-seed", amount=5},
 	  {type="item", name="solid-sand", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
@@ -395,7 +404,7 @@ data:extend(
       {type="item", name="desert-2", amount_min=30, amount_max=40},
     },
 	main_product = "desert-2",
-    order = "ba",
+    order = "c",
 	crafting_machine_tint =
     {
       primary = {r = 79/255, g = 39/255, b = 34/255, a = 1},
@@ -410,13 +419,13 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "desert-2", amount= 1}
+	  {type= item, name= "desert-2", amount= 10}
 	},
 	results=
 	{
-	  {type="item", name= "desert-2-seed", amount=1},
+	  {type="item", name= "desert-2-seed", amount_min=5, amount_max=6},
 	},
-	order = "bb",
+	order = "d",
 	},
     {
     type = "recipe",
@@ -426,16 +435,17 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="desert-3-seed", amount=10},
+	  {type="item", name="desert-3-seed", amount=5},
 	  {type="item", name="solid-sand", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
       {type="item", name="desert-3", amount_min=30, amount_max=40},
+	  {type="item", name="desert-3-seed-dormant", amount=5},
     },
 	main_product = "desert-3",
-    order = "ca",
+    order = "e",
 	crafting_machine_tint =
     {
       primary = {r = 130/255, g = 106/255, b = 49/255, a = 1},
@@ -450,13 +460,15 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "desert-3", amount= 1}
+	  {type="item", name="desert-3-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "desert-3-seed", amount=1},
+	  {type="item", name= "desert-3-seed", amount=5},
+	  {type="item", name= "desert-3-seed", amount=1, probability=0.05},
 	},
-	order = "cb",
+	main_product = "desert-3-seed",
+	order = "f",
 	},
     {
     type = "recipe",
@@ -466,16 +478,17 @@ data:extend(
 	enabled = "true",
     energy_required = 60,
     ingredients ={
-	  {type="item", name="desert-4-seed", amount=10},
+	  {type="item", name="desert-4-seed", amount=5},
 	  {type="item", name="solid-sand", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
       {type="item", name="desert-4", amount_min=30, amount_max=40},
+	  {type="item", name="desert-3-seed-dormant", amount=5},
     },
 	main_product = "desert-4",
-    order = "da",
+    order = "g",
 	crafting_machine_tint =
     {
       primary = {r = 212/255, g = 95/255, b = 0/255, a = 1},
@@ -490,13 +503,15 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "desert-4", amount= 1}
+	  {type="item", name="desert-4-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "desert-4-seed", amount=1},
+	  {type="item", name= "desert-4-seed", amount=5},
+	  {type="item", name= "desert-4-seed", amount=1, probability=0.05},
 	},
-	order = "db",
+	main_product = "desert-4-seed",
+	order = "h",
 	},
     {
     type = "recipe",
@@ -513,9 +528,10 @@ data:extend(
     results=
     {
       {type="item", name="desert-5", amount_min=30, amount_max=40},
+	  {type="item", name="desert-5-seed-dormant", amount=5},
     },
 	main_product = "desert-5",
-    order = "ea",
+    order = "i",
 	crafting_machine_tint =
     {
       primary = {r = 194/255, g = 135/255, b = 0/255, a = 1},
@@ -530,33 +546,35 @@ data:extend(
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "desert-5", amount= 1}
+	  {type="item", name="desert-5-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "desert-5-seed", amount=1},
+	  {type="item", name= "desert-5-seed", amount=5},
+	  {type="item", name= "desert-5-seed", amount=1, probability=0.05},
 	},
-	order = "eb",
+	main_product = "desert-5-seed",
+	order = "j",
 	},
-	--WATER
+	--SWAMP
     {
     type = "recipe",
-    name = "water-1",
-    category = "water-farming",
-	subgroup = "farming-water",
+    name = "swamp-1",
+    category = "swamp-farming",
+	subgroup = "farming-swamp",
 	enabled = "true",
     energy_required = 45,
     ingredients ={
-	  {type="item", name="water-1-seed", amount=10},
+	  {type="item", name="swamp-1-seed", amount=5},
 	  {type="item", name="solid-mud", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
-      {type="item", name="water-1", amount_min=40, amount_max=50},
+      {type="item", name="swamp-1", amount_min=40, amount_max=50},
     },
-	main_product = "water-1",
-    order = "aa",
+	main_product = "swamp-1",
+    order = "a",
 	crafting_machine_tint =
     {
       primary = {r = 106/255, g = 45/255, b = 36/255, a = 1},
@@ -564,39 +582,39 @@ data:extend(
     },
 	{
 	type = "recipe",
-	name = "water-1-seed",
+	name = "swamp-1-seed",
 	category = "seed-extractor",
-	subgroup = "farming-water",
+	subgroup = "farming-swamp",
 	enabled = "true",
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "water-1", amount= 1}
+	  {type= item, name= "swamp-1", amount= 10}
 	},
 	results=
 	{
-	  {type="item", name= "water-1-seed", amount=1},
+	  {type="item", name= "swamp-1-seed", amount_min=5, amount_max=6},
 	},
-	order = "ab",
+	order = "b",
 	},
     {
     type = "recipe",
-    name = "water-2",
-    category = "water-farming",
-	subgroup = "farming-water",
+    name = "swamp-2",
+    category = "swamp-farming",
+	subgroup = "farming-swamp",
 	enabled = "true",
     energy_required = 45,
     ingredients ={
-	  {type="item", name="water-2-seed", amount=10},
+	  {type="item", name="swamp-2-seed", amount=5},
 	  {type="item", name="solid-mud", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
-      {type="item", name="water-2", amount_min=40, amount_max=50},
+      {type="item", name="swamp-2", amount_min=40, amount_max=50},
     },
-	main_product = "water-2",
-    order = "ba",
+	main_product = "swamp-2",
+    order = "c",
 	crafting_machine_tint =
     {
       primary = {r = 53/255, g = 71/255, b = 19/255, a = 1},
@@ -604,39 +622,40 @@ data:extend(
     },
 	{
 	type = "recipe",
-	name = "water-2-seed",
+	name = "swamp-2-seed",
 	category = "seed-extractor",
-	subgroup = "farming-water",
+	subgroup = "farming-swamp",
 	enabled = "true",
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "water-2", amount= 1}
+	  {type= item, name= "swamp-2", amount= 10}
 	},
 	results=
 	{
-	  {type="item", name= "water-2-seed", amount=1},
+	  {type="item", name= "swamp-2-seed", amount_min=5, amount_max=6},
 	},
-	order = "bb",
+	order = "d",
 	},
     {
     type = "recipe",
-    name = "water-3",
-    category = "water-farming",
-	subgroup = "farming-water",
+    name = "swamp-3",
+    category = "swamp-farming",
+	subgroup = "farming-swamp",
 	enabled = "true",
     energy_required = 45,
     ingredients ={
-	  {type="item", name="water-3-seed", amount=10},
+	  {type="item", name="swamp-3-seed", amount=5},
 	  {type="item", name="solid-mud", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
-      {type="item", name="water-3", amount_min=40, amount_max=50},
+      {type="item", name="swamp-3", amount_min=40, amount_max=50},
+	  {type="item", name="swamp-3-seed-dormant", amount=5},
     },
-	main_product = "water-3",
-    order = "ca",
+	main_product = "swamp-3",
+    order = "e",
 	crafting_machine_tint =
     {
       primary = {r = 80/255, g = 98/255, b = 47/255, a = 1},
@@ -644,39 +663,42 @@ data:extend(
     },
 	{
 	type = "recipe",
-	name = "water-3-seed",
+	name = "swamp-3-seed",
 	category = "seed-extractor",
-	subgroup = "farming-water",
+	subgroup = "farming-swamp",
 	enabled = "true",
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "water-3", amount= 1}
+	  {type="item", name="swamp-3-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "water-3-seed", amount=1},
+	  {type="item", name= "swamp-3-seed", amount=5},
+	  {type="item", name= "swamp-3-seed", amount=1, probability=0.05},
 	},
-	order = "cb",
+	main_product = "swamp-3-seed",
+	order = "f",
 	},
     {
     type = "recipe",
-    name = "water-4",
-    category = "water-farming",
-	subgroup = "farming-water",
+    name = "swamp-4",
+    category = "swamp-farming",
+	subgroup = "farming-swamp",
 	enabled = "true",
     energy_required = 45,
     ingredients ={
-	  {type="item", name="water-4-seed", amount=10},
+	  {type="item", name="swamp-4-seed", amount=10},
 	  {type="item", name="solid-mud", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
-      {type="item", name="water-4", amount_min=40, amount_max=50},
+      {type="item", name="swamp-4", amount_min=40, amount_max=50},
+	  {type="item", name="swamp-4-seed-dormant", amount=5},
     },
-	main_product = "water-4",
-    order = "da",
+	main_product = "swamp-4",
+    order = "g",
 	crafting_machine_tint =
     {
       primary = {r = 119/255, g = 79/255, b = 63/255, a = 1},
@@ -684,39 +706,42 @@ data:extend(
     },
 	{
 	type = "recipe",
-	name = "water-4-seed",
+	name = "swamp-4-seed",
 	category = "seed-extractor",
-	subgroup = "farming-water",
+	subgroup = "farming-swamp",
 	enabled = "true",
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "water-4", amount= 1}
+	  {type="item", name="swamp-4-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "water-4-seed", amount=1},
+	  {type="item", name= "swamp-4-seed", amount=5},
+	  {type="item", name= "swamp-4-seed", amount=1, probability=0.05},
 	},
-	order = "db",
+	main_product = "swamp-4-seed",
+	order = "h",
 	},
     {
     type = "recipe",
-    name = "water-5",
-    category = "water-farming",
-	subgroup = "farming-water",
+    name = "swamp-5",
+    category = "swamp-farming",
+	subgroup = "farming-swamp",
 	enabled = "true",
     energy_required = 45,
     ingredients ={
-	  {type="item", name="water-5-seed", amount=10},
+	  {type="item", name="swamp-5-seed", amount=10},
 	  {type="item", name="solid-mud", amount=10},
 	  {type="fluid", name="water", amount=50},
 	},
     results=
     {
-      {type="item", name="water-5", amount_min=40, amount_max=50},
+      {type="item", name="swamp-5", amount_min=40, amount_max=50},
+	  {type="item", name="swamp-5-seed-dormant", amount=5},
     },
-	main_product = "water-5",
-    order = "ea",
+	main_product = "swamp-5",
+    order = "i",
 	crafting_machine_tint =
     {
       primary = {r = 104/255, g = 85/255, b = 146/255, a = 1},
@@ -724,20 +749,22 @@ data:extend(
     },
 	{
 	type = "recipe",
-	name = "water-5-seed",
+	name = "swamp-5-seed",
 	category = "seed-extractor",
-	subgroup = "farming-water",
+	subgroup = "farming-swamp",
 	enabled = "true",
 	energy_required = 0.5,
 	ingredients =
 	{
-	  {type= item, name= "water-5", amount= 1}
+	  {type="item", name="swamp-5-seed-dormant", amount=5},
 	},
 	results=
 	{
-	  {type="item", name= "water-5-seed", amount=1},
+	  {type="item", name= "swamp-5-seed", amount=5},
+	  {type="item", name= "swamp-5-seed", amount=1, probability=0.05},
 	},
-	order = "eb",
+	main_product = "swamp-5-seed",
+	order = "j",
 	},
 }
 )

@@ -16,6 +16,7 @@ if angelsmods.bioprocessing then
 	require("prototypes.buildings.composter")
 	require("prototypes.buildings.seed-extractor")
 	require("prototypes.buildings.bio-press")
+	require("prototypes.buildings.bio-processor")
 	require("prototypes.buildings.gardens")
 	require("prototypes.buildings.trees")
 
@@ -26,6 +27,7 @@ if angelsmods.bioprocessing then
 	require("prototypes.items.bio-processing-alien")
 	require("prototypes.items.bio-processing-paste")
 	require("prototypes.items.crop-farming")
+	require("prototypes.items.crop-farming-processing")
 
 	require("prototypes.recipes.bio-processing-algae-blue")
 	require("prototypes.recipes.bio-processing-algae-green")
@@ -35,6 +37,7 @@ if angelsmods.bioprocessing then
 	require("prototypes.recipes.bio-processing-entity")
 	require("prototypes.recipes.bio-processing-paste")
 	require("prototypes.recipes.crop-farming")
+	require("prototypes.recipes.crop-farming-processing")
 
 	require("prototypes.technology.bio-processing-technology")
 end

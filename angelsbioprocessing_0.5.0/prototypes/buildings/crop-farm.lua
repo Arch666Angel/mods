@@ -27,7 +27,7 @@
       module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"temperate-farming", "desert-farming", "water-farming"},
+    crafting_categories = {"temperate-farming", "desert-farming", "swamp-farming"},
     crafting_speed = 0.5,
     energy_source =
     {
@@ -275,32 +275,32 @@
   },
   {
     type = "item",
-    name = "water-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/water-farm.png",
+    name = "swamp-farm",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-farm.png",
     flags = {"goes-to-quickbar"},
     subgroup = "bio-processing-buildings",
     order = "a",
-    place_result = "water-farm",
+    place_result = "swamp-farm",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "water-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/water-farm.png",
+    name = "swamp-farm",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-farm.png",
     flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1, result = "water-farm"},
+    minable = {mining_time = 1, result = "swamp-farm"},
     max_health = 300,
 	corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-	fast_replaceable_group= "water-farm",
+	fast_replaceable_group= "swamp-farm",
     module_specification =
     {
       module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"water-farming"},
+    crafting_categories = {"swamp-farming"},
     crafting_speed = 1,
     energy_source =
     {

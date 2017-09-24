@@ -104,13 +104,13 @@
     {
       shadow =
       {
-        red = {1.17188, 1.98438},
-        green = {1.04688, 2.04688}
+        red = {0.17188, 0},
+        green = {0, 0.17188}
       },
       wire =
       {
-        red = {0.78125, 1.375},
-        green = {0.78125, 1.53125}
+        red = {0, 0},
+        green = {0, 0}
       }
     },
     circuit_connector_sprites = get_circuit_connector_sprites({0.59375, 1.3125}, nil, 18),
@@ -227,8 +227,8 @@
       },
       wire =
       {
-        red = {0.78125, 1.375},
-        green = {0.78125, 1.53125}
+        red = {0.78125, 0},
+        green = {0.78125, 0.17188}
       }
     },
     circuit_connector_sprites = get_circuit_connector_sprites({0.59375, 1.3125}, nil, 18),

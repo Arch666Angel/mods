@@ -167,8 +167,8 @@ data:extend(
   },
   {
     type = "item",
-    name = "water-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/water-garden.png",
+    name = "swamp-garden",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "farming-gardens",
     order = "c",
@@ -176,14 +176,14 @@ data:extend(
   },  
   {
     type = "tree",
-    name = "water-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/water-garden.png",
+    name = "swamp-garden",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
     minable =
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "water-garden",
+      result = "swamp-garden",
       count = 1
     },
     emissions_per_tick = -0.0001,
@@ -215,21 +215,21 @@ data:extend(
     pictures =
 	{
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/water-garden-1.png",
+        filename = "__angelsbioprocessing__/graphics/entity/gardens/swamp-garden-1.png",
         width = 128,
         height = 128,
 		scale = 0.75,
         shift = {0, 0}
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/water-garden-2.png",
+        filename = "__angelsbioprocessing__/graphics/entity/gardens/swamp-garden-2.png",
         width = 128,
         height = 128,
 		scale = 0.75,
         shift = {0, 0}
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/water-garden-3.png",
+        filename = "__angelsbioprocessing__/graphics/entity/gardens/swamp-garden-3.png",
         width = 128,
         height = 128,
 		scale = 0.75,

@@ -76,6 +76,15 @@ data:extend(
   },
   {
     type = "item",
+    name = "temperate-3-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/temperate-3-seed-dormant.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-temperate",
+    order = "f",
+    stack_size = 500
+  },
+  {
+    type = "item",
     name = "temperate-4",
     icon = "__angelsbioprocessing__/graphics/icons/temperate-4.png",
     flags = {"goes-to-main-inventory"},
@@ -94,6 +103,15 @@ data:extend(
   },
   {
     type = "item",
+    name = "temperate-4-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/temperate-4-seed-dormant.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-temperate",
+    order = "h",
+    stack_size = 500
+  },
+  {
+    type = "item",
     name = "temperate-5",
     icon = "__angelsbioprocessing__/graphics/icons/temperate-5.png",
     flags = {"goes-to-main-inventory"},
@@ -105,6 +123,15 @@ data:extend(
     type = "item",
     name = "temperate-5-seed",
     icon = "__angelsbioprocessing__/graphics/icons/temperate-5-seed.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-temperate",
+    order = "j",
+    stack_size = 500
+  },
+  {
+    type = "item",
+    name = "temperate-5-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/temperate-5-seed-dormant.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "farming-temperate",
     order = "j",
@@ -167,6 +194,15 @@ data:extend(
   },
   {
     type = "item",
+    name = "desert-3-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/desert-3-seed-dormant.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-desert",
+    order = "f",
+    stack_size = 500
+  },
+  {
+    type = "item",
     name = "desert-4",
     icon = "__angelsbioprocessing__/graphics/icons/desert-4.png",
     flags = {"goes-to-main-inventory"},
@@ -178,6 +214,15 @@ data:extend(
     type = "item",
     name = "desert-4-seed",
     icon = "__angelsbioprocessing__/graphics/icons/desert-4-seed.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-desert",
+    order = "h",
+    stack_size = 500
+  },
+  {
+    type = "item",
+    name = "desert-4-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/desert-4-seed-dormant.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "farming-desert",
     order = "h",
@@ -201,94 +246,130 @@ data:extend(
     order = "j",
     stack_size = 500
   },
+  {
+    type = "item",
+    name = "desert-5-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/desert-5-seed-dormant.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-desert",
+    order = "j",
+    stack_size = 500
+  },
 --WATER
   {
     type = "item",
-    name = "water-1",
-    icon = "__angelsbioprocessing__/graphics/icons/water-1.png",
+    name = "swamp-1",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-1.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "a",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-1-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/water-1-seed.png",
+    name = "swamp-1-seed",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-1-seed.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "b",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-2",
-    icon = "__angelsbioprocessing__/graphics/icons/water-2.png",
+    name = "swamp-2",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-2.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "c",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-2-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/water-2-seed.png",
+    name = "swamp-2-seed",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-2-seed.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "d",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-3",
-    icon = "__angelsbioprocessing__/graphics/icons/water-3.png",
+    name = "swamp-3",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-3.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "e",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-3-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/water-3-seed.png",
+    name = "swamp-3-seed",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-3-seed.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "f",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-4",
-    icon = "__angelsbioprocessing__/graphics/icons/water-4.png",
+    name = "swamp-3-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-3-seed-dormant.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
+    order = "f",
+    stack_size = 500
+  },
+  {
+    type = "item",
+    name = "swamp-4",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-4.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-swamp",
     order = "g",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-4-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/water-4-seed.png",
+    name = "swamp-4-seed",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-4-seed.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
     order = "h",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-5",
-    icon = "__angelsbioprocessing__/graphics/icons/water-5.png",
+    name = "swamp-4-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-4-seed-dormant.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
+    order = "h",
+    stack_size = 500
+  },
+  {
+    type = "item",
+    name = "swamp-5",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-5.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-swamp",
     order = "i",
     stack_size = 500
   },
   {
     type = "item",
-    name = "water-5-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/water-5-seed.png",
+    name = "swamp-5-seed",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-5-seed.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "farming-water",
+    subgroup = "farming-swamp",
+    order = "j",
+    stack_size = 500
+  },
+  {
+    type = "item",
+    name = "swamp-5-seed-dormant",
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-5-seed-dormant.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "farming-swamp",
     order = "j",
     stack_size = 500
   },

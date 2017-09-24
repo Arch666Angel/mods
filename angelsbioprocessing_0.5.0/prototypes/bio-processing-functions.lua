@@ -23,7 +23,7 @@ function angelsmods.functions.make_seed(plant)
 end
 
 function angelsmods.functions.make_process(plant)
-	angelsmods.functions.make_seed(plant)
+	--angelsmods.functions.make_seed(plant)
 	angelsmods.functions.make_void(plant)
 	angelsmods.functions.make_void(plant.."-seed")
 end
