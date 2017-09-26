@@ -134,21 +134,27 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-uncommon",
+    name = "bio-processor-temperate",
 	group = "bio-processing",
 	order = "p",
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-common",
+    name = "bio-processor-desert",
 	group = "bio-processing",
 	order = "q",
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-rare",
+    name = "bio-processor-swamp",
 	group = "bio-processing",
 	order = "r",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processor-nutrient",
+	group = "bio-processing",
+	order = "s",
   },
   {
     type = "item-subgroup",
