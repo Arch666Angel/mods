@@ -1,0 +1,55 @@
+data:extend(
+{
+--GRATES
+  {
+    type = "item",
+    name = "grate-1",
+    icon = "__angelsindustries__/graphics/icons/grate-1.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "blocks-frames",
+    order = "a",
+    stack_size = 200,
+  }, 
+  {
+    type = "item",
+    name = "grate-2",
+    icon = "__angelsindustries__/graphics/icons/grate-2.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "blocks-frames",
+    order = "b",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "grate-3",
+    icon = "__angelsindustries__/graphics/icons/grate-3.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "blocks-frames",
+    order = "c",
+    stack_size = 200,
+  }, 
+  {
+    type = "item",
+    name = "grate-4",
+    icon = "__angelsindustries__/graphics/icons/grate-4.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "blocks-frames",
+    order = "d",
+    stack_size = 200,
+  }, 
+  {
+    type = "item",
+    name = "grate-5",
+    icon = "__angelsindustries__/graphics/icons/grate-5.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "blocks-frames",
+    order = "e",
+    stack_size = 200,
+  }, 
+}
+)

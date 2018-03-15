@@ -1,0 +1,172 @@
+data:extend(
+{
+  {
+    type = "fluid",
+    name = "alien-spores",
+    default_temperature = 25,
+    max_temperature = 100,
+    heat_capacity = "1KJ",
+    base_color = {r=0.572, g=0.392, b=0.894},
+    flow_color = {r=0.572, g=0.392, b=0.894},
+    icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
+	icon_size = 32,
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
+    },
+    {
+    type = "item",
+    name = "alien-bacteria",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-bacteria.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-intermediate",
+    order = "a[alien-bacteria]",
+    stack_size = 200
+    },
+    {
+    type = "fluid",
+    name = "alien-goo",
+    default_temperature = 25,
+    max_temperature = 100,
+    heat_capacity = "1KJ",
+    base_color = {r=0.572, g=0.392, b=0.894},
+    flow_color = {r=0.572, g=0.392, b=0.894},
+    icon = "__angelsbioprocessing__/graphics/icons/alien-goo.png",
+	icon_size = 32,
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
+    },
+    {
+    type = "item",
+    name = "petri-dish",
+    icon = "__angelsbioprocessing__/graphics/icons/petri-dish.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-intermediate",
+    order = "b[petri-dish]",
+    stack_size = 200
+    },  
+    {
+    type = "item",
+    name = "substrate-dish",
+    icon = "__angelsbioprocessing__/graphics/icons/substrate-dish.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-intermediate",
+    order = "c[substrate-dish]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-intermediate",
+    order = "d[bio-processing-alien-intermediate]",
+    stack_size = 200
+    },
+	--PRE-ARTIFACT
+    {
+    type = "item",
+    name = "alien-pre-artifact-red",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-red.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "a[alien-pre-artifact-red]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact-yellow",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-yellow.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "b[alien-pre-artifact-yellow]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact-orange",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-orange.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "c[alien-pre-artifact-orange]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact-blue",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-blue.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "d[alien-pre-artifact-blue]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact-purple",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-purple.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "e[alien-pre-artifact-purple]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact-green",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-green.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "f[alien-pre-artifact-green]",
+    stack_size = 200
+    },
+    {
+    type = "item",
+    name = "alien-pre-artifact-base",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-base.png",
+	icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    subgroup = "bio-processing-alien-pre",
+    order = "g[alien-pre-artifact-base]",
+    stack_size = 200
+    },
+	--ALIEN EGGS
+    {
+    type = "item",
+    name = "alien-egg-red",
+    icon = "__angelsbioprocessing__/graphics/icons/egg-red.png",
+	icon_size = 32,
+    flags = { "goes-to-main-inventory" },
+    subgroup = "bio-processing-alien-small",
+    order = "a",
+    stack_size = 200,
+    },
+    {
+    type = "item",
+    name = "alien-egg-green",
+    icon = "__angelsbioprocessing__/graphics/icons/egg-green.png",
+	icon_size = 32,
+    flags = { "goes-to-main-inventory" },
+    subgroup = "bio-processing-alien-small",
+    order = "b",
+    stack_size = 200,
+    },
+    {
+    type = "item",
+    name = "alien-egg-blue",
+    icon = "__angelsbioprocessing__/graphics/icons/egg-blue.png",
+	icon_size = 32,
+    flags = { "goes-to-main-inventory" },
+    subgroup = "bio-processing-alien-small",
+    order = "c",
+    stack_size = 200,
+    },
+}
+)

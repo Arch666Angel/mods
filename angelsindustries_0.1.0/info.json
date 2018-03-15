@@ -1,0 +1,17 @@
+{
+  "name": "angelsindustries",
+  "version": "0.1.0",
+  "factorio_version": "0.16",
+  "title": "Angel's Industries",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "",
+  "description": "Adds components, equipment and tech overhaul as a base for other Angelsmods. [BETA]",
+  "dependencies": [
+  "base >= 0.16.0",
+  "angelsrefining >= 0.8.1",
+  "angelspetrochem >= 0.6.1",
+  "angelsbioprocessing >= 0.5.0",
+  "angelssmelting >= 0.3.1"
+  ]
+}
