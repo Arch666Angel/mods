@@ -6,7 +6,7 @@
   "author": "Arch666Angel",
   "contact": "",
   "homepage": "",
-  "description": "Adds components, equipment and tech overhaul as a base for other Angelsmods. [BETA]",
+  "description": "Adds components, equipment and a tech overhaul as well as the tool you need to expand and grow your base. [Alpha]",
   "dependencies": [
   "base >= 0.16.0",
   "angelsrefining >= 0.8.1",

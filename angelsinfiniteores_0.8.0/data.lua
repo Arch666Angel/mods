@@ -4,6 +4,7 @@ if not angelsmods.ores then angelsmods.ores = {} end
 
 angelsmods.ores.yield = 1000
 angelsmods.ores.loweryield = 1
+angelsmods.ores.enablefluidreq = settings.startup["angels-enablefluidreq"].value
 
 require("prototypes.resource-builder")
 
@@ -17,4 +18,5 @@ if angelsmods.refining then
 	make_resource(infinite_angels_ore6)
 else
 	make_resource(infinite_iron_ore)
+	make_resource(infinite_copper_ore)
 end

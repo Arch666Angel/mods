@@ -1,0 +1,112 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+  Changes:
+    - balance pass to sulfite pulping
+---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+  Changes:
+    - Added localizations
+  Bugfixes:
+    - added missing recipes to arboretum tech
+---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+  Changes:
+    - Tree Arboretums are redone, you can now build a Seed Generator with a Tree you gathered
+    - Arboretums now need Seeds from the Seed Generators
+    - Slight balancing to paper production
+    - added additional recipe for boards from paper
+  Bugfixes:
+    - fixed an error with the alien-biomes tie in for gardens and trees
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+  Bugfixes:
+    - fixed an error with the alien-biomes tie in for gardens and trees
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+  Changes:
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformating them)
+    - added fertilizer
+    - changed techs for aboretums around
+    - added additional aboretum tech and raw wood recipe
+    - changed recipes for aboretum, garden cultivation and rare seed to use fertilizer
+    - changed values on the paper making chains
+    - added localization strings
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+  Changes:
+    - added aboretum
+    - added ethanol void recipe
+  Bugfixes:
+    - fixed filtering recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+  Changes:
+    - added localizations
+    - added recipe values
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+  Changes:
+    - update to 0.16
+    - added gardens
+    - added crop farms
+    - added crop processing recipes and techs
+    - added bio-plastic production chains
+    - added paper production chains
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Changes:
+    - update to 0.15
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+  Changes:
+    - removed fuel value for small artifacts
+  Bugfixes:
+    - fixed missing algae farm recipes
+    - added missing localization strings
+    - fixed missing recipes for salination plants in vanilla
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+  Changes:
+    - disabled alien artifact tech when bob enemies is present
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Changes:
+    - removed wood from cellulose and resin recipe
+    - reordered alien artifacts
+    - removed fuel value from alginic acid
+    - added fuel value to artifacts
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+  Changes:
+    - added brown algae
+    - removed pulver production
+    - internal restructuring
+    - fixed grouping order
+  Bugfixes:
+    - added possible fix for the handcrafting bug
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+  Bugfixes:
+    - fixed an error for older versions
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+  Changes:
+    - added third tier algaes
+    - added alien-processing lines back in
+    - tweaked some numbers
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+  Changes:
+    - added override to move mineralized water recipe from water-treatment tech to bio-processing-1 tech
+    - added red algae recipes
+    - added alien artefact creation line
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+  Changes:
+    - moved algae farm recipes to technology
+  Bugfixes:
+    - fixed a typo in the description
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+  Changes:
+    - initial release

@@ -1,0 +1,12 @@
+{
+  "item":
+  [
+    ["bio-aboretum-temperate", "bio-generator-temperate-1"],
+    ["bio-aboretum-swamp", "bio-generator-swamp-1"]
+  ],
+  "entity":
+  [
+    ["bio-aboretum-temperate", "bio-generator-temperate-1"],
+    ["bio-aboretum-swamp", "bio-generator-swamp-1"]
+  ] 
+}

@@ -3,8 +3,8 @@ if not angelsmods then angelsmods = {} end
 if not angelsmods.industries then angelsmods.industries = {} end
 
 --TRIGGER CHECKS
-angelsmods.industries.tech = false
-angelsmods.industries.components = false
+angelsmods.industries.tech = true
+angelsmods.industries.components = true
 
 --LOAD FUNCTIONS
 if not angelsmods.industries.tech_exceptions then angelsmods.industries.tech_exceptions = {} end
@@ -30,7 +30,7 @@ if angelsmods.industries.tech then
 	--RECIPES
 	require("prototypes.recipes.tech-science-packs-recipes")
 	require("prototypes.recipes.tech-entity")
-	
+
 	--TECHS
 	require("prototypes.technology.angels-tech-technology")
 end
@@ -41,15 +41,18 @@ if angelsmods.industries.components then
 	--require("prototypes.items.components-basic")
 	require("prototypes.items.components-electronics")
 	require("prototypes.items.components-mechanical")
+	require("prototypes.items.components-construction")
 	require("prototypes.items.components-blocks")
 
-	--ENTITIES	
-	require("prototypes.buildings.angels-assemblers")	
-	
+	--ENTITIES
+	require("prototypes.buildings.angels-assemblers")
+
 	--RECIPES
-	require("prototypes.recipes.components-blocks-recipes")
+	require("prototypes.recipes.components-entity")
 	require("prototypes.recipes.components-electronics-recipes")
 	require("prototypes.recipes.components-mechanical-recipes")
+	require("prototypes.recipes.components-construction-recipes")
+	require("prototypes.recipes.components-blocks-recipes")
 end
 
 
@@ -59,7 +62,7 @@ require("prototypes.buildings.cargo-robot")
 require("prototypes.buildings.zone-expander")
 require("prototypes.buildings.construction-robot")
 --require("prototypes.buildings.loader")
-require("prototypes.buildings.chests")	
+require("prototypes.buildings.chests")
 
 require("prototypes.entities.crawler")
 require("prototypes.entities.crawler-train")

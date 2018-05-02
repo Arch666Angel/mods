@@ -1,11 +1,11 @@
 data:extend(
 {
---RECIPE CATEGORY
+  --RECIPE CATEGORY
   {
     type = "recipe-category",
     name = "bob-logistics",
   },
---EQUIPMENT CATEGORY
+  --EQUIPMENT CATEGORY
   {
     type = "equipment-category",
     name = "angels-light-attack"
@@ -38,15 +38,15 @@ data:extend(
     type = "equipment-category",
     name = "angels-movement"
   },
---SUBGROUPS
-	--COMPONENTS
+  --SUBGROUPS
+  --COMPONENTS
   {
     type = "item-group",
     name = "angels-components",
     order = "pa",
     inventory_order = "pa",
-	icon_size = 64,
-    icon = "__angelsindustries__/graphics/technology/components-tech.png",
+    icon_size = 64,
+    icon = "__angelsindustries__/graphics/item-group/components-tech.png",
   },
   {
     type = "item-subgroup",
@@ -72,23 +72,47 @@ data:extend(
     group = "angels-components",
     order = "ad",
   },
+  -- {
+  --   type = "item-subgroup",
+  --   name = "angels-electronics",
+  --   group = "angels-components",
+  --   order = "ae",
+  -- },
   {
     type = "item-subgroup",
-    name = "angels-electronics",
-    group = "angels-components",
-    order = "ae",
-  },
-  {
-    type = "item-subgroup",
-    name = "angels-mechanical-parts",
+    name = "angels-motors-casing",
     group = "angels-components",
     order = "ba",
   },
   {
     type = "item-subgroup",
-    name = "angels-mechanical-subcomponents",
+    name = "angels-motors",
     group = "angels-components",
     order = "bb",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-mechanical-parts",
+    group = "angels-components",
+    order = "bc",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-construction-grates",
+    group = "angels-components",
+    order = "ca",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-construction-frames",
+    group = "angels-components",
+    order = "cb",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-construction-components",
+    group = "angels-components",
+    order = "cc",
   },
   {
     type = "item-subgroup",
@@ -126,14 +150,32 @@ data:extend(
     group = "angels-components",
     order = "k",
   },
-	--SCIENCE
+  {
+    type = "item-subgroup",
+    name = "angels-assemblers-small",
+    group = "angels-components",
+    order = "za",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-assemblers-medium",
+    group = "angels-components",
+    order = "zb",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-assemblers-big",
+    group = "angels-components",
+    order = "zc",
+  },
+  --SCIENCE
   {
     type = "item-group",
     name = "angels-tech",
     order = "pb",
     inventory_order = "pb",
-	icon_size = 64,
-    icon = "__angelsindustries__/graphics/technology/tech-blue.png",
+    icon_size = 64,
+    icon = "__angelsindustries__/graphics/item-group/science-group.png",
   },
   {
     type = "item-subgroup",
@@ -171,14 +213,14 @@ data:extend(
     group = "angels-tech",
     order = "z",
   },
-	--EQUIPMENT
+  --EQUIPMENT
   {
     type = "item-group",
     name = "angels-enhancement",
     order = "pa",
     inventory_order = "pc",
-	icon_size = 64,
-    icon = "__angelsindustries__/graphics/technology/vequip.png",
+    icon_size = 64,
+    icon = "__angelsindustries__/graphics/item-group/vequip.png",
   },
   {
     type = "item-subgroup",
@@ -222,50 +264,50 @@ data:extend(
     group = "angels-enhancement",
     order = "g",
   },
-	--LOGISTICS
+  --LOGISTICS
   {
     type = "item-group",
     name = "angels-logistics",
     order = "q",
     inventory_order = "q",
     icon = "__angelsindustries__/graphics/item-group/cargo-roboport-group.png",
-	icon_size = 64,
+    icon_size = 64,
   },
   {
     type = "item-subgroup",
     name = "angels-chests-big",
-	group = "angels-logistics",
-	order = "a",
+    group = "angels-logistics",
+    order = "a",
   },
   {
     type = "item-subgroup",
     name = "angels-cargo-ports",
-	group = "angels-logistics",
-	order = "b",
+    group = "angels-logistics",
+    order = "b",
   },
   {
     type = "item-subgroup",
     name = "angels-cargo-expander",
-	group = "angels-logistics",
-	order = "c",
+    group = "angels-logistics",
+    order = "c",
   },
   {
     type = "item-subgroup",
     name = "angels-cargo-bots",
-	group = "angels-logistics",
-	order = "d",
+    group = "angels-logistics",
+    order = "d",
   },
   {
     type = "item-subgroup",
     name = "angels-vehicles",
-	group = "angels-logistics",
-	order = "e",
+    group = "angels-logistics",
+    order = "e",
   },
   {
     type = "item-subgroup",
     name = "angels-crawler-train",
-	group = "angels-logistics",
-	order = "f",
+    group = "angels-logistics",
+    order = "f",
   },
-  }
-  )
+}
+)
