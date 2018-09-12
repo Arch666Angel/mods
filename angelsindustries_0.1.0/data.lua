@@ -1,20 +1,20 @@
 --INITIALIZE
 if not angelsmods then angelsmods = {} end
-if not angelsmods.industries then angelsmods.industries = {} end
+if not angelsmods.industry then angelsmods.industry = {} end
 
 --TRIGGER CHECKS
-angelsmods.industries.tech = true
-angelsmods.industries.components = true
+angelsmods.industry.tech = true
+angelsmods.industry.components = true
 
 --LOAD FUNCTIONS
-if not angelsmods.industries.tech_exceptions then angelsmods.industries.tech_exceptions = {} end
+if not angelsmods.industry.tech_exceptions then angelsmods.industry.tech_exceptions = {} end
 
 --LOAD PROTOTYPES
 --CATEGORIES
 require("prototypes.angels-industries-category")
 
 --TECH
-if angelsmods.industries.tech then
+if angelsmods.industry.tech then
 	--ITEMS
 	require("prototypes.items.tech-science-packs")
 
@@ -36,13 +36,14 @@ if angelsmods.industries.tech then
 end
 
 --COMPONENTS
-if angelsmods.industries.components then
+if angelsmods.industry.components then
 	--ITEMS
-	--require("prototypes.items.components-basic")
 	require("prototypes.items.components-electronics")
 	require("prototypes.items.components-mechanical")
 	require("prototypes.items.components-construction")
 	require("prototypes.items.components-blocks")
+	require("prototypes.items.components-weapons")
+	require("prototypes.items.components-cabling")
 
 	--ENTITIES
 	require("prototypes.buildings.angels-assemblers")
@@ -52,7 +53,9 @@ if angelsmods.industries.components then
 	require("prototypes.recipes.components-electronics-recipes")
 	require("prototypes.recipes.components-mechanical-recipes")
 	require("prototypes.recipes.components-construction-recipes")
+	require("prototypes.recipes.components-cabling-recipes")
 	require("prototypes.recipes.components-blocks-recipes")
+	require("prototypes.recipes.components-weapons-recipes")
 end
 
 
@@ -67,6 +70,8 @@ require("prototypes.buildings.chests")
 require("prototypes.entities.crawler")
 require("prototypes.entities.crawler-train")
 require("prototypes.entities.equipment")
+
+require("prototypes.entities.bio-tile")
 
 --RECIPES
 require("prototypes.recipes.equipment-recipes")

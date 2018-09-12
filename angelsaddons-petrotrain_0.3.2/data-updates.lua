@@ -1,7 +1,7 @@
-if angelsmods.logistics then
-	require("prototypes.petro-category")
-	data.raw["item-with-entity-data"]["petro-locomotive-1"].subgroup = "angels-petrotrain"
-	data.raw["item-with-entity-data"]["petro-tank1"].subgroup = "angels-petrotrain"
-	data.raw["item-with-entity-data"]["petro-tank2"].subgroup = "angels-petrotrain"
+if angelsmods.industry then
+	if angelsmods.industry.components then
+		require("prototypes.recipes.petrotrain-updates")
+	end
+	data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-logistics"
 end
 

@@ -227,7 +227,7 @@ if angelsmods.bioprocessing then
 end
 
 --COMPONENTS
-if angelsmods.industries then
+if angelsmods.industry then
 	OV.set_science_pack("angels-vequipment-1", "datacore-enhance-1", 2)
 	OV.set_science_pack("angels-vequipment-2", "datacore-enhance-1", 2)
 

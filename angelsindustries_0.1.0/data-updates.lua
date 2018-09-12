@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 
-if angelsmods.industries.components then
+if angelsmods.industry.components then
 	--MODIFY ASSEMBLING MACHINES
 	OV.add_unlock("automation", "angels-assembling-machine-small-1")
 	OV.add_unlock("automation", "angels-assembling-machine-big-1")

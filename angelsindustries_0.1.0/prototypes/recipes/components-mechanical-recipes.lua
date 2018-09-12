@@ -1,5 +1,81 @@
 data:extend(
 {
+	--GRATES
+	{
+		type = "recipe",
+		name = "casing-1",
+		enabled = true,
+		category = "crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "iron-plate", amount = 2},
+		},
+		results=
+		{
+			{type="item", name="casing-1", amount=1},
+		},
+		icon_size = 32,
+	},
+	{
+		type = "recipe",
+		name = "casing-2",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "steel-plate", amount = 2},
+		},
+		results=
+		{
+			{type="item", name="casing-2", amount=1},
+		},
+		icon_size = 32,
+	},
+	{
+		type = "recipe",
+		name = "casing-3",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-plate-aluminium", amount = 2},
+		},
+		results=
+		{
+			{type="item", name="casing-3", amount=1},
+		},
+		icon_size = 32,
+	},
+	{
+		type = "recipe",
+		name = "casing-4",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-plate-titanium", amount = 2},
+		},
+		results=
+		{
+			{type="item", name="casing-4", amount=1},
+		},
+		icon_size = 32,
+	},
+	{
+		type = "recipe",
+		name = "casing-5",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-plate-tungsten", amount = 2},
+		},
+		results=
+		{
+			{type="item", name="casing-5", amount=1},
+		},
+		icon_size = 32,
+	},
 	--MECHANICAL PARTS
 	{
 		type = "recipe",
@@ -8,6 +84,7 @@ data:extend(
 		category = "crafting",
 		enabled = "true",
 		ingredients ={
+			{type = "item", name = "casing-1", amount = 1},
 			{type = "item", name = "angels-gear", amount = 1},
 		},
 		result = "motor-1",
@@ -20,6 +97,7 @@ data:extend(
 		category = "advanced-crafting",
 		enabled = "true",
 		ingredients ={
+			{type = "item", name = "casing-2", amount = 1},
 			{type = "item", name = "angels-gear", amount = 1},
 			{type = "item", name = "angels-axle", amount = 1},
 		},
@@ -33,6 +111,7 @@ data:extend(
 		category = "advanced-crafting",
 		enabled = "true",
 		ingredients ={
+			{type = "item", name = "casing-3", amount = 1},
 			{type = "item", name = "angels-gear", amount = 1},
 			{type = "item", name = "angels-axle", amount = 1},
 			{type = "item", name = "angels-roller-chain", amount = 1},
@@ -47,6 +126,7 @@ data:extend(
 		category = "advanced-crafting",
 		enabled = "true",
 		ingredients ={
+			{type = "item", name = "casing-4", amount = 1},
 			{type = "item", name = "angels-gear", amount = 1},
 			{type = "item", name = "angels-axle", amount = 1},
 			{type = "item", name = "angels-roller-chain", amount = 1},
@@ -62,6 +142,7 @@ data:extend(
 		category = "advanced-crafting",
 		enabled = "true",
 		ingredients ={
+			{type = "item", name = "casing-5", amount = 1},
 			{type = "item", name = "angels-gear", amount = 1},
 			{type = "item", name = "angels-axle", amount = 1},
 			{type = "item", name = "angels-roller-chain", amount = 1},

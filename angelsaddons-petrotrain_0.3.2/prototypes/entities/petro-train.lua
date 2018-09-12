@@ -1,34 +1,27 @@
 data:extend(
 {
-  -- {
-    -- type = "equipment-grid",
-    -- name = "angels-petro-locomotive",
-    -- width = 6,
-    -- height = 6,
-    -- equipment_categories = {"angels-energy", "angels-heavy-defense", "angels-movement"}
-  -- },
-  -- {
-    -- type = "equipment-grid",
-    -- name = "angels-petro-loco-wagon",
-    -- width = 6,
-    -- height = 6,
-    -- equipment_categories = {"angels-energy", "angels-heavy-defense", "angels-movement"}
-  -- },
-  -- {
-    -- type = "equipment-grid",
-    -- name = "angels-petro-bot-wagon",
-    -- width = 12,
-    -- height = 12,
-    -- equipment_categories = {"angels-energy", "angels-repair", "angels-heavy-defense", "angels-construction", "angels-movement"}
-  -- },
+  {
+    type = "equipment-grid",
+    name = "angels-petro-locomotive",
+    width = 6,
+    height = 6,
+    equipment_categories = {"angels-void"}		--"angels-energy", "angels-heavy-defense", "angels-movement"
+  },
+  {
+    type = "equipment-grid",
+    name = "angels-petro-tank-wagon",
+    width = 12,
+    height = 12,
+    equipment_categories = {"angels-void"}		--"angels-energy", "angels-repair", "angels-heavy-defense", "angels-construction", "angels-movement"
+  },
   {
     type = "item-with-entity-data",
     name = "petro-locomotive-1",
     icon = "__angelsaddons-petrotrain__/graphics/icons/petro-loco-1-ico.png",
 	icon_size = 32,
     flags = {"goes-to-quickbar"},
-    subgroup = "transport",
-    order = "a[petro-locomotive-1]",
+    subgroup = "angels-petrotrain",
+    order = "a",
     place_result = "petro-locomotive-1",
     stack_size = 5
   },
@@ -57,7 +50,7 @@ data:extend(
     connection_distance = 3,
     joint_distance = 4,
     energy_per_hit_point = 5,
-    --equipment_grid = "petro-loco",
+    equipment_grid = "angels-petro-locomotive",
     resistances =
     {
       {
@@ -232,7 +225,7 @@ data:extend(
     },
     open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
     close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-    sound_minimum_speed = 0.5;
+    sound_minimum_speed = 0.5,
   },
   {
     type = "item-with-entity-data",
@@ -240,8 +233,8 @@ data:extend(
 	icon = "__angelsaddons-petrotrain__/graphics/icons/petro-tank1-ico.png",
 	icon_size = 32,
     flags = {"goes-to-quickbar"},
-    subgroup = "transport",
-    order = "b[petro-tank1]",
+    subgroup = "angels-petrotrain",
+    order = "b",
     place_result = "petro-tank1",
     stack_size = 5
   },
@@ -396,7 +389,7 @@ data:extend(
     crash_trigger = crash_trigger(),
     sound_minimum_speed = 0.5;
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
-    --equipment_grid = "petro-tank",
+    equipment_grid = "angels-petro-tank-wagon",
   },
   {
     type = "item-with-entity-data",
@@ -404,8 +397,8 @@ data:extend(
 	icon = "__angelsaddons-petrotrain__/graphics/icons/petro-tank2-ico.png",
 	icon_size = 32,
     flags = {"goes-to-quickbar"},
-    subgroup = "transport",
-    order = "c[petro-tank2]",
+    subgroup = "angels-petrotrain",
+    order = "c",
     place_result = "petro-tank2",
     stack_size = 5
   },
@@ -560,7 +553,7 @@ data:extend(
     crash_trigger = crash_trigger(),
     sound_minimum_speed = 0.5;
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
-    --equipment_grid = "petro-tank",
+    equipment_grid = "angels-petro-tank-wagon",
   },
 }
 )

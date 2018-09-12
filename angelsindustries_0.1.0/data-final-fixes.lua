@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 
-if angelsmods.industries.tech then
+if angelsmods.industry.tech then
 	--GLOBAL REPLACE ALL VANILLA PACKS
 	OV.global_replace_science_packs("high-tech-science-pack", {"science-pack-1", "science-pack-2", "science-pack-3"}, "angels-science-pack-yellow")
 	OV.global_replace_science_packs("science-pack-3", {"science-pack-1", "science-pack-2"}, "angels-science-pack-blue")
@@ -19,7 +19,7 @@ if angelsmods.industries.tech then
 	OV.execute()
 
 	--MODIFY ALL TECHS ACCORDING TO TIERS
-	angelsmods.industries.techtiers = {
+	angelsmods.industry.techtiers = {
 		grey = { amount = 32,  time = 10 },		--BURNER
 		red = {  amount = 64, time = 20 },		--AUTOMATION
 		green = { amount = 128, time = 30 },	--TRAINS
@@ -32,34 +32,34 @@ if angelsmods.industries.tech then
 	angelsmods.marathon.tech_time_multi = 1
 
 	for techname, technology in pairs(data.raw.technology) do
-		if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
+		if angelsmods.functions.check_exception(techname, angelsmods.industry.tech_exceptions) then
 			--UNTIE TECHS FROM EACH OTHER
 			--technology.prerequisites = {}
 			--SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
 			if technology.unit.ingredients and not technology.max_level then
 				for i, ingredients in pairs(technology.unit.ingredients[1]) do
 					if ingredients == "angels-science-pack-grey" then
-						OV.set_research_difficulty(techname, angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi, angelsmods.industries.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi)
+						OV.set_research_difficulty(techname, angelsmods.industry.techtiers.grey.time * angelsmods.marathon.tech_time_multi, angelsmods.industry.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi)
 					end
 					if ingredients == "angels-science-pack-red" then
 						OV.add_prereq(techname, "tech-red-labs")
-						OV.set_research_difficulty(techname, angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi, angelsmods.industries.techtiers.red.amount * angelsmods.marathon.tech_amount_multi)
+						OV.set_research_difficulty(techname, angelsmods.industry.techtiers.red.time * angelsmods.marathon.tech_time_multi, angelsmods.industry.techtiers.red.amount * angelsmods.marathon.tech_amount_multi)
 					end
 					if ingredients == "angels-science-pack-green" then
 						OV.add_prereq(techname, "tech-green-labs")
-						OV.set_research_difficulty(techname, angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi, angelsmods.industries.techtiers.green.amount * angelsmods.marathon.tech_amount_multi)
+						OV.set_research_difficulty(techname, angelsmods.industry.techtiers.green.time * angelsmods.marathon.tech_time_multi, angelsmods.industry.techtiers.green.amount * angelsmods.marathon.tech_amount_multi)
 					end
 					if ingredients == "angels-science-pack-orange" then
 						OV.add_prereq(techname, "tech-orange-labs")
-						OV.set_research_difficulty(techname, angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi, angelsmods.industries.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi)
+						OV.set_research_difficulty(techname, angelsmods.industry.techtiers.orange.time * angelsmods.marathon.tech_time_multi, angelsmods.industry.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi)
 					end
 					if ingredients == "angels-science-pack-blue" then
 						OV.add_prereq(techname, "tech-blue-labs")
-						OV.set_research_difficulty(techname, angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi, angelsmods.industries.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi)
+						OV.set_research_difficulty(techname, angelsmods.industry.techtiers.blue.time * angelsmods.marathon.tech_time_multi, angelsmods.industry.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi)
 					end
 					if ingredients == "angels-science-pack-yellow" then
 						OV.add_prereq(techname, "tech-yellow-labs")
-						OV.set_research_difficulty(techname, angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi, angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi)
+						OV.set_research_difficulty(techname, angelsmods.industry.techtiers.yellow.time * angelsmods.marathon.tech_time_multi, angelsmods.industry.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi)
 					end
 				end
 			end
@@ -76,7 +76,7 @@ if angelsmods.industries.tech then
 -- 	local adebug = true
 --
 -- 	if adebug then
--- 		angelsmods.industries.techcounters = {
+-- 		angelsmods.industry.techcounters = {
 -- 			grey = 0,
 -- 			red = 0,
 -- 			green = 0,
@@ -94,61 +94,61 @@ if angelsmods.industries.tech then
 -- 		}
 --
 -- 		for techname, technology in pairs(data.raw.technology) do
--- 			if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
+-- 			if angelsmods.functions.check_exception(techname, angelsmods.industry.tech_exceptions) then
 -- 				if technology.unit.ingredients and not technology.max_level then
 -- 					for i, ingredients in pairs(technology.unit.ingredients[1]) do
 -- 						if ingredients == "angels-science-pack-grey" then
--- 							angelsmods.industries.techcounters.grey = angelsmods.industries.techcounters.grey + 1
+-- 							angelsmods.industry.techcounters.grey = angelsmods.industry.techcounters.grey + 1
 -- 						end
 -- 						if ingredients == "angels-science-pack-red" then
--- 							angelsmods.industries.techcounters.red = angelsmods.industries.techcounters.red + 1
+-- 							angelsmods.industry.techcounters.red = angelsmods.industry.techcounters.red + 1
 -- 						end
 -- 						if ingredients == "angels-science-pack-green" then
--- 							angelsmods.industries.techcounters.green = angelsmods.industries.techcounters.green + 1
+-- 							angelsmods.industry.techcounters.green = angelsmods.industry.techcounters.green + 1
 -- 						end
 -- 						if ingredients == "angels-science-pack-orange" then
--- 							angelsmods.industries.techcounters.orange = angelsmods.industries.techcounters.orange + 1
+-- 							angelsmods.industry.techcounters.orange = angelsmods.industry.techcounters.orange + 1
 -- 						end
 -- 						if ingredients == "angels-science-pack-blue" then
--- 							angelsmods.industries.techcounters.blue = angelsmods.industries.techcounters.blue + 1
+-- 							angelsmods.industry.techcounters.blue = angelsmods.industry.techcounters.blue + 1
 -- 						end
 -- 						if ingredients == "angels-science-pack-yellow" then
--- 							angelsmods.industries.techcounters.yellow = angelsmods.industries.techcounters.yellow + 1
+-- 							angelsmods.industry.techcounters.yellow = angelsmods.industry.techcounters.yellow + 1
 -- 						end
 -- 					end
 -- 					if technology.unit.ingredients[2] then
 -- 						for i, ingredients in pairs(technology.unit.ingredients[2]) do
 -- 							if ingredients == "datacore-basic" then
--- 								angelsmods.industries.techcounters.basic = angelsmods.industries.techcounters.basic + 1
+-- 								angelsmods.industry.techcounters.basic = angelsmods.industry.techcounters.basic + 1
 -- 							end
 -- 							if ingredients == "datacore-exploration-1" or "datacore-exploration-2" then
--- 								angelsmods.industries.techcounters.exploration = angelsmods.industries.techcounters.exploration + 1
+-- 								angelsmods.industry.techcounters.exploration = angelsmods.industry.techcounters.exploration + 1
 -- 							end
 -- 							if ingredients == "datacore-enhance-1" or "datacore-enhance-2" then
--- 								angelsmods.industries.techcounters.enhancement = angelsmods.industries.techcounters.enhancement + 1
+-- 								angelsmods.industry.techcounters.enhancement = angelsmods.industry.techcounters.enhancement + 1
 -- 							end
 -- 							if ingredients == "datacore-energy-1" or "datacore-energy-2" then
--- 								angelsmods.industries.techcounters.energy = angelsmods.industries.techcounters.energy + 1
+-- 								angelsmods.industry.techcounters.energy = angelsmods.industry.techcounters.energy + 1
 -- 							end
 -- 							if ingredients == "datacore-logistic-1" or "datacore-logistic-2" then
--- 								angelsmods.industries.techcounters.logistic = angelsmods.industries.techcounters.logistic + 1
+-- 								angelsmods.industry.techcounters.logistic = angelsmods.industry.techcounters.logistic + 1
 -- 							end
 -- 							if ingredients == "datacore-processing-1" or "datacore-processing-2" then
--- 								angelsmods.industries.techcounters.processing = angelsmods.industries.techcounters.processing + 1
+-- 								angelsmods.industry.techcounters.processing = angelsmods.industry.techcounters.processing + 1
 -- 							end
 -- 							if ingredients == "datacore-war-1" or "datacore-war-2" then
--- 								angelsmods.industries.techcounters.warfare = angelsmods.industries.techcounters.warfare + 1
+-- 								angelsmods.industry.techcounters.warfare = angelsmods.industry.techcounters.warfare + 1
 -- 							end
 -- 						end
 -- 					end
 -- 				end
 -- 			end
 -- 		end
--- 		log(serpent.block(angelsmods.industries.techcounters))
+-- 		log(serpent.block(angelsmods.industry.techcounters))
 -- 	end
 end
 
-if angelsmods.industries.components then
+if angelsmods.industry.components then
 	--MODIFY MINABLE RESULTS TO DROP BLOCKS
 	for _, recipes in pairs(data.raw.recipe) do
 		if recipes.normal and recipes.normal.ingredients then

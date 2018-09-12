@@ -81,7 +81,7 @@ data:extend(
 		type = "recipe",
 		name = "construction-frame-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "grate-iron", amount = 1},
@@ -120,6 +120,7 @@ data:extend(
 			{type="item", name = "grate-aluminium", amount = 1},
 			{type="item", name = "angels-girder", amount = 1},
 			{type="item", name = "angels-rivet", amount = 1},
+			{type="item", name = "angels-bracket", amount=1},
 		},
 		results=
 		{
@@ -137,6 +138,8 @@ data:extend(
 			{type="item", name = "grate-titanium", amount = 1},
 			{type="item", name = "angels-girder", amount = 1},
 			{type="item", name = "angels-rivet", amount = 1},
+			{type="item", name = "angels-bracket", amount=1},
+			{type="item", name = "angels-plating", amount=1},
 		},
 		results=
 		{
@@ -154,6 +157,9 @@ data:extend(
 			{type="item", name = "grate-tungsten", amount = 1},
 			{type="item", name = "angels-girder", amount = 1},
 			{type="item", name = "angels-rivet", amount = 1},
+			{type="item", name = "angels-bracket", amount=1},
+			{type="item", name = "angels-plating", amount=1},
+			{type="item", name = "angels-strut", amount=1},
 		},
 		results=
 		{
@@ -166,7 +172,7 @@ data:extend(
 		type = "recipe",
 		name = "angels-girder",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "iron-plate", amount = 1},
@@ -194,7 +200,7 @@ data:extend(
 	},
 	{
 		type = "recipe",
-		name = "angels-plating",
+		name = "angels-bracket",
 		enabled = true,
 		category = "advanced-crafting",
 		energy_required = 5,
@@ -203,10 +209,41 @@ data:extend(
 		},
 		results=
 		{
+			{type="item", name="angels-bracket", amount=1},
+		},
+		icon_size = 32,
+	},
+	{
+		type = "recipe",
+		name = "angels-plating",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-plate-titanium", amount = 1},
+		},
+		results=
+		{
 			{type="item", name="angels-plating", amount=1},
 		},
 		icon_size = 32,
 	},
+	{
+		type = "recipe",
+		name = "angels-strut",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-plate-tungsten", amount = 1},
+		},
+		results=
+		{
+			{type="item", name="angels-strut", amount=1},
+		},
+		icon_size = 32,
+	},
+
 	--CONSTRUCTION COMPONENTS
 	{
 		type = "recipe",
@@ -214,7 +251,7 @@ data:extend(
 		subgroup = "angels-construction-components",
     order = "f",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "angels-girder", amount = 5},
@@ -264,6 +301,33 @@ data:extend(
 	},
 	{
 		type = "recipe",
+		name = "construction-components-bracket",
+		subgroup = "angels-construction-components",
+    order = "h",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-bracket", amount = 5},
+		},
+		results=
+		{
+			{type="item", name="construction-components", amount=5},
+		},
+		icons = {
+			{
+				icon = "__angelsindustries__/graphics/icons/construction-components.png"
+			},
+			{
+				icon = "__angelsindustries__/graphics/icons/bracket.png",
+				scale = 0.4375,
+				shift = { -10, -10},
+			},
+		},
+		icon_size = 32,
+	},
+	{
+		type = "recipe",
 		name = "construction-components-plating",
 		subgroup = "angels-construction-components",
     order = "h",
@@ -275,7 +339,7 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="construction-components", amount=2},
+			{type="item", name="construction-components", amount=3},
 		},
 		icons = {
 			{
@@ -289,5 +353,33 @@ data:extend(
 		},
 		icon_size = 32,
 	},
+	{
+		type = "recipe",
+		name = "construction-components-strut",
+		subgroup = "angels-construction-components",
+    order = "h",
+		enabled = true,
+		category = "advanced-crafting",
+		energy_required = 5,
+		ingredients ={
+			{type="item", name = "angels-strut", amount = 5},
+		},
+		results=
+		{
+			{type="item", name="construction-components", amount=4},
+		},
+		icons = {
+			{
+				icon = "__angelsindustries__/graphics/icons/construction-components.png"
+			},
+			{
+				icon = "__angelsindustries__/graphics/icons/strut.png",
+				scale = 0.4375,
+				shift = { -10, -10},
+			},
+		},
+		icon_size = 32,
+	},
+
 }
 )

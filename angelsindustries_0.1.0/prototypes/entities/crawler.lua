@@ -31,7 +31,8 @@ data:extend(
     max_health = 3500,
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
-    energy_per_hit_point = 0.06,
+    energy_per_hit_point = 0.03,
+    immune_to_tree_impacts = true,
     resistances =
     {
       {
