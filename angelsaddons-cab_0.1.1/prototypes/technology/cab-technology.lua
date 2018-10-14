@@ -7,6 +7,7 @@ data:extend(
 	icon_size = 128,
 	prerequisites =
     {
+	"automobilism"
     },
     effects =
     {
@@ -14,14 +15,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-cab"
       },
-	  -- {
-        -- type = "unlock-recipe",
-        -- recipe = "smelting-locomotive-tender"
-      -- },
-	  -- {
-        -- type = "unlock-recipe",
-        -- recipe = "smelting-wagon-1"
-      -- },
+	  {
+        type = "unlock-recipe",
+        recipe = "angels-cab-deploy-charge"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "angels-cab-undeploy-charge"
+      },
     },
     unit =
     {

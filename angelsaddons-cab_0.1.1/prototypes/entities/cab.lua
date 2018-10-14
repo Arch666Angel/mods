@@ -24,7 +24,7 @@ data:extend(
   {
     type = "gun",
     name = "angels-cab-deploy",
-    icon = "__angelsaddons-cab__/graphics/icons/deploy.png",
+    icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
     flags = {"goes-to-main-inventory", "hidden"},
     subgroup = "gun",
@@ -51,7 +51,7 @@ data:extend(
   {
     type = "gun",
     name = "angels-cab-undeploy",
-    icon = "__angelsaddons-cab__/graphics/icons/undeploy.png",
+    icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
     flags = {"goes-to-main-inventory", "hidden"},
     subgroup = "gun",
@@ -121,8 +121,8 @@ data:extend(
         percent = 30
       }
     },
-    collision_box = {{-1.5, -2.25}, {1.5, 2.25}},
-    selection_box = {{-1.5, -2.25}, {1.5, 2.25}},
+    collision_box = {{-2.5, -4}, {2.5, 4}},
+    selection_box = {{-2.5, -4}, {2.5, 4}},
     effectivity = 0.7,
     braking_power = "1000kW",
     burner =
@@ -190,159 +190,189 @@ data:extend(
       layers =
       {
         {
-          width = 256,
-          height = 256,
-          frame_count = 2,
+          width = 320,
+          height = 320,
+          frame_count = 5,
           direction_count = 64,
           shift = {0, 0},
-          animation_speed = 8,
+          animation_speed = 4,
           max_advance = 1,
           stripes =
           {
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-1.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-1.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-2.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-2.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-3.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-3.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-4.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-4.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-5.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-5.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-6.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-6.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-7.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-7.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
             },
             {
-             filename = "__angelsaddons-cab__/graphics/entity/cab/base-8.png",
-             width_in_frames = 2,
-             height_in_frames = 8,
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-8.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
+            },
+            {
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-9.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
+            },
+            {
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-10.png",
+             width_in_frames = 5,
+             height_in_frames = 6,
+            },
+            {
+             filename = "__angelsaddons-cab__/graphics/entity/cab/cab-11.png",
+             width_in_frames = 5,
+             height_in_frames = 4,
             }
           }
         },
+        -- {
+          -- width = 256,
+          -- height = 256,
+          -- frame_count = 2,
+          -- apply_runtime_tint = true,
+          -- direction_count = 64,
+          -- shift = {0, 0},
+          -- max_advance = 1,
+          -- line_length = 2,
+          -- stripes = util.multiplystripes(2,
+          -- {
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-1.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-2.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-3.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-4.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-5.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-6.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-7.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+            -- {
+              -- filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-8.png",
+              -- width_in_frames = 1,
+              -- height_in_frames = 8,
+            -- },
+          -- })
+        -- },
         {
-          width = 256,
-          height = 256,
-          frame_count = 2,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0, 0},
-          max_advance = 1,
-          line_length = 2,
-          stripes = util.multiplystripes(2,
-          {
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-1.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-2.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-3.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-4.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-5.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-6.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-7.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsaddons-cab__/graphics/entity/cab/base-mask-8.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-          })
-        },
-        {
-          width = 256,
-          height = 256,
-          frame_count = 2,
+          width = 320,
+          height = 320,
+          frame_count = 5,
           draw_as_shadow = true,
           direction_count = 64,
-          shift = {0, 0},
+          shift = {0.25, 0.25},
           max_advance = 1,
-          stripes = util.multiplystripes(2,
+          stripes = util.multiplystripes(5,
           {
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-1.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-1.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-2.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-2.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-3.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-3.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-4.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-4.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-5.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-5.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-6.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-6.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-7.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-7.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
            },
            {
-            filename = "__angelsaddons-cab__/graphics/entity/cab/base-shadow-8.png",
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-8.png",
             width_in_frames = 1,
-            height_in_frames = 8,
+            height_in_frames = 6,
+           },
+           {
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-9.png",
+            width_in_frames = 1,
+            height_in_frames = 6,
+           },
+           {
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-10.png",
+            width_in_frames = 1,
+            height_in_frames = 6,
+           },
+           {
+            filename = "__angelsaddons-cab__/graphics/entity/cab/cab-shadow-11.png",
+            width_in_frames = 1,
+            height_in_frames = 4,
            }
           })
         }
@@ -396,7 +426,7 @@ data:extend(
   {
     type = "ammo",
     name = "angels-cab-deploy-charge",
-    icon = "__angelsaddons-cab__/graphics/icons/deploy.png",
+    icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
     flags = {"goes-to-main-inventory"},
     ammo_type =
@@ -432,7 +462,7 @@ data:extend(
   {
     type = "ammo",
     name = "angels-cab-undeploy-charge",
-    icon = "__angelsaddons-cab__/graphics/icons/undeploy.png",
+    icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
     flags = {"goes-to-main-inventory"},
     ammo_type =
