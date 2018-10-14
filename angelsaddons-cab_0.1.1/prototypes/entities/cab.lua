@@ -6,9 +6,13 @@ data:extend(
   {
     type = "equipment-grid",
     name = "angels-cab",
-    width = 24,
-    height = 12,
-    equipment_categories = {"angels-void"}        --"angels-energy", "angels-repair", "angels-heavy-defense", "angels-construction", "angels-movement"
+    width = 12,
+    height = 24,
+    equipment_categories = --"angels-void", "angels-cab", "angels-energy", "angels-repair", "angels-heavy-defense", "angels-construction", "angels-movement"
+    {
+      "angels-cab",
+      "angels-void"
+    }
   },
   {
     type = "item-with-entity-data",

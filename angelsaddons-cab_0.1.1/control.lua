@@ -9,6 +9,7 @@ script.on_event(defines.events.on_player_joined_game, function(event)
       player.insert("angels-cab")
       player.insert("angels-cab-deploy-charge")
       player.insert("angels-cab-undeploy-charge")
+      player.insert("angels-cab-energy-interface-vequip")
 
       player.insert("medium-electric-pole")
       player.insert("rocket-fuel")
@@ -19,6 +20,7 @@ end)
 
 script.on_init(function()
   if not global.vehicleData then global.vehicleData = {} end
+  global.vehicleData.version = 1.0
   global.vehicleData.onTickActive = false
   global.vehicleData.entityName = "angels-cab"
   global.vehicleData.positionIdentifier = "%u(%gx%g)"
@@ -47,7 +49,6 @@ script.on_event(defines.events.on_built_entity, function(event)
   if event.created_entity and
      event.created_entity.valid and
      event.created_entity.name == global.vehicleData.entityName then
-
   end
 end)
 ]]--

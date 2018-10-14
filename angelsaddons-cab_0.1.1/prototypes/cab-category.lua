@@ -10,12 +10,12 @@ end
 
 data:extend(
 {
+  --EQUIPMENT CATEGORY
   {
-    type = "item-subgroup",
-    name = "angels-cab",
-    group = "logistics",
-    order = "zc",
-  },
+    type = "equipment-category",
+    name = "angels-cab"
+    },
+  --AMMO CATEGORY
   {
     type = "ammo-category",
     name = "angels-cab-deploy",
@@ -23,5 +23,12 @@ data:extend(
   {
     type = "ammo-category",
     name = "angels-cab-undeploy",
+  },
+  --SUBGROUPS
+  {
+    type = "item-subgroup",
+    name = "angels-cab",
+    group = "logistics",
+    order = "zc",
   },
 })
