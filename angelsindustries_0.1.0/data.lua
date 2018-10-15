@@ -26,6 +26,8 @@ if angelsmods.industry.tech then
 	require("prototypes.buildings.angels-labs-logistic")
 	require("prototypes.buildings.angels-labs-processing")
 	require("prototypes.buildings.angels-labs-war")
+	
+	require("prototypes.buildings.angels-accelerator")
 
 	--RECIPES
 	require("prototypes.recipes.tech-science-packs-recipes")

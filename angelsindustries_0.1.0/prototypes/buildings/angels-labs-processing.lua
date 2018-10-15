@@ -8,7 +8,7 @@ data:extend(
 	icon_size = 32,
 	flags = {"goes-to-quickbar"},
     subgroup = "angels-labs-1",
-    order = "e[angels-processing-lab-1]",
+    order = "f",
     place_result = "angels-processing-lab-1",
     stack_size = 10,
   },
@@ -81,7 +81,7 @@ data:extend(
 	icon_size = 32,
 	flags = {"goes-to-quickbar"},
     subgroup = "angels-labs-2",
-    order = "e[angels-processing-lab-2]",
+    order = "f",
     place_result = "angels-processing-lab-2",
     stack_size = 10,
   },
@@ -128,6 +128,9 @@ data:extend(
       "angels-science-pack-blue",
       "angels-science-pack-yellow",
       "datacore-processing-2",
+      "datacore-processing-3",
+	  "datacore-processing-4",
+	  "datacore-processing-5",
     },
     module_specification =
     {

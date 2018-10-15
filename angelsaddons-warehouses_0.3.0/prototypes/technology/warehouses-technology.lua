@@ -54,6 +54,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-warehouse-requester"
       },
+  	  {
+        type = "unlock-recipe",
+        recipe = "angels-warehouse-buffer"
+      },
     },
     unit =
     {

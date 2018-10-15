@@ -215,7 +215,7 @@ data:extend(
 	icon_size = 32,
 	flags = {"goes-to-quickbar"},
     subgroup = "angels-warehouses",
-    order = "e[angels-warehouse-buffer]",
+    order = "f[angels-warehouse-buffer]",
     place_result = "angels-warehouse-buffer",
     stack_size = 10,
   },
