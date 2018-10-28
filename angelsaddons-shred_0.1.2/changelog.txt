@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 9. 8. 2018
+  Major Features:
+    - Added Inter decorations and offering
+    - Added Voske decorations and offering
+    - Added Eastborn decorations and offering
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 8. 8. 2018
+  Major Features:
+    - Added Shred offering to shoot into space
+    - Added Santa offering to shoot into space
+  Features:
+    - Enable/disable offerings (configurable)
+    - Auto placement of the shred walk at spawn point (configurable)
+    - Research to unlock the decorations (configurable)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0 - First public release
+Date: 18. 7. 2018
+  Major Features:
+    - Added Shred decoration (vertical, flat, walk)
+    - Added Santa decoration (vertical)

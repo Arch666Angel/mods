@@ -1,99 +1,50 @@
-data:extend(
-{
+
+if settings.startup["deco-shred-create-tech"].value then
+
+  data:extend({
     {
-    type = "technology",
-    name = "ore-silos",
-    icon = "__angelsaddons-oresilos__/graphics/technology/silo-tech.png",
-	icon_size = 128,
-	prerequisites =
-    {
-	"steel-processing",
-    },
-    effects =
-    {
-	  {
-        type = "unlock-recipe",
-        recipe = "silo"
+      type = "technology",
+      name = "deco-shred",
+      icon = data.raw["lamp"]["shred-start"].picture_on.filename,
+      icon_size = data.raw["lamp"]["shred-start"].picture_on.width,
+
+      prerequisites = {
+        "optics",
+        "steel-processing",
       },
-	  {
-        type = "unlock-recipe",
-        recipe = "silo-ore1"
-      },
-  	  {
-        type = "unlock-recipe",
-        recipe = "silo-ore2"
-      },
-  	  {
-        type = "unlock-recipe",
-        recipe = "silo-ore3"
-      },
-	  {
-        type = "unlock-recipe",
-        recipe = "silo-ore4"
-      },
-  	  {
-        type = "unlock-recipe",
-        recipe = "silo-ore5"
-      },
-   	  {
-        type = "unlock-recipe",
-        recipe = "silo-ore6"
-      },
-   	  {
-        type = "unlock-recipe",
-        recipe = "silo-coal"
+
+      effects = {},
+
+      unit =
+      {
+        count = 2 * data.raw.technology["steel-processing"].unit.count,
+        ingredients = util.table.deepcopy(data.raw.technology["steel-processing"].unit.ingredients),
+        time = data.raw.technology["steel-processing"].unit.time,
       },
     },
-    unit =
-    {
-      count = 30,
-      ingredients = {
-	  {"science-pack-1", 1},
-	  },
-      time = 15
-    },
-    order = "c-a"
-    },
-    {
-    type = "technology",
-    name = "logistic-silos",
-    icon = "__angelsaddons-oresilos__/graphics/technology/logistic-silo-tech.png",
-	icon_size = 128,
-	prerequisites =
-    {
-	"logistic-system",
-	"ore-silos",
-    },
-    effects =
-    {
-	  {
-        type = "unlock-recipe",
-        recipe = "silo-passive-provider"
-      },
-  	  {
-        type = "unlock-recipe",
-        recipe = "silo-active-provider"
-      },
-  	  {
-        type = "unlock-recipe",
-        recipe = "silo-requester"
-      },
-	  {
-        type = "unlock-recipe",
-        recipe = "silo-storage"
-      },
-    },
-    unit =
-    {
-      count = 50,
-      ingredients = {
-	  {"science-pack-1", 1},
-	  {"science-pack-2", 1},
-	  {"science-pack-3", 1},
-	  },
-      time = 15
-    },
-    order = "c-a"
-    },
-}
-)
+  })
+
+  for _,decoName in pairs({
+    "shred",
+    "santa",
+    "inter",
+    "voske",
+    "east",
+  }) do
+
+    for _,recipeName in pairs({
+      "deco-"..decoName.."-1",
+      "deco-"..decoName.."-2",
+      decoName.."-start",
+    }) do
+
+      if data.raw.recipe[recipeName] then
+
+        data.raw.recipe[recipeName].enabled = false
+        table.insert(data.raw.technology["deco-shred"].effects, {type = "unlock-recipe", recipe = recipeName})
+
+      end
+    end
+  end
+
+end
