@@ -8,10 +8,16 @@ data:extend(
     name = "angels-cab",
     width = 12,
     height = 24,
-    equipment_categories = --"angels-void", "angels-cab", "angels-energy", "angels-repair", "angels-heavy-defense", "angels-construction", "angels-movement"
+    equipment_categories =
     {
+      --"armor",
+      "angels-void",
       "angels-cab",
-      "angels-void"
+      --"angels-energy",
+      --"angels-repair",
+      --"angels-heavy-defense",
+      --"angels-construction",
+      --"angels-movement"
     }
   },
   {
@@ -84,7 +90,7 @@ data:extend(
     name = "angels-cab",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
-    flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
+    flags = {"pushable", "placeable-player", "player-creation", "placeable-off-grid"},
     minable = {mining_time = 1, result = "angels-cab"},
     max_health = 5000,
     corpse = "medium-remnants",
@@ -92,7 +98,7 @@ data:extend(
     immune_to_tree_impacts = true,
     energy_per_hit_point = 0.1,
     rotation_speed = 0.0035,
-    tank_driving = true,
+    tank_driving = false,
     weight = 20000,
     inventory_size = 768,
     guns = {"angels-cab-deploy", "angels-cab-undeploy"},
@@ -169,7 +175,7 @@ data:extend(
           width = 200,
           height = 200
         },
-        shift = {-1, -14},
+        shift = {-1.25, -15.15},
         size = 2,
         intensity = 0.6
       },
@@ -184,7 +190,7 @@ data:extend(
           width = 200,
           height = 200
         },
-        shift = {1, -14},
+        shift = {1.25, -15.15},
         size = 2,
         intensity = 0.6
       }
@@ -722,7 +728,7 @@ data:extend(
     {
       type = "electric",
       buffer_capacity = "100MJ",
-      usage_priority = "primary-input",
+      usage_priority = "terciary",
       input_flow_limit = "0kW",
       output_flow_limit = "500kW",
       drain = "0kW",
