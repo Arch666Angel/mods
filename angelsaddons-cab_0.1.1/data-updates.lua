@@ -8,3 +8,5 @@ if angelsmods.industry then
   OV.remove_prereq("angels-cab", "automobilism")
   OV.add_prereq("angels-cab", "angels-crawler")
 end
+
+require"prototypes.entities.cab-updates"

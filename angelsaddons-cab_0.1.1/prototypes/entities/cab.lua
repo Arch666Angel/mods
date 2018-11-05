@@ -13,7 +13,7 @@ data:extend(
       --"armor",
       "angels-void",
       "angels-cab",
-      --"angels-energy",
+      "angels-energy",
       --"angels-repair",
       --"angels-heavy-defense",
       --"angels-construction",
@@ -465,7 +465,7 @@ data:extend(
         }
       }
     },
-    subgroup = "ammo",
+    subgroup = "angels-cab",
     order = "d[cannon-shell]-a[basic]",
     stack_size = 200
   },
@@ -501,7 +501,7 @@ data:extend(
         }
       }
     },
-    subgroup = "ammo",
+    subgroup = "angels-cab",
     order = "d[cannon-shell]-a[basic]",
     stack_size = 200
   },
