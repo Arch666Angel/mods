@@ -49,6 +49,7 @@ else if angelsmods.trigger.enableacids then
       { name = "angelsore2-chunk", results = {{ name = "water-greenyellow-waste", type = "fluid", amount = "water-yellow-waste" }} },
       { name = "angelsore4-chunk", results = {{ name = "water-green-waste", type = "fluid", amount = "water-yellow-waste" }} },
       { name = "angelsore5-chunk", results = {{ name = "water-red-waste", type = "fluid", amount = "water-yellow-waste" }} },
+      { name = "angelsore6-chunk", results = {{ name = "water-red-waste", type = "fluid", amount = "water-yellow-waste" }} },
       { name = "greenyellow-waste-water-purification", results = {{ "fluorite-ore" }} },
    })
 	else
