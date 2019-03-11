@@ -18,7 +18,7 @@ for _,decoName in pairs({
       localised_name = {"decoration.start", {"names.shred"}},
       icon = "__angelsaddons-shred__/graphics/icons/"..buildingName..".png",
       icon_size = 32,
-      flags = {"goes-to-quickbar"},
+      --flags = {},
       subgroup = "deco-shred",
       order = "z"..orderstring[decoName].."-a",
       place_result = buildingName,

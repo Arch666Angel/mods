@@ -184,6 +184,8 @@ return {
   end,
 
   destroyed = function(entity)
+    if not global.vehicleData.deployedCabs then return false end
+
     -- get info out of the entity
     local surfaceIndex = entity.surface.index
     local position = {

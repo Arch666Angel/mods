@@ -25,7 +25,6 @@ data:extend(
     name = "angels-cab",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
-    flags = {"goes-to-quickbar"},
     subgroup = "angels-cab",
     order = "a",
     place_result = "angels-cab",
@@ -36,7 +35,7 @@ data:extend(
     name = "angels-cab-deploy",
     icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "z",
     attack_parameters =
@@ -63,7 +62,7 @@ data:extend(
     name = "angels-cab-undeploy",
     icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "z",
     attack_parameters =
@@ -90,7 +89,7 @@ data:extend(
     name = "angels-cab",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
-    flags = {"pushable", "placeable-player", "player-creation", "placeable-off-grid"},
+    flags = {"placeable-player", "player-creation", "placeable-off-grid"},
     minable = {mining_time = 1, result = "angels-cab"},
     max_health = 5000,
     corpse = "medium-remnants",
@@ -438,7 +437,6 @@ data:extend(
     name = "angels-cab-deploy-charge",
     icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory"},
     ammo_type =
     {
       category = "angels-cab-deploy",
@@ -474,7 +472,6 @@ data:extend(
     name = "angels-cab-undeploy-charge",
     icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory"},
     ammo_type =
     {
       category = "angels-cab-undeploy",
@@ -728,7 +725,7 @@ data:extend(
     {
       type = "electric",
       buffer_capacity = "100MJ",
-      usage_priority = "terciary",
+      usage_priority = "tertiary",
       input_flow_limit = "0kW",
       output_flow_limit = "500kW",
       drain = "0kW",

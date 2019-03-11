@@ -7,7 +7,6 @@ data:extend(
     icon = "__angelsaddons-cab__/graphics/icons/cab-energy-interface-ico.png",
     icon_size = 32,
     placed_as_equipment_result = "angels-cab-energy-interface-vequip",
-    flags = {"goes-to-main-inventory"},
     subgroup = "angels-cab",
     order = "e[angels-cab-energy-interface-vequip]-a",
     stack_size = 50,
