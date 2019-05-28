@@ -1,6 +1,6 @@
 local cab = require 'src.cab'
 
---[[-- DEBUG ONLY --
+--[ [-- DEBUG ONLY --
 script.on_event(defines.events.on_player_joined_game, function(event)
   local player_index = event.player_index
   if player_index then
@@ -83,3 +83,22 @@ script.on_event(defines.events.on_built_entity, function(event)
   end
 end)
 ]]--
+
+script.on_event(defines.events.on_player_removed_equipment, function(event)
+  if event.equipment == "angels-cab-energy-interface-vequip" then
+    local player = game.get_player(event.player_index)
+    local openedEntity = player.opened
+    if openedEntity and openedEntity.name == "angels-cab" and cab.is_deployed(openedEntity) then
+      -- put the item back
+      for _=1,event.count do
+        event.grid.put{name=event.equipment}
+      end
+      -- remove the item from the player
+      if player.clean_cursor() then
+        player.get_main_inventory().remove{name=event.equipment, count=event.count}
+      end
+      -- inform the player
+      player.print{"angels-cab-messages.deployed-noVequipRemoval"}
+    end
+  end
+end)

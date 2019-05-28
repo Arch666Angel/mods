@@ -1,7 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 28. 05. 2019
+  Bugfixes:
+    - Fixed you could take the energy interface out of the vehicle while being deployed
+    - Fixed vehicle couldn't be moved when unsuccessfully deployed
+    - Fixed crash when angels industry is not present ("angels-energy" doesn't exist)
+---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 11. 03. 2019
-  Fixed bug when C.A.B is destroyed
+  Bugfixes:
+    - Fixed bug when C.A.B is destroyed
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1 - Initial release
 Date: 03. 03. 2019

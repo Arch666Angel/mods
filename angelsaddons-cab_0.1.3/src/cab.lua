@@ -30,9 +30,9 @@ return {
         cab.get_passenger(),
       } do
         if entity.is_player() then -- player in godmode
-          entity.print{localisedMessage}
-        elseif entity.type == "player" and entity.player then -- player in character
-          entity.player.print{localisedMessage}
+          entity.print(localisedMessage)
+        elseif entity.type == "character" and entity.player then -- player in character
+          entity.player.print(localisedMessage)
         end
       end
 
@@ -48,21 +48,19 @@ return {
     local identifier = string.format(global.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
     if not global.vehicleData.deployedCabs then global.vehicleData.deployedCabs = {} end
     if global.vehicleData.deployedCabs[identifier] then
-      return cannotDeploy(deployedCab["angels-cab"], "angels-cab-messages.deploy-alreadyDeployed")
+      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.deploy-alreadyDeployed"})
     end
 
     -- check if the vehicle is moving
     if math.abs(deployedCab["angels-cab"].speed) >= 0.1/216 then
-      return cannotDeploy(deployedCab["angels-cab"], "angels-cab-messages.deploy-driveSpeed")
+      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.deploy-driveSpeed"})
     else
       deployedCab["angels-cab"].speed = 0
-      deployedCab["angels-cab"].effectivity_modifier = 0
-      deployedCab["angels-cab"].consumption_modifier = 0
     end
 
     -- check if the vehicle has at least one interface equipment
     if not deployedCab["angels-cab"].grid.get_contents()["angels-cab-energy-interface-vequip"] then
-      return cannotDeploy(deployedCab["angels-cab"], "angels-cab-messages.deploy-noVequip")
+      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.deploy-noVequip", {"equipment-name.angels-cab-energy-interface-vequip"}})
     end
 
     -- deploy the vehicle
@@ -78,6 +76,8 @@ return {
       }
     end
     deployedCab["angels-cab"].minable = false
+    deployedCab["angels-cab"].effectivity_modifier = 0
+    deployedCab["angels-cab"].consumption_modifier = 0
     global.vehicleData.deployedCabs[identifier] = deployedCab
     return true
   end,
@@ -147,6 +147,17 @@ return {
     deployedCab["angels-cab"].consumption_modifier = 1
     global.vehicleData.deployedCabs[identifier] = nil
     return true
+  end,
+
+  is_deployed = function(entity)
+    if not global.vehicleData.deployedCabs then return false end
+
+    local identifier = string.format(global.vehicleData.positionIdentifier,
+                                     entity.surface.index                 ,
+                                     math.floor(entity.position.y) + .5   ,
+                                     math.floor(entity.position.x) + .5   )
+                                     
+    return (global.vehicleData.deployedCabs[identifier] and true or false)
   end,
 
   tick = function()

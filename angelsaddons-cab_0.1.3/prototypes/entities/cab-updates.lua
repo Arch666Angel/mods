@@ -1,8 +1,15 @@
 if not mods["angelsindustries"] then
   -- remove none existing angels stuff
-  for index, equipmentCategory in pairs(data.raw["equipment-grid"]["angels-cab"].equipment_categories) do
+  local cabEquipmentCategories = data.raw["equipment-grid"]["angels-cab"].equipment_categories
+  local equipmentCategories = util.table.deepcopy(cabEquipmentCategories)
+  for _,equipmentCategory in pairs(equipmentCategories) do
     if not data.raw["equipment-category"][equipmentCategory] then
-      table.remove(data.raw["equipment-grid"]["angels-cab"].equipment_categories, index)
+      log(string.format("removing %q", equipmentCategory))
+      for index, category in pairs(cabEquipmentCategories) do
+        if category == equipmentCategory then
+          table.remove(cabEquipmentCategories, index)
+        end
+      end
     end
   end
 
