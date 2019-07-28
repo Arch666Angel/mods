@@ -1,3 +1,71 @@
+-------------------------------------------------------------------------------
+-- convert settings to usable data
+-------------------------------------------------------------------------------
+local energyInterfaceSettings = require("prototypes/settings").equipment["energy-interface"]
+local energyInterfaceTransferRates = {}
+for tier,rate in pairs(energyInterfaceSettings.transferRates) do
+  energyInterfaceTransferRates[string.format(energyInterfaceSettings.name, "-"..tier)] = rate
+end
+log(serpent.block(energyInterfaceTransferRates))
+
+-------------------------------------------------------------------------------
+-- internal cab functions                                                    --
+-------------------------------------------------------------------------------
+local tick_getEnergyInterface = function(deployedCabData)
+  for _,interfaceName in pairs{
+    "angels-cab-energy-interface-mk1"
+  } do
+    if deployedCabData[interfaceName] then
+      return interfaceName, deployedCabData[interfaceName]
+    end
+  end
+  return nil, nil
+end
+
+local tick_updateDeployedCab = function(deployedCabData)
+  --log("------------------------------------------------------------------------------------------")
+  local energyInterfaceName, energyInterface = tick_getEnergyInterface(deployedCabData)
+  if energyInterface and energyInterface.valid then
+    --log("Found a valid energy interface entity!")
+    --log(string.format("    Interface name: %q", energyInterfaceName))
+    --log(string.format("    Interface current energy: %i J", energyInterface.energy))
+    local energyRequired = energyInterfaceTransferRates[energyInterfaceName] -- max energy here (500 kJ)
+    --log(string.format("    Interface max energy    : %i J", energyRequired))
+
+    if energyInterface.energy < energyRequired then -- needs more energy
+      --log(string.format("        Interface requires more energy! Missing %i J (%i W)", energyRequired - energyInterface.energy, (energyRequired - energyInterface.energy)*60))
+      local angelsCab = deployedCabData["angels-cab"]
+      if angelsCab and angelsCab.valid and angelsCab.grid.get_contents()[energyInterfaceName] then
+        --log("        There are modules to recharge this interface...")
+        local energyRequired = energyRequired - energyInterface.energy -- will be a positive number (and never 0)
+
+        for _,equipment in pairs(angelsCab.grid.equipment) do
+          if equipment.name == energyInterfaceName then -- found the equipment grid module!
+
+            --log("        Found a valid module to recharge this interface!")
+            if equipment.energy >= energyRequired then
+              equipment.energy = equipment.energy - energyRequired
+              energyInterface.energy = energyInterface.energy + energyRequired
+            else
+              energyInterface.energy = energyInterface.energy + equipment.energy
+              energyRequired = energyRequired - equipment.energy
+              equipment.energy = 0
+            end
+            --log(string.format("    Interface current energy: %i J", energyInterface.energy))
+            return
+
+          end
+        end -- end of finding the equipment grid modules
+
+      end
+    end -- end of requiring more energy
+
+  end
+end
+
+-------------------------------------------------------------------------------
+-- external cab functions, used in control.lua                               --
+-------------------------------------------------------------------------------
 return {
 
   deploy = function(entity)
@@ -59,14 +127,14 @@ return {
     end
 
     -- check if the vehicle has at least one interface equipment
-    if not deployedCab["angels-cab"].grid.get_contents()["angels-cab-energy-interface-vequip"] then
-      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.deploy-noVequip", {"equipment-name.angels-cab-energy-interface-vequip"}})
+    if not deployedCab["angels-cab"].grid.get_contents()["angels-cab-energy-interface-mk1"] then
+      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.noEnergyInterface", {"equipment-name.angels-cab-energy-interface", "MK1"}})
     end
 
     -- deploy the vehicle
     local force = deployedCab["angels-cab"].force
     for _, entityName in pairs{
-      "angels-cab-energy-interface",
+      "angels-cab-energy-interface-mk1",
       "angels-cab-electric-pole",
     } do
       deployedCab[entityName] = surface.create_entity{
@@ -112,7 +180,7 @@ return {
       } do
         if entity.is_player() then -- player in godmode
           entity.print{localisedMessage}
-        elseif entity.type == "player" and entity.player then -- player in character
+        elseif entity.type == "character" and entity.player then -- player in character
           entity.player.print{localisedMessage}
         end
       end
@@ -161,36 +229,8 @@ return {
   end,
 
   tick = function()
-    --game.print("tick tock")
     for _,deployedCab in pairs(global.vehicleData.deployedCabs) do
-      local energyInterface = deployedCab["angels-cab-energy-interface"]
-      if energyInterface and energyInterface.valid then
-
-        local energyRequired = 100000000-1 -- max energy here (100 MJ)
-        if energyInterface.energy < energyRequired then -- needs more energy
-          local angelsCab = deployedCab["angels-cab"]
-          if angelsCab and angelsCab.valid and angelsCab.grid.get_contents()["angels-cab-energy-interface-vequip"] then
-
-            local energyRequired = energyRequired - energyInterface.energy -- will be a positive number
-            for _,equipment in ipairs(angelsCab.grid.equipment) do
-              if equipment.name == "angels-cab-energy-interface-vequip" then
-                print(energyInterface.energy)
-                if equipment.energy >= energyRequired then
-                  equipment.energy = equipment.energy - energyRequired
-                  energyInterface.energy = energyInterface.energy + energyRequired
-                  break
-                else
-                  energyInterface.energy = energyInterface.energy + equipment.energy
-                  energyRequired = energyRequired - equipment.energy
-                  equipment.energy = 0
-                end
-              end
-            end
-
-          end
-        end
-
-      end
+      tick_updateDeployedCab(deployedCab)
     end
   end,
 
@@ -210,7 +250,7 @@ return {
 
     -- destroy the other entities
     for _, entityName in pairs{
-      "angels-cab-energy-interface",
+      "angels-cab-energy-interface-mk1",
       "angels-cab-electric-pole",
     } do
       if deployedCab[entityName] and deployedCab[entityName].valid then

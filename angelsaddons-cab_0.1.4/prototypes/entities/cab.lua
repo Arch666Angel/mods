@@ -25,8 +25,8 @@ data:extend(
     name = "angels-cab",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
-    subgroup = "angels-cab",
-    order = "a",
+    subgroup = mods["angelsindustries"] and "angels-vehicles" or "angels-cab",
+    order = mods["angelsindustries"] and "c[angels-cab]" or "a",
     place_result = "angels-cab",
     stack_size = 1
   },
@@ -671,7 +671,7 @@ data:extend(
     --selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     drawing_box = {{-0.5, -2.8}, {0.5, 0.5}},
     maximum_wire_distance = .25,
-    supply_area_distance = 5.5,
+    supply_area_distance = require("prototypes/settings").equipment["energy-interface"].supplyArea / 2,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     pictures =
     {
@@ -706,43 +706,6 @@ data:extend(
       height = 12,
       priority = "extra-high-no-scale"
     }
-  },
-  {
-    type = "electric-energy-interface",
-    name = "angels-cab-energy-interface",
-    icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
-    icon_size = 32,
-    flags = {"not-blueprintable", "not-deconstructable", "not-on-map", "hide-alt-info"},
-    enable_gui = false,
-    allow_copy_paste = false,
-    --minable = {hardness = 0.2, mining_time = 1, result = energyInterfaceItem.name},
-    max_health = 50,
-    corpse = "small-remnants",
-    collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
-    collision_mask = {},
-    --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
-    energy_source =
-    {
-      type = "electric",
-      buffer_capacity = "100MJ",
-      usage_priority = "tertiary",
-      input_flow_limit = "0kW",
-      output_flow_limit = "500kW",
-      drain = "0kW",
-
-      render_no_network_icon = false,
-      render_no_power_icon = false,
-    },
-    energy_production = "0kW",
-    energy_consumption = "0kW",
-    picture =
-    {
-      filename = "__core__/graphics/empty.png",
-      priority = "low",
-      width = 1,
-      height = 1,
-    },
-    working_sound = nil,
   },
 }
 )

@@ -28,7 +28,7 @@ data:extend(
   {
     type = "item-subgroup",
     name = "angels-cab",
-    group = "logistics",
-    order = "zc",
+    group = mods["angelsindustries"] and "angels-enhancement" or "logistics",
+    order = mods["angelsindustries"] and "h" or "zc",
   },
 })

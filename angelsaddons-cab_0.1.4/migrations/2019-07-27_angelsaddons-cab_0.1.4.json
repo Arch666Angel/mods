@@ -1,0 +1,18 @@
+{
+  "item":
+  [
+    [ "angels-cab-energy-interface-vequip", "angels-cab-energy-interface-mk1" ]
+  ],
+  "recipe":
+  [
+    [ "angels-cab-energy-interface-vequip", "angels-cab-energy-interface-mk1" ]
+  ],
+  "entity":
+  [
+    [ "angels-cab-energy-interface", "angels-cab-energy-interface-mk1" ]
+  ],
+  "equipment":
+  [
+    [ "angels-cab-energy-interface-vequip", "angels-cab-energy-interface-mk1" ]
+  ]
+}

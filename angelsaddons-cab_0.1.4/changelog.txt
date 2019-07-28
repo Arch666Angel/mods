@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 28. 07. 2019
+  Features:
+    - Energy transfer ports show how much energy they can transfer and the supply area
+    - Added settings to configure transfer ports transfer rate
+  Changes:
+    - C.A.B recipe location changed if playing with angelsindustries
+    - C.A.B energy interface port now has a detailed description
+    - The C.A.B now only allows one energy interface port module (of each tier)
+  Bugfixes:
+    - Fixed that the transfer port had an extreme big buffer
+    - Fixed that some informative messages wouldn't be printed to the player
+  Modding:
+    - Changed prototype names of the energy interface (item, recipe, vehicle equipment and entity)
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 28. 05. 2019
   Bugfixes:

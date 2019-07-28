@@ -11,6 +11,7 @@ angelsmods.functions.RB.build({
       {"construction-frame-3", 5},
       {"construction-components", 20},
       {"circuit-orange-loaded", 2},
+      mods["angelsindustries"] and {"angels-crawler", 1} or nil,
     },
     result = "angels-cab"
   },
