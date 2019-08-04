@@ -1,0 +1,251 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.8.10
+Date: 15.07.2019
+  Bugfixes:
+    - added setting to leave uranium ore requiring acid to main even if require acid setting is off
+  Changes:
+	- added pymods infinite ores
+	- readded yuoki mods infinite ores
+---------------------------------------------------------------------------------------------------
+Version: 0.8.9
+Date: 11.06.2019
+  Bugfixes:
+    - fix to resource generator functions
+---------------------------------------------------------------------------------------------------
+Version: 0.8.8
+Date: 11.06.2019
+  Bugfixes:
+    - fixed missing {} brackets in icons when attempting to generate vanilla resources
+---------------------------------------------------------------------------------------------------
+Version: 0.8.7
+Date: 02.06.2019
+  Bugfixes:
+    - fix to infinites ores not being generated in some cases
+---------------------------------------------------------------------------------------------------
+Version: 0.8.6
+Date: 31.05.2019
+  Bugfixes:
+    - fix to mining acid and infinites
+---------------------------------------------------------------------------------------------------
+Version: 0.8.5
+Date: 31.05.2019
+  Changes:
+    - adjustments to resource generator in cooperation with bobbbingabout
+---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: 27.03.2019
+  Bugfixes:
+    - resource generator: added another get method for icons
+    - fixed override for petrochem acids
+---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+Date: 26.03.2019
+  Bugfixes:
+    - fixed some default value set wrong for the resource generator
+---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 25.03.2019
+  Bugfixes:
+    - fixed a bug in the resource system
+---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+  Changes:
+    - new resource system
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+  Changes:
+    - updated factorio version number to 0.17
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+  Changes:
+    - moved regular ore generation to the dependent mods, infinite ore will only generate infinites and "special mode" ores
+---------------------------------------------------------------------------------------------------
+Version: 0.6.11
+  Changes:
+    - adjusted some values for fluid resources that should increase yield a bit
+---------------------------------------------------------------------------------------------------
+Version: 0.6.10
+  Changes:
+    - improvements to vanilla spawning behaviour
+---------------------------------------------------------------------------------------------------
+Version: 0.6.9
+  Changes:
+    - disabled uranium spawning for refining + bobs
+  Bugfixes:
+    - added missing localization key
+---------------------------------------------------------------------------------------------------
+Version: 0.6.8
+  Changes:
+    - added options for fluid requirement to infinite ores
+  Bugfixes:
+    - fixed some internal logic issues due to the shift to using mod options
+---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+  Bugfixes:
+    - fixed yields for gas wells and fissures
+---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+  Bugfixes:
+    - fixed an error
+---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+  Changes:
+    - added and converted config options to mod options menu
+---------------------------------------------------------------------------------------------------
+Version: 0.6.2
+  Bugfixes:
+    - fixed an error
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+  Bugfixes:
+    - added fix for 0.15
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+  Changes:
+    - update for 0.15
+    - changed angels-ore to use new base game ore sheets
+    - dropped support for nucular because of conflicts with the new base game uranium ore
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+  Bugfixes:
+    - I broke something
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+  Bugfixes:
+    - fixed non RSO coal spawning
+    - fixed trigger mod not working
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+  Changes:
+    - gfx update
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+  Changes:
+    - removed RSO trigger now autodetects
+    - moved some internal stuff around
+---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+  Changes:
+    - added auto detection for RSO
+  Bugfixes:
+    - fixed spawning of infinite ores for non RSO variants
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+  Changes:
+    - changed rubyte coloring
+  Bugfixes:
+    - fixed a conflict with nucular and reactor mod
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+  Changes:
+    - added dynamic localization for the description of the angels ores
+  Bugfixes:
+    - fixed vanilla spawning of angels infinite ores
+    - fixed bob gem-ore hardness and mining time
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+  Bugfixes:
+    - fixed an error with the change yield option for liquid resources should work as intended now
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+  Bugfixes:
+    - fixed mining hardness and time for infinite version of saphirite and jivolite to match their finite counterparts
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+  Changes:
+    - update for trigger mods
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Changes:
+    - update to 0.14 game version
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+  Bugfixes:
+    - fixed a typo in the config
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+  Changes:
+    - added lower yield option to all infinite ores
+  Bugfixes:
+    - fixed a typo
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+  Changes:
+    - added config option to change minimum oil and gas yield
+    - added config option to change minimum fissure yield
+  Bugfixes:
+    - fixed ore spawning for vanilla
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+  Bugfixes:
+    - fixed logic error with dark matter replicator
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+  Bugfixes:
+    - fixed base ore check
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+  Changes:
+    - added support for Dark Matter Replicator mod
+    - added option to enable a loweryield mode in the config: loweryield will add a probability to the ore output of the infinite ores, so that they will produce less ore overall and even less with lower yields
+    - added modifier for loweryield to the config, changes the probability with which ores are produced
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Changes:
+    - changed resource configs for the angels ores to work without RSO (not recommended)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+  Changes:
+    - updated for 0.13
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+  Changes:
+    - changed spawning for angelsrefining vanilla mode
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+  Changes:
+    - changed colours for UP ores and ore patches as well as icons for uraninite and fluorite
+    - added support for angelspetrochem mod
+    - added config option to change the minimum yield for the infinite ores (default 20%)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+  Changes:
+    - changed angelsore mode to only remove iron/copper/stone autoplace and not the entire entity to fix an error with landfill
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+  Changes:
+    - angels ores should now spawn in starting area without any resource spawner mods
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+  Bugfixes:
+    - fixed an error with the UP mod support in vanilla and non RSO-mode
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+  Bugfixes:
+    - fixed a logic check error
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+  Changes:
+    - changed icon for uranium-ore from nucular mod
+    - added support for uranium ore to angelsinfiniteores and angelsrefining
+  Bugfixes:
+    - updated the fissure gfx to have variations
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+  Bugfixes:
+    - fixed an error for bobs sulfur resource entity (wrong path to ore sheet)
+    - fixed a logic error for detecting triggers
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+  Changes:
+    - lowered infinite ore yield for modded games, should be 20% now (to counter better drills in bobs/yuokis)
+    - change the mining time and hardness for some angelsores to higher values
+    - Added support for nucular mod
+    - changed file structure for vanilla ores
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+  Changes:
+    - Added support for Yuoki Industries mod
+    - Added support for Uranium Power mod
+    - changed versioning
+    - changed mod structure

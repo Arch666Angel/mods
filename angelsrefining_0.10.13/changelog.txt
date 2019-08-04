@@ -1,0 +1,766 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.10.13
+Date: 11.06.2019
+  Changes:
+    - added new ore icons and gfx
+  Bugfixes:
+    - fixed an error with the resource generator functions
+---------------------------------------------------------------------------------------------------
+Version: 0.10.12
+Date: 02.02.2019
+  Changes:
+    - changes to several functions
+  Bugfixes:
+    - fixed barreling modification function
+---------------------------------------------------------------------------------------------------
+Version: 0.10.11
+Date: 31.05.2019
+  Bugfixes:
+    - fix to mining acid and infinites
+---------------------------------------------------------------------------------------------------
+Version: 0.10.10
+Date: 31.05.2019
+  Changes:
+    - adjustments to resource generator in cooperation with bobbbingabout
+  Bugfixes:
+    - fixed wrong values for ferrous/cupric powder sorting recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.10.9
+Date: 26.04.2019
+  Changes:
+    - additional resource GFX
+    - addition to barreling disabling function
+    - switched catalyst recipes to crystallizer
+    - adjusted ferrous and cupric chains
+---------------------------------------------------------------------------------------------------
+Version: 0.10.8
+Date: 27.03.2019
+  Bugfixes:
+    - resource generator: added another get method for icons
+    - fixed override for petrochem acids
+---------------------------------------------------------------------------------------------------
+Version: 0.10.7
+Date: 26.03.2019
+  Bugfixes:
+    - fixed some default value set wrong for the resource generator
+---------------------------------------------------------------------------------------------------
+Version: 0.10.6
+Date: 25.03.2019
+  Bugfixes:
+    - fixed a bug in the resource system
+---------------------------------------------------------------------------------------------------
+Version: 0.10.5
+Date: 24.03.2019
+  Changes:
+    - another round of additions and tweaks to the resource system
+---------------------------------------------------------------------------------------------------
+Version: 0.10.4
+Date: 16.03.2019
+  Changes:
+    - rewrite of the resource system
+---------------------------------------------------------------------------------------------------
+Version: 0.10.3
+Date: N/A
+  Changes:
+    - added a function and corrected an override
+  Bugfixes:
+    - fixed a bug in a function
+---------------------------------------------------------------------------------------------------
+Version: 0.10.2
+Date: N/A
+  Bugfixes:
+    - fixed a bug with barreling recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.10.1
+Date: N/A
+  Bugfixes:
+    - fixed a bug with bobmods mode
+---------------------------------------------------------------------------------------------------
+Version: 0.10.0
+Date: N/A
+  Changes:
+    - update to 0.17
+---------------------------------------------------------------------------------------------------
+Version: 0.9.15
+Date: N/A
+  Bugfixes:
+    - added additional checks for special bob options
+    - added missing productivity for a recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.9.14
+Date: N/A
+  Changes:
+    - added internal code for ober-overhaul-mod
+  Bugfixes:
+    - changed stack override function to only work if stacksize is less then the desired size
+---------------------------------------------------------------------------------------------------
+Version: 0.9.13
+Date: N/A
+  Changes:
+    - increased sea-floor-pump collision_box
+    - added option to show voiding recipes in the crafting menu
+    - added additional functions
+  Bugfixes:
+    - fixed geode-washing recipe not producing the amounts it should've been
+---------------------------------------------------------------------------------------------------
+Version: 0.9.12
+Date: N/A
+  Changes:
+    - added descriptions and localizations
+---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: N/A
+  Changes:
+    - increased waste water output from filtering (coal 30 -> 40, ceramic 10 -> 20)
+    - decreased iron output for sorting jivolite chunks in vanilla mode
+  Bugfixes:
+    - fixed geode-washing recipe not producing the amounts it should've been
+    - fixed missing override for map-gen-presets
+---------------------------------------------------------------------------------------------------
+Version: 0.9.10
+Date: N/A
+  Changes:
+    - buffed washing recipe chain
+    - added description for Seafloor Pump
+  Bugfixes:
+    - fixed Seafloor Pump being placeable everywhere
+---------------------------------------------------------------------------------------------------
+Version: 0.9.9
+Date: N/A
+  Changes:
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformating them)
+    - adjusted geodes to be in the same order in the item as well as in the crafting menu
+  Bugfixes:
+    - fixed missing output for leaching plant
+---------------------------------------------------------------------------------------------------
+Version: 0.9.8
+Date: N/A
+  Changes:
+    - shifted water-treatment techs
+---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: N/A
+  Changes:
+    - added localization strings
+---------------------------------------------------------------------------------------------------
+Version: 0.9.6
+Date: N/A
+  Bugfixes:
+    - fixed functions
+---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: N/A
+  Bugfixes:
+    - building recipe fixes
+  Changes:
+    - switched ferrous and cupric raw ores
+---------------------------------------------------------------------------------------------------
+Version: 0.9.4
+Date: N/A
+  Bugfixes:
+    - building recipe fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.9.3
+Date: N/A
+  Bugfixes:
+    - building recipe fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: N/A
+  Bugfixes:
+    - building recipe fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: N/A
+  Bugfixes:
+    - building recipe fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: N/A
+  Changes:
+    - update to 0.16
+    - added cupric and ferrous production lines
+    - added electrowhinning cell
+    - added ore pulverizer
+    - added hybrid catalyst
+    - changed focused production recipes to always require a catalyst
+    - changed geodes processing lines to produce crystal dust
+---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+Date: N/A
+  Bugfixes:
+    - fixed expensive mixed sorting recipe requiring only 4 chunks as base
+  Changes:
+    - added crystal dust to geode processing
+    - added crystal dust to slurry recipe
+    - removed nodules and it's processing chains
+    - replaced nodules with geodes from washing
+    - buffed washing chain by 50%
+    - added iron focused refining chain
+    - added copper focused refining chain
+    - added catalyst to all focused ore sorting recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: N/A
+  Changes:
+    - moved basic ore generation inside the mod
+    - added optional dependency to bobsrevamp to fix a loading issue
+    - removed nodules and it's processing chains
+---------------------------------------------------------------------------------------------------
+Version: 0.7.26
+Date: N/A
+  Bugfixes:
+    - fixed an error with curshed smelting recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.7.25
+Date: N/A
+  Changes:
+    - re-enabled barreling for lithia water
+    - changed expensive plates to 5:1
+    - script update
+---------------------------------------------------------------------------------------------------
+Version: 0.7.24
+Date: N/A
+  Bugfixes:
+    - fixed wrong values for sorting recipes for bob
+---------------------------------------------------------------------------------------------------
+Version: 0.7.23
+Date: N/A
+  Bugfixes:
+    - fixed crafting time for updated recipes
+  Changes:
+    - removed bobs pure water recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.7.22
+Date: N/A
+  Changes:
+    - added override for bobs pure water
+---------------------------------------------------------------------------------------------------
+Version: 0.7.21
+Date: N/A
+  Bugfixes:
+    - fixed Yuokis and UP overrides again
+  Changes:
+    - small script update
+---------------------------------------------------------------------------------------------------
+Version: 0.7.20
+Date: N/A
+  Bugfixes:
+    - fixed broken override for Yuokis and UP
+    - fixed smelting recipes from crushed
+---------------------------------------------------------------------------------------------------
+Version: 0.7.19
+Date: N/A
+  Bugfixes:
+    - fixed broken vanilla mode
+  Changes:
+    - tweaked some recipes for buildings
+    - added expensive recipes for all buildings
+    - added expensive recipes for sorting, crystallizing, crushed to stone, crushed to plates
+    - added mod settings to adjust expensive settings
+---------------------------------------------------------------------------------------------------
+Version: 0.7.18
+Date: N/A
+  Bugfixes:
+    - fixed a bug in the overrides that caused additional waste waters not to be added
+---------------------------------------------------------------------------------------------------
+Version: 0.7.17
+Date: N/A
+  Changes:
+    - script update
+---------------------------------------------------------------------------------------------------
+Version: 0.7.16
+Date: N/A
+  Bugfixes:
+    - fixed typo
+---------------------------------------------------------------------------------------------------
+Version: 0.7.15
+Date: N/A
+  Bugfixes:
+    - fixed that washing was not disabled if smelting was not present
+  Changes:
+    - added checks for the dynamic localization function
+---------------------------------------------------------------------------------------------------
+Version: 0.7.14
+Date: N/A
+  Changes:
+    - added localization back in for resouce patches and ores
+    - doubled acid consumption by leaching plants (5 -> 10)
+    - increased acid consupmtion for dissolution recipes (10 -> 15)
+    - increased amount of fluid processed by ceramic filtering (25 -> 35)
+    - decreased waster water from ceramic filtering (25 -> 10)
+    - increased waster water from coal filtering (25 -> 30)
+    - increased yield for final washing recipes (nodules, limestone, clay, sand)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.13
+Date: N/A
+  Changes:
+    - adjusted washing recipes for final products
+    - decreased seafloorpump speed
+    - added more dynamic recipe override for buildings (should fix dependencies on bobelectronics and boblogistics)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.12
+Date: N/A
+  Changes:
+    - added missing check if you disabled infinite ores
+---------------------------------------------------------------------------------------------------
+Version: 0.7.11
+Date: N/A
+  Bugfixes:
+    - fixed a typo that caused issues for some people
+---------------------------------------------------------------------------------------------------
+Version: 0.7.10
+Date: N/A
+  Changes:
+    - redesigned the water washing process (needs rebuilding)
+    - added clay and sand if smelting is enabled
+    - increased fluorite from crystallization
+---------------------------------------------------------------------------------------------------
+Version: 0.7.9
+Date: N/A
+  Bugfixes:
+    - fixed additional fluid values
+  Changes:
+    - added uranium to the refining tables
+---------------------------------------------------------------------------------------------------
+Version: 0.7.8
+Date: N/A
+  Bugfixes:
+    - migration fix for non petrochem
+---------------------------------------------------------------------------------------------------
+Version: 0.7.7
+Date: N/A
+  Changes:
+    - added additional item migration.
+    - added function to add fluid icon to the barrel items
+    - added function to disable barreling recipes
+    - disabled double barreling recipes for overridden bobs and vanilla chemicals
+---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+Date: N/A
+  Bugfixes:
+    - added a fix for migration
+    - added a fix for mod options
+    - fixed errors that happend because of the heavy pump move
+    - fixed that the acid override had old 0.14 fluid values
+  Changes:
+    - changed name of the heavy pump to barreling pump
+    - moved vanilla barreling recipes to angels-fluid-control tab
+    - moved storage tank to fluid-control-tab
+---------------------------------------------------------------------------------------------------
+Version: 0.7.5
+Date: N/A
+  Changes:
+    - added heavy pump
+    - added options to use either vanilla barreling or heavy pump barreling
+    - added options to use auto barreling (heavy pump selects barreling recipe by itself)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: N/A
+  Bugfixes:
+    - added fixed override functions
+---------------------------------------------------------------------------------------------------
+Version: 0.7.3
+Date: N/A
+  Changes:
+    - added mod option to use angels or vanilla barelling
+---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+Date: N/A
+  Bugfixes:
+    - added temporary fix for override functions
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: N/A
+  Bugfixes:
+    - fixed thermal extractor not working
+  Changes:
+    - removed water-treatment-3 technology for vanilla
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: N/A
+  Changes:
+    - update for 0.15
+---------------------------------------------------------------------------------------------------
+Version: 0.6.13
+Date: N/A
+  Changes:
+    - added Fatmice Uranium Power tweaks https://forums.factorio.com/viewtopic.php?p=229924#p229924
+    - added water treatment 3, changed prior techs to lower requirements, moved salt recipes to wt3
+    - added washing plant 2
+---------------------------------------------------------------------------------------------------
+Version: 0.6.12
+Date: N/A
+  Changes:
+    - updated icons to match new plates in smelting
+    - increased output of manganese and chrome
+    - disabled sand recipe (no use as of yet)
+    - enabled productivity for all recipes in ore-sorting-facilities and crystallizers
+---------------------------------------------------------------------------------------------------
+Version: 0.6.11
+Date: N/A
+  Bugfixes:
+    - fix for empty barrel recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.6.10
+Date: N/A
+  Changes:
+    - added barreling for nodule fluids
+---------------------------------------------------------------------------------------------------
+Version: 0.6.9
+Date: N/A
+  Bugfixes:
+    - fixed recipes for washing plant and seafloor pump
+---------------------------------------------------------------------------------------------------
+Version: 0.6.8
+Date: N/A
+  Changes:
+    - added support smelting 2.0
+    - added washer processing chain
+---------------------------------------------------------------------------------------------------
+Version: 0.6.7
+Date: N/A
+  Bugfixes:
+    - fixed missing void recipes for saline and mineralized water if only refining is used
+---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: N/A
+  Bugfixes:
+    - fixed crystallizer mk2 energy consumption
+  Changes:
+    - decreased crafting time for all salination plant recipes
+    - added new vanilla mode
+    - changed order of the geode processing recipe, to match their occurence in floatation
+---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: N/A
+  Changes:
+    - increased geode yield a bit again
+    - added additional migration for older versions
+---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: N/A
+  Changes:
+    - updated functions
+---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: N/A
+  Bugfixes:
+    - fixed Crystal Catalyst not being craftable
+---------------------------------------------------------------------------------------------------
+Version: 0.6.2
+Date: N/A
+  Bugfixes:
+    - migration fix
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: N/A
+  Bugfixes:
+    - migration fix
+  Changes:
+    - void items are now hidden
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: N/A
+  Bugfixes:
+    - fixed some grouping errors
+  Changes:
+    - internal restructure
+    - reduced amount of geodes from floatation
+    - readded other color geodes to floatation recipes
+    - removed parts of the geode/gem processing line
+    - added crystallization of gems
+    - added gem-crystallization technology
+    - added crystal catalysator
+    - reduced waste water output on all recipes
+    - added barrel recipes for lithia-water
+    - removed vanilla version
+    - removed furnace type entities experiment
+---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+Date: N/A
+  Bugfixes:
+    - fixed values for salination recipes
+  Changes:
+    - added grouping for barrel items
+---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: N/A
+  Bugfixes:
+    - small fixes
+  Changes:
+    - improved salination plant recipes
+    - removed legacy thermal-water-barrels
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: N/A
+  Bugfixes:
+    - fixed clarifier not working
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: N/A
+  Bugfixes:
+    - another migration fix
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: N/A
+  Bugfixes:
+    - migration fix for vanilla
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: N/A
+  Bugfixes:
+    - migration fix
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: N/A
+  Bugfixes:
+    - several small fixes
+  Changes:
+    - added barreling for fluids
+    - added new tabs for barreling and water-treatment
+    - added barreling technology
+    - added salination-plant
+    - added recipes to produce saline-water and salt
+    - increased clarifier input
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: N/A
+  Bugfixes:
+    - another fix for furnace types (source_inventory_size)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: N/A
+  Bugfixes:
+    - fix for furnace types
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: N/A
+  Changes:
+    - changed rubyte coloring
+    - added trigger to enable furnace types for refining machines
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: N/A
+  Bugfixes:
+    - small fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: N/A
+  Changes:
+    - added missing migration
+    - changed mineralized water recipe to use water instead of purified water
+    - changed rubyte coloring
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: N/A
+  Changes:
+    - added additional water-treatment options to go along the tie ins with petrochem
+    - converted parts of the overrides to script to make it more robust
+    - redone the icons for waste water
+    - adjusted module slots for main refining buildings
+    - added module slots to the thermal extractor
+    - added trigger support to enable productivity on sorters, crystallizer and dissolution recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: N/A
+  Bugfixes:
+    - fixed a load error for the vanilla variant caused by the renaming of yellow waste water
+---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: N/A
+  Bugfixes:
+    - fixed/added migration
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: N/A
+  Bugfixes:
+    - fixed an error with the waste water name change and yuokis
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: N/A
+  Bugfixes:
+    - fixed a typo
+  Changes:
+    - renamed floatation waste water to yellow waste water, to reflect that it isnt exclusively give by the floatation process
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: N/A
+  Bugfixes:
+    - fixed order of buildings in crafting menu
+  Changes:
+    - decreased sodium hydroxide output of saline water electrolysis recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: N/A
+  Bugfixes:
+    - fixed crystallization recipes for additional mods to require 5 minderal sludge
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: N/A
+  Bugfixes:
+    - fixed the base game recipes for MK3 leaching plant and floatation cell
+  Changes:
+    - changed recipes for the liquifier to be more avaiable early game
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: N/A
+  Changes:
+    - replaced icon for jivolite ore
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: N/A
+  Bugfixes:
+    - fixed an error
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: N/A
+  Changes:
+    - replaced water in bob chemical recipes with purified water
+    - added some localization strings
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: N/A
+  Changes:
+    - Updated to game version > 0.14
+---------------------------------------------------------------------------------------------------
+Version: 0.2.12
+Date: N/A
+  Bugfixes:
+    - Fixed missing fast_replaceable_group for burner-ore-crusher
+---------------------------------------------------------------------------------------------------
+Version: 0.2.11
+Date: N/A
+  Bugfixes:
+    - Fixed a logic error
+---------------------------------------------------------------------------------------------------
+Version: 0.2.10
+Date: N/A
+  Bugfixes:
+    - Fixed some recipe values
+  Changes:
+    - Changed ceramic filters, they need to be cleaned after use now
+    - Re-rendered the Hydro-Plant to fix a bug with MacOS and improve animation
+---------------------------------------------------------------------------------------------------
+Version: 0.2.9
+Date: N/A
+  Bugfixes:
+    - Fixed error with vanilla
+---------------------------------------------------------------------------------------------------
+Version: 0.2.8
+Date: N/A
+  Bugfixes:
+    - Fixed error with vanilla
+---------------------------------------------------------------------------------------------------
+Version: 0.2.7
+Date: N/A
+  Bugfixes:
+    - Fixed migration (hopefully)
+  Changes:
+    - Added recipe to turn crystal slurry into mineral sludge
+    - Added Hydro Plant Mk2
+    - Added recipe to turn crushed stone into mineralized water
+---------------------------------------------------------------------------------------------------
+Version: 0.2.6
+Date: N/A
+  Bugfixes:
+    - Fixed migration (hopefully)
+  Changes:
+    - Changed several inconsistencies with the localization
+    - Changed the processing/refining chain for gems
+    - Rearranged some groups and icons
+    - Added new technology: Geode processing 2
+    - Added new building: Liquifier, as an early simpler chemical plant
+    - Changed Icon for Thermal to Lithia Water
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: N/A
+  Bugfixes:
+    - Fixed an error
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: N/A
+  Bugfixes:
+    - Fixed broken migration script for slag processing, UP, YI and NUC support
+    - Fixed icons for advanced sorting for UP, YI and NUC
+---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: N/A
+  Bugfixes:
+    - Fixed missing dependency/broken tie in for other mods (YI, UP, NUC)
+  Changes:
+    - Switched tables for vanilla sorting
+    - Updated more of the icons
+    - Added localization for the Geode Processing technology
+    - Added advanced recipes for other mods ores (YI, UP, NUC)
+    - Removed config file
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: N/A
+  Changes:
+    - Added geodes to the game, they are a byproduct to the hydro refining and drop from rocks.
+    - Added geodes processing lines to get bobgems from them
+    - Re-Rendered most technology icons to be 128x128 px
+    - Added some missing localizations
+    - Added recipes to get lithia water from thermal water
+    - Moved some item-groups to other rows in the angels-refining tab
+    - Rearranged the position of some recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: N/A
+  Bugfixes:
+    - fixed an error with clarifier void recipes
+  Changes:
+    - Updated for version 0.13
+    - new icons for several items
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: N/A
+  Bugfixes:
+    - fixed an error with the clarifier not working
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: N/A
+  Bugfixes:
+    - fixed a typo in the migration file
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: N/A
+  Bugfixes:
+    - fixed a possible naming error
+  Changes:
+    - changed the crafting speed for the ore-crusher-mk2 from 3 to 2
+    - added clarifier, which acts as a water void pump for the specialized water types
+    - reworked vanilla version: will now use the same mode as the bobs version. angelsinfiniteores are now required.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: N/A
+  Changes:
+    - added recipe to turn crushed stone into mineral sludge
+    - added water treatment recipe to yield YI contaminated water
+    - added individual icons for slag processing recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: N/A
+  Bugfixes:
+    - fixed an error with nucular integration (requiring the wrong material for the sorting recipe)
+  Changes:
+    - added localization for the base game variant
+    - added hydro-plant and config settings to enable/disable it
+    - moved the catalysts into the processing mod
+    - tweaked some stats for the refining buildings (consumption, modules, idle drain, pollution)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: N/A
+  Bugfixes:
+    - fixed tier 1 ore mixing results to 4 instead of 3
+    - fixed an error with the vanilla sorting recipes crafting categories
+  Changes:
+    - cut the time for all the sorting recipes in half
+    - added final version of the thermal-extractor
+    - updated the icons for alien artifacts and catalysts
+    - added oil-processing as a requirement to the hydro-refining technology
+    - changed the cost of ore-refining and advanced-ore-processing-4 technology from requiring science-pack-4 to alien-science-packs
+    - added basic catalyst as ingredient to the tier 4 refining (crystal to purified)
+    - added support for nucular mod and its uranium ore to angelsinfiniteores and angelsrefining
+    - tweaked some stats for the refining buildings (consumption, modules, idle drain, pollution)

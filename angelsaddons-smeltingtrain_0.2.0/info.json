@@ -1,0 +1,13 @@
+{
+  "name": "angelsaddons-smeltingtrain",
+  "version": "0.2.0",
+  "factorio_version": "0.17",
+  "title": "Angel's Addons - Smelting Train",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "",
+  "description": "Adds a Smelting themed train",
+  "dependencies": [
+	"base >= 0.17.0"
+	]
+}

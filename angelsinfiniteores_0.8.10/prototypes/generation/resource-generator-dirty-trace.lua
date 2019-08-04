@@ -1,0 +1,2 @@
+--create dirty and trace version of ores that can be spawned instead of the normal infinite ores
+--only do non infinite ores
