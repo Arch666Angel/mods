@@ -1,7 +1,5 @@
-# mods
-Angelsmods Repository
+# Angelsmods
 
-# Content
 ## 01. Refining
 ## 02. Petrochem
 ## 03. Smelting
