@@ -1,6 +1,6 @@
 if bobmods and bobmods.ores then
 	if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
-		if resource_generator.resource_autoplace_data["bauxite-ore"] then
+		if data.raw.resource["bauxite-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-bauxite-ore",
 				get = "bauxite-ore",
@@ -32,7 +32,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if resource_generator.resource_autoplace_data["cobalt-ore"] then
+		if data.raw.resource["cobalt-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-cobalt-ore",
 				get = "cobalt-ore",
@@ -64,7 +64,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if resource_generator.resource_autoplace_data["gem-ore"] then
+		if data.raw.resource["gem-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-gem-ore",
 				get = "gem-ore",
@@ -96,7 +96,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if resource_generator.resource_autoplace_data["gold-ore"] then
+		if data.raw.resource["gold-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-gold-ore",
 				get = "gold-ore",
@@ -128,7 +128,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.lead then
+		if data.raw.resource["lead-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-lead-ore",
 				get = "lead-ore",
@@ -160,7 +160,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.nickel then
+		if data.raw.resource["nickel-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-nickel-ore",
 				get = "nickel-ore",
@@ -192,7 +192,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.quartz then
+		if data.raw.resource["quartz"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-quartz",
 				get = "quartz",
@@ -224,7 +224,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.rutile then
+		if data.raw.resource["rutile-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-rutile-ore",
 				get = "rutile-ore",
@@ -256,7 +256,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.silver then
+		if data.raw.resource["silver-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-silver-ore",
 				get = "silver-ore",
@@ -288,8 +288,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.sulfur then
-
+		if data.raw.resource["sulfur"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-sulfur",
 				get = "sulfur",
@@ -321,7 +320,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.thorium then
+		if data.raw.resource["thorium-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-thorium-ore",
 				get = "thorium-ore",
@@ -353,7 +352,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 		
-		if bobmods.ores.tin then
+		if data.raw.resource["tin-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-tin-ore",
 				get = "tin-ore",
@@ -385,7 +384,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.tungsten then
+		if data.raw.resource["tungsten-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-tungsten-ore",
 				get = "tungsten-ore",
@@ -417,7 +416,7 @@ if bobmods and bobmods.ores then
 			})
 		end
 
-		if bobmods.ores.zinc then
+		if data.raw.resource["zinc-ore"] then
 			angelsmods.functions.add_resource("make", {
 				name = "infinite-zinc-ore",
 				get = "zinc-ore",

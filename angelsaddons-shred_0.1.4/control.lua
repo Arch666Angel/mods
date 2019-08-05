@@ -29,7 +29,10 @@ script.on_init(function()
     if #entities > 0 then
       for _, entity in pairs(entities) do
         if entity and entity.valid then
-          entity.destroy(true)
+          entity.destroy{
+            do_cliff_correction = true ,
+            raise_destroy       = false,
+          }
         end
       end
     end
@@ -58,7 +61,7 @@ script.on_init(function()
       if game.item_prototypes[offerName] then
 
         remote.call("silo_script", "add_tracked_item", offerName)
-        
+
       end
     end
   end

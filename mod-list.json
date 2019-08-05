@@ -1,0 +1,186 @@
+
+{
+  "mods": 
+  [
+    
+    {
+      "name": "base",
+      "enabled": true
+    },
+    
+    {
+      "name": "angelsaddons-cab",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-liquidrobot",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-nilaus",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-oresilos",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-petrotrain",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-pressuretanks",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-shred",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-smeltingtrain",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsaddons-warehouses",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsbioprocessing",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsexploration",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsindustries",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsinfiniteores",
+      "enabled": true
+    },
+    
+    {
+      "name": "angelspetrochem",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelsrefining",
+      "enabled": false
+    },
+    
+    {
+      "name": "angelssmelting",
+      "enabled": false
+    },
+    
+    {
+      "name": "bobassembly",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobelectronics",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobenemies",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobequipment",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobgreenhouse",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobinserters",
+      "enabled": true
+    },
+    
+    {
+      "name": "boblibrary",
+      "enabled": true
+    },
+    
+    {
+      "name": "boblogistics",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobmining",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobmodules",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobores",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobplates",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobpower",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobrevamp",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobtech",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobvehicleequipment",
+      "enabled": true
+    },
+    
+    {
+      "name": "bobwarfare",
+      "enabled": true
+    },
+    
+    {
+      "name": "FNEI",
+      "enabled": false
+    },
+    
+    {
+      "name": "helmod",
+      "enabled": false
+    }
+  ]
+}
