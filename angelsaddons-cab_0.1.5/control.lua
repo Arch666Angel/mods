@@ -1,6 +1,6 @@
 local cab = require 'src.cab'
 
---[[-- DEBUG ONLY --
+--[ [-- DEBUG ONLY --
 script.on_event(defines.events.on_player_joined_game, function(event)
   local player_index = event.player_index
   if player_index then
@@ -20,11 +20,7 @@ end)
 --]]--
 
 script.on_init(function()
-  if not global.vehicleData then global.vehicleData = {} end
-  global.vehicleData.version = 1.1
-  global.vehicleData.onTickActive = false
-  global.vehicleData.entityName = "angels-cab"
-  global.vehicleData.positionIdentifier = "%u(%gx%g)"
+  cab.init()
 end)
 
 local onConfigChanged = require("src.cab-config-changes")
@@ -88,20 +84,28 @@ script.on_event(defines.events.on_built_entity, function(event)
 end)
 ]]--
 
+script.on_event(defines.events.on_gui_opened, function(event)
+  if event.entity and event.entity.name == "angels-cab" then
+    cab.player_opened_cab(event.player_index, event.entity)
+  end
+end)
+
 script.on_event(defines.events.on_player_removed_equipment, function(event)
-  if event.equipment == "angels-cab-energy-interface-mk1" then
-    local player = game.get_player(event.player_index)
-    local openedEntity = player.opened
-    if openedEntity and openedEntity.name == "angels-cab" and cab.is_deployed(openedEntity) then
-      -- remove the item from the player
-      local equipment = game.equipment_prototypes[event.equipment]
-      if player.clean_cursor() then
-        player.get_main_inventory().remove{name = equipment.take_result.name, count = event.count}
+  if event.grid.prototype.name == "angels-cab" then
+    if event.equipment == "angels-cab-energy-interface-mk1" then
+      local player = game.get_player(event.player_index)
+      local openedEntity = cab.get_opened_cab(event.player_index)
+      if openedEntity and cab.is_deployed(openedEntity) then
+        -- remove the item from the player
+        local equipment = game.equipment_prototypes[event.equipment]
+        if player.clean_cursor() then
+          player.get_main_inventory().remove{name = equipment.take_result.name, count = event.count}
+        end
+        -- put the item back
+        for _=1,event.count do event.grid.put{name = event.equipment} end
+        -- inform the player
+        player.print{"angels-cab-messages.grid-noEnergyInterfaceRemoval", equipment.localised_name}
       end
-      -- put the item back
-      for _=1,event.count do event.grid.put{name = event.equipment} end
-      -- inform the player
-      player.print{"angels-cab-messages.grid-noEnergyInterfaceRemoval", equipment.localised_name}
     end
   end
 end)

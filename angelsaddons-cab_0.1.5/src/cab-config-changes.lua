@@ -30,6 +30,22 @@ return function(configurationData)
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
+    
+    if global.vehicleData.version == 1.1 then
+      -- updating from mod version 0.1.4 (or lower)
+      local oldVersion = global.vehicleData.version
+      local newVersion = 1.2
+      log(string.format("    Updating vehicleData from version '%.1f' to version '%.1f'.", oldVersion, newVersion))
+
+      global.vehicleData.openedCabs = {}
+
+      log(string.format("    Finished updating vehicleData to version '%.1f'.", newVersion))
+      global.vehicleData.version = newVersion
+    end
+
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
 
   end
 end

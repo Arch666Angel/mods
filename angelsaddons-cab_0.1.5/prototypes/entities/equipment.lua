@@ -80,7 +80,7 @@ data:extend{{
   energy_source =
   {
     type = "electric",
-    usage_priority = "primary-input",
+    usage_priority = "secondary-input",
     buffer_capacity   = string.format("%iJ", energyInterface.transferRates["mk1"]),
     --drain             = "0W",
     input_flow_limit  = string.format("%iW", energyInterface.transferRates["mk1"] * 60),
@@ -123,8 +123,8 @@ data:extend{{
   --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
   energy_source =
   {
-    type = "electric",
-    usage_priority = "tertiary",
+    type              = "electric",
+    usage_priority    = "tertiary",
     buffer_capacity   = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.buffer_capacity,
     drain             = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.drain,
     input_flow_limit  = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.output_flow_limit,
@@ -144,6 +144,7 @@ data:extend{{
   },
   working_sound = nil,
 }}
+
 -------------------------------------------------------------------------------
 -- CAB ENERGY TRANSFER PORT MK2                                              --
 -------------------------------------------------------------------------------
@@ -200,8 +201,8 @@ data:extend{{
   },
   energy_source =
   {
-    type = "electric",
-    usage_priority = "primary-input",
+    type              = "electric",
+    usage_priority    = data.raw["night-vision-equipment"][data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result].energy_source.usage_priority,
     buffer_capacity   = string.format("%iJ", energyInterface.transferRates["mk2"]),
     --drain             = "0W",
     input_flow_limit  = string.format("%iW", energyInterface.transferRates["mk2"] * 60),
@@ -244,8 +245,8 @@ data:extend{{
   --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
   energy_source =
   {
-    type = "electric",
-    usage_priority = "tertiary",
+    type              = "electric",
+    usage_priority    = data.raw["electric-energy-interface"][data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result].energy_source.usage_priority,
     buffer_capacity   = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk2")].energy_source.buffer_capacity,
     drain             = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk2")].energy_source.drain,
     input_flow_limit  = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk2")].energy_source.output_flow_limit,
@@ -264,4 +265,4 @@ data:extend{{
     height = 1,
   },
   working_sound = nil,
-}}]]
+}}--]]

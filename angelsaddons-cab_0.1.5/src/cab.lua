@@ -68,6 +68,17 @@ end
 -------------------------------------------------------------------------------
 return {
 
+  init = function()
+    if not global.vehicleData then global.vehicleData = {} end
+
+    global.vehicleData.version = 1.2
+    global.vehicleData.entityName = "angels-cab"
+    global.vehicleData.positionIdentifier = "%u(%gx%g)"
+
+    global.vehicleData.openedCabs = {}
+    global.vehicleData.onTickActive = false
+  end,
+
   deploy = function(entity)
     -- get info out of the trigger entity
     local surface = entity.surface
@@ -261,6 +272,20 @@ return {
     -- remove the destroyed cab from the list
     global.vehicleData.deployedCabs[identifier] = nil
     return true
+  end,
+
+  player_opened_cab = function(playerIndex, entity)
+    global.vehicleData.openedCabs[playerIndex] = entity
+  end,
+
+  get_opened_cab = function(playerIndex)
+    local entity = global.vehicleData.openedCabs[playerIndex]
+    if entity.valid then
+      return entity
+    else
+      global.vehicleData.openedCabs[playerIndex] = nil
+      return nil
+    end
   end,
 
 }
