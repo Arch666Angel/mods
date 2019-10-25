@@ -621,29 +621,29 @@ data:extend(
 							priority = "very-low",
 							width = 256,
 							height = 256,
-							direction_count = 128,
+							direction_count = 64,
 							filenames = {
-								"__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco1/smelting-loco1-1-base.png",
-								"__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco1/smelting-loco1-2-base.png",
+								"__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-1-base.png",
 							},
 							line_length = 8,
 							lines_per_file = 8,
-							shift = { 0.0, -0.75 }
+							shift = { 0.0, -0.75 },
+							back_equals_front = true,
 						},
 						{
 							priority = "very-low",
 							flags = { "mask" },
 							width = 256,
 							height = 256,
-							direction_count = 128,
+							direction_count = 64,
 							filenames = {
-								"__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco1/smelting-loco1-1-tint.png",
-								"__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco1/smelting-loco1-2-tint.png",
+								"__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-1-tint.png",
 							},
 							line_length = 8,
 							lines_per_file = 8,
 							apply_runtime_tint = true,
-							shift = { 0.0, -0.75 }
+							shift = { 0.0, -0.75 },
+							back_equals_front = true,
 						},
 						{
 							priority = "very-low",
