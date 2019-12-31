@@ -5,7 +5,7 @@ data:extend(
     name = "angels-pressure-tank-1",
     icon = "__angelsaddons-pressuretanks__/graphics/icons/pressure-tank-1.png",
 	icon_size = 32,
-	subgroup = "angels-fluid-tanks",
+    subgroup = (mods['angelspetrochem'] and 'angels-fluid-tanks' or 'storage'),
     order = "e",
     place_result = "angels-pressure-tank-1",
     stack_size = 10,

@@ -7,7 +7,7 @@ data:extend(
 	icon_size = 128,
 	prerequisites =
     {
-	"angels-fluid-control",
+	  (mods['angelspetrochem'] and 'angels-fluid-control' or 'fluid-handling'),
     },
     effects =
     {
