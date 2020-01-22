@@ -14,8 +14,8 @@ data:extend(
   {
     type = "resource",
     name = "angels-fissure",
-    icon = "__base__/graphics/icons/crude-oil.png",
-	icon_size = 32,
+    icon = "__base__/graphics/icons/crude-oil-resource.png",
+	icon_size =64, icon_mipmaps = 4,
     flags = {"placeable-neutral"},
     category = "angels-fissure",
     order="a-b-a",

@@ -21,7 +21,7 @@ if not data.raw.particle[input.name.."-particle"] then
 	data:extend(
 	{
 	  {
-		type = "particle",
+		type = "optimized-particle",
 		name = input.name.."-particle",
 		flags = {"not-on-map"},
 		life_time = 180,
@@ -956,7 +956,7 @@ function angelsmods.functions.make_resource()
 			make_resautoplace(input)
 			--Create Particle if resource yields items
 			if input.type == "item" then
-				if input.get and data.raw.particle[input.get.."-particle"] then
+				if input.get and data.raw.optimized-particle[input.get.."-particle"] then
 					input.particle = input.get.."-particle"
 				else
 					make_particle(input)

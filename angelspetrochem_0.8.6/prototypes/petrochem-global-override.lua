@@ -1,6 +1,7 @@
 local OV = angelsmods.functions.OV
 --OVERRIDE FOR BASE
 	data.raw["item"]["sulfur"].icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png"
+	data.raw["item"]["sulfur"].icon_size = 32
 
 	OV.global_replace_item("heavy-oil", "liquid-naphtha")
 	OV.global_replace_item("light-oil", "liquid-fuel-oil")

@@ -82,6 +82,7 @@ data:extend(
       }
     },
     map_color={r=50, g=50, b=50},
+	pollution_absorption_per_second = 0,
     ageing=0,
     vehicle_friction_modifier = 1.1
   },
