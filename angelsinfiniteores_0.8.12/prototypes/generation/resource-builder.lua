@@ -21,7 +21,7 @@ if not data.raw.particle[input.name.."-particle"] then
 	data:extend(
 	{
 	  {
-		type = "particle",
+		type = "optimized-particle",
 		name = input.name.."-particle",
 		flags = {"not-on-map"},
 		life_time = 180,
