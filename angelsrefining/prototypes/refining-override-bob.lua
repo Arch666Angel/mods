@@ -1,6 +1,7 @@
 local OV = angelsmods.functions.OV
 
-if bobmods.plates then
+--if bobmods.plates then
+if mods['bobplates'] then
 
    OV.patch_recipes({
       { name = "filter-ceramic", ingredients = {{ "alumina", 1}} },

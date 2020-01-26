@@ -18,6 +18,7 @@ local OV = angelsmods.functions.OV
 	OV.add_prereq("rocketry", "rocket-booster-1")
 	OV.remove_prereq("rocketry", "rocket-fuel")
 	data.raw["item"]["rocket-fuel"].icon = "__angelspetrochem__/graphics/icons/rocket-fuel.png"
+	data.raw["item"]["rocket-fuel"].icon_size = 32
 
 --OVERRIDE FOR ANGELS
 	--REFINING

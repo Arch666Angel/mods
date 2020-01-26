@@ -22,7 +22,8 @@ local OV = angelsmods.functions.OV
 
 --SORTING OVERRIDES
 require("prototypes.recipes.refining-entity-angels")
-if angelsmods.industries or (bobmods and bobmods.plates) then
+--if angelsmods.industries or (bobmods and bobmods.plates) then
+if angelsmods.industries or mods['bobplates'] then
 	if angelsmods.industries and angelsmods.industries.overhaul then
 		require("prototypes.refining-override-angels")
 	else
@@ -61,7 +62,8 @@ if not angelsmods.smelting then
 end
 
 --OVERRIDE FOR BOBs
-if bobmods and bobmods.plates then
+--if bobmods and bobmods.plates then
+if mods['bobplates'] then
 	OV.patch_recipes({
    --SINGLE GEM CRYSTALLIZATION
       { name = "angelsore7-crystallization-1", results = {
@@ -103,7 +105,8 @@ if bobmods and bobmods.plates then
       { name = "advanced-oil-processing", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } }
 	})
 	
-	if bobmods.gems then
+	--if bobmods.gems then
+	if mods['bobores'] and settings.startup['bobmods-ores-unsortedgemore'].value == true then
 	--TEMP FIX
 	if data.raw.recipe["sort-gem-ore"] then
 	data.raw.recipe["sort-gem-ore"].icon_size = 32

@@ -1,14 +1,14 @@
 {
   "name": "angelsaddons-liquidrobot",
-  "version": "0.1.1",
-  "factorio_version": "0.16",
+  "version": "0.2.0",
+  "factorio_version": "0.18",
   "title": "Angel's Addons - Liquid Cargo Bot",
   "author": "Arch666Angel",
   "contact": "",
   "homepage": "",
   "description": "Adds another type of Cargobot",
   "dependencies": [
-	"base >= 0.16.0",
-	"? angelsindustry >= 0.1.0"
+    "base >= 0.18.0",
+    "? angelsindustry >= 0.3.0"
 	]
 }

@@ -38,6 +38,7 @@ data:extend(
       base_level = 1,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
+      filter = "water-viscous-mud",
       pipe_connections =
       {
         {

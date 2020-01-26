@@ -103,7 +103,8 @@ data:extend{{
     maximum = 1.0
   },
   categories = {"angels-cab"},
-  darkness_to_turn_on = 0
+  darkness_to_turn_on = 0,
+  color_lookup = {{0.5, "__core__/graphics/color_luts/nightvision.png"}}
 }}
 data:extend{{
   type = "electric-energy-interface",
