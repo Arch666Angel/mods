@@ -1,159 +1,159 @@
-local noise = require("noise");
-local tne = noise.to_noise_expression;
-local resource_autoplace = require("resource-autoplace");
+local noise = require("noise")
+local tne = noise.to_noise_expression
+local resource_autoplace = require("resource-autoplace")
 
 --Create autoplace
 local function make_resautoplace(input)
-	data:extend({
+	data:extend(
 		{
-			type = "autoplace-control",
-			name = input.name,
-			richness = true,
-			order="b-"..input.order,
-			category = "resource",
-		},
-	})
+			{
+				type = "autoplace-control",
+				name = input.name,
+				richness = true,
+				order = "b-" .. input.order,
+				category = "resource"
+			}
+		}
+	)
 end
 
 --Create particles
 local function make_particle(input)
-if not data.raw.particle[input.name.."-particle"] then
-	data:extend(
-	{
-	  {
-		type = "optimized-particle",
-		name = input.name.."-particle",
-		flags = {"not-on-map"},
-		life_time = 180,
-		pictures =
-		{
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-1.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 5,
-			height = 5,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-2.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 7,
-			height = 5,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-3.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 6,
-			height = 7,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-4.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 9,
-			height = 8,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-5.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 5,
-			height = 5,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-6.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 6,
-			height = 4,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-7.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 7,
-			height = 8,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-8.png",
-			priority = "extra-high",
-			tint = input.tint,
-			width = 6,
-			height = 5,
-			frame_count = 1
-		  }
-		},
-		shadows =
-		{
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
-			priority = "extra-high",
-			width = 5,
-			height = 5,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
-			priority = "extra-high",
-			width = 7,
-			height = 5,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
-			priority = "extra-high",
-			width = 6,
-			height = 7,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
-			priority = "extra-high",
-			width = 9,
-			height = 8,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
-			priority = "extra-high",
-			width = 5,
-			height = 5,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
-			priority = "extra-high",
-			width = 6,
-			height = 4,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
-			priority = "extra-high",
-			width = 7,
-			height = 8,
-			frame_count = 1
-		  },
-		  {
-			filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
-			priority = "extra-high",
-			width = 6,
-			height = 5,
-			frame_count = 1
-		  }
-		}
-	  }
-	}
-	)
+	if not data.raw.particle[input.name .. "-particle"] then
+		data:extend(
+			{
+				{
+					type = "optimized-particle",
+					name = input.name .. "-particle",
+					flags = {"not-on-map"},
+					life_time = 180,
+					pictures = {
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-1.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 5,
+							height = 5,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-2.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 7,
+							height = 5,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-3.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 6,
+							height = 7,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-4.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 9,
+							height = 8,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-5.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 5,
+							height = 5,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-6.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 6,
+							height = 4,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-7.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 7,
+							height = 8,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-8.png",
+							priority = "extra-high",
+							tint = input.tint,
+							width = 6,
+							height = 5,
+							frame_count = 1
+						}
+					},
+					shadows = {
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
+							priority = "extra-high",
+							width = 5,
+							height = 5,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
+							priority = "extra-high",
+							width = 7,
+							height = 5,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
+							priority = "extra-high",
+							width = 6,
+							height = 7,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
+							priority = "extra-high",
+							width = 9,
+							height = 8,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
+							priority = "extra-high",
+							width = 5,
+							height = 5,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
+							priority = "extra-high",
+							width = 6,
+							height = 4,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
+							priority = "extra-high",
+							width = 7,
+							height = 8,
+							frame_count = 1
+						},
+						{
+							filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
+							priority = "extra-high",
+							width = 6,
+							height = 5,
+							frame_count = 1
+						}
+					}
+				}
+			}
+		)
 	end
 end
 
@@ -174,10 +174,8 @@ local function make_resgfx(input)
 		else
 			--Sheet used for Copper Ore, angels-ore3 (Stiratite)
 			if input.sheet == 1 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-11-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -202,10 +200,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for Coal
 			if input.sheet == 2 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-12-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -230,10 +226,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for Iron Ore, angels-ore4 (Crotinium)
 			if input.sheet == 3 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-13-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -258,10 +252,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for Uranium Ore, angels-ore2 (Jivolite)
 			if input.sheet == 4 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-14-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -286,10 +278,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for Stone
 			if input.sheet == 5 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-15-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -314,10 +304,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for Coal, angels-ore1 (Saphirite)
 			if input.sheet == 6 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-16-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -342,10 +330,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for angels-ore5 (Rubyte)
 			if input.sheet == 7 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-17-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -370,10 +356,8 @@ local function make_resgfx(input)
 			end
 			--Sheet used for angels-ore6 (Bobmonium)
 			if input.sheet == 8 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-18-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -397,10 +381,8 @@ local function make_resgfx(input)
 				}
 			end
 			if input.sheet == 9 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-19-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -424,10 +406,8 @@ local function make_resgfx(input)
 				}
 			end
 			if input.sheet == 10 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-20-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -451,10 +431,8 @@ local function make_resgfx(input)
 				}
 			end
 			if input.sheet == 11 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-21-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -478,10 +456,8 @@ local function make_resgfx(input)
 				}
 			end
 			if input.sheet == 12 then
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-22-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -508,48 +484,42 @@ local function make_resgfx(input)
 	end
 	if input.type == "fluid" then
 		if input.sheet == 1 then
-			return
-			{
-			sheet =
-			  {
-				filename = "__angelsrefining__/graphics/entity/patches/fissure.png",
-				tint = input.tint,
-				priority = "extra-high",
-				width = 256,
-				height = 256,
-				frame_count = 4,
-				variation_count = 1,
-			  }
+			return {
+				sheet = {
+					filename = "__angelsrefining__/graphics/entity/patches/fissure.png",
+					tint = input.tint,
+					priority = "extra-high",
+					width = 256,
+					height = 256,
+					frame_count = 4,
+					variation_count = 1
+				}
 			}
 		end
 		if input.sheet == 2 then
-			return
-			{
-			sheet =
-			  {
-				filename = "__angelsrefining__/graphics/entity/patches/gas.png",
-				tint = input.tint,
-				priority = "extra-high",
-				width = 64,
-				height = 64,
-				frame_count = 4,
-				variation_count = 1
-			  }
+			return {
+				sheet = {
+					filename = "__angelsrefining__/graphics/entity/patches/gas.png",
+					tint = input.tint,
+					priority = "extra-high",
+					width = 64,
+					height = 64,
+					frame_count = 4,
+					variation_count = 1
+				}
 			}
 		end
 		if input.sheet == 3 then
-			return
-			{
-			sheet =
-			  {
-				filename = "__angelsrefining__/graphics/entity/patches/liquid.png",
-				tint = input.tint,
-				priority = "extra-high",
-				width = 75,
-				height = 61,
-				frame_count = 4,
-				variation_count = 1
-			  }
+			return {
+				sheet = {
+					filename = "__angelsrefining__/graphics/entity/patches/liquid.png",
+					tint = input.tint,
+					priority = "extra-high",
+					width = 75,
+					height = 61,
+					frame_count = 4,
+					variation_count = 1
+				}
 			}
 		end
 	end
@@ -586,10 +556,8 @@ local function make_resglow(input)
 					input.gfx_alpha_min = 0.3
 					input.gfx_alpha_max = 0.7
 				end
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-11-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -611,7 +579,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -622,10 +590,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 3
 				input.gfx_alpha_min = 0.1
 				input.gfx_alpha_max = 0.4
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-12-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -647,7 +613,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -658,10 +624,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 3
 				input.gfx_alpha_min = 0.3
 				input.gfx_alpha_max = 0.8
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-13-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -683,7 +647,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -694,10 +658,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 3.6
 				input.gfx_alpha_min = 0.2
 				input.gfx_alpha_max = 0.3
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-14-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -719,7 +681,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -730,10 +692,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 3.6
 				input.gfx_alpha_min = 0.2
 				input.gfx_alpha_max = 0.3
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-15-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -755,7 +715,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -766,10 +726,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 2
 				input.gfx_alpha_min = 0.2
 				input.gfx_alpha_max = 0.3
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-16-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -791,7 +749,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -802,10 +760,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 3
 				input.gfx_alpha_min = 0.2
 				input.gfx_alpha_max = 0.3
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-17-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -827,7 +783,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -838,10 +794,8 @@ local function make_resglow(input)
 				input.gfx_dark_mul = 3
 				input.gfx_alpha_min = 0.2
 				input.gfx_alpha_max = 0.3
-				return
-				{
-					sheet =
-					{
+				return {
+					sheet = {
 						filename = "__angelsrefining__/graphics/entity/ores/ore-18-lr-glow.png",
 						priority = "extra-high",
 						tint = input.tint,
@@ -863,7 +817,7 @@ local function make_resglow(input)
 							variation_count = input.variation_count,
 							scale = 0.5,
 							blend_mode = "additive",
-							flags = {"light"},
+							flags = {"light"}
 						}
 					}
 				}
@@ -884,20 +838,18 @@ local function make_resglow(input)
 					input.gfx_alpha_min = 0.3
 					input.gfx_alpha_max = 0.7
 				end
-				return
-				{
-				  sheet =
-				  {
-					filename = "__angelsrefining__/graphics/entity/patches/fissure-glow.png",
-					tint = input.tint,
-					priority = "extra-high",
-					width = 256,
-					height = 256,
-					frame_count = 4,
-					variation_count = 1,
-					blend_mode = "additive-soft",
-					flags = {"light"},
-				   }
+				return {
+					sheet = {
+						filename = "__angelsrefining__/graphics/entity/patches/fissure-glow.png",
+						tint = input.tint,
+						priority = "extra-high",
+						width = 256,
+						height = 256,
+						frame_count = 4,
+						variation_count = 1,
+						blend_mode = "additive-soft",
+						flags = {"light"}
+					}
 				}
 			end
 		end
@@ -931,7 +883,7 @@ function angelsmods.functions.make_resource()
 			tree_removal_probability = 0.8,
 			tree_removal_max_distance = 32 * 32,
 			infinite_depletion_amount = 10,
-			resource_patch_search_radius = 12,
+			resource_patch_search_radius = 12
 		}
 		autoplace_ret_table = {
 			name = input.name,
@@ -946,8 +898,8 @@ function angelsmods.functions.make_resource()
 			random_spot_size_minimum = input.autoplace.random_spot_size_minimum,
 			random_spot_size_maximum = input.autoplace.random_spot_size_maximum,
 			additional_richness = input.autoplace.additional_richness,
-			--richness_post_multiplier = input.autoplace.richness_post_multiplier		
-			richness_post_multiplier = 0.1,	--Maybe make that an option?
+			--richness_post_multiplier = input.autoplace.richness_post_multiplier
+			richness_post_multiplier = 0.1 --Maybe make that an option?
 		}
 		if not data.raw.resource[input.name] then
 			--Setup autoplace (base game)
@@ -956,20 +908,20 @@ function angelsmods.functions.make_resource()
 			make_resautoplace(input)
 			--Create Particle if resource yields items
 			if input.type == "item" then
-				if input.get and data.raw.optimized-particle[input.get.."-particle"] then
-					input.particle = input.get.."-particle"
+				if input.get and data.raw.particle[input.get .. "-particle"] then
+					input.particle = input.get .. "-particle"
 				else
 					make_particle(input)
-					input.particle = input.name.."-particle"
+					input.particle = input.name .. "-particle"
 				end
-			else 
+			else
 				input.particle = nil
 			end
 			--Set infinite yields according to mod options or default
-			if angelsmods.ores and angelsmods.ores.yield then 
+			if angelsmods.ores and angelsmods.ores.yield then
 				input.minimum = angelsmods.ores.yield * 15
 				input.output_probability = angelsmods.ores.loweryield
-			else 
+			else
 				input.minimum = 300
 				input.output_probability = 1
 			end
@@ -979,7 +931,9 @@ function angelsmods.functions.make_resource()
 				input.maximum = 6000
 			end
 			--Set mining hardness
-			if input.hardness == nil then input.hardness = 0.9 end
+			if input.hardness == nil then
+				input.hardness = 0.9
+			end
 			--Set stages count according to resource type
 			if input.type == "item" then
 				if input.infinite == true then
@@ -991,24 +945,30 @@ function angelsmods.functions.make_resource()
 				stages_count = {0}
 			end
 			--Set if map grid will show
-			if input.type == "item" then input.map_grid = true else input.map_grid = false end
+			if input.type == "item" then
+				input.map_grid = true
+			else
+				input.map_grid = false
+			end
 			--Set resource category if resource yields fluids
-			if not input.type == "fluid" then input.category = nil end
+			if not input.type == "fluid" then
+				input.category = nil
+			end
 			--Set Boxes according to presets
 			if input.type == "fluid" then
 				input.highlight = true
 				if input.sheet == 1 then
-					input.collision_box = {{ -4.4, -4.4}, {4.4, 4.4}}
-					input.selection_box = {{ -2.5, -2.5}, {2.5, 2.5}} 
+					input.collision_box = {{-4.4, -4.4}, {4.4, 4.4}}
+					input.selection_box = {{-2.5, -2.5}, {2.5, 2.5}}
 				end
 				if input.sheet == 2 or input.sheet == 3 then
-					input.collision_box = {{ -1.4, -1.4}, {1.4, 1.4}}
-					input.selection_box = {{ -0.5, -0.5}, {0.5, 0.5}}
+					input.collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
+					input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
 				end
-			else 
+			else
 				input.highlight = false
-				input.collision_box = {{ -0.1, -0.1}, {0.1, 0.1}} 
-				input.selection_box = {{ -0.5, -0.5}, {0.5, 0.5}}
+				input.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
+				input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
 			end
 			--Add fluidrequirements according to mod options
 			if input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq then
@@ -1019,10 +979,10 @@ function angelsmods.functions.make_resource()
 				input.map_color = data.raw.resource[input.get].map_color
 				autoplace_ret_table.patch_set_name = input.get
 				if data.raw.resource[input.get] then
-					if data.raw.resource[input.get].icon_size then 
-						input.icon_size = data.raw.resource[input.get].icon_size 
-					else 
-						input.icon_size = 32 
+					if data.raw.resource[input.get].icon_size then
+						input.icon_size = data.raw.resource[input.get].icon_size
+					else
+						input.icon_size = 32
 					end
 					if data.raw.resource[input.get].icon then
 						ret_table.icon = data.raw.resource[input.get].icon
@@ -1037,20 +997,19 @@ function angelsmods.functions.make_resource()
 			if input.icon then
 				if not input.icon_size then
 					input.icon_size = 32
-				end					
+				end
 				ret_table.icons = {{icon = input.icon, icon_size = input.icon_size}}
 			end
 			ret_table.name = input.name
 			ret_table.icon_size = input.icon_size
 			ret_table.category = input.category
-			ret_table.order = "a-"..input.order
+			ret_table.order = "a-" .. input.order
 			ret_table.highlight = input.highlight
 			ret_table.infinite = input.infinite
 			ret_table.minimum = input.minimum
 			ret_table.normal = input.normal
 			ret_table.maximum = input.maximum
-			ret_table.minable =
-			{
+			ret_table.minable = {
 				hardness = input.hardness,
 				mining_particle = input.particle,
 				mining_time = input.mining_time,
@@ -1062,9 +1021,9 @@ function angelsmods.functions.make_resource()
 						amount_min = input.output_min,
 						amount_max = input.output_max,
 						probability = input.output_probability,
-						temperature = input.temperature,
+						temperature = input.temperature
 					}
-				},
+				}
 			}
 			ret_table.collision_box = input.collision_box
 			ret_table.selection_box = input.selection_box
@@ -1089,11 +1048,11 @@ function angelsmods.functions.remove_resource(resource)
 	if data.raw.resource[resource] then
 		data.raw.resource[resource] = nil
 		data.raw["autoplace-control"][resource] = nil
-		--log(serpent.block(resource))
+	--log(serpent.block(resource))
 	end
-	if data.raw.resource["infinite-"..resource] then
-		data.raw.resource["infinite-"..resource] = nil
-		data.raw["autoplace-control"]["infinite-"..resource] = nil
+	if data.raw.resource["infinite-" .. resource] then
+		data.raw.resource["infinite-" .. resource] = nil
+		data.raw["autoplace-control"]["infinite-" .. resource] = nil
 	end
 	for r, subdir in pairs(angelsmods.functions.store) do
 		for r, input in pairs(subdir) do
@@ -1131,7 +1090,7 @@ function angelsmods.functions.update_autoplace()
 		for r, input in pairs(subdir) do
 			if not input.inactive then
 				if input.infinite then
-					input.richness_post_multiplier = 1/20
+					input.richness_post_multiplier = 1 / 20
 				else
 					input.richness_post_multiplier = 1
 				end
@@ -1152,8 +1111,8 @@ function angelsmods.functions.update_autoplace()
 							end
 						end
 						data.raw.resource[input.name].minable.required_fluid = input.acid_req
-						-- log(serpent.block(input.acid_req))
-						-- log(serpent.block(data.raw.resource[input.name].minable.required_fluid))
+					-- log(serpent.block(input.acid_req))
+					-- log(serpent.block(data.raw.resource[input.name].minable.required_fluid))
 					end
 				end
 			end
@@ -1172,10 +1131,10 @@ function angelsmods.functions.update_resource()
 		for _, garbage in pairs(subdir) do
 			if not garbage.inactive then
 				if garbage.name then
-					totalcount = totalcount+1
+					totalcount = totalcount + 1
 				end
 				if garbage.autoplace.starting_area then
-					startcount = startcount+1
+					startcount = startcount + 1
 				end
 				if regioncount <= 1536 then
 					regioncount = regioncount + 32
@@ -1191,7 +1150,7 @@ function angelsmods.functions.update_resource()
 	starting_resource_count = startcount
 	starting_size = startcount * 30
 	region_size = regioncount
-	--UPDATE AUTOPLACE FOR UPDATE_RESOURCES 
+	--UPDATE AUTOPLACE FOR UPDATE_RESOURCES
 	angelsmods.functions.update_autoplace()
 end
 
@@ -1200,7 +1159,7 @@ end
 function angelsmods.functions.index_check()
 	--SET TABLE TO RETURN
 	angelsmods.functions.test = {}
-	--GET ALL RESOURCE INDEX' SET 
+	--GET ALL RESOURCE INDEX' SET
 	for r, subdir in pairs(angelsmods.functions.store) do
 		for r, input in pairs(subdir) do
 			if not input.inactive then
@@ -1211,8 +1170,8 @@ function angelsmods.functions.index_check()
 	--RETURN TABLE
 	log(serpent.block(angelsmods.functions.test))
 	--RETURN OTHER IMPORTANT VALUES
-	log(serpent.block("regular_resource_count = "..regular_resource_count))
-	log(serpent.block("starting_resource_count = "..starting_resource_count))
-	log(serpent.block("starting_size = "..starting_size))
-	log(serpent.block("region_size = "..region_size))
+	log(serpent.block("regular_resource_count = " .. regular_resource_count))
+	log(serpent.block("starting_resource_count = " .. starting_resource_count))
+	log(serpent.block("starting_size = " .. starting_size))
+	log(serpent.block("region_size = " .. region_size))
 end
