@@ -5,7 +5,7 @@ data:extend(
       name = "empty-liquid-bot",
       icon = "__angelsaddons-liquidrobot__/graphics/icons/bot-ico.png",
       icon_size = 32,
-      flags = {"goes-to-quickbar"},
+      flags = {},
       subgroup = "liquid-bot-items",
       order = "a",
       place_result = "empty-liquid-bot",

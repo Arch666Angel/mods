@@ -29,7 +29,7 @@ function make_fluid_robot()
 			--localised_name = {"item-name.filled-barrel", {"fluid-name." .. fluid.name}},
 			icons = bot_icon,
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "fill-liquid-bot",
 			order = "b[" .. fluid.name .. "]",
 			stack_size = 1,
