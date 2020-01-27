@@ -100,6 +100,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "gardens"
     },
     effects =
     {

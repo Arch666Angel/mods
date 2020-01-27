@@ -40,7 +40,8 @@ if angelsmods.bioprocessing then
 	require("prototypes.items.bio-refugium-hogger")
 
 	require("prototypes.recipes.bio-processing-algae")
-	require("prototypes.recipes.bio-processing-wood-paper")
+	require("prototypes.recipes.bio-processing-wood")
+	require("prototypes.recipes.bio-processing-paper")
 	require("prototypes.recipes.bio-processing-alien")
 	require("prototypes.recipes.bio-processing-entity")
 	require("prototypes.recipes.bio-processing-paste")

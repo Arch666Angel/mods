@@ -7,6 +7,9 @@ OV.remove_output("algae-brown-burning", "angels-void")
 data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
 data.raw["capsule"]["raw-fish"].order = "ba"
 
+data.raw["item"]["wood"].subgroup = "bio-processing-wood"
+data.raw["item"]["wood"].order = "a[wood]"
+
 --REFINING
 if angelsmods.refining then
 	--MOVE UNLOCKS

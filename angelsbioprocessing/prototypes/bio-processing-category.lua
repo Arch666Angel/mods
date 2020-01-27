@@ -84,75 +84,112 @@ data:extend(
     type = "recipe-category",
     name = "bio-butchery",
   },
-  --FARMING
+
+
+
+  --NAUVIS
   {
     type = "item-group",
-    name = "bio-processing",
-    order = "le",
-    inventory_order = "le",
+    name = "bio-processing-nauvis",
+    order = "le-a[nauvis]",
+    inventory_order = "le-a[nauvis]",
     icon = "__angelsbioprocessing__/graphics/technology/algae-farm-group.png",
     icon_size = 64,
   },
   {
     type = "item-subgroup",
     name = "bio-processing-green",
-    group = "bio-processing",
+    group = "bio-processing-nauvis",
     order = "a",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-brown",
-    group = "bio-processing",
+    group = "bio-processing-nauvis",
     order = "b",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-blue",
-    group = "bio-processing",
+    group = "bio-processing-nauvis",
     order = "c",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-red",
-    group = "bio-processing",
+    group = "bio-processing-nauvis",
     order = "d",
   },
   {
     type = "item-subgroup",
     name = "bio-wood",
-    group = "bio-processing",
+    group = "bio-processing-nauvis",
     order = "e",
   },
   {
     type = "item-subgroup",
-    name = "bio-arboretum",
-    group = "bio-processing",
+    name = "bio-processing-wood",
+    group = "bio-processing-nauvis",
     order = "f",
   },
   {
     type = "item-subgroup",
-    name = "bio-arboretum-temperate",
-    group = "bio-processing",
+    name = "bio-arboretum",
+    group = "bio-processing-nauvis",
     order = "g",
   },
   {
     type = "item-subgroup",
-    name = "bio-arboretum-swamp",
-    group = "bio-processing",
+    name = "bio-arboretum-temperate",
+    group = "bio-processing-nauvis",
     order = "h",
   },
   {
     type = "item-subgroup",
-    name = "bio-arboretum-desert",
-    group = "bio-processing",
+    name = "bio-arboretum-swamp",
+    group = "bio-processing-nauvis",
     order = "i",
   },
   {
     type = "item-subgroup",
-    name = "bio-paper",
-    group = "bio-processing",
+    name = "bio-arboretum-desert",
+    group = "bio-processing-nauvis",
     order = "j",
   },
+  {
+    type = "item-subgroup",
+    name = "bio-liquor",
+    group = "bio-processing-nauvis",
+    order = "k",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-paper",
+    group = "bio-processing-nauvis",
+    order = "l",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processing-buildings-nauvis-a",
+    group = "bio-processing-nauvis",
+    order = "m",
+  },
+
+
+
+  --FARMING
+  {
+    type = "item-group",
+    name = "bio-processing",
+    order = "le-b[farming]",
+    inventory_order = "le-b[farming]",
+    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-group.png",
+    icon_size = 64,
+  },
+
+
+
+
   {
     type = "item-subgroup",
     name = "farming-gardens",
@@ -237,12 +274,15 @@ data:extend(
     group = "bio-processing",
     order = "zb",
   },
+
+
+
   --ALIEN
   {
     type = "item-group",
     name = "bio-processing-alien",
-    order = "le",
-    inventory_order = "le",
+    order = "le-c[alien]",
+    inventory_order = "le-c[alien]",
     icon = "__angelsbioprocessing__/graphics/technology/refugium-1-group.png",
     icon_size = 64,
   },
