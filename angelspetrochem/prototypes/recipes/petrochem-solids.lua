@@ -50,7 +50,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,		
+	icon_size = 32,
     order = "b",
 	},
 	{
@@ -79,7 +79,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     order = "c",
 	},
 	{
@@ -108,7 +108,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     order = "d",
 	},
 	--RESIN
@@ -162,7 +162,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     order = "f",
 	},
 	{
@@ -190,7 +190,7 @@ data:extend(
 			scale = 0.32,
 			shift = {-12, -12},
 		}
-	},	
+	},
 	icon_size = 32,
     order = "g",
 	},
@@ -219,7 +219,7 @@ data:extend(
 			scale = 0.32,
 			shift = {-12, -12},
 		}
-	},	
+	},
 	icon_size = 32,
     order = "h",
 	},
@@ -274,7 +274,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     order = "j",
 	},
 	--GLASS
@@ -562,6 +562,7 @@ data:extend(
     icons = {
 		{
 			icon = "__base__/graphics/icons/explosives.png",
+			icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_2.png",
@@ -595,6 +596,7 @@ data:extend(
     icons = {
 		{
 			icon = "__base__/graphics/icons/explosives.png",
+			icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_3.png",
@@ -602,7 +604,7 @@ data:extend(
 			scale = 0.32,
 			shift = {-12, -12},
 		}
-	},	
+	},
 	icon_size = 32,
 	main_product = "explosives",
     order = "c",

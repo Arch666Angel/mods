@@ -6,6 +6,7 @@ data:extend(
     icons = {
 		{
 			icon = "__base__/graphics/icons/oil-refinery.png",
+      icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_2.png",
@@ -14,7 +15,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     subgroup = "petrochem-vanilla",
     order = "f[refinery-2]",
     place_result = "oil-refinery-2",
@@ -26,6 +27,7 @@ data:extend(
     icons = {
 		{
 			icon = "__base__/graphics/icons/oil-refinery.png",
+      icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_2.png",
@@ -34,7 +36,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-2"},
 	fast_replaceable_group = "oil-refinery",
@@ -173,6 +175,7 @@ data:extend(
     icons = {
 		{
 			icon = "__base__/graphics/icons/oil-refinery.png",
+      icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_3.png",
@@ -181,7 +184,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     subgroup = "petrochem-vanilla",
     order = "g[refinery-3]",
     place_result = "oil-refinery-3",
@@ -201,7 +204,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-3"},
 	fast_replaceable_group = "oil-refinery",
@@ -340,6 +343,7 @@ data:extend(
     icons = {
 		{
 			icon = "__base__/graphics/icons/oil-refinery.png",
+      icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_4.png",
@@ -348,7 +352,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     subgroup = "petrochem-vanilla",
     order = "h[refinery-4]",
     place_result = "oil-refinery-4",
@@ -368,7 +372,7 @@ data:extend(
 			shift = {-12, -12},
 		}
 	},
-	icon_size = 32,	
+	icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-4"},
 	fast_replaceable_group = "oil-refinery",

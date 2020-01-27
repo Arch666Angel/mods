@@ -47,7 +47,7 @@ data:extend(
     type = "item",
     name = "angels-fusion-reactor-vequip",
     icon = "__base__/graphics/icons/fusion-reactor-equipment.png",
-	icon_size = 32,
+	icon_size = 64,
     placed_as_equipment_result = "angels-fusion-reactor-vequip",
     subgroup = "angels-equipment-energy",
     order = "a[angels-fusion-reactor-vequip]",
@@ -85,7 +85,7 @@ data:extend(
     name = "angels-repair-roboport-vequip",
     icon = "__base__/graphics/icons/rocket-part.png",
     placed_as_equipment_result = "angels-repair-roboport-vequip",
-	icon_size = 32,
+	icon_size = 64,
     subgroup = "angels-equipment-robo",
     order = "a[angels-repair-roboport-vequip]",
     stack_size = 50,
@@ -97,8 +97,8 @@ data:extend(
     sprite =
     {
       filename = "__base__/graphics/icons/rocket-part.png",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
       priority = "medium"
     },
     shape =
@@ -206,7 +206,7 @@ data:extend(
     type = "item",
     name = "angels-heavy-energy-shield-vequip",
     icon = "__base__/graphics/icons/energy-shield-equipment.png",
-	icon_size = 32,
+	icon_size = 64,
     placed_as_equipment_result = "angels-heavy-energy-shield-vequip",
     subgroup = "angels-equipment-hdef",
     order = "a[angels-energy-heavy-shield-vequip]",

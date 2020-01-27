@@ -8,7 +8,7 @@ local OV = angelsmods.functions.OV
 	OV.disable_recipe("lubricant")
 	OV.global_replace_item("petroleum-gas", "gas-methane")
 	OV.global_replace_item("sulfuric-acid", "liquid-sulfuric-acid")
-	OV.global_replace_icon("__base__/graphics/icons/fluid/sulfuric-acid.png", "__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png")
+	OV.global_replace_icon({"__base__/graphics/icons/fluid/sulfuric-acid.png",},{"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png",icon_size=64,})
 
 	data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
 	data.raw["recipe"]["explosives"].order = "a"
@@ -16,6 +16,7 @@ local OV = angelsmods.functions.OV
 	data.raw["recipe"]["explosives"].icons = {
 		{
 			icon = "__base__/graphics/icons/explosives.png",
+			icon_size=64,
 		},
 		{
 			icon = "__angelspetrochem__/graphics/icons/num_1.png",
@@ -32,6 +33,7 @@ local OV = angelsmods.functions.OV
 	data.raw["item"]["chemical-plant"].icons = {
 		{
 			icon = "__base__/graphics/icons/chemical-plant.png",
+			icon_size=64
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -47,6 +49,7 @@ local OV = angelsmods.functions.OV
 	data.raw["item"]["oil-refinery"].icons = {
 		{
 			icon = "__base__/graphics/icons/oil-refinery.png",
+			icon_size=64,
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_1.png",

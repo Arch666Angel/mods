@@ -403,7 +403,7 @@ data:extend(
 			{type="fluid", name="lubricant", amount=50},
 		},
 		icon = "__base__/graphics/icons/fluid/lubricant.png",
-		icon_size = 32,
+		icon_size = 64,
 		order = "g",
 	},
 	--SYNTHESIS
