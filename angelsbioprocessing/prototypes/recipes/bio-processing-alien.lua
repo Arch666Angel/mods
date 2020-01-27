@@ -2,22 +2,42 @@ data:extend(
 {
   --ALIEN ARTIFACTS
   --PRE
+  --{
+  --  type = "recipe",
+  --  name = "alien-air-filtering",
+  --  category = "petrochem-air-filtering",
+  --  subgroup = "bio-processing-alien-intermediate",
+  --  enabled = "false",
+  --  energy_required = 20,
+  --  ingredients ={
+  --    {type="fluid", name="water-purified", amount=50},
+  --  },
+  --  results=
+  --  {
+  --    {type="fluid", name="alien-spores", amount=50},
+  --  },
+  --  icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
+  --  icon_size = 32,
+  --  order = "a",
+  --},
   {
     type = "recipe",
-    name = "alien-air-filtering",
-    category = "petrochem-air-filtering",
+    name = "alien-spores",
+    category = "water-treatment",
     subgroup = "bio-processing-alien-intermediate",
     enabled = "false",
-    energy_required = 20,
+    energy_required = 10,
     ingredients ={
-      {type="fluid", name="water-purified", amount=50},
+      {type="fluid", name="liquid-polluted-fish-atmosphere", amount=100},
     },
     results=
     {
-      {type="fluid", name="alien-spores", amount=50},
+      {type="fluid", name="alien-spores", amount_min=25, amount_max=50},
+      {type="fluid", name="water-yellow-waste", amount_min=80, amount_max=100},
     },
-    icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
-    icon_size = 32,
+    main_product = "alien-spores",
+    --icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
+    --icon_size = 32,
     order = "a",
   },
   {
@@ -38,7 +58,7 @@ data:extend(
     },
     main_product = "alien-bacteria",
     --icon = "__angelsbioprocessing__/graphics/icons/alien-bacteria.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "b",
   },
   {
@@ -57,7 +77,7 @@ data:extend(
     },
     main_product = "alien-goo",
     --icon = "__angelsbioprocessing__/graphics/icons/alien-goo.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "c",
   },
   {
@@ -75,7 +95,7 @@ data:extend(
     },
     main_product = "petri-dish",
     --icon = "__angelsbioprocessing__/graphics/icons/petri-dish.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "d",
   },
   {
@@ -95,7 +115,7 @@ data:extend(
     },
     main_product = "substrate-dish",
     --icon = "__angelsbioprocessing__/graphics/icons/substrate-dish.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "e",
   },
   {
@@ -115,7 +135,7 @@ data:extend(
     },
     main_product = "seeded-dish",
     --icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "f",
   },
   {
@@ -135,7 +155,7 @@ data:extend(
     },
     main_product = "crystal-seed",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "g",
   },
   {
@@ -156,7 +176,7 @@ data:extend(
     },
     main_product = "crystal-enhancer",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "h",
   },
   {
@@ -176,7 +196,7 @@ data:extend(
     },
     main_product = "crystal-grindstone",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "i",
   },
   {
@@ -224,7 +244,7 @@ data:extend(
     },
     main_product = "biter-small-egg",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "a",
   },
   {
@@ -245,7 +265,7 @@ data:extend(
     },
     main_product = "biter-small",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "b",
   },
   {
@@ -265,7 +285,7 @@ data:extend(
     },
     main_product = "crystal-splinter-raw",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "c",
   },
   {
@@ -307,7 +327,7 @@ data:extend(
     },
     main_product = "crystal-splinter-blue",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "e",
   },
   {
@@ -328,7 +348,7 @@ data:extend(
     },
     main_product = "crystal-splinter-red",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "f",
   },
   {
@@ -349,7 +369,7 @@ data:extend(
     },
     main_product = "crystal-splinter-green",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "g",
   },
   {
@@ -452,7 +472,7 @@ data:extend(
     },
     main_product = "biter-medium-egg",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "a",
   },
   {
@@ -473,7 +493,7 @@ data:extend(
     },
     main_product = "biter-medium",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "b",
   },
   {
@@ -493,7 +513,7 @@ data:extend(
     },
     main_product = "crystal-shard-raw",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "c",
   },
   {
@@ -535,7 +555,7 @@ data:extend(
     },
     main_product = "crystal-shard-blue",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "e",
   },
   {
@@ -556,7 +576,7 @@ data:extend(
     },
     main_product = "crystal-shard-red",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "f",
   },
   {
@@ -577,7 +597,7 @@ data:extend(
     },
     main_product = "crystal-shard-green",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "g",
   },
   {
@@ -681,7 +701,7 @@ data:extend(
     },
     main_product = "biter-big-egg",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "a",
   },
   {
@@ -702,7 +722,7 @@ data:extend(
     },
     main_product = "biter-big",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "b",
   },
   {
@@ -722,7 +742,7 @@ data:extend(
     },
     main_product = "crystal-full-raw",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "c",
   },
   {
@@ -764,7 +784,7 @@ data:extend(
     },
     main_product = "crystal-full-blue",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "e",
   },
   {
@@ -785,7 +805,7 @@ data:extend(
     },
     main_product = "crystal-full-red",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "f",
   },
   {
@@ -806,7 +826,7 @@ data:extend(
     },
     main_product = "crystal-full-green",
     --icon = "__angelsbioprocessing__/graphics/icons/void.png",
-    icon_size = 32,
+    --icon_size = 32,
     order = "g",
   },
   {

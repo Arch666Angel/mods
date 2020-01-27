@@ -6,7 +6,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-z",
-    order = "a",
+    order = "b",
     place_result = "bio-butchery",
     stack_size = 10,
   },

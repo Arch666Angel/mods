@@ -3,6 +3,10 @@ local OV = angelsmods.functions.OV
 --PREPARATION
 OV.remove_output("algae-brown-burning", "angels-void")
 
+--BASE
+data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
+data.raw["capsule"]["raw-fish"].order = "ba"
+
 --REFINING
 if angelsmods.refining then
 	--MOVE UNLOCKS

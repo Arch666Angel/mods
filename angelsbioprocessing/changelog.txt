@@ -3,6 +3,8 @@ Version: 0.7.0
 Date: ???
   Changes:
     - updated to 0.18
+    - changed fish to require a fish atmosphere
+    - added base game fish to breeding
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 26.04.2019

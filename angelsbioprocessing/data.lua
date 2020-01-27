@@ -35,6 +35,9 @@ if angelsmods.bioprocessing then
 	require("prototypes.items.crop-farming")
 	require("prototypes.items.crop-farming-processing")
 	require("prototypes.items.bio-refugium")
+	require("prototypes.items.bio-refugium-fish")
+	require("prototypes.items.bio-refugium-puffer")
+	require("prototypes.items.bio-refugium-hogger")
 
 	require("prototypes.recipes.bio-processing-algae")
 	require("prototypes.recipes.bio-processing-wood-paper")
@@ -43,7 +46,10 @@ if angelsmods.bioprocessing then
 	require("prototypes.recipes.bio-processing-paste")
 	require("prototypes.recipes.crop-farming")
 	require("prototypes.recipes.crop-farming-processing")
-	require("prototypes.recipes.bio-refugium")
+	require("prototypes.recipes.bio-refugium-fish")
+	require("prototypes.recipes.bio-refugium-puffer")
+	require("prototypes.recipes.bio-refugium-hogger")
+	--require("prototypes.recipes.bio-refugium")
 
 	require("prototypes.technology.bio-processing-algae")
 	require("prototypes.technology.bio-processing-wood-paper")

@@ -54,5 +54,7 @@
 	
 	angelsmods.functions.make_void("gas-ethanol", "chemical")
 	
+	angelsmods.functions.make_void("liquid-polluted-fish-atmosphere", "water")
+
 	angelsmods.functions.make_void("alien-spores", "bio")
 	angelsmods.functions.make_void("alien-bacteria", "bio")

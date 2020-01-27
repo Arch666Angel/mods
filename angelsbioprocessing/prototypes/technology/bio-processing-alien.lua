@@ -73,7 +73,8 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "alien-air-filtering"
+        --recipe = "alien-air-filtering"
+        recipe = "alien-spores"
       },
       {
         type = "unlock-recipe",
