@@ -45,5 +45,9 @@ if angelsmods.bioprocessing then
 	require("prototypes.recipes.crop-farming-processing")
 	require("prototypes.recipes.bio-refugium")
 
-	require("prototypes.technology.bio-processing-technology")
+	require("prototypes.technology.bio-processing-algae")
+	require("prototypes.technology.bio-processing-wood-paper")
+	require("prototypes.technology.bio-processing-alien")
+	require("prototypes.technology.crop-farming")
+	require("prototypes.technology.bio-refugium")
 end
