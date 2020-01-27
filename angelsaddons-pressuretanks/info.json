@@ -9,6 +9,6 @@
   "description": "Adds pressure tanks (extremly large tanks).",
   "dependencies": [
     "base >= 0.18.0",
-    "angelspetrochem >= 0.9.0"
+    "? angelspetrochem >= 0.9.0"
 	]
 }
