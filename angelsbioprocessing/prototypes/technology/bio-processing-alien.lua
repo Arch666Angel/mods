@@ -182,6 +182,10 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "crystal-splinter-harmonic"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "crystal-powder-splinter-blue"
       },
       {
@@ -199,7 +203,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+        --{"chemical-science-pack", 1},
       },
       time = 30
     },
@@ -232,6 +236,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "crystal-shard-green"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-shard-harmonic"
       },
       {
         type = "unlock-recipe",
@@ -285,6 +293,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "crystal-full-green"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-full-harmonic"
       },
       {
         type = "unlock-recipe",

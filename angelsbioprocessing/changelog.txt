@@ -8,6 +8,8 @@ Date: ???
     - moved farming recipes to their own tab
     - petri dish require iron instead of glass by default (todo: reintroduce glass when possible)
     - crystal enhancer now require crystal slurry (instead of the catalyst)
+    - modules require crystals as an ingredient
+    - added beter saw blades to make the fuel production less nerfed
   Bugfixes:
     - fixed missing localisation on puffer nest (item)
     - biter butchering now happens in butchery (was assembling machine before)

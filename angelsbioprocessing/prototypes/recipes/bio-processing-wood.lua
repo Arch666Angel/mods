@@ -226,11 +226,49 @@ data:extend(
       {type="item", name="solid-saw", amount=1},
     },
     --icon_size = 32,
-    order = "b[saw]",
+    order = "b[saw]-a[iron]",
   },
   {
     type = "recipe",
-    name = "wood-sawing",
+    name = "solid-crystal-tipped-saw",
+    category = "crafting",
+    subgroup = "bio-wood",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
+      {type="item", name="solid-saw", amount=1},
+      {type="item", name="crystal-splinter-harmonic", amount=1},
+    },
+    results=
+    {
+      {type="item", name="solid-crystal-tipped-saw", amount=1},
+    },
+    --icon_size = 32,
+    order = "b[saw]-b[crystal-tipped]",
+  },
+  {
+    type = "recipe",
+    name = "solid-crystal-full-saw",
+    category = "crafting",
+    subgroup = "bio-wood",
+    enabled = "false",
+    energy_required = 5,
+    ingredients =
+    {
+      {type="item", name="solid-crystal-tipped-saw", amount=1},
+      {type="item", name="crystal-shard-harmonic", amount=1},
+    },
+    results=
+    {
+      {type="item", name="solid-crystal-full-saw", amount=1},
+    },
+    --icon_size = 32,
+    order = "b[saw]-c[crystal-full]",
+  },
+  {
+    type = "recipe",
+    name = "wood-sawing-1",
     category = "crafting",
     subgroup = "bio-processing-wood",
     enabled = "false",
@@ -246,8 +284,89 @@ data:extend(
       {type="item", name="solid-saw", amount=1, catalyst_amount=1, probability= 0.9},
     },
     main_product = "wood",
-    --icon_size = 32,
-    order = "a",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/wood.png",
+        icon_size = 64,
+        scale = 0.5
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    order = "a[wood]-a[iron-saw]",
+  },
+  {
+    type = "recipe",
+    name = "wood-sawing-2",
+    category = "crafting",
+    subgroup = "bio-processing-wood",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
+      {type="item", name="solid-tree", amount=1},
+      {type="item", name="solid-crystal-tipped-saw", amount=1},
+    },
+    results=
+    {
+      {type="item", name="wood", amount_min=6, amount_max=8},
+      {type="item", name="solid-crystal-tipped-saw", amount=1, catalyst_amount=1, probability= 0.95},
+    },
+    main_product = "wood",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/wood.png",
+        icon_size = 64,
+        scale = 0.5
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    order = "a[wood]-b[crystal-tipped-saw]",
+  },
+  {
+    type = "recipe",
+    name = "wood-sawing-3",
+    category = "crafting",
+    subgroup = "bio-processing-wood",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
+      {type="item", name="solid-tree", amount=1},
+      {type="item", name="solid-crystal-full-saw", amount=1},
+    },
+    results=
+    {
+      {type="item", name="wood", amount_min=6, amount_max=8},
+      {type="item", name="solid-crystal-full-saw", amount=1, catalyst_amount=1, probability= 0.99},
+    },
+    main_product = "wood",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/wood.png",
+        icon_size = 64,
+        scale = 0.5
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    order = "a[wood]-c[crystal-full-saw]",
   },
 
 

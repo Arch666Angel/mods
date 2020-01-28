@@ -121,19 +121,19 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-generator-1"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "bio-arboretum-1"
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-saw"
+        recipe = "tree-generator-1"
       },
       {
         type = "unlock-recipe",
-        recipe = "wood-sawing"
+        recipe = "wood-sawing-1"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-saw"
       },
     },
     unit =
@@ -158,6 +158,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-1",
+      "bio-processing-crystal-1",
     },
     effects =
     {
@@ -168,6 +169,14 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "tree-arboretum-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "wood-sawing-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-crystal-tipped-saw"
       },
     },
     unit =
@@ -193,6 +202,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-2",
+      "bio-processing-crystal-2"
     },
     effects =
     {
@@ -203,6 +213,14 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "tree-arboretum-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "wood-sawing-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-crystal-full-saw"
       },
     },
     unit =
