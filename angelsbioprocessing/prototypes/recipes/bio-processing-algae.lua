@@ -125,7 +125,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "aa [algae-farming]",
+    order = "aa[algae-farming]",
   },
   {
     type = "recipe",
@@ -155,7 +155,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "ab [algae-farming]",
+    order = "ab[algae-farming]",
   },
   {
     type = "recipe",
@@ -173,7 +173,7 @@ data:extend(
     },
     icon = "__angelsbioprocessing__/graphics/icons/cellulose-fiber-algae.png",
     icon_size = 32,
-    order = "b [cellulose-fiber-algae]",
+    order = "b[cellulose-fiber-algae]",
   },
   {
     type = "recipe",
@@ -191,7 +191,7 @@ data:extend(
     },
     icon = "__angelspetrochem__/graphics/icons/gas-methanol.png",
     icon_size = 32,
-    order = "k [gas-methanol-from-wood]",
+    order = "k[gas-methanol-from-wood]",
   },
 
 
@@ -215,7 +215,7 @@ data:extend(
     },
     icon = "__angelsbioprocessing__/graphics/icons/algae-blue.png",
     icon_size = 32,
-    order = "a [algae-blue]",
+    order = "a[algae-blue]",
   },
   {
     type = "recipe",
@@ -234,7 +234,7 @@ data:extend(
     },
     icon = "__angelsbioprocessing__/graphics/icons/blue-cellulose-fiber.png",
     icon_size = 32,
-    order = "b [blue-fiber-algae]",
+    order = "b[blue-fiber-algae]",
   },
   {
     type = "recipe",
@@ -253,7 +253,7 @@ data:extend(
     },
     icon = "__angelspetrochem__/graphics/icons/gas-ammonia.png",
     icon_size = 32,
-    order = "c [gas-ammonia-from-blue-fiber]",
+    order = "c[gas-ammonia-from-blue-fiber]",
   },
 
 
@@ -277,7 +277,7 @@ data:extend(
     },
     icon = "__angelsbioprocessing__/graphics/icons/algae-red.png",
     icon_size = 32,
-    order = "a [algae-red]",
+    order = "a[algae-red]",
   },
   {
     type = "recipe",
@@ -296,7 +296,7 @@ data:extend(
     },
     icon = "__angelsbioprocessing__/graphics/icons/red-cellulose-fiber.png",
     icon_size = 32,
-    order = "b [red-fiber-algae]",
+    order = "b[red-fiber-algae]",
   },
   {
     type = "recipe",
@@ -315,7 +315,7 @@ data:extend(
     },
     icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
     icon_size = 32,
-    order = "c [solid-calcium-carbonate]",
+    order = "c[solid-calcium-carbonate]",
   },
 }
 )

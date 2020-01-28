@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- PRE
   {
     type = "technology",
     name = "bio-processing-paste",
@@ -8,7 +9,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
-        "bio-processing-alien",
+      "bio-nutrient-paste",
     },
     effects =
     {
@@ -61,13 +62,14 @@ data:extend(
   },
   {
     type = "technology",
-    name = "bio-processing-alien",
+    name = "bio-processing-alien-1",
     icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites =
     {
-      "bio-nutrient-paste",
+      "bio-processing-paste",
+      "bio-refugium-fish-1",
     },
     effects =
     {
@@ -100,18 +102,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "crystal-seed"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-enhancer"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-grindstone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-powder-slurry"
-      },
     },
     unit =
     {
@@ -126,28 +116,54 @@ data:extend(
   },
   {
     type = "technology",
-    name = "bio-biter-small",
+    name = "bio-processing-alien-2",
     icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites =
     {
-        "bio-processing-alien",
+      "bio-processing-alien-1"
     },
     effects =
     {
       {
         type = "unlock-recipe",
-        recipe = "biter-small-egg"
+        recipe = "crystal-powder-slurry"
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small"
+        recipe = "crystal-enhancer"
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small-butchering"
+        recipe = "crystal-grindstone"
       },
+    },
+    unit =
+    {
+      count = 50,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+      },
+      time = 30
+    },
+  },
+
+  -- CRYSTAL
+  {
+    type = "technology",
+    name = "bio-processing-crystal-1",
+    icon = "__angelsbioprocessing__/graphics/technology/crystal.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites =
+    {
+      "bio-refugium-biter-1",
+    },
+    effects =
+    {
       {
         type = "unlock-recipe",
         recipe = "crystal-splinter-cutting"
@@ -176,10 +192,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "crystal-powder-splinter-green"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-refugium-biter"
-      },
     },
     unit =
     {
@@ -194,28 +206,17 @@ data:extend(
   },
   {
     type = "technology",
-    name = "bio-biter-medium",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    name = "bio-processing-crystal-2",
+    icon = "__angelsbioprocessing__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites =
     {
-      "bio-biter-small",
+      "bio-processing-crystal-1",
+      "bio-refugium-biter-2",
     },
     effects =
     {
-      {
-        type = "unlock-recipe",
-        recipe = "biter-medium-egg"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "biter-medium"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "biter-medium-butchering"
-      },
       {
         type = "unlock-recipe",
         recipe = "crystal-shard-cutting"
@@ -258,28 +259,17 @@ data:extend(
   },
   {
     type = "technology",
-    name = "bio-biter-big",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    name = "bio-processing-crystal-3",
+    icon = "__angelsbioprocessing__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites =
     {
-      "bio-biter-medium",
+      "bio-processing-crystal-2",
+      "bio-refugium-biter-3",
     },
     effects =
     {
-      {
-        type = "unlock-recipe",
-        recipe = "biter-big-egg"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "biter-big"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "biter-big-butchering"
-      },
       {
         type = "unlock-recipe",
         recipe = "crystal-full-cutting"

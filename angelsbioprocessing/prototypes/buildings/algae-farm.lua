@@ -3,7 +3,17 @@ data:extend(
   {
     type = "item",
     name = "algae-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+    icons = {
+      {
+        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "bio-processing-buildings-nauvis-a",
     order = "a[algae]-a",
@@ -94,7 +104,17 @@ data:extend(
   {
     type = "item",
     name = "algae-farm-2",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+    icons = {
+      {
+        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "bio-processing-buildings-nauvis-a",
     order = "a[algae]-b",
@@ -186,7 +206,17 @@ data:extend(
   {
     type = "item",
     name = "algae-farm-3",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+    icons = {
+      {
+        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "bio-processing-buildings-nauvis-a",
     order = "a[algae]-c",

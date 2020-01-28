@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ALIEN
   {
     type = "fluid",
     name = "alien-spores",
@@ -19,7 +20,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/alien-bacteria.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "a[alien-bacteria]",
+    order = "a[alien]-b[bacteria]",
     stack_size = 200
   },
   {
@@ -35,13 +36,17 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
+
+
+
+  -- DISH
   {
     type = "item",
     name = "petri-dish",
     icon = "__angelsbioprocessing__/graphics/icons/petri-dish.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "b[petri-dish]",
+    order = "b[dish]-a[petri]",
     stack_size = 200
   },
   {
@@ -50,7 +55,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/substrate-dish.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c[substrate-dish]",
+    order = "b[dish]-b[substrate]",
     stack_size = 200
   },
   {
@@ -59,7 +64,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c",
+    order = "b[dish]-c[seeded]",
     stack_size = 200
   },
   {
@@ -68,7 +73,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/crystal-seed.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c",
+    order = "c[crystal]-a[seed]",
     stack_size = 200
   },
   {
@@ -77,268 +82,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/crystal-enhancer.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-powder",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-raw.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-raw.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-raw.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-blue-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-blue.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-red-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-red.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-green-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-green.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-blue-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-blue.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-red-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-red.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-green-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-green.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-blue-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-blue.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-red-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-red.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-green-cut",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-green.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-blue",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-blue.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-red",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-red.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-splinter-green",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-green.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-blue",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-blue.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-red",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-red.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-shard-green",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-green.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-blue",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-blue.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-red",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-red.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-green",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-green.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "crystal-full-harmonic",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-full-harmonic.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "biter-small-egg",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-small.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "biter-medium-egg",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-medium.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "biter-big-egg",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-large.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "biter-small",
-    icon = "__angelsbioprocessing__/graphics/icons/biter-small.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "biter-medium",
-    icon = "__angelsbioprocessing__/graphics/icons/biter-medium.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "biter-big",
-    icon = "__angelsbioprocessing__/graphics/icons/biter-big.png",
-    icon_size = 32,
-    subgroup = "bio-processing-alien-intermediate",
-    order = "c",
+    order = "c[crystal]-b[enhancer]",
     stack_size = 200
   },
   {
@@ -347,7 +91,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/crystal-grindstone.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c",
+    order = "c[crystal]-c[grindstone]",
     stack_size = 200
   },
 }

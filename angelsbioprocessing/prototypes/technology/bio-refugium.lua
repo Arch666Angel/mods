@@ -238,6 +238,137 @@ data:extend(
 
 
 
+  -- BITER
+  {
+    type = "technology",
+    name = "bio-refugium-biter-1",
+    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites =
+    {
+      "bio-processing-alien-1",
+      "bio-refugium-puffer-1",
+      "bio-refugium-butchery-2",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "bio-refugium-biter"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-small-egg"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-small"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-small-keeping"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-small-butchering"
+      },
+    },
+    unit =
+    {
+      count = 50,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+      },
+      time = 30
+    },
+  },
+  {
+    type = "technology",
+    name = "bio-refugium-biter-2",
+    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites =
+    {
+      "bio-refugium-biter-1",
+      "bio-processing-alien-2",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "biter-medium-egg"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-medium"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-medium-keeping"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-medium-butchering"
+      },
+    },
+    unit =
+    {
+      count = 100,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+      },
+      time = 30
+    },
+  },
+  {
+    type = "technology",
+    name = "bio-refugium-biter-3",
+    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites =
+    {
+      "bio-refugium-biter-2",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "biter-big-egg"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-big"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-big-keeping"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-big-butchering"
+      },
+    },
+    unit =
+    {
+      count = 150,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+      },
+      time = 30
+    },
+  },
+
+
+
   -- HOGGER
   {
     type = "technology",
