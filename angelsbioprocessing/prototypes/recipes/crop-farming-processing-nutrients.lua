@@ -162,6 +162,10 @@ data:extend(
     },
     icon_size = 32,
   },
+
+
+
+  -- REFINING
   {
     type = "recipe",
     name = "nutrients-refining-1",

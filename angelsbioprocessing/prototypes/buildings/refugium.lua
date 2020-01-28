@@ -66,13 +66,13 @@ data:extend(
       {
         animation =
         {
-		  filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-fish.png",
-		  width = 288,
-		  height = 288,
-		  line_length = 7,
-		  frame_count = 49,
-		  shift = {0, 0},
-		  animation_speed = 49/90,
+          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-fish.png",
+          width = 288,
+          height = 288,
+          line_length = 7,
+          frame_count = 49,
+          shift = {0, 0},
+          animation_speed = 49/90,
         }
       },
     },
@@ -166,13 +166,13 @@ data:extend(
       {
         animation =
         {
-		  filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-puffer.png",
-		  width = 224,
-		  height = 256,
-		  line_length = 6,
-		  frame_count = 36,
-		  shift = {0, -0.5},
-		  animation_speed = 36/60,
+          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-puffer.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 36/60,
         }
       },
     },
@@ -288,15 +288,15 @@ data:extend(
     {
       {
         animation =
-		{
-		  filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-biter.png",
-		  width = 288,
-		  height = 288,
-		  line_length = 4,
-		  frame_count = 16,
-		  shift = {0, 0},
-		  animation_speed = 0.5,
-		},
+        {
+          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-biter.png",
+          width = 288,
+          height = 288,
+          line_length = 4,
+          frame_count = 16,
+          shift = {0, 0},
+          animation_speed = 0.5,
+        },
       },
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },

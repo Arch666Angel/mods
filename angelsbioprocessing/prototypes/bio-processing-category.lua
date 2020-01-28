@@ -177,7 +177,7 @@ data:extend(
 
 
 
-  --FARMING
+  -- VEGETABILIS
   {
     type = "item-group",
     name = "bio-processing-vegetables",
@@ -188,122 +188,110 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "farming-gardens",
+    group = "bio-processing-vegetables",
+    order = "a[garden]",
+  },
+  {
+    type = "item-subgroup",
     name = "farming-temperate-seed",
     group = "bio-processing-vegetables",
-    order = "a[temperate]-a",
+    order = "b[temperate]-a",
   },
   {
     type = "item-subgroup",
     name = "farming-temperate",
     group = "bio-processing-vegetables",
-    order = "a[temperate]-b",
+    order = "b[temperate]-b",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-temperate",
     group = "bio-processing-vegetables",
-    order = "a[temperate]-c",
+    order = "b[temperate]-c",
   },
   {
     type = "item-subgroup",
     name = "farming-swamp-seed",
     group = "bio-processing-vegetables",
-    order = "b[swamp]-a",
+    order = "c[swamp]-a",
   },
   {
     type = "item-subgroup",
     name = "farming-swamp",
     group = "bio-processing-vegetables",
-    order = "b[swamp]-b",
+    order = "c[swamp]-b",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-swamp",
     group = "bio-processing-vegetables",
-    order = "b[swamp]-c",
+    order = "c[swamp]-c",
   },
   {
     type = "item-subgroup",
     name = "farming-desert-seed",
     group = "bio-processing-vegetables",
-    order = "c[desert]-a",
+    order = "d[desert]-a",
   },
   {
     type = "item-subgroup",
     name = "farming-desert",
     group = "bio-processing-vegetables",
-    order = "c[desert]-b",
+    order = "d[desert]-b",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-desert",
     group = "bio-processing-vegetables",
-    order = "c[desert]-c",
+    order = "d[desert]-c",
   },
-
-
-
-
-  -- todo below this
-
-  {
-    type = "item-subgroup",
-    name = "farming-gardens",
-    group = "bio-processing-vegetables",
-    order = "k",
-  },
-
-
-
-
-
-
   {
     type = "item-subgroup",
     name = "bio-processor-nutrient",
     group = "bio-processing-vegetables",
-    order = "r",
+    order = "e[processing]-a",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-press",
     group = "bio-processing-vegetables",
-    order = "s",
+    order = "e[processing]-b",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-fermentation",
     group = "bio-processing-vegetables",
-    order = "t",
+    order = "e[processing]-c",
   },
   {
     type = "item-subgroup",
     name = "bio-plastic",
     group = "bio-processing-vegetables",
-    order = "u",
+    order = "e[processing]-d",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-blocks",
     group = "bio-processing-vegetables",
-    order = "y",
+    order = "y[blocks]",
   },
   {
     type = "item-subgroup",
-    name = "bio-processing-buildings-a",
+    name = "bio-processing-buildings-vegetabilis-a",
     group = "bio-processing-vegetables",
-    order = "za",
+    order = "z[buildings]-a",
   },
   {
     type = "item-subgroup",
-    name = "bio-processing-buildings-b",
+    name = "bio-processing-buildings-vegetabilis-b",
     group = "bio-processing-vegetables",
-    order = "zb",
+    order = "z[buildings]-b",
   },
 
 
 
-  --ALIEN
+  -- ANIMALIS
   {
     type = "item-group",
     name = "bio-processing-alien",

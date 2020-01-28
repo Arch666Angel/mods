@@ -20,9 +20,9 @@ data:extend(
       mining_particle = "wooden-particle",
       mining_time = 1,
       results = {
-            {type = "item", name = "wood", amount = 100},
-            {type = "item", name = "temperate-tree", amount = 1},
-        }
+        {type = "item", name = "wood", amount = 100},
+        {type = "item", name = "temperate-tree", amount = 1},
+      }
     },
     emissions_per_tick = -0.0001,
     max_health = 20,
@@ -90,9 +90,9 @@ data:extend(
       mining_particle = "wooden-particle",
       mining_time = 1,
       results = {
-            {type = "item", name = "wood", amount = 100},
-            {type = "item", name = "swamp-tree", amount = 1},
-        }
+        {type = "item", name = "wood", amount = 100},
+        {type = "item", name = "swamp-tree", amount = 1},
+      }
     },
     emissions_per_tick = -0.0001,
     max_health = 20,

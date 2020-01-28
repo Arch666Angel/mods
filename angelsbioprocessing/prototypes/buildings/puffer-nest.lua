@@ -9,7 +9,8 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-gardens",
     order = "a",
-    stack_size = 200
+    stack_size = 200,
+    place_result = "puffer-nest"
   },
   {
     type = "tree",
