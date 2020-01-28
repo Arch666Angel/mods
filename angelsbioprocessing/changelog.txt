@@ -5,6 +5,7 @@ Date: ???
     - updated to 0.18
     - changed fish to require a fish atmosphere
     - added base game fish to breeding
+    - moved farming recipes to their own tab
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 26.04.2019

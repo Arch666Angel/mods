@@ -214,7 +214,7 @@ data:extend(
     type = "recipe",
     name = "solid-saw",
     category = "crafting",
-    subgroup = "bio-arboretum",
+    subgroup = "bio-wood",
     enabled = "false",
     energy_required = 0.5,
     ingredients =
@@ -226,7 +226,7 @@ data:extend(
       {type="item", name="solid-saw", amount=1},
     },
     --icon_size = 32,
-    order = "c[processing]",
+    order = "b[saw]",
   },
   {
     type = "recipe",

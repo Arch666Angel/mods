@@ -204,8 +204,8 @@ data:extend(
     name = "solid-saw",
     icon = "__angelsbioprocessing__/graphics/icons/solid-saw.png",
     icon_size = 64,
-    subgroup = "bio-arboretum-swamp",
-    order = "a",
+    subgroup = "bio-wood",
+    order = "b[saw]",
     stack_size = 200,
   },
   {

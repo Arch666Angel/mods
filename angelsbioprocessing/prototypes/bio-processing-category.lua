@@ -122,13 +122,13 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-wood",
+    name = "bio-processing-wood",
     group = "bio-processing-nauvis",
     order = "e",
   },
   {
     type = "item-subgroup",
-    name = "bio-processing-wood",
+    name = "bio-wood",
     group = "bio-processing-nauvis",
     order = "f",
   },
@@ -180,98 +180,124 @@ data:extend(
   --FARMING
   {
     type = "item-group",
-    name = "bio-processing",
+    name = "bio-processing-vegetables",
     order = "le-b[farming]",
     inventory_order = "le-b[farming]",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-group.png",
-    icon_size = 64,
+    icon = "__angelsbioprocessing__/graphics/technology/vegetables-farm-group.png",
+    icon_size = 128,
   },
-
-
-
-
   {
     type = "item-subgroup",
-    name = "farming-gardens",
-    group = "bio-processing",
-    order = "k",
+    name = "farming-temperate-seed",
+    group = "bio-processing-vegetables",
+    order = "a[temperate]-a",
   },
   {
     type = "item-subgroup",
     name = "farming-temperate",
-    group = "bio-processing",
-    order = "l",
-  },
-  {
-    type = "item-subgroup",
-    name = "farming-desert",
-    group = "bio-processing",
-    order = "m",
-  },
-  {
-    type = "item-subgroup",
-    name = "farming-swamp",
-    group = "bio-processing",
-    order = "n",
+    group = "bio-processing-vegetables",
+    order = "a[temperate]-b",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-temperate",
-    group = "bio-processing",
-    order = "o",
+    group = "bio-processing-vegetables",
+    order = "a[temperate]-c",
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-desert",
-    group = "bio-processing",
-    order = "p",
+    name = "farming-swamp-seed",
+    group = "bio-processing-vegetables",
+    order = "b[swamp]-a",
+  },
+  {
+    type = "item-subgroup",
+    name = "farming-swamp",
+    group = "bio-processing-vegetables",
+    order = "b[swamp]-b",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-swamp",
-    group = "bio-processing",
-    order = "q",
+    group = "bio-processing-vegetables",
+    order = "b[swamp]-c",
   },
   {
     type = "item-subgroup",
+    name = "farming-desert-seed",
+    group = "bio-processing-vegetables",
+    order = "c[desert]-a",
+  },
+  {
+    type = "item-subgroup",
+    name = "farming-desert",
+    group = "bio-processing-vegetables",
+    order = "c[desert]-b",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processor-desert",
+    group = "bio-processing-vegetables",
+    order = "c[desert]-c",
+  },
+
+
+
+
+  -- todo below this
+
+  {
+    type = "item-subgroup",
+    name = "farming-gardens",
+    group = "bio-processing-vegetables",
+    order = "k",
+  },
+
+
+
+
+
+
+  {
+    type = "item-subgroup",
     name = "bio-processor-nutrient",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "r",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-press",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "s",
   },
   {
     type = "item-subgroup",
     name = "bio-processor-fermentation",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "t",
   },
   {
     type = "item-subgroup",
     name = "bio-plastic",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "u",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-blocks",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "y",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-buildings-a",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "za",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-buildings-b",
-    group = "bio-processing",
+    group = "bio-processing-vegetables",
     order = "zb",
   },
 

@@ -6,8 +6,8 @@ data:extend(
     name = "solid-compost",
     icon = "__angelsbioprocessing__/graphics/icons/solid-compost.png",
     icon_size = 32,
-    subgroup = "farming-gardens",
-    order = "d",
+    subgroup = "bio-wood",
+    order = "a[support]-b",
     stack_size = 500
   },
   {
@@ -15,8 +15,8 @@ data:extend(
     name = "solid-soil",
     icon = "__angelsbioprocessing__/graphics/icons/solid-soil.png",
     icon_size = 32,
-    subgroup = "farming-gardens",
-    order = "e",
+    subgroup = "bio-wood",
+    order = "a[support]-a",
     stack_size = 500
   },
   {
@@ -24,8 +24,8 @@ data:extend(
     name = "solid-fertilizer",
     icon = "__angelsbioprocessing__/graphics/icons/solid-fertilizer.png",
     icon_size = 32,
-    subgroup = "farming-gardens",
-    order = "f",
+    subgroup = "bio-wood",
+    order = "a[support]-c",
     stack_size = 500
   },
   {
@@ -40,6 +40,9 @@ data:extend(
     durability_description_key = "description.science-pack-remaining-amount",
     durability_description_value = "description.science-pack-remaining-amount-value"
   },
+
+
+
   --UPGRADES
   {
     type = "item",
