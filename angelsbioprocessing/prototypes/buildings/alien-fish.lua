@@ -1,44 +1,6 @@
 data:extend(
 {
   {
-    type = "capsule",
-    name = "alien-fish-1-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
-    icon_size = 32,
-    subgroup = "raw-resource",
-    capsule_action =
-    {
-      type = "use-on-self",
-      attack_parameters =
-      {
-        type = "projectile",
-        ammo_category = "capsule",
-        cooldown = 30,
-        range = 0,
-        ammo_type =
-        {
-          category = "capsule",
-          target_type = "position",
-          action =
-          {
-            type = "direct",
-            action_delivery =
-            {
-              type = "instant",
-              target_effects =
-              {
-                type = "damage",
-                damage = {type = "physical", amount = -40}
-              }
-            }
-          }
-        }
-      }
-    },
-    order = "i",
-    stack_size = 100
-  },
-  {
     type = "fish",
     name = "alien-fish-1",
     icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
@@ -75,44 +37,6 @@ data:extend(
         }
       },
     },
-  },
-  {
-    type = "capsule",
-    name = "alien-fish-2-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-2.png",
-    icon_size = 32,
-    subgroup = "raw-resource",
-    capsule_action =
-    {
-      type = "use-on-self",
-      attack_parameters =
-      {
-        type = "projectile",
-        ammo_category = "capsule",
-        cooldown = 30,
-        range = 0,
-        ammo_type =
-        {
-          category = "capsule",
-          target_type = "position",
-          action =
-          {
-            type = "direct",
-            action_delivery =
-            {
-              type = "instant",
-              target_effects =
-              {
-                type = "damage",
-                damage = {type = "physical", amount = -40}
-              }
-            }
-          }
-        }
-      }
-    },
-    order = "i",
-    stack_size = 100
   },
   {
     type = "fish",
@@ -153,44 +77,6 @@ data:extend(
     },
   },
   {
-    type = "capsule",
-    name = "alien-fish-3-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
-    icon_size = 32,
-    subgroup = "raw-resource",
-    capsule_action =
-    {
-      type = "use-on-self",
-      attack_parameters =
-      {
-        type = "projectile",
-        ammo_category = "capsule",
-        cooldown = 30,
-        range = 0,
-        ammo_type =
-        {
-          category = "capsule",
-          target_type = "position",
-          action =
-          {
-            type = "direct",
-            action_delivery =
-            {
-              type = "instant",
-              target_effects =
-              {
-                type = "damage",
-                damage = {type = "physical", amount = -40}
-              }
-            }
-          }
-        }
-      }
-    },
-    order = "i",
-    stack_size = 100
-  },
-  {
     type = "fish",
     name = "alien-fish-3",
     icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
@@ -228,4 +114,5 @@ data:extend(
       },
     },
   },
-})
+}
+)

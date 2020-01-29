@@ -1,12 +1,22 @@
-  data:extend(
-  {
+data:extend(
+{
   {
     type = "item",
     name = "algae-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-	icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "a",
+    icons = {
+      {
+        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "a[algae]-a",
     place_result = "algae-farm",
     stack_size = 10,
   },
@@ -14,15 +24,15 @@
     type = "assembling-machine",
     name = "algae-farm",
     icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "algae-farm"},
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-	fast_replaceable_group= "algae-farm",
+    fast_replaceable_group= "algae-farm",
     module_specification =
     {
       module_slots = 2
@@ -39,33 +49,33 @@
     energy_usage = "100kW",
     ingredient_count = 4,
     animation=
-      {
-        filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
-        width = 288,
-        height = 288,
-		line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-    	animation_speed = 0.4,
-      },
-	working_visualisations =
+    {
+      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      width = 288,
+      height = 288,
+      line_length = 6,
+      frame_count = 36,
+      shift = {0, 0},
+      animation_speed = 0.4,
+    },
+    working_visualisations =
     {
       {
         animation =
-		{
+        {
           filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
-		  frame_count = 10,
+          frame_count = 10,
           width = 92,
           height = 99,
           scale = 0.4,
           shift = {-1.4, 0},
-		  animation_speed = 0.2,
+          animation_speed = 0.2,
           run_mode="forward",
         },
-		light = {intensity = 0.4, size = 6},
-	  },
-	},
+        light = {intensity = 0.4, size = 6},
+      },
+    },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -91,13 +101,23 @@
       }
     },
   },
-    {
+  {
     type = "item",
     name = "algae-farm-2",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-	icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "b",
+    icons = {
+      {
+        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "a[algae]-b",
     place_result = "algae-farm-2",
     stack_size = 10,
   },
@@ -105,15 +125,15 @@
     type = "assembling-machine",
     name = "algae-farm-2",
     icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "algae-farm-2"},
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-	fast_replaceable_group= "algae-farm",
+    fast_replaceable_group= "algae-farm",
     module_specification =
     {
       module_slots = 2
@@ -130,33 +150,33 @@
     energy_usage = "125kW",
     ingredient_count = 4,
     animation=
-      {
-        filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
-        width = 288,
-        height = 288,
-		line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-    	animation_speed = 0.4,
-      },
-	working_visualisations =
+    {
+      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      width = 288,
+      height = 288,
+      line_length = 6,
+      frame_count = 36,
+      shift = {0, 0},
+      animation_speed = 0.4,
+    },
+    working_visualisations =
     {
       {
         animation =
-		{
+        {
           filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
-		  frame_count = 10,
+          frame_count = 10,
           width = 92,
           height = 99,
           scale = 0.4,
           shift = {-1.4, 0},
-		  animation_speed = 0.2,
+          animation_speed = 0.2,
           run_mode="forward",
         },
-		light = {intensity = 0.4, size = 6},
-	  },
-	},
+        light = {intensity = 0.4, size = 6},
+      },
+    },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -183,13 +203,23 @@
     },
     pipe_covers = pipecoverspictures()
   },
-    {
+  {
     type = "item",
     name = "algae-farm-3",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-	icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "c",
+    icons = {
+      {
+        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "a[algae]-c",
     place_result = "algae-farm-3",
     stack_size = 10,
   },
@@ -197,15 +227,15 @@
     type = "assembling-machine",
     name = "algae-farm-3",
     icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "algae-farm-3"},
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-	fast_replaceable_group= "algae-farm",
+    fast_replaceable_group= "algae-farm",
     module_specification =
     {
       module_slots = 2
@@ -222,33 +252,33 @@
     energy_usage = "150kW",
     ingredient_count = 4,
     animation=
-      {
-        filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
-        width = 288,
-        height = 288,
-		line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-    	animation_speed = 0.4,
-      },
-	working_visualisations =
+    {
+      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      width = 288,
+      height = 288,
+      line_length = 6,
+      frame_count = 36,
+      shift = {0, 0},
+      animation_speed = 0.4,
+    },
+    working_visualisations =
     {
       {
         animation =
-		{
+        {
           filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
-		  frame_count = 10,
+          frame_count = 10,
           width = 92,
           height = 99,
           scale = 0.4,
           shift = {-1.4, 0},
-		  animation_speed = 0.2,
+          animation_speed = 0.2,
           run_mode="forward",
         },
-		light = {intensity = 0.4, size = 6},
-	  },
-	},
+        light = {intensity = 0.4, size = 6},
+      },
+    },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -275,5 +305,5 @@
     },
     pipe_covers = pipecoverspictures()
   },
-  }
-  )
+}
+)

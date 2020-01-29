@@ -1,415 +1,6 @@
 data:extend(
 {
-  {
-    type = "recipe",
-    name = "cellulose-fiber-raw-wood",
-    category = "crafting",
-    subgroup = "bio-wood",
-    enabled = "true",
-    energy_required = 2,
-    ingredients ={
-      {type="item", name="wood", amount=2},
-    },
-    results=
-    {
-      {type="item", name="cellulose-fiber", amount=4},
-    },
-    icon = "__angelsbioprocessing__/graphics/icons/cellulose-fiber-raw-wood.png",
-    icon_size = 32,
-    order = "a",
-  },
-  {
-    type = "recipe",
-    name = "wood-pellets",
-    category = "crafting",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="item", name="cellulose-fiber", amount=12},
-    },
-    results=
-    {
-      {type="item", name="wood-pellets", amount=2},
-    },
-    icon = "__angelsbioprocessing__/graphics/icons/wood-pellets.png",
-    icon_size = 32,
-    order = "c",
-  },
-  {
-    type = "recipe",
-    name = "wood-bricks",
-    category = "crafting",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients ={
-      {type="item", name="wood-pellets", amount=8},
-    },
-    results=
-    {
-      {type="item", name="wood-bricks", amount=4},
-    },
-    icon = "__angelsbioprocessing__/graphics/icons/wood-bricks.png",
-    icon_size = 32,
-    order = "d",
-  },
-  {
-    type = "recipe",
-    name = "gas-carbon-dioxide-from-wood",
-    category = "liquifying",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients ={
-      {type="item", name="wood-pellets", amount=1},
-    },
-    results=
-    {
-      {type="fluid", name="gas-carbon-dioxide", amount=70},
-    },
-    icon = "__angelspetrochem__/graphics/icons/gas-carbon-dioxide.png",
-    icon_size = 32,
-    order = "e",
-  },
-  {
-    type = "recipe",
-    name = "wood-charcoal",
-    category = "smelting",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients ={
-      {type="item", name="wood-pellets", amount=2},
-    },
-    results=
-    {
-      {type="item", name="wood-charcoal", amount=3},
-    },
-    icon_size = 32,
-    order = "f",
-  },
-  {
-    type = "recipe",
-    name = "carbon-from-charcoal",
-    category = "liquifying",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients ={
-      {type="item", name="wood-charcoal", amount=1},
-      {type="fluid", name="gas-oxygen", amount=20},
-    },
-    results=
-    {
-      {type="item", name="solid-carbon", amount=2},
-    },
-    icon_size = 32,
-    order = "g",
-  },
-  --PAPER
-  --T1
-  {
-    type = "recipe",
-    name = "solid-wood-pulp",
-    category = "crafting",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="item", name="cellulose-fiber", amount=20},
-      {type="item", name="solid-alginic-acid", amount=5},
-    },
-    results=
-    {
-      {type="item", name="solid-wood-pulp", amount=20},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a",
-  },
-  --T2 SULFITE PROCESS
-  {
-    type = "recipe",
-    name = "liquid-pulping-liquor",
-    category = "advanced-chemistry",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 2,
-    ingredients ={
-      {type="fluid", name="gas-sulfur-dioxide", amount=100},
-      {type="fluid", name="gas-oxygen", amount=40},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="fluid", name="liquid-pulping-liquor", amount=100},
-    },
-    --icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-    icon_size = 32,
-    order = "b",
-  },
-  {
-    type = "recipe",
-    name = "brown-liquor-recovery",
-    category = "liquifying",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="fluid", name="liquid-brown-liquor", amount=50},
-      {type="item", name="solid-sodium-hydroxide", amount=2},
-    },
-    results=
-    {
-      {type="item", name="solid-sodium-sulfate", amount=1},
-      {type="fluid", name="water-red-waste", amount=50},
-    },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
-      },
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/liquid-brown-liquor.png",
-        scale = 0.4375,
-        shift = { -10, -10},
-      },
-    },
-    icon_size = 32,
-    order = "c",
-  },
-  {
-    type = "recipe",
-    name = "sulfite-pulping",
-    category = "advanced-chemistry",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 6,
-    ingredients ={
-      {type="item", name="cellulose-fiber", amount=20},
-      {type="fluid", name="liquid-pulping-liquor", amount=75},
-      {type="fluid", name="gas-ammonia", amount=25},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="solid-wood-pulp", amount=25},
-      {type="fluid", name="liquid-brown-liquor", amount=75},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "d",
-  },
-  --T3 KRAFT PROCESS (SULFATE PROCESS)
-  {
-    type = "recipe",
-    name = "liquid-white-liquor",
-    category = "liquifying",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 2,
-    ingredients ={
-      {type="item", name="solid-sodium-hydroxide", amount=2},
-      {type="item", name="solid-sodium-sulfate", amount=2},
-      {type="fluid", name="water", amount=40},
-    },
-    results=
-    {
-      {type="fluid", name="liquid-white-liquor", amount=40},
-    },
-    --icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-    icon_size = 32,
-    order = "e",
-  },
-  {
-    type = "recipe",
-    name = "kraft-recovery",
-    category = "liquifying",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="fluid", name="liquid-black-liquor", amount=40},
-    },
-    results=
-    {
-      {type="fluid", name="liquid-green-liquor", amount=40},	--+energy gain
-    },
-    icon = "__angelsbioprocessing__/graphics/icons/liquid-green-liquor.png",
-    icon_size = 32,
-    order = "f",
-  },
-  {
-    type = "recipe",
-    name = "kraft-causting",
-    category = "chemistry",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 6,
-    ingredients ={
-      {type="fluid", name="liquid-green-liquor", amount=60},
-      {type="fluid", name="water", amount=60},
-      {type="item", name="solid-lime", amount=4},
-    },
-    results=
-    {
-      {type="fluid", name="liquid-white-liquor", amount=55},
-      {type="item", name="solid-limestone", amount=4},
-    },
-    icon = "__angelsbioprocessing__/graphics/icons/liquid-white-liquor.png",
-    icon_size = 32,
-    order = "g",
-  },
-  {
-    type = "recipe",
-    name = "kraft-cooking-washing",
-    category = "liquifying",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 6,
-    ingredients ={
-      {type="item", name="cellulose-fiber", amount=20},
-      {type="fluid", name="liquid-white-liquor", amount=40},
-    },
-    results=
-    {
-      {type="item", name="solid-wood-pulp", amount=30},
-      {type="fluid", name="liquid-black-liquor", amount_min=35, amount_max=40},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "h",
-  },
-  --BLEACHING
-  {
-    type = "recipe",
-    name = "paper-bleaching-1",
-    category = "crafting",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="item", name="solid-wood-pulp", amount=2},
-    },
-    results=
-    {
-      {type="item", name="solid-paper", amount=4},
-    },
-    --main_product = "solid-paper",
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "i",
-  },
-  {
-    type = "recipe",
-    name = "paper-bleaching-2",
-    category = "liquifying",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="item", name="solid-wood-pulp", amount=2},
-      {type="item", name="solid-sodium-hydroxide", amount=2},
-      {type="fluid", name="gas-chlorine", amount=60},
-    },
-    results=
-    {
-      {type="item", name="solid-paper", amount=5},
-      {type="item", name="solid-sodium-hypochlorite", amount=2},
-    },
-    --main_product = "solid-paper",
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "j",
-  },
-  {
-    type = "recipe",
-    name = "paper-bleaching-3",
-    category = "advanced-chemistry",
-    subgroup = "bio-paper",
-    enabled = "false",
-    energy_required = 4,
-    ingredients ={
-      {type="item", name="solid-wood-pulp", amount=2},
-      {type="item", name="solid-sodium-hydroxide", amount=2},
-      {type="fluid", name="gas-oxygen", amount=60},
-      {type="fluid", name="gas-sulfur-dioxide", amount=40},
-      {type="fluid", name="water", amount=100},
-    },
-    results=
-    {
-      {type="item", name="solid-paper", amount=6},
-      {type="item", name="solid-sodium-carbonate", amount=2},
-      {type="fluid", name="water-yellow-waste", amount=100},
-    },
-    --main_product = "solid-paper",
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "k",
-  },
-  --TREES
-  --RAW WOOD
-  --GENERATOR
+  -- RAW WOOD GENERATOR
   {
     type = "recipe",
     name = "tree-generator-1",
@@ -417,7 +8,8 @@ data:extend(
     subgroup = "bio-arboretum",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-soil", amount=5},
       {type="fluid", name="water", amount=50},
     },
@@ -437,7 +29,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "a",
+    order = "a[generator]-a",
   },
   {
     type = "recipe",
@@ -446,7 +38,8 @@ data:extend(
     subgroup = "bio-arboretum",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water", amount=50},
@@ -467,7 +60,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "b",
+    order = "a[generator]-b",
   },
   {
     type = "recipe",
@@ -476,7 +69,8 @@ data:extend(
     subgroup = "bio-arboretum",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water", amount=50},
@@ -498,9 +92,12 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c",
+    order = "a[generator]-c",
   },
-  --ARBORETUM
+
+
+
+  -- RAW WOOD ARBORETUM
   {
     type = "recipe",
     name = "tree-arboretum-1",
@@ -508,7 +105,8 @@ data:extend(
     subgroup = "bio-arboretum",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-seed", amount=2},
       {type="item", name="solid-soil", amount=5},
       {type="fluid", name="water", amount=50},
@@ -533,7 +131,7 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 100/255, a = 1},
     },
-    order = "d",
+    order = "b[arboretum]-a",
   },
   {
     type = "recipe",
@@ -542,7 +140,8 @@ data:extend(
     subgroup = "bio-arboretum",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-seed", amount=2},
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
@@ -568,7 +167,7 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 100/255, a = 1},
     },
-    order = "e",
+    order = "b[arboretum]-b",
   },
   {
     type = "recipe",
@@ -577,7 +176,8 @@ data:extend(
     subgroup = "bio-arboretum",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-seed", amount=2},
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
@@ -604,34 +204,77 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 100/255, a = 1},
     },
-    order = "f",
+    order = "b[arboretum]-c",
   },
-  --PROCESSING
+
+
+
+  -- RAW WOOD PROCESSING
   {
     type = "recipe",
     name = "solid-saw",
     category = "crafting",
-    subgroup = "bio-arboretum",
+    subgroup = "bio-wood",
     enabled = "false",
     energy_required = 0.5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="iron-plate", amount=1},
     },
     results=
     {
       {type="item", name="solid-saw", amount=1},
     },
-    icon_size = 32,
-    order = "g",
+    --icon_size = 32,
+    order = "b[saw]-a[iron]",
   },
   {
     type = "recipe",
-    name = "wood-sawing",
+    name = "solid-crystal-tipped-saw",
     category = "crafting",
-    subgroup = "bio-arboretum",
+    subgroup = "bio-wood",
     enabled = "false",
     energy_required = 2,
-    ingredients ={
+    ingredients =
+    {
+      {type="item", name="solid-saw", amount=1},
+      {type="item", name="crystal-splinter-harmonic", amount=1},
+    },
+    results=
+    {
+      {type="item", name="solid-crystal-tipped-saw", amount=1},
+    },
+    --icon_size = 32,
+    order = "b[saw]-b[crystal-tipped]",
+  },
+  {
+    type = "recipe",
+    name = "solid-crystal-full-saw",
+    category = "crafting",
+    subgroup = "bio-wood",
+    enabled = "false",
+    energy_required = 5,
+    ingredients =
+    {
+      {type="item", name="solid-crystal-tipped-saw", amount=1},
+      {type="item", name="crystal-shard-harmonic", amount=1},
+    },
+    results=
+    {
+      {type="item", name="solid-crystal-full-saw", amount=1},
+    },
+    --icon_size = 32,
+    order = "b[saw]-c[crystal-full]",
+  },
+  {
+    type = "recipe",
+    name = "wood-sawing-1",
+    category = "crafting",
+    subgroup = "bio-processing-wood",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
       {type="item", name="solid-tree", amount=1},
       {type="item", name="solid-saw", amount=1},
     },
@@ -640,12 +283,95 @@ data:extend(
       {type="item", name="wood", amount_min=6, amount_max=8},
       {type="item", name="solid-saw", amount=1, catalyst_amount=1, probability= 0.9},
     },
-	main_product = "wood",
+    main_product = "wood",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/wood.png",
+        icon_size = 64,
+        scale = 0.5
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
-    order = "h",
+    order = "a[wood]-a[iron-saw]",
   },
-  --TEMPERATE
-  --GENERATOR
+  {
+    type = "recipe",
+    name = "wood-sawing-2",
+    category = "crafting",
+    subgroup = "bio-processing-wood",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
+      {type="item", name="solid-tree", amount=1},
+      {type="item", name="solid-crystal-tipped-saw", amount=1},
+    },
+    results=
+    {
+      {type="item", name="wood", amount_min=6, amount_max=8},
+      {type="item", name="solid-crystal-tipped-saw", amount=1, catalyst_amount=1, probability= 0.95},
+    },
+    main_product = "wood",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/wood.png",
+        icon_size = 64,
+        scale = 0.5
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    order = "a[wood]-b[crystal-tipped-saw]",
+  },
+  {
+    type = "recipe",
+    name = "wood-sawing-3",
+    category = "crafting",
+    subgroup = "bio-processing-wood",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
+      {type="item", name="solid-tree", amount=1},
+      {type="item", name="solid-crystal-full-saw", amount=1},
+    },
+    results=
+    {
+      {type="item", name="wood", amount_min=6, amount_max=8},
+      {type="item", name="solid-crystal-full-saw", amount=1, catalyst_amount=1, probability= 0.99},
+    },
+    main_product = "wood",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/wood.png",
+        icon_size = 64,
+        scale = 0.5
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    order = "a[wood]-c[crystal-full-saw]",
+  },
+
+
+
+  -- TEMPERATE WOOD GENERATOR
   {
     type = "recipe",
     name = "temperate-tree-generator-1",
@@ -653,7 +379,8 @@ data:extend(
     subgroup = "bio-arboretum-temperate",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-soil", amount=5},
       {type="fluid", name="water", amount=50},
     },
@@ -673,7 +400,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "a",
+    order = "a[generator]-a",
   },
   {
     type = "recipe",
@@ -682,7 +409,8 @@ data:extend(
     subgroup = "bio-arboretum-temperate",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water", amount=50},
@@ -703,7 +431,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "b",
+    order = "a[generator]-b",
   },
   {
     type = "recipe",
@@ -712,7 +440,8 @@ data:extend(
     subgroup = "bio-arboretum-temperate",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water", amount=50},
@@ -734,9 +463,12 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c",
+    order = "a[generator]-c",
   },
-  --ARBORETUM
+
+
+
+  -- TEMPERATE WOOD ARBORETUM
   {
     type = "recipe",
     name = "temperate-tree-arboretum-1",
@@ -744,7 +476,8 @@ data:extend(
     subgroup = "bio-arboretum-temperate",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-temperate-seed", amount=2},
       {type="item", name="solid-soil", amount=5},
       {type="fluid", name="water", amount=50},
@@ -770,7 +503,7 @@ data:extend(
     {
       primary = {r = 0/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "d",
+    order = "b[arboretum]-a",
   },
   {
     type = "recipe",
@@ -779,7 +512,8 @@ data:extend(
     subgroup = "bio-arboretum-temperate",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-temperate-seed", amount=2},
       {type="item", name="solid-soil", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
@@ -806,9 +540,12 @@ data:extend(
     {
       primary = {r = 0/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "e",
+    order = "b[arboretum]-b",
   },
-  --PROCESSING
+
+
+
+  -- TEMPERATE WOOD PROCESSING
   {
     type = "recipe",
     name = "bio-resin",
@@ -816,7 +553,8 @@ data:extend(
     subgroup = "bio-arboretum-temperate",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-ethanol", amount=20},
       {type="item", name="bio-resin", amount=1},
     },
@@ -835,10 +573,12 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "f",
+    order = "c[processing]",
   },
-  --SWAMP
-  --GENERATOR
+
+
+
+  -- SWAMP WOOD GENERATOR
   {
     type = "recipe",
     name = "swamp-tree-generator-1",
@@ -846,7 +586,8 @@ data:extend(
     subgroup = "bio-arboretum-swamp",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-mud", amount=5},
       {type="fluid", name="water-light-mud", amount=50},
     },
@@ -870,7 +611,7 @@ data:extend(
     {
       primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
     },
-    order = "a",
+    order = "a[generator]-a",
   },
   {
     type = "recipe",
@@ -879,7 +620,8 @@ data:extend(
     subgroup = "bio-arboretum-swamp",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-mud", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water-light-mud", amount=50},
@@ -904,7 +646,7 @@ data:extend(
     {
       primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
     },
-    order = "b",
+    order = "a[generator]-b",
   },
   {
     type = "recipe",
@@ -913,7 +655,8 @@ data:extend(
     subgroup = "bio-arboretum-swamp",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-mud", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water-light-mud", amount=50},
@@ -939,9 +682,12 @@ data:extend(
     {
       primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
     },
-    order = "c",
+    order = "a[generator]-c",
   },
-  --ARBORETUM
+
+
+
+  -- SWAMP WOOD ARBORETUM
   {
     type = "recipe",
     name = "swamp-tree-arboretum-1",
@@ -949,7 +695,8 @@ data:extend(
     subgroup = "bio-arboretum-swamp",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-swamp-seed", amount=2},
       {type="item", name="solid-mud", amount=5},
       {type="fluid", name="water-light-mud", amount=50},
@@ -975,7 +722,7 @@ data:extend(
     {
       primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
     },
-    order = "d",
+    order = "b[arboretum]-a",
   },
   {
     type = "recipe",
@@ -984,7 +731,8 @@ data:extend(
     subgroup = "bio-arboretum-swamp",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-swamp-seed", amount=2},
       {type="item", name="solid-mud", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
@@ -1011,9 +759,12 @@ data:extend(
     {
       primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
     },
-    order = "e",
+    order = "b[arboretum]-b",
   },
-  --PROCESSING
+
+
+
+  -- SWAMP WOOD PROCESSING
   {
     type = "recipe",
     name = "bio-plastic",
@@ -1021,7 +772,8 @@ data:extend(
     subgroup = "bio-arboretum-swamp",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-acetone", amount=20},
       {type="item", name="bio-plastic", amount=1},
     },
@@ -1040,10 +792,12 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "f",
+    order = "c[processing]",
   },
-  --DESERT
-  --GENERATOR
+
+
+
+  -- DESERT WOOD GENERATOR
   {
     type = "recipe",
     name = "desert-tree-generator-1",
@@ -1051,7 +805,8 @@ data:extend(
     subgroup = "bio-arboretum-desert",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-sand", amount=5},
       {type="fluid", name="water-saline", amount=50},
     },
@@ -1075,7 +830,7 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "a",
+    order = "a[generator]-a",
   },
   {
     type = "recipe",
@@ -1084,7 +839,8 @@ data:extend(
     subgroup = "bio-arboretum-desert",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-sand", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water-saline", amount=50},
@@ -1109,7 +865,7 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "b",
+    order = "a[generator]-b",
   },
   {
     type = "recipe",
@@ -1118,7 +874,8 @@ data:extend(
     subgroup = "bio-arboretum-desert",
     enabled = "false",
     energy_required = 15,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-sand", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
       {type="fluid", name="water-saline", amount=50},
@@ -1144,9 +901,12 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "c",
+    order = "a[generator]-c",
   },
-  --ARBORETUM
+
+
+
+  -- DESERT WOOD ARBORETUM
   {
     type = "recipe",
     name = "desert-tree-arboretum-1",
@@ -1154,7 +914,8 @@ data:extend(
     subgroup = "bio-arboretum-desert",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-desert-seed", amount=2},
       {type="item", name="solid-sand", amount=5},
       {type="fluid", name="water-saline", amount=50},
@@ -1180,7 +941,7 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "d",
+    order = "b[arboretum]-a",
   },
   {
     type = "recipe",
@@ -1189,7 +950,8 @@ data:extend(
     subgroup = "bio-arboretum-desert",
     enabled = "false",
     energy_required = 30,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="tree-desert-seed", amount=2},
       {type="item", name="solid-sand", amount=5},
       {type="item", name="solid-fertilizer", amount=1},
@@ -1216,9 +978,12 @@ data:extend(
     {
       primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
     },
-    order = "e",
+    order = "b[arboretum]-b",
   },
-  --PROCESSING
+
+
+
+  -- DESERT WOOD PROCESSING
   {
     type = "recipe",
     name = "bio-rubber",
@@ -1226,7 +991,8 @@ data:extend(
     subgroup = "bio-arboretum-desert",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-acetone", amount=20},
       {type="item", name="bio-rubber", amount=1},
     },
@@ -1245,7 +1011,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "f",
+    order = "c[processing]",
   },
 }
 )

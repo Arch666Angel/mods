@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- GENERATOR
   {
     type = "item",
     name = "bio-generator-temperate-1",
@@ -9,8 +10,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "e",
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "b[generator]-a",
     place_result = "bio-generator-temperate-1",
     stack_size = 10,
   },
@@ -47,8 +48,10 @@ data:extend(
     },
     energy_usage = "100kW",
     ingredient_count = 4,
-    animation={
-      layers={
+    animation=
+    {
+      layers=
+      {
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-shadow.png",
           width = 160,
@@ -140,8 +143,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "e",
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "b[generator]-b",
     place_result = "bio-generator-swamp-1",
     stack_size = 10,
   },
@@ -271,8 +274,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "e",
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "b[generator]-c",
     place_result = "bio-generator-desert-1",
     stack_size = 10,
   },
@@ -393,6 +396,9 @@ data:extend(
       apparent_volume = 2.5,
     },
   },
+
+
+
   --ARBORETUM
   {
     type = "item",
@@ -403,8 +409,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    subgroup = "bio-processing-buildings-a",
-    order = "e",
+    subgroup = "bio-processing-buildings-nauvis-a",
+    order = "c[arboretum]",
     place_result = "bio-arboretum-1",
     stack_size = 10,
   },

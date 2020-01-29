@@ -127,8 +127,8 @@ data:extend(
       },
     },
     result_units = {
-		{"puffer-egg", {{0, 0}, {1, 1}}}
-	},
+        {"puffer-egg", {{0, 0}, {1, 1}}}
+    },
     spawning_cooldown = {360, 150},
     spawning_radius = 10,
     spawning_spacing = 3,
@@ -137,4 +137,5 @@ data:extend(
     autoplace = enemy_autoplace.enemy_spawner_autoplace(0),
     call_for_help_radius = 50
   },
-})
+}
+)

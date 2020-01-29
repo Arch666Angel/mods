@@ -3,6 +3,18 @@ Version: 0.7.0
 Date: ???
   Changes:
     - updated to 0.18
+    - changed fish to require a fish environment
+    - added base game fish to breeding
+    - moved farming recipes to their own tab
+    - crystal enhancer now require crystal slurry (instead of the catalyst)
+    - modules require crystals as an ingredient
+    - added beter saw blades to make the fuel production less nerfed
+  Bugfixes:
+    - fixed missing localisation on puffer nest (item)
+    - biter butchering now happens in butchery (was assembling machine before)
+    - raw crystal cutting had wrong recipe icon and was missing localisation
+    - fixed algae farms didn't have numbers indicating there mk
+    - petri dish require iron when there is no glass available
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 26.04.2019
