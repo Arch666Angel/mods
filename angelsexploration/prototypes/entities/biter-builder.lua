@@ -83,19 +83,19 @@ local function make_run_animation(data_run)
 					scale = data_run.scale,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/biter/biter-run-1.png",
+							filename = "__base__/graphics/entity/biter/biter-run-01.png",
 							width_in_frames = 8,
 							height_in_frames = 16
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-run-2.png",
+							filename = "__base__/graphics/entity/biter/biter-run-02.png",
 							width_in_frames = 8,
 							height_in_frames = 16
 						}
 					}
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-run-mask1.png",
+					filename = "__base__/graphics/entity/biter/biter-run-mask1-01.png",
 					flags = {"mask"},
 					width = 105,
 					height = 81,
@@ -106,7 +106,7 @@ local function make_run_animation(data_run)
 					tint = data_run.tint1
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-run-mask2.png",
+					filename = "__base__/graphics/entity/biter/biter-run-mask2-01.png",
 					flags = {"mask"},
 					line_length = 16,
 					width = 95,
@@ -223,32 +223,32 @@ local function make_run_animation(data_run)
 					still_frame = 4,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-1.png",
+							filename = "__base__/graphics/entity/spitter/spitter-run-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-2.png",
+							filename = "__base__/graphics/entity/spitter/spitter-run-02.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-3.png",
+							filename = "__base__/graphics/entity/spitter/spitter-run-03.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-4.png",
+							filename = "__base__/graphics/entity/spitter/spitter-run-04.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-5.png",
+							filename = "__base__/graphics/entity/spitter/spitter-run-05.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-6.png",
+							filename = "__base__/graphics/entity/spitter/spitter-run-06.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						}
@@ -284,29 +284,29 @@ local function make_attack_animation(data_attack)
 					scale = data_attack.scale,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/biter/biter-attack-1.png",
+							filename = "__base__/graphics/entity/biter/biter-attack-01.png",
 							width_in_frames = 6,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-attack-2.png",
+							filename = "__base__/graphics/entity/biter/biter-attack-02.png",
 							width_in_frames = 5,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-attack-3.png",
+							filename = "__base__/graphics/entity/biter/biter-attack-03.png",
 							width_in_frames = 6,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-attack-4.png",
+							filename = "__base__/graphics/entity/biter/biter-attack-04.png",
 							width_in_frames = 5,
 							height_in_frames = 8
 						}
 					}
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-attack-mask1.png",
+					filename = "__base__/graphics/entity/biter/biter-attack-mask1-01.png",
 					flags = {"mask"},
 					width = 125,
 					height = 108,
@@ -317,7 +317,7 @@ local function make_attack_animation(data_attack)
 					tint = data_attack.tint1
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-attack-mask2.png",
+					filename = "__base__/graphics/entity/biter/biter-attack-mask2-01.png",
 					flags = {"mask"},
 					width = 114,
 					height = 100,
@@ -432,35 +432,25 @@ local function make_attack_animation(data_attack)
 					animation_speed = 0.4,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-1.png",
+							filename = "__base__/graphics/entity/spitter/spitter-attack-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-2.png",
+							filename = "__base__/graphics/entity/spitter/spitter-attack-02.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-3.png",
+							filename = "__base__/graphics/entity/spitter/spitter-attack-03.png",
 							width_in_frames = 6,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-4.png",
+							filename = "__base__/graphics/entity/spitter/spitter-attack-04.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
-						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-5.png",
-							width_in_frames = 8,
-							height_in_frames = 8
-						},
-						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-6.png",
-							width_in_frames = 6,
-							height_in_frames = 8
-						}
 					}
 				},
 				{
@@ -475,12 +465,12 @@ local function make_attack_animation(data_attack)
 					animation_speed = 0.4,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-mask-1.png",
+							filename = "__base__/graphics/entity/spitter/spitter-attack-mask-1-01.png",
 							width_in_frames = 11,
 							height_in_frames = 16
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-mask-2.png",
+							filename = "__base__/graphics/entity/spitter/spitter-attack-mask-2-01.png",
 							width_in_frames = 11,
 							height_in_frames = 16
 						}
@@ -504,29 +494,29 @@ local function make_die_animation(data_die)
 					scale = data_die.scale,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/biter/biter-die-1.png",
+							filename = "__base__/graphics/entity/biter/biter-die-01.png",
 							width_in_frames = 9,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-die-2.png",
+							filename = "__base__/graphics/entity/biter/biter-die-02.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-die-3.png",
+							filename = "__base__/graphics/entity/biter/biter-die-03.png",
 							width_in_frames = 9,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/biter/biter-die-4.png",
+							filename = "__base__/graphics/entity/biter/biter-die-04.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						}
 					}
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-die-mask1.png",
+					filename = "__base__/graphics/entity/biter/biter-die-mask1-01.png",
 					flags = {"mask"},
 					width = 120,
 					height = 109,
@@ -537,7 +527,7 @@ local function make_die_animation(data_die)
 					tint = data_die.tint1
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-die-mask2.png",
+					filename = "__base__/graphics/entity/biter/biter-die-mask2-01.png",
 					flags = {"mask"},
 					width = 115,
 					height = 108,
@@ -652,22 +642,22 @@ local function make_die_animation(data_die)
 					scale = data_die.scale,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-1.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-2.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-02.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-3.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-03.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-4.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-04.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						}
@@ -685,22 +675,22 @@ local function make_die_animation(data_die)
 					scale = data_die.scale,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-1.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask-1-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-2.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask-2-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-3.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask-3-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-4.png",
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask-4-01.png",
 							width_in_frames = 8,
 							height_in_frames = 8
 						}
@@ -743,38 +733,51 @@ local function make_roar_sound(type, volume)
 	if type == "spitter" or type == "psyker" then
 		return {
 			{
-				filename = "__base__/sound/creatures/spitter-1.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-1.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-2.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-2.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-3.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-3.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-4.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-4.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-5.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-5.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-6.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-6.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-7.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-7.ogg",
 				volume = volume
 			},
 			{
-				filename = "__base__/sound/creatures/spitter-8.ogg",
+				filename = "__base__/sound/creatures/spitter-call-med-8.ogg",
+				volume = volume
+			},
+			{
+				filename = "__base__/sound/creatures/spitter-call-med-9.ogg",
+				volume = volume
+			},
+			{
+				filename = "__base__/sound/creatures/spitter-call-med-10.ogg",
+				volume = volume
+			},
+			{
+				filename = "__base__/sound/creatures/spitter-call-med-11.ogg",
 				volume = volume
 			}
 		}
+
 	end
 	if type == "worm" then
 		return {
@@ -1109,17 +1112,28 @@ local function make_attack_parameter(data_app, data_dmg)
 		}
 	end
 	if data_app.type == "spitter" then
-		data_dmg.type = "projectile"
-		data_dmg.category = "rocket"
-		data_dmg.ammo = {
+		data_dmg.type = "stream"
+		data_dmg.ammo_category = "biological"
+		data_dmg.cooldown_deviation = 0.15
+		data_dmg.damage_modifier = damage_modifier_spitter_small
+		data_dmg.roarvolume = 0.4
+
+		data_dmg.warmup = 30
+		--projectile_creation_parameters = spitter_shoot_shiftings(data.scale, data.scale * scale_spitter_stream),
+		data_dmg.use_shooter_direction = true
+
+		data_dmg.lead_target_for_projectile_speed = 0.2* 0.75 * 1.5 *1.5 -- this is same as particle horizontal speed of flamethrower fire stream
+
+		data_dmg.ammo =
+		{
 			category = "biological",
-			action = {
+			action =
+			{
 				type = "direct",
-				action_delivery = {
-					type = "projectile",
-					projectile = "acid-projectile-purple",
-					starting_speed = 0.5,
-					max_range = data_dmg.range * 2
+				action_delivery =
+				{
+					type = "stream",
+					stream = "bio-weapon-stream"
 				}
 			}
 		}

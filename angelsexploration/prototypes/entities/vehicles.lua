@@ -47,7 +47,12 @@ data:extend(
         projectile_center = {-0.15625, -0.07812},
         projectile_creation_distance = 1,
         range = 20,
-        sound = make_heavy_gunshot_sounds()
+        sound = heavy_gunshot--[[{
+          {
+            filename="__base__/prototypes/entity/demo-sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
+            volume=1.0,
+          }
+        },]]
       },
       stack_size = 1
     },

@@ -385,11 +385,11 @@ data:extend(
         shift = {0, 0}
       },
       shadow = {
-        filename = "__base__/graphics/entity/acid-projectile-purple/acid-projectile-purple-shadow.png",
-        line_length = 5,
-        width = 28,
-        height = 16,
-        frame_count = 33,
+        filename = "__base__/graphics/entity/acid-projectile/acid-projectile-shadow.png",
+        line_length = 15,
+        width = 330,
+        height = 84,
+        frame_count = 15,
         priority = "high",
         shift = {-0.09, 0.395}
       },
