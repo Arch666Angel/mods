@@ -23,11 +23,13 @@ angelsmods.functions.update_alien(small_biter)
 angelsmods.functions.update_alien(medium_biter)
 angelsmods.functions.update_alien(big_biter)
 angelsmods.functions.update_alien(behemoth_biter)
+angelsmods.functions.update_alien(colossal_biter)
 
 angelsmods.functions.update_alien(small_spitter)
 angelsmods.functions.update_alien(medium_spitter)
 angelsmods.functions.update_alien(big_spitter)
 angelsmods.functions.update_alien(behemoth_spitter)
+angelsmods.functions.update_alien(colossal_spitter)
 
 angelsmods.functions.update_spawner(spitter_spawner)
 angelsmods.functions.update_spawner(biter_spawner)

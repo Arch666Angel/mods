@@ -26,5 +26,6 @@ require("prototypes.entities.biter-definitions")
 require("prototypes.entities.biter")
 
 require("prototypes.recipes.vehicles-recipes")
+require("prototypes.recipes.bio-gun")
 
 require("prototypes.technology.exploration-technology")

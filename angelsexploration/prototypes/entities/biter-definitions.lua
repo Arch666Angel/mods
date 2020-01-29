@@ -24,6 +24,7 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 100,
+				corpse= "small_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -55,6 +56,7 @@
 				tint2 = {r=0.9, g=0.3, b=0.3, a=0.75},
 				speed = 0.185,
 				health = 200,
+				corpse= "medium_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -86,6 +88,7 @@
 				tint2 = {r=0.31, g=0.61, b=0.95, a=0.85},
 				speed = 0.185,
 				health = 300,
+				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -117,6 +120,7 @@
 				tint2 = {r=0.88, g=0.24, b=0.24, a=0.9},
 				speed = 0.17,
 				health = 400,
+				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -137,7 +141,6 @@
 				{type = "plasma", decrease = 15, percent = 40}
 			}
 		}
---[[
 	colossal_biter =
 		{
 			appearance = {
@@ -148,6 +151,7 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.17,
 				health = 500,
+				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -168,7 +172,6 @@
 				{type = "plasma", decrease = 10, percent = 30}
 			}
 		}
-]]--
 --SPITTER DEFINITIONS
 	small_spitter =
 		{
@@ -177,9 +180,10 @@
 				name = "small",
 				scale = 0.5,
 				tint1 = {r=0.68, g=0.4, b=0, a=1},
-				--tint2 = {r=1, g=0.63, b=0, a=0.4},
+				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 50,
+				corpse= "small_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -206,9 +210,10 @@
 				name = "medium",
 				scale = 0.7,
 				tint1 = {r=0.83, g=0.39, b=0.36, a=0.75},
-				--tint2 = {r=1, g=0.63, b=0, a=0.4},
+				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 100,
+				corpse= "medium_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -235,9 +240,10 @@
 				name = "big",
 				scale = 1,
 				tint1 = {r=0.54, g=0.58, b=0.85, a=0.6},
-				--tint2 = {r=1, g=0.63, b=0, a=0.4},
+				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 150,
+				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -264,9 +270,10 @@
 				name = "behemoth",
 				scale = 1.2,
 				tint1 = {r=0.3, g=0.9, b=0.3, a=0.75},
-				--tint2 = {r=1, g=0.63, b=0, a=0.4},
+				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 200,
+				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -293,9 +300,10 @@
 				name = "colossal",
 				scale = 1.4,
 				tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
-				--tint2 = {r=1, g=0.63, b=0, a=0.4},
+				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 250,
+				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -314,7 +322,6 @@
 				{type = "plasma", decrease = 10, percent = 30}
 			}
 		}
-
 --SCARAB DEFINITIONS
 	small_scarab =
 		{
@@ -326,6 +333,7 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 150,
+				corpse="small_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -355,6 +363,7 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 300,
+				corpse="medium_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -384,6 +393,7 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 450,
+				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -413,6 +423,7 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 600,
+				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -442,6 +453,7 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 750,
+				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -472,6 +484,7 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 100,
+				corpse= "small_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -501,6 +514,7 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 200,
+				corpse= "medium_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -530,6 +544,7 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 300,
+				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -559,6 +574,7 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 400,
+				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -588,6 +604,7 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 500,
+				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
