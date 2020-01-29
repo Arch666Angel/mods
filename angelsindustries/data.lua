@@ -3,9 +3,9 @@ if not angelsmods then angelsmods = {} end
 if not angelsmods.industries then angelsmods.industries = {} end
 
 --TRIGGER CHECKS
-angelsmods.industries.tech = false
-angelsmods.industries.components = false
-angelsmods.industries.overhaul = false
+angelsmods.industries.overhaul = true -- enable industries
+angelsmods.industries.tech = false -- enable technology overhaul
+angelsmods.industries.components = false -- enable hard mode
 
 --LOAD FUNCTIONS
 if not angelsmods.industries.tech_exceptions then angelsmods.industries.tech_exceptions = {} end
@@ -16,49 +16,49 @@ require("prototypes.angels-industries-category")
 
 --TECH
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
-	--ITEMS
-	require("prototypes.items.tech-science-packs")
+  --ITEMS
+  require("prototypes.items.tech-science-packs")
 
-	--ENTITIES
-	require("prototypes.buildings.angels-labs")
-	require("prototypes.buildings.angels-labs-enhance")
-	require("prototypes.buildings.angels-labs-exploration")
-	require("prototypes.buildings.angels-labs-energy")
-	require("prototypes.buildings.angels-labs-logistic")
-	require("prototypes.buildings.angels-labs-processing")
-	require("prototypes.buildings.angels-labs-war")
-	
-	require("prototypes.buildings.angels-accelerator")
+  --ENTITIES
+  require("prototypes.buildings.angels-labs")
+  require("prototypes.buildings.angels-labs-enhance")
+  require("prototypes.buildings.angels-labs-exploration")
+  require("prototypes.buildings.angels-labs-energy")
+  require("prototypes.buildings.angels-labs-logistic")
+  require("prototypes.buildings.angels-labs-processing")
+  require("prototypes.buildings.angels-labs-war")
+  
+  require("prototypes.buildings.angels-accelerator")
 
-	--RECIPES
-	require("prototypes.recipes.tech-science-packs-recipes")
-	require("prototypes.recipes.tech-entity")
+  --RECIPES
+  require("prototypes.recipes.tech-science-packs-recipes")
+  require("prototypes.recipes.tech-entity")
 
-	--TECHS
-	require("prototypes.technology.angels-tech-technology")
+  --TECHS
+  require("prototypes.technology.angels-tech-technology")
 end
 
 --COMPONENTS
 if angelsmods.industries.overhaul and angelsmods.industries.components then
-	--ITEMS
-	require("prototypes.items.components-electronics")
-	require("prototypes.items.components-mechanical")
-	require("prototypes.items.components-construction")
-	require("prototypes.items.components-blocks")
-	require("prototypes.items.components-weapons")
-	require("prototypes.items.components-cabling")
+  --ITEMS
+  require("prototypes.items.components-electronics")
+  require("prototypes.items.components-mechanical")
+  require("prototypes.items.components-construction")
+  require("prototypes.items.components-blocks")
+  require("prototypes.items.components-weapons")
+  require("prototypes.items.components-cabling")
 
-	--ENTITIES
-	require("prototypes.buildings.angels-assemblers")
+  --ENTITIES
+  require("prototypes.buildings.angels-assemblers")
 
-	--RECIPES
-	require("prototypes.recipes.components-entity")
-	require("prototypes.recipes.components-electronics-recipes")
-	require("prototypes.recipes.components-mechanical-recipes")
-	require("prototypes.recipes.components-construction-recipes")
-	require("prototypes.recipes.components-cabling-recipes")
-	require("prototypes.recipes.components-blocks-recipes")
-	require("prototypes.recipes.components-weapons-recipes")
+  --RECIPES
+  require("prototypes.recipes.components-entity")
+  require("prototypes.recipes.components-electronics-recipes")
+  require("prototypes.recipes.components-mechanical-recipes")
+  require("prototypes.recipes.components-construction-recipes")
+  require("prototypes.recipes.components-cabling-recipes")
+  require("prototypes.recipes.components-blocks-recipes")
+  require("prototypes.recipes.components-weapons-recipes")
 end
 
 
