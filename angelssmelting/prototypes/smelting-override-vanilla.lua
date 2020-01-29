@@ -42,17 +42,17 @@ OV.disable_recipe({ "angels-mono-silicon-seed", "angels-mono-silicon-1", "angels
 OV.disable_recipe({"molten-steel-smelting-2", "molten-steel-smelting-3", "molten-steel-smelting-4", "molten-steel-smelting-5", "rod-stack-steel-casting", "angels-rod-stack-steel-converting", "rod-stack-steel-casting-fast"})
 
 OV.patch_recipes({
-	{ 
-	name = "cement-mixture-1",
-	ingredients = {
-		{ name = "stone-crushed", type = "item", amount = "quartz" },
-	},
-	},
-	{ 
-	name = "cement-mixture-2",
-	ingredients = {
-		{ name = "stone-crushed", type = "item", amount = "quartz" },
-		{ name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
-	},
-	}
+  { 
+  name = "cement-mixture-1",
+  ingredients = {
+    { name = "stone-crushed", type = "item", amount = "quartz" },
+  },
+  },
+  { 
+  name = "cement-mixture-2",
+  ingredients = {
+    { name = "stone-crushed", type = "item", amount = "quartz" },
+    { name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
+  },
+  }
 })

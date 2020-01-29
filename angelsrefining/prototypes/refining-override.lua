@@ -23,8 +23,8 @@ local OV = angelsmods.functions.OV
 --SORTING OVERRIDES
 require("prototypes.recipes.refining-entity-angels")
 --if angelsmods.industries or (bobmods and bobmods.plates) then
-if angelsmods.industries or mods['bobplates'] then
-	if angelsmods.industries and angelsmods.industries.overhaul then
+if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] then
+	if angelsmods.industries then
 		require("prototypes.refining-override-angels")
 	else
 		require("prototypes.refining-override-bob")
