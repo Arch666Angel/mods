@@ -337,8 +337,8 @@ if bobmods and bobmods.plates then
   })
 end
 
-OV.add_unlock("bio-processing-alien", "alien-pre-artifact-base")      
-OV.add_unlock("bio-processing-alien", "alien-pre-artifact-yellow")										    	
+OV.add_unlock("bio-processing-alien", "alien-pre-artifact-base")
+OV.add_unlock("bio-processing-alien", "alien-pre-artifact-yellow")
 OV.add_unlock("bio-processing-alien", "alien-pre-artifact-blue")
 OV.add_unlock("bio-processing-alien", "alien-pre-artifact-green")
 OV.add_unlock("bio-processing-alien", "alien-pre-artifact-purple")
