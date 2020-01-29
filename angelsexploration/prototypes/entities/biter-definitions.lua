@@ -137,7 +137,7 @@
 				{type = "plasma", decrease = 15, percent = 40}
 			}
 		}
-
+--[[
 	colossal_biter =
 		{
 			appearance = {
@@ -168,7 +168,7 @@
 				{type = "plasma", decrease = 10, percent = 30}
 			}
 		}
-
+]]--
 --SPITTER DEFINITIONS
 	small_spitter =
 		{

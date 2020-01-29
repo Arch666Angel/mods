@@ -213,10 +213,10 @@ local function make_run_animation(data_run)
 		return {
 			layers = {
 				{
-					width = 193,
-					height = 164,
+					width = 124,
+					height = 110,
 					priority = "very-low",
-					frame_count = 24,
+					frame_count = 16,
 					direction_count = 16,
 					shift = {data_run.scale * 1.01562, 0},
 					scale = data_run.scale,
@@ -241,27 +241,38 @@ local function make_run_animation(data_run)
 							filename = "__base__/graphics/entity/spitter/spitter-run-04.png",
 							width_in_frames = 8,
 							height_in_frames = 8
-						},
-						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-05.png",
-							width_in_frames = 8,
-							height_in_frames = 8
-						},
-						{
-							filename = "__base__/graphics/entity/spitter/spitter-run-06.png",
-							width_in_frames = 8,
-							height_in_frames = 8
 						}
 					}
 				},
 				{
-					width = 81,
-					height = 90,
-					frame_count = 24,
+					width = 124,
+					height = 100,
+					frame_count = 16,
 					direction_count = 16,
 					shift = {data_run.scale * 0.015625, data_run.scale * -0.6875},
 					scale = data_run.scale,
-					filename = "__base__/graphics/entity/spitter/spitter-run-mask.png",
+					stripes = {
+						{
+							filename = "__base__/graphics/entity/spitter/spitter-run-mask1-01.png",
+							width_in_frames = 8,
+							height_in_frames = 8
+						},
+						{
+							filename = "__base__/graphics/entity/spitter/spitter-run-mask1-02.png",
+							width_in_frames = 8,
+							height_in_frames = 8
+						},
+						{
+							filename = "__base__/graphics/entity/spitter/spitter-run-mask1-03.png",
+							width_in_frames = 8,
+							height_in_frames = 8
+						},
+						{
+							filename = "__base__/graphics/entity/spitter/spitter-run-mask1-04.png",
+							width_in_frames = 8,
+							height_in_frames = 8
+						}
+					},
 					flags = {"mask"},
 					tint = data_run.tint1
 				}
@@ -275,8 +286,8 @@ local function make_attack_animation(data_attack)
 		return {
 			layers = {
 				{
-					width = 279,
-					height = 184,
+					width = 182,
+					height = 176,
 					frame_count = 11,
 					direction_count = 16,
 					shift = {data_attack.scale * 1.74609, data_attack.scale * -0.644531},
@@ -285,31 +296,53 @@ local function make_attack_animation(data_attack)
 					stripes = {
 						{
 							filename = "__base__/graphics/entity/biter/biter-attack-01.png",
-							width_in_frames = 6,
-							height_in_frames = 8
+							width_in_frames = 11,
+							height_in_frames = 4
 						},
 						{
 							filename = "__base__/graphics/entity/biter/biter-attack-02.png",
-							width_in_frames = 5,
-							height_in_frames = 8
+							width_in_frames = 11,
+							height_in_frames = 4
 						},
 						{
 							filename = "__base__/graphics/entity/biter/biter-attack-03.png",
-							width_in_frames = 6,
-							height_in_frames = 8
+							width_in_frames = 11,
+							height_in_frames = 4
 						},
 						{
 							filename = "__base__/graphics/entity/biter/biter-attack-04.png",
-							width_in_frames = 5,
-							height_in_frames = 8
+							width_in_frames = 11,
+							height_in_frames = 4
 						}
 					}
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-attack-mask1-01.png",
+					stripes =
+						{
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask1-01.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask1-02.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask1-03.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask1-04.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+						},
 					flags = {"mask"},
-					width = 125,
-					height = 108,
+					width = 178,
+					height = 144,
 					frame_count = 11,
 					direction_count = 16,
 					shift = {data_attack.scale * 0.117188, data_attack.scale * -1.11328},
@@ -317,10 +350,32 @@ local function make_attack_animation(data_attack)
 					tint = data_attack.tint1
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-attack-mask2-01.png",
+					stripes =
+						{
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask2-01.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask2-02.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask2-03.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+							{
+								filename = "__base__/graphics/entity/biter/biter-attack-mask2-04.png",
+								width_in_frames = 11,
+								height_in_frames = 4
+							},
+						},
 					flags = {"mask"},
-					width = 114,
-					height = 100,
+					width = 182,
+					height = 144,
 					frame_count = 11,
 					direction_count = 16,
 					shift = {data_attack.scale * 0.117188, data_attack.scale * -1.06641},
@@ -423,41 +478,42 @@ local function make_attack_animation(data_attack)
 		return {
 			layers = {
 				{
-					width = 199,
-					height = 164,
-					frame_count = 22,
+					width = 156,
+					height = 132,
+					priority = "very-low",
+					frame_count = 14,
 					direction_count = 16,
+					shift = {data_attack.scale * 1.01562, 0},
 					scale = data_attack.scale,
-					shift = {data_attack.scale * 0.765625, data_attack.scale * 0.0625},
-					animation_speed = 0.4,
+					--still_frame = 4,
 					stripes = {
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-attack-01.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-attack-02.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-attack-03.png",
-							width_in_frames = 6,
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-attack-04.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
-						},
+						}
 					}
 				},
 				{
 					flags = {"mask"},
-					width = 108,
-					height = 90,
-					frame_count = 22,
+					width = 156,
+					height = 126,
+					frame_count = 14,
 					direction_count = 16,
 					shift = {data_attack.scale * 0, data_attack.scale * -0.625},
 					scale = data_attack.scale,
@@ -465,15 +521,25 @@ local function make_attack_animation(data_attack)
 					animation_speed = 0.4,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-mask-1-01.png",
-							width_in_frames = 11,
-							height_in_frames = 16
+							filename = "__base__/graphics/entity/spitter/spitter-attack-mask1-01.png",
+							width_in_frames = 7,
+							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-attack-mask-2-01.png",
-							width_in_frames = 11,
-							height_in_frames = 16
-						}
+							filename = "__base__/graphics/entity/spitter/spitter-attack-mask1-02.png",
+							width_in_frames = 7,
+							height_in_frames = 8
+						},
+						{
+							filename = "__base__/graphics/entity/spitter/spitter-attack-mask1-03.png",
+							width_in_frames = 7,
+							height_in_frames = 8
+						},
+						{
+							filename = "__base__/graphics/entity/spitter/spitter-attack-mask1-04.png",
+							width_in_frames = 7,
+							height_in_frames = 8
+						},
 					}
 				}
 			}
@@ -486,8 +552,8 @@ local function make_die_animation(data_die)
 		return {
 			layers = {
 				{
-					width = 190,
-					height = 129,
+					width = 276,
+					height = 202,
 					frame_count = 17,
 					direction_count = 16,
 					shift = {data_die.scale * 0.621094, data_die.scale * -0.1875},
@@ -495,31 +561,182 @@ local function make_die_animation(data_die)
 					stripes = {
 						{
 							filename = "__base__/graphics/entity/biter/biter-die-01.png",
-							width_in_frames = 9,
-							height_in_frames = 8
+							width_in_frames = 4,
+							height_in_frames = 4
 						},
 						{
 							filename = "__base__/graphics/entity/biter/biter-die-02.png",
-							width_in_frames = 8,
-							height_in_frames = 8
+							width_in_frames = 4,
+							height_in_frames = 4
 						},
 						{
 							filename = "__base__/graphics/entity/biter/biter-die-03.png",
-							width_in_frames = 9,
-							height_in_frames = 8
+							width_in_frames = 4,
+							height_in_frames = 4
 						},
 						{
 							filename = "__base__/graphics/entity/biter/biter-die-04.png",
-							width_in_frames = 8,
-							height_in_frames = 8
-						}
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-05.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-06.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-07.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-08.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-09.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-10.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-11.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-12.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-13.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-14.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-15.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-16.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-17.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
 					}
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-die-mask1-01.png",
+					stripes = {
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-01.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-02.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-03.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-04.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-05.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-06.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-07.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-08.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-09.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-10.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-11.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-12.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-13.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-14.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-15.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-16.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask1-17.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+					},
 					flags = {"mask"},
-					width = 120,
-					height = 109,
+					width = 198,
+					height = 166,
 					frame_count = 17,
 					direction_count = 16,
 					shift = {data_die.scale * 0.117188, data_die.scale * -0.574219},
@@ -527,10 +744,96 @@ local function make_die_animation(data_die)
 					tint = data_die.tint1
 				},
 				{
-					filename = "__base__/graphics/entity/biter/biter-die-mask2-01.png",
+					stripes = {
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-01.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-02.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-03.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-04.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-05.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-06.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-07.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-08.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-09.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-10.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-11.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-12.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-13.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-14.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-15.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-16.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+						{
+							filename = "__base__/graphics/entity/biter/biter-die-mask2-17.png",
+							width_in_frames = 4,
+							height_in_frames = 4
+						},
+					},
 					flags = {"mask"},
-					width = 115,
-					height = 108,
+					width = 200,
+					height = 166,
 					frame_count = 17,
 					direction_count = 16,
 					shift = {data_die.scale * 0.128906, data_die.scale * -0.585938},
@@ -633,9 +936,9 @@ local function make_die_animation(data_die)
 		return {
 			layers = {
 				{
-					width = 225,
-					height = 174,
-					frame_count = 16,
+					width = 142,
+					height = 128,
+					frame_count = 14,
 					direction_count = 16,
 					shift = {data_die.scale * 0.546875, data_die.scale * 0.21875},
 					priority = "very-low",
@@ -643,31 +946,31 @@ local function make_die_animation(data_die)
 					stripes = {
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-die-01.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-die-02.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-die-03.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
 							filename = "__base__/graphics/entity/spitter/spitter-die-04.png",
-							width_in_frames = 8,
+							width_in_frames = 7,
 							height_in_frames = 8
 						}
 					}
 				},
 				{
 					flags = {"mask"},
-					width = 166,
-					height = 144,
-					frame_count = 16,
+					width = 130,
+					height = 114,
+					frame_count = 14,
 					direction_count = 16,
 					shift = {data_die.scale * 0, data_die.scale * -0.0625},
 					priority = "very-low",
@@ -675,23 +978,23 @@ local function make_die_animation(data_die)
 					scale = data_die.scale,
 					stripes = {
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-1-01.png",
-							width_in_frames = 8,
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask1-01.png",
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-2-01.png",
-							width_in_frames = 8,
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask1-02.png",
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-3-01.png",
-							width_in_frames = 8,
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask1-03.png",
+							width_in_frames = 7,
 							height_in_frames = 8
 						},
 						{
-							filename = "__base__/graphics/entity/spitter/spitter-die-mask-4-01.png",
-							width_in_frames = 8,
+							filename = "__base__/graphics/entity/spitter/spitter-die-mask1-04.png",
+							width_in_frames = 7,
 							height_in_frames = 8
 						}
 					}
@@ -1172,6 +1475,8 @@ local function make_attack_parameter(data_app, data_dmg)
 end
 
 function angelsmods.functions.make_alien(def_data)
+	--log(serpent.block(def_data))
+	if def_data ~= nil then
 	data:extend(
 		{
 			{
@@ -1218,6 +1523,7 @@ function angelsmods.functions.make_alien(def_data)
 			}
 		}
 	)
+end
 end
 
 function angelsmods.functions.make_alien_spawner(spawn_data)

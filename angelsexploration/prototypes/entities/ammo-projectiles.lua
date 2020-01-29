@@ -387,7 +387,7 @@ data:extend(
       shadow = {
         filename = "__base__/graphics/entity/acid-projectile/acid-projectile-shadow.png",
         line_length = 15,
-        width = 330,
+        width = 22,
         height = 84,
         frame_count = 15,
         priority = "high",
