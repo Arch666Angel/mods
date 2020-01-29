@@ -67,7 +67,7 @@ data:extend(
     name = "fluorite-ore",
     icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
+    subgroup = "petrochem-sulfur",
     order = "a[fluorite-ore]",
     stack_size = 200
   },
@@ -77,8 +77,8 @@ data:extend(
     name = "solid-calcium-chloride",
     icon = "__angelspetrochem__/graphics/icons/solid-calcium-chloride.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-calcium-chloride]",
+    subgroup = "petrochem-sulfur",
+    order = "c[solid-calcium-chloride]",
     stack_size = 200
   },
   {
@@ -86,7 +86,7 @@ data:extend(
     name = "solid-oil-residual",
     icon = "__angelspetrochem__/graphics/icons/solid-oil-residual.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
+    subgroup = "petrochem-carbon-oil-feed",
     order = "a[solid-oil-residual]",
     stack_size = 200
   },
@@ -156,8 +156,8 @@ data:extend(
     name = "catalyst-metal-carrier",
     icon = "__angelspetrochem__/graphics/icons/catalyst-metal-carrier.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[catalyst-metal-carrier]",
+    subgroup = "petrochem-catalysts",
+    order = "c[catalyst-metal]-a[carrier]",
     stack_size = 200
   },
   {
@@ -165,8 +165,8 @@ data:extend(
     name = "catalyst-metal-red",
     icon = "__angelspetrochem__/graphics/icons/catalyst-metal-red.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "b[catalyst-metal-red]",
+    subgroup = "petrochem-catalysts",
+    order = "c[catalyst-metal]-b[red]",
     stack_size = 200
   },
   {
@@ -174,8 +174,8 @@ data:extend(
     name = "catalyst-metal-green",
     icon = "__angelspetrochem__/graphics/icons/catalyst-metal-green.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "c[catalyst-metal-red]",
+    subgroup = "petrochem-catalysts",
+    order = "c[catalyst-metal]-c[green]",
     stack_size = 200
   },
   {
@@ -183,8 +183,8 @@ data:extend(
     name = "catalyst-metal-blue",
     icon = "__angelspetrochem__/graphics/icons/catalyst-metal-blue.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "c[catalyst-metal-blue]",
+    subgroup = "petrochem-catalysts",
+    order = "c[catalyst-metal]-d[blue]",
     stack_size = 200
   },
   {
@@ -192,8 +192,8 @@ data:extend(
     name = "catalyst-metal-yellow",
     icon = "__angelspetrochem__/graphics/icons/catalyst-metal-yellow.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "d[catalyst-metal-yellow]",
+    subgroup = "petrochem-catalysts",
+    order = "c[catalyst-metal]-e[yellow]",
     stack_size = 200
   },
   {
@@ -201,8 +201,8 @@ data:extend(
     name = "angels-electrode",
     icon = "__angelspetrochem__/graphics/icons/solid-electrode.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "b",
+    subgroup = "petrochem-catalysts",
+    order = "a[electrode]-a[new]",
     stack_size = 200
   },
   {
@@ -210,8 +210,8 @@ data:extend(
     name = "angels-electrode-used",
     icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "b",
+    subgroup = "petrochem-catalysts",
+    order = "a[electrode]-b[used]",
     stack_size = 200
   },
   --COAL/CARBON

@@ -48,8 +48,8 @@ data:extend(
     name = "solid-calcium-sulfate",
     icon = "__angelspetrochem__/graphics/icons/solid-calcium-sulfate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-calcium-sulfate]",
+    subgroup = "petrochem-sulfur",
+    order = "b[solid-calcium-sulfate]",
     stack_size = 200
   },
   {
@@ -66,8 +66,8 @@ data:extend(
     name = "filter-lime",
     icon = "__angelspetrochem__/graphics/icons/filter-lime.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a",
+    subgroup = "petrochem-catalysts",
+    order = "b[filter-lime]-a[new]",
     stack_size = 200
   },
   {
@@ -75,8 +75,8 @@ data:extend(
     name = "filter-lime-used",
     icon = "__angelspetrochem__/graphics/icons/filter-lime-used.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "c",
+    subgroup = "petrochem-catalysts",
+    order = "b[filter-lime]-a[used]",
     stack_size = 200
   },
 }
