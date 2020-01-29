@@ -562,7 +562,7 @@ data:extend(
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-8.png",   scale = 0.25, mipmap_count = 1, tint = {r=164/255, g=164/255, b=164/255} },
     },
     subgroup = "slag-processing-1",
-    order = "a",
+    order = "ba",
     stack_size = 200
   },
   {
@@ -589,7 +589,7 @@ data:extend(
     icon = "__angelsrefining__/graphics/icons/slag.png",
     icon_size = 32,
     subgroup = "slag-processing-1",
-    order = "b",
+    order = "bb",
     stack_size = 200
   },
   {

@@ -10,6 +10,8 @@ data:extend(
     flow_color = {r=156/255, g=206/255, b=0/255},
     icon = "__angelsbioprocessing__/graphics/icons/gas-puffer-atmosphere.png",
     icon_size = 32,
+    subgroup = "bio-puffer",
+    order = "f",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },

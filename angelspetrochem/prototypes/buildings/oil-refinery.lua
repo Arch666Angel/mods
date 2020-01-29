@@ -1,23 +1,23 @@
 data:extend(
-  {
+{
   {
     type = "item",
     name = "oil-refinery-2",
     icons = {
-		{
-			icon = "__base__/graphics/icons/oil-refinery.png",
-      icon_size=64,
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,
-    subgroup = "petrochem-vanilla",
-    order = "f[refinery-2]",
+      {
+        icon = "__base__/graphics/icons/oil-refinery.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "petrochem-buildings-oil-refinery",
+    order = "b[oil-refinery]-b",
     place_result = "oil-refinery-2",
     stack_size = 10
   },
@@ -25,21 +25,21 @@ data:extend(
     type = "assembling-machine",
     name = "oil-refinery-2",
     icons = {
-		{
-			icon = "__base__/graphics/icons/oil-refinery.png",
-      icon_size=64,
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,
+      {
+        icon = "__base__/graphics/icons/oil-refinery.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-2"},
-	fast_replaceable_group = "oil-refinery",
+    fast_replaceable_group = "oil-refinery",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -173,20 +173,20 @@ data:extend(
     type = "item",
     name = "oil-refinery-3",
     icons = {
-		{
-			icon = "__base__/graphics/icons/oil-refinery.png",
-      icon_size=64,
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,
-    subgroup = "petrochem-vanilla",
-    order = "g[refinery-3]",
+      {
+        icon = "__base__/graphics/icons/oil-refinery.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "petrochem-buildings-oil-refinery",
+    order = "b[oil-refinery]-c",
     place_result = "oil-refinery-3",
     stack_size = 10
   },
@@ -194,20 +194,21 @@ data:extend(
     type = "assembling-machine",
     name = "oil-refinery-3",
     icons = {
-		{
-			icon = "__base__/graphics/icons/oil-refinery.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,
+      {
+        icon = "__base__/graphics/icons/oil-refinery.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-3"},
-	fast_replaceable_group = "oil-refinery",
+    fast_replaceable_group = "oil-refinery",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -341,20 +342,20 @@ data:extend(
     type = "item",
     name = "oil-refinery-4",
     icons = {
-		{
-			icon = "__base__/graphics/icons/oil-refinery.png",
-      icon_size=64,
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_4.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,
-    subgroup = "petrochem-vanilla",
-    order = "h[refinery-4]",
+      {
+        icon = "__base__/graphics/icons/oil-refinery.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "petrochem-buildings-oil-refinery",
+    order = "b[oil-refinery]-d",
     place_result = "oil-refinery-4",
     stack_size = 10
   },
@@ -362,20 +363,21 @@ data:extend(
     type = "assembling-machine",
     name = "oil-refinery-4",
     icons = {
-		{
-			icon = "__base__/graphics/icons/oil-refinery.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_4.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,
+      {
+        icon = "__base__/graphics/icons/oil-refinery.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-4"},
-	fast_replaceable_group = "oil-refinery",
+    fast_replaceable_group = "oil-refinery",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",

@@ -1,234 +1,255 @@
 data:extend(
 {
---SEPARATOR
-	{
+  --SEPARATOR
+  {
     type = "recipe",
     name = "separator",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "separator",
+      {"steel-plate", 10},
     },
-	{
+    result= "separator",
+  },
+  {
     type = "recipe",
     name = "separator-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"separator", 1},
-	},
-    result= "separator-2",
+      {"separator", 1},
     },
-	{
+    result= "separator-2",
+  },
+  {
     type = "recipe",
     name = "separator-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"separator-2", 1},
-	},
-    result= "separator-3",
+      {"separator-2", 1},
     },
-	{
+    result= "separator-3",
+  },
+  {
     type = "recipe",
     name = "separator-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"separator-3", 1},
-	},
-    result= "separator-4",
+      {"separator-3", 1},
     },
---GAS REFINERY SMALL
-	{
+    result= "separator-4",
+  },
+
+
+
+  --GAS REFINERY SMALL
+  {
     type = "recipe",
     name = "gas-refinery-small",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "gas-refinery-small",
+      {"steel-plate", 10},
     },
-	{
+    result= "gas-refinery-small",
+  },
+  {
     type = "recipe",
     name = "gas-refinery-small-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"gas-refinery-small", 1},
-	},
-    result= "gas-refinery-small-2",
+      {"gas-refinery-small", 1},
     },
-	{
+    result= "gas-refinery-small-2",
+  },
+  {
     type = "recipe",
     name = "gas-refinery-small-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"gas-refinery-small-2", 1},
-	},
-    result= "gas-refinery-small-3",
+      {"gas-refinery-small-2", 1},
     },
-	{
+    result= "gas-refinery-small-3",
+  },
+  {
     type = "recipe",
     name = "gas-refinery-small-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"gas-refinery-small-3", 1},
-	},
-    result= "gas-refinery-small-4",
+      {"gas-refinery-small-3", 1},
     },
---GAS REFINERY
-	{
+    result= "gas-refinery-small-4",
+  },
+
+
+
+  --GAS REFINERY
+  {
     type = "recipe",
     name = "gas-refinery",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "gas-refinery",
+      {"steel-plate", 10},
     },
-	{
+    result= "gas-refinery",
+  },
+  {
     type = "recipe",
     name = "gas-refinery-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"gas-refinery", 1},
-	},
-    result= "gas-refinery-2",
+      {"gas-refinery", 1},
     },
-	{
+    result= "gas-refinery-2",
+  },
+  {
     type = "recipe",
     name = "gas-refinery-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"gas-refinery-2", 1},
-	},
-    result= "gas-refinery-3",
+      {"gas-refinery-2", 1},
     },
-	{
+    result= "gas-refinery-3",
+  },
+  {
     type = "recipe",
     name = "gas-refinery-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"gas-refinery-3", 1},
-	},
-    result= "gas-refinery-4",
+      {"gas-refinery-3", 1},
     },
---OIL REFINERY
-	{
+    result= "gas-refinery-4",
+  },
+
+
+
+  --OIL REFINERY
+  {
     type = "recipe",
     name = "oil-refinery-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"oil-refinery", 1},
-	},
-    result= "oil-refinery-2",
+      {"oil-refinery", 1},
     },
-	{
+    result= "oil-refinery-2",
+  },
+  {
     type = "recipe",
     name = "oil-refinery-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"oil-refinery-2", 1},
-	},
-    result= "oil-refinery-3",
+      {"oil-refinery-2", 1},
     },
-	{
+    result= "oil-refinery-3",
+  },
+  {
     type = "recipe",
     name = "oil-refinery-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"oil-refinery-3", 1},
-	},
-    result= "oil-refinery-4",
+      {"oil-refinery-3", 1},
     },
---STEAM CRACKER
-	{
+    result= "oil-refinery-4",
+  },
+
+
+
+  --STEAM CRACKER
+  {
     type = "recipe",
     name = "steam-cracker",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "steam-cracker",
+      {"steel-plate", 10},
     },
-	{
+    result= "steam-cracker",
+  },
+  {
     type = "recipe",
     name = "steam-cracker-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steam-cracker", 1},
-	},
-    result= "steam-cracker-2",
+      {"steam-cracker", 1},
     },
-	{
+    result= "steam-cracker-2",
+  },
+  {
     type = "recipe",
     name = "steam-cracker-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steam-cracker-2", 1},
-	},
-    result= "steam-cracker-3",
+      {"steam-cracker-2", 1},
     },
-	{
+    result= "steam-cracker-3",
+  },
+  {
     type = "recipe",
     name = "steam-cracker-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steam-cracker-3", 1},
-	},
-    result= "steam-cracker-4",
+      {"steam-cracker-3", 1},
     },
- --ADVANCED CHEMICAL PLANT
-	{
+    result= "steam-cracker-4",
+  },
+
+
+
+  --ADVANCED CHEMICAL PLANT
+  {
     type = "recipe",
     name = "advanced-chemical-plant",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "advanced-chemical-plant",
+      {"steel-plate", 10},
     },
-	{
+    result= "advanced-chemical-plant",
+  },
+  {
     type = "recipe",
     name = "advanced-chemical-plant-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"advanced-chemical-plant", 1},
-	},
-    result= "advanced-chemical-plant-2",
+      {"advanced-chemical-plant", 1},
     },
---FLARE STACK
-    {
+    result= "advanced-chemical-plant-2",
+  },
+
+
+
+  --FLARE STACK
+  {
     type = "recipe",
     name = "angels-flare-stack",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "angels-flare-stack",
+      {"steel-plate", 10},
     },
---VALVES
-    {
+    result= "angels-flare-stack",
+  },
+
+
+
+  --VALVES
+  {
     type = "recipe",
     name = "valve-check",
     energy_required = 2,
@@ -238,8 +259,8 @@ data:extend(
       {"steel-plate", 1},
     },
     result = "valve-check",
-    },
-    {
+  },
+  {
     type = "recipe",
     name = "valve-overflow",
     energy_required = 2,
@@ -249,8 +270,8 @@ data:extend(
       {"steel-plate", 1},
     },
     result = "valve-overflow",
-    },
-    {
+  },
+  {
     type = "recipe",
     name = "valve-return",
     energy_required = 2,
@@ -260,8 +281,8 @@ data:extend(
       {"steel-plate", 1},
     },
     result = "valve-return",
-    },
-    {
+  },
+  {
     type = "recipe",
     name = "valve-underflow",
     energy_required = 2,
@@ -271,8 +292,8 @@ data:extend(
       {"steel-plate", 1},
     },
     result = "valve-underflow",
-    },
-    {
+  },
+  {
     type = "recipe",
     name = "valve-converter",
     energy_required = 2,
@@ -282,40 +303,46 @@ data:extend(
       {"steel-plate", 1},
     },
     result = "valve-converter",
-    },
---STORAGE TANKS
-    {
+  },
+
+
+
+  --STORAGE TANKS
+  {
     type = "recipe",
     name = "angels-storage-tank-1",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "angels-storage-tank-1",
+      {"steel-plate", 10},
     },
-    {
+    result= "angels-storage-tank-1",
+  },
+  {
     type = "recipe",
     name = "angels-storage-tank-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "angels-storage-tank-2",
+      {"steel-plate", 10},
     },
-    {
+    result= "angels-storage-tank-2",
+  },
+  {
     type = "recipe",
     name = "angels-storage-tank-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "angels-storage-tank-3",
+      {"steel-plate", 10},
     },
---FLUID SPLITTER
-    -- {
+    result= "angels-storage-tank-3",
+  },
+
+
+
+  --FLUID SPLITTER
+  -- {
     -- type = "recipe",
     -- name = "fluid-splitter-2-way",
     -- energy_required = 2,
@@ -325,8 +352,8 @@ data:extend(
       -- {"steel-plate", 1},
     -- },
     -- result = "angels-fluid-splitter-2-way",
-    -- },
-    -- {
+  -- },
+  -- {
     -- type = "recipe",
     -- name = "fluid-splitter-3-way",
     -- energy_required = 2,
@@ -336,161 +363,176 @@ data:extend(
       -- {"steel-plate", 1},
     -- },
     -- result = "angels-fluid-splitter-3-way",
-    -- },
---ELECTROLYSER
-	{
+  -- },
+
+
+
+  --ELECTROLYSER
+  {
     type = "recipe",
     name = "angels-electrolyser",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"iron-plate", 10},
-	},
-    result= "angels-electrolyser",
+      {"iron-plate", 10},
     },
-	{
+    result= "angels-electrolyser",
+  },
+  {
     type = "recipe",
     name = "angels-electrolyser-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-electrolyser", 1},
-	},
-    result= "angels-electrolyser-2",
+      {"angels-electrolyser", 1},
     },
-	{
+    result= "angels-electrolyser-2",
+  },
+  {
     type = "recipe",
     name = "angels-electrolyser-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-electrolyser-2", 1},
-	},
-    result= "angels-electrolyser-3",
+      {"angels-electrolyser-2", 1},
     },
-	{
+    result= "angels-electrolyser-3",
+  },
+  {
     type = "recipe",
     name = "angels-electrolyser-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-electrolyser-3", 1},
-	},
-    result= "angels-electrolyser-4",
+      {"angels-electrolyser-3", 1},
     },
-	-- {
+    result= "angels-electrolyser-4",
+  },
+  -- {
     -- type = "recipe",
     -- name = "angels-electrolyser-4",
     -- energy_required = 10,
-	-- enabled = false,
+    -- enabled = false,
     -- ingredients ={
-	-- {"angels-electrolyser-3", 1},
-	-- },
-    -- result= "angels-electrolyser-4",
+      -- {"angels-electrolyser-3", 1},
     -- },
---AIR FILTER
-	{
+    -- result= "angels-electrolyser-4",
+  -- },
+
+
+
+  --AIR FILTER
+  {
     type = "recipe",
     name = "angels-air-filter",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"steel-plate", 10},
-	},
-    result= "angels-air-filter",
+      {"steel-plate", 10},
     },
-	{
+    result= "angels-air-filter",
+  },
+  {
     type = "recipe",
     name = "angels-air-filter-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-air-filter", 1},
-	},
-    result= "angels-air-filter-2",
+      {"angels-air-filter", 1},
     },
---OIL REFINERY
-	{
+    result= "angels-air-filter-2",
+  },
+
+
+
+  --OIL REFINERY
+  {
     type = "recipe",
     name = "oil-refinery-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"oil-refinery", 10},
-	},
-    result= "oil-refinery-2",
+      {"oil-refinery", 10},
     },
-	{
+    result= "oil-refinery-2",
+  },
+  {
     type = "recipe",
     name = "oil-refinery-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"oil-refinery-2", 1},
-	},
-    result= "oil-refinery-3",
+      {"oil-refinery-2", 1},
     },
-	{
+    result= "oil-refinery-3",
+  },
+  {
     type = "recipe",
     name = "oil-refinery-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"oil-refinery-3", 1},
-	},
-    result= "oil-refinery-4",
+      {"oil-refinery-3", 1},
     },
---CHEMICAL PLANT
-	{
+    result= "oil-refinery-4",
+  },
+
+
+
+  --CHEMICAL PLANT
+  {
     type = "recipe",
     name = "angels-chemical-plant",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"iron-plate", 1},
-	},
-    result= "angels-chemical-plant",
+      {"iron-plate", 1},
     },
-	{
+    result= "angels-chemical-plant",
+  },
+  {
     type = "recipe",
     name = "angels-chemical-plant-2",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-chemical-plant", 1},
-	},
-    result= "angels-chemical-plant-2",
+      {"angels-chemical-plant", 1},
     },
-	{
+    result= "angels-chemical-plant-2",
+  },
+  {
     type = "recipe",
     name = "angels-chemical-plant-3",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-chemical-plant-2", 1},
-	},
-    result= "angels-chemical-plant-3",
+      {"angels-chemical-plant-2", 1},
     },
-	{
+    result= "angels-chemical-plant-3",
+  },
+  {
     type = "recipe",
     name = "angels-chemical-plant-4",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"angels-chemical-plant-3", 1},
-	},
-    result= "angels-chemical-plant-4",
+      {"angels-chemical-plant-3", 1},
     },
---ELECTRIC BOILER
-	{
+    result= "angels-chemical-plant-4",
+  },
+
+
+
+  --ELECTRIC BOILER
+  {
     type = "recipe",
     name = "angels-electric-boiler",
     energy_required = 5,
-	enabled = false,
+    enabled = false,
     ingredients ={
-	{"iron-plate", 10},
-	},
-    result= "angels-electric-boile",
+      {"iron-plate", 10},
     },
-  }
-  )
+    result= "angels-electric-boile",
+  },
+}
+)

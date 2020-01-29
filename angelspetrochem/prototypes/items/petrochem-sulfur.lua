@@ -6,7 +6,8 @@ data:extend(
     name = "gas-hydrogen-sulfide",
     icon = "__angelspetrochem__/graphics/icons/gas-hydrogen-sulfide.png",
     icon_size = 32,
-    subgroup = "fluids-petro",
+    subgroup = "petrochem-sulfer-fluids",
+    order = "a",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     base_color = {r = 1, g = 1, b = 0.3},
@@ -20,7 +21,8 @@ data:extend(
     name = "gas-sulfur-dioxide",
     icon = "__angelspetrochem__/graphics/icons/gas-sulfur-dioxide.png",
     icon_size = 32,
-    subgroup = "fluids-petro",
+    subgroup = "petrochem-sulfer-fluids",
+    order = "b",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     base_color = {r = 0.9, g = 0.9, b = 0.2},
@@ -34,7 +36,8 @@ data:extend(
     name = "liquid-sulfuric-acid",
     icon = "__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png",
     icon_size = 32,
-    subgroup = "fluids-petro",
+    subgroup = "petrochem-sulfer-fluids",
+    order = "ca",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     base_color = {r = 0.8, g = 0.8, b = 0.1},
@@ -48,8 +51,8 @@ data:extend(
     name = "solid-calcium-sulfate",
     icon = "__angelspetrochem__/graphics/icons/solid-calcium-sulfate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-calcium-sulfate]",
+    subgroup = "petrochem-sulfur",
+    order = "b[solid-calcium-sulfate]",
     stack_size = 200
   },
   {
@@ -57,8 +60,8 @@ data:extend(
     name = "solid-sodium-sulfate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a",
+    subgroup = "petrochem-sodium",
+    order = "d[sodium-hydroxide]",
     stack_size = 200
   },
   {
@@ -66,8 +69,8 @@ data:extend(
     name = "filter-lime",
     icon = "__angelspetrochem__/graphics/icons/filter-lime.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a",
+    subgroup = "petrochem-catalysts",
+    order = "b[filter-lime]-a[new]",
     stack_size = 200
   },
   {
@@ -75,8 +78,8 @@ data:extend(
     name = "filter-lime-used",
     icon = "__angelspetrochem__/graphics/icons/filter-lime-used.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "c",
+    subgroup = "petrochem-catalysts",
+    order = "b[filter-lime]-a[used]",
     stack_size = 200
   },
 }

@@ -41,6 +41,8 @@ data:extend(
     name = "liquid-chlorauric-acid",
     icon = "__angelssmelting__/graphics/icons/liquid-chlorauric-acid.png",
     icon_size = 32,
+    subgroup = "angels-gold",
+    order = "e",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 237/255, g = 191/255, b = 29/255},
@@ -55,7 +57,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/solid-sodium-gold-cyanide.png",
     icon_size = 32,
     subgroup = "angels-gold",
-    order = "e",
+    order = "f",
     stack_size = 200
   },
   {
@@ -64,7 +66,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/ingot-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
-    order = "f",
+    order = "g",
     stack_size = 200
   },
   {
@@ -72,6 +74,8 @@ data:extend(
     name = "liquid-molten-gold",
     icon = "__angelssmelting__/graphics/icons/molten-gold.png",
     icon_size = 32,
+    subgroup = "angels-gold-casting",
+    order = "h",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 237/255, g = 191/255, b = 29/255},
@@ -87,7 +91,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "g",
+    order = "i",
     stack_size = 200
   },
   {
@@ -96,7 +100,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "h",
+    order = "j",
     stack_size = 200
   },
   {
@@ -105,7 +109,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "i",
+    order = "k",
     stack_size = 200
   },
   {
@@ -114,7 +118,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "j",
+    order = "l",
     stack_size = 200
   },
 }

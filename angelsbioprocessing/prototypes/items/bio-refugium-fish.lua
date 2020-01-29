@@ -10,6 +10,8 @@ data:extend(
     flow_color = {r=156/255, g=206/255, b=0/255},
     icon = "__angelsbioprocessing__/graphics/icons/liquid-fish-atmosphere.png",
     icon_size = 32,
+    subgroup = "bio-fish",
+    order = "ca",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
@@ -23,6 +25,8 @@ data:extend(
     flow_color = {r=156/255, g=206/255, b=0/255},
     icon = "__angelsbioprocessing__/graphics/icons/liquid-polluted-fish-atmosphere.png",
     icon_size = 32,
+    subgroup = "bio-fish",
+    order = "cb",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
@@ -35,7 +39,6 @@ data:extend(
     name = "alien-fish-1-raw",
     icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
     icon_size = 32,
-    subgroup = "bio-fish",
     capsule_action =
     {
       type = "use-on-self",
@@ -65,6 +68,7 @@ data:extend(
         }
       }
     },
+    subgroup = "bio-fish",
     order = "bb",
     stack_size = 100
   },
@@ -73,7 +77,6 @@ data:extend(
     name = "alien-fish-2-raw",
     icon = "__angelsbioprocessing__/graphics/icons/alien-fish-2.png",
     icon_size = 32,
-    subgroup = "bio-fish",
     capsule_action =
     {
       type = "use-on-self",
@@ -103,6 +106,7 @@ data:extend(
         }
       }
     },
+    subgroup = "bio-fish",
     order = "bc",
     stack_size = 100
   },
@@ -111,7 +115,6 @@ data:extend(
     name = "alien-fish-3-raw",
     icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
     icon_size = 32,
-    subgroup = "bio-fish",
     capsule_action =
     {
       type = "use-on-self",
@@ -141,6 +144,7 @@ data:extend(
         }
       }
     },
+    subgroup = "bio-fish",
     order = "bd",
     stack_size = 100
   },
