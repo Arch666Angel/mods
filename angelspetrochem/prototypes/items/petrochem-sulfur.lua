@@ -57,8 +57,8 @@ data:extend(
     name = "solid-sodium-sulfate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a",
+    subgroup = "petrochem-sodium",
+    order = "d[sodium-hydroxide]",
     stack_size = 200
   },
   {

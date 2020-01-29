@@ -21,6 +21,12 @@ data.raw["item"]["iron-ore"].order = "a"
 data.raw["item"]["copper-ore"].subgroup = "angels-copper"
 data.raw["item"]["copper-ore"].order = "a"
 
+data.raw["item"]["stone"].subgroup = "slag-processing-1"
+data.raw["item"]["stone"].order = "a"
+
+data.raw["item"]["uranium-ore"].subgroup = "angels-ores"
+data.raw["item"]["uranium-ore"].order = "h[uranium-ore]"
+
 OV.patch_recipes({
   { name = "iron-plate",
     energy_required = 10.5,

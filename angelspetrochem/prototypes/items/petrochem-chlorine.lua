@@ -90,8 +90,8 @@ data:extend(
     name = "solid-sodium-chlorate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-chlorate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium-chlorate]",
+    subgroup = "petrochem-sodium",
+    order = "f[liquid-sodium-hydroxide]-b[solid-sodium-chlorate]",
     stack_size = 200
   },
   {
@@ -99,8 +99,8 @@ data:extend(
     name = "solid-sodium-perchlorate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-perchlorate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium-chlorate]",
+    subgroup = "petrochem-sodium",
+    order = "f[liquid-sodium-hydroxide]-c[solid-sodium-perchlorate]",
     stack_size = 200
   },
   {

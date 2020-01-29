@@ -96,8 +96,8 @@ data:extend(
     name = "solid-sodium",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium]",
+    subgroup = "petrochem-sodium",
+    order = "a[sodium]",
     stack_size = 200
   },
   {
@@ -105,8 +105,8 @@ data:extend(
     name = "solid-sodium-hydroxide",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-hydroxide.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium-hydroxide]",
+    subgroup = "petrochem-sodium",
+    order = "c[sodium-hydroxide]",
     stack_size = 200
   },
   {
@@ -114,8 +114,8 @@ data:extend(
     name = "solid-sodium-carbonate",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-carbonate.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium-carbonate]",
+    subgroup = "petrochem-sodium",
+    order = "b[sodium]-a[sodium-carbonate]",
     stack_size = 200
   },
   {
@@ -123,8 +123,8 @@ data:extend(
     name = "solid-sodium-hypochlorite",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-hypochlorite.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium-hypochlorite]",
+    subgroup = "petrochem-sodium",
+    order = "f[liquid-sodium-hydroxide]-a[sodium-hypochlorite]",
     stack_size = 200
   },
   {
@@ -132,8 +132,8 @@ data:extend(
     name = "solid-sodium-cyanide",
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-cyanide.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-sodium-cyanide]",
+    subgroup = "petrochem-sodium",
+    order = "b[sodium]-b[solid-sodium-cyanide]",
     stack_size = 200
   },
   {
@@ -220,8 +220,8 @@ data:extend(
     name = "coal-crushed",
     icon = "__angelspetrochem__/graphics/icons/coal-crushed.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[carbon]",
+    subgroup = "petrochem-coal",
+    order = "a[carbon]-b",
     fuel_category = "chemical",
     fuel_value = "2MJ",
     stack_size = 200
@@ -231,8 +231,8 @@ data:extend(
     name = "solid-coke",
     icon = "__angelspetrochem__/graphics/icons/solid-coke.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[carbon]",
+    subgroup = "petrochem-coal",
+    order = "a[carbon]-c",
     fuel_category = "chemical",
     fuel_value = "2.5MJ",
     stack_size = 200
@@ -242,8 +242,8 @@ data:extend(
     name = "pellet-coke",
     icon = "__angelspetrochem__/graphics/icons/pellet-coke.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[coke]",
+    subgroup = "petrochem-coal",
+    order = "b[coke]",
     fuel_category = "chemical",
     fuel_value = "15MJ",
     stack_size = 200
@@ -253,8 +253,8 @@ data:extend(
     name = "solid-carbon",
     icon = "__angelspetrochem__/graphics/icons/solid-carbon.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[carbon]",
+    subgroup = "petrochem-coal",
+    order = "a[carbon]-d",
     fuel_category = "chemical",
     fuel_value = "3MJ",
     stack_size = 200
@@ -302,8 +302,8 @@ data:extend(
     name = "rocket-fuel-capsule",
     icon = "__angelspetrochem__/graphics/icons/rocket-fuel-capsule.png",
     icon_size = 32,
-    subgroup = "petrochem-nitrogen",
-    order = "a",
+    subgroup = "petrochem-fuel",
+    order = "b[rocket-fuel]-b",
     stack_size = 200
   },
   {
@@ -311,8 +311,8 @@ data:extend(
     name = "rocket-oxidizer-capsule",
     icon = "__angelspetrochem__/graphics/icons/rocket-oxidizer-capsule.png",
     icon_size = 32,
-    subgroup = "petrochem-nitrogen",
-    order = "a",
+    subgroup = "petrochem-fuel",
+    order = "b[rocket-fuel]-a",
     stack_size = 200
   },
   {
@@ -320,8 +320,8 @@ data:extend(
     name = "rocket-booster",
     icon = "__angelspetrochem__/graphics/icons/rocket-booster.png",
     icon_size = 32,
-    subgroup = "petrochem-nitrogen",
-    order = "a",
+    subgroup = "petrochem-fuel",
+    order = "c[rocket-booster]",
     fuel_category = "chemical",
     fuel_value = "10MJ",
     fuel_acceleration_multiplier = 1.8,
