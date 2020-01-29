@@ -56,7 +56,7 @@ OV.patch_recipes({
     {"!!"},
     { name = "uranium-ore", type = "item", amount = 1, probability = 0.05 },
     { name = "fluorite-ore", type = "item", amount = 1, probability = 0.2 }
-  }, icons = {{ icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },{ icon = "__base__/graphics/icons/uranium-ore.png", scale = 0.32, shift = { -12, 12}}, { icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png", scale = 0.32, shift = { 12, 12}}} }
+  }, icons = {{ icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },{ icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64, scale = 0.16, shift = { -12, 12}}, { icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png", scale = 0.32, shift = { 12, 12}}} }
 })
 
 --SORTING
@@ -381,7 +381,7 @@ OV.patch_recipes({
          { "uranium-ore", 3 }
       }, icons = {
          { icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-         { icon = "__base__/graphics/icons/uranium-ore.png", scale = 0.5, shift = { 10, 10}}
+         { icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64, scale = 0.25, shift = { 10, 10}}
       } },
    --PURE
       { name = "angelsore-pure-mix1-processing", results = {

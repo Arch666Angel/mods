@@ -45,16 +45,16 @@ data:extend(
   {
     type = "item-subgroup",
     name = "fluids-smelting",
-	group = "fluids",
-	order = "d",
+    group = "fluids",
+    order = "d",
   },
   {
     type = "item-group",
     name = "angels-smelting",
-    order = "lf",
-    inventory_order = "lf",
+    order = "la[angels]-b[smelting]-a",
+    inventory_order = "la[angels]-b[smelting]-a",
     icon = "__angelssmelting__/graphics/technology/blast-furnace-group.png",
-	icon_size = 64,
+    icon_size = 64,
   },
   {
     type = "item-subgroup",
@@ -221,10 +221,10 @@ data:extend(
   {
     type = "item-group",
     name = "angels-casting",
-    order = "lg",
-    inventory_order = "lg",
+    order = "la[angels]-b[smelting]-b",
+    inventory_order = "la[angels]-b[smelting]-b",
     icon = "__angelssmelting__/graphics/technology/induction-furnace-group.png",
-	icon_size = 64,
+    icon_size = 64,
   },
   {
     type = "item-subgroup",
@@ -388,5 +388,5 @@ data:extend(
     group = "angels-casting",
     order = "zh",
   },
-  }
-  )
+}
+)

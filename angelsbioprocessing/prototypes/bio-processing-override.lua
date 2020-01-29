@@ -57,7 +57,7 @@ if angelsmods.industries then
   })
 
   if angelsmods.industries.overhaul then
-    require("prototypes.bio-processing-override-angels")
+    require("prototypes.bio-processing-override-angel")
   end
 else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")

@@ -3,6 +3,8 @@ Version: 0.11.0
 Date: ???
   Changes:
     - Updated to 0.18
+  Bugfixes:
+    - fixed uranium ore icon did not fit the recipe box
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.14
 Date: 04.08.2019

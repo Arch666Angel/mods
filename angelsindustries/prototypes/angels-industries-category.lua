@@ -43,8 +43,8 @@ data:extend(
   {
     type = "item-group",
     name = "angels-components",
-    order = "pa",
-    inventory_order = "pa",
+    order = "la[angels]-e[industries]-a",
+    inventory_order = "la[angels]-e[industries]-a",
     icon_size = 64,
     icon = "__angelsindustries__/graphics/item-group/components-tech.png",
   },
@@ -232,8 +232,8 @@ data:extend(
   {
     type = "item-group",
     name = "angels-tech",
-    order = "pb",
-    inventory_order = "pb",
+    order = "la[angels]-e[industries]-b",
+    inventory_order = "la[angels]-e[industries]-b",
     icon_size = 64,
     icon = "__angelsindustries__/graphics/item-group/science-group.png",
   },
@@ -277,8 +277,8 @@ data:extend(
   {
     type = "item-group",
     name = "angels-enhancement",
-    order = "pa",
-    inventory_order = "pc",
+    order = "la[angels]-e[industries]-c",
+    inventory_order = "la[angels]-e[industries]-c",
     icon_size = 64,
     icon = "__angelsindustries__/graphics/item-group/vequip.png",
   },
@@ -328,8 +328,8 @@ data:extend(
   {
     type = "item-group",
     name = "angels-logistics",
-    order = "q",
-    inventory_order = "q",
+    order = "la[angels]-e[industries]-d",
+    inventory_order = "la[angels]-e[industries]-d",
     icon = "__angelsindustries__/graphics/item-group/cargo-roboport-group.png",
     icon_size = 64,
   },
