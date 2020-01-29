@@ -40,21 +40,21 @@ local OV = angelsmods.functions.OV
     --MOVE LIQUIFIER AND ADD CATEGORY
     table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories,"liquifying")
     table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories,"liquifying")
-    data.raw["item"]["liquifier"].subgroup = "petrochem-electrolyser"
-    data.raw["item"]["liquifier"].order = "e"
-    data.raw["item"]["liquifier-2"].subgroup = "petrochem-electrolyser"
-    data.raw["item"]["liquifier-2"].order = "f"
-    data.raw["item"]["liquifier-3"].subgroup = "petrochem-electrolyser"
-    data.raw["item"]["liquifier-3"].order = "g"
-    data.raw["item"]["liquifier-4"].subgroup = "petrochem-electrolyser"
-    data.raw["item"]["liquifier-4"].order = "h"
+    data.raw["item"]["liquifier"].subgroup = "petrochem-buildings-electrolyser"
+    data.raw["item"]["liquifier"].order = "b[liquifier]-a"
+    data.raw["item"]["liquifier-2"].subgroup = "petrochem-buildings-electrolyser"
+    data.raw["item"]["liquifier-2"].order = "b[liquifier]-b"
+    data.raw["item"]["liquifier-3"].subgroup = "petrochem-buildings-electrolyser"
+    data.raw["item"]["liquifier-3"].order = "b[liquifier]-c"
+    data.raw["item"]["liquifier-4"].subgroup = "petrochem-buildings-electrolyser"
+    data.raw["item"]["liquifier-4"].order = "b[liquifier]-d"
     OV.patch_recipes({
       { name = "carbon-separation-1", category = "liquifying" },
       { name = "carbon-separation-2", category = "liquifying" },
-      { name = "liquifier", subgroup = "petrochem-electrolyser", order = "e" },
-      { name = "liquifier-2", subgroup = "petrochem-electrolyser", order = "f" },
-      { name = "liquifier-3", subgroup = "petrochem-electrolyser", order = "g" },
-      { name = "liquifier-4", subgroup = "petrochem-electrolyser", order = "h" },
+      { name = "liquifier", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-a" },
+      { name = "liquifier-2", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-b" },
+      { name = "liquifier-3", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-c" },
+      { name = "liquifier-4", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-d" },
       { name = "angelsore8-dust", ingredients = { { name = "solid-sodium-hydroxide", 2 } } },
       { name = "angelsore9-dust", ingredients = { { name = "solid-sodium-hydroxide", 2 } } },
       { name = "angelsore8-anode-sludge", ingredients = { { name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10 } } },

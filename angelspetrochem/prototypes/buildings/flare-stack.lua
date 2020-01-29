@@ -1,20 +1,20 @@
 data:extend(
 {
-    {
+  {
     type = "item",
     name = "angels-flare-stack",
     icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
-	icon_size = 32,
-	subgroup = "petrochem-separator-gas-refinery",
-    order = "i",
+    icon_size = 32,
+    subgroup = "petrochem-buildings-steam",
+    order = "b[angels-flare-stack]",
     place_result = "angels-flare-stack",
     stack_size = 10,
-    },
-    {
+  },
+  {
     type = "furnace",
     name = "angels-flare-stack",
     icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "angels-flare-stack"},
     max_health = 100,
@@ -59,7 +59,7 @@ data:extend(
       emissions = 0.01 / 2.5
     },
     energy_usage = "30kW",
-	animation =
+    animation =
     {
       north =
       {
@@ -118,13 +118,13 @@ data:extend(
             frame_count = 60,
             animation_speed = 0.75,
             scale = 1,
-			shift = {0, -6},
+            shift = {0, -6},
           },
         },
         light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
       }
     },
-	vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },

@@ -126,12 +126,6 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "petrochem-raw",
-    group = "petrochem-refining",
-    order = "z",
-  },
-  {
-    type = "item-subgroup",
     name = "petrochem-cracking",
     group = "petrochem-refining",
     order = "gb",
@@ -172,29 +166,43 @@ data:extend(
     group = "petrochem-refining",
     order = "l",
   },
-  {
+  -- BUILDINGS
+  { -- electrolizers + liquifier + air filters
     type = "item-subgroup",
-    name = "petrochem-electrolyser",
+    name = "petrochem-buildings-electrolyser",
     group = "petrochem-refining",
-    order = "r",
+    order = "za[buildings]-a",
   },
-  {
+  { -- chemical plants + adv chemical plants
     type = "item-subgroup",
-    name = "petrochem-separator-gas-refinery",
+    name = "petrochem-buildings-chemical-plant",
     group = "petrochem-refining",
-    order = "s",
+    order = "za[buildings]-b",
   },
-  {
+  { -- gas refineries + advanced gas refineries
     type = "item-subgroup",
-    name = "petrochem-steam-cracker-advanced-chemical-plant",
+    name = "petrochem-buildings-gas-refinery",
     group = "petrochem-refining",
-    order = "t",
+    order = "za[buildings]-c",
   },
+  { -- oil and gas seperator + oil refinery
+    type = "item-subgroup",
+    name = "petrochem-buildings-oil-refinery",
+    group = "petrochem-refining",
+    order = "za[buildings]-d",
+  },
+  { --steam crackers, flare stack, boiler
+    type = "item-subgroup",
+    name = "petrochem-buildings-steam",
+    group = "petrochem-refining",
+    order = "za[buildings]-e",
+  },
+  -- OTHERS
   {
     type = "item-subgroup",
-    name = "petrochem-vanilla",
+    name = "petrochem-raw",
     group = "petrochem-refining",
-    order = "ta",
+    order = "zz[raw]",
   },
   {
     type = "item-subgroup",

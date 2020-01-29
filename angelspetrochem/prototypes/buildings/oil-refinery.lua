@@ -16,8 +16,8 @@ data:extend(
       }
     },
     icon_size = 32,
-    subgroup = "petrochem-vanilla",
-    order = "f[refinery-2]",
+    subgroup = "petrochem-buildings-oil-refinery",
+    order = "b[oil-refinery]-b",
     place_result = "oil-refinery-2",
     stack_size = 10
   },
@@ -185,8 +185,8 @@ data:extend(
       }
     },
     icon_size = 32,
-    subgroup = "petrochem-vanilla",
-    order = "g[refinery-3]",
+    subgroup = "petrochem-buildings-oil-refinery",
+    order = "b[oil-refinery]-c",
     place_result = "oil-refinery-3",
     stack_size = 10
   },
@@ -354,8 +354,8 @@ data:extend(
       }
     },
     icon_size = 32,
-    subgroup = "petrochem-vanilla",
-    order = "h[refinery-4]",
+    subgroup = "petrochem-buildings-oil-refinery",
+    order = "b[oil-refinery]-d",
     place_result = "oil-refinery-4",
     stack_size = 10
   },

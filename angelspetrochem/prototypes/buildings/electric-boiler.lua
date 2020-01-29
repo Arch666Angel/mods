@@ -1,25 +1,25 @@
 data:extend(
 {
-    {
+  {
     type = "item",
     name = "angels-electric-boiler",
     icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
-	icon_size = 32,
-    subgroup = "petrochem-separator-gas-refinery",
-    order = "i[separator]",
+    icon_size = 32,
+    subgroup = "petrochem-buildings-steam",
+    order = "c[electric-boiler]",
     place_result = "angels-electric-boiler",
     stack_size = 10,
-    },
+  },
   {
     type = "boiler",
     name = "angels-electric-boiler",
     icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-electric-boiler"},
     max_health = 200,
     corpse = "small-remnants",
-	collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
+    collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     mode = "output-to-separate-pipe",
@@ -51,7 +51,7 @@ data:extend(
         {type = "input-output", position = {2, 0}}
       },
       production_type = "input-output",
-	  filter = "water"
+      filter = "water"
     },
     output_fluid_box =
     {
@@ -67,14 +67,14 @@ data:extend(
       filter = "steam"
     },
     energy_consumption = "1.2MW",
-	energy_source =
-	{
-	  type = "electric",
-	  effectivity = 0.8,
-	  input_priority = "secondary",
-	  usage_priority = "secondary-input",
-	  emissions = 0.01 / 6,
-	},
+    energy_source =
+    {
+      type = "electric",
+      effectivity = 0.8,
+      input_priority = "secondary",
+      usage_priority = "secondary-input",
+      emissions = 0.01 / 6,
+    },
     working_sound =
     {
       sound =
@@ -89,38 +89,37 @@ data:extend(
     {
       north =
       { 
-            filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-off.png",
-            priority = "extra-high",
-            width = 160,
-            height = 160,
-            shift = {0, 0},
+        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-off.png",
+        priority = "extra-high",
+        width = 160,
+        height = 160,
+        shift = {0, 0},
       },
       east =
       {
-            filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-off.png",
-            priority = "extra-high",
-            width = 160,
-            height = 160,
-            shift = {0, 0},
+        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-off.png",
+        priority = "extra-high",
+        width = 160,
+        height = 160,
+        shift = {0, 0},
       },
       south =
       {
-            filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-off.png",
-            priority = "extra-high",
-            width = 160,
-            height = 160,
-            shift = {0, 0},
+        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-off.png",
+        priority = "extra-high",
+        width = 160,
+        height = 160,
+        shift = {0, 0},
       },
       west =
       {
-            filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-off.png",
-            priority = "extra-high",
-            width = 160,
-            height = 160,
-            shift = {0, 0},
+        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-off.png",
+        priority = "extra-high",
+        width = 160,
+        height = 160,
+        shift = {0, 0},
       }
     },
-   
     -- patch = 
     -- {
       -- east =
@@ -132,7 +131,6 @@ data:extend(
         -- shift = util.by_pixel(33.5, -13.5),
       -- },
     -- },
-    
     fire =
     {
       north =
@@ -180,9 +178,7 @@ data:extend(
         shift = {0, 0},
       }
     },
-   
     fire_glow_flicker_enabled = true,
-    
     fire_glow =
     {
       north =

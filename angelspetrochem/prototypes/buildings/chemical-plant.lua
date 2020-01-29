@@ -1,22 +1,22 @@
 data:extend(
-  {
+{
   {
     type = "item",
     name = "angels-chemical-plant",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_1.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
-    subgroup = "petrochem-vanilla",
-    order = "a[chemical-plant]",
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
+    subgroup = "petrochem-buildings-chemical-plant",
+    order = "a[regular]-b[angel]-a",
     place_result = "angels-chemical-plant",
     stack_size = 10
   },
@@ -24,17 +24,17 @@ data:extend(
     type = "assembling-machine",
     name = "angels-chemical-plant",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_1.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant"},
     max_health = 300,
@@ -59,13 +59,13 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation = {
-        filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-        width = 160,
-        height = 160,
-        frame_count = 1,
-		line_length = 1,
-        shift = {0, 0},
-	},
+      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      width = 160,
+      height = 160,
+      frame_count = 1,
+      line_length = 1,
+      shift = {0, 0},
+    },
     working_visualisations =
     {
       {
@@ -73,11 +73,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -85,11 +85,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -98,11 +98,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -110,11 +110,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -166,19 +166,19 @@ data:extend(
     type = "item",
     name = "angels-chemical-plant-2",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
-    subgroup = "petrochem-vanilla",
-    order = "b[chemical-plant-2]",
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
+    subgroup = "petrochem-buildings-chemical-plant",
+    order = "a[regular]-b[angel]-b",
     place_result = "angels-chemical-plant-2",
     stack_size = 10
   },
@@ -186,17 +186,17 @@ data:extend(
     type = "assembling-machine",
     name = "angels-chemical-plant-2",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-2"},
     max_health = 300,
@@ -221,13 +221,13 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation = {
-        filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-        width = 160,
-        height = 160,
-        frame_count = 1,
-		line_length = 1,
-        shift = {0, 0},
-	},
+      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      width = 160,
+      height = 160,
+      frame_count = 1,
+      line_length = 1,
+      shift = {0, 0},
+    },
     working_visualisations =
     {
       {
@@ -235,11 +235,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -247,11 +247,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -260,11 +260,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -272,11 +272,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -328,19 +328,19 @@ data:extend(
     type = "item",
     name = "angels-chemical-plant-3",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
-    subgroup = "petrochem-vanilla",
-    order = "c[chemical-plant-3]",
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
+    subgroup = "petrochem-buildings-chemical-plant",
+    order = "a[regular]-b[angel]-c",
     place_result = "angels-chemical-plant-3",
     stack_size = 10
   },
@@ -348,17 +348,17 @@ data:extend(
     type = "assembling-machine",
     name = "angels-chemical-plant-3",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-3"},
     max_health = 300,
@@ -383,13 +383,13 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation = {
-        filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-        width = 160,
-        height = 160,
-        frame_count = 1,
-		line_length = 1,
-        shift = {0, 0},
-	},
+      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      width = 160,
+      height = 160,
+      frame_count = 1,
+      line_length = 1,
+      shift = {0, 0},
+    },
     working_visualisations =
     {
       {
@@ -397,11 +397,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -409,11 +409,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -422,11 +422,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -434,11 +434,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -490,19 +490,19 @@ data:extend(
     type = "item",
     name = "angels-chemical-plant-4",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_4.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
-    subgroup = "petrochem-vanilla",
-    order = "d[chemical-plant-4]",
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
+    subgroup = "petrochem-buildings-chemical-plant",
+    order = "a[regular]-b[angel]-d",
     place_result = "angels-chemical-plant-4",
     stack_size = 10
   },
@@ -510,17 +510,17 @@ data:extend(
     type = "assembling-machine",
     name = "angels-chemical-plant-4",
     icons = {
-		{
-			icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_4.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},
-	icon_size = 32,	
+      {
+        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,  
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-4"},
     max_health = 300,
@@ -545,13 +545,13 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation = {
-        filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-        width = 160,
-        height = 160,
-        frame_count = 1,
-		line_length = 1,
-        shift = {0, 0},
-	},
+      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      width = 160,
+      height = 160,
+      frame_count = 1,
+      line_length = 1,
+      shift = {0, 0},
+    },
     working_visualisations =
     {
       {
@@ -559,11 +559,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -571,11 +571,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -584,11 +584,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
@@ -596,11 +596,11 @@ data:extend(
         animation =
         {
           filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-		  line_length = 6,
+          line_length = 6,
           frame_count = 36,
           width = 160,
           height = 160,
-		  shift = {0, 0},
+          shift = {0, 0},
           animation_speed = 0.5,
         }
       },
