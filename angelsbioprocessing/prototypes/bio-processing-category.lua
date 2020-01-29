@@ -91,8 +91,8 @@ data:extend(
   {
     type = "item-group",
     name = "bio-processing-nauvis",
-    order = "le-a[nauvis]",
-    inventory_order = "le-a[nauvis]",
+    order = "la[angels]-d[bio-processing]-a[nauvis]",
+    inventory_order = "la[angels]-d[bio-processing]-a[nauvis]",
     icon = "__angelsbioprocessing__/graphics/technology/algae-farm-group.png",
     icon_size = 64,
   },
@@ -181,8 +181,8 @@ data:extend(
   {
     type = "item-group",
     name = "bio-processing-vegetables",
-    order = "le-b[farming]",
-    inventory_order = "le-b[farming]",
+    order = "la[angels]-d[bio-processing]-b[farming]",
+    inventory_order = "la[angels]-d[bio-processing]-b[farming]",
     icon = "__angelsbioprocessing__/graphics/technology/vegetables-farm-group.png",
     icon_size = 128,
   },
@@ -295,8 +295,8 @@ data:extend(
   {
     type = "item-group",
     name = "bio-processing-alien",
-    order = "le-c[alien]",
-    inventory_order = "le-c[alien]",
+    order = "la[angels]-d[bio-processing]-c[alien]",
+    inventory_order = "la[angels]-d[bio-processing]-c[alien]",
     icon = "__angelsbioprocessing__/graphics/technology/refugium-1-group.png",
     icon_size = 64,
   },
