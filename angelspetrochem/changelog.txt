@@ -4,6 +4,8 @@ Date: ??
   Changes:
     - updated to 0.18
     - added missing localisations
+  Bugfixes:
+    - fixed changelog not showing up
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.6
 Date: 11.06.2019
@@ -50,8 +52,6 @@ Version: 0.8.0
     - slight reduction in ammonia usage for rocket fuel
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.13
-  Changes:
-    - 
   Bugfixes:
     - added additional checks for special bob options
 ---------------------------------------------------------------------------------------------------
@@ -279,7 +279,15 @@ Version: 0.3.4
     - changed machine for the lubricant recipe from steam-cracker to chemical plant
     - added module slots to flare stack
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.1-0.3.3
+Version: 0.3.3
+  Bugfixes:
+    - migration fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+  Bugfixes:
+    - migration fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
   Bugfixes:
     - migration fixes
 ---------------------------------------------------------------------------------------------------
