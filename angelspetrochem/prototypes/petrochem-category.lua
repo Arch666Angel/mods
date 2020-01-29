@@ -38,12 +38,12 @@ data:extend(
     name = "angels-chemical-void",
   },
 --SUBGROUPS
-  {
-    type = "item-subgroup",
-    name = "fluids-petro",
-    group = "fluids",
-    order = "c",
-  },
+  --{
+  --  type = "item-subgroup",
+  --  name = "fluids-petro",
+  --  group = "fluids",
+  --  order = "c",
+  --},
   {
     type = "item-group",
     name = "petrochem-refining",
@@ -72,6 +72,12 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "petrochem-basic-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-ac",
+  },
+  {
+    type = "item-subgroup",
     name = "petrochem-sodium",
     group = "petrochem-refining",
     order = "ba",
@@ -90,6 +96,12 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "petrochem-chlorine-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-b",
+  },
+  {
+    type = "item-subgroup",
     name = "petrochem-nitrogen",
     group = "petrochem-refining",
     order = "ca",
@@ -102,69 +114,99 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "petrochem-nitrogen-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-c",
+  },
+  {
+    type = "item-subgroup",
     name = "petrochem-sulfur",
     group = "petrochem-refining",
     order = "d",
   },
   {
     type = "item-subgroup",
+    name = "petrochem-sulfer-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-d",
+  },
+  {
+    type = "item-subgroup",
     name = "petrochem-carbon-gas-feed",
     group = "petrochem-refining",
-    order = "e",
+    order = "ea",
   },
   {
     type = "item-subgroup",
     name = "petrochem-carbon-oil-feed",
     group = "petrochem-refining",
-    order = "f",
+    order = "eb",
   },
   {
     type = "item-subgroup",
     name = "petrochem-carbon-synthesis",
     group = "petrochem-refining",
-    order = "ga",
+    order = "ec",
   },
   {
     type = "item-subgroup",
     name = "petrochem-cracking",
     group = "petrochem-refining",
-    order = "gb",
+    order = "ed",
   },
-    {
+  {
+    type = "item-subgroup",
+    name = "petrochem-raw-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-ea",
+  },
+  {
+    type = "item-subgroup",
+    name = "petrochem-carbon-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-eb",
+  },
+  {
     type = "item-subgroup",
     name = "petrochem-feedstock",
     group = "petrochem-refining",
-    order = "h",
+    order = "f",
   },
   {
     type = "item-subgroup",
     name = "petrochem-chemistry",
     group = "petrochem-refining",
-    order = "i",
+    order = "g",
   },
   {
     type = "item-subgroup",
     name = "petrochem-oil-output",
     group = "petrochem-refining",
-    order = "j",
+    order = "h",
   },
   {
     type = "item-subgroup",
     name = "petrochem-solids",
     group = "petrochem-refining",
-    order = "ka",
+    order = "ia",
   },
   {
     type = "item-subgroup",
     name = "petrochem-solids-2",
     group = "petrochem-refining",
-    order = "kb",
+    order = "ib",
+  },
+  {
+    type = "item-subgroup",
+    name = "petrochem-solids-fluids",
+    group = "petrochem-refining",
+    order = "y[fluids]-i",
   },
   {
     type = "item-subgroup",
     name = "petrochem-catalysts",
     group = "petrochem-refining",
-    order = "l",
+    order = "j",
   },
   -- BUILDINGS
   { -- electrolizers + liquifier + air filters
@@ -198,29 +240,29 @@ data:extend(
     order = "za[buildings]-e",
   },
   -- OTHERS
-  {
-    type = "item-subgroup",
-    name = "petrochem-raw",
-    group = "petrochem-refining",
-    order = "zz[raw]",
-  },
+  --{
+  --  type = "item-subgroup",
+  --  name = "petrochem-raw",
+  --  group = "petrochem-refining",
+  --  order = "zz[raw]",
+  --},
   {
     type = "item-subgroup",
     name = "petrochem-utility",
     group = "petrochem-refining",
-    order = "u",
+    order = "k",
   },
   {
     type = "item-subgroup",
     name = "petrochem-tanks",
     group = "petrochem-refining",
-    order = "w",
+    order = "l",
   },
   {
     type = "item-subgroup",
     name = "angels-converter",
     group = "petrochem-refining",
-    order = "zzz",
+    order = "zb[converters]",
   },
-  }
-  )
+}
+)

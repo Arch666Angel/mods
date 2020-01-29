@@ -33,6 +33,20 @@ local OV = angelsmods.functions.OV
     data.raw["item"]["coal"].subgroup = "petrochem-coal"
     data.raw["item"]["coal"].order = "a[carbon]-a"
   end
+  data.raw["fluid"]["steam"].subgroup = "petrochem-basic-fluids"
+  data.raw["fluid"]["steam"].order = "a"
+  data.raw["fluid"]["crude-oil"].subgroup = "petrochem-raw-fluids"
+  data.raw["fluid"]["crude-oil"].order = "bb"
+  data.raw["fluid"]["petroleum-gas"].subgroup = "petrochem-carbon-fluids"
+  data.raw["fluid"]["petroleum-gas"].order = "a"
+  data.raw["fluid"]["light-oil"].subgroup = "petrochem-carbon-fluids"
+  data.raw["fluid"]["light-oil"].order = "dab"
+  data.raw["fluid"]["heavy-oil"].subgroup = "petrochem-carbon-fluids"
+  data.raw["fluid"]["heavy-oil"].order = "dbb"
+  data.raw["fluid"]["lubricant"].subgroup = "petrochem-carbon-fluids"
+  data.raw["fluid"]["lubricant"].order = "dcb"
+  data.raw["fluid"]["sulfuric-acid"].subgroup = "petrochem-sulfer-fluids"
+  data.raw["fluid"]["sulfuric-acid"].order = "cb"
 
 --OVERRIDE FOR ANGELS
   --REFINING
@@ -68,9 +82,13 @@ local OV = angelsmods.functions.OV
     OV.add_unlock("angels-advanced-chemistry-2", "liquifier-3")
     OV.add_unlock("angels-advanced-chemistry-3", "liquifier-4")
     if angelsmods or bobmods then
-      OV.add_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
       OV.add_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")
+      OV.add_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
     end
+    data.raw["fluid"]["liquid-ferric-chloride-solution"].subgroup = "ore-processing-fluid"
+    data.raw["fluid"]["liquid-ferric-chloride-solution"].order = "a[ferrous]-e"
+    data.raw["fluid"]["liquid-cupric-chloride-solution"].subgroup = "ore-processing-fluid"
+    data.raw["fluid"]["liquid-cupric-chloride-solution"].order = "b[cupric]-e"
   end
 
   --SMELTING
