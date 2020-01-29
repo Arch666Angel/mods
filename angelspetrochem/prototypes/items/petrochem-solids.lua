@@ -49,8 +49,8 @@ data:extend(
     name = "solid-resin",
     icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-resin]",
+    subgroup = "petrochem-solids",
+    order = "a[petrochem-solids]-b[resin]",
     stack_size = 200
   },
   {
@@ -58,8 +58,8 @@ data:extend(
     name = "solid-rubber",
     icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
     icon_size = 32,
-    subgroup = "petrochem-raw",
-    order = "a[solid-rubber]",
+    subgroup = "petrochem-solids",
+    order = "a[petrochem-solids]-c[rubber]",
     stack_size = 200
   },
   {
@@ -68,7 +68,7 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png",
     icon_size = 32,
     subgroup = "petrochem-sulfur",
-    order = "a[fluorite-ore]",
+    order = "a[sulfer]-b[fluorite]",
     stack_size = 200
   },
   --CHEMICAL POWDERS

@@ -23,6 +23,12 @@ local OV = angelsmods.functions.OV
 
   data.raw["item"]["solid-fuel"].subgroup = "petrochem-fuel"
   data.raw["item"]["solid-fuel"].order = "a[solid-fuel]"
+  data.raw["item"]["sulfur"].subgroup = "petrochem-sulfur"
+  data.raw["item"]["sulfur"].order = "a[sulfer]-a[sulfer]"
+  data.raw["item"]["plastic-bar"].subgroup = "petrochem-solids"
+  data.raw["item"]["plastic-bar"].order = "a[petrochem-solids]-a[plastic]"
+  data.raw["item"]["explosives"].subgroup = "petrochem-solids"
+  data.raw["item"]["explosives"].order = "b[petrochem-solids-2]-a[explosives]"
   if angelsmods.smelting then
     data.raw["item"]["coal"].subgroup = "petrochem-coal"
     data.raw["item"]["coal"].order = "a[carbon]-a"
