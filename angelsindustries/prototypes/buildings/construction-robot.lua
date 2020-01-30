@@ -1,20 +1,21 @@
-  data:extend(
+local sounds = require("__base__.prototypes.entity.demo-sounds")
+data:extend(
+{
   {
-    {
     type = "item",
     name = "angels-construction-robot",
     icon = "__angelsindustries__/graphics/icons/construction-robot-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-cargo-bots",
     order = "c[angels-construction-robot]",
     place_result = "angels-construction-robot",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "construction-robot",
     name = "angels-construction-robot",
     icon = "__angelsindustries__/graphics/icons/construction-robot-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "angels-construction-robot"},
     resistances = { { type = "fire", percent = 85 } },
@@ -40,7 +41,7 @@
       height = 128,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
     },
     in_motion =
@@ -52,7 +53,7 @@
       height = 128,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
       y = 128
     },
@@ -87,7 +88,7 @@
       height = 128,
       frame_count = 2,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
       animation_speed = 0.3,
     },
@@ -96,7 +97,7 @@
       stripes = util.multiplystripes(2,
       {
         {
-		  filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot-shadow.png",
+          filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot-shadow.png",
           width_in_frames = 16,
           height_in_frames = 1,
         }
@@ -181,9 +182,9 @@
         animation_speed = 0.3,
       },
     },
-    working_sound = flying_robot_sounds(),
+    working_sound = sounds.construction_robot(0.7),
     cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
   },
-  }
-  )
+}
+)

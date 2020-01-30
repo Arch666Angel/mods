@@ -6,7 +6,7 @@ data:extend(
     name = "angels-ore1-crushed",
     icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=60/255, g=84/255, b=116/255} },
@@ -27,7 +27,7 @@ data:extend(
     name = "angels-ore2-crushed",
     icon = "__angelsrefining__/graphics/icons/angels-ore2-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=0.55, g=0.51, b=0.30} },
@@ -48,7 +48,7 @@ data:extend(
     name = "angels-ore3-crushed",
     icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=0.42, g=0.71, b=0.86} },
@@ -69,7 +69,7 @@ data:extend(
     name = "angels-ore4-crushed",
     icon = "__angelsrefining__/graphics/icons/angels-ore4-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=0.75, g=0.75, b=0.75} },
@@ -90,7 +90,7 @@ data:extend(
     name = "angels-ore5-crushed",
     icon = "__angelsrefining__/graphics/icons/angels-ore5-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=0.68, g=0.18, b=0.16} },
@@ -111,7 +111,7 @@ data:extend(
     name = "angels-ore6-crushed",
     icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=0.75, g=0.5, b=0.25} },
@@ -549,7 +549,7 @@ data:extend(
     name = "stone-crushed",
     icon = "__angelsrefining__/graphics/icons/stone-crushed.png",
     icon_size = 32,
-    icon_mipmaps = 8,
+    --icon_mipmaps = 8,
     pictures =
     {
       { size = 64, filename = "__angelsrefining__/graphics/icons/crushed/crushed-1.png",   scale = 0.25, mipmap_count = 1, tint = {r=164/255, g=164/255, b=164/255} },

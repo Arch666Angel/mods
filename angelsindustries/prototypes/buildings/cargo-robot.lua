@@ -1,20 +1,21 @@
-  data:extend(
+local sounds = require("__base__.prototypes.entity.demo-sounds")
+data:extend(
+{
   {
-    {
     type = "item",
     name = "cargo-robot",
     icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-cargo-bots",
     order = "c[angels-logistics]-c[cargo-robot]",
     place_result = "cargo-robot",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "logistic-robot",
     name = "cargo-robot",
     icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "cargo-robot"},
     max_health = 100,
@@ -36,7 +37,7 @@
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
       direction_count = 16,
@@ -49,10 +50,10 @@
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
     },
     in_motion =
@@ -62,24 +63,24 @@
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
       y = 384
     },
     in_motion_with_cargo =
     {
-	  filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
-	  priority = "high",
+      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      priority = "high",
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
       y = 256
     },
@@ -127,24 +128,24 @@
       shift = {0, 0},
       direction_count = 16
     },
-    working_sound = flying_robot_sounds(),
+    working_sound = sounds.flying_robot(0.5),
     cargo_centered = {0.0, 0},
   },
-    {
+  {
     type = "item",
     name = "cargo-robot-2",
     icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-cargo-bots",
     order = "c[angels-logistics]-c[cargo-robot]",
     place_result = "cargo-robot-2",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "logistic-robot",
     name = "cargo-robot-2",
     icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "cargo-robot-2"},
     max_health = 100,
@@ -166,7 +167,7 @@
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
       direction_count = 16,
@@ -179,10 +180,10 @@
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
     },
     in_motion =
@@ -192,24 +193,24 @@
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
       y = 384
     },
     in_motion_with_cargo =
     {
-	  filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
-	  priority = "high",
+      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      priority = "high",
       line_length = 16,
       width = 128,
       height = 128,
-	  scale = 0.5,
+      scale = 0.5,
       frame_count = 1,
       shift = {0, 0},
-	  scale = 0.5,
+      scale = 0.5,
       direction_count = 16,
       y = 256
     },
@@ -257,8 +258,8 @@
       shift = {0, 0},
       direction_count = 16
     },
-    working_sound = flying_robot_sounds(),
+    working_sound = sounds.flying_robot(0.5),
     cargo_centered = {0.0, 0},
   },
-  }
-  )
+}
+)

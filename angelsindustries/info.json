@@ -8,7 +8,7 @@
   "homepage": "",
   "description": "Adds components, equipment and a tech overhaul as well as the tool you need to expand and grow your base. [Alpha]",
   "dependencies": [
-    "base >= 0.18.0",
+    "base >= 0.18.2",
     "angelsrefining >= 0.11.0",
     "angelspetrochem >= 0.9.0",
     "angelsbioprocessing >= 0.7.0",

@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds ore refining to the game. Compound ores have to be refined before you are able to smelt and cast them into plates. Works best in conjunction with Bobmods and supports additional mods like Yuoki Industries, Uranium Power and Nucular.",
   "dependencies": [
-    "base >= 0.18.0",
+    "base >= 0.18.2",
     "? rso-mod >= 2.3.3",
     "? bobplates >= 0.15.0",
     "? bobrevamp >= 0.15.0", 
