@@ -552,6 +552,48 @@ end
   -- table.insert(data.raw["technology"]["advanced-ore-refining-3"].effects,{type = "unlock-recipe", recipe = "angelsore-crystal-mix-nuc-processing"})
 -- end
 
+--OVERRIDE FOR THORIUM POWER
+if data.raw.item["thorium-ore"] then
+  data:extend(
+  {
+    {
+      type = "recipe",
+      name = "angelsore-crystal-mix6-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      enabled = "false",
+      allow_decomposition = false,
+      ingredients = {
+        {type = "item", name = "angels-ore8-crystal", amount = 2},
+        {type = "item", name = "angels-ore9-crystal", amount = 2},
+        {type = "item", name = "catalysator-orange", amount = 1}
+      },
+      results = {
+        {type = "item", name = "thorium-ore", amount = 1}
+      },
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/icons/sort-icon.png",
+        },
+        {
+          icon = "__boblibrary__/graphics/icons/ore-5.png",
+          tint = {
+            b = 0.25,
+            g = 1,
+            r = 1
+          },
+          scale = 0.5,
+          shift = {10, 10},
+        }
+      },
+      icon_size = 32,
+      order = "p"
+    },
+  })
+  table.insert(data.raw["technology"]["ore-electro-whinning-cell"].effects,{type = "unlock-recipe", recipe = "angelsore-crystal-mix6-processing"})
+end
+
 --ENABLE PRODUCTIVITY
   angelsmods.functions.allow_productivity("slag-processing-1")
   angelsmods.functions.allow_productivity("slag-processing-2")

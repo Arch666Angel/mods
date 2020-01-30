@@ -181,5 +181,19 @@ if bobmods and bobmods.ores then
 				}
 			})
 		end
+
+		if bobmods.ores.thorium.enabled then
+			angelsmods.functions.add_resource("update", {
+				name = "thorium-ore",
+				order = "b-cn",
+				autoplace = {
+					starting_area = false,
+					resource_index = 43,
+					base_density = 8,
+					regular_rq_factor_multiplier = 1.0,
+					starting_rq_factor_multiplier = 1.1
+				}
+			})
+		end
 	end
 end
