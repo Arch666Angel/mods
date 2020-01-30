@@ -9,6 +9,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "bio-processing-brown",
       "bio-nutrient-paste",
     },
     effects =
@@ -109,7 +110,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+        --{"chemical-science-pack", 1},
       },
       time = 30
     },
@@ -133,10 +134,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "crystal-enhancer"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-grindstone"
       },
     },
     unit =
@@ -195,6 +192,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "crystal-powder-splinter-green"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-grindstone"
       },
     },
     unit =

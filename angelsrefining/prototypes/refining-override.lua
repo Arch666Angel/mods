@@ -105,8 +105,8 @@ end
 --OVERRIDE FOR BOBs
 --if bobmods and bobmods.plates then
 if mods['bobplates'] then
+  --SINGLE GEM CRYSTALLIZATION
   OV.patch_recipes({
-    --SINGLE GEM CRYSTALLIZATION
     { name = "angelsore7-crystallization-1", results = {
         {"!!"},
         { "sapphire-ore", 1 }
@@ -131,7 +131,33 @@ if mods['bobplates'] then
         {"!!"},
         { "diamond-ore", 1 }
     }, icon = "__angelsrefining__/graphics/icons/gem-crystallization-diamond.png" },
-    --INSERT WATER RESOURCES TO BOB RECIPES
+  })
+  if angelsmods.industries and angelsmods.industries.overhaul then
+    data:extend({
+      {
+        type = "item-subgroup",
+        name = "bob-gems-crystallization",
+        group = "bob-gems",
+        order = "2-1"
+      }
+    })
+    data.raw["item-subgroup"]["bob-gems-ore"].order = "2-2"
+    data.raw["recipe"]["angelsore7-crystallization-1"].subgroup = "bob-gems-crystallization"
+    data.raw["recipe"]["angelsore7-crystallization-1"].order = "b"
+    data.raw["recipe"]["angelsore7-crystallization-2"].subgroup = "bob-gems-crystallization"
+    data.raw["recipe"]["angelsore7-crystallization-2"].order = "e"
+    data.raw["recipe"]["angelsore7-crystallization-3"].subgroup = "bob-gems-crystallization"
+    data.raw["recipe"]["angelsore7-crystallization-3"].order = "a"
+    data.raw["recipe"]["angelsore7-crystallization-4"].subgroup = "bob-gems-crystallization"
+    data.raw["recipe"]["angelsore7-crystallization-4"].order = "c"
+    data.raw["recipe"]["angelsore7-crystallization-5"].subgroup = "bob-gems-crystallization"
+    data.raw["recipe"]["angelsore7-crystallization-5"].order = "d"
+    data.raw["recipe"]["angelsore7-crystallization-6"].subgroup = "bob-gems-crystallization"
+    data.raw["recipe"]["angelsore7-crystallization-6"].order = "f"
+  end
+
+  --INSERT WATER RESOURCES TO BOB RECIPES
+  OV.patch_recipes({
     { name = "water-electrolysis", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "nitric-acid", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "sulfuric-acid-2", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
