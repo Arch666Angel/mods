@@ -3,3 +3,4 @@ Version: 0.3.0
 Date: ??
   Changes:
     - update to 0.18
+    - put smeltingtrain under angel logistics when angelsindustries is present

@@ -1,8 +1,9 @@
-if angelsmods.industry then
-	if angelsmods.industry.components then
+if angelsmods.industries then
+	if angelsmods.industries.components then
 		require("prototypes.recipes.smeltingtrain-updates")
 	end
 	data.raw["item-subgroup"]["angels-smeltingtrain"].group = "angels-logistics"
+	data.raw["item-subgroup"]["angels-smeltingtrain"].order = "fb"
 end
 
 if data.raw["equipment-category"]["armoured-vehicle"] then

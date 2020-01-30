@@ -6,7 +6,6 @@ local energyInterfaceTransferRates = {}
 for tier,rate in pairs(energyInterfaceSettings.transferRates) do
   energyInterfaceTransferRates[string.format(energyInterfaceSettings.name, "-"..tier)] = rate
 end
-log(serpent.block(energyInterfaceTransferRates))
 
 -------------------------------------------------------------------------------
 -- internal cab functions                                                    --
@@ -139,7 +138,7 @@ return {
 
     -- check if the vehicle has at least one interface equipment
     if not deployedCab["angels-cab"].grid.get_contents()["angels-cab-energy-interface-mk1"] then
-      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.noEnergyInterface", {"equipment-name.angels-cab-energy-interface", "MK1"}})
+      return cannotDeploy(deployedCab["angels-cab"], {"angels-cab-messages.deploy-noEnergyInterface", {"equipment-name.angels-cab-energy-interface", "MK1"}})
     end
 
     -- deploy the vehicle

@@ -7,22 +7,22 @@ circuit_connector_definitions["chest-big"] = circuit_connector_definitions.creat
 )
 
 data:extend(
+{
   {
-    {
     type = "item",
     name = "angels-big-chest",
     icon = "__angelsindustries__/graphics/icons/chest-big-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-chests-big",
     order = "a",
     place_result = "angels-big-chest",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "container",
     name = "angels-big-chest",
     icon = "__angelsindustries__/graphics/icons/chest-big-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "angels-big-chest"},
     max_health = 200,
@@ -56,14 +56,14 @@ data:extend(
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
-    },
-    {
+  },
+  {
     type = "item",
     name = "angels-logistic-chest-requester",
     icon = "__angelsindustries__/graphics/icons/chest-big-requester-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-chests-big",
-    order = "b",
+    order = "f",
     place_result = "angels-logistic-chest-requester",
     stack_size = 50
     },
@@ -71,7 +71,7 @@ data:extend(
     type = "logistic-container",
     name = "angels-logistic-chest-requester",
     icon = "__angelsindustries__/graphics/icons/chest-big-requester-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-logistic-chest-requester"},
     max_health = 350,
@@ -91,7 +91,7 @@ data:extend(
     },
     fast_replaceable_group = "container",
     inventory_size = 60,
-	logistic_slots_count = 12,
+    logistic_slots_count = 12,
     logistic_mode = "requester",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
@@ -108,21 +108,21 @@ data:extend(
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
-    {
+  {
     type = "item",
     name = "angels-logistic-chest-passive-provider",
     icon = "__angelsindustries__/graphics/icons/chest-big-passive-provider-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-chests-big",
     order = "c",
     place_result = "angels-logistic-chest-passive-provider",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "logistic-container",
     name = "angels-logistic-chest-passive-provider",
     icon = "__angelsindustries__/graphics/icons/chest-big-passive-provider-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-logistic-chest-passive-provider"},
     max_health = 350,
@@ -157,22 +157,22 @@ data:extend(
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
-    },
-    {
+  },
+  {
     type = "item",
     name = "angels-logistic-chest-active-provider",
     icon = "__angelsindustries__/graphics/icons/chest-big-active-provider-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-chests-big",
-    order = "d",
+    order = "a",
     place_result = "angels-logistic-chest-active-provider",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "logistic-container",
     name = "angels-logistic-chest-active-provider",
     icon = "__base__/graphics/icons/logistic-chest-active-provider.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-logistic-chest-active-provider"},
     max_health = 350,
@@ -196,22 +196,22 @@ data:extend(
     circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
-	},
-    {
+  },
+  {
     type = "item",
     name = "angels-logistic-chest-storage",
     icon = "__angelsindustries__/graphics/icons/chest-big-storage-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-chests-big",
-    order = "e",
+    order = "d",
     place_result = "angels-logistic-chest-storage",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "logistic-container",
     name = "angels-logistic-chest-storage",
     icon = "__base__/graphics/icons/logistic-chest-storage.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-logistic-chest-storage"},
     max_health = 350,
@@ -247,16 +247,16 @@ data:extend(
     circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
-    {
+  {
     type = "item",
     name = "angels-logistic-chest-buffer",
     icon = "__angelsindustries__/graphics/icons/chest-big-buffer-ico.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-chests-big",
-    order = "f",
+    order = "e",
     place_result = "angels-logistic-chest-buffer",
     stack_size = 50
-    },
+  },
   {
     type = "logistic-container",
     name = "angels-logistic-chest-buffer",
@@ -298,5 +298,5 @@ data:extend(
     circuit_connector_sprites = circuit_connector_definitions["chest-big"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
-  }
-  )
+}
+)

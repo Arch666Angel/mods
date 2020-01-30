@@ -337,7 +337,7 @@ data:extend(
     type = "item-subgroup",
     name = "angels-chests-big",
     group = "angels-logistics",
-    order = "a",
+    order = "aa",
   },
   {
     type = "item-subgroup",
@@ -367,7 +367,7 @@ data:extend(
     type = "item-subgroup",
     name = "angels-crawler-train",
     group = "angels-logistics",
-    order = "f",
+    order = "fa",
   },
 }
 )
