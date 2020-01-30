@@ -552,6 +552,89 @@ end
   -- table.insert(data.raw["technology"]["advanced-ore-refining-3"].effects,{type = "unlock-recipe", recipe = "angelsore-crystal-mix-nuc-processing"})
 -- end
 
+--OVERRIDE FOR THORIUM POWER
+if data.raw.item["thorium-ore"] then
+  -- pure sorting
+  OV.modify_output("angelsore2-pure-processing", {"thorium-ore", "platinum-ore"})
+  
+  -- mixed sorting
+  data:extend(
+  {
+    {
+      type = "recipe",
+      name = "angelsore-crystal-mix6-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      enabled = "false",
+      allow_decomposition = false,
+      ingredients = {
+        {type = "item", name = "angels-ore8-crystal", amount = 2},
+        {type = "item", name = "angels-ore9-crystal", amount = 2},
+        {type = "item", name = "catalysator-orange", amount = 1}
+      },
+      results = {
+        {type = "item", name = "thorium-ore", amount = 1}
+      },
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/icons/sort-icon.png",
+        },
+        {
+          icon = "__boblibrary__/graphics/icons/ore-5.png",
+          tint = {
+            b = 0.25,
+            g = 1,
+            r = 1
+          },
+          scale = 0.5,
+          shift = {10, 10},
+        }
+      },
+      icon_size = 32,
+      order = "p"
+    },
+  })
+  table.insert(data.raw["technology"]["ore-electro-whinning-cell"].effects,{type = "unlock-recipe", recipe = "angelsore-crystal-mix6-processing"})
+
+  -- crystalizing
+  OV.patch_recipes({
+    {
+      name = "slag-processing-9",
+      results = {
+        {type = "item", name = "thorium-ore", amount = 1, probability = 0.005 },
+      },
+      icons =
+      {
+        {
+          icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png"
+        },
+        {
+          icon = "__base__/graphics/icons/uranium-ore.png",
+          icon_size = 64,
+          scale = 0.16,
+          shift = { -12, 12}
+        },
+        {
+          icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png",
+          scale = 0.32,
+          shift = { 12, 12}
+        },
+        {
+          icon = "__boblibrary__/graphics/icons/ore-5.png",
+          tint = {
+            b = 0.25,
+            g = 1,
+            r = 1
+          },
+          scale = 0.32,
+          shift = { 0, 12}
+        }
+      }
+    },
+  })
+end
+
 --ENABLE PRODUCTIVITY
   angelsmods.functions.allow_productivity("slag-processing-1")
   angelsmods.functions.allow_productivity("slag-processing-2")

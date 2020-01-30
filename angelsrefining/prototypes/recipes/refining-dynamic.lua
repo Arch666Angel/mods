@@ -1744,7 +1744,7 @@ data:extend(
     }
     },
     icon_size = 32,
-    order = "p"
+    order = "q"
   },
   {
     type = "recipe",
@@ -1777,7 +1777,7 @@ data:extend(
     }
     },
     icon_size = 32,
-    order = "q"
+    order = "r"
   },
   {
     type = "recipe",
@@ -1810,7 +1810,7 @@ data:extend(
     }
     },
     icon_size = 32,
-    order = "r"
+    order = "s"
   },
   --GEODES
   {
