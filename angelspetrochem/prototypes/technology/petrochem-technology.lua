@@ -1699,6 +1699,7 @@ data:extend(
     name = "angels-rocket-fuel",
     icon = "__base__/graphics/technology/rocket-silo.png",
     icon_size = 128,
+    icon_mipmaps = 1,
     prerequisites =
     {
       "angels-nitrogen-processing-4",
