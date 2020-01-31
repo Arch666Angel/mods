@@ -1,20 +1,19 @@
 local OV = angelsmods.functions.OV
 
-OV.disable_technology({ "angels-yellow-loader", "angels-red-loader", "angels-blue-loader" })
+OV.disable_technology({"angels-yellow-loader", "angels-red-loader", "angels-blue-loader"})
 
 if data.raw["equipment-category"]["armoured-vehicle"] then
-	table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories,"vehicle")
-	table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories,"vehicle")
-	table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories,"vehicle")
-	table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories,"vehicle")
+	table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "vehicle")
+	table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories, "vehicle")
+	table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories, "vehicle")
+	table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories, "vehicle")
 end
-
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then
 	--UPDATE RECIPES FOR ENTITIES
 	require("prototypes.recipes.components-entity-update")
 	require("prototypes.overrides.global-components-entity-update")
-	
+
 	--MODIFY ASSEMBLING MACHINES
 	data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
 	data.raw["item"]["assembling-machine-1"].order = "a"
@@ -36,3 +35,13 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 	data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
 end
 
+if angelsmods.industries.overhaul then
+	-- Move vehicles
+	data.raw["item-with-entity-data"]["locomotive"].subgroup = "angels-vehicle-train-vanilla"
+	data.raw["item-with-entity-data"]["cargo-wagon"].subgroup = "angels-vehicle-train-vanilla"
+	data.raw["item-with-entity-data"]["fluid-wagon"].subgroup = "angels-vehicle-train-vanilla"
+	data.raw["item-with-entity-data"]["artillery-wagon"].subgroup = "angels-vehicle-train-vanilla"
+
+	data.raw["item-with-entity-data"]["car"].subgroup = "angels-vehicle-drive"
+	data.raw["item-with-entity-data"]["tank"].subgroup = "angels-vehicle-drive"
+end

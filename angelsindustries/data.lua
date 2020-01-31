@@ -1,14 +1,22 @@
+local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
+
 --INITIALIZE
-if not angelsmods then angelsmods = {} end
-if not angelsmods.industries then angelsmods.industries = {} end
+if not angelsmods then
+  angelsmods = {}
+end
+if not angelsmods.industries then
+  angelsmods.industries = {}
+end
 
 --TRIGGER CHECKS
-angelsmods.industries.overhaul = true -- enable industries
+angelsmods.industries.overhaul = mods.bobplates and true or settings.startup["angels-industries-enable-overhaul"].value -- enable industries
 angelsmods.industries.tech = false -- enable technology overhaul
 angelsmods.industries.components = false -- enable hard mode
 
 --LOAD FUNCTIONS
-if not angelsmods.industries.tech_exceptions then angelsmods.industries.tech_exceptions = {} end
+if not angelsmods.industries.tech_exceptions then
+  angelsmods.industries.tech_exceptions = {}
+end
 
 --LOAD PROTOTYPES
 --CATEGORIES
@@ -27,7 +35,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.buildings.angels-labs-logistic")
   require("prototypes.buildings.angels-labs-processing")
   require("prototypes.buildings.angels-labs-war")
-  
+
   require("prototypes.buildings.angels-accelerator")
 
   --RECIPES
@@ -61,7 +69,6 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.recipes.components-weapons-recipes")
 end
 
-
 --ENTITIES
 require("prototypes.buildings.cargo-roboport")
 require("prototypes.buildings.cargo-robot")
@@ -72,7 +79,6 @@ require("prototypes.buildings.chests")
 require("prototypes.entities.crawler")
 require("prototypes.entities.crawler-train")
 require("prototypes.entities.equipment")
-
 require("prototypes.entities.bio-tile")
 
 --RECIPES

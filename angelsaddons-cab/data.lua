@@ -1,6 +1,14 @@
-if not angelsmods then angelsmods = {} end
-if not angelsmods.addons then angelsmods.addons = {} end
-if not angelsmods.addons.cab then angelsmods.addons.cab = {} end
+local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
+
+if not angelsmods then
+  angelsmods = {}
+end
+if not angelsmods.addons then
+  angelsmods.addons = {}
+end
+if not angelsmods.addons.cab then
+  angelsmods.addons.cab = {}
+end
 
 require("prototypes.cab-category")
 
