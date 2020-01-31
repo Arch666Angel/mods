@@ -1,5 +1,6 @@
 data:extend(
 {
+  --ORE
   {
     type = "item",
     name = "bauxite-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-aluminium",
@@ -54,6 +56,7 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-aluminium",
@@ -72,6 +75,7 @@ data:extend(
     order = "h",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-aluminium",
@@ -90,17 +94,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-aluminium",
-    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
+    name = "angels-roll-aluminium",
+    icon = "__angelssmelting__/graphics/icons/roll-aluminium.png",
     icon_size = 32,
     subgroup = "angels-aluminium-casting",
     order = "j",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-roll-aluminium",
-    icon = "__angelssmelting__/graphics/icons/roll-aluminium.png",
+    name = "angels-plate-aluminium",
+    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
     icon_size = 32,
     subgroup = "angels-aluminium-casting",
     order = "k",

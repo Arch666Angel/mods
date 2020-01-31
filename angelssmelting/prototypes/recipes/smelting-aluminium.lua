@@ -3,7 +3,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 data:extend(
 {
   --BAUXITE/ALUMINIUM
-  --INTERMEDIATE
+  -- SMELTING INTERMEDIATE
   {
     type = "recipe",
     name = "bauxite-ore-processing",
@@ -11,15 +11,18 @@ data:extend(
     subgroup = "angels-aluminium",
     energy_required = 2,
     enabled = "false",
-    ingredients ={{"bauxite-ore", 4}},
-    results=
+    ingredients =
+    {
+      {"bauxite-ore", 4}
+    },
+    results =
     {
       {type="item", name="processed-aluminium", amount=2},
     },
     main_product= "processed-aluminium",
     icon = "__angelssmelting__/graphics/icons/processed-aluminium.png",
     icon_size = 32,
-    order = "aa",
+    order = "b[processed-aluminium]",
   },
   {
     type = "recipe",
@@ -28,68 +31,18 @@ data:extend(
     subgroup = "angels-aluminium",
     energy_required = 2,
     enabled = "false",
-    ingredients ={{"processed-aluminium", 3}},
-    results=
+    ingredients =
+    {
+      {"processed-aluminium", 3}
+    },
+    results =
     {
       {type="item", name="pellet-aluminium", amount=4},
     },
     main_product= "pellet-aluminium",
     icon = "__angelssmelting__/graphics/icons/pellet-aluminium.png",
     icon_size = 32,
-    order = "ab",
-  },
-  --INGOT
-  {
-    type = "recipe",
-    name = "bauxite-ore-smelting",
-    category = "powder-mixing",
-    subgroup = "angels-aluminium",
-    energy_required = 6,
-    enabled = "false",
-    ingredients ={
-      {type="item", name="bauxite-ore", amount=12},
-      {type="item", name="solid-sodium-hydroxide", amount=3},
-    },
-    results=
-    {
-      {type="item", name="solid-aluminium-hydroxide", amount=12},
-    },
-    icon_size = 32,
-    order = "ac",
-  },
-  {
-    type = "recipe",
-    name = "processed-aluminium-smelting",
-    category = "powder-mixing",
-    subgroup = "angels-aluminium",
-    energy_required = 6,
-    enabled = "false",
-    ingredients ={
-      {type="item", name="processed-aluminium", amount=4},
-      {type="item", name="solid-sodium-hydroxide", amount=3},
-    },
-    results=
-    {
-      {type="item", name="solid-aluminium-hydroxide", amount=12},
-    },
-    icon_size = 32,
-    order = "ad",
-  },
-  {
-    type = "recipe",
-    name = "solid-aluminium-hydroxide-smelting",
-    category = "blast-smelting",
-    subgroup = "angels-aluminium",
-    energy_required = 4,
-    enabled = "false",
-    ingredients ={
-      {type="item", name="solid-aluminium-hydroxide", amount=24},
-    },
-    results=
-    {
-      {type="item", name="solid-aluminium-oxide", amount=24},
-    },
-    order = "ae",
+    order = "c[pellet-aluminium]",
   },
   {
     type = "recipe",
@@ -98,17 +51,73 @@ data:extend(
     subgroup = "angels-aluminium",
     energy_required = 6,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="pellet-aluminium", amount=6},
       {type="item", name="solid-sodium-carbonate", amount=3},
       {type="item", name="solid-coke", amount=3},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-aluminate", amount=18},
     },
     icon_size = 32,
-    order = "af",
+    order = "d[solid-sodium-aluminate]",
+  },
+  {
+    type = "recipe",
+    name = "bauxite-ore-smelting",
+    category = "powder-mixing",
+    subgroup = "angels-aluminium",
+    energy_required = 6,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="bauxite-ore", amount=12},
+      {type="item", name="solid-sodium-hydroxide", amount=3},
+    },
+    results =
+    {
+      {type="item", name="solid-aluminium-hydroxide", amount=12},
+    },
+    icon_size = 32,
+    order = "e[solid-aluminium-hydroxide]-a",
+  },
+  {
+    type = "recipe",
+    name = "processed-aluminium-smelting",
+    category = "powder-mixing",
+    subgroup = "angels-aluminium",
+    energy_required = 6,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="processed-aluminium", amount=4},
+      {type="item", name="solid-sodium-hydroxide", amount=3},
+    },
+    results =
+    {
+      {type="item", name="solid-aluminium-hydroxide", amount=12},
+    },
+    icon_size = 32,
+    order = "e[solid-aluminium-hydroxide]-b",
+  },
+  {
+    type = "recipe",
+    name = "solid-aluminium-hydroxide-smelting",
+    category = "blast-smelting",
+    subgroup = "angels-aluminium",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="solid-aluminium-hydroxide", amount=24},
+    },
+    results =
+    {
+      {type="item", name="solid-aluminium-oxide", amount=24},
+    },
+    order = "f[solid-aluminium-oxide]-a",
   },
   {
     type = "recipe",
@@ -117,20 +126,22 @@ data:extend(
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-sodium-aluminate", amount=24},
       {type="item", name="solid-sodium-hydroxide", amount=3},
       {type="fluid", name="gas-carbon-dioxide", amount=60},
     },
-    results=
+    results =
     {
       {type="item", name="solid-aluminium-oxide", amount=24},
       {type="item", name="solid-sodium-carbonate", amount=2},
     },
     main_product= "solid-aluminium-oxide",
     icon_size = 32,
-    order = "ag",
+    order = "f[solid-aluminium-oxide]-b",
   },
+  -- SMELTING RESULT  
   {
     type = "recipe",
     name = "solid-aluminium-oxide-smelting",
@@ -138,18 +149,37 @@ data:extend(
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-aluminium-oxide", amount=24},
       {type="item", name="solid-carbon", amount=3},
     },
-    results=
+    results =
     {
       {type="item", name="ingot-aluminium", amount=24},
     },
     icon_size = 32,
-    order = "ah",
+    order = "g[ingot-aluminium]",
   },
-  --SMELTING
+  {
+    type = "recipe",
+    name = "powder-aluminium",
+    category = "advanced-crafting",
+    subgroup = "angels-aluminium",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-aluminium", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-aluminium", amount=1},
+    },
+    icon_size = 32,
+    order = "h[powder-aluminium]",
+  },
+  -- CASTING INTERMEDIATE
   {
     type = "recipe",
     name = "molten-aluminium-smelting-1",
@@ -157,10 +187,11 @@ data:extend(
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-aluminium", amount=12},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-molten-aluminium", amount=120},
     },
@@ -170,13 +201,13 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "ba",
+    order = "i[liquid-molten-aluminium]-a",
   },
   {
     type = "recipe",
@@ -185,11 +216,12 @@ data:extend(
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-aluminium", amount=12},
       {type="item", name="ingot-manganese", amount=12},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-molten-aluminium", amount=240},
     },
@@ -199,13 +231,13 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "bb",
+    order = "i[liquid-molten-aluminium]-b",
   },
   {
     type = "recipe",
@@ -214,12 +246,13 @@ data:extend(
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-aluminium", amount=12},
       {type="item", name="ingot-silicon", amount=12},
       {type="item", name="ingot-copper", amount=12},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-molten-aluminium", amount=360},
     },
@@ -229,15 +262,14 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "bc",
+    order = "i[liquid-molten-aluminium]-c",
   },
-  --CASTING
   {
     type = "recipe",
     name = "roll-aluminium-casting",
@@ -247,21 +279,29 @@ data:extend(
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-aluminium", amount=80},
         {type="fluid", name="water", amount=40},
       },
-      results={{type="item", name="angels-roll-aluminium", amount=2}},
+      results =
+      {
+        {type="item", name="angels-roll-aluminium", amount=2}
+      },
     },
     expensive =
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-aluminium", amount=100 * intermediatemulti},
         {type="fluid", name="water", amount=40},
       },
-      results={{type="item", name="angels-roll-aluminium", amount=2}},
+      results =
+      {
+        {type="item", name="angels-roll-aluminium", amount=2}
+      },
     },
     icons = {
       {
@@ -269,13 +309,13 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
       },
     },
     icon_size = 32,
-    order = "ca",
+    order = "j[angels-roll-aluminium]-a",
   },
   {
     type = "recipe",
@@ -286,11 +326,13 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-aluminium", amount=140},
         {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
       },
-      results={
+      results =
+      {
         {type="item", name="angels-roll-aluminium", amount=4},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
@@ -300,11 +342,13 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-aluminium", amount=180 * intermediatemulti},
         {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
       },
-      results={
+      results =
+      {
         {type="item", name="angels-roll-aluminium", amount=4},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
@@ -316,14 +360,15 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
       },
     },
     icon_size = 32,
-    order = "cb",
+    order = "j[angels-roll-aluminium]-b",
   },
+  -- CASTING RESULT
   {
     type = "recipe",
     name = "angels-plate-aluminium",
@@ -333,15 +378,27 @@ data:extend(
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={{type="fluid", name="liquid-molten-aluminium", amount=40}},
-      results={{type="item", name="angels-plate-aluminium", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-aluminium", amount=40}
+      },
+      results =
+      {
+        {type="item", name="angels-plate-aluminium", amount=4}
+      },
     },
     expensive =
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={{type="fluid", name="liquid-molten-aluminium", amount=50 * intermediatemulti}},
-      results={{type="item", name="angels-plate-aluminium", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-aluminium", amount=50 * intermediatemulti}
+      },
+      results =
+      {
+        {type="item", name="angels-plate-aluminium", amount=4}
+      },
     },
     icons = {
       {
@@ -354,9 +411,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "d",
+    order = "k[angels-plate-aluminium]-a",
   },
-  --CRAFTING
   {
     type = "recipe",
     name = "angels-roll-aluminium-converting",
@@ -365,10 +421,11 @@ data:extend(
     energy_required = 0.5,
     enabled = "false",
     allow_decomposition = false,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="angels-roll-aluminium", amount=1},
     },
-    results=
+    results =
     {
       {type="item", name="angels-plate-aluminium", amount=4},
     },
@@ -383,7 +440,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "cc",
+    order = "k[angels-plate-aluminium]-b",
   },
 }
 )
