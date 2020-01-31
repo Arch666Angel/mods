@@ -1,3 +1,5 @@
+local sounds = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
   {
     {
@@ -116,7 +118,7 @@ data:extend(
         shift = {0, 0},
         direction_count = 16
       },
-      working_sound = flying_robot_sounds(),
+      working_sound = sounds.flying_robot(0.5),
       cargo_centered = {0.0, 0}
     }
   }
