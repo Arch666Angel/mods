@@ -34,11 +34,61 @@ OV.patch_recipes({
     expensive = { ingredients = { {"!!"}, { name = "iron-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
     subgroup = "angels-iron-casting", order = "zz" 
   },
-  { name = "copper-plate",
+  {
+    name = "copper-plate",
     energy_required = 10.5,
-    normal = { ingredients = { { name = "copper-ore", type = "item", amount = "+3" } }, results = { { name = "copper-plate", type = "item", amount = "+2" } } },
-    expensive = { ingredients = { {"!!"}, { name = "copper-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "copper-plate", type = "item", amount = "+2" } } },
-    subgroup = "angels-copper-casting", order = "zz" 
+    normal =
+    {
+      ingredients =
+      {
+        { name = "copper-ore", type = "item", amount = "+3" }
+      },
+      results =
+      {
+        { name = "copper-plate", type = "item", amount = "+2" }
+      }
+    },
+    expensive =
+    {
+      ingredients =
+      { {"!!"},
+        { name = "copper-ore", type = "item", amount = 5 * intermediatemulti }
+      },
+      results =
+      {
+        { name = "copper-plate", type = "item", amount = "+2" }
+      }
+    },
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+      },
+      {
+        icon = "__base__/graphics/icons/copper-ore.png",
+        icon_size = 64,
+        scale = 32/64 * 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-copper-casting",
+    order = "j[angels-plate-copper]-b",
+  },
+  {
+    name = "copper-cable",
+    icons = {
+      { 
+        icon = "__base__/graphics/icons/copper-cable.png",
+      },
+      {
+        icon = "__base__/graphics/icons/copper-plate.png",
+        scale = 32/64 * 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 64,
+    subgroup = "angels-copper-casting",
+    order = "k[angels-wire-copper]-a"
   },
   { name = "steel-plate", subgroup = "angels-steel-casting", order = "zz" }
 })
@@ -56,7 +106,11 @@ angelsmods.functions.add_flag("angels-wire-copper", "hidden")
 if angelsmods.refining then
   OV.patch_recipes({
     { name = "angelsore1-crushed-smelting", subgroup = "angels-iron-casting", order = "zy" },
-    { name = "angelsore3-crushed-smelting", subgroup = "angels-copper-casting", order = "zy" },
+    {
+      name = "angelsore3-crushed-smelting",
+      subgroup = "angels-copper-casting",
+      order = "j[angels-plate-copper]-a"
+    },
     { name = "angelsore5-crushed-smelting", subgroup = "angels-lead-casting", order = "zy" },
     { name = "angelsore6-crushed-smelting", subgroup = "angels-tin-casting", order = "zy" }
   })

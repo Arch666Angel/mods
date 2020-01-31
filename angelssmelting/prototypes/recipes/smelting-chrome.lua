@@ -123,6 +123,17 @@ data:extend(
       {type="fluid", name="gas-carbon-monoxide", amount=60},
     },
     main_product= "ingot-chrome",
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/ingot-chrome.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "g[ingot-chrome]-a",
   },
@@ -144,6 +155,17 @@ data:extend(
       {type="fluid", name="gas-carbon-monoxide", amount=60},
     },
     main_product= "ingot-chrome",
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/ingot-chrome.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "g[ingot-chrome]-b",
   },
@@ -165,6 +187,17 @@ data:extend(
       {type="item", name="solid-aluminium-oxide", amount=6},
     },
     main_product= "ingot-chrome",
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/ingot-chrome.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "g[ingot-chrome]-c",
   },

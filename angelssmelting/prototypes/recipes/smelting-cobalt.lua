@@ -75,6 +75,17 @@ data:extend(
     {
       {type="item", name="solid-cobalt-oxide", amount=24},
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "e[solid-cobalt-oxide]-a",
   },
@@ -93,6 +104,17 @@ data:extend(
     results =
     {
       {type="item", name="solid-cobalt-oxide", amount=24},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
     },
     icon_size = 32,
     order = "e[solid-cobalt-oxide]-b",
@@ -114,6 +136,17 @@ data:extend(
     {
       {type="item", name="ingot-cobalt", amount=24},
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/ingot-cobalt.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "f[ingot-cobalt]-a",
   },
@@ -132,6 +165,17 @@ data:extend(
     results =
     {
       {type="item", name="ingot-cobalt", amount=24},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/ingot-cobalt.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
     },
     icon_size = 32,
     order = "f[ingot-cobalt]-b",

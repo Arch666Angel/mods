@@ -80,6 +80,17 @@ data:extend(
     {
       {type="item", name="solid-aluminium-hydroxide", amount=12},
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "e[solid-aluminium-hydroxide]-a",
   },
@@ -99,6 +110,17 @@ data:extend(
     {
       {type="item", name="solid-aluminium-hydroxide", amount=12},
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "e[solid-aluminium-hydroxide]-b",
   },
@@ -117,6 +139,18 @@ data:extend(
     {
       {type="item", name="solid-aluminium-oxide", amount=24},
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
     order = "f[solid-aluminium-oxide]-a",
   },
   {
@@ -138,6 +172,17 @@ data:extend(
       {type="item", name="solid-sodium-carbonate", amount=2},
     },
     main_product= "solid-aluminium-oxide",
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
     icon_size = 32,
     order = "f[solid-aluminium-oxide]-b",
   },
@@ -161,24 +206,24 @@ data:extend(
     icon_size = 32,
     order = "g[ingot-aluminium]",
   },
-  {
-    type = "recipe",
-    name = "powder-aluminium",
-    category = "advanced-crafting",
-    subgroup = "angels-aluminium",
-    energy_required = 0.5,
-    enabled = "false",
-    ingredients =
-    {
-      {type="item", name="ingot-aluminium", amount=1},
-    },
-    results =
-    {
-      {type="item", name="powder-aluminium", amount=1},
-    },
-    icon_size = 32,
-    order = "h[powder-aluminium]",
-  },
+  --{
+  --  type = "recipe",
+  --  name = "powder-aluminium",
+  --  category = "advanced-crafting",
+  --  subgroup = "angels-aluminium",
+  --  energy_required = 0.5,
+  --  enabled = "false",
+  --  ingredients =
+  --  {
+  --    {type="item", name="ingot-aluminium", amount=1},
+  --  },
+  --  results =
+  --  {
+  --    {type="item", name="powder-aluminium", amount=1},
+  --  },
+  --  icon_size = 32,
+  --  order = "h[powder-aluminium]",
+  --},
   -- CASTING INTERMEDIATE
   {
     type = "recipe",

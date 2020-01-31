@@ -15,12 +15,12 @@ data.raw["item"]["copper-plate"].icon = "__angelssmelting__/graphics/icons/plate
 data.raw["item"]["copper-plate"].icon_size = 32
 data.raw["item"]["copper-plate"].icon_mipmaps = 1
 data.raw["item"]["copper-plate"].subgroup = "angels-copper-casting"
-data.raw["item"]["copper-plate"].order = "a"
+data.raw["item"]["copper-plate"].order = "j"
 data.raw["item"]["copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-copper.png"
 data.raw["item"]["copper-cable"].icon_size = 32
 data.raw["item"]["copper-cable"].icon_mipmaps = 1
 data.raw["item"]["copper-cable"].subgroup = "angels-copper-casting"
-data.raw["item"]["copper-cable"].order = "e"
+data.raw["item"]["copper-cable"].order = "k"
 angelsmods.functions.OV.global_replace_icon(
   "__base__/graphics/icons/plate/iron-plate.png",
   "__angelssmelting__/graphics/icons/plate-iron.png"
