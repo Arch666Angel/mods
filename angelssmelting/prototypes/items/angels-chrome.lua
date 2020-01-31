@@ -1,5 +1,6 @@
 data:extend(
 {
+  --ORE
   {
     type = "item",
     name = "chrome-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-chrome",
@@ -54,6 +56,7 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-chrome",
@@ -64,12 +67,22 @@ data:extend(
     stack_size = 200
   },
   {
+    type = "item",
+    name = "powder-chrome",
+    icon = "__angelssmelting__/graphics/icons/powder-chrome.png",
+    icon_size = 32,
+    subgroup = "angels-chrome",
+    order = "h",
+    stack_size = 200
+  },
+  -- CASTING INTERMEDIATE
+  {
     type = "fluid",
     name = "liquid-molten-chrome",
     icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
     icon_size = 32,
     subgroup = "angels-chrome-casting",
-    order = "h",
+    order = "i",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 200/255, g = 186/255, b = 245/255},
@@ -81,26 +94,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-chrome",
-    icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
-    icon_size = 32,
-    subgroup = "angels-chrome-casting",
-    order = "i",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "powder-chrome",
-    icon = "__angelssmelting__/graphics/icons/powder-chrome.png",
+    name = "angels-roll-chrome",
+    icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
     icon_size = 32,
     subgroup = "angels-chrome-casting",
     order = "j",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-roll-chrome",
-    icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
+    name = "angels-plate-chrome",
+    icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
     icon_size = 32,
     subgroup = "angels-chrome-casting",
     order = "k",
