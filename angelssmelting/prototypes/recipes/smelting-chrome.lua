@@ -15,7 +15,7 @@ data:extend(
     {
       {"chrome-ore", 4}
     },
-    results=
+    results =
     {
       {type="item", name="processed-chrome", amount=2},
     },
@@ -33,7 +33,7 @@ data:extend(
     {
       {"processed-chrome", 3}
     },
-    results=
+    results =
     {
       {type="item", name="pellet-chrome", amount=4},
     },
@@ -53,7 +53,7 @@ data:extend(
       {type="item", name="solid-sodium-carbonate", amount=6},
       {type="fluid", name="gas-oxygen", amount=60},
     },
-    results=
+    results =
     {
       {type="item", name="solid-chromate", amount=24},
     },
@@ -72,7 +72,7 @@ data:extend(
       {type="item", name="solid-chromate", amount=12},
       {type="fluid", name="liquid-sulfuric-acid", amount=30},
     },
-    results=
+    results =
     {
       {type="item", name="solid-dichromate", amount=12},
       {type="item", name="solid-sodium-sulfate", amount=1},
@@ -94,7 +94,7 @@ data:extend(
       {type="item", name="solid-dichromate", amount=24},
       {type="item", name="solid-carbon", amount=3},
     },
-    results=
+    results =
     {
       {type="item", name="solid-chrome-oxide", amount=24},
       {type="item", name="solid-sodium-carbonate", amount=3},
@@ -117,7 +117,7 @@ data:extend(
       {type="item", name="chrome-ore", amount=24},
       {type="item", name="solid-carbon", amount=3},
     },
-    results=
+    results =
     {
       {type="item", name="ingot-chrome", amount=24},
       {type="fluid", name="gas-carbon-monoxide", amount=60},
@@ -138,7 +138,7 @@ data:extend(
       {type="item", name="processed-chrome", amount=8},
       {type="item", name="solid-carbon", amount=3},
     },
-    results=
+    results =
     {
       {type="item", name="ingot-chrome", amount=24},
       {type="fluid", name="gas-carbon-monoxide", amount=60},
@@ -159,7 +159,7 @@ data:extend(
       {type="item", name="solid-chrome-oxide", amount=24},
       {type="item", name="ingot-aluminium", amount=6},
     },
-    results=
+    results =
     {
       {type="item", name="ingot-chrome", amount=24},
       {type="item", name="solid-aluminium-oxide", amount=6},
@@ -172,13 +172,14 @@ data:extend(
     type = "recipe",
     name = "powder-chrome",
     category = "advanced-crafting",
-    subgroup = "angels-chrome-casting",
+    subgroup = "angels-chrome",
     energy_required = 0.5,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-chrome", amount=1},
     },
-    results=
+    results =
     {
       {type="item", name="powder-chrome", amount=1},
     },
@@ -197,7 +198,7 @@ data:extend(
     {
       {type="item", name="ingot-chrome", amount=12},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-molten-chrome", amount=120},
     },
@@ -218,7 +219,7 @@ data:extend(
       {
         {type="fluid", name="liquid-molten-chrome", amount=40}
       },
-      results=
+      results =
       {
         {type="item", name="angels-plate-chrome", amount=4}
       },
@@ -231,7 +232,7 @@ data:extend(
       {
         {type="fluid", name="liquid-molten-chrome", amount=50 * intermediatemulti}
       },
-      results=
+      results =
       {
         {type="item", name="angels-plate-chrome", amount=4}
       },

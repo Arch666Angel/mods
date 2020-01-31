@@ -1,5 +1,6 @@
 data:extend(
 {
+  --ORE
   {
     type = "item",
     name = "cobalt-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-cobalt",
@@ -45,6 +47,7 @@ data:extend(
     order = "e",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-cobalt",
@@ -63,6 +66,7 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-cobalt",
@@ -81,17 +85,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-cobalt",
-    icon = "__angelssmelting__/graphics/icons/plate-cobalt.png",
+    name = "angels-roll-cobalt",
+    icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
     icon_size = 32,
     subgroup = "angels-cobalt-casting",
     order = "i",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-roll-cobalt",
-    icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
+    name = "angels-plate-cobalt",
+    icon = "__angelssmelting__/graphics/icons/plate-cobalt.png",
     icon_size = 32,
     subgroup = "angels-cobalt-casting",
     order = "j",
