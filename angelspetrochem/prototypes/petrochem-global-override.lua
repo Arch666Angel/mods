@@ -127,6 +127,11 @@ end
 --OVERRIDE FOR BOBs
 if bobmods then
   if bobmods.plates then
+    -- move subgroup
+    data.raw["item"]["bob-small-inline-storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["bob-small-storage-tank"].subgroup = "angels-fluid-tanks"
+
+    -- generic replace
     OV.global_replace_item("carbon", "solid-carbon")
     OV.global_replace_item("chlorine", "gas-chlorine")
     OV.global_replace_item("hydrogen", "gas-hydrogen")
