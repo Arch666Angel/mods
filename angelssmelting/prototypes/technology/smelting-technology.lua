@@ -1120,6 +1120,7 @@ data:extend(
 		{
 			"angels-manganese-smelting-2",
 			"ore-processing-2",
+			"angels-iron-smelting-3",
 			"oil-gas-extraction",
 		},
 		effects =

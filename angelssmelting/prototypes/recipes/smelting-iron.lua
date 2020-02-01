@@ -132,6 +132,38 @@ data:extend(
     icon_size = 32,
     order = "e[ingot-iron]-c",
   },
+  {
+    type = "recipe",
+    name = "solid-iron-hydroxide-smelting",
+    category = "chemical-smelting",
+    subgroup = "angels-iron",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="solid-iron-hydroxide", amount=6},
+      {type="item", name="solid-coke", amount=2},
+    },
+    results =
+    {
+      {type="item", name="ingot-iron", amount=6},
+      {type="fluid", name="gas-carbon-dioxide", amount=20},
+    },
+    main_product= "ingot-iron",
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/ingot-iron.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "e[ingot-iron]-d",
+  },
   -- order f reserved for ingot-steel
   {
     type = "recipe",
