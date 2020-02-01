@@ -144,7 +144,7 @@ if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates
   OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")
   angelsmods.functions.add_flag("angels-wire-silver", "hidden")
-  angelsmods.functions.add_flag("angels-wire-gold", "hidden")
+  --angelsmods.functions.add_flag("angels-wire-gold", "hidden")
   angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
 else
   require("prototypes.smelting-override-vanilla")

@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "gold-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-gold",
@@ -29,8 +31,8 @@ data:extend(
   },
   {
     type = "item",
-    name = "cathode-gold",
-    icon = "__angelssmelting__/graphics/icons/cathode-gold.png",
+    name = "solid-sodium-gold-cyanide",
+    icon = "__angelssmelting__/graphics/icons/solid-sodium-gold-cyanide.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "d",
@@ -53,13 +55,14 @@ data:extend(
   },
   {
     type = "item",
-    name = "solid-sodium-gold-cyanide",
-    icon = "__angelssmelting__/graphics/icons/solid-sodium-gold-cyanide.png",
+    name = "cathode-gold",
+    icon = "__angelssmelting__/graphics/icons/cathode-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "f",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-gold",
@@ -69,6 +72,7 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-gold",
@@ -87,8 +91,8 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-gold",
-    icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+    name = "angels-roll-gold",
+    icon = "__angelssmelting__/graphics/icons/roll-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "i",
@@ -96,17 +100,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-roll-gold",
-    icon = "__angelssmelting__/graphics/icons/roll-gold.png",
+    name = "angels-wire-coil-gold",
+    icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "j",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-wire-coil-gold",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
+    name = "angels-plate-gold",
+    icon = "__angelssmelting__/graphics/icons/plate-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "k",

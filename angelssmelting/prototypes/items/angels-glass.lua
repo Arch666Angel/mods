@@ -29,20 +29,20 @@ data:extend(
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
-  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-plate-glass",
-    icon = "__angelssmelting__/graphics/icons/plate-glass.png",
+    name = "angels-coil-glass-fiber",
+    icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
     icon_size = 32,
     subgroup = "angels-glass-casting",
     order = "c",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-coil-glass-fiber",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
+    name = "angels-plate-glass",
+    icon = "__angelssmelting__/graphics/icons/plate-glass.png",
     icon_size = 32,
     subgroup = "angels-glass-casting",
     order = "d",

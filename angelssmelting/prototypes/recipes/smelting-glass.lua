@@ -146,6 +146,40 @@ data:extend(
     icon_size = 32,
     order = "b[liquid-molten-glass]",
   },
+  {
+    type = "recipe",
+    name = "angels-coil-glass-fiber",
+    category = "strand-casting",
+    subgroup = "angels-glass-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-glass", amount=80},
+      },
+      results =
+      {
+        {type="item", name="angels-coil-glass-fiber", amount=4},
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-glass", amount=100 * intermediatemulti},
+      },
+      results =
+      {
+        {type="item", name="angels-coil-glass-fiber", amount=4},
+      },
+    },
+    icon_size = 32,
+    order = "c[angels-coil-glass-fiber]",
+  },
   -- CASTING RESULT
   {
     type = "recipe",
@@ -190,7 +224,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c[angels-plate-glass]-a",
+    order = "d[angels-plate-glass]-a",
   },
   {
     type = "recipe",
@@ -241,7 +275,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c[angels-plate-glass]-b",
+    order = "d[angels-plate-glass]-b",
   },
   {
     type = "recipe",
@@ -294,43 +328,8 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c[angels-plate-glass]-c",
+    order = "d[angels-plate-glass]-c",
   },
-  {
-    type = "recipe",
-    name = "angels-coil-glass-fiber",
-    category = "strand-casting",
-    subgroup = "angels-glass-casting",
-    normal =
-    {
-      enabled = "false",
-      energy_required = 4,
-      ingredients =
-      {
-        {type="fluid", name="liquid-molten-glass", amount=80},
-      },
-      results =
-      {
-        {type="item", name="angels-coil-glass-fiber", amount=4},
-      },
-    },
-    expensive =
-    {
-      enabled = "false",
-      energy_required = 4,
-      ingredients =
-      {
-        {type="fluid", name="liquid-molten-glass", amount=100 * intermediatemulti},
-      },
-      results =
-      {
-        {type="item", name="angels-coil-glass-fiber", amount=4},
-      },
-    },
-    icon_size = 32,
-    order = "d[angels-coil-glass-fiber]",
-  },
-  --CRAFTING
   {
     type = "recipe",
     name = "angels-glass-fiber-board",
