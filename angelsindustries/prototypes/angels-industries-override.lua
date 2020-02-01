@@ -14,7 +14,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 	--UPDATE RECIPES FOR ENTITIES
 	require("prototypes.recipes.components-entity-update")
 	require("prototypes.overrides.global-components-entity-update")
-	
+
 	--MODIFY ASSEMBLING MACHINES
 	data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
 	data.raw["item"]["assembling-machine-1"].order = "a"
@@ -35,4 +35,3 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 	data.raw["item"]["assembling-machine-2"].subgroup = "angels-assemblers-medium"
 	data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
 end
-
