@@ -1,11 +1,12 @@
 --INITIALIZE
-if not angelsmods then angelsmods = {} end
-if not angelsmods.bioprocessing then angelsmods.bioprocessing = {} end
+angelsmods = angelsmods or {}
+angelsmods.bioprocessing = angelsmods.bioprocessing or {}
+angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 0.5}
 
 --TRIGGER CHECKS
 
 --LOAD FUNCTIONS
-  require("prototypes.bio-processing-functions")
+require("prototypes.bio-processing-functions")
 
 --LOAD PROTOTYPES
 if angelsmods.bioprocessing then
