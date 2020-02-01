@@ -12,7 +12,7 @@ ores = {
     "stone",
     "coal",
     "uranium-ore"
-  }  
+  }
 }
 angelsmods.functions.override_item_conditions(ores)
 
@@ -32,21 +32,21 @@ OV.patch_recipes({
     energy_required = 10.5,
     normal = { ingredients = { { name = "iron-ore", type = "item", amount = "+3" } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
     expensive = { ingredients = { {"!!"}, { name = "iron-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
-    subgroup = "angels-iron-casting", order = "zz" 
+    subgroup = "angels-iron-casting", order = "zz"
   },
   { name = "copper-plate",
     energy_required = 10.5,
     normal = { ingredients = { { name = "copper-ore", type = "item", amount = "+3" } }, results = { { name = "copper-plate", type = "item", amount = "+2" } } },
     expensive = { ingredients = { {"!!"}, { name = "copper-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "copper-plate", type = "item", amount = "+2" } } },
-    subgroup = "angels-copper-casting", order = "zz" 
+    subgroup = "angels-copper-casting", order = "zz"
   },
   { name = "steel-plate", subgroup = "angels-steel-casting", order = "zz" }
 })
-  
+
 OV.global_replace_item("angels-plate-steel", "steel-plate")
 angelsmods.functions.add_flag("angels-plate-steel", "hidden")
 OV.global_replace_item("angels-plate-iron", "iron-plate")
-angelsmods.functions.add_flag("angels-plate-iron", "hidden")  
+angelsmods.functions.add_flag("angels-plate-iron", "hidden")
 OV.global_replace_item("angels-plate-copper", "copper-plate")
 angelsmods.functions.add_flag("angels-plate-copper", "hidden")
 OV.global_replace_item("angels-wire-copper", "copper-cable")
@@ -61,7 +61,7 @@ if angelsmods.refining then
     { name = "angelsore6-crushed-smelting", subgroup = "angels-tin-casting", order = "zy" }
   })
 end
-  
+
 if angelsmods.smelting then
   OV.patch_recipes({
     { name = "gas-sulfur-dioxide-calcium-sulfate", results = {
@@ -78,16 +78,23 @@ require("prototypes.recipes.smelting-entity-angels")
 
 if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] then
   if angelsmods.industries then
-    --require("prototypes.smelting-override-angels")
+    if angelsmods.industries.components or angelsmods.industries.tech then
+    else
+      OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
+      OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
+      OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
+      --require("prototypes.smelting-override-angels")
+    end
   else
     require("prototypes.smelting-override-bob")
+    OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
+    OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
+    OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
   end
 
   --OV.disable_recipe({ "angels-wire-platinum" })
   --OV.disable_recipe({ "angels-wire-silver", "angels-wire-coil-silver-casting", "angels-wire-coil-silver-casting-fast", "angels-wire-coil-silver-converting" })
-  OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
-  OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
-  OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
+
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")
   angelsmods.functions.add_flag("angels-wire-silver", "hidden")
   angelsmods.functions.add_flag("angels-wire-gold", "hidden")
@@ -118,7 +125,7 @@ angelsmods.functions.allow_productivity("angels-plate-gold")
 angelsmods.functions.allow_productivity("angels-wire-coil-gold-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-iron")
-angelsmods.functions.allow_productivity("angels-roll-iron-converting")  
+angelsmods.functions.allow_productivity("angels-roll-iron-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-lead")
 
