@@ -149,7 +149,11 @@ if angelsmods.refining then
       subgroup = "angels-copper-casting",
       order = "j[angels-plate-copper]-a"
     },
-    { name = "angelsore5-crushed-smelting", subgroup = "angels-lead-casting", order = "zy" },
+    {
+      name = "angelsore5-crushed-smelting",
+      subgroup = "angels-lead-casting",
+      order = "i[angels-plate-lead]-a"
+    },
     { name = "angelsore6-crushed-smelting", subgroup = "angels-tin-casting", order = "zy" }
   })
 end
