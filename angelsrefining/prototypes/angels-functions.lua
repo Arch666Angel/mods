@@ -412,14 +412,13 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
   end
 
   for fn, fd in pairs(fluids_to_move) do
-    -- ignore gasses
     local recipe = recipes[fn]
     local subgroup = fd.subgroup or (recipe and recipe.subgroup) or false
     local order = fd.order or (recipe and recipe.order) or false
     local barrel = items[fn .. "-barrel"]
 
     if subgroup and barrel then
-      if not data.raw["item-subgroup"][fn] then
+      if not data.raw["item-subgroup"][subgroup] then
         data:extend(
           {
             {
@@ -437,7 +436,7 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
         recipes["fill-" .. fn .. "-barrel"].subgroup = "angels-fluid-control-" .. subgroup
         recipes["fill-" .. fn .. "-barrel"].order = order .. "-a"
         recipes["empty-" .. fn .. "-barrel"].subgroup = "angels-fluid-control-" .. subgroup
-        recipes["empty-" .. fn .. "-barrel"].order = order .. "-a"
+        recipes["empty-" .. fn .. "-barrel"].order = order .. "-b"
       end
     end
   end
