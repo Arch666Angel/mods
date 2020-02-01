@@ -64,7 +64,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese-casting",
-    order = "f",
+    order = "g",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 242/255, g = 97/255, b = 97/255},
@@ -80,7 +80,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese-casting",
-    order = "g",
+    order = "h",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -90,7 +90,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese-casting",
-    order = "h",
+    order = "i",
     stack_size = 200
   },
 }
