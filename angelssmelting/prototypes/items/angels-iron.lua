@@ -1,5 +1,8 @@
 data:extend(
 {
+  -- ORE
+  -- order a reserved for ore
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-iron",
@@ -27,6 +30,7 @@ data:extend(
     order = "d",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-iron",
@@ -36,22 +40,24 @@ data:extend(
     order = "e",
     stack_size = 200
   },
+  -- order f reserved for ingot-steel
   {
     type = "item",
     name = "powder-iron",
     icon = "__angelssmelting__/graphics/icons/powder-iron.png",
     icon_size = 32,
     subgroup = "angels-iron",
-    order = "f",
+    order = "g",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-iron",
     icon = "__angelssmelting__/graphics/icons/molten-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
-    order = "g",
+    order = "h",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 125/255, g = 145/255, b = 161/255},
@@ -60,15 +66,6 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
-  },
-  {
-    type = "item",
-    name = "angels-plate-iron",
-    icon = "__angelssmelting__/graphics/icons/plate-iron.png",
-    icon_size = 32,
-    subgroup = "angels-iron-casting",
-    order = "h",
-    stack_size = 200
   },
   {
     type = "item",
@@ -81,20 +78,30 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-rod-iron",
-    icon = "__angelssmelting__/graphics/icons/rod-iron.png",
+    name = "angels-rod-stack-iron",
+    icon = "__angelssmelting__/graphics/icons/rod-stack-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
     order = "j",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-rod-stack-iron",
-    icon = "__angelssmelting__/graphics/icons/rod-stack-iron.png",
+    name = "angels-plate-iron",
+    icon = "__angelssmelting__/graphics/icons/plate-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
     order = "k",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "angels-rod-iron",
+    icon = "__angelssmelting__/graphics/icons/rod-iron.png",
+    icon_size = 32,
+    subgroup = "angels-iron-casting",
+    order = "l",
     stack_size = 200
   },
 }

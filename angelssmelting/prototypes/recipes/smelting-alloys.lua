@@ -3,6 +3,24 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 data:extend(
 {
   --STEEL
+  {
+    type = "recipe",
+    name = "ingot-iron-smelting",
+    category = "blast-smelting",
+    subgroup = "angels-iron",
+    energy_required = 4,
+    enabled = "false",
+    ingredients ={
+      {type="item", name="ingot-iron", amount=24},
+      {type="fluid", name="gas-oxygen", amount=60},
+    },
+    results =
+    {
+      {type="item", name="ingot-steel", amount=6},
+    },
+    icon_size = 32,
+    order = "af",
+  },
   --SMELTING
   {
     type = "recipe",

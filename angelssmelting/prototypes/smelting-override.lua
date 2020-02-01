@@ -28,11 +28,45 @@ data.raw["item"]["uranium-ore"].subgroup = "angels-ores"
 data.raw["item"]["uranium-ore"].order = "h[uranium-ore]"
 
 OV.patch_recipes({
-  { name = "iron-plate",
+  {
+    name = "iron-plate",
     energy_required = 10.5,
-    normal = { ingredients = { { name = "iron-ore", type = "item", amount = "+3" } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
-    expensive = { ingredients = { {"!!"}, { name = "iron-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
-    subgroup = "angels-iron-casting", order = "zz" 
+    normal =
+    {
+      ingredients =
+      {
+        { name = "iron-ore", type = "item", amount = "+3" }
+      },
+      results =
+      {
+        { name = "iron-plate", type = "item", amount = "+2" }
+      }
+    },
+    expensive =
+    {
+      ingredients =
+      { {"!!"},
+        { name = "iron-ore", type = "item", amount = 5 * intermediatemulti }
+      },
+      results =
+      {
+        { name = "iron-plate", type = "item", amount = "+2" }
+      }
+    },
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+      },
+      {
+        icon = "__base__/graphics/icons/iron-ore.png",
+        icon_size = 64,
+        scale = 32/64 * 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-iron-casting",
+    order = "k[angels-plate-iron]-b" 
   },
   {
     name = "copper-plate",
@@ -105,7 +139,11 @@ angelsmods.functions.add_flag("angels-wire-copper", "hidden")
 --OVERRIDE FOR ANGELS
 if angelsmods.refining then
   OV.patch_recipes({
-    { name = "angelsore1-crushed-smelting", subgroup = "angels-iron-casting", order = "zy" },
+    {
+      name = "angelsore1-crushed-smelting",
+      subgroup = "angels-iron-casting",
+      order = "k[angels-plate-iron]-a"
+    },
     {
       name = "angelsore3-crushed-smelting",
       subgroup = "angels-copper-casting",

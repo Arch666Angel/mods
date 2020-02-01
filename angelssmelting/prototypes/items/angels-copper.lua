@@ -1,6 +1,7 @@
 data:extend(
 {
   -- ORE
+  -- order a reserved for ore
   -- SMELTING INTERMEDIATE
   {
     type = "item",
