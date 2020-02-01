@@ -1,14 +1,15 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
+angelsmods.refining.disable_ore_override = false
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
-angelsmods.refining.disable_ore_override = false
 angelsmods.trigger.enable_auto_barreling = settings.startup["angels-enable-auto-barreling"].value
 angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"].value
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
 
+-- MARATHON MODE
 angelsmods.marathon = angelsmods.marathon or {}
 angelsmods.marathon.buildingmulti = settings.startup["angels-marathon-buildingmulti"].value
 angelsmods.marathon.buildingtime = settings.startup["angels-marathon-buildingtime"].value
