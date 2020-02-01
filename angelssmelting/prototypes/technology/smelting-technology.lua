@@ -1711,6 +1711,7 @@ data:extend(
 		{
 			"angels-stone-smelting-1",
 			"powder-metallurgy-1",
+			"concrete",
 		},
 		effects =
 		{

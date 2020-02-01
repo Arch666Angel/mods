@@ -23,6 +23,16 @@ data.raw["item"]["copper-ore"].order = "a"
 
 data.raw["item"]["stone"].subgroup = "slag-processing-1"
 data.raw["item"]["stone"].order = "a"
+data.raw["item"]["stone-brick"].subgroup = "angels-stone"
+data.raw["item"]["stone-brick"].order = "f"
+data.raw["item"]["concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["concrete"].order = "ha"
+data.raw["item"]["hazard-concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["hazard-concrete"].order = "hb"
+data.raw["item"]["refined-concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["refined-concrete"].order = "hc"
+data.raw["item"]["refined-hazard-concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["refined-hazard-concrete"].order = "hd"
 
 data.raw["item"]["uranium-ore"].subgroup = "angels-ores"
 data.raw["item"]["uranium-ore"].order = "h[uranium-ore]"
@@ -124,7 +134,28 @@ OV.patch_recipes({
     subgroup = "angels-copper-casting",
     order = "k[angels-wire-copper]-a"
   },
-  { name = "steel-plate", subgroup = "angels-steel-casting", order = "zz" }
+  { name = "steel-plate", subgroup = "angels-steel-casting", order = "zz" },
+  { name = "stone-brick", subgroup = "angels-stone", order = "f[stone-brick]" },
+  {
+    name = "concrete",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/concrete.png",
+        icon_size = 64
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-stone-casting",
+    order = "h[concrete]-a" },
+  { name = "hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-c" },
+  { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
+  { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
   
 OV.global_replace_item("angels-plate-steel", "steel-plate")
