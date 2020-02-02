@@ -3,6 +3,7 @@ Version: 0.11.0
 Date: ???
   Changes:
     - Updated to 0.18
+    - Added a tryptophobia setting to get alternative graphics for stiratite ore
   Bugfixes:
     - fixed uranium ore icon did not fit the recipe box
 ---------------------------------------------------------------------------------------------------
