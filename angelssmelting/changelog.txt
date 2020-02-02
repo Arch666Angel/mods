@@ -4,6 +4,9 @@ Date: ???
   Changes:
     - updated to 0.18
     - disabled bobs silver nitrate recipe
+    - added a distinguishable icon for tungsten powder mixture versus the tungsten powder itself 
+  Bugfixes:
+    - fixed missing localisation on iron rod stack (recipe)
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 26.04.2019
