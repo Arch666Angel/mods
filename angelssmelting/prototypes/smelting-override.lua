@@ -23,24 +23,154 @@ data.raw["item"]["copper-ore"].order = "a"
 
 data.raw["item"]["stone"].subgroup = "slag-processing-1"
 data.raw["item"]["stone"].order = "a"
+data.raw["item"]["stone-brick"].subgroup = "angels-stone"
+data.raw["item"]["stone-brick"].order = "f"
+data.raw["item"]["concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["concrete"].order = "ha"
+data.raw["item"]["hazard-concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["hazard-concrete"].order = "hb"
+data.raw["item"]["refined-concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["refined-concrete"].order = "hc"
+data.raw["item"]["refined-hazard-concrete"].subgroup = "angels-stone-casting"
+data.raw["item"]["refined-hazard-concrete"].order = "hd"
 
 data.raw["item"]["uranium-ore"].subgroup = "angels-ores"
 data.raw["item"]["uranium-ore"].order = "h[uranium-ore]"
 
 OV.patch_recipes({
-  { name = "iron-plate",
+  {
+    name = "iron-plate",
     energy_required = 10.5,
-    normal = { ingredients = { { name = "iron-ore", type = "item", amount = "+3" } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
-    expensive = { ingredients = { {"!!"}, { name = "iron-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "iron-plate", type = "item", amount = "+2" } } },
-    subgroup = "angels-iron-casting", order = "zz"
+    normal =
+    {
+      ingredients =
+      {
+        { name = "iron-ore", type = "item", amount = "+3" }
+      },
+      results =
+      {
+        { name = "iron-plate", type = "item", amount = "+2" }
+      }
+    },
+    expensive =
+    {
+      ingredients =
+      { {"!!"},
+        { name = "iron-ore", type = "item", amount = 5 * intermediatemulti }
+      },
+      results =
+      {
+        { name = "iron-plate", type = "item", amount = "+2" }
+      }
+    },
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+      },
+      {
+        icon = "__base__/graphics/icons/iron-ore.png",
+        icon_size = 64,
+        scale = 32/64 * 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-iron-casting",
+    order = "k[angels-plate-iron]-b" 
   },
-  { name = "copper-plate",
+  {
+    name = "copper-plate",
     energy_required = 10.5,
-    normal = { ingredients = { { name = "copper-ore", type = "item", amount = "+3" } }, results = { { name = "copper-plate", type = "item", amount = "+2" } } },
-    expensive = { ingredients = { {"!!"}, { name = "copper-ore", type = "item", amount = 5 * intermediatemulti } }, results = { { name = "copper-plate", type = "item", amount = "+2" } } },
-    subgroup = "angels-copper-casting", order = "zz"
+    normal =
+    {
+      ingredients =
+      {
+        { name = "copper-ore", type = "item", amount = "+3" }
+      },
+      results =
+      {
+        { name = "copper-plate", type = "item", amount = "+2" }
+      }
+    },
+    expensive =
+    {
+      ingredients =
+      { {"!!"},
+        { name = "copper-ore", type = "item", amount = 5 * intermediatemulti }
+      },
+      results =
+      {
+        { name = "copper-plate", type = "item", amount = "+2" }
+      }
+    },
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+      },
+      {
+        icon = "__base__/graphics/icons/copper-ore.png",
+        icon_size = 64,
+        scale = 32/64 * 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-copper-casting",
+    order = "j[angels-plate-copper]-b",
   },
-  { name = "steel-plate", subgroup = "angels-steel-casting", order = "zz" }
+  {
+    name = "copper-cable",
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/wire-copper.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-copper-casting",
+    order = "k[angels-wire-copper]-a"
+  },
+  {
+    name = "steel-plate",
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-steel.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-steel-casting",
+    order = "l[angels-plate-steel]-a"
+  },
+  { name = "stone-brick", subgroup = "angels-stone", order = "f[stone-brick]" },
+  {
+    name = "concrete",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/concrete.png",
+        icon_size = 64
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-stone-casting",
+    order = "h[concrete]-a" },
+  { name = "hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-c" },
+  { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
+  { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
 
 OV.global_replace_item("angels-plate-steel", "steel-plate")
@@ -55,10 +185,26 @@ angelsmods.functions.add_flag("angels-wire-copper", "hidden")
 --OVERRIDE FOR ANGELS
 if angelsmods.refining then
   OV.patch_recipes({
-    { name = "angelsore1-crushed-smelting", subgroup = "angels-iron-casting", order = "zy" },
-    { name = "angelsore3-crushed-smelting", subgroup = "angels-copper-casting", order = "zy" },
-    { name = "angelsore5-crushed-smelting", subgroup = "angels-lead-casting", order = "zy" },
-    { name = "angelsore6-crushed-smelting", subgroup = "angels-tin-casting", order = "zy" }
+    {
+      name = "angelsore1-crushed-smelting",
+      subgroup = "angels-iron-casting",
+      order = "k[angels-plate-iron]-a"
+    },
+    {
+      name = "angelsore3-crushed-smelting",
+      subgroup = "angels-copper-casting",
+      order = "j[angels-plate-copper]-a"
+    },
+    {
+      name = "angelsore5-crushed-smelting",
+      subgroup = "angels-lead-casting",
+      order = "i[angels-plate-lead]-a"
+    },
+    {
+      name = "angelsore6-crushed-smelting",
+      subgroup = "angels-tin-casting",
+      order = "g[angels-plate-tin]-a"
+    }
   })
 end
 
@@ -78,28 +224,23 @@ require("prototypes.recipes.smelting-entity-angels")
 
 if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] then
   if angelsmods.industries then
+    if mods['bobplates'] then
+      require("prototypes.smelting-override-bob")
+    end
     if angelsmods.industries.components or angelsmods.industries.tech then
     else
+      --require("prototypes.smelting-override-angels")
       OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
       OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
       OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
-      --require("prototypes.smelting-override-angels")
     end
-  else
+  else -- bobmods
     require("prototypes.smelting-override-bob")
     OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
     OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
     OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
   end
-
-  --OV.disable_recipe({ "angels-wire-platinum" })
-  --OV.disable_recipe({ "angels-wire-silver", "angels-wire-coil-silver-casting", "angels-wire-coil-silver-casting-fast", "angels-wire-coil-silver-converting" })
-
-  angelsmods.functions.add_flag("angels-wire-tin", "hidden")
-  angelsmods.functions.add_flag("angels-wire-silver", "hidden")
-  angelsmods.functions.add_flag("angels-wire-gold", "hidden")
-  angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
-else
+else -- vanilla
   require("prototypes.smelting-override-vanilla")
 end
 

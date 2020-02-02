@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "nickel-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-nickel",
@@ -45,6 +47,7 @@ data:extend(
     order = "e",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-nickel",
@@ -63,6 +66,7 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-nickel",
@@ -81,17 +85,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-nickel",
-    icon = "__angelssmelting__/graphics/icons/plate-nickel.png",
+    name = "angels-roll-nickel",
+    icon = "__angelssmelting__/graphics/icons/roll-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel-casting",
     order = "i",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-roll-nickel",
-    icon = "__angelssmelting__/graphics/icons/roll-nickel.png",
+    name = "angels-plate-nickel",
+    icon = "__angelssmelting__/graphics/icons/plate-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel-casting",
     order = "j",

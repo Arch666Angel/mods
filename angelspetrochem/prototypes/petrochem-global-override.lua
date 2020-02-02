@@ -158,9 +158,11 @@ if bobmods then
     OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
-    data.raw["recipe"]["pure-water-pump"].icon=nil
-    data.raw["recipe"]["pure-water-pump"].icon_size=32
-    data.raw["recipe"]["pure-water-pump"].icons={{icon="__angelsrefining__/graphics/icons/water-purified.png"}}
+    if data.raw.recipe["pure-water-pump"] then
+      data.raw["recipe"]["pure-water-pump"].icon=nil
+      data.raw["recipe"]["pure-water-pump"].icon_size=32
+      data.raw["recipe"]["pure-water-pump"].icons={{icon="__angelsrefining__/graphics/icons/water-purified.png"}}
+    end
 
     OV.patch_recipes(
       {

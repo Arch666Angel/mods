@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "zinc-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-zinc",
@@ -45,6 +47,7 @@ data:extend(
     order = "e",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-zinc",
@@ -54,6 +57,7 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-zinc",
@@ -70,19 +74,21 @@ data:extend(
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
+  -- CASTING INTERMEDIATE
   {
     type = "item",
-    name = "angels-plate-zinc",
-    icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
+    name = "angels-roll-zinc",
+    icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc-casting",
     order = "h",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-roll-zinc",
-    icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+    name = "angels-plate-zinc",
+    icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc-casting",
     order = "i",
