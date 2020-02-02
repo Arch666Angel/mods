@@ -13,7 +13,13 @@ OV.global_replace_icon(
   {"__base__/graphics/icons/fluid/sulfuric-acid.png"},
   {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
 )
-
+--hide vanilla fluids if converter recipes setting not active
+if not angelsmods.trigger.enableconverter then
+  data.raw["fluid"]["heavy-oil"].hidden=true
+  data.raw["fluid"]["light-oil"].hidden=true
+  data.raw["fluid"]["petroleum-gas"].hidden=true
+  data.raw["fluid"]["sulfuric-acid"].hidden=true
+end
 data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
 data.raw["recipe"]["explosives"].order = "a[explosives]-a"
 data.raw["recipe"]["explosives"].icon_size = 32
@@ -152,6 +158,9 @@ if bobmods then
     OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
+    data.raw["recipe"]["pure-water-pump"].icon=nil
+    data.raw["recipe"]["pure-water-pump"].icon_size=32
+    data.raw["recipe"]["pure-water-pump"].icons={{icon="__angelsrefining__/graphics/icons/water-purified.png"}}
 
     OV.patch_recipes(
       {
