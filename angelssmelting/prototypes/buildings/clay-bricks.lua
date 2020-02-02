@@ -17,7 +17,7 @@ data:extend(
         {
           picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-small.png",
           count = 16,
-		  scale = 0.5,
+          scale = 0.5,
           size = 1
         },
         -- {
@@ -36,19 +36,19 @@ data:extend(
       inner_corner =
       {
         picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-inner.png",
-		scale = 0.5,
+        scale = 0.5,
         count = 8
       },
       outer_corner =
       {
         picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-outer.png",
-		scale = 0.5,
+        scale = 0.5,
         count = 1
       },
       side =
       {
         picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-side.png",
-		scale = 0.5,
+        scale = 0.5,
         count = 8
       },
       -- u_transition =
@@ -82,7 +82,7 @@ data:extend(
       }
     },
     map_color={r=50, g=50, b=50},
-	pollution_absorption_per_second = 0,
+    pollution_absorption_per_second = 0,
     ageing=0,
     vehicle_friction_modifier = 1.1
   },
