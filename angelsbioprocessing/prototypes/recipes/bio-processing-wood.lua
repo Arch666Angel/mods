@@ -23,7 +23,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -54,7 +54,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -86,7 +86,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -121,7 +121,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -157,7 +157,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -194,7 +194,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -292,7 +292,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -326,7 +326,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -360,7 +360,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -394,7 +394,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -425,7 +425,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -457,7 +457,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -493,7 +493,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -530,7 +530,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -601,7 +601,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -636,7 +636,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -672,7 +672,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -712,7 +712,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -749,7 +749,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -820,7 +820,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -855,7 +855,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -891,7 +891,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -931,7 +931,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -968,7 +968,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.2, g = 1, b = 0.2, a = 0.5},
+        tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }

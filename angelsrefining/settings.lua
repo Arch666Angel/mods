@@ -15,6 +15,13 @@ data:extend(
     order = "ab",
    },
    {
+    type = "bool-setting",
+    name = "angels-tryptophobia-friendly-stiratite",
+    setting_type = "startup",
+    default_value = false,
+    order = "ac"
+   },
+   {
 	type = "double-setting",
 	name = "angels-marathon-buildingmulti",
 	setting_type = "startup",

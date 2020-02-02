@@ -12,7 +12,7 @@ ores = {
     "stone",
     "coal",
     "uranium-ore"
-  }  
+  }
 }
 angelsmods.functions.override_item_conditions(ores)
 
@@ -172,11 +172,11 @@ OV.patch_recipes({
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
   { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
-  
+
 OV.global_replace_item("angels-plate-steel", "steel-plate")
 angelsmods.functions.add_flag("angels-plate-steel", "hidden")
 OV.global_replace_item("angels-plate-iron", "iron-plate")
-angelsmods.functions.add_flag("angels-plate-iron", "hidden")  
+angelsmods.functions.add_flag("angels-plate-iron", "hidden")
 OV.global_replace_item("angels-plate-copper", "copper-plate")
 angelsmods.functions.add_flag("angels-plate-copper", "hidden")
 OV.global_replace_item("angels-wire-copper", "copper-cable")
@@ -207,7 +207,7 @@ if angelsmods.refining then
     }
   })
 end
-  
+
 if angelsmods.smelting then
   OV.patch_recipes({
     { name = "gas-sulfur-dioxide-calcium-sulfate", results = {
@@ -223,20 +223,21 @@ end
 require("prototypes.recipes.smelting-entity-angels")
 
 if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] then
-  if mods['bobplates'] then
+  if angelsmods.industries then
+    if angelsmods.industries.components or angelsmods.industries.tech then
+    else
+      --require("prototypes.smelting-override-angels")
+      OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
+      OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
+      OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
+    end
+  else -- bobmods
     require("prototypes.smelting-override-bob")
+    OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
+    OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
+    OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
   end
-
-  --OV.disable_recipe({ "angels-wire-platinum" })
-  --OV.disable_recipe({ "angels-wire-silver", "angels-wire-coil-silver-casting", "angels-wire-coil-silver-casting-fast", "angels-wire-coil-silver-converting" })
-  OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
-  OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
-  OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
-  --angelsmods.functions.add_flag("angels-wire-tin", "hidden")
-  --angelsmods.functions.add_flag("angels-wire-silver", "hidden")
-  --angelsmods.functions.add_flag("angels-wire-gold", "hidden")
-  angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
-else
+else -- vanilla
   require("prototypes.smelting-override-vanilla")
 end
 
@@ -262,7 +263,7 @@ angelsmods.functions.allow_productivity("angels-plate-gold")
 angelsmods.functions.allow_productivity("angels-wire-coil-gold-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-iron")
-angelsmods.functions.allow_productivity("angels-roll-iron-converting")  
+angelsmods.functions.allow_productivity("angels-roll-iron-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-lead")
 

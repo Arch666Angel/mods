@@ -300,7 +300,55 @@ else
     )
   end
 end
-
+--hide bobs fluids if converter recipes setting not active
+if not angelsmods.trigger.enableconverter and mods['bobplates'] then
+  data.raw["fluid"]["sulfur-dioxide"].hidden=true
+  data.raw["fluid"]["oxygen"].hidden=true
+  data.raw["fluid"]["nitrogen"].hidden=true
+  data.raw["fluid"]["nitrogen-dioxide"].hidden=true
+  data.raw["fluid"]["nitric-acid"].hidden=true
+  data.raw["fluid"]["liquid-air"].hidden=true
+  data.raw["fluid"]["hydrogen"].hidden=true
+  data.raw["fluid"]["hydrogen-sulfide"].hidden=true
+  data.raw["fluid"]["hydrogen-chloride"].hidden=true
+  data.raw["fluid"]["ferric-chloride-solution"].hidden=true
+  data.raw["fluid"]["chlorine"].hidden=true
+  data.raw["fluid"]["pure-water"].hidden=true
+  if mods['bobrevamp'] then
+      data.raw["fluid"]["ammonia"].hidden=true
+      data.raw["fluid"]["dinitrogen-tetroxide"].hidden=true
+      data.raw["fluid"]["hydrazine"].hidden=true
+      data.raw["fluid"]["hydrogen-peroxide"].hidden=true
+      data.raw["fluid"]["nitric-oxide"].hidden=true
+  end
+end
+--if bobs is active, add fuel values to fluids
+--Do this regardless of settings
+--base fluid is methane, all others are based on relative real values
+--hydrogen is halved to stop it being too overpowered
+if mods["bobplates"] then
+  data.raw.fluid["liquid-naphtha"].fuel_value ="1.8MJ"--bobs value is 1MJ (39/50*2.3MJ)
+  data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3
+  data.raw.fluid["liquid-fuel-oil"].fuel_value ="1.9MJ"--1.5MJ (40.6/50*2.3MJ)
+  data.raw.fluid["liquid-fuel-oil"].emissions_multiplier = 2
+  data.raw.fluid["gas-methane"].fuel_value ="2.3MJ"--all are based on this value
+  data.raw.fluid["gas-ethane"].fuel_value ="2.2MJ"--47.8/50*2.3MJ
+  data.raw.fluid["gas-ethane"].emissions_multiplier = 1.5
+  data.raw.fluid["gas-butane"].fuel_value ="2.1MJ"--46.5/50*2.3MJ
+  data.raw.fluid["gas-butane"].emissions_multiplier = 1.8
+  data.raw.fluid["gas-propene"].fuel_value ="2.1MJ"--45.7/50*2.3MJ
+  data.raw.fluid["gas-propene"].emissions_multiplier = 5
+  data.raw.fluid["gas-methanol"].fuel_value ="915kJ"--19.9/50*2.3MJ
+  data.raw.fluid["gas-ethylene"].fuel_value ="2.2MJ"--47.2/50*2.3MJ
+  data.raw.fluid["gas-benzene"].fuel_value ="1.8MJ"--40.5/50*2.3MJ
+  data.raw.fluid["gas-hydrogen"].fuel_value ="2.7MJ"--bobs value is 45kJ--(121/50*2.3MJ)/2 (may need to go much lower)
+  data.raw.fluid["gas-hydrogen"].emissions_multiplier = 0.2
+  data.raw.fluid["gas-hydrazine"].fuel_value ="340kJ"-- (19.4/50*2.3MJ)
+  data.raw.fluid["gas-hydrazine"].emissions_multiplier = 0.1
+  if mods['angelsbioprocessing'] then
+    data.raw.fluid["gas-ethanol"].fuel_value ="1.2MJ"--26.7/50*2.3MJ
+  end
+end
 --ENABLE PRODUCTIVITY
 angelsmods.functions.allow_productivity("liquid-plastic-1")
 angelsmods.functions.allow_productivity("liquid-plastic-2")
