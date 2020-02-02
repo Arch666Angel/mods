@@ -353,7 +353,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "k[angels-plate-silver]",
+    order = "k[angels-plate-silver]-b", -- k[angels-plate-silver]-a reserved for silver ore smelting (see bob overrides)
   },
   {
     type = "recipe",

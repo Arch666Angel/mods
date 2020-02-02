@@ -224,7 +224,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "d[angels-plate-glass]-a",
+    order = "d[angels-plate-glass]-b", -- d[angels-plate-glass]-a reserved for quartz (ore) smelting (see bob overrides)
   },
   {
     type = "recipe",
@@ -275,7 +275,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "d[angels-plate-glass]-b",
+    order = "d[angels-plate-glass]-c",
   },
   {
     type = "recipe",
@@ -328,7 +328,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "d[angels-plate-glass]-c",
+    order = "d[angels-plate-glass]-d",
   },
   {
     type = "recipe",
@@ -344,7 +344,7 @@ data:extend(
     },
     results =
     {
-      {type="item", name="angels-void", amount=1},
+      {type="item", name="angels-void", amount=1}, -- see bob overrides
     },
     icons = {
       {

@@ -295,8 +295,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "g[angels-plate-tin]-b", -- g[angels-plate-tin]-a reserved for crushed bobmonium smelting (see global overrides)
-  },
+    order = "g[angels-plate-tin]-c", -- g[angels-plate-tin]-a reserved for crushed bobmonium smelting (see global overrides)
+  },                                 -- g[angels-plate-tin]-b reserved for tin ore smelting (see bob overrides)
   {
     type = "recipe",
     name = "angels-wire-coil-tin-converting",

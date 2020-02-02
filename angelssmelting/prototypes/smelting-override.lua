@@ -223,9 +223,7 @@ end
 require("prototypes.recipes.smelting-entity-angels")
 
 if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] then
-  if angelsmods.industries then
-    --require("prototypes.smelting-override-angels")
-  else
+  if mods['bobplates'] then
     require("prototypes.smelting-override-bob")
   end
 
