@@ -122,19 +122,34 @@ OV.patch_recipes({
     name = "copper-cable",
     icons = {
       { 
-        icon = "__base__/graphics/icons/copper-cable.png",
+        icon = "__angelssmelting__/graphics/icons/wire-copper.png",
       },
       {
-        icon = "__base__/graphics/icons/copper-plate.png",
-        scale = 32/64 * 0.4375,
+        icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        scale = 0.4375,
         shift = { -10, -10},
       }
     },
-    icon_size = 64,
+    icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "k[angels-wire-copper]-a"
   },
-  { name = "steel-plate", subgroup = "angels-steel-casting", order = "zz" },
+  {
+    name = "steel-plate",
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-steel.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    subgroup = "angels-steel-casting",
+    order = "l[angels-plate-steel]-a"
+  },
   { name = "stone-brick", subgroup = "angels-stone", order = "f[stone-brick]" },
   {
     name = "concrete",

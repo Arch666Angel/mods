@@ -40,7 +40,7 @@ data:extend(
     order = "e",
     stack_size = 200
   },
-  -- order f reserved for ingot-steel
+  -- order f reserved for ingot-steel (see alloys)
   {
     type = "item",
     name = "powder-iron",
@@ -50,6 +50,7 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  -- order h reserved for powder-steel (see alloys)
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -57,7 +58,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
-    order = "h",
+    order = "i",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 125/255, g = 145/255, b = 161/255},
@@ -73,7 +74,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
-    order = "i",
+    order = "j",
     stack_size = 200
   },
   {
@@ -82,7 +83,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/rod-stack-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
-    order = "j",
+    order = "k",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -92,7 +93,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
-    order = "k",
+    order = "l",
     stack_size = 200
   },
   {
@@ -101,7 +102,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/rod-iron.png",
     icon_size = 32,
     subgroup = "angels-iron-casting",
-    order = "l",
+    order = "m",
     stack_size = 200
   },
 }

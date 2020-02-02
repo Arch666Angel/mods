@@ -164,7 +164,7 @@ data:extend(
     icon_size = 32,
     order = "e[ingot-iron]-d",
   },
-  -- order f reserved for ingot-steel
+  -- order f reserved for ingot-steel (see alloys)
   {
     type = "recipe",
     name = "powder-iron",
@@ -183,6 +183,7 @@ data:extend(
     icon_size = 32,
     order = "g[powder-iron]",
   },
+  -- order h reserved for powder-steel (see alloys)
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -211,7 +212,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[liquid-molten-iron]-a",
+    order = "i[liquid-molten-iron]-a",
   },
   {
     type = "recipe",
@@ -241,7 +242,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[liquid-molten-iron]-b",
+    order = "i[liquid-molten-iron]-b",
   },
   {
     type = "recipe",
@@ -271,7 +272,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[liquid-molten-iron]-c",
+    order = "i[liquid-molten-iron]-c",
   },
   {
     type = "recipe",
@@ -302,7 +303,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[liquid-molten-iron]-d",
+    order = "i[liquid-molten-iron]-d",
   },
   {
     type = "recipe",
@@ -333,7 +334,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[liquid-molten-iron]-e",
+    order = "i[liquid-molten-iron]-e",
   },
   {
     type = "recipe",
@@ -380,7 +381,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "i[angels-roll-iron]-a",
+    order = "j[angels-roll-iron]-a",
   },
   {
     type = "recipe",
@@ -431,7 +432,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "i[angels-roll-iron]-b",
+    order = "j[angels-roll-iron]-b",
   },
   {
     type = "recipe",
@@ -478,7 +479,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "j[angels-rod-stack-iron]-a",
+    order = "k[angels-rod-stack-iron]-a",
   },
   {
     type = "recipe",
@@ -529,7 +530,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "j[angels-rod-stack-iron]-b",
+    order = "k[angels-rod-stack-iron]-b",
   },
   -- CASTING RESULT
   {
@@ -574,7 +575,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "k[angels-plate-iron]-c", -- k[angels-plate-iron]-a reserved for crushed saphirite smelting (see global overrides)
+    order = "l[angels-plate-iron]-c", -- k[angels-plate-iron]-a reserved for crushed saphirite smelting (see global overrides)
   },                                  -- k[angels-plate-iron]-b reserved for base game smelting recipe (see global overrides)
   {
     type = "recipe",
@@ -603,7 +604,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "k[angels-plate-iron]-d",
+    order = "l[angels-plate-iron]-d",
   },
   {
     type = "recipe",
@@ -631,7 +632,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "l[angels-rod-iron]-a",
+    order = "m[angels-rod-iron]-a",
   },
   {
     type = "recipe",
@@ -660,35 +661,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "l[angels-rod-iron]-b",
+    order = "m[angels-rod-iron]-b",
   },
-
-
-
-
-
-
---INGOT
-
-
-
-
---SMELTING
-
-
-
-
-
---CASTING
-
-
-
-
-
---CRAFTING
-
-
-
-
 }
 )

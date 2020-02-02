@@ -1,6 +1,8 @@
 data:extend(
 {
---STEEL
+--
+  -- STEEL SMELTING INTERMEDIATE
+  -- STEEL SMELTING RESULTS
   {
     type = "item",
     name = "ingot-steel",
@@ -11,12 +13,22 @@ data:extend(
     stack_size = 200
   },
   {
+    type = "item",
+    name = "powder-steel",
+    icon = "__angelssmelting__/graphics/icons/powder-steel.png",
+    icon_size = 32,
+    subgroup = "angels-iron",
+    order = "h",
+    stack_size = 200
+  },
+  -- STEEL CASTING INTERMEDIATE
+  {
     type = "fluid",
     name = "liquid-molten-steel",
     icon = "__angelssmelting__/graphics/icons/molten-steel.png",
     icon_size = 32,
     subgroup = "angels-steel-casting",
-    order = "g",
+    order = "i",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 187/255, g = 192/255, b = 199/255},
@@ -25,24 +37,6 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
-  },
-  {
-    type = "item",
-    name = "powder-steel",
-    icon = "__angelssmelting__/graphics/icons/powder-steel.png",
-    icon_size = 32,
-    subgroup = "angels-steel-casting",
-    order = "h",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "angels-plate-steel",
-    icon = "__angelssmelting__/graphics/icons/plate-steel.png",
-    icon_size = 32,
-    subgroup = "angels-steel-casting",
-    order = "i",
-    stack_size = 200
   },
   {
     type = "item",
@@ -55,22 +49,35 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-rod-steel",
-    icon = "__angelssmelting__/graphics/icons/rod-steel.png",
+    name = "angels-rod-stack-steel",
+    icon = "__angelssmelting__/graphics/icons/rod-stack-steel.png",
     icon_size = 32,
     subgroup = "angels-steel-casting",
     order = "k",
     stack_size = 200
   },
+  -- STEEL CASTING RESULT
   {
     type = "item",
-    name = "angels-rod-stack-steel",
-    icon = "__angelssmelting__/graphics/icons/rod-stack-steel.png",
+    name = "angels-plate-steel",
+    icon = "__angelssmelting__/graphics/icons/plate-steel.png",
     icon_size = 32,
     subgroup = "angels-steel-casting",
     order = "l",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "angels-rod-steel",
+    icon = "__angelssmelting__/graphics/icons/rod-steel.png",
+    icon_size = 32,
+    subgroup = "angels-steel-casting",
+    order = "m",
+    stack_size = 200
+  },
+
+
+
 --SOLDER
   {
     type = "fluid",
