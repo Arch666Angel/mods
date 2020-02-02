@@ -195,7 +195,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     order = "f[angels-wire-coil-tin]-a",
   },
@@ -248,7 +248,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     order = "f[angels-wire-coil-tin]-b",
   },
