@@ -160,7 +160,7 @@ OV.patch_recipes({
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 1, g = 0.8, b = 0.0, a = 0.5},
+        tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }

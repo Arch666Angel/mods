@@ -77,7 +77,9 @@ data:extend(
 
 
 
---SOLDER
+  -- SOLDER SMELTING INTERMEDIATE
+  -- SOLDER SMELTING RESULTS
+  -- SOLDER CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-solder",
@@ -96,17 +98,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-solder",
-    icon = "__angelssmelting__/graphics/icons/solder.png",
+    name = "angels-roll-solder",
+    icon = "__angelssmelting__/graphics/icons/roll-solder.png",
     icon_size = 32,
     subgroup = "angels-solder-casting",
     order = "b",
     stack_size = 200
   },
+  -- SOLDER CASTING RESULT
   {
     type = "item",
-    name = "angels-roll-solder",
-    icon = "__angelssmelting__/graphics/icons/roll-solder.png",
+    name = "angels-solder",
+    icon = "__angelssmelting__/graphics/icons/solder.png",
     icon_size = 32,
     subgroup = "angels-solder-casting",
     order = "c",
