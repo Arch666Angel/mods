@@ -5,12 +5,17 @@ if not angelsmods.industries then angelsmods.industries = {} end
 --TRIGGER CHECKS
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value --false -- enable technology overhaul
-if settings.startup["angels-enable-tech"].value==true then
+--temp overrides to disable until ready
+angelsmods.industries.tech=false
+angelsmods.industries.components=false
+--Final settings
+--[[if settings.startup["angels-enable-tech"].value==true then
   --enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
   angelsmods.industries.components=true
 else
   angelsmods.industries.components = settings.startup["angels-enable-components"].value --false -- enable hard mode
-end
+end]]
+
 
 
 --LOAD FUNCTIONS

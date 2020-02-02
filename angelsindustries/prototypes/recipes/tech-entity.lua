@@ -12,6 +12,26 @@ data:extend(
 		result= "angels-basic-lab",
 		icon_size = 32,
 	},
+	{
+		type = "recipe",
+		name = "angels-basic-lab-2",
+		energy_required = 5,
+		enabled = "true",
+		ingredients ={
+			{"block-construction-3", 3},
+			{"block-exploration-3", 1},
+			{"block-electronics-3", 1},
+			{"block-energy-1", 1},
+			{"block-logistic-1", 1},
+			{"block-enhancement-1", 1},
+			{"block-production-1", 1},
+			{"block-warfare-1", 1},
+		},
+		result= "angels-basic-lab-2",
+		icon_size = 32,
+		subgroup="angels-labs-2",
+		order="g"
+	},
 	--EXPLORATION LAB
 	{
 		type = "recipe",

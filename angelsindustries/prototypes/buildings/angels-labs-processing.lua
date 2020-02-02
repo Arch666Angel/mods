@@ -64,6 +64,7 @@ data:extend(
       "angels-science-pack-green",
       "angels-science-pack-orange",
       "datacore-processing-1",
+      "token-bio",
     },
     module_specification =
     {

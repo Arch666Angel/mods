@@ -255,7 +255,7 @@ data:extend(
 		type = "recipe",
 		name = "block-enhancement-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "block-construction-1", amount = 1},
@@ -341,7 +341,7 @@ data:extend(
 		type = "recipe",
 		name = "block-energy-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "block-construction-1", amount = 1},
@@ -432,7 +432,7 @@ data:extend(
 		type = "recipe",
 		name = "block-exploration-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "block-construction-1", amount = 1},
@@ -518,7 +518,7 @@ data:extend(
 		type = "recipe",
 		name = "block-logistic-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "block-construction-1", amount = 1},
@@ -614,7 +614,7 @@ data:extend(
 		type = "recipe",
 		name = "block-production-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "block-construction-1", amount = 1},
@@ -935,7 +935,7 @@ data:extend(
 		type = "recipe",
 		name = "block-warfare-1",
 		enabled = true,
-		category = "advanced-crafting",
+		category = "crafting",
 		energy_required = 5,
 		ingredients ={
 			{type="item", name = "block-construction-1", amount = 1},
