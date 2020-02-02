@@ -1,6 +1,5 @@
 data:extend(
 {
---
   -- STEEL SMELTING INTERMEDIATE
   -- STEEL SMELTING RESULTS
   {

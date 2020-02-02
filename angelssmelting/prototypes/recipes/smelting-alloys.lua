@@ -491,8 +491,9 @@ data:extend(
 
 
 
-  --SOLDER
-  --SMELTING
+  -- SOLDER SMELTING INTERMEDIATE
+  -- SOLDER SMELTING RESULTS
+  -- SOLDER CASTING INTERMEDIATE
   {
     type = "recipe",
     name = "angels-solder-smelting-1",
@@ -500,7 +501,8 @@ data:extend(
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-tin", amount=12},
       {type="item", name="ingot-lead", amount=12},
     },
@@ -520,7 +522,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "aa",
+    order = "a[liquid-molten-solder]-a",
   },
   {
     type = "recipe",
@@ -529,7 +531,8 @@ data:extend(
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-tin", amount=12},
       {type="item", name="ingot-zinc", amount=12},
     },
@@ -549,7 +552,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "ab",
+    order = "a[liquid-molten-solder]-b",
   },
   {
     type = "recipe",
@@ -558,7 +561,8 @@ data:extend(
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="ingot-tin", amount=12},
       {type="item", name="ingot-copper", amount=12},
       {type="item", name="ingot-silver", amount=12},
@@ -579,9 +583,8 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "ac",
+    order = "a[liquid-molten-solder]-c",
   },
-  --CASTING
   {
     type = "recipe",
     name = "roll-solder-casting",
@@ -591,21 +594,29 @@ data:extend(
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-solder", amount=80},
         {type="fluid", name="water", amount=40},
       },
-      results ={{type="item", name="angels-roll-solder", amount=4}},
+      results =
+      {
+        {type="item", name="angels-roll-solder", amount=4}
+      },
     },
     expensive =
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-solder", amount=100 * intermediatemulti},
         {type="fluid", name="water", amount=40},
       },
-      results ={{type="item", name="angels-roll-solder", amount=4}},
+      results =
+      {
+        {type="item", name="angels-roll-solder", amount=4}
+      },
     },
     icons = {
       {
@@ -619,7 +630,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "ba",
+    order = "b[angels-roll-solder]-a",
   },
   {
     type = "recipe",
@@ -630,11 +641,13 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-solder", amount=140},
         {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
       },
-      results ={
+      results =
+      {
         {type="item", name="angels-roll-solder", amount=8},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
@@ -644,11 +657,13 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={
+      ingredients =
+      {
         {type="fluid", name="liquid-molten-solder", amount=180 * intermediatemulti},
         {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
       },
-      results ={
+      results =
+      {
         {type="item", name="angels-roll-solder", amount=8},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
@@ -666,8 +681,9 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "bb",
+    order = "b[angels-roll-solder]-b",
   },
+  -- SOLDER CASTING RESULT
   {
     type = "recipe",
     name = "angels-solder",
@@ -677,15 +693,27 @@ data:extend(
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={{type="fluid", name="liquid-molten-solder", amount=40}},
-      results ={{type="item", name="angels-solder", amount=6}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-solder", amount=40}
+      },
+      results =
+      {
+        {type="item", name="angels-solder", amount=6}
+      },
     },
     expensive =
     {
       enabled = "false",
       energy_required = 4,
-      ingredients ={{type="fluid", name="liquid-molten-solder", amount=50 * intermediatemulti}},
-      results ={{type="item", name="angels-solder", amount=6}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-solder", amount=50 * intermediatemulti}
+      },
+      results =
+      {
+        {type="item", name="angels-solder", amount=6}
+      },
     },
     icons = {
       {
@@ -698,9 +726,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "bc",
+    order = "c[angels-solder]-a",
   },
-  --CRAFTING
   {
     type = "recipe",
     name = "angels-roll-solder-converting",
@@ -709,7 +736,8 @@ data:extend(
     energy_required = 0.5,
     enabled = "false",
     allow_decomposition = false,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="angels-roll-solder", amount=4},
     },
     results =
@@ -727,7 +755,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c",
+    order = "c[angels-solder]-b",
   },
 }
 )
