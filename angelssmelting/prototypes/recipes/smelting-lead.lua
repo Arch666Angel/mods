@@ -261,7 +261,7 @@ data:extend(
         shift = { -10, -10},
       },
     },
-    order = "i[angels-plate-lead]-b", -- i[angels-plate-lead]-a reserved for crushed saphirite smelting (see global overrides)
+    order = "i[angels-plate-lead]-b", -- i[angels-plate-lead]-a reserved for crushed rubyte smelting (see global overrides)
   },
 }
 )

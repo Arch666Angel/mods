@@ -185,7 +185,11 @@ if angelsmods.refining then
       subgroup = "angels-lead-casting",
       order = "i[angels-plate-lead]-a"
     },
-    { name = "angelsore6-crushed-smelting", subgroup = "angels-tin-casting", order = "zy" }
+    {
+      name = "angelsore6-crushed-smelting",
+      subgroup = "angels-tin-casting",
+      order = "g[angels-plate-tin]-a"
+    }
   })
 end
   
@@ -215,7 +219,7 @@ if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates
   OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
   OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
   OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
-  angelsmods.functions.add_flag("angels-wire-tin", "hidden")
+  --angelsmods.functions.add_flag("angels-wire-tin", "hidden")
   --angelsmods.functions.add_flag("angels-wire-silver", "hidden")
   --angelsmods.functions.add_flag("angels-wire-gold", "hidden")
   angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
