@@ -201,7 +201,8 @@ data:extend(
       type = "ammo",
       name = "heavy-cannon-shell",
       icon = "__base__/graphics/icons/cannon-shell.png",
-      icon_size = 32,
+      icon_size = 64,
+      icon_mipmaps = 4,
       flags = {},
       ammo_type = {
         category = "cannon-shell",
@@ -223,7 +224,7 @@ data:extend(
           }
         }
       },
-      subgroup = "angels-exploration",
+      subgroup = "angels-explosion",
       order = "d[heavy-cannon-shell]",
       stack_size = 200
     },

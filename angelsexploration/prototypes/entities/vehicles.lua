@@ -16,8 +16,8 @@ data:extend(
       icon = "__angelsexploration__/graphics/icons/heavy-tank-icon.png",
       icon_size = 32,
       flags = {},
-      subgroup = "angels-exploration",
-      order = "a",
+      subgroup = "angels-exploration-vehicles",
+      order = "c[personal-transport]-e[angels-heavy-tank]",
       place_result = "angels-heavy-tank",
       stack_size = 1
     },
@@ -47,7 +47,7 @@ data:extend(
         projectile_center = {-0.15625, -0.07812},
         projectile_creation_distance = 1,
         range = 20,
-        sound = heavy_gunshot--[[{
+        sound = heavy_gunshot --[[{
           {
             filename="__base__/prototypes/entity/demo-sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
             volume=1.0,
