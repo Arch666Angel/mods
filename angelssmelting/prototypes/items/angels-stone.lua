@@ -1,5 +1,7 @@
 data:extend(
 {
+  -- ORE
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "solid-lime",
@@ -9,6 +11,7 @@ data:extend(
     order = "b",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "solid-cement",
@@ -19,12 +22,38 @@ data:extend(
     stack_size = 200
   },
   {
+    type = "item",
+    name = "clay-brick-raw",
+    icon = "__angelssmelting__/graphics/icons/brick-clay-raw.png",
+    icon_size = 32,
+    subgroup = "angels-stone",
+    order = "d",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "clay-brick",
+    icon = "__angelssmelting__/graphics/icons/brick-clay.png",
+    icon_size = 32,
+    subgroup = "angels-stone",
+    order = "e",
+    stack_size = 1000,
+    place_as_tile =
+    {
+      result = "clay-bricks",
+      condition_size = 4,
+      condition = { "water-tile" }
+    }
+  },
+  -- order f is reserved for stone brick (see override)
+  -- CASTING INTERMEDIATE
+  {
     type = "fluid",
     name = "liquid-concrete",
     icon = "__angelssmelting__/graphics/icons/molten-concrete.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
-    order = "d",
+    order = "g",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 99/255, g = 99/255, b = 99/255},
@@ -34,37 +63,15 @@ data:extend(
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
-  {
-    type = "item",
-    name = "clay-brick-raw",
-    icon = "__angelssmelting__/graphics/icons/brick-clay-raw.png",
-    icon_size = 32,
-    subgroup = "angels-stone",
-    order = "e",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "clay-brick",
-    icon = "__angelssmelting__/graphics/icons/brick-clay.png",
-    icon_size = 32,
-    subgroup = "angels-stone",
-    order = "f",
-    stack_size = 1000,
-    place_as_tile =
-    {
-      result = "clay-bricks",
-      condition_size = 4,
-      condition = { "water-tile" }
-    }
-  },
+  -- CASTING RESULT
+  -- order h reserved for base game concrete
   {
     type = "item",
     name = "concrete-brick",
     icon = "__angelssmelting__/graphics/icons/brick-concrete.png",
     icon_size = 32,
-    subgroup = "angels-stone",
-    order = "g",
+    subgroup = "angels-stone-casting",
+    order = "i",
     stack_size = 1000,
     place_as_tile =
     {
@@ -78,8 +85,8 @@ data:extend(
     name = "reinforced-concrete-brick",
     icon = "__angelssmelting__/graphics/icons/brick-reinforced.png",
     icon_size = 32,
-    subgroup = "angels-stone",
-    order = "h",
+    subgroup = "angels-stone-casting",
+    order = "j",
     stack_size = 1000,
     place_as_tile =
     {

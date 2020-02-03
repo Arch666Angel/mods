@@ -42,6 +42,11 @@ angelsmods.functions.add_resource("make", {
   }
 })
 
+if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
+	ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3.png"
+else
+	ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3-HR.png"
+end
 angelsmods.functions.add_resource("make", {
   name = "angels-ore3",
   order = "b-dc",
@@ -54,7 +59,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore3",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore3.png",
+  icon = ore_3_icon,
   autoplace = {
     starting_area = true,
     --resource_index = 23,

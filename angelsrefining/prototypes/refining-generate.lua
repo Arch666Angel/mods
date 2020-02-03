@@ -41,6 +41,8 @@ if angelsmods.refining then
   data.raw["item-subgroup"]["empty-barrel"].group = "angels-fluid-control"
   data.raw["item"]["empty-barrel"].subgroup = "angels-fluid-control"
   data.raw["item"]["empty-barrel"].order = "h"
+  data.raw["recipe"]["empty-barrel"].subgroup = "angels-fluid-control"
+  data.raw["recipe"]["empty-barrel"].order = "h"
   --angelsmods.functions.OV.set_special_recipe_override("empty-barrel", { subgroup = "angels-fluid-control", order = "h" })
   
   --MOVE STORAGE TANK

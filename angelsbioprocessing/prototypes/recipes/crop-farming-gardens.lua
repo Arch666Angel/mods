@@ -8,21 +8,20 @@ data:extend(
     subgroup = "farming-temperate-seed",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="temperate-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "temperate-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=16},
-      {type="item", name="temperate-1-seed", amount=5, probability = 0.4},
-      {type="item", name="temperate-2-seed", amount=5, probability = 0.3},
-      {type="item", name="temperate-3-seed", amount=5, probability = 0.2},
-      {type="item", name="temperate-4-seed", amount=5, probability = 0.1},
-      {type="item", name="temperate-5-seed", amount=5, probability = 0.05},
+    results = {
+      {type = "item", name = "token-bio", amount = 16},
+      {type = "item", name = "temperate-1-seed", amount = 5, probability = 0.4},
+      {type = "item", name = "temperate-2-seed", amount = 5, probability = 0.3},
+      {type = "item", name = "temperate-3-seed", amount = 5, probability = 0.2},
+      {type = "item", name = "temperate-4-seed", amount = 5, probability = 0.1},
+      {type = "item", name = "temperate-5-seed", amount = 5, probability = 0.05}
     },
     icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
     icon_size = 32,
-    order = "ba",
+    order = "ba"
   },
   {
     type = "recipe",
@@ -31,16 +30,15 @@ data:extend(
     subgroup = "farming-temperate-seed",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="temperate-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "temperate-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=32},
+    results = {
+      {type = "item", name = "token-bio", amount = 32}
     },
     icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
     icon_size = 32,
-    order = "bb",
+    order = "bb"
   },
   {
     type = "recipe",
@@ -49,20 +47,19 @@ data:extend(
     subgroup = "farming-temperate-seed",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="temperate-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "temperate-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="temperate-1-seed", amount=5, probability = 0.8},
-      {type="item", name="temperate-2-seed", amount=5, probability = 0.6},
-      {type="item", name="temperate-3-seed", amount=5, probability = 0.4},
-      {type="item", name="temperate-4-seed", amount=5, probability = 0.2},
-      {type="item", name="temperate-5-seed", amount=5, probability = 0.1},
+    results = {
+      {type = "item", name = "temperate-1-seed", amount = 5, probability = 0.8},
+      {type = "item", name = "temperate-2-seed", amount = 5, probability = 0.6},
+      {type = "item", name = "temperate-3-seed", amount = 5, probability = 0.4},
+      {type = "item", name = "temperate-4-seed", amount = 5, probability = 0.2},
+      {type = "item", name = "temperate-5-seed", amount = 5, probability = 0.1}
     },
     icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
     icon_size = 32,
-    order = "bc",
+    order = "bc"
   },
   {
     type = "recipe",
@@ -71,23 +68,19 @@ data:extend(
     subgroup = "farming-temperate-seed",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="temperate-garden", amount=1},
-      {type="item", name="solid-fertilizer", amount=2},
+    ingredients = {
+      {type = "item", name = "temperate-garden", amount = 1},
+      {type = "item", name = "solid-fertilizer", amount = 2}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=8, probability=0.25},
-      {type="item", name="temperate-garden", amount=1},
-      {type="item", name="temperate-garden", amount=1, probability=0.05},
+    results = {
+      {type = "item", name = "token-bio", amount = 8, probability = 0.25},
+      {type = "item", name = "temperate-garden", amount = 1},
+      {type = "item", name = "temperate-garden", amount = 1, probability = 0.05}
     },
     icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
     icon_size = 32,
-    order = "bd",
+    order = "bd"
   },
-
-
-
   --DESERT
   {
     type = "recipe",
@@ -96,21 +89,20 @@ data:extend(
     subgroup = "bio-processor-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="desert-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "desert-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=16},
-      {type="item", name="desert-1-seed", amount=5, probability = 0.4},
-      {type="item", name="desert-2-seed", amount=5, probability = 0.3},
-      {type="item", name="desert-3-seed", amount=5, probability = 0.2},
-      {type="item", name="desert-4-seed", amount=5, probability = 0.1},
-      {type="item", name="desert-5-seed", amount=5, probability = 0.05},
+    results = {
+      {type = "item", name = "token-bio", amount = 16},
+      {type = "item", name = "desert-1-seed", amount = 5, probability = 0.4},
+      {type = "item", name = "desert-2-seed", amount = 5, probability = 0.3},
+      {type = "item", name = "desert-3-seed", amount = 5, probability = 0.2},
+      {type = "item", name = "desert-4-seed", amount = 5, probability = 0.1},
+      {type = "item", name = "desert-5-seed", amount = 5, probability = 0.05}
     },
     icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
     icon_size = 32,
-    order = "ba",
+    order = "ba"
   },
   {
     type = "recipe",
@@ -119,16 +111,15 @@ data:extend(
     subgroup = "bio-processor-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="desert-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "desert-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=32},
+    results = {
+      {type = "item", name = "token-bio", amount = 32}
     },
     icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
     icon_size = 32,
-    order = "bb",
+    order = "bb"
   },
   {
     type = "recipe",
@@ -137,20 +128,19 @@ data:extend(
     subgroup = "bio-processor-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="desert-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "desert-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="desert-1-seed", amount=5, probability = 0.8},
-      {type="item", name="desert-2-seed", amount=5, probability = 0.6},
-      {type="item", name="desert-3-seed", amount=5, probability = 0.4},
-      {type="item", name="desert-4-seed", amount=5, probability = 0.2},
-      {type="item", name="desert-5-seed", amount=5, probability = 0.1},
+    results = {
+      {type = "item", name = "desert-1-seed", amount = 5, probability = 0.8},
+      {type = "item", name = "desert-2-seed", amount = 5, probability = 0.6},
+      {type = "item", name = "desert-3-seed", amount = 5, probability = 0.4},
+      {type = "item", name = "desert-4-seed", amount = 5, probability = 0.2},
+      {type = "item", name = "desert-5-seed", amount = 5, probability = 0.1}
     },
     icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
     icon_size = 32,
-    order = "bc",
+    order = "bc"
   },
   {
     type = "recipe",
@@ -159,23 +149,19 @@ data:extend(
     subgroup = "bio-processor-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="desert-garden", amount=1},
-      {type="item", name="solid-fertilizer", amount=2},
+    ingredients = {
+      {type = "item", name = "desert-garden", amount = 1},
+      {type = "item", name = "solid-fertilizer", amount = 2}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=8, probability=0.25},
-      {type="item", name="desert-garden", amount=1},
-      {type="item", name="desert-garden", amount=1, probability = 0.05},
+    results = {
+      {type = "item", name = "token-bio", amount = 8, probability = 0.25},
+      {type = "item", name = "desert-garden", amount = 1},
+      {type = "item", name = "desert-garden", amount = 1, probability = 0.05}
     },
     icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
     icon_size = 32,
-    order = "bd",
+    order = "bd"
   },
-
-
-
   --SWAMP
   {
     type = "recipe",
@@ -184,21 +170,20 @@ data:extend(
     subgroup = "farming-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="swamp-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "swamp-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=16},
-      {type="item", name="swamp-1-seed", amount=5, probability = 0.4},
-      {type="item", name="swamp-2-seed", amount=5, probability = 0.3},
-      {type="item", name="swamp-3-seed", amount=5, probability = 0.2},
-      {type="item", name="swamp-4-seed", amount=5, probability = 0.1},
-      {type="item", name="swamp-5-seed", amount=5, probability = 0.05},
+    results = {
+      {type = "item", name = "token-bio", amount = 16},
+      {type = "item", name = "swamp-1-seed", amount = 5, probability = 0.4},
+      {type = "item", name = "swamp-2-seed", amount = 5, probability = 0.3},
+      {type = "item", name = "swamp-3-seed", amount = 5, probability = 0.2},
+      {type = "item", name = "swamp-4-seed", amount = 5, probability = 0.1},
+      {type = "item", name = "swamp-5-seed", amount = 5, probability = 0.05}
     },
     icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     icon_size = 32,
-    order = "ba",
+    order = "ba"
   },
   {
     type = "recipe",
@@ -207,16 +192,15 @@ data:extend(
     subgroup = "farming-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="swamp-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "swamp-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=32},
+    results = {
+      {type = "item", name = "token-bio", amount = 32}
     },
     icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     icon_size = 32,
-    order = "bb",
+    order = "bb"
   },
   {
     type = "recipe",
@@ -225,20 +209,19 @@ data:extend(
     subgroup = "farming-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="swamp-garden", amount=1},
+    ingredients = {
+      {type = "item", name = "swamp-garden", amount = 1}
     },
-    results=
-    {
-      {type="item", name="swamp-1-seed", amount=5, probability = 0.8},
-      {type="item", name="swamp-2-seed", amount=5, probability = 0.6},
-      {type="item", name="swamp-3-seed", amount=5, probability = 0.4},
-      {type="item", name="swamp-4-seed", amount=5, probability = 0.2},
-      {type="item", name="swamp-5-seed", amount=5, probability = 0.1},
+    results = {
+      {type = "item", name = "swamp-1-seed", amount = 5, probability = 0.8},
+      {type = "item", name = "swamp-2-seed", amount = 5, probability = 0.6},
+      {type = "item", name = "swamp-3-seed", amount = 5, probability = 0.4},
+      {type = "item", name = "swamp-4-seed", amount = 5, probability = 0.2},
+      {type = "item", name = "swamp-5-seed", amount = 5, probability = 0.1}
     },
     icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     icon_size = 32,
-    order = "bc",
+    order = "bc"
   },
   {
     type = "recipe",
@@ -247,23 +230,19 @@ data:extend(
     subgroup = "farming-temperate",
     enabled = "false",
     energy_required = 300,
-    ingredients ={
-      {type="item", name="swamp-garden", amount=1},
-      {type="item", name="solid-fertilizer", amount=2},
+    ingredients = {
+      {type = "item", name = "swamp-garden", amount = 1},
+      {type = "item", name = "solid-fertilizer", amount = 2}
     },
-    results=
-    {
-      {type="item", name="token-bio", amount=8, probability=0.25},
-      {type="item", name="swamp-garden", amount=1},
-      {type="item", name="swamp-garden", amount=1, probability = 0.05},
+    results = {
+      {type = "item", name = "token-bio", amount = 8, probability = 0.25},
+      {type = "item", name = "swamp-garden", amount = 1},
+      {type = "item", name = "swamp-garden", amount = 1, probability = 0.05}
     },
     icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
     icon_size = 32,
-    order = "bd",
+    order = "bd"
   },
-
-
-
   --COMPOST
   {
     type = "recipe",
@@ -272,16 +251,15 @@ data:extend(
     subgroup = "bio-wood",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
-      {type="item", name="solid-mud", amount=1},
-      {type="item", name="solid-compost", amount=1},
+    ingredients = {
+      {type = "item", name = "solid-mud", amount = 1},
+      {type = "item", name = "solid-compost", amount = 1}
     },
-    results=
-    {
-      {type="item", name="solid-soil", amount=1},
+    results = {
+      {type = "item", name = "solid-soil", amount = 1}
     },
     icon_size = 32,
-    order = "a[support]-a",
+    order = "a[support]-a"
   },
   {
     type = "recipe",
@@ -290,20 +268,16 @@ data:extend(
     subgroup = "bio-wood",
     enabled = "false",
     energy_required = 2,
-    ingredients ={
-      {type="item", name="solid-compost", amount=2},
-      {type="fluid", name="gas-urea", amount=40},
+    ingredients = {
+      {type = "item", name = "solid-compost", amount = 2},
+      {type = "fluid", name = "gas-urea", amount = 40}
     },
-    results=
-    {
-      {type="item", name="solid-fertilizer", amount=2},
+    results = {
+      {type = "item", name = "solid-fertilizer", amount = 2}
     },
     icon_size = 32,
-    order = "a[support]-c",
+    order = "a[support]-c"
   },
-
-
-
   --UPGRADES
   {
     type = "recipe",
@@ -312,16 +286,15 @@ data:extend(
     subgroup = "bio-processing-blocks",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
-      {type="item", name="token-bio", amount=5},
-      {type="item", name="angels-void", amount=1},
+    ingredients = {
+      {type = "item", name = "token-bio", amount = 5},
+      {type = "item", name = "angels-void", amount = 1}
     },
-    results=
-    {
-      {type="item", name="temperate-upgrade", amount=1},
+    results = {
+      {type = "item", name = "temperate-upgrade", amount = 1}
     },
     icon_size = 32,
-    order = "d",
+    order = "d"
   },
   {
     type = "recipe",
@@ -330,16 +303,15 @@ data:extend(
     subgroup = "bio-processing-blocks",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
-      {type="item", name="token-bio", amount=5},
-      {type="item", name="angels-void", amount=1},
+    ingredients = {
+      {type = "item", name = "token-bio", amount = 5},
+      {type = "item", name = "angels-void", amount = 1}
     },
-    results=
-    {
-      {type="item", name="desert-upgrade", amount=1},
+    results = {
+      {type = "item", name = "desert-upgrade", amount = 1}
     },
     icon_size = 32,
-    order = "d",
+    order = "d"
   },
   {
     type = "recipe",
@@ -348,16 +320,102 @@ data:extend(
     subgroup = "bio-processing-blocks",
     enabled = "false",
     energy_required = 4,
-    ingredients ={
-      {type="item", name="token-bio", amount=5},
-      {type="item", name="angels-void", amount=1},
+    ingredients = {
+      {type = "item", name = "token-bio", amount = 5},
+      {type = "item", name = "angels-void", amount = 1}
+    },
+    results = {
+      {type = "item", name = "swamp-upgrade", amount = 1}
+    },
+    icon_size = 32,
+    order = "d"
+  }  {
+    type = "recipe",
+    name = "desert-garden-mutation-temperate",
+    category = "seed-extractor",
+    subgroup = "farming-swamp-seed",
+    enabled = false,
+    energy_required = 600,
+    ingredients =
+    {
+      {type = "item", name = "desert-garden", amount = 4},
+      {type = "item", name = "solid-compost", amount = 200},
+      {type = "item", name = "uranium-235", amount = 1},
     },
     results=
     {
-      {type="item", name="swamp-upgrade", amount=1},
+      {type = "item", name = "temperate-garden", amount = 1,probability=0.02},
+      {type = "item", name = "temperate-tree", amount = 1,probability=0.001},
     },
+    icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
     icon_size = 32,
-    order = "d",
+    order = "h",
+  },
+  {
+    type = "recipe",
+    name = "temperate-garden-mutation-swamp",
+    category = "seed-extractor",
+    subgroup = "farming-swamp",
+    enabled = false,
+    energy_required = 600,
+    ingredients =
+    {
+      {type = "item", name = "temperate-garden", amount = 4},
+      {type = "item", name = "solid-soil", amount = 500},
+      {type = "item", name = "uranium-235", amount = 1},
+    },
+    results=
+    {
+      {type = "item", name = "swamp-garden", amount = 1,probability=0.02},
+      {type = "item", name = "swamp-tree", amount = 1,probability=0.001},
+    },
+    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    icon_size = 32,
+    order = "h",
+  },
+  {
+    type = "recipe",
+    name = "swamp-garden-mutation-temperate",
+    category = "seed-extractor",
+    subgroup = "bio-processor-swamp",
+    enabled = false,
+    energy_required = 600,
+    ingredients =
+    {
+      {type = "item", name = "swamp-garden", amount = 4},
+      {type = "item", name = "solid-compost", amount = 200},
+      {type = "item", name = "uranium-235", amount = 1},
+    },
+    results=
+    {
+      {type = "item", name = "temperate-garden", amount = 1,probability=0.02},
+      {type = "item", name = "temperate-tree", amount = 1,probability=0.001},
+    },
+    icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    icon_size = 32,
+    order = "h",
+  },
+  {
+    type = "recipe",
+    name = "temperate-garden-mutation-desert",
+    category = "seed-extractor",
+    subgroup = "farming-desert-seed",
+    enabled = false,
+    energy_required = 600,
+    ingredients =
+    {
+      {type = "item", name = "temperate-garden", amount = 4},
+      {type = "item", name = "solid-sand", amount = 200},
+      {type = "item", name = "uranium-235", amount = 1},
+    },
+    results=
+    {
+      {type = "item", name = "desert-garden", amount = 1,probability=0.02},
+      {type = "item", name = "desert-tree", amount = 1,probability=0.001},
+    },
+    icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+    icon_size = 32,
+    order = "h",
   },
 }
 )

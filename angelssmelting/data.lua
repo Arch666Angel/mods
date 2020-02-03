@@ -1,5 +1,6 @@
 if not angelsmods then angelsmods = {} end
 if not angelsmods.smelting then angelsmods.smelting = {} end
+angelsmods.smelting.number_tint = {r = 1, g = 0.8, b = 0.0, a = 0.5}
 
 
 if angelsmods.smelting then

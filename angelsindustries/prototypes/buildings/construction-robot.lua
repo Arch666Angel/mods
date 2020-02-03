@@ -7,7 +7,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/construction-robot-ico.png",
     icon_size = 32,
     subgroup = "angels-cargo-bots",
-    order = "c[angels-construction-robot]",
+    order = "a[angels-construction-robot]",
     place_result = "angels-construction-robot",
     stack_size = 50
   },

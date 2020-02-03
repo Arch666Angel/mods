@@ -130,6 +130,7 @@ OV.set_science_pack("power-armor", "datacore-enhance-2", 2)
 OV.remove_science_pack("power-armor", "datacore-war-1")
 OV.set_science_pack("power-armor-2", "datacore-enhance-2", 2)
 OV.remove_science_pack("power-armor-2", "datacore-war-1")
+OV.set_science_pack("steel-axe", "datacore-enhance-1", 2)
 
 --LOGISTIC
 OV.set_science_pack("logistics-2", "datacore-logistic-1", 2)

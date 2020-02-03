@@ -1,5 +1,8 @@
 data:extend(
 {
+  -- ORE
+  -- order a reserved for ore
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-copper",
@@ -27,6 +30,7 @@ data:extend(
     order = "d",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-copper",
@@ -45,6 +49,7 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-copper",
@@ -63,8 +68,8 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-copper",
-    icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+    name = "angels-roll-copper",
+    icon = "__angelssmelting__/graphics/icons/roll-copper.png",
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "h",
@@ -72,17 +77,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-roll-copper",
-    icon = "__angelssmelting__/graphics/icons/roll-copper.png",
+    name = "angels-wire-coil-copper",
+    icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png",
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "i",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-wire-coil-copper",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png",
+    name = "angels-plate-copper",
+    icon = "__angelssmelting__/graphics/icons/plate-copper.png",
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "j",
@@ -97,6 +103,5 @@ data:extend(
     order = "k",
     stack_size = 200
   },
-
 }
 )

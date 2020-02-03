@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "quartz",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-silica",
@@ -28,13 +30,19 @@ data:extend(
     stack_size = 200
   },
   {
-    type = "item",
-    name = "ingot-silicon",
-    icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
+    type = "fluid",
+    name = "liquid-trichlorosilane",
+    icon = "__angelssmelting__/graphics/icons/liquid-trichlorosilane.png",
     icon_size = 32,
     subgroup = "angels-silicon",
     order = "d",
-    stack_size = 200
+    default_temperature = 100,
+    heat_capacity = "0KJ",
+    base_color = {r = 209/255, g = 209/255, b = 209/255},
+    flow_color = {r = 209/255, g = 209/255, b = 209/255},
+    max_temperature = 100,
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -51,21 +59,17 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
+  -- SMELTING RESULTS
   {
-    type = "fluid",
-    name = "liquid-trichlorosilane",
-    icon = "__angelssmelting__/graphics/icons/liquid-trichlorosilane.png",
+    type = "item",
+    name = "ingot-silicon",
+    icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
     icon_size = 32,
     subgroup = "angels-silicon",
     order = "f",
-    default_temperature = 100,
-    heat_capacity = "0KJ",
-    base_color = {r = 209/255, g = 209/255, b = 209/255},
-    flow_color = {r = 209/255, g = 209/255, b = 209/255},
-    max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
+    stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-silicon",
@@ -93,17 +97,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-mono-silicon",
-    icon = "__angelssmelting__/graphics/icons/silicon-mono.png",
+    name = "angels-quartz-crucible",
+    icon = "__angelssmelting__/graphics/icons/silicon-crucible.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
     order = "i",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-quartz-crucible",
-    icon = "__angelssmelting__/graphics/icons/silicon-crucible.png",
+    name = "angels-mono-silicon",
+    icon = "__angelssmelting__/graphics/icons/silicon-mono.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
     order = "j",

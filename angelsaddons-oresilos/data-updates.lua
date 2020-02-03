@@ -31,7 +31,7 @@ if angelsmods.industries then
       type = "item-subgroup",
       name = "angels-silo",
       group = "angels-logistics",
-      order = "ab",
+      order = "ac[chests-silo]",
     },
   })
   data.raw["item"]["silo"].subgroup = "angels-silo"

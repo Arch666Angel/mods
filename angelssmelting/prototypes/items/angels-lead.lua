@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "lead-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-lead",
@@ -36,13 +38,22 @@ data:extend(
     order = "d",
     stack_size = 200
   },
-{
+  {
+    type = "item",
+    name = "anode-lead",
+    icon = "__angelssmelting__/graphics/icons/anode-lead.png",
+    icon_size = 32,
+    subgroup = "angels-lead",
+    order = "e",
+    stack_size = 200
+  },
+  {
     type = "fluid",
     name = "liquid-hexafluorosilicic-acid",
     icon = "__angelssmelting__/graphics/icons/liquid-hexafluorosilicic-acid.png",
     icon_size = 32,
     subgroup = "angels-lead",
-    order = "e",
+    order = "f",
     default_temperature = 25,
     heat_capacity = "1KJ",
     base_color = {r = 209/255, g = 209/255, b = 209/255},
@@ -50,16 +61,8 @@ data:extend(
     max_temperature = 100,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-},
-  {
-    type = "item",
-    name = "anode-lead",
-    icon = "__angelssmelting__/graphics/icons/anode-lead.png",
-    icon_size = 32,
-    subgroup = "angels-lead",
-    order = "f",
-    stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-lead",
@@ -69,6 +72,7 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-lead",
@@ -85,6 +89,7 @@ data:extend(
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
+  -- CASTING RESULT
   {
     type = "item",
     name = "angels-plate-lead",

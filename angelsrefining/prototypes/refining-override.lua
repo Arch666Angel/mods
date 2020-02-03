@@ -4,8 +4,8 @@ local OV = angelsmods.functions.OV
   --PREPARATIONS
   OV.disable_recipe("solid-lithium")
 
---INSERT GEODES AS MINABLE RESULT TO STONE ROCKS  
--- if angelsmods.industries or bobmods and bobmods.plates then  
+--INSERT GEODES AS MINABLE RESULT TO STONE ROCKS
+-- if angelsmods.industries or bobmods and bobmods.plates then
   -- data.raw["simple-entity"]["stone-rock"].minable={mining_particle = "stone-particle",mining_time = 8,
   -- results=
     -- {
@@ -18,7 +18,7 @@ local OV = angelsmods.functions.OV
       -- {type="item", name="geode-yellow", amount=2, probability=0.6},
     -- },
     -- }
--- end  
+-- end
 
 --SORTING OVERRIDES
 require("prototypes.recipes.refining-entity-angels")
@@ -171,44 +171,67 @@ if mods['bobplates'] then
     { name = "light-oil-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "advanced-oil-processing", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } }
   })
-  
+
   --if bobmods.gems then
-  if mods['bobores'] and settings.startup['bobmods-ores-unsortedgemore'].value == true then
-    --TEMP FIX
-    if data.raw.recipe["sort-gem-ore"] then
-      data.raw.recipe["sort-gem-ore"].icon_size = 32
+  if mods['bobores'] then
+    if angelsmods.industries and angelsmods.industries.overhaul then
+      data.raw["item"]["gem-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["gem-ore"].order = "g"
+      data.raw["item"]["sapphire-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["sapphire-ore"].order = "b"
+      data.raw["item"]["topaz-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["topaz-ore"].order = "e"
+      data.raw["item"]["ruby-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["ruby-ore"].order = "a"
+      data.raw["item"]["emerald-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["emerald-ore"].order = "c"
+      data.raw["item"]["amethyst-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["amethyst-ore"].order = "d"
+      data.raw["item"]["diamond-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["diamond-ore"].order = "f"
     end
-    data:extend(
-    {
+
+    if settings.startup['bobmods-ores-unsortedgemore'].value == true then
+      --TEMP FIX
+      if data.raw.recipe["sort-gem-ore"] then
+        data.raw.recipe["sort-gem-ore"].icon_size = 32
+      end
+      data:extend(
       {
-        type = "recipe",
-        name = "sort-gem-ore",
-        energy_required = 1,
-        ingredients =
         {
-          {"crystal-dust", 5},
+          type = "recipe",
+          name = "sort-gem-ore",
+          energy_required = 1,
+          ingredients =
+          {
+            {"crystal-dust", 5},
+          },
+          results =
+          {
+            {type="item", name="ruby-ore", amount=1, probability = bobmods.gems.RubyRatio},
+            {type="item", name="sapphire-ore", amount=1, probability = bobmods.gems.SapphireRatio},
+            {type="item", name="emerald-ore", amount=1, probability = bobmods.gems.EmeraldRatio},
+            {type="item", name="amethyst-ore", amount=1, probability = bobmods.gems.AmethystRatio},
+            {type="item", name="topaz-ore", amount=1, probability = bobmods.gems.TopazRatio},
+            {type="item", name="diamond-ore", amount=1, probability = bobmods.gems.DiamondRatio},
+          },
+          subgroup = "bob-gems-ore",
+          icon = "__bobores__/graphics/icons/gem-ore.png",
+          icon_size = 32,
+          order = "a-0",
         },
-        results =
-        {
-          {type="item", name="ruby-ore", amount=1, probability = bobmods.gems.RubyRatio},
-          {type="item", name="sapphire-ore", amount=1, probability = bobmods.gems.SapphireRatio},
-          {type="item", name="emerald-ore", amount=1, probability = bobmods.gems.EmeraldRatio},
-          {type="item", name="amethyst-ore", amount=1, probability = bobmods.gems.AmethystRatio},
-          {type="item", name="topaz-ore", amount=1, probability = bobmods.gems.TopazRatio},
-          {type="item", name="diamond-ore", amount=1, probability = bobmods.gems.DiamondRatio},
-        },
-        subgroup = "bob-gems-ore",
-        icon = "__bobores__/graphics/icons/gem-ore.png",
-        icon_size = 32,
-        order = "a-0",
-      },
-    }
-    )
+      }
+      )
+      if angelsmods.industries and angelsmods.industries.overhaul then
+        data.raw["recipe"]["sort-gem-ore"].subgroup = "bob-gems-crystallization"
+        data.raw["recipe"]["sort-gem-ore"].order = "g"
+      end
+    end
   end
 
   --WATER TREATMENT
   data.raw["fluid"]["lithia-water"].icon = "__angelsrefining__/graphics/icons/water-lithia.png"
-  
+
   --SPECIAL RECIPES
   data:extend(
   {
@@ -258,16 +281,16 @@ if mods['bobplates'] then
   if not angelsmods.petrochem then
     OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
   end
-  
+
   OV.add_unlock("thermal-water-extraction", "water-thermal-lithia")
-  
-  data.raw["recipe"]["bob-ruby-3"].result_count = 1  
-  data.raw["recipe"]["bob-sapphire-3"].result_count = 1  
-  data.raw["recipe"]["bob-emerald-3"].result_count = 1  
-  data.raw["recipe"]["bob-amethyst-3"].result_count = 1  
-  data.raw["recipe"]["bob-topaz-3"].result_count = 1  
-  data.raw["recipe"]["bob-diamond-3"].result_count = 1  
-  
+
+  data.raw["recipe"]["bob-ruby-3"].result_count = 1
+  data.raw["recipe"]["bob-sapphire-3"].result_count = 1
+  data.raw["recipe"]["bob-emerald-3"].result_count = 1
+  data.raw["recipe"]["bob-amethyst-3"].result_count = 1
+  data.raw["recipe"]["bob-topaz-3"].result_count = 1
+  data.raw["recipe"]["bob-diamond-3"].result_count = 1
+
   --ADD LIQUIFYING RECIPES TO CHEMICAL PLANTS
   if bobmods.assembly then
     if data.raw["assembling-machine"]["chemical-plant"  ] then table.insert(data.raw["assembling-machine"]["chemical-plant"  ].crafting_categories,"liquifying") end
@@ -275,7 +298,7 @@ if mods['bobplates'] then
     if data.raw["assembling-machine"]["chemical-plant-3"] then table.insert(data.raw["assembling-machine"]["chemical-plant-3"].crafting_categories,"liquifying") end
     if data.raw["assembling-machine"]["chemical-plant-4"] then table.insert(data.raw["assembling-machine"]["chemical-plant-4"].crafting_categories,"liquifying") end
   end
-  
+
   --DISABLE WATER-MINERS
   if data.raw["technology"]["water-miner-1"] then
     data.raw["technology"]["water-miner-1"] = nil
@@ -284,13 +307,60 @@ if mods['bobplates'] then
     data.raw["technology"]["water-miner-4"] = nil
     data.raw["technology"]["water-miner-5"] = nil
   end
-  
+
   --OVERRIDE BOB PURE WATER
   if data.raw["fluid"]["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
   end
-  
+
+  --OVERRIDE BARRELING
+  if data.raw["item-subgroup"]["bob-gas-bottle"] then
+    data.raw["item"]["empty-canister"].subgroup = "angels-fluid-control"
+    data.raw["item"]["empty-canister"].order = "i"
+    data.raw["item"]["gas-canister"].subgroup = "angels-fluid-control"
+    data.raw["item"]["gas-canister"].order = "j"
+    data.raw.technology["gas-canisters"].prerequisites={"fluid-handling"}
+    data.raw.technology["gas-canisters"].enabled = true
+    OV.patch_recipes({
+      {
+        name = "empty-canister",
+        ingredients =
+        {
+          { name = "empty-barrel", amount = 5 },
+        },
+        subgroup = "angels-fluid-control",
+        order = "i",
+      },
+      {
+        name = "gas-canister",
+        ingredients =
+        {
+          { name = "empty-canister", amount = 5 },
+        },
+        subgroup = "angels-fluid-control",
+        order = "j",
+      },
+    })
+
+    --local fluid_n=data.raw["fluid"]
+    for _, fluid_n in pairs(data.raw.fluid) do
+      if not (fluid_n.auto_barrel==false or fluid_n.auto_barrel=="false") then
+        if string.sub(fluid_n.name,1,3)=="gas" then
+          OV.barrel_overrides(fluid_n.name,"gas")
+        elseif not string.find(fluid_n.name,"acid")==nil or string.sub(fluid_n.name,-4)=="acid" then
+          local acid=string.find(fluid_n.name,"acid")
+          OV.barrel_overrides(fluid_n.name,"acid")
+        end
+        data.raw.recipe["fill-"..fluid_n.name.."-barrel"].category = "barreling-pump"
+        data.raw.recipe["empty-"..fluid_n.name.."-barrel"].category = "barreling-pump"
+      end
+    end
+    --insert custom barrel replacements
+    OV.barrel_overrides("liquid-ferric-chloride-solution","acid")
+    OV.barrel_overrides("liquid-cupric-chloride-solution","acid")
+  end
+
   --LOCALIZATION
   --SINGLE GEM CRYSTALLIZATION
   data.raw["recipe"]["angelsore7-crystallization-1"].localised_name = {"recipe-name.angelsore7-crystallization-1", "Sapphire-Ore"}
@@ -300,10 +370,10 @@ if mods['bobplates'] then
   data.raw["recipe"]["angelsore7-crystallization-5"].localised_name = {"recipe-name.angelsore7-crystallization-5", "Amethyst-Ore"}
   data.raw["recipe"]["angelsore7-crystallization-6"].localised_name = {"recipe-name.angelsore7-crystallization-6", "Diamond-Ore"}
 else
-  OV.disable_recipe({ "angelsore7-crystallization-1", "angelsore7-crystallization-2", "angelsore7-crystallization-3", "angelsore7-crystallization-4", "angelsore7-crystallization-5", "angelsore7-crystallization-6"})  
+  OV.disable_recipe({ "angelsore7-crystallization-1", "angelsore7-crystallization-2", "angelsore7-crystallization-3", "angelsore7-crystallization-4", "angelsore7-crystallization-5", "angelsore7-crystallization-6"})
 end
-    
-    
+
+
 --OVERRIDE FOR YUOKI
 if data.raw.item["y-res1"] then
   OV.patch_recipes({
@@ -400,7 +470,7 @@ if data.raw.item["y-res1"] then
       order = "a[yellow-waste-water-purification-yi]",
     },
   })
-  
+
   --INSERT RECIPES TO TECHNOLOGY
   OV.add_unlock("water-treatment", "yellow-waste-water-purification-yi")
   OV.add_unlock("slag-processing-1", "slag-processing-yi")
@@ -556,7 +626,7 @@ end
 if data.raw.item["thorium-ore"] then
   -- pure sorting
   OV.modify_output("angelsore2-pure-processing", {"thorium-ore", "platinum-ore"})
-  
+
   -- mixed sorting
   data:extend(
   {
@@ -635,6 +705,7 @@ if data.raw.item["thorium-ore"] then
   })
 end
 
+
 --ENABLE PRODUCTIVITY
   angelsmods.functions.allow_productivity("slag-processing-1")
   angelsmods.functions.allow_productivity("slag-processing-2")
@@ -646,14 +717,14 @@ end
   angelsmods.functions.allow_productivity("slag-processing-8")
   angelsmods.functions.allow_productivity("slag-processing-9")
   angelsmods.functions.allow_productivity("catalysator-brown")
-  
+
   angelsmods.functions.allow_productivity("angelsore1-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore2-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore3-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore4-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore5-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore6-crushed-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore1-chunk-processing")
   angelsmods.functions.allow_productivity("angelsore2-chunk-processing")
   angelsmods.functions.allow_productivity("angelsore3-chunk-processing")
@@ -667,14 +738,14 @@ end
   angelsmods.functions.allow_productivity("angelsore4-crystal-processing")
   angelsmods.functions.allow_productivity("angelsore5-crystal-processing")
   angelsmods.functions.allow_productivity("angelsore6-crystal-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore1-pure-processing")
   angelsmods.functions.allow_productivity("angelsore2-pure-processing")
   angelsmods.functions.allow_productivity("angelsore3-pure-processing")
   angelsmods.functions.allow_productivity("angelsore4-pure-processing")
   angelsmods.functions.allow_productivity("angelsore5-pure-processing")
   angelsmods.functions.allow_productivity("angelsore6-pure-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore8-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore8-powder-processing")
   angelsmods.functions.allow_productivity("angelsore8-dust-processing")
@@ -684,27 +755,27 @@ end
   angelsmods.functions.allow_productivity("angelsore9-powder-processing")
   angelsmods.functions.allow_productivity("angelsore9-dust-processing")
   angelsmods.functions.allow_productivity("angelsore9-crystal-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-crushed-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-crushed-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-crushed-mix3-processing")
   angelsmods.functions.allow_productivity("angelsore-crushed-mix4-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-chunk-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix3-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix4-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix5-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-crystal-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-crystal-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-crystal-mix3-processing")
   angelsmods.functions.allow_productivity("angelsore-crystal-mix4-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-pure-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-pure-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-pure-mix3-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore7-crystallization-1")
   angelsmods.functions.allow_productivity("angelsore7-crystallization-2")
   angelsmods.functions.allow_productivity("angelsore7-crystallization-3")
