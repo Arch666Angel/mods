@@ -1,6 +1,12 @@
+local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
+
 --INITIALIZE
-if not angelsmods then angelsmods = {} end
-if not angelsmods.industries then angelsmods.industries = {} end
+if not angelsmods then
+  angelsmods = {}
+end
+if not angelsmods.industries then
+  angelsmods.industries = {}
+end
 
 --TRIGGER CHECKS
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
@@ -15,7 +21,9 @@ if angelsmods.industries.tech==true then angelsmods.industries.components = true
 angelsmods.industries.components = false --temp overrides to disable until ready
 
 --LOAD FUNCTIONS
-if not angelsmods.industries.tech_exceptions then angelsmods.industries.tech_exceptions = {} end
+if not angelsmods.industries.tech_exceptions then
+  angelsmods.industries.tech_exceptions = {}
+end
 
 --LOAD PROTOTYPES
 --CATEGORIES
@@ -78,7 +86,6 @@ require("prototypes.buildings.chests")
 require("prototypes.entities.crawler")
 require("prototypes.entities.crawler-train")
 require("prototypes.entities.equipment")
-
 require("prototypes.entities.bio-tile")
 
 --RECIPES

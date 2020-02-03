@@ -7,7 +7,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/burner-generator-ico.png",
       icon_size = 32,
       placed_as_equipment_result = "angels-burner-generator-vequip",
-      subgroup = "angels-equipment-energy",
+      subgroup = "angels-vehicle-equipment",
       order = "a[angels-burner-generator-vequip]",
       stack_size = 50,
       default_request_amount = 10
@@ -45,8 +45,8 @@ data:extend(
       icon = "__base__/graphics/icons/fusion-reactor-equipment.png",
       icon_size = 64,
       placed_as_equipment_result = "angels-fusion-reactor-vequip",
-      subgroup = "angels-equipment-energy",
-      order = "a[angels-fusion-reactor-vequip]",
+      subgroup = "angels-vehicle-equipment",
+      order = "b[angels-fusion-reactor-vequip]",
       stack_size = 50,
       default_request_amount = 10
     },
@@ -79,8 +79,8 @@ data:extend(
       icon = "__base__/graphics/icons/rocket-part.png",
       placed_as_equipment_result = "angels-repair-roboport-vequip",
       icon_size = 64,
-      subgroup = "angels-equipment-robo",
-      order = "a[angels-repair-roboport-vequip]",
+      subgroup = "angels-vehicle-equipment",
+      order = "d[angels-repair-roboport-vequip]",
       stack_size = 50,
       default_request_amount = 10
     },
@@ -133,8 +133,8 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/construction-roboport-ico.png",
       icon_size = 32,
       placed_as_equipment_result = "angels-construction-roboport-vequip",
-      subgroup = "angels-equipment-robo",
-      order = "a[angels-construction-roboport-vequip]",
+      subgroup = "angels-vehicle-equipment",
+      order = "c[angels-construction-roboport-vequip]",
       stack_size = 50,
       default_request_amount = 10
     },
@@ -189,8 +189,8 @@ data:extend(
       icon = "__base__/graphics/icons/energy-shield-equipment.png",
       icon_size = 64,
       placed_as_equipment_result = "angels-heavy-energy-shield-vequip",
-      subgroup = "angels-equipment-hdef",
-      order = "a[angels-energy-heavy-shield-vequip]",
+      subgroup = "angels-vehicle-equipment",
+      order = "e[angels-energy-heavy-shield-vequip]",
       stack_size = 20
     },
     {
@@ -225,8 +225,8 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
       icon_size = 32,
       placed_as_equipment_result = "angels-rocket-defense-equipment-vequip",
-      subgroup = "angels-equipment-hat",
-      order = "a[rocket-defense-equipment]",
+      subgroup = "angels-vehicle-equipment",
+      order = "f[rocket-defense-equipment]",
       stack_size = 20
     },
     {
