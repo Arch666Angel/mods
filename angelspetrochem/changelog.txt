@@ -5,6 +5,8 @@ Date: ??
     - updated to 0.18
     - added missing localisations
     - organised the recipes a bit to be found easier
+    - cleaned up fluid signals if conversion recipes are disabled
+    - added fuel values to various fluids if bobs mods is active
   Bugfixes:
     - fixed changelog not showing up
 ---------------------------------------------------------------------------------------------------

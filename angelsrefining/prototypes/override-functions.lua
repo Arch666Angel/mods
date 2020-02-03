@@ -609,6 +609,5 @@ ov_functions.execute = function ()
 
    initialize_tables() -- reset the data tables after execution to allow for multiple points of execution (eg, one set of adjustments in data-updates and another in data-final-fixes)
 end
-
 initialize_tables()
 return ov_functions

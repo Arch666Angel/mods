@@ -12,17 +12,24 @@ function make_fluid_robot()
     end
 
     local bot_name = fluid.name .. "-liquid-bot"
-    local fluid_icon = fluid.icon
+    if fluid.icon==nil then
+      fluid_icon=fluid.icons
+    elseif fluid.icon_size==nil then
+      fluid_icon=32
+    else
+      fluid_icon=fluid.icon
+    end
+    local fluid_size= fluid.icon_size
 
     local bot_icon = {
       {icon = "__angelsaddons-liquidrobot__/graphics/icons/bot-ico.png"},
       {icon = "__angelsaddons-liquidrobot__/graphics/icons/bot-ico-mask.png", tint = fluid.base_color},
-      {icon = fluid_icon, scale = 0.5, shift = {0, 5}}
+      {icon = fluid_icon, scale = 0.5*32/fluid_size, shift = {0, 7}}
     }
     local fill_icon = {
       {icon = "__angelsaddons-liquidrobot__/graphics/icons/liquid_bot-empty.png"},
       {icon = "__angelsaddons-liquidrobot__/graphics/icons/liquid_bot-empty-mask.png", tint = fluid.base_color},
-      {icon = fluid_icon, scale = 0.5, shift = {0, 5}}
+      {icon = fluid_icon, scale = 0.5*32/fluid_size, shift = {-7, -7}}
     }
 
     local bot_item = {
@@ -248,7 +255,7 @@ function make_fluid_robot()
       subgroup = "empty-liquid-bot",
       order = "b[empty-" .. bot_name .. "]",
       enabled = false,
-      icons = fill_icon,
+      icons = bot_icon,
       icon_size = 32,
       ingredients = {
         {type = "item", name = bot_name, amount = 1}

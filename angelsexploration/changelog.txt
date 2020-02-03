@@ -3,6 +3,12 @@ Version: 0.3.0
 Date: ???
   Changes:
     - update to 0.18
+    - updated biter graphics to align with 0.17+ biter animations
+    - fixed icon_size errors
+    - added recipes and technology for bio-gun and bio-ammo
+    - updated spawners to spawn all variants (colossal biters/spitters)
+    - localisation fixes
+    - minor code clean-ups
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: ??

@@ -4,8 +4,8 @@ local OV = angelsmods.functions.OV
   --PREPARATIONS
   OV.disable_recipe("solid-lithium")
 
---INSERT GEODES AS MINABLE RESULT TO STONE ROCKS  
--- if angelsmods.industries or bobmods and bobmods.plates then  
+--INSERT GEODES AS MINABLE RESULT TO STONE ROCKS
+-- if angelsmods.industries or bobmods and bobmods.plates then
   -- data.raw["simple-entity"]["stone-rock"].minable={mining_particle = "stone-particle",mining_time = 8,
   -- results=
     -- {
@@ -18,7 +18,7 @@ local OV = angelsmods.functions.OV
       -- {type="item", name="geode-yellow", amount=2, probability=0.6},
     -- },
     -- }
--- end  
+-- end
 
 --SORTING OVERRIDES
 require("prototypes.recipes.refining-entity-angels")
@@ -171,7 +171,7 @@ if mods['bobplates'] then
     { name = "light-oil-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "advanced-oil-processing", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } }
   })
-  
+
   --if bobmods.gems then
   if mods['bobores'] and settings.startup['bobmods-ores-unsortedgemore'].value == true then
     --TEMP FIX
@@ -208,7 +208,7 @@ if mods['bobplates'] then
 
   --WATER TREATMENT
   data.raw["fluid"]["lithia-water"].icon = "__angelsrefining__/graphics/icons/water-lithia.png"
-  
+
   --SPECIAL RECIPES
   data:extend(
   {
@@ -258,16 +258,16 @@ if mods['bobplates'] then
   if not angelsmods.petrochem then
     OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
   end
-  
+
   OV.add_unlock("thermal-water-extraction", "water-thermal-lithia")
-  
-  data.raw["recipe"]["bob-ruby-3"].result_count = 1  
-  data.raw["recipe"]["bob-sapphire-3"].result_count = 1  
-  data.raw["recipe"]["bob-emerald-3"].result_count = 1  
-  data.raw["recipe"]["bob-amethyst-3"].result_count = 1  
-  data.raw["recipe"]["bob-topaz-3"].result_count = 1  
-  data.raw["recipe"]["bob-diamond-3"].result_count = 1  
-  
+
+  data.raw["recipe"]["bob-ruby-3"].result_count = 1
+  data.raw["recipe"]["bob-sapphire-3"].result_count = 1
+  data.raw["recipe"]["bob-emerald-3"].result_count = 1
+  data.raw["recipe"]["bob-amethyst-3"].result_count = 1
+  data.raw["recipe"]["bob-topaz-3"].result_count = 1
+  data.raw["recipe"]["bob-diamond-3"].result_count = 1
+
   --ADD LIQUIFYING RECIPES TO CHEMICAL PLANTS
   if bobmods.assembly then
     if data.raw["assembling-machine"]["chemical-plant"  ] then table.insert(data.raw["assembling-machine"]["chemical-plant"  ].crafting_categories,"liquifying") end
@@ -275,7 +275,7 @@ if mods['bobplates'] then
     if data.raw["assembling-machine"]["chemical-plant-3"] then table.insert(data.raw["assembling-machine"]["chemical-plant-3"].crafting_categories,"liquifying") end
     if data.raw["assembling-machine"]["chemical-plant-4"] then table.insert(data.raw["assembling-machine"]["chemical-plant-4"].crafting_categories,"liquifying") end
   end
-  
+
   --DISABLE WATER-MINERS
   if data.raw["technology"]["water-miner-1"] then
     data.raw["technology"]["water-miner-1"] = nil
@@ -284,13 +284,13 @@ if mods['bobplates'] then
     data.raw["technology"]["water-miner-4"] = nil
     data.raw["technology"]["water-miner-5"] = nil
   end
-  
+
   --OVERRIDE BOB PURE WATER
   if data.raw["fluid"]["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
   end
-  
+
   --LOCALIZATION
   --SINGLE GEM CRYSTALLIZATION
   data.raw["recipe"]["angelsore7-crystallization-1"].localised_name = {"recipe-name.angelsore7-crystallization-1", "Sapphire-Ore"}
@@ -300,10 +300,10 @@ if mods['bobplates'] then
   data.raw["recipe"]["angelsore7-crystallization-5"].localised_name = {"recipe-name.angelsore7-crystallization-5", "Amethyst-Ore"}
   data.raw["recipe"]["angelsore7-crystallization-6"].localised_name = {"recipe-name.angelsore7-crystallization-6", "Diamond-Ore"}
 else
-  OV.disable_recipe({ "angelsore7-crystallization-1", "angelsore7-crystallization-2", "angelsore7-crystallization-3", "angelsore7-crystallization-4", "angelsore7-crystallization-5", "angelsore7-crystallization-6"})  
+  OV.disable_recipe({ "angelsore7-crystallization-1", "angelsore7-crystallization-2", "angelsore7-crystallization-3", "angelsore7-crystallization-4", "angelsore7-crystallization-5", "angelsore7-crystallization-6"})
 end
-    
-    
+
+
 --OVERRIDE FOR YUOKI
 if data.raw.item["y-res1"] then
   OV.patch_recipes({
@@ -400,7 +400,7 @@ if data.raw.item["y-res1"] then
       order = "a[yellow-waste-water-purification-yi]",
     },
   })
-  
+
   --INSERT RECIPES TO TECHNOLOGY
   OV.add_unlock("water-treatment", "yellow-waste-water-purification-yi")
   OV.add_unlock("slag-processing-1", "slag-processing-yi")
@@ -556,7 +556,7 @@ end
 if data.raw.item["thorium-ore"] then
   -- pure sorting
   OV.modify_output("angelsore2-pure-processing", {"thorium-ore", "platinum-ore"})
-  
+
   -- mixed sorting
   data:extend(
   {
@@ -634,6 +634,143 @@ if data.raw.item["thorium-ore"] then
     },
   })
 end
+--BARREL OVERRIDE FUNCTIONS
+local function generate_gas_canister_icons(fluid)
+  return
+  {
+    {
+      icon = "__boblibrary__/graphics/icons/cylinder/gas-canister.png",
+      icon_size = 32,
+    },
+    {
+      icon = "__boblibrary__/graphics/icons/cylinder/cylinder-top.png",
+      icon_size = 32,
+      tint = fluid.flow_color
+    },
+    {
+      icon = "__boblibrary__/graphics/icons/cylinder/cylinder-mid.png",
+      icon_size = 32,
+      tint = fluid.base_color
+    },
+  }
+end
+local function generate_liquid_canister_icons(fluid)
+  return
+  {
+    {
+      icon = "__boblibrary__/graphics/icons/cylinder/empty-canister.png",
+      icon_size = 32,
+    },
+    {
+      icon = "__boblibrary__/graphics/icons/cylinder/canister-top.png",
+      icon_size = 32,
+      tint = fluid.flow_color
+    },
+    {
+      icon = "__boblibrary__/graphics/icons/cylinder/canister-bottom.png",
+      icon_size = 32,
+      tint = fluid.base_color
+    },
+  }
+end
+local function generate_fill_barrel_icons(fluid,style)
+  local f_icon
+  if style=="gas" then
+    f_icon= generate_gas_canister_icons(fluid)
+  else
+    f_icon= generate_liquid_canister_icons(fluid)
+  end
+  if fluid.icon and fluid.icon_size then
+    table.insert(f_icon, { icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {4, -8}})
+  elseif fluid.icons and util.combine_icons then
+    icon = util.combine_icons(f_icon, fluid.icons, {scale = 0.5, shift = {4, -8}})
+  end
+  return f_icon
+end
+-- Generates the icons definition for a empty-barrel recipe with the provided barrel name and fluid definition
+local function generate_empty_barrel_icons(fluid,style)
+  local e_icon
+  if style=="gas" then
+    e_icon= generate_gas_canister_icons(fluid)
+  else
+    e_icon= generate_liquid_canister_icons(fluid)
+  end
+  if fluid.icon and fluid.icon_size then
+    table.insert(e_icon, {icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {7, 8}})
+  elseif fluid.icons and util.combine_icons then
+    e_icon = util.combine_icons(e_icon, fluid.icons, {scale = 0.5, shift = {7, 8}})
+  end
+  return e_icon
+end
+
+function barrel_overrides(fluid,style)
+  if data.raw.fluid[fluid] then
+    --Bottling override functions for icons, localisation and tech unlocks
+
+    --Filling Gas Bottle Recipe
+    local fluid_s=data.raw.fluid[fluid]
+    --check that it actually exists
+    if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
+      --define common properties
+      local F_Fill=data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"]
+      F_Fill.subgroup="bob-gas-bottle"
+      --Tech Unlock location Change
+      OV.remove_unlock("fluid-handling", "fill-" .. fluid_s.name .. "-barrel")
+      OV.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
+      --full canister Item icon change
+      data.raw.item[fluid_s.name.."-barrel"].icons=generate_fill_barrel_icons(fluid_s,style)
+      F_Fill.icons=generate_fill_barrel_icons(fluid_s,style)
+      F_Fill.results=
+      {
+        {type = "item", name = fluid_s.name .. "-barrel", amount = 1}
+      }
+      if style=="gas" then
+        F_Fill.localised_name= {"recipe-name.fill-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+        F_Fill.ingredients =
+        {
+          {type = "fluid", name = fluid_s.name, amount = 50},
+          {type = "item", name = "gas-canister", amount = 1},
+        }
+      else
+        F_Fill.localised_name= {"recipe-name.fill-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+        F_Fill.ingredients =
+        {
+          {type = "fluid", name = fluid_s.name, amount = 50},
+          {type = "item", name = "empty-canister", amount = 1},
+        }
+      end
+
+      --Decanting Gas Bottle Recipe
+      --define common properties
+      local F_Empty=data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"]
+      F_Empty.icons = generate_empty_barrel_icons(fluid_s,style)
+      F_Empty.ingredients =
+      {
+        {type = "item", name = fluid_s.name .. "-barrel", amount = 1},
+      }
+      F_Empty.subgroup = "bob-empty-gas-bottle"
+      --Tech Unlock location Change
+      OV.remove_unlock("fluid-handling", "empty-" .. fluid_s.name .. "-barrel")
+      OV.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
+      if style=="gas" then
+        F_Empty.results=
+        {
+          {type = "fluid", name = fluid_s.name, amount = 50},
+          {type = "item", name = "gas-canister", amount = 1},
+        }
+        F_Empty.localised_name= {"recipe-name.empty-filled-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+      else
+        F_Empty.results=
+        {
+          {type = "fluid", name = fluid_s.name, amount = 50},
+          {type = "item", name = "empty-canister", amount = 1},
+        }
+        F_Empty.localised_name= {"recipe-name.empty-filled-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+      end
+    end
+  end
+end
+
 
 --ENABLE PRODUCTIVITY
   angelsmods.functions.allow_productivity("slag-processing-1")
@@ -646,14 +783,14 @@ end
   angelsmods.functions.allow_productivity("slag-processing-8")
   angelsmods.functions.allow_productivity("slag-processing-9")
   angelsmods.functions.allow_productivity("catalysator-brown")
-  
+
   angelsmods.functions.allow_productivity("angelsore1-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore2-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore3-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore4-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore5-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore6-crushed-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore1-chunk-processing")
   angelsmods.functions.allow_productivity("angelsore2-chunk-processing")
   angelsmods.functions.allow_productivity("angelsore3-chunk-processing")
@@ -667,14 +804,14 @@ end
   angelsmods.functions.allow_productivity("angelsore4-crystal-processing")
   angelsmods.functions.allow_productivity("angelsore5-crystal-processing")
   angelsmods.functions.allow_productivity("angelsore6-crystal-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore1-pure-processing")
   angelsmods.functions.allow_productivity("angelsore2-pure-processing")
   angelsmods.functions.allow_productivity("angelsore3-pure-processing")
   angelsmods.functions.allow_productivity("angelsore4-pure-processing")
   angelsmods.functions.allow_productivity("angelsore5-pure-processing")
   angelsmods.functions.allow_productivity("angelsore6-pure-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore8-crushed-processing")
   angelsmods.functions.allow_productivity("angelsore8-powder-processing")
   angelsmods.functions.allow_productivity("angelsore8-dust-processing")
@@ -684,27 +821,27 @@ end
   angelsmods.functions.allow_productivity("angelsore9-powder-processing")
   angelsmods.functions.allow_productivity("angelsore9-dust-processing")
   angelsmods.functions.allow_productivity("angelsore9-crystal-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-crushed-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-crushed-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-crushed-mix3-processing")
   angelsmods.functions.allow_productivity("angelsore-crushed-mix4-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-chunk-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix3-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix4-processing")
   angelsmods.functions.allow_productivity("angelsore-chunk-mix5-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-crystal-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-crystal-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-crystal-mix3-processing")
   angelsmods.functions.allow_productivity("angelsore-crystal-mix4-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore-pure-mix1-processing")
   angelsmods.functions.allow_productivity("angelsore-pure-mix2-processing")
   angelsmods.functions.allow_productivity("angelsore-pure-mix3-processing")
-  
+
   angelsmods.functions.allow_productivity("angelsore7-crystallization-1")
   angelsmods.functions.allow_productivity("angelsore7-crystallization-2")
   angelsmods.functions.allow_productivity("angelsore7-crystallization-3")
