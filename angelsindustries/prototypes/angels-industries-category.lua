@@ -1,4 +1,5 @@
 data:extend(
+{
   --RECIPE CATEGORY
   {
     type = "recipe-category",
