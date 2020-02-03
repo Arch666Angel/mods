@@ -7,7 +7,9 @@ Date: ???
     - If bobs mods are activated, integrate gas bottles and canisters to auto-barreling 
       - moved from PCPRedux and improved
   Bugfixes:
-    - fixed uranium ore icon did not fit the recipe box
+    - Fixed uranium ore icon did not fit the recipe box
+  Modding:
+    - Added barreling override functions
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.14
 Date: 04.08.2019

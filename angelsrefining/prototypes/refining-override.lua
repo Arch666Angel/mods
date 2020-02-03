@@ -173,37 +173,60 @@ if mods['bobplates'] then
   })
 
   --if bobmods.gems then
-  if mods['bobores'] and settings.startup['bobmods-ores-unsortedgemore'].value == true then
-    --TEMP FIX
-    if data.raw.recipe["sort-gem-ore"] then
-      data.raw.recipe["sort-gem-ore"].icon_size = 32
+  if mods['bobores'] then
+    if angelsmods.industries and angelsmods.industries.overhaul then
+      data.raw["item"]["gem-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["gem-ore"].order = "g"
+      data.raw["item"]["sapphire-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["sapphire-ore"].order = "b"
+      data.raw["item"]["topaz-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["topaz-ore"].order = "e"
+      data.raw["item"]["ruby-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["ruby-ore"].order = "a"
+      data.raw["item"]["emerald-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["emerald-ore"].order = "c"
+      data.raw["item"]["amethyst-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["amethyst-ore"].order = "d"
+      data.raw["item"]["diamond-ore"].subgroup = "bob-gems-crystallization"
+      data.raw["item"]["diamond-ore"].order = "f"
     end
-    data:extend(
-    {
+
+    if settings.startup['bobmods-ores-unsortedgemore'].value == true then
+      --TEMP FIX
+      if data.raw.recipe["sort-gem-ore"] then
+        data.raw.recipe["sort-gem-ore"].icon_size = 32
+      end
+      data:extend(
       {
-        type = "recipe",
-        name = "sort-gem-ore",
-        energy_required = 1,
-        ingredients =
         {
-          {"crystal-dust", 5},
+          type = "recipe",
+          name = "sort-gem-ore",
+          energy_required = 1,
+          ingredients =
+          {
+            {"crystal-dust", 5},
+          },
+          results =
+          {
+            {type="item", name="ruby-ore", amount=1, probability = bobmods.gems.RubyRatio},
+            {type="item", name="sapphire-ore", amount=1, probability = bobmods.gems.SapphireRatio},
+            {type="item", name="emerald-ore", amount=1, probability = bobmods.gems.EmeraldRatio},
+            {type="item", name="amethyst-ore", amount=1, probability = bobmods.gems.AmethystRatio},
+            {type="item", name="topaz-ore", amount=1, probability = bobmods.gems.TopazRatio},
+            {type="item", name="diamond-ore", amount=1, probability = bobmods.gems.DiamondRatio},
+          },
+          subgroup = "bob-gems-ore",
+          icon = "__bobores__/graphics/icons/gem-ore.png",
+          icon_size = 32,
+          order = "a-0",
         },
-        results =
-        {
-          {type="item", name="ruby-ore", amount=1, probability = bobmods.gems.RubyRatio},
-          {type="item", name="sapphire-ore", amount=1, probability = bobmods.gems.SapphireRatio},
-          {type="item", name="emerald-ore", amount=1, probability = bobmods.gems.EmeraldRatio},
-          {type="item", name="amethyst-ore", amount=1, probability = bobmods.gems.AmethystRatio},
-          {type="item", name="topaz-ore", amount=1, probability = bobmods.gems.TopazRatio},
-          {type="item", name="diamond-ore", amount=1, probability = bobmods.gems.DiamondRatio},
-        },
-        subgroup = "bob-gems-ore",
-        icon = "__bobores__/graphics/icons/gem-ore.png",
-        icon_size = 32,
-        order = "a-0",
-      },
-    }
-    )
+      }
+      )
+      if angelsmods.industries and angelsmods.industries.overhaul then
+        data.raw["recipe"]["sort-gem-ore"].subgroup = "bob-gems-crystallization"
+        data.raw["recipe"]["sort-gem-ore"].order = "g"
+      end
+    end
   end
 
   --WATER TREATMENT
@@ -289,6 +312,35 @@ if mods['bobplates'] then
   if data.raw["fluid"]["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
+  end
+
+  --OVERRIDE BARRELING
+  if data.raw["item-subgroup"]["bob-gas-bottle"] then
+    data.raw["item"]["empty-canister"].subgroup = "angels-fluid-control"
+    data.raw["item"]["empty-canister"].order = "i"
+    data.raw["recipe"]["empty-canister"].subgroup = "angels-fluid-control"
+    data.raw["recipe"]["empty-canister"].order = "i"
+    data.raw["item"]["gas-canister"].subgroup = "angels-fluid-control"
+    data.raw["item"]["gas-canister"].order = "j"
+    data.raw["recipe"]["gas-canister"].subgroup = "angels-fluid-control"
+    data.raw["recipe"]["gas-canister"].order = "j"
+    data.raw.technology["gas-canisters"].prerequisites={"fluid-handling"}
+    data.raw.technology["gas-canisters"].enabled = true
+
+    --local fluid_n=data.raw["fluid"]
+    for _, fluid_n in pairs(data.raw.fluid) do
+      if not (fluid_n.auto_barrel==false or fluid_n.auto_barrel=="false") then
+        if string.sub(fluid_n.name,1,3)=="gas" then
+          OV.barrel_overrides(fluid_n.name,"gas")
+        elseif not string.find(fluid_n.name,"acid")==nil or string.sub(fluid_n.name,-4)=="acid" then
+          local acid=string.find(fluid_n.name,"acid")
+          OV.barrel_overrides(fluid_n.name,"acid")
+        end
+      end
+    end
+    --insert custom barrel replacements
+    OV.barrel_overrides("liquid-ferric-chloride-solution","acid")
+    OV.barrel_overrides("liquid-cupric-chloride-solution","acid")
   end
 
   --LOCALIZATION
@@ -633,142 +685,6 @@ if data.raw.item["thorium-ore"] then
       }
     },
   })
-end
---BARREL OVERRIDE FUNCTIONS
-local function generate_gas_canister_icons(fluid)
-  return
-  {
-    {
-      icon = "__boblibrary__/graphics/icons/cylinder/gas-canister.png",
-      icon_size = 32,
-    },
-    {
-      icon = "__boblibrary__/graphics/icons/cylinder/cylinder-top.png",
-      icon_size = 32,
-      tint = fluid.flow_color
-    },
-    {
-      icon = "__boblibrary__/graphics/icons/cylinder/cylinder-mid.png",
-      icon_size = 32,
-      tint = fluid.base_color
-    },
-  }
-end
-local function generate_liquid_canister_icons(fluid)
-  return
-  {
-    {
-      icon = "__boblibrary__/graphics/icons/cylinder/empty-canister.png",
-      icon_size = 32,
-    },
-    {
-      icon = "__boblibrary__/graphics/icons/cylinder/canister-top.png",
-      icon_size = 32,
-      tint = fluid.flow_color
-    },
-    {
-      icon = "__boblibrary__/graphics/icons/cylinder/canister-bottom.png",
-      icon_size = 32,
-      tint = fluid.base_color
-    },
-  }
-end
-local function generate_fill_barrel_icons(fluid,style)
-  local f_icon
-  if style=="gas" then
-    f_icon= generate_gas_canister_icons(fluid)
-  else
-    f_icon= generate_liquid_canister_icons(fluid)
-  end
-  if fluid.icon and fluid.icon_size then
-    table.insert(f_icon, { icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {4, -8}})
-  elseif fluid.icons and util.combine_icons then
-    icon = util.combine_icons(f_icon, fluid.icons, {scale = 0.5, shift = {4, -8}})
-  end
-  return f_icon
-end
--- Generates the icons definition for a empty-barrel recipe with the provided barrel name and fluid definition
-local function generate_empty_barrel_icons(fluid,style)
-  local e_icon
-  if style=="gas" then
-    e_icon= generate_gas_canister_icons(fluid)
-  else
-    e_icon= generate_liquid_canister_icons(fluid)
-  end
-  if fluid.icon and fluid.icon_size then
-    table.insert(e_icon, {icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {7, 8}})
-  elseif fluid.icons and util.combine_icons then
-    e_icon = util.combine_icons(e_icon, fluid.icons, {scale = 0.5, shift = {7, 8}})
-  end
-  return e_icon
-end
-
-function barrel_overrides(fluid,style)
-  if data.raw.fluid[fluid] then
-    --Bottling override functions for icons, localisation and tech unlocks
-
-    --Filling Gas Bottle Recipe
-    local fluid_s=data.raw.fluid[fluid]
-    --check that it actually exists
-    if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
-      --define common properties
-      local F_Fill=data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"]
-      F_Fill.subgroup="bob-gas-bottle"
-      --Tech Unlock location Change
-      OV.remove_unlock("fluid-handling", "fill-" .. fluid_s.name .. "-barrel")
-      OV.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
-      --full canister Item icon change
-      data.raw.item[fluid_s.name.."-barrel"].icons=generate_fill_barrel_icons(fluid_s,style)
-      F_Fill.icons=generate_fill_barrel_icons(fluid_s,style)
-      F_Fill.results=
-      {
-        {type = "item", name = fluid_s.name .. "-barrel", amount = 1}
-      }
-      if style=="gas" then
-        F_Fill.localised_name= {"recipe-name.fill-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
-        F_Fill.ingredients =
-        {
-          {type = "fluid", name = fluid_s.name, amount = 50},
-          {type = "item", name = "gas-canister", amount = 1},
-        }
-      else
-        F_Fill.localised_name= {"recipe-name.fill-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
-        F_Fill.ingredients =
-        {
-          {type = "fluid", name = fluid_s.name, amount = 50},
-          {type = "item", name = "empty-canister", amount = 1},
-        }
-      end
-
-      --Decanting Gas Bottle Recipe
-      --define common properties
-      local F_Empty=data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"]
-      F_Empty.icons = generate_empty_barrel_icons(fluid_s,style)
-      F_Empty.ingredients =
-      {
-        {type = "item", name = fluid_s.name .. "-barrel", amount = 1},
-      }
-      F_Empty.subgroup = "bob-empty-gas-bottle"
-      --Tech Unlock location Change
-      OV.remove_unlock("fluid-handling", "empty-" .. fluid_s.name .. "-barrel")
-      OV.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
-      if style=="gas" then
-        F_Empty.results=
-        {
-          {type = "fluid", name = fluid_s.name, amount = 50},
-          {type = "item", name = "gas-canister", amount = 1},
-        }
-        F_Empty.localised_name= {"recipe-name.empty-filled-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
-      else
-        F_Empty.results=
-        {
-          {type = "fluid", name = fluid_s.name, amount = 50},
-          {type = "item", name = "empty-canister", amount = 1},
-        }
-        F_Empty.localised_name= {"recipe-name.empty-filled-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
-      end
-    end
-  end
 end
 
 
