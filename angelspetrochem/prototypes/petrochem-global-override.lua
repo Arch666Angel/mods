@@ -13,7 +13,13 @@ OV.global_replace_icon(
   {"__base__/graphics/icons/fluid/sulfuric-acid.png"},
   {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
 )
-
+--hide vanilla fluids if converter recipes setting not active
+if not angelsmods.trigger.enableconverter then
+  data.raw["fluid"]["heavy-oil"].hidden=true
+  data.raw["fluid"]["light-oil"].hidden=true
+  data.raw["fluid"]["petroleum-gas"].hidden=true
+  data.raw["fluid"]["sulfuric-acid"].hidden=true
+end
 data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
 data.raw["recipe"]["explosives"].order = "a[explosives]-a"
 data.raw["recipe"]["explosives"].icon_size = 32
@@ -127,6 +133,105 @@ end
 --OVERRIDE FOR BOBs
 if bobmods then
   if bobmods.plates then
+    -- move fluid tanks
+    data.raw["item"]["bob-small-inline-storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["bob-small-inline-storage-tank"].order = "a[small-tank]-a"
+    data.raw["item"]["bob-small-storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["bob-small-storage-tank"].order = "a[small-tank]-b"
+    data.raw["item"]["storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["storage-tank"].order = "b[medium-tank]-a[mk1]-a[regular]"
+    data.raw["item"]["angels-storage-tank-1"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["angels-storage-tank-1"].order = "c[large-tank]-c[gas]"
+    data.raw["item"]["angels-storage-tank-2"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["angels-storage-tank-2"].order = "c[large-tank]-b[oil]"
+    data.raw["item"]["angels-storage-tank-3"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["angels-storage-tank-3"].order = "c[large-tank]-a[inline]"
+    OV.patch_recipes({
+      {
+        name = "bob-small-storage-tank",
+        ingredients =
+        { {"!!"},
+          { name = "bob-small-inline-storage-tank", amount = 1},
+          { name = "pipe", amount = 1},
+        }
+      },
+      {
+        name = "storage-tank",
+        ingredients =
+        {
+          { name = "bob-small-inline-storage-tank", amount = 1},
+        }
+      },
+    })
+    if bobmods.logistics then
+      data.raw["item"]["bob-storage-tank-all-corners"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners"].order = "b[medium-tank]-a[mk1]-b[all-corners]"
+      data.raw["item"]["storage-tank-2"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["storage-tank-2"].order = "b[medium-tank]-b[mk2]-a[regular]"
+      data.raw["item"]["bob-storage-tank-all-corners-2"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners-2"].order = "b[medium-tank]-b[mk2]-b[all-corners]"
+      data.raw["item"]["storage-tank-3"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["storage-tank-3"].order = "b[medium-tank]-c[mk3]-a[regular]"
+      data.raw["item"]["bob-storage-tank-all-corners-3"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners-3"].order = "b[medium-tank]-c[mk3]-b[all-corners]"
+      data.raw["item"]["storage-tank-4"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["storage-tank-4"].order = "b[medium-tank]-d[mk4]-a[regular]"
+      data.raw["item"]["bob-storage-tank-all-corners-4"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners-4"].order = "b[medium-tank]-d[mk4]-b[all-corners]"
+      OV.patch_recipes({
+        {
+          name = "bob-storage-tank-all-corners",
+          ingredients =
+          {
+            { name = "bob-small-storage-tank", amount = 1},
+            { name = "pipe", amount = 2},
+          }
+        },
+        {
+          name = "angels-storage-tank-3",
+          ingredients =
+          {
+            { name = "bob-small-inline-storage-tank", amount = 1},
+          }
+        },
+        --{
+        --  name = "angels-storage-tank-2",
+        --  ingredients =
+        --  {
+        --    { name = "storage-tank-4", amount = 1},
+        --  }
+        --},
+        --{
+        --  name = "angels-storage-tank-1",
+        --  ingredients =
+        --  {
+        --    { name = "bob-storage-tank-all-corners-4", amount = 1},
+        --  }
+        --},
+      })
+      data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.base_area = 2000
+      data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.base_area = 1500
+
+      -- hide fluid control from bob (as we use the extended angel equivalents)
+      angelsmods.functions.add_flag("bob-valve", "hidden")
+      angelsmods.functions.add_flag("bob-overflow-valve", "hidden")
+      angelsmods.functions.add_flag("bob-topup-valve", "hidden")
+      OV.disable_recipe("bob-valve")
+      OV.remove_unlock("fluid-handling", "bob-overflow-valve")
+      OV.remove_unlock("fluid-handling", "bob-topup-valve")
+
+      -- move pumps over
+      data.raw["item"]["pump"].subgroup = "angels-fluid-control"
+      data.raw["item"]["pump"].order = "b[pump]-a[mk1]"
+      data.raw["item"]["bob-pump-2"].subgroup = "angels-fluid-control"
+      data.raw["item"]["bob-pump-2"].order = "b[pump]-b[mk2]"
+      data.raw["item"]["bob-pump-3"].subgroup = "angels-fluid-control"
+      data.raw["item"]["bob-pump-3"].order = "b[pump]-c[mk3]"
+      data.raw["item"]["bob-pump-4"].subgroup = "angels-fluid-control"
+      data.raw["item"]["bob-pump-4"].order = "b[pump]-d[mk4]"
+    end
+
+    -- generic replace
     OV.global_replace_item("carbon", "solid-carbon")
     OV.global_replace_item("chlorine", "gas-chlorine")
     OV.global_replace_item("hydrogen", "gas-hydrogen")
@@ -147,6 +252,11 @@ if bobmods then
     OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
+    if data.raw.recipe["pure-water-pump"] then
+      data.raw["recipe"]["pure-water-pump"].icon=nil
+      data.raw["recipe"]["pure-water-pump"].icon_size=32
+      data.raw["recipe"]["pure-water-pump"].icons={{icon="__angelsrefining__/graphics/icons/water-purified.png"}}
+    end
 
     OV.patch_recipes(
       {

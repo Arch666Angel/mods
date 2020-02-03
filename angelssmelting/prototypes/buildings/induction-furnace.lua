@@ -3,44 +3,44 @@ data:extend(
   {
     type = "item",
     name = "induction-furnace",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_1.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "a[induction-furnace]",
     place_result = "induction-furnace",
     stack_size = 10,
-   },
-   {
+  },
+  {
     type = "assembling-machine",
     name = "induction-furnace",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_1.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
-	flags = {"placeable-neutral","player-creation"},
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
+    flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace"},
-	fast_replaceable_group = "induction-furnace",
-	next_upgrade = "induction-furnace-2",
+    fast_replaceable_group = "induction-furnace",
+    next_upgrade = "induction-furnace-2",
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -60,26 +60,26 @@ data:extend(
     energy_usage = "150kW",
     ingredient_count = 2,
     animation ={
-	layers={
-	{
+      layers={
+      {
         filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
         width = 224,
         height = 256,
-		line_length = 6,
+        line_length = 6,
         frame_count = 36,
         shift = {0, -0.5},
-		animation_speed = 0.5,
-    },
-	-- {
+        animation_speed = 0.5,
+      },
+      -- {
         -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-		-- tint = {r=1, g=0, b=0},
+        -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
         -- frame_count = 1,
         -- shift = {0, 0},
-    -- },
-	}
-	},
+      -- },
+      }
+    },
     fluid_boxes =
     {
       -- {
@@ -102,51 +102,51 @@ data:extend(
     working_sound =
     {
       sound = { filename = "__angelssmelting__/sound/induction-furnace.ogg" },
-	  idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
-	},
-    {
+  },
+  {
     type = "item",
     name = "induction-furnace-2",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "b[induction-furnace-2]",
     place_result = "induction-furnace-2",
     stack_size = 10,
-    },
-    {
+  },
+  {
     type = "assembling-machine",
     name = "induction-furnace-2",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
-	flags = {"placeable-neutral","player-creation"},
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
+    flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace-2"},
-	fast_replaceable_group = "induction-furnace",
-	next_upgrade = "induction-furnace-3",
+    fast_replaceable_group = "induction-furnace",
+    next_upgrade = "induction-furnace-3",
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -166,26 +166,26 @@ data:extend(
     energy_usage = "200kW",
     ingredient_count = 4,
     animation ={
-	layers={
-	{
+      layers={
+      {
         filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
         width = 224,
         height = 256,
-		line_length = 6,
+        line_length = 6,
         frame_count = 36,
         shift = {0, -0.5},
-		animation_speed = 0.5,
-    },
-	-- {
+        animation_speed = 0.5,
+      },
+      -- {
         -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-		-- tint = {r=1, g=0, b=0},
+        -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
         -- frame_count = 1,
         -- shift = {0, 0},
-    -- },
-	}
-	},
+      -- },
+      }
+    },
     fluid_boxes =
     {
       {
@@ -200,51 +200,51 @@ data:extend(
     working_sound =
     {
       sound = { filename = "__angelssmelting__/sound/induction-furnace.ogg" },
-	  idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
-	},
-    {
+  },
+  {
     type = "item",
     name = "induction-furnace-3",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "c[induction-furnace-3]",
     place_result = "induction-furnace-3",
     stack_size = 10,
-    },
-    {
+  },
+  {
     type = "assembling-machine",
     name = "induction-furnace-3",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
-	flags = {"placeable-neutral","player-creation"},
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
+    flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace-3"},
-	fast_replaceable_group = "induction-furnace",
-	next_upgrade = "induction-furnace-4",
+    fast_replaceable_group = "induction-furnace",
+    next_upgrade = "induction-furnace-4",
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -264,26 +264,26 @@ data:extend(
     energy_usage = "250kW",
     ingredient_count = 6,
     animation ={
-	layers={
-	{
+      layers={
+      {
         filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
         width = 224,
         height = 256,
-		line_length = 6,
+        line_length = 6,
         frame_count = 36,
         shift = {0, -0.5},
-		animation_speed = 0.5,
-    },
-	-- {
+        animation_speed = 0.5,
+      },
+      -- {
         -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-		-- tint = {r=1, g=0, b=0},
+        -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
         -- frame_count = 1,
         -- shift = {0, 0},
-    -- },
-	}
-	},
+      -- },
+      }
+    },
     fluid_boxes =
     {
       {
@@ -298,50 +298,50 @@ data:extend(
     working_sound =
     {
       sound = { filename = "__angelssmelting__/sound/induction-furnace.ogg" },
-	  idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
-	},
-	{
+  },
+  {
     type = "item",
     name = "induction-furnace-4",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_4.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "d[induction-furnace-4]",
     place_result = "induction-furnace-4",
     stack_size = 10,
-    },	
-	{
+  },    
+  {
     type = "assembling-machine",
     name = "induction-furnace-4",
-	icons = {
-		{
-			icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-		},
-		{
-			icon = "__angelspetrochem__/graphics/icons/num_4.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-			scale = 0.32,
-			shift = {-12, -12},
-		}
-	},	
-	icon_size = 32,
-	flags = {"placeable-neutral","player-creation"},
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },    
+    icon_size = 32,
+    flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace-4"},
-	fast_replaceable_group = "induction-furnace",
+    fast_replaceable_group = "induction-furnace",
     max_health = 300,
-	corpse = "big-remnants",
+    corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -361,26 +361,26 @@ data:extend(
     energy_usage = "250kW",
     ingredient_count = 6,
     animation ={
-	layers={
-	{
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
-        width = 224,
-        height = 256,
-		line_length = 6,
-        frame_count = 36,
-        shift = {0, -0.5},
-		animation_speed = 0.5,
+    layers={
+    {
+      filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
+      width = 224,
+      height = 256,
+      line_length = 6,
+      frame_count = 36,
+      shift = {0, -0.5},
+      animation_speed = 0.5,
     },
-	-- {
-        -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-		-- tint = {r=1, g=0, b=0},
-        -- width = 224,
-        -- height = 224,
-        -- frame_count = 1,
-        -- shift = {0, 0},
+    -- {
+      -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
+      -- tint = {r=1, g=0, b=0},
+      -- width = 224,
+      -- height = 224,
+      -- frame_count = 1,
+      -- shift = {0, 0},
     -- },
-	}
-	},
+    }
+    },
     fluid_boxes =
     {
       {
@@ -395,9 +395,9 @@ data:extend(
     working_sound =
     {
       sound = { filename = "__angelssmelting__/sound/induction-furnace.ogg" },
-	  idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
-	},
+  },
 }
 )

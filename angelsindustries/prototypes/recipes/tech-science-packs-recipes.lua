@@ -260,7 +260,7 @@ data:extend(
 	enabled = "true",
     ingredients ={
 		{"angels-science-pack-grey", 1},
-		{"science-force-analyzer", 1},
+		{"science-data-analyzer", 1},--{"science-force-analyzer", 1},
 		{"circuit-red-loaded", 1},
 	},
     result = "angels-science-pack-red",
@@ -273,7 +273,7 @@ data:extend(
 	enabled = "true",
     ingredients ={
 		{"angels-science-pack-red", 1},
-		{"science-harmonics-analyzer", 1},
+		{"science-force-analyzer", 1},--{"science-harmonics-analyzer", 1},
 		{"circuit-green-loaded", 1},
 	},
     result = "angels-science-pack-green",
@@ -286,6 +286,7 @@ data:extend(
 	enabled = "true",
     ingredients ={
 		{"angels-science-pack-green", 1},
+		{"science-force-analyzer", 1},--addition
 		{"circuit-orange-loaded", 1},
 	},
     result = "angels-science-pack-orange",
@@ -298,6 +299,7 @@ data:extend(
 	enabled = "true",
     ingredients ={
 		{"angels-science-pack-orange", 1},
+		{"science-harmonics-analyzer", 1},--addition
 		{"circuit-blue-loaded", 1},
 	},
     result = "angels-science-pack-blue",
@@ -310,6 +312,7 @@ data:extend(
 	enabled = "true",
     ingredients ={
 		{"angels-science-pack-blue", 1},
+		{"science-harmonics-analyzer", 1},--addition
 		{"circuit-yellow-loaded", 1},
 	},
     result = "angels-science-pack-yellow",

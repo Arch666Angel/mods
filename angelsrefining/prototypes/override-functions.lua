@@ -112,6 +112,81 @@ local function merge_patches(old, new)
    end
 end
 
+local function generate_gas_canister_icons(fluid)
+   if mods["boblibrary"] then
+      return
+      {
+        {icon = "__boblibrary__/graphics/icons/cylinder/gas-canister.png",icon_size = 32,},
+        {icon = "__boblibrary__/graphics/icons/cylinder/cylinder-top.png",icon_size = 32,tint = fluid.flow_color},
+        {icon = "__boblibrary__/graphics/icons/cylinder/cylinder-mid.png",icon_size = 32,tint = fluid.base_color},
+      }
+   else
+      --something is wrong here but we need to return something
+      return
+      {
+         {icon = "__angelsrefining__/graphics/icons/void.png",icon_size = 32,}
+      }
+   end
+end
+
+local function generate_liquid_canister_icons(fluid)
+   if mods["boblibrary"] then
+      return
+      {
+         {icon = "__boblibrary__/graphics/icons/cylinder/empty-canister.png",icon_size = 32,},
+         {icon = "__boblibrary__/graphics/icons/cylinder/canister-top.png",icon_size = 32,tint = fluid.flow_color},
+         {icon = "__boblibrary__/graphics/icons/cylinder/canister-bottom.png",icon_size = 32,tint = fluid.base_color},
+      }
+   else
+      --something is wrong here but we need to return something
+      return
+      {
+         {icon = "__angelsrefining__/graphics/icons/void.png",icon_size = 32,}
+      }
+   end
+end
+-- Generates the icons definition for a full-barrel recipe with the provided barrel name and fluid definition
+local function generate_fill_barrel_icons(fluid, style)
+   local f_icon
+   if style=="gas" then
+      f_icon= generate_gas_canister_icons(fluid)
+   else
+      f_icon= generate_liquid_canister_icons(fluid)
+   end
+   if fluid.icon and fluid.icon_size then
+      table.insert(f_icon, {icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {4, -8}})
+   elseif fluid.icons and util.combine_icons then
+      f_icon = util.combine_icons(f_icon, util.table.deepcopy(fluid.icons), {scale = 0.5, shift = {4, -8}})
+   end
+   return f_icon
+end
+-- Generates the icons definition for a full-barrel item with the provided barrel name and fluid definition
+local function generate_barrel_icons(fluid, style)
+   local f_icon
+   if style=="gas" then
+      f_icon= generate_gas_canister_icons(fluid)
+   else
+      f_icon= generate_liquid_canister_icons(fluid)
+   end
+   return f_icon
+end
+
+-- Generates the icons definition for a empty-barrel recipe with the provided barrel name and fluid definition
+local function generate_empty_barrel_icons(fluid, style)
+   local e_icon
+   if style=="gas" then
+      e_icon= generate_gas_canister_icons(fluid)
+   else
+      e_icon= generate_liquid_canister_icons(fluid)
+   end
+   if fluid.icon and fluid.icon_size then
+      table.insert(e_icon, {icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {7, 8}})
+   elseif fluid.icons and util.combine_icons then
+      e_icon = util.combine_icons(e_icon, util.table.deepcopy(fluid.icons), {scale = 0.5, shift = {7, 8}})
+   end
+   return e_icon
+end
+
 -- OVERRIDE ASSIGNMENT FUNCTIONS
 
 ov_functions.add_unlock = function (technology, recipe)
@@ -395,6 +470,71 @@ ov_functions.set_research_difficulty = function (technology, unit_time, unit_amo
    end
 end
 
+ov_functions.barrel_overrides = function (fluid, style)   --Bottling override functions for icons, localisation and tech unlocks
+   if data.raw.fluid[fluid] then
+     --declare variables moving forward
+     local fluid_s=data.raw.fluid[fluid]
+     local fluid_i
+     local F_Fill
+     local F_Empty
+      --check that the barrel actually exists
+      if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
+         --define local function variables
+         F_Fill=data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] --define F_Fill
+         F_Empty=data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"] --define F_Empty
+         fluid_i=data.raw.item[fluid.."-barrel"] --define barrel name
+         --set common properties
+         F_Fill.icons=generate_fill_barrel_icons(fluid_s,style)
+         fluid_i.icons=generate_barrel_icons(fluid_s,style)
+         F_Empty.icons=generate_empty_barrel_icons(fluid_s,style)
+         --results are generic for filled barrels
+         F_Fill.results=
+         {
+            {type = "item", name = fluid_s.name .. "-barrel", amount = 1}
+         }
+         --ingredients are common for emptying recipes
+         F_Empty.ingredients =
+         {
+            {type = "item", name = fluid_s.name .. "-barrel", amount = 1},
+         }
+
+         if style=="gas" then -- Gas Bottles
+           F_Fill.localised_name= {"recipe-name.fill-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+           fluid_i.localised_name= {"item-name.filled-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+           F_Fill.ingredients =
+           {
+              {type = "fluid", name = fluid_s.name, amount = 50},
+              {type = "item", name = "gas-canister", amount = 1},
+           }
+           F_Empty.results=
+           {
+              {type = "fluid", name = fluid_s.name, amount = 50},
+              {type = "item", name = "gas-canister", amount = 1},
+           }
+           F_Empty.localised_name= {"recipe-name.empty-filled-gas-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+           ov_functions.remove_unlock("fluid-handling", "fill-" .. fluid_s.name .. "-barrel")
+           ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
+           ov_functions.remove_unlock("fluid-handling", "empty-" .. fluid_s.name .. "-barrel")
+           ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
+         else -- Liquid Cannisters
+           F_Fill.localised_name= {"recipe-name.fill-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+           fluid_i.localised_name= {"item-name.filled-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+           F_Fill.ingredients =
+           {
+              {type = "fluid", name = fluid_s.name, amount = 50},
+              {type = "item", name = "empty-canister", amount = 1},
+           }
+           F_Empty.results=
+           {
+              {type = "fluid", name = fluid_s.name, amount = 50},
+              {type = "item", name = "empty-canister", amount = 1},
+           }
+           F_Empty.localised_name= {"recipe-name.empty-filled-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
+         end
+      end
+   end
+end
+
 -- OVERRIDE EXECUTION
 local function adjust_recipe (recipe, k) -- check a recipe for basic adjustments based on tables and make any necessary changes
    local function adjust_member (parent, member, substitution_type)
@@ -609,6 +749,5 @@ ov_functions.execute = function ()
 
    initialize_tables() -- reset the data tables after execution to allow for multiple points of execution (eg, one set of adjustments in data-updates and another in data-final-fixes)
 end
-
 initialize_tables()
 return ov_functions

@@ -9,9 +9,16 @@ if not angelsmods.industries then
 end
 
 --TRIGGER CHECKS
-angelsmods.industries.overhaul = mods.bobplates and true or settings.startup["angels-industries-enable-overhaul"].value -- enable industries
-angelsmods.industries.tech = false -- enable technology overhaul
-angelsmods.industries.components = false -- enable hard mode
+angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
+if mods['bobplates'] then angelsmods.industries.overhaul = true end
+
+angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
+angelsmods.industries.tech=false --temp overrides to disable until ready
+
+angelsmods.industries.components = settings.startup["angels-enable-components"].value
+--Enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
+if angelsmods.industries.tech==true then angelsmods.industries.components = true end
+angelsmods.industries.components = false --temp overrides to disable until ready
 
 --LOAD FUNCTIONS
 if not angelsmods.industries.tech_exceptions then
@@ -21,6 +28,29 @@ end
 --LOAD PROTOTYPES
 --CATEGORIES
 require("prototypes.angels-industries-category")
+
+--COMPONENTS
+if angelsmods.industries.overhaul and angelsmods.industries.components then
+  --ITEMS
+  require("prototypes.items.components-electronics")
+  require("prototypes.items.components-mechanical")
+  require("prototypes.items.components-construction")
+  require("prototypes.items.components-blocks")
+  require("prototypes.items.components-weapons")
+  require("prototypes.items.components-cabling")
+
+  --ENTITIES
+  require("prototypes.buildings.angels-assemblers")
+
+  --RECIPES
+  require("prototypes.recipes.components-entity")
+  require("prototypes.recipes.components-electronics-recipes")
+  require("prototypes.recipes.components-mechanical-recipes")
+  require("prototypes.recipes.components-construction-recipes")
+  require("prototypes.recipes.components-cabling-recipes")
+  require("prototypes.recipes.components-blocks-recipes")
+  require("prototypes.recipes.components-weapons-recipes")
+end
 
 --TECH
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
@@ -44,29 +74,6 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
 
   --TECHS
   require("prototypes.technology.angels-tech-technology")
-end
-
---COMPONENTS
-if angelsmods.industries.overhaul and angelsmods.industries.components then
-  --ITEMS
-  require("prototypes.items.components-electronics")
-  require("prototypes.items.components-mechanical")
-  require("prototypes.items.components-construction")
-  require("prototypes.items.components-blocks")
-  require("prototypes.items.components-weapons")
-  require("prototypes.items.components-cabling")
-
-  --ENTITIES
-  require("prototypes.buildings.angels-assemblers")
-
-  --RECIPES
-  require("prototypes.recipes.components-entity")
-  require("prototypes.recipes.components-electronics-recipes")
-  require("prototypes.recipes.components-mechanical-recipes")
-  require("prototypes.recipes.components-construction-recipes")
-  require("prototypes.recipes.components-cabling-recipes")
-  require("prototypes.recipes.components-blocks-recipes")
-  require("prototypes.recipes.components-weapons-recipes")
 end
 
 --ENTITIES

@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "tin-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-tin",
@@ -27,6 +29,7 @@ data:extend(
     order = "c",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-tin",
@@ -36,6 +39,7 @@ data:extend(
     order = "d",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-tin",
@@ -54,17 +58,18 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-tin",
-    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+    name = "angels-wire-coil-tin",
+    icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
     order = "f",
     stack_size = 200
   },
+  -- CASTING RESULT
   {
     type = "item",
-    name = "angels-wire-coil-tin",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
+    name = "angels-plate-tin",
+    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
     order = "g",

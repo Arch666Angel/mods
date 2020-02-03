@@ -1,20 +1,20 @@
 data:extend(
 {
-    {
+  {
     type = "item",
     name = "cooling-tower",
     icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "water-treatment-building",
     order = "f[cooling-tower]",
     place_result = "cooling-tower",
     stack_size = 10,
-    },
-    {
+  },
+  {
     type = "assembling-machine",
     name = "cooling-tower",
     icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cooling-tower"},
     max_health = 100,
@@ -23,11 +23,11 @@ data:extend(
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     crafting_categories = {"cooling"},
-	module_specification =
+    module_specification =
     {
       module_slots = 2
     },
-	allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = {"consumption", "speed", "pollution"},
     crafting_speed = 2,
     ingredient_count = 4,
     resistances =
@@ -83,11 +83,11 @@ data:extend(
         width = 160,
         height = 192,
         frame_count = 25,
-	    line_length = 5,
+        line_length = 5,
         shift = {0, -0.5},
         animation_speed = 0.5
     },
-	vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },

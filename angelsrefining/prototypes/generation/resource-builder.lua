@@ -381,9 +381,14 @@ local function make_resgfx(input)
 				}
 			end
 			if input.sheet == 9 then
+				if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
+					sheet_id = 11
+				else
+					sheet_id = 19
+				end
 				return {
 					sheet = {
-						filename = "__angelsrefining__/graphics/entity/ores/ore-19-lr.png",
+						filename = "__angelsrefining__/graphics/entity/ores/ore-"..sheet_id.."-lr.png",
 						priority = "extra-high",
 						tint = input.tint,
 						width = 64,
@@ -392,7 +397,7 @@ local function make_resgfx(input)
 						frame_count = input.frame_count,
 						variation_count = input.variation_count,
 						hr_version = {
-							filename = "__angelsrefining__/graphics/entity/ores/ore-19-hr.png",
+							filename = "__angelsrefining__/graphics/entity/ores/ore-"..sheet_id.."-hr.png",
 							priority = "extra-high",
 							tint = input.tint,
 							width = 128,

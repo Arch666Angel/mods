@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "manganese-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-manganese",
@@ -42,25 +44,27 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/cathode-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese",
-    order = "d",
+    order = "e",
     stack_size = 200
   },
+  -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-manganese",
     icon = "__angelssmelting__/graphics/icons/ingot-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese",
-    order = "e",
+    order = "f",
     stack_size = 200
   },
+  -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-manganese",
     icon = "__angelssmelting__/graphics/icons/molten-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese-casting",
-    order = "f",
+    order = "g",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 242/255, g = 97/255, b = 97/255},
@@ -72,20 +76,21 @@ data:extend(
   },
   {
     type = "item",
-    name = "angels-plate-manganese",
-    icon = "__angelssmelting__/graphics/icons/plate-manganese.png",
-    icon_size = 32,
-    subgroup = "angels-manganese-casting",
-    order = "g",
-    stack_size = 200
-  },
-  {
-    type = "item",
     name = "angels-roll-manganese",
     icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese-casting",
     order = "h",
+    stack_size = 200
+  },
+  -- CASTING RESULT
+  {
+    type = "item",
+    name = "angels-plate-manganese",
+    icon = "__angelssmelting__/graphics/icons/plate-manganese.png",
+    icon_size = 32,
+    subgroup = "angels-manganese-casting",
+    order = "i",
     stack_size = 200
   },
 }

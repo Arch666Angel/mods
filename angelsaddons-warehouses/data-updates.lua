@@ -17,5 +17,5 @@ end
 
 if angelsmods.industries then
   data.raw["item-subgroup"]["angels-warehouses"].group = "angels-logistics"
-  data.raw["item-subgroup"]["angels-warehouses"].order = "ac"
+  data.raw["item-subgroup"]["angels-warehouses"].order = "ad[chests-warehouse]"
 end
