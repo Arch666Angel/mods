@@ -3,71 +3,66 @@ local OV = angelsmods.functions.OV
 OV.disable_technology({"angels-yellow-loader", "angels-red-loader", "angels-blue-loader"})
 
 if data.raw["equipment-category"]["armoured-vehicle"] then
-  table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories, "vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories, "vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories, "vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories,"vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories,"vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories,"vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories,"vehicle")
+end
+
+if angelsmods.industries.overhaul and angelsmods.industries.components then
+  --UPDATE RECIPES FOR ENTITIES
+  require("prototypes.recipes.components-entity-update")
+  require("prototypes.overrides.global-components-entity-update")
+
+  --MODIFY ASSEMBLING MACHINES
+  data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
+  data.raw["item"]["assembling-machine-1"].order = "a"
+  data.raw["item"]["assembling-machine-2"].subgroup = "angels-assemblers-medium"
+  data.raw["item"]["assembling-machine-2"].order = "a"
+  data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
+  data.raw["item"]["assembling-machine-3"].order = "a"
+  OV.add_unlock("automation", "angels-assembling-machine-small-1")
+  OV.add_unlock("automation", "angels-assembling-machine-big-1")
+  OV.add_unlock("automation-2", "angels-assembling-machine-small-2")
+  OV.add_unlock("automation-2", "angels-assembling-machine-big-2")
+  OV.add_unlock("automation-3", "angels-assembling-machine-small-3")
+  OV.add_unlock("automation-3", "angels-assembling-machine-big-3")
+  data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 2
+  data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 3
+  data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 4
+  data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
+  data.raw["item"]["assembling-machine-2"].subgroup = "angels-assemblers-medium"
+  data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
 end
 
 if angelsmods.industries.overhaul then
-  data.raw["item-with-entity-data"]["locomotive"].subgroup = "angels-vehicle-train-vanilla"
-  data.raw["item-with-entity-data"]["cargo-wagon"].subgroup = "angels-vehicle-train-vanilla"
-  data.raw["item-with-entity-data"]["fluid-wagon"].subgroup = "angels-vehicle-train-vanilla"
-  data.raw["item-with-entity-data"]["artillery-wagon"].subgroup = "angels-vehicle-train-vanilla"
+  -- Move vehicles
+  data.raw["item-with-entity-data"]["car"].subgroup = "angels-vehicle-car"
+  data.raw["item-with-entity-data"]["car"].order = "a[car]-a"
+  -- order a[car]-b reserved for nilaus truck
+  -- order b[crawlers]-a already taken by the crawler (car)
+  -- order b[crawlers]-b reserved for CAB
 
-  data.raw["item-with-entity-data"]["car"].subgroup = "angels-vehicle-drive"
-  data.raw["item-with-entity-data"]["tank"].subgroup = "angels-vehicle-drive"
+  data.raw["item-with-entity-data"]["tank"].subgroup = "angels-vehicle-car" -- todo: conditional only when exploration is not present
 
-  if angelsmods.industries.components then
-    --UPDATE RECIPES FOR ENTITIES
-    require("prototypes.recipes.components-entity-update")
-    require("prototypes.overrides.global-components-entity-update")
-
-    --MODIFY ASSEMBLING MACHINES
-    data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
-    data.raw["item"]["assembling-machine-1"].order = "a"
-    data.raw["item"]["assembling-machine-2"].subgroup = "angels-assemblers-medium"
-    data.raw["item"]["assembling-machine-2"].order = "a"
-    data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
-    data.raw["item"]["assembling-machine-3"].order = "a"
-    OV.add_unlock("automation", "angels-assembling-machine-small-1")
-    OV.add_unlock("automation", "angels-assembling-machine-big-1")
-    OV.add_unlock("automation-2", "angels-assembling-machine-small-2")
-    OV.add_unlock("automation-2", "angels-assembling-machine-big-2")
-    OV.add_unlock("automation-3", "angels-assembling-machine-small-3")
-    OV.add_unlock("automation-3", "angels-assembling-machine-big-3")
-    data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 2
-    data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 3
-    data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 4
-    data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
-    data.raw["item"]["assembling-machine-2"].subgroup = "angels-assemblers-medium"
-    data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
+  if not bobmods.logistics then -- bobmods will override this for us
+    data.raw["item-with-entity-data"]["locomotive"].subgroup = "angels-vehicle-train-vanilla"
+    data.raw["item-with-entity-data"]["cargo-wagon"].subgroup = "angels-vehicle-train-vanilla"
+    data.raw["item-with-entity-data"]["fluid-wagon"].subgroup = "angels-vehicle-train-vanilla"
+    data.raw["item-with-entity-data"]["artillery-wagon"].subgroup = "angels-vehicle-train-vanilla"
   end
+end
 
-  -- BOBS
-  if mods["bobplates"] and bobmods and bobmods.logistics then
+-- BOBS
+if mods['bobplates'] and angelsmods.industries.overhaul then
+  if bobmods.logistics then
     --UPDATE LOGISTICS CONTAINERS
     data:extend(
-      {
-        {
-          type = "item-subgroup",
-          name = "angels-chests-small-a",
-          group = "angels-logistics",
-          order = "aa[chests-small]-a"
-        },
-        {
-          type = "item-subgroup",
-          name = "angels-chests-small-b",
-          group = "angels-logistics",
-          order = "aa[chests-small]-b"
-        },
-        {
-          type = "item-subgroup",
-          name = "angels-chests-small-c",
-          group = "angels-logistics",
-          order = "aa[chests-small]-c"
-        }
-      }
+    {
+      { type = "item-subgroup", name = "angels-chests-small-a", group = "angels-logistics", order = "aa[chests-small]-a", },
+      { type = "item-subgroup", name = "angels-chests-small-b", group = "angels-logistics", order = "aa[chests-small]-b", },
+      { type = "item-subgroup", name = "angels-chests-small-c", group = "angels-logistics", order = "aa[chests-small]-c", },
+    }
     )
     -- pre-logistics chests
     data.raw["item"]["wooden-chest"].subgroup = "angels-chests-small-a"
@@ -116,12 +111,12 @@ if angelsmods.industries.overhaul then
 
     --UPDATE ROBOPORTS
     data:extend(
-      {
-        {type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a"},
-        {type = "item-subgroup", name = "angels-roboport-b", group = "angels-logistics", order = "ba[roboport]-b"},
-        {type = "item-subgroup", name = "angels-roboport-c", group = "angels-logistics", order = "ba[roboport]-c"},
-        {type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d"}
-      }
+    {
+      {type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a"},
+      {type = "item-subgroup", name = "angels-roboport-b", group = "angels-logistics", order = "ba[roboport]-b"},
+      {type = "item-subgroup", name = "angels-roboport-c", group = "angels-logistics", order = "ba[roboport]-c"},
+      {type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d"}
+    }
     )
     -- antenna
     data.raw["item"]["roboport-antenna-1"].subgroup = "angels-roboport-a"
@@ -209,12 +204,12 @@ if angelsmods.industries.overhaul then
 
     --UPDATE ROBOTS
     data:extend(
-      {
-        {type = "item-subgroup", name = "angels-robot-a", group = "angels-logistics", order = "ca[robots]-a"},
-        {type = "item-subgroup", name = "angels-robot-b", group = "angels-logistics", order = "ca[robots]-b"},
-        {type = "item-subgroup", name = "angels-robot-c", group = "angels-logistics", order = "ca[robots]-c"},
-        {type = "item-subgroup", name = "angels-robot-d", group = "angels-logistics", order = "ca[robots]-d"}
-      }
+    {
+      {type = "item-subgroup", name = "angels-robot-a", group = "angels-logistics", order = "ca[robots]-a"},
+      {type = "item-subgroup", name = "angels-robot-b", group = "angels-logistics", order = "ca[robots]-b"},
+      {type = "item-subgroup", name = "angels-robot-c", group = "angels-logistics", order = "ca[robots]-c"},
+      {type = "item-subgroup", name = "angels-robot-d", group = "angels-logistics", order = "ca[robots]-d"}
+    }
     )
     -- frames
     data.raw.item["flying-robot-frame"].subgroup = "angels-robot-a"
@@ -277,6 +272,46 @@ if angelsmods.industries.overhaul then
       data.raw.item["robot-tool-combat-3"].order = "d[combat]-b[tool]"
       data.raw.item["robot-tool-combat-4"].subgroup = "angels-robot-d"
       data.raw.item["robot-tool-combat-4"].order = "d[combat]-b[tool]"
+    end
+    -- regular robots
+    data.raw.item["construction-robot"].subgroup = "angels-robot-a"
+    data.raw.item["construction-robot"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-2"].subgroup = "angels-robot-b"
+    data.raw.item["bob-construction-robot-2"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-3"].subgroup = "angels-robot-c"
+    data.raw.item["bob-construction-robot-3"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-4"].subgroup = "angels-robot-d"
+    data.raw.item["bob-construction-robot-4"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-5"].subgroup = "angels-cargo-bots"
+    data.raw.item["bob-construction-robot-5"].order = "c[bob-fusion]-a[construction]"
+    data.raw.item["logistic-robot"].subgroup = "angels-robot-a"
+    data.raw.item["logistic-robot"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-2"].subgroup = "angels-robot-b"
+    data.raw.item["bob-logistic-robot-2"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-3"].subgroup = "angels-robot-c"
+    data.raw.item["bob-logistic-robot-3"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-4"].subgroup = "angels-robot-d"
+    data.raw.item["bob-logistic-robot-4"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-5"].subgroup = "angels-cargo-bots"
+    data.raw.item["bob-logistic-robot-5"].order = "c[bob-fusion]-b[logistic]"
+
+    -- UPDATE TRAINS
+    data:extend({
+      { type = "item-subgroup", name = "angels-artillery", group = "angels-vehicles", order = "ba[vanilla-train]-d[artillery-wagon]", },
+    })
+    data.raw["item-subgroup"]["bob-locomotive"].group = "angels-vehicles"
+    data.raw["item-subgroup"]["bob-locomotive"].order = "ba[vanilla-train]-a[locomotive]"
+    data.raw["item-subgroup"]["bob-cargo-wagon"].group = "angels-vehicles"
+    data.raw["item-subgroup"]["bob-cargo-wagon"].order = "ba[vanilla-train]-b[cargo-wagon]"
+    data.raw["item-subgroup"]["bob-fluid-wagon"].group = "angels-vehicles"
+    data.raw["item-subgroup"]["bob-fluid-wagon"].order = "ba[vanilla-train]-c[fluid-wagon]"
+    data.raw["item-with-entity-data"]["artillery-wagon"].subgroup = "angels-artillery"
+    data.raw["item-with-entity-data"]["artillery-wagon"].order = "a"
+    if data.raw["item-with-entity-data"]["bob-artillery-wagon-2"] then
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-2"].subgroup = "angels-artillery"
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-2"].order = "b"
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-3"].subgroup = "angels-artillery"
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-3"].order = "c"
     end
     -- regular robots
     data.raw.item["construction-robot"].subgroup = "angels-robot-a"

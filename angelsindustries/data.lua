@@ -11,6 +11,7 @@ end
 --TRIGGER CHECKS
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
 if mods['bobplates'] then angelsmods.industries.overhaul = true end
+--angelsmods.industries.overhaul=false --temp overrides
 
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
 angelsmods.industries.tech=false --temp overrides to disable until ready
