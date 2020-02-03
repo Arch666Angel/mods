@@ -700,5 +700,56 @@ data:extend(
       time = 30
     },
   },
+  {
+    type = "technology",
+    name = "angels-garden-mutations",
+    icons={
+      {icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",icon_size=128},
+      {icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",icon_size = 128,scale=0.4,shift={-40,-50}},
+      {icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",icon_size = 128,scale=0.4,shift={40,-50}},
+      {icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",icon_size = 128,scale=0.4,shift={40,50}},
+      {icon = "__base__/graphics/icons/uranium-235.png",icon_size=64,scale=0.6,shift={-40,50}},
+    },
+    icon_size = 128,
+    order = "c-a",
+    prerequisites =
+    {
+      "uranium-processing",
+      "bio-temperate-farm",
+      "bio-swamp-farm",
+      "bio-desert-farm",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "temperate-garden-mutation-desert"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "temperate-garden-mutation-swamp"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "swamp-garden-mutation-temperate"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "desert-garden-mutation-temperate"
+      },
+    },
+    unit =
+    {
+      count = 200,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack",1},
+        {"token-bio",2},
+      },
+      time = 30,
+    },
+  },
 }
 )
