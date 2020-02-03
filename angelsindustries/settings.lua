@@ -6,7 +6,7 @@ data:extend(
       type = "bool-setting",
       name = "angels-enable-industries",
       setting_type = "startup",
-      default_value = true,
+      default_value = false,
       order = "a"
     },
     {
