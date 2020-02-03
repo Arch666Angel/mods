@@ -21,8 +21,8 @@ data:extend(
       name = "angels-crawler",
       icon = "__angelsindustries__/graphics/icons/crawler-icon.png",
       icon_size = 32,
-      subgroup = "angels-vehicle-drive",
-      order = "b[angels-crawler]",
+      subgroup = "angels-vehicle-car",
+      order = "b[crawlers]-a",
       place_result = "angels-crawler",
       stack_size = 1
     },

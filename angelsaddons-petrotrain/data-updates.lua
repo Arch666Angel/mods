@@ -8,8 +8,8 @@ if angelsmods.industries then
   if angelsmods.industries.components then
     require("prototypes.recipes.petrotrain-updates")
   end
-  data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-logistics"
-  data.raw["item-subgroup"]["angels-petrotrain"].order = "fc"
+  data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-vehicles"
+  data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"
 end
 
 if data.raw["equipment-category"]["armoured-vehicle"] then

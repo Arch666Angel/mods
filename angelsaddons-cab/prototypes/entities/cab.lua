@@ -25,8 +25,8 @@ data:extend(
     name = "angels-cab",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
-    subgroup = angelsmods.industries and angelsmods.industries.overhaul and "angels-vehicle-drive" or "angels-cab",
-    order = mods["angelsindustries"] and "c[angels-cab]" or "a",
+    subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
+    order = mods["angelsindustries"] and "b[crawlers]-b" or "a",
     place_result = "angels-cab",
     stack_size = 1
   },
