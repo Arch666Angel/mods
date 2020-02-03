@@ -53,8 +53,20 @@ data:extend(
     name = "angels-smelting",
     order = "la[angels]-b[smelting]-a",
     inventory_order = "la[angels]-b[smelting]-a",
-    icon = "__angelssmelting__/graphics/technology/blast-furnace-group.png",
-    icon_size = 64,
+    --icon = "__angelssmelting__/graphics/technology/blast-furnace-group.png",
+    --icon_size = 64,
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+        icon_size = 128
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 128 / 32 * 0.35,
+        shift = {40, -40}
+      }
+    }
   },
   {
     type = "item-subgroup",
@@ -223,8 +235,20 @@ data:extend(
     name = "angels-casting",
     order = "la[angels]-b[smelting]-b",
     inventory_order = "la[angels]-b[smelting]-b",
-    icon = "__angelssmelting__/graphics/technology/induction-furnace-group.png",
-    icon_size = 64,
+    --icon = "__angelssmelting__/graphics/technology/induction-furnace-group.png",
+    --icon_size = 64,
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
+        icon_size = 128
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 128 / 32 * 0.35,
+        shift = {40, -40}
+      }
+    }
   },
   {
     type = "item-subgroup",

@@ -330,8 +330,20 @@ data:extend(
     name = "angels-logistics",
     order = "la[angels]-e[industries]-d",
     inventory_order = "la[angels]-e[industries]-d",
-    icon = "__angelsindustries__/graphics/item-group/cargo-roboport-group.png",
-    icon_size = 64,
+    --icon = "__angelsindustries__/graphics/item-group/cargo-roboport-group.png",
+    --icon_size = 64,
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/technology/cargo-roboport-tech.png",
+        icon_size = 128
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 128 / 32 * 0.35,
+        shift = {40, -40}
+      }
+    }
   },
   {
     type = "item-subgroup",

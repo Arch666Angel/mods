@@ -92,8 +92,20 @@ data:extend(
       name = "resource-refining",
       order = "la[angels]-a[refining]-a",
       inventory_order = "la[angels]-a[refining]-a",
-      icon = "__angelsrefining__/graphics/item-group/ore-refining.png",
-      icon_size = 64
+      --icon = "__angelsrefining__/graphics/item-group/ore-refining.png",
+      --icon_size = 64
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+          icon_size = 128
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 128 / 32 * 0.35,
+          shift = {40, -40}
+        }
+      }
     },
     {
       type = "item-subgroup",
@@ -257,8 +269,20 @@ data:extend(
       name = "water-treatment",
       order = "la[angels]-c[petrochem]-a",
       inventory_order = "la[angels]-c[petrochem]-a",
-      icon = "__angelsrefining__/graphics/item-group/water-treatment-group.png",
-      icon_size = 64
+      --icon = "__angelsrefining__/graphics/item-group/water-treatment-group.png",
+      --icon_size = 64
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+          icon_size = 128
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 128 / 32 * 0.35,
+          shift = {40, -40}
+        }
+      }
     },
     {
       type = "item-subgroup",
@@ -332,8 +356,20 @@ data:extend(
       name = "angels-fluid-control",
       order = "la[angels]-c[petrochem]-c",
       inventory_order = "la[angels]-c[petrochem]-c",
-      icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      icon_size = 64
+      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
+      --icon_size = 64
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
+          icon_size = 128
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 128 / 32 * 0.35,
+          shift = {40, -40}
+        }
+      }
     },
     {
       type = "item-subgroup",
@@ -359,8 +395,20 @@ data:extend(
       name = "angels-void",
       order = "la[angels]-z[void]-a",
       inventory_order = "la[angels]-z[void]-a",
-      icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      icon_size = 64
+      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
+      --icon_size = 64
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
+          icon_size = 128
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 128 / 32 * 0.35,
+          shift = {40, -40}
+        }
+      }
     },
     {
       type = "item-subgroup",
