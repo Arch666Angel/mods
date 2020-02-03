@@ -318,14 +318,30 @@ if mods['bobplates'] then
   if data.raw["item-subgroup"]["bob-gas-bottle"] then
     data.raw["item"]["empty-canister"].subgroup = "angels-fluid-control"
     data.raw["item"]["empty-canister"].order = "i"
-    data.raw["recipe"]["empty-canister"].subgroup = "angels-fluid-control"
-    data.raw["recipe"]["empty-canister"].order = "i"
     data.raw["item"]["gas-canister"].subgroup = "angels-fluid-control"
     data.raw["item"]["gas-canister"].order = "j"
-    data.raw["recipe"]["gas-canister"].subgroup = "angels-fluid-control"
-    data.raw["recipe"]["gas-canister"].order = "j"
     data.raw.technology["gas-canisters"].prerequisites={"fluid-handling"}
     data.raw.technology["gas-canisters"].enabled = true
+    OV.patch_recipes({
+      {
+        name = "empty-canister",
+        ingredients =
+        {
+          { name = "empty-barrel", amount = 5 },
+        },
+        subgroup = "angels-fluid-control",
+        order = "i",
+      },
+      {
+        name = "gas-canister",
+        ingredients =
+        {
+          { name = "empty-canister", amount = 5 },
+        },
+        subgroup = "angels-fluid-control",
+        order = "j",
+      },
+    })
 
     --local fluid_n=data.raw["fluid"]
     for _, fluid_n in pairs(data.raw.fluid) do
@@ -336,6 +352,8 @@ if mods['bobplates'] then
           local acid=string.find(fluid_n.name,"acid")
           OV.barrel_overrides(fluid_n.name,"acid")
         end
+        data.raw.recipe["fill-"..fluid_n.name.."-barrel"].category = "barreling-pump"
+        data.raw.recipe["empty-"..fluid_n.name.."-barrel"].category = "barreling-pump"
       end
     end
     --insert custom barrel replacements

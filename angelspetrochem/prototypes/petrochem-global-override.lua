@@ -219,6 +219,16 @@ if bobmods then
       OV.disable_recipe("bob-valve")
       OV.remove_unlock("fluid-handling", "bob-overflow-valve")
       OV.remove_unlock("fluid-handling", "bob-topup-valve")
+
+      -- move pumps over
+      data.raw["item"]["pump"].subgroup = "angels-fluid-control"
+      data.raw["item"]["pump"].order = "b[pump]-a[mk1]"
+      data.raw["item"]["bob-pump-2"].subgroup = "angels-fluid-control"
+      data.raw["item"]["bob-pump-2"].order = "b[pump]-b[mk2]"
+      data.raw["item"]["bob-pump-3"].subgroup = "angels-fluid-control"
+      data.raw["item"]["bob-pump-3"].order = "b[pump]-c[mk3]"
+      data.raw["item"]["bob-pump-4"].subgroup = "angels-fluid-control"
+      data.raw["item"]["bob-pump-4"].order = "b[pump]-d[mk4]"
     end
 
     -- generic replace
