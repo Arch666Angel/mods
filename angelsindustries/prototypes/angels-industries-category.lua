@@ -343,7 +343,7 @@ data:extend(
     type = "item-subgroup",
     name = "angels-cargo-ports",
     group = "angels-logistics",
-    order = "b",
+    order = "bz",
   },
   {
     type = "item-subgroup",

@@ -4,7 +4,7 @@ data:extend(
     type = "bool-setting",
     name = "angels-enable-industries",
     setting_type = "startup",
-    default_value = false,
+    default_value = true,
     order = "a",
   },
   {
@@ -12,14 +12,14 @@ data:extend(
     name = "angels-enable-tech",
     setting_type = "startup",
     default_value = false,
-    order = "a",
+    order = "b",
   },
   {
     type = "bool-setting",
     name = "angels-enable-components",
     setting_type = "startup",
     default_value = false,
-    order = "a",
+    order = "c",
   },
 }
 )
