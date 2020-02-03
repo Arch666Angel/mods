@@ -160,8 +160,7 @@ data:extend(
       name = "nilaus-truck",
       icon = "__angelsaddons-nilaus__/graphics/icons/nilaus-truck-ico.png",
       icon_size = 64,
-      subgroup = angelsmods and angelsmods.industries and angelsmods.industries.overhaul and "angels-vehicle-drive" or
-        "transport",
+      subgroup = "transport",
       order = "b[nilaus-truck]",
       place_result = "nilaus-truck",
       stack_size = 1
