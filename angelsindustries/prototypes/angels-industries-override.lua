@@ -38,6 +38,57 @@ end
 -- BOBS
 if mods['bobplates'] and angelsmods.industries.overhaul then
   if bobmods.logistics then
+    --UPDATE LOGISTICS CONTAINERS
+    data:extend({
+      { type = "item-subgroup", name = "angels-chests-small-a", group = "angels-logistics", order = "aa[chests-small]-a", },
+      { type = "item-subgroup", name = "angels-chests-small-b", group = "angels-logistics", order = "aa[chests-small]-b", },
+      { type = "item-subgroup", name = "angels-chests-small-c", group = "angels-logistics", order = "aa[chests-small]-c", },
+    })
+    -- pre-logistics chests
+    data.raw["item"]["wooden-chest"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["wooden-chest"].order = "za"
+    data.raw["item"]["iron-chest"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["iron-chest"].order = "zb"
+    -- steel chests
+    data.raw["item"]["steel-chest"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["steel-chest"].order = "a"
+    data.raw["item"]["logistic-chest-active-provider"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["logistic-chest-active-provider"].order = "b"
+    data.raw["item"]["logistic-chest-passive-provider"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["logistic-chest-passive-provider"].order = "c"
+    data.raw["item"]["logistic-chest-storage"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["logistic-chest-storage"].order = "d"
+    data.raw["item"]["logistic-chest-buffer"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["logistic-chest-buffer"].order = "e"
+    data.raw["item"]["logistic-chest-requester"].subgroup = "angels-chests-small-a"
+    data.raw["item"]["logistic-chest-requester"].order = "f"
+    -- brass chests
+    data.raw["item"]["brass-chest"].subgroup = "angels-chests-small-b"
+    data.raw["item"]["brass-chest"].order = "a"
+    data.raw["item"]["logistic-chest-active-provider-2"].subgroup = "angels-chests-small-b"
+    data.raw["item"]["logistic-chest-active-provider-2"].order = "b"
+    data.raw["item"]["logistic-chest-passive-provider-2"].subgroup = "angels-chests-small-b"
+    data.raw["item"]["logistic-chest-passive-provider-2"].order = "c"
+    data.raw["item"]["logistic-chest-storage-2"].subgroup = "angels-chests-small-b"
+    data.raw["item"]["logistic-chest-storage-2"].order = "d"
+    data.raw["item"]["logistic-chest-buffer-2"].subgroup = "angels-chests-small-b"
+    data.raw["item"]["logistic-chest-buffer-2"].order = "e"
+    data.raw["item"]["logistic-chest-requester-2"].subgroup = "angels-chests-small-b"
+    data.raw["item"]["logistic-chest-requester-2"].order = "f"
+    -- titanium chests
+    data.raw["item"]["titanium-chest"].subgroup = "angels-chests-small-c"
+    data.raw["item"]["titanium-chest"].order = "a"
+    data.raw["item"]["logistic-chest-active-provider-3"].subgroup = "angels-chests-small-c"
+    data.raw["item"]["logistic-chest-active-provider-3"].order = "b"
+    data.raw["item"]["logistic-chest-passive-provider-3"].subgroup = "angels-chests-small-c"
+    data.raw["item"]["logistic-chest-passive-provider-3"].order = "c"
+    data.raw["item"]["logistic-chest-storage-3"].subgroup = "angels-chests-small-c"
+    data.raw["item"]["logistic-chest-storage-3"].order = "d"
+    data.raw["item"]["logistic-chest-buffer-3"].subgroup = "angels-chests-small-c"
+    data.raw["item"]["logistic-chest-buffer-3"].order = "e"
+    data.raw["item"]["logistic-chest-requester-3"].subgroup = "angels-chests-small-c"
+    data.raw["item"]["logistic-chest-requester-3"].order = "f"
+
     --UPDATE ROBOPORTS
     data:extend({
       { type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a", },

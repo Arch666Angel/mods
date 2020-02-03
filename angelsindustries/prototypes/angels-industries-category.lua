@@ -337,7 +337,7 @@ data:extend(
     type = "item-subgroup",
     name = "angels-chests-big",
     group = "angels-logistics",
-    order = "aa",
+    order = "ab[chests-big]",
   },
   {
     type = "item-subgroup",

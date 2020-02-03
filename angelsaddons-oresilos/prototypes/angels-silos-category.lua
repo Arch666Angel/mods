@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-subgroup",
     name = "angels-silos",
-	group = "logistics",
-	order = "zc",
+    group = "logistics",
+    order = "zc",
   },
-  }
-  )
+}
+)
