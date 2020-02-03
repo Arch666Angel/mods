@@ -343,19 +343,19 @@ data:extend(
     type = "item-subgroup",
     name = "angels-cargo-ports",
     group = "angels-logistics",
-    order = "bz",
+    order = "bb[carbo-port]-a",
   },
   {
     type = "item-subgroup",
     name = "angels-cargo-expander",
     group = "angels-logistics",
-    order = "c",
+    order = "bb[carbo-port]-b",
   },
   {
     type = "item-subgroup",
     name = "angels-cargo-bots",
     group = "angels-logistics",
-    order = "d",
+    order = "cb[bots]",
   },
   {
     type = "item-subgroup",

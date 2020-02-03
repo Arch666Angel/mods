@@ -6,15 +6,15 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
   }
 )
 
-  data:extend(
+data:extend(
+{
   {
-   {
     type = "item",
     name = "cargo-roboport",
     icon = "__angelsindustries__/graphics/icons/cargo-roboport.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-cargo-ports",
-    order = "a",
+    order = "a[roboport]-a",
     place_result = "cargo-roboport",
     stack_size = 50
   },
@@ -22,7 +22,7 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
     type = "roboport",
     name = "cargo-roboport",
     icon = "__angelsindustries__/graphics/icons/cargo-roboport.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "cargo-roboport"},
     max_health = 1000,
@@ -139,13 +139,13 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
     default_available_construction_output_signal = {type = "virtual", name = "signal-Z"},
     default_total_construction_output_signal = {type = "virtual", name = "signal-T"},
   },
-   {
+  {
     type = "item",
     name = "cargo-hub",
     icon = "__angelsindustries__/graphics/icons/cargo-hub.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-cargo-ports",
-    order = "b",
+    order = "a[roboport]-b",
     place_result = "cargo-hub",
     stack_size = 50
   },
@@ -153,7 +153,7 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
     type = "roboport",
     name = "cargo-hub",
     icon = "__angelsindustries__/graphics/icons/cargo-hub.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "cargo-hub"},
     max_health = 1000,
@@ -270,13 +270,13 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
     default_available_construction_output_signal = {type = "virtual", name = "signal-Z"},
     default_total_construction_output_signal = {type = "virtual", name = "signal-T"},
   },
-   {
+  {
     type = "item",
     name = "cargo-box",
     icon = "__angelsindustries__/graphics/icons/cargo-box-icon.png",
-	icon_size = 32,
+    icon_size = 32,
     subgroup = "angels-cargo-ports",
-    order = "c",
+    order = "a[roboport]-c",
     place_result = "cargo-box",
     stack_size = 50
   },
@@ -284,7 +284,7 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
     type = "roboport",
     name = "cargo-box",
     icon = "__angelsindustries__/graphics/icons/cargo-box-icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "cargo-box"},
     max_health = 1000,
@@ -336,7 +336,7 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
       width = 32,
       height = 32,
       frame_count = 16,
-	  line_length = 4,
+      line_length = 4,
       shift = {-1.5, -3.25},
       animation_speed = 0.5
     },
@@ -403,5 +403,5 @@ circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.creat
     default_available_construction_output_signal = {type = "virtual", name = "signal-Z"},
     default_total_construction_output_signal = {type = "virtual", name = "signal-T"},
   },
-  }
-  )
+}
+)

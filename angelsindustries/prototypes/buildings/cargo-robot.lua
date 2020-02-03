@@ -7,7 +7,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
     icon_size = 32,
     subgroup = "angels-cargo-bots",
-    order = "c[angels-logistics]-c[cargo-robot]",
+    order = "b[angels-logistics-robot]-a[cargo-robot]",
     place_result = "cargo-robot",
     stack_size = 50
   },
@@ -137,7 +137,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
     icon_size = 32,
     subgroup = "angels-cargo-bots",
-    order = "c[angels-logistics]-c[cargo-robot]",
+    order = "b[angels-logistics-robot]-b[cargo-robot-2]",
     place_result = "cargo-robot-2",
     stack_size = 50
   },
