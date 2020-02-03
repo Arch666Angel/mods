@@ -57,11 +57,13 @@ end
 if mods['bobplates'] and angelsmods.industries.overhaul then
   if bobmods.logistics then
     --UPDATE LOGISTICS CONTAINERS
-    data:extend({
+    data:extend(
+    {
       { type = "item-subgroup", name = "angels-chests-small-a", group = "angels-logistics", order = "aa[chests-small]-a", },
       { type = "item-subgroup", name = "angels-chests-small-b", group = "angels-logistics", order = "aa[chests-small]-b", },
       { type = "item-subgroup", name = "angels-chests-small-c", group = "angels-logistics", order = "aa[chests-small]-c", },
-    })
+    }
+    )
     -- pre-logistics chests
     data.raw["item"]["wooden-chest"].subgroup = "angels-chests-small-a"
     data.raw["item"]["wooden-chest"].order = "za"
@@ -108,12 +110,14 @@ if mods['bobplates'] and angelsmods.industries.overhaul then
     data.raw["item"]["logistic-chest-requester-3"].order = "f"
 
     --UPDATE ROBOPORTS
-    data:extend({
-      { type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a", },
-      { type = "item-subgroup", name = "angels-roboport-b", group = "angels-logistics", order = "ba[roboport]-b", },
-      { type = "item-subgroup", name = "angels-roboport-c", group = "angels-logistics", order = "ba[roboport]-c", },
-      { type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d", },
-    })
+    data:extend(
+    {
+      {type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a"},
+      {type = "item-subgroup", name = "angels-roboport-b", group = "angels-logistics", order = "ba[roboport]-b"},
+      {type = "item-subgroup", name = "angels-roboport-c", group = "angels-logistics", order = "ba[roboport]-c"},
+      {type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d"}
+    }
+    )
     -- antenna
     data.raw["item"]["roboport-antenna-1"].subgroup = "angels-roboport-a"
     data.raw["item"]["roboport-antenna-1"].order = "a[parts]-a[roboport-antenna]"
@@ -199,12 +203,14 @@ if mods['bobplates'] and angelsmods.industries.overhaul then
     data.raw["item"]["angels-construction-zone-expander-2"].subgroup = "angels-cargo-ports"
 
     --UPDATE ROBOTS
-    data:extend({
-      { type = "item-subgroup", name = "angels-robot-a", group = "angels-logistics", order = "ca[robots]-a", },
-      { type = "item-subgroup", name = "angels-robot-b", group = "angels-logistics", order = "ca[robots]-b", },
-      { type = "item-subgroup", name = "angels-robot-c", group = "angels-logistics", order = "ca[robots]-c", },
-      { type = "item-subgroup", name = "angels-robot-d", group = "angels-logistics", order = "ca[robots]-d", },
-    })
+    data:extend(
+    {
+      {type = "item-subgroup", name = "angels-robot-a", group = "angels-logistics", order = "ca[robots]-a"},
+      {type = "item-subgroup", name = "angels-robot-b", group = "angels-logistics", order = "ca[robots]-b"},
+      {type = "item-subgroup", name = "angels-robot-c", group = "angels-logistics", order = "ca[robots]-c"},
+      {type = "item-subgroup", name = "angels-robot-d", group = "angels-logistics", order = "ca[robots]-d"}
+    }
+    )
     -- frames
     data.raw.item["flying-robot-frame"].subgroup = "angels-robot-a"
     data.raw.item["flying-robot-frame"].order = "a[frame]"
@@ -307,5 +313,26 @@ if mods['bobplates'] and angelsmods.industries.overhaul then
       data.raw["item-with-entity-data"]["bob-artillery-wagon-3"].subgroup = "angels-artillery"
       data.raw["item-with-entity-data"]["bob-artillery-wagon-3"].order = "c"
     end
+    -- regular robots
+    data.raw.item["construction-robot"].subgroup = "angels-robot-a"
+    data.raw.item["construction-robot"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-2"].subgroup = "angels-robot-b"
+    data.raw.item["bob-construction-robot-2"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-3"].subgroup = "angels-robot-c"
+    data.raw.item["bob-construction-robot-3"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-4"].subgroup = "angels-robot-d"
+    data.raw.item["bob-construction-robot-4"].order = "b[construction]-c[robot]"
+    data.raw.item["bob-construction-robot-5"].subgroup = "angels-cargo-bots"
+    data.raw.item["bob-construction-robot-5"].order = "c[bob-fusion]-a[construction]"
+    data.raw.item["logistic-robot"].subgroup = "angels-robot-a"
+    data.raw.item["logistic-robot"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-2"].subgroup = "angels-robot-b"
+    data.raw.item["bob-logistic-robot-2"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-3"].subgroup = "angels-robot-c"
+    data.raw.item["bob-logistic-robot-3"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-4"].subgroup = "angels-robot-d"
+    data.raw.item["bob-logistic-robot-4"].order = "c[logistic]-c[robot]"
+    data.raw.item["bob-logistic-robot-5"].subgroup = "angels-cargo-bots"
+    data.raw.item["bob-logistic-robot-5"].order = "c[bob-fusion]-b[logistic]"
   end
 end
