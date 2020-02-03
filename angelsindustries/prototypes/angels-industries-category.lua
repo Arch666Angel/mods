@@ -377,11 +377,11 @@ data:extend(
     inventory_order = "la[angels]-e[industries]-e",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/item-group/crawler.png",
+        icon = "__angelsindustries__/graphics/technology/crawler-tech.png",
         icon_size = 128
       },
       {
-        icon = "__angelsindustries__/graphics/icons/void.png",
+        icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
         scale = 128 / 32 * 0.35,
         shift = {40, -40}

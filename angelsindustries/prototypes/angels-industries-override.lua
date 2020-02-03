@@ -290,13 +290,22 @@ if mods['bobplates'] and angelsmods.industries.overhaul then
     data.raw.item["bob-logistic-robot-5"].order = "c[bob-fusion]-b[logistic]"
 
     -- UPDATE TRAINS
+    data:extend({
+      { type = "item-subgroup", name = "angels-artillery", group = "angels-vehicles", order = "ba[vanilla-train]-d[artillery-wagon]", },
+    })
     data.raw["item-subgroup"]["bob-locomotive"].group = "angels-vehicles"
     data.raw["item-subgroup"]["bob-locomotive"].order = "ba[vanilla-train]-a[locomotive]"
     data.raw["item-subgroup"]["bob-cargo-wagon"].group = "angels-vehicles"
     data.raw["item-subgroup"]["bob-cargo-wagon"].order = "ba[vanilla-train]-b[cargo-wagon]"
     data.raw["item-subgroup"]["bob-fluid-wagon"].group = "angels-vehicles"
     data.raw["item-subgroup"]["bob-fluid-wagon"].order = "ba[vanilla-train]-c[fluid-wagon]"
-    data.raw["item-subgroup"]["bob-fluid-wagon"].group = "angels-vehicles"
-    data.raw["item-subgroup"]["bob-fluid-wagon"].order = "ba[vanilla-train]-c[artillery-wagon]"
+    data.raw["item-with-entity-data"]["artillery-wagon"].subgroup = "angels-artillery"
+    data.raw["item-with-entity-data"]["artillery-wagon"].order = "a"
+    if data.raw["item-with-entity-data"]["bob-artillery-wagon-2"] then
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-2"].subgroup = "angels-artillery"
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-2"].order = "b"
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-3"].subgroup = "angels-artillery"
+      data.raw["item-with-entity-data"]["bob-artillery-wagon-3"].order = "c"
+    end
   end
 end
