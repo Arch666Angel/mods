@@ -2,13 +2,15 @@
 Version: 0.9.0
 Date: ??
   Changes:
-    - updated to 0.18
-    - added missing localisations
-    - organised the recipes a bit to be found easier
-    - cleaned up fluid signals if conversion recipes are disabled
-    - added fuel values to various fluids if bobs mods is active
+    - Updated to 0.18
+    - Added missing localisations
+    - Organised the recipes a bit to be found easier
+    - Cleaned up fluid signals if conversion recipes are disabled
+    - Added fuel values to various fluids if bobs mods is active
+    - Removed some obsolete localisations on the petrochem tanks
+    - If bobs mods are activated, increases the storage capacity of the petrochem tanks
   Bugfixes:
-    - fixed changelog not showing up
+    - Fixed changelog not showing up
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.6
 Date: 11.06.2019

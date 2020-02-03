@@ -133,9 +133,93 @@ end
 --OVERRIDE FOR BOBs
 if bobmods then
   if bobmods.plates then
-    -- move subgroup
+    -- move fluid tanks
     data.raw["item"]["bob-small-inline-storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["bob-small-inline-storage-tank"].order = "a[small-tank]-a"
     data.raw["item"]["bob-small-storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["bob-small-storage-tank"].order = "a[small-tank]-b"
+    data.raw["item"]["storage-tank"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["storage-tank"].order = "b[medium-tank]-a[mk1]-a[regular]"
+    data.raw["item"]["angels-storage-tank-1"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["angels-storage-tank-1"].order = "c[large-tank]-c[gas]"
+    data.raw["item"]["angels-storage-tank-2"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["angels-storage-tank-2"].order = "c[large-tank]-b[oil]"
+    data.raw["item"]["angels-storage-tank-3"].subgroup = "angels-fluid-tanks"
+    data.raw["item"]["angels-storage-tank-3"].order = "c[large-tank]-a[inline]"
+    OV.patch_recipes({
+      {
+        name = "bob-small-storage-tank",
+        ingredients =
+        { {"!!"},
+          { name = "bob-small-inline-storage-tank", amount = 1},
+          { name = "pipe", amount = 1},
+        }
+      },
+      {
+        name = "storage-tank",
+        ingredients =
+        {
+          { name = "bob-small-inline-storage-tank", amount = 1},
+        }
+      },
+    })
+    if bobmods.logistics then
+      data.raw["item"]["bob-storage-tank-all-corners"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners"].order = "b[medium-tank]-a[mk1]-b[all-corners]"
+      data.raw["item"]["storage-tank-2"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["storage-tank-2"].order = "b[medium-tank]-b[mk2]-a[regular]"
+      data.raw["item"]["bob-storage-tank-all-corners-2"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners-2"].order = "b[medium-tank]-b[mk2]-b[all-corners]"
+      data.raw["item"]["storage-tank-3"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["storage-tank-3"].order = "b[medium-tank]-c[mk3]-a[regular]"
+      data.raw["item"]["bob-storage-tank-all-corners-3"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners-3"].order = "b[medium-tank]-c[mk3]-b[all-corners]"
+      data.raw["item"]["storage-tank-4"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["storage-tank-4"].order = "b[medium-tank]-d[mk4]-a[regular]"
+      data.raw["item"]["bob-storage-tank-all-corners-4"].subgroup = "angels-fluid-tanks"
+      data.raw["item"]["bob-storage-tank-all-corners-4"].order = "b[medium-tank]-d[mk4]-b[all-corners]"
+      OV.patch_recipes({
+        {
+          name = "bob-storage-tank-all-corners",
+          ingredients =
+          {
+            { name = "bob-small-storage-tank", amount = 1},
+            { name = "pipe", amount = 2},
+          }
+        },
+        {
+          name = "angels-storage-tank-3",
+          ingredients =
+          {
+            { name = "bob-small-inline-storage-tank", amount = 1},
+          }
+        },
+        --{
+        --  name = "angels-storage-tank-2",
+        --  ingredients =
+        --  {
+        --    { name = "storage-tank-4", amount = 1},
+        --  }
+        --},
+        --{
+        --  name = "angels-storage-tank-1",
+        --  ingredients =
+        --  {
+        --    { name = "bob-storage-tank-all-corners-4", amount = 1},
+        --  }
+        --},
+      })
+      data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.base_area = 2000
+      data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.base_area = 1500
+
+      -- hide fluid control from bob (as we use the extended angel equivalents)
+      angelsmods.functions.add_flag("bob-valve", "hidden")
+      angelsmods.functions.add_flag("bob-overflow-valve", "hidden")
+      angelsmods.functions.add_flag("bob-topup-valve", "hidden")
+      OV.disable_recipe("bob-valve")
+      OV.remove_unlock("fluid-handling", "bob-overflow-valve")
+      OV.remove_unlock("fluid-handling", "bob-topup-valve")
+    end
 
     -- generic replace
     OV.global_replace_item("carbon", "solid-carbon")
