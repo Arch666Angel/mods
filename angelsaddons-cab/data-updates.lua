@@ -1,3 +1,5 @@
+local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
+
 if angelsmods.industries then
   local OV = angelsmods.functions.OV
 
@@ -8,4 +10,4 @@ if angelsmods.industries then
   OV.add_prereq("angels-cab", "angels-crawler")
 end
 
-require"prototypes.entities.cab-updates"
+require "prototypes.entities.cab-updates"
