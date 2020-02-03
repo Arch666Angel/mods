@@ -1,11 +1,18 @@
 if angelsmods.industries and angelsmods.industries.overhaul then
-	data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration"
-	data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration"
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-energy")
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-repair")
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-defense")
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-attack")
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-movement")
+	data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
+	data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
+	-- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-energy")
+	-- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-repair")
+	-- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-defense")
+	-- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-attack")
+	-- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-movement")
+
+	if bobmods and bobmods.warfare then
+		data.raw["item-with-entity-data"]["bob-tank-2"].subgroup = "angels-exploration-vehicles"
+		data.raw["item-with-entity-data"]["bob-tank-2"].order = "c[personal-transport]-b[bob-tank-2]"
+		data.raw["item-with-entity-data"]["bob-tank-3"].subgroup = "angels-exploration-vehicles"
+		data.raw["item-with-entity-data"]["bob-tank-3"].order = "c[personal-transport]-b[bob-tank-3]"
+	end
 end
 
 -- if data.raw["equipment-category"]["armoured-vehicle"] then

@@ -29,39 +29,45 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-physical",
+      name = "angels-exploration",
       group = "angels-exploration",
       order = "a"
     },
     {
       type = "item-subgroup",
-      name = "angels-fire",
+      name = "angels-exploration-vehicles",
       group = "angels-exploration",
       order = "b"
     },
     {
       type = "item-subgroup",
-      name = "angels-explosion",
+      name = "angels-physical",
       group = "angels-exploration",
       order = "c"
     },
     {
       type = "item-subgroup",
-      name = "angels-bio",
+      name = "angels-fire",
       group = "angels-exploration",
       order = "d"
     },
     {
       type = "item-subgroup",
-      name = "angels-plasma",
+      name = "angels-explosion",
       group = "angels-exploration",
       order = "e"
     },
     {
       type = "item-subgroup",
-      name = "angels-exploration",
+      name = "angels-bio",
       group = "angels-exploration",
-      order = "z"
+      order = "f"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-plasma",
+      group = "angels-exploration",
+      order = "g"
     },
     {
       type = "item-subgroup",
