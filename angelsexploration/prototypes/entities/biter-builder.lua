@@ -903,10 +903,10 @@ function angelsmods.functions.update_spawner(us_data)
 	if data.raw["unit-spawner"][s_name] then
 		spawner = data.raw["unit-spawner"][s_name]
 		--log(serpent.block(spawner))
-		spawner.resistances = us_data.resistance
+		table.insert(spawner.resistances,us_data.resistance)
 		spawner.max_health = us_data.appearance.health
 		spawner.spawning_cooldown = us_data.appearance.spawn_cooldown
-		spawner.result_units=us_data.results
+		table.insert(spawner.result_units,us_data.results)
 	end
 end
 

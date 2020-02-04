@@ -8,7 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "",
   "dependencies": [
-    "base >= 0.18.0",
-    "? angelsindustries >= 0.3.0"
+    "base >= 0.18.3",
+    "? angelsindustries >= 0.3.0",
+    "? bobenemies >= 0.3.0"
 	]
 }

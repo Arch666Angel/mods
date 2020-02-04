@@ -12,6 +12,13 @@
 --SCARAB: 0.185, 0.185, 0.185, 0.17, 0.17
 --BITER: 0.185, 0.185, 0.185, 0.17, 0.17
 --SPITTER: 0.185, 0.185, 0.185, 0.17, 0.17
+--spawner result fetch script
+--[[function ammend_spawner_results(base)
+	for _, spawner in pairs(data.raw["unit-spawner"]) do
+		if spawner.name=base then
+			return spawner.results
+	end]]
+
 
 --BITER DEFINITIONS
 	small_biter =
@@ -635,8 +642,8 @@
 			},
 			results = {
 				{"small-scarab", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-scarab", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-scarab", {{0.4, 0.0}, {0.8, 0.4}}},
+				{"medium-scarab", {{0.2, 0.0},{0.45,0.3}, {0.6, 0.0}}},
+				{"big-scarab", {{0.4, 0.0}, {0.6,0.6},{0.8, 0.4}}},
 				{"behemoth-scarab", {{0.6, 0.0}, {1.0, 0.6}}},
 				{"colossal-scarab", {{0.8, 0.0}, {1.0, 0.8}}},
 			},
@@ -657,20 +664,14 @@
 				health = 500,
 				spawn_cooldown = {360, 150}
 			},
-			results = {
-				{"small-biter", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-biter", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-biter", {{0.4, 0.0}, {0.8, 0.4}}},
-				{"behemoth-biter", {{0.6, 0.0}, {1.0, 0.6}}},
-				{"colossal-biter", {{0.8, 0.0}, {1.0, 0.8}}},
-			},
-			resistance = {
+			results ={"colossal-biter", {{0.9, 0.0}, {1.0, 0.8}}},
+			resistance = --[[{
 				{type = "physical", decrease = 5, percent = 10},
 				{type = "explosion", decrease = 5, percent = 10},
 				{type = "fire", decrease = 30, percent = 60},
-				{type = "laser", decrease = 5, percent = 10},
+				{type = "laser", decrease = 5, percent = 10},]]
 				{type = "plasma", decrease = 5, percent = 10}
-			}
+			--}
 		}
 
 	spitter_spawner =
@@ -681,20 +682,14 @@
 				health = 500,
 				spawn_cooldown = {360, 150}
 			},
-			results = {
-				{"small-spitter", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-spitter", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-spitter", {{0.4, 0.0}, {0.8, 0.4}}},
-				{"behemoth-spitter", {{0.6, 0.0}, {1.0, 0.6}}},
-				{"colossal-spitter", {{0.8, 0.0}, {1.0, 0.8}}},
-			},
-			resistance = {
+			results ={"colossal-spitter", {{0.9, 0.0}, {1.0, 0.8}}},
+			resistance = --[[{
 				{type = "physical", decrease = 5, percent = 10},
 				{type = "explosion", decrease = 5, percent = 10},
 				{type = "fire", decrease = 30, percent = 60},
-				{type = "laser", decrease = 5, percent = 10},
+				{type = "laser", decrease = 5, percent = 10},]]
 				{type = "plasma", decrease = 5, percent = 10}
-			}
+			--}
 		}
 
 	psyker_spawner =
@@ -707,8 +702,8 @@
 			},
 			results = {
 				{"small-psyker", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-psyker", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-psyker", {{0.4, 0.0}, {0.8, 0.4}}},
+				{"medium-psyker", {{0.2, 0.0},{0.45,0.3}, {0.6, 0.0}}},
+				{"big-psyker", {{0.4, 0.0}, {0.6,0.6},{0.8, 0.4}}},
 				{"behemoth-psyker", {{0.6, 0.0}, {1.0, 0.6}}},
 				{"colossal-psyker", {{0.8, 0.0}, {1.0, 0.8}}},
 			},
