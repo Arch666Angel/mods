@@ -1,3 +1,5 @@
+local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
+
 --INITIALIZE
 if not angelsmods then angelsmods = {} end
 if not angelsmods.exploration then angelsmods.exploration = {} end
