@@ -37,10 +37,8 @@ data.raw["recipe"]["explosives"].icons = {
 }
 
 data.raw["item"]["chemical-plant"].subgroup = "petrochem-buildings-chemical-plant"
-data.raw["item"]["chemical-plant"].order = "a[regular]-a[vanilla]"
-if data.raw["item"]["chemical-plant"].icon then
-  data.raw["item"]["chemical-plant"].icon = nil
-end
+data.raw["item"]["chemical-plant"].order = "a[regular]-aa[vanilla]"
+data.raw["item"]["chemical-plant"].icon = nil
 data.raw["item"]["chemical-plant"].icon_size = 32
 data.raw["item"]["chemical-plant"].icons = {
   {
@@ -54,6 +52,7 @@ data.raw["item"]["chemical-plant"].icons = {
     shift = {-12, -12}
   }
 }
+
 data.raw["item"]["oil-refinery"].subgroup = "petrochem-buildings-oil-refinery"
 data.raw["item"]["oil-refinery"].order = "b[oil-refinery]-a"
 data.raw["item"]["oil-refinery"].icon = nil
@@ -229,6 +228,28 @@ if bobmods then
       data.raw["item"]["bob-pump-3"].order = "b[pump]-c[mk3]"
       data.raw["item"]["bob-pump-4"].subgroup = "angels-fluid-control"
       data.raw["item"]["bob-pump-4"].order = "b[pump]-d[mk4]"
+    end
+
+    -- move chemical plants
+    if bobmods.assembly then
+      data.raw["item"]["chemical-plant-2"].subgroup = "petrochem-buildings-chemical-plant"
+      data.raw["item"]["chemical-plant-2"].order = "a[regular]-ab[bob]-a"
+      data.raw["item"]["chemical-plant-3"].subgroup = "petrochem-buildings-chemical-plant"
+      data.raw["item"]["chemical-plant-3"].order = "a[regular]-ab[bob]-b"
+      data.raw["item"]["chemical-plant-4"].subgroup = "petrochem-buildings-chemical-plant"
+      data.raw["item"]["chemical-plant-4"].order = "a[regular]-ab[bob]-c"
+    end
+
+      -- move electrolysers
+    data.raw["item"]["electrolyser"].subgroup = "petrochem-buildings-electrolyser"
+    data.raw["item"]["electrolyser"].order = "aa[bobs-electrolyser]-a"
+    if bobmods.assembly then
+      data.raw["item"]["electrolyser-2"].subgroup = "petrochem-buildings-electrolyser"
+      data.raw["item"]["electrolyser-2"].order = "aa[bobs-electrolyser]-b"
+      data.raw["item"]["electrolyser-3"].subgroup = "petrochem-buildings-electrolyser"
+      data.raw["item"]["electrolyser-3"].order = "aa[bobs-electrolyser]-c"
+      data.raw["item"]["electrolyser-4"].subgroup = "petrochem-buildings-electrolyser"
+      data.raw["item"]["electrolyser-4"].order = "aa[bobs-electrolyser]-d"
     end
 
     -- generic replace

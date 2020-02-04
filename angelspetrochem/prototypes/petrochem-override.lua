@@ -63,13 +63,13 @@ if angelsmods.refining then
   table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories, "liquifying")
   table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories, "liquifying")
   data.raw["item"]["liquifier"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier"].order = "b[liquifier]-a"
+  data.raw["item"]["liquifier"].order = "c[liquifier]-a"
   data.raw["item"]["liquifier-2"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-2"].order = "b[liquifier]-b"
+  data.raw["item"]["liquifier-2"].order = "c[liquifier]-b"
   data.raw["item"]["liquifier-3"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-3"].order = "b[liquifier]-c"
+  data.raw["item"]["liquifier-3"].order = "c[liquifier]-c"
   data.raw["item"]["liquifier-4"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-4"].order = "b[liquifier]-d"
+  data.raw["item"]["liquifier-4"].order = "c[liquifier]-d"
   OV.patch_recipes(
     {
       {name = "carbon-separation-1", category = "liquifying"},
