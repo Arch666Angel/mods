@@ -6,8 +6,8 @@ data:extend(
       icon = "__base__/graphics/icons/flamethrower.png",
       icon_size = 64, icon_mipmaps = 4,
       flags = {},
-      subgroup = "gun",
-      order = "e[flamethrower]",
+      subgroup = "angels-fire",
+      order = "a[gun]-b[bio-rounds]",
       attack_parameters = {
         type = "stream",
         ammo_category = "bio",

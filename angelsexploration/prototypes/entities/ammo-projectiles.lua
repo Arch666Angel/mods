@@ -224,8 +224,8 @@ data:extend(
           }
         }
       },
-      subgroup = "angels-explosion",
-      order = "d[heavy-cannon-shell]",
+      subgroup = "angels-explosion-b",
+      order = "c[basic-ammo]-b[heavy]-a[basic-rounds]",
       stack_size = 200
     },
     --BIO WEAPONS
@@ -446,8 +446,8 @@ data:extend(
         -- }
       },
       magazine_size = 100,
-      subgroup = "ammo",
-      order = "e[flamethrower]",
+      subgroup = "angels-fire",
+      order = "c[basic-ammo]-b[bio-rounds]",
       stack_size = 100
     }
     --ROCKETS

@@ -46,7 +46,7 @@ if angelsmods.industries.overhaul then
   data.raw.ammo["piercing-rounds-magazine"].subgroup = "angels-warfare-bullet-guns"
   data.raw.ammo["piercing-rounds-magazine"].order = "c[basic-ammo]-b[piercing-rounds]"
   data.raw.ammo["uranium-rounds-magazine"].subgroup = "angels-warfare-bullet-guns"
-  data.raw.ammo["uranium-rounds-magazine"].order = "c[basic-ammo]-b[uranium-rounds]"
+  data.raw.ammo["uranium-rounds-magazine"].order = "c[basic-ammo]-c[uranium-rounds]"
 
   data.raw.gun["shotgun"].subgroup = "angels-warfare-shotgun-guns"
   data.raw.gun["shotgun"].order = "a[gun]-a[shotgun]"

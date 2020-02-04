@@ -8,6 +8,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
+      "tanks",
       --"angels-vequipment-1",
     },
     effects =

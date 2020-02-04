@@ -26,9 +26,8 @@ data:extend(
       results = {
         {"heavy-cannon-shell", 10}
       },
-      icon = "__base__/graphics/icons/cannon-shell.png",
-      icon_size = 64,
-      order = "a"
+      --icon = "__base__/graphics/icons/cannon-shell.png",
+      --icon_size = 64,
     },
     --TURRET
     {

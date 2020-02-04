@@ -66,9 +66,15 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-explosion",
+      name = "angels-explosion-a", -- rocket
       group = "angels-exploration",
-      order = "e"
+      order = "ea"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-explosion-b", -- cannon
+      group = "angels-exploration",
+      order = "eb"
     },
     {
       type = "item-subgroup",

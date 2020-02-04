@@ -1,12 +1,13 @@
 local OV = angelsmods.functions.OV
 
+data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
+data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
+
 if angelsmods.industries then
   data.raw["item-group"]["angels-warfare"].order = "la[angels]-f[exploration]-b"
   data.raw["item-group"]["angels-warfare"].inventory_order = "la[angels]-f[exploration]-b"
 
   if angelsmods.industries.overhaul then
-    data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
-    data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-energy")
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-repair")
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-defense")
@@ -295,6 +296,54 @@ if angelsmods.industries then
       })
     end
   end
+
+else -- no industries present
+
+  -- angels physical
+  data.raw.gun["pistol"].subgroup = "angels-physical"
+  data.raw.gun["pistol"].order = "a[gun]-a[pistol]"
+  data.raw.gun["submachine-gun"].subgroup = "angels-physical"
+  data.raw.gun["submachine-gun"].order = "a[gun]-b[submachine]"
+  data.raw.gun["shotgun"].subgroup = "angels-physical"
+  data.raw.gun["shotgun"].order = "a[gun]-c[shotgun]"
+  data.raw.gun["combat-shotgun"].subgroup = "angels-physical"
+  data.raw.gun["combat-shotgun"].order = "a[gun]-d[combat-shotgun]"
+  data.raw.ammo["firearm-magazine"].subgroup = "angels-physical"
+  data.raw.ammo["firearm-magazine"].order = "c[basic-ammo]-a[basic-rounds]"
+  data.raw.ammo["piercing-rounds-magazine"].subgroup = "angels-physical"
+  data.raw.ammo["piercing-rounds-magazine"].order = "c[basic-ammo]-b[piercing-rounds]"
+  data.raw.ammo["uranium-rounds-magazine"].subgroup = "angels-physical"
+  data.raw.ammo["uranium-rounds-magazine"].order = "c[basic-ammo]-c[uranium-rounds]"
+  data.raw.ammo["shotgun-shell"].subgroup = "angels-physical"
+  data.raw.ammo["shotgun-shell"].order = "c[basic-ammo]-d[basic-shells]"
+  data.raw.ammo["piercing-shotgun-shell"].subgroup = "angels-physical"
+  data.raw.ammo["piercing-shotgun-shell"].order = "c[basic-ammo]-e[piercing-shells]"
+
+  -- angels fire
+  data.raw.gun["flamethrower"].subgroup = "angels-fire"
+  data.raw.gun["flamethrower"].order = "a[gun]-a[flamethrower]"
+  data.raw.ammo["flamethrower-ammo"].subgroup = "angels-fire"
+  data.raw.ammo["flamethrower-ammo"].order = "c[basic-ammo]-a[flame-rounds]"
+
+  -- angels explosion a (rocket)
+  data.raw.gun["rocket-launcher"].subgroup = "angels-explosion-a"
+  data.raw.gun["rocket-launcher"].order = "a[gun]-a[rocket-launcher]"
+  data.raw.ammo["rocket"].subgroup = "angels-explosion-a"
+  data.raw.ammo["rocket"].order = "c[basic-ammo]-a[basic-rounds]"
+  data.raw.ammo["explosive-rocket"].subgroup = "angels-explosion-a"
+  data.raw.ammo["explosive-rocket"].order = "c[basic-ammo]-b[explosive-rounds]"
+  data.raw.ammo["atomic-bomb"].subgroup = "angels-explosion-a"
+  data.raw.ammo["atomic-bomb"].order = "c[basic-ammo]-c[uranium-rounds]"
+
+  -- angels explosion b (cannon)
+  data.raw.ammo["cannon-shell"].subgroup = "angels-explosion-b"
+  data.raw.ammo["cannon-shell"].order = "c[basic-ammo]-a[light]-a[basic-rounds]"
+  data.raw.ammo["explosive-cannon-shell"].subgroup = "angels-explosion-b"
+  data.raw.ammo["explosive-cannon-shell"].order = "c[basic-ammo]-a[light]-b[explosive-rounds]"
+  data.raw.ammo["uranium-cannon-shell"].subgroup = "angels-explosion-b"
+  data.raw.ammo["uranium-cannon-shell"].order = "c[basic-ammo]-a[light]-c[uranium-rounds]"
+  data.raw.ammo["explosive-uranium-cannon-shell"].subgroup = "angels-explosion-b"
+  data.raw.ammo["explosive-uranium-cannon-shell"].order = "c[basic-ammo]-a[light]-d[explosive-uranium-rounds]"
 end
 
 -- if data.raw["equipment-category"]["armoured-vehicle"] then
