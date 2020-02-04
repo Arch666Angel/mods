@@ -334,5 +334,23 @@ if mods['bobplates'] and angelsmods.industries.overhaul then
     data.raw.item["bob-logistic-robot-4"].order = "c[logistic]-c[robot]"
     data.raw.item["bob-logistic-robot-5"].subgroup = "angels-cargo-bots"
     data.raw.item["bob-logistic-robot-5"].order = "c[bob-fusion]-b[logistic]"
+
+    -- UPDATE BOB LOGISTICS TAB
+    data.raw["item-group"]["bob-logistics"].order = "lb[bobs]-a[logistics]"
+    data.raw["item-group"]["bob-logistics"].inventory_order = "lb[bobs]-a[logistics]"
+    data.raw["item-group"]["bob-logistics"].icon = nil
+    data.raw["item-group"]["bob-logistics"].icon_size = nil
+    data.raw["item-group"]["bob-logistics"].icons = {
+      {
+        icon = "__boblogistics__/graphics/icons/technology/logistics.png",
+        icon_size = 64
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
+        icon_size = 1080,
+        scale = 64/1080 * 0.35,
+        shift = {20, -20}
+      },
+    }
   end
 end

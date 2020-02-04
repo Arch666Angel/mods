@@ -335,13 +335,14 @@ data:extend(
     icons = {
       {
         icon = "__angelsindustries__/graphics/technology/cargo-roboport-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },
@@ -390,13 +391,14 @@ data:extend(
     icons = {
       {
         icon = "__angelsindustries__/graphics/technology/crawler-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5,
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },

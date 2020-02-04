@@ -22,10 +22,23 @@ data:extend(
     {
       type = "item-group",
       name = "angels-exploration",
-      order = "n",
-      inventory_order = "n",
-      icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
-      icon_size = 128
+      order = "la[angels]-f[exploration]-a",
+      inventory_order = "la[angels]-f[exploration]-a",
+      --icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+      --icon_size = 128
+      icons = {
+        {
+          icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+          icon_size = 128,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 64 / 32 * 0.35,
+          shift = {20, -20}
+        }
+      }
     },
     {
       type = "item-subgroup",
