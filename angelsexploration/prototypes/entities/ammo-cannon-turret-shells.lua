@@ -221,7 +221,7 @@ data:extend(
       }
     },
     subgroup = "angels-physical-a",
-    order = "d[cannon-ammo]-b[uranium-shells]",
+    order = "d[cannon-ammo]-c[uranium-shells]",
     magazine_size = 4,
     stack_size = 200
   },

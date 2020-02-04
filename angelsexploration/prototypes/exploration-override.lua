@@ -17,8 +17,19 @@ if angelsmods.industries then
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-defense")
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-attack")
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-movement")
+    
+    data.raw.item["angels-cannon-turret"].subgroup = "angels-warfare-bullet-guns"
+    data.raw.item["angels-cannon-turret"].order = "b[turret]-b[cannon-gun]"
+    data.raw.ammo["cannon-turret-shell-1"].subgroup = "angels-warfare-bullet-guns"
+    data.raw.ammo["cannon-turret-shell-1"].order = "d[cannon-ammo]-a[basic-shells]"
+    data.raw.ammo["cannon-turret-shell-2"].subgroup = "angels-warfare-bullet-guns"
+    data.raw.ammo["cannon-turret-shell-2"].order = "d[cannon-ammo]-b[piercing-shells]"
+    data.raw.ammo["cannon-turret-shell-3"].subgroup = "angels-warfare-bullet-guns"
+    data.raw.ammo["cannon-turret-shell-3"].order = "d[cannon-ammo]-c[uranium-shells]"
+    
     data.raw.item["angels-rocket-turret"].subgroup = "angels-warfare-rocket-guns"
     data.raw.item["angels-rocket-turret"].order = "b[turret]-a[rocket]"
+
     data.raw.gun["bio-gun"].subgroup = "angels-warfare-flamethrower-guns"
     data.raw.gun["bio-gun"].order = "a[gun]-b[bio-gun]"
     data.raw.ammo["bio-ammo"].subgroup = "angels-warfare-flamethrower-guns"
@@ -27,6 +38,15 @@ if angelsmods.industries then
       { name = "bio-gun", subgroup = "angels-warfare-flamethrower-guns", order = "a[gun]-b[bio-gun]" },
       { name = "bio-ammo", subgroup = "angels-warfare-flamethrower-guns", order = "c[basic-ammo]-b[bio-rounds]" },
     })
+
+    data.raw.ammo["cannon-shell"].subgroup = "angels-explosion-b"
+    data.raw.ammo["cannon-shell"].order = "c[basic-ammo]-a[light]-a[basic-rounds]"
+    data.raw.ammo["explosive-cannon-shell"].subgroup = "angels-explosion-b"
+    data.raw.ammo["explosive-cannon-shell"].order = "c[basic-ammo]-a[light]-b[explosive-rounds]"
+    data.raw.ammo["uranium-cannon-shell"].subgroup = "angels-explosion-b"
+    data.raw.ammo["uranium-cannon-shell"].order = "c[basic-ammo]-a[light]-c[uranium-rounds]"
+    data.raw.ammo["explosive-uranium-cannon-shell"].subgroup = "angels-explosion-b"
+    data.raw.ammo["explosive-uranium-cannon-shell"].order = "c[basic-ammo]-a[light]-d[explosive-uranium-rounds]"
 
     if bobmods and bobmods.warfare then
       data.raw["item-with-entity-data"]["bob-tank-2"].subgroup = "angels-exploration-vehicles"

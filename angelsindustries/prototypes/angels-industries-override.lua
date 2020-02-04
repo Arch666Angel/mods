@@ -41,6 +41,8 @@ if angelsmods.industries.overhaul then
   data.raw.gun["pistol"].order = "a[gun]-a[pistol]"
   data.raw.gun["submachine-gun"].subgroup = "angels-warfare-bullet-guns"
   data.raw.gun["submachine-gun"].order = "a[gun]-b[submachine]"
+  data.raw.item["gun-turret"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.item["gun-turret"].order = "b[turret]-a[gun]"
   data.raw.ammo["firearm-magazine"].subgroup = "angels-warfare-bullet-guns"
   data.raw.ammo["firearm-magazine"].order = "c[basic-ammo]-a[basic-rounds]"
   data.raw.ammo["piercing-rounds-magazine"].subgroup = "angels-warfare-bullet-guns"
@@ -68,8 +70,13 @@ if angelsmods.industries.overhaul then
 
   data.raw.gun["flamethrower"].subgroup = "angels-warfare-flamethrower-guns"
   data.raw.gun["flamethrower"].order = "a[gun]-a[flamethrower]"
+  data.raw.item["flamethrower-turret"].subgroup = "angels-warfare-flamethrower-guns"
+  data.raw.item["flamethrower-turret"].order = "b[turret]-a[flame]"
   data.raw.ammo["flamethrower-ammo"].subgroup = "angels-warfare-flamethrower-guns"
   data.raw.ammo["flamethrower-ammo"].order = "c[basic-ammo]-a[basic-rounds]"
+
+  data.raw.item["laser-turret"].subgroup = "angels-warfare-laser-guns"
+  data.raw.item["laser-turret"].order = "b[turret]-a[laser]"
 
   data.raw.ammo["cannon-shell"].subgroup = "angels-warfare-tank-guns"
   data.raw.ammo["cannon-shell"].order = "c[basic-ammo]-a[basic-rounds]"
@@ -79,19 +86,12 @@ if angelsmods.industries.overhaul then
   data.raw.ammo["uranium-cannon-shell"].order = "c[basic-ammo]-c[uranium-rounds]"
   data.raw.ammo["explosive-uranium-cannon-shell"].subgroup = "angels-warfare-tank-guns"
   data.raw.ammo["explosive-uranium-cannon-shell"].order = "c[basic-ammo]-d[explosive-uranium-rounds]"
-
+  
   data.raw.capsule["artillery-targeting-remote"].subgroup = "angels-warfare-artillery-guns"
   data.raw.capsule["artillery-targeting-remote"].order = "a[gun]-a[remote]"
   data.raw.ammo["artillery-shell"].subgroup = "angels-warfare-artillery-guns"
   data.raw.ammo["artillery-shell"].order = "c[basic-ammo]-a[basic-rounds]"
 
-  -- Move turrets
-  data.raw.item["gun-turret"].subgroup = "angels-warfare-bullet-guns"
-  data.raw.item["gun-turret"].order = "b[turret]-a[gun]"
-  data.raw.item["flamethrower-turret"].subgroup = "angels-warfare-flamethrower-guns"
-  data.raw.item["flamethrower-turret"].order = "b[turret]-a[flame]"
-  data.raw.item["laser-turret"].subgroup = "angels-warfare-laser-guns"
-  data.raw.item["laser-turret"].order = "b[turret]-a[laser]"
   data.raw.item["artillery-turret"].subgroup = "angels-warfare-artillery-guns"
   data.raw.item["artillery-turret"].order = "b[turret]-a[laser]"
 
