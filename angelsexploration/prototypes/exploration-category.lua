@@ -7,6 +7,10 @@ data:extend(
     },
     {
       type = "ammo-category",
+      name = "heavy-cannon-shell"
+    },
+    {
+      type = "ammo-category",
       name = "bio"
     },
     --DAMAGE TYPE

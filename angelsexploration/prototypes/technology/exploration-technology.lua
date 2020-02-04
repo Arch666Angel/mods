@@ -85,6 +85,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
+      "rocketry"
     },
     effects =
     {
@@ -99,6 +100,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"military-science-pack", 2},
       },
       time = 15
     },

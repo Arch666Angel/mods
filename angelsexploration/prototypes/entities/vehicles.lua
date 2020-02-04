@@ -66,7 +66,7 @@ data:extend(
       order = "z[tank]-a[cannon]",
       attack_parameters = {
         type = "projectile",
-        ammo_category = "cannon-shell",
+        ammo_categories = { "cannon-shell", "heavy-cannon-shell" },
         cooldown = 120,
         movement_slow_down_factor = 0,
         projectile_creation_distance = 4,
@@ -513,8 +513,8 @@ data:extend(
         },
         match_speed_to_activity = true
       },
-      open_sound = {filename = "__base__/sound/car-door-open.ogg", volume = 0.7},
-      close_sound = {filename = "__base__/sound/car-door-close.ogg", volume = 0.7},
+      open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume=0.5 },
+      close_sound = { filename = "__base__/sound/fight/tank-door-close.ogg", volume = 0.4 },
       rotation_speed = 0.0035,
       tank_driving = true,
       weight = 30000,

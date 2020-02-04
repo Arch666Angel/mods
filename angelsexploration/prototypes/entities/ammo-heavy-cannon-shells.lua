@@ -73,7 +73,7 @@ data:extend(
     icon_mipmaps = 4,
     flags = {},
     ammo_type = {
-      category = "cannon-shell",
+      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -183,7 +183,7 @@ data:extend(
     icon_mipmaps = 4,
     flags = {},
     ammo_type = {
-      category = "cannon-shell",
+      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -278,7 +278,7 @@ data:extend(
     icon_mipmaps = 4,
     flags = {},
     ammo_type = {
-      category = "cannon-shell",
+      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -388,7 +388,7 @@ data:extend(
     icon_mipmaps = 4,
     flags = {},
     ammo_type = {
-      category = "cannon-shell",
+      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
