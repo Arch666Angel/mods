@@ -45,7 +45,7 @@ if angelsmods.industries.overhaul then
 
   data.raw["item-with-entity-data"]["tank"].subgroup = "angels-vehicle-car" -- todo: conditional only when exploration is not present
 
-  if not bobmods.logistics then -- bobmods will override this for us
+  if not (bobmods and bobmods.logistics) then -- bobmods will override this for us
     data.raw["item-with-entity-data"]["locomotive"].subgroup = "angels-vehicle-train-vanilla"
     data.raw["item-with-entity-data"]["cargo-wagon"].subgroup = "angels-vehicle-train-vanilla"
     data.raw["item-with-entity-data"]["fluid-wagon"].subgroup = "angels-vehicle-train-vanilla"
