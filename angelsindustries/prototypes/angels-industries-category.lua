@@ -431,6 +431,79 @@ data:extend(
     name = "angels-vehicle-equipment",
     group = "angels-vehicles",
     order = "db" -- order da reserved for CAB (see addon cab-category)
-  }
+  },
+  -- WARFARE
+  {
+    type = "item-group",
+    name = "angels-warfare",
+    order = "la[angels]-f[warfare]-a",
+    inventory_order = "la[angels]-f[warfare]-a",
+    icons = {
+      {
+        icon = "__base__/graphics/item-group/military.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
+      }
+    }
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-bullet-guns",
+    group = "angels-warfare",
+    order = "b[bullets]-a[guns]" -- "b[bullets]-b[projectile]" reserved for "angels-warfare-bullet-projectiles" (see exploration override)
+  },                             -- "b[bullets]-c[bullet]" reserved for "angels-warfare-bullet" (see exploration override)
+  {                              -- "b[bullets]-d[magazine]" reserved for "angels-warfare-bullet-magazine" (see exploration override)
+    type = "item-subgroup",
+    name = "angels-warfare-shotgun-guns",
+    group = "angels-warfare",
+    order = "c[shotgun]-a[guns]" -- "c[shotgun]-b[shells]" reserved for "angels-warfare-shotgun-shells" (see exploration override)
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-rocket-guns",
+    group = "angels-warfare",
+    order = "d[rocket]-a[guns]" -- "d[rocket]-b[warhead]" reserved for "angels-warfare-rocket-warhead"
+  },                            -- "d[rocket]-c[bob-rocket]" reserved for "angels-warfare-bob-rocket"
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-flamethrower-guns",
+    group = "angels-warfare",
+    order = "e[flamethrower]-a[guns]"
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-laser-guns",
+    group = "angels-warfare",
+    order = "f[laser]-a[guns]" -- "f[laser-rifle]-b[battery]" reserved for "angels-warfare-laser-battery"
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-tank-guns",
+    group = "angels-warfare",
+    order = "g[tank]-a[guns]"
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-artillery-guns",
+    group = "angels-warfare",
+    order = "h[artillery]-a[guns]"
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-capsules-manual",
+    group = "angels-warfare",
+    order = "i[capsules]-a[manual]"
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-warfare-wall",
+    group = "angels-warfare",
+    order = "j[wall]"
+  },
 }
 )

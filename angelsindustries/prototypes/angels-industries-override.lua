@@ -36,14 +36,97 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 end
 
 if angelsmods.industries.overhaul then
+  -- Move guns and ammo
+  data.raw.gun["pistol"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.gun["pistol"].order = "a[gun]-a[pistol]"
+  data.raw.gun["submachine-gun"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.gun["submachine-gun"].order = "a[gun]-b[submachine]"
+  data.raw.ammo["firearm-magazine"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.ammo["firearm-magazine"].order = "c[basic-ammo]-a[basic-rounds]"
+  data.raw.ammo["piercing-rounds-magazine"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.ammo["piercing-rounds-magazine"].order = "c[basic-ammo]-b[piercing-rounds]"
+  data.raw.ammo["uranium-rounds-magazine"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.ammo["uranium-rounds-magazine"].order = "c[basic-ammo]-b[uranium-rounds]"
+
+  data.raw.gun["shotgun"].subgroup = "angels-warfare-shotgun-guns"
+  data.raw.gun["shotgun"].order = "a[gun]-a[shotgun]"
+  data.raw.gun["combat-shotgun"].subgroup = "angels-warfare-shotgun-guns"
+  data.raw.gun["combat-shotgun"].order = "a[gun]-b[combat-shotgun]"
+  data.raw.ammo["shotgun-shell"].subgroup = "angels-warfare-shotgun-guns"
+  data.raw.ammo["shotgun-shell"].order = "c[basic-ammo]-a[basic-rounds]"
+  data.raw.ammo["piercing-shotgun-shell"].subgroup = "angels-warfare-shotgun-guns"
+  data.raw.ammo["piercing-shotgun-shell"].order = "c[basic-ammo]-b[piercing-rounds]"
+
+  data.raw.gun["rocket-launcher"].subgroup = "angels-warfare-rocket-guns"
+  data.raw.gun["rocket-launcher"].order = "a[gun]-a[rocket-launcher]"
+  data.raw.ammo["rocket"].subgroup = "angels-warfare-rocket-guns"
+  data.raw.ammo["rocket"].order = "c[basic-ammo]-a[basic-rounds]"
+  data.raw.ammo["explosive-rocket"].subgroup = "angels-warfare-rocket-guns"
+  data.raw.ammo["explosive-rocket"].order = "c[basic-ammo]-b[explosive-rounds]"
+  data.raw.ammo["atomic-bomb"].subgroup = "angels-warfare-rocket-guns"
+  data.raw.ammo["atomic-bomb"].order = "c[basic-ammo]-c[uranium-rounds]"
+
+  data.raw.gun["flamethrower"].subgroup = "angels-warfare-flamethrower-guns"
+  data.raw.gun["flamethrower"].order = "a[gun]-a[flamethrower]"
+  data.raw.ammo["flamethrower-ammo"].subgroup = "angels-warfare-flamethrower-guns"
+  data.raw.ammo["flamethrower-ammo"].order = "c[basic-ammo]-a[basic-rounds]"
+
+  data.raw.ammo["cannon-shell"].subgroup = "angels-warfare-tank-guns"
+  data.raw.ammo["cannon-shell"].order = "c[basic-ammo]-a[basic-rounds]"
+  data.raw.ammo["explosive-cannon-shell"].subgroup = "angels-warfare-tank-guns"
+  data.raw.ammo["explosive-cannon-shell"].order = "c[basic-ammo]-b[explosive-rounds]"
+  data.raw.ammo["uranium-cannon-shell"].subgroup = "angels-warfare-tank-guns"
+  data.raw.ammo["uranium-cannon-shell"].order = "c[basic-ammo]-c[uranium-rounds]"
+  data.raw.ammo["explosive-uranium-cannon-shell"].subgroup = "angels-warfare-tank-guns"
+  data.raw.ammo["explosive-uranium-cannon-shell"].order = "c[basic-ammo]-d[explosive-uranium-rounds]"
+
+  data.raw.capsule["artillery-targeting-remote"].subgroup = "angels-warfare-artillery-guns"
+  data.raw.capsule["artillery-targeting-remote"].order = "a[gun]-a[remote]"
+  data.raw.ammo["artillery-shell"].subgroup = "angels-warfare-artillery-guns"
+  data.raw.ammo["artillery-shell"].order = "c[basic-ammo]-a[basic-rounds]"
+
+  -- Move turrets
+  data.raw.item["gun-turret"].subgroup = "angels-warfare-bullet-guns"
+  data.raw.item["gun-turret"].order = "b[turret]-a[gun]"
+  data.raw.item["flamethrower-turret"].subgroup = "angels-warfare-flamethrower-guns"
+  data.raw.item["flamethrower-turret"].order = "b[turret]-a[flame]"
+  data.raw.item["laser-turret"].subgroup = "angels-warfare-laser-guns"
+  data.raw.item["laser-turret"].order = "b[turret]-a[laser]"
+  data.raw.item["artillery-turret"].subgroup = "angels-warfare-artillery-guns"
+  data.raw.item["artillery-turret"].order = "b[turret]-a[laser]"
+
   -- Move vehicles
   data.raw["item-with-entity-data"]["car"].subgroup = "angels-vehicle-car"
   data.raw["item-with-entity-data"]["car"].order = "a[car]-a"
   -- order a[car]-b reserved for nilaus truck
   -- order b[crawlers]-a already taken by the crawler (car)
   -- order b[crawlers]-b reserved for CAB
+  data.raw["item-with-entity-data"]["tank"].subgroup = "angels-warfare-tank-guns"
+  data.raw["item-with-entity-data"]["tank"].order = "a[gun]-a[tank]"
 
-  data.raw["item-with-entity-data"]["tank"].subgroup = "angels-vehicle-car" -- todo: conditional only when exploration is not present
+  -- Move capsules
+  data.raw.item["land-mine"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.item["land-mine"].order = "a[mine]-a[basic]"
+  data.raw.capsule["grenade"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["grenade"].order = "b[grenade]-a[single]"
+  data.raw.capsule["cluster-grenade"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["cluster-grenade"].order = "b[grenade]-b[cluster]"
+  data.raw.capsule["poison-capsule"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["poison-capsule"].order = "c[clouds]-a[poison]"
+  data.raw.capsule["slowdown-capsule"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["slowdown-capsule"].order = "c[clouds]-a[slowdown]"
+  data.raw.capsule["defender-capsule"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["defender-capsule"].order = "d[troups]-a[defender]"
+  data.raw.capsule["distractor-capsule"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["distractor-capsule"].order = "d[troups]-b[distractor]"
+  data.raw.capsule["destroyer-capsule"].subgroup = "angels-warfare-capsules-manual"
+  data.raw.capsule["destroyer-capsule"].order = "d[troups]-c[destroyer]"
+
+  -- Move walls
+  data.raw.item["stone-wall"].subgroup = "angels-warfare-wall"
+  data.raw.item["stone-wall"].order = "a[wall]-a[stone]-a[wall]"
+  data.raw.item["gate"].subgroup = "angels-warfare-wall"
+  data.raw.item["gate"].order = "a[wall]-a[stone]-b[gate]"
 
   if not (bobmods and bobmods.logistics) then -- bobmods will override this for us
     data.raw["item-with-entity-data"]["locomotive"].subgroup = "angels-vehicle-train-vanilla"

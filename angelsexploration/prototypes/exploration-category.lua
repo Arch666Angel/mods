@@ -22,7 +22,7 @@ data:extend(
     {
       type = "item-group",
       name = "angels-exploration",
-      order = "la[angels]-f[exploration]-a",
+      order = "la[angels]-f[exploration]-a", -- order la[angels]-f[exploration]-b reserved for warfare
       inventory_order = "la[angels]-f[exploration]-a",
       --icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
       --icon_size = 128
