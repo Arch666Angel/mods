@@ -21,6 +21,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "heavy-cannon-shell"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "heavy-explosive-cannon-shell"
+      },
       -- {
       -- type = "unlock-recipe",
       -- recipe = "angels-rocket-defense-equipment-vequip"
@@ -37,6 +41,42 @@ data:extend(
       time = 15
     },
     order = "c-a"
+  },
+  {
+    type = "technology",
+    name = "angels-heavy-uranium-ammo",
+    icon_size = 128,
+    icon = "__base__/graphics/technology/uranium-ammo.png",
+    prerequisites =
+    {
+      "uranium-ammo",
+      "angels-heavy-tank",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "heavy-uranium-cannon-shell"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "heavy-explosive-uranium-cannon-shell"
+      },
+    },
+    unit =
+    {
+      count = 1000,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"military-science-pack", 1},
+        {"utility-science-pack", 1}
+      },
+      time = 45
+    },
+    order = "e-a-b"
   },
   --TURRETS
   {
