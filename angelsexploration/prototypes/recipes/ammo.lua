@@ -1,5 +1,50 @@
 data:extend(
 {
+  -- CANNON TURRET SHELL
+  {
+    type = "recipe",
+    name = "cannon-turret-shell-1",
+    energy_required = 2,
+    enabled = "false",
+    ingredients =
+    {
+      {"firearm-magazine", 1},
+      {"coal", 2}
+    },
+    results =
+    {
+      {"cannon-turret-shell-1", 1}
+    },
+  },
+  {
+    type = "recipe",
+    name = "cannon-turret-shell-2",
+    energy_required = 2,
+    enabled = "false",
+    ingredients =
+    {
+      {"piercing-rounds-magazine", 1},
+      {"coal", 4}
+    },
+    results = {
+      {"cannon-turret-shell-2", 1}
+    },
+  },
+  {
+    type = "recipe",
+    name = "cannon-turret-shell-3",
+    energy_required = 2,
+    enabled = "false",
+    ingredients =
+    {
+      {"uranium-rounds-magazine", 1},
+      {"coal", 8}
+    },
+    results = {
+      {"cannon-turret-shell-3", 1}
+    },
+  },
+  -- HEAVY CANNON SHELL
   {
     type = "recipe",
     name = "heavy-cannon-shell",

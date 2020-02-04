@@ -1,9 +1,13 @@
-local OV = angelsmods.functions.OV
 
 data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
 data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
 
+table.insert(data.raw.technology["military-3"].prerequisites, "angels-cannon-turret")
+table.insert(data.raw.technology["military-3"].effects, { type = "unlock-recipe", recipe = "cannon-turret-shell-2" })
+
 if angelsmods.industries then
+  local OV = angelsmods.functions.OV
+
   data.raw["item-group"]["angels-warfare"].order = "la[angels]-f[exploration]-b"
   data.raw["item-group"]["angels-warfare"].inventory_order = "la[angels]-f[exploration]-b"
 

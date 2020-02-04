@@ -43,35 +43,6 @@ data:extend(
     result = "angels-rocket-turret",
     order = "b"
   },
-  {
-    type = "recipe",
-    name = "cannon-turret-shell-1",
-    energy_required = 2,
-    enabled = "false",
-    ingredients = {
-      {"iron-plate", 4},
-      {"coal", 2}
-    },
-    results = {
-      {"cannon-turret-shell-1", 1}
-    },
-    order = "a"
-  },
-  {
-    type = "recipe",
-    name = "cannon-turret-shell-2",
-    energy_required = 2,
-    enabled = "false",
-    ingredients = {
-      {"cannon-turret-shell-1", 1},
-      {"steel-plate", 2},
-      {"copper-plate", 2},
-      {"coal", 2}
-    },
-    results = {
-      {"cannon-turret-shell-2", 1}
-    },
-    order = "a"
-  }
+
 }
 )
