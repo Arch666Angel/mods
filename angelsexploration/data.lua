@@ -16,7 +16,10 @@ if angelsmods.functions then
 end
 
 --PROTOTYPES
-require("prototypes.entities.ammo-projectiles")
+require("prototypes.entities.ammo-heavy-cannon-shells")
+require("prototypes.entities.ammo-cannon-turret-shells")
+--require("prototypes.entities.ammo-rocket")
+require("prototypes.entities.ammo-bio")
 require("prototypes.entities.guns")
 
 require("prototypes.entities.vehicles")
@@ -27,6 +30,7 @@ require("prototypes.entities.rocket-turret")
 require("prototypes.entities.biter-definitions")
 require("prototypes.entities.biter")
 
+require("prototypes.recipes.ammo")
 require("prototypes.recipes.vehicles-recipes")
 require("prototypes.recipes.bio-gun")
 
