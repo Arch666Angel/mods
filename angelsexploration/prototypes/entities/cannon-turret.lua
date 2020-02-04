@@ -8,8 +8,8 @@ data:extend(
       icon = "__angelsexploration__/graphics/icons/cannon-turret.png",
       icon_size = 32,
       flags = {},
-      subgroup = "defensive-structure",
-      order = "b[turret]-a[gun-turret]",
+      subgroup = "angels-physical-a",
+      order = "b[turret]-b[cannon-gun]",
       place_result = "angels-cannon-turret",
       stack_size = 50
     },

@@ -54,9 +54,15 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-physical",
+      name = "angels-physical-a", -- regular gun
       group = "angels-exploration",
-      order = "c"
+      order = "ca"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-physical-b", -- shotgun
+      group = "angels-exploration",
+      order = "cb"
     },
     {
       type = "item-subgroup",
@@ -78,13 +84,13 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-bio",
+      name = "angels-electric",
       group = "angels-exploration",
       order = "f"
     },
     {
       type = "item-subgroup",
-      name = "angels-plasma",
+      name = "angels-artillery",
       group = "angels-exploration",
       order = "g"
     },

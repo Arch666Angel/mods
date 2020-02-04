@@ -70,8 +70,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-turrets",
-    order = "d",
+    subgroup = "angels-physical-a",
+    order = "d[cannon-ammo]-a[basic-shells]",
     magazine_size = 4,
     stack_size = 200
   },
@@ -145,8 +145,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-turrets",
-    order = "d",
+    subgroup = "angels-physical-a",
+    order = "d[cannon-ammo]-b[piercing-shells]",
     magazine_size = 4,
     stack_size = 200
   },
@@ -220,8 +220,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-turrets",
-    order = "d",
+    subgroup = "angels-physical-a",
+    order = "d[cannon-ammo]-b[uranium-shells]",
     magazine_size = 4,
     stack_size = 200
   },

@@ -27,7 +27,6 @@ data:extend(
       {"iron-gear-wheel", 10}
     },
     result = "angels-cannon-turret",
-    order = "a"
   },
   {
     type = "recipe",
@@ -41,7 +40,6 @@ data:extend(
       {"iron-gear-wheel", 10}
     },
     result = "angels-rocket-turret",
-    order = "b"
   },
 
 }

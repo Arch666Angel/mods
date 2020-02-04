@@ -300,32 +300,39 @@ if angelsmods.industries then
       })
     end
   end
+end
 
-else -- no industries present
-
-  -- angels physical
-  data.raw.gun["pistol"].subgroup = "angels-physical"
+-- ordening when industries is not present
+if not (angelsmods.industries and angelsmods.industries.overhaul) then
+  -- angels physical a
+  data.raw.gun["pistol"].subgroup = "angels-physical-a"
   data.raw.gun["pistol"].order = "a[gun]-a[pistol]"
-  data.raw.gun["submachine-gun"].subgroup = "angels-physical"
+  data.raw.gun["submachine-gun"].subgroup = "angels-physical-a"
   data.raw.gun["submachine-gun"].order = "a[gun]-b[submachine]"
-  data.raw.gun["shotgun"].subgroup = "angels-physical"
-  data.raw.gun["shotgun"].order = "a[gun]-c[shotgun]"
-  data.raw.gun["combat-shotgun"].subgroup = "angels-physical"
-  data.raw.gun["combat-shotgun"].order = "a[gun]-d[combat-shotgun]"
-  data.raw.ammo["firearm-magazine"].subgroup = "angels-physical"
+  data.raw.item["gun-turret"].subgroup = "angels-physical-a"
+  data.raw.item["gun-turret"].order = "b[turret]-a[magazine-gun]"
+  data.raw.ammo["firearm-magazine"].subgroup = "angels-physical-a"
   data.raw.ammo["firearm-magazine"].order = "c[basic-ammo]-a[basic-rounds]"
-  data.raw.ammo["piercing-rounds-magazine"].subgroup = "angels-physical"
+  data.raw.ammo["piercing-rounds-magazine"].subgroup = "angels-physical-a"
   data.raw.ammo["piercing-rounds-magazine"].order = "c[basic-ammo]-b[piercing-rounds]"
-  data.raw.ammo["uranium-rounds-magazine"].subgroup = "angels-physical"
+  data.raw.ammo["uranium-rounds-magazine"].subgroup = "angels-physical-a"
   data.raw.ammo["uranium-rounds-magazine"].order = "c[basic-ammo]-c[uranium-rounds]"
-  data.raw.ammo["shotgun-shell"].subgroup = "angels-physical"
-  data.raw.ammo["shotgun-shell"].order = "c[basic-ammo]-d[basic-shells]"
-  data.raw.ammo["piercing-shotgun-shell"].subgroup = "angels-physical"
-  data.raw.ammo["piercing-shotgun-shell"].order = "c[basic-ammo]-e[piercing-shells]"
+
+  -- angels physical b
+  data.raw.gun["shotgun"].subgroup = "angels-physical-b"
+  data.raw.gun["shotgun"].order = "a[gun]-a[basic]"
+  data.raw.gun["combat-shotgun"].subgroup = "angels-physical-b"
+  data.raw.gun["combat-shotgun"].order = "a[gun]-b[combat]"
+  data.raw.ammo["shotgun-shell"].subgroup = "angels-physical-b"
+  data.raw.ammo["shotgun-shell"].order = "c[basic-ammo]-a[basic-shells]"
+  data.raw.ammo["piercing-shotgun-shell"].subgroup = "angels-physical-b"
+  data.raw.ammo["piercing-shotgun-shell"].order = "c[basic-ammo]-b[piercing-shells]"
 
   -- angels fire
   data.raw.gun["flamethrower"].subgroup = "angels-fire"
   data.raw.gun["flamethrower"].order = "a[gun]-a[flamethrower]"
+  data.raw.item["flamethrower-turret"].subgroup = "angels-fire"
+  data.raw.item["flamethrower-turret"].order = "b[turret]-a[flame]"
   data.raw.ammo["flamethrower-ammo"].subgroup = "angels-fire"
   data.raw.ammo["flamethrower-ammo"].order = "c[basic-ammo]-a[flame-rounds]"
 
@@ -348,6 +355,18 @@ else -- no industries present
   data.raw.ammo["uranium-cannon-shell"].order = "c[basic-ammo]-a[light]-c[uranium-rounds]"
   data.raw.ammo["explosive-uranium-cannon-shell"].subgroup = "angels-explosion-b"
   data.raw.ammo["explosive-uranium-cannon-shell"].order = "c[basic-ammo]-a[light]-d[explosive-uranium-rounds]"
+
+  -- angels electric
+  data.raw.item["laser-turret"].subgroup = "angels-electric"
+  data.raw.item["laser-turret"].order = "b[turret]-a[laser]"
+
+  -- angels artillery
+  data.raw.capsule["artillery-targeting-remote"].subgroup = "angels-artillery"
+  data.raw.capsule["artillery-targeting-remote"].order = "a[gun]-a[remote]"
+  data.raw.item["artillery-turret"].subgroup = "angels-artillery"
+  data.raw.item["artillery-turret"].order = "b[turret]-a[artillery]"
+  data.raw.ammo["artillery-shell"].subgroup = "angels-artillery"
+  data.raw.ammo["artillery-shell"].order = "c[basic-ammo]-a[basic-rounds]"
 end
 
 -- if data.raw["equipment-category"]["armoured-vehicle"] then
