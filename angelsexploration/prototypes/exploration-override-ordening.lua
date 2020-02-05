@@ -373,155 +373,294 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     data.raw.item["reinforced-gate"].order = "a[wall]-b[reinforced]-b[gate]"
   end
 
-  -- ORDENING OF VEHICLE EQUIPMENT
-  if bobmods and bobmods.equipment and mods['bobvehicleequipment'] then
-    -- power equipment
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-a", group = "angels-vehicles", order = "dc-a[power]-a[solar]" } })
-    data.raw.item["vehicle-solar-panel-1"].subgroup = "angels-vehicle-equipment-bobpower-a"
-    data.raw.item["vehicle-solar-panel-1"].order = "a"
-    data.raw.item["vehicle-solar-panel-2"].subgroup = "angels-vehicle-equipment-bobpower-a"
-    data.raw.item["vehicle-solar-panel-2"].order = "b"
-    data.raw.item["vehicle-solar-panel-3"].subgroup = "angels-vehicle-equipment-bobpower-a"
-    data.raw.item["vehicle-solar-panel-3"].order = "c"
-    data.raw.item["vehicle-solar-panel-4"].subgroup = "angels-vehicle-equipment-bobpower-a"
-    data.raw.item["vehicle-solar-panel-4"].order = "d"
-    data.raw.item["vehicle-solar-panel-5"].subgroup = "angels-vehicle-equipment-bobpower-a"
-    data.raw.item["vehicle-solar-panel-5"].order = "e"
-    data.raw.item["vehicle-solar-panel-6"].subgroup = "angels-vehicle-equipment-bobpower-a"
-    data.raw.item["vehicle-solar-panel-6"].order = "f"
+  -- ORDENING OF EQUIPMENT
+  if bobmods and bobmods.equipment then
+    if mods['bobvehicleequipment'] then -- vehicle equipment
+      -- power equipment
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-a", group = "angels-vehicles", order = "dc-a[power]-a[solar]" } })
+      data.raw.item["vehicle-solar-panel-1"].subgroup = "angels-vehicle-equipment-bobpower-a"
+      data.raw.item["vehicle-solar-panel-1"].order = "a"
+      data.raw.item["vehicle-solar-panel-2"].subgroup = "angels-vehicle-equipment-bobpower-a"
+      data.raw.item["vehicle-solar-panel-2"].order = "b"
+      data.raw.item["vehicle-solar-panel-3"].subgroup = "angels-vehicle-equipment-bobpower-a"
+      data.raw.item["vehicle-solar-panel-3"].order = "c"
+      data.raw.item["vehicle-solar-panel-4"].subgroup = "angels-vehicle-equipment-bobpower-a"
+      data.raw.item["vehicle-solar-panel-4"].order = "d"
+      data.raw.item["vehicle-solar-panel-5"].subgroup = "angels-vehicle-equipment-bobpower-a"
+      data.raw.item["vehicle-solar-panel-5"].order = "e"
+      data.raw.item["vehicle-solar-panel-6"].subgroup = "angels-vehicle-equipment-bobpower-a"
+      data.raw.item["vehicle-solar-panel-6"].order = "f"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-b", group = "angels-vehicles", order = "dc-a[power]-b[fusion-cell]" } })
-    data.raw.item["vehicle-fusion-cell-1"].subgroup = "angels-vehicle-equipment-bobpower-b"
-    data.raw.item["vehicle-fusion-cell-1"].order = "a"
-    data.raw.item["vehicle-fusion-cell-2"].subgroup = "angels-vehicle-equipment-bobpower-b"
-    data.raw.item["vehicle-fusion-cell-2"].order = "b"
-    data.raw.item["vehicle-fusion-cell-3"].subgroup = "angels-vehicle-equipment-bobpower-b"
-    data.raw.item["vehicle-fusion-cell-3"].order = "c"
-    data.raw.item["vehicle-fusion-cell-4"].subgroup = "angels-vehicle-equipment-bobpower-b"
-    data.raw.item["vehicle-fusion-cell-4"].order = "d"
-    data.raw.item["vehicle-fusion-cell-5"].subgroup = "angels-vehicle-equipment-bobpower-b"
-    data.raw.item["vehicle-fusion-cell-5"].order = "e"
-    data.raw.item["vehicle-fusion-cell-6"].subgroup = "angels-vehicle-equipment-bobpower-b"
-    data.raw.item["vehicle-fusion-cell-6"].order = "f"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-b", group = "angels-vehicles", order = "dc-a[power]-b[fusion-cell]" } })
+      data.raw.item["vehicle-fusion-cell-1"].subgroup = "angels-vehicle-equipment-bobpower-b"
+      data.raw.item["vehicle-fusion-cell-1"].order = "a"
+      data.raw.item["vehicle-fusion-cell-2"].subgroup = "angels-vehicle-equipment-bobpower-b"
+      data.raw.item["vehicle-fusion-cell-2"].order = "b"
+      data.raw.item["vehicle-fusion-cell-3"].subgroup = "angels-vehicle-equipment-bobpower-b"
+      data.raw.item["vehicle-fusion-cell-3"].order = "c"
+      data.raw.item["vehicle-fusion-cell-4"].subgroup = "angels-vehicle-equipment-bobpower-b"
+      data.raw.item["vehicle-fusion-cell-4"].order = "d"
+      data.raw.item["vehicle-fusion-cell-5"].subgroup = "angels-vehicle-equipment-bobpower-b"
+      data.raw.item["vehicle-fusion-cell-5"].order = "e"
+      data.raw.item["vehicle-fusion-cell-6"].subgroup = "angels-vehicle-equipment-bobpower-b"
+      data.raw.item["vehicle-fusion-cell-6"].order = "f"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-c", group = "angels-vehicles", order = "dc-a[power]-c[fusion-reactor]" } })
-    data.raw.item["vehicle-fusion-reactor-1"].subgroup = "angels-vehicle-equipment-bobpower-c"
-    data.raw.item["vehicle-fusion-reactor-1"].order = "a"
-    data.raw.item["vehicle-fusion-reactor-2"].subgroup = "angels-vehicle-equipment-bobpower-c"
-    data.raw.item["vehicle-fusion-reactor-2"].order = "b"
-    data.raw.item["vehicle-fusion-reactor-3"].subgroup = "angels-vehicle-equipment-bobpower-c"
-    data.raw.item["vehicle-fusion-reactor-3"].order = "c"
-    data.raw.item["vehicle-fusion-reactor-4"].subgroup = "angels-vehicle-equipment-bobpower-c"
-    data.raw.item["vehicle-fusion-reactor-4"].order = "d"
-    data.raw.item["vehicle-fusion-reactor-5"].subgroup = "angels-vehicle-equipment-bobpower-c"
-    data.raw.item["vehicle-fusion-reactor-5"].order = "e"
-    data.raw.item["vehicle-fusion-reactor-6"].subgroup = "angels-vehicle-equipment-bobpower-c"
-    data.raw.item["vehicle-fusion-reactor-6"].order = "f"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-c", group = "angels-vehicles", order = "dc-a[power]-c[fusion-reactor]" } })
+      data.raw.item["vehicle-fusion-reactor-1"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["vehicle-fusion-reactor-1"].order = "a"
+      data.raw.item["vehicle-fusion-reactor-2"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["vehicle-fusion-reactor-2"].order = "b"
+      data.raw.item["vehicle-fusion-reactor-3"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["vehicle-fusion-reactor-3"].order = "c"
+      data.raw.item["vehicle-fusion-reactor-4"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["vehicle-fusion-reactor-4"].order = "d"
+      data.raw.item["vehicle-fusion-reactor-5"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["vehicle-fusion-reactor-5"].order = "e"
+      data.raw.item["vehicle-fusion-reactor-6"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["vehicle-fusion-reactor-6"].order = "f"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-d", group = "angels-vehicles", order = "dc-a[power]-d[battery]" } })
-    data.raw.item["vehicle-battery-1"].subgroup = "angels-vehicle-equipment-bobpower-d"
-    data.raw.item["vehicle-battery-1"].order = "a"
-    data.raw.item["vehicle-battery-2"].subgroup = "angels-vehicle-equipment-bobpower-d"
-    data.raw.item["vehicle-battery-2"].order = "b"
-    data.raw.item["vehicle-battery-3"].subgroup = "angels-vehicle-equipment-bobpower-d"
-    data.raw.item["vehicle-battery-3"].order = "c"
-    data.raw.item["vehicle-battery-4"].subgroup = "angels-vehicle-equipment-bobpower-d"
-    data.raw.item["vehicle-battery-4"].order = "d"
-    data.raw.item["vehicle-battery-5"].subgroup = "angels-vehicle-equipment-bobpower-d"
-    data.raw.item["vehicle-battery-5"].order = "e"
-    data.raw.item["vehicle-battery-6"].subgroup = "angels-vehicle-equipment-bobpower-d"
-    data.raw.item["vehicle-battery-6"].order = "f"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-d", group = "angels-vehicles", order = "dc-a[power]-d[battery]" } })
+      data.raw.item["vehicle-battery-1"].subgroup = "angels-vehicle-equipment-bobpower-d"
+      data.raw.item["vehicle-battery-1"].order = "a"
+      data.raw.item["vehicle-battery-2"].subgroup = "angels-vehicle-equipment-bobpower-d"
+      data.raw.item["vehicle-battery-2"].order = "b"
+      data.raw.item["vehicle-battery-3"].subgroup = "angels-vehicle-equipment-bobpower-d"
+      data.raw.item["vehicle-battery-3"].order = "c"
+      data.raw.item["vehicle-battery-4"].subgroup = "angels-vehicle-equipment-bobpower-d"
+      data.raw.item["vehicle-battery-4"].order = "d"
+      data.raw.item["vehicle-battery-5"].subgroup = "angels-vehicle-equipment-bobpower-d"
+      data.raw.item["vehicle-battery-5"].order = "e"
+      data.raw.item["vehicle-battery-6"].subgroup = "angels-vehicle-equipment-bobpower-d"
+      data.raw.item["vehicle-battery-6"].order = "f"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-e", group = "angels-vehicles", order = "dc-a[power]-e[drive]" } })
-    data.raw.item["vehicle-motor"].subgroup = "angels-vehicle-equipment-bobpower-e"
-    data.raw.item["vehicle-motor"].order = "a"
-    data.raw.item["vehicle-engine"].subgroup = "angels-vehicle-equipment-bobpower-e"
-    data.raw.item["vehicle-engine"].order = "b"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobpower-e", group = "angels-vehicles", order = "dc-a[power]-e[drive]" } })
+      data.raw.item["vehicle-motor"].subgroup = "angels-vehicle-equipment-bobpower-e"
+      data.raw.item["vehicle-motor"].order = "a"
+      data.raw.item["vehicle-engine"].subgroup = "angels-vehicle-equipment-bobpower-e"
+      data.raw.item["vehicle-engine"].order = "b"
 
-    -- robot equipment
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-a", group = "angels-vehicles", order = "dc-b[robot]-a[control]" } })
-    data.raw.item["vehicle-roboport-robot-equipment"].subgroup = "angels-vehicle-equipment-bobrobot-a"
-    data.raw.item["vehicle-roboport-robot-equipment"].order = "a"
-    data.raw.item["vehicle-roboport-robot-equipment-2"].subgroup = "angels-vehicle-equipment-bobrobot-a"
-    data.raw.item["vehicle-roboport-robot-equipment-2"].order = "b"
-    data.raw.item["vehicle-roboport-robot-equipment-3"].subgroup = "angels-vehicle-equipment-bobrobot-a"
-    data.raw.item["vehicle-roboport-robot-equipment-3"].order = "c"
-    data.raw.item["vehicle-roboport-robot-equipment-4"].subgroup = "angels-vehicle-equipment-bobrobot-a"
-    data.raw.item["vehicle-roboport-robot-equipment-4"].order = "d"
+      -- robot equipment
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-a", group = "angels-vehicles", order = "dc-b[robot]-a[control]" } })
+      data.raw.item["vehicle-roboport-robot-equipment"].subgroup = "angels-vehicle-equipment-bobrobot-a"
+      data.raw.item["vehicle-roboport-robot-equipment"].order = "a"
+      data.raw.item["vehicle-roboport-robot-equipment-2"].subgroup = "angels-vehicle-equipment-bobrobot-a"
+      data.raw.item["vehicle-roboport-robot-equipment-2"].order = "b"
+      data.raw.item["vehicle-roboport-robot-equipment-3"].subgroup = "angels-vehicle-equipment-bobrobot-a"
+      data.raw.item["vehicle-roboport-robot-equipment-3"].order = "c"
+      data.raw.item["vehicle-roboport-robot-equipment-4"].subgroup = "angels-vehicle-equipment-bobrobot-a"
+      data.raw.item["vehicle-roboport-robot-equipment-4"].order = "d"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-b", group = "angels-vehicles", order = "dc-b[robot]-b[chargepad]" } })
-    data.raw.item["vehicle-roboport-chargepad-equipment"].subgroup = "angels-vehicle-equipment-bobrobot-b"
-    data.raw.item["vehicle-roboport-chargepad-equipment"].order = "a"
-    data.raw.item["vehicle-roboport-chargepad-equipment-2"].subgroup = "angels-vehicle-equipment-bobrobot-b"
-    data.raw.item["vehicle-roboport-chargepad-equipment-2"].order = "b"
-    data.raw.item["vehicle-roboport-chargepad-equipment-3"].subgroup = "angels-vehicle-equipment-bobrobot-b"
-    data.raw.item["vehicle-roboport-chargepad-equipment-3"].order = "c"
-    data.raw.item["vehicle-roboport-chargepad-equipment-4"].subgroup = "angels-vehicle-equipment-bobrobot-b"
-    data.raw.item["vehicle-roboport-chargepad-equipment-4"].order = "d"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-b", group = "angels-vehicles", order = "dc-b[robot]-b[chargepad]" } })
+      data.raw.item["vehicle-roboport-chargepad-equipment"].subgroup = "angels-vehicle-equipment-bobrobot-b"
+      data.raw.item["vehicle-roboport-chargepad-equipment"].order = "a"
+      data.raw.item["vehicle-roboport-chargepad-equipment-2"].subgroup = "angels-vehicle-equipment-bobrobot-b"
+      data.raw.item["vehicle-roboport-chargepad-equipment-2"].order = "b"
+      data.raw.item["vehicle-roboport-chargepad-equipment-3"].subgroup = "angels-vehicle-equipment-bobrobot-b"
+      data.raw.item["vehicle-roboport-chargepad-equipment-3"].order = "c"
+      data.raw.item["vehicle-roboport-chargepad-equipment-4"].subgroup = "angels-vehicle-equipment-bobrobot-b"
+      data.raw.item["vehicle-roboport-chargepad-equipment-4"].order = "d"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-c", group = "angels-vehicles", order = "dc-b[robot]-c[expander]" } })
-    data.raw.item["vehicle-roboport-antenna-equipment"].subgroup = "angels-vehicle-equipment-bobrobot-c"
-    data.raw.item["vehicle-roboport-antenna-equipment"].order = "a"
-    data.raw.item["vehicle-roboport-antenna-equipment-2"].subgroup = "angels-vehicle-equipment-bobrobot-c"
-    data.raw.item["vehicle-roboport-antenna-equipment-2"].order = "b"
-    data.raw.item["vehicle-roboport-antenna-equipment-3"].subgroup = "angels-vehicle-equipment-bobrobot-c"
-    data.raw.item["vehicle-roboport-antenna-equipment-3"].order = "c"
-    data.raw.item["vehicle-roboport-antenna-equipment-4"].subgroup = "angels-vehicle-equipment-bobrobot-c"
-    data.raw.item["vehicle-roboport-antenna-equipment-4"].order = "d"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-c", group = "angels-vehicles", order = "dc-b[robot]-c[expander]" } })
+      data.raw.item["vehicle-roboport-antenna-equipment"].subgroup = "angels-vehicle-equipment-bobrobot-c"
+      data.raw.item["vehicle-roboport-antenna-equipment"].order = "a"
+      data.raw.item["vehicle-roboport-antenna-equipment-2"].subgroup = "angels-vehicle-equipment-bobrobot-c"
+      data.raw.item["vehicle-roboport-antenna-equipment-2"].order = "b"
+      data.raw.item["vehicle-roboport-antenna-equipment-3"].subgroup = "angels-vehicle-equipment-bobrobot-c"
+      data.raw.item["vehicle-roboport-antenna-equipment-3"].order = "c"
+      data.raw.item["vehicle-roboport-antenna-equipment-4"].subgroup = "angels-vehicle-equipment-bobrobot-c"
+      data.raw.item["vehicle-roboport-antenna-equipment-4"].order = "d"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-d", group = "angels-vehicles", order = "dc-b[robot]-d[roboport]" } })
-    data.raw.item["vehicle-roboport"].subgroup = "angels-vehicle-equipment-bobrobot-d"
-    data.raw.item["vehicle-roboport"].order = "a"
-    data.raw.item["vehicle-roboport-2"].subgroup = "angels-vehicle-equipment-bobrobot-d"
-    data.raw.item["vehicle-roboport-2"].order = "b"
-    data.raw.item["vehicle-roboport-3"].subgroup = "angels-vehicle-equipment-bobrobot-d"
-    data.raw.item["vehicle-roboport-3"].order = "c"
-    data.raw.item["vehicle-roboport-4"].subgroup = "angels-vehicle-equipment-bobrobot-d"
-    data.raw.item["vehicle-roboport-4"].order = "d"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobrobot-d", group = "angels-vehicles", order = "dc-b[robot]-d[roboport]" } })
+      data.raw.item["vehicle-roboport"].subgroup = "angels-vehicle-equipment-bobrobot-d"
+      data.raw.item["vehicle-roboport"].order = "a"
+      data.raw.item["vehicle-roboport-2"].subgroup = "angels-vehicle-equipment-bobrobot-d"
+      data.raw.item["vehicle-roboport-2"].order = "b"
+      data.raw.item["vehicle-roboport-3"].subgroup = "angels-vehicle-equipment-bobrobot-d"
+      data.raw.item["vehicle-roboport-3"].order = "c"
+      data.raw.item["vehicle-roboport-4"].subgroup = "angels-vehicle-equipment-bobrobot-d"
+      data.raw.item["vehicle-roboport-4"].order = "d"
 
-    -- combat (weapons and defences)
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobcombat-a", group = "angels-vehicles", order = "dc-c[combat]-a[shield]" } })
-    data.raw.item["vehicle-shield-1"].subgroup = "angels-vehicle-equipment-bobcombat-a"
-    data.raw.item["vehicle-shield-1"].order = "a"
-    data.raw.item["vehicle-shield-2"].subgroup = "angels-vehicle-equipment-bobcombat-a"
-    data.raw.item["vehicle-shield-2"].order = "b"
-    data.raw.item["vehicle-shield-3"].subgroup = "angels-vehicle-equipment-bobcombat-a"
-    data.raw.item["vehicle-shield-3"].order = "c"
-    data.raw.item["vehicle-shield-4"].subgroup = "angels-vehicle-equipment-bobcombat-a"
-    data.raw.item["vehicle-shield-4"].order = "d"
-    data.raw.item["vehicle-shield-5"].subgroup = "angels-vehicle-equipment-bobcombat-a"
-    data.raw.item["vehicle-shield-5"].order = "e"
-    data.raw.item["vehicle-shield-6"].subgroup = "angels-vehicle-equipment-bobcombat-a"
-    data.raw.item["vehicle-shield-6"].order = "f"
+      -- combat (weapons and defences)
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobcombat-a", group = "angels-vehicles", order = "dc-c[combat]-a[shield]" } })
+      data.raw.item["vehicle-shield-1"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["vehicle-shield-1"].order = "a"
+      data.raw.item["vehicle-shield-2"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["vehicle-shield-2"].order = "b"
+      data.raw.item["vehicle-shield-3"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["vehicle-shield-3"].order = "c"
+      data.raw.item["vehicle-shield-4"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["vehicle-shield-4"].order = "d"
+      data.raw.item["vehicle-shield-5"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["vehicle-shield-5"].order = "e"
+      data.raw.item["vehicle-shield-6"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["vehicle-shield-6"].order = "f"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobcombat-b", group = "angels-vehicles", order = "dc-c[combat]-b[laser]" } })
-    data.raw.item["vehicle-laser-defense-1"].subgroup = "angels-vehicle-equipment-bobcombat-b"
-    data.raw.item["vehicle-laser-defense-1"].order = "a"
-    data.raw.item["vehicle-laser-defense-2"].subgroup = "angels-vehicle-equipment-bobcombat-b"
-    data.raw.item["vehicle-laser-defense-2"].order = "b"
-    data.raw.item["vehicle-laser-defense-3"].subgroup = "angels-vehicle-equipment-bobcombat-b"
-    data.raw.item["vehicle-laser-defense-3"].order = "c"
-    data.raw.item["vehicle-laser-defense-4"].subgroup = "angels-vehicle-equipment-bobcombat-b"
-    data.raw.item["vehicle-laser-defense-4"].order = "d"
-    data.raw.item["vehicle-laser-defense-5"].subgroup = "angels-vehicle-equipment-bobcombat-b"
-    data.raw.item["vehicle-laser-defense-5"].order = "e"
-    data.raw.item["vehicle-laser-defense-6"].subgroup = "angels-vehicle-equipment-bobcombat-b"
-    data.raw.item["vehicle-laser-defense-6"].order = "f"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobcombat-b", group = "angels-vehicles", order = "dc-c[combat]-b[laser]" } })
+      data.raw.item["vehicle-laser-defense-1"].subgroup = "angels-vehicle-equipment-bobcombat-b"
+      data.raw.item["vehicle-laser-defense-1"].order = "a"
+      data.raw.item["vehicle-laser-defense-2"].subgroup = "angels-vehicle-equipment-bobcombat-b"
+      data.raw.item["vehicle-laser-defense-2"].order = "b"
+      data.raw.item["vehicle-laser-defense-3"].subgroup = "angels-vehicle-equipment-bobcombat-b"
+      data.raw.item["vehicle-laser-defense-3"].order = "c"
+      data.raw.item["vehicle-laser-defense-4"].subgroup = "angels-vehicle-equipment-bobcombat-b"
+      data.raw.item["vehicle-laser-defense-4"].order = "d"
+      data.raw.item["vehicle-laser-defense-5"].subgroup = "angels-vehicle-equipment-bobcombat-b"
+      data.raw.item["vehicle-laser-defense-5"].order = "e"
+      data.raw.item["vehicle-laser-defense-6"].subgroup = "angels-vehicle-equipment-bobcombat-b"
+      data.raw.item["vehicle-laser-defense-6"].order = "f"
 
-    data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobcombat-c", group = "angels-vehicles", order = "dc-c[combat]-c[plasma]" } })
-    data.raw.item["vehicle-big-turret-1"].subgroup = "angels-vehicle-equipment-bobcombat-c"
-    data.raw.item["vehicle-big-turret-1"].order = "a"
-    data.raw.item["vehicle-big-turret-2"].subgroup = "angels-vehicle-equipment-bobcombat-c"
-    data.raw.item["vehicle-big-turret-2"].order = "b"
-    data.raw.item["vehicle-big-turret-3"].subgroup = "angels-vehicle-equipment-bobcombat-c"
-    data.raw.item["vehicle-big-turret-3"].order = "c"
-    data.raw.item["vehicle-big-turret-4"].subgroup = "angels-vehicle-equipment-bobcombat-c"
-    data.raw.item["vehicle-big-turret-4"].order = "d"
-    data.raw.item["vehicle-big-turret-5"].subgroup = "angels-vehicle-equipment-bobcombat-c"
-    data.raw.item["vehicle-big-turret-5"].order = "e"
-    data.raw.item["vehicle-big-turret-6"].subgroup = "angels-vehicle-equipment-bobcombat-c"
-    data.raw.item["vehicle-big-turret-6"].order = "f"
+      data:extend({ { type = "item-subgroup", name = "angels-vehicle-equipment-bobcombat-c", group = "angels-vehicles", order = "dc-c[combat]-c[plasma]" } })
+      data.raw.item["vehicle-big-turret-1"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["vehicle-big-turret-1"].order = "a"
+      data.raw.item["vehicle-big-turret-2"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["vehicle-big-turret-2"].order = "b"
+      data.raw.item["vehicle-big-turret-3"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["vehicle-big-turret-3"].order = "c"
+      data.raw.item["vehicle-big-turret-4"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["vehicle-big-turret-4"].order = "d"
+      data.raw.item["vehicle-big-turret-5"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["vehicle-big-turret-5"].order = "e"
+      data.raw.item["vehicle-big-turret-6"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["vehicle-big-turret-6"].order = "f"
+    end
+    if mods['bobequipment'] then -- personal equipment
+      -- power equipment                                                                                 order h-a[armor] reserved for armors from warfare
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-a", group = "angels-exploration", order = "h-b[power]-a[solar]" } })
+      data.raw.item["solar-panel-equipment"].subgroup = "angels-personal-equipment-bobpower-a"
+      data.raw.item["solar-panel-equipment"].order = "a"
+      data.raw.item["solar-panel-equipment-2"].subgroup = "angels-personal-equipment-bobpower-a"
+      data.raw.item["solar-panel-equipment-2"].order = "b"
+      data.raw.item["solar-panel-equipment-3"].subgroup = "angels-personal-equipment-bobpower-a"
+      data.raw.item["solar-panel-equipment-3"].order = "c"
+      data.raw.item["solar-panel-equipment-4"].subgroup = "angels-personal-equipment-bobpower-a"
+      data.raw.item["solar-panel-equipment-4"].order = "d"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-b", group = "angels-exploration", order = "h-b[power]-b[fusion-reactor]" } })
+      data.raw.item["fusion-reactor-equipment"].subgroup = "angels-personal-equipment-bobpower-b"
+      data.raw.item["fusion-reactor-equipment"].order = "a"
+      data.raw.item["fusion-reactor-equipment-2"].subgroup = "angels-personal-equipment-bobpower-b"
+      data.raw.item["fusion-reactor-equipment-2"].order = "b"
+      data.raw.item["fusion-reactor-equipment-3"].subgroup = "angels-personal-equipment-bobpower-b"
+      data.raw.item["fusion-reactor-equipment-3"].order = "c"
+      data.raw.item["fusion-reactor-equipment-4"].subgroup = "angels-personal-equipment-bobpower-b"
+      data.raw.item["fusion-reactor-equipment-4"].order = "d"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-c", group = "angels-exploration", order = "h-b[power]-c[battery]" } })
+      data.raw.item["battery-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-equipment"].order = "a"
+      data.raw.item["battery-mk2-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk2-equipment"].order = "b"
+      data.raw.item["battery-mk3-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk3-equipment"].order = "c"
+      data.raw.item["battery-mk4-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk4-equipment"].order = "d"
+      data.raw.item["battery-mk5-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk5-equipment"].order = "e"
+      data.raw.item["battery-mk6-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk6-equipment"].order = "f"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-d", group = "angels-exploration", order = "h-b[power]-d[night-vision]" } })
+      data.raw.item["night-vision-equipment"].subgroup = "angels-personal-equipment-bobpower-d"
+      data.raw.item["night-vision-equipment"].order = "aa"
+      data.raw.item["night-vision-equipment-2"].subgroup = "angels-personal-equipment-bobpower-d"
+      data.raw.item["night-vision-equipment-2"].order = "ab"
+      data.raw.item["night-vision-equipment-3"].subgroup = "angels-personal-equipment-bobpower-d"
+      data.raw.item["night-vision-equipment-3"].order = "ac"
+      data.raw.item["belt-immunity-equipment"].subgroup = "angels-personal-equipment-bobpower-d"
+      data.raw.item["belt-immunity-equipment"].order = "b"
+
+      -- robot equipment
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobrobot-a", group = "angels-exploration", order = "h-c[robot]-a[control]" } })
+      data.raw.item["personal-roboport-robot-equipment"].subgroup = "angels-personal-equipment-bobrobot-a"
+      data.raw.item["personal-roboport-robot-equipment"].order = "a"
+      data.raw.item["personal-roboport-robot-equipment-2"].subgroup = "angels-personal-equipment-bobrobot-a"
+      data.raw.item["personal-roboport-robot-equipment-2"].order = "b"
+      data.raw.item["personal-roboport-robot-equipment-3"].subgroup = "angels-personal-equipment-bobrobot-a"
+      data.raw.item["personal-roboport-robot-equipment-3"].order = "c"
+      data.raw.item["personal-roboport-robot-equipment-4"].subgroup = "angels-personal-equipment-bobrobot-a"
+      data.raw.item["personal-roboport-robot-equipment-4"].order = "d"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobrobot-b", group = "angels-exploration", order = "h-c[robot]-b[chargepad]" } })
+      data.raw.item["personal-roboport-chargepad-equipment"].subgroup = "angels-personal-equipment-bobrobot-b"
+      data.raw.item["personal-roboport-chargepad-equipment"].order = "a"
+      data.raw.item["personal-roboport-chargepad-equipment-2"].subgroup = "angels-personal-equipment-bobrobot-b"
+      data.raw.item["personal-roboport-chargepad-equipment-2"].order = "b"
+      data.raw.item["personal-roboport-chargepad-equipment-3"].subgroup = "angels-personal-equipment-bobrobot-b"
+      data.raw.item["personal-roboport-chargepad-equipment-3"].order = "c"
+      data.raw.item["personal-roboport-chargepad-equipment-4"].subgroup = "angels-personal-equipment-bobrobot-b"
+      data.raw.item["personal-roboport-chargepad-equipment-4"].order = "d"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobrobot-c", group = "angels-exploration", order = "h-c[robot]-c[expander]" } })
+      data.raw.item["personal-roboport-antenna-equipment"].subgroup = "angels-personal-equipment-bobrobot-c"
+      data.raw.item["personal-roboport-antenna-equipment"].order = "a"
+      data.raw.item["personal-roboport-antenna-equipment-2"].subgroup = "angels-personal-equipment-bobrobot-c"
+      data.raw.item["personal-roboport-antenna-equipment-2"].order = "b"
+      data.raw.item["personal-roboport-antenna-equipment-3"].subgroup = "angels-personal-equipment-bobrobot-c"
+      data.raw.item["personal-roboport-antenna-equipment-3"].order = "c"
+      data.raw.item["personal-roboport-antenna-equipment-4"].subgroup = "angels-personal-equipment-bobrobot-c"
+      data.raw.item["personal-roboport-antenna-equipment-4"].order = "d"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobrobot-d", group = "angels-exploration", order = "h-c[robot]-d[roboport]" } })
+      data.raw.item["personal-roboport-equipment"].subgroup = "angels-personal-equipment-bobrobot-d"
+      data.raw.item["personal-roboport-equipment"].order = "a"
+      data.raw.item["personal-roboport-mk2-equipment"].subgroup = "angels-personal-equipment-bobrobot-d"
+      data.raw.item["personal-roboport-mk2-equipment"].order = "b"
+      data.raw.item["personal-roboport-mk3-equipment"].subgroup = "angels-personal-equipment-bobrobot-d"
+      data.raw.item["personal-roboport-mk3-equipment"].order = "c"
+      data.raw.item["personal-roboport-mk4-equipment"].subgroup = "angels-personal-equipment-bobrobot-d"
+      data.raw.item["personal-roboport-mk4-equipment"].order = "d"
+
+      -- combat (weapons and defences)
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-a", group = "angels-exploration", order = "h-d[robot]-a[shields]" } })
+      data.raw.item["energy-shield-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-equipment"].order = "a"
+      data.raw.item["energy-shield-mk2-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk2-equipment"].order = "b"
+      data.raw.item["energy-shield-mk3-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk3-equipment"].order = "c"
+      data.raw.item["energy-shield-mk4-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk4-equipment"].order = "d"
+      data.raw.item["energy-shield-mk5-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk5-equipment"].order = "e"
+      data.raw.item["energy-shield-mk6-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk6-equipment"].order = "f"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-b", group = "angels-exploration", order = "h-d[robot]-b[legs]" } })
+      data.raw.item["exoskeleton-equipment"].subgroup = "angels-personal-equipment-bobcombat-b"
+      data.raw.item["exoskeleton-equipment"].order = "a"
+      data.raw.item["exoskeleton-equipment-2"].subgroup = "angels-personal-equipment-bobcombat-b"
+      data.raw.item["exoskeleton-equipment-2"].order = "b"
+      data.raw.item["exoskeleton-equipment-3"].subgroup = "angels-personal-equipment-bobcombat-b"
+      data.raw.item["exoskeleton-equipment-3"].order = "c"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-c", group = "angels-exploration", order = "h-d[robot]-c[laser]" } })
+      data.raw.item["personal-laser-defense-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment"].order = "a"
+      data.raw.item["personal-laser-defense-equipment-2"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-2"].order = "b"
+      data.raw.item["personal-laser-defense-equipment-3"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-3"].order = "c"
+      data.raw.item["personal-laser-defense-equipment-4"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-4"].order = "d"
+      data.raw.item["personal-laser-defense-equipment-5"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-5"].order = "e"
+      data.raw.item["personal-laser-defense-equipment-6"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-6"].order = "f"
+
+      data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-d", group = "angels-exploration", order = "h-d[robot]-d[discharge]" } })
+      data.raw.capsule["discharge-defense-remote"].subgroup = "angels-personal-equipment-bobcombat-d"
+      data.raw.capsule["discharge-defense-remote"].order = "a[remote]"
+      data.raw.item["discharge-defense-equipment"].subgroup = "angels-personal-equipment-bobcombat-d"
+      data.raw.item["discharge-defense-equipment"].order = "b[equipment]"
+    end
   end
+
+  -- ORDERING OF ARMOR
+  if bobmods and bobmods.warfare then
+    data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-a", group = "angels-exploration", order = "h-a[armor]-a[normal]" } })
+    data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-a", group = "angels-exploration", order = "h-a[armor]-b[power]" } })
+  end
+
 
 else -- industries not present
 

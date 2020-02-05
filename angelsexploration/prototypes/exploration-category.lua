@@ -98,6 +98,7 @@ data:extend(
       group = "angels-exploration",
       order = "g"
     },
+    -- order h reserved for bob personal equipment
     {
       type = "item-subgroup",
       name = "angels-turrets",
