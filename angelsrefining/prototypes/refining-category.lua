@@ -256,13 +256,25 @@ data:extend(
       type = "item-subgroup",
       name = "ore-refining",
       group = "resource-refining",
-      order = "z[building]-e[refining]-a"
+      order = "z[building]-e[refining]"
+    },
+    {
+      type = "item-subgroup",
+      name = "ore-powderizer",
+      group = "resource-refining",
+      order = "z[building]-f[powderizer]"
+    },
+    {
+      type = "item-subgroup",
+      name = "ore-whinning",
+      group = "resource-refining",
+      order = "z[building]-g[electro-whinning]"
     },
     {
       type = "item-subgroup",
       name = "refining-buildings",
       group = "resource-refining",
-      order = "z[building]-e[refining]-b"
+      order = "z[building]-h[refining]"
     },
     --WATER TREATMENT
     {

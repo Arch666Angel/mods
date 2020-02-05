@@ -9,13 +9,13 @@ data:extend(
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_1.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			tint = angelsmods.refining.number_tint,
 			scale = 0.32,
 			shift = {-12, -12},
 		}
 	},
 	icon_size = 32,
-    subgroup = "ore-floatation",
+    subgroup = "ore-powderizer",
     order = "a",
     place_result = "ore-powderizer",
     stack_size = 10,
@@ -29,7 +29,7 @@ data:extend(
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_1.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			tint = angelsmods.refining.number_tint,
 			scale = 0.32,
 			shift = {-12, -12},
 		}
@@ -98,13 +98,13 @@ data:extend(
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			tint = angelsmods.refining.number_tint,
 			scale = 0.32,
 			shift = {-12, -12},
 		}
 	},
 	icon_size = 32,
-    subgroup = "ore-floatation",
+    subgroup = "ore-powderizer",
     order = "b",
     place_result = "ore-powderizer-2",
     stack_size = 10,
@@ -118,7 +118,7 @@ data:extend(
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_2.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			tint = angelsmods.refining.number_tint,
 			scale = 0.32,
 			shift = {-12, -12},
 		}
@@ -187,13 +187,13 @@ data:extend(
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			tint = angelsmods.refining.number_tint,
 			scale = 0.32,
 			shift = {-12, -12},
 		}
 	},
 	icon_size = 32,
-    subgroup = "ore-floatation",
+    subgroup = "ore-powderizer",
     order = "c",
     place_result = "ore-powderizer-3",
     stack_size = 10,
@@ -207,7 +207,7 @@ data:extend(
 		},
 		{
 			icon = "__angelsrefining__/graphics/icons/num_3.png",
-			tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+			tint = angelsmods.refining.number_tint,
 			scale = 0.32,
 			shift = {-12, -12},
 		}

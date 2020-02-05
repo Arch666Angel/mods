@@ -5,9 +5,10 @@ Date: ???
     - Updated to 0.18
     - Added a tryptophobia setting to get alternative graphics for stiratite ore
     - If bobs mods are activated, integrate gas bottles and canisters to auto-barreling (moved from PCPRedux and improved)
-    - If bobs mods are activated, refining give options to obtain thorium ore
+    - If bobs mods are activated, refining give options to obtain thorium ore (also stopped thorium-ore from spawning natively)
   Bugfixes:
     - Fixed uranium ore icon did not fit the recipe box
+    - Fixed that item grouping didn't match recipe groupings
   Modding:
     - Added barreling override functions
 ---------------------------------------------------------------------------------------------------

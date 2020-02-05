@@ -10,8 +10,6 @@ data:extend(
 	{"angels-void", 1},
 	},
     result= "burner-ore-crusher",
-    subgroup = "ore-sorter",
-	order = "a"
     },
 	{
     type = "recipe",
@@ -22,8 +20,6 @@ data:extend(
 	{"burner-ore-crusher", 1},
 	},
     result= "ore-crusher",
-    subgroup = "ore-sorter",
-	order = "b"
 	},
 	{
     type = "recipe",
@@ -34,8 +30,6 @@ data:extend(
 	{"ore-crusher", 1},
 	},
     result= "ore-crusher-2",
-    subgroup = "ore-sorter",
-	order = "c"
 	},
 	{
     type = "recipe",
@@ -46,8 +40,6 @@ data:extend(
 	{"ore-crusher-2", 1},
 	},
     result= "ore-crusher-3",
-    subgroup = "ore-sorter",
-	order = "d"
 	},
 --ORE FLOATATION CELL
 	{
@@ -59,8 +51,6 @@ data:extend(
 	{"angels-void", 1},
 	},
     result= "ore-floatation-cell",
-    subgroup = "ore-crusher",
-	order = "a"
     },
 	{
     type = "recipe",
@@ -71,8 +61,6 @@ data:extend(
 	{"ore-floatation-cell", 1},
 	},
     result= "ore-floatation-cell-2",
-    subgroup = "ore-crusher",
-	order = "b"
     },
 	{
     type = "recipe",
@@ -83,8 +71,6 @@ data:extend(
 	{"ore-floatation-cell-2", 1},
 	},
     result= "ore-floatation-cell-3",
-    subgroup = "ore-crusher",
-	order = "c"
     },
 --ORE LEACHING PLANT
 	{
@@ -96,8 +82,6 @@ data:extend(
 	{"angels-void", 1},
 	},
     result= "ore-leaching-plant",
-    subgroup = "ore-crusher",
-	order = "d"
     },
 	{
     type = "recipe",
@@ -108,8 +92,6 @@ data:extend(
 	{"ore-leaching-plant", 1},
 	},
     result= "ore-leaching-plant-2",
-    subgroup = "ore-crusher",
-	order = "e"
     },
 	{
     type = "recipe",
@@ -120,8 +102,6 @@ data:extend(
 	{"ore-leaching-plant-2", 1},
 	},
     result= "ore-leaching-plant-3",
-    subgroup = "ore-crusher",
-	order = "f"
     },
  --ORE REFINERY
  	{
@@ -133,8 +113,6 @@ data:extend(
 	{"angels-void", 1},
 	},
     result= "ore-refinery",
-    subgroup = "ore-crusher",
-	order = "g"
     },
 	{
     type = "recipe",
@@ -145,8 +123,6 @@ data:extend(
 	{"ore-refinery", 1},
 	},
     result= "ore-refinery-2",
-    subgroup = "ore-crusher",
-	order = "h"
     },
 --ORE SORTING FACILITY
 	{
@@ -158,8 +134,6 @@ data:extend(
 	{"angels-void", 1},
 	},
     result= "ore-sorting-facility",
-    subgroup = "ore-sorter",
-	order = "e"
     },
 	{
     type = "recipe",
@@ -170,8 +144,6 @@ data:extend(
 	{"ore-sorting-facility", 1},
 	},
     result= "ore-sorting-facility-2",
-    subgroup = "ore-sorter",
-	order = "f"
     },
 	{
     type = "recipe",
@@ -182,8 +154,6 @@ data:extend(
 	{"ore-sorting-facility-2", 1},
 	},
     result= "ore-sorting-facility-3",
-    subgroup = "ore-sorter",
-	order = "g"
     },
 	{
     type = "recipe",
@@ -194,8 +164,6 @@ data:extend(
 	{"ore-sorting-facility-3", 1},
 	},
     result= "ore-sorting-facility-4",
-    subgroup = "ore-sorter",
-	order = "h"
     },
  --FILTRATION UNIT
     {
