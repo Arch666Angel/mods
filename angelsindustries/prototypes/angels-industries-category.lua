@@ -431,7 +431,7 @@ data:extend(
     name = "angels-vehicle-equipment",
     group = "angels-vehicles",
     order = "db" -- order da reserved for CAB (see addon cab-category)
-  },
+  },             -- order dc reserved for bobvehicleequipment (see override)
   -- WARFARE
   {
     type = "item-group",
