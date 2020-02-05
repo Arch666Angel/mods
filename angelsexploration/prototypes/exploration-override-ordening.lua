@@ -30,6 +30,8 @@ if angelsmods.industries and angelsmods.industries.overhaul then
 
   data.raw.gun["bio-gun"].subgroup = "angels-warfare-flamethrower-guns"
   data.raw.gun["bio-gun"].order = "a[gun]-b[bio-gun]"
+  data.raw.item["angels-bio-turret"].subgroup = "angels-warfare-flamethrower-guns"
+  data.raw.item["angels-bio-turret"].order = "b[turret]-b[bio]"
   data.raw.ammo["bio-ammo"].subgroup = "angels-warfare-flamethrower-guns"
   data.raw.ammo["bio-ammo"].order = "c[basic-ammo]-b[bio-rounds]"
   OV.patch_recipes({

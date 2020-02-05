@@ -106,11 +106,11 @@ data:extend(
     },
     order = "c-a"
   },
-  --GUNS
+  --BIO TECH
   {
     type = "technology",
     name = "angels-bio-gun",
-    icon = "__base__/graphics/technology/flamethrower.png",
+    icon = "__angelsexploration__/graphics/technology/bio-tech.png",
     icon_size = 128,
     prerequisites =
     {
@@ -126,6 +126,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-ammo"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-bio-turret"
       },
     },
     unit =
