@@ -340,6 +340,16 @@ if angelsmods.industries.overhaul then
       data.raw.item["bob-logistic-robot-4"].order = "c[logistic]-c[robot]"
       data.raw.item["bob-logistic-robot-5"].subgroup = "angels-cargo-bots"
       data.raw.item["bob-logistic-robot-5"].order = "c[bob-fusion]-b[logistic]"
+      if data.raw["item"]["robot-brain-combat"] then
+        data.raw.item["defender-robot"].subgroup = "angels-robot-a"
+        data.raw.item["defender-robot"].order = "d[combat]-c[robot]"
+        data.raw.item["distractor-robot"].subgroup = "angels-robot-b"
+        data.raw.item["distractor-robot"].order = "d[combat]-c[robot]"
+        data.raw.item["destroyer-robot"].subgroup = "angels-robot-c"
+        data.raw.item["destroyer-robot"].order = "d[combat]-c[robot]"
+        data.raw.item["bob-laser-robot"].subgroup = "angels-robot-d"
+        data.raw.item["bob-laser-robot"].order = "d[combat]-c[robot]"
+      end
 
       -- UPDATE TRAINS
       data:extend({

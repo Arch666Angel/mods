@@ -1,6 +1,20 @@
 if angelsmods.industries and angelsmods.industries.overhaul then
   local OV = angelsmods.functions.OV
 
+  -- ORDENING OF RADARS
+  data.raw["item"]["radar"].subgroup = "angels-exploration-vehicles"
+  data.raw["item"]["radar"].order = "d[radar]-a[vanilla]"
+  if bobmods and bobmods.warfare then
+    data.raw["item"]["radar-2"].subgroup = "angels-exploration-vehicles"
+    data.raw["item"]["radar-2"].order = "d[radar]-b[bob-2]"
+    data.raw["item"]["radar-3"].subgroup = "angels-exploration-vehicles"
+    data.raw["item"]["radar-3"].order = "d[radar]-a[bob-3]"
+    data.raw["item"]["radar-4"].subgroup = "angels-exploration-vehicles"
+    data.raw["item"]["radar-4"].order = "d[radar]-a[bob-4]"
+    data.raw["item"]["radar-5"].subgroup = "angels-exploration-vehicles"
+    data.raw["item"]["radar-5"].order = "d[radar]-a[bob-5]"
+  end
+
   -- ORDENING OF WEAPONS/TURRETS/AMMO
   data.raw.item["angels-cannon-turret"].subgroup = "angels-warfare-bullet-guns"
   data.raw.item["angels-cannon-turret"].order = "b[turret]-b[cannon-gun]"
@@ -55,6 +69,9 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     data.raw["item-group"]["angels-warfare"].order = "lb[bobs]-e[warfare]"
     data.raw["item-group"]["angels-warfare"].inventory_order = "lb[bobs]-e[warfare]"
     data.raw["item-group"]["angels-warfare"].localised_name = {"item-group-name.angels-warfare-bob"}
+
+    data.raw.ammo["scatter-cannon-shell"].subgroup = "angels-explosion-b"
+    data.raw.ammo["scatter-cannon-shell"].order = "c[basic-ammo]-a[light]-a[basic-rounds]"
 
     -- bullet guns
     data.raw.gun["rifle"].subgroup = "angels-warfare-bullet-guns"
@@ -366,6 +383,16 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     data.raw.capsule["bob-laser-robot-capsule"].subgroup = "angels-warfare-capsules-manual"
     data.raw.capsule["bob-laser-robot-capsule"].order = "d[troups]-d[laser]"
 
+    -- attack drones, due to lack of a better place to put them
+    data.raw.item["bob-robot-gun-drone"].subgroup = "angels-warfare-capsules-manual"
+    data.raw.item["bob-robot-gun-drone"].order = "e[drone]-a[gun]"
+    data.raw.item["bob-robot-laser-drone"].subgroup = "angels-warfare-capsules-manual"
+    data.raw.item["bob-robot-laser-drone"].order = "e[drone]-b[laser]"
+    data.raw.item["bob-robot-flamethrower-drone"].subgroup = "angels-warfare-capsules-manual"
+    data.raw.item["bob-robot-flamethrower-drone"].order = "e[drone]-c[flamethrower]"
+    data.raw.item["bob-robot-plasma-drone"].subgroup = "angels-warfare-capsules-manual"
+    data.raw.item["bob-robot-plasma-drone"].order = "e[drone]-d[plasma]"
+
     -- wall
     data.raw.item["reinforced-wall"].subgroup = "angels-warfare-wall"
     data.raw.item["reinforced-wall"].order = "a[wall]-b[reinforced]-a[wall]"
@@ -657,10 +684,30 @@ if angelsmods.industries and angelsmods.industries.overhaul then
 
   -- ORDERING OF ARMOR
   if bobmods and bobmods.warfare then
-    data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-a", group = "angels-exploration", order = "h-a[armor]-a[normal]" } })
-    data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-a", group = "angels-exploration", order = "h-a[armor]-b[power]" } })
-  end
+    data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobarmor-a", group = "angels-exploration", order = "h-a[armor]-a[normal]" } })
+    data.raw.armor["light-armor"].subgroup = "angels-personal-equipment-bobarmor-a"
+    data.raw.armor["light-armor"].order = "a"
+    data.raw.armor["heavy-armor"].subgroup = "angels-personal-equipment-bobarmor-a"
+    data.raw.armor["heavy-armor"].order = "b"
+    data.raw.armor["heavy-armor-2"].subgroup = "angels-personal-equipment-bobarmor-a"
+    data.raw.armor["heavy-armor-2"].order = "c"
+    data.raw.armor["heavy-armor-3"].subgroup = "angels-personal-equipment-bobarmor-a"
+    data.raw.armor["heavy-armor-3"].order = "d"
 
+    data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobarmor-b", group = "angels-exploration", order = "h-a[armor]-b[power]" } })
+    data.raw.armor["modular-armor"].subgroup = "angels-personal-equipment-bobarmor-b"
+    data.raw.armor["modular-armor"].order = "a"
+    data.raw.armor["power-armor"].subgroup = "angels-personal-equipment-bobarmor-b"
+    data.raw.armor["power-armor"].order = "b"
+    data.raw.armor["power-armor-mk2"].subgroup = "angels-personal-equipment-bobarmor-b"
+    data.raw.armor["power-armor-mk2"].order = "c"
+    data.raw.armor["bob-power-armor-mk3"].subgroup = "angels-personal-equipment-bobarmor-b"
+    data.raw.armor["bob-power-armor-mk3"].order = "d"
+    data.raw.armor["bob-power-armor-mk4"].subgroup = "angels-personal-equipment-bobarmor-b"
+    data.raw.armor["bob-power-armor-mk4"].order = "e"
+    data.raw.armor["bob-power-armor-mk5"].subgroup = "angels-personal-equipment-bobarmor-b"
+    data.raw.armor["bob-power-armor-mk5"].order = "f"
+  end
 
 else -- industries not present
 
