@@ -89,11 +89,10 @@ if angelsmods.industries.overhaul then
   
   data.raw.capsule["artillery-targeting-remote"].subgroup = "angels-warfare-artillery-guns"
   data.raw.capsule["artillery-targeting-remote"].order = "a[gun]-a[remote]"
+  data.raw.item["artillery-turret"].subgroup = "angels-warfare-artillery-guns"
+  data.raw.item["artillery-turret"].order = "b[turret]-a[artillery]"
   data.raw.ammo["artillery-shell"].subgroup = "angels-warfare-artillery-guns"
   data.raw.ammo["artillery-shell"].order = "c[basic-ammo]-a[basic-rounds]"
-
-  data.raw.item["artillery-turret"].subgroup = "angels-warfare-artillery-guns"
-  data.raw.item["artillery-turret"].order = "b[turret]-a[laser]"
 
   -- Move vehicles
   data.raw["item-with-entity-data"]["car"].subgroup = "angels-vehicle-car"
@@ -114,7 +113,7 @@ if angelsmods.industries.overhaul then
   data.raw.capsule["poison-capsule"].subgroup = "angels-warfare-capsules-manual"
   data.raw.capsule["poison-capsule"].order = "c[clouds]-a[poison]"
   data.raw.capsule["slowdown-capsule"].subgroup = "angels-warfare-capsules-manual"
-  data.raw.capsule["slowdown-capsule"].order = "c[clouds]-a[slowdown]"
+  data.raw.capsule["slowdown-capsule"].order = "c[clouds]-b[slowdown]"
   data.raw.capsule["defender-capsule"].subgroup = "angels-warfare-capsules-manual"
   data.raw.capsule["defender-capsule"].order = "d[troups]-a[defender]"
   data.raw.capsule["distractor-capsule"].subgroup = "angels-warfare-capsules-manual"

@@ -159,7 +159,27 @@ if angelsmods.industries then
       },
     })
 
-
+    if bobmods and bobmods.warfare then
+      -- laser turret
+      OV.patch_recipes({
+        {
+          name = "laser-rifle",
+          ingredients =
+          {
+            { type = "item", name = "rifle", amount = 1},
+            { type = "item", name = "plastic-bar", amount = 0},
+          }
+        },
+        {
+          name = "laser-turret",
+          ingredients =
+          {
+            { type = "item", name = "laser-rifle", amount = 1},
+            { type = "item", name = "steel-plate", amount = 0},
+          }
+        },
+      })
+    end
 
 
     -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-energy")
@@ -227,6 +247,21 @@ if angelsmods.industries then
       data.raw.gun["rifle"].order = "a[gun]-c[rifle]"
       data.raw.gun["sniper-rifle"].subgroup = "angels-warfare-bullet-guns"
       data.raw.gun["sniper-rifle"].order = "a[gun]-d[sniper-rifle]"
+      data.raw.item["gun-turret"].order = "b[turret]-a[gun]-a"
+      data.raw.item["bob-gun-turret-2"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-gun-turret-2"].order = "b[turret]-a[gun]-b"
+      data.raw.item["bob-gun-turret-3"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-gun-turret-3"].order = "b[turret]-a[gun]-c"
+      data.raw.item["bob-gun-turret-4"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-gun-turret-4"].order = "b[turret]-a[gun]-d"
+      data.raw.item["bob-gun-turret-5"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-gun-turret-5"].order = "b[turret]-a[gun]-e"
+      data.raw.item["bob-sniper-turret-1"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-sniper-turret-1"].order = "b[turret]-c[sniper]-a"
+      data.raw.item["bob-sniper-turret-2"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-sniper-turret-2"].order = "b[turret]-c[sniper]-b"
+      data.raw.item["bob-sniper-turret-3"].subgroup = "angels-warfare-bullet-guns"
+      data.raw.item["bob-sniper-turret-3"].order = "b[turret]-c[sniper]-c"
 
       -- bullet projectile
       data:extend({ { type = "item-subgroup", name = "angels-warfare-bullet-projectiles", group = "angels-warfare", order = "b[bullets]-b[projectile]" } })
@@ -440,6 +475,26 @@ if angelsmods.industries then
       -- laser gun
       data.raw.gun["laser-rifle"].subgroup  = "angels-warfare-laser-guns"
       data.raw.gun["laser-rifle"].order  = "a[gun]-a[rifle]"
+      data.raw.item["laser-turret"].order = "b[turret]-a[laser]-a"
+      data.raw.item["bob-laser-turret-2"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-laser-turret-2"].order = "b[turret]-a[laser]-b"
+      data.raw.item["bob-laser-turret-3"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-laser-turret-3"].order = "b[turret]-a[laser]-c"
+      data.raw.item["bob-laser-turret-4"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-laser-turret-4"].order = "b[turret]-a[laser]-d"
+      data.raw.item["bob-laser-turret-5"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-laser-turret-5"].order = "b[turret]-a[laser]-e"
+
+      data.raw.item["bob-plasma-turret-1"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-plasma-turret-1"].order = "b[turret]-b[plasma]-a"
+      data.raw.item["bob-plasma-turret-2"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-plasma-turret-2"].order = "b[turret]-b[plasma]-b"
+      data.raw.item["bob-plasma-turret-3"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-plasma-turret-3"].order = "b[turret]-b[plasma]-c"
+      data.raw.item["bob-plasma-turret-4"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-plasma-turret-4"].order = "b[turret]-b[plasma]-d"
+      data.raw.item["bob-plasma-turret-5"].subgroup = "angels-warfare-laser-guns"
+      data.raw.item["bob-plasma-turret-5"].order = "b[turret]-b[plasma]-e"
 
       -- laser rifle
       data:extend({ { type = "item-subgroup", name = "angels-warfare-laser-battery", group = "angels-warfare", order = "f[laser-rifle]-b[battery]" } })
@@ -469,6 +524,39 @@ if angelsmods.industries then
         { name = "laser-rifle-battery-diamond", subgroup = "angels-warfare-laser-battery", order = "g[diamond]" },
         { name = "laser-rifle-battery-case", subgroup = "angels-warfare-laser-battery", order = "j[intermediate]" },
       })
+
+      -- artillery turret
+      data.raw.item["artillery-turret"].order = "b[turret]-a[artillery]-a"
+      data.raw.item["bob-artillery-turret-2"].subgroup = "angels-warfare-artillery-guns"
+      data.raw.item["bob-artillery-turret-2"].order = "b[turret]-a[artillery]-b"
+      data.raw.item["bob-artillery-turret-3"].subgroup = "angels-warfare-artillery-guns"
+      data.raw.item["bob-artillery-turret-3"].order = "b[turret]-a[artillery]-b"
+      data.raw.ammo["poison-artillery-shell"].subgroup = "angels-warfare-artillery-guns"
+      data.raw.ammo["poison-artillery-shell"].order = "c[basic-ammo]-b[poison-rounds]"
+      data.raw.ammo["fire-artillery-shell"].subgroup = "angels-warfare-artillery-guns"
+      data.raw.ammo["fire-artillery-shell"].order = "c[basic-ammo]-c[fire-rounds]"
+      data.raw.ammo["explosive-artillery-shell"].subgroup = "angels-warfare-artillery-guns"
+      data.raw.ammo["explosive-artillery-shell"].order = "c[basic-ammo]-d[explosive-rounds]"
+      data.raw.ammo["distractor-artillery-shell"].subgroup = "angels-warfare-artillery-guns"
+      data.raw.ammo["distractor-artillery-shell"].order = "c[basic-ammo]-e[distractor-rounds]"
+
+      -- capsules
+      data.raw.item["poison-mine"].subgroup = "angels-warfare-capsules-manual"
+      data.raw.item["poison-mine"].order = "a[mine]-b[poison]"
+      data.raw.item["slowdown-mine"].subgroup = "angels-warfare-capsules-manual"
+      data.raw.item["slowdown-mine"].order = "a[mine]-c[slowdown]"
+      data.raw.item["distractor-mine"].subgroup = "angels-warfare-capsules-manual"
+      data.raw.item["distractor-mine"].order = "a[mine]-d[distractor]"
+      data.raw.capsule["fire-capsule"].subgroup = "angels-warfare-capsules-manual"
+      data.raw.capsule["fire-capsule"].order = "c[clouds]-c[fire]"
+      data.raw.capsule["bob-laser-robot-capsule"].subgroup = "angels-warfare-capsules-manual"
+      data.raw.capsule["bob-laser-robot-capsule"].order = "d[troups]-d[laser]"
+
+      -- wall
+      data.raw.item["reinforced-wall"].subgroup = "angels-warfare-wall"
+      data.raw.item["reinforced-wall"].order = "a[wall]-b[reinforced]-a[wall]"
+      data.raw.item["reinforced-gate"].subgroup = "angels-warfare-wall"
+      data.raw.item["reinforced-gate"].order = "a[wall]-b[reinforced]-b[gate]"
     end
   end
 end
