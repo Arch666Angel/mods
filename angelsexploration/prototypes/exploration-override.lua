@@ -3,7 +3,7 @@ if not (angelsmods.industries and angelsmods.industries.overhaul) then
   data.raw["item-with-entity-data"]["car"].order = "a[car]"
 end
 data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
-data.raw["item-with-entity-data"]["tank"].subgroup = "b[tank]-a[vanilla]"
+data.raw["item-with-entity-data"]["tank"].order = "b[tank]-a[vanilla]"
 
 table.insert(data.raw.technology["military-3"].prerequisites, "angels-cannon-turret")
 table.insert(data.raw.technology["military-3"].effects, { type = "unlock-recipe", recipe = "cannon-turret-shell-2" })
