@@ -16,7 +16,8 @@ data:extend(
       animation_speed = 0.4
     },
     duration_in_ticks = 30 * 60,
-    target_movement_modifier = 0.5
+    target_movement_modifier = 0.4,
+    damage_per_tick = { amount = 15 / 60, type = "bio" },
   },
   {
     type = "corpse",

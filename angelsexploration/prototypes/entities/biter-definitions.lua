@@ -31,7 +31,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 100,
-				corpse= "small_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -63,7 +62,6 @@
 				tint2 = {r=0.9, g=0.3, b=0.3, a=0.75},
 				speed = 0.185,
 				health = 200,
-				corpse= "medium_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -95,7 +93,6 @@
 				tint2 = {r=0.31, g=0.61, b=0.95, a=0.85},
 				speed = 0.185,
 				health = 300,
-				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -127,7 +124,6 @@
 				tint2 = {r=0.88, g=0.24, b=0.24, a=0.9},
 				speed = 0.17,
 				health = 400,
-				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -158,7 +154,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.17,
 				health = 500,
-				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -190,7 +185,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 50,
-				corpse= "small_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -220,7 +214,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 100,
-				corpse= "medium_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -250,7 +243,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 150,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -280,7 +272,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 200,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -310,7 +301,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 250,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -340,7 +330,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 150,
-				corpse="small_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -370,7 +359,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 300,
-				corpse="medium_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -400,7 +388,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 450,
-				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -430,7 +417,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 600,
-				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -460,7 +446,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 750,
-				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -491,7 +476,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 100,
-				corpse= "small_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -521,7 +505,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 200,
-				corpse= "medium_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -551,7 +534,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 300,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -581,7 +563,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 400,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -611,7 +592,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 500,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,

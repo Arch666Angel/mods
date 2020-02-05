@@ -69,7 +69,96 @@ local function enemy_worm_autoplace(distance)
 		is_turret = true
 	}
 end
-
+local function make_die_animation(data_die)
+	if data_die.type == "scarab" then
+		return
+		{
+			layers=
+			{
+				{
+					width = 160,
+					height = 160,
+					frame_count = 16,
+					direction_count = 16,
+					shift = {0, 0},
+					animation_speed = 0.75,
+					scale = data_die.scale,
+					stripes =
+					{
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+							width_in_frames = 8,
+							height_in_frames = 8,
+						},
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+							width_in_frames = 8,
+							height_in_frames = 8,
+						},
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+							width_in_frames = 8,
+							height_in_frames = 8,
+						},
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+							width_in_frames = 8,
+							height_in_frames = 8,
+						}
+					}
+				},
+				{
+					flags = { "mask" },
+					width = 160,
+					height = 160,
+					frame_count = 16,
+					direction_count = 16,
+					shift = {0, 0},
+					animation_speed = 0.75,
+					scale = data_die.scale,
+					tint = data_die.tint1,
+					stripes = util.multiplystripes(16,
+					{
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+							width_in_frames = 1,
+							height_in_frames = 8,
+						},
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+							width_in_frames = 1,
+							height_in_frames = 8,
+						}
+					})
+				},
+				{
+					flags = { "mask" },
+					width = 160,
+					height = 160,
+					frame_count = 16,
+					direction_count = 16,
+					shift = {0, 0},
+					animation_speed = 0.75,
+					scale = data_die.scale,
+					tint = data_die.tint2,
+					stripes = util.multiplystripes(16,
+					{
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+							width_in_frames = 1,
+							height_in_frames = 8,
+						},
+						{
+							filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+							width_in_frames = 1,
+							height_in_frames = 8,
+						}
+					})
+				},
+			}
+		}
+	end
+end
 local function make_run_animation(data_run)
 	if data_run.type == "biter" then
 		--utilise the vanilla script
@@ -749,6 +838,29 @@ function angelsmods.functions.make_alien(def_data)
 		else
 			c_type="big-biter-corpse"
 		end
+		--utilise the vanilla script to add the death animation and corpses in one go
+		local corpse_base={
+			type = "corpse",
+			name = c_name,
+			icon = "__base__/graphics/icons/big-biter-corpse.png",
+			icon_size=64,
+			icon_mipmaps = 4,
+			tint=def_data.appearance.tint1,
+			selection_box = {{-1, -1}, {1, 1}},
+			selectable_in_game = false,
+			subgroup = "corpses",
+			order = "c[corpse]-a["..def_data.appearance.type.."]-a["..def_data.appearance.name.."]",
+			flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map"},
+		}
+		data:extend({corpse_base})
+		 if def_data.appearance.type=="scarab" then
+			 data.raw.corpse[c_name].animation=make_die_animation(def_data.appearance)
+		 elseif def_data.appearance.type=="biter" then
+			--both share biter animations
+			add_biter_die_animation(def_data.appearance.scale, def_data.appearance.tint1, def_data.appearance.tint2, corpse_base)
+		else --psyker and spitter share spitter ones, any custom ones would have to be isolated or paired with these
+			add_spitter_die_animation(def_data.appearance.scale, def_data.appearance.tint1, def_data.appearance.tint2, corpse_base)
+		end
 		data:extend(
 		{
 			{
@@ -772,33 +884,13 @@ function angelsmods.functions.make_alien(def_data)
 				distraction_cooldown = 300,
 				min_pursue_time = 10 * 60,
 				max_pursue_distance = 50,
-				corpse = c_type,
+				corpse = c_name,--c_type,
 				dying_explosion = "blood-explosion-big",
 				dying_sound = make_die_sound(def_data.appearance.type, 0.4),
 				working_sound = make_call_sounds(0.3),
 				run_animation = make_run_animation(def_data.appearance)
 			},
 		})
-		--utilise the vanilla script to add the death animation and corpses in one go
-		local corpse_base={
-			type = "corpse",
-			name = c_name,
-			icon = "__base__/graphics/icons/big-biter-corpse.png",
-			icon_size=64,
-			icon_mipmaps = 4,
-			tint=def_data.appearance.tint1,
-			selection_box = {{1, -1}, {1, 1}},
-			selectable_in_game = false,
-			subgroup = "corpses",
-			order = "c[corpse]-a[biter]-a[small]",
-			flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map"},
-		}
-		 if def_data.appearance.type=="scarab" or def_data.appearance.type=="biter" then
-			--both share biter animations
-			add_biter_die_animation(def_data.appearance.scale+1, def_data.appearance.tint1, def_data.appearance.tint2, corpse_base)
-		else --psyker and spitter share spitter ones, any custom ones would have to be isolated or paired with these
-			add_spitter_die_animation(def_data.appearance.scale+1, def_data.appearance.tint1, def_data.appearance.tint2, corpse_base)
-		end
 	end
 end
 
