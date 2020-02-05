@@ -12,7 +12,12 @@ if angelsmods.industries then
   data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"
 end
 
-if data.raw["equipment-category"]["armoured-vehicle"] then
+if mods['bobvehicleequipment'] then
+  -- petro locomotive
+  table.insert(data.raw["equipment-grid"]["angels-petro-locomotive"].equipment_categories,"train")
   table.insert(data.raw["equipment-grid"]["angels-petro-locomotive"].equipment_categories,"vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-petro-locomotive"].equipment_categories,"locomotive")
+  -- petro tank wagon
+  table.insert(data.raw["equipment-grid"]["angels-petro-tank-wagon"].equipment_categories,"train")
   table.insert(data.raw["equipment-grid"]["angels-petro-tank-wagon"].equipment_categories,"vehicle")
 end

@@ -11,3 +11,9 @@ if angelsmods.industries then
 end
 
 require "prototypes.entities.cab-updates"
+
+if mods['bobvehicleequipment'] then
+  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories,"tank")
+  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories,"vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories,"armoured-vehicle")
+end
