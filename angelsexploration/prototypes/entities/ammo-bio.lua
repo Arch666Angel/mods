@@ -178,8 +178,8 @@ data:extend(
   {
     type = "ammo",
     name = "bio-ammo",
-    icon = "__base__/graphics/icons/flamethrower-ammo.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__angelsexploration__/graphics/icons/bio-ammo.png",
+    icon_size = 64, icon_mipmaps = 1,
     flags = {},
     ammo_type = {
       {
