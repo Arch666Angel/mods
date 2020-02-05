@@ -3,13 +3,13 @@ require("util")
 data:extend(
   {
     --HEAVY TANK
-    -- {
-    -- type = "equipment-grid",
-    -- name = "angels-heavy-tank",
-    -- width = 9,
-    -- height = 9,
-    --equipment_categories = {}
-    -- },
+    --{
+    --  type = "equipment-grid",
+    --  name = "angels-heavy-tank",
+    --  width = 10,
+    --  height = 10,
+    --  equipment_categories = {}
+    --},
     {
       type = "item-with-entity-data",
       name = "angels-heavy-tank",

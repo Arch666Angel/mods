@@ -1,5 +1,6 @@
-
-data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
+if not (angelsmods.industries and angelsmods.industries.overhaul) then
+  data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
+end
 data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
 
 table.insert(data.raw.technology["military-3"].prerequisites, "angels-cannon-turret")
@@ -190,11 +191,19 @@ if angelsmods.industries then
   end
 end
 
--- if data.raw["equipment-category"]["armoured-vehicle"] then
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"tank")
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"vehicle")
--- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"armoured-vehicle")
--- end
+if mods['bobvehicleequipment'] then
+  data:extend(
+  {
+    {
+      type = "equipment-grid",
+      name = "angels-heavy-tank",
+      width = 10,
+      height = 10,
+      equipment_categories = {"tank", "vehicle", "armoured-vehicle"}
+    }
+  })
+  data.raw.car["angels-heavy-tank"].equipment_grid = "angels-heavy-tank"
+end
 
 -- function modify_biter(biter, resistance, health, damage, evolution)
 -- data.raw.unit[biter].resistances = resistance

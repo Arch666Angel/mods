@@ -1,10 +1,7 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.1
-Date: 2020-01-31
-  Changes:
-    - Integrate into angels industries overhaul tabs
----------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: ??
   Changes:
     - update to 0.18
+    - Integrate into angels industries overhaul tabs
+    - Added mod compatibility for bob vehicle equipment
