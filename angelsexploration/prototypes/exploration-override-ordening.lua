@@ -116,6 +116,8 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     data.raw.item["plasma-bullet-projectile"].order = "h[plasma]"
     data.raw.item["uranium-bullet-projectile"].subgroup = "angels-warfare-bullet-projectiles"
     data.raw.item["uranium-bullet-projectile"].order = "i[nuclear]"
+    data.raw.item["cordite"].subgroup = "angels-warfare-bullet-projectiles"
+    data.raw.item["cordite"].order = "j[intermediate]"
     OV.patch_recipes({
       { name = "bullet-projectile", subgroup = "angels-warfare-bullet-projectiles", order = "a[regular]" },
       { name = "ap-bullet-projectile", subgroup = "angels-warfare-bullet-projectiles", order = "b[pierce]" },
@@ -126,6 +128,7 @@ if angelsmods.industries and angelsmods.industries.overhaul then
       { name = "electric-bullet-projectile", subgroup = "angels-warfare-bullet-projectiles", order = "g[electric]" },
       { name = "plasma-bullet-projectile", subgroup = "angels-warfare-bullet-projectiles", order = "h[plasma]" },
       { name = "uranium-bullet-projectile", subgroup = "angels-warfare-bullet-projectiles", order = "i[nuclear]" },
+      { name = "cordite", subgroup = "angels-warfare-bullet-projectiles", order = "j[intermediate]" },
     })
 
     -- bullet
@@ -199,6 +202,17 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     })
 
     -- shotgun guns (done by industries already, no bob variants)
+    data.raw.item["shot"].subgroup = "angels-warfare-shotgun-guns"
+    data.raw.item["shot"].order = "z[other]-a[pellets]"
+    data.raw.item["gun-cotton"].subgroup = "angels-warfare-shotgun-guns"
+    data.raw.item["gun-cotton"].order = "z[other]-b[cordite]-a"
+    data.raw.item["petroleum-jelly"].subgroup = "angels-warfare-shotgun-guns"
+    data.raw.item["petroleum-jelly"].order = "z[other]-b[cordite]-c"
+    OV.patch_recipes({
+      { name = "shot", subgroup = "angels-warfare-shotgun-guns", order = "z[other]-a[pellets]" },
+      { name = "gun-cotton", subgroup = "angels-warfare-shotgun-guns", order = "z[other]-b[cordite]-a" },
+      { name = "petroleum-jelly", subgroup = "angels-warfare-shotgun-guns", order = "z[other]-b[cordite]-b" },
+    })
 
     -- shotgun shells
     data:extend({ { type = "item-subgroup", name = "angels-warfare-shotgun-shells", group = "angels-warfare", order = "c[shotgun]-b[shells]" } })

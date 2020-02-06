@@ -51,11 +51,67 @@ OV.global_replace_technology("lead-processing", "angels-lead-smelting-1")
 OV.global_replace_technology("nickel-processing", "angels-nickel-smelting-1")
 OV.add_prereq( "silicon-processing", "angels-silicon-smelting-1" )
 OV.disable_recipe({ "bob-silicon-plate" })
+data.raw.item["silicon-wafer"].subgroup = "angels-silicon-casting"
+data.raw.item["silicon-wafer"].order = "k[bobs-silicon]-a"
+data.raw.item["silicon-powder"].subgroup = "angels-silicon-casting"
+data.raw.item["silicon-powder"].order = "k[bobs-silicon]-b"
+data.raw.item["silicon-nitride"].subgroup = "angels-silicon-casting"
+data.raw.item["silicon-nitride"].order = "k[bobs-silicon]-c"
+data.raw.item["silicon-carbide"].subgroup = "angels-silicon-casting"
+data.raw.item["silicon-carbide"].order = "k[bobs-silicon]-d"
+OV.patch_recipes({
+  { name = "silicon-wafer", subgroup = "angels-silicon-casting", order = "k[bobs-silicon]-a" },
+  { name = "silicon-powder", subgroup = "angels-silicon-casting", order = "k[bobs-silicon]-b" },
+  { name = "silicon-nitride", subgroup = "angels-silicon-casting", order = "k[bobs-silicon]-c" },
+  { name = "silicon-carbide", subgroup = "angels-silicon-casting", order = "k[bobs-silicon]-d" },
+})
 OV.disable_recipe({"silver-nitrate"})
 OV.add_prereq( "titanium-processing", "angels-titanium-smelting-1" )
 OV.disable_recipe({ "bob-titanium-plate" })
 OV.add_prereq( "tungsten-processing", "angels-tungsten-smelting-1" )
 OV.disable_recipe({ "tungstic-acid", "tungsten-oxide", "powdered-tungsten", "bob-tungsten-plate" })
+data.raw.item["tungsten-carbide"].subgroup = "angels-tungsten-casting"
+data.raw.item["tungsten-carbide"].order = "k[tungsten-carbide]"
+OV.patch_recipes({
+  {
+    name = "tungsten-carbide",
+    subgroup = "angels-tungsten-casting",
+    order = "k[tungsten-carbide]-a",
+    icons = {
+      {
+        icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+        icon_size = 32
+      }
+    }
+  },
+  {
+    name = "tungsten-carbide-2",
+    subgroup = "angels-tungsten-casting",
+    order = "k[tungsten-carbide]-b",
+    icons = {
+      {
+        icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+        icon_size = 32
+      }
+    }
+  },
+})
+data.raw.item["copper-tungsten-alloy"].subgroup = "angels-tungsten-casting"
+data.raw.item["copper-tungsten-alloy"].order = "l[copper-tungsten-alloy]"
 OV.add_prereq( "zinc-processing", "angels-brass-smelting-1" )
 OV.disable_recipe({ "bob-zinc-plate", "brass-alloy", "gunmetal-alloy" })
 
@@ -64,12 +120,16 @@ OV.disable_recipe({ "bob-zinc-plate", "brass-alloy", "gunmetal-alloy" })
 -- OV.remove_unlock( "alloy-processing-1", "mixing-furnace" )
 -- OV.add_unlock( "electronics", "mixing-furnace" )
 
-if data.raw.item["tinned-copper-cable"] then
+if data.raw.item["tinned-copper-cable"] then -- bob electronics
   OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
   OV.global_replace_item("angels-wire-gold", "gilded-copper-cable")
   OV.global_replace_item("angels-solder", "solder")
   angelsmods.functions.add_flag("angels-solder", "hidden")
-  OV.disable_recipe({ "solder-alloy" })
+  OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "solder" })
+  angelsmods.functions.add_flag("solder-alloy", "hidden")
+  OV.remove_unlock("electronics", "solder")
+  OV.remove_unlock("electronics", "solder-alloy-lead")
+  OV.add_prereq( "electronics", "angels-solder-smelting-1" )
 
   OV.patch_recipes({
     {

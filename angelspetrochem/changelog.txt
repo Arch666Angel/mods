@@ -7,6 +7,7 @@ Date: ??
     - Organised the recipes a bit to be found easier
     - Cleaned up fluid signals if conversion recipes are disabled
     - Added fuel values to various fluids if bobs mods is active
+    - Liquid fuel requires additional Residual gas
     - Removed some obsolete localisations on the petrochem tanks
     - If bobs mods are activated, increases the storage capacity of the petrochem tanks
   Bugfixes:

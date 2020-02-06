@@ -228,7 +228,7 @@ data:extend(
     type = "recipe",
     name = "solid-rubber",
     category = "crafting-with-fluid",
-    subgroup = "petrochem-solids",
+    subgroup = "petrochem-solids-2",
     enabled = "false",
     normal =
     {
@@ -246,13 +246,13 @@ data:extend(
     },
     icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
     icon_size = 32,
-    order = "c[rubber]-b[solid]",
+    order = "b[rubber]-b[solid]",
   },
   {
     type = "recipe",
     name = "liquid-rubber-1",
     category = "chemistry",
-    subgroup = "petrochem-solids",
+    subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = "false",
     ingredients ={
@@ -275,7 +275,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c[rubber]-a[liquid]",
+    order = "b[rubber]-a[liquid]",
   },
   --GLASS
   -- {

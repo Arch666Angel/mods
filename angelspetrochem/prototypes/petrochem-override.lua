@@ -10,27 +10,34 @@ data.raw["resource"]["crude-oil"]["minable"].results = {
 table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories, "liquifying")
 
 --ROCKET FUEL
-OV.patch_recipes(
+OV.patch_recipes({
   {
-    {
-      name = "rocket-fuel",
-      ingredients = {
-        {"!!"},
-        {"rocket-fuel-capsule", 10},
-        {"rocket-oxidizer-capsule", 10}
-      },
-      category = "chemistry"
-    }
+    name = "rocket-fuel",
+    ingredients = {
+      {"!!"},
+      {"rocket-fuel-capsule", 10},
+      {"rocket-oxidizer-capsule", 10}
+    },
+    category = "chemistry",
+    subgroup = "petrochem-fuel",
+    order = "hc"
   }
-)
+})
 OV.add_prereq("rocketry", "rocket-booster-1")
 OV.remove_prereq("rocketry", "rocket-fuel")
 data.raw["item"]["rocket-fuel"].icon = "__angelspetrochem__/graphics/icons/rocket-fuel.png"
 data.raw["item"]["rocket-fuel"].icon_size = 32
 data.raw["item"]["rocket-fuel"].icon_mipmaps = 1
+data.raw["item"]["rocket-fuel"].subgroup = "petrochem-fuel"
+data.raw["item"]["rocket-fuel"].order = "b[rocket-fuel]-c"
+
+data.raw["item"]["nuclear-fuel"].subgroup = "petrochem-fuel"
+data.raw["item"]["nuclear-fuel"].order = "d[nuclear-fuel]"
+OV.patch_recipes({ { name = "nuclear-fuel", subgroup = "petrochem-fuel", order = "j" } })
 
 data.raw["item"]["solid-fuel"].subgroup = "petrochem-fuel"
-data.raw["item"]["solid-fuel"].order = "a[solid-fuel]"
+data.raw["item"]["solid-fuel"].order = "a[solid-fuel]-a"
+
 data.raw["item"]["sulfur"].subgroup = "petrochem-sulfur"
 data.raw["item"]["sulfur"].order = "a[sulfer]-a[sulfer]"
 data.raw["item"]["plastic-bar"].subgroup = "petrochem-solids"

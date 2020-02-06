@@ -370,5 +370,6 @@ data:extend(
     icon_size = 32,
     order = "j[angels-mono-silicon]-b",
   },
+  -- order k reserved for bob silicon processing
 }
 )

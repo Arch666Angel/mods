@@ -5,6 +5,7 @@ Date: ???
     - updated to 0.18
     - disabled bobs silver nitrate recipe
     - added a distinguishable icon for tungsten powder mixture versus the tungsten powder itself 
+    - replaces the solder (bob electronics) from solder plate with angels equivalent of solder
   Bugfixes:
     - fixed missing localisation on iron rod stack (recipe)
 ---------------------------------------------------------------------------------------------------

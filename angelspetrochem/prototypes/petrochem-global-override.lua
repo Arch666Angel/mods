@@ -106,26 +106,26 @@ if data.raw.resource["thorium-ore"] then
 end
 if angelsmods.trigger.enableacids then
   OV.patch_recipes(
+  {
     {
-      {
-        name = "angelsore2-crystal",
-        ingredients = {
-          {name = "liquid-hydrofluoric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-        }
-      },
-      {
-        name = "angelsore4-crystal",
-        ingredients = {
-          {name = "liquid-hydrochloric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-        }
-      },
-      {
-        name = "angelsore5-crystal",
-        ingredients = {
-          {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-        }
+      name = "angelsore2-crystal",
+      ingredients = {
+        {name = "liquid-hydrofluoric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
+      }
+    },
+    {
+      name = "angelsore4-crystal",
+      ingredients = {
+        {name = "liquid-hydrochloric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
+      }
+    },
+    {
+      name = "angelsore5-crystal",
+      ingredients = {
+        {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
       }
     }
+  }
   )
 end
 
@@ -254,6 +254,7 @@ if bobmods then
 
     -- generic replace
     OV.global_replace_item("carbon", "solid-carbon")
+    angelsmods.functions.add_flag("carbon", "hidden")
     OV.global_replace_item("chlorine", "gas-chlorine")
     OV.global_replace_item("hydrogen", "gas-hydrogen")
     OV.global_replace_item("hydrogen-chloride", "gas-hydrogen-chloride")
@@ -270,37 +271,120 @@ if bobmods then
 
     OV.global_replace_item({"solid-resin"}, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
+    data.raw["item"]["resin"].subgroup = "petrochem-solids"
+    data.raw["item"]["resin"].order = "a[petrochem-solids]-b[resin]"
+    OV.patch_recipes({
+      {
+        name = "bob-resin-wood",
+        ingredients =
+        { {"!!"},
+          {"wood" , 2},
+        },
+        subgroup = "petrochem-solids",
+        order = "b[resin]-b[solid]-a",
+        icons = {
+          {
+            icon = "__bobplates__/graphics/icons/resin.png"
+          },
+          {
+            icon = "__angelspetrochem__/graphics/icons/num_1.png",
+            tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+            scale = 0.32,
+            shift = {-12, -12},
+          }
+        },
+        icon_size = 32
+      },
+      {
+        name = "solid-resin",
+        order = "b[resin]-b[solid]-b",
+        icons = {
+          {
+            icon = "__bobplates__/graphics/icons/resin.png"
+          },
+          {
+            icon = "__angelspetrochem__/graphics/icons/num_2.png",
+            tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+            scale = 0.32,
+            shift = {-12, -12},
+          }
+        },
+        icon_size = 32
+      }
+    })
     OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
+    angelsmods.functions.add_flag("calcium-chloride", "hidden")
+    OV.disable_recipe("calcium-chloride")
+    OV.remove_unlock("chemical-processing-2", "calcium-chloride")
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
+    data.raw["item"]["rubber"].subgroup = "petrochem-solids"
+    data.raw["item"]["rubber"].order = "a[petrochem-solids]-c[rubber]"
+    OV.patch_recipes({
+      {
+        name = "bob-rubber",
+        ingredients =
+        { {"!!"},
+          {"resin" , 3},
+        },
+        subgroup = "petrochem-solids-2",
+        order = "b[rubber]-b[solid]-a",
+        icons = {
+          {
+            icon = "__bobplates__/graphics/icons/rubber.png"
+          },
+          {
+            icon = "__angelspetrochem__/graphics/icons/num_1.png",
+            tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+            scale = 0.32,
+            shift = {-12, -12},
+          }
+        },
+        icon_size = 32
+      },
+      {
+        name = "solid-rubber",
+        order = "b[rubber]-b[solid]-a",
+        icons = {
+          {
+            icon = "__bobplates__/graphics/icons/rubber.png"
+          },
+          {
+            icon = "__angelspetrochem__/graphics/icons/num_2.png",
+            tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+            scale = 0.32,
+            shift = {-12, -12},
+          }
+        },
+        icon_size = 32
+      }
+    })
     if data.raw.recipe["pure-water-pump"] then
       data.raw["recipe"]["pure-water-pump"].icon=nil
       data.raw["recipe"]["pure-water-pump"].icon_size=32
       data.raw["recipe"]["pure-water-pump"].icons={{icon="__angelsrefining__/graphics/icons/water-purified.png"}}
     end
 
-    OV.patch_recipes(
+    OV.patch_recipes({
       {
-        {
-          name = "lithium-water-electrolysis",
-          results = {
-            {name = "gas-hydrogen", type = "fluid", amount = 20}
-          }
-        },
-        {
-          name = "petroleum-jelly",
-          ingredients = {
-            {name = "gas-residual", type = "fluid", amount = "liquid-naphtha"}
-          }
-        },
-        {
-          name = "polishing-compound",
-          ingredients = {
-            {name = "liquid-mineral-oil", type = "fluid", amount = "liquid-fuel-oil"}
-          }
+        name = "lithium-water-electrolysis",
+        results = {
+          {name = "gas-hydrogen", type = "fluid", amount = 20}
+        }
+      },
+      {
+        name = "petroleum-jelly",
+        ingredients = {
+          {name = "gas-residual", type = "fluid", amount = "liquid-naphtha"}
+        }
+      },
+      {
+        name = "polishing-compound",
+        ingredients = {
+          {name = "liquid-mineral-oil", type = "fluid", amount = "liquid-fuel-oil"}
         }
       }
-    )
+    })
 
     OV.remove_unlock("chemical-processing-1", "carbon")
 
@@ -332,47 +416,72 @@ if bobmods then
     OV.remove_unlock("plastics", "plastic-bar")
 
     --oil processing
+    data.raw["fluid"]["liquid-fuel"].subgroup = "petrochem-carbon-fluids"
+    data.raw["fluid"]["liquid-fuel"].order = "dac"
+    OV.patch_recipes({
+      {
+        name = "liquid-fuel",
+        ingredients =
+        { {"!!"},
+          {name = "liquid-fuel-oil", type = "fluid", amount = 40},
+          {name = "gas-residual", type = "fluid", amount = 10}
+        },
+        results =
+        {
+          {name = "liquid-fuel", type = "fluid", amount = 50}
+        },
+        subgroup = "petrochem-carbon-oil-feed",
+        order = "h"
+      },
+    })
     OV.add_unlock("angels-oil-processing", "liquid-fuel")
+    data.raw["item"]["enriched-fuel"].subgroup = "petrochem-fuel"
+    data.raw["item"]["enriched-fuel"].order = "a[solid-fuel]-b"
+    OV.patch_recipes({ { name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g" } })
 
     OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
   end
 
   if bobmods.greenhouse then
-    OV.patch_recipes(
+    OV.patch_recipes({
       {
-        {
-          name = "bob-fertiliser",
-          ingredients = {
-            {name = "gas-urea", type = "fluid", amount = 20},
-            {name = "gas-methane", type = "fluid", amount = 0},
-            {name = "gas-nitrogen", type = "fluid", amount = 0}
-          }
+        name = "bob-fertiliser",
+        ingredients = {
+          {name = "gas-urea", type = "fluid", amount = 20},
+          {name = "gas-methane", type = "fluid", amount = 0},
+          {name = "gas-nitrogen", type = "fluid", amount = 0}
         }
       }
-    )
+    })
     OV.remove_prereq("bob-fertiliser", "nitrogen-processing")
     OV.add_prereq("bob-fertiliser", "angels-nitrogen-processing-2")
   end
 
   if bobmods.warfare then
+    if data.raw.fluid["sulfuric-nitric-acid"] then
+      data.raw["fluid"]["sulfuric-nitric-acid"].subgroup = "petrochem-nitrogen-fluids"
+      data.raw["fluid"]["sulfuric-nitric-acid"].order = "oa"
+      OV.patch_recipes({ { name = "sulfuric-nitric-acid", subgroup = "petrochem-rocket", order = "ia" } })
+    end
+    data.raw["fluid"]["nitroglycerin"].subgroup = "petrochem-nitrogen-fluids"
+    data.raw["fluid"]["nitroglycerin"].order = "ob"
+    OV.patch_recipes({ { name = "nitroglycerin", subgroup = "petrochem-rocket", order = "ib" } })
     OV.global_replace_item("glycerol", "gas-glycerol")
 
-    OV.patch_recipes(
+    OV.patch_recipes({
       {
-        {
-          name = "gun-cotton",
-          ingredients = {
-            {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-          }
-        },
-        {
-          name = "gun-cotton-synthetic",
-          ingredients = {
-            {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-          }
+        name = "gun-cotton",
+        ingredients = {
+          {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
+        }
+      },
+      {
+        name = "gun-cotton-synthetic",
+        ingredients = {
+          {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
         }
       }
-    )
+    })
   end
 
   if data.raw["fluid"]["dinitrogen-tetroxide"] then --BOBS REVAMP
@@ -385,6 +494,11 @@ if bobmods then
 
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
     OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
+  end
+  if data.raw["fluid"]["sour-gas"] then --BOBS REVAMP
+    OV.disable_technology({"coal-liquefaction"})
+    OV.disable_recipe({"coal-liquefaction", "petroleum-gas-sweetening"})
+    data.raw.fluid["sour-gas"].hidden = true
   end
 end
 
