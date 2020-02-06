@@ -7,10 +7,11 @@ angelsmods.addons.smeltingtrain.enable_tiers = settings.startup["angels-smelting
 angelsmods.addons.smeltingtrain.tier_amount = settings.startup["angels-smeltingtrain-tier-amount"].value
 angelsmods.addons.smeltingtrain.number_tint = {r = 1, g = 0.38, b = 0, a = 1}
 
+tech_unlocks = {}
+
 require("prototypes.smelting-category")
-
 require("prototypes.entities.smelting-train")
-
 require("prototypes.recipes.smelting-recipe")
-
 require("prototypes.technology.smelting-technology")
+
+tech_unlocks = nil

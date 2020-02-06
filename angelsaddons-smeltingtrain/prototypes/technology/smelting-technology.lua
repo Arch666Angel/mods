@@ -1,3 +1,18 @@
+local function get_unlocks(tech, base_effects)
+  if tech_unlocks[tech] then
+    for name, _ in pairs(tech_unlocks[tech]) do
+      table.insert(
+        base_effects,
+        {
+          type = "unlock-recipe",
+          recipe = name
+        }
+      )
+    end
+  end
+
+  return base_effects
+end
 data:extend(
   {
     {
@@ -8,20 +23,7 @@ data:extend(
       prerequisites = {
         "railway"
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "smelting-locomotive-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "smelting-locomotive-tender"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "smelting-wagon-1"
-        }
-      },
+      effects = get_unlocks("angels-smelting-train", {}),
       unit = {
         count = 60,
         ingredients = {
