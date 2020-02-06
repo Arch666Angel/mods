@@ -15,11 +15,11 @@ Date: ???
     - small tweaks
     - added a new generic lab to allow flexibility
   TO DO:
-    -update recipes to unlock with tech
-    -move components to a more convenient format (mainly electronics ect)
-    -localise tech
-    -check higher tier recipes are achievable
-    -add recipe to have more than one tech archive (relatively early, 1 is too slow at 64 minutes minimum to unlock a new tier)
+    - update recipes to unlock with tech
+    - move components to a more convenient format (mainly electronics ect)
+    - localise tech
+    - check higher tier recipes are achievable
+    - add recipe to have more than one tech archive (relatively early, 1 is too slow at 64 minutes minimum to unlock a new tier)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 29.03.2019
