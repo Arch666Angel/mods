@@ -575,17 +575,17 @@ if angelsmods.industries and angelsmods.industries.overhaul then
       data.raw.item["fusion-reactor-equipment-4"].order = "d"
 
       data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-c", group = "angels-exploration", order = "h-b[power]-c[battery]" } })
-      data.raw.item["battery-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-equipment"].subgroup = "angels-personal-equipment-bobpower-c"
       data.raw.item["battery-equipment"].order = "a"
-      data.raw.item["battery-mk2-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk2-equipment"].subgroup = "angels-personal-equipment-bobpower-c"
       data.raw.item["battery-mk2-equipment"].order = "b"
-      data.raw.item["battery-mk3-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk3-equipment"].subgroup = "angels-personal-equipment-bobpower-c"
       data.raw.item["battery-mk3-equipment"].order = "c"
-      data.raw.item["battery-mk4-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk4-equipment"].subgroup = "angels-personal-equipment-bobpower-c"
       data.raw.item["battery-mk4-equipment"].order = "d"
-      data.raw.item["battery-mk5-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk5-equipment"].subgroup = "angels-personal-equipment-bobpower-c"
       data.raw.item["battery-mk5-equipment"].order = "e"
-      data.raw.item["battery-mk6-equipment"].subgroup = "angels-vehicle-equipment-bobpower-c"
+      data.raw.item["battery-mk6-equipment"].subgroup = "angels-personal-equipment-bobpower-c"
       data.raw.item["battery-mk6-equipment"].order = "f"
 
       data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobpower-d", group = "angels-exploration", order = "h-b[power]-d[night-vision]" } })

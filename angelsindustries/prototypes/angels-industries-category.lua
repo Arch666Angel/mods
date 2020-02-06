@@ -364,9 +364,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "angels-power-nuclear-processing",
+    group = "angels-power",
+    order = "d[nuclear-processing]-a",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-power-poles",
     group = "angels-power",
-    order = "d[power-poles]-a",
+    order = "e[power-poles]-a",
   },
   -- LOGISTICS
   {
