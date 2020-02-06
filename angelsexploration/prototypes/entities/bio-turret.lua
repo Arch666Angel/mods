@@ -939,7 +939,7 @@ data:extend(
         {type = "crude-oil"},
         --{type = "heavy-oil", damage_modifier = 1.05},
         --{type = "light-oil", damage_modifier = 1.1}
-        {type = "lubricant"},
+        {type = "lubricant", damage_modifier = 1.05},
       },
       fluid_consumption = 0.2, -- 0.2 = 3/s
 

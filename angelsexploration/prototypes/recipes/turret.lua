@@ -44,10 +44,10 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {"steel-plate", 20},
-      {"iron-plate", 10},
-      {"electronic-circuit", 10},
-      {"iron-gear-wheel", 10}
+      {"engine-unit", 5},
+      {"iron-gear-wheel", 15},
+      {"pipe", 10},
+      {"steel-plate", 30},
     },
     results =
     {

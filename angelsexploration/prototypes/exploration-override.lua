@@ -145,7 +145,7 @@ if angelsmods.industries then
         name = "bio-gun",
         ingredients =
         { {"!!"},
-          { type = "item", name = "submachine-gun", amount = 4},
+          { type = "item", name = "submachine-gun", amount = 1},
           { type = "item", name = "iron-gear-wheel", amount = 5},
           { type = "item", name = "steel-plate", amount = 5},
         }
@@ -155,6 +155,16 @@ if angelsmods.industries then
         ingredients =
         { {"!!"},
           { type = "item", name = "flamethrower", amount = 1},
+          { type = "item", name = "engine-unit", amount = 5},
+          { type = "item", name = "steel-plate", amount = 20},
+          { type = "item", name = "pipe", amount = 10},
+        }
+      },
+      {
+        name = "angels-bio-turret",
+        ingredients =
+        { {"!!"},
+          { type = "item", name = "bio-gun", amount = 1},
           { type = "item", name = "engine-unit", amount = 5},
           { type = "item", name = "steel-plate", amount = 20},
           { type = "item", name = "pipe", amount = 10},

@@ -39,7 +39,7 @@ data:extend(
     name = "angels-movement"
   },
   --SUBGROUPS
-  --COMPONENTS
+  -- COMPONENTS
   {
     type = "item-group",
     name = "angels-components",
@@ -228,7 +228,7 @@ data:extend(
     group = "angels-components",
     order = "zc",
   },
-  --SCIENCE
+  -- SCIENCE
   {
     type = "item-group",
     name = "angels-tech",
@@ -273,58 +273,102 @@ data:extend(
     group = "angels-tech",
     order = "z",
   },
-  --EQUIPMENT
+  -- EQUIPMENT
+  --{
+  --  type = "item-group",
+  --  name = "angels-enhancement",
+  --  order = "la[angels]-e[industries]-c",
+  --  inventory_order = "la[angels]-e[industries]-c",
+  --  icon_size = 64,
+  --  icon = "__angelsindustries__/graphics/item-group/vequip.png",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-energy",
+  --  group = "angels-enhancement",
+  --  order = "a",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-movement",
+  --  group = "angels-enhancement",
+  --  order = "b",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-robo",
+  --  group = "angels-enhancement",
+  --  order = "c",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-ldef",
+  --  group = "angels-enhancement",
+  --  order = "d",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-hdef",
+  --  group = "angels-enhancement",
+  --  order = "e",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-lat",
+  --  group = "angels-enhancement",
+  --  order = "f",
+  --},
+  --{
+  --  type = "item-subgroup",
+  --  name = "angels-equipment-hat",
+  --  group = "angels-enhancement",
+  --  order = "g",
+  --},
+  -- POWER
   {
     type = "item-group",
-    name = "angels-enhancement",
+    name = "angels-power",
     order = "la[angels]-e[industries]-c",
     inventory_order = "la[angels]-e[industries]-c",
-    icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/vequip.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/technology/vequip.png",
+        icon_size = 128,
+        scale = 0.5,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
+      }
+    }
   },
   {
     type = "item-subgroup",
-    name = "angels-equipment-energy",
-    group = "angels-enhancement",
-    order = "a",
+    name = "angels-power-steam",
+    group = "angels-power",
+    order = "a[steam]-a",
   },
   {
     type = "item-subgroup",
-    name = "angels-equipment-movement",
-    group = "angels-enhancement",
-    order = "b",
+    name = "angels-power-solar",
+    group = "angels-power",
+    order = "b[solar]-a",
   },
   {
     type = "item-subgroup",
-    name = "angels-equipment-robo",
-    group = "angels-enhancement",
-    order = "c",
+    name = "angels-power-nuclear",
+    group = "angels-power",
+    order = "c[nuclear]-a",
   },
   {
     type = "item-subgroup",
-    name = "angels-equipment-ldef",
-    group = "angels-enhancement",
-    order = "d",
+    name = "angels-power-poles",
+    group = "angels-power",
+    order = "d[power-poles]-a",
   },
-  {
-    type = "item-subgroup",
-    name = "angels-equipment-hdef",
-    group = "angels-enhancement",
-    order = "e",
-  },
-  {
-    type = "item-subgroup",
-    name = "angels-equipment-lat",
-    group = "angels-enhancement",
-    order = "f",
-  },
-  {
-    type = "item-subgroup",
-    name = "angels-equipment-hat",
-    group = "angels-enhancement",
-    order = "g",
-  },
-  --LOGISTICS
+  -- LOGISTICS
   {
     type = "item-group",
     name = "angels-logistics",
@@ -431,7 +475,7 @@ data:extend(
     name = "angels-vehicle-equipment",
     group = "angels-vehicles",
     order = "db" -- order da reserved for CAB (see addon cab-category)
-  },
+  },             -- order dc reserved for bobvehicleequipment (see override)
   -- WARFARE
   {
     type = "item-group",
