@@ -3,111 +3,200 @@ local OV = angelsmods.functions.OV
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
   --GLOBAL REPLACE ALL VANILLA PACKS
   OV.global_replace_science_packs(
-    "utility-science-pack",
-    {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"},
-    "angels-science-pack-yellow"
-  )
-  OV.global_replace_science_packs(
-    "chemical-science-pack",
-    {"automation-science-pack", "logistic-science-pack"},
-    "angels-science-pack-blue"
-  )
-  OV.global_replace_science_packs("logistic-science-pack", {"automation-science-pack"}, "angels-science-pack-green")
-  OV.global_replace_science_packs("automation-science-pack", {}, "angels-science-pack-red")
-  OV.global_replace_science_packs("production-science-pack", {}, "datacore-processing-1", 2)
-  OV.global_replace_science_packs("military-science-pack", {}, "datacore-war-1", 2)
+  "utility-science-pack",
+  {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"},
+  "angels-science-pack-yellow"
+)
+OV.global_replace_science_packs(
+"chemical-science-pack",
+{"automation-science-pack", "logistic-science-pack"},
+"angels-science-pack-blue"
+)
+OV.global_replace_science_packs("logistic-science-pack", {"automation-science-pack"}, "angels-science-pack-green")
+OV.global_replace_science_packs("automation-science-pack", {}, "angels-science-pack-red")
+OV.global_replace_science_packs("production-science-pack", {}, "datacore-processing-1", 2)
+OV.global_replace_science_packs("military-science-pack", {}, "datacore-war-1", 2)
 
-  OV.execute()
+OV.execute()
 
-  --ADD MANUAL OVERRIDES FOR DATACORES AND EXCEPTIONS TO TECH OVERRIDES
-  require("prototypes.overrides.angels-tech-data")
-  require("prototypes.overrides.angels-tech-base")
-  require("prototypes.overrides.angels-tech-angels")
+--ADD MANUAL OVERRIDES FOR DATACORES AND EXCEPTIONS TO TECH OVERRIDES
+require("prototypes.overrides.angels-tech-data")
+require("prototypes.overrides.angels-tech-base")
+require("prototypes.overrides.angels-tech-angels")
 
-  OV.execute()
+OV.execute()
 
-  --MODIFY ALL TECHS ACCORDING TO TIERS
-  angelsmods.industries.techtiers = {
-    grey = {amount = 16, time = 10}, --BURNER
-    red = {amount = 64, time = 20}, --AUTOMATION
-    green = {amount = 128, time = 30}, --TRAINS
-    orange = {amount = 256, time = 40}, --OIL
-    blue = {amount = 512, time = 50}, --ROBOTS
-    yellow = {amount = 1024, time = 60} --ENDGAME
-  }
+--MODIFY ALL TECHS ACCORDING TO TIERS
+angelsmods.industries.techtiers = {
+  grey = {amount = 16, time = 10}, --BURNER
+  red = {amount = 64, time = 20}, --AUTOMATION
+  green = {amount = 128, time = 30}, --TRAINS
+  orange = {amount = 256, time = 40}, --OIL
+  blue = {amount = 512, time = 50}, --ROBOTS
+  yellow = {amount = 1024, time = 60} --ENDGAME
+}
 
-  angelsmods.marathon.tech_amount_multi = 1
-  angelsmods.marathon.tech_time_multi = 1
+angelsmods.marathon.tech_amount_multi = 1
+angelsmods.marathon.tech_time_multi = 1
 
-  for techname, technology in pairs(data.raw.technology) do
-    if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
-      --UNTIE TECHS FROM EACH OTHER
-      --technology.prerequisites = {}
-      --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
-      if technology.unit.ingredients and not technology.max_level then
-        for i, ingredients in pairs(technology.unit.ingredients[1]) do
-          if ingredients == "angels-science-pack-grey" then
-            OV.set_research_difficulty(
-              techname,
-              angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi
-            )
-          end
-          if ingredients == "angels-science-pack-red" then
-            OV.add_prereq(techname, "tech-red-labs")
-            OV.set_research_difficulty(
-              techname,
-              angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.red.amount * angelsmods.marathon.tech_amount_multi
-            )
-          end
-          if ingredients == "angels-science-pack-green" then
-            OV.add_prereq(techname, "tech-green-labs")
-            OV.set_research_difficulty(
-              techname,
-              angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.green.amount * angelsmods.marathon.tech_amount_multi
-            )
-          end
-          if ingredients == "angels-science-pack-orange" then
-            OV.add_prereq(techname, "tech-orange-labs")
-            OV.set_research_difficulty(
-              techname,
-              angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi
-            )
-          end
-          if ingredients == "angels-science-pack-blue" then
-            OV.add_prereq(techname, "tech-blue-labs")
-            OV.set_research_difficulty(
-              techname,
-              angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi
-            )
-          end
-          if ingredients == "angels-science-pack-yellow" then
-            OV.add_prereq(techname, "tech-yellow-labs")
-            OV.set_research_difficulty(
-              techname,
-              angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi
-            )
+for techname, technology in pairs(data.raw.technology) do
+  if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
+    --UNTIE TECHS FROM EACH OTHER
+    --technology.prerequisites = {}
+    --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
+    if technology.unit.ingredients and not technology.max_level then
+      for i, ingredients in pairs(technology.unit.ingredients[1]) do
+        if ingredients == "angels-science-pack-grey" then
+          OV.set_research_difficulty(
+          techname,
+          angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi,
+          angelsmods.industries.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi
+          )
+        end
+        if ingredients == "angels-science-pack-red" then
+          OV.add_prereq(techname, "tech-red-labs")
+          OV.set_research_difficulty(
+          techname,
+          angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi,
+          angelsmods.industries.techtiers.red.amount * angelsmods.marathon.tech_amount_multi
+          )
+        end
+        if ingredients == "angels-science-pack-green" then
+          OV.add_prereq(techname, "tech-green-labs")
+          OV.set_research_difficulty(
+          techname,
+          angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi,
+          angelsmods.industries.techtiers.green.amount * angelsmods.marathon.tech_amount_multi
+          )
+        end
+        if ingredients == "angels-science-pack-orange" then
+          OV.add_prereq(techname, "tech-orange-labs")
+          OV.set_research_difficulty(
+          techname,
+          angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi,
+          angelsmods.industries.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi
+          )
+        end
+        if ingredients == "angels-science-pack-blue" then
+          OV.add_prereq(techname, "tech-blue-labs")
+          OV.set_research_difficulty(
+          techname,
+          angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi,
+          angelsmods.industries.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi
+          )
+        end
+        if ingredients == "angels-science-pack-yellow" then
+          OV.add_prereq(techname, "tech-yellow-labs")
+          OV.set_research_difficulty(
+          techname,
+          angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi,
+          angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi
+          )
+        end
+        if ingredients == "angels-science-pack-yellow" or ingredients == "angels-science-pack-blue" then
+          for tech,tech_ing in next,technology.unit.ingredients,nil do
+            local subpack=technology.unit.ingredients[tech][1]
+            if string.sub(subpack, 1, 19) ~= "angels-science-pack" and subpack~="datacore-basic" then
+              local data_core=string.sub(subpack,9,-2)
+              if string.sub(data_core,1,1)=="-" then
+                OV.remove_science_pack(techname, "datacore"..data_core.."1")
+                OV.set_science_pack(techname, "datacore"..data_core.."2",2)
+              end
+            end
           end
         end
       end
-      --ADD BASIC DATACORES TO TECHS MISSING MANUAL OVERRIDES
-      if
-        (technology.unit.ingredients[1][1] and
-          string.sub(technology.unit.ingredients[1][1], 1, 19) == "angels-science-pack") and
-          not technology.unit.ingredients[2]
-       then
-        OV.set_science_pack(techname, "datacore-basic", 2)
-      --log(serpent.block(techname))
-      end
     end
+    --ADD BASIC DATACORES TO TECHS MISSING MANUAL OVERRIDES
+    if (technology.unit.ingredients[1][1] and
+    string.sub(technology.unit.ingredients[1][1], 1, 19) == "angels-science-pack") and
+    not technology.unit.ingredients[2]
+    then
+      OV.set_science_pack(techname, "datacore-basic", 2)
+    end
+    --Manual top tier fixes (somehow some of the military stuff does not transfer correctly)
+    OV.remove_science_pack("stronger-explosives-3", "datacore-war-1")
+    OV.set_science_pack("stronger-explosives-3", "datacore-war-2", 2)
+    OV.remove_science_pack("stronger-explosives-4", "datacore-war-1")
+    OV.set_science_pack("stronger-explosives-4", "datacore-war-2", 2)
+    OV.remove_science_pack("stronger-explosives-5", "datacore-war-1")
+    OV.set_science_pack("stronger-explosives-5", "datacore-war-2", 2)
+    OV.remove_science_pack("stronger-explosives-6", "datacore-war-1")
+    OV.set_science_pack("stronger-explosives-6", "datacore-war-2", 2)
+    OV.remove_science_pack("stronger-explosives-7", "datacore-war-1")
+    OV.set_science_pack("stronger-explosives-7", "datacore-war-2", 2)
+    OV.remove_science_pack("refined-flammables-4", "datacore-war-1")
+    OV.set_science_pack("refined-flammables-4", "datacore-war-2", 2)
+    OV.remove_science_pack("refined-flammables-5", "datacore-war-1")
+    OV.set_science_pack("refined-flammables-5", "datacore-war-2", 2)
+    OV.remove_science_pack("refined-flammables-6", "datacore-war-1")
+    OV.set_science_pack("refined-flammables-6", "datacore-war-2", 2)
+    OV.remove_science_pack("refined-flammables-7", "datacore-war-1")
+    OV.set_science_pack("refined-flammables-7", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turrets", "datacore-war-1")
+    OV.set_science_pack("laser-turrets", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-1", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-1", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-2", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-2", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-3", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-3", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-4", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-4", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-5", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-5", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-6", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-6", "datacore-war-2", 2)
+    OV.remove_science_pack("laser-turret-shooting-speed-7", "datacore-war-1")
+    OV.set_science_pack("laser-turret-shooting-speed-7", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-1", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-1", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-2", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-2", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-3", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-3", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-4", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-41", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-5", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-5", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-6", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-6", "datacore-war-2", 2)
+    OV.remove_science_pack("energy-weapons-damage-7", "datacore-war-1")
+    OV.set_science_pack("energy-weapons-damage-7", "datacore-war-2", 2)
+    OV.remove_science_pack("military-4", "datacore-war-1")
+    OV.set_science_pack("military-4", "datacore-war-2", 2)
+    OV.remove_science_pack("uranium-ammo", "datacore-war-1")
+    OV.set_science_pack("uranium-ammo", "datacore-war-2", 2)
+    OV.remove_science_pack("atomic-bomb", "datacore-war-1")
+    OV.set_science_pack("atomic-bomb", "datacore-war-2", 2)
+    OV.remove_science_pack("combat-robotics-3", "datacore-war-1")
+    OV.set_science_pack("combat-robotics-3", "datacore-war-2", 2)
+    OV.remove_science_pack("follower-robot-count-5", "datacore-war-1")
+    OV.set_science_pack("follower-robot-count-5", "datacore-war-2", 2)
+    OV.remove_science_pack("follower-robot-count-6", "datacore-war-1")
+    OV.set_science_pack("follower-robot-count-6", "datacore-war-2", 2)
+    OV.remove_science_pack("follower-robot-count-7", "datacore-war-1")
+    OV.set_science_pack("follower-robot-count-7", "datacore-war-2", 2)
+    OV.remove_science_pack("atomic-bomb", "datacore-war-1")
+    OV.set_science_pack("atomic-bomb", "datacore-war-2", 2)
+    OV.remove_science_pack("artillery", "datacore-war-1")
+    OV.set_science_pack("artillery", "datacore-war-2", 2)
+    OV.remove_science_pack("artillery-shell-range-1", "datacore-war-1")
+    OV.set_science_pack("artillery-shell-range-1", "datacore-war-2", 2)
+    OV.remove_science_pack("artillery-shell-speed-1", "datacore-war-1")
+    OV.set_science_pack("artillery-shell-speed-1", "datacore-war-2", 2)
+    OV.remove_science_pack("advanced-ore-refining-4", "datacore-processing-1")
+    OV.set_science_pack("advanced-ore-refining-4", "datacore-processing-2", 2)
+    OV.remove_science_pack("production-science-pack", "datacore-basic")
+    OV.set_science_pack("production-science-pack", "datacore-processing-2", 2)
+    OV.remove_science_pack("utility-science-pack", "datacore-basic")
+    OV.set_science_pack("utility-science-pack", "datacore-enhance-2", 2)
+    OV.remove_science_pack("space-science-pack", "datacore-basic")
+    OV.set_science_pack("space-science-pack", "datacore-exploration-2", 2)
   end
+end
 
-  OV.execute()
+OV.execute()
 
 -- 	local adebug = true
 --
@@ -363,7 +452,7 @@ if not loaders_graphics then
   end
   if data.raw["technology"]["extremely-fast-loader"] then
     data.raw["technology"]["extremely-fast-loader"].icon =
-      "__angelsindustries__/graphics/technology/purple-loader-tech.png"
+    "__angelsindustries__/graphics/technology/purple-loader-tech.png"
     data.raw["technology"]["extremely-fast-loader"].icon_size = 128
   end
 end

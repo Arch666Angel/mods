@@ -14,12 +14,12 @@ if mods['bobplates'] then angelsmods.industries.overhaul = true end
 --angelsmods.industries.overhaul=false --temp overrides
 
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
-angelsmods.industries.tech=false --temp overrides to disable until ready
+--angelsmods.industries.tech=false --temp overrides to disable until ready
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
 --Enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
 if angelsmods.industries.tech==true then angelsmods.industries.components = true end
-angelsmods.industries.components = false --temp overrides to disable until ready
+--angelsmods.industries.components = false --temp overrides to disable until ready
 
 --LOAD FUNCTIONS
 if not angelsmods.industries.tech_exceptions then
