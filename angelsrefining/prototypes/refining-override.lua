@@ -23,7 +23,7 @@ OV.disable_recipe("solid-lithium")
 --SORTING OVERRIDES
 require("prototypes.recipes.refining-entity-angels")
 --if angelsmods.industries or (bobmods and bobmods.plates) then
-if (angelsmods.industries and angelsmods.industries.overhaul) or mod.bobplates then
+if (angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates then
   if angelsmods.industries then
     require("prototypes.refining-override-angels")
   else
