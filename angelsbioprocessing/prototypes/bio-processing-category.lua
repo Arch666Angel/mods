@@ -490,6 +490,18 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "bio-processing-alien-large",
+    group = "bio-processing-alien",
+    order = "hca",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processing-alien-large-convert",
+    group = "bio-processing-alien",
+    order = "hcb",
+  },
+  {
+    type = "item-subgroup",
     name = "bio-processing-buildings-alien-a",
     group = "bio-processing-alien",
     order = "za",
