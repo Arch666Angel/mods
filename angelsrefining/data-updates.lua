@@ -1,12 +1,12 @@
 if angelsmods.refining then
-	--Fallbacks for the recipe builder
-	require("prototypes.recipe-builder-fallbacks")
-	--Overrides for refining/angels internal
-	require("prototypes.refining-override")
-	--Generic recipe generatio
-	require("prototypes.refining-generate")
-	--Overrides for resources
-	require("prototypes.generation.angels-override")
+  --Fallbacks for the recipe builder
+  require("prototypes.recipe-builder-fallbacks")
+  --Overrides for refining/angels internal
+  require("prototypes.refining-override")
+  --Generic recipe generatio
+  require("prototypes.refining-generate")
+  --Overrides for resources
+  require("prototypes.generation.angels-override")
 end
 
 -- EXECUTE OVERRIDES

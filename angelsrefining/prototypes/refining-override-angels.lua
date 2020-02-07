@@ -639,28 +639,28 @@ OV.patch_recipes(
 --LOCALIZATION STRINGS
 --SLAG PROCESSING
 --1-IRON, COPPER
-data.raw["recipe"]["slag-processing-1"].localised_name = {
+data.raw.recipe["slag-processing-1"].localised_name = {
   "recipe-name.slag-processing-1",
   {"item-description.loc-iron"},
   {"item-description.loc-and"},
   {"item-description.loc-copper"}
 }
 --2-LEAD, TIN
-data.raw["recipe"]["slag-processing-2"].localised_name = {
+data.raw.recipe["slag-processing-2"].localised_name = {
   "recipe-name.slag-processing-2",
   {"item-description.loc-lead"},
   {"item-description.loc-and"},
   {"item-description.loc-tin"}
 }
 --3-SILVER, QUARTZ
-data.raw["recipe"]["slag-processing-3"].localised_name = {
+data.raw.recipe["slag-processing-3"].localised_name = {
   "recipe-name.slag-processing-3",
   {"item-description.loc-silver"},
   {"item-description.loc-and"},
   {"item-description.loc-quartz"}
 }
 --4-BAUXITE, MANGANESE
-data.raw["recipe"]["slag-processing-4"].localised_name = {
+data.raw.recipe["slag-processing-4"].localised_name = {
   "recipe-name.slag-processing-4",
   {"item-description.loc-bauxite"},
   {"item-description.loc-and"},
@@ -669,35 +669,35 @@ data.raw["recipe"]["slag-processing-4"].localised_name = {
   {"item-description.loc-space"}
 }
 --5-GOLD, NICKEL
-data.raw["recipe"]["slag-processing-5"].localised_name = {
+data.raw.recipe["slag-processing-5"].localised_name = {
   "recipe-name.slag-processing-5",
   {"item-description.loc-gold"},
   {"item-description.loc-and"},
   {"item-description.loc-nickel"}
 }
 --6-ZINC, RUTILE
-data.raw["recipe"]["slag-processing-6"].localised_name = {
+data.raw.recipe["slag-processing-6"].localised_name = {
   "recipe-name.slag-processing-6",
   {"item-description.loc-zinc"},
   {"item-description.loc-and"},
   {"item-description.loc-rutile"}
 }
 --7-PLATINUM, CHROME
-data.raw["recipe"]["slag-processing-7"].localised_name = {
+data.raw.recipe["slag-processing-7"].localised_name = {
   "recipe-name.slag-processing-6",
   {"item-description.loc-platinum"},
   {"item-description.loc-and"},
   {"item-description.loc-chrome"}
 }
 --8-COBALT, TUNGSTEN
-data.raw["recipe"]["slag-processing-8"].localised_name = {
+data.raw.recipe["slag-processing-8"].localised_name = {
   "recipe-name.slag-processing-6",
   {"item-description.loc-cobalt"},
   {"item-description.loc-and"},
   {"item-description.loc-tungsten"}
 }
 --9-URANIUM, FLUORITE
-data.raw["recipe"]["slag-processing-9"].localised_name = {
+data.raw.recipe["slag-processing-9"].localised_name = {
   "recipe-name.slag-processing-6",
   {"item-description.loc-uranium"},
   {"item-description.loc-and"},
