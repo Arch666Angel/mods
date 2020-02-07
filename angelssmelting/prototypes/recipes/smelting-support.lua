@@ -105,7 +105,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = angelsmods.smelting.number_tint,
+        tint = angelsmods.refining.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -137,7 +137,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = angelsmods.smelting.number_tint,
+        tint = angelsmods.refining.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -169,7 +169,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = angelsmods.smelting.number_tint,
+        tint = angelsmods.refining.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }

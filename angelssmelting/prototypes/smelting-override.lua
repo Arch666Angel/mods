@@ -36,6 +36,10 @@ data.raw["item"]["refined-hazard-concrete"].order = "hd"
 
 data.raw["item"]["uranium-ore"].subgroup = "angels-ores"
 data.raw["item"]["uranium-ore"].order = "h[uranium-ore]"
+if data.raw["item"]["thorium-ore"] then
+  data.raw["item"]["thorium-ore"].subgroup = "angels-ores"
+  data.raw["item"]["thorium-ore"].order = "i[thorium-ore]"
+end
 
 OV.patch_recipes({
   {

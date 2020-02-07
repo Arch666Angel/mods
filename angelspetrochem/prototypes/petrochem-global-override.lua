@@ -257,18 +257,29 @@ if bobmods then
     OV.global_replace_item("carbon", "solid-carbon")
     angelsmods.functions.add_flag("carbon", "hidden")
     OV.global_replace_item("chlorine", "gas-chlorine")
+    data.raw.fluid["chlorine"].hidden = true
     OV.global_replace_item("hydrogen", "gas-hydrogen")
+    data.raw.fluid["hydrogen"].hidden = true
     OV.global_replace_item("hydrogen-chloride", "gas-hydrogen-chloride")
+    data.raw.fluid["hydrogen-chloride"].hidden = true
     OV.global_replace_item("nitric-acid", "liquid-nitric-acid")
+    data.raw.fluid["nitric-acid"].hidden = true
     OV.global_replace_item("nitrogen", "gas-nitrogen")
+    data.raw.fluid["nitrogen"].hidden = true
     OV.global_replace_item("nitrogen-dioxide", "gas-nitrogen-dioxide")
+    data.raw.fluid["nitrogen-dioxide"].hidden = true
     OV.global_replace_item("oxygen", "gas-oxygen")
+    data.raw.fluid["oxygen"].hidden = true
     OV.global_replace_item("ferric-chloride-solution", "liquid-ferric-chloride-solution")
+    data.raw.fluid["ferric-chloride-solution"].hidden = true
     OV.global_replace_item("sodium-hydroxide", "solid-sodium-hydroxide")
     angelsmods.functions.add_flag("sodium-hydroxide", "hidden")
     OV.global_replace_item("sulfur-dioxide", "gas-sulfur-dioxide")
+    data.raw.fluid["sulfur-dioxide"].hidden = true
     OV.global_replace_item("liquid-air", "gas-compressed-air")
+    data.raw.fluid["liquid-air"].hidden = true
     OV.global_replace_item("hydrogen-sulfide", "gas-hydrogen-sulfide")
+    data.raw.fluid["hydrogen-sulfide"].hidden = true
 
     OV.global_replace_item({"solid-resin"}, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
@@ -371,11 +382,12 @@ if bobmods then
     end
 
     table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
-    data.raw.recipe["bob-heavy-water"].group = "water-treatment"
+    data.raw.fluid["heavy-water"].subgroup = "water-treatment-fluid"
+    data.raw.fluid["heavy-water"].order = "eb"
+    data.raw.fluid["deuterium"].subgroup = "petrochem-basic-fluids"
+    data.raw.fluid["deuterium"].order = "i"
     data.raw.recipe["bob-heavy-water"].subgroup = "water-treatment"
     data.raw.recipe["bob-heavy-water"].order = "b[bob-heavy-water]"
-    data.raw.recipe["heavy-water-electrolysis"].category = "petrochem-electrolyser"
-    data.raw.recipe["heavy-water-electrolysis"].group = "petrochem-refining"
     data.raw.recipe["heavy-water-electrolysis"].subgroup = "petrochem-basics"
     data.raw.recipe["heavy-water-electrolysis"].order = "a[water-separation]-a[heavy-water-electrolysis]"
 
@@ -486,6 +498,7 @@ if bobmods then
     data.raw["fluid"]["nitroglycerin"].order = "ob"
     OV.patch_recipes({{name = "nitroglycerin", subgroup = "petrochem-rocket", order = "ib"}})
     OV.global_replace_item("glycerol", "gas-glycerol")
+    data.raw.fluid["glycerol"].hidden = true
 
     OV.patch_recipes(
       {
@@ -507,11 +520,17 @@ if bobmods then
 
   if data.raw["fluid"]["dinitrogen-tetroxide"] then --BOBS REVAMP
     OV.global_replace_item("ammonia", "gas-ammonia")
+    data.raw.fluid["ammonia"].hidden = true
     OV.global_replace_item("nitric-oxide", "gas-nitrogen-monoxide")
+    data.raw.fluid["nitric-oxide"].hidden = true
     OV.global_replace_item("nitric-dioxide", "gas-nitrogen-dioxide")
+    --data.raw.fluid["nitric-dioxide"].hidden = true
     OV.global_replace_item("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
+    data.raw.fluid["dinitrogen-tetroxide"].hidden = true
     OV.global_replace_item("hydrogen-peroxide", "gas-hydrogen-peroxide")
+    data.raw.fluid["hydrogen-peroxide"].hidden = true
     OV.global_replace_item("hydrazine", "gas-hydrazine")
+    data.raw.fluid["hydrazine"].hidden = true
 
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
     OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")

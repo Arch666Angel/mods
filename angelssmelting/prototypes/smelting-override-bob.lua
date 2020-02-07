@@ -70,6 +70,7 @@ OV.add_prereq( "titanium-processing", "angels-titanium-smelting-1" )
 OV.disable_recipe({ "bob-titanium-plate" })
 OV.add_prereq( "tungsten-processing", "angels-tungsten-smelting-1" )
 OV.disable_recipe({ "tungstic-acid", "tungsten-oxide", "powdered-tungsten", "bob-tungsten-plate" })
+data.raw.fluid["tungstic-acid"].hidden = true
 data.raw.item["tungsten-carbide"].subgroup = "angels-tungsten-casting"
 data.raw.item["tungsten-carbide"].order = "k[tungsten-carbide]"
 OV.patch_recipes({

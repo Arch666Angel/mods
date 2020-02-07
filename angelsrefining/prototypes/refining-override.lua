@@ -231,6 +231,8 @@ if mods['bobplates'] then
 
   --WATER TREATMENT
   data.raw["fluid"]["lithia-water"].icon = "__angelsrefining__/graphics/icons/water-lithia.png"
+  data.raw.fluid["lithia-water"].subgroup = "water-treatment-fluid"
+  data.raw.fluid["lithia-water"].order = "ea"
 
   --SPECIAL RECIPES
   data:extend(
@@ -312,6 +314,7 @@ if mods['bobplates'] then
   if data.raw["fluid"]["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
+    data.raw.fluid["pure-water"].hidden = true
   end
 
   --OVERRIDE BARRELING
