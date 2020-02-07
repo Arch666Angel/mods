@@ -380,15 +380,21 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "angels-alloys-casting",
+    name = "angels-lithium-casting",
     group = "angels-casting",
     order = "t",
   },
   {
     type = "item-subgroup",
+    name = "angels-alloys-casting",
+    group = "angels-casting",
+    order = "u",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-mold-casting",
     group = "angels-casting",
-    order = "t",
+    order = "y",
   },
   {
     type = "item-subgroup",

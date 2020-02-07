@@ -290,8 +290,7 @@ if bobmods then
         {
           name = "bob-resin-wood",
           ingredients = {
-            {"!!"},
-            {"wood", 2}
+            {name = "wood", type = "item", amount = "+4"}
           },
           subgroup = "petrochem-solids",
           order = "b[resin]-b[solid]-a",
@@ -326,6 +325,8 @@ if bobmods then
         }
       }
     )
+    OV.remove_unlock("plastics", "synthetic-wood")
+    OV.disable_recipe({"synthetic-wood"})
     OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
     angelsmods.functions.add_flag("calcium-chloride", "hidden")
     OV.disable_recipe("calcium-chloride")
