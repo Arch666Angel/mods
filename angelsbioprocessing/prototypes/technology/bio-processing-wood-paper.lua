@@ -185,6 +185,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -230,6 +231,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -270,6 +272,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -302,6 +305,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -333,11 +337,12 @@ data:extend(
     },
     unit =
     {
-      count = 50,
+      count = 100,
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -378,6 +383,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -410,6 +416,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -441,11 +448,12 @@ data:extend(
     },
     unit =
     {
-      count = 50,
+      count = 100,
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -486,6 +494,7 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -518,6 +527,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },
@@ -549,11 +559,12 @@ data:extend(
     },
     unit =
     {
-      count = 50,
+      count = 100,
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
+        {"token-bio", 1}
       },
       time = 30
     },

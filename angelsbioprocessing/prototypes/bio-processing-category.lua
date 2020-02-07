@@ -2,6 +2,10 @@ data:extend(
 {
   {
     type = "recipe-category",
+    name = "angels-manual-crafting",
+  },
+  {
+    type = "recipe-category",
     name = "bio-processing",
   },
   {
@@ -155,37 +159,38 @@ data:extend(
     type = "item-subgroup",
     name = "bio-arboretum-temperate",
     group = "bio-processing-nauvis",
-    order = "h",
+    order = "ha",
   },
   {
     type = "item-subgroup",
     name = "bio-arboretum-swamp",
     group = "bio-processing-nauvis",
-    order = "i",
+    order = "hb",
   },
   {
     type = "item-subgroup",
     name = "bio-arboretum-desert",
     group = "bio-processing-nauvis",
-    order = "j",
+    order = "hc",
   },
+  -- order i reserved for bob greenhouse
   {
     type = "item-subgroup",
     name = "bio-liquor",
     group = "bio-processing-nauvis",
-    order = "k",
+    order = "j",
   },
   {
     type = "item-subgroup",
     name = "bio-paper",
     group = "bio-processing-nauvis",
-    order = "l",
+    order = "k",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-buildings-nauvis-a",
     group = "bio-processing-nauvis",
-    order = "m",
+    order = "z",
   },
 
 

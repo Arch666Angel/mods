@@ -410,7 +410,7 @@ data:extend(
     },
     icon_size = 32,
     subgroup = "bio-processing-buildings-nauvis-a",
-    order = "c[arboretum]",
+    order = "c[arboretum]-a", -- c[arboretum]-b reserved for bob greenhouse (see override)
     place_result = "bio-arboretum-1",
     stack_size = 10,
   },
