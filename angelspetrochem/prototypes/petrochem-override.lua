@@ -95,11 +95,11 @@ if angelsmods.refining then
       {name = "angelsore9-dust", ingredients = {{name = "solid-sodium-hydroxide", 2}}},
       {
         name = "angelsore8-anode-sludge",
-        ingredients = {{name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10}}
+        ingredients = {{name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10}}
       },
       {
         name = "angelsore9-anode-sludge",
-        ingredients = {{name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10}}
+        ingredients = {{name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10}}
       }
     }
   )

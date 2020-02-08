@@ -235,12 +235,32 @@ if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates
     else
       --require("prototypes.smelting-override-angels")
       OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
+      angelsmods.functions.add_flag("processed-platinum", "hidden")
+      angelsmods.functions.add_flag("pellet-platinum", "hidden")
+      angelsmods.functions.add_flag("solid-ammonium-chloroplatinate", "hidden")
+      angelsmods.functions.add_flag("ingot-platinum", "hidden")
+      data.raw.fluid["liquid-hexachloroplatinic-acid"].hidden = true
+      data.raw.fluid["liquid-molten-platinum"].hidden = true
+      angelsmods.functions.add_flag("angels-plate-platinum", "hidden")
+      angelsmods.functions.add_flag("angels-roll-platinum", "hidden")
+      angelsmods.functions.add_flag("angels-wire-coil-platinum", "hidden")
+      angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
       OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
       OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
     end
   else -- bobmods
     require("prototypes.smelting-override-bob")
     OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
+    angelsmods.functions.add_flag("processed-platinum", "hidden")
+    angelsmods.functions.add_flag("pellet-platinum", "hidden")
+    angelsmods.functions.add_flag("solid-ammonium-chloroplatinate", "hidden")
+    angelsmods.functions.add_flag("ingot-platinum", "hidden")
+    data.raw.fluid["liquid-hexachloroplatinic-acid"].hidden = true
+    data.raw.fluid["liquid-molten-platinum"].hidden = true
+    angelsmods.functions.add_flag("angels-plate-platinum", "hidden")
+    angelsmods.functions.add_flag("angels-roll-platinum", "hidden")
+    angelsmods.functions.add_flag("angels-wire-coil-platinum", "hidden")
+    angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
     OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast", "angels-rod-stack-iron-converting", "angels-rod-iron-plate" })
     OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
   end
