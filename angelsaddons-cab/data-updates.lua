@@ -1,5 +1,3 @@
-local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
-
 if angelsmods.industries then
   local OV = angelsmods.functions.OV
 
@@ -12,8 +10,8 @@ end
 
 require "prototypes.entities.cab-updates"
 
-if mods['bobvehicleequipment'] then
-  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories,"tank")
-  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories,"vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories,"armoured-vehicle")
+if mods["bobvehicleequipment"] then
+  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories, "tank")
+  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories, "vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories, "armoured-vehicle")
 end

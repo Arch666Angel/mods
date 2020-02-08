@@ -1,7 +1,3 @@
-if mods["debugadapter"] then
-  require("__debugadapter__/debugadapter.lua")
-end
-
 -- if angelsmods.industries then
 -- local OV = angelsmods.functions.OV
 

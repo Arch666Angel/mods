@@ -1,4 +1,3 @@
-local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}

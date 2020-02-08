@@ -1,5 +1,3 @@
-local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
-
 --INITIALIZE
 if not angelsmods then
   angelsmods = {}
@@ -10,7 +8,9 @@ end
 
 --TRIGGER CHECKS
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
-if mods['bobplates'] then angelsmods.industries.overhaul = true end
+if mods["bobplates"] then
+  angelsmods.industries.overhaul = true
+end
 --angelsmods.industries.overhaul=false --temp overrides
 
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
@@ -18,7 +18,9 @@ angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- ena
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
 --Enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
-if angelsmods.industries.tech==true then angelsmods.industries.components = true end
+if angelsmods.industries.tech == true then
+  angelsmods.industries.components = true
+end
 --angelsmods.industries.components = false --temp overrides to disable until ready
 
 --LOAD FUNCTIONS

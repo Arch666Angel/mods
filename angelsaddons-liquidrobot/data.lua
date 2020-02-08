@@ -1,7 +1,3 @@
-if mods["debugadapter"] then
-  require("__debugadapter__/debugadapter.lua")
-end
-
 if not angelsmods then
   angelsmods = {}
 end

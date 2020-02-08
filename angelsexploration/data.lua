@@ -1,8 +1,10 @@
-local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
-
 --INITIALIZE
-if not angelsmods then angelsmods = {} end
-if not angelsmods.exploration then angelsmods.exploration = {} end
+if not angelsmods then
+	angelsmods = {}
+end
+if not angelsmods.exploration then
+	angelsmods.exploration = {}
+end
 
 --TRIGGER CHECKS
 
@@ -10,7 +12,9 @@ if not angelsmods.exploration then angelsmods.exploration = {} end
 require("prototypes.exploration-category")
 
 --LOAD FUNCTIONS
-if not angelsmods.functions then angelsmods.functions = {} end
+if not angelsmods.functions then
+	angelsmods.functions = {}
+end
 if angelsmods.functions then
 	require("prototypes.entities.biter-builder")
 end
