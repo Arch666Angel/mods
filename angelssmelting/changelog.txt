@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: ???
+Date: 2020-02-09
   Changes:
     - updated to 0.18
     - disabled bobs silver nitrate recipe

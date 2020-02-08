@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.0
-Date: ???
+Date: 2020-02-09
   Changes:
     - Updated to 0.18
     - Added a tryptophobia setting to get alternative graphics for stiratite ore

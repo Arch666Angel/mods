@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
-Date: ???
+Date: 2020-02-09
   Changes:
     - updated to 0.18
     - changed fish to require a fish environment

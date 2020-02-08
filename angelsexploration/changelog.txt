@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: ???
+Date: 2020-02-09
   Changes:
     - update to 0.18
     - updated biter graphics to align with 0.17+ biter animations
