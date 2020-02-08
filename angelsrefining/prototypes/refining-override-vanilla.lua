@@ -430,328 +430,38 @@ end
 --empty
 --empty
 
-data.raw.item["angels-ore1-crushed"].localised_description = {
-  "item-description.angels-ore1-crushed",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore1-chunk"].localised_description = {
-  "item-description.angels-ore1-chunk",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore1-crystal"].localised_description = {
-  "item-description.angels-ore1-crystal",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore1-pure"].localised_description = {
-  "item-description.angels-ore1-pure",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
+angelsmods.functions.add_localization("angels-ore1", "angels-ore", "iron")
+angelsmods.functions.add_localization("angels-ore1-crushed", "angels-ore-crushed", "iron")
+angelsmods.functions.add_localization("angels-ore1-chunk", "angels-ore-chunk", "iron")
+angelsmods.functions.add_localization("angels-ore1-crystal", "angels-ore-crystal", "iron")
+angelsmods.functions.add_localization("angels-ore1-pure", "angels-ore-pure", "iron")
 
-data.raw.item["angels-ore2-crushed"].localised_description = {
-  "item-description.angels-ore2-crushed",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore2-chunk"].localised_description = {
-  "item-description.angels-ore2-chunk",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore2-crystal"].localised_description = {
-  "item-description.angels-ore2-crystal",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore2-pure"].localised_description = {
-  "item-description.angels-ore2-pure",
-  {"item-description.loc-iron"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
+angelsmods.functions.add_localization("angels-ore2", "angels-ore", "iron")
+angelsmods.functions.add_localization("angels-ore2-crushed", "angels-ore-crushed-no-smelt", "iron")
+angelsmods.functions.add_localization("angels-ore2-chunk", "angels-ore-chunk", "iron")
+angelsmods.functions.add_localization("angels-ore2-crystal", "angels-ore-crystal", "iron")
+angelsmods.functions.add_localization("angels-ore2-pure", "angels-ore-pure", "iron")
 
-data.raw.item["angels-ore3-crushed"].localised_description = {
-  "item-description.angels-ore3-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore3-chunk"].localised_description = {
-  "item-description.angels-ore3-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore3-crystal"].localised_description = {
-  "item-description.angels-ore3-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore3-pure"].localised_description = {
-  "item-description.angels-ore3-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
+angelsmods.functions.add_localization("angels-ore3", "angels-ore", "copper")
+angelsmods.functions.add_localization("angels-ore3-crushed", "angels-ore-crushed", "copper")
+angelsmods.functions.add_localization("angels-ore3-chunk", "angels-ore-chunk", "copper")
+angelsmods.functions.add_localization("angels-ore3-crystal", "angels-ore-crystal", "copper")
+angelsmods.functions.add_localization("angels-ore3-pure", "angels-ore-pure", "copper")
 
-data.raw.item["angels-ore4-crushed"].localised_description = {
-  "item-description.angels-ore4-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore4-chunk"].localised_description = {
-  "item-description.angels-ore4-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore4-crystal"].localised_description = {
-  "item-description.angels-ore4-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore4-pure"].localised_description = {
-  "item-description.angels-ore4-pure",
-  {"item-description.loc-copper"},
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
+angelsmods.functions.add_localization("angels-ore4", "angels-ore", "copper")
+angelsmods.functions.add_localization("angels-ore4-crushed", "angels-ore-crushed-no-smelt", "copper")
+angelsmods.functions.add_localization("angels-ore4-chunk", "angels-ore-chunk", "copper")
+angelsmods.functions.add_localization("angels-ore4-crystal", "angels-ore-crystal", "copper")
+angelsmods.functions.add_localization("angels-ore4-pure", "angels-ore-pure", "copper")
 
-data.raw.item["angels-ore5-crushed"].localised_description = {
-  "item-description.angels-ore5-pure",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore5-chunk"].localised_description = {
-  "item-description.angels-ore5-pure",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore5-crystal"].localised_description = {
-  "item-description.angels-ore5-pure",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore5-pure"].localised_description = {
-  "item-description.angels-ore5-pure",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
+angelsmods.functions.add_localization("angels-ore5", "angels-ore")
+angelsmods.functions.add_localization("angels-ore5-crushed", "angels-ore-crushed")
+angelsmods.functions.add_localization("angels-ore5-chunk", "angels-ore-chunk")
+angelsmods.functions.add_localization("angels-ore5-crystal", "angels-ore-crystal")
+angelsmods.functions.add_localization("angels-ore5-pure", "angels-ore-pure")
 
-data.raw.item["angels-ore6-crushed"].localised_description = {
-  "item-description.angels-ore6-pure",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore6-chunk"].localised_description = {
-  "item-description.angels-ore6-pure",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore6-crystal"].localised_description = {
-  "item-description.angels-ore6-pure",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
-data.raw.item["angels-ore6-pure"].localised_description = {
-  "item-description.angels-ore6-pure",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-}
+angelsmods.functions.add_localization("angels-ore6", "angels-ore")
+angelsmods.functions.add_localization("angels-ore6-crushed", "angels-ore-crushed")
+angelsmods.functions.add_localization("angels-ore6-chunk", "angels-ore-chunk")
+angelsmods.functions.add_localization("angels-ore6-crystal", "angels-ore-crystal")
+angelsmods.functions.add_localization("angels-ore6-pure", "angels-ore-pure")

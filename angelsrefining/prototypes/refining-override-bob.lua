@@ -633,75 +633,302 @@ if mods.bobplates then
 
   --LOCALIZATION STRINGS
   --SLAG PROCESSING
-  --1-IRON, COPPER
-  data.raw.recipe["slag-processing-1"].localised_name = {
-    "recipe-name.slag-processing-1",
-    {"item-description.loc-iron"},
-    {"item-description.loc-and"},
-    {"item-description.loc-copper"}
-  }
-  --2-LEAD, TIN
-  data.raw.recipe["slag-processing-2"].localised_name = {
-    "recipe-name.slag-processing-2",
-    {"item-description.loc-lead"},
-    {"item-description.loc-and"},
-    {"item-description.loc-tin"}
-  }
-  --3-NICKEL, QUARTZ
-  data.raw.recipe["slag-processing-3"].localised_name = {
-    "recipe-name.slag-processing-3",
-    {"item-description.loc-nickel"},
-    {"item-description.loc-and"},
-    {"item-description.loc-quartz"}
-  }
-  --4-BAUXITE, COBAL, ZINC
-  data.raw.recipe["slag-processing-4"].localised_name = {
-    "recipe-name.slag-processing-4",
-    {"item-description.loc-bauxite"},
-    {"item-description.loc-dot"},
-    {"item-description.loc-cobalt"},
-    {"item-description.loc-and"},
-    {"item-description.loc-zinc"}
-  }
-  --5-SILVER, RUTILE
-  data.raw.recipe["slag-processing-5"].localised_name = {
-    "recipe-name.slag-processing-5",
-    {"item-description.loc-silver"},
-    {"item-description.loc-and"},
-    {"item-description.loc-rutile"}
-  }
-  --6-GOLD, TUNGSTEN
-  data.raw.recipe["slag-processing-6"].localised_name = {
-    "recipe-name.slag-processing-6",
-    {"item-description.loc-gold"},
-    {"item-description.loc-and"},
-    {"item-description.loc-tungsten"}
-  }
-  --7-URANIUM, FLUORITE
-  data.raw.recipe["slag-processing-7"].localised_name = {
-    "recipe-name.slag-processing-7",
-    {"item-description.loc-uranium"},
-    {"item-description.loc-and"},
-    {"item-description.loc-fluorite"}
-  }
+  angelsmods.functions.add_recipe_localization("slag-processing-1", "slag-processing", "iron", "copper")
+  angelsmods.functions.add_recipe_localization("slag-processing-2", "slag-processing", "lead", "tin")
+  angelsmods.functions.add_recipe_localization("slag-processing-3", "slag-processing", "nickel", "quartz")
+  angelsmods.functions.add_recipe_localization("slag-processing-4", "slag-processing", "bauxite", "cobalt", "zinc")
+  angelsmods.functions.add_recipe_localization("slag-processing-5", "slag-processing", "silver", "rutile")
+  angelsmods.functions.add_recipe_localization("slag-processing-6", "slag-processing", "gold", "tungsten")
+  angelsmods.functions.add_recipe_localization("slag-processing-7", "slag-processing", "uranium", "fluorite")
+
   --8-EMPTY
   --empty
 
   --SAPHIRITE (IRON, COPPER, QUARTZ, NICKEL, RUTILE, ZINC)
-  angelsmods.functions.add_localization("angels-ore1", "iron", "copper", "quartz", "nickel", "rutile", "zinc")
+  angelsmods.functions.add_localization(
+    "angels-ore1",
+    "angels-ore",
+    "iron",
+    "copper",
+    "quartz",
+    "nickel",
+    "rutile",
+    "zinc"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore1-crushed",
+    "angels-ore-crushed",
+    "iron",
+    "copper",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore1-chunk",
+    "angels-ore-chunk",
+    "iron",
+    "copper",
+    "quartz",
+    "nickel",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore1-crystal",
+    "angels-ore-crystal",
+    "iron",
+    "copper",
+    "quartz",
+    "nickel",
+    "rutile",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore1-pure",
+    "angels-ore-pure",
+    "iron",
+    "copper",
+    "quartz",
+    "nickel",
+    "rutile",
+    "zinc"
+  )
 
   --JIVOLITE (IRON, COPPER, BAUXITE, ZINC, SILVER, TUNGSTEN)
-  angelsmods.functions.add_localization("angels-ore2", "iron", "copper", "bauxite", "zinc", "silver", "tungsten")
+  angelsmods.functions.add_localization(
+    "angels-ore2",
+    "angels-ore",
+    "iron",
+    "copper",
+    "bauxite",
+    "zinc",
+    "silver",
+    "tungsten"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore2-crushed",
+    "angels-ore-crushed",
+    "iron",
+    "copper",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore2-chunk",
+    "angels-ore-chunk",
+    "iron",
+    "copper",
+    "bauxite",
+    "zinc",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore2-crystal",
+    "angels-ore-crystal",
+    "iron",
+    "copper",
+    "bauxite",
+    "zinc",
+    "silver",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore2-pure",
+    "angels-ore-pure",
+    "iron",
+    "copper",
+    "bauxite",
+    "zinc",
+    "silver",
+    "tungsten"
+  )
 
   --STIRATITE (COPPER, IRON, COBALT, TIN, URANIUM, BAUXITE)
-  angelsmods.functions.add_localization("angels-ore3", "copper", "iron", "cobalt", "tin", "uranium", "bauxite")
+  angelsmods.functions.add_localization(
+    "angels-ore3",
+    "angels-ore",
+    "copper",
+    "iron",
+    "cobalt",
+    "tin",
+    "uranium",
+    "bauxite"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore3-crushed",
+    "angels-ore-crushed",
+    "copper",
+    "iron",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore3-chunk",
+    "angels-ore-chunk",
+    "copper",
+    "iron",
+    "cobalt",
+    "tin",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore3-crystal",
+    "angels-ore-crystal",
+    "copper",
+    "iron",
+    "cobalt",
+    "tin",
+    "uranium",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore3-pure",
+    "angels-ore-pure",
+    "copper",
+    "iron",
+    "cobalt",
+    "tin",
+    "uranium",
+    "bauxite"
+  )
 
   --CROTINIUM (COPPER, IRON, LEAD, SILVER, GOLD, RUTILE)
-  angelsmods.functions.add_localization("angels-ore4", "copper", "iron", "lead", "silver", "gold", "rutile")
+  angelsmods.functions.add_localization(
+    "angels-ore4",
+    "angels-ore",
+    "copper",
+    "iron",
+    "lead",
+    "silver",
+    "gold",
+    "rutile"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore4-crushed",
+    "angels-ore-crushed",
+    "copper",
+    "iron",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore4-chunk",
+    "angels-ore-chunk",
+    "copper",
+    "iron",
+    "lead",
+    "silver",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore4-crystal",
+    "angels-ore-crystal",
+    "copper",
+    "iron",
+    "lead",
+    "silver",
+    "gold",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore4-pure",
+    "angels-ore-pure",
+    "copper",
+    "iron",
+    "lead",
+    "silver",
+    "gold",
+    "rutile"
+  )
 
   --RUBYTE (LEAD, NICKEL, BAUXITE, GOLD, RUTILE, TUNGSTEN)
-  angelsmods.functions.add_localization("angels-ore5", "lead", "nickel", "bauxite", "gold", "rutile", "tungsten")
+  angelsmods.functions.add_localization(
+    "angels-ore5",
+    "angels-ore",
+    "lead",
+    "nickel",
+    "bauxite",
+    "gold",
+    "rutile",
+    "tungsten"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore5-crushed",
+    "angels-ore-crushed",
+    "lead",
+    "nickel",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore5-chunk",
+    "angels-ore-chunk",
+    "lead",
+    "nickel",
+    "bauxite",
+    "gold",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore5-crystal",
+    "angels-ore-crystal",
+    "lead",
+    "nickel",
+    "bauxite",
+    "gold",
+    "rutile",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore5-pure",
+    "angels-ore-pure",
+    "lead",
+    "nickel",
+    "bauxite",
+    "gold",
+    "rutile",
+    "tungsten"
+  )
 
   --BOBMONIUM (TIN, QUARTZ, COBALT, ZINC, BAUXITE, URANIUM)
-  angelsmods.functions.add_localization("angels-ore6", "tin", "quartz", "cobalt", "zinc", "bauxite", "uranium")
+  angelsmods.functions.add_localization(
+    "angels-ore6",
+    "angels-ore",
+    "tin",
+    "quartz",
+    "cobalt",
+    "zinc",
+    "bauxite",
+    "uranium"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore6-crushed",
+    "angels-ore-crushed",
+    "tin",
+    "quartz",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore6-chunk",
+    "angels-ore-chunk",
+    "tin",
+    "quartz",
+    "cobalt",
+    "zinc",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore6-crystal",
+    "angels-ore-crystal",
+    "tin",
+    "quartz",
+    "cobalt",
+    "zinc",
+    "bauxite",
+    "slag"
+  )
+  angelsmods.functions.add_localization(
+    "angels-ore6-pure",
+    "angels-ore-pure",
+    "tin",
+    "quartz",
+    "cobalt",
+    "zinc",
+    "bauxite",
+    "uranium"
+  )
 end

@@ -1,9 +1,10 @@
+local __DebugAdapter = mods["debugadapter"] and require("__debugadapter__/debugadapter.lua")
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
 angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0.5}
- --{r=6/255,g=237/255,b=182/255,a=219/255}
+--{r=6/255,g=237/255,b=182/255,a=219/255}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
