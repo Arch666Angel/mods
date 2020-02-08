@@ -121,7 +121,8 @@ if angelsmods.addons then
 	end
 	--ORE SILORS
 	if angelsmods.addons.oresilos then
-		OV.set_science_pack("ore-silos", "datacore-logistic-1", 2)
+		core_replace("ore-silos","processing","logistic")
+		--OV.set_science_pack("ore-silos", "datacore-logistic-1", 2)
 	end
 	--WAREHOUSES
 	if angelsmods.addons.warehouses then
@@ -131,6 +132,10 @@ if angelsmods.addons then
 	--PETROTRAIN
 	if angelsmods.addons.petrotrain then
 		OV.set_science_pack("angels-petro-train", "datacore-logistic-1", 2)
+	end
+	--CAB
+	if angelsmods.addons.cab then
+		OV.set_science_pack("angels-cab", "datacore-exploration-2", 2)
 	end
 end
 --LOGISTIC
@@ -191,8 +196,6 @@ for rec_4tech in pairs(data.raw.technology) do
     OV.remove_science_pack(rec_4tech, "datacore-processing-1")
   end
 end
-OV.execute()
-tech_unlock_reset()
 OV.execute()
 core_tier_upgrade()
 OV.execute()

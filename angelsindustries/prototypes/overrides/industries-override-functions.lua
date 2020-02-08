@@ -4,7 +4,11 @@ function pack_replace(techname,old_c,new_c)--tech tier swapping script (for clea
   OV.set_science_pack(techname, "angels-science-pack-"..new_c)
 end
 function core_replace(techname,old_c,new_c)--tech core swapping script (for cleaner code) (assumes tier 1)
-  OV.remove_science_pack(techname, "datacore-"..old_c.."-1")
+  if old_c=="basic" then
+    ov.remove_science_pack(techname,"datacore-basic")
+  else
+    OV.remove_science_pack(techname, "datacore-"..old_c.."-1")
+  end
   if new_c=="basic" then
     OV.set_science_pack(techname, "datacore-basic", 2)
   else
@@ -140,7 +144,7 @@ function core_tier_upgrade()
           for tech,tech_ing in next,technology.unit.ingredients,nil do
             local subpack=technology.unit.ingredients[tech][1]
             local data_core=string.sub(subpack,9,-2)
-            if string.sub(data_core,1,1)=="-" then
+            if string.sub(data_core,1,1)=="-" and string.sub(data_core,-1,-1)=="-" then
               core_tier_up(techname,string.sub(data_core,2,-2))
             end
           end
@@ -152,7 +156,7 @@ function core_tier_upgrade()
           for tech,tech_ing in next,technology.unit.ingredients,nil do
             local subpack=technology.unit.ingredients[tech][1]
             local data_core=string.sub(subpack,9,-2)
-            if string.sub(data_core,1,1)=="-" then
+            if string.sub(data_core,1,1)=="-" and string.sub(data_core,-1,-1)=="-" then
               core_tier_up(techname,string.sub(data_core,2,-2))
             end
           end
