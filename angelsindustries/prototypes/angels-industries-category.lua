@@ -51,25 +51,25 @@ data:extend(
   {
     type = "item-subgroup",
     name = "angels-board",
-    group = "angels-components",
+    group = "intermediate-products",
     order = "aa",
   },
   {
     type = "item-subgroup",
     name = "angels-circuit-board",
-    group = "angels-components",
+    group = "intermediate-products",
     order = "ab",
   },
   {
     type = "item-subgroup",
     name = "angels-loaded-circuit-board",
-    group = "angels-components",
+    group = "intermediate-products",
     order = "ac",
   },
   {
     type = "item-subgroup",
     name = "angels-circuit-components",
-    group = "angels-components",
+    group = "intermediate-products",
     order = "ad",
   },
   -- {
@@ -171,25 +171,25 @@ data:extend(
   {
     type = "item-subgroup",
     name = "blocks-enhancement",
-    group = "angels-components",
+    group = "angels-tech",
     order = "va",
   },
   {
     type = "item-subgroup",
     name = "blocks-energy",
-    group = "angels-components",
+    group = "angels-tech",
     order = "vb",
   },
   {
     type = "item-subgroup",
     name = "blocks-exploration",
-    group = "angels-components",
+    group = "angels-tech",
     order = "vc",
   },
   {
     type = "item-subgroup",
     name = "blocks-logistic",
-    group = "angels-components",
+    group = "angels-tech",
     order = "vd",
   },
   {
@@ -201,31 +201,31 @@ data:extend(
   {
     type = "item-subgroup",
     name = "blocks-processing",
-    group = "angels-components",
+    group = "angels-tech",
     order = "vf",
   },
   {
     type = "item-subgroup",
     name = "blocks-warfare",
-    group = "angels-components",
+    group = "angels-tech",
     order = "vg",
   },
   {
     type = "item-subgroup",
     name = "angels-assemblers-small",
-    group = "angels-components",
+    group = "production",
     order = "za",
   },
   {
     type = "item-subgroup",
     name = "angels-assemblers-medium",
-    group = "angels-components",
+    group = "production",
     order = "zb",
   },
   {
     type = "item-subgroup",
     name = "angels-assemblers-big",
-    group = "angels-components",
+    group = "production",
     order = "zc",
   },
   -- SCIENCE
