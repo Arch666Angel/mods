@@ -791,7 +791,7 @@ local function make_attack_parameter(data_app, data_dmg)
 				action_delivery =
 				{
 					type = "stream",
-					stream = "bio-weapon-stream"
+					stream = "bio-stream"
 				}
 			}
 		}

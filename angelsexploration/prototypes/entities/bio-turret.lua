@@ -936,7 +936,7 @@ data:extend(
             type = "direct",
             action_delivery = {
               type = "stream",
-              stream = "bio-weapon-stream",
+              stream = "bio-stream",
               source_offset = {0.15, -0.5}
             }
           }

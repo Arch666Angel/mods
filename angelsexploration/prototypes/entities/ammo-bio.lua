@@ -17,15 +17,80 @@ data:extend(
     },
     duration_in_ticks = 30 * 60,
     target_movement_modifier = 0.4,
-    damage_per_tick = { amount = 15 / 60, type = "bio" },
+    --damage_per_tick = { amount = 0 / 60, type = "bio" },
   },
   {
-    type = "corpse",
+    type = "fire",
     name = "bio-splash",
-    flags = {"not-on-map"},
-    time_before_removed = 60 * 30,
-    final_render_layer = "corpse",
-    splash = {
+    flags = {"placeable-off-grid", "not-on-map"},
+
+    damage_per_tick = {amount = 0 / 60, type = "bio"},
+    on_damage_tick_effect =
+    {
+      type = "direct",
+      --force = "enemy",
+      ignore_collision_condition = true,
+      trigger_target_mask = { "ground-unit" },
+      filter_enabled = true,
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-sticker",
+            sticker = "bio-slowdown-sticker",
+            show_in_tooltip = true
+          },
+          {
+            type = "damage",
+            damage = { amount = 7.5 / 6, type = "bio" }, -- 7.5 dmg/sec
+            apply_damage_to_trees = false,
+            show_in_tooltip = true
+          }
+        }
+      }
+    },
+
+    maximum_damage_multiplier = 5,
+    damage_multiplier_increase_per_added_fuel = 1,
+    damage_multiplier_decrease_per_tick = 1 / 5 / 60,
+
+    --spawn_entity = "fire-flame-on-tree",
+    uses_alternative_behavior = true,
+    limit_overlapping_particles = true,
+    initial_render_layer = "object",
+    render_layer = "lower-object-above-shadow",
+    --secondary_render_layer = "higher-object-above",
+    --secondary_picture_fade_out_start = 30,
+    --secondary_picture_fade_out_duration = 60,
+
+    spread_delay = 300,
+    spread_delay_deviation = 180,
+    maximum_spread_count = 100,
+
+    particle_alpha = 0.6,
+    particle_alpha_blend_duration = 60*5,
+    --flame_alpha = 0.35,
+    --flame_alpha_deviation = 0.05,
+
+    emissions_per_second = 0,
+
+    add_fuel_cooldown = 10,
+    fade_in_duration = 1,
+    fade_out_duration = 30,
+
+    initial_lifetime = 60 * 20,
+    lifetime_increase_by = 60 * 2.5,
+    lifetime_increase_cooldown = 60 * 0.5,
+    maximum_lifetime = 60 * 30,
+
+    delay_between_initial_flames = 10,
+    initial_flame_count = 1,
+    burnt_patch_lifetime = 0,
+
+    pictures =
+    {
       {
         filename = "__angelsexploration__/graphics/entity/bio-projectile/splash-1.png",
         line_length = 5,
@@ -57,13 +122,12 @@ data:extend(
         height = 146,
         frame_count = 20,
         shift = {0.703125, -0.375}
-      }
+      },
     },
-    splash_speed = 0.03
   },
   {
     type = "stream",
-    name = "bio-weapon-stream",
+    name = "bio-stream",
     flags = {"not-on-map"},
     stream_light = {intensity = 1, size = 4},
     ground_light = {intensity = 0.8, size = 4},
@@ -88,6 +152,29 @@ data:extend(
     particle_fade_out_threshold = 0.9,
     particle_loop_exit_threshold = 0.25,
     action = {
+      {
+        type = "area",
+        radius = 2.5,
+        --repeat_count = 2,
+        --force = "enemy",
+        --ignore_collision_condition = true,
+        action_delivery = {
+          type = "instant",
+          target_effects = {
+            {
+              type = "create-sticker",
+              sticker = "bio-slowdown-sticker",
+              show_in_tooltip = false
+            },
+            {
+              type = "damage",
+              damage = {amount = 5, type = "bio"},
+              apply_damage_to_trees = false,
+              show_in_tooltip = true
+            }
+          }
+        }
+      },
       {
         type = "direct",
         action_delivery = {
@@ -114,36 +201,29 @@ data:extend(
                 }
               }
             },
+            --{
+            --  type = "create-entity",
+            --  entity_name = "bio-splash"
+            --},
+            --{
+            --  type = "damage",
+            --  damage = {amount = 5, type = "bio"}
+            --}
             {
-              type = "create-entity",
-              entity_name = "bio-splash"
+              type = "create-fire",
+              entity_name = "bio-splash",
+              tile_collision_mask = { "water-tile" },
+              show_in_tooltip = true
             },
             {
-              type = "damage",
-              damage = {amount = 5, type = "bio"}
+              type = "create-entity",
+              entity_name = "water-splash",
+              tile_collision_mask = { "ground-tile" },
+              show_in_tooltip = false
             }
           }
         }
       },
-      {
-        type = "area",
-        radius = 2.5,
-        --repeat_count = 2,
-        action_delivery = {
-          type = "instant",
-          target_effects = {
-            {
-              type = "create-sticker",
-              sticker = "bio-slowdown-sticker"
-            },
-            {
-              type = "damage",
-              damage = {amount = 10, type = "bio"},
-              apply_damage_to_trees = false
-            }
-          }
-        }
-      }
     },
     spine_animation = {
       filename = "__angelsexploration__/graphics/entity/bio-projectile/bio-projectile.png",
@@ -192,7 +272,7 @@ data:extend(
           type = "direct",
           action_delivery = {
             type = "stream",
-            stream = "bio-weapon-stream",
+            stream = "bio-stream",
             max_length = 15,
             duration = 160
           }
