@@ -573,7 +573,7 @@ data:extend(
     collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
     selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
     vertical_selection_shift = -0.796875,
-    weight = 1000,
+    weight = 1500,
     max_speed = 1.5,
     braking_force = 3,
     friction_force = 0.50,
