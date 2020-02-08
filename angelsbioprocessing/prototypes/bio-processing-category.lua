@@ -500,6 +500,7 @@ data:extend(
     group = "bio-processing-alien",
     order = "hcb",
   },
+  -- order hd reserved for alien resource products (see override bob artifacts)
   {
     type = "item-subgroup",
     name = "bio-processing-buildings-alien-a",

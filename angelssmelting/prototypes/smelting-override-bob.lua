@@ -124,14 +124,50 @@ if mods['bobplates'] then
 
   if data.raw.item["tinned-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
+    angelsmods.functions.add_flag("angels-wire-tin", "hidden")
+    data.raw.item["tinned-copper-cable"].subgroup = "angels-tin-casting"
+    data.raw.item["tinned-copper-cable"].order = "h"
+    data.raw.recipe["tinned-copper-cable"].subgroup ="angels-tin-casting"
+    data.raw.recipe["tinned-copper-cable"].order = "h[angels-wire-tin]-a"
+    data.raw.recipe["tinned-copper-cable"].icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/wire-tin.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    }
+    data.raw.recipe["tinned-copper-cable"].icon_size = 32
+
     OV.global_replace_item("angels-wire-gold", "gilded-copper-cable")
+    angelsmods.functions.add_flag("angels-wire-gold", "hidden")
+    data.raw.item["gilded-copper-cable"].subgroup = "angels-gold-casting"
+    data.raw.item["gilded-copper-cable"].order = "l"
+    data.raw.recipe["gilded-copper-cable"].subgroup ="angels-gold-casting"
+    data.raw.recipe["gilded-copper-cable"].order = "l[angels-wire-gold]-a"
+    data.raw.recipe["gilded-copper-cable"].icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/wire-gold.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    }
+    data.raw.recipe["gilded-copper-cable"].icon_size = 32
+
     OV.global_replace_item("angels-solder", "solder")
     angelsmods.functions.add_flag("angels-solder", "hidden")
+    data.raw.item["solder"].subgroup = "angels-solder-casting"
+    data.raw.item["solder"].order = "c"
     OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "solder" })
     angelsmods.functions.add_flag("solder-alloy", "hidden")
     OV.remove_unlock("electronics", "solder")
     OV.remove_unlock("electronics", "solder-alloy-lead")
-    OV.add_prereq( "electronics", "angels-solder-smelting-1" )
+    OV.add_prereq("electronics", "angels-solder-smelting-1" )
 
     OV.patch_recipes({
       {
@@ -143,6 +179,8 @@ if mods['bobplates'] then
         icons = {
           {
             icon = "__bobelectronics__/graphics/icons/fibreglass-board.png",
+            icon_size = 128,
+            scale = 32/128
           },
           {
             icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
@@ -154,6 +192,9 @@ if mods['bobplates'] then
       }
     })
     OV.add_unlock("angels-glass-smelting-3", "angels-glass-fiber-board")
+    OV.add_prereq("advanced-electronics-2", "angels-glass-smelting-3" )
+    OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
+    OV.disable_recipe({ "fibreglass-board" })
 
     OV.patch_recipes({
       { name = "angels-wire-coil-copper-converting", category = "electronics-machine"},

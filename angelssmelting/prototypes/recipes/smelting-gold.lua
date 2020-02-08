@@ -401,7 +401,7 @@ data:extend(
       }
     },    
     icon_size = 32,
-    order = "l[angels-wire-gold]",
+    order = "l[angels-wire-gold]-b", -- l[angels-wire-gold]-a reserved for bob (see bob override)
   },
 }
 )

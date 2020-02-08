@@ -118,6 +118,8 @@ if angelsmods.industries.overhaul then
     move_item("artillery-wagon", "angels-vehicle-train-vanilla", false, "item-with-entity-data")
   end
 
+
+
   -----------------------------------------------------------------------------
   -- ROBOTS -------------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -320,6 +322,8 @@ if angelsmods.industries.overhaul then
       }
     }
   end
+
+
 
   -----------------------------------------------------------------------------
   -- POWER --------------------------------------------------------------------
@@ -629,10 +633,67 @@ if angelsmods.industries.overhaul then
     end
   end
 
+
+
   -----------------------------------------------------------------------------
   -- Fluid --------------------------------------------------------------------
   -----------------------------------------------------------------------------
   if bobmods and bobmods.plates then
     move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]", "recipe")
+  end
+
+
+
+  -----------------------------------------------------------------------------
+  -- INTERMEDIATES ------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  -- basics
+  move_item("iron-stick", "angels-basic-intermediate", "a[basic]-a")
+  if bobmods and bobmods.plates then
+    move_item("iron-gear-wheel", "bob-gears", "a[iron]")
+    data.raw["item-subgroup"]["bob-gears"].group = "intermediate-products"
+    data.raw["item-subgroup"]["bob-gears"].order = "a[basic]-b"
+    data.raw["item-subgroup"]["bob-bearings"].group = "intermediate-products"
+    data.raw["item-subgroup"]["bob-bearings"].order = "a[basic]-c"
+  else
+    move_item("iron-gear-wheel", "angels-basic-intermediate", "a[basic]-b")
+  end
+  -- engines
+  move_item("engine-unit", "angels-basic-intermediate", "b[motor]-a")
+  move_item("electric-engine-unit", "angels-basic-intermediate", "b[motor]-b")
+  -- batteries
+  move_item("battery", "angels-basic-intermediate", "c[battery]-a")
+  if bobmods and bobmods.plates then
+    move_item("lithium-ion-battery", "angels-basic-intermediate", "c[battery]-b")
+    move_item("silver-zinc-battery", "angels-basic-intermediate", "c[battery]-c")
+  end
+  -- rocket parts
+  move_item("rocket-control-unit", "angels-basic-intermediate", "z[rocket]-a[rcu]")
+  move_item("low-density-structure", "angels-basic-intermediate", "z[rocket]-b[lds]")
+  if data.raw.item["heat-shield-tile"] then
+    move_item("heat-shield-tile", "angels-basic-intermediate", "z[rocket]-c[heat-shield]")
+  end
+  move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")
+  move_item("rocket-silo", "production-machine", "z[rocket]-a[silo]")
+  -- electronics
+  if bobmods and bobmods.electronics then
+    move_item("basic-electronic-components", "angels-circuit-components", "z[bob]-a")
+    move_item("electronic-components", "angels-circuit-components", "z[bob]-b")
+    move_item("intergrated-electronics", "angels-circuit-components", "z[bob]-c")
+    move_item("processing-electronics", "angels-circuit-components", "z[bob]-d")
+
+    move_item("wooden-board", "angels-board", "z[bob]-a")
+    move_item("phenolic-board", "angels-board", "z[bob]-b")
+    move_item("fibreglass-board", "angels-board", "z[bob]-c")
+
+    move_item("basic-circuit-board", "angels-circuit-board", "z[bob]-a")
+    move_item("circuit-board", "angels-circuit-board", "z[bob]-b")
+    move_item("superior-circuit-board", "angels-circuit-board", "z[bob]-c")
+    move_item("multi-layer-circuit-board", "angels-circuit-board", "z[bob]-d")
+
+    move_item("electronic-circuit", "angels-loaded-circuit-board", "z[bob]-a")
+    move_item("advanced-circuit", "angels-loaded-circuit-board", "z[bob]-b")
+    move_item("processing-unit", "angels-loaded-circuit-board", "z[bob]-c")
+    move_item("advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-d")
   end
 end

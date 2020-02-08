@@ -324,7 +324,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[angels-wire-tin]",
+    order = "h[angels-wire-tin]-b", -- h[angels-wire-tin]-a reserved for bob (see bob override)
   },
 }
 )

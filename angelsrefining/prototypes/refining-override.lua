@@ -335,6 +335,8 @@ if mods["bobplates"] then
       }
     }
   )
+  angelsmods.functions.add_flag("salt", "hidden")
+  
   if not angelsmods.petrochem then
     OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
   end

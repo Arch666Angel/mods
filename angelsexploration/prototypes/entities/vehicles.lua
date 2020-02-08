@@ -86,7 +86,7 @@ data:extend(
       name = "heavy-tank-rocket-launcher",
       icon = "__angelsexploration__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
       icon_size = 32,
-      flags = {},
+      flags = {"hidden"},
       subgroup = "gun",
       order = "d[heavy-tank-rocket-launcher]",
       attack_parameters = {

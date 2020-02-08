@@ -400,14 +400,18 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     data.raw.capsule["bob-laser-robot-capsule"].order = "d[troups]-d[laser]"
 
     -- attack drones, due to lack of a better place to put them
+    data.raw.item["robot-drone-frame"].subgroup = "angels-warfare-capsules-manual"
+    data.raw.item["robot-drone-frame"].order = "e[drone]-a[intermediate]-a[regular]"
+    data.raw.item["robot-drone-frame-large"].subgroup = "angels-warfare-capsules-manual"
+    data.raw.item["robot-drone-frame-large"].order = "e[drone]-a[intermediate]-b[large]"
     data.raw.item["bob-robot-gun-drone"].subgroup = "angels-warfare-capsules-manual"
-    data.raw.item["bob-robot-gun-drone"].order = "e[drone]-a[gun]"
+    data.raw.item["bob-robot-gun-drone"].order = "e[drone]-b[robot]-a[gun]"
     data.raw.item["bob-robot-laser-drone"].subgroup = "angels-warfare-capsules-manual"
-    data.raw.item["bob-robot-laser-drone"].order = "e[drone]-b[laser]"
+    data.raw.item["bob-robot-laser-drone"].order = "e[drone]-b[robot]-b[laser]"
     data.raw.item["bob-robot-flamethrower-drone"].subgroup = "angels-warfare-capsules-manual"
-    data.raw.item["bob-robot-flamethrower-drone"].order = "e[drone]-c[flamethrower]"
+    data.raw.item["bob-robot-flamethrower-drone"].order = "e[drone]-b[robot]-c[flamethrower]"
     data.raw.item["bob-robot-plasma-drone"].subgroup = "angels-warfare-capsules-manual"
-    data.raw.item["bob-robot-plasma-drone"].order = "e[drone]-d[plasma]"
+    data.raw.item["bob-robot-plasma-drone"].order = "e[drone]-b[robot]-d[plasma]"
 
     -- wall
     data.raw.item["reinforced-wall"].subgroup = "angels-warfare-wall"
@@ -655,17 +659,17 @@ if angelsmods.industries and angelsmods.industries.overhaul then
 
       -- combat (weapons and defences)
       data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-a", group = "angels-exploration", order = "h-d[robot]-a[shields]" } })
-      data.raw.item["energy-shield-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-equipment"].subgroup = "angels-personal-equipment-bobcombat-a"
       data.raw.item["energy-shield-equipment"].order = "a"
-      data.raw.item["energy-shield-mk2-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk2-equipment"].subgroup = "angels-personal-equipment-bobcombat-a"
       data.raw.item["energy-shield-mk2-equipment"].order = "b"
-      data.raw.item["energy-shield-mk3-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk3-equipment"].subgroup = "angels-personal-equipment-bobcombat-a"
       data.raw.item["energy-shield-mk3-equipment"].order = "c"
-      data.raw.item["energy-shield-mk4-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk4-equipment"].subgroup = "angels-personal-equipment-bobcombat-a"
       data.raw.item["energy-shield-mk4-equipment"].order = "d"
-      data.raw.item["energy-shield-mk5-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk5-equipment"].subgroup = "angels-personal-equipment-bobcombat-a"
       data.raw.item["energy-shield-mk5-equipment"].order = "e"
-      data.raw.item["energy-shield-mk6-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-a"
+      data.raw.item["energy-shield-mk6-equipment"].subgroup = "angels-personal-equipment-bobcombat-a"
       data.raw.item["energy-shield-mk6-equipment"].order = "f"
 
       data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-b", group = "angels-exploration", order = "h-d[robot]-b[legs]" } })
@@ -677,17 +681,17 @@ if angelsmods.industries and angelsmods.industries.overhaul then
       data.raw.item["exoskeleton-equipment-3"].order = "c"
 
       data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-c", group = "angels-exploration", order = "h-d[robot]-c[laser]" } })
-      data.raw.item["personal-laser-defense-equipment"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment"].subgroup = "angels-personal-equipment-bobcombat-c"
       data.raw.item["personal-laser-defense-equipment"].order = "a"
-      data.raw.item["personal-laser-defense-equipment-2"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-2"].subgroup = "angels-personal-equipment-bobcombat-c"
       data.raw.item["personal-laser-defense-equipment-2"].order = "b"
-      data.raw.item["personal-laser-defense-equipment-3"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-3"].subgroup = "angels-personal-equipment-bobcombat-c"
       data.raw.item["personal-laser-defense-equipment-3"].order = "c"
-      data.raw.item["personal-laser-defense-equipment-4"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-4"].subgroup = "angels-personal-equipment-bobcombat-c"
       data.raw.item["personal-laser-defense-equipment-4"].order = "d"
-      data.raw.item["personal-laser-defense-equipment-5"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-5"].subgroup = "angels-personal-equipment-bobcombat-c"
       data.raw.item["personal-laser-defense-equipment-5"].order = "e"
-      data.raw.item["personal-laser-defense-equipment-6"].subgroup = "angels-vehicle-equipment-bobcombat-c"
+      data.raw.item["personal-laser-defense-equipment-6"].subgroup = "angels-personal-equipment-bobcombat-c"
       data.raw.item["personal-laser-defense-equipment-6"].order = "f"
 
       data:extend({ { type = "item-subgroup", name = "angels-personal-equipment-bobcombat-d", group = "angels-exploration", order = "h-d[robot]-d[discharge]" } })

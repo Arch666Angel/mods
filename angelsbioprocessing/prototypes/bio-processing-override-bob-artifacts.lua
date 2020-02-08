@@ -395,4 +395,10 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
     { name = "alien-artifact-purple-from-basic", subgroup = "bio-processing-alien-large-convert" },
     { name = "alien-artifact-green-from-basic", subgroup = "bio-processing-alien-large-convert" },
   })
+
+  -- result products
+  if bobmods and bobmods.plates then
+    data.raw["item-subgroup"]["bob-alien-resource"].group = "bio-processing-alien"
+    data.raw["item-subgroup"]["bob-alien-resource"].order = "hd"
+  end
 end

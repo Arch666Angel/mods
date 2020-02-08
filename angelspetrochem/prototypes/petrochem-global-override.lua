@@ -334,7 +334,7 @@ if bobmods then
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
     data.raw["item"]["rubber"].subgroup = "petrochem-solids"
-    data.raw["item"]["rubber"].order = "a[petrochem-solids]-c[rubber]"
+    data.raw["item"]["rubber"].order = "a[petrochem-solids]-c[rubber]-a"
     OV.patch_recipes(
       {
         {
@@ -360,6 +360,7 @@ if bobmods then
         },
         {
           name = "solid-rubber",
+          subgroup = "petrochem-solids-2",
           order = "b[rubber]-b[solid]-a",
           icons = {
             {
@@ -376,6 +377,13 @@ if bobmods then
         }
       }
     )
+
+    if data.raw.item["insulated-cable"] then -- bob electronics
+      data.raw.item["insulated-cable"].subgroup = "petrochem-solids"
+      data.raw.item["insulated-cable"].order = "a[petrochem-solids]-c[rubber]-b"
+      OV.patch_recipes({ { name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"} })
+    end
+
     if data.raw.recipe["pure-water-pump"] then
       data.raw.recipe["pure-water-pump"].icon = nil
       data.raw.recipe["pure-water-pump"].icon_size = 32
