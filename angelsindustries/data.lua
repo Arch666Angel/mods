@@ -8,16 +8,22 @@ end
 
 --TRIGGER CHECKS
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
-if mods["bobplates"] then
+if mods["bobplates"] or bobmods then
   angelsmods.industries.overhaul = true
 end
 --angelsmods.industries.overhaul=false --temp overrides
 
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
+if mods["bobplates"] or bobmods then
+  angelsmods.industries.tech = false
+end
 --angelsmods.industries.tech=false --temp overrides to disable until ready
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
 --Enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
+if mods["bobplates"] or bobmods then
+  angelsmods.industries.components = false
+end
 if angelsmods.industries.tech == true then
   angelsmods.industries.components = true
 end
