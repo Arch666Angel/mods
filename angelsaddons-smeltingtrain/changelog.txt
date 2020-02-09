@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2020-02-09
+  Changes:
+    - update to 0.18
+    - put smelting train under angel logistics when angelsindustries is present
+    - changed the weight of the smelting wagon (1500 instead of 1000)

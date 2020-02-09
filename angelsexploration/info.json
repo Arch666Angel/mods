@@ -1,0 +1,15 @@
+{
+  "name": "angelsexploration",
+  "version": "0.3.0",
+  "factorio_version": "0.18",
+  "title": "Angel's Exploration (BETA)",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "https://forums.factorio.com/viewforum.php?f=185",
+  "description": "",
+  "dependencies": [
+    "base >= 0.18.3",
+    "? angelsindustries >= 0.3.0",
+    "? bobenemies >= 0.3.0"
+	]
+}

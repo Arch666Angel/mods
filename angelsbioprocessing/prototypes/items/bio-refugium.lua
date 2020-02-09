@@ -1,0 +1,43 @@
+data:extend(
+{
+  --PROCESSING
+  {
+    type = "capsule",
+    name = "bio-raw-meat",
+    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon_size = 32,
+    subgroup = "bio-fish",
+    capsule_action =
+    {
+      type = "use-on-self",
+      attack_parameters =
+      {
+        type = "projectile",
+        ammo_category = "capsule",
+        cooldown = 30,
+        range = 0,
+        ammo_type =
+        {
+          category = "capsule",
+          target_type = "position",
+          action =
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                type = "damage",
+                damage = {type = "physical", amount = -80}
+              }
+            }
+          }
+        }
+      }
+    },
+    order = "a",
+    stack_size = 200
+  },
+}
+)

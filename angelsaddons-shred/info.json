@@ -1,0 +1,13 @@
+{
+  "name": "angelsaddons-shred",
+  "version": "0.2.0",
+  "factorio_version": "0.18",
+  "title": "Angel's Addons - Decorations - Shred",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
+  "description": "",
+  "dependencies": [
+    "base >= 0.18.0"
+	]
+}
