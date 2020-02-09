@@ -93,7 +93,7 @@ if mods.bobplates then
           icons = {
             {icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png"},
             {icon = "__base__/graphics/icons/uranium-ore.png", scale = 0.32, shift = {-12, 12}},
-            {icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png", scale = 0.32, shift = {12, 12}}
+            {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png", scale = 0.32, shift = {12, 12}}
           }
         }
       }
@@ -619,7 +619,7 @@ if mods.bobplates then
           },
           icons = {
             {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-            {icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png", scale = 0.5, shift = {10, 10}}
+            {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png", scale = 0.5, shift = {10, 10}}
           }
         }
       }

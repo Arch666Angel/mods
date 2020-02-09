@@ -840,7 +840,7 @@ if data.raw.item["thorium-ore"] then
             shift = {-12, 12}
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png",
+            icon = "__angelsrefining__/graphics/icons/ore-fluorite.png",
             scale = 0.32,
             shift = {12, 12}
           },
