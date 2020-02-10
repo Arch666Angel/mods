@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.2
+Date: ???
+  Changes:
+    - Changed ore generation so richness is using default settings (instead of a .1 multiplier) GH#23
+---------------------------------------------------------------------------------------------------
 Version: 0.11.1
 Date: 2020-02-09
   Bugfixes:

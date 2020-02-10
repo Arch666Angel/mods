@@ -901,7 +901,7 @@ function angelsmods.functions.make_resource()
       random_spot_size_minimum = input.autoplace.random_spot_size_minimum,
       random_spot_size_maximum = input.autoplace.random_spot_size_maximum,
       additional_richness = input.autoplace.additional_richness,
-      richness_post_multiplier = input.autoplace.richness_post_multiplier or 0.1
+      richness_post_multiplier = input.autoplace.richness_post_multiplier
       -- richness_post_multiplier = 0.1 --Maybe make that an option?
     }
     if not data.raw.resource[input.name] then
