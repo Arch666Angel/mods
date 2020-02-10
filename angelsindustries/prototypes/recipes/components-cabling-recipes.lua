@@ -207,7 +207,7 @@ data:extend(
 		name = "basic-tinned-copper-wire",
 		subgroup = "angels-tin-casting",
 		order = "m",
-		enabled = true,
+		enabled = false,
 		category = "crafting",
 		energy_required = 0.5,
 		ingredients ={
@@ -235,7 +235,7 @@ data:extend(
 		name = "basic-silvered-copper-wire",
 		subgroup = "angels-silver-casting",
 		order = "m",
-		enabled = true,
+		enabled = false,
 		category = "crafting",
 		energy_required = 0.5,
 		ingredients ={
@@ -263,7 +263,7 @@ data:extend(
 		name = "angels-silicon-wafer",
 		subgroup = "angels-silicon-casting",
 		order = "m",
-		enabled = true,
+		enabled = false,
 		category = "crafting",
 		energy_required = 0.5,
 		ingredients ={
@@ -290,7 +290,7 @@ data:extend(
 		name = "angels-wire-gold",
 		subgroup = "angels-gold-casting",
 		order = "m",
-		enabled = true,
+		enabled = false,
 		category = "crafting",
 		energy_required = 0.5,
 		ingredients ={

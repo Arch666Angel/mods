@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+local lab_ignore = {["lab-module"] = true, ["lab-alien"] = true}
 
 --PREPARATION
 OV.remove_output("algae-brown-burning", "angels-void")
@@ -26,7 +27,16 @@ end
 
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
-
+--add biotoken to all labs if industries.tech is active
+if not angelsmods.industries.tech then
+  for i,labs in pairs(data.raw["lab"]) do
+    log(serpent.block(labs.name))
+    --check exclusion (module lab/alien lab)
+    if not lab_ignore[labs.name] then
+      table.insert(labs.inputs, "token-bio")
+    end
+  end
+end
 --CONDITIONAL
 if angelsmods.industries then
   OV.patch_recipes({
@@ -40,13 +50,14 @@ if angelsmods.industries then
   if angelsmods.industries.overhaul then
     require("prototypes.bio-processing-override-angel")
   end
+
 else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")
   table.insert(data.raw["lab"]["lab"].inputs, "token-bio")
   if bobmods and bobmods.plates then
-    if data.raw["lab"]["lab-2"] then
-      table.insert(data.raw["lab"]["lab-2"].inputs, "token-bio")
-    end
+    --if data.raw["lab"]["lab-2"] then
+    --  table.insert(data.raw["lab"]["lab-2"].inputs, "token-bio")
+    --end
     OV.patch_recipes({
       { name = "algae-brown-burning", results = {{"lithium-chloride", 1}} },
       -- { name = "temperate-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
@@ -190,7 +201,7 @@ if bobmods then
     })
     -- manualy patch the result as the recipe builder is failing
     data.raw.recipe["bob-basic-greenhouse-cycle"].result = nil
-    data.raw.recipe["bob-basic-greenhouse-cycle"].results = 
+    data.raw.recipe["bob-basic-greenhouse-cycle"].results =
     { {"!!"},
       { type = "item", name = "solid-tree", amount = 2 },
       { type = "item", name = "solid-tree", amount = 1, probability = 1/3 }
@@ -321,7 +332,7 @@ if bobmods then
     OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
     OV.add_prereq("bio-arboretum-1", "bob-greenhouse")
   end
-  
+
   --ADDED RECIPES FOR BOBS ARTIFACTS
   require("prototypes.bio-processing-override-bob-artifacts")
 
