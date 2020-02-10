@@ -862,13 +862,18 @@ else -- industries not present
   reorder("ammo", "cannon-shell", "angels-explosion-b", "c[basic-ammo]-a[light]-a[basic-rounds]")
   reorder("ammo", "explosive-cannon-shell", "angels-explosion-b", "c[basic-ammo]-a[light]-b[explosive-rounds]")
   reorder("ammo", "uranium-cannon-shell", "angels-explosion-b", "c[basic-ammo]-a[light]-c[uranium-rounds]")
-  reorder("ammo", "explosive-uranium-cannon-shell", "angels-explosion-b", "c[basic-ammo]-a[light]-d[explosive-uranium-rounds]")
+  reorder(
+    "ammo",
+    "explosive-uranium-cannon-shell",
+    "angels-explosion-b",
+    "c[basic-ammo]-a[light]-d[explosive-uranium-rounds]"
+  )
 
   -- angels electric
   reorder("item", "laser-turret", "angels-electric", "b[turret]-a[laser]")
 
   -- angels artillery
-  reorder("capsule", "artillery-targeting-remote", "angels-artillery", )
+  reorder("capsule", "artillery-targeting-remote", "angels-artillery", "a[gun]-a[remote]")
   reorder("item", "artillery-turret", "angels-artillery", "b[turret]-a[artillery]")
   reorder("ammo", "artillery-shell", "angels-artillery", "c[basic-ammo]-a[basic-rounds]")
 end
