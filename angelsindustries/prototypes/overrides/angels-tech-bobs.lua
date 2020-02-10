@@ -13,15 +13,19 @@ if mods['bobplates'] then
 end
 if mods['bobassembly'] then
 	--adds bobassembly stuffs
+	--chemplants
+	OV.set_science_pack("chemical-plant-2", "datacore-processing-2", 2)
+	OV.set_science_pack("chemical-plant-3", "datacore-processing-2", 2)
+	--oil-furnaces (and metal-mixing)
 	OV.set_science_pack("oil-steel-furnace", "datacore-processing-1", 2)
 	OV.set_science_pack("oil-mixing-steel-furnace", "datacore-processing-1", 2)
 	OV.set_science_pack("oil-chemical-steel-furnace", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolyser-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-distillery-2", "datacore-processing-1", 2)
 	OV.set_science_pack("multi-purpose-furnace-1", "datacore-processing-2", 2)
-	OV.set_science_pack("chemical-plant-2", "datacore-processing-2", 2)
-	OV.set_science_pack("chemical-plant-3", "datacore-processing-2", 2)
+	--electrolysers
+	OV.set_science_pack("electrolyser-2", "datacore-processing-1", 2)
 	OV.set_science_pack("electrolyser-3", "datacore-processing-2", 2)
+	--distillery
+	OV.set_science_pack("bob-distillery-2", "datacore-processing-1", 2)
 	pack_replace("bob-distillery-3","blue","orange")
 	OV.set_science_pack("bob-distillery-3", "datacore-processing-1", 2)
 	core_tier_up("bob-distillery-5","processing")
@@ -38,15 +42,19 @@ if mods['bobclasses'] then
 end
 if mods['bobmining'] then
 	--adds bob classes stuffs
+	--regular drills
 	OV.set_science_pack("bob-drills-1", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-area-drills-1", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-pumpjacks-1", "datacore-processing-1", 2)
 	OV.set_science_pack("bob-drills-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-area-drills-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-pumpjacks-2", "datacore-processing-1", 2)
 	OV.set_science_pack("bob-drills-3", "datacore-processing-2", 2)
+	--area drills
+	OV.set_science_pack("bob-area-drills-1", "datacore-processing-1", 2)
+	OV.set_science_pack("bob-area-drills-2", "datacore-processing-1", 2)
 	OV.set_science_pack("bob-area-drills-3", "datacore-processing-2", 2)
+	--pumpjacks
+	OV.set_science_pack("bob-pumpjacks-1", "datacore-processing-1", 2)
+	OV.set_science_pack("bob-pumpjacks-2", "datacore-processing-1", 2)
 	OV.set_science_pack("bob-pumpjacks-3", "datacore-processing-2", 2)
+	--axe(s)
 	OV.remove_science_pack("steel-axe-5", "datacore-processing-1")
 	core_tier_up("steel-axe-5","enhance")
 	OV.remove_science_pack("steel-axe-6", "datacore-processing-1")
@@ -334,19 +342,52 @@ if mods['bobpower'] then
 	core_replace("fluid-reactor-3","logistic","energy")
 	core_tier_up("fluid-reactor-3","energy")
 end
---[[OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
-	core_replace("bodies","basic","enhance")]]
+if mods['bobrevamp'] then
+	--adds bob revamp stuffs
+	OV.set_science_pack("hydrazine-generator", "datacore-energy-2", 2)
+	OV.remove_science_pack("hydrazine-generator", "datacore-processing-1")
+	OV.set_science_pack("chemical-plant", "datacore-processing-1", 2)
+	OV.set_science_pack("pumpjack", "datacore-processing-1", 2)
+end
+if mods['bobtech'] then
+	--adds bob revamp stuffs
+	for rec_4tech in pairs(data.raw.technology) do
+		--remove all advanced-logistics packs
+		OV.remove_science_pack(rec_4tech, "advanced-logistic-science-pack")
+	end
+	--update alien-science systems
+	--blue artifact tech
+	OV.remove_science_pack("alien-blue-research", "datacore-processing-1")
+	OV.remove_science_pack("bob-ap-bullets", "datacore-war-1")
+	OV.remove_science_pack("bob-shotgun-ap-shells", "datacore-war-1")
+	OV.remove_science_pack("bob-piercing-rocket", "datacore-war-1")
+	--orange artifact tech
+	OV.remove_science_pack("alien-orange-research", "datacore-processing-1")
+	OV.remove_science_pack("bob-electric-bullets", "datacore-war-1")
+	OV.remove_science_pack("bob-shotgun-electric-shells", "datacore-war-1")
+	OV.remove_science_pack("bob-electric-rocket", "datacore-war-1")
+	--purple artifact tech
+	OV.remove_science_pack("alien-purple-research", "datacore-processing-1")
+	OV.remove_science_pack("bob-acid-bullets", "datacore-war-1")
+	OV.remove_science_pack("bob-shotgun-acid-shells", "datacore-war-1")
+	OV.remove_science_pack("bob-acid-rocket", "datacore-war-1")
+	--yellow artifact tech
+	OV.remove_science_pack("alien-yellow-research", "datacore-processing-1")
+	OV.remove_science_pack("bob-he-bullets", "datacore-war-1")
+	OV.remove_science_pack("bob-shotgun-explosive-shells", "datacore-war-1")
+	OV.remove_science_pack("bob-explosive-rocket", "datacore-war-1")
+	--green artifact tech
+	OV.remove_science_pack("alien-green-research", "datacore-processing-1")
+	OV.remove_science_pack("bob-poison-bullets", "datacore-war-1")
+	OV.remove_science_pack("bob-shotgun-poison-shells", "datacore-war-1")
+	OV.remove_science_pack("bob-poison-rocket", "datacore-war-1")
+	--red artifact tech
+	OV.remove_science_pack("alien-red-research", "datacore-processing-1")
+	OV.remove_science_pack("bob-flame-bullets", "datacore-war-1")
+	OV.remove_science_pack("bob-shotgun-flame-shells", "datacore-war-1")
+	OV.remove_science_pack("bob-flame-rocket", "datacore-war-1")
+	--Plasma Updates
+	OV.remove_science_pack("bob-plasma-bullets", "datacore-war-2")
+	OV.remove_science_pack("bob-shotgun-plasma-shells", "datacore-war-2")
+	OV.remove_science_pack("bob-plasma-rocket", "datacore-war-2")
+end
