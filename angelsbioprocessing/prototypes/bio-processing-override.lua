@@ -30,7 +30,7 @@ require("prototypes.recipes.bio-processing-entity-angels")
 --add biotoken to all labs if industries.tech is active
 if not angelsmods.industries.tech then
   for i,labs in pairs(data.raw["lab"]) do
-    log(serpent.block(labs.name))
+    --log(serpent.block(labs.name))
     --check exclusion (module lab/alien lab)
     if not lab_ignore[labs.name] then
       table.insert(labs.inputs, "token-bio")
