@@ -232,7 +232,7 @@ if bobmods then
     end
 
     -- move chemical plants
-    if bobmods.assembly then
+    if bobmods.assembly and data.raw["item"]["chemical-plant-2"] then
       data.raw["item"]["chemical-plant-2"].subgroup = "petrochem-buildings-chemical-plant"
       data.raw["item"]["chemical-plant-2"].order = "a[regular]-ab[bob]-a"
       data.raw["item"]["chemical-plant-3"].subgroup = "petrochem-buildings-chemical-plant"
@@ -244,7 +244,7 @@ if bobmods then
     -- move electrolysers
     data.raw["item"]["electrolyser"].subgroup = "petrochem-buildings-electrolyser"
     data.raw["item"]["electrolyser"].order = "aa[bobs-electrolyser]-a"
-    if bobmods.assembly then
+    if bobmods.assembly and data.raw["item"]["electrolyser-2"] then
       data.raw["item"]["electrolyser-2"].subgroup = "petrochem-buildings-electrolyser"
       data.raw["item"]["electrolyser-2"].order = "aa[bobs-electrolyser]-b"
       data.raw["item"]["electrolyser-3"].subgroup = "petrochem-buildings-electrolyser"
