@@ -9,6 +9,7 @@ if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 		"ore-quartz",
 		"raw-coal",
 		"ore-aluminium",
+		--"ore-bioreserve",
 		"ore-chromium",
 		"ore-lead",
 		"ore-nickel",
@@ -71,9 +72,63 @@ if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 				starting_rq_factor_multiplier = 0.5,
 			}
 		})
-		
 		end
-		
 	end
+	
+	-- Alien Life Bioresources
+	local alienOre = "ore-bioreserve"
+	if data.raw.resource[alienOre] ~= nil then
+	
+		angelsmods.functions.add_resource("update", {
+			name = alienOre,
+			order = "b-ab",
+			autoplace = {
+				starting_area = true,
+				--resource_index = 1,
+				base_density = 10,
+				regular_rq_factor_multiplier = 1.10,
+				starting_rq_factor_multiplier = 1.5
+			}
+		})
+		--log(serpent.block(data.raw.resource[alienOre].minable.results[1].name))
+		local output
 
+		if data.raw.resource[alienOre].minable.results[1].name ~= nil then
+			output = data.raw.resource[alienOre].minable.results[1].name
+		else 
+			output = data.raw.resource[alienOre].minable.results[1][1]
+		end
+
+		angelsmods.functions.add_resource("make", {
+			name = "infinite-" .. alienOre,
+			get = alienOre,
+			order = "b",
+			sheet = 2,
+			infinite = true,
+			--glow = true,
+			-- Glow causes sprite sheet error
+			var = 2,
+			map_color = {r=0.415, g=0.525, b=0.580},
+			tint = {r= 0.34, g= 0.42, b= 0.43},
+			mining_time = 1,
+			type = "item",
+			minimum = angelsmods.ores.yield,
+			normal = 1500,
+			maximum = 6000,
+			-- TODO: change fluid to something reasonable
+			acid_to_mine = data.raw.resource[alienOre].minable.required_fluid or "liquid-sulfuric-acid",
+			output_name = output,
+			output_min = 1,
+			output_max = 1,
+			output_probability = angelsmods.ores.loweryield,
+			icon = data.raw.resource[alienOre].icon,
+			autoplace = {
+				starting_area = false,
+				--resource_index = 1,
+				base_density = 5,
+				regular_rq_factor_multiplier = 0.3,
+				starting_rq_factor_multiplier = 0.5,
+			}
+		})
+	end
 end
