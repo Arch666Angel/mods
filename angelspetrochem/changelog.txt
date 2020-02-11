@@ -3,6 +3,7 @@ Version: ???
 Date: ???
   Changes:
     - Changed richness multiplier of natural-gas so its more in line with crude-oil
+    - Fixed error on override on chemical plants when they where not available
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 2020-02-09
