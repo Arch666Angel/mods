@@ -17,6 +17,12 @@ Date: 2020-02-09
     - If bobs mods are activated, integrate gas bottles and canisters to auto-barreling (moved from PCPRedux and improved)
     - If bobs mods are activated, refining give options to obtain thorium ore (also stopped thorium-ore from spawning natively)
     - Ferrous and Cupric crystals are made in crystalizer
+    - Balance changes with relation to pure sorting recipes
+      - Nickel is now a T3 ore, requiring Crystals (Former silver recipe)
+      - Manganese ore now has a raw recipe, requiring Chunks (Former nickel recipe)
+      - Silver is now a T2 ore, requiring Chunks
+      - Various other raw recipes added (Thorium/Platinum/Chrome) if needed
+      - SORRY IF THIS REQUIRES REBUILDING parts of your existing base
   Bugfixes:
     - Fixed uranium ore icon did not fit the recipe box
     - Fixed that item grouping didn't match recipe groupings
