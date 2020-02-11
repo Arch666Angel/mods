@@ -2,7 +2,9 @@
 Version: 0.7.1
 Date: ??
   Bugfixes:
+    - Fixed that bio-token was not being added to labs correctly
     - Fixed that bobs greenhouse was producing wood instead of trees
+    - Fixed seed extractor requiring too advanced circuits compared to bobs greenhouse
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 2020-02-09
