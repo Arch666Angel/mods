@@ -21,14 +21,17 @@ function process() {
     awk '!f && /Version:\s*\?+/ {$0="Version: '"${version}"'"; f=1}1' "${dirname}/changelog.txt" > tmp.txt
     mv tmp.txt "${dirname}/changelog.txt"
   fi
-  echo "$cmd"
   $(eval $cmd)
   cd "${dirname}../"
   zip -r "${release}.zip" "${release}/"
   rm -rf "${release}/"
 }
 
-for d in $(ls -d */)
-do
+dirs=$1
+if [ -z "${dirs}" ]; then
+  dirs="*"
+fi
+
+for d in $(ls -d ${dirs}/); do
   process "$d"
 done
