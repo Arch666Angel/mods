@@ -343,7 +343,7 @@ if bobmods then
           name = "wood-sawing-manual",
           category = "angels-manual-crafting",
           always_show_made_in = true,
-          subgroup = "bio-processing-wood",
+          enabled = false,
           energy_required = 1 / 3,
           ingredients = {
             {type = "item", name = "solid-tree", amount = 1}
@@ -364,6 +364,7 @@ if bobmods then
             }
           },
           icon_size = 32,
+          subgroup = "bio-processing-wood",
           order = "a[wood]-a[manual]"
         }
       }
