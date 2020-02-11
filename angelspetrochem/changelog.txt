@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: ???
+Version: 0.9.1
 Date: ???
   Changes:
     - Changed richness multiplier of natural-gas so its more in line with crude-oil
