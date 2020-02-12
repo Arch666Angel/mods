@@ -50,6 +50,8 @@ if angelsmods.industries then
         table.insert(labs.inputs, "token-bio")
       end
     end
+  else
+    table.insert(data.raw["lab"]["lab"].inputs, "token-bio")
   end
 
   if angelsmods.industries.overhaul then
