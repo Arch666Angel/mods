@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 12.02.2020
+  Bugfixes:
+    - Fixed checking if items exist before ordering them to prevent crashes
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: 2020-02-09
+Date: 09.02.2020
   Changes:
     - update to 0.18
     - updated biter graphics to align with 0.17+ biter animations

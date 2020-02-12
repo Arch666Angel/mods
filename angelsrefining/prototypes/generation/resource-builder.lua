@@ -901,7 +901,7 @@ function angelsmods.functions.make_resource()
       random_spot_size_minimum = input.autoplace.random_spot_size_minimum,
       random_spot_size_maximum = input.autoplace.random_spot_size_maximum,
       additional_richness = input.autoplace.additional_richness,
-      richness_post_multiplier = input.autoplace.richness_post_multiplier or 0.1
+      richness_post_multiplier = input.autoplace.richness_post_multiplier
       -- richness_post_multiplier = 0.1 --Maybe make that an option?
     }
     if not data.raw.resource[input.name] then
@@ -956,6 +956,9 @@ function angelsmods.functions.make_resource()
       --Set resource category if resource yields fluids
       if not input.type == "fluid" then
         input.category = nil
+        input.order = "c-" .. input.order
+      else
+        input.order = "a-" .. input.order
       end
       --Set Boxes according to presets
       if input.type == "fluid" then
@@ -1007,7 +1010,7 @@ function angelsmods.functions.make_resource()
       ret_table.name = input.name
       ret_table.icon_size = input.icon_size
       ret_table.category = input.category
-      ret_table.order = "a-" .. input.order
+      ret_table.order = input.order
       ret_table.highlight = input.highlight
       ret_table.infinite = input.infinite
       ret_table.minimum = input.minimum

@@ -1,6 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: 12.02.2020
+  Bugfixes:
+    - Fixed that bio-token was not being added to labs correctly
+    - Fixed that bobs greenhouse was producing wood instead of trees
+    - Fixed that the manual tree to wood conversion recipe was not disabled at the start of the game
+    - Fixed seed extractor requiring too advanced circuits compared to bobs greenhouse
+---------------------------------------------------------------------------------------------------
 Version: 0.7.0
-Date: 2020-02-09
+Date: 09.02.2020
   Changes:
     - updated to 0.18
     - changed fish to require a fish environment

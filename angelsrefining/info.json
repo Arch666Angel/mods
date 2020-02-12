@@ -1,6 +1,6 @@
 {
   "name": "angelsrefining",
-  "version": "0.11.0",
+  "version": "0.11.2",
   "factorio_version": "0.18",
   "title": "Angel's Refining",
   "author": "Arch666Angel",
@@ -11,9 +11,9 @@
     "base >= 0.18.2",
     "? rso-mod >= 2.3.3",
     "? bobplates >= 0.15.0",
-    "? bobrevamp >= 0.15.0", 
-    "? Yuoki >= 0.4.0", 
-    "? UraniumPower >= 0.6.4", 
+    "? bobrevamp >= 0.15.0",
+    "? Yuoki >= 0.4.0",
+    "? UraniumPower >= 0.6.4",
     "? Nucular >= 0.2.0"
-	]
+  ]
 }
