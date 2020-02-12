@@ -1,12 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
-Date: ???
+Date: 12.02.2020
   Changes:
     - Changed richness multiplier of natural-gas so its more in line with crude-oil
-    - Fixed error on override on chemical plants when they where not available
+  Bugfixes:
+    - Fixed error on override on (bobs) chemical plants (and electrolysers) when they where not available
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.0
-Date: 2020-02-09
+Date: 09.02.2020
   Changes:
     - Updated to 0.18
     - Added missing localisations

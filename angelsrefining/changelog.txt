@@ -1,16 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.2
-Date: ???
+Date: 12.02.2020
   Changes:
     - Changed ore generation so richness is using default settings (instead of a .1 multiplier) GH#23
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.1
-Date: 2020-02-09
+Date: 09.02.2020
   Bugfixes:
     - Fixed error when not having petrochem (fluorite error)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.0
-Date: 2020-02-09
+Date: 09.02.2020
   Changes:
     - Updated to 0.18
     - Added a tryptophobia setting to get alternative graphics for stiratite ore
