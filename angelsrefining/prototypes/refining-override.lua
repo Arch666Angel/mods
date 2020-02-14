@@ -22,34 +22,35 @@ OV.disable_recipe("solid-lithium")
 
 --SORTING OVERRIDES
 require("prototypes.recipes.refining-entity-angels")
+require("prototypes.refining-override-sorting")
 --if angelsmods.industries or (bobmods and bobmods.plates) then
-if (angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates then
-  if angelsmods.industries then
-    require("prototypes.refining-override-angels")
-  else
-    require("prototypes.refining-override-bob")
-  end
-
-  --SPECIAL VANILLA
-  OV.disable_recipe(
-    {
-      "angels-iron-nugget-smelting",
-      "angels-iron-pebbles-smelting",
-      "angels-copper-nugget-smelting",
-      "angels-copper-pebbles-smelting",
-      "angels-iron-pebbles",
-      "angels-copper-pebbles"
-    }
-  )
-  angelsmods.functions.add_flag("angels-iron-nugget", "hidden")
-  angelsmods.functions.add_flag("angels-iron-pebbles", "hidden")
-  angelsmods.functions.add_flag("angels-iron-slag", "hidden")
-  angelsmods.functions.add_flag("angels-copper-nugget", "hidden")
-  angelsmods.functions.add_flag("angels-copper-pebbles", "hidden")
-  angelsmods.functions.add_flag("angels-copper-slag", "hidden")
-else
-  require("prototypes.refining-override-vanilla")
-end
+--if (angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates then
+--  if angelsmods.industries then
+--    require("prototypes.refining-override-angels")
+--  else
+--    require("prototypes.refining-override-bob")
+--  end
+--
+--  --SPECIAL VANILLA
+--  OV.disable_recipe(
+--    {
+--      "angels-iron-nugget-smelting",
+--      "angels-iron-pebbles-smelting",
+--      "angels-copper-nugget-smelting",
+--      "angels-copper-pebbles-smelting",
+--      "angels-iron-pebbles",
+--      "angels-copper-pebbles"
+--    }
+--  )
+--  angelsmods.functions.add_flag("angels-iron-nugget", "hidden")
+--  angelsmods.functions.add_flag("angels-iron-pebbles", "hidden")
+--  angelsmods.functions.add_flag("angels-iron-slag", "hidden")
+--  angelsmods.functions.add_flag("angels-copper-nugget", "hidden")
+--  angelsmods.functions.add_flag("angels-copper-pebbles", "hidden")
+--  angelsmods.functions.add_flag("angels-copper-slag", "hidden")
+--else
+--  require("prototypes.refining-override-vanilla")
+--end
 
 --OVERRIDE FOR WATER TREATMENT
 if not angelsmods.petrochem then

@@ -11,6 +11,44 @@ angelsmods.trigger.enable_auto_barreling = settings.startup["angels-enable-auto-
 angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"].value
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
 
+--REFINERY SORTING TRIGGERS
+angelsmods.trigger.ores = angelsmods.trigger.ores or {}
+-- angels refining default mode is to be special-vanilla, aka iron and copper only
+angelsmods.trigger.ores["iron"] = true
+angelsmods.trigger.ores["copper"] = true
+-- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
+if mods.bobplates then
+  angelsmods.trigger.ores["tin"] = true
+  angelsmods.trigger.ores["lead"] = true
+  angelsmods.trigger.ores["nickel"] = true
+  angelsmods.trigger.ores["silicon"] = true -- aka quartz
+  angelsmods.trigger.ores["aluminium"] = true -- aka bauxite
+  angelsmods.trigger.ores["cobalt"] = true
+  angelsmods.trigger.ores["zinc"] = true
+  angelsmods.trigger.ores["silver"] = true
+  angelsmods.trigger.ores["titanium"] = true -- aka rutile
+  angelsmods.trigger.ores["gold"] = true
+  angelsmods.trigger.ores["tungsten"] = true
+  angelsmods.trigger.ores["uranium"] = true
+  angelsmods.trigger.ores["fluorite"] = false -- petrochem should enable this
+  --angelsmods.trigger.ores["thorium"] = false -- todo
+end
+angelsmods.trigger.ores["manganese"] = false
+angelsmods.trigger.ores["chrome"] = false
+
+--REFINERY PRODUCTS TRIGGERS
+angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {}
+angelsmods.trigger.refinery_products["saphirite"] = true
+angelsmods.trigger.refinery_products["jivolite"] = true
+angelsmods.trigger.refinery_products["stiratite"] = true
+angelsmods.trigger.refinery_products["crotinnium"] = true
+if mods.bobplates then
+  angelsmods.trigger.refinery_products["rubyte"] = true
+  angelsmods.trigger.refinery_products["bobmonium"] = true
+end
+angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"] or angelsmods.trigger.ores["chrome"]
+angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.refinery_products["ferrous"]
+
 -- MARATHON MODE
 angelsmods.marathon = angelsmods.marathon or {}
 angelsmods.marathon.buildingmulti = settings.startup["angels-marathon-buildingmulti"].value
