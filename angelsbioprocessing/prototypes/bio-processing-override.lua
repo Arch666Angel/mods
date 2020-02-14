@@ -31,7 +31,12 @@ require("prototypes.recipes.bio-processing-entity-angels")
 if angelsmods.industries then
   OV.patch_recipes(
     {
-      {name = "petri-dish", ingredients = {{"!!"}, {"angels-plate-glass", 1}}},
+      {
+        name = "petri-dish",
+        ingredients = {{"!!"}, 
+          {data.raw.item["glass"] and "glass" or "angels-plate-glass", 1}, -- bob glass
+        }
+      },
       {
         name = "crystal-enhancer",
         ingredients = {
