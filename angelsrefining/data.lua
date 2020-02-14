@@ -13,41 +13,29 @@ angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-re
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}
+local ore_exist = function (ore_name) return data.raw.item["gold-ore"] and true or false end
 -- angels refining default mode is to be special-vanilla, aka iron and copper only
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
+angelsmods.trigger.ores["uranium"] = true
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods.bobplates then
-  angelsmods.trigger.ores["tin"] = true
-  angelsmods.trigger.ores["lead"] = true
-  angelsmods.trigger.ores["nickel"] = true
-  angelsmods.trigger.ores["silicon"] = true -- aka quartz
-  angelsmods.trigger.ores["aluminium"] = true -- aka bauxite
-  angelsmods.trigger.ores["cobalt"] = true
-  angelsmods.trigger.ores["zinc"] = true
-  angelsmods.trigger.ores["silver"] = true
-  angelsmods.trigger.ores["titanium"] = true -- aka rutile
-  angelsmods.trigger.ores["gold"] = true
-  angelsmods.trigger.ores["tungsten"] = true
-  angelsmods.trigger.ores["uranium"] = true
-  angelsmods.trigger.ores["fluorite"] = true -- petrochem should enable this
-  angelsmods.trigger.ores["thorium"] = true -- todo
+  angelsmods.trigger.ores["tin"] = ore_exist("tin-ore")
+  angelsmods.trigger.ores["lead"] = ore_exist("lead-ore")
+  angelsmods.trigger.ores["nickel"] = ore_exist("nickel-ore")
+  angelsmods.trigger.ores["silicon"] = ore_exist("quartz")
+  angelsmods.trigger.ores["aluminium"] = ore_exist("bauxite-ore")
+  angelsmods.trigger.ores["cobalt"] = ore_exist("cobalt-ore")
+  angelsmods.trigger.ores["zinc"] = ore_exist("zinc-ore")
+  angelsmods.trigger.ores["silver"] = ore_exist("silver-ore")
+  angelsmods.trigger.ores["titanium"] = ore_exist("rutile-ore")
+  angelsmods.trigger.ores["gold"] = ore_exist("gold-ore")
+  angelsmods.trigger.ores["tungsten"] = ore_exist("tungsten-ore")
+  angelsmods.trigger.ores["thorium"] = ore_exist("thorium-ore")
 end
-angelsmods.trigger.ores["manganese"] = false
-angelsmods.trigger.ores["chrome"] = false
-
---REFINERY PRODUCTS TRIGGERS
-angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {}
-angelsmods.trigger.refinery_products["saphirite"] = true
-angelsmods.trigger.refinery_products["jivolite"] = true
-angelsmods.trigger.refinery_products["stiratite"] = true
-angelsmods.trigger.refinery_products["crotinnium"] = true
-if mods.bobplates then
-  angelsmods.trigger.refinery_products["rubyte"] = true
-  angelsmods.trigger.refinery_products["bobmonium"] = true
-end
-angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"] or angelsmods.trigger.ores["chrome"] or angelsmods.trigger.ores["thorium"]
-angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.refinery_products["ferrous"]
+angelsmods.trigger.ores["fluorite"] = true -- petrochem should enable this
+angelsmods.trigger.ores["manganese"] = false -- smelting should enable this
+angelsmods.trigger.ores["chrome"] = false -- smelting should enable this
 
 -- MARATHON MODE
 angelsmods.marathon = angelsmods.marathon or {}

@@ -1,3 +1,16 @@
+--REFINERY PRODUCTS TRIGGERS
+angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {}
+angelsmods.trigger.refinery_products["saphirite"] = true
+angelsmods.trigger.refinery_products["jivolite"] = true
+angelsmods.trigger.refinery_products["stiratite"] = true
+angelsmods.trigger.refinery_products["crotinnium"] = true
+if mods.bobplates then
+  angelsmods.trigger.refinery_products["rubyte"] = true
+  angelsmods.trigger.refinery_products["bobmonium"] = true
+end
+angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"] or angelsmods.trigger.ores["chrome"] or angelsmods.trigger.ores["thorium"]
+angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.refinery_products["ferrous"]
+
 if angelsmods.refining then
   --Fallbacks for the recipe builder
   require("prototypes.recipe-builder-fallbacks")

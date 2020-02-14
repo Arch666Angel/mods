@@ -232,6 +232,39 @@ data:extend(
       },
       icon_size = 32,
       order = "h"
+    },
+    -- TIER 3.5 MIX
+    {
+      type = "recipe",
+      name = "angelsore-crystal-mix6-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      allow_decomposition = false,
+      normal = {
+        enabled = "false",
+        ingredients = {
+          {type = "item", name = "angels-ore8-crystal", amount = 2},
+          {type = "item", name = "angels-ore9-crystal", amount = 2},
+          {type = "item", name = "catalysator-orange", amount = 1}
+        },
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
+        }
+      },
+      expensive = {
+        enabled = "false",
+        ingredients = {
+          {type = "item", name = "angels-ore8-crystal", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore9-crystal", amount = 3 * rawmulti},
+          {type = "item", name = "catalysator-orange", amount = 1}
+        },
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
+        }
+      },
+      icon_size = 32,
+      order = "p"
     }
   }
 )
