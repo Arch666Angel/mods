@@ -21,19 +21,19 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "temperate-garden-cultivating-a"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "desert-garden-a"
       },
       {
         type = "unlock-recipe",
-        recipe = "desert-garden-cultivating-a"
+        recipe = "swamp-garden-a"
       },
       {
         type = "unlock-recipe",
-        recipe = "swamp-garden-a"
+        recipe = "temperate-garden-cultivating-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "desert-garden-cultivating-a"
       },
       {
         type = "unlock-recipe",
@@ -723,20 +723,32 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "temperate-garden-mutation-desert"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "temperate-garden-mutation-swamp"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "swamp-garden-mutation-temperate"
+        recipe = "solid-nuclear-fertilizer"
       },
       {
         type = "unlock-recipe",
         recipe = "desert-garden-mutation-temperate"
       },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "swamp-garden-mutation-temperate"
+      --},
+      {
+        type = "unlock-recipe",
+        recipe = "temperate-garden-mutation-swamp"
+      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "desert-garden-mutation-swamp"
+      --},
+      {
+        type = "unlock-recipe",
+        recipe = "swamp-garden-mutation-desert"
+      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "temperate-garden-mutation-desert"
+      --},
     },
     unit =
     {

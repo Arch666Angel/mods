@@ -162,7 +162,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "biter-small", amount = 4},
         {type = "item", name = "bio-raw-meat", amount = 4},
-        {type = "fluid", name = "liquid-nutrient-pulp", amount = 10}
+        {type = "fluid", name = "liquid-nutrient-pulp", amount = 30}
       },
       results = {
         {type = "item", name = "biter-small", amount = 3},
@@ -185,7 +185,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "biter-medium", amount = 4},
         {type = "item", name = "bio-raw-meat", amount = 6},
-        {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
+        {type = "fluid", name = "liquid-nutrient-pulp", amount = 60}
       },
       results = {
         {type = "item", name = "biter-medium", amount = 3},
@@ -208,7 +208,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "biter-big", amount = 4},
         {type = "item", name = "bio-raw-meat", amount = 8},
-        {type = "fluid", name = "liquid-nutrient-pulp", amount = 30}
+        {type = "fluid", name = "liquid-nutrient-pulp", amount = 90}
       },
       results = {
         {type = "item", name = "biter-big", amount = 3},

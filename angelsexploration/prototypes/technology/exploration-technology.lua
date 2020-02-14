@@ -8,6 +8,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
+      "tanks",
       --"angels-vequipment-1",
     },
     effects =
@@ -19,6 +20,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "heavy-cannon-shell"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "heavy-explosive-cannon-shell"
       },
       -- {
       -- type = "unlock-recipe",
@@ -45,6 +50,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
+      "military-2"
     },
     effects =
     {
@@ -56,10 +62,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "cannon-turret-shell-1"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "cannon-turret-shell-2"
-      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "cannon-turret-shell-2"     -- moved to military 3 (see overrides)
+      --},
     },
     unit =
     {
@@ -79,6 +85,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
+      "rocketry"
     },
     effects =
     {
@@ -93,15 +100,17 @@ data:extend(
       ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
+        {"military-science-pack", 2},
       },
       time = 15
     },
     order = "c-a"
   },
+  --BIO TECH
   {
     type = "technology",
     name = "angels-bio-gun",
-    icon = "__base__/graphics/technology/flamethrower.png",
+    icon = "__angelsexploration__/graphics/technology/bio-tech.png",
     icon_size = 128,
     prerequisites =
     {
@@ -118,6 +127,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "bio-ammo"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-bio-turret"
+      },
     },
     unit =
     {
@@ -130,5 +143,46 @@ data:extend(
       time = 15
     },
     order = "c-a"
+  },
+  --MOAR AMMO
+  {
+    type = "technology",
+    name = "angels-heavy-uranium-ammo",
+    icon_size = 128,
+    icon = "__base__/graphics/technology/uranium-ammo.png",
+    prerequisites =
+    {
+      "uranium-ammo",
+      "angels-heavy-tank",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "cannon-turret-shell-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "heavy-uranium-cannon-shell"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "heavy-explosive-uranium-cannon-shell"
+      },
+    },
+    unit =
+    {
+      count = 1500,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"military-science-pack", 1},
+        {"utility-science-pack", 1}
+      },
+      time = 45
+    },
+    order = "e-a-b"
   },
 })

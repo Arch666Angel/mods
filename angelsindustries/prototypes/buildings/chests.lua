@@ -66,8 +66,8 @@ data:extend(
     order = "f",
     place_result = "angels-logistic-chest-requester",
     stack_size = 50
-    },
-    {
+  },
+  {
     type = "logistic-container",
     name = "angels-logistic-chest-requester",
     icon = "__angelsindustries__/graphics/icons/chest-big-requester-ico.png",
@@ -231,6 +231,7 @@ data:extend(
     },
     fast_replaceable_group = "container",
     inventory_size = 60,
+    logistic_slots_count = 1,
     logistic_mode = "storage",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },

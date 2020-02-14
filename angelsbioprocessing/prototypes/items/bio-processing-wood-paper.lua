@@ -152,7 +152,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
     icon_size = 32,
     subgroup = "bio-arboretum-swamp",
-    order = "b",
+    order = "b", -- order a reserved for seedling (see override)
     stack_size = 200,
   },
   {

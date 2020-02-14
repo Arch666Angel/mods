@@ -13,14 +13,25 @@ function process() {
       cmd+=" --exclude ${ignore}"
   done
 
-  echo "$cmd"
+# Insert version and date if not defined
+  if [ -f "${dirname}/changelog.txt" ]; then
+    date=`date +"%Y.%m.%d"`
+    awk '!f && /Date:\s*\?+/ {$0="Date: '"${date}"'"; f=1}1' "${dirname}/changelog.txt" > tmp.txt
+    mv tmp.txt "${dirname}/changelog.txt"
+    awk '!f && /Version:\s*\?+/ {$0="Version: '"${version}"'"; f=1}1' "${dirname}/changelog.txt" > tmp.txt
+    mv tmp.txt "${dirname}/changelog.txt"
+  fi
   $(eval $cmd)
   cd "${dirname}../"
   zip -r "${release}.zip" "${release}/"
   rm -rf "${release}/"
 }
 
-for d in $(ls -d */)
-do
+dirs=$1
+if [ -z "${dirs}" ]; then
+  dirs="*"
+fi
+
+for d in $(ls -d ${dirs}/); do
   process "$d"
 done

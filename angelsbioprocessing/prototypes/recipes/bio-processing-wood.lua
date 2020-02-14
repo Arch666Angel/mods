@@ -269,7 +269,7 @@ data:extend(
   {
     type = "recipe",
     name = "wood-sawing-1",
-    category = "crafting",
+    category = "advanced-crafting",
     subgroup = "bio-processing-wood",
     enabled = "false",
     energy_required = 2,
@@ -298,12 +298,12 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "a[wood]-a[iron-saw]",
+    order = "a[wood]-b[iron-saw]", -- order a[wood]-a[manual] reserved for manual wood crafting (bob greenhouse)
   },
   {
     type = "recipe",
     name = "wood-sawing-2",
-    category = "crafting",
+    category = "advanced-crafting",
     subgroup = "bio-processing-wood",
     enabled = "false",
     energy_required = 2,
@@ -332,12 +332,12 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "a[wood]-b[crystal-tipped-saw]",
+    order = "a[wood]-c[crystal-tipped-saw]",
   },
   {
     type = "recipe",
     name = "wood-sawing-3",
-    category = "crafting",
+    category = "advanced-crafting",
     subgroup = "bio-processing-wood",
     enabled = "false",
     energy_required = 2,
@@ -366,7 +366,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "a[wood]-c[crystal-full-saw]",
+    order = "a[wood]-d[crystal-full-saw]",
   },
 
 

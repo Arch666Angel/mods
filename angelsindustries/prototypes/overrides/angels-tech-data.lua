@@ -13,7 +13,7 @@ angelsmods.functions.add_exception("tech-yellow-labs")
 --BASE
 angelsmods.functions.add_exception("automation")
 
---BIO PROCESSING
+--BIO PROCESSING (not sure these are activated... i may have overridden these anyway)
 angelsmods.functions.add_exception("bio-temperate-farming")
 angelsmods.functions.add_exception("bio-temperate-farm")
 angelsmods.functions.add_exception("bio-desert-farming")

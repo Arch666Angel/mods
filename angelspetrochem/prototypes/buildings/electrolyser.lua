@@ -9,14 +9,14 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,  
     subgroup = "petrochem-buildings-electrolyser",
-    order = "a[angels-electrolyser]-a",
+    order = "ab[angels-electrolyser]-a",
     place_result = "angels-electrolyser",
     stack_size = 10,
   },
@@ -29,7 +29,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -152,14 +152,14 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,  
     subgroup = "petrochem-buildings-electrolyser",
-    order = "a[angels-electrolyser]-b",
+    order = "ab[angels-electrolyser]-b",
     place_result = "angels-electrolyser-2",
     stack_size = 10,
   },
@@ -172,7 +172,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -295,14 +295,14 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,  
     subgroup = "petrochem-buildings-electrolyser",
-    order = "a[angels-electrolyser]-c",
+    order = "ab[angels-electrolyser]-c",
     place_result = "angels-electrolyser-3",
     stack_size = 10,
   },
@@ -315,7 +315,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -438,14 +438,14 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_4.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,  
     subgroup = "petrochem-buildings-electrolyser",
-    order = "a[angels-electrolyser]-d",
+    order = "ab[angels-electrolyser]-d",
     place_result = "angels-electrolyser-4",
     stack_size = 10,
   },
@@ -458,7 +458,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_4.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }

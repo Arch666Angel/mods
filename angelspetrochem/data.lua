@@ -1,6 +1,7 @@
 --INITIALIZE
 if not angelsmods then angelsmods = {} end
 if not angelsmods.petrochem then angelsmods.petrochem = {} end
+angelsmods.petrochem.number_tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5}
 
 --TRIGGER CHECKS
 	if not angelsmods.trigger then angelsmods.trigger ={} end

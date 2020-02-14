@@ -8,3 +8,7 @@ if angelsmods and angelsmods.industries then
   data.raw["item-with-entity-data"]["nilaus-truck"].subgroup = "angels-vehicle-car"
   data.raw["item-with-entity-data"]["nilaus-truck"].order = "a[car]-b"
 end
+
+if mods['bobvehicleequipment'] then
+  data.raw["car"]["nilaus-truck"].equipment_grid = "bob-car"
+end

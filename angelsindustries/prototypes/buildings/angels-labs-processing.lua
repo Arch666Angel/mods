@@ -130,6 +130,7 @@ data:extend(
       "datacore-processing-3",
 	  "datacore-processing-4",
 	  "datacore-processing-5",
+    "token-bio",
     },
     module_specification =
     {

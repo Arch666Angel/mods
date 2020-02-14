@@ -2,6 +2,10 @@ data:extend(
 {
   {
     type = "recipe-category",
+    name = "angels-manual-crafting",
+  },
+  {
+    type = "recipe-category",
     name = "bio-processing",
   },
   {
@@ -98,13 +102,14 @@ data:extend(
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },
@@ -154,37 +159,38 @@ data:extend(
     type = "item-subgroup",
     name = "bio-arboretum-temperate",
     group = "bio-processing-nauvis",
-    order = "h",
+    order = "ha",
   },
   {
     type = "item-subgroup",
     name = "bio-arboretum-swamp",
     group = "bio-processing-nauvis",
-    order = "i",
+    order = "hb",
   },
   {
     type = "item-subgroup",
     name = "bio-arboretum-desert",
     group = "bio-processing-nauvis",
-    order = "j",
+    order = "hc",
   },
+  -- order i reserved for bob greenhouse
   {
     type = "item-subgroup",
     name = "bio-liquor",
     group = "bio-processing-nauvis",
-    order = "k",
+    order = "j",
   },
   {
     type = "item-subgroup",
     name = "bio-paper",
     group = "bio-processing-nauvis",
-    order = "l",
+    order = "k",
   },
   {
     type = "item-subgroup",
     name = "bio-processing-buildings-nauvis-a",
     group = "bio-processing-nauvis",
-    order = "m",
+    order = "z",
   },
 
 
@@ -200,13 +206,14 @@ data:extend(
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },
@@ -326,13 +333,14 @@ data:extend(
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },
@@ -480,6 +488,19 @@ data:extend(
     group = "bio-processing-alien",
     order = "hb",
   },
+  {
+    type = "item-subgroup",
+    name = "bio-processing-alien-large",
+    group = "bio-processing-alien",
+    order = "hca",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-processing-alien-large-convert",
+    group = "bio-processing-alien",
+    order = "hcb",
+  },
+  -- order hd reserved for alien resource products (see override bob artifacts)
   {
     type = "item-subgroup",
     name = "bio-processing-buildings-alien-a",

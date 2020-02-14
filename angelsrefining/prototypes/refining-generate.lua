@@ -39,15 +39,15 @@ if angelsmods.refining then
   --MOVE EMPTY BARREL
   data.raw["item-subgroup"]["fill-barrel"].group = "angels-fluid-control"
   data.raw["item-subgroup"]["empty-barrel"].group = "angels-fluid-control"
-  data.raw["item"]["empty-barrel"].subgroup = "angels-fluid-control"
-  data.raw["item"]["empty-barrel"].order = "h"
-  data.raw["recipe"]["empty-barrel"].subgroup = "angels-fluid-control"
-  data.raw["recipe"]["empty-barrel"].order = "h"
+  data.raw.item["empty-barrel"].subgroup = "angels-fluid-control"
+  data.raw.item["empty-barrel"].order = "h"
+  data.raw.recipe["empty-barrel"].subgroup = "angels-fluid-control"
+  data.raw.recipe["empty-barrel"].order = "h"
   --angelsmods.functions.OV.set_special_recipe_override("empty-barrel", { subgroup = "angels-fluid-control", order = "h" })
   
   --MOVE STORAGE TANK
-  data.raw["item"]["storage-tank"].subgroup = "angels-fluid-tanks"
-  data.raw["item"]["storage-tank"].order = "a"
+  data.raw.item["storage-tank"].subgroup = "angels-fluid-tanks"
+  data.raw.item["storage-tank"].order = "a"
   --angelsmods.functions.OV.set_special_recipe_override("storage-tank", { subgroup = "angels-fluid-tanks", order = "a" })
   
   --MODIFY BARRELING RECIPES

@@ -1,16 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 12.02.2020
+  Changes:
+    - Changed richness multiplier of natural-gas so its more in line with crude-oil
+  Bugfixes:
+    - Fixed error on override on (bobs) chemical plants (and electrolysers) when they where not available
+---------------------------------------------------------------------------------------------------
 Version: 0.9.0
-Date: ??
+Date: 09.02.2020
   Changes:
     - Updated to 0.18
     - Added missing localisations
     - Organised the recipes a bit to be found easier
     - Cleaned up fluid signals if conversion recipes are disabled
     - Added fuel values to various fluids if bobs mods is active
+    - Liquid fuel requires additional Residual gas
     - Removed some obsolete localisations on the petrochem tanks
     - If bobs mods are activated, increases the storage capacity of the petrochem tanks
   Bugfixes:
     - Fixed changelog not showing up
+    - Fixed Ferrous/Cupric Anode Sludge required the wrong Chloride solution
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.6
 Date: 11.06.2019

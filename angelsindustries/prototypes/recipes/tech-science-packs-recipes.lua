@@ -19,7 +19,7 @@ data:extend(
     type = "recipe",
     name = "datacore-exploration-1",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-basic", 1},
 		{"circuit-red-loaded", 1},
@@ -33,7 +33,7 @@ data:extend(
     type = "recipe",
     name = "datacore-exploration-2",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-exploration-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -47,7 +47,7 @@ data:extend(
     type = "recipe",
     name = "datacore-enhance-1",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-basic", 1},
 		{"circuit-red-loaded", 1},
@@ -61,7 +61,7 @@ data:extend(
     type = "recipe",
     name = "datacore-enhance-2",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-enhance-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -75,7 +75,7 @@ data:extend(
     type = "recipe",
     name = "datacore-energy-1",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-basic", 1},
 		{"circuit-red-loaded", 1},
@@ -89,7 +89,7 @@ data:extend(
     type = "recipe",
     name = "datacore-energy-2",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-energy-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -103,7 +103,7 @@ data:extend(
     type = "recipe",
     name = "datacore-logistic-1",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-basic", 1},
 		{"circuit-red-loaded", 1},
@@ -117,7 +117,7 @@ data:extend(
     type = "recipe",
     name = "datacore-logistic-2",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-logistic-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -131,7 +131,7 @@ data:extend(
     type = "recipe",
     name = "datacore-war-1",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-basic", 1},
 		{"circuit-red-loaded", 1},
@@ -145,7 +145,7 @@ data:extend(
     type = "recipe",
     name = "datacore-war-2",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-war-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -159,7 +159,7 @@ data:extend(
     type = "recipe",
     name = "datacore-processing-1",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-basic", 1},
 		{"circuit-red-loaded", 1},
@@ -173,7 +173,7 @@ data:extend(
     type = "recipe",
     name = "datacore-processing-2",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-processing-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -187,7 +187,7 @@ data:extend(
     type = "recipe",
     name = "datacore-processing-3",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-processing-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -201,7 +201,7 @@ data:extend(
     type = "recipe",
     name = "datacore-processing-4",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-processing-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -215,7 +215,7 @@ data:extend(
     type = "recipe",
     name = "datacore-processing-5",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-processing-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -229,7 +229,7 @@ data:extend(
     type = "recipe",
     name = "datacore-processing-6",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"datacore-processing-1", 1},
 		{"circuit-orange-loaded", 1},
@@ -257,7 +257,7 @@ data:extend(
     type = "recipe",
     name = "angels-science-pack-red",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-science-pack-grey", 1},
 		{"science-data-analyzer", 1},--{"science-force-analyzer", 1},
@@ -270,7 +270,7 @@ data:extend(
     type = "recipe",
     name = "angels-science-pack-green",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-science-pack-red", 1},
 		{"science-force-analyzer", 1},--{"science-harmonics-analyzer", 1},
@@ -283,7 +283,7 @@ data:extend(
     type = "recipe",
     name = "angels-science-pack-orange",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-science-pack-green", 1},
 		{"science-force-analyzer", 1},--addition
@@ -296,7 +296,7 @@ data:extend(
     type = "recipe",
     name = "angels-science-pack-blue",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-science-pack-orange", 1},
 		{"science-harmonics-analyzer", 1},--addition
@@ -309,7 +309,7 @@ data:extend(
     type = "recipe",
     name = "angels-science-pack-yellow",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-science-pack-blue", 1},
 		{"science-harmonics-analyzer", 1},--addition
@@ -337,7 +337,7 @@ data:extend(
     type = "recipe",
     name = "science-force-analyzer",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-solder", 1},
 		{"steel-plate", 1},
@@ -349,7 +349,7 @@ data:extend(
     type = "recipe",
     name = "science-harmonics-analyzer",
     energy_required = 10,
-	enabled = "true",
+	enabled = "false",
     ingredients ={
 		{"angels-plate-silver", 1},
 		{"angels-plate-aluminium", 1},
@@ -361,7 +361,7 @@ data:extend(
     -- type = "recipe",
     -- name = "angels-science-pack-orange",
     -- energy_required = 10,
-	-- enabled = "true",
+	-- enabled = "false",
     -- ingredients ={
 		-- {"angels-science-pack-green", 1},
 		-- {"circuit-orange-loaded", 1},
@@ -373,7 +373,7 @@ data:extend(
     -- type = "recipe",
     -- name = "angels-science-pack-blue",
     -- energy_required = 10,
-	-- enabled = "true",
+	-- enabled = "false",
     -- ingredients ={
 		-- {"angels-science-pack-orange", 1},
 		-- {"circuit-blue-loaded", 1},
@@ -385,7 +385,7 @@ data:extend(
     -- type = "recipe",
     -- name = "angels-science-pack-yellow",
     -- energy_required = 10,
-	-- enabled = "true",
+	-- enabled = "false",
     -- ingredients ={
 		-- {"angels-science-pack-blue", 1},
 		-- {"circuit-yellow-loaded", 1},

@@ -6,7 +6,12 @@ if angelsmods.industries then
   data.raw["item-subgroup"]["angels-smeltingtrain"].order = "bc[smelting-train]"
 end
 
-if data.raw["equipment-category"]["armoured-vehicle"] then
+if mods['bobvehicleequipment'] then
+  -- smelting locomotive
+  table.insert(data.raw["equipment-grid"]["angels-smelting-locomotive"].equipment_categories,"train")
   table.insert(data.raw["equipment-grid"]["angels-smelting-locomotive"].equipment_categories,"vehicle")
+  table.insert(data.raw["equipment-grid"]["angels-smelting-locomotive"].equipment_categories,"locomotive")
+  -- smelting wagon
+  table.insert(data.raw["equipment-grid"]["angels-smelting-wagon"].equipment_categories,"train")
   table.insert(data.raw["equipment-grid"]["angels-smelting-wagon"].equipment_categories,"vehicle")
 end

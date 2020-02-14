@@ -7,6 +7,10 @@ data:extend(
     },
     {
       type = "ammo-category",
+      name = "heavy-cannon-shell"
+    },
+    {
+      type = "ammo-category",
       name = "bio"
     },
     --DAMAGE TYPE
@@ -22,10 +26,23 @@ data:extend(
     {
       type = "item-group",
       name = "angels-exploration",
-      order = "n",
-      inventory_order = "n",
-      icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
-      icon_size = 128
+      order = "la[angels]-f[exploration]-a", -- order la[angels]-f[exploration]-b reserved for warfare
+      inventory_order = "la[angels]-f[exploration]-a",
+      --icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+      --icon_size = 128
+      icons = {
+        {
+          icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+          icon_size = 128,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsexploration__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 64 / 32 * 0.35,
+          shift = {20, -20}
+        }
+      }
     },
     {
       type = "item-subgroup",
@@ -41,9 +58,15 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-physical",
+      name = "angels-physical-a", -- regular gun
       group = "angels-exploration",
-      order = "c"
+      order = "ca"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-physical-b", -- shotgun
+      group = "angels-exploration",
+      order = "cb"
     },
     {
       type = "item-subgroup",
@@ -53,22 +76,29 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-explosion",
+      name = "angels-explosion-a", -- rocket
       group = "angels-exploration",
-      order = "e"
+      order = "ea"
     },
     {
       type = "item-subgroup",
-      name = "angels-bio",
+      name = "angels-explosion-b", -- cannon
+      group = "angels-exploration",
+      order = "eb"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-electric",
       group = "angels-exploration",
       order = "f"
     },
     {
       type = "item-subgroup",
-      name = "angels-plasma",
+      name = "angels-artillery",
       group = "angels-exploration",
       order = "g"
     },
+    -- order h reserved for bob personal equipment
     {
       type = "item-subgroup",
       name = "angels-turrets",

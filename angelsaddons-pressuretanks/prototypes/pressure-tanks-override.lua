@@ -1,7 +1,7 @@
 --OVERRIDE FOR ANGELS
 -- PETROCHEM
 if angelsmods.petrochem then
-  if bobmods.logistics then
+  if bobmods and bobmods.logistics then
     data.raw["item"]["angels-pressure-tank-1"].order = "c[large-tank]-d[jax35]"
   end
 else

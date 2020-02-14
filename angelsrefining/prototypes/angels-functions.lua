@@ -260,143 +260,55 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
 end
 
 --MODIFY LOCALIZATION STRINGS
-function angelsmods.functions.add_localization(res_name, ore1, ore2, ore3, ore4, ore5, ore6)
-  if not ore1 then
-    ore1 = "missing"
+local function get_add_localization(args)
+  local add = {""}
+  local length = #args
+  for i, res in ipairs(args) do
+    table.insert(add, {"item-description.loc-" .. res})
+    if i == length - 1 then
+      table.insert(add, {"item-description.loc-space"})
+      table.insert(add, {"item-description.loc-and"})
+      table.insert(add, {"item-description.loc-space"})
+    elseif i < length then
+      table.insert(add, {"item-description.loc-dot"})
+      table.insert(add, {"item-description.loc-space"})
+    end
   end
-  if not ore2 then
-    ore2 = "missing"
+
+  return add
+end
+
+function angelsmods.functions.add_localization(res_name, translate, ...)
+  local description = {
+    "item-description." .. translate
+  }
+
+  table.insert(description, get_add_localization({...}))
+
+  if data.raw.resource[res_name] then
+    data.raw.resource[res_name].localised_description = description
   end
-  if not ore3 then
-    ore3 = "missing"
+  if data.raw.resource["infinite-" .. res_name] then
+    data.raw.resource["infinite-" .. res_name].localised_description = description
   end
-  if not ore4 then
-    ore4 = "missing"
-  end
-  if not ore5 then
-    ore5 = "missing"
-  end
-  if not ore6 then
-    ore6 = "missing"
-  end
-  if data.raw["resource"][res_name] then
-    data.raw["resource"][res_name].localised_description = {
-      "item-description." .. res_name,
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore3},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore4},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore5},
-      {"item-description.loc-and"},
-      {"item-description.loc-" .. ore6},
-      "",
-      ""
-    }
-  end
-  if data.raw["resource"]["infinite-" .. res_name] then
-    data.raw["resource"]["infinite-" .. res_name].localised_description = {
-      "item-description." .. res_name,
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore3},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore4},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore5},
-      {"item-description.loc-and"},
-      {"item-description.loc-" .. ore6},
-      "",
-      ""
-    }
-  end
-  if data.raw["item"][res_name] then
-    data.raw["item"][res_name].localised_description = {
-      "item-description." .. res_name,
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore3},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore4},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore5},
-      {"item-description.loc-and"},
-      {"item-description.loc-" .. ore6},
-      "",
-      ""
-    }
-  end
-  if data.raw["item"][res_name .. "-crushed"] then
-    data.raw["item"][res_name .. "-crushed"].localised_description = {
-      "item-description." .. res_name .. "-crushed",
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-and"},
-      {"item-description.loc-slag"}
-    }
-  end
-  if data.raw["item"][res_name .. "-chunk"] then
-    data.raw["item"][res_name .. "-chunk"].localised_description = {
-      "item-description." .. res_name .. "-chunk",
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore3},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore4},
-      {"item-description.loc-and"},
-      {"item-description.loc-slag"},
-      "",
-      ""
-    }
-  end
-  if data.raw["item"][res_name .. "-crystal"] then
-    data.raw["item"][res_name .. "-crystal"].localised_description = {
-      "item-description." .. res_name .. "-crystal",
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore3},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore4},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore5},
-      {"item-description.loc-and"},
-      {"item-description.loc-slag"},
-      "",
-      ""
-    }
-  end
-  if data.raw["item"][res_name .. "-pure"] then
-    data.raw["item"][res_name .. "-pure"].localised_description = {
-      "item-description." .. res_name .. "-pure",
-      {"item-description.loc-" .. ore1},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore2},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore3},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore4},
-      {"item-description.loc-dot"},
-      {"item-description.loc-" .. ore5},
-      {"item-description.loc-and"},
-      {"item-description.loc-" .. ore6},
-      "",
-      ""
-    }
+  if data.raw.item[res_name] then
+    data.raw.item[res_name].localised_description = description
   end
 end
 
+function angelsmods.functions.add_recipe_localization(res_name, translate, ...)
+  local description = {
+    "recipe-name." .. translate
+  }
+
+  table.insert(description, get_add_localization({...}))
+
+  if data.raw.recipe[res_name] then
+    data.raw.recipe[res_name].localised_name = description
+  end
+end
+
+-- Barreling
 function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
   local auto_barreling = angelsmods.trigger.enable_auto_barreling
   -- no need to modify since it will happen automaticly

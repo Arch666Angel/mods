@@ -1,25 +1,20 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: ???
+Date: 2020-02-09
   Changes:
-    - update to 0.18
-    - updated recipe interaction
-    - added settings and activation clauses
-      - currently forcing off pending further testing
-    - fixed icons
-    - fixed localisations
-      - technologies still need updating
-    - tested early functionality
-    - allowed basic blocks to be handcrafted so technology can progress
-    - integrated bio-tokens into the production lab
-    - small tweaks
-    - added a new generic lab to allow flexibility
-  TO DO:
-    -update recipes to unlock with tech
-    -move components to a more convenient format (mainly electronics ect)
-    -localise tech
-    -check higher tier recipes are achievable
-    -add recipe to have more than one tech archive (relatively early, 1 is too slow at 64 minutes minimum to unlock a new tier)
+    - Update to 0.18
+    - Updated recipe interaction
+    - Added settings and activation clauses (currently forcing off pending further testing)
+    - Tested early functionality
+    - Allowed basic blocks to be handcrafted so technology can progress
+    - Integrated bio-tokens into the production lab
+    - Small tweaks
+    - Added a new generic lab to allow flexibility
+    - Changed the weight of the crawler train wagon and robot wagon
+  Bugfixes:
+    - Fixed icons
+    - Fixed localisations (technologies still need updating)
+    - Fixed that the logistics storage silo did not have a filter slot
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 29.03.2019

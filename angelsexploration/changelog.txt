@@ -1,12 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 12.02.2020
+  Bugfixes:
+    - Fixed checking if items exist before ordering them to prevent crashes
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: ???
+Date: 09.02.2020
   Changes:
     - update to 0.18
     - updated biter graphics to align with 0.17+ biter animations
     - fixed icon_size errors
     - added recipes and technology for bio-gun and bio-ammo
     - updated spawners to spawn all variants (colossal biters/spitters)
+    - applied a compatablity with some biter mods
     - localisation fixes
     - minor code clean-ups
 ---------------------------------------------------------------------------------------------------

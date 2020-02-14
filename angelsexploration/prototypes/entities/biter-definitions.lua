@@ -12,6 +12,13 @@
 --SCARAB: 0.185, 0.185, 0.185, 0.17, 0.17
 --BITER: 0.185, 0.185, 0.185, 0.17, 0.17
 --SPITTER: 0.185, 0.185, 0.185, 0.17, 0.17
+--spawner result fetch script
+--[[function ammend_spawner_results(base)
+	for _, spawner in pairs(data.raw["unit-spawner"]) do
+		if spawner.name=base then
+			return spawner.results
+	end]]
+
 
 --BITER DEFINITIONS
 	small_biter =
@@ -24,7 +31,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 100,
-				corpse= "small_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -56,7 +62,6 @@
 				tint2 = {r=0.9, g=0.3, b=0.3, a=0.75},
 				speed = 0.185,
 				health = 200,
-				corpse= "medium_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -88,7 +93,6 @@
 				tint2 = {r=0.31, g=0.61, b=0.95, a=0.85},
 				speed = 0.185,
 				health = 300,
-				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -120,7 +124,6 @@
 				tint2 = {r=0.88, g=0.24, b=0.24, a=0.9},
 				speed = 0.17,
 				health = 400,
-				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -151,7 +154,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.17,
 				health = 500,
-				corpse= "big_biter_corpse",
 			},
 			attack = {
 				category = "melee",
@@ -183,7 +185,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 50,
-				corpse= "small_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -213,7 +214,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 100,
-				corpse= "medium_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -243,7 +243,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 150,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -273,7 +272,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 200,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -303,7 +301,6 @@
 				tint2 = {r=1, g=0.63, b=0, a=0.4},
 				speed = 0.185,
 				health = 250,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 15,
@@ -333,7 +330,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 150,
-				corpse="small_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -363,7 +359,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 300,
-				corpse="medium_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -393,7 +388,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 450,
-				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -423,7 +417,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 600,
-				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -453,7 +446,6 @@
 				tint2 = {r=164/255, g=8/255, b=8/255, a=0.4},
 				speed = 0.185,
 				health = 750,
-				corpse="big_biter_corpse",
 			},
 			attack = {
 				range = 0.5,
@@ -484,7 +476,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 100,
-				corpse= "small_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -514,7 +505,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 200,
-				corpse= "medium_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -544,7 +534,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 300,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -574,7 +563,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 400,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -604,7 +592,6 @@
 				tint2 = {r=118/255, g=210/255, b=209/255, a=0.4},
 				speed = 0.185,
 				health = 500,
-				corpse= "big_spitter_corpse",
 			},
 			attack = {
 				range = 7,
@@ -635,8 +622,8 @@
 			},
 			results = {
 				{"small-scarab", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-scarab", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-scarab", {{0.4, 0.0}, {0.8, 0.4}}},
+				{"medium-scarab", {{0.2, 0.0},{0.45,0.3}, {0.6, 0.0}}},
+				{"big-scarab", {{0.4, 0.0}, {0.6,0.6},{0.8, 0.4}}},
 				{"behemoth-scarab", {{0.6, 0.0}, {1.0, 0.6}}},
 				{"colossal-scarab", {{0.8, 0.0}, {1.0, 0.8}}},
 			},
@@ -657,20 +644,14 @@
 				health = 500,
 				spawn_cooldown = {360, 150}
 			},
-			results = {
-				{"small-biter", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-biter", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-biter", {{0.4, 0.0}, {0.8, 0.4}}},
-				{"behemoth-biter", {{0.6, 0.0}, {1.0, 0.6}}},
-				{"colossal-biter", {{0.8, 0.0}, {1.0, 0.8}}},
-			},
-			resistance = {
+			results ={"colossal-biter", {{0.9, 0.0}, {1.0, 0.8}}},
+			resistance = --[[{
 				{type = "physical", decrease = 5, percent = 10},
 				{type = "explosion", decrease = 5, percent = 10},
 				{type = "fire", decrease = 30, percent = 60},
-				{type = "laser", decrease = 5, percent = 10},
+				{type = "laser", decrease = 5, percent = 10},]]
 				{type = "plasma", decrease = 5, percent = 10}
-			}
+			--}
 		}
 
 	spitter_spawner =
@@ -681,20 +662,14 @@
 				health = 500,
 				spawn_cooldown = {360, 150}
 			},
-			results = {
-				{"small-spitter", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-spitter", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-spitter", {{0.4, 0.0}, {0.8, 0.4}}},
-				{"behemoth-spitter", {{0.6, 0.0}, {1.0, 0.6}}},
-				{"colossal-spitter", {{0.8, 0.0}, {1.0, 0.8}}},
-			},
-			resistance = {
+			results ={"colossal-spitter", {{0.9, 0.0}, {1.0, 0.8}}},
+			resistance = --[[{
 				{type = "physical", decrease = 5, percent = 10},
 				{type = "explosion", decrease = 5, percent = 10},
 				{type = "fire", decrease = 30, percent = 60},
-				{type = "laser", decrease = 5, percent = 10},
+				{type = "laser", decrease = 5, percent = 10},]]
 				{type = "plasma", decrease = 5, percent = 10}
-			}
+			--}
 		}
 
 	psyker_spawner =
@@ -707,8 +682,8 @@
 			},
 			results = {
 				{"small-psyker", {{0.0, 0.2}, {0.4, 0.0}}},
-				{"medium-psyker", {{0.2, 0.0}, {0.6, 0.0}}},
-				{"big-psyker", {{0.4, 0.0}, {0.8, 0.4}}},
+				{"medium-psyker", {{0.2, 0.0},{0.45,0.3}, {0.6, 0.0}}},
+				{"big-psyker", {{0.4, 0.0}, {0.6,0.6},{0.8, 0.4}}},
 				{"behemoth-psyker", {{0.6, 0.0}, {1.0, 0.6}}},
 				{"colossal-psyker", {{0.8, 0.0}, {1.0, 0.8}}},
 			},

@@ -45,7 +45,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -74,7 +74,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -103,7 +103,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -157,7 +157,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -186,7 +186,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -215,7 +215,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -228,7 +228,7 @@ data:extend(
     type = "recipe",
     name = "solid-rubber",
     category = "crafting-with-fluid",
-    subgroup = "petrochem-solids",
+    subgroup = "petrochem-solids-2",
     enabled = "false",
     normal =
     {
@@ -246,13 +246,13 @@ data:extend(
     },
     icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
     icon_size = 32,
-    order = "c[rubber]-b[solid]",
+    order = "b[rubber]-b[solid]",
   },
   {
     type = "recipe",
     name = "liquid-rubber-1",
     category = "chemistry",
-    subgroup = "petrochem-solids",
+    subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = "false",
     ingredients ={
@@ -269,13 +269,13 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "c[rubber]-a[liquid]",
+    order = "b[rubber]-a[liquid]",
   },
   --GLASS
   -- {
@@ -570,7 +570,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
@@ -604,7 +604,7 @@ data:extend(
       },
       {
         icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }

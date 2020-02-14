@@ -22,7 +22,7 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/gas-hydrogen.png",
     icon_size = 32,
     subgroup = "petrochem-basic-fluids",
-    order = "v",
+    order = "h",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     base_color = {r = 1, g = 1, b = 1},

@@ -19,7 +19,9 @@ OV.patch_recipes(
         {"rocket-fuel-capsule", 10},
         {"rocket-oxidizer-capsule", 10}
       },
-      category = "chemistry"
+      category = "chemistry",
+      subgroup = "petrochem-fuel",
+      order = "hc"
     }
   }
 )
@@ -28,9 +30,16 @@ OV.remove_prereq("rocketry", "rocket-fuel")
 data.raw["item"]["rocket-fuel"].icon = "__angelspetrochem__/graphics/icons/rocket-fuel.png"
 data.raw["item"]["rocket-fuel"].icon_size = 32
 data.raw["item"]["rocket-fuel"].icon_mipmaps = 1
+data.raw["item"]["rocket-fuel"].subgroup = "petrochem-fuel"
+data.raw["item"]["rocket-fuel"].order = "b[rocket-fuel]-c"
+
+data.raw["item"]["nuclear-fuel"].subgroup = "petrochem-fuel"
+data.raw["item"]["nuclear-fuel"].order = "d[nuclear-fuel]"
+OV.patch_recipes({{name = "nuclear-fuel", subgroup = "petrochem-fuel", order = "j"}})
 
 data.raw["item"]["solid-fuel"].subgroup = "petrochem-fuel"
-data.raw["item"]["solid-fuel"].order = "a[solid-fuel]"
+data.raw["item"]["solid-fuel"].order = "a[solid-fuel]-a"
+
 data.raw["item"]["sulfur"].subgroup = "petrochem-sulfur"
 data.raw["item"]["sulfur"].order = "a[sulfer]-a[sulfer]"
 data.raw["item"]["plastic-bar"].subgroup = "petrochem-solids"
@@ -63,13 +72,17 @@ if angelsmods.refining then
   table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories, "liquifying")
   table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories, "liquifying")
   data.raw["item"]["liquifier"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier"].order = "b[liquifier]-a"
+  data.raw["item"]["liquifier"].order = "c[liquifier]-a"
+  data.raw["item"]["liquifier"].icons[2].tint = angelsmods.petrochem.number_tint
   data.raw["item"]["liquifier-2"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-2"].order = "b[liquifier]-b"
+  data.raw["item"]["liquifier-2"].order = "c[liquifier]-b"
+  data.raw["item"]["liquifier-2"].icons[2].tint = angelsmods.petrochem.number_tint
   data.raw["item"]["liquifier-3"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-3"].order = "b[liquifier]-c"
+  data.raw["item"]["liquifier-3"].order = "c[liquifier]-c"
+  data.raw["item"]["liquifier-3"].icons[2].tint = angelsmods.petrochem.number_tint
   data.raw["item"]["liquifier-4"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-4"].order = "b[liquifier]-d"
+  data.raw["item"]["liquifier-4"].order = "c[liquifier]-d"
+  data.raw["item"]["liquifier-4"].icons[2].tint = angelsmods.petrochem.number_tint
   OV.patch_recipes(
     {
       {name = "carbon-separation-1", category = "liquifying"},
@@ -82,11 +95,11 @@ if angelsmods.refining then
       {name = "angelsore9-dust", ingredients = {{name = "solid-sodium-hydroxide", 2}}},
       {
         name = "angelsore8-anode-sludge",
-        ingredients = {{name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10}}
+        ingredients = {{name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10}}
       },
       {
         name = "angelsore9-anode-sludge",
-        ingredients = {{name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10}}
+        ingredients = {{name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10}}
       }
     }
   )
@@ -108,8 +121,7 @@ if angelsmods.refining then
 end
 
 --SMELTING
-if angelsmods.smelting then
-else
+if not angelsmods.smelting then
   OV.disable_recipe({"solid-sodium-cyanide", "solid-sodium-carbonate", "solid-sodium-sulfate-separation"})
 end
 
@@ -301,53 +313,67 @@ else
   end
 end
 --hide bobs fluids if converter recipes setting not active
-if not angelsmods.trigger.enableconverter and mods['bobplates'] then
-  data.raw["fluid"]["sulfur-dioxide"].hidden=true
-  data.raw["fluid"]["oxygen"].hidden=true
-  data.raw["fluid"]["nitrogen"].hidden=true
-  data.raw["fluid"]["nitrogen-dioxide"].hidden=true
-  data.raw["fluid"]["nitric-acid"].hidden=true
-  data.raw["fluid"]["liquid-air"].hidden=true
-  data.raw["fluid"]["hydrogen"].hidden=true
-  data.raw["fluid"]["hydrogen-sulfide"].hidden=true
-  data.raw["fluid"]["hydrogen-chloride"].hidden=true
-  data.raw["fluid"]["ferric-chloride-solution"].hidden=true
-  data.raw["fluid"]["chlorine"].hidden=true
-  data.raw["fluid"]["pure-water"].hidden=true
-  if mods['bobrevamp'] then
-      data.raw["fluid"]["ammonia"].hidden=true
-      data.raw["fluid"]["dinitrogen-tetroxide"].hidden=true
-      data.raw["fluid"]["hydrazine"].hidden=true
-      data.raw["fluid"]["hydrogen-peroxide"].hidden=true
-      data.raw["fluid"]["nitric-oxide"].hidden=true
+if not angelsmods.trigger.enableconverter and mods.bobplates then
+  data.raw["fluid"]["sulfur-dioxide"].hidden = true
+  data.raw["fluid"]["oxygen"].hidden = true
+  data.raw["fluid"]["nitrogen"].hidden = true
+  data.raw["fluid"]["nitrogen-dioxide"].hidden = true
+  data.raw["fluid"]["nitric-acid"].hidden = true
+  data.raw["fluid"]["liquid-air"].hidden = true
+  data.raw["fluid"]["hydrogen"].hidden = true
+  data.raw["fluid"]["hydrogen-sulfide"].hidden = true
+  data.raw["fluid"]["hydrogen-chloride"].hidden = true
+  data.raw["fluid"]["ferric-chloride-solution"].hidden = true
+  data.raw["fluid"]["chlorine"].hidden = true
+  data.raw["fluid"]["pure-water"].hidden = true
+  if mods.bobrevamp then
+    data.raw["fluid"]["ammonia"].hidden = true
+    data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true
+    data.raw["fluid"]["hydrazine"].hidden = true
+    data.raw["fluid"]["hydrogen-peroxide"].hidden = true
+    data.raw["fluid"]["nitric-oxide"].hidden = true
   end
 end
 --if bobs is active, add fuel values to fluids
 --Do this regardless of settings
 --base fluid is methane, all others are based on relative real values
 --hydrogen is halved to stop it being too overpowered
-if mods["bobplates"] then
-  data.raw.fluid["liquid-naphtha"].fuel_value ="1.8MJ"--bobs value is 1MJ (39/50*2.3MJ)
+if mods.bobplates then
+  data.raw.fluid["liquid-naphtha"].fuel_value = "1.8MJ"
+  --bobs value is 1MJ (39/50*2.3MJ)
   data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3
-  data.raw.fluid["liquid-fuel-oil"].fuel_value ="1.9MJ"--1.5MJ (40.6/50*2.3MJ)
+  data.raw.fluid["liquid-fuel-oil"].fuel_value = "1.9MJ"
+  --1.5MJ (40.6/50*2.3MJ)
   data.raw.fluid["liquid-fuel-oil"].emissions_multiplier = 2
-  data.raw.fluid["gas-methane"].fuel_value ="2.3MJ"--all are based on this value
-  data.raw.fluid["gas-ethane"].fuel_value ="2.2MJ"--47.8/50*2.3MJ
+  data.raw.fluid["gas-methane"].fuel_value = "2.3MJ"
+  --all are based on this value
+  data.raw.fluid["gas-ethane"].fuel_value = "2.2MJ"
+  --47.8/50*2.3MJ
   data.raw.fluid["gas-ethane"].emissions_multiplier = 1.5
-  data.raw.fluid["gas-butane"].fuel_value ="2.1MJ"--46.5/50*2.3MJ
+  data.raw.fluid["gas-butane"].fuel_value = "2.1MJ"
+  --46.5/50*2.3MJ
   data.raw.fluid["gas-butane"].emissions_multiplier = 1.8
-  data.raw.fluid["gas-propene"].fuel_value ="2.1MJ"--45.7/50*2.3MJ
+  data.raw.fluid["gas-propene"].fuel_value = "2.1MJ"
+  --45.7/50*2.3MJ
   data.raw.fluid["gas-propene"].emissions_multiplier = 5
-  data.raw.fluid["gas-methanol"].fuel_value ="915kJ"--19.9/50*2.3MJ
-  data.raw.fluid["gas-ethylene"].fuel_value ="2.2MJ"--47.2/50*2.3MJ
-  data.raw.fluid["gas-benzene"].fuel_value ="1.8MJ"--40.5/50*2.3MJ
-  data.raw.fluid["gas-hydrogen"].fuel_value ="2.7MJ"--bobs value is 45kJ--(121/50*2.3MJ)/2 (may need to go much lower)
+  data.raw.fluid["gas-methanol"].fuel_value = "915kJ"
+  --19.9/50*2.3MJ
+  data.raw.fluid["gas-ethylene"].fuel_value = "2.2MJ"
+  --47.2/50*2.3MJ
+  data.raw.fluid["gas-benzene"].fuel_value = "1.8MJ"
+  --40.5/50*2.3MJ
+  data.raw.fluid["gas-hydrogen"].fuel_value = "2.7MJ"
+  --bobs value is 45kJ--(121/50*2.3MJ)/2 (may need to go much lower)
   data.raw.fluid["gas-hydrogen"].emissions_multiplier = 0.2
-  data.raw.fluid["gas-hydrazine"].fuel_value ="340kJ"-- (19.4/50*2.3MJ)
+  data.raw.fluid["gas-hydrazine"].fuel_value = "340kJ"
+  -- (19.4/50*2.3MJ)
   data.raw.fluid["gas-hydrazine"].emissions_multiplier = 0.1
-  if mods['angelsbioprocessing'] then
-    data.raw.fluid["gas-ethanol"].fuel_value ="1.2MJ"--26.7/50*2.3MJ
+
+  if mods["angelsbioprocessing"] then
+    data.raw.fluid["gas-ethanol"].fuel_value = "1.2MJ"
+  --26.7/50*2.3MJ
   end
+
 end
 --ENABLE PRODUCTIVITY
 angelsmods.functions.allow_productivity("liquid-plastic-1")

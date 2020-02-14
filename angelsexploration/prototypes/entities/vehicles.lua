@@ -3,13 +3,13 @@ require("util")
 data:extend(
   {
     --HEAVY TANK
-    -- {
-    -- type = "equipment-grid",
-    -- name = "angels-heavy-tank",
-    -- width = 9,
-    -- height = 9,
-    --equipment_categories = {}
-    -- },
+    --{
+    --  type = "equipment-grid",
+    --  name = "angels-heavy-tank",
+    --  width = 10,
+    --  height = 10,
+    --  equipment_categories = {}
+    --},
     {
       type = "item-with-entity-data",
       name = "angels-heavy-tank",
@@ -66,7 +66,7 @@ data:extend(
       order = "z[tank]-a[cannon]",
       attack_parameters = {
         type = "projectile",
-        ammo_category = "cannon-shell",
+        ammo_categories = { "cannon-shell", "heavy-cannon-shell" },
         cooldown = 120,
         movement_slow_down_factor = 0,
         projectile_creation_distance = 4,
@@ -86,7 +86,7 @@ data:extend(
       name = "heavy-tank-rocket-launcher",
       icon = "__angelsexploration__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
       icon_size = 32,
-      flags = {},
+      flags = {"hidden"},
       subgroup = "gun",
       order = "d[heavy-tank-rocket-launcher]",
       attack_parameters = {
@@ -513,8 +513,8 @@ data:extend(
         },
         match_speed_to_activity = true
       },
-      open_sound = {filename = "__base__/sound/car-door-open.ogg", volume = 0.7},
-      close_sound = {filename = "__base__/sound/car-door-close.ogg", volume = 0.7},
+      open_sound = { filename = "__base__/sound/fight/tank-door-open.ogg", volume=0.5 },
+      close_sound = { filename = "__base__/sound/fight/tank-door-close.ogg", volume = 0.4 },
       rotation_speed = 0.0035,
       tank_driving = true,
       weight = 30000,

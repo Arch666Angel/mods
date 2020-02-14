@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: ??
+Date: 2020-02-09
   Changes:
     - update to 0.18
     - move logistics silos to angel logistics if angel industries is present
+  Bugfixes:
+    - Fixed that the logistics storage silo did not have a filter slot

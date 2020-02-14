@@ -58,13 +58,14 @@ data:extend(
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },
@@ -240,13 +241,14 @@ data:extend(
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
-        icon_size = 128
+        icon_size = 128,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = {40, -40}
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
       }
     }
   },
@@ -378,15 +380,21 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "angels-alloys-casting",
+    name = "angels-lithium-casting",
     group = "angels-casting",
     order = "t",
   },
   {
     type = "item-subgroup",
+    name = "angels-alloys-casting",
+    group = "angels-casting",
+    order = "u",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-mold-casting",
     group = "angels-casting",
-    order = "t",
+    order = "y",
   },
   {
     type = "item-subgroup",

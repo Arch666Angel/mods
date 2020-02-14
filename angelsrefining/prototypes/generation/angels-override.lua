@@ -4,13 +4,15 @@ if not angelsmods.refining.disable_ore_override then
   angelsmods.functions.remove_resource("copper-ore")
   angelsmods.functions.remove_resource("stone")
 
-    --ANGELS
-  if not ( (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] ) then
+  --ANGELS
+  if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates) then
     angelsmods.functions.remove_resource("angels-ore5")
     angelsmods.functions.remove_resource("angels-ore6")
   end
 
-  if data.raw.resource["uranium-ore"] and angelsmods.refining and ((bobmods and bobmods.plates) or angelsmods.industries) then
+  if
+    data.raw.resource["uranium-ore"] and angelsmods.refining and ((bobmods and bobmods.plates) or angelsmods.industries)
+   then
     angelsmods.functions.remove_resource("uranium-ore")
   end
 
@@ -31,6 +33,7 @@ if not angelsmods.refining.disable_ore_override then
     angelsmods.functions.remove_resource("zinc-ore")
     angelsmods.functions.remove_resource("lithia-water")
     angelsmods.functions.remove_resource("ground-water")
+    angelsmods.functions.remove_resource("thorium-ore")
   end
 
   --YUOKI
@@ -46,36 +49,32 @@ if not angelsmods.refining.disable_ore_override then
   if data.raw.resource["uraninite"] then
     data.raw.resource["fluorite"] = nil
     data.raw["autoplace-control"]["fluorite"] = nil
-    data.raw["item"]["fluorite"].icon="__angelsinfiniteores__/graphics/icons/up-fluorite.png"
+    data.raw["item"]["fluorite"].icon = "__angelsinfiniteores__/graphics/icons/up-fluorite.png"
 
     data.raw.resource["uraninite"] = nil
     data.raw["autoplace-control"]["uraninite"] = nil
-    data.raw["item"]["uraninite"].icon="__angelsinfiniteores__/graphics/icons/up-uraninite.png"
+    data.raw["item"]["uraninite"].icon = "__angelsinfiniteores__/graphics/icons/up-uraninite.png"
   end
 end
 
 --MODIFY MAP GEN PRESETS
-data.raw["map-gen-presets"]["default"]["rich-resources"] =
-{
+data.raw["map-gen-presets"]["default"]["rich-resources"] = {
   order = "b",
-  basic_settings =
-  {
-    autoplace_controls =
-    {
-      ["angels-ore1"] = { richness = "very-good"},
-      ["angels-ore2"] = { richness = "very-good"},
-      ["angels-ore3"] = { richness = "very-good"},
-      ["angels-ore4"] = { richness = "very-good"},
-      ["coal"] = { richness = "very-good"},
-      ["crude-oil"] = { richness = "very-good"},
-      ["angels-fissure"] = { richness = "very-good"},
+  basic_settings = {
+    autoplace_controls = {
+      ["angels-ore1"] = {richness = "very-good"},
+      ["angels-ore2"] = {richness = "very-good"},
+      ["angels-ore3"] = {richness = "very-good"},
+      ["angels-ore4"] = {richness = "very-good"},
+      ["coal"] = {richness = "very-good"},
+      ["crude-oil"] = {richness = "very-good"},
+      ["angels-fissure"] = {richness = "very-good"}
     }
   }
 }
 
-data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings =
-{
-    property_expression_names = {},
+data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings = {
+  property_expression_names = {},
   autoplace_controls = {
     ["angels-ore1"] = {
       frequency = 0.33333333333,
@@ -107,49 +106,48 @@ data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings =
     },
     ["enemy-base"] = {
       size = 0.5
-    },
+    }
   },
   terrain_segmentation = "very-low",
-  water = "high",
+  water = "high"
 }
 
-data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings =
-{
+data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings = {
   autoplace_controls = {
     ["angels-ore1"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     },
     ["angels-ore2"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     },
     ["angels-ore3"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     },
     ["angels-ore4"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     },
     ["coal"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     },
     ["crude-oil"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     },
     ["angels-fissure"] = {
-            frequency = 3,
-            size = 0.5,
-            richness = 2
+      frequency = 3,
+      size = 0.5,
+      richness = 2
     }
   },
   terrain_segmentation = 4,
@@ -158,13 +156,31 @@ data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings =
   height = 128
 }
 
-if (angelsmods.industries and angelsmods.industries.overhaul) or mods['bobplates'] then
-  data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-ore5"] = { richness = "very-good"}
-  data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-ore6"] = { richness = "very-good"}
+if (angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates then
+  data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-ore5"] = {
+    richness = "very-good"
+  }
+  data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-ore6"] = {
+    richness = "very-good"
+  }
 
-  data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-ore5"] = {frequency = 0.33333333333,  size = 3}
-  data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-ore6"] = {frequency = 0.33333333333,  size = 3}
+  data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-ore5"] = {
+    frequency = 0.33333333333,
+    size = 3
+  }
+  data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-ore6"] = {
+    frequency = 0.33333333333,
+    size = 3
+  }
 
-  data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-ore5"] = {frequency = 3,  size = 0.5, richness = 2}
-  data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-ore6"] = {frequency = 3,  size = 0.5, richness = 2}
+  data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-ore5"] = {
+    frequency = 3,
+    size = 0.5,
+    richness = 2
+  }
+  data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-ore6"] = {
+    frequency = 3,
+    size = 0.5,
+    richness = 2
+  }
 end

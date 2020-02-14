@@ -1,12 +1,31 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.2
+Date: 12.02.2020
+  Changes:
+    - Changed ore generation so richness is using default settings (instead of a .1 multiplier) GH#23
+---------------------------------------------------------------------------------------------------
+Version: 0.11.1
+Date: 09.02.2020
+  Bugfixes:
+    - Fixed error when not having petrochem (fluorite error)
+---------------------------------------------------------------------------------------------------
 Version: 0.11.0
-Date: ???
+Date: 09.02.2020
   Changes:
     - Updated to 0.18
     - Added a tryptophobia setting to get alternative graphics for stiratite ore
     - If bobs mods are activated, integrate gas bottles and canisters to auto-barreling (moved from PCPRedux and improved)
+    - If bobs mods are activated, refining give options to obtain thorium ore (also stopped thorium-ore from spawning natively)
+    - Ferrous and Cupric crystals are made in crystalizer
+    - Balance changes with relation to pure sorting recipes
+      - Nickel is now a T3 ore, requiring Crystals (Former silver recipe)
+      - Manganese ore now has a raw recipe, requiring Chunks (Former nickel recipe)
+      - Silver is now a T2 ore, requiring Chunks
+      - Various other raw recipes added (Thorium/Platinum/Chrome) if needed
+      - SORRY IF THIS REQUIRES REBUILDING parts of your existing base
   Bugfixes:
     - Fixed uranium ore icon did not fit the recipe box
+    - Fixed that item grouping didn't match recipe groupings
   Modding:
     - Added barreling override functions
 ---------------------------------------------------------------------------------------------------
