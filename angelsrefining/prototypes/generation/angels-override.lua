@@ -58,24 +58,27 @@ if not angelsmods.refining.disable_ore_override then
 end
 
 --MODIFY MAP GEN PRESETS
-data.raw["map-gen-presets"]["default"]["rich-resources"] = {
-  order = "b",
-  basic_settings = {
-    autoplace_controls = {
-      ["angels-ore1"] = {richness = "very-good"},
-      ["angels-ore2"] = {richness = "very-good"},
-      ["angels-ore3"] = {richness = "very-good"},
-      ["angels-ore4"] = {richness = "very-good"},
-      ["coal"] = {richness = "very-good"},
-      ["crude-oil"] = {richness = "very-good"},
-      ["angels-fissure"] = {richness = "very-good"}
-    }
-  }
-}
+local function add_preset_resource(preset, resources)
+  local set = data.raw["map-gen-presets"]["default"][preset]
+  if set and set.basic_settings and set.basic_settings.autoplace_controls then
+    set.basic_settings.autoplace_controls = util.merge({set.basic_settings.autoplace_controls, resources})
+  end
+end
 
-data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings = {
-  property_expression_names = {},
-  autoplace_controls = {
+add_preset_resource(
+  "rich-resources",
+  {
+    ["angels-ore1"] = {richness = "very-good"},
+    ["angels-ore2"] = {richness = "very-good"},
+    ["angels-ore3"] = {richness = "very-good"},
+    ["angels-ore4"] = {richness = "very-good"},
+    ["angels-fissure"] = {richness = "very-good"}
+  }
+)
+
+add_preset_resource(
+  "rail-world",
+  {
     ["angels-ore1"] = {
       frequency = 0.33333333333,
       size = 3
@@ -89,14 +92,6 @@ data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings = {
       size = 3
     },
     ["angels-ore4"] = {
-      frequency = 0.33333333333,
-      size = 3
-    },
-    ["coal"] = {
-      frequency = 0.33333333333,
-      size = 3
-    },
-    ["crude-oil"] = {
       frequency = 0.33333333333,
       size = 3
     },
@@ -107,13 +102,12 @@ data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings = {
     ["enemy-base"] = {
       size = 0.5
     }
-  },
-  terrain_segmentation = "very-low",
-  water = "high"
-}
+  }
+)
 
-data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings = {
-  autoplace_controls = {
+add_preset_resource(
+  "ribbon-world",
+  {
     ["angels-ore1"] = {
       frequency = 3,
       size = 0.5,
@@ -134,53 +128,54 @@ data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings = {
       size = 0.5,
       richness = 2
     },
-    ["coal"] = {
-      frequency = 3,
-      size = 0.5,
-      richness = 2
-    },
-    ["crude-oil"] = {
-      frequency = 3,
-      size = 0.5,
-      richness = 2
-    },
     ["angels-fissure"] = {
       frequency = 3,
       size = 0.5,
       richness = 2
     }
-  },
-  terrain_segmentation = 4,
-  water = 0.25,
-  starting_area = 3,
-  height = 128
-}
+  }
+)
 
 if (angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates then
-  data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-ore5"] = {
-    richness = "very-good"
-  }
-  data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-ore6"] = {
-    richness = "very-good"
-  }
+  add_preset_resource(
+    "rich-resources",
+    {
+      ["angels-ore5"] = {
+        richness = "very-good"
+      },
+      ["angels-ore6"] = {
+        richness = "very-good"
+      }
+    }
+  )
 
-  data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-ore5"] = {
-    frequency = 0.33333333333,
-    size = 3
-  }
-  data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-ore6"] = {
-    frequency = 0.33333333333,
-    size = 3
-  }
+  add_preset_resource(
+    "rail-world",
+    {
+      ["angels-ore5"] = {
+        frequency = 0.33333333333,
+        size = 3
+      },
+      ["angels-ore6"] = {
+        frequency = 0.33333333333,
+        size = 3
+      }
+    }
+  )
 
-  data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-ore5"] = {
-    frequency = 3,
-    size = 0.5,
-    richness = 2
-  }
-  data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-ore6"] = {
-    frequency = 3,
-    size = 0.5,
-    richness = 2
-  }
+  add_preset_resource(
+    "ribbon-world",
+    {
+      ["angels-ore5"] = {
+        frequency = 3,
+        size = 0.5,
+        richness = 2
+      },
+      ["angels-ore6"] = {
+        frequency = 3,
+        size = 0.5,
+        richness = 2
+      }
+    }
+  )
 end

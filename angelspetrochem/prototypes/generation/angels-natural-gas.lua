@@ -1,41 +1,41 @@
 angelsmods.functions.add_resource(
-	"make",
-	{
-		name = "angels-natural-gas",
-		order = "c-b-b",
-		sheet = 2,
-		infinite = true,
-		glow = false,
-		var = 1,
-		map_color = {r = 0.70, g = 0.90, b = 0.60},
-		tint = {r = 0.70, g = 0.90, b = 0.60},
-		mining_time = 1,
-		type = "fluid",
-		category = "basic-fluid",
-		-- normal = 10000,
-		-- maximum = 50000,
-		output_name = "gas-natural-1",
-		output_min = 20,
-		output_max = 20,
-		icon = "__base__/graphics/icons/crude-oil-resource.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
-		stage_counts = {0},
-		autoplace = {
-			starting_area = false,
-			order = "c-b",
-			-- resource_index = 28,
-			base_density = 8,
-			regular_rq_factor_multiplier = 1,
-			starting_rq_factor_multiplier = 1,
-			base_spots_per_km2 = 1.8,
-			random_probability = 1 / 48,
-			random_spot_size_minimum = 1,
-			random_spot_size_maximum = 1,
-			additional_richness = 10000,
-			richness_post_multiplier = 0.03
-		}
-	}
+  "make",
+  {
+    name = "angels-natural-gas",
+    order = "c-b-b",
+    sheet = 2,
+    infinite = true,
+    glow = false,
+    var = 1,
+    map_color = {r = 0.70, g = 0.90, b = 0.60},
+    tint = {r = 0.70, g = 0.90, b = 0.60},
+    mining_time = 1,
+    type = "fluid",
+    category = "basic-fluid",
+    -- normal = 10000,
+    -- maximum = 50000,
+    output_name = "gas-natural-1",
+    output_min = 20,
+    output_max = 20,
+    icon = "__base__/graphics/icons/crude-oil-resource.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    stage_counts = {0},
+    autoplace = {
+      starting_area = false,
+      order = "c-b",
+      -- resource_index = 28,
+      base_density = 8,
+      regular_rq_factor_multiplier = 1,
+      starting_rq_factor_multiplier = 1,
+      base_spots_per_km2 = 1.8,
+      random_probability = 1 / 48,
+      random_spot_size_minimum = 1,
+      random_spot_size_maximum = 1,
+      additional_richness = 10000,
+      richness_post_multiplier = 0.03
+    }
+  }
 )
 
 -- data:extend(
@@ -121,9 +121,15 @@ angelsmods.functions.add_resource(
 -- })
 
 data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.autoplace_controls["angels-natural-gas"] = {
-	richness = "very-good"
+  richness = "very-good"
 }
 data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.autoplace_controls["angels-natural-gas"] = {
-	frequency = "low",
-	size = "high"
+  frequency = 0.33333333333,
+  size = 3
+}
+
+data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.autoplace_controls["angels-natural-gas"] = {
+  frequency = 3,
+  size = 0.5,
+  richness = 2
 }

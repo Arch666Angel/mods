@@ -953,15 +953,9 @@ function angelsmods.functions.make_resource()
       else
         input.map_grid = false
       end
-      --Set resource category if resource yields fluids
-      if not input.type == "fluid" then
-        input.category = nil
-        input.order = "c-" .. input.order
-      else
-        input.order = "a-" .. input.order
-      end
       --Set Boxes according to presets
       if input.type == "fluid" then
+        input.order = "d-" .. input.order
         input.highlight = true
         if input.sheet == 1 then
           input.collision_box = {{-4.4, -4.4}, {4.4, 4.4}}
@@ -972,6 +966,9 @@ function angelsmods.functions.make_resource()
           input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
         end
       else
+        --Unset resource category if resource yields fluids
+        input.category = nil
+        input.order = "a-" .. input.order
         input.highlight = false
         input.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
         input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
@@ -1061,6 +1058,17 @@ function angelsmods.functions.remove_resource(resource)
     data.raw.resource["infinite-" .. resource] = nil
     data.raw["autoplace-control"]["infinite-" .. resource] = nil
   end
+
+  -- Remove from presets
+  for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
+    if
+      preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
+        preset.basic_settings.autoplace_controls[resource]
+     then
+      preset.basic_settings.autoplace_controls[resource] = nil
+    end
+  end
+
   for r, subdir in pairs(angelsmods.functions.store) do
     for r, input in pairs(subdir) do
       if input == resource then
