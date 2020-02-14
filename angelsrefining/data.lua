@@ -30,8 +30,8 @@ if mods.bobplates then
   angelsmods.trigger.ores["gold"] = true
   angelsmods.trigger.ores["tungsten"] = true
   angelsmods.trigger.ores["uranium"] = true
-  angelsmods.trigger.ores["fluorite"] = false -- petrochem should enable this
-  --angelsmods.trigger.ores["thorium"] = false -- todo
+  angelsmods.trigger.ores["fluorite"] = true -- petrochem should enable this
+  angelsmods.trigger.ores["thorium"] = true -- todo
 end
 angelsmods.trigger.ores["manganese"] = false
 angelsmods.trigger.ores["chrome"] = false
@@ -46,7 +46,7 @@ if mods.bobplates then
   angelsmods.trigger.refinery_products["rubyte"] = true
   angelsmods.trigger.refinery_products["bobmonium"] = true
 end
-angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"] or angelsmods.trigger.ores["chrome"]
+angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"] or angelsmods.trigger.ores["chrome"] or angelsmods.trigger.ores["thorium"]
 angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.refinery_products["ferrous"]
 
 -- MARATHON MODE
