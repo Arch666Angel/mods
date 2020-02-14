@@ -13,7 +13,7 @@ angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-re
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}
-local ore_exist = function (ore_name) return data.raw.item["gold-ore"] and true or false end
+local ore_exist = function (ore_name) return data.raw.item[ore_name] and true or false end
 -- angels refining default mode is to be special-vanilla, aka iron and copper only
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
@@ -32,6 +32,14 @@ if mods.bobplates then
   angelsmods.trigger.ores["gold"] = ore_exist("gold-ore")
   angelsmods.trigger.ores["tungsten"] = ore_exist("tungsten-ore")
   angelsmods.trigger.ores["thorium"] = ore_exist("thorium-ore")
+
+  --angelsmods.trigger.ores["gem-ore"] = ore_exist("gem-ore")
+  --angelsmods.trigger.ores["gem-ruby"] = ore_exist("ruby-ore")
+  --angelsmods.trigger.ores["gem-sapphire"] = ore_exist("sapphire-ore")
+  --angelsmods.trigger.ores["gem-emerald"] = ore_exist("emerald-ore")
+  --angelsmods.trigger.ores["gem-amethyst"] = ore_exist("amethyst-ore")
+  --angelsmods.trigger.ores["gem-topaz"] = ore_exist("topaz-ore")
+  --angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
 end
 angelsmods.trigger.ores["fluorite"] = true -- petrochem should enable this
 angelsmods.trigger.ores["manganese"] = false -- smelting should enable this

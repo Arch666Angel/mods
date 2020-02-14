@@ -1,15 +1,31 @@
---REFINERY PRODUCTS TRIGGERS
+-- REFINERY PRODUCTS TRIGGERS
+-- in the data stage, triggers where set for the ores,
+-- depending on the ore settings, we enable the refinery products
 angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {}
 angelsmods.trigger.refinery_products["saphirite"] = true
 angelsmods.trigger.refinery_products["jivolite"] = true
 angelsmods.trigger.refinery_products["stiratite"] = true
 angelsmods.trigger.refinery_products["crotinnium"] = true
+
 if mods.bobplates then
   angelsmods.trigger.refinery_products["rubyte"] = true
   angelsmods.trigger.refinery_products["bobmonium"] = true
 end
+
 angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"] or angelsmods.trigger.ores["chrome"] or angelsmods.trigger.ores["thorium"]
-angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.refinery_products["ferrous"]
+if angelsmods.trigger.refinery_products["ferrous"] then
+  angelsmods.trigger.refinery_products["saphirite"] = true
+  angelsmods.trigger.refinery_products["jivolite"] = true
+  angelsmods.trigger.refinery_products["rubyte"] = true
+end
+
+angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.ores["thorium"]
+if angelsmods.trigger.refinery_products["cupric"] then
+  angelsmods.trigger.refinery_products["stiratite"] = true
+  angelsmods.trigger.refinery_products["crotinnium"] = true
+  angelsmods.trigger.refinery_products["bobmonium"] = true
+end
+
 
 if angelsmods.refining then
   --Fallbacks for the recipe builder

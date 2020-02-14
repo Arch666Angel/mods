@@ -197,7 +197,9 @@ local merge_table_of_tables = function (recipes_table)
   return big_table
 end
 
--- REGULAR SORTING
+-------------------------------------------------------------------------------
+-- REGULAR SORTING ------------------------------------------------------------
+-------------------------------------------------------------------------------
 OV.patch_recipes(merge_table_of_tables{
   -- SAPHIRITE
   create_sorting_recipes("saphirite", "angelsore1%s", {
@@ -290,6 +292,7 @@ OV.patch_recipes(merge_table_of_tables{
     ["gold-ore"  ] = (not special_vanilla) and {0, 0, 0, 1},
   }, true),
 })
+
 if not special_vanilla then
   -- disable the nuggets and pebbles
   OV.disable_recipe({
@@ -307,6 +310,30 @@ if not special_vanilla then
   angelsmods.functions.add_flag("angels-copper-pebbles", "hidden")
   angelsmods.functions.add_flag("angels-copper-slag", "hidden")
 end
+
+-- take care of the special sorting fluids
+if ore_exists("ferrous") then
+  angelsmods.functions.move_item("angels-ore8-sludge", "ore-processing-fluid", "a[ferrous]-a", "fluid")
+  angelsmods.functions.move_item("angels-ore8-solution", "ore-processing-fluid", "a[ferrous]-b", "fluid")
+  angelsmods.functions.move_item("angels-ore8-anode-sludge", "ore-processing-fluid", "a[ferrous]-c", "fluid")
+  angelsmods.functions.move_item("angels-ore8-slime", "ore-processing-fluid", "a[ferrous]-d", "fluid")
+else
+  data.raw.fluid["angels-ore8-sludge"].hidden = true
+  data.raw.fluid["angels-ore8-solution"].hidden = true
+  data.raw.fluid["angels-ore8-anode-sludge"].hidden = true
+  data.raw.fluid["angels-ore8-slime"].hidden = true
+end
+if ore_exists("cupric") then
+  angelsmods.functions.move_item("angels-ore9-sludge", "ore-processing-fluid", "b[cupric]-a", "fluid")
+  angelsmods.functions.move_item("angels-ore9-solution", "ore-processing-fluid", "b[cupric]-b", "fluid")
+  angelsmods.functions.move_item("angels-ore9-anode-sludge", "ore-processing-fluid", "b[cupric]-c", "fluid")
+  angelsmods.functions.move_item("angels-ore9-slime", "ore-processing-fluid", "b[cupric]-d", "fluid")
+else
+  data.raw.fluid["angels-ore9-sludge"].hidden = true
+  data.raw.fluid["angels-ore9-solution"].hidden = true
+  data.raw.fluid["angels-ore9-anode-sludge"].hidden = true
+  data.raw.fluid["angels-ore9-slime"].hidden = true
+end
 if not (ore_exists("ferrous") or ore_exists("cupric")) then
   OV.disable_technology({
     "ore-advanced-crushing",
@@ -316,7 +343,9 @@ if not (ore_exists("ferrous") or ore_exists("cupric")) then
   })
 end
 
--- MIXED SORTING
+-------------------------------------------------------------------------------
+-- MIXED SORTING --------------------------------------------------------------
+-------------------------------------------------------------------------------
 OV.patch_recipes(merge_table_of_tables{
   -- CRUSHED
   create_sorting_mix_recipe("angelsore-crushed-mix%i-processing", {
@@ -395,7 +424,9 @@ OV.patch_recipes(merge_table_of_tables{
   }),
 })
 
--- SLAG SORTING
+-------------------------------------------------------------------------------
+-- SLAG SORTING ---------------------------------------------------------------
+-------------------------------------------------------------------------------
 OV.patch_recipes(create_slag_recipes("slag-processing%s", {
   ["iron-ore"             ] = { special_vanilla and 0.8 or 0.4, 0, 0, 0, 0, 0, 0, 0, 0 },
   ["angels-iron-pebbles"  ] = special_vanilla and {0, 0, 0, 3 * 0.8, 0, 0, 0, 0, 0} or nil,
