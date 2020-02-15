@@ -5,6 +5,7 @@ Date: ??
     - Bio tokens always gets added to labs now, trigger option added for mods to exclude the lab
   Bugfixes:
     - Fixed petri-dish requiring the wrong glass item (when playing with bob)
+    - Updated emission data, so it now shows in the ingame toolips (and activates)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.2
 Date: 12.02.2020

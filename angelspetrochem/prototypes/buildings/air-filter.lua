@@ -14,7 +14,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-electrolyser",
     order = "b[angels-air-filter]-a",
     place_result = "angels-air-filter",
@@ -34,7 +34,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "angels-air-filter"},
     fast_replaceable_group = "angels-air-filter",
@@ -54,7 +54,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.02 / 2
     },
     energy_usage = "150kW",
     ingredient_count = 3,
@@ -109,7 +109,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-electrolyser",
     order = "b[angels-air-filter]-b",
     place_result = "angels-air-filter-2",
@@ -129,7 +129,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "angels-air-filter-2"},
     fast_replaceable_group = "angels-air-filter",
@@ -149,7 +149,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.02 / 2
     },
     energy_usage = "200kW",
     ingredient_count = 3,

@@ -29,7 +29,7 @@ data:extend(
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
       energy_source = {
         type = "electric",
-        emissions = 0.15 / 1.5,
+        emissions_per_minute = 0.15 / 1.5,
         usage_priority = "secondary-input"
       },
       output_fluid_box = {

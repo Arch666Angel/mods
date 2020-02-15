@@ -52,7 +52,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.02 / 2
+        emissions_per_minute = 0.02 / 2
       },
       energy_usage = "200kW",
       ingredient_count = 3,
@@ -170,7 +170,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.03 / 2.5
+        emissions_per_minute = 0.03 / 2.5
       },
       energy_usage = "250kW",
       ingredient_count = 3,
@@ -288,7 +288,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.04 / 3
+        emissions_per_minute = 0.04 / 3
       },
       energy_usage = "300kW",
       ingredient_count = 3,
