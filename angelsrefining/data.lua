@@ -3,7 +3,6 @@ angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
 angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0.5}
---{r=6/255,g=237/255,b=182/255,a=219/255}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
@@ -42,8 +41,8 @@ if mods.bobplates then
   --angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
 end
 angelsmods.trigger.ores["fluorite"] = true -- petrochem should enable this
-angelsmods.trigger.ores["manganese"] = false -- smelting should enable this
-angelsmods.trigger.ores["chrome"] = false -- smelting should enable this
+angelsmods.trigger.ores["manganese"] = false -- angels smelting enables this
+angelsmods.trigger.ores["chrome"] = false -- angels smelting enables this
 
 -- MARATHON MODE
 angelsmods.marathon = angelsmods.marathon or {}
