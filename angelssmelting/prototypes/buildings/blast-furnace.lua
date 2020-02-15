@@ -55,7 +55,7 @@ data:extend(
       type = "burner",
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions = 0.02,
+      emissions_per_minute = 0.02,
       smoke =
       {
         {
@@ -160,7 +160,7 @@ data:extend(
       type = "burner",
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions = 0.02,
+      emissions_per_minute = 0.02,
       smoke =
       {
         {
@@ -265,7 +265,7 @@ data:extend(
       type = "burner",
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions = 0.02,
+      emissions_per_minute = 0.02,
       smoke =
       {
         {
@@ -370,7 +370,7 @@ data:extend(
       type = "burner",
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions = 0.02,
+      emissions_per_minute = 0.02,
       smoke =
       {
         {

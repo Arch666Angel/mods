@@ -14,7 +14,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-a",
     place_result = "angels-chemical-plant",
@@ -34,7 +34,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant"},
     max_health = 300,
@@ -48,7 +48,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "250kW",
     ingredient_count = 4,
@@ -176,7 +176,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-b",
     place_result = "angels-chemical-plant-2",
@@ -196,7 +196,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-2"},
     max_health = 300,
@@ -210,7 +210,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "300kW",
     ingredient_count = 4,
@@ -338,7 +338,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-c",
     place_result = "angels-chemical-plant-3",
@@ -358,7 +358,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-3"},
     max_health = 300,
@@ -372,7 +372,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "350kW",
     ingredient_count = 4,
@@ -500,7 +500,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-d",
     place_result = "angels-chemical-plant-4",
@@ -520,7 +520,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-4"},
     max_health = 300,
@@ -534,7 +534,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "400kW",
     ingredient_count = 4,
