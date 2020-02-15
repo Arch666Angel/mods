@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-local lab_ignore = {["lab-module"] = true, ["lab-alien"] = true}
+local lab_ignore = angelsmods.triggers.lab_ignore_token
 
 --PREPARATION
 OV.remove_output("algae-brown-burning", "angels-void")
@@ -33,8 +33,9 @@ if angelsmods.industries then
     {
       {
         name = "petri-dish",
-        ingredients = {{"!!"}, 
-          {data.raw.item["glass"] and "glass" or "angels-plate-glass", 1}, -- bob glass
+        ingredients = {
+          {"!!"},
+          {data.raw.item["glass"] and "glass" or "angels-plate-glass", 1} -- bob glass
         }
       },
       {
@@ -333,15 +334,17 @@ if bobmods then
 
     -- make sure the seed extractor can be unlocked early on
     if bobmods and bobmods.electronics then
-      OV.patch_recipes({
+      OV.patch_recipes(
         {
-          name = "seed-extractor",
-          ingredients = {
-            { name = "electronic-circuit", amount = 0 },
-            { name = "basic-circuit-board", amount = 4 },
+          {
+            name = "seed-extractor",
+            ingredients = {
+              {name = "electronic-circuit", amount = 0},
+              {name = "basic-circuit-board", amount = 4}
+            }
           }
-        },
-      })
+        }
+      )
     end
 
     -- allow manualy creating wood without a sawblade (because nerfed bob greenhouse)
