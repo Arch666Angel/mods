@@ -2,7 +2,7 @@
 Version: 0.3.1
 Date: ???
   Changes:
-    - Dependand on bioprocessing 0.7.3 for new lab triggers
+    - Dependent on bioprocessing 0.7.3 for new lab triggers
     - Updated emission data, so it now shows in the ingame toolips (and activates)
     - Automated component replacement script if components is activated
       - Works with Vanilla, Angels and Bobs (default, normal and expensive)
