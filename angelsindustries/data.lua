@@ -57,7 +57,6 @@ end
 
 --TECH
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
-  angelsmods.triggers.lab_ignore_token = angelsmods.triggers.lab_ignore_token or {}
   --ITEMS
   require("prototypes.items.tech-science-packs")
 
