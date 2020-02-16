@@ -57,11 +57,21 @@ if angelsmods.trigger.smelting_products["steel"].plate then
   end
 end
 --aluminium
+if angelsmods.trigger.smelting_products["aluminium"].powder then
+  angelsmods.trigger.smelting_products["aluminium"].ingot = true
+end
 if angelsmods.trigger.smelting_products["aluminium"].plate then
   angelsmods.trigger.smelting_products["aluminium"].ingot = true
   angelsmods.trigger.smelting_products["manganese"].ingot = true
   angelsmods.trigger.smelting_products["copper"].ingot = true
   angelsmods.trigger.smelting_products["silicon"].ingot = true
+end
+--chrome
+if angelsmods.trigger.smelting_products["chrome"].powder then
+  angelsmods.trigger.smelting_products["chrome"].ingot = true
+end
+if angelsmods.trigger.smelting_products["chrome"].plate then
+  angelsmods.trigger.smelting_products["chrome"].ingot = true
 end
 --tungsten
 if angelsmods.trigger.smelting_products["tungsten"].plate then
@@ -81,6 +91,9 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   angelsmods.trigger.smelting_products["copper"].plate = true
 end
 if angelsmods.trigger.smelting_products["copper"].plate then
+  angelsmods.trigger.smelting_products["copper"].ingot = true
+end
+if angelsmods.trigger.smelting_products["copper"].powder then
   angelsmods.trigger.smelting_products["copper"].ingot = true
 end
 --glass

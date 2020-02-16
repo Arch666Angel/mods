@@ -73,6 +73,10 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "powder-aluminium"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "roll-aluminium-casting"
 			},
 			{
@@ -203,6 +207,14 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "powder-chrome"
 			},
+			{
+				type = "unlock-recipe",
+				recipe = "roll-chrome-casting"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "angels-roll-chrome-converting"
+			},
 		},
 		unit =
 		{
@@ -249,6 +261,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "solid-chrome-oxide-smelting"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "roll-chrome-casting-fast"
 			},
 		},
 		unit =
@@ -331,6 +347,14 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "powder-cobalt"
 			},
+			{
+				type = "unlock-recipe",
+				recipe = "roll-cobalt-casting"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "angels-roll-cobalt-converting"
+			},
 		},
 		unit =
 		{
@@ -369,6 +393,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "solid-cobalt-hydroxide-smelting"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "roll-cobalt-casting-fast"
 			},
 		},
 		unit =

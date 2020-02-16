@@ -12,6 +12,7 @@ end
 
 --create all the tables
 angelsmods.trigger.smelting_products = angelsmods.trigger.smelting_products or {}
+angelsmods.trigger.smelting_products["enable-all"] = true -- setting to override and enable everything (debug mode)
 angelsmods.trigger.smelting_products["brass"] = angelsmods.trigger.smelting_products["brass"] or {}
 angelsmods.trigger.smelting_products["bronze"] = angelsmods.trigger.smelting_products["bronze"] or {}
 angelsmods.trigger.smelting_products["cobalt-steel"] = angelsmods.trigger.smelting_products["cobalt-steel"] or {}

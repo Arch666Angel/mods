@@ -1,6 +1,12 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+if angelsmods.trigger.smelting_products["enable-all"] then
+  angelsmods.trigger.smelting_products["cobalt"].ingot = true
+  angelsmods.trigger.smelting_products["cobalt"].plate = true
+  angelsmods.trigger.smelting_products["cobalt"].powder = true
+end
+
 -------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -28,4 +34,13 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
 else
   angelsmods.functions.add_flag("angels-plate-cobalt", "hidden")
   -- disable cobalt plate recipe
+end
+
+-------------------------------------------------------------------------------
+-- POWDER ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["cobalt"].powder then
+else
+  angelsmods.functions.add_flag("powder-cobalt", "hidden")
+  OV.disable_recipe({ "powder-cobalt" })
 end
