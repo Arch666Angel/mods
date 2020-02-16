@@ -930,8 +930,8 @@ function angelsmods.functions.make_resource()
       end
       --Set defaults for infinite resouces normal and maximum
       if input.infinite then
-        input.normal = 1500
-        input.maximum = 6000
+        input.normal = 150000
+        input.maximum = 600000
       end
       --Set mining hardness
       if input.hardness == nil then
