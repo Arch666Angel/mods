@@ -44,32 +44,33 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   angelsmods.functions.add_flag("salt", "hidden")
-end
-if not angelsmods.petrochem then
-  OV.disable_recipe({ "solid-salt-from-saline", "solid-salt" })
 
-  data:extend({
-    {
-      type = "recipe",
-      name = "salt-water-electrolysis-2",
-      category = "electrolysis",
-      enabled = "false",
-      energy_required = 1,
-      ingredients = {
-        {type = "fluid", name = "water-saline", amount = 40}
-      },
-      results = {
-        {type = "item", name = "sodium-hydroxide", amount = 1},
-        {type = "fluid", name = "chlorine", amount = 20},
-        {type = "fluid", name = "hydrogen", amount = 20}
-      },
-      icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
-      icon_size = 32,
-      subgroup = "bob-fluid-electrolysis",
-      order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
-    }
-  })
-  OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
+  if not angelsmods.petrochem then
+    OV.disable_recipe({ "solid-salt-from-saline", "solid-salt" })
+
+    data:extend({
+      {
+        type = "recipe",
+        name = "salt-water-electrolysis-2",
+        category = "electrolysis",
+        enabled = "false",
+        energy_required = 1,
+        ingredients = {
+          {type = "fluid", name = "water-saline", amount = 40}
+        },
+        results = {
+          {type = "item", name = "sodium-hydroxide", amount = 1},
+          {type = "fluid", name = "chlorine", amount = 20},
+          {type = "fluid", name = "hydrogen", amount = 20}
+        },
+        icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
+        icon_size = 32,
+        subgroup = "bob-fluid-electrolysis",
+        order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
+      }
+    })
+    OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
+  end
 end
 
 -------------------------------------------------------------------------------
@@ -105,14 +106,14 @@ end
 -------------------------------------------------------------------------------
 -- PURE-WATER -----------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] and data.raw.fluid["pure-water"] then
-  OV.global_replace_item("pure-water", "water-purified")
-  OV.disable_recipe({"pure-water", "pure-water-from-lithia"})
-  data.raw.fluid["pure-water"].hidden = true
-end
+if mods["bobplates"] then 
+  if data.raw.fluid["pure-water"] then
+    OV.global_replace_item("pure-water", "water-purified")
+    OV.disable_recipe({"pure-water", "pure-water-from-lithia"})
+    data.raw.fluid["pure-water"].hidden = true
+  end
 
   --Insert water resources to bob recipes
-if mods["bobplates"] then
   OV.patch_recipes({
     {name = "water-electrolysis", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}},
     {name = "nitric-acid", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}},

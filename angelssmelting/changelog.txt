@@ -5,7 +5,7 @@ Date: ??
     - Changes the smelting recipe generation to be more flexible and dynamic
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: 2020-02-09
+Date: 09.02.2020
   Changes:
     - updated to 0.18
     - disabled bobs silver nitrate recipe

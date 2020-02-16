@@ -16,7 +16,7 @@ local ore_exist = function (ore_name) return data.raw.item[ore_name] and true or
 -- angels refining default mode is to be special-vanilla, aka iron and copper only
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
-angelsmods.trigger.ores["uranium"] = true
+angelsmods.trigger.ores["uranium"] = mods.bobplates and true or false
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods.bobplates then
   angelsmods.trigger.ores["tin"] = ore_exist("tin-ore")
@@ -40,7 +40,8 @@ if mods.bobplates then
   --angelsmods.trigger.ores["gem-topaz"] = ore_exist("topaz-ore")
   --angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
 end
-angelsmods.trigger.ores["fluorite"] = true -- petrochem should enable this
+angelsmods.trigger.ores["fluorite"] = false -- angels petrochem enables this
+angelsmods.trigger.ores["platinum"] = false -- angels petrochem enables this
 angelsmods.trigger.ores["manganese"] = false -- angels smelting enables this
 angelsmods.trigger.ores["chrome"] = false -- angels smelting enables this
 
