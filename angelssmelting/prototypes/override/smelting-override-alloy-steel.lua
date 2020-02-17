@@ -42,4 +42,6 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or
         angelsmods.trigger.smelting_products["tin"].plate) then
   -- special vanilla
   OV.disable_recipe({"molten-steel-smelting-2", "molten-steel-smelting-3", "molten-steel-smelting-4", "molten-steel-smelting-5", "rod-stack-steel-casting", "angels-rod-stack-steel-converting", "rod-stack-steel-casting-fast"})
+else
+  OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
 end

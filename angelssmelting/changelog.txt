@@ -5,6 +5,8 @@ Date: ??
     - Changes the smelting recipe generation to be more flexible and dynamic
     - Added powder recipe for Aluminium, Gold
     - Added roll recipes for Chrome, Cobalt, Gold
+  Bugfixes:
+    - Fixed the icon on the gold wire recipe
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 09.02.2020

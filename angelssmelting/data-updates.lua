@@ -119,6 +119,9 @@ if angelsmods.trigger.smelting_products["gold"].plate then
   angelsmods.trigger.smelting_products["gold"].ingot = true
 end
 --iron
+if angelsmods.trigger.smelting_products["iron"].powder then
+  angelsmods.trigger.smelting_products["iron"].ingot = true
+end
 if angelsmods.trigger.smelting_products["iron"].plate then
   angelsmods.trigger.smelting_products["iron"].ingot = true
   if not is_special_vanilla(angelsmods.trigger.ores) then

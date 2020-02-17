@@ -575,8 +575,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "l[angels-plate-iron]-c", -- k[angels-plate-iron]-a reserved for crushed saphirite smelting (see global overrides)
-  },                                  -- k[angels-plate-iron]-b reserved for base game smelting recipe (see global overrides)
+    order = "l[angels-plate-iron]-c", -- l[angels-plate-iron]-a reserved for crushed saphirite smelting (see global overrides)
+  },                                  -- l[angels-plate-iron]-b reserved for base game smelting recipe (see global overrides)
   {
     type = "recipe",
     name = "angels-roll-iron-converting",
