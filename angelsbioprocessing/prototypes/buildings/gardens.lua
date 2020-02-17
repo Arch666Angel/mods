@@ -32,7 +32,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "za",
+      order = "xa",
       max_probability = 0.025,
       peaks =
       {
@@ -120,7 +120,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "zb",
+      order = "ya",
       max_probability = 0.025,
       peaks =
       {
@@ -201,7 +201,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "zc",
+      order = "ya",
       max_probability = 0.025,
       peaks =
       {
