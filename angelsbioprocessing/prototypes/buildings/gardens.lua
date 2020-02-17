@@ -32,7 +32,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "za",
+      order = "xab",
       max_probability = 0.025,
       peaks =
       {
@@ -42,9 +42,9 @@ data:extend(
         {
           influence = 0.0005,
           min_influence = 0,
-          water_optimal = 0.5,
-          water_range = 0.2,
-          water_max_range = 0.3,
+          water_optimal = 0.6,
+          water_range = 0.1,
+          water_max_range = 0.15,
         }
       },
       --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
@@ -120,7 +120,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "zb",
+      order = "yab",
       max_probability = 0.025,
       peaks =
       {
@@ -130,7 +130,7 @@ data:extend(
         {
           influence = 0.0005,
           min_influence = 0,
-          water_optimal = 0.1,
+          water_optimal = 0.225,
           water_range = 0.1,
           water_max_range = 0.15,
         }
@@ -201,7 +201,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "zc",
+      order = "yab",
       max_probability = 0.025,
       peaks =
       {
