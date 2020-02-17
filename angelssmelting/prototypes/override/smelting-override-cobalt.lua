@@ -18,7 +18,15 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     OV.disable_recipe({ "cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
   end
 else
+  angelsmods.functions.add_flag("processed-cobalt", "hidden")
+  angelsmods.functions.add_flag("pellet-cobalt", "hidden")
+  angelsmods.functions.add_flag("solid-cobalt-hydroxide", "hidden")
   angelsmods.functions.add_flag("solid-cobalt-oxide", "hidden")
+  angelsmods.functions.add_flag("ingot-cobalt", "hidden")
+  data.raw.fluid["liquid-molten-cobalt"].hidden = true
+  OV.disable_recipe({"cobalt-ore-processing", "cobalt-processed-processing"})
+  OV.disable_recipe({"pellet-cobalt-smelting", "processed-cobalt-smelting", "solid-cobalt-hydroxide-smelting"})
+  OV.disable_recipe({"cobalt-ore-smelting", "solid-cobalt-oxide-smelting"})
   OV.disable_technology({"angels-cobalt-smelting-1", "angels-cobalt-smelting-2", "angels-cobalt-smelting-3"})
 end
 
@@ -33,7 +41,9 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
   end
 else
   angelsmods.functions.add_flag("angels-plate-cobalt", "hidden")
-  -- disable cobalt plate recipe
+  angelsmods.functions.add_flag("angels-roll-cobalt", "hidden")
+  OV.disable_recipe({"roll-cobalt-casting", "roll-cobalt-casting-fast"})
+  OV.disable_recipe({"angels-plate-cobalt", "angels-roll-cobalt-converting"})
 end
 
 -------------------------------------------------------------------------------

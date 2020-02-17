@@ -97,12 +97,20 @@ if angelsmods.trigger.smelting_products["copper"].powder then
   angelsmods.trigger.smelting_products["copper"].ingot = true
 end
 --glass
+if angelsmods.trigger.smelting_products["glass"].board then
+  angelsmods.trigger.smelting_products["glass"].mixture = true
+  angelsmods.trigger.smelting_products["lead"].ingot = true
+  angelsmods.trigger.smelting_products["tin"].ingot = true
+end
 if angelsmods.trigger.smelting_products["glass"].plate then
   angelsmods.trigger.smelting_products["glass"].mixture = true
   angelsmods.trigger.smelting_products["lead"].ingot = true
   angelsmods.trigger.smelting_products["tin"].ingot = true
 end
 --gold
+if angelsmods.trigger.smelting_products["gold"].powder then
+  angelsmods.trigger.smelting_products["gold"].ingot = true
+end
 if angelsmods.trigger.smelting_products["gold"].wire then
   angelsmods.trigger.smelting_products["gold"].plate = true
   angelsmods.trigger.smelting_products["copper"].ingot = true

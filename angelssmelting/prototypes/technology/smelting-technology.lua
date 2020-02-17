@@ -731,11 +731,23 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "powder-gold"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "angels-wire-coil-gold-casting"
 			},
 			{
 				type = "unlock-recipe",
 				recipe = "angels-wire-coil-gold-converting"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "roll-gold-casting"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "angels-roll-gold-converting"
 			},
 		},
 		unit =
@@ -780,6 +792,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "angels-wire-coil-gold-casting-fast"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "roll-gold-casting-fast"
 			},
 		},
 		unit =

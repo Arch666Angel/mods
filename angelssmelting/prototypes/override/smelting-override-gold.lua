@@ -1,11 +1,29 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+if angelsmods.trigger.smelting_products["enable-all"] then
+  angelsmods.trigger.smelting_products["gold"].ingot = true
+  angelsmods.trigger.smelting_products["gold"].plate = true
+  angelsmods.trigger.smelting_products["gold"].wire = true
+  angelsmods.trigger.smelting_products["gold"].powder = true
+end
+
 -------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["gold"].ingot then
 else
+  angelsmods.functions.add_flag("processed-gold", "hidden")
+  angelsmods.functions.add_flag("pellet-gold", "hidden")
+  angelsmods.functions.add_flag("solid-sodium-gold-cyanide", "hidden")
+  data.raw.fluid["liquid-chlorauric-acid"].hidden = true
+  angelsmods.functions.add_flag("cathode-gold", "hidden")
+  angelsmods.functions.add_flag("ingot-gold", "hidden")
+  data.raw.fluid["liquid-molten-gold"].hidden = true
+  OV.disable_recipe({"gold-ore-processing", "gold-processed-processing"})
+  OV.disable_recipe({"pellet-gold-smelting", "liquid-chlorauric-acid", "processed-gold-smelting", "solid-sodium-gold-cyanide-smelting"})
+  OV.disable_recipe({"gold-ore-smelting", "cathode-gold-smelting"})
+  OV.disable_recipe({"molten-gold-smelting"})
   OV.disable_technology({"angels-gold-smelting-1", "angels-gold-smelting-2", "angels-gold-smelting-3"})
 end
 
@@ -22,7 +40,7 @@ if angelsmods.trigger.smelting_products["gold"].plate then
   end
 else
   angelsmods.functions.add_flag("angels-plate-gold", "hidden")
-  -- disable plate recipe
+  OV.disable_recipe({"angels-plate-gold"})
 end
 
 -------------------------------------------------------------------------------
@@ -35,7 +53,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "l")
     OV.patch_recipes({
       {
-        name = "tinned-copper-cable",
+        name = "gilded-copper-cable",
         subgroup = "angels-gold-casting",
         order = "l[angels-wire-gold]-a",
         icons = {
@@ -57,5 +75,17 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     })
   end
 else
-  -- disable coil and wire recipe
+  angelsmods.functions.add_flag("angels-roll-gold", "hidden")
+  angelsmods.functions.add_flag("angels-wire-coil-gold", "hidden")
+  OV.disable_recipe({"angels-wire-coil-gold-casting", "angels-wire-coil-gold-casting-fast"})
+  OV.disable_recipe({"angels-wire-coil-gold-converting"})
+end
+
+-------------------------------------------------------------------------------
+-- POWDER ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["gold"].powder then
+else
+  angelsmods.functions.add_flag("powder-gold", "hidden")
+  OV.disable_recipe({ "powder-gold" })
 end

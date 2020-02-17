@@ -18,6 +18,7 @@ angelsmods.functions.allow_productivity("angels-roll-copper-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-gold")
 angelsmods.functions.allow_productivity("angels-wire-coil-gold-converting")
+angelsmods.functions.allow_productivity("angels-roll-gold-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-iron")
 angelsmods.functions.allow_productivity("angels-roll-iron-converting")

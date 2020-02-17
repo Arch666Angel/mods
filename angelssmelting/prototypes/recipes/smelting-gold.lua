@@ -206,6 +206,24 @@ data:extend(
     icon_size = 32,
     order = "g[ingot-gold]-b",
   },
+  {
+    type = "recipe",
+    name = "powder-gold",
+    category = "advanced-crafting",
+    subgroup = "angels-gold",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-gold", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-gold", amount=1},
+    },
+    icon_size = 32,
+    order = "h[powder-gold]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -225,7 +243,105 @@ data:extend(
     main_product= "liquid-molten-gold",
     --icon = "__angelssmelting__/graphics/icons/molten-gold.png",
     icon_size = 32,
-    order = "h[liquid-molten-gold]",
+    order = "i[liquid-molten-gold]",
+  },
+  {
+    type = "recipe",
+    name = "roll-gold-casting",
+    category = "strand-casting",
+    subgroup = "angels-gold-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-gold", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-gold", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-gold", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-gold", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-gold.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "j[angels-roll-gold]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-gold-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-gold-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-gold", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-gold", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-gold",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-gold", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-gold", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-gold",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-gold.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "j[angels-roll-gold]-b",
   },
   {
     type = "recipe",
@@ -274,7 +390,7 @@ data:extend(
       }
     },    
     icon_size = 32,
-    order = "j[angels-wire-coil-gold]-a",
+    order = "k[angels-wire-coil-gold]-a",
   },
   {
     type = "recipe",
@@ -327,7 +443,7 @@ data:extend(
       }
     },    
     icon_size = 32,
-    order = "j[angels-wire-coil-gold]-b",
+    order = "k[angels-wire-coil-gold]-b",
   },
   -- CASTING RESULT
   {
@@ -372,7 +488,36 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "k[angels-plate-gold]",
+    order = "l[angels-plate-gold]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-roll-gold-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-gold-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-gold", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-gold", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-gold.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "l[angels-plate-gold]-b",
   },
   {
     type = "recipe",
@@ -401,7 +546,7 @@ data:extend(
       }
     },    
     icon_size = 32,
-    order = "l[angels-wire-gold]-b", -- l[angels-wire-gold]-a reserved for bob (see bob override)
+    order = "m[angels-wire-gold]-b", -- l[angels-wire-gold]-a reserved for bob (see bob override)
   },
 }
 )

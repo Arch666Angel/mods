@@ -1,10 +1,21 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
+
+if angelsmods.trigger.smelting_products["enable-all"] then
+  angelsmods.trigger.smelting_products["glass"].mixture = true
+  angelsmods.trigger.smelting_products["glass"].plate = true
+  angelsmods.trigger.smelting_products["glass"].board = true
+end
+
 -------------------------------------------------------------------------------
 -- MIXTURE --------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["glass"].mixture then
 else
+  angelsmods.functions.add_flag("solid-glass-mixture", "hidden")
+  data.raw.fluid["liquid-molten-glass"].hidden = true
+  OV.disable_recipe({"glass-mixture-1", "glass-mixture-2", "glass-mixture-3", "glass-mixture-4"})
+  OV.disable_recipe({"molten-glass-smelting"})
   OV.disable_technology({"angels-glass-smelting-1", "angels-glass-smelting-2", "angels-glass-smelting-3"})
 end
 
@@ -64,6 +75,16 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     })
   end
 
+
+else
+  angelsmods.functions.add_flag("angels-plate-glass", "hidden")
+  OV.disable_recipe({ "angels-plate-glass-1", "angels-plate-glass-2", "angels-plate-glass-3" })
+end
+
+-------------------------------------------------------------------------------
+-- BOARD ----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["glass"].board then
   if mods['bobelectronics'] then
     OV.patch_recipes({
       {
@@ -89,10 +110,13 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     })
     OV.add_unlock("angels-glass-smelting-3", "angels-glass-fiber-board")
     OV.add_prereq("advanced-electronics-2", "angels-glass-smelting-3" )
+
+     -- disable bob variant
     OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
     OV.disable_recipe({ "fibreglass-board" })
   end
 else
-  angelsmods.functions.add_flag("angels-plate-glass", "hidden")
-  -- todo disable recipes (?)
+  angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
+  OV.disable_recipe({ "angels-coil-glass-fiber" })
+  OV.disable_recipe({ "angels-glass-fiber-board" })
 end
