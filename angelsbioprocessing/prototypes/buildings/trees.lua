@@ -187,7 +187,7 @@ data:extend(
         {
           influence = 0.0005,
           min_influence = 0,
-          water_optimal = 0.375,
+          water_optimal = 0.25,
           water_range = 0.125,
           water_max_range = 0.125,
         }
