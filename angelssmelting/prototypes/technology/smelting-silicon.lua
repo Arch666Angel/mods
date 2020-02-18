@@ -65,6 +65,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "liquid-trichlorosilane-smelting"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "powder-silicon"
+      },
     },
     unit =
     {

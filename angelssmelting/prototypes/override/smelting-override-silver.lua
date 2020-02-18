@@ -1,6 +1,13 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+if angelsmods.trigger.smelting_products["enable-all"] then
+  angelsmods.trigger.smelting_products["silver"].ingot = true
+  angelsmods.trigger.smelting_products["silver"].plate = true
+  angelsmods.trigger.smelting_products["silver"].wire = true
+  angelsmods.trigger.smelting_products["silver"].powder = true
+end
+
 -------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -10,12 +17,22 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
     angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
     OV.disable_recipe({"silver-nitrate"})
+  end
 
-    angelsmods.functions.move_item("silver-oxide", "angels-silver-casting", "m[silver-oxide]")
-    OV.patch_recipes({ { name = "silver-oxide", subgroup = "angels-silver-casting", order = "m[silver-oxide]" } })
+  if mods['bobplates'] then
+    angelsmods.functions.move_item("silver-oxide", "angels-silver", "e")
+    data.raw.item["silver-oxide"].icon = "__angelssmelting__/graphics/icons/solid-silver-oxide.png"
+    data.raw.item["silver-oxide"].icon_size = 32
+    OV.patch_recipes({ { name = "silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]" } })
   end
 else
+  angelsmods.functions.add_flag("processed-silver", "hidden")
+  angelsmods.functions.add_flag("pellet-silver", "hidden")
   angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
+  angelsmods.functions.add_flag("solid-sodium-silver-cyanide", "hidden")
+  angelsmods.functions.add_flag("cathode-silver", "hidden")
+  angelsmods.functions.add_flag("ingot-silver", "hidden")
+  data.raw.fluid["liquid-molten-silver"].hidden = true
   OV.disable_technology({"angels-silver-smelting-1", "angels-silver-smelting-2", "angels-silver-smelting-3"})
 end
 
@@ -66,13 +83,19 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         },
         icon_size = 32,
         subgroup = "angels-silver-casting",
-        order = "k[angels-plate-silver]-a"
+        order = "m[angels-plate-silver]-a"
+      },
+      {
+        name = "angels-wire-coil-silver-converting",
+        category = "electronics-machine"
       },
     })
   end
 else
-  -- disable roll and plate recipes
   angelsmods.functions.add_flag("angels-plate-silver", "hidden")
+  angelsmods.functions.add_flag("angels-roll-silver", "hidden")
+  OV.disable_recipe({"roll-silver-casting", "roll-silver-casting-fast"})
+  OV.disable_recipe({"angels-plate-silver", "angels-roll-silver-converting"})
 end
 
 -------------------------------------------------------------------------------
@@ -80,5 +103,17 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silver"].wire then
 else
-  -- disable coil and wire recipes
+  angelsmods.functions.add_flag("angels-wire-silver", "hidden")
+  angelsmods.functions.add_flag("angels-wire-coil-silver", "hidden")
+  OV.disable_recipe({"angels-wire-coil-silver-casting", "angels-wire-coil-silver-casting-fast"})
+  OV.disable_recipe({"angels-wire-coil-silver-converting"})
+end
+
+-------------------------------------------------------------------------------
+-- POWDER ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["silver"].powder then
+else
+  angelsmods.functions.add_flag("powder-silver", "hidden")
+  OV.disable_recipe({ "powder-silver" })
 end

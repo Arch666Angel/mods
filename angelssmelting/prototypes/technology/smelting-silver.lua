@@ -63,11 +63,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "powder-silver"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-wire-coil-silver-casting"
       },
       {
         type = "unlock-recipe",
         recipe = "angels-wire-coil-silver-converting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-silver-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-silver-converting"
       },
     },
     unit =
@@ -116,6 +128,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-wire-coil-silver-casting-fast"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-silver-casting-fast"
       },
     },
     unit =

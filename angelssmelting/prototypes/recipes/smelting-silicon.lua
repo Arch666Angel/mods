@@ -3,6 +3,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 data:extend(
 {
   --SILICON
+  -- SMELTING INTERMEDIATE
   {
     type = "recipe",
     name = "silica-ore-processing",
@@ -23,7 +24,6 @@ data:extend(
     icon_size = 32,
     order = "b[processed-silica]",
   },
-  -- SMELTING INTERMEDIATE
   {
     type = "recipe",
     name = "silica-processed-processing",
@@ -178,6 +178,24 @@ data:extend(
     icon_size = 32,
     order = "f[ingot-silicon]-c",
   },
+  {
+    type = "recipe",
+    name = "powder-silicon",
+    category = "advanced-crafting",
+    subgroup = "angels-silicon",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-silicon", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-silicon", amount=1},
+    },
+    icon_size = 32,
+    order = "g[powder-silicon]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -197,7 +215,7 @@ data:extend(
     main_product= "liquid-molten-silicon",
     --icon = "__angelssmelting__/graphics/icons/molten-silicon.png",
     icon_size = 32,
-    order = "g[liquid-molten-silicon]",
+    order = "h[liquid-molten-silicon]",
   },
   {
     type = "recipe",
@@ -233,7 +251,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "h[angels-mono-silicon-seed]",
+    order = "i[angels-mono-silicon-seed]",
   },
   {
     type = "recipe",
@@ -267,7 +285,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "i[angels-quartz-crucible]",
+    order = "j[angels-quartz-crucible]",
     },
   -- CASTING RESULT
   {
@@ -315,7 +333,7 @@ data:extend(
       },
     },    
     icon_size = 32,
-    order = "j[angels-mono-silicon]-a",
+    order = "k[angels-mono-silicon]-a",
   },
   {
     type = "recipe",
@@ -368,7 +386,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "j[angels-mono-silicon]-b",
+    order = "k[angels-mono-silicon]-b",
   },
   -- order k reserved for bob silicon processing
 }

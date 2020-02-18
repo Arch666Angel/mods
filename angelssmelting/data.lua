@@ -72,7 +72,7 @@ angelsmods.trigger.smelting_products["glass"].board = mods["bobelectronics"] and
 angelsmods.trigger.smelting_products["gold"].plate = mods["bobplates"] and true or false
 angelsmods.trigger.smelting_products["gold"].wire = mods["bobelectronics"] and true or false
 --iron
-angelsmods.trigger.smelting_products["iron"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["iron"].plate = true
 --lead
 angelsmods.trigger.smelting_products["lead"].plate = mods["bobplates"] and true or false
 --litium
@@ -82,6 +82,7 @@ angelsmods.trigger.smelting_products["nickel"].plate = mods["bobplates"] and tru
 --platinum
 --silicon
 angelsmods.trigger.smelting_products["silicon"].mono = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["silicon"].powder = mods["bobplates"] and true or false
 --silver
 angelsmods.trigger.smelting_products["silver"].plate = mods["bobplates"] and true or false
 angelsmods.trigger.smelting_products["silver"].wire = false

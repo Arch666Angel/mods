@@ -80,7 +80,7 @@ data:extend(
     },
     main_product= "solid-sodium-silver-cyanide",
     icon_size = 32,
-    order = "e[solid-sodium-silver-cyanide]",
+    order = "f[solid-sodium-silver-cyanide]",
   },
   {
     type = "recipe",
@@ -98,7 +98,7 @@ data:extend(
       {type="item", name="cathode-silver", amount=12},
     },
     icon_size = 32,
-    order = "f[cathode-silver]",
+    order = "g[cathode-silver]",
   },
   -- SMELTING RESULTS
   {
@@ -128,7 +128,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "g[ingot-silver]-a",
+    order = "h[ingot-silver]-a",
   },
   {
     type = "recipe",
@@ -157,7 +157,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "g[ingot-silver]-b",
+    order = "h[ingot-silver]-b",
   },
   {
     type = "recipe",
@@ -186,7 +186,25 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "g[ingot-silver]-c",
+    order = "h[ingot-silver]-c",
+  },
+  {
+    type = "recipe",
+    name = "powder-silver",
+    category = "advanced-crafting",
+    subgroup = "angels-silver",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-silver", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-silver", amount=1},
+    },
+    icon_size = 32,
+    order = "i[powder-silver]",
   },
   -- CASTING INTERMEDIATE
   {
@@ -205,9 +223,106 @@ data:extend(
       {type="fluid", name="liquid-molten-silver", amount=120},
     },
     icon_size = 32,
-    order = "h[liquid-molten-silver]",
+    order = "j[liquid-molten-silver]",
   },
-  -- order i is reserved for silver sheet coil
+  {
+    type = "recipe",
+    name = "roll-silver-casting",
+    category = "strand-casting",
+    subgroup = "angels-silver-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-silver", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-silver", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-silver", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-silver", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-silver.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "k[angels-roll-silver]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-silver-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-silver-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-silver", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-silver", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-silver",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-silver", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-silver", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-silver",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-silver.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "k[angels-roll-silver]-b",
+  },
   {
     type = "recipe",
     name = "angels-wire-coil-silver-casting",
@@ -255,7 +370,7 @@ data:extend(
       }
     },    
     icon_size = 32,
-    order = "j[angels-wire-coil-silver]-a",
+    order = "l[angels-wire-coil-silver]-a",
   },
   {
     type = "recipe",
@@ -308,7 +423,7 @@ data:extend(
       }
     },    
     icon_size = 32,
-    order = "j[angels-wire-coil-silver]-b",
+    order = "l[angels-wire-coil-silver]-b",
   },
   -- CASTING RESULT
   {
@@ -353,7 +468,36 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "k[angels-plate-silver]-b", -- k[angels-plate-silver]-a reserved for silver ore smelting (see bob overrides)
+    order = "m[angels-plate-silver]-b", -- m[angels-plate-silver]-a reserved for silver ore smelting (see silver overrides)
+  },
+  {
+    type = "recipe",
+    name = "angels-roll-silver-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-silver-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-silver", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-silver", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-silver.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-silver.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "m[angels-plate-silver]-c",
   },
   {
     type = "recipe",
@@ -382,8 +526,8 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "l[angels-wire-silver]",
+    order = "n[angels-wire-silver]",
   },
-  -- order m reserved for bob
+  -- order n reserved for bob
 }
 )

@@ -158,6 +158,9 @@ if angelsmods.trigger.smelting_products["platinum"].powder then
   angelsmods.trigger.smelting_products["platinum"].ingot = true
 end
 --silicon
+if angelsmods.trigger.smelting_products["silicon"].powder then
+  angelsmods.trigger.smelting_products["silicon"].ingot = true
+end
 if angelsmods.trigger.smelting_products["silicon"].mono then
   angelsmods.trigger.smelting_products["silicon"].ingot = true
 end
@@ -167,6 +170,9 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   angelsmods.trigger.smelting_products["copper"].ingot = true
 end
 if angelsmods.trigger.smelting_products["silver"].plate then
+  angelsmods.trigger.smelting_products["silver"].ingot = true
+end
+if angelsmods.trigger.smelting_products["silver"].powder then
   angelsmods.trigger.smelting_products["silver"].ingot = true
 end
 --tin

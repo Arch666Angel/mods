@@ -40,10 +40,6 @@ OV.patch_recipes({
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
   { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
-OV.global_replace_item("angels-plate-copper", "copper-plate")
-angelsmods.functions.add_flag("angels-plate-copper", "hidden")
-OV.global_replace_item("angels-wire-copper", "copper-cable")
-angelsmods.functions.add_flag("angels-wire-copper", "hidden")
 
 -------------------------------------------------------------------------------
 -- ANGEL OVERRIDES ------------------------------------------------------------
@@ -63,17 +59,19 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or
   -- special vanilla
   OV.patch_recipes({
     { 
-    name = "cement-mixture-1",
-    ingredients = {
-      { name = "stone-crushed", type = "item", amount = "quartz" },
-    },
+      name = "cement-mixture-1",
+      ingredients =
+      {
+        { name = "stone-crushed", type = "item", amount = "quartz" },
+      },
     },
     { 
-    name = "cement-mixture-2",
-    ingredients = {
-      { name = "stone-crushed", type = "item", amount = "quartz" },
-      { name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
-    },
+      name = "cement-mixture-2",
+      ingredients =
+      {
+        { name = "stone-crushed", type = "item", amount = "quartz" },
+        { name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
+      },
     }
   })
 end
