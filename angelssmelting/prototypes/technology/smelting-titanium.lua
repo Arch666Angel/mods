@@ -76,6 +76,10 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "powder-titanium"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "roll-titanium-casting"
       },
       {

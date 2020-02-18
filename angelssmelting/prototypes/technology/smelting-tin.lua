@@ -58,11 +58,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "powder-tin"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-wire-coil-tin-casting"
       },
       {
         type = "unlock-recipe",
         recipe = "angels-wire-coil-tin-converting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-tin-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-tin-converting"
       },
     },
     unit =
@@ -101,6 +113,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-wire-coil-tin-casting-fast"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-tin-casting-fast"
       },
     },
     unit =

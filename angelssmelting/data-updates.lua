@@ -183,6 +183,9 @@ end
 if angelsmods.trigger.smelting_products["tin"].plate then
   angelsmods.trigger.smelting_products["tin"].ingot = true
 end
+if angelsmods.trigger.smelting_products["tin"].powder then
+  angelsmods.trigger.smelting_products["tin"].ingot = true
+end
 --titanium
 if angelsmods.trigger.smelting_products["titanium"].plate then
   angelsmods.trigger.smelting_products["titanium"].ingot = true
@@ -192,6 +195,9 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
   angelsmods.trigger.smelting_products["aluminium"].ingot = true
   angelsmods.trigger.smelting_products["cobalt"].ingot = true
   angelsmods.trigger.smelting_products["chrome"].ingot = true
+end
+if angelsmods.trigger.smelting_products["titanium"].powder then
+  angelsmods.trigger.smelting_products["titanium"].ingot = true
 end
 --zinc
 if angelsmods.trigger.smelting_products["zinc"].plate then

@@ -43,7 +43,7 @@ if bobmods and bobmods.plates then
   -- plates
   data.raw["item"]["tin-plate"].icon = "__angelssmelting__/graphics/icons/plate-tin.png"
   data.raw["item"]["tin-plate"].subgroup = "angels-tin-casting"
-  data.raw["item"]["tin-plate"].order = "g"
+  data.raw["item"]["tin-plate"].order = "i"
   data.raw["item"]["tin-plate"].icon_size = 32
   data.raw["item"]["silver-plate"].icon = "__angelssmelting__/graphics/icons/plate-silver.png"
   data.raw["item"]["silver-plate"].subgroup = "angels-silver-casting"
@@ -100,7 +100,7 @@ if bobmods and bobmods.plates then
   data.raw["item"]["silver-nitrate"].icon_size = 32
   data.raw["item"]["titanium-plate"].icon = "__angelssmelting__/graphics/icons/plate-titanium.png"
   data.raw["item"]["titanium-plate"].subgroup = "angels-titanium-casting"
-  data.raw["item"]["titanium-plate"].order = "i"
+  data.raw["item"]["titanium-plate"].order = "j"
   data.raw["item"]["titanium-plate"].icon_size = 32
   data.raw["item"]["tungsten-plate"].icon = "__angelssmelting__/graphics/icons/plate-tungsten.png"
   data.raw["item"]["tungsten-plate"].subgroup = "angels-tungsten-casting"

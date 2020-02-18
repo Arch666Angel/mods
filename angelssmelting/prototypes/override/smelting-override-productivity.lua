@@ -24,22 +24,28 @@ angelsmods.functions.allow_productivity("angels-plate-iron")
 angelsmods.functions.allow_productivity("angels-roll-iron-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-lead")
+angelsmods.functions.allow_productivity("angels-roll-lead-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-manganese")
+angelsmods.functions.allow_productivity("angels-roll-manganese-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-nickel")
+angelsmods.functions.allow_productivity("angels-roll-nickel-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-platinum")
 angelsmods.functions.allow_productivity("angels-wire-coil-platinum-converting")
+angelsmods.functions.allow_productivity("angels-roll-platinum-converting")
 
 angelsmods.functions.allow_productivity("angels-mono-silicon-1")
 angelsmods.functions.allow_productivity("angels-mono-silicon-2")
 
 angelsmods.functions.allow_productivity("angels-plate-silver")
 angelsmods.functions.allow_productivity("angels-wire-coil-silver-converting")
+angelsmods.functions.allow_productivity("angels-roll-silver-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-tin")
 angelsmods.functions.allow_productivity("angels-wire-coil-tin-converting")
+angelsmods.functions.allow_productivity("angels-roll-tin-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-titanium")
 angelsmods.functions.allow_productivity("angels-roll-titanium-converting")

@@ -130,6 +130,24 @@ data:extend(
     icon_size = 32,
     order = "d[ingot-tin]-c",
   },
+  {
+    type = "recipe",
+    name = "powder-tin",
+    category = "advanced-crafting",
+    subgroup = "angels-tin",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-tin", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-tin", amount=1},
+    },
+    icon_size = 32,
+    order = "e[powder-tin]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -148,7 +166,105 @@ data:extend(
     },
     main_product= "liquid-molten-tin",
     icon_size = 32,
-    order = "e[liquid-molten-tin]",
+    order = "f[liquid-molten-tin]",
+  },
+  {
+    type = "recipe",
+    name = "roll-tin-casting",
+    category = "strand-casting",
+    subgroup = "angels-tin-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-tin", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-tin", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-tin", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-tin", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-tin.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "g[angels-roll-tin]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-tin-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-tin-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-tin", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-tin", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-tin",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-tin", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-tin", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-tin",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-tin.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "g[angels-roll-tin]-b",
   },
   {
     type = "recipe",
@@ -197,7 +313,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "f[angels-wire-coil-tin]-a",
+    order = "h[angels-wire-coil-tin]-a",
   },
   {
     type = "recipe",
@@ -250,7 +366,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "f[angels-wire-coil-tin]-b",
+    order = "h[angels-wire-coil-tin]-b",
   },
   -- CASTING RESULT
   {
@@ -295,8 +411,37 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "g[angels-plate-tin]-c", -- g[angels-plate-tin]-a reserved for crushed bobmonium smelting (see global overrides)
-  },                                 -- g[angels-plate-tin]-b reserved for tin ore smelting (see bob overrides)
+    order = "i[angels-plate-tin]-c", -- i[angels-plate-tin]-a reserved for crushed bobmonium smelting (see tin overrides)
+  },                                 -- i[angels-plate-tin]-b reserved for tin ore smelting (see tin overrides)
+  {
+    type = "recipe",
+    name = "angels-roll-tin-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-tin-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-tin", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-tin", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-tin.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "i[angels-plate-tin]-d",
+  },
   {
     type = "recipe",
     name = "angels-wire-coil-tin-converting",
@@ -324,7 +469,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "h[angels-wire-tin]-b", -- h[angels-wire-tin]-a reserved for bob (see bob override)
+    order = "j[angels-wire-tin]-b", -- j[angels-wire-tin]-a reserved for bob (see tin override)
   },
 }
 )
