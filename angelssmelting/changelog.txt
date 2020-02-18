@@ -3,8 +3,8 @@ Version: 0.6.1
 Date: ??
   Changes:
     - Changes the smelting recipe generation to be more flexible and dynamic
-    - Added powder recipe for Aluminium, Gold, Lead, Manganese
-    - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel
+    - Added powder recipe for Aluminium, Gold, Lead, Manganese, Platinum
+    - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel, Platinum
   Bugfixes:
     - Fixed the icon on the gold wire recipe
 ---------------------------------------------------------------------------------------------------

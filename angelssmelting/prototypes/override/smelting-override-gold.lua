@@ -77,7 +77,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     })
   end
 else
-  angelsmods.functions.add_flag("angels-roll-gold", "hidden")
+  angelsmods.functions.add_flag("angels-wire-gold", "hidden")
   angelsmods.functions.add_flag("angels-wire-coil-gold", "hidden")
   OV.disable_recipe({"angels-wire-coil-gold-casting", "angels-wire-coil-gold-casting-fast"})
   OV.disable_recipe({"angels-wire-coil-gold-converting"})

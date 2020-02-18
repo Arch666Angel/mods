@@ -59,11 +59,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "powder-platinum"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-wire-coil-platinum-casting"
       },
       {
         type = "unlock-recipe",
         recipe = "angels-wire-coil-platinum-converting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-platinum-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-platinum-converting"
       },
     },
     unit =
@@ -113,6 +125,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-wire-coil-platinum-casting-fast"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-platinum-casting-fast"
       },
     },
     unit =
