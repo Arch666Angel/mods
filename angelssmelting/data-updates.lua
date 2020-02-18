@@ -203,6 +203,9 @@ end
 if angelsmods.trigger.smelting_products["zinc"].plate then
   angelsmods.trigger.smelting_products["zinc"].ingot = true
 end
+if angelsmods.trigger.smelting_products["zinc"].powder then
+  angelsmods.trigger.smelting_products["zinc"].ingot = true
+end
 --manganese
 if angelsmods.trigger.smelting_products["manganese"].powder then
   angelsmods.trigger.smelting_products["manganese"].ingot = true

@@ -57,6 +57,18 @@ data:extend({
         type = "unlock-recipe",
         recipe = "processed-zinc-smelting"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "powder-zinc"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-zinc-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-zinc-converting"
+      },
     },
     unit =
     {
@@ -99,6 +111,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cathode-zinc-smelting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-zinc-casting-fast"
       },
     },
     unit =

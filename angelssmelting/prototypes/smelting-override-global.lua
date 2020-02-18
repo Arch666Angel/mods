@@ -67,7 +67,7 @@ if bobmods and bobmods.plates then
   data.raw["item"]["nickel-plate"].icon_size = 32
   data.raw["item"]["zinc-plate"].icon = "__angelssmelting__/graphics/icons/plate-zinc.png"
   data.raw["item"]["zinc-plate"].subgroup = "angels-zinc-casting"
-  data.raw["item"]["zinc-plate"].order = "i"
+  data.raw["item"]["zinc-plate"].order = "j"
   data.raw["item"]["zinc-plate"].icon_size = 32
   data.raw["item"]["aluminium-plate"].icon = "__angelssmelting__/graphics/icons/plate-aluminium.png"
   data.raw["item"]["aluminium-plate"].subgroup = "angels-aluminium-casting"

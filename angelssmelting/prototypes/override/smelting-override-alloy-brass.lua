@@ -231,4 +231,5 @@ if mods["bobplates"] and angelsmods.trigger.smelting_products["brass"].plate the
   })
   OV.disable_recipe({ "brass-alloy" })
   angelsmods.functions.allow_productivity("angels-plate-brass")
+  OV.add_prereq( "zinc-processing", "angels-brass-smelting-1" )
 end
