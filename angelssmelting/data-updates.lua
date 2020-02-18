@@ -180,6 +180,16 @@ end
 if angelsmods.trigger.smelting_products["zinc"].plate then
   angelsmods.trigger.smelting_products["zinc"].ingot = true
 end
+--manganese
+if angelsmods.trigger.smelting_products["manganese"].powder then
+  angelsmods.trigger.smelting_products["manganese"].ingot = true
+end
+if angelsmods.trigger.smelting_products["manganese"].plate then
+  angelsmods.trigger.smelting_products["manganese"].ingot = true
+end
+if angelsmods.trigger.smelting_products["manganese"].ingot then
+  angelsmods.trigger.smelting_products["iron"].ingot = true
+end
 
 --Overrides for refining/angels internal
 require("prototypes.smelting-override")

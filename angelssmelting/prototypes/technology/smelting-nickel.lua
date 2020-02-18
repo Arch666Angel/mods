@@ -65,6 +65,14 @@ data:extend({
         type = "unlock-recipe",
         recipe = "powder-nickel"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-nickel-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-nickel-converting"
+      },
     },
     unit =
     {
@@ -102,6 +110,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "solid-nickel-carbonyl-smelting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-nickel-casting-fast"
       },
     },
     unit =

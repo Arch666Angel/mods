@@ -52,7 +52,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
   if data.raw.item["gilded-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-gold", "gilded-copper-cable")
     angelsmods.functions.add_flag("angels-wire-gold", "hidden")
-    angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "l")
+    angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "m")
     OV.patch_recipes({
       {
         name = "gilded-copper-cable",

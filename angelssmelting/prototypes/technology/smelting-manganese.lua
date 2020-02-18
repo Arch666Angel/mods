@@ -61,6 +61,18 @@ data:extend({
         type = "unlock-recipe",
         recipe = "cathode-manganese-smelting"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "powder-manganese"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-manganese-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-manganese-converting"
+      },
     },
     unit =
     {
@@ -104,6 +116,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "solid-iron-hydroxide-smelting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-manganese-casting-fast"
       },
     },
     unit =
