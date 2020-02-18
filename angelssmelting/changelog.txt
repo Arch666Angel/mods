@@ -7,6 +7,7 @@ Date: ??
     - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel, Platinum, Silver, Tin
     - Changed bobs powdered silicon icon for angels version for consistency
     - Updated bobs silver oxide icon to be consistent with angels icons
+    - Renamed Powdered Tungsten to Tungsten Powder to be in line with other angel powders
   Bugfixes:
     - Fixed the icon on the gold wire recipe
 ---------------------------------------------------------------------------------------------------
