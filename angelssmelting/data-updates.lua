@@ -133,6 +133,9 @@ if angelsmods.trigger.smelting_products["iron"].plate then
   end
 end
 --lead
+if angelsmods.trigger.smelting_products["lead"].powder then
+  angelsmods.trigger.smelting_products["lead"].ingot = true
+end
 if angelsmods.trigger.smelting_products["lead"].plate then
   angelsmods.trigger.smelting_products["lead"].ingot = true
 end

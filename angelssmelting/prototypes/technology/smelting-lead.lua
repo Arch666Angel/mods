@@ -60,6 +60,18 @@ data:extend({
         type = "unlock-recipe",
         recipe = "solid-lead-oxide-smelting"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "powder-lead"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-lead-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-lead-converting"
+      },
     },
     unit =
     {
@@ -101,6 +113,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "anode-lead-smelting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "roll-lead-casting-fast"
       },
     },
     unit =

@@ -40,7 +40,9 @@ if angelsmods.trigger.smelting_products["gold"].plate then
   end
 else
   angelsmods.functions.add_flag("angels-plate-gold", "hidden")
-  OV.disable_recipe({"angels-plate-gold"})
+  angelsmods.functions.add_flag("angels-roll-gold", "hidden")
+  OV.disable_recipe({"roll-gold-casting", "roll-gold-casting-fast"})
+  OV.disable_recipe({"angels-plate-gold", "angels-roll-gold-converting"})
 end
 
 -------------------------------------------------------------------------------
