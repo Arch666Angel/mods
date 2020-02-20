@@ -16,6 +16,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.ores["tin"] = true
   angelsmods.trigger.ores["titanium"] = true
   angelsmods.trigger.ores["tungsten"] = true
+  angelsmods.trigger.ores["uranium"] = true
   angelsmods.trigger.ores["zinc"] = true
 
   --SMELTING TRIGGERS
@@ -25,6 +26,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.smelting_products["aluminium"].plate = true
   angelsmods.trigger.smelting_products["copper"].plate = true
   angelsmods.trigger.smelting_products["copper"].wire = true
+  angelsmods.trigger.smelting_products["glass"].board = true
   angelsmods.trigger.smelting_products["gold"].plate = true
   angelsmods.trigger.smelting_products["gold"].wire = true
   angelsmods.trigger.smelting_products["iron"].plate = true

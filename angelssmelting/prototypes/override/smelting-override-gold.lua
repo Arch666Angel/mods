@@ -53,34 +53,14 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     OV.global_replace_item("angels-wire-gold", "gilded-copper-cable")
     angelsmods.functions.add_flag("angels-wire-gold", "hidden")
     angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "m")
-    OV.patch_recipes({
-      {
-        name = "gilded-copper-cable",
-        subgroup = "angels-gold-casting",
-        order = "l[angels-wire-gold]-a",
-        icons = {
-          {
-            icon = "__angelssmelting__/graphics/icons/wire-gold.png",
-          },
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-gold.png",
-            scale = 0.4375,
-            shift = { -10, -10},
-          }
-        },
-        icon_size = 32,
-      },
-      {
-        name = "angels-wire-coil-gold-converting",
-        category = "electronics-machine"
-      },
-    })
+    OV.disable_recipe({"gilded-copper-cable"})
+    OV.patch_recipes({ { name = "angels-wire-coil-gold-converting", category = "electronics-machine" } })
   end
 else
   angelsmods.functions.add_flag("angels-wire-gold", "hidden")
   angelsmods.functions.add_flag("angels-wire-coil-gold", "hidden")
   OV.disable_recipe({"angels-wire-coil-gold-casting", "angels-wire-coil-gold-casting-fast"})
-  OV.disable_recipe({"angels-wire-coil-gold-converting"})
+  OV.disable_recipe({"angels-wire-gold", "angels-wire-coil-gold-converting"})
 end
 
 -------------------------------------------------------------------------------

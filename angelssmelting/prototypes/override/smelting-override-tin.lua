@@ -99,34 +99,14 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
     angelsmods.functions.add_flag("angels-wire-tin", "hidden")
     angelsmods.functions.move_item("tinned-copper-cable", "angels-tin-casting", "j")
-    OV.patch_recipes({
-      {
-        name = "tinned-copper-cable",
-        subgroup = "angels-tin-casting",
-        order = "j[angels-wire-tin]-a",
-        icons = {
-          {
-            icon = "__angelssmelting__/graphics/icons/wire-tin.png",
-          },
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-tin.png",
-            scale = 0.4375,
-            shift = { -10, -10},
-          }
-        },
-        icon_size = 32,
-      },
-      {
-        name = "angels-wire-coil-tin-converting",
-        category = "electronics-machine"
-      },
-    })
+    OV.disable_recipe({"tinned-copper-cable"})
+    OV.patch_recipes({ { name = "angels-wire-coil-tin-converting", category = "electronics-machine" } })
   end
 else
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")
   angelsmods.functions.add_flag("angels-wire-coil-tin", "hidden")
   OV.disable_recipe({"angels-wire-coil-tin-casting", "angels-wire-coil-tin-casting-fast"})
-  OV.disable_recipe({"angels-wire-coil-tin-converting"})
+  OV.disable_recipe({"basic-tinned-copper-wire", "angels-wire-coil-tin-converting"})
 end
 
 -------------------------------------------------------------------------------

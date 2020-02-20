@@ -480,6 +480,36 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "basic-platinated-copper-wire",
+    subgroup = "angels-platinum-casting",
+    order = "m",
+    enabled = false,
+    category = "crafting",
+    energy_required = 0.5,
+    ingredients =
+    {
+      {type="item", name ="copper-cable", amount=10},
+      {type="item", name="angels-plate-platinum", amount=4},
+    },
+    results=
+    {
+      {type="item", name="angels-wire-platinum", amount=5},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/wire-platinum.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-platinum.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
+    icon_size = 32,
+    order = "l[angels-wire-platinum]-a",
+  },
+  {
+    type = "recipe",
     name = "angels-wire-coil-platinum-converting",
     category = "advanced-crafting",
     subgroup = "angels-platinum-casting",
@@ -505,7 +535,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "l[angels-wire-platinum]",
+    order = "l[angels-wire-platinum]-b",
   },
 }
 )

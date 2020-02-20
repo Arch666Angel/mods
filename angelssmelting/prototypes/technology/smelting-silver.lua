@@ -22,6 +22,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-plate-silver"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "basic-silvered-copper-wire"
+      },
     },
     unit =
     {

@@ -261,7 +261,7 @@ OV.patch_recipes(merge_table_of_tables{
     ["nickel-ore"  ] = (not special_vanilla) and {1, 1, 1, 2},
     ["bauxite-ore" ] = (not special_vanilla) and {0, 1, 1, 1},
     ["gold-ore"    ] = (not special_vanilla) and {0, 1, 1, 1},
-    ["rulite-ore"  ] = (not special_vanilla) and {0, 0, 1, 1},
+    ["rutile-ore"  ] = (not special_vanilla) and {0, 0, 1, 1},
     ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1},
   }),
   -- BOBMONIUM

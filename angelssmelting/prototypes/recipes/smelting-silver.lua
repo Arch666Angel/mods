@@ -501,6 +501,36 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "basic-silvered-copper-wire",
+    subgroup = "angels-silver-casting",
+    order = "m",
+    enabled = false,
+    category = "crafting",
+    energy_required = 0.5,
+    ingredients =
+    {
+      {type="item", name ="copper-cable", amount=10},
+      {type="item", name="angels-plate-silver", amount=4},
+    },
+    results=
+    {
+      {type="item", name="angels-wire-silver", amount=5},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/wire-silver.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-silver.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
+    icon_size = 32,
+    order = "n[angels-wire-silver]-a",
+  },
+  {
+    type = "recipe",
     name = "angels-wire-coil-silver-converting",
     category = "advanced-crafting",
     subgroup = "angels-silver-casting",
@@ -526,7 +556,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "n[angels-wire-silver]",
+    order = "n[angels-wire-silver]-b",
   },
   -- order n reserved for bob
 }

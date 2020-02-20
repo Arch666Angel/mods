@@ -487,5 +487,6 @@ data:extend(
     icon_size = 32,
     order = "k[angels-plate-aluminium]-b",
   },
+  -- order l reserved for motor casting (see industries)
 }
 )

@@ -521,6 +521,35 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "angels-wire-gold",
+    subgroup = "angels-gold-casting",
+    enabled = false,
+    category = "crafting",
+    energy_required = 0.5,
+    ingredients =
+    {
+      {type="item", name = "copper-cable", amount=10},
+      {type="item", name="angels-plate-gold", amount=4},
+    },
+    results=
+    {
+      {type="item", name="angels-wire-gold", amount=5},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/wire-gold.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
+    icon_size = 32,
+    order = "m[angels-wire-gold]-a",
+  },
+  {
+    type = "recipe",
     name = "angels-wire-coil-gold-converting",
     category = "advanced-crafting",
     subgroup = "angels-gold-casting",
@@ -544,9 +573,9 @@ data:extend(
         scale = 0.4375,
         shift = { -10, -10},
       }
-    },    
+    },
     icon_size = 32,
-    order = "m[angels-wire-gold]-b", -- l[angels-wire-gold]-a reserved for bob (see bob override)
+    order = "m[angels-wire-gold]-b",
   },
 }
 )

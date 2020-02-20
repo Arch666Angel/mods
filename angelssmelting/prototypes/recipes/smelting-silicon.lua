@@ -397,11 +397,11 @@ data:extend(
     energy_required = 2,
     ingredients =
     {
-      {type="item", name="angels-mono-silicon", amount=2}
+      {type="item", name="angels-mono-silicon", amount=1}
     },
     results=
     {
-      {type="item", name="angels-silicon-wafer", amount=4}
+      {type="item", name="angels-silicon-wafer", amount_min=1, amount_max=5}
     },
     icon_size = 32,
     order = "l[angels-silicon-wafer]",

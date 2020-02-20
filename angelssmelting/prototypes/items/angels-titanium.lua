@@ -108,5 +108,6 @@ data:extend(
     order = "j",
     stack_size = 200
   },
+  -- order k reserved for motor casting (see industries)
 }
 )

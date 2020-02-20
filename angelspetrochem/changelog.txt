@@ -1,10 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.2
-Date: ??.02.2020
+Date: ??
   Changes:
     - Updated emission data, so it now shows in the ingame toolips (and activates)
     - Updated fuel values to be based on volume not mass (and globally balanced down) GH#38
       - For reference Hydrogen is only 33kJ now
+  Bugfixes:
+    - Marked the Metal Catalyst Carrier result in recipes as a catalyst ingredient
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 12.02.2020

@@ -23,6 +23,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-plate-gold"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-wire-gold"
+      },
     },
     unit =
     {

@@ -106,7 +106,7 @@ else
   angelsmods.functions.add_flag("angels-wire-silver", "hidden")
   angelsmods.functions.add_flag("angels-wire-coil-silver", "hidden")
   OV.disable_recipe({"angels-wire-coil-silver-casting", "angels-wire-coil-silver-casting-fast"})
-  OV.disable_recipe({"angels-wire-coil-silver-converting"})
+  OV.disable_recipe({"basic-silvered-copper-wire", "angels-wire-coil-silver-converting"})
 end
 
 -------------------------------------------------------------------------------

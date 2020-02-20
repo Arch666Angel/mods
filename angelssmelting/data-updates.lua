@@ -160,7 +160,7 @@ if angelsmods.trigger.smelting_products["nickel"].powder then
 end
 --platinum
 if angelsmods.trigger.smelting_products["platinum"].wire then
-  angelsmods.trigger.smelting_products["platinum"].ingot = true
+  angelsmods.trigger.smelting_products["platinum"].plate = true
   angelsmods.trigger.smelting_products["copper"].ingot = true
 end
 if angelsmods.trigger.smelting_products["platinum"].plate then

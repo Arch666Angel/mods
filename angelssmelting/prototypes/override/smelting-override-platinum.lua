@@ -48,7 +48,7 @@ else
   angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
   angelsmods.functions.add_flag("angels-wire-coil-platinum", "hidden")
   OV.disable_recipe({"angels-wire-coil-platinum-casting", "angels-wire-coil-platinum-casting-fast"})
-  OV.disable_recipe({"angels-wire-coil-platinum-converting"})
+  OV.disable_recipe({"basic-platinated-copper-wire", "angels-wire-coil-platinum-converting"})
 end
 
 -------------------------------------------------------------------------------

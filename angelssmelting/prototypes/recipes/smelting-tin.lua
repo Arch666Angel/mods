@@ -444,6 +444,36 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "basic-tinned-copper-wire",
+    subgroup = "angels-tin-casting",
+    order = "m",
+    enabled = false,
+    category = "crafting",
+    energy_required = 0.5,
+    ingredients =
+    {
+      {type="item", name="copper-cable", amount=10},
+      {type="item", name="angels-plate-tin", amount=4},
+    },
+    results=
+    {
+      {type="item", name="angels-wire-tin", amount=5},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/wire-tin.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
+    icon_size = 32,
+    order = "j[angels-wire-tin]-a",
+  },
+  {
+    type = "recipe",
     name = "angels-wire-coil-tin-converting",
     category = "advanced-crafting",
     subgroup = "angels-tin-casting",
@@ -469,7 +499,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "j[angels-wire-tin]-b", -- j[angels-wire-tin]-a reserved for bob (see tin override)
+    order = "j[angels-wire-tin]-b",
   },
 }
 )
