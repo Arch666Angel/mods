@@ -44,7 +44,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = -0.02 / 2
+      emissions_per_minute = -0.02 / 2
     },
     energy_usage = "100kW",
     ingredient_count = 4,
@@ -177,7 +177,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = -0.02 / 2
+      emissions_per_minute = -0.02 / 2
     },
     energy_usage = "100kW",
     ingredient_count = 4,
@@ -308,7 +308,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = -0.02 / 2
+      emissions_per_minute = -0.02 / 2
     },
     energy_usage = "100kW",
     ingredient_count = 4,
@@ -442,7 +442,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = -0.02 / 2
+      emissions_per_minute = -0.02 / 2
     },
     energy_usage = "100kW",
     ingredient_count = 4,

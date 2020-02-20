@@ -2,6 +2,7 @@
 Version: 0.6.1
 Date: ??
   Changes:
+    - Updated emission data, so it now shows in the ingame toolips (and activates)
     - Changes the smelting recipe generation to be more flexible and dynamic
     - Added powder recipe for Aluminium, Gold, Lead, Manganese, Platinum, Silver, Tin, Titanium, Zinc
     - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel, Platinum, Silver, Tin
@@ -21,7 +22,7 @@ Date: 09.02.2020
   Changes:
     - updated to 0.18
     - disabled bobs silver nitrate recipe
-    - added a distinguishable icon for tungsten powder mixture versus the tungsten powder itself 
+    - added a distinguishable icon for tungsten powder mixture versus the tungsten powder itself
     - replaces the solder (bob electronics) from solder plate with angels equivalent of solder
   Bugfixes:
     - fixed missing localisation on iron rod stack (recipe)

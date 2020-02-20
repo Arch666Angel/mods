@@ -337,43 +337,42 @@ end
 --if bobs is active, add fuel values to fluids
 --Do this regardless of settings
 --base fluid is methane, all others are based on relative real values
---hydrogen is halved to stop it being too overpowered
+--==BASED ON VOULMETRIC NUMBERS divided by 10, using methane as the base
 if mods.bobplates then
-  data.raw.fluid["liquid-naphtha"].fuel_value = "1.8MJ"
-  --bobs value is 1MJ (39/50*2.3MJ)
+  --liquid Naphtha (heavy oil), bobs value is 1MJ (Heavy fuel oil 38.2 MJ/L)(39 MJ/kg)
+  data.raw.fluid["liquid-naphtha"].fuel_value = "244.7kJ"
   data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3
-  data.raw.fluid["liquid-fuel-oil"].fuel_value = "1.9MJ"
-  --1.5MJ (40.6/50*2.3MJ)
+  --liquid Fuel oil (light oil), bobs value 1.5MJ (light fuel oil 39 MJ/L)(40.6 MJ/kg)
+  data.raw.fluid["liquid-fuel-oil"].fuel_value = "24.99kJ"
   data.raw.fluid["liquid-fuel-oil"].emissions_multiplier = 2
-  data.raw.fluid["gas-methane"].fuel_value = "2.3MJ"
-  --all are based on this value
-  data.raw.fluid["gas-ethane"].fuel_value = "2.2MJ"
-  --47.8/50*2.3MJ
+  --gas methane (petrogas), bobs value 2.3MJ (methane 35.9 MJ/L)(49.85 MJ/kg)
+  data.raw.fluid["gas-methane"].fuel_value = "230.0kJ"
+  --gas ethane (), - (ethane 60.7 MJ/L)(47.2 MJ/kg)
+  data.raw.fluid["gas-ethane"].fuel_value = "388.9kJ"
   data.raw.fluid["gas-ethane"].emissions_multiplier = 1.5
-  data.raw.fluid["gas-butane"].fuel_value = "2.1MJ"
-  --46.5/50*2.3MJ
+  --gas butane (), - (butane 110.9 MJ/L)(46.46 MJ/kg)
+  data.raw.fluid["gas-butane"].fuel_value = "710.5kJ"
   data.raw.fluid["gas-butane"].emissions_multiplier = 1.8
-  data.raw.fluid["gas-propene"].fuel_value = "2.1MJ"
-  --45.7/50*2.3MJ
+  --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
+  data.raw.fluid["gas-propene"].fuel_value = "521.5kJ"
   data.raw.fluid["gas-propene"].emissions_multiplier = 5
-  data.raw.fluid["gas-methanol"].fuel_value = "915kJ"
-  --19.9/50*2.3MJ
-  data.raw.fluid["gas-ethylene"].fuel_value = "2.2MJ"
-  --47.2/50*2.3MJ
-  data.raw.fluid["gas-benzene"].fuel_value = "1.8MJ"
-  --40.5/50*2.3MJ
-  data.raw.fluid["gas-hydrogen"].fuel_value = "2.7MJ"
-  --bobs value is 45kJ--(121/50*2.3MJ)/2 (may need to go much lower)
+  --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
+  data.raw.fluid["gas-methanol"].fuel_value = "101.2kJ"
+  --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
+  data.raw.fluid["gas-ethylene"].fuel_value = "365.2kJ"
+  --gas benzene (), - (benzene 133.8 MJ/L)(40.5 MJ/kg)
+  data.raw.fluid["gas-benzene"].fuel_value = "857.2kJ"
+  --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
+  -->>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.
+  data.raw.fluid["gas-hydrogen"].fuel_value = "33kJ"
   data.raw.fluid["gas-hydrogen"].emissions_multiplier = 0.2
-  data.raw.fluid["gas-hydrazine"].fuel_value = "340kJ"
-  -- (19.4/50*2.3MJ)
+  --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
+  data.raw.fluid["gas-hydrazine"].fuel_value = "126.9kJ"
   data.raw.fluid["gas-hydrazine"].emissions_multiplier = 0.1
-
   if mods["angelsbioprocessing"] then
-    data.raw.fluid["gas-ethanol"].fuel_value = "1.2MJ"
-  --26.7/50*2.3MJ
+    --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
+    data.raw.fluid["gas-ethanol"].fuel_value = "135.2kJ"
   end
-
 end
 --ENABLE PRODUCTIVITY
 angelsmods.functions.allow_productivity("liquid-plastic-1")

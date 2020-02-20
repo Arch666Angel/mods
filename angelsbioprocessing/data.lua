@@ -4,6 +4,10 @@ angelsmods.bioprocessing = angelsmods.bioprocessing or {}
 angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 0.5}
 
 --TRIGGER CHECKS
+angelsmods.triggers = angelsmods.triggers or {}
+angelsmods.triggers.lab_ignore_token = angelsmods.triggers.lab_ignore_token or {}
+angelsmods.triggers.lab_ignore_token["lab-alien"] = true
+angelsmods.triggers.lab_ignore_token["lab-module"] = true
 
 --LOAD FUNCTIONS
 require("prototypes.bio-processing-functions")

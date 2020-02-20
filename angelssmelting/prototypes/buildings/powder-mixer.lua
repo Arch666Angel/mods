@@ -54,7 +54,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "100kW",
     ingredient_count = 2,
@@ -142,7 +142,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "125kW",
     ingredient_count = 4,
@@ -230,7 +230,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "150kW",
     ingredient_count = 6,
@@ -283,7 +283,7 @@ data:extend(
     order = "d[powder-mixer-4]",
     place_result = "powder-mixer-4",
     stack_size = 10,
-  },    
+  },
   {
     type = "assembling-machine",
     name = "powder-mixer-4",
@@ -318,7 +318,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 / 3.5
     },
     energy_usage = "175kW",
     ingredient_count = 6,

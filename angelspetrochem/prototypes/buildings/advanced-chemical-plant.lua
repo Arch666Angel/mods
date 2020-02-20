@@ -54,7 +54,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2,
+      emissions_per_minute = 0.02 / 2,
     },
     energy_usage = "300kW",
     ingredient_count = 4,
@@ -153,7 +153,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-chemical-plant",
     order = "b[advanced]-b",
     place_result = "advanced-chemical-plant-2",
@@ -173,7 +173,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "advanced-chemical-plant-2"},
     fast_replaceable_group = "advanced-chemical-plant",
@@ -193,7 +193,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2,
+      emissions_per_minute = 0.02 / 2,
     },
     energy_usage = "400kW",
     ingredient_count = 4,
