@@ -72,5 +72,6 @@ if angelsmods.trigger.smelting_products["steel"].rod then
 else
   angelsmods.functions.add_flag("angels-rod-stack-steel", "hidden")
   angelsmods.functions.add_flag("angels-rod-steel", "hidden")
-  OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast", "angels-rod-stack-steel-converting" })
+  OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast" })
+  OV.disable_recipe({ "angels-rod-steel-plate", "angels-rod-stack-steel-converting" })
 end

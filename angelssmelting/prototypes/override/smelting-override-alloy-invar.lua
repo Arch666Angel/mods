@@ -1,115 +1,121 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+if angelsmods.trigger.smelting_products["enable-all"] then
+  angelsmods.trigger.smelting_products["invar"].plate = true
+end
+
 -------------------------------------------------------------------------------
--- BOB OVERRIDES --------------------------------------------------------------
+-- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] and angelsmods.trigger.smelting_products["invar"].plate then
-  data:extend(
-  {
-    --INVAR
-    --ITEMS
+if angelsmods.trigger.smelting_products["invar"].plate then
+  if mods["bobplates"] then
+    data:extend(
     {
-      type = "fluid",
-      name = "liquid-molten-invar",
-      icon = "__angelssmelting__/graphics/icons/molten-invar.png",
-      icon_size = 32,
-      subgroup = "angels-alloys-casting",
-      order = "d[invar]-a[liquid-molten-invar]",
-      default_temperature = 100,
-      heat_capacity = "0KJ",
-      base_color = {r = 95/256, g = 125/256, b = 122/256},
-      flow_color = {r = 95/256, g = 125/256, b = 122/256},
-      max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
-      auto_barrel = false
-    },
-    --RECIPES
-    --SMELTING
-    {
-      type = "recipe",
-      name = "angels-invar-smelting-1",
-      category = "induction-smelting",
-      subgroup = "angels-alloys-casting",
-      energy_required = 4,
-      enabled = "false",
-      ingredients =
+      --INVAR
+      --ITEMS
       {
-        {type="item", name="ingot-steel", amount=24},
-        {type="item", name="ingot-nickel", amount=12},
+        type = "fluid",
+        name = "liquid-molten-invar",
+        icon = "__angelssmelting__/graphics/icons/molten-invar.png",
+        icon_size = 32,
+        subgroup = "angels-alloys-casting",
+        order = "d[invar]-a[liquid-molten-invar]",
+        default_temperature = 100,
+        heat_capacity = "0KJ",
+        base_color = {r = 95/256, g = 125/256, b = 122/256},
+        flow_color = {r = 95/256, g = 125/256, b = 122/256},
+        max_temperature = 100,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        auto_barrel = false
       },
-      results =
+      --RECIPES
+      --SMELTING
       {
-        {type="fluid", name="liquid-molten-invar", amount=360},
-      },
-      icons = {
+        type = "recipe",
+        name = "angels-invar-smelting-1",
+        category = "induction-smelting",
+        subgroup = "angels-alloys-casting",
+        energy_required = 4,
+        enabled = "false",
+        ingredients =
         {
-          icon = "__angelssmelting__/graphics/icons/molten-invar.png",
+          {type="item", name="ingot-steel", amount=24},
+          {type="item", name="ingot-nickel", amount=12},
         },
-        -- {
-        -- icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        -- tint = angelsmods.smelting.number_tint,
-        -- scale = 0.32,
-        -- shift = {-12, -12},
-        -- }
-      },
-      icon_size = 32,
-      order = "d[invar]-a[liquid-molten-invar]"
-    },
-    --CASTING
-    {
-      type = "recipe",
-      name = "angels-plate-invar",
-      category = "casting",
-      subgroup = "angels-alloys-casting",
-      energy_required = 4,
-      enabled = "false",
-      ingredients ={
-        {type="fluid", name="liquid-molten-invar", amount=40},
-      },
-      results =
-      {
-        {type="item", name="invar-alloy", amount=4},
-      },
-      icon_size = 32,
-      order = "d[invar]-b[invar-alloy]"
-    },
-    --TECH
-    {
-      type = "technology",
-      name = "angels-invar-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-invar.png",
-      icon_size = 128,
-      prerequisites =
-      {
-        "angels-steel-smelting-1",
-        "angels-nickel-smelting-1",
-      },
-      effects =
-      {
+        results =
         {
-          type = "unlock-recipe",
-          recipe = "angels-invar-smelting-1"
+          {type="fluid", name="liquid-molten-invar", amount=360},
         },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-plate-invar"
+        icons = {
+          {
+            icon = "__angelssmelting__/graphics/icons/molten-invar.png",
+          },
+          -- {
+          -- icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          -- tint = angelsmods.smelting.number_tint,
+          -- scale = 0.32,
+          -- shift = {-12, -12},
+          -- }
         },
+        icon_size = 32,
+        order = "d[invar]-a[liquid-molten-invar]"
       },
-      unit =
+      --CASTING
       {
-        count = 50,
-        ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
+        type = "recipe",
+        name = "angels-plate-invar",
+        category = "casting",
+        subgroup = "angels-alloys-casting",
+        energy_required = 4,
+        enabled = "false",
+        ingredients ={
+          {type="fluid", name="liquid-molten-invar", amount=40},
         },
-        time = 30
+        results =
+        {
+          {type="item", name="invar-alloy", amount=4},
+        },
+        icon_size = 32,
+        order = "d[invar]-b[invar-alloy]"
       },
-      order = "c-a"
-    },
-  }
-  )
-  OV.global_replace_technology("invar-processing", "angels-invar-smelting-1")
-  angelsmods.functions.allow_productivity("angels-plate-invar")
+      --TECH
+      {
+        type = "technology",
+        name = "angels-invar-smelting-1",
+        icon = "__angelssmelting__/graphics/technology/smelting-invar.png",
+        icon_size = 128,
+        prerequisites =
+        {
+          "angels-steel-smelting-1",
+          "angels-nickel-smelting-1",
+        },
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "angels-invar-smelting-1"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "angels-plate-invar"
+          },
+        },
+        unit =
+        {
+          count = 50,
+          ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+          },
+          time = 30
+        },
+        order = "c-a"
+      },
+    }
+    )
+    OV.global_replace_technology("invar-processing", "angels-invar-smelting-1")
+    angelsmods.functions.allow_productivity("angels-plate-invar")
+  end
 end

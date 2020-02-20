@@ -57,7 +57,7 @@ if angelsmods.trigger.smelting_products["silicon"].wafer then
         name = "silicon-wafer",
         energy_required = 1,
         results = {
-          {"silicon-wafer", 2}
+          {"silicon-wafer", 6}
         },
         subgroup = "angels-silicon-casting",
         order = "l[angels-silicon-wafer]",

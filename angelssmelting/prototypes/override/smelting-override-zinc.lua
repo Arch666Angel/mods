@@ -37,8 +37,17 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
     OV.disable_recipe({ "bob-zinc-plate" })
   end
 else
-  angelsmods.functions.add_flag("angels-wire-zinc", "hidden")
-  angelsmods.functions.add_flag("angels-wire-coil-zinc", "hidden")
-  OV.disable_recipe({"angels-wire-coil-zinc-casting", "angels-wire-coil-zinc-casting-fast"})
-  OV.disable_recipe({"angels-wire-coil-zinc-converting"})
+  angelsmods.functions.add_flag("angels-plate-zinc", "hidden")
+  angelsmods.functions.add_flag("angels-roll-zinc", "hidden")
+  OV.disable_recipe({"roll-zinc-casting", "roll-zinc-casting-fast"})
+  OV.disable_recipe({"angels-plate-zinc", "angels-roll-zinc-converting"})
+end
+
+-------------------------------------------------------------------------------
+-- POWDER ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["zinc"].powder then
+else
+  angelsmods.functions.add_flag("powder-zinc", "hidden")
+  OV.disable_recipe({ "powder-zinc" })
 end

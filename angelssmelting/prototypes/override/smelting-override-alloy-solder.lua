@@ -1,6 +1,10 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+if angelsmods.trigger.smelting_products["enable-all"] then
+  angelsmods.trigger.smelting_products["solder"].wire = true
+end
+
 -------------------------------------------------------------------------------
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
