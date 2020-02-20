@@ -84,6 +84,7 @@ angelsmods.trigger.smelting_products["nickel"].plate = mods["bobplates"] and tru
 --silicon
 angelsmods.trigger.smelting_products["silicon"].mono = mods["bobplates"] and true or false
 angelsmods.trigger.smelting_products["silicon"].powder = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["silicon"].wafer = mods["bobplates"] and true or false
 --silver
 angelsmods.trigger.smelting_products["silver"].plate = mods["bobplates"] and true or false
 angelsmods.trigger.smelting_products["silver"].wire = false

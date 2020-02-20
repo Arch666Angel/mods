@@ -4,6 +4,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["silicon"].ingot = true
   angelsmods.trigger.smelting_products["silicon"].mono = true
+  angelsmods.trigger.smelting_products["silicon"].wafer = true
   angelsmods.trigger.smelting_products["silicon"].powder = true
 end
 
@@ -34,20 +35,39 @@ if angelsmods.trigger.smelting_products["silicon"].mono then
     angelsmods.functions.add_flag("silicon", "hidden")
     OV.disable_recipe({ "bob-silicon-plate" })
   end
-
-  if mods['bobplates'] then
-    -- silicon plate derivatives
-    angelsmods.functions.move_item("silicon-wafer", "angels-silicon-casting", "l[bobs-silicon]-a")
-    OV.patch_recipes({
-      { name = "silicon-wafer", subgroup = "angels-silicon-casting", order = "l[bobs-silicon]-a" },
-    })
-    OV.add_prereq( "silicon-processing", "angels-silicon-smelting-1" )
-  end
 else
   angelsmods.functions.add_flag("angels-mono-silicon-seed", "hidden")
   angelsmods.functions.add_flag("angels-quartz-crucible", "hidden")
   angelsmods.functions.add_flag("angels-mono-silicon", "hidden")
   OV.disable_recipe({"angels-mono-silicon-seed", "angels-mono-silicon-1", "angels-mono-silicon-2", "angels-quartz-crucible"})
+end
+
+-------------------------------------------------------------------------------
+-- WAFER ----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["silicon"].wafer then
+  if mods['bobplates'] then
+    OV.global_replace_item("angels-silicon-wafer", "silicon-wafer")
+    angelsmods.functions.add_flag("angels-silicon-wafer", "hidden")
+    OV.disable_recipe({ "angels-silicon-wafer" })
+
+    angelsmods.functions.move_item("silicon-wafer", "angels-silicon-casting", "l[angels-silicon-wafer]")
+    OV.patch_recipes({
+      {
+        name = "silicon-wafer",
+        energy_required = 1,
+        results = {
+          {"silicon-wafer", 2}
+        },
+        subgroup = "angels-silicon-casting",
+        order = "l[angels-silicon-wafer]",
+      }
+    })
+    OV.add_prereq( "silicon-processing", "angels-silicon-smelting-1" )
+  end
+else
+  angelsmods.functions.add_flag("angels-silicon-wafer", "hidden")
+  OV.disable_recipe({"angels-silicon-wafer"})
 end
 
 -------------------------------------------------------------------------------
@@ -79,11 +99,11 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
 
   if mods['bobplates'] then
     -- silicon powder derivatives
-    angelsmods.functions.move_item("silicon-nitride", "angels-silicon-casting", "l[bobs-silicon]-b")
-    angelsmods.functions.move_item("silicon-carbide", "angels-silicon-casting", "l[bobs-silicon]-c")
+    angelsmods.functions.move_item("silicon-nitride", "angels-silicon-casting", "m[bobs-silicon]-a")
+    angelsmods.functions.move_item("silicon-carbide", "angels-silicon-casting", "m[bobs-silicon]-b")
     OV.patch_recipes({
-      { name = "silicon-nitride", subgroup = "angels-silicon-casting", order = "l[bobs-silicon]-b" },
-      { name = "silicon-carbide", subgroup = "angels-silicon-casting", order = "l[bobs-silicon]-c" },
+      { name = "silicon-nitride", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-a" },
+      { name = "silicon-carbide", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-b" },
     })
   end
 else

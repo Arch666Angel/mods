@@ -123,5 +123,14 @@ data:extend(
     order = "k",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "angels-silicon-wafer",
+    icon = "__angelssmelting__/graphics/icons/silicon-wafer.png",
+    icon_size = 32,
+    subgroup = "angels-silicon-casting",
+    order = "l",
+    stack_size = 200
+  },
 }
 )

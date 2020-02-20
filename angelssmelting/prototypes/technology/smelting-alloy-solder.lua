@@ -1,11 +1,41 @@
 data:extend({
   {
     type = "technology",
-    name = "angels-solder-smelting-1",
-    icon = "__angelssmelting__/graphics/technology/smelting-zinc.png",
+    name = "angels-solder-smelting-basic",
+    icon = "__angelssmelting__/graphics/technology/smelting-solder.png",
     icon_size = 128,
     prerequisites =
     {
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-mixture"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-mixture-smelting"
+      },
+    },
+    unit =
+    {
+      count = 25,
+      ingredients = {
+        {"automation-science-pack", 1},
+      },
+      time = 30
+    },
+    order = "c-a"
+  },
+  {
+    type = "technology",
+    name = "angels-solder-smelting-1",
+    icon = "__angelssmelting__/graphics/technology/smelting-solder.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "angels-solder-smelting-basic",
       "angels-tin-smelting-1",
       "angels-lead-smelting-1",
     },
@@ -14,6 +44,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-solder-smelting-1"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-smelting-2"
       },
       {
         type = "unlock-recipe",
@@ -33,7 +67,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-solder-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-zinc.png",
+    icon = "__angelssmelting__/graphics/technology/smelting-solder.png",
     icon_size = 128,
     upgrade = true,
     prerequisites =
@@ -45,7 +79,7 @@ data:extend({
     {
       {
         type = "unlock-recipe",
-        recipe = "angels-solder-smelting-2"
+        recipe = "angels-solder-smelting-3"
       },
       {
         type = "unlock-recipe",
@@ -70,7 +104,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-solder-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-zinc.png",
+    icon = "__angelssmelting__/graphics/technology/smelting-solder.png",
     icon_size = 128,
     upgrade = true,
     prerequisites =
@@ -83,7 +117,7 @@ data:extend({
     {
       {
         type = "unlock-recipe",
-        recipe = "angels-solder-smelting-3"
+        recipe = "angels-solder-smelting-4"
       },
       {
         type = "unlock-recipe",

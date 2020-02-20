@@ -173,6 +173,9 @@ end
 if angelsmods.trigger.smelting_products["silicon"].powder then
   angelsmods.trigger.smelting_products["silicon"].ingot = true
 end
+if angelsmods.trigger.smelting_products["silicon"].wafer then
+  angelsmods.trigger.smelting_products["silicon"].mono = true
+end
 if angelsmods.trigger.smelting_products["silicon"].mono then
   angelsmods.trigger.smelting_products["silicon"].ingot = true
 end

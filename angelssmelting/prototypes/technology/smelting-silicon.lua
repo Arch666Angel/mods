@@ -27,6 +27,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-mono-silicon-1"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-silicon-wafer"
+      },
     },
     unit =
     {

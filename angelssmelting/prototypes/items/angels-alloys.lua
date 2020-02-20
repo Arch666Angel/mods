@@ -79,6 +79,15 @@ data:extend(
 
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
+  {
+    type = "item",
+    name = "angels-solder-mixture",
+    icon = "__angelssmelting__/graphics/icons/solder-mixture.png",
+    icon_size = 32,
+    subgroup = "angels-alloys",
+    order = "a[solder]-a",
+    stack_size = 200
+  },
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -86,7 +95,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-solder-1.png",
     icon_size = 32,
     subgroup = "angels-solder-casting",
-    order = "a",
+    order = "b",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 106/255, g = 138/255, b = 129/255},
@@ -102,7 +111,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-solder.png",
     icon_size = 32,
     subgroup = "angels-solder-casting",
-    order = "b",
+    order = "c",
     stack_size = 200
   },
   -- SOLDER CASTING RESULT
@@ -112,7 +121,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/solder.png",
     icon_size = 32,
     subgroup = "angels-solder-casting",
-    order = "c",
+    order = "d",
     stack_size = 200
   },
 }

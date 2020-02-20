@@ -388,6 +388,24 @@ data:extend(
     icon_size = 32,
     order = "k[angels-mono-silicon]-b",
   },
-  -- order k reserved for bob silicon processing
+  {
+    type = "recipe",
+    name = "angels-silicon-wafer",
+    category = "crafting",
+    subgroup = "angels-silicon-casting",
+    enabled = "false",
+    energy_required = 2,
+    ingredients =
+    {
+      {type="item", name="angels-mono-silicon", amount=2}
+    },
+    results=
+    {
+      {type="item", name="angels-silicon-wafer", amount=4}
+    },
+    icon_size = 32,
+    order = "l[angels-silicon-wafer]",
+  },
+  -- order m reserved for bob silicon processing
 }
 )
