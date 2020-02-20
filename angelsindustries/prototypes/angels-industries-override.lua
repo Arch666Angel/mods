@@ -25,9 +25,7 @@ end
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   --UPDATE RECIPES FOR ENTITIES
-  OV.execute()
   require("prototypes.recipes.components-entity-update")
-  OV.execute()
   require("prototypes.overrides.global-components-entity-update")
 
   --MODIFY ASSEMBLING MACHINES

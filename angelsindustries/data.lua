@@ -7,12 +7,6 @@ if not angelsmods.industries then
 end
 
 --TRIGGER CHECKS
-angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
-if mods["bobplates"] then
-  angelsmods.industries.overhaul = true
-end
---angelsmods.industries.overhaul=false --temp overrides
-
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
 --angelsmods.industries.tech=false --temp overrides to disable until ready
 
@@ -22,6 +16,15 @@ if angelsmods.industries.tech == true then
   angelsmods.industries.components = true
 end
 --angelsmods.industries.components = false --temp overrides to disable until ready
+
+angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
+if mods["bobplates"] or angelsmods.industries.components then
+  angelsmods.industries.overhaul = true
+end
+--angelsmods.industries.overhaul=false --temp overrides
+
+-- set triggers for other angel mods
+require("prototypes.angels-industries-triggers")
 
 --LOAD FUNCTIONS
 if not angelsmods.industries.tech_exceptions then

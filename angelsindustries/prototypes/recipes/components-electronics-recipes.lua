@@ -475,55 +475,55 @@ data:extend(
 		result = "circuit-yellow-loaded",
 		icon_size = 32,
 	},
-	--INTERMEDIATES
-    {
-		type = "recipe",
-		name = "angels-silicon-wafer",
-		category = "crafting",
-		subgroup = "angels-silicon-casting",
-		enabled = "false",
-		energy_required = 2,
-		ingredients ={
-			{type="item", name="angels-mono-silicon", amount=2}
-		},
-		results={
-			{type="item", name="angels-silicon-wafer", amount=4}
-		},
-		icon_size = 32,
-		order = "l",
-    },
-    {
-		type = "recipe",
-		name = "angels-solder-mixture",
-		category = "crafting",
-		subgroup = "angels-solder-casting",
-		enabled = "true",
-		energy_required = 2,
-		ingredients ={
-			{type="item", name="angels-plate-tin", amount=2},
-			{type="item", name="angels-plate-lead", amount=2},
-		},
-		results={
-			{type="item", name="angels-solder-mixture", amount=2}
-		},
-		icon_size = 32,
-		order = "l",
-    },
-    {
-		type = "recipe",
-		name = "angels-solder",
-		category = "smelting",
-		subgroup = "angels-solder-casting",
-		enabled = "true",
-		energy_required = 3.5,
-		ingredients ={
-			{type="item", name="angels-solder-mixture", amount=2}
-		},
-		results={
-			{type="item", name="angels-solder", amount=2}
-		},
-		icon_size = 32,
-		order = "l",
-    },
+	--INTERMEDIATES (moved to smelting)
+    --{
+	--	type = "recipe",
+	--	name = "angels-silicon-wafer",
+	--	category = "crafting",
+	--	subgroup = "angels-silicon-casting",
+	--	enabled = "false",
+	--	energy_required = 2,
+	--	ingredients ={
+	--		{type="item", name="angels-mono-silicon", amount=2}
+	--	},
+	--	results={
+	--		{type="item", name="angels-silicon-wafer", amount=4}
+	--	},
+	--	icon_size = 32,
+	--	order = "l",
+    --},
+    --{
+	--	type = "recipe",
+	--	name = "angels-solder-mixture",
+	--	category = "crafting",
+	--	subgroup = "angels-solder-casting",
+	--	enabled = "true",
+	--	energy_required = 2,
+	--	ingredients ={
+	--		{type="item", name="angels-plate-tin", amount=2},
+	--		{type="item", name="angels-plate-lead", amount=2},
+	--	},
+	--	results={
+	--		{type="item", name="angels-solder-mixture", amount=2}
+	--	},
+	--	icon_size = 32,
+	--	order = "l",
+    --},
+    --{
+	--	type = "recipe",
+	--	name = "angels-solder",
+	--	category = "smelting",
+	--	subgroup = "angels-solder-casting",
+	--	enabled = "true",
+	--	energy_required = 3.5,
+	--	ingredients ={
+	--		{type="item", name="angels-solder-mixture", amount=2}
+	--	},
+	--	results={
+	--		{type="item", name="angels-solder", amount=2}
+	--	},
+	--	icon_size = 32,
+	--	order = "l",
+    --},
 }
 )
