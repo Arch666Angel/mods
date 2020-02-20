@@ -45,6 +45,9 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   angelsmods.trigger.smelting_products["silver"].ingot = true
 end
 --alloy-steel
+if angelsmods.trigger.smelting_products["steel"].rod then
+  angelsmods.trigger.smelting_products["steel"].plate = true
+end
 if angelsmods.trigger.smelting_products["steel"].plate then
   angelsmods.trigger.smelting_products["steel"].ingot = true
   if not is_special_vanilla(angelsmods.trigger.ores) then
@@ -55,6 +58,12 @@ if angelsmods.trigger.smelting_products["steel"].plate then
     angelsmods.trigger.smelting_products["chrome"].ingot = true
     angelsmods.trigger.smelting_products["tungsten"].powder = true
   end
+end
+if angelsmods.trigger.smelting_products["steel"].powder then
+  angelsmods.trigger.smelting_products["steel"].ingot = true
+end
+if angelsmods.trigger.smelting_products["steel"].ingot then
+  angelsmods.trigger.smelting_products["iron"].ingot = true
 end
 --aluminium
 if angelsmods.trigger.smelting_products["aluminium"].powder then
@@ -121,6 +130,9 @@ end
 --iron
 if angelsmods.trigger.smelting_products["iron"].powder then
   angelsmods.trigger.smelting_products["iron"].ingot = true
+end
+if angelsmods.trigger.smelting_products["iron"].rod then
+  angelsmods.trigger.smelting_products["iron"].plate = true
 end
 if angelsmods.trigger.smelting_products["iron"].plate then
   angelsmods.trigger.smelting_products["iron"].ingot = true

@@ -32,11 +32,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-steel-casting"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-rod-stack-steel-converting"
+        recipe = "angels-rod-steel-plate"
       },
     },
     unit =
@@ -75,6 +71,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "powder-steel"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "rod-stack-steel-casting"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-rod-stack-steel-converting"
       },
     },
     unit =

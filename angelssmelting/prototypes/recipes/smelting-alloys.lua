@@ -356,6 +356,7 @@ data:extend(
         {type="item", name="angels-rod-stack-steel", amount=2},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
+      main_product = "angels-rod-stack-steel",
     },
     expensive =
     {
@@ -371,6 +372,7 @@ data:extend(
         {type="item", name="angels-rod-stack-steel", amount=2},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
+      main_product = "angels-rod-stack-steel",
     },
     icons = {
       {
@@ -462,6 +464,34 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "angels-rod-steel-plate",
+    category = "crafting",
+    subgroup = "angels-steel-casting",
+    energy_required = 0.5,
+    enabled = true,
+    allow_decomposition = true,
+    ingredients ={
+      {type="item", name="angels-plate-steel", amount=2},
+    },
+    results =
+    {
+      {type="item", name="angels-rod-steel", amount=1},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/rod-steel.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-steel.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "m[angels-rod-steel]-a",
+  },
+  {
+    type = "recipe",
     name = "angels-rod-stack-steel-converting",
     category = "advanced-crafting",
     subgroup = "angels-steel-casting",
@@ -486,7 +516,7 @@ data:extend(
       }
     },  
     icon_size = 32,
-    order = "m[angels-rod-steel]",
+    order = "m[angels-rod-steel]-b",
   },
 
 

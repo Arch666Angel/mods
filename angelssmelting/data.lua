@@ -58,6 +58,7 @@ angelsmods.trigger.smelting_products["nitinol"].plate = mods["bobplates"] and tr
 angelsmods.trigger.smelting_products["solder"].wire = mods["bobplates"] and true or false
 --alloy-steel
 angelsmods.trigger.smelting_products["steel"].plate = true
+angelsmods.trigger.smelting_products["steel"].rod = false
 --aluminium
 angelsmods.trigger.smelting_products["aluminium"].plate = mods["bobplates"] and true or false
 --cobalt
