@@ -19,7 +19,7 @@ if ore_exists("lead") then
       name = "angelsore5-crushed-smelting",
       results = {
         {"!!"},
-        {"lead-plate", 1}
+        {"angels-plate-lead", 1}
       },
       icon = "__angelsrefining__/graphics/icons/lead-plate-crushed.png"
     }
@@ -31,7 +31,7 @@ if ore_exists("tin") then
       name = "angelsore6-crushed-smelting",
       results = {
         {"!!"},
-        {"tin-plate", 1}
+        {"angels-plate-tin", 1}
       },
       icon = "__angelsrefining__/graphics/icons/tin-plate-crushed.png"
     }
