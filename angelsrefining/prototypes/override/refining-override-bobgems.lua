@@ -95,4 +95,11 @@ if mods["bobplates"] then
       "gem-crystallization-amethyst.png",
       "gem-crystallization-diamond.png",
   }))
+else
+  OV.disable_recipe("angelsore7-crystallization-1")
+  OV.disable_recipe("angelsore7-crystallization-2")
+  OV.disable_recipe("angelsore7-crystallization-3")
+  OV.disable_recipe("angelsore7-crystallization-4")
+  OV.disable_recipe("angelsore7-crystallization-5")
+  OV.disable_recipe("angelsore7-crystallization-6")
 end

@@ -256,13 +256,14 @@ OV.patch_recipes(merge_table_of_tables{
   }),
   -- RUBYTE
   create_sorting_recipes("rubyte", "angelsore5%s", {
-    ["!!"          ] = (not special_vanilla) and {false, false, false, true},
-    ["lead-ore"    ] = (not special_vanilla) and {2, 2, 3, 3},
-    ["nickel-ore"  ] = (not special_vanilla) and {1, 1, 1, 2},
-    ["bauxite-ore" ] = (not special_vanilla) and {0, 1, 1, 1},
-    ["gold-ore"    ] = (not special_vanilla) and {0, 1, 1, 1},
-    ["rutile-ore"  ] = (not special_vanilla) and {0, 0, 1, 1},
-    ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1},
+    ["!!"           ] = (not special_vanilla) and {false, false, false, true},
+    ["lead-ore"     ] = (not special_vanilla) and {2, 2, 3, 3},
+    ["manganese-ore"] = (not special_vanilla) and {1, 1, 1, 2},
+    ["nickel-ore"   ] = (not special_vanilla) and (not ore_exists("manganese-ore")) and {1, 1, 1, 2},
+    ["bauxite-ore"  ] = (not special_vanilla) and {0, 1, 1, 1},
+    ["gold-ore"     ] = (not special_vanilla) and {0, 1, 1, 1},
+    ["rutile-ore"   ] = (not special_vanilla) and {0, 0, 1, 1},
+    ["tungsten-ore" ] = (not special_vanilla) and {0, 0, 0, 1},
   }),
   -- BOBMONIUM
   create_sorting_recipes("bobmonium", "angelsore6%s", {
