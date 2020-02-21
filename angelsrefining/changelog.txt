@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.3
-Date: ??.02.2020
+Date: ??
   Changes:
     - Updated emission data, so it now shows in the ingame toolips (and activates)
+    - Changes the refinery ore product generation to be more flexible and dynamic
+  Bugfixes:
+    - Fixed Electro Whinning Cell MK1 and MK2 had same crafting speed (changed MK1 1 --> 0.75)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.2
 Date: 12.02.2020

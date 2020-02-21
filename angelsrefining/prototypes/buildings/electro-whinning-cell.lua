@@ -48,7 +48,7 @@ data:extend(
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
       crafting_categories = {"ore-sorting-t3-5"},
-      crafting_speed = 1,
+      crafting_speed = 0.75,
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
