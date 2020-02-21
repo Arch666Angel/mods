@@ -32,7 +32,6 @@ require("prototypes.entities.cannon-turret")
 require("prototypes.entities.rocket-turret")
 require("prototypes.entities.bio-turret")
 
-require("prototypes.entities.biter-definitions")
 require("prototypes.entities.biter")
 
 require("prototypes.recipes.ammo")
