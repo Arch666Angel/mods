@@ -25,6 +25,14 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     data.raw.item["silver-oxide"].icon_size = 32
     OV.patch_recipes({ { name = "silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]" } })
   end
+
+  if angelsmods.trigger.smelting_products["silver"].plate or
+     angelsmods.trigger.smelting_products["silver"].wire then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-silver"].hidden = true
+    OV.disable_recipe({"molten-silver-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-silver", "hidden")
   angelsmods.functions.add_flag("pellet-silver", "hidden")
@@ -33,6 +41,10 @@ else
   angelsmods.functions.add_flag("cathode-silver", "hidden")
   angelsmods.functions.add_flag("ingot-silver", "hidden")
   data.raw.fluid["liquid-molten-silver"].hidden = true
+  OV.disable_recipe({"silver-ore-processing", "silver-processed-processing"})
+  OV.disable_recipe({"processed-silver-smelting", "pellet-silver-smelting", "solid-sodium-silver-cyanide-smelting"})
+  OV.disable_recipe({"silver-ore-smelting", "solid-silver-nitrate-smelting", "cathode-silver-smelting"})
+  OV.disable_recipe({"molten-silver-smelting"})
   OV.disable_technology({"angels-silver-smelting-1", "angels-silver-smelting-2", "angels-silver-smelting-3"})
 end
 

@@ -23,8 +23,9 @@ angelsmods.functions.move_item("iron-ore", "angels-iron", "a")
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].ingot then
-  if not (angelsmods.trigger.smelting_products["lead"].plate or
-          angelsmods.trigger.smelting_products["tin"].plate) then
+  if angelsmods.trigger.smelting_products["lead"].plate or
+     angelsmods.trigger.smelting_products["tin"].plate then
+  else
     -- special vanilla
     OV.disable_recipe({"molten-iron-smelting-2", "molten-iron-smelting-3", "molten-iron-smelting-4", "molten-iron-smelting-5"})
   end

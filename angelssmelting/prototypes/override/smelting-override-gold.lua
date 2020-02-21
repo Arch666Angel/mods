@@ -12,6 +12,13 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["gold"].ingot then
+  if angelsmods.trigger.smelting_products["gold"].plate or
+     angelsmods.trigger.smelting_products["gold"].wire then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-gold"].hidden = true
+    OV.disable_recipe({"molten-gold-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-gold", "hidden")
   angelsmods.functions.add_flag("pellet-gold", "hidden")

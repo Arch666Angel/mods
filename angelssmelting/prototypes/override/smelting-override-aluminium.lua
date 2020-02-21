@@ -18,6 +18,13 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
 
     OV.global_replace_technology("aluminium-processing", "angels-aluminium-smelting-1")
   end
+
+  if angelsmods.trigger.smelting_products["aluminium"].plate then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-aluminium"].hidden = true
+    OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
+  end
 else
   angelsmods.functions.add_flag("processed-aluminium", "hidden")
   angelsmods.functions.add_flag("pellet-aluminium", "hidden")

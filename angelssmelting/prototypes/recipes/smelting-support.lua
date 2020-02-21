@@ -12,7 +12,7 @@ data:extend(
     {
       {type="fluid", name="steam", amount=100},
     },
-    results=
+    results =
     {
       {type="fluid", name="water-purified", amount=100},
     },
@@ -31,7 +31,7 @@ data:extend(
       {type="fluid", name="water", amount=80},
       {type="fluid", name="liquid-mineral-oil", amount=20},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-coolant", amount=100},
     },
@@ -50,7 +50,7 @@ data:extend(
       {type="fluid", name="liquid-coolant-used", amount=200, maximum_temperature = 50},
       {type="item", name="filter-coal", amount=1},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-coolant", amount=160, temperature = 25},
       {type="item", name="filter-frame", amount=1},
@@ -71,7 +71,7 @@ data:extend(
       {type="fluid", name="liquid-coolant-used", amount=200, maximum_temperature = 50},
       {type="item", name="filter-ceramic", amount=1},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-coolant", amount=160, temperature = 25},
       {type="item", name="filter-ceramic-used", amount=1},
@@ -93,7 +93,7 @@ data:extend(
       {type="fluid", name="liquid-coolant-used", amount=200, minimum_temperature = 285, maximum_temperature = 315},
       {type="fluid", name="water", amount=50},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-coolant-used", amount=200, temperature = 200},
       {type="fluid", name="steam", amount=50, temperature = 175},
@@ -125,7 +125,7 @@ data:extend(
       {type="fluid", name="liquid-coolant-used", amount=200, minimum_temperature = 185, maximum_temperature = 215},
       {type="fluid", name="water", amount=50},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-coolant-used", amount=200, temperature = 100},
       {type="fluid", name="steam", amount=50, temperature = 150},
@@ -157,7 +157,7 @@ data:extend(
       {type="fluid", name="liquid-coolant-used", amount=200, minimum_temperature = 85, maximum_temperature = 115},
       {type="fluid", name="water", amount=50},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-coolant-used", amount=200, temperature = 25},
       {type="fluid", name="steam", amount=50, temperature = 125},
@@ -176,6 +176,44 @@ data:extend(
     },
     icon_size = 32,
     order = "f",
+  },
+  --MOLDS
+  {
+    type = "recipe",
+    name = "mold-expendable",
+    category = "smelting",
+    subgroup = "angels-mold-casting",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="clay-brick", amount=8},
+    },
+    results =
+    {
+      {type="item", name="mold-expendable", amount=2},
+    },
+    icon_size = 32,
+    order = "a[mold-expendable]",
+  },
+  {
+    type = "recipe",
+    name = "mold-non-expendable",
+    category = "blast-smelting",
+    subgroup = "angels-mold-casting",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="concrete-brick", amount=8},
+    },
+    results =
+    {
+      {type="item", name="mold-non-expendable", amount=2},
+    },
+    icon_size = 32,
+    order = "b[mold-non-expendable]",
+    stack_size = 200
   },
 }
 )

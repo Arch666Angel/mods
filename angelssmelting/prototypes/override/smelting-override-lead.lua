@@ -18,6 +18,14 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
     
     OV.global_replace_technology("lead-processing", "angels-lead-smelting-1")
   end
+
+  if angelsmods.trigger.smelting_products["lead"].plate or
+     angelsmods.trigger.smelting_products["zinc"].ingot then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-lead"].hidden = true
+    OV.disable_recipe({"molten-lead-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-lead", "hidden")
   angelsmods.functions.add_flag("pellet-lead", "hidden")

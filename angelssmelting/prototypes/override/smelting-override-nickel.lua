@@ -11,7 +11,16 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["nickel"].ingot then
-  OV.global_replace_technology("nickel-processing", "angels-nickel-smelting-1")
+  if mods['bobplates'] then
+    OV.global_replace_technology("nickel-processing", "angels-nickel-smelting-1")
+  end
+
+  if angelsmods.trigger.smelting_products["nickel"].plate then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-nickel"].hidden = true
+    OV.disable_recipe({"molten-nickel-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-nickel", "hidden")
   angelsmods.functions.add_flag("pellet-nickel", "hidden")

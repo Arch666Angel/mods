@@ -297,7 +297,7 @@ data:extend(
     subgroup = "angels-steel-casting",
     normal =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 4,
       ingredients =
       {
@@ -311,7 +311,7 @@ data:extend(
     },
     expensive =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 4,
       ingredients =
       {
@@ -344,7 +344,7 @@ data:extend(
     subgroup = "angels-steel-casting",
     normal =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 2,
       ingredients =
       {
@@ -360,7 +360,7 @@ data:extend(
     },
     expensive =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 2,
       ingredients =
       {
@@ -468,7 +468,7 @@ data:extend(
     category = "crafting",
     subgroup = "angels-steel-casting",
     energy_required = 0.5,
-    enabled = true,
+    enabled = "false",
     allow_decomposition = true,
     ingredients ={
       {type="item", name="angels-plate-steel", amount=2},
@@ -496,7 +496,7 @@ data:extend(
     category = "advanced-crafting",
     subgroup = "angels-steel-casting",
     energy_required = 0.5,
-    enabled = true,
+    enabled = "false",
     allow_decomposition = false,
     ingredients ={
       {type="item", name="angels-rod-stack-steel", amount=1},

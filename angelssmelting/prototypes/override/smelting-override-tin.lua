@@ -12,6 +12,13 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].ingot then
+  if angelsmods.trigger.smelting_products["tin"].plate or
+     angelsmods.trigger.smelting_products["tin"].wire then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-tin"].hidden = true
+    OV.disable_recipe({"molten-tin-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-tin", "hidden")
   angelsmods.functions.add_flag("pellet-tin", "hidden")

@@ -23,6 +23,7 @@ angelsmods.functions.move_item("copper-ore", "angels-copper", "a")
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].ingot then
+  --todo
 else
   --todo
 end

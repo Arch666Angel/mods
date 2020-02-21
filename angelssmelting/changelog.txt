@@ -16,6 +16,8 @@ Date: ??
   Bugfixes:
     - Fixed the icon on the gold wire recipe
     - Fixed missing localisation on steel rod stack (recipe)
+    - Fixed casting machine tiers 2..4 not having an output fluid box
+    - Fixed missing recipes for the molds
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 09.02.2020

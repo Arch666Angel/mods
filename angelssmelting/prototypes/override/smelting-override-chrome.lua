@@ -11,6 +11,12 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["chrome"].ingot then
+  if angelsmods.trigger.smelting_products["chrome"].plate then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-chrome"].hidden = true
+    OV.disable_recipe({ "molten-chrome-smelting" })
+  end
 else
   angelsmods.functions.add_flag("processed-chrome", "hidden")
   angelsmods.functions.add_flag("pellet-chrome", "hidden")

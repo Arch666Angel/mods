@@ -11,6 +11,12 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["manganese"].ingot then
+  if angelsmods.trigger.smelting_products["manganese"].plate then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-manganese"].hidden = true
+    OV.disable_recipe({"molten-manganese-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-manganese", "hidden")
   angelsmods.functions.add_flag("pellet-manganese", "hidden")

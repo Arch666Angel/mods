@@ -42,3 +42,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.smelting_products["titanium"].plate = true
   angelsmods.trigger.smelting_products["tungsten"].plate = true
 end
+
+if angelsmods.industries.components then
+  angelsmods.trigger.smelting_molds = true
+end

@@ -11,6 +11,12 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["zinc"].ingot then
+  if angelsmods.trigger.smelting_products["zinc"].plate then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-zinc"].hidden = true
+    OV.disable_recipe({"molten-zinc-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-zinc", "hidden")
   angelsmods.functions.add_flag("pellet-zinc", "hidden")
@@ -22,7 +28,7 @@ else
   OV.disable_recipe({"pellet-zinc-smelting", "solid-zinc-oxide-smelting"})
   OV.disable_recipe({"zinc-ore-smelting", "processed-zinc-smelting", "cathode-zinc-smelting"})
   OV.disable_recipe({"molten-zinc-smelting"})
-  OV.disable_recipe({"liquid-molten-zinc"})
+  OV.disable_recipe({"molten-zinc-smelting"})
   OV.disable_technology({"angels-zinc-smelting-1", "angels-zinc-smelting-2", "angels-zinc-smelting-3"})
 end
 

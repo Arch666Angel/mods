@@ -31,6 +31,7 @@ end
 
 --DYNAMIC OVERRIDES
 require("prototypes.recipes.smelting-entity-angels")
+require("prototypes.override.smelting-override-support")
 
 require("prototypes.override.smelting-override-alloy-brass")
 require("prototypes.override.smelting-override-alloy-bronze")

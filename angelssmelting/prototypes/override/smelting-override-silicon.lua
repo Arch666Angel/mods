@@ -12,6 +12,13 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].ingot then
+  if angelsmods.trigger.smelting_products["silicon"].mono or
+     angelsmods.trigger.smelting_products["silicon"].wafer then
+  else
+    -- no need for molten recipe
+    data.raw.fluid["liquid-molten-silicon"].hidden = true
+    OV.disable_recipe({"molten-silicon-smelting"})
+  end
 else
   angelsmods.functions.add_flag("processed-silica", "hidden")
   angelsmods.functions.add_flag("pellet-silica", "hidden")
