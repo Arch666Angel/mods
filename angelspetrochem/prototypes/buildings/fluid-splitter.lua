@@ -74,7 +74,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.01 / 2.5
+      emissions_per_minute = 0.01 / 2.5
     },
     energy_usage = "30kW",
 	animation =
@@ -217,7 +217,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.01 / 2.5
+      emissions_per_minute = 0.01 / 2.5
     },
     energy_usage = "30kW",
 	animation =

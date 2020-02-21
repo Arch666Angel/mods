@@ -85,7 +85,7 @@ data:extend(
         fuel_category = "chemical",
         effectivity = 1,
         fuel_inventory_size = 1,
-        emissions = 0.01
+        emissions_per_minute = 0.01
         -- smoke =
         -- {
         -- {
@@ -199,7 +199,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.05 / 1.5
+        emissions_per_minute = 0.05 / 1.5
       },
       energy_usage = "90kW",
       ingredient_count = 1,
@@ -301,7 +301,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.05 / 1.5
+        emissions_per_minute = 0.05 / 1.5
       },
       energy_usage = "90kW",
       ingredient_count = 4,
@@ -421,7 +421,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.04 / 2.5
+        emissions_per_minute = 0.04 / 2.5
       },
       energy_usage = "150kW",
       ingredient_count = 2,
@@ -548,7 +548,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.04 / 2.5
+        emissions_per_minute = 0.04 / 2.5
       },
       energy_usage = "150kW",
       ingredient_count = 5,
@@ -655,7 +655,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.03 / 3.5
+        emissions_per_minute = 0.03 / 3.5
       },
       energy_usage = "210kW",
       ingredient_count = 2,
@@ -782,7 +782,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.03 / 3.5
+        emissions_per_minute = 0.03 / 3.5
       },
       energy_usage = "210kW",
       ingredient_count = 6,

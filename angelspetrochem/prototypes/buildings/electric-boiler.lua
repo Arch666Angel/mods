@@ -73,7 +73,7 @@ data:extend(
       effectivity = 0.8,
       input_priority = "secondary",
       usage_priority = "secondary-input",
-      emissions = 0.01 / 6,
+      emissions_per_minute = 0.01 / 6,
     },
     working_sound =
     {
@@ -88,7 +88,7 @@ data:extend(
     structure =
     {
       north =
-      { 
+      {
         filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-off.png",
         priority = "extra-high",
         width = 160,
@@ -120,7 +120,7 @@ data:extend(
         shift = {0, 0},
       }
     },
-    -- patch = 
+    -- patch =
     -- {
       -- east =
       -- {

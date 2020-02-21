@@ -532,7 +532,7 @@ data:extend(
     ingredients ={
       {"iron-plate", 10},
     },
-    result= "angels-electric-boile",
+    result= "angels-electric-boiler",
   },
 }
 )
