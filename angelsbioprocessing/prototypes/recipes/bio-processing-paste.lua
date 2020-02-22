@@ -28,11 +28,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "copper-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-copper", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-copper", amount = 5}
+        {type = "item", name = "paste-copper", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-copper.png",
       icon_size = 32,
@@ -46,11 +46,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "gold-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-gold", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-gold", amount = 5}
+        {type = "item", name = "paste-gold", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-gold.png",
       icon_size = 32,
@@ -64,11 +64,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "tungsten-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-tungsten", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-tungsten", amount = 5}
+        {type = "item", name = "paste-tungsten", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-tungsten.png",
       icon_size = 32,
@@ -82,11 +82,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "cobalt-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-cobalt", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-cobalt", amount = 5}
+        {type = "item", name = "paste-cobalt", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-cobalt.png",
       icon_size = 32,
@@ -100,11 +100,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "rutile-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-titanium", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-titanium", amount = 5}
+        {type = "item", name = "paste-titanium", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-titanium.png",
       icon_size = 32,
@@ -118,11 +118,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "zinc-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-zinc", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-zinc", amount = 5}
+        {type = "item", name = "paste-zinc", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-zinc.png",
       icon_size = 32,
@@ -136,11 +136,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "iron-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-iron", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-iron", amount = 5}
+        {type = "item", name = "paste-iron", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-iron.png",
       icon_size = 32,
@@ -154,11 +154,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "paste-cellulose", amount = 5},
-        {type = "item", name = "silver-ore", amount = 5}
+        {type = "item", name = "paste-cellulose", amount = 1},
+        {type = "item", name = "powder-silver", amount = 2}
       },
       results = {
-        {type = "item", name = "paste-silver", amount = 5}
+        {type = "item", name = "paste-silver", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-silver.png",
       icon_size = 32,

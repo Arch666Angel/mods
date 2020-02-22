@@ -14,7 +14,7 @@ angelsmods.functions.add_resource(
     output_max = 1,
     icon = "__angelsrefining__/graphics/icons/angels-ore1.png",
     autoplace = {
-      starting_area = true,
+      starting_area = settings.startup["angels-starting-resource-ore1"].value,
       --resource_index = 21,
       base_density = 10,
       regular_rq_factor_multiplier = 1.0,
@@ -39,7 +39,7 @@ angelsmods.functions.add_resource(
     output_max = 1,
     icon = "__angelsrefining__/graphics/icons/angels-ore2.png",
     autoplace = {
-      starting_area = false,
+      starting_area = settings.startup["angels-starting-resource-ore2"].value,
       --resource_index = 22,
       base_density = 7,
       regular_rq_factor_multiplier = 0.9,
@@ -69,7 +69,7 @@ angelsmods.functions.add_resource(
     output_max = 1,
     icon = ore_3_icon,
     autoplace = {
-      starting_area = true,
+      starting_area = settings.startup["angels-starting-resource-ore3"].value,
       --resource_index = 23,
       base_density = 10,
       regular_rq_factor_multiplier = 1.0,
@@ -94,7 +94,7 @@ angelsmods.functions.add_resource(
     output_max = 1,
     icon = "__angelsrefining__/graphics/icons/angels-ore4.png",
     autoplace = {
-      starting_area = false,
+      starting_area = settings.startup["angels-starting-resource-ore4"].value,
       --resource_index = 24,
       base_density = 7,
       regular_rq_factor_multiplier = 0.9,
@@ -119,7 +119,7 @@ angelsmods.functions.add_resource(
     output_max = 1,
     icon = "__angelsrefining__/graphics/icons/angels-ore5.png",
     autoplace = {
-      starting_area = true,
+      starting_area = settings.startup["angels-starting-resource-ore5"].value,
       --resource_index = 25,
       base_density = 8,
       regular_rq_factor_multiplier = 1.0,
@@ -144,7 +144,7 @@ angelsmods.functions.add_resource(
     output_max = 1,
     icon = "__angelsrefining__/graphics/icons/angels-ore6.png",
     autoplace = {
-      starting_area = true,
+      starting_area = settings.startup["angels-starting-resource-ore6"].value,
       --resource_index = 26,
       base_density = 8,
       regular_rq_factor_multiplier = 1.0,

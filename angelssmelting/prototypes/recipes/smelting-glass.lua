@@ -344,7 +344,7 @@ data:extend(
     },
     results =
     {
-      {type="item", name="angels-void", amount=1}, -- see bob overrides
+      {type="item", name="angels-void", amount=1}, -- see glass overrides
     },
     icons = {
       {

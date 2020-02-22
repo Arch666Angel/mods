@@ -6,7 +6,7 @@ end
 
 if angelsmods.industries then
   if angelsmods.industries.components then
-    require("prototypes.recipes.petrotrain-updates")
+    require("prototypes.recipes.petrotrain-industries-components-updates")
   end
   data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"

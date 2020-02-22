@@ -1,8 +1,23 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
-Date: ??.02.2020
+Date: ??
   Changes:
     - Updated emission data, so it now shows in the ingame toolips (and activates)
+    - Changes the smelting recipe generation to be more flexible and dynamic
+    - Added powder recipe for Aluminium, Gold, Lead, Manganese, Platinum, Silver, Tin, Titanium, Zinc
+    - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel, Platinum, Silver, Tin
+    - Changed bobs powdered silicon icon for angels version for consistency
+    - Updated bobs silver oxide icon to be consistent with angels icons
+    - Renamed Powdered Tungsten to Tungsten Powder to be in line with other angel powders
+    - Added a steel rod from steel plate recipe and moved steel rod stacks further down the tech tree
+    - Added silicon wafer item and recipe, also affects bobs silicon wafer yield to be consistent
+    - Added a basic solder wire recipe to counteract the need of oxygen to make solder early game
+    - Added seperate solder smelting technology icon (was using the one from zinc smelting before)
+  Bugfixes:
+    - Fixed the icon on the gold wire recipe
+    - Fixed missing localisation on steel rod stack (recipe)
+    - Fixed casting machine tiers 2..4 not having an output fluid box
+    - Fixed missing recipes for the molds
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 09.02.2020

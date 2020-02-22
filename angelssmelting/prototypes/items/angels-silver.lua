@@ -38,13 +38,14 @@ data:extend(
     order = "d",
     stack_size = 200
   },
+  -- e reserved for bob silver oxide (see silver override)
   {
     type = "item",
     name = "solid-sodium-silver-cyanide",
     icon = "__angelssmelting__/graphics/icons/solid-sodium-silver-cyanide.png",
     icon_size = 32,
     subgroup = "angels-silver",
-    order = "e",
+    order = "f",
     stack_size = 200
   },
   {
@@ -53,7 +54,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/cathode-silver.png",
     icon_size = 32,
     subgroup = "angels-silver",
-    order = "f",
+    order = "g",
     stack_size = 200
   },
   -- SMELTING RESULTS
@@ -63,7 +64,16 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/ingot-silver.png",
     icon_size = 32,
     subgroup = "angels-silver",
-    order = "g",
+    order = "h",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "powder-silver",
+    icon = "__angelssmelting__/graphics/icons/powder-silver.png",
+    icon_size = 32,
+    subgroup = "angels-silver",
+    order = "i",
     stack_size = 200
   },
   -- CASTING INTERMEDIATE
@@ -73,7 +83,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-silver.png",
     icon_size = 32,
     subgroup = "angels-silver-casting",
-    order = "h",
+    order = "j",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 59/255, g = 143/255, b = 179/255},
@@ -89,7 +99,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-silver.png",
     icon_size = 32,
     subgroup = "angels-silver-casting",
-    order = "i",
+    order = "k",
     stack_size = 200
   },
   {
@@ -98,7 +108,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-coil-silver.png",
     icon_size = 32,
     subgroup = "angels-silver-casting",
-    order = "j",
+    order = "l",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -108,7 +118,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-silver.png",
     icon_size = 32,
     subgroup = "angels-silver-casting",
-    order = "k",
+    order = "m",
     stack_size = 200
   },
   {
@@ -117,7 +127,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-silver.png",
     icon_size = 32,
     subgroup = "angels-silver-casting",
-    order = "l",
+    order = "n",
     stack_size = 200
   },
 }

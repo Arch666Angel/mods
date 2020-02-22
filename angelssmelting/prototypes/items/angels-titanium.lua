@@ -63,6 +63,15 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "powder-titanium",
+    icon = "__angelssmelting__/graphics/icons/powder-titanium.png",
+    icon_size = 32,
+    subgroup = "angels-titanium",
+    order = "g",
+    stack_size = 200
+  },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -70,7 +79,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-titanium.png",
     icon_size = 32,
     subgroup = "angels-titanium-casting",
-    order = "g",
+    order = "h",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 126/255, g = 98/255, b = 123/255},
@@ -86,7 +95,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-titanium.png",
     icon_size = 32,
     subgroup = "angels-titanium-casting",
-    order = "h",
+    order = "i",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -96,8 +105,9 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-titanium.png",
     icon_size = 32,
     subgroup = "angels-titanium-casting",
-    order = "i",
+    order = "j",
     stack_size = 200
   },
+  -- order k reserved for motor casting (see industries)
 }
 )

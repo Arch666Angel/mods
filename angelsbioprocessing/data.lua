@@ -9,6 +9,9 @@ angelsmods.triggers.lab_ignore_token = angelsmods.triggers.lab_ignore_token or {
 angelsmods.triggers.lab_ignore_token["lab-alien"] = true
 angelsmods.triggers.lab_ignore_token["lab-module"] = true
 
+-- set triggers for other angel mods
+require("prototypes.bio-processing-triggers")
+
 --LOAD FUNCTIONS
 require("prototypes.bio-processing-functions")
 

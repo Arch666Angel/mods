@@ -69,6 +69,15 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "powder-silicon",
+    icon = "__angelssmelting__/graphics/icons/powder-silica.png",
+    icon_size = 32,
+    subgroup = "angels-silicon",
+    order = "g",
+    stack_size = 200
+  },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -76,7 +85,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-silicon.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
-    order = "g",
+    order = "h",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 209/255, g = 209/255, b = 209/255},
@@ -92,7 +101,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/silicon-seed.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
-    order = "h",
+    order = "i",
     stack_size = 200
   },
   {
@@ -101,7 +110,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/silicon-crucible.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
-    order = "i",
+    order = "j",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -111,7 +120,16 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/silicon-mono.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
-    order = "j",
+    order = "k",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "angels-silicon-wafer",
+    icon = "__angelssmelting__/graphics/icons/silicon-wafer.png",
+    icon_size = 32,
+    subgroup = "angels-silicon-casting",
+    order = "l",
     stack_size = 200
   },
 }
