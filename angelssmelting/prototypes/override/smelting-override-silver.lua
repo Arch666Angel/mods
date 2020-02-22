@@ -97,10 +97,6 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         subgroup = "angels-silver-casting",
         order = "m[angels-plate-silver]-a"
       },
-      {
-        name = "angels-wire-coil-silver-converting",
-        category = "electronics-machine"
-      },
     })
   end
 else
@@ -114,6 +110,9 @@ end
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silver"].wire then
+  if data.raw.item["gilded-copper-cable"] then -- bob electronics
+    OV.patch_recipes({ { name = "angels-wire-coil-silver-converting", category = "electronics-machine" } })
+  end
 else
   angelsmods.functions.add_flag("angels-wire-silver", "hidden")
   angelsmods.functions.add_flag("angels-wire-coil-silver", "hidden")
