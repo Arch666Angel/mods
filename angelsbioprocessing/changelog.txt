@@ -4,10 +4,13 @@ Date: ??
   Changes:
     - Bio tokens always gets added to labs now, trigger option added for mods to exclude the lab
     - Pastes requires 2 powder instead of 1 ore
+    - Changed the tech icon of Farming and Garden Mutations
+    - In marathon mode (expensive), you get the garden back when trying to obtain alien life samples
   Bugfixes:
     - Fixed petri-dish requiring the wrong glass item (when playing with bob)
     - Updated emission data, so it now shows in the ingame toolips (and activates)
     - Fixed that there where no temperate gardens generating under any circumstances
+    - Fixed garden duplication recipes did not have the garden marked as a catalyst ingredient (production stats)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.2
 Date: 12.02.2020
