@@ -217,6 +217,104 @@ data:extend(
     icon_size = 32,
     order = "h[liquid-molten-cobalt]",
   },
+  {
+    type = "recipe",
+    name = "roll-cobalt-casting",
+    category = "strand-casting",
+    subgroup = "angels-cobalt-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-cobalt", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-cobalt", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-cobalt", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-cobalt", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "i[angels-roll-cobalt]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-cobalt-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-cobalt-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-cobalt", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-cobalt", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-cobalt",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-cobalt", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-cobalt", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-cobalt",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "i[angels-roll-cobalt]-b",
+  },
   -- CASTING RESULT
   {
     type = "recipe",
@@ -249,8 +347,47 @@ data:extend(
         {type="item", name="angels-plate-cobalt", amount=4}
       },
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-cobalt.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/molten-cobalt.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
     icon_size = 32,
-    order = "j[angels-plate-cobalt]",
+    order = "j[angels-plate-cobalt]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-roll-cobalt-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-cobalt-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-cobalt", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-cobalt", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-cobalt.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "j[angels-plate-cobalt]-b",
   },
 }
 )

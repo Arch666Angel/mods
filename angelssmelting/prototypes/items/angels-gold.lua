@@ -72,6 +72,15 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "powder-gold",
+    icon = "__angelssmelting__/graphics/icons/powder-gold.png",
+    icon_size = 32,
+    subgroup = "angels-gold",
+    order = "h",
+    stack_size = 200
+  },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -79,7 +88,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "h",
+    order = "i",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 237/255, g = 191/255, b = 29/255},
@@ -95,7 +104,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/roll-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "i",
+    order = "j",
     stack_size = 200
   },
   {
@@ -104,7 +113,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "j",
+    order = "k",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -114,7 +123,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "k",
+    order = "l",
     stack_size = 200
   },
   {
@@ -123,7 +132,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
-    order = "l",
+    order = "m",
     stack_size = 200
   },
 }

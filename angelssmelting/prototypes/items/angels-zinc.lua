@@ -57,6 +57,15 @@ data:extend(
     order = "f",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "powder-zinc",
+    icon = "__angelssmelting__/graphics/icons/powder-zinc.png",
+    icon_size = 32,
+    subgroup = "angels-zinc",
+    order = "g",
+    stack_size = 200
+  },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -64,7 +73,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc-casting",
-    order = "g",
+    order = "h",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 100/255, g = 183/255, b = 177/255},
@@ -74,14 +83,13 @@ data:extend(
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
-  -- CASTING INTERMEDIATE
   {
     type = "item",
     name = "angels-roll-zinc",
     icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc-casting",
-    order = "h",
+    order = "i",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -91,7 +99,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc-casting",
-    order = "i",
+    order = "j",
     stack_size = 200
   },
 }

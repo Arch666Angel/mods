@@ -107,5 +107,8 @@ data:extend(
     order = "j",
     stack_size = 200
   },
+  -- order k reserved for tungsten carbide plate (see tungsten override)
+  -- order l reserved for copper tungsten plate (see tungsten override)
+  -- order m reserved for motor casing (see industries)
 }
 )

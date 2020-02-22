@@ -1010,6 +1010,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "angelsore-crystal-mix6-processing"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "ore-powderizer-3"
         },
         {

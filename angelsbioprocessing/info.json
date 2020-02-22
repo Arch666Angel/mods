@@ -10,8 +10,8 @@
   "dependencies": [
     "base >= 0.18.0",
     "angelspetrochem >= 0.9.0",
-    "angelsrefining >= 0.11.0",
-    "angelssmelting >= 0.6.0",
+    "angelsrefining >= 0.11.3",
+    "angelssmelting >= 0.6.1",
     "? bobenemies >= 0.15.0"
   ]
 }

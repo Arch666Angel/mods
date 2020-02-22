@@ -179,12 +179,12 @@ data:extend(
     ingredients =
     {
       {type="item", name="solid-chrome-oxide", amount=24},
-      {type="item", name="ingot-aluminium", amount=6},
+      {type="item", name="ingot-chrome", amount=6},
     },
     results =
     {
       {type="item", name="ingot-chrome", amount=24},
-      {type="item", name="solid-aluminium-oxide", amount=6},
+      {type="item", name="solid-chrome-oxide", amount=6},
     },
     main_product= "ingot-chrome",
     icons = {
@@ -238,6 +238,104 @@ data:extend(
     icon_size = 32,
     order = "i[liquid-molten-chrome]",
   },
+  {
+    type = "recipe",
+    name = "roll-chrome-casting",
+    category = "strand-casting",
+    subgroup = "angels-chrome-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-chrome", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-chrome", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-chrome", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-chrome", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "j[angels-roll-chrome]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-chrome-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-chrome-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-chrome", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-chrome", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-chrome",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-chrome", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-chrome", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-chrome",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "j[angels-roll-chrome]-b",
+  },
   -- CASTING RESULT
   {
     type = "recipe",
@@ -270,8 +368,47 @@ data:extend(
         {type="item", name="angels-plate-chrome", amount=4}
       },
     },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
     icon_size = 32,
-    order = "k[angels-plate-chrome]",
+    order = "k[angels-plate-chrome]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-roll-chrome-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-chrome-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-chrome", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-chrome", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "k[angels-plate-chrome]-b",
   },
 }
 )

@@ -72,6 +72,15 @@ data:extend(
     order = "g",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "powder-lead",
+    icon = "__angelssmelting__/graphics/icons/powder-lead.png",
+    icon_size = 32,
+    subgroup = "angels-lead",
+    order = "h",
+    stack_size = 200
+  },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -79,7 +88,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-lead.png",
     icon_size = 32,
     subgroup = "angels-lead-casting",
-    order = "h",
+    order = "i",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 77/255, g = 78/255, b = 90/255},
@@ -89,6 +98,15 @@ data:extend(
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
+  {
+    type = "item",
+    name = "angels-roll-lead",
+    icon = "__angelssmelting__/graphics/icons/roll-lead.png",
+    icon_size = 32,
+    subgroup = "angels-lead-casting",
+    order = "j",
+    stack_size = 200
+  },
   -- CASTING RESULT
   {
     type = "item",
@@ -96,7 +114,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-lead.png",
     icon_size = 32,
     subgroup = "angels-lead-casting",
-    order = "i",
+    order = "k",
     stack_size = 200
   },
 }
