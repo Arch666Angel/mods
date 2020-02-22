@@ -182,6 +182,24 @@ data:extend(
     icon_size = 32,
     order = "f[ingot-manganese]-b",
   },
+  {
+    type = "recipe",
+    name = "powder-manganese",
+    category = "advanced-crafting",
+    subgroup = "angels-manganese",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-manganese", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-manganese", amount=1},
+    },
+    icon_size = 32,
+    order = "g[powder-manganese]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -199,7 +217,105 @@ data:extend(
       {type="fluid", name="liquid-molten-manganese", amount=120},
     },
     icon_size = 32,
-    order = "g[liquid-molten-manganese]",
+    order = "h[liquid-molten-manganese]",
+  },
+  {
+    type = "recipe",
+    name = "roll-manganese-casting",
+    category = "strand-casting",
+    subgroup = "angels-manganese-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-manganese", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-manganese", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-manganese", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-manganese", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "i[angels-roll-manganese]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-manganese-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-manganese-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-manganese", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-manganese", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-manganese",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-manganese", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-manganese", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-manganese",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "i[angels-roll-manganese]-b",
   },
   -- CASTING RESULT
   {
@@ -233,8 +349,47 @@ data:extend(
         {type="item", name="angels-plate-manganese", amount=4}
       },
     },
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-manganese.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/molten-manganese.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
     icon_size = 32,
-    order = "j",
+    order = "j[angels-plate-manganese]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-roll-manganese-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-manganese-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-manganese", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-manganese", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-manganese.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "j[angels-plate-manganese]-b",
   },
 }
 )

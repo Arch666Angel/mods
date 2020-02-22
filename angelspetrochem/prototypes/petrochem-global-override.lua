@@ -30,7 +30,7 @@ data.raw["recipe"]["explosives"].icons = {
   },
   {
     icon = "__angelspetrochem__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+    tint = angelsmods.petrochem.number_tint,
     scale = 0.32,
     shift = {-12, -12}
   }
@@ -47,7 +47,7 @@ data.raw["item"]["chemical-plant"].icons = {
   },
   {
     icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+    tint = angelsmods.petrochem.number_tint,
     scale = 0.32,
     shift = {-12, -12}
   }
@@ -64,7 +64,7 @@ data.raw["item"]["oil-refinery"].icons = {
   },
   {
     icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+    tint = angelsmods.petrochem.number_tint,
     scale = 0.32,
     shift = {-12, -12}
   }
@@ -300,7 +300,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_1.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -316,7 +316,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_2.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -351,7 +351,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_1.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -368,7 +368,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_2.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -381,7 +381,7 @@ if bobmods then
     if data.raw.item["insulated-cable"] then -- bob electronics
       data.raw.item["insulated-cable"].subgroup = "petrochem-solids"
       data.raw.item["insulated-cable"].order = "a[petrochem-solids]-c[rubber]-b"
-      OV.patch_recipes({ { name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"} })
+      OV.patch_recipes({{name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"}})
     end
 
     if data.raw.recipe["pure-water-pump"] then
@@ -391,6 +391,11 @@ if bobmods then
     end
 
     table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
+    if bobmods and bobmods.assembly then
+      table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
+      table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
+      table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
+    end
     data.raw.fluid["heavy-water"].subgroup = "water-treatment-fluid"
     data.raw.fluid["heavy-water"].order = "eb"
     data.raw.fluid["deuterium"].subgroup = "petrochem-basic-fluids"

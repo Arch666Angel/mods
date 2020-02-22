@@ -181,6 +181,24 @@ data:extend(
     icon_size = 32,
     order = "f[ingot-zinc]-c",
   },
+  {
+    type = "recipe",
+    name = "powder-zinc",
+    category = "advanced-crafting",
+    subgroup = "angels-zinc",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-zinc", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-zinc", amount=1},
+    },
+    icon_size = 32,
+    order = "g[powder-zinc]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -198,9 +216,106 @@ data:extend(
       {type="fluid", name="liquid-molten-zinc", amount=120},
     },
     icon_size = 32,
-    order = "g[liquid-molten-zinc]",
+    order = "h[liquid-molten-zinc]",
   },
-  -- order h reserved for angel-roll-zinc
+  {
+    type = "recipe",
+    name = "roll-zinc-casting",
+    category = "strand-casting",
+    subgroup = "angels-zinc-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-zinc", amount=80},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-zinc", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-zinc", amount=100 * intermediatemulti},
+        {type="fluid", name="water", amount=40},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-zinc", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "i[angels-roll-zinc]-a",
+  },
+  {
+    type = "recipe",
+    name = "roll-zinc-casting-fast",
+    category = "strand-casting",
+    subgroup = "angels-zinc-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-zinc", amount=140},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-zinc", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-zinc",
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 2,
+      ingredients =
+      {
+        {type="fluid", name="liquid-molten-zinc", amount=180 * intermediatemulti},
+        {type="fluid", name="liquid-coolant", amount=40, maximum_temperature = 50},
+      },
+      results =
+      {
+        {type="item", name="angels-roll-zinc", amount=4},
+        {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
+      },
+      main_product = "angels-roll-zinc",
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
+      },
+    },
+    icon_size = 32,
+    order = "i[angels-roll-zinc]-b",
+  },
   {
     type = "recipe",
     name = "angels-plate-zinc",
@@ -232,8 +347,47 @@ data:extend(
         {type="item", name="angels-plate-zinc", amount=4}
       },
     },
+    icons = {
+      { 
+        icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
     icon_size = 32,
-    order = "i[angels-plate-zinc]",
+    order = "j[angels-plate-zinc]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-roll-zinc-converting",
+    category = "advanced-crafting",
+    subgroup = "angels-zinc-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = false,
+    ingredients =
+    {
+      {type="item", name="angels-roll-zinc", amount=1},
+    },
+    results =
+    {
+      {type="item", name="angels-plate-zinc", amount=4},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "j[angels-plate-zinc]-b",
   },
 }
 )

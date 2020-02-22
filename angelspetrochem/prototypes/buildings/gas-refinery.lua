@@ -15,7 +15,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-a",
     place_result = "gas-refinery-small",
@@ -35,7 +35,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "gas-refinery-small"},
     fast_replaceable_group = "gas-refinery-small",
@@ -55,7 +55,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2,
+      emissions_per_minute = 0.03 * 60,
     },
     energy_usage = "300kW",
     ingredient_count = 4,
@@ -146,7 +146,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-b",
     place_result = "gas-refinery-small-2",
@@ -166,7 +166,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "gas-refinery-small-2"},
     fast_replaceable_group = "gas-refinery-small",
@@ -186,7 +186,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2,
+      emissions_per_minute = 0.04 * 60
     },
     energy_usage = "350kW",
     ingredient_count = 4,
@@ -277,7 +277,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-c",
     place_result = "gas-refinery-small-3",
@@ -317,7 +317,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2,
+      emissions_per_minute = 0.05 * 60
     },
     energy_usage = "400kW",
     ingredient_count = 4,
@@ -448,7 +448,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2,
+      emissions_per_minute = 0.06 * 60
     },
     energy_usage = "425kW",
     ingredient_count = 4,

@@ -867,6 +867,33 @@ local function make_resglow(input)
   end
 end
 
+local function generate_presets(resource)
+  local presets = {
+    ["rich-resources"] = {richness = "very-good"},
+    ["rail-world"] = {
+      frequency = 0.33333333333,
+      size = 3
+    },
+    ["ribbon-world"] = {
+      frequency = 3,
+      size = 0.5,
+      richness = 2
+    }
+  }
+  -- if set and set.basic_settings and set.basic_settings.autoplace_controls then
+  --   set.basic_settings.autoplace_controls = util.merge({set.basic_settings.autoplace_controls, resources})
+  -- end
+  for preset, conf in pairs(presets) do
+    local set = data.raw["map-gen-presets"]["default"][preset]
+    if
+      set and set.basic_settings and set.basic_settings.autoplace_controls and
+        not set.basic_settings.autoplace_controls[resource]
+     then
+      set.basic_settings.autoplace_controls[resource] = conf
+    end
+  end
+end
+
 --ADD RESOURCE TO CREATE OR UPDATE TO STORE
 function angelsmods.functions.add_resource(action, input)
   if action == "update" and not angelsmods.functions.store.update[input.name] then
@@ -901,7 +928,7 @@ function angelsmods.functions.make_resource()
       random_spot_size_minimum = input.autoplace.random_spot_size_minimum,
       random_spot_size_maximum = input.autoplace.random_spot_size_maximum,
       additional_richness = input.autoplace.additional_richness,
-      richness_post_multiplier = input.autoplace.richness_post_multiplier
+      richness_post_multiplier = input.autoplace.richness_post_multiplier or nil
       -- richness_post_multiplier = 0.1 --Maybe make that an option?
     }
     if not data.raw.resource[input.name] then
@@ -909,6 +936,7 @@ function angelsmods.functions.make_resource()
       resource_autoplace.initialize_patch_set(input.name, input.autoplace.starting_area)
       --Create Autopace for the resource
       make_resautoplace(input)
+      generate_presets(input.name)
       --Create Particle if resource yields items
       if input.type == "item" then
         if input.get and data.raw.particle[input.get .. "-particle"] then
@@ -953,15 +981,10 @@ function angelsmods.functions.make_resource()
       else
         input.map_grid = false
       end
-      --Set resource category if resource yields fluids
-      if not input.type == "fluid" then
-        input.category = nil
-        input.order = "c-" .. input.order
-      else
-        input.order = "a-" .. input.order
-      end
+
       --Set Boxes according to presets
       if input.type == "fluid" then
+        input.order = "d-" .. input.order
         input.highlight = true
         if input.sheet == 1 then
           input.collision_box = {{-4.4, -4.4}, {4.4, 4.4}}
@@ -972,12 +995,19 @@ function angelsmods.functions.make_resource()
           input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
         end
       else
+        --Unset resource category if resource yields fluids
+        input.category = nil
+        input.order = "a-" .. input.order
         input.highlight = false
         input.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
         input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
       end
       --Add fluidrequirements according to mod options
-      if input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq then
+      if
+        input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq or
+          (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
+            settings.startup["angels-keepuranacid"].value
+       then
         input.acid_amount = 10
       end
       --Get map_color and icon from the regular resource
@@ -1055,12 +1085,22 @@ function angelsmods.functions.remove_resource(resource)
   if data.raw.resource[resource] then
     data.raw.resource[resource] = nil
     data.raw["autoplace-control"][resource] = nil
-  --log(serpent.block(resource))
   end
   if data.raw.resource["infinite-" .. resource] then
     data.raw.resource["infinite-" .. resource] = nil
     data.raw["autoplace-control"]["infinite-" .. resource] = nil
   end
+
+  -- Remove from presets
+  for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
+    if
+      preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
+        preset.basic_settings.autoplace_controls[resource]
+     then
+      preset.basic_settings.autoplace_controls[resource] = nil
+    end
+  end
+
   for r, subdir in pairs(angelsmods.functions.store) do
     for r, input in pairs(subdir) do
       if input == resource then
@@ -1103,7 +1143,11 @@ function angelsmods.functions.update_autoplace()
         end
         --Add autoplace to resource
         if data.raw.resource[input.name] then
-          if input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq) then
+          if
+            input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq) or
+              (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
+                settings.startup["angels-keepuranacid"].value
+           then
             if angelsmods.petrochem then
               if angelsmods.trigger.enableacids then
                 input.acid_req = input.acid_to_mine
@@ -1176,7 +1220,6 @@ function angelsmods.functions.index_check()
   end
   --RETURN TABLE
   log(serpent.block(angelsmods.functions.test))
-
   --RETURN OTHER IMPORTANT VALUES
   log(serpent.block("regular_resource_count = " .. regular_resource_count))
   log(serpent.block("starting_resource_count = " .. starting_resource_count))

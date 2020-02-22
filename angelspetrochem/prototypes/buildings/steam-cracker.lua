@@ -14,7 +14,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-steam",
     order = "a[steam-cracker]-a",
     place_result = "steam-cracker",
@@ -34,7 +34,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-cracker"},
     fast_replaceable_group = "steam-cracker",
@@ -54,7 +54,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.02 * 60
     },
     energy_usage = "200kW",
     ingredient_count = 3,
@@ -180,7 +180,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-steam",
     order = "a[steam-cracker]-b",
     place_result = "steam-cracker-2",
@@ -200,7 +200,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-cracker-2"},
     fast_replaceable_group = "steam-cracker",
@@ -220,7 +220,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.03 * 60
     },
     energy_usage = "225kW",
     ingredient_count = 3,
@@ -330,7 +330,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-steam",
     order = "a[steam-cracker]-c",
     place_result = "steam-cracker-3",
@@ -350,7 +350,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-cracker-3"},
     fast_replaceable_group = "steam-cracker",
@@ -370,7 +370,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.04 * 60
     },
     energy_usage = "250kW",
     ingredient_count = 3,
@@ -480,7 +480,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-steam",
     order = "a[steam-cracker]-d",
     place_result = "steam-cracker-4",
@@ -500,7 +500,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-cracker-4"},
     fast_replaceable_group = "steam-cracker",
@@ -520,7 +520,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.05 * 60
     },
     energy_usage = "275kW",
     ingredient_count = 3,

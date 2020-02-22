@@ -206,24 +206,24 @@ data:extend(
     icon_size = 32,
     order = "g[ingot-aluminium]",
   },
-  --{
-  --  type = "recipe",
-  --  name = "powder-aluminium",
-  --  category = "advanced-crafting",
-  --  subgroup = "angels-aluminium",
-  --  energy_required = 0.5,
-  --  enabled = "false",
-  --  ingredients =
-  --  {
-  --    {type="item", name="ingot-aluminium", amount=1},
-  --  },
-  --  results =
-  --  {
-  --    {type="item", name="powder-aluminium", amount=1},
-  --  },
-  --  icon_size = 32,
-  --  order = "h[powder-aluminium]",
-  --},
+  {
+    type = "recipe",
+    name = "powder-aluminium",
+    category = "advanced-crafting",
+    subgroup = "angels-aluminium",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-aluminium", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-aluminium", amount=1},
+    },
+    icon_size = 32,
+    order = "h[powder-aluminium]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -487,5 +487,6 @@ data:extend(
     icon_size = 32,
     order = "k[angels-plate-aluminium]-b",
   },
+  -- order l reserved for motor casting (see industries)
 }
 )

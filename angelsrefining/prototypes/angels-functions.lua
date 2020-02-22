@@ -68,6 +68,15 @@ function angelsmods.functions.add_flag(entity, flag)
   end
 end
 
+--MODIFY LOCATION
+function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type)
+  i_type = i_type or "item"
+  
+  local i = data.raw[i_type] and data.raw[i_type][i_name] or {}
+  i.subgroup = i_subgroup or i.subgroup
+  i.order = i_order or i.order
+end
+
 --MODIFY BARRELING RECIPES
 function angelsmods.functions.disable_barreling_recipes(fluid_to_disable)
   angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-barrel")

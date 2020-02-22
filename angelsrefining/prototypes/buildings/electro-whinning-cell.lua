@@ -48,11 +48,11 @@ data:extend(
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
       crafting_categories = {"ore-sorting-t3-5"},
-      crafting_speed = 1,
+      crafting_speed = 0.75,
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.02 / 2
+        emissions_per_minute = 0.02 * 60
       },
       energy_usage = "200kW",
       ingredient_count = 3,
@@ -170,7 +170,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.03 / 2.5
+        emissions_per_minute = 0.03 * 60
       },
       energy_usage = "250kW",
       ingredient_count = 3,
@@ -288,7 +288,7 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions = 0.04 / 3
+        emissions_per_minute = 0.04 * 60
       },
       energy_usage = "300kW",
       ingredient_count = 3,

@@ -1,6 +1,6 @@
 {
   "name": "angelsexploration",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "factorio_version": "0.18",
   "title": "Angel's Exploration (BETA)",
   "author": "Arch666Angel",
@@ -9,7 +9,7 @@
   "description": "",
   "dependencies": [
     "base >= 0.18.3",
-    "? angelsindustries >= 0.3.0",
+    "? angelsindustries >= 0.3.1",
     "? bobenemies >= 0.3.0"
 	]
 }

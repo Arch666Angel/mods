@@ -183,15 +183,15 @@ data:extend(
     group = "angels-smelting",
     order = "q",
   },
+  {
+    type = "item-subgroup",
+    name = "angels-alloys",
+    group = "angels-smelting",
+    order = "r",
+  },
   -- {
     -- type = "item-subgroup",
-    -- name = "angels-alloys",
-    -- group = "angels-smelting",
-    -- order = "r",
-  -- },
-  -- {
-    -- type = "item-subgroup",
-    -- name = "angels-alloys",
+    -- name = "angels-alloys-2",
     -- group = "angels-smelting",
     -- order = "s",
   -- },
@@ -377,12 +377,6 @@ data:extend(
     name = "angels-solder-casting",
     group = "angels-casting",
     order = "s",
-  },
-  {
-    type = "item-subgroup",
-    name = "angels-lithium-casting",
-    group = "angels-casting",
-    order = "t",
   },
   {
     type = "item-subgroup",

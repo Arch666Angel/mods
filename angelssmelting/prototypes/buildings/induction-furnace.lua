@@ -13,7 +13,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "a[induction-furnace]",
@@ -33,7 +33,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace"},
@@ -55,7 +55,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 * 60
     },
     energy_usage = "150kW",
     ingredient_count = 2,
@@ -119,7 +119,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "b[induction-furnace-2]",
@@ -139,7 +139,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace-2"},
@@ -161,7 +161,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.04 * 60
     },
     energy_usage = "200kW",
     ingredient_count = 4,
@@ -217,7 +217,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "c[induction-furnace-3]",
@@ -237,7 +237,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace-3"},
@@ -259,7 +259,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.05 * 60
     },
     energy_usage = "250kW",
     ingredient_count = 6,
@@ -315,13 +315,13 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     subgroup = "angels-induction-furnace",
     order = "d[induction-furnace-4]",
     place_result = "induction-furnace-4",
     stack_size = 10,
-  },    
+  },
   {
     type = "assembling-machine",
     name = "induction-furnace-4",
@@ -335,7 +335,7 @@ data:extend(
         scale = 0.32,
         shift = {-12, -12},
       }
-    },    
+    },
     icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "induction-furnace-4"},
@@ -356,7 +356,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.06 * 60
     },
     energy_usage = "250kW",
     ingredient_count = 6,

@@ -54,7 +54,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.03 * 60
     },
     energy_usage = "150kW",
     ingredient_count = 2,
@@ -171,7 +171,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.04 * 60
     },
     energy_usage = "200kW",
     ingredient_count = 4,
@@ -218,7 +218,13 @@ data:extend(
         base_area = 10,
         base_level = -1,
         pipe_connections = {{ type="input", position = {-1, -2} }}
-      }
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        base_level = 1,
+        pipe_connections = {{ position = {2, -1} }}
+      },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
@@ -282,7 +288,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.05 * 60
     },
     energy_usage = "250kW",
     ingredient_count = 6,
@@ -329,7 +335,13 @@ data:extend(
         base_area = 10,
         base_level = -1,
         pipe_connections = {{ type="input", position = {-1, -2} }}
-      }
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        base_level = 1,
+        pipe_connections = {{ position = {2, -1} }}
+      },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
@@ -393,7 +405,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.03 / 3.5
+      emissions_per_minute = 0.06 * 60
     },
     energy_usage = "250kW",
     ingredient_count = 6,
@@ -440,7 +452,13 @@ data:extend(
         base_area = 10,
         base_level = -1,
         pipe_connections = {{ type="input", position = {-1, -2} }}
-      }
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        base_level = 1,
+        pipe_connections = {{ position = {2, -1} }}
+      },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =

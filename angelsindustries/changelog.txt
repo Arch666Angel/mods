@@ -1,6 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 22.02.2020
+  Changes:
+    - Dependent on bioprocessing 0.7.3 for new lab triggers
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
+    - Automated component replacement script if components is activated
+      - Works with Vanilla, Angels and Bobs (default, normal and expensive)
+      - All buildings require blocks
+      - Other recipes changed to take angels components
+      - Hides bobs electronic(finals) to use angels electronics
+      - Still uses bobs electronic paths for modules (for now)
+      - Warning: Does not need overhaul=true to work
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: 2020-02-09
+Date: 09.02.2020
   Changes:
     - Update to 0.18
     - Updated recipe interaction
@@ -26,4 +39,3 @@ Version: 0.1.0
 Date: 01.04.2018
   Changes:
     - merged mods and first release
-

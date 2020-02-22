@@ -445,10 +445,10 @@ if not loaders_graphics then
   end
 end
 --ensure that it is possible to produce the packs at each stage
-if angelsmods.industries and angelsmods.industries.tech then
-	OV.add_unlock("angels-tin-smelting-1", "basic-tinned-copper-wire")
-	OV.add_unlock("angels-silver-smelting-1", "basic-silvered-copper-wire")
-	OV.add_unlock("angels-silicon-smelting-1","angels-silicon-wafer")
-	OV.add_unlock("angels-glass-smelting-2","angels-coil-glass-fiber")
-	OV.add_unlock("angels-gold-smelting-1","angels-wire-gold")
+if angelsmods.industries and angelsmods.industries.components then
+	--OV.add_unlock("angels-tin-smelting-1", "basic-tinned-copper-wire")
+	--OV.add_unlock("angels-silver-smelting-1", "basic-silvered-copper-wire")
+	--OV.add_unlock("angels-silicon-smelting-1","angels-silicon-wafer")
+	--OV.add_unlock("angels-glass-smelting-2","angels-coil-glass-fiber")
+	--OV.add_unlock("angels-gold-smelting-1","angels-wire-gold")
 end

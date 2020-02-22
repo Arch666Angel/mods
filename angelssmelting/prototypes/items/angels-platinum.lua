@@ -1,5 +1,6 @@
 data:extend(
 {
+  -- ORE
   {
     type = "item",
     name = "platinum-ore",
@@ -9,6 +10,7 @@ data:extend(
     order = "a",
     stack_size = 200
   },
+  -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-platinum",
@@ -28,30 +30,12 @@ data:extend(
     stack_size = 200
   },
   {
-    type = "item",
-    name = "solid-ammonium-chloroplatinate",
-    icon = "__angelssmelting__/graphics/icons/solid-ammonium-chloroplatinate.png",
-    icon_size = 32,
-    subgroup = "angels-platinum",
-    order = "d",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "ingot-platinum",
-    icon = "__angelssmelting__/graphics/icons/ingot-platinum.png",
-    icon_size = 32,
-    subgroup = "angels-platinum",
-    order = "e",
-    stack_size = 200
-  },
-  {
     type = "fluid",
     name = "liquid-hexachloroplatinic-acid",
     icon = "__angelssmelting__/graphics/icons/liquid-hexachloroplatinic-acid.png",
     icon_size = 32,
     subgroup = "angels-platinum",
-    order = "f",
+    order = "d",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 242/255, g = 212/255, b = 194/255},
@@ -61,12 +45,41 @@ data:extend(
     flow_to_energy_ratio = 0.59,
   },
   {
+    type = "item",
+    name = "solid-ammonium-chloroplatinate",
+    icon = "__angelssmelting__/graphics/icons/solid-ammonium-chloroplatinate.png",
+    icon_size = 32,
+    subgroup = "angels-platinum",
+    order = "e",
+    stack_size = 200
+  },
+  -- SMELTING RESULTS
+  {
+    type = "item",
+    name = "ingot-platinum",
+    icon = "__angelssmelting__/graphics/icons/ingot-platinum.png",
+    icon_size = 32,
+    subgroup = "angels-platinum",
+    order = "f",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "powder-platinum",
+    icon = "__angelssmelting__/graphics/icons/powder-platinum.png",
+    icon_size = 32,
+    subgroup = "angels-platinum",
+    order = "g",
+    stack_size = 200
+  },
+  -- CASTING INTERMEDIATE
+  {
     type = "fluid",
     name = "liquid-molten-platinum",
     icon = "__angelssmelting__/graphics/icons/molten-platinum.png",
     icon_size = 32,
     subgroup = "angels-platinum-casting",
-    order = "g",
+    order = "h",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 242/255, g = 212/255, b = 194/255},
@@ -75,15 +88,6 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false
-  },
-  {
-    type = "item",
-    name = "angels-plate-platinum",
-    icon = "__angelssmelting__/graphics/icons/plate-platinum.png",
-    icon_size = 32,
-    subgroup = "angels-platinum-casting",
-    order = "h",
-    stack_size = 200
   },
   {
     type = "item",
@@ -103,13 +107,23 @@ data:extend(
     order = "j",
     stack_size = 200
   },
+  -- CASTING RESULT
+  {
+    type = "item",
+    name = "angels-plate-platinum",
+    icon = "__angelssmelting__/graphics/icons/plate-platinum.png",
+    icon_size = 32,
+    subgroup = "angels-platinum-casting",
+    order = "k",
+    stack_size = 200
+  },
   {
     type = "item",
     name = "angels-wire-platinum",
     icon = "__angelssmelting__/graphics/icons/wire-platinum.png",
     icon_size = 32,
     subgroup = "angels-platinum-casting",
-    order = "k",
+    order = "l",
     stack_size = 200
   },
 }

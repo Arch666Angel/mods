@@ -1,10 +1,10 @@
 --INITIALIZE
-if not angelsmods then angelsmods = {} end
-if not angelsmods.ores then angelsmods.ores = {} end
-if not angelsmods.functions then angelsmods.functions = {} end
-if not angelsmods.functions.store then angelsmods.functions.store = {} end
-if not angelsmods.functions.store.update then angelsmods.functions.store.update = {} end
-if not angelsmods.functions.store.make then angelsmods.functions.store.make = {} end
+angelsmods = angelsmods or {}
+angelsmods.ores = angelsmods.ores or {}
+angelsmods.functions = angelsmods.functions or {}
+angelsmods.functions.store = angelsmods.functions.store or {}
+angelsmods.functions.store.update = angelsmods.functions.store.update or {}
+angelsmods.functions.store.make = angelsmods.functions.store.make or {}
 
 --SET MOD OPTIONS
 angelsmods.ores.yield = settings.startup["angels-infinite-yield"].value

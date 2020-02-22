@@ -183,6 +183,24 @@ data:extend(
     icon_size = 32,
     order = "f[ingot-titanium]-b",
   },
+  {
+    type = "recipe",
+    name = "powder-titanium",
+    category = "advanced-crafting",
+    subgroup = "angels-titanium",
+    energy_required = 0.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="ingot-titanium", amount=1},
+    },
+    results =
+    {
+      {type="item", name="powder-titanium", amount=1},
+    },
+    icon_size = 32,
+    order = "g[powder-titanium]",
+  },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -211,7 +229,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "g[liquid-molten-titanium]-a",
+    order = "h[liquid-molten-titanium]-a",
   },
   {
     type = "recipe",
@@ -241,7 +259,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "g[liquid-molten-titanium]-b",
+    order = "h[liquid-molten-titanium]-b",
   },
   {
     type = "recipe",
@@ -271,7 +289,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "g[liquid-molten-titanium]-c",
+    order = "h[liquid-molten-titanium]-c",
   },
   {
     type = "recipe",
@@ -302,7 +320,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "g[liquid-molten-titanium]-d",
+    order = "h[liquid-molten-titanium]-d",
   },
   {
     type = "recipe",
@@ -333,7 +351,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "g[liquid-molten-titanium]-e",
+    order = "h[liquid-molten-titanium]-e",
   },
   {
     type = "recipe",
@@ -380,7 +398,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "h[angels-roll-titanium]-a",
+    order = "i[angels-roll-titanium]-a",
   },
   {
     type = "recipe",
@@ -431,7 +449,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "h[angels-roll-titanium]-b",
+    order = "i[angels-roll-titanium]-b",
   },
   {
     type = "recipe",
@@ -475,7 +493,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "i[angels-plate-titanium]-a",
+    order = "j[angels-plate-titanium]-a",
   },
   {
     type = "recipe",
@@ -504,7 +522,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "i[angels-plate-titanium]-b",
+    order = "j[angels-plate-titanium]-b",
   },
 }
 )

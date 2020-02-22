@@ -39,6 +39,15 @@ data:extend(
     order = "d",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "powder-tin",
+    icon = "__angelssmelting__/graphics/icons/powder-tin.png",
+    icon_size = 32,
+    subgroup = "angels-tin",
+    order = "e",
+    stack_size = 200
+  },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
@@ -46,7 +55,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/molten-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
-    order = "e",
+    order = "f",
     default_temperature = 100,
     heat_capacity = "0KJ",
     base_color = {r = 87/255, g = 130/255, b = 96/255},
@@ -58,11 +67,20 @@ data:extend(
   },
   {
     type = "item",
+    name = "angels-roll-tin",
+    icon = "__angelssmelting__/graphics/icons/roll-tin.png",
+    icon_size = 32,
+    subgroup = "angels-tin-casting",
+    order = "g",
+    stack_size = 200
+  },
+  {
+    type = "item",
     name = "angels-wire-coil-tin",
     icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
-    order = "f",
+    order = "h",
     stack_size = 200
   },
   -- CASTING RESULT
@@ -72,7 +90,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/plate-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
-    order = "g",
+    order = "i",
     stack_size = 200
   },
   {
@@ -81,7 +99,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/wire-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
-    order = "h",
+    order = "j",
     stack_size = 200
   },
 }

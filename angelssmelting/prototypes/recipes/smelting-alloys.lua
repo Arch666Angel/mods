@@ -297,7 +297,7 @@ data:extend(
     subgroup = "angels-steel-casting",
     normal =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 4,
       ingredients =
       {
@@ -311,7 +311,7 @@ data:extend(
     },
     expensive =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 4,
       ingredients =
       {
@@ -344,7 +344,7 @@ data:extend(
     subgroup = "angels-steel-casting",
     normal =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 2,
       ingredients =
       {
@@ -356,10 +356,11 @@ data:extend(
         {type="item", name="angels-rod-stack-steel", amount=2},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
+      main_product = "angels-rod-stack-steel",
     },
     expensive =
     {
-      enabled = true,
+      enabled = "false",
       energy_required = 2,
       ingredients =
       {
@@ -371,6 +372,7 @@ data:extend(
         {type="item", name="angels-rod-stack-steel", amount=2},
         {type="fluid", name="liquid-coolant-used", amount=40, temperature = 300},
       },
+      main_product = "angels-rod-stack-steel",
     },
     icons = {
       {
@@ -462,11 +464,39 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "angels-rod-steel-plate",
+    category = "crafting",
+    subgroup = "angels-steel-casting",
+    energy_required = 0.5,
+    enabled = "false",
+    allow_decomposition = true,
+    ingredients ={
+      {type="item", name="angels-plate-steel", amount=2},
+    },
+    results =
+    {
+      {type="item", name="angels-rod-steel", amount=1},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/rod-steel.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/plate-steel.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      }
+    },
+    icon_size = 32,
+    order = "m[angels-rod-steel]-a",
+  },
+  {
+    type = "recipe",
     name = "angels-rod-stack-steel-converting",
     category = "advanced-crafting",
     subgroup = "angels-steel-casting",
     energy_required = 0.5,
-    enabled = true,
+    enabled = "false",
     allow_decomposition = false,
     ingredients ={
       {type="item", name="angels-rod-stack-steel", amount=1},
@@ -486,17 +516,63 @@ data:extend(
       }
     },  
     icon_size = 32,
-    order = "m[angels-rod-steel]",
+    order = "m[angels-rod-steel]-b",
   },
 
 
 
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
+  {
+    type = "recipe",
+    name = "angels-solder-mixture",
+    category = "crafting",
+    subgroup = "angels-alloys",
+    enabled = "true",
+    energy_required = 2,
+    ingredients ={
+      {type="item", name="angels-plate-tin", amount=2},
+      {type="item", name="angels-plate-lead", amount=2},
+    },
+    results={
+      {type="item", name="angels-solder-mixture", amount=2}
+    },
+    icon_size = 32,
+    order = "a[solder]-a[angels-solder-mixture]-a",
+  },
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "recipe",
     name = "angels-solder-smelting-1",
+    category = "induction-smelting",
+    subgroup = "angels-solder-casting",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="angels-solder-mixture", amount=12},
+    },
+    results =
+    {
+      {type="fluid", name="liquid-molten-solder", amount=120},
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/molten-solder.png",
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        tint = angelsmods.smelting.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
+    icon_size = 32,
+    order = "b[liquid-molten-solder]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-solder-smelting-2",
     category = "induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
@@ -515,18 +591,18 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "a[liquid-molten-solder]-a",
+    order = "b[liquid-molten-solder]-b",
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-2",
+    name = "angels-solder-smelting-3",
     category = "induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
@@ -545,18 +621,18 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelspetrochem__/graphics/icons/num_3.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "a[liquid-molten-solder]-b",
+    order = "b[liquid-molten-solder]-c",
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-3",
+    name = "angels-solder-smelting-4",
     category = "induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
@@ -576,14 +652,14 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelspetrochem__/graphics/icons/num_4.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
       }
     },
     icon_size = 32,
-    order = "a[liquid-molten-solder]-c",
+    order = "b[liquid-molten-solder]-d",
   },
   {
     type = "recipe",
@@ -630,7 +706,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "b[angels-roll-solder]-a",
+    order = "c[angels-roll-solder]-a",
   },
   {
     type = "recipe",
@@ -681,9 +757,53 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "b[angels-roll-solder]-b",
+    order = "c[angels-roll-solder]-b",
   },
   -- SOLDER CASTING RESULT
+  {
+    type = "recipe",
+    name = "angels-solder-mixture-smelting",
+    category = "smelting",
+    subgroup = "angels-solder-casting",
+    normal =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="item", name="angels-solder-mixture", amount=2}
+      },
+      results =
+      {
+        {type="item", name="angels-solder", amount=2}
+      },
+    },
+    expensive =
+    {
+      enabled = "false",
+      energy_required = 4,
+      ingredients =
+      {
+        {type="item", name="angels-solder-mixture", amount=3 * intermediatemulti}
+      },
+      results =
+      {
+        {type="item", name="angels-solder", amount=2}
+      },
+    },
+    icons = {
+      {
+        icon = "__angelssmelting__/graphics/icons/solder.png",
+      },
+      {
+        icon = "__angelssmelting__/graphics/icons/solder-mixture.png",
+        scale = 0.4375,
+        shift = { -10, -10},
+      },
+    },
+    icon_size = 32,
+    order = "d[angels-solder]-a",
+  },
   {
     type = "recipe",
     name = "angels-solder",
@@ -726,7 +846,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "c[angels-solder]-a",
+    order = "d[angels-solder]-b",
   },
   {
     type = "recipe",
@@ -755,7 +875,7 @@ data:extend(
       }
     },
     icon_size = 32,
-    order = "c[angels-solder]-b",
+    order = "d[angels-solder]-c",
   },
 }
 )

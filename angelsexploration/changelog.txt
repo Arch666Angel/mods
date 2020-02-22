@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 22.02.2020
+  Bugfixes:
+    - Fixed spitters were dealing too much damage (600+/s)
+    - Fixed some guns recipes that were not in the correct spot
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 12.02.2020
   Bugfixes:
@@ -30,4 +36,3 @@ Version: 0.1.0
 Date: ??
   Changes:
     - first release for 0.14
-

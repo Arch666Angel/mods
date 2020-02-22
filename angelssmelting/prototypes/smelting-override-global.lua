@@ -5,7 +5,7 @@ data.raw["item"]["iron-plate"].icon = "__angelssmelting__/graphics/icons/plate-i
 data.raw["item"]["iron-plate"].icon_size = 32
 data.raw["item"]["iron-plate"].icon_mipmaps = 1
 data.raw["item"]["iron-plate"].subgroup = "angels-iron-casting"
-data.raw["item"]["iron-plate"].order = "k"
+data.raw["item"]["iron-plate"].order = "l"
 data.raw["item"]["steel-plate"].icon = "__angelssmelting__/graphics/icons/plate-steel.png"
 data.raw["item"]["steel-plate"].icon_size = 32
 data.raw["item"]["steel-plate"].icon_mipmaps = 1
@@ -43,15 +43,15 @@ if bobmods and bobmods.plates then
   -- plates
   data.raw["item"]["tin-plate"].icon = "__angelssmelting__/graphics/icons/plate-tin.png"
   data.raw["item"]["tin-plate"].subgroup = "angels-tin-casting"
-  data.raw["item"]["tin-plate"].order = "g"
+  data.raw["item"]["tin-plate"].order = "i"
   data.raw["item"]["tin-plate"].icon_size = 32
   data.raw["item"]["silver-plate"].icon = "__angelssmelting__/graphics/icons/plate-silver.png"
   data.raw["item"]["silver-plate"].subgroup = "angels-silver-casting"
-  data.raw["item"]["silver-plate"].order = "k"
+  data.raw["item"]["silver-plate"].order = "m"
   data.raw["item"]["silver-plate"].icon_size = 32
   data.raw["item"]["lead-plate"].icon = "__angelssmelting__/graphics/icons/plate-lead.png"
   data.raw["item"]["lead-plate"].subgroup = "angels-lead-casting"
-  data.raw["item"]["lead-plate"].order = "i"
+  data.raw["item"]["lead-plate"].order = "k"
   data.raw["item"]["lead-plate"].icon_size = 32
   data.raw["item"]["glass"].icon = "__angelssmelting__/graphics/icons/plate-glass.png"
   data.raw["item"]["glass"].subgroup = "angels-glass-casting"
@@ -59,7 +59,7 @@ if bobmods and bobmods.plates then
   data.raw["item"]["glass"].icon_size = 32
   data.raw["item"]["gold-plate"].icon = "__angelssmelting__/graphics/icons/plate-gold.png"
   data.raw["item"]["gold-plate"].subgroup = "angels-gold-casting"
-  data.raw["item"]["gold-plate"].order = "k"
+  data.raw["item"]["gold-plate"].order = "l"
   data.raw["item"]["gold-plate"].icon_size = 32
   data.raw["item"]["nickel-plate"].icon = "__angelssmelting__/graphics/icons/plate-nickel.png"
   data.raw["item"]["nickel-plate"].subgroup = "angels-nickel-casting"
@@ -67,7 +67,7 @@ if bobmods and bobmods.plates then
   data.raw["item"]["nickel-plate"].icon_size = 32
   data.raw["item"]["zinc-plate"].icon = "__angelssmelting__/graphics/icons/plate-zinc.png"
   data.raw["item"]["zinc-plate"].subgroup = "angels-zinc-casting"
-  data.raw["item"]["zinc-plate"].order = "i"
+  data.raw["item"]["zinc-plate"].order = "j"
   data.raw["item"]["zinc-plate"].icon_size = 32
   data.raw["item"]["aluminium-plate"].icon = "__angelssmelting__/graphics/icons/plate-aluminium.png"
   data.raw["item"]["aluminium-plate"].subgroup = "angels-aluminium-casting"
@@ -100,7 +100,7 @@ if bobmods and bobmods.plates then
   data.raw["item"]["silver-nitrate"].icon_size = 32
   data.raw["item"]["titanium-plate"].icon = "__angelssmelting__/graphics/icons/plate-titanium.png"
   data.raw["item"]["titanium-plate"].subgroup = "angels-titanium-casting"
-  data.raw["item"]["titanium-plate"].order = "i"
+  data.raw["item"]["titanium-plate"].order = "j"
   data.raw["item"]["titanium-plate"].icon_size = 32
   data.raw["item"]["tungsten-plate"].icon = "__angelssmelting__/graphics/icons/plate-tungsten.png"
   data.raw["item"]["tungsten-plate"].subgroup = "angels-tungsten-casting"

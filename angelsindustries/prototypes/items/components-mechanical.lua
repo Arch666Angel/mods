@@ -40,10 +40,16 @@ data:extend(
   {
     type = "item",
     name = "motor-casing-5-green",
-    icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
+    --icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
+        tint={r=0.7, g=0.7, b=0.7}
+      },
+    },
     icon_size = 32,
     subgroup = "angels-motor-casing",
-    order = "e",
+    order = "eb",
     stack_size = 200,
   },
   {
@@ -52,7 +58,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
     icon_size = 32,
     subgroup = "angels-motor-casing",
-    order = "e",
+    order = "ea",
     stack_size = 200,
   },
   --BLOCK

@@ -14,7 +14,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-a",
     place_result = "angels-electrolyser",
@@ -34,7 +34,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "angels-electrolyser"},
     fast_replaceable_group = "angels-electrolyser",
@@ -54,7 +54,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.02 * 60
     },
     energy_usage = "300kW",
     ingredient_count = 3,
@@ -157,7 +157,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-b",
     place_result = "angels-electrolyser-2",
@@ -177,7 +177,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "angels-electrolyser-2"},
     fast_replaceable_group = "angels-electrolyser",
@@ -197,7 +197,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.03 * 60
     },
     energy_usage = "350kW",
     ingredient_count = 3,
@@ -300,7 +300,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-c",
     place_result = "angels-electrolyser-3",
@@ -320,7 +320,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "angels-electrolyser-3"},
     fast_replaceable_group = "angels-electrolyser",
@@ -340,7 +340,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.04 * 60
     },
     energy_usage = "400kW",
     ingredient_count = 3,
@@ -443,7 +443,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     subgroup = "petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-d",
     place_result = "angels-electrolyser-4",
@@ -463,7 +463,7 @@ data:extend(
         shift = {-12, -12},
       }
     },
-    icon_size = 32,  
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "angels-electrolyser-4"},
     fast_replaceable_group = "angels-electrolyser",
@@ -483,7 +483,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.02 / 2
+      emissions_per_minute = 0.05 * 60
     },
     energy_usage = "450kW",
     ingredient_count = 3,

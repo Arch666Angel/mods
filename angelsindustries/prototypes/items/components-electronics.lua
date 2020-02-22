@@ -213,23 +213,23 @@ data:extend(
     stack_size = 200,
   },
   --INTERMEDIATES
-  {
-    type = "item",
-    name = "angels-silicon-wafer",
-    icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
-	icon_size = 32,
-    subgroup = "angels-silicon-casting",
-    order = "h",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "angels-solder-mixture",
-    icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
-	icon_size = 32,
-    subgroup = "angels-solder-casting",
-    order = "h",
-    stack_size = 200
-  },
+  --{
+  --  type = "item",
+  --  name = "angels-silicon-wafer",
+  --  icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
+  --  icon_size = 32,
+  --  subgroup = "angels-silicon-casting",
+  --  order = "h",
+  --  stack_size = 200
+  --},
+  --{
+  --  type = "item",
+  --  name = "angels-solder-mixture",
+  --  icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
+  --  icon_size = 32,
+  --  subgroup = "angels-solder-casting",
+  --  order = "h",
+  --  stack_size = 200
+  --},
 }
 )

@@ -19,8 +19,14 @@ data:extend(
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "temperate-garden",
-      count = 1
+      results = {
+        { name = "temperate-garden", amount = 1 },
+        { name = "temperate-1", amount = 5, probability = 0.4 },
+        { name = "temperate-2", amount = 5, probability = 0.3 },
+        { name = "temperate-3", amount = 5, probability = 0.2 },
+        { name = "temperate-4", amount = 5, probability = 0.1 },
+        { name = "temperate-5", amount = 5, probability = 0.05 },
+      },
     },
     emissions_per_tick = -0.0001,
     max_health = 20,
@@ -32,7 +38,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "za",
+      order = "xab",
       max_probability = 0.025,
       peaks =
       {
@@ -42,9 +48,9 @@ data:extend(
         {
           influence = 0.0005,
           min_influence = 0,
-          water_optimal = 0.5,
-          water_range = 0.2,
-          water_max_range = 0.3,
+          water_optimal = 0.6,
+          water_range = 0.1,
+          water_max_range = 0.15,
         }
       },
       --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
@@ -107,8 +113,14 @@ data:extend(
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "desert-garden",
-      count = 1
+      results = {
+        { name = "desert-garden", amount = 1 },
+        { name = "desert-1", amount = 5, probability = 0.4 },
+        { name = "desert-2", amount = 5, probability = 0.3 },
+        { name = "desert-3", amount = 5, probability = 0.2 },
+        { name = "desert-4", amount = 5, probability = 0.1 },
+        { name = "desert-5", amount = 5, probability = 0.05 },
+      },
     },
     emissions_per_tick = -0.0001,
     max_health = 20,
@@ -120,7 +132,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "zb",
+      order = "yab",
       max_probability = 0.025,
       peaks =
       {
@@ -130,7 +142,7 @@ data:extend(
         {
           influence = 0.0005,
           min_influence = 0,
-          water_optimal = 0.1,
+          water_optimal = 0.225,
           water_range = 0.1,
           water_max_range = 0.15,
         }
@@ -188,8 +200,14 @@ data:extend(
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "swamp-garden",
-      count = 1
+      results = {
+        { name = "swamp-garden", amount = 1 },
+        { name = "swamp-1", amount = 5, probability = 0.4 },
+        { name = "swamp-2", amount = 5, probability = 0.3 },
+        { name = "swamp-3", amount = 5, probability = 0.2 },
+        { name = "swamp-4", amount = 5, probability = 0.1 },
+        { name = "swamp-5", amount = 5, probability = 0.05 },
+      },
     },
     emissions_per_tick = -0.0001,
     max_health = 20,
@@ -201,7 +219,7 @@ data:extend(
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
     autoplace =
     {
-      order = "zc",
+      order = "yab",
       max_probability = 0.025,
       peaks =
       {

@@ -1,19 +1,23 @@
 local OV = angelsmods.functions.OV
 local RB = angelsmods.functions.RB
-
+require("prototypes.overrides.industries-override-functions")
 local buildingmulti = angelsmods.marathon.buildingmulti
 local buildingtime = angelsmods.marathon.buildingtime
-
+add_con_mats()
+OV.execute()
+replace_gen_mats()
+OV.execute()
+--[[
 OV.patch_recipes({
 	{ name = "offshore-pump",
-		normal = { 
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"block-electronics-0", 1},
 			{"block-construction-1", 1},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"block-electronics-0", 1},
@@ -22,7 +26,7 @@ OV.patch_recipes({
 		},
 	},
 	{ name = "burner-mining-drill",
-		normal = { 
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"stone-furnace", 1},
@@ -30,7 +34,7 @@ OV.patch_recipes({
 			{"block-construction-1", 2},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"stone-furnace", 1},
@@ -40,7 +44,7 @@ OV.patch_recipes({
 		},
 	},
 	{ name = "electric-mining-drill",
-		normal = { 
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"block-electronics-0", 2},
@@ -48,7 +52,7 @@ OV.patch_recipes({
 			{"block-mechanical-1", 4},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"block-electronics-0", 2},
@@ -58,7 +62,7 @@ OV.patch_recipes({
 		},
 	},
 	{ name = "assembling-machine-1",
-		normal = { 
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"block-electronics-0", 3},
@@ -66,7 +70,7 @@ OV.patch_recipes({
 			{"block-mechanical-1", 3},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"block-electronics-0", 3},
@@ -75,8 +79,8 @@ OV.patch_recipes({
 			}
 		},
 	},
-	{ name = "assembling-machine-2", 
-		normal = { 
+	{ name = "assembling-machine-2",
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"block-production-1", 1},
@@ -84,7 +88,7 @@ OV.patch_recipes({
 			{"block-mechanical-1", 4},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"block-production-1", 1},
@@ -94,14 +98,14 @@ OV.patch_recipes({
 		},
 	},
 	{ name = "boiler",
-		normal = { 
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"stone-furnace", 1},
 			{"block-construction-1", 1},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"stone-furnace", 1},
@@ -110,7 +114,7 @@ OV.patch_recipes({
 		},
 	},
 	{ name = "steam-engine",
-		normal = { 
+		normal = {
 			ingredients ={
 			{"!!"},
 			{"block-mechanical-1", 3},
@@ -118,7 +122,7 @@ OV.patch_recipes({
 			{"block-fluidbox-1", 3},
 			}
 		},
-		expensive = { 
+		expensive = {
 			ingredients ={
 			{"!!"},
 			{"block-mechanical-1", 3},
@@ -201,4 +205,4 @@ OV.patch_recipes({
 		},
 	},
 }
-)
+)]]

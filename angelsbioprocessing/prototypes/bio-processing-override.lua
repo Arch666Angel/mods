@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-local lab_ignore = {["lab-module"] = true, ["lab-alien"] = true}
+local lab_ignore = angelsmods.triggers.lab_ignore_token
 
 --PREPARATION
 OV.remove_output("algae-brown-burning", "angels-void")
@@ -27,11 +27,25 @@ end
 
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
+
+--UPDATE LABS INPUT
+for i, labs in pairs(data.raw["lab"]) do
+  if not lab_ignore[labs.name] then
+    table.insert(labs.inputs, "token-bio")
+  end
+end
+
 --CONDITIONAL
 if angelsmods.industries then
   OV.patch_recipes(
     {
-      {name = "petri-dish", ingredients = {{"!!"}, {"angels-plate-glass", 1}}},
+      {
+        name = "petri-dish",
+        ingredients = {
+          {"!!"},
+          {data.raw.item["glass"] and "glass" or "angels-plate-glass", 1} -- bob glass
+        }
+      },
       {
         name = "crystal-enhancer",
         ingredients = {
@@ -42,28 +56,13 @@ if angelsmods.industries then
     }
   )
 
-  --add biotoken to all labs if industries.tech is active
-  if angelsmods.industries.tech then
-    for i, labs in pairs(data.raw["lab"]) do
-      --check exclusion (module lab/alien lab)
-      if not lab_ignore[labs.name] then
-        table.insert(labs.inputs, "token-bio")
-      end
-    end
-  else
-    table.insert(data.raw["lab"]["lab"].inputs, "token-bio")
-  end
-
   if angelsmods.industries.overhaul then
     require("prototypes.bio-processing-override-angel")
   end
 else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")
-  table.insert(data.raw["lab"]["lab"].inputs, "token-bio")
+
   if bobmods and bobmods.plates then
-    --if data.raw["lab"]["lab-2"] then
-    --  table.insert(data.raw["lab"]["lab-2"].inputs, "token-bio")
-    --end
     OV.patch_recipes(
       {
         {name = "algae-brown-burning", results = {{"lithium-chloride", 1}}}
@@ -328,15 +327,17 @@ if bobmods then
 
     -- make sure the seed extractor can be unlocked early on
     if bobmods and bobmods.electronics then
-      OV.patch_recipes({
+      OV.patch_recipes(
         {
-          name = "seed-extractor",
-          ingredients = {
-            { name = "electronic-circuit", amount = 0 },
-            { name = "basic-circuit-board", amount = 4 },
+          {
+            name = "seed-extractor",
+            ingredients = {
+              {name = "electronic-circuit", amount = 0},
+              {name = "basic-circuit-board", amount = 4}
+            }
           }
-        },
-      })
+        }
+      )
     end
 
     -- allow manualy creating wood without a sawblade (because nerfed bob greenhouse)
