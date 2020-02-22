@@ -6,8 +6,8 @@ Date: 22.02.2020
     - Updated emission data, so it now shows in the ingame tooltips (and activates)
     - Automated component replacement script if components is activated
       - Works with Vanilla, Angels and Bobs (default, normal and expensive)
-      - Buildings all require blocks
-      - Other recipes recipes changed to take angels components
+      - All buildings require blocks
+      - Other recipes changed to take angels components
       - Hides bobs electronic(finals) to use angels electronics
       - Still uses bobs electronic paths for modules (for now)
       - Warning: Does not need overhaul=true to work

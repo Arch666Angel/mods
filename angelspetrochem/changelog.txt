@@ -8,6 +8,7 @@ Date: 22.02.2020
   Bugfixes:
     - Fixes incorrect presets for natural-gas
     - Marked the Metal Catalyst Carrier result in recipes as a catalyst ingredient
+    - Added all bobs electrolysers to include the angels recipes
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 12.02.2020

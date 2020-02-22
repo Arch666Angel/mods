@@ -7,7 +7,7 @@ Date: 22.02.2020
     - Auto preset generation on adding ore
     - Changes the refinery ore product generation to be more flexible and dynamic
       - This puts almost all sorting recipes back to the way they where in 0.17
-      - The reason is that in the 0.11.0 release a lot of recipes did have unintended changed
+      - The reason is that in the 0.11.0 release a lot of recipes did have unintended changes
       - DO NOT UPDATE IF YOU DO NOT WANT TO REBUILDING parts of your existing base (again..)!
     - Added settings to allow all ores in the starting area
   Bugfixes:
