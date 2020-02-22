@@ -30,7 +30,7 @@ data.raw["recipe"]["explosives"].icons = {
   },
   {
     icon = "__angelspetrochem__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+    tint = angelsmods.petrochem.number_tint,
     scale = 0.32,
     shift = {-12, -12}
   }
@@ -47,7 +47,7 @@ data.raw["item"]["chemical-plant"].icons = {
   },
   {
     icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+    tint = angelsmods.petrochem.number_tint,
     scale = 0.32,
     shift = {-12, -12}
   }
@@ -64,7 +64,7 @@ data.raw["item"]["oil-refinery"].icons = {
   },
   {
     icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+    tint = angelsmods.petrochem.number_tint,
     scale = 0.32,
     shift = {-12, -12}
   }
@@ -300,7 +300,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_1.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -316,7 +316,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_2.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -351,7 +351,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_1.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
@@ -368,7 +368,7 @@ if bobmods then
             },
             {
               icon = "__angelspetrochem__/graphics/icons/num_2.png",
-              tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+              tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
             }
