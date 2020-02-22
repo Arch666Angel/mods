@@ -1,12 +1,8 @@
 local reorder = function(type, item, subgroup, order)
   local entry = data.raw[type] and data.raw[type][item] or nil
   if entry then
-    if subgroup ~= nil then
-      entry.subgroup = subgroup
-    end
-    if order ~= nil then
-      entry.order = subgroup
-    end
+    entry.subgroup = subgroup or entry.subgroup
+    entry.order = order or entry.order
   end
 end
 
@@ -326,17 +322,17 @@ if angelsmods.industries and angelsmods.industries.overhaul then
 
     -- laser gun
     reorder("gun", "laser-rifle", "angels-warfare-laser-guns", "a[gun]-a[rifle]")
-    reorder("item", "laser-turret", nil, "b[turret]-a[laser]-b")
-    reorder("gun", "bob-laser-turret-2", "angels-warfare-laser-guns", "b[turret]-a[laser]-b")
-    reorder("gun", "bob-laser-turret-3", "angels-warfare-laser-guns", "b[turret]-a[laser]-c")
-    reorder("gun", "bob-laser-turret-4", "angels-warfare-laser-guns", "b[turret]-a[laser]-d")
-    reorder("gun", "bob-laser-turret-5", "angels-warfare-laser-guns", "b[turret]-a[laser]-e")
+    reorder("item", "laser-turret", nil, "b[turret]-a[laser]-a")
+    reorder("item", "bob-laser-turret-2", "angels-warfare-laser-guns", "b[turret]-a[laser]-b")
+    reorder("item", "bob-laser-turret-3", "angels-warfare-laser-guns", "b[turret]-a[laser]-c")
+    reorder("item", "bob-laser-turret-4", "angels-warfare-laser-guns", "b[turret]-a[laser]-d")
+    reorder("item", "bob-laser-turret-5", "angels-warfare-laser-guns", "b[turret]-a[laser]-e")
 
-    reorder("gun", "bob-plasma-turret-1", "angels-warfare-laser-guns", "b[turret]-b[plasma]-a")
-    reorder("gun", "bob-plasma-turret-2", "angels-warfare-laser-guns", "b[turret]-b[plasma]-b")
-    reorder("gun", "bob-plasma-turret-3", "angels-warfare-laser-guns", "b[turret]-b[plasma]-c")
-    reorder("gun", "bob-plasma-turret-4", "angels-warfare-laser-guns", "b[turret]-b[plasma]-d")
-    reorder("gun", "bob-plasma-turret-5", "angels-warfare-laser-guns", "b[turret]-b[plasma]-e")
+    reorder("item", "bob-plasma-turret-1", "angels-warfare-laser-guns", "b[turret]-b[plasma]-a")
+    reorder("item", "bob-plasma-turret-2", "angels-warfare-laser-guns", "b[turret]-b[plasma]-b")
+    reorder("item", "bob-plasma-turret-3", "angels-warfare-laser-guns", "b[turret]-b[plasma]-c")
+    reorder("item", "bob-plasma-turret-4", "angels-warfare-laser-guns", "b[turret]-b[plasma]-d")
+    reorder("item", "bob-plasma-turret-5", "angels-warfare-laser-guns", "b[turret]-b[plasma]-e")
 
     -- laser rifle
     data:extend(

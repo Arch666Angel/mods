@@ -3,6 +3,7 @@ Version: 0.3.2
 Date: ??
   Bugfixes:
     - Fixed spitters where dealing too much data (600+/s)
+    - Fixed some guns where not in the correct spot
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 12.02.2020
