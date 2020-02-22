@@ -1,11 +1,11 @@
 data:extend(
-  {
+{
   {
     type = "item",
     name = "heavy-pump",
     icon = "__angelspetrochem__/graphics/icons/heavy-pump.png",
-	icon_size = 32,
-	subgroup = "petrochem-well-head",
+    icon_size = 32,
+    subgroup = "petrochem-well-head",
     order = "g[heavy-pump]",
     place_result = "heavy-pump",
     stack_size = 10,
@@ -14,10 +14,10 @@ data:extend(
     type = "assembling-machine",
     name = "heavy-pump",
     icon = "__angelspetrochem__/graphics/icons/heavy-pump.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "heavy-pump"},
-	fast_replaceable_group = "heavy-pump",
+    fast_replaceable_group = "heavy-pump",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -34,11 +34,11 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.03 / 3.5
+      emissions_per_minute = 0.03 * 60
     },
     energy_usage = "60kW",
     ingredient_count = 4,
-	animation =
+    animation =
     {
       north =
       {
@@ -87,17 +87,17 @@ data:extend(
         {
         filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
           frame_count = 36,
-		  line_length = 6,
+          line_length = 6,
           width = 64,
           height = 64,
           shift = {0, 0},
-		  animation_speed = 0.25,
+          animation_speed = 0.25,
           run_mode="forward"
         },
         light = {intensity = 0.4, size = 6}
       }
     },
-     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
@@ -121,6 +121,6 @@ data:extend(
       }
     },
     pipe_covers = pipecoverspictures(),
-    },
- }
+  },
+}
 )

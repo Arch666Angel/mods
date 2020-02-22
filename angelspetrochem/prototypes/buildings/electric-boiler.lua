@@ -73,7 +73,7 @@ data:extend(
       effectivity = 0.8,
       input_priority = "secondary",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.01 / 6,
+      emissions_per_minute = 0.005 * 60,
     },
     working_sound =
     {

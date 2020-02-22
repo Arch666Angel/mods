@@ -1,4 +1,7 @@
---EXECUTE
+-- INCLUDE BUILDER PROPERTIES
+require("prototypes.entities.biter-definitions")
+
+-- EXECUTE
 angelsmods.functions.make_alien(colossal_biter)
 
 angelsmods.functions.make_alien(colossal_spitter)

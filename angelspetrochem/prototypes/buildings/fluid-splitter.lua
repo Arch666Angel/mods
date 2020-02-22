@@ -1,16 +1,16 @@
 data:extend(
 {
-    {
+  {
     type = "item",
     name = "angels-fluid-splitter-2-way",
     icon = "__angelspetrochem__/graphics/icons/fluid-splitter-1.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "angels-fluid-control",
+    flags = {"goes-to-quickbar"},
+    subgroup = "angels-fluid-control",
     order = "e[angels-fluid-splitter-2-way]",
     place_result = "angels-fluid-splitter-2-way",
     stack_size = 10,
-    },
-    {
+  },
+  {
     type = "furnace",
     name = "angels-fluid-splitter-2-way",
     icon = "__angelspetrochem__/graphics/icons/fluid-splitter-1.png",
@@ -21,11 +21,11 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	module_specification =
+    module_specification =
     {
       module_slots = 2
     },
-	allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"angels-fluid-splitter"},
     result_inventory_size = 1,
     result_count = 2,
@@ -53,19 +53,19 @@ data:extend(
       },
       {
         production_type = "output",
-		--pipe_picture = floatationpipepictures(),
+        --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
-		base_area = 0.3,
-		--base_area = 0.2,
+        base_area = 0.3,
+        --base_area = 0.2,
         base_level = 1,
         pipe_connections = {{ position = {2, -1} }}
       },
       {
         production_type = "output",
-		--pipe_picture = floatationpipepictures(),
+        --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
-		base_area = 0.3,
-		--base_area = 0.2,
+        base_area = 0.3,
+        --base_area = 0.2,
         base_level = 1,
         pipe_connections = {{ position = {-2, -1} }}
       },
@@ -74,10 +74,10 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.01 / 2.5
+      emissions_per_minute = 0.01 * 60
     },
     energy_usage = "30kW",
-	animation =
+    animation =
     {
       north =
       {
@@ -126,32 +126,32 @@ data:extend(
         {
         filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
           frame_count = 36,
-		  line_length = 6,
+          line_length = 6,
           width = 64,
           height = 64,
           shift = {0, 0},
-		  animation_speed = 0.25,
+          animation_speed = 0.25,
           run_mode="forward"
         },
         light = {intensity = 0.4, size = 6}
       }
     },
-	vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
   },
-    {
+  {
     type = "item",
     name = "angels-fluid-splitter-3-way",
     icon = "__angelspetrochem__/graphics/icons/fluid-splitter-2.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "angels-fluid-control",
+    flags = {"goes-to-quickbar"},
+    subgroup = "angels-fluid-control",
     order = "e[angels-fluid-splitter-3-way]",
     place_result = "angels-fluid-splitter-3-way",
     stack_size = 10,
-    },
-    {
+  },
+  {
     type = "furnace",
     name = "angels-fluid-splitter-3-way",
     icon = "__angelspetrochem__/graphics/icons/fluid-splitter-2.png",
@@ -163,7 +163,7 @@ data:extend(
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     --crafting_categories = {"angels-fluid-splitter-3-way"},
-	crafting_categories = {"angels-fluid-splitter"},
+    crafting_categories = {"angels-fluid-splitter"},
     result_inventory_size = 1,
     result_count = 3,
     crafting_speed = 4,
@@ -190,7 +190,7 @@ data:extend(
       },
       {
         production_type = "output",
-		--pipe_picture = floatationpipepictures(),
+        --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 0.2,
         base_level = 1,
@@ -198,17 +198,17 @@ data:extend(
       },
       {
         production_type = "output",
-		--pipe_picture = floatationpipepictures(),
+        --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
-		base_area = 0.2,
+        base_area = 0.2,
         base_level = 1,
         pipe_connections = {{ position = {2, -1} }}
       },
       {
         production_type = "output",
-		--pipe_picture = floatationpipepictures(),
+        --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
-		base_area = 0.2,
+        base_area = 0.2,
         base_level = 1,
         pipe_connections = {{ position = {-2, -1} }}
       },
@@ -217,10 +217,10 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.01 / 2.5
+      emissions_per_minute = 0.01 * 60
     },
     energy_usage = "30kW",
-	animation =
+    animation =
     {
       north =
       {
@@ -269,17 +269,17 @@ data:extend(
         {
         filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
           frame_count = 36,
-		  line_length = 6,
+          line_length = 6,
           width = 64,
           height = 64,
           shift = {0, 0},
-		  animation_speed = 0.25,
+          animation_speed = 0.25,
           run_mode="forward"
         },
         light = {intensity = 0.4, size = 6}
       }
     },
-	vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
