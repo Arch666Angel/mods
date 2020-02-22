@@ -381,7 +381,7 @@ if bobmods then
     if data.raw.item["insulated-cable"] then -- bob electronics
       data.raw.item["insulated-cable"].subgroup = "petrochem-solids"
       data.raw.item["insulated-cable"].order = "a[petrochem-solids]-c[rubber]-b"
-      OV.patch_recipes({ { name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"} })
+      OV.patch_recipes({{name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"}})
     end
 
     if data.raw.recipe["pure-water-pump"] then
@@ -391,6 +391,11 @@ if bobmods then
     end
 
     table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
+    if bobmods and bobmods.assembly then
+      table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
+      table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
+      table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
+    end
     data.raw.fluid["heavy-water"].subgroup = "water-treatment-fluid"
     data.raw.fluid["heavy-water"].order = "eb"
     data.raw.fluid["deuterium"].subgroup = "petrochem-basic-fluids"
