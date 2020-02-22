@@ -704,11 +704,7 @@ data:extend(
     type = "technology",
     name = "angels-garden-mutations",
     icons={
-      {icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",icon_size=128},
-      {icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",icon_size = 128,scale=0.4,shift={-40,-50}},
-      {icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",icon_size = 128,scale=0.4,shift={40,-50}},
-      {icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",icon_size = 128,scale=0.4,shift={40,50}},
-      {icon = "__base__/graphics/icons/uranium-235.png",icon_size=64,scale=0.6,shift={-40,50}},
+      {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png",icon_size=128},
     },
     icon_size = 128,
     order = "c-a",

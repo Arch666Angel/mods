@@ -1,3 +1,4 @@
+local intermediatemulti = angelsmods.marathon.intermediatemulti
 local seed_icon_shift = 12
 
 data:extend(
@@ -64,13 +65,33 @@ data:extend(
       name = "temperate-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
-      enabled = "false",
-      energy_required = 300,
-      ingredients = {
-        {type = "item", name = "temperate-garden", amount = 1}
+      normal =
+      {
+        enabled = "false",
+        energy_required = 300,
+        ingredients =
+        {
+          {type = "item", name = "temperate-garden", amount = 1}
+        },
+        results =
+        {
+          {type = "item", name = "token-bio", amount = 32}
+        },
       },
-      results = {
-        {type = "item", name = "token-bio", amount = 32}
+      expensive =
+      {
+        enabled = "false",
+        energy_required = 300,
+        ingredients =
+        {
+          {type = "item", name = "temperate-garden", amount = 1}
+        },
+        results =
+        {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti) },
+          {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1}
+        },
+        main_product = "token-bio",
       },
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       --icon_size = 32,
@@ -140,7 +161,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "token-bio", amount = 8, probability = 0.25},
-        {type = "item", name = "temperate-garden", amount = 1},
+        {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1},
         {type = "item", name = "temperate-garden", amount = 1, probability = 0.05}
       },
       main_product = "temperate-garden",
@@ -210,13 +231,33 @@ data:extend(
       name = "desert-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "bio-processor-temperate",
-      enabled = "false",
-      energy_required = 300,
-      ingredients = {
-        {type = "item", name = "desert-garden", amount = 1}
+      normal =
+      {
+        enabled = "false",
+        energy_required = 300,
+        ingredients =
+        {
+          {type = "item", name = "desert-garden", amount = 1}
+        },
+        results =
+        {
+          {type = "item", name = "token-bio", amount = 32}
+        },
       },
-      results = {
-        {type = "item", name = "token-bio", amount = 32}
+      expensive =
+      {
+        enabled = "false",
+        energy_required = 300,
+        ingredients =
+        {
+          {type = "item", name = "desert-garden", amount = 1}
+        },
+        results =
+        {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti) },
+          {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1}
+        },
+        main_product = "token-bio",
       },
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       --icon_size = 32,
@@ -286,7 +327,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "token-bio", amount = 8, probability = 0.25},
-        {type = "item", name = "desert-garden", amount = 1},
+        {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1},
         {type = "item", name = "desert-garden", amount = 1, probability = 0.05}
       },
       main_product = "desert-garden",
@@ -356,13 +397,33 @@ data:extend(
       name = "swamp-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-temperate",
-      enabled = "false",
-      energy_required = 300,
-      ingredients = {
-        {type = "item", name = "swamp-garden", amount = 1}
+      normal =
+      {
+        enabled = "false",
+        energy_required = 300,
+        ingredients =
+        {
+          {type = "item", name = "swamp-garden", amount = 1}
+        },
+        results =
+        {
+          {type = "item", name = "token-bio", amount = 32}
+        },
       },
-      results = {
-        {type = "item", name = "token-bio", amount = 32}
+      expensive =
+      {
+        enabled = "false",
+        energy_required = 300,
+        ingredients =
+        {
+          {type = "item", name = "swamp-garden", amount = 1}
+        },
+        results =
+        {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti) },
+          {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1}
+        },
+        main_product = "token-bio",
       },
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       --icon_size = 32,
@@ -432,7 +493,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "token-bio", amount = 8, probability = 0.25},
-        {type = "item", name = "swamp-garden", amount = 1},
+        {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1},
         {type = "item", name = "swamp-garden", amount = 1, probability = 0.05}
       },
       main_product = "swamp-garden",
