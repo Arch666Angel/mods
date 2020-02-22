@@ -19,8 +19,14 @@ data:extend(
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "temperate-garden",
-      count = 1
+      results = {
+        { name = "temperate-garden", amount = 1 },
+        { name = "temperate-1", amount = 5, probability = 0.4 },
+        { name = "temperate-2", amount = 5, probability = 0.3 },
+        { name = "temperate-3", amount = 5, probability = 0.2 },
+        { name = "temperate-4", amount = 5, probability = 0.1 },
+        { name = "temperate-5", amount = 5, probability = 0.05 },
+      },
     },
     emissions_per_tick = -0.0001,
     max_health = 20,
@@ -107,8 +113,14 @@ data:extend(
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "desert-garden",
-      count = 1
+      results = {
+        { name = "desert-garden", amount = 1 },
+        { name = "desert-1", amount = 5, probability = 0.4 },
+        { name = "desert-2", amount = 5, probability = 0.3 },
+        { name = "desert-3", amount = 5, probability = 0.2 },
+        { name = "desert-4", amount = 5, probability = 0.1 },
+        { name = "desert-5", amount = 5, probability = 0.05 },
+      },
     },
     emissions_per_tick = -0.0001,
     max_health = 20,
@@ -188,8 +200,14 @@ data:extend(
     {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "swamp-garden",
-      count = 1
+      results = {
+        { name = "swamp-garden", amount = 1 },
+        { name = "swamp-1", amount = 5, probability = 0.4 },
+        { name = "swamp-2", amount = 5, probability = 0.3 },
+        { name = "swamp-3", amount = 5, probability = 0.2 },
+        { name = "swamp-4", amount = 5, probability = 0.1 },
+        { name = "swamp-5", amount = 5, probability = 0.05 },
+      },
     },
     emissions_per_tick = -0.0001,
     max_health = 20,

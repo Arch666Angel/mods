@@ -6,6 +6,7 @@ Date: ??
     - Pastes requires 2 powder instead of 1 ore
     - Changed the tech icon of Farming and Garden Mutations
     - In marathon mode (expensive), you get the garden back when trying to obtain alien life samples
+    - When picking up gardens, they have a chance of giving some crops as well
   Bugfixes:
     - Fixed petri-dish requiring the wrong glass item (when playing with bob)
     - Updated emission data, so it now shows in the ingame toolips (and activates)
