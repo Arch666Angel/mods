@@ -1,11 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.3
-Date: ??
+Date: 22.02.2020
   Changes:
     - Updated the loading of presets
-    - Updated emission data, so it now shows in the ingame toolips (and activates)
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
     - Auto preset generation on adding ore
     - Changes the refinery ore product generation to be more flexible and dynamic
+      - This puts almost all sorting recipes back to the way they where in 0.17
+      - The reason is that in the 0.11.0 release a lot of recipes did have unintended changed
+      - DO NOT UPDATE IF YOU DO NOT WANT TO REBUILDING parts of your existing base (again..)!
     - Added settings to allow all ores in the starting area
   Bugfixes:
     - Fixed Electro Whinning Cell MK1 and MK2 had same crafting speed (changed MK1 1 --> 0.75)

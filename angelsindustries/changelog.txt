@@ -1,9 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
-Date: ???
+Date: 22.02.2020
   Changes:
     - Dependent on bioprocessing 0.7.3 for new lab triggers
-    - Updated emission data, so it now shows in the ingame toolips (and activates)
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
     - Automated component replacement script if components is activated
       - Works with Vanilla, Angels and Bobs (default, normal and expensive)
       - Buildings all require blocks

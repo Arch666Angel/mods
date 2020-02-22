@@ -9,7 +9,7 @@
   "description": "",
   "dependencies": [
     "base >= 0.18.3",
-    "? angelsindustries >= 0.3.0",
+    "? angelsindustries >= 0.3.1",
     "? bobenemies >= 0.3.0"
 	]
 }

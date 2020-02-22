@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
-Date: ??
+Date: 22.02.2020
   Changes:
-    - Updated emission data, so it now shows in the ingame toolips (and activates)
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
     - Changes the smelting recipe generation to be more flexible and dynamic
     - Added powder recipe for Aluminium, Gold, Lead, Manganese, Platinum, Silver, Tin, Titanium, Zinc
     - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel, Platinum, Silver, Tin
@@ -12,7 +12,7 @@ Date: ??
     - Added a steel rod from steel plate recipe and moved steel rod stacks further down the tech tree
     - Added silicon wafer item and recipe, also affects bobs silicon wafer yield to be consistent
     - Added a basic solder wire recipe to counteract the need of oxygen to make solder early game
-    - Added seperate solder smelting technology icon (was using the one from zinc smelting before)
+    - Added separate solder smelting technology icon (was using the one from zinc smelting before)
   Bugfixes:
     - Fixed the icon on the gold wire recipe
     - Fixed missing localisation on steel rod stack (recipe)

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
-Date: ???
+Date: 22.02.2020
   Changes:
     - Synced the resource-builder with refining
     - Auto preset generation on adding ore
