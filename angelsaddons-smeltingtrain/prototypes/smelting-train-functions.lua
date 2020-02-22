@@ -21,7 +21,7 @@ local function generate_train_recipe(item, add_unlock)
           ingredients,
           {
             i == 2 and item.name or (item.name .. "-" .. (i - 1)),
-            "1"
+            1
           }
         )
       end
