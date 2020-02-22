@@ -17,7 +17,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     OV.remove_unlock("electronics", "solder")
 
     OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "solder" })
-    --angelsmods.functions.add_flag("solder-alloy", "hidden")
+    angelsmods.functions.add_flag("solder-alloy", "hidden")
     OV.remove_unlock("electronics", "solder-alloy-lead")
     
     OV.add_prereq("electronics", "angels-solder-smelting-basic" )
