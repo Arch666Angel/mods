@@ -6,6 +6,7 @@ Date: ??
     - Updated fuel values to be based on volume not mass (and globally balanced down) GH#38
       - For reference Hydrogen is only 33kJ now
   Bugfixes:
+    - Fixes incorrect presets for natural-gas
     - Marked the Metal Catalyst Carrier result in recipes as a catalyst ingredient
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
