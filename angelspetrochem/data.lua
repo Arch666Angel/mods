@@ -10,8 +10,12 @@ angelsmods.trigger = angelsmods.trigger or {}
 angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"].value
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
 
---ACID OVERRIDE FOR REFINING
+--OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
+if mods["bobplates"] or mods["angelsindustries"] and settings.startup["angels-enable-industries"].value then
+  angelsmods.trigger.ores["fluorite"] = true
+  angelsmods.trigger.ores["platinum"] = true
+end
 
 --LOAD PROTOTYPES
 require("prototypes.petrochem-category")
