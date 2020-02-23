@@ -458,19 +458,19 @@ OV.patch_recipes(merge_table_of_tables{
     --[[4]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla3.png" or "__angelsrefining__/graphics/icons/slag-processing-angel5.png",
     --[[5]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla4.png" or {
       { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__angelssmelting__/graphics/icons/ore-zinc.png", scale = 0.32, shift = {-12, 12} },
-      { icon = "__angelssmelting__/graphics/icons/ore-rutile.png", scale = 0.32, shift = {12, 12} },
+      { icon = "__angelsrefining__/graphics/icons/ore-zinc.png", scale = 0.32, shift = {-12, 12} },
+      { icon = "__angelsrefining__/graphics/icons/ore-rutile.png", scale = 0.32, shift = {12, 12} },
     },
     --[[6]] {
       { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__angelssmelting__/graphics/icons/ore-bauxite.png", scale = 0.32, shift = {-12, 12} },
-      { icon = "__angelssmelting__/graphics/icons/ore-manganese.png", scale = 0.32, shift = {12, 12} },
-      (not ore_exists("platinum-ore")) and { icon = "__angelssmelting__/graphics/icons/ore-chrome.png", scale = 0.32, shift = {0, 12} } or nil,
+      { icon = "__angelsrefining__/graphics/icons/ore-bauxite.png", scale = 0.32, shift = {-12, 12} },
+      ore_exists("manganese-ore") and { icon = "__angelsrefining__/graphics/icons/ore-manganese.png", scale = 0.32, shift = {12, 12} } or nil,
+      (not ore_exists("platinum-ore")) and ore_exists("chrome-ore") and { icon = "__angelsrefining__/graphics/icons/ore-chrome.png", scale = 0.32, shift = {0, 12} } or nil,
     },
     --[[7]] ore_exists("platinum-ore") and {
       { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__angelssmelting__/graphics/icons/ore-platinum.png", scale = 0.32, shift = {-12, 12} },
-      { icon = "__angelssmelting__/graphics/icons/ore-chrome.png", scale = 0.32, shift = {12, 12} },
+      { icon = "__angelsrefining__/graphics/icons/ore-platinum.png", scale = 0.32, shift = {-12, 12} },
+      { icon = "__angelsrefining__/graphics/icons/ore-chrome.png", scale = 0.32, shift = {12, 12} },
     } or nil,
     --[[8]] "__angelsrefining__/graphics/icons/slag-processing-angel6.png",
     --[[9]] {
