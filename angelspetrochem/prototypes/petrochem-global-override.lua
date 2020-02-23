@@ -391,7 +391,7 @@ if bobmods then
     end
 
     table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
-    if bobmods and bobmods.assembly then
+    if bobmods and bobmods.assembly and data.raw["item"]["electrolyser-2"] then
       table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
       table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
       table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
