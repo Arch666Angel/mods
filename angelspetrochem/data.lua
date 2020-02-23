@@ -14,7 +14,7 @@ angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].val
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 if mods["bobplates"] or mods["angelsindustries"] and settings.startup["angels-enable-industries"].value then
   angelsmods.trigger.ores["fluorite"] = true
-  angelsmods.trigger.ores["platinum"] = true
+  angelsmods.trigger.ores["platinum"] = mods["angelssmelting"] and true or false
 end
 
 --LOAD PROTOTYPES
