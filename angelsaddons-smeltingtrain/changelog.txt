@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: ???
+  Changes:
+    - Settings were surrounded by quotes
+  Bugfixes:
+    - Allow robot deployment when in automatic mode #48
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 22.02.2020
   Changes:
