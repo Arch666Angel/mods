@@ -4,8 +4,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-compressed-air",
-    icon = "__angelspetrochem__/graphics/icons/gas-compressed-air.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_icon(nil, { {180,180,225}, {150,150,187}, {120,120,150} }),
+    --icon = "__angelspetrochem__/graphics/icons/gas-compressed-air.png",
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "b",
     default_temperature = 25,
@@ -19,8 +20,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-hydrogen",
-    icon = "__angelspetrochem__/graphics/icons/gas-hydrogen.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }, "hhh"),
+    --icon = "__angelspetrochem__/graphics/icons/gas-hydrogen.png",
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "h",
     default_temperature = 25,

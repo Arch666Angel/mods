@@ -42,16 +42,38 @@ local function unify_tint(tint)
   end
 end
 
-function angelsmods.functions.create_gas_icon(molecule_icon, tint_top, tint_mid, tint_bot)
-  -- molecule_icon can be a string (assumes icon_size 32) or be a table with size defined
+local gas_icon_tint_table = {
+  --c = { r = 047, g = 047, b = 047 }, -- Carbon
+  h = { { 255, 255, 255 }, { 225, 225, 255 }, { 180, 180, 180 } }  -- Hydrogen
+  --o = { r = 229, g = 013, b = 013 }, -- Oxygen
+  --n = { r = 041, g = 041, b = 180 }, -- Nitrogen
+  --l = { r = 196, g = 248, b = 042 }, -- Chlorine
+  --m = { r = 041, g = 041, b = 180 }, -- Complex
+  --f = { r = 233, g = 254, b = 127 }, -- Fluoride
+  --t = { r = 192, g = 192, b = 255 }, -- Steam
+  --s = { r = 115, g = 063, b = 163 }, -- Sodium
+  --p = { r = 244, g = 125, b = 001 }, -- Phosphorus
+  --y = { r = 255, g = 105, b = 180 }, -- Syngas
+}
+
+function angelsmods.functions.create_gas_icon(molecule_icon, tints)
+  -- molecule_icon can be a string (assumes icon_size 32)
+  -- or be a table with size defined
   if molecule_icon then
-    if type_of(molecule_icon) ~= "table" then
+    if type(molecule_icon) ~= "table" then
       molecule_icon = {
         icon = molecule_icon,
         icon_size = 32
       }
     else
-      molecule_icon.icon_size = molecule_icon.icon_size or 32
+      molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
+      if molecule_icon.icon then
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+      else
+        --something is wrong here but we need to return something
+        molecule_icon.icon = "__angelsrefining__/graphics/icons/void.png"
+        molecule_icon.icon_size = 32
+      end
     end
 
     molecule_icon.scale = 13/molecule_icon.icon_size
@@ -60,23 +82,41 @@ function angelsmods.functions.create_gas_icon(molecule_icon, tint_top, tint_mid,
     molecule_icon = nil
   end
 
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((gas_icon_tint_table[string.sub(tints,1,1)] or {})[1]),
+        mid = unify_tint((gas_icon_tint_table[string.sub(tints,2,2)] or {})[2]),
+        bot = unify_tint((gas_icon_tint_table[string.sub(tints,3,3)] or {})[3]),
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
   return {
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-top.png",
       icon_size = 32,
-      tint = unify_tint(tint_top),
+      tint = tints.top,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-mid.png",
       icon_size = 32,
-      tint = unify_tint(tint_mid),
+      tint = tints.mid,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-bottom.png",
       icon_size = 32,
-      tint = unify_tint(tint_bot),
+      tint = tints.bot,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
     molecule_icon,
