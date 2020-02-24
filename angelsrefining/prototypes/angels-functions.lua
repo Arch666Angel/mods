@@ -16,6 +16,73 @@ local function get_icon_or_icons(object_name)
   return "__angelsrefining__/graphics/icons/void.png"
 end
 
+local function unify_tint(tint)
+  -- allows tints to be defined as {255, 255, 255, 255}
+  -- meaing doesn't need keys rgba (but assumes that order)
+  -- doesn't need to be in range 0..1, but up to 255 as well
+  if tint then
+    local unified_tint = {}
+
+    unified_tint.r = tint.r or tint[1] or 0
+    unified_tint.g = tint.g or tint[2] or 0
+    unified_tint.b = tint.b or tint[3] or 0
+
+    if unified_tint.r > 1 or unified_tint.g > 1 or unified_tint.b > 1 then
+      unified_tint.r = unified_tint.r / 255
+      unified_tint.g = unified_tint.g / 255
+      unified_tint.b = unified_tint.b / 255
+    end
+
+    unified_tint.a = tint.a or tint[4] or 1
+    unified_tint.a = unified_tint.a > 1 and unified_tint.a / 255 or unified_tint.a
+
+    return unified_tint
+  else
+    return nil
+  end
+end
+
+function angelsmods.functions.create_gas_icon(molecule_icon, tint_top, tint_mid, tint_bot)
+  -- molecule_icon can be a string (assumes icon_size 32) or be a table with size defined
+  if molecule_icon then
+    if type_of(molecule_icon) ~= "table" then
+      molecule_icon = {
+        icon = molecule_icon,
+        icon_size = 32
+      }
+    else
+      molecule_icon.icon_size = molecule_icon.icon_size or 32
+    end
+
+    molecule_icon.scale = 13/molecule_icon.icon_size
+    molecule_icon.shift = {-11, -11}
+  else
+    molecule_icon = nil
+  end
+
+  return {
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-top.png",
+      icon_size = 32,
+      tint = unify_tint(tint_top),
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-mid.png",
+      icon_size = 32,
+      tint = unify_tint(tint_mid),
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-bottom.png",
+      icon_size = 32,
+      tint = unify_tint(tint_bot),
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    molecule_icon,
+  }
+end
+
 --COMPARES ARGUMENT (ARG) AGAINST A TABLE (EXCEP), RETURNS FALSE IF ARG == EXCEP ELSE TRUE
 function angelsmods.functions.check_exception(arg, excep)
   for _, exception in pairs(excep) do
