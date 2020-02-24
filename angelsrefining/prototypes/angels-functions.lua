@@ -28,9 +28,9 @@ local function unify_tint(tint)
     unified_tint.b = tint.b or tint[3] or 0
 
     if unified_tint.r > 1 or unified_tint.g > 1 or unified_tint.b > 1 then
-      unified_tint.r = unified_tint.r / 255
-      unified_tint.g = unified_tint.g / 255
-      unified_tint.b = unified_tint.b / 255
+      unified_tint.r = (unified_tint.r <= 255 and unified_tint.r or 255) / 255
+      unified_tint.g = (unified_tint.g <= 255 and unified_tint.g or 255) / 255
+      unified_tint.b = (unified_tint.b <= 255 and unified_tint.b or 255) / 255
     end
 
     unified_tint.a = tint.a or tint[4] or 1
@@ -43,20 +43,21 @@ local function unify_tint(tint)
 end
 
 local gas_icon_tint_table = {
-  --c = { r = 047, g = 047, b = 047 }, -- Carbon
-  h = { { 255, 255, 255 }, { 225, 225, 255 }, { 180, 180, 180 } }  -- Hydrogen
-  --o = { r = 229, g = 013, b = 013 }, -- Oxygen
+  c = { { 044, 044, 044 }, { 140, 000, 000 }, { 140, 000, 000 } }, -- Carbon
+  h = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, -- Hydrogen
+  o = { { 249, 013, 013 }, { 214, 012, 012 }, { 198, 011, 011 } }, -- Oxygen
   --n = { r = 041, g = 041, b = 180 }, -- Nitrogen
   --l = { r = 196, g = 248, b = 042 }, -- Chlorine
   --m = { r = 041, g = 041, b = 180 }, -- Complex
-  --f = { r = 233, g = 254, b = 127 }, -- Fluoride
+  f = { { 181, 208, 000 }, { nil, nil, nil }, { nil, nil, nil } }, -- Fluoride
   --t = { r = 192, g = 192, b = 255 }, -- Steam
   --s = { r = 115, g = 063, b = 163 }, -- Sodium
   --p = { r = 244, g = 125, b = 001 }, -- Phosphorus
   --y = { r = 255, g = 105, b = 180 }, -- Syngas
 }
 
-function angelsmods.functions.create_gas_icon(molecule_icon, tints)
+-- use create_gas_fluid_icon to create fluid icons (not for recipes!)
+function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
   -- molecule_icon can be a string (assumes icon_size 32)
   -- or be a table with size defined
   if molecule_icon then
@@ -76,8 +77,13 @@ function angelsmods.functions.create_gas_icon(molecule_icon, tints)
       end
     end
 
-    molecule_icon.scale = 13/molecule_icon.icon_size
-    molecule_icon.shift = {-11, -11}
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-11, -11}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 13/molecule_icon.icon_size
+
+    molecule_icon[1] = nil
+    molecule_icon[2] = nil
+    molecule_icon[3] = nil
+    molecule_icon[4] = nil
   else
     molecule_icon = nil
   end
@@ -102,20 +108,23 @@ function angelsmods.functions.create_gas_icon(molecule_icon, tints)
 
   return {
     {
-      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-top.png",
-      icon_size = 32,
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-top.png",
+      icon_size = 596,
+      scale = 32/596,
       tint = tints.top,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
     {
-      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-mid.png",
-      icon_size = 32,
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-mid.png",
+      icon_size = 596,
+      scale = 32/596,
       tint = tints.mid,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
     {
-      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-base-bottom.png",
-      icon_size = 32,
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-bot.png",
+      icon_size = 596,
+      scale = 32/596,
       tint = tints.bot,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
