@@ -47,7 +47,7 @@ local gas_icon_tint_table = {
   h = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, -- Hydrogen
   o = { { 249, 013, 013 }, { 214, 012, 012 }, { 198, 011, 011 } }, -- Oxygen
   --n = { r = 041, g = 041, b = 180 }, -- Nitrogen
-  --l = { r = 196, g = 248, b = 042 }, -- Chlorine
+  l = { { 031, 229, 031 }, { 057, 211, 040 }, { 075, 195, 045 } }, -- Chlorine
   --m = { r = 041, g = 041, b = 180 }, -- Complex
   f = { { 181, 208, 000 }, { nil, nil, nil }, { nil, nil, nil } }, -- Fluoride
   --t = { r = 192, g = 192, b = 255 }, -- Steam
@@ -56,7 +56,7 @@ local gas_icon_tint_table = {
   --y = { r = 255, g = 105, b = 180 }, -- Syngas
 }
 
--- use create_gas_fluid_icon to create fluid icons (not for recipes!)
+-- CREATE GAS FLUID ICONS (NOT FOR RECIPES)
 function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
   -- molecule_icon can be a string (assumes icon_size 32)
   -- or be a table with size defined
@@ -77,8 +77,8 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
       end
     end
 
-    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-11, -11}
-    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 13/molecule_icon.icon_size
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
 
     molecule_icon[1] = nil
     molecule_icon[2] = nil
@@ -127,6 +127,82 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
       scale = 32/596,
       tint = tints.bot,
       shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    molecule_icon,
+  }
+end
+
+-- CREATE LIQUID FLUID ICONS (NOT FOR RECIPES)
+function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
+  -- molecule_icon can be a string (assumes icon_size 32)
+  -- or be a table with size defined
+  if molecule_icon then
+    if type(molecule_icon) ~= "table" then
+      molecule_icon = {
+        icon = molecule_icon,
+        icon_size = 32
+      }
+    else
+      molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
+      if molecule_icon.icon then
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+      else
+        --something is wrong here but we need to return something
+        molecule_icon.icon = "__angelsrefining__/graphics/icons/void.png"
+        molecule_icon.icon_size = 32
+      end
+    end
+
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+
+    molecule_icon[1] = nil
+    molecule_icon[2] = nil
+    molecule_icon[3] = nil
+    molecule_icon[4] = nil
+  else
+    molecule_icon = nil
+  end
+
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((gas_icon_tint_table[string.sub(tints,1,1)] or {})[1]),
+        mid = unify_tint((gas_icon_tint_table[string.sub(tints,2,2)] or {})[2]),
+        bot = unify_tint((gas_icon_tint_table[string.sub(tints,3,3)] or {})[3]),
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
+  return {
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-top.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = tints.top,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-mid.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = tints.mid,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-bot.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = tints.bot,
+      shift = molecule_icon and {3.5, 0} or nil,
     },
     molecule_icon,
   }

@@ -102,7 +102,7 @@ data:extend(
     type = "fluid",
     name = "liquid-hydrofluoric-acid",
     localised_description = show_formula and {"tooltip-description.chemical-formula", "HF"} or nil,
-    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 }, "fhh"),
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 }, "fhh"),
     --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "e",

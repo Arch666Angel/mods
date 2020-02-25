@@ -1,11 +1,14 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   --CHLORINE
   {
     type = "fluid",
     name = "gas-chlorine",
-    icon = "__angelspetrochem__/graphics/icons/gas-chlorine.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "Cl[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 }, "lll"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "a",
     default_temperature = 25,
@@ -19,8 +22,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-hydrogen-chloride",
-    icon = "__angelspetrochem__/graphics/icons/gas-hydrogen-chloride.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "HCl"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72 }, "llh"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "b",
     default_temperature = 25,
@@ -34,8 +38,9 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-hydrochloric-acid",
-    icon = "__angelspetrochem__/graphics/icons/liquid-hydrochloric-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "HCl[font=default-tiny-bold](aq)[/font]"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 }, "lho"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "c",
     default_temperature = 25,
@@ -49,8 +54,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-allylchlorid",
-    icon = "__angelspetrochem__/graphics/icons/gas-allylchlorid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]ClO"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/allyl-chloride.png", 72 }, "clh"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "d",
     default_temperature = 25,
@@ -64,8 +70,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-epichlorhydrin",
-    icon = "__angelspetrochem__/graphics/icons/gas-epichlorhydrin.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]Cl"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72 }, "clc"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "e",
     default_temperature = 25,
@@ -79,8 +86,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-chlor-methane",
-    icon = "__angelspetrochem__/graphics/icons/gas-chlor-methane.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "CH[font=default-tiny-bold]3[/font]Cl"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/chloromethane.png", 72 }, "clh"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "f",
     default_temperature = 25,
@@ -112,8 +120,9 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-perchloric-acid",
-    icon = "__angelspetrochem__/graphics/icons/liquid-perchloric-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "HClO[font=default-tiny-bold]4[/font]"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/perchloric-acid.png", 72 }, "lho"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "g",
     default_temperature = 25,
@@ -127,8 +136,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-phosgene",
-    icon = "__angelspetrochem__/graphics/icons/gas-phosgene.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "COCl[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72 }, "clo"),
+    --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "h",
     default_temperature = 25,
