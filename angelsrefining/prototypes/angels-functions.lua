@@ -46,10 +46,12 @@ local gas_icon_tint_table = {
   c = { { 044, 044, 044 }, { 140, 000, 000 }, { 140, 000, 000 } }, -- Carbon
   h = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, -- Hydrogen
   o = { { 249, 013, 013 }, { 214, 012, 012 }, { 198, 011, 011 } }, -- Oxygen
-  --n = { r = 041, g = 041, b = 180 }, -- Nitrogen
+  n = { { 045, 075, 180 }, { 045, 076, 175 }, { 038, 063, 150 } }, -- Nitrogen
   l = { { 031, 229, 031 }, { 057, 211, 040 }, { 075, 195, 045 } }, -- Chlorine
-  --m = { r = 041, g = 041, b = 180 }, -- Complex
+  s = { { 225, 210, 000 }, { 216, 196, 017 }, { 210, 187, 030 } }, -- Sulfur
+  a = { { 105, 135, 090 }, { 096, 122, 082 }, { 088, 113, 075 } }, -- Natural Gas
   f = { { 181, 208, 000 }, { nil, nil, nil }, { nil, nil, nil } }, -- Fluoride
+  --m = { r = 041, g = 041, b = 180 }, -- Complex
   --t = { r = 192, g = 192, b = 255 }, -- Steam
   --s = { r = 115, g = 063, b = 163 }, -- Sodium
   --p = { r = 244, g = 125, b = 001 }, -- Phosphorus
@@ -107,6 +109,13 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
   end
 
   return {
+    { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-base.png",
+      icon_size = 596,
+      scale = 32/596,
+      tint = {a=0.5},
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-top.png",
       icon_size = 596,
@@ -183,6 +192,13 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
   end
 
   return {
+    { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-base.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = {a=0.5},
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-top.png",
       icon_size = 330,

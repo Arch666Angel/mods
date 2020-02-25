@@ -1,11 +1,13 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   --RAWS
   {
     type = "fluid",
     name = "gas-natural-1",
-    icon = "__angelspetrochem__/graphics/icons/gas-natural-1.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_fluid_icon(nil, "aaa"),
+    --icon_size = 32,
     subgroup = "petrochem-raw-fluids",
     order = "aa",
     default_temperature = 25,
@@ -46,8 +48,8 @@ data:extend(
   {
     type = "fluid",
     name = "gas-raw-1",
-    icon = "__angelspetrochem__/graphics/icons/gas-raw-1.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_fluid_icon(nil, "aas"),
+    --icon_size = 32,
     subgroup = "petrochem-raw-fluids",
     order = "ab",
     default_temperature = 25,
@@ -73,8 +75,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-condensates",
-    icon = "__angelspetrochem__/graphics/icons/liquid-condensates.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_liquid_fluid_icon(nil, { {106,106,106}, {093,093,093}, {071,071,071} }),
+    --icon_size = 32,
     subgroup = "petrochem-raw-fluids",
     order = "ca",
     default_temperature = 25,
@@ -88,8 +90,8 @@ data:extend(
   {
     type = "fluid",
     name = "gas-acid",
-    icon = "__angelspetrochem__/graphics/icons/gas-acid.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_fluid_icon(nil, "sss"),
+    --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "d",
     default_temperature = 25,
@@ -103,8 +105,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-ngl",
-    icon = "__angelspetrochem__/graphics/icons/liquid-ngl.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_liquid_fluid_icon(nil, "aaa"),
+    --icon_size = 32,
     subgroup = "petrochem-raw-fluids",
     order = "ac",
     default_temperature = 25,
@@ -118,8 +120,8 @@ data:extend(
   {
     type = "fluid",
     name = "gas-residual",
-    icon = "__angelspetrochem__/graphics/icons/gas-residual.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_fluid_icon(nil, { {064,000,064}, {128,000,128}, {192,000,192} }),
+    --icon_size = 32,
     subgroup = "petrochem-raw-fluids",
     order = "cb",
     default_temperature = 25,
@@ -132,3 +134,7 @@ data:extend(
   },
 }
 )
+
+data.raw.fluid["crude-oil"].icon = nil
+data.raw.fluid["crude-oil"].icon_size = nil
+data.raw.fluid["crude-oil"].icons = angelsmods.functions.create_liquid_fluid_icon(nil, { {069,069,069}, {054,054,054}, {036,036,036} })
