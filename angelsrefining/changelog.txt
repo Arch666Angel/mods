@@ -1,4 +1,11 @@
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------- 
+Version: 0.11.5
+Date: 25.02.2020
+  Changes
+    - Added Tin back to Cupric Sorting at Tier 1
+    - Replaced Silver with Silicon to Cupric Sorting at Tier 2
+    - Replaced Aluminum with Platinum in Purified Stiritite Sorting
+--------------------------------------------------------------------------------------------------- 
 Version: 0.11.4
 Date: 22.02.2020
   Bugfixes:
