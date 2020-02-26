@@ -5,6 +5,7 @@ Date: 25.02.2020
     - Added Tin back to Cupric Sorting at Tier 1
     - Replaced Silver with Silicon to Cupric Sorting at Tier 2
     - Replaced Aluminum with Platinum in Purified Stiritite Sorting
+    - Added platinum wire to Multi Layer Electronics boards, if bobelectronics is loaded
 --------------------------------------------------------------------------------------------------- 
 Version: 0.11.4
 Date: 22.02.2020
