@@ -14,6 +14,8 @@ require("prototypes.override.refining-override-smelting")
 require("prototypes.override.refining-override-water-treatment")
 
 --OVERRIDE FOR BOBs
+--if bobmods and bobmods.electronics then
+require("prototypes.override.refining-override-bobelectronics")
 --if bobmods and bobmods.plates then
 require("prototypes.override.refining-override-bobgems")
 if mods["bobplates"] then

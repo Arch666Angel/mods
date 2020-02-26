@@ -252,7 +252,7 @@ OV.patch_recipes(merge_table_of_tables{
     ["lead-ore"             ] = (not special_vanilla) and {0, 1, 1, 1},
     ["silver-ore"           ] = (not special_vanilla) and {0, 1, 1, 1},
     ["gold-ore"             ] = (not special_vanilla) and {0, 0, 1, 1},
-    ["rutile-ore"           ] = (not special_vanilla) and {0, 0, 0, 1},
+    ["platinum-ore"         ] = (not special_vanilla) and {0, 0, 0, 1},
   }),
   -- RUBYTE
   create_sorting_recipes("rubyte", "angelsore5%s", {
@@ -287,8 +287,8 @@ OV.patch_recipes(merge_table_of_tables{
   create_sorting_recipes("cupric", "angelsore9%s", {
     ["!!"          ] = (not special_vanilla) and {true, true, true, true},
     ["copper-ore"  ] = (not special_vanilla) and {2, 3, 4, 4},
-    ["quartz"      ] = (not special_vanilla) and {2, 2, 2, 2},
-    ["silver-ore"  ] = (not special_vanilla) and {0, 1, 1, 1},
+    ["tin-ore"     ] = (not special_vanilla) and {2, 2, 2, 2},
+    ["quartz"      ] = (not special_vanilla) and {0, 1, 1, 1},
     ["gold-ore"    ] = (not special_vanilla) and {0, 0, 1, 1},
     ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1},
   }, true),
