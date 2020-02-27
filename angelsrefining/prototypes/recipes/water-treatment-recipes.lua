@@ -87,7 +87,6 @@ data:extend(
       results = {
         {type = "fluid", name = "water-mineralized", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70}
-        --{type="item", name="solid-sodium-nitrate", amount=1},
       },
       icon = "__angelsrefining__/graphics/icons/water-red-waste-purification.png",
       icon_size = 32,

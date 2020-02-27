@@ -473,6 +473,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "liquid-nitric-acid"
       },
+      {
+        type = "unlock-recipe",
+	recipe = "solid-sodium-nitrate-processing"
+      },
+      {
+        type = "unlock-recipe",
+	recipe = "sodium-nitrate-acid-processing"
+      }
     },
     unit =
     {

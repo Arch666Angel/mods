@@ -22,6 +22,14 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     {
       name = "greenyellow-waste-water-purification",
       results = {{"fluorite-ore"}}
+    },
+    {
+      name = "red-waste-water-purification",
+      results = {{name = "solid-sodium-nitrate", type = "item", amount = 1}}
+    },
+    {
+      name = "green-waste-water-purification",
+      results = {{name = "solid-sodium", type = "item", amount = 1}}
     }
   })
 else

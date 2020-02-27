@@ -140,6 +140,14 @@ data:extend(
     stack_size = 200
   },
   {
+    type = "item",
+    name = "solid-sodium-nitrate",
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png",
+    icon_size = 32,
+    subgroup = "petrochem-sodium",
+    order = "b[sodium]-b[solid-sodium-nitrate]",
+    stack_size = 200
+  },  {
     type = "fluid",
     name = "liquid-aqueous-sodium-hydroxide",
     icon = "__angelspetrochem__/graphics/icons/liquid-aqueous-sodium-hydroxide.png",
