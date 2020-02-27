@@ -2,7 +2,7 @@
 Version: 0.11.5
 Date: 25.02.2020
   Changes
-    - Added Sodium to Chloric Waste Water when petrochem is enabled
+    - Added Salt to Chloric Waste Water when petrochem is enabled
     - Added Sodium Nitrate to Nitric Waste Water when petrochem is enabled
 --------------------------------------------------------------------------------------------------- 
 Version: 0.11.4
