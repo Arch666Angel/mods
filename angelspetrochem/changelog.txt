@@ -2,7 +2,8 @@
  Version: 0.9.5
 Date: 25.02.2020 
  Changes:
-   - Added Sodium Nitrate and related recipes 
+   - Added Sodium Nitrate and related recipes
+   - Added Saline Water from Water & Salt recipe
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: ???

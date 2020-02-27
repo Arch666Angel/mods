@@ -22,6 +22,25 @@ data:extend(
     icon_size = 32,
     order = "a[sodium]-a[generation]",
   },
+  {
+    type = "recipe",
+    name = "solid-salt-dissolving",
+    category = "chemistry",
+    subgroup = "petrochem-sodium",
+    energy_required = 2,
+    enabled = "false",
+    ingredients ={
+      {type="item", name="solid-salt", amount=10},
+      {type="fluid", name="water", amount=1000}
+    },
+    results=
+    {
+      {type="fluid", name="water-saline", amount=1000}
+    },
+    icon = "__angelspetrochem__/graphics/icons/solid-salt.png",
+    icon_size = 32,
+    order = "a[sodium]-a[generation]",
+  },
   { -- from hydroxide
     type = "recipe",
     name = "solid-sodium",

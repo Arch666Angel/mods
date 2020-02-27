@@ -29,7 +29,7 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     },
     {
       name = "green-waste-water-purification",
-      results = {{name = "solid-sodium", type = "item", amount = 1}}
+      results = {{name = "solid-salt", type = "item", amount = 1}}
     }
   })
 else

@@ -674,6 +674,10 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+	recipe = "solid-salt-dissolving"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "gas-hydrogen-chloride-separation"
       },
       {
