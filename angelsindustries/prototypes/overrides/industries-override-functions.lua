@@ -161,7 +161,7 @@ function tech_unlock_reset()
             )
           end
           if ingredients == "angels-science-pack-red" then
-            OV.add_prereq(techname, "tech-red-labs")
+            OV.add_prereq(techname, "tech-red-packs")
             OV.set_research_difficulty(
               techname,
               angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi,
@@ -169,7 +169,7 @@ function tech_unlock_reset()
             )
           end
           if ingredients == "angels-science-pack-green" then
-            OV.add_prereq(techname, "tech-green-labs")
+            OV.add_prereq(techname, "tech-green-packs")
             OV.set_research_difficulty(
               techname,
               angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi,
@@ -177,7 +177,7 @@ function tech_unlock_reset()
             )
           end
           if ingredients == "angels-science-pack-orange" then
-            OV.add_prereq(techname, "tech-orange-labs")
+            OV.add_prereq(techname, "tech-orange-packs")
             OV.set_research_difficulty(
               techname,
               angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi,
@@ -185,7 +185,7 @@ function tech_unlock_reset()
             )
           end
           if ingredients == "angels-science-pack-blue" then
-            OV.add_prereq(techname, "tech-blue-labs")
+            OV.add_prereq(techname, "tech-blue-packs")
             OV.set_research_difficulty(
               techname,
               angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi,
@@ -193,7 +193,7 @@ function tech_unlock_reset()
             )
           end
           if ingredients == "angels-science-pack-yellow" then
-            OV.add_prereq(techname, "tech-yellow-labs")
+            OV.add_prereq(techname, "tech-yellow-packs")
             OV.set_research_difficulty(
               techname,
               angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi,
@@ -230,6 +230,20 @@ function core_tier_upgrade()
             local data_core = string.sub(subpack, 9, -2)
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
               core_tier_up(techname, string.sub(data_core, 2, -2))
+            end
+          end
+        end
+      elseif technology.unit.ingredients[1][1] == "angels-science-pack-red" then
+        if technology.unit.ingredients[3] then
+          --log("mess"..technology.unit.ingredients[3][1])
+        else
+          for tech, tech_ing in next, technology.unit.ingredients, nil do
+            local subpack = technology.unit.ingredients[tech][1]
+            local data_core = string.sub(subpack, 9, -2)
+            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
+              --core_tier_up(techname, string.sub(data_core, 2, -2))
+              OV.remove_prereq(techname, "tech-red-packs")
+              OV.add_prereq(techname, string.format("tech-specialised-labs-%s-1", string.sub(data_core, 2, -2)))
             end
           end
         end

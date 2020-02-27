@@ -3,18 +3,56 @@ require("prototypes.overrides.industries-override-functions")
 --this is where pack_replace(techname,old_c,new_c),core_replace(techname,old_c,new_c),core_tier_up(techname,core_n) functions are stored
 --SET COLOURED PACKS BEFORE ADDING CORES
 
+-------------------------------------------------------------------------------
+-- GREY SCIENCE PACKS ---------------------------------------------------------
+-------------------------------------------------------------------------------
+--replace starting tech requirements to needing grey (not red)
+for _,tech_name in pairs({
+  -- BASE GAME
+  "automation",
+  "logistics",
+  "turrets",
+  -- REFINING,
+  "water-treatment",
+  -- SMELTING
+  "angels-solder-smelting-basic",
+  -- BIO PROCESSING
+  "bio-processing-brown",
+  "bio-paper-1",
+  -- INDUSTRIES
+  "tech-red-circuit",
+}) do
+  pack_replace(tech_name,"red","grey")
+end
+
+-------------------------------------------------------------------------------
+-- RED SCIENCE PACKS ----------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
+pack_replace("armor-making-2","green","red") --move armour making down a tier
+-- BIO PROCESSING
+pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
+pack_replace("bio-fermentation","green","red")
+pack_replace("bio-arboretum-temperate-1","green","red")
+
+-------------------------------------------------------------------------------
+-- GREEN SCIENCE PACKS --------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
+OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
+pack_replace("advanced-material-processing","red","green") --move advanced material processing up a tier
+
+
+
+-------------------------------------------------------------------------------
 --remove pre-requisites for vanilla packs, moving them across to the new lab techs
-OV.global_replace_technology("logistic-science-pack", "tech-green-labs")
+--OV.global_replace_technology("logistic-science-pack", "tech-green-labs")
 OV.global_replace_technology("chemical-science-pack", "tech-blue-labs")
 OV.global_replace_technology("high-tech-science-pack", "tech-yellow-labs")
---replace starting tech requirements (automation, logistics, turrets) to needing grey not red
-pack_replace("automation","red","grey")
-pack_replace("logistics","red","grey")
-pack_replace("turrets","red","grey")
+
 --move advanced material processing up a tier
-pack_replace("advanced-material-processing","red","green")
---move armour making down a tier
-pack_replace("armor-making-2","green","red")
+--pack_replace("advanced-material-processing","red","green")
+
 --general tier changes
 pack_replace("battery","green","orange")
 pack_replace("oil-processing","green","orange")
@@ -57,19 +95,19 @@ OV.set_science_pack("rocket-silo", "angels-science-pack-green")
 OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
 OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
 --REFINING
-pack_replace("water-treatment","red","grey")
+--pack_replace("water-treatment","red","grey")
 pack_replace("water-treatment-3","green","orange")
 pack_replace("advanced-ore-refining-4","blue","yellow")
 pack_replace("ore-leaching","blue","orange")
 pack_replace("geode-processing-2","green","orange")
 pack_replace("advanced-ore-refining-2","green","orange")
 --BIOPROCESSING
-pack_replace("bio-processing-brown","red","grey")
-pack_replace("bio-paper-1","red","grey")
+--pack_replace("bio-processing-brown","red","grey")
+--pack_replace("bio-paper-1","red","grey")
 pack_replace("bio-wood-processing-3","green","orange")
-pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
-pack_replace("bio-fermentation","green","red")
-pack_replace("bio-arboretum-temperate-1","green","red")
+--pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
+--pack_replace("bio-fermentation","green","red")
+--pack_replace("bio-arboretum-temperate-1","green","red")
 --PETROCHEM
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("plastic-1", "green","orange")
@@ -81,6 +119,13 @@ pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 --RUN CORE BUILDER
 OV.execute()
+
+
+
+
+
+if true then
+
 core_builder()
 --CUSTOM FIXES (in Categories)--
 OV.execute()
@@ -451,4 +496,7 @@ if angelsmods.industries and angelsmods.industries.components then
 	--OV.add_unlock("angels-silicon-smelting-1","angels-silicon-wafer")
 	--OV.add_unlock("angels-glass-smelting-2","angels-coil-glass-fiber")
 	--OV.add_unlock("angels-gold-smelting-1","angels-wire-gold")
+end
+
+
 end

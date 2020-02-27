@@ -14,7 +14,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "block-construction-2",
+    name = "block-construction-2", -- green science
     icon = "__angelsindustries__/graphics/icons/block-construction-2.png",
     icon_size = 32,
     subgroup = "blocks-frames",
@@ -110,7 +110,7 @@ data:extend(
   -----------------------------------------------------------------------------
   {
     type = "item",
-    name = "block-fluidbox-1",
+    name = "block-fluidbox-1", -- required at start
     icon = "__angelsindustries__/graphics/icons/block-fluidbox.png",
     icon_size = 32,
     subgroup = "blocks-basic",

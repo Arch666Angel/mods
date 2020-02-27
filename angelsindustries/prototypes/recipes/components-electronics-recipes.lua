@@ -1,12 +1,14 @@
 data:extend(
 {
-  --CIRCUIT COMPONENTS
+  -----------------------------------------------------------------------------
+  -- COMPONENTS ---------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "recipe",
     name = "circuit-resistor",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "solid-paper", amount = 1},
@@ -37,7 +39,7 @@ data:extend(
     name = "circuit-transistor",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "iron-plate", amount = 1},
@@ -232,7 +234,9 @@ data:extend(
     },
     icon_size = 32,
   },
-  --BOARDS
+  -----------------------------------------------------------------------------
+  -- BOARDS -------------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "recipe",
     name = "circuit-grey-board",
@@ -264,13 +268,12 @@ data:extend(
     icon_size = 32,
     order = "g",
   },
-  --PRODUCTS
   {
     type = "recipe",
     name = "circuit-red-board",
     energy_required = 3,
     category = "crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "solid-paper", amount = 1},
@@ -283,7 +286,7 @@ data:extend(
     name = "circuit-green-board",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "solid-paper", amount = 1},
@@ -335,7 +338,9 @@ data:extend(
     result = "circuit-yellow-board",
     icon_size = 32,
   },
-  --CIRCUIT BOARDS
+  -----------------------------------------------------------------------------
+  -- CIRCUIT BOARDS -----------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "recipe",
     name = "circuit-grey",
@@ -355,7 +360,7 @@ data:extend(
     name = "circuit-red",
     energy_required = 1,
     category = "crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-red-board", amount = 1},
@@ -369,7 +374,7 @@ data:extend(
     name = "circuit-green",
     energy_required = 1,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-green-board", amount = 1},
@@ -423,13 +428,15 @@ data:extend(
     result = "circuit-yellow",
     icon_size = 32,
   },
-  --CIRCUIT LOADED
+  -----------------------------------------------------------------------------
+  -- LOADED CIRCUIT BOARDS ----------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "recipe",
     name = "circuit-red-loaded",
     energy_required = 3,
     category = "crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-red", amount = 1},
@@ -444,7 +451,7 @@ data:extend(
     name = "circuit-green-loaded",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-green", amount = 1},

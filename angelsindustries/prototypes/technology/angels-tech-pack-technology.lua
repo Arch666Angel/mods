@@ -112,6 +112,7 @@ data:extend(
     prerequisites =
     {
       "tech-red-labs",
+      "tech-green-circuit",
     },
     effects =
     {

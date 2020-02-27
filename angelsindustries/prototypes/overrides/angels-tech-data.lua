@@ -11,6 +11,7 @@ angelsmods.functions.add_exception("tech-yellow-packs")
 angelsmods.functions.add_exception("tech-yellow-labs")
 
 angelsmods.functions.add_exception("tech-specialised-labs-exploration-1")
+angelsmods.functions.add_exception("tech-specialised-labs-exploration-2")
 angelsmods.functions.add_exception("tech-specialised-labs-energy-1")
 angelsmods.functions.add_exception("tech-specialised-labs-logistic-1")
 angelsmods.functions.add_exception("tech-specialised-labs-enhancement-1")

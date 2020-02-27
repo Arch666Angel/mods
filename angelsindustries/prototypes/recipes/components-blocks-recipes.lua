@@ -22,7 +22,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-construction-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients =
@@ -109,7 +109,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-electronics-1",
-    enabled = true,
+    enabled = false,
     category = "crafting",
     energy_required = 5,
     ingredients ={
@@ -126,7 +126,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-electronics-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -267,7 +267,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-enhancement-1",
-    enabled = true,
+    enabled = false,
     category = "crafting",
     energy_required = 5,
     ingredients ={
@@ -284,7 +284,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-enhancement-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -373,7 +373,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-energy-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -465,7 +465,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-exploration-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -555,7 +555,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-logistic-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -653,7 +653,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-production-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -988,7 +988,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-warfare-2",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
