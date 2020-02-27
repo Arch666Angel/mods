@@ -10,6 +10,14 @@ angelsmods.functions.add_exception("tech-blue-labs")
 angelsmods.functions.add_exception("tech-yellow-packs")
 angelsmods.functions.add_exception("tech-yellow-labs")
 
+angelsmods.functions.add_exception("tech-specialised-labs-exploration-1")
+angelsmods.functions.add_exception("tech-specialised-labs-energy-1")
+angelsmods.functions.add_exception("tech-specialised-labs-logistic-1")
+angelsmods.functions.add_exception("tech-specialised-labs-enhancement-1")
+angelsmods.functions.add_exception("tech-specialised-labs-processing-1")
+angelsmods.functions.add_exception("tech-specialised-labs-warfare-1")
+angelsmods.functions.add_exception("tech-specialised-labs-basic-2")
+
 --BASE
 angelsmods.functions.add_exception("automation")
 

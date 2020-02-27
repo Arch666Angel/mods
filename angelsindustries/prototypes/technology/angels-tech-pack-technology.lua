@@ -8,7 +8,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-
+      "tech-red-circuit",
     },
     effects =
     {
@@ -16,69 +16,30 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-science-pack-red",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-war-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-processing-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-logistic-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-energy-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-enhance-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-exploration-1",
-      },
-    },
-    unit =
-    {
-      count = 64,
-      ingredients = {
-        {"angels-science-pack-grey", 1},
-        {"datacore-basic", 1},
-      },
-      time = 60
-    },
-    order = "a-5"
-  },
-  {
-    type = "technology",
-    name = "tech-red-circuit",
-    icon = "__angelsindustries__/graphics/technology/red-circuit-tech.png",
-    icon_size = 128,
-    prerequisites =
-    {
-      "tech-red-packs",
-    },
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "circuit-resistor"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "circuit-red-board"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "circuit-red"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "circuit-red-loaded"
-      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-war-1",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-processing-1",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-logistic-1",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-energy-1",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-enhance-1",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-exploration-1",
+      --},
     },
     unit =
     {
@@ -99,38 +60,37 @@ data:extend(
     prerequisites =
     {
       "tech-red-packs",
-      "tech-red-circuit",
     },
     effects =
     {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-exploration-lab-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-energy-lab-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-logistic-lab-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-enhance-lab-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-processing-lab-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-war-lab-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-basic-lab-2"
-      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-exploration-lab-1"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-energy-lab-1"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-logistic-lab-1"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-enhance-lab-1"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-processing-lab-1"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-war-lab-1"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-basic-lab-2"
+      --},
     },
     unit =
     {

@@ -56,6 +56,10 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.recipes.components-cabling-recipes")
   require("prototypes.recipes.components-blocks-recipes")
   require("prototypes.recipes.components-weapons-recipes")
+
+  --TECHS
+  require("prototypes.technology.angels-components-electronics-technology")
+  require("prototypes.technology.angels-components-blocks-technology")
 end
 
 --TECH
@@ -79,7 +83,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.recipes.tech-entity")
 
   --TECHS
-  require("prototypes.technology.angels-tech-technology")
+  require("prototypes.technology.angels-tech-lab-technology")
+  require("prototypes.technology.angels-tech-pack-technology")
 end
 
 --ENTITIES

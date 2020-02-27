@@ -1,8 +1,10 @@
 local OV = angelsmods.functions.OV
+
 function pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
   OV.remove_science_pack(techname, "angels-science-pack-" .. old_c)
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
 end
+
 function core_replace(techname, old_c, new_c) --tech core swapping script (for cleaner code) (assumes tier 1)
   if old_c == "basic" then
     OV.remove_science_pack(techname, "datacore-basic")
@@ -15,97 +17,121 @@ function core_replace(techname, old_c, new_c) --tech core swapping script (for c
     OV.set_science_pack(techname, "datacore-" .. new_c .. "-1", 2)
   end
 end
+
 function core_tier_up(techname, core_n)
   OV.remove_science_pack(techname, "datacore-" .. core_n .. "-1")
   OV.set_science_pack(techname, "datacore-" .. core_n .. "-2", 2)
 end
+
 function core_builder()
   -- Start of research Automated Stack...
   for rec_4tech in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(rec_4tech, angelsmods.industries.tech_exceptions) then
       --personal-equipment and other enhancements take priority
       if
-        string.find(rec_4tech, "module") ~= nil or string.find(rec_4tech, "equipment") ~= nil or
-          string.find(rec_4tech, "armor") ~= nil or
-          string.find(rec_4tech, "axe") ~= nil or
-          string.find(rec_4tech, "personal") ~= nil
-       then
-        --war takes next priority
+        string.find(rec_4tech, "module") ~= nil or 
+        string.find(rec_4tech, "equipment") ~= nil or
+        string.find(rec_4tech, "armor") ~= nil or
+        string.find(rec_4tech, "axe") ~= nil or
+        string.find(rec_4tech, "personal") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-enhance-1", 2)
+
+      --war takes next priority
       elseif
-        string.find(rec_4tech, "military") ~= nil or string.find(rec_4tech, "laser") ~= nil or
-          string.find(rec_4tech, "combat") ~= nil or
-          string.find(rec_4tech, "damage") ~= nil or
-          string.find(rec_4tech, "shell") ~= nil or
-          string.find(rec_4tech, "flam") ~= nil or
-          string.find(rec_4tech, "bullet") ~= nil or
-          string.find(rec_4tech, "rocket") ~= nil
-       then
-        --exploration is next
+        string.find(rec_4tech, "military") ~= nil or
+        string.find(rec_4tech, "laser") ~= nil or
+        string.find(rec_4tech, "combat") ~= nil or
+        string.find(rec_4tech, "damage") ~= nil or
+        string.find(rec_4tech, "shell") ~= nil or
+        string.find(rec_4tech, "flam") ~= nil or
+        string.find(rec_4tech, "bullet") ~= nil or
+        string.find(rec_4tech, "rocket") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-war-1", 2)
+
+      --exploration is next
       elseif string.find(rec_4tech, "explor") ~= nil then
-        --energy is next
         OV.set_science_pack(rec_4tech, "datacore-exploration-1", 2)
-      elseif string.find(rec_4tech, "energy") ~= nil or string.find(rec_4tech, "power") ~= nil then
-        --logistics is next
+
+      --energy is next
+      elseif
+        string.find(rec_4tech, "energy") ~= nil or
+        string.find(rec_4tech, "power") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-energy-1", 2)
+
+      --logistics is next
       elseif
-        string.find(rec_4tech, "insert") ~= nil or string.find(rec_4tech, "logistic") ~= nil or
-          string.find(rec_4tech, "rail") ~= nil or
-          string.find(rec_4tech, "braking") ~= nil or
-          string.find(rec_4tech, "robot") ~= nil or
-          string.find(rec_4tech, "fluid") ~= nil
-       then
-        --production is up next
+        string.find(rec_4tech, "insert") ~= nil or
+        string.find(rec_4tech, "logistic") ~= nil or
+        string.find(rec_4tech, "rail") ~= nil or
+        string.find(rec_4tech, "braking") ~= nil or
+        string.find(rec_4tech, "robot") ~= nil or
+        string.find(rec_4tech, "fluid") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-logistic-1", 2)
+
+      --production is up next
       elseif
-        string.find(rec_4tech, "processing") ~= nil or string.find(rec_4tech, "automation") ~= nil or
+          string.find(rec_4tech, "processing") ~= nil or
+          string.find(rec_4tech, "automation") ~= nil or
           string.find(rec_4tech, "plastic") ~= nil or
           string.find(rec_4tech, "mining") ~= nil or
           string.find(rec_4tech, "research") ~= nil or
           string.find(rec_4tech, "battery") ~= nil or
           string.find(rec_4tech, "electronic") ~= nil
        then
-        --smelting and metallurgy
         OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+
+      --smelting and metallurgy
       elseif
-        string.find(rec_4tech, "smelting") ~= nil or string.find(rec_4tech, "casting") ~= nil or
-          string.find(rec_4tech, "metallurgy") ~= nil or
-          string.find(rec_4tech, "cool") ~= nil
-       then
-        --Bioprocessing updates
+        string.find(rec_4tech, "smelting") ~= nil or
+        string.find(rec_4tech, "casting") ~= nil or
+        string.find(rec_4tech, "metallurgy") ~= nil or
+        string.find(rec_4tech, "cool") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+
+      --Bioprocessing updates
       elseif
-        string.find(rec_4tech, "bio") ~= nil or string.find(rec_4tech, "farm") ~= nil or
+        string.find(rec_4tech, "bio") ~= nil or
+        string.find(rec_4tech, "farm") ~= nil or
           string.find(rec_4tech, "arbor") ~= nil or
           string.find(rec_4tech, "cool") ~= nil or
           string.find(rec_4tech, "garden") ~= nil
        then
-        --more war updates
         OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+
+      --more war updates
       elseif
-        string.find(rec_4tech, "wall") ~= nil or string.find(rec_4tech, "gate") ~= nil or
-          string.find(rec_4tech, "shoot") ~= nil or
-          string.find(rec_4tech, "turret") ~= nil or
-          string.find(rec_4tech, "explo") ~= nil
-       then
-        --petrochem and refining updates
+        string.find(rec_4tech, "wall") ~= nil or
+        string.find(rec_4tech, "gate") ~= nil or
+        string.find(rec_4tech, "shoot") ~= nil or
+        string.find(rec_4tech, "turret") ~= nil or
+        string.find(rec_4tech, "explo") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-war-1", 2)
+
+      --petrochem and refining updates
       elseif
-        string.find(rec_4tech, "chemistry") ~= nil or string.find(rec_4tech, "ore") ~= nil or
-          string.find(rec_4tech, "crack") ~= nil or
-          string.find(rec_4tech, "science-pack") ~= nil or
-          string.find(rec_4tech, "water") ~= nil
-       then
+        string.find(rec_4tech, "chemistry") ~= nil or
+        string.find(rec_4tech, "ore") ~= nil or
+        string.find(rec_4tech, "crack") ~= nil or
+        string.find(rec_4tech, "science-pack") ~= nil or
+        string.find(rec_4tech, "water") ~= nil
+      then
         OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
       end
     end
   end
 end
+
 function pack_count_update(tech, pack, count) --cheap and cheerful replacement (possibly should use a better script but if it works...)
   OV.remove_science_pack(tech, pack)
   OV.set_science_pack(tech, pack, count)
 end
+
 --MODIFY ALL TECHS ACCORDING TO TIERS
 angelsmods.industries.techtiers = {
   grey = {amount = 16, time = 10}, --BURNER
@@ -179,6 +205,7 @@ function tech_unlock_reset()
     end
   end
 end
+
 function core_tier_upgrade()
   for techname, technology in pairs(data.raw.technology) do
     if technology.unit.ingredients[1][1] --[[and technology.unit.ingredients[2] ]] then
@@ -210,6 +237,7 @@ function core_tier_upgrade()
     end
   end
 end
+
 --gets the row count so you can iterate through row count
 function table_rows(table_chk)
   local ct = 0
@@ -220,6 +248,7 @@ function table_rows(table_chk)
   end
   return ct
 end
+
 --ADD BUILDING BLOCKS TO BUILDINGS
 function add_con_mats()
   local building_types = {
@@ -248,6 +277,7 @@ function add_con_mats()
     n = n + 1
   end
 end
+
 function replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
   local rows = table_rows(ing_list)
   local n = 1
@@ -413,6 +443,7 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
     n = n + 1
   end
 end
+
 --Replace non-construction components with angels components
 function replace_gen_mats()
   --bobs replacements first (mainly for electronics reasons)
@@ -488,6 +519,7 @@ function replace_gen_mats()
   OV.global_replace_item("iron-stick", "angels-rod-iron")
   data.raw.recipe["iron-stick"].hidden = true
 end
+
 --REPLACE CONSTRUCTION ELECTRONIC BLOCKS
 function replace_con_mats(buildings)
   for assembly_check in pairs(data.raw[buildings]) do

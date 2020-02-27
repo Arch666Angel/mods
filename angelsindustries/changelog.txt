@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: ???
+  Changes:
+    - Added dedicated icon to the Electronics Block 0
+    - Added dedicated researched for the specialised labs
   Bugfixes:
     - Allow robot deployment when in automatic mode #48
 ---------------------------------------------------------------------------------------------------
