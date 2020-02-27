@@ -233,6 +233,34 @@ function core_tier_upgrade()
             end
           end
         end
+      elseif technology.unit.ingredients[1][1] == "angels-science-pack-orange" then
+        if technology.unit.ingredients[3] then
+          --log("mess"..technology.unit.ingredients[3][1])
+        else
+          for tech, tech_ing in next, technology.unit.ingredients, nil do
+            local subpack = technology.unit.ingredients[tech][1]
+            local data_core = string.sub(subpack, 9, -2)
+            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
+              --core_tier_up(techname, string.sub(data_core, 2, -2))
+              OV.remove_prereq(techname, "tech-orange-packs")
+              OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-3", string.sub(data_core, 2, -2)))
+            end
+          end
+        end
+      elseif technology.unit.ingredients[1][1] == "angels-science-pack-green" then
+        if technology.unit.ingredients[3] then
+          --log("mess"..technology.unit.ingredients[3][1])
+        else
+          for tech, tech_ing in next, technology.unit.ingredients, nil do
+            local subpack = technology.unit.ingredients[tech][1]
+            local data_core = string.sub(subpack, 9, -2)
+            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
+              --core_tier_up(techname, string.sub(data_core, 2, -2))
+              OV.remove_prereq(techname, "tech-green-packs")
+              OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-2", string.sub(data_core, 2, -2)))
+            end
+          end
+        end
       elseif technology.unit.ingredients[1][1] == "angels-science-pack-red" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
@@ -243,7 +271,7 @@ function core_tier_upgrade()
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
               --core_tier_up(techname, string.sub(data_core, 2, -2))
               OV.remove_prereq(techname, "tech-red-packs")
-              OV.add_prereq(techname, string.format("tech-specialised-labs-%s-1", string.sub(data_core, 2, -2)))
+              OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-1", string.sub(data_core, 2, -2)))
             end
           end
         end

@@ -42,25 +42,16 @@ pack_replace("bio-arboretum-temperate-1","green","red")
 OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
 pack_replace("advanced-material-processing","red","green") --move advanced material processing up a tier
 
-
-
 -------------------------------------------------------------------------------
---remove pre-requisites for vanilla packs, moving them across to the new lab techs
---OV.global_replace_technology("logistic-science-pack", "tech-green-labs")
-OV.global_replace_technology("chemical-science-pack", "tech-blue-labs")
-OV.global_replace_technology("high-tech-science-pack", "tech-yellow-labs")
-
---move advanced material processing up a tier
---pack_replace("advanced-material-processing","red","green")
-
---general tier changes
+-- ORANGE SCIENCE PACKS --------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
 pack_replace("battery","green","orange")
 pack_replace("oil-processing","green","orange")
 pack_replace("circuit-network","green","orange")
 pack_replace("armor-making-3","green","orange")
 pack_replace("solar-energy","green","orange")
 pack_replace("electric-engine","green","orange")
-OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
 pack_replace("electric-energy-accumulators-1","green","orange")
 pack_replace("energy-shield-equipment","green","orange")
 pack_replace("night-vision-equipment","green","orange")
@@ -86,6 +77,76 @@ OV.remove_science_pack("automated-construction", "angels-science-pack-blue")
 pack_replace("construction-robotics","green","orange")
 OV.remove_science_pack("construction-robotics", "angels-science-pack-blue")
 pack_replace("electric-energy-distribution-2","blue","orange")
+--REFINING
+pack_replace("water-treatment-3","green","orange")
+pack_replace("ore-leaching","blue","orange")
+pack_replace("geode-processing-2","green","orange")
+pack_replace("advanced-ore-refining-2","green","orange")
+--BIOPROCESSING
+pack_replace("bio-wood-processing-3","green","orange")
+--PETROCHEM
+pack_replace("angels-advanced-chemistry-2", "green","orange")
+pack_replace("plastic-1", "green","orange")
+pack_replace("resin-2", "blue","orange")
+pack_replace("rubber", "green","orange")
+pack_replace("rocket-booster-1", "green","orange")
+pack_replace("rocket-explosives-1", "green","orange")
+pack_replace("angels-advanced-chemistry-2", "green","orange")
+pack_replace("angels-advanced-chemistry-2", "green","orange")
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+--remove pre-requisites for vanilla packs, moving them across to the new lab techs
+--OV.global_replace_technology("logistic-science-pack", "tech-green-labs")
+OV.global_replace_technology("chemical-science-pack", "tech-blue-labs")
+OV.global_replace_technology("high-tech-science-pack", "tech-yellow-labs")
+
+--move advanced material processing up a tier
+--pack_replace("advanced-material-processing","red","green")
+
+--general tier changes
+--pack_replace("battery","green","orange")
+--pack_replace("oil-processing","green","orange")
+--pack_replace("circuit-network","green","orange")
+--pack_replace("armor-making-3","green","orange")
+--pack_replace("solar-energy","green","orange")
+--pack_replace("electric-engine","green","orange")
+OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
+--pack_replace("electric-energy-accumulators-1","green","orange")
+--pack_replace("energy-shield-equipment","green","orange")
+--pack_replace("night-vision-equipment","green","orange")
+--pack_replace("battery-equipment","green","orange")
+--pack_replace("solar-panel-equipment","green","orange")
+--pack_replace("sulfur-processing","green","orange")
+--pack_replace("plastics","green","orange")
+--pack_replace("modules","green","orange")
+--pack_replace("speed-module","green","orange")
+--pack_replace("productivity-module","green","orange")
+--pack_replace("effectivity-module","green","orange")
+--pack_replace("combat-robotics","green","orange")
+--pack_replace("flamethrower-damage-1","green","orange")
+--pack_replace("bullet-damage-3","green","orange")
+--pack_replace("flying","green","orange")
+--pack_replace("robotics","green","orange")
+--pack_replace("lubricant","blue","orange")
+--OV.remove_prereq("lubricant","angels-advanced-oil-processing")
+--OV.add_prereq("lubricant","angels-oil-processing")
+--OV.remove_science_pack("robotics", "angels-science-pack-blue")
+--pack_replace("automated-construction","green","orange")
+--OV.remove_science_pack("automated-construction", "angels-science-pack-blue")
+--pack_replace("construction-robotics","green","orange")
+--OV.remove_science_pack("construction-robotics", "angels-science-pack-blue")
+--pack_replace("electric-energy-distribution-2","blue","orange")
 pack_replace("logistic-robotics","green","blue")
 
 --set multi-colours for the silo
@@ -96,27 +157,27 @@ OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
 OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
 --REFINING
 --pack_replace("water-treatment","red","grey")
-pack_replace("water-treatment-3","green","orange")
+--pack_replace("water-treatment-3","green","orange")
 pack_replace("advanced-ore-refining-4","blue","yellow")
-pack_replace("ore-leaching","blue","orange")
-pack_replace("geode-processing-2","green","orange")
-pack_replace("advanced-ore-refining-2","green","orange")
+--pack_replace("ore-leaching","blue","orange")
+--pack_replace("geode-processing-2","green","orange")
+--pack_replace("advanced-ore-refining-2","green","orange")
 --BIOPROCESSING
 --pack_replace("bio-processing-brown","red","grey")
 --pack_replace("bio-paper-1","red","grey")
-pack_replace("bio-wood-processing-3","green","orange")
+--pack_replace("bio-wood-processing-3","green","orange")
 --pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
 --pack_replace("bio-fermentation","green","red")
 --pack_replace("bio-arboretum-temperate-1","green","red")
 --PETROCHEM
-pack_replace("angels-advanced-chemistry-2", "green","orange")
-pack_replace("plastic-1", "green","orange")
-pack_replace("resin-2", "blue","orange")
-pack_replace("rubber", "green","orange")
-pack_replace("rocket-booster-1", "green","orange")
-pack_replace("rocket-explosives-1", "green","orange")
-pack_replace("angels-advanced-chemistry-2", "green","orange")
-pack_replace("angels-advanced-chemistry-2", "green","orange")
+--pack_replace("angels-advanced-chemistry-2", "green","orange")
+--pack_replace("plastic-1", "green","orange")
+--pack_replace("resin-2", "blue","orange")
+--pack_replace("rubber", "green","orange")
+--pack_replace("rocket-booster-1", "green","orange")
+--pack_replace("rocket-explosives-1", "green","orange")
+--pack_replace("angels-advanced-chemistry-2", "green","orange")
+--pack_replace("angels-advanced-chemistry-2", "green","orange")
 --RUN CORE BUILDER
 OV.execute()
 

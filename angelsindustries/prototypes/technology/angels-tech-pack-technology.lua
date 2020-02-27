@@ -111,7 +111,7 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "tech-red-labs",
+      "tech-red-packs",
       "tech-green-circuit",
     },
     effects =
@@ -172,7 +172,8 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "tech-green-labs",
+      "tech-green-packs",
+      "tech-orange-circuit",
     },
     effects =
     {
@@ -230,7 +231,8 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "tech-orange-labs",
+      "tech-orange-packs",
+      "tech-blue-circuit",
     },
     effects =
     {
@@ -338,7 +340,8 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "tech-blue-labs",
+      "tech-blue-packs",
+      "tech-yellow-circuit",
     },
     effects =
     {

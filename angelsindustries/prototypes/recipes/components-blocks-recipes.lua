@@ -143,7 +143,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-electronics-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -160,7 +160,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-electronics-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -177,7 +177,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-electronics-5",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={

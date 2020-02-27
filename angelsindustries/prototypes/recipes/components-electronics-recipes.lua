@@ -22,7 +22,7 @@ data:extend(
   --  name = "circuit-resistor",
   --  energy_required = 3,
   --  category = "advanced-crafting",
-  --  enabled = "true",
+  --  enabled = "false",
   --  ingredients =
   --  {
   --    {type = "item", name = "plastic", amount = 1},
@@ -53,7 +53,7 @@ data:extend(
     name = "circuit-microchip",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "angels-silicon-wafer", amount = 1},
@@ -69,7 +69,7 @@ data:extend(
     name = "circuit-transformer",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "iron-plate", amount = 1},
@@ -83,7 +83,7 @@ data:extend(
     name = "circuit-cpu",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "angels-silicon-wafer", amount = 1},
@@ -101,7 +101,7 @@ data:extend(
     order = "f",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-resistor", amount = 5},
@@ -129,7 +129,7 @@ data:extend(
     order = "g",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-transistor", amount = 5},
@@ -157,7 +157,7 @@ data:extend(
     order = "h",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-microchip", amount = 5},
@@ -185,7 +185,7 @@ data:extend(
     order = "i",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-transformer", amount = 5},
@@ -213,7 +213,7 @@ data:extend(
     order = "j",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-cpu", amount = 5},
@@ -300,7 +300,7 @@ data:extend(
     name = "circuit-orange-board",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "cellulose-fiber", amount = 1},
@@ -314,7 +314,7 @@ data:extend(
     name = "circuit-blue-board",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "angels-coil-glass-fiber", amount = 2},
@@ -328,7 +328,7 @@ data:extend(
     name = "circuit-yellow-board",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "angels-coil-glass-fiber", amount = 2},
@@ -388,7 +388,7 @@ data:extend(
     name = "circuit-orange",
     energy_required = 1,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-orange-board", amount = 1},
@@ -403,7 +403,7 @@ data:extend(
     name = "circuit-blue",
     energy_required = 1,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-blue-board", amount = 1},
@@ -418,7 +418,7 @@ data:extend(
     name = "circuit-yellow",
     energy_required = 1,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-yellow-board", amount = 1},
@@ -467,7 +467,7 @@ data:extend(
     name = "circuit-orange-loaded",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-orange", amount = 1},
@@ -484,7 +484,7 @@ data:extend(
     name = "circuit-blue-loaded",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-blue", amount = 1},
@@ -502,7 +502,7 @@ data:extend(
     name = "circuit-yellow-loaded",
     energy_required = 3,
     category = "advanced-crafting",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type = "item", name = "circuit-yellow", amount = 1},

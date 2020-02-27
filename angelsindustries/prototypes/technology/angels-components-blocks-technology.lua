@@ -48,6 +48,35 @@ data:extend(
     {
       count = 64,
       ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+      },
+      time = 60
+    },
+    order = "a-5"
+  },
+  {
+    type = "technology",
+    name = "angels-blocks-3",
+    icon = "__angelsindustries__/graphics/technology/components-tech.png",
+    icon_size = 64,
+    prerequisites =
+    {
+      "angels-blocks-2",
+      "logistic-science-pack",
+    },
+    effects =
+    {
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "block-construction-2",
+      --},
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
       },
       time = 60
