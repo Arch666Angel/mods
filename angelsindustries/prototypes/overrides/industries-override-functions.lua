@@ -217,7 +217,8 @@ function core_tier_upgrade()
             local subpack = technology.unit.ingredients[tech][1]
             local data_core = string.sub(subpack, 9, -2)
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              core_tier_up(techname, string.sub(data_core, 2, -2))
+              local research_type = string.sub(data_core, 2, -2)
+              core_tier_up(techname, research_type)
             end
           end
         end
@@ -229,7 +230,12 @@ function core_tier_upgrade()
             local subpack = technology.unit.ingredients[tech][1]
             local data_core = string.sub(subpack, 9, -2)
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              core_tier_up(techname, string.sub(data_core, 2, -2))
+              local research_type = string.sub(data_core, 2, -2)
+              core_tier_up(techname, research_type)
+              if research_type ~= "basic" then
+                OV.remove_prereq(techname, "tech-blue-packs")
+                OV.add_prereq(techname, string.format("tech-specialised-labs-advanced-%s-1", research_type))
+              end
             end
           end
         end
@@ -241,9 +247,12 @@ function core_tier_upgrade()
             local subpack = technology.unit.ingredients[tech][1]
             local data_core = string.sub(subpack, 9, -2)
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              --core_tier_up(techname, string.sub(data_core, 2, -2))
-              OV.remove_prereq(techname, "tech-orange-packs")
-              OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-3", string.sub(data_core, 2, -2)))
+              local research_type = string.sub(data_core, 2, -2)
+              --core_tier_up(techname, research_type)
+              if research_type ~= "basic" then
+                OV.remove_prereq(techname, "tech-orange-packs")
+                OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-3", research_type))
+              end
             end
           end
         end
@@ -255,9 +264,12 @@ function core_tier_upgrade()
             local subpack = technology.unit.ingredients[tech][1]
             local data_core = string.sub(subpack, 9, -2)
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              --core_tier_up(techname, string.sub(data_core, 2, -2))
-              OV.remove_prereq(techname, "tech-green-packs")
-              OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-2", string.sub(data_core, 2, -2)))
+              local research_type = string.sub(data_core, 2, -2)
+              --core_tier_up(techname, research_type)
+              if research_type ~= "basic" then
+                OV.remove_prereq(techname, "tech-green-packs")
+                OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-2", research_type))
+              end
             end
           end
         end
@@ -269,9 +281,12 @@ function core_tier_upgrade()
             local subpack = technology.unit.ingredients[tech][1]
             local data_core = string.sub(subpack, 9, -2)
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              --core_tier_up(techname, string.sub(data_core, 2, -2))
-              OV.remove_prereq(techname, "tech-red-packs")
-              OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-1", string.sub(data_core, 2, -2)))
+              local research_type = string.sub(data_core, 2, -2)
+              --core_tier_up(techname, research_type)
+              if research_type ~= "basic" then
+                OV.remove_prereq(techname, "tech-red-packs")
+                OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-1", research_type))
+              end
             end
           end
         end

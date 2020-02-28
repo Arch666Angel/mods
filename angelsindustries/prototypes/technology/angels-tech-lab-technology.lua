@@ -36,7 +36,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -46,7 +46,6 @@ data:extend(
     prerequisites =
     {
       "tech-green-packs",
-      "angels-blocks-2",
       "tech-specialised-labs-basic-exploration-1",
     },
     effects =
@@ -66,7 +65,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -76,15 +75,14 @@ data:extend(
     prerequisites =
     {
       "tech-orange-packs",
-      "angels-blocks-3",
       "tech-specialised-labs-basic-exploration-2",
     },
     effects =
     {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "block-exploration-2",
-      --},
+      {
+        type = "unlock-recipe",
+        recipe = "block-exploration-3",
+      },
     },
     unit =
     {
@@ -93,10 +91,50 @@ data:extend(
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-exploration-1",
+    icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-blue-packs",
+      "tech-specialised-labs-basic-exploration-3",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-exploration-lab-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacore-exploration-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-exploration-4",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
   },
   -----------------------------------------------------------------------------
   -- ENERGY LABS --------------------------------------------------------------
@@ -134,7 +172,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -144,7 +182,6 @@ data:extend(
     prerequisites =
     {
       "tech-green-packs",
-      "angels-blocks-2",
       "tech-specialised-labs-basic-energy-1",
     },
     effects =
@@ -164,7 +201,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -174,15 +211,14 @@ data:extend(
     prerequisites =
     {
       "tech-orange-packs",
-      "angels-blocks-3",
       "tech-specialised-labs-basic-energy-2",
     },
     effects =
     {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "block-energy-2",
-      --},
+      {
+        type = "unlock-recipe",
+        recipe = "block-energy-3",
+      },
     },
     unit =
     {
@@ -191,10 +227,50 @@ data:extend(
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-energy-1",
+    icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-specialised-labs-advanced-exploration-1",
+      "tech-specialised-labs-basic-energy-3",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-energy-lab-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacore-energy-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-energy-4",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
   },
   -----------------------------------------------------------------------------
   -- LOGISTICS LABS -----------------------------------------------------------
@@ -232,7 +308,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -242,7 +318,6 @@ data:extend(
     prerequisites =
     {
       "tech-green-packs",
-      "angels-blocks-2",
       "tech-specialised-labs-basic-logistic-1",
     },
     effects =
@@ -262,7 +337,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -272,15 +347,14 @@ data:extend(
     prerequisites =
     {
       "tech-orange-packs",
-      "angels-blocks-3",
       "tech-specialised-labs-basic-logistic-2",
     },
     effects =
     {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "block-logistic-2",
-      --},
+      {
+        type = "unlock-recipe",
+        recipe = "block-logistic-3",
+      },
     },
     unit =
     {
@@ -289,10 +363,50 @@ data:extend(
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-logistic-1",
+    icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-specialised-labs-advanced-exploration-1",
+      "tech-specialised-labs-basic-logistic-3",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-logistic-lab-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacore-logistic-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-logistic-4",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
   },
   -----------------------------------------------------------------------------
   -- ENHANCEMENT LABS ---------------------------------------------------------
@@ -330,7 +444,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -340,7 +454,6 @@ data:extend(
     prerequisites =
     {
       "tech-green-packs",
-      "angels-blocks-2",
       "tech-specialised-labs-basic-enhance-1",
     },
     effects =
@@ -360,7 +473,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -370,15 +483,14 @@ data:extend(
     prerequisites =
     {
       "tech-orange-packs",
-      "angels-blocks-3",
       "tech-specialised-labs-basic-enhance-2",
     },
     effects =
     {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "block-enhancement-2",
-      --},
+      {
+        type = "unlock-recipe",
+        recipe = "block-enhancement-3",
+      },
     },
     unit =
     {
@@ -387,10 +499,50 @@ data:extend(
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-enhance-1",
+    icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-specialised-labs-advanced-exploration-1",
+      "tech-specialised-labs-basic-enhance-3",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-enhance-lab-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacore-enhance-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-enhancement-4",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
   },
   -----------------------------------------------------------------------------
   -- PRODUCTION LABS ----------------------------------------------------------
@@ -428,7 +580,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -438,7 +590,6 @@ data:extend(
     prerequisites =
     {
       "tech-green-packs",
-      "angels-blocks-2",
       "tech-specialised-labs-basic-processing-1",
     },
     effects =
@@ -458,7 +609,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -468,15 +619,14 @@ data:extend(
     prerequisites =
     {
       "tech-orange-packs",
-      "angels-blocks-3",
       "tech-specialised-labs-basic-processing-2",
     },
     effects =
     {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "block-production-2",
-      --},
+      {
+        type = "unlock-recipe",
+        recipe = "block-production-3",
+      },
     },
     unit =
     {
@@ -485,10 +635,50 @@ data:extend(
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-processing-1",
+    icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-specialised-labs-advanced-exploration-1",
+      "tech-specialised-labs-basic-processing-3",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-processing-lab-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacore-processing-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-production-4",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
   },
   -----------------------------------------------------------------------------
   -- WARFARE LABS -------------------------------------------------------------
@@ -526,7 +716,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -536,7 +726,6 @@ data:extend(
     prerequisites =
     {
       "tech-green-packs",
-      "angels-blocks-2",
       "tech-specialised-labs-basic-war-1",
     },
     effects =
@@ -556,7 +745,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
   },
   {
     type = "technology",
@@ -566,15 +755,14 @@ data:extend(
     prerequisites =
     {
       "tech-orange-packs",
-      "angels-blocks-3",
       "tech-specialised-labs-basic-war-2",
     },
     effects =
     {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "block-warfare-2",
-      --},
+      {
+        type = "unlock-recipe",
+        recipe = "block-warfare-3",
+      },
     },
     unit =
     {
@@ -583,17 +771,57 @@ data:extend(
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
       },
       time = 60
     },
-    order = "a-5"
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-war-1",
+    icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-specialised-labs-advanced-exploration-1",
+      "tech-specialised-labs-basic-war-3",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-war-lab-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacore-war-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-warfare-4",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
   },
   -----------------------------------------------------------------------------
   -- BASIC LABS ---------------------------------------------------------------
   -----------------------------------------------------------------------------
   {
     type = "technology",
-    name = "tech-specialised-labs-basic-basic-1", -- i know it's weird naming, but it simplifies the overrides
+    name = "tech-specialised-labs-basic-basic", -- i know it's weird naming, but it simplifies the overrides
     icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
     icon_size = 128,
     prerequisites =
@@ -621,67 +849,7 @@ data:extend(
       },
       time = 60
     },
-    order = "a-5"
-  },
-  {
-    type = "technology",
-    name = "tech-specialised-labs-basic-basic-2",
-    icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
-    icon_size = 128,
-    prerequisites =
-    {
-      "tech-green-packs",
-      --"angels-blocks-2",
-      "tech-specialised-labs-basic-basic-1",
-    },
-    effects =
-    {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "angels-basic-lab-2"
-      --},
-    },
-    unit =
-    {
-      count = 64,
-      ingredients = {
-        {"angels-science-pack-grey", 1},
-        {"angels-science-pack-red", 1},
-        {"angels-science-pack-green", 1},
-      },
-      time = 60
-    },
-    order = "a-5"
-  },
-  {
-    type = "technology",
-    name = "tech-specialised-labs-basic-basic-3",
-    icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
-    icon_size = 128,
-    prerequisites =
-    {
-      "tech-green-packs",
-      --"angels-blocks-3",
-      "tech-specialised-labs-basic-basic-2",
-    },
-    effects =
-    {
-      --{
-      --  type = "unlock-recipe",
-      --  recipe = "angels-basic-lab-2"
-      --},
-    },
-    unit =
-    {
-      count = 64,
-      ingredients = {
-        {"angels-science-pack-grey", 1},
-        {"angels-science-pack-red", 1},
-        {"angels-science-pack-green", 1},
-      },
-      time = 60
-    },
-    order = "a-5"
+    order = "b-5"
   },
 }
 )

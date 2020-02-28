@@ -39,7 +39,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-construction-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients =
@@ -56,7 +56,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-construction-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients =
@@ -301,7 +301,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-enhancement-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -318,7 +318,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-enhancement-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -391,7 +391,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-energy-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -409,7 +409,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-energy-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -482,7 +482,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-exploration-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -499,7 +499,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-exploration-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -574,7 +574,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-logistic-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -593,7 +593,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-logistic-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -672,7 +672,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-production-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -691,7 +691,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-production-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -1007,7 +1007,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-warfare-3",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={
@@ -1026,7 +1026,7 @@ data:extend(
   {
     type = "recipe",
     name = "block-warfare-4",
-    enabled = true,
+    enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
     ingredients ={

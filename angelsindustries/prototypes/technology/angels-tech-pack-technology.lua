@@ -124,6 +124,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "science-force-analyzer",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "block-construction-2",
+      },
     },
     unit =
     {
@@ -162,7 +166,7 @@ data:extend(
       },
       time = 60
     },
-    order = "b-5"
+    order = "a-5"
   },
   --TIER 2.5
   {
@@ -180,6 +184,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "angels-science-pack-orange",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "block-construction-3",
       },
     },
     unit =
@@ -221,7 +229,7 @@ data:extend(
       },
       time = 60
     },
-    order = "b-5"
+    order = "a-5"
   },
   --TIER 3
   {
@@ -246,28 +254,32 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "datacore-war-2",
+        recipe = "block-construction-4",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-processing-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-logistic-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-energy-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-enhance-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "datacore-exploration-2",
-      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-war-2",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-processing-2",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-logistic-2",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-energy-2",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-enhance-2",
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "datacore-exploration-2",
+      --},
     },
     unit =
     {
@@ -293,30 +305,30 @@ data:extend(
     },
     effects =
     {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-exploration-lab-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-energy-lab-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-logistic-lab-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-enhance-lab-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-processing-lab-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-war-lab-2"
-      },
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-exploration-lab-2"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-energy-lab-2"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-logistic-lab-2"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-enhance-lab-2"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-processing-lab-2"
+      --},
+      --{
+      --  type = "unlock-recipe",
+      --  recipe = "angels-war-lab-2"
+      --},
     },
     unit =
     {
@@ -330,7 +342,7 @@ data:extend(
       },
       time = 60
     },
-    order = "b-5"
+    order = "a-5"
   },
   --TIER 4
   {
@@ -393,7 +405,7 @@ data:extend(
       },
       time = 60
     },
-    order = "b-5"
+    order = "a-5"
   },
 }
 )
