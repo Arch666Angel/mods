@@ -125,7 +125,7 @@ function tech_unlock_reset()
       --UNTIE TECHS FROM EACH OTHER
       --technology.prerequisites = {}
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
-      if technology.unit.ingredients and not technology.max_level then
+      if technology.unit.ingredients and not technology.max_level and technology.unit.ingredients[1] then
         for i, ingredients in pairs(technology.unit.ingredients[1]) do
           if ingredients == "angels-science-pack-grey" then
             OV.set_research_difficulty(
@@ -181,7 +181,7 @@ function tech_unlock_reset()
 end
 function core_tier_upgrade()
   for techname, technology in pairs(data.raw.technology) do
-    if technology.unit.ingredients[1][1] --[[and technology.unit.ingredients[2] ]] then
+    if technology.unit.ingredients[1] and technology.unit.ingredients[1][1] --[[and technology.unit.ingredients[2] ]] then
       if technology.unit.ingredients[1][1] == "angels-science-pack-yellow" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
