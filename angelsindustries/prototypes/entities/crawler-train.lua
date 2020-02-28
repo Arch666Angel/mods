@@ -72,6 +72,7 @@ data:extend(
       joint_distance = 4,
       energy_per_hit_point = 5,
       equipment_grid = "angels-crawler-loco-wagon",
+      allow_robot_dispatch_in_automatic_mode = true,
       resistances = {
         {
           type = "fire",
@@ -265,6 +266,7 @@ data:extend(
       joint_distance = 4,
       energy_per_hit_point = 5,
       equipment_grid = "angels-crawler-loco-wagon",
+      allow_robot_dispatch_in_automatic_mode = true,
       resistances = {
         {
           type = "fire",
@@ -492,6 +494,7 @@ data:extend(
       joint_distance = 4,
       energy_per_hit_point = 5,
       equipment_grid = "angels-crawler-wagon",
+      allow_robot_dispatch_in_automatic_mode = true,
       resistances = {
         {
           type = "fire",
@@ -696,6 +699,7 @@ data:extend(
       joint_distance = 4,
       energy_per_hit_point = 5,
       equipment_grid = "angels-crawler-bot-wagon",
+      allow_robot_dispatch_in_automatic_mode = true,
       resistances = {
         {
           type = "fire",
