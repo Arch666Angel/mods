@@ -14,6 +14,3 @@ for index, force in pairs(game.forces) do
 	end
     end
 end
-
-
-
