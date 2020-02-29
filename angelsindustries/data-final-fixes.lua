@@ -21,7 +21,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   --ADD MANUAL OVERRIDES FOR DATACORES AND EXCEPTIONS TO TECH OVERRIDES
   require("prototypes.overrides.angels-tech-data")
   OV.execute()
-  require("prototypes.overrides.angels-tech-base")
+  require("prototypes.overrides.angels-tech-base-packs")
+  --require("prototypes.overrides.angels-tech-base-cores")
   OV.execute()
   --if mods["bobplates"] then
   --  require("prototypes.overrides.angels-tech-bobs")
