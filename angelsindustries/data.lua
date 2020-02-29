@@ -79,6 +79,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.buildings.angels-accelerator")
 
   --RECIPES
+  require("prototypes.recipes.tech-science-cores-recipes")
   require("prototypes.recipes.tech-science-packs-recipes")
   require("prototypes.recipes.tech-entity")
 

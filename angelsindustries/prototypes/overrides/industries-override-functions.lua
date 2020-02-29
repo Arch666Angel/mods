@@ -219,6 +219,10 @@ function core_tier_upgrade()
             if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
               local research_type = string.sub(data_core, 2, -2)
               core_tier_up(techname, research_type)
+              if research_type ~= "basic" then
+                OV.remove_prereq(techname, "tech-yellow-packs")
+                OV.add_prereq(techname, string.format("tech-specialised-labs-advanced-%s-2", research_type))
+              end
             end
           end
         end

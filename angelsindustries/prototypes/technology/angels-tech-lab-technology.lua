@@ -136,6 +136,38 @@ data:extend(
     },
     order = "b-5"
   },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-exploration-2",
+    icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-yellow-packs",
+      "tech-specialised-labs-advanced-exploration-1",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "block-exploration-5",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
+  },
   -----------------------------------------------------------------------------
   -- ENERGY LABS --------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -267,6 +299,38 @@ data:extend(
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-energy-2",
+    icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-yellow-packs",
+      "tech-specialised-labs-advanced-energy-1",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "block-energy-5",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
       },
       time = 60
     },
@@ -408,6 +472,38 @@ data:extend(
     },
     order = "b-5"
   },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-logistic-2",
+    icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-yellow-packs",
+      "tech-specialised-labs-advanced-logistic-1",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "block-logistic-5",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
+  },
   -----------------------------------------------------------------------------
   -- ENHANCEMENT LABS ---------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -539,6 +635,38 @@ data:extend(
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-enhance-2",
+    icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-yellow-packs",
+      "tech-specialised-labs-advanced-enhance-1",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "block-enhancement-5",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
       },
       time = 60
     },
@@ -680,6 +808,38 @@ data:extend(
     },
     order = "b-5"
   },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-processing-2",
+    icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-yellow-packs",
+      "tech-specialised-labs-advanced-processing-1",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "block-production-5",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
+  },
   -----------------------------------------------------------------------------
   -- WARFARE LABS -------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -811,6 +971,38 @@ data:extend(
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
+      },
+      time = 60
+    },
+    order = "b-5"
+  },
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced-war-2",
+    icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "tech-yellow-packs",
+      "tech-specialised-labs-advanced-war-1",
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "block-warfare-5",
+      },
+    },
+    unit =
+    {
+      count = 64,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
       },
       time = 60
     },
