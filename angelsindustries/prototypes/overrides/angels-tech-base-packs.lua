@@ -12,7 +12,7 @@ for _,tech_name in pairs({
   "automation",
   "logistics",
   "turrets",
-  -- REFINING,
+  -- REFINING
   "water-treatment",
   -- SMELTING
   "angels-solder-smelting-basic",
@@ -93,6 +93,8 @@ pack_replace("rocket-booster-1", "green","orange")
 pack_replace("rocket-explosives-1", "green","orange")
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("angels-advanced-chemistry-2", "green","orange")
+--INDUSTRIES
+pack_replace("tech-blue-circuit", "green","orange")
 
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -120,4 +122,4 @@ OV.set_science_pack("rocket-silo", "angels-science-pack-green")
 OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
 OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
 
-OV.execute()
+OV.execute() ------------------------------------------------------------------

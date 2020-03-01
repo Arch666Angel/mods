@@ -23,6 +23,23 @@ function core_tier_up(techname, core_n)
   OV.set_science_pack(techname, "datacore-" .. core_n .. "-2", 2)
 end
 
+function set_core(techname, core_n)
+  local has_core = false
+  for _,pack in pairs((data.raw.technology[techname] or {unit={ingredients={}}}).unit.ingredients) do
+    local packname = pack.name or pack[1]
+    if string.find(packname, "datacore") ~= nil then
+      if packname == core_n then
+        has_core = true
+      else
+        OV.remove_science_pack(techname, packname)
+      end
+    end
+  end
+  if not has_core then
+    OV.set_science_pack(techname, core_n, 2)
+  end
+end
+
 function core_builder()
   -- Start of research Automated Stack...
   for rec_4tech in pairs(data.raw.technology) do
@@ -35,7 +52,7 @@ function core_builder()
         string.find(rec_4tech, "axe") ~= nil or
         string.find(rec_4tech, "personal") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-enhance-1", 2)
+        set_core(rec_4tech, "datacore-enhance-1", 2)
 
       --war takes next priority
       elseif
@@ -48,29 +65,32 @@ function core_builder()
         string.find(rec_4tech, "bullet") ~= nil or
         string.find(rec_4tech, "rocket") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-war-1", 2)
+        set_core(rec_4tech, "datacore-war-1", 2)
 
       --exploration is next
       elseif string.find(rec_4tech, "explor") ~= nil then
-        OV.set_science_pack(rec_4tech, "datacore-exploration-1", 2)
+        set_core(rec_4tech, "datacore-exploration-1", 2)
 
       --energy is next
       elseif
         string.find(rec_4tech, "energy") ~= nil or
-        string.find(rec_4tech, "power") ~= nil
+        string.find(rec_4tech, "power") ~= nil or
+        string.find(rec_4tech, "boiler") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-energy-1", 2)
+        set_core(rec_4tech, "datacore-energy-1", 2)
 
       --logistics is next
       elseif
         string.find(rec_4tech, "insert") ~= nil or
         string.find(rec_4tech, "logistic") ~= nil or
         string.find(rec_4tech, "rail") ~= nil or
+        string.find(rec_4tech, "train") ~= nil or
         string.find(rec_4tech, "braking") ~= nil or
         string.find(rec_4tech, "robot") ~= nil or
-        string.find(rec_4tech, "fluid") ~= nil
+        string.find(rec_4tech, "fluid") ~= nil or
+        string.find(rec_4tech, "warehouse") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-logistic-1", 2)
+        set_core(rec_4tech, "datacore-logistic-1", 2)
 
       --production is up next
       elseif
@@ -82,7 +102,7 @@ function core_builder()
           string.find(rec_4tech, "battery") ~= nil or
           string.find(rec_4tech, "electronic") ~= nil
        then
-        OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+        set_core(rec_4tech, "datacore-processing-1", 2)
 
       --smelting and metallurgy
       elseif
@@ -91,7 +111,7 @@ function core_builder()
         string.find(rec_4tech, "metallurgy") ~= nil or
         string.find(rec_4tech, "cool") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+        set_core(rec_4tech, "datacore-processing-1", 2)
 
       --Bioprocessing updates
       elseif
@@ -101,7 +121,7 @@ function core_builder()
           string.find(rec_4tech, "cool") ~= nil or
           string.find(rec_4tech, "garden") ~= nil
        then
-        OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+        set_core(rec_4tech, "datacore-processing-1", 2)
 
       --more war updates
       elseif
@@ -111,7 +131,7 @@ function core_builder()
         string.find(rec_4tech, "turret") ~= nil or
         string.find(rec_4tech, "explo") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-war-1", 2)
+        set_core(rec_4tech, "datacore-war-1", 2)
 
       --petrochem and refining updates
       elseif
@@ -121,7 +141,7 @@ function core_builder()
         string.find(rec_4tech, "science-pack") ~= nil or
         string.find(rec_4tech, "water") ~= nil
       then
-        OV.set_science_pack(rec_4tech, "datacore-processing-1", 2)
+        set_core(rec_4tech, "datacore-processing-1", 2)
       end
     end
   end
@@ -208,8 +228,10 @@ end
 
 function core_tier_upgrade()
   for techname, technology in pairs(data.raw.technology) do
-    if technology.unit.ingredients[1][1] --[[and technology.unit.ingredients[2] ]] then
-      if technology.unit.ingredients[1][1] == "angels-science-pack-yellow" then
+    local pack_name = (technology.unit.ingredients[1] and (technology.unit.ingredients[1].name or technology.unit.ingredients[1][1])) or nil
+    if pack_name then
+
+      if pack_name == "angels-science-pack-yellow" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
         else
@@ -226,7 +248,8 @@ function core_tier_upgrade()
             end
           end
         end
-      elseif technology.unit.ingredients[1][1] == "angels-science-pack-blue" then
+
+      elseif pack_name == "angels-science-pack-blue" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
         else
@@ -243,7 +266,8 @@ function core_tier_upgrade()
             end
           end
         end
-      elseif technology.unit.ingredients[1][1] == "angels-science-pack-orange" then
+
+      elseif pack_name == "angels-science-pack-orange" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
         else
@@ -260,7 +284,8 @@ function core_tier_upgrade()
             end
           end
         end
-      elseif technology.unit.ingredients[1][1] == "angels-science-pack-green" then
+
+      elseif pack_name == "angels-science-pack-green" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
         else
@@ -277,7 +302,8 @@ function core_tier_upgrade()
             end
           end
         end
-      elseif technology.unit.ingredients[1][1] == "angels-science-pack-red" then
+
+      elseif pack_name == "angels-science-pack-red" then
         if technology.unit.ingredients[3] then
           --log("mess"..technology.unit.ingredients[3][1])
         else
@@ -294,6 +320,7 @@ function core_tier_upgrade()
             end
           end
         end
+
       end
     end
   end

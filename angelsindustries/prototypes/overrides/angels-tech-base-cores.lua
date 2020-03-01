@@ -1,154 +1,251 @@
 local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
-
--------------------------------------------------------------------------------
--- GREY SCIENCE PACKS ---------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--- RED SCIENCE PACKS ----------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--- GREEN SCIENCE PACKS --------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--- ORANGE SCIENCE PACKS -------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--- BLUE SCIENCE PACKS ---------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--- YELOW SCIENCE PACKS --------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--- WHITE SCIENCE PACKS --------------------------------------------------------
--------------------------------------------------------------------------------
-
-if true then
-
+-- catch most of the cores with the core builder
 core_builder()
---CUSTOM FIXES (in Categories)--
 OV.execute()
-OV.set_science_pack("production-science-pack", "datacore-processing-1")
-OV.set_science_pack("utility-science-pack", "datacore-enhance-1")
---vanilla
-core_replace("automation","processing","basic")
-core_replace("logistics","logistic","basic")
-core_replace("space-science-pack","processing","exploration")
-OV.remove_science_pack("worker-robots-storage-2", "datacore-processing-1")
-OV.remove_science_pack("worker-robots-storage-3", "datacore-processing-1")
---REFINING
-core_replace("water-treatment","processing","basic")
---BIOPROCESSING
-core_replace("bio-processing-brown","processing","basic")
-core_replace("bio-paper-1","processing","basic")
---Exploration
-OV.set_science_pack("automobilism", "datacore-exploration-1", 2)
-core_replace("tanks", "processing","exploration")
-OV.remove_science_pack("tanks", "datacore-war-1")
+
+-- now the custom fixes
+-------------------------------------------------------------------------------
+-- NO CORES -------------------------------------------------------------------
+-------------------------------------------------------------------------------
+OV.remove_science_pack("rocket-silo", "datacore-war-1")
+
+-------------------------------------------------------------------------------
+-- BASIC CORES ----------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
+core_replace("automation", "processing", "basic")
+core_replace("logistics", "logistic", "basic")
+core_replace("turrets","war","basic")
+-- REFINING
+core_replace("water-treatment", "processing", "basic")
+-- SMELTING
+core_replace("angels-solder-smelting-basic", "processing", "basic")
+-- BIO PROCESSING
+core_replace("bio-processing-brown", "processing", "basic")
+core_replace("bio-paper-1", "processing", "basic")
+-- INDUSTRIES
+OV.set_science_pack("tech-red-circuit", "datacore-basic", 2)
+OV.set_science_pack("tech-green-circuit", "datacore-basic", 2)
+OV.set_science_pack("tech-orange-circuit", "datacore-basic", 2)
+OV.set_science_pack("tech-blue-circuit", "datacore-basic", 2)
+OV.set_science_pack("tech-yellow-circuit", "datacore-basic", 2)
+
+
+-------------------------------------------------------------------------------
+-- EXPLORATION CORES ----------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
 OV.set_science_pack("landfill", "datacore-exploration-1", 2)
+OV.set_science_pack("automobilism", "datacore-exploration-1", 2)
+core_replace("space-science-pack", "processing", "exploration")
+-- EXPLORATION
 OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
---Components
+-- CAB ADDONS
+if angelsmods.addons.cab then
+  OV.set_science_pack("angels-cab", "datacore-exploration-1", 2)
+end
+if angelsmods.addons.decorations then
+  OV.set_science_pack("nilaus-truck", "datacore-exploration-1", 2)
+end
+
+-------------------------------------------------------------------------------
+-- ENHANCEMENT CORES ----------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
+core_replace("effect-transmission", "processing", "enhance")
+OV.set_science_pack("toolbelt", "datacore-enhance-1", 2)
+OV.set_science_pack("optics", "datacore-enhance-1", 2)
+core_replace("rocket-fuel","war","enhance")
+-- PETROCHEM
+core_replace("angels-rocket-fuel","war","enhance")
+
+-------------------------------------------------------------------------------
+-- ENERGY CORES ---------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+-- LOGISTIC CORES -------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- PETROCHEM
+OV.set_science_pack("angels-fluid-control", "datacore-logistic-1", 2)
+-- INDUSTRIES
 OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-crawler-train", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
---ENHANCEMENT
-core_replace("effect-transmission","processing","enhance")
-OV.set_science_pack("toolbelt", "datacore-enhance-1", 2)
-OV.set_science_pack("optics", "datacore-enhance-1", 2)
---Addons
-if angelsmods.addons then
-	--PRESSURE TANKS
-	if angelsmods.addons.pressuretanks then
-		OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
-	end
-	--ORE SILORS
-	if angelsmods.addons.oresilos then
-		core_replace("ore-silos","processing","logistic")
-		--OV.set_science_pack("ore-silos", "datacore-logistic-1", 2)
-	end
-	--WAREHOUSES
-	if angelsmods.addons.warehouses then
-		OV.set_science_pack("angels-warehouses", "datacore-logistic-1", 2)
-		OV.set_science_pack("angels-logistic-warehouses", "datacore-logistic-1", 2)
-	end
-	--PETROTRAIN
-	if angelsmods.addons.petrotrain then
-		OV.set_science_pack("angels-petro-train", "datacore-logistic-1", 2)
-	end
-	--CAB
-	if angelsmods.addons.cab then
-		OV.set_science_pack("angels-cab", "datacore-exploration-2", 2)
-	end
+-- PRESSURE TANKS ADDONS
+if angelsmods.addons.pressuretanks then
+  OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
 end
---LOGISTIC
-OV.set_science_pack("flying", "datacore-logistic-1", 2) --does this even exist?
-OV.set_science_pack("automated-construction", "datacore-logistic-1", 2) --does this even exist?
--- (im not sure why i need to actually do these, will have to check the other override files for shenanigans)
-OV.remove_science_pack("inserter-capacity-bonus-4", "datacore-processing-1")
-OV.remove_science_pack("inserter-capacity-bonus-5", "datacore-processing-1")
-OV.remove_science_pack("inserter-capacity-bonus-6", "datacore-processing-1")
-OV.remove_science_pack("inserter-capacity-bonus-7", "datacore-processing-1")
-OV.remove_science_pack("logistics-3", "datacore-processing-1")
---PROCESSING
+--ORE SILO ADDONS
+if angelsmods.addons.oresilos then
+  core_replace("ore-silos", "processing", "logistic")
+end
+-------------------------------------------------------------------------------
+-- WARFARE CORES --------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
+for rec_4tech,_ in pairs(data.raw.technology) do --fix follower robot count techs
+  if string.find(rec_4tech,"follower")~=nil and string.find(rec_4tech,"robot")~=nil then
+    core_replace(rec_4tech, "logistic", "war")
+  end
+end
+-------------------------------------------------------------------------------
+-- PRODUCTION CORES -----------------------------------------------------------
+-------------------------------------------------------------------------------
+-- BASE GAME
 OV.set_science_pack("concrete", "datacore-processing-1", 2)
 OV.set_science_pack("circuit-network", "datacore-processing-1", 2)
 OV.set_science_pack("engine", "datacore-processing-1", 2)
 OV.set_science_pack("electric-engine", "datacore-processing-1", 2)
-OV.set_science_pack("geode-crystallization", "datacore-processing-1", 2)
 OV.set_science_pack("lubricant", "datacore-processing-1", 2)
-OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
 OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
---WAR
-core_replace("turrets","war","basic")
-OV.remove_science_pack("power-armor-mk2", "datacore-war-1")
-OV.remove_science_pack("atomic-bomb", "datacore-processing-1")
---PETROCHEM
-OV.set_science_pack("angels-fluid-control", "datacore-logistic-1", 2)
+-- REFINING
+OV.set_science_pack("geode-crystallization", "datacore-processing-1", 2)
+OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
+-- PETROCHEM
 OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
 OV.set_science_pack("oil-gas-extraction", "datacore-processing-1", 2)
 OV.set_science_pack("angels-flare-stack", "datacore-processing-1", 2)
 OV.set_science_pack("gas-synthesis", "datacore-processing-1", 2)
-OV.set_science_pack("angels-electric-boiler", "datacore-energy-1", 2)
 OV.set_science_pack("resin-1", "datacore-processing-1", 2)
 OV.set_science_pack("resin-2", "datacore-processing-1", 2)
 OV.set_science_pack("resin-3", "datacore-processing-1", 2)
 OV.set_science_pack("rubber", "datacore-processing-1", 2)
-OV.remove_science_pack("angels-rocket-fuel", "datacore-war-1")
-OV.set_science_pack("angels-rocket-fuel", "datacore-processing-2", 2)
 core_replace("rocket-booster-1","war","processing")
 core_replace("rocket-booster-2","war","processing")
-core_replace("rocket-fuel","war","enhance")
-OV.remove_science_pack("rocket-silo", "datacore-processing-1")
-OV.remove_science_pack("rocket-silo", "datacore-war-1")
 
--- Start of research Automated Stack removal overrides
-for rec_4tech in pairs(data.raw.technology) do
-  --fix follower robot tech needing multi-core
-  if string.find(rec_4tech,"follower")~=nil  then
-    OV.remove_science_pack(rec_4tech, "datacore-logistic-1")
-    OV.remove_science_pack(rec_4tech, "datacore-processing-1")
-    --fix modules
-  elseif string.find(rec_4tech,"module")~=nil  then
-    OV.remove_science_pack(rec_4tech, "datacore-processing-1")
-    --update equipment
-    --fix modules
-  elseif string.find(rec_4tech,"equipment")~=nil  then
-    OV.remove_science_pack(rec_4tech, "datacore-war-1")
-  elseif string.find(rec_4tech,"braking")~=nil  then
-    OV.remove_science_pack(rec_4tech, "datacore-processing-1")
-  end
-end
-OV.execute()
+OV.execute() ------------------------------------------------------------------
+
+-- now upgrade the cores to tier 2 and let them depend on the correct technology
 core_tier_upgrade()
 OV.execute()
+
+-- and the custom fixes
+
+if false then
+
+
+--CUSTOM FIXES (in Categories)--
+--OV.set_science_pack("production-science-pack", "datacore-processing-1")
+--OV.set_science_pack("utility-science-pack", "datacore-enhance-1")
+--vanilla
+--core_replace("automation","processing","basic")
+--core_replace("logistics","logistic","basic")
+--core_replace("space-science-pack","processing","exploration")
+--OV.remove_science_pack("worker-robots-storage-2", "datacore-processing-1")
+--OV.remove_science_pack("worker-robots-storage-3", "datacore-processing-1")
+--REFINING
+--core_replace("water-treatment","processing","basic")
+--BIOPROCESSING
+--core_replace("bio-processing-brown","processing","basic")
+--core_replace("bio-paper-1","processing","basic")
+--Exploration
+--OV.set_science_pack("automobilism", "datacore-exploration-1", 2)
+--core_replace("tanks", "processing","exploration")
+--OV.remove_science_pack("tanks", "datacore-war-1")
+--OV.set_science_pack("landfill", "datacore-exploration-1", 2)
+--OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
+--Components
+--OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
+--OV.set_science_pack("angels-crawler-train", "datacore-logistic-1", 2)
+--OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
+--OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
+--OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
+--ENHANCEMENT
+--core_replace("effect-transmission","processing","enhance")
+--OV.set_science_pack("toolbelt", "datacore-enhance-1", 2)
+--OV.set_science_pack("optics", "datacore-enhance-1", 2)
+--Addons
+if angelsmods.addons then
+  --PRESSURE TANKS
+  --if angelsmods.addons.pressuretanks then
+  --  OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
+  --end
+  --ORE SILORS
+  --if angelsmods.addons.oresilos then
+  --  core_replace("ore-silos","processing","logistic")
+  --  --OV.set_science_pack("ore-silos", "datacore-logistic-1", 2)
+  --end
+  --WAREHOUSES
+  --if angelsmods.addons.warehouses then
+  --  OV.set_science_pack("angels-warehouses", "datacore-logistic-1", 2)
+  --  OV.set_science_pack("angels-logistic-warehouses", "datacore-logistic-1", 2)
+  --end
+  --PETROTRAIN
+  --if angelsmods.addons.petrotrain then
+  --  OV.set_science_pack("angels-petro-train", "datacore-logistic-1", 2)
+  --end
+  --CAB
+  --if angelsmods.addons.cab then
+  --  OV.set_science_pack("angels-cab", "datacore-exploration-2", 2)
+  --end
+end
+--LOGISTIC
+--OV.set_science_pack("flying", "datacore-logistic-1", 2) --does this even exist?
+--OV.set_science_pack("automated-construction", "datacore-logistic-1", 2) --does this even exist?
+-- (im not sure why i need to actually do these, will have to check the other override files for shenanigans)
+--OV.remove_science_pack("inserter-capacity-bonus-4", "datacore-processing-1")
+--OV.remove_science_pack("inserter-capacity-bonus-5", "datacore-processing-1")
+--OV.remove_science_pack("inserter-capacity-bonus-6", "datacore-processing-1")
+--OV.remove_science_pack("inserter-capacity-bonus-7", "datacore-processing-1")
+--OV.remove_science_pack("logistics-3", "datacore-processing-1")
+--PROCESSING
+--OV.set_science_pack("concrete", "datacore-processing-1", 2)
+--OV.set_science_pack("circuit-network", "datacore-processing-1", 2)
+--OV.set_science_pack("engine", "datacore-processing-1", 2)
+--OV.set_science_pack("electric-engine", "datacore-processing-1", 2)
+--OV.set_science_pack("geode-crystallization", "datacore-processing-1", 2)
+--OV.set_science_pack("lubricant", "datacore-processing-1", 2)
+--OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
+--OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
+--WAR
+--core_replace("turrets","war","basic")
+--OV.remove_science_pack("power-armor-mk2", "datacore-war-1")
+--OV.remove_science_pack("atomic-bomb", "datacore-processing-1")
+--PETROCHEM
+--OV.set_science_pack("angels-fluid-control", "datacore-logistic-1", 2)
+--OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
+--OV.set_science_pack("oil-gas-extraction", "datacore-processing-1", 2)
+--OV.set_science_pack("angels-flare-stack", "datacore-processing-1", 2)
+--OV.set_science_pack("gas-synthesis", "datacore-processing-1", 2)
+--OV.set_science_pack("angels-electric-boiler", "datacore-energy-1", 2)
+--OV.set_science_pack("resin-1", "datacore-processing-1", 2)
+--OV.set_science_pack("resin-2", "datacore-processing-1", 2)
+--OV.set_science_pack("resin-3", "datacore-processing-1", 2)
+--OV.set_science_pack("rubber", "datacore-processing-1", 2)
+--OV.remove_science_pack("angels-rocket-fuel", "datacore-war-1")
+--OV.set_science_pack("angels-rocket-fuel", "datacore-processing-2", 2)
+--core_replace("rocket-booster-1","war","processing")
+--core_replace("rocket-booster-2","war","processing")
+--core_replace("rocket-fuel","war","enhance")
+--OV.remove_science_pack("rocket-silo", "datacore-processing-1")
+--OV.remove_science_pack("rocket-silo", "datacore-war-1")
+
+-- Start of research Automated Stack removal overrides
+--for rec_4tech in pairs(data.raw.technology) do
+--  --fix follower robot tech needing multi-core
+--  if string.find(rec_4tech,"follower")~=nil and string.find(rec_4tech,"robot")~=nil then
+--    OV.remove_science_pack(rec_4tech, "datacore-logistic-1")
+--    OV.remove_science_pack(rec_4tech, "datacore-processing-1")
+--    --fix modules
+--  elseif string.find(rec_4tech,"module")~=nil  then
+--    OV.remove_science_pack(rec_4tech, "datacore-processing-1")
+--    --update equipment
+--    --fix modules
+--  elseif string.find(rec_4tech,"equipment")~=nil  then
+--    OV.remove_science_pack(rec_4tech, "datacore-war-1")
+--  elseif string.find(rec_4tech,"braking")~=nil  then
+--    OV.remove_science_pack(rec_4tech, "datacore-processing-1")
+--  end
+--end
+--OV.execute()
+
+--core_tier_upgrade()
+--OV.execute()
+
 --Manual Updates to pack upgrades (not sure why the auto-script misses these)--allmost all seem to be infinite tech stuffs
 core_tier_up("stronger-explosives-3","war")
 core_tier_up("stronger-explosives-4","war")
@@ -396,11 +493,11 @@ if not loaders_graphics then
 end
 --ensure that it is possible to produce the packs at each stage
 if angelsmods.industries and angelsmods.industries.components then
-	--OV.add_unlock("angels-tin-smelting-1", "basic-tinned-copper-wire")
-	--OV.add_unlock("angels-silver-smelting-1", "basic-silvered-copper-wire")
-	--OV.add_unlock("angels-silicon-smelting-1","angels-silicon-wafer")
-	--OV.add_unlock("angels-glass-smelting-2","angels-coil-glass-fiber")
-	--OV.add_unlock("angels-gold-smelting-1","angels-wire-gold")
+  --OV.add_unlock("angels-tin-smelting-1", "basic-tinned-copper-wire")
+  --OV.add_unlock("angels-silver-smelting-1", "basic-silvered-copper-wire")
+  --OV.add_unlock("angels-silicon-smelting-1","angels-silicon-wafer")
+  --OV.add_unlock("angels-glass-smelting-2","angels-coil-glass-fiber")
+  --OV.add_unlock("angels-gold-smelting-1","angels-wire-gold")
 end
 
 

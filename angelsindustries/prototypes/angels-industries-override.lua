@@ -51,5 +51,11 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
 end
 
+if angelsmods.industries.overhaul and angelsmods.industries.tech then
+  OV.remove_science_pack("tech-blue-circuit", "chemical-science-pack")
+  OV.remove_science_pack("tech-yellow-circuit", "utility-science-pack")
+
+end
+
 -- ordening
 require("prototypes.angels-industries-override-ordening")

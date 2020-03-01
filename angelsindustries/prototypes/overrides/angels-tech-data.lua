@@ -1,14 +1,9 @@
 --KEY TECHs
 angelsmods.functions.add_exception("tech-red-packs")
-angelsmods.functions.add_exception("tech-red-labs")
 angelsmods.functions.add_exception("tech-green-packs")
-angelsmods.functions.add_exception("tech-green-labs")
 angelsmods.functions.add_exception("tech-orange-packs")
-angelsmods.functions.add_exception("tech-orange-labs")
 angelsmods.functions.add_exception("tech-blue-packs")
-angelsmods.functions.add_exception("tech-blue-labs")
 angelsmods.functions.add_exception("tech-yellow-packs")
-angelsmods.functions.add_exception("tech-yellow-labs")
 
 angelsmods.functions.add_exception("tech-specialised-labs-basic-exploration-1")
 angelsmods.functions.add_exception("tech-specialised-labs-basic-exploration-2")

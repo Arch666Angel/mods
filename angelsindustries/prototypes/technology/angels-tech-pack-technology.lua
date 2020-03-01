@@ -22,7 +22,6 @@ data:extend(
       count = 64,
       ingredients = {
         {"angels-science-pack-grey", 1},
-        {"datacore-basic", 1},
       },
       time = 60
     },
