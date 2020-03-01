@@ -57,6 +57,8 @@ if angelsmods.refining then
   angelsmods.functions.make_void("gas-carbon-dioxide", "chemical")
   angelsmods.functions.make_void("liquid-hydrofluoric-acid", "chemical")
 
+  angelsmods.functions.make_void("liquid-aqueous-sodium-hydroxide", "water")
+
   angelsmods.functions.make_void("gas-chlorine", "chemical")
   angelsmods.functions.make_void("gas-hydrogen-chloride", "chemical")
   angelsmods.functions.make_void("liquid-hydrochloric-acid", "chemical")
