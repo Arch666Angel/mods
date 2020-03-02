@@ -5,6 +5,9 @@ core_builder()
 OV.execute()
 
 -- now the custom fixes
+OV.global_replace_technology("military-science-pack", "tech-green-packs")
+OV.global_replace_technology("production-science-pack", "tech-blue-packs")
+
 -------------------------------------------------------------------------------
 -- NO CORES -------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -88,6 +91,7 @@ end
 if angelsmods.addons.oresilos then
   core_replace("ore-silos", "processing", "logistic")
 end
+
 -------------------------------------------------------------------------------
 -- WARFARE CORES --------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -97,6 +101,9 @@ for rec_4tech,_ in pairs(data.raw.technology) do --fix follower robot count tech
     core_replace(rec_4tech, "logistic", "war")
   end
 end
+angelsmods.functions.add_flag("military-science-pack", "hidden")
+OV.disable_recipe({"military-science-pack"})
+
 -------------------------------------------------------------------------------
 -- PRODUCTION CORES -----------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -121,6 +128,8 @@ OV.set_science_pack("resin-3", "datacore-processing-1", 2)
 OV.set_science_pack("rubber", "datacore-processing-1", 2)
 core_replace("rocket-booster-1","war","processing")
 core_replace("rocket-booster-2","war","processing")
+angelsmods.functions.add_flag("production-science-pack", "hidden")
+OV.disable_recipe({"production-science-pack"})
 
 OV.execute() ------------------------------------------------------------------
 

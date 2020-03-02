@@ -30,6 +30,8 @@ end
 -------------------------------------------------------------------------------
 -- BASE GAME
 pack_replace("armor-making-2","green","red") --move armour making down a tier
+angelsmods.functions.add_flag("automation-science-pack", "hidden")
+OV.disable_recipe({"automation-science-pack"})
 -- BIO PROCESSING
 pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
 pack_replace("bio-fermentation","green","red")
@@ -41,6 +43,8 @@ pack_replace("bio-arboretum-temperate-1","green","red")
 -- BASE GAME
 OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
 pack_replace("advanced-material-processing","red","green") --move advanced material processing up a tier
+angelsmods.functions.add_flag("logistic-science-pack", "hidden")
+OV.disable_recipe({"logistic-science-pack"})
 
 -------------------------------------------------------------------------------
 -- ORANGE SCIENCE PACKS -------------------------------------------------------
@@ -103,12 +107,16 @@ pack_replace("tech-blue-circuit", "green","orange")
 OV.global_replace_technology("chemical-science-pack", "tech-blue-packs")
 OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
 pack_replace("logistic-robotics","green","blue")
+angelsmods.functions.add_flag("chemical-science-pack", "hidden")
+OV.disable_recipe({"chemical-science-pack"})
 
 -------------------------------------------------------------------------------
 -- YELOW SCIENCE PACKS --------------------------------------------------------
 -------------------------------------------------------------------------------
 -- BASE GAME
-OV.global_replace_technology("high-tech-science-pack", "tech-yellow-packs")
+OV.global_replace_technology("utility-science-pack", "tech-yellow-packs")
+angelsmods.functions.add_flag("utility-science-pack", "hidden")
+OV.disable_recipe({"utility-science-pack"})
 --REFINING
 pack_replace("advanced-ore-refining-4","blue","yellow")
 

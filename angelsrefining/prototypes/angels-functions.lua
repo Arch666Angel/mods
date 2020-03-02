@@ -58,8 +58,8 @@ end
 
 --MODIFY FLAGS
 function angelsmods.functions.add_flag(entity, flag)
-  if data.raw.item[entity] then
-    local to_add = data.raw.item[entity]
+  local to_add = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
+  if to_add then
     if to_add.flags then
       table.insert(to_add.flags, flag)
     else

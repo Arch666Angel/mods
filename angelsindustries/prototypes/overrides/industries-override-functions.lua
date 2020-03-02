@@ -168,8 +168,6 @@ angelsmods.marathon.tech_time_multi = 1
 function tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
-      --UNTIE TECHS FROM EACH OTHER
-      --technology.prerequisites = {}
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
       if technology.unit.ingredients and not technology.max_level then
         for i, ingredients in pairs(technology.unit.ingredients[1]) do

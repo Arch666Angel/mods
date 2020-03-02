@@ -5,11 +5,11 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 end
 
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
-  --ADD MANUAL OVERRIDES EXCEPTIONS TO TECH OVERRIDES
+  -- ADD MANUAL OVERRIDES EXCEPTIONS TO TECH OVERRIDES
   require("prototypes.overrides.global-tech-data")
   OV.execute()
 
-  --GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS PACKS
+  -- GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS PACKS
   OV.global_replace_science_packs(
     "utility-science-pack",
     {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"},
@@ -36,7 +36,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.overrides.global-tech-base-packs")
   OV.execute()
 
-  --GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS CORES
+  -- GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS CORES
   OV.global_replace_science_packs(
     "military-science-pack",
     {"production-science-pack"},
@@ -51,6 +51,9 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
 
   -- MANUAL OVERRIDES FOR ANGELS CORES
   require("prototypes.overrides.global-tech-base-cores")
+
+  -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
+  tech_unlock_reset()
 
   --if mods["bobplates"] then
   --  require("prototypes.overrides.angels-tech-bobs")
@@ -76,3 +79,5 @@ end
 
 --OTHER OVERRIDES
 --require("prototypes.overrides.global-loaders")
+
+log(serpent.block(data.raw.tool["production-science-pack"]))
