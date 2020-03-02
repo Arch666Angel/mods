@@ -1,8 +1,12 @@
 local OV = angelsmods.functions.OV
 
+if angelsmods.industries.overhaul and angelsmods.industries.components then
+  require("prototypes.overrides.global-components-blocks")
+end
+
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
   --ADD MANUAL OVERRIDES EXCEPTIONS TO TECH OVERRIDES
-  require("prototypes.overrides.angels-tech-data")
+  require("prototypes.overrides.global-tech-data")
   OV.execute()
 
   --GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS PACKS
@@ -29,7 +33,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   OV.execute()
 
   -- MANUAL OVERRIDES FOR ANGELS PACKS
-  require("prototypes.overrides.angels-tech-base-packs")
+  require("prototypes.overrides.global-tech-base-packs")
   OV.execute()
 
   --GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS CORES
@@ -46,11 +50,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   OV.execute()
 
   -- MANUAL OVERRIDES FOR ANGELS CORES
-  require("prototypes.overrides.angels-tech-base-cores")
-
-
-
-
+  require("prototypes.overrides.global-tech-base-cores")
 
   --if mods["bobplates"] then
   --  require("prototypes.overrides.angels-tech-bobs")
@@ -70,3 +70,6 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   --end
   --OV.execute()
 end
+
+--OTHER OVERRIDES
+--require("prototypes.overrides.global-loaders")

@@ -228,101 +228,46 @@ end
 
 function core_tier_upgrade()
   for techname, technology in pairs(data.raw.technology) do
-    local pack_name = (technology.unit.ingredients[1] and (technology.unit.ingredients[1].name or technology.unit.ingredients[1][1])) or nil
-    if pack_name then
-
-      if pack_name == "angels-science-pack-yellow" then
-        if technology.unit.ingredients[3] then
-          --log("mess"..technology.unit.ingredients[3][1])
-        else
-          for tech, tech_ing in next, technology.unit.ingredients, nil do
-            local subpack = technology.unit.ingredients[tech][1]
-            local data_core = string.sub(subpack, 9, -2)
-            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              local research_type = string.sub(data_core, 2, -2)
-              core_tier_up(techname, research_type)
-              if research_type ~= "basic" then
-                OV.remove_prereq(techname, "tech-yellow-packs")
-                OV.add_prereq(techname, string.format("tech-specialised-labs-advanced-%s-2", research_type))
-              end
-            end
-          end
-        end
-
-      elseif pack_name == "angels-science-pack-blue" then
-        if technology.unit.ingredients[3] then
-          --log("mess"..technology.unit.ingredients[3][1])
-        else
-          for tech, tech_ing in next, technology.unit.ingredients, nil do
-            local subpack = technology.unit.ingredients[tech][1]
-            local data_core = string.sub(subpack, 9, -2)
-            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              local research_type = string.sub(data_core, 2, -2)
-              core_tier_up(techname, research_type)
-              if research_type ~= "basic" then
-                OV.remove_prereq(techname, "tech-blue-packs")
-                OV.add_prereq(techname, string.format("tech-specialised-labs-advanced-%s-1", research_type))
-              end
-            end
-          end
-        end
-
-      elseif pack_name == "angels-science-pack-orange" then
-        if technology.unit.ingredients[3] then
-          --log("mess"..technology.unit.ingredients[3][1])
-        else
-          for tech, tech_ing in next, technology.unit.ingredients, nil do
-            local subpack = technology.unit.ingredients[tech][1]
-            local data_core = string.sub(subpack, 9, -2)
-            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              local research_type = string.sub(data_core, 2, -2)
-              --core_tier_up(techname, research_type)
-              if research_type ~= "basic" then
-                OV.remove_prereq(techname, "tech-orange-packs")
-                OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-3", research_type))
-              end
-            end
-          end
-        end
-
-      elseif pack_name == "angels-science-pack-green" then
-        if technology.unit.ingredients[3] then
-          --log("mess"..technology.unit.ingredients[3][1])
-        else
-          for tech, tech_ing in next, technology.unit.ingredients, nil do
-            local subpack = technology.unit.ingredients[tech][1]
-            local data_core = string.sub(subpack, 9, -2)
-            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              local research_type = string.sub(data_core, 2, -2)
-              --core_tier_up(techname, research_type)
-              if research_type ~= "basic" then
-                OV.remove_prereq(techname, "tech-green-packs")
-                OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-2", research_type))
-              end
-            end
-          end
-        end
-
-      elseif pack_name == "angels-science-pack-red" then
-        if technology.unit.ingredients[3] then
-          --log("mess"..technology.unit.ingredients[3][1])
-        else
-          for tech, tech_ing in next, technology.unit.ingredients, nil do
-            local subpack = technology.unit.ingredients[tech][1]
-            local data_core = string.sub(subpack, 9, -2)
-            if string.sub(data_core, 1, 1) == "-" and string.sub(data_core, -1, -1) == "-" then
-              local research_type = string.sub(data_core, 2, -2)
-              --core_tier_up(techname, research_type)
-              if research_type ~= "basic" then
-                OV.remove_prereq(techname, "tech-red-packs")
-                OV.add_prereq(techname, string.format("tech-specialised-labs-basic-%s-1", research_type))
-              end
-            end
-          end
-        end
-
+    -- find the science pack and the datacore
+    local pack_name = nil
+    local core_name = nil
+    for _,pack in pairs(technology.unit and technology.unit.ingredients or {}) do
+      local pack_n = pack[1] or pack.name or ""
+      if string.find(pack_n, "angels") and string.find(pack_n, "science") and string.find(pack_n, "pack") then
+        pack_name = pack_n
+      elseif string.find(pack_n, "datacore") then
+        core_name = pack_n
       end
     end
+
+    -- now update the core if required and also depend on the correct tech
+    if pack_name and core_name then
+      core_type = string.sub(core_name, 9, -2)
+      if string.sub(core_type, 1, 1) == "-" and string.sub(core_type, -1, -1) == "-" then
+        local research_type = string.sub(core_type, 2, -2)
+
+        for pack_color, tier_up in pairs({
+          ["yellow"] = true,
+          ["blue"  ] = true,
+          ["orange"] = false,
+          ["green" ] = false,
+          ["red"   ] = false,
+          --["grey"  ] = false,
+        }) do
+          if pack_name == string.format("angels-science-pack-%s", pack_color) then
+            if tier_up then
+              core_tier_up(techname, research_type)
+            end
+
+            if research_type ~= "basic" then
+              OV.remove_prereq(techname, string.format("tech-%s-packs", pack_color))
+              OV.add_prereq(techname, string.format("tech-specialised-labs-advanced-%s-2", research_type))
+            end
+          end
+        end
+      end
+    end
+
   end
 end
 
