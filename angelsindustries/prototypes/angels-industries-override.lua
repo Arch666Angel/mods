@@ -28,7 +28,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   OV.execute()
   require("prototypes.recipes.components-entity-update")
   OV.execute()
-  require("prototypes.overrides.global-components-entity-update")
+  require("prototypes.overrides.components-entity-update")
 
   --MODIFY ASSEMBLING MACHINES
   data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"

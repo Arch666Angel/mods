@@ -246,6 +246,14 @@ function core_tier_upgrade()
       if string.sub(core_type, 1, 1) == "-" and string.sub(core_type, -1, -1) == "-" then
         local research_type = string.sub(core_type, 2, -2)
 
+        local tech_prereq = {
+          ["grey"  ] = nil,
+          ["red"   ] = "tech-specialised-labs-basic-%s-1",
+          ["green" ] = "tech-specialised-labs-basic-%s-2",
+          ["orange"] = "tech-specialised-labs-basic-%s-3",
+          ["blue"  ] = "tech-specialised-labs-advanced-%s-1",
+          ["yellow"] = "tech-specialised-labs-advanced-%s-2",
+        }
         for pack_color, tier_up in pairs({
           ["yellow"] = true,
           ["blue"  ] = true,
@@ -261,7 +269,7 @@ function core_tier_upgrade()
 
             if research_type ~= "basic" then
               OV.remove_prereq(techname, string.format("tech-%s-packs", pack_color))
-              OV.add_prereq(techname, string.format("tech-specialised-labs-advanced-%s-2", research_type))
+              OV.add_prereq(techname, string.format(tech_prereq[pack_color], research_type))
             end
           end
         end

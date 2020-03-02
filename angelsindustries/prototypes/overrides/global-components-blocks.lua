@@ -1,3 +1,5 @@
+local OV = angelsmods.functions.OV
+
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   -- MODIFY MINABLE RESULTS TO DROP BLOCKS
   for _, recipes in pairs(data.raw.recipe) do
