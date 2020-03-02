@@ -69,6 +69,9 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   --  end
   --end
   --OV.execute()
+
+  -- CLEAN UP THE TECH TREE
+  require("prototypes.overrides.global-tech-cleanup")
 end
 
 --OTHER OVERRIDES
