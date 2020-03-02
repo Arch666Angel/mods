@@ -58,7 +58,6 @@ data:extend(
     {
       {type = "item", name = "angels-silicon-wafer", amount = 1},
       {type = "item", name = "angels-wire-silver", amount = 1},
-      {type = "fluid", name = "liquid-plastic", amount = 1},
       {type = "fluid", name = "liquid-sulfuric-acid", amount = 1},
     },
     result = "circuit-microchip",
