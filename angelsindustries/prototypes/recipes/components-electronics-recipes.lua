@@ -392,7 +392,7 @@ data:extend(
     {
       {type = "item", name = "circuit-orange-board", amount = 1},
       {type = "item", name = "angels-wire-silver", amount = 3},
-      {type = "fluid", name = "liquid-ferric-chloride-solution", amount = 2},
+      {type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2},
     },
     result = "circuit-orange",
     icon_size = 32,
@@ -407,7 +407,7 @@ data:extend(
     {
       {type = "item", name = "circuit-blue-board", amount = 1},
       {type = "item", name = "angels-wire-gold", amount = 3},
-      {type = "fluid", name = "liquid-ferric-chloride-solution", amount = 2},
+      {type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2},
     },
     result = "circuit-blue",
     icon_size = 32,
@@ -422,7 +422,7 @@ data:extend(
     {
       {type = "item", name = "circuit-yellow-board", amount = 1},
       {type = "item", name = "angels-wire-platinum", amount = 3},
-      {type = "fluid", name = "liquid-ferric-chloride-solution", amount = 2},
+      {type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2},
     },
     result = "circuit-yellow",
     icon_size = 32,

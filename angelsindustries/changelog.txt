@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Added dedicated icon to the Electronics Block 0
     - Added dedicated researched for the specialised labs
+    - Changed Electronics Board ingredients to use Cupric instead of Ferrous Chloride Solution
   Bugfixes:
     - Allow robot deployment when in automatic mode #48
     - Fixed Microchip requiring liquid plastic as ingredient

@@ -239,37 +239,46 @@ function core_tier_upgrade()
     end
 
     -- now update the core if required and also depend on the correct tech
-    if pack_name and core_name then
-      core_type = string.sub(core_name, 9, -2)
-      if string.sub(core_type, 1, 1) == "-" and string.sub(core_type, -1, -1) == "-" then
-        local research_type = string.sub(core_type, 2, -2)
+    if pack_name then
+      if core_name then
+        core_type = string.sub(core_name, 9, -2)
+        if string.sub(core_type, 1, 1) == "-" and string.sub(core_type, -1, -1) == "-" then
+          local research_type = string.sub(core_type, 2, -2)
 
-        local tech_prereq = {
-          ["grey"  ] = nil,
-          ["red"   ] = "tech-specialised-labs-basic-%s-1",
-          ["green" ] = "tech-specialised-labs-basic-%s-2",
-          ["orange"] = "tech-specialised-labs-basic-%s-3",
-          ["blue"  ] = "tech-specialised-labs-advanced-%s-1",
-          ["yellow"] = "tech-specialised-labs-advanced-%s-2",
-        }
-        for pack_color, tier_up in pairs({
-          ["yellow"] = true,
-          ["blue"  ] = true,
-          ["orange"] = false,
-          ["green" ] = false,
-          ["red"   ] = false,
-          --["grey"  ] = false,
-        }) do
-          if pack_name == string.format("angels-science-pack-%s", pack_color) then
-            if tier_up then
-              core_tier_up(techname, research_type)
-            end
+          local tech_prereq = {
+            ["grey"  ] = nil,
+            ["red"   ] = "tech-specialised-labs-basic-%s-1",
+            ["green" ] = "tech-specialised-labs-basic-%s-2",
+            ["orange"] = "tech-specialised-labs-basic-%s-3",
+            ["blue"  ] = "tech-specialised-labs-advanced-%s-1",
+            ["yellow"] = "tech-specialised-labs-advanced-%s-2",
+          }
+          for pack_color, tier_up in pairs({
+            ["yellow"] = true,
+            ["blue"  ] = true,
+            ["orange"] = false,
+            ["green" ] = false,
+            ["red"   ] = false,
+            --["grey"  ] = false,
+          }) do
+            if pack_name == string.format("angels-science-pack-%s", pack_color) then
+              if tier_up then
+                core_tier_up(techname, research_type)
+              end
 
-            if research_type ~= "basic" then
-              OV.remove_prereq(techname, string.format("tech-%s-packs", pack_color))
-              OV.add_prereq(techname, string.format(tech_prereq[pack_color], research_type))
+              if research_type ~= "basic" then
+                OV.remove_prereq(techname, string.format("tech-%s-packs", pack_color))
+                OV.add_prereq(techname, string.format(tech_prereq[pack_color], research_type))
+              end
             end
           end
+        end
+
+      elseif angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
+        set_core(techname, "datacore-basic", 2)
+
+        if pack_name ~= "angels-science-pack-grey" and techname ~= "tech-specialised-labs-basic" then
+          OV.add_prereq(techname, "tech-specialised-labs-basic")
         end
       end
     end
@@ -535,16 +544,16 @@ function replace_gen_mats()
   --electronics
   OV.global_replace_item("electronic-circuit", "circuit-red-loaded")
   OV.remove_unlock("electronics", "electronic-circuit")
-  data.raw.recipe["electronic-circuit"].hidden = true
-  data.raw.item["electronic-circuit"].hidden = true
+  angelsmods.functions.add_flag("electronic-circuit", "hidden")
+  OV.disable_recipe({"electronic-circuit"})
   OV.global_replace_item("advanced-circuit", "circuit-green-loaded")
   OV.remove_unlock("advanced-electronics", "advanced-circuit")
-  data.raw.recipe["advanced-circuit"].hidden = true
-  data.raw.item["advanced-circuit"].hidden = true
+  angelsmods.functions.add_flag("advanced-circuit", "hidden")
+  OV.disable_recipe({"advanced-circuit"})
   OV.global_replace_item("processing-unit", "circuit-blue-loaded")
   OV.remove_unlock("advanced-electronics-2", "processing-unit")
-  data.raw.recipe["processing-unit"].hidden = true
-  data.raw.item["processing-unit"].hidden = true
+  angelsmods.functions.add_flag("processing-unit", "hidden")
+  OV.disable_recipe({"processing-unit"})
 
   --intermediates
   OV.global_replace_item("engine-unit", "motor-2")

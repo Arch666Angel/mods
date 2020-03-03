@@ -1,8 +1,5 @@
 local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
--- catch most of the cores with the core builder
-core_builder()
-OV.execute()
 
 -- now the custom fixes
 OV.global_replace_technology("military-science-pack", "tech-green-packs")
@@ -11,7 +8,12 @@ OV.global_replace_technology("production-science-pack", "tech-blue-packs")
 -------------------------------------------------------------------------------
 -- NO CORES -------------------------------------------------------------------
 -------------------------------------------------------------------------------
-OV.remove_science_pack("rocket-silo", "datacore-war-1")
+OV.remove_science_pack("rocket-silo", "datacore-processing-1")
+OV.execute()
+
+-- catch most of the cores with the core builder
+core_builder()
+OV.execute()
 
 -------------------------------------------------------------------------------
 -- BASIC CORES ----------------------------------------------------------------

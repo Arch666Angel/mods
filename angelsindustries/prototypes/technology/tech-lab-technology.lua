@@ -1013,7 +1013,7 @@ data:extend(
   -----------------------------------------------------------------------------
   {
     type = "technology",
-    name = "tech-specialised-labs-basic-basic", -- i know it's weird naming, but it simplifies the overrides
+    name = "tech-specialised-labs-basic",
     icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
     icon_size = 128,
     prerequisites =

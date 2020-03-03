@@ -30,6 +30,15 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   OV.execute()
   require("prototypes.overrides.components-entity-update")
 
+  --UPDATE NON-BLOCK COMPONENTS
+  require("prototypes.overrides.components-recipe-update")
+  OV.execute()
+
+  --UPDATE BLOCK COMPONENTS
+  if not angelsmods.industries.tech then
+    require("prototypes.overrides.components-block-update")
+  end
+
   --MODIFY ASSEMBLING MACHINES
   data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
   data.raw["item"]["assembling-machine-1"].order = "a"

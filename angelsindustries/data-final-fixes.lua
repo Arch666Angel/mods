@@ -15,16 +15,19 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
     {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"},
     "angels-science-pack-yellow"
   )
+  OV.execute()
   OV.global_replace_science_packs(
     "chemical-science-pack",
     {"automation-science-pack", "logistic-science-pack"},
     "angels-science-pack-blue"
   )
+  OV.execute()
   OV.global_replace_science_packs(
     "logistic-science-pack",
     {"automation-science-pack"},
     "angels-science-pack-green"
   )
+  OV.execute()
   OV.global_replace_science_packs(
     "automation-science-pack",
     {},
@@ -42,13 +45,14 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
     {"production-science-pack"},
     "datacore-war-1", 2
   )
+  OV.execute()
   OV.global_replace_science_packs(
     "production-science-pack",
     {},
     "datacore-processing-1", 2
   )
   OV.execute()
-
+  
   -- MANUAL OVERRIDES FOR ANGELS CORES
   require("prototypes.overrides.global-tech-base-cores")
 
@@ -79,5 +83,3 @@ end
 
 --OTHER OVERRIDES
 --require("prototypes.overrides.global-loaders")
-
-log(serpent.block(data.raw.tool["production-science-pack"]))
