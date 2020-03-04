@@ -63,6 +63,7 @@ end
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
   OV.remove_science_pack("tech-blue-circuit", "chemical-science-pack")
   OV.remove_science_pack("tech-yellow-circuit", "utility-science-pack")
+  OV.remove_science_pack("angels-components-construction-5", "utility-science-pack")
 end
 
 -- ordening

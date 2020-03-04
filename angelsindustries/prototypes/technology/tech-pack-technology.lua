@@ -48,10 +48,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "science-force-analyzer",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "block-construction-2",
-      },
     },
     unit =
     {
@@ -80,18 +76,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "angels-science-pack-orange",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "block-construction-3",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "block-fluidbox-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "block-mechanical-2",
       },
     },
     unit =
@@ -127,10 +111,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "science-harmonics-analyzer",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "block-construction-4",
-      },
     },
     unit =
     {
@@ -161,10 +141,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "angels-science-pack-yellow",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "block-construction-5",
       },
     },
     unit =

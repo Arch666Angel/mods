@@ -39,6 +39,8 @@ pack_replace("angels-steel-smelting-1","green","red")
 pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
 pack_replace("bio-fermentation","green","red")
 pack_replace("bio-arboretum-temperate-1","green","red")
+-- INDUSTRIES
+OV.add_prereq("angels-components-construction-2","tech-red-packs")
 
 -------------------------------------------------------------------------------
 -- GREEN SCIENCE PACKS --------------------------------------------------------
@@ -48,6 +50,8 @@ OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
 pack_replace("advanced-material-processing","red","green") --move advanced material processing up a tier
 angelsmods.functions.add_flag("logistic-science-pack", "hidden")
 OV.disable_recipe({"logistic-science-pack"})
+-- INDUSTRIES
+OV.add_prereq("angels-components-construction-3","tech-green-packs")
 
 -------------------------------------------------------------------------------
 -- ORANGE SCIENCE PACKS -------------------------------------------------------
@@ -103,6 +107,8 @@ pack_replace("angels-advanced-chemistry-2", "green","orange")
 --INDUSTRIES
 pack_replace("tech-blue-circuit", "green","orange")
 pack_replace("angels-components-mechanical-4","green","orange")
+OV.add_prereq("angels-components-construction-4","tech-orange-packs")
+pack_replace("angels-components-construction-4", "blue","orange")
 
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -113,6 +119,8 @@ OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
 pack_replace("logistic-robotics","green","blue")
 angelsmods.functions.add_flag("chemical-science-pack", "hidden")
 OV.disable_recipe({"chemical-science-pack"})
+-- INDUSTRIES
+OV.add_prereq("angels-components-construction-5","tech-blue-packs")
 
 -------------------------------------------------------------------------------
 -- YELOW SCIENCE PACKS --------------------------------------------------------

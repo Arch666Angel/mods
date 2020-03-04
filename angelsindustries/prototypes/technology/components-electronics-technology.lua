@@ -54,6 +54,7 @@ data:extend(
     prerequisites =
     {
       "tech-red-circuit",
+      "angels-components-construction-2",
     },
     effects =
     {
@@ -100,6 +101,7 @@ data:extend(
     prerequisites =
     {
       "tech-green-circuit",
+      "angels-components-construction-3",
     },
     effects =
     {
@@ -147,6 +149,7 @@ data:extend(
     prerequisites =
     {
       "tech-orange-circuit",
+      "angels-components-construction-4",
     },
     effects =
     {
@@ -195,6 +198,7 @@ data:extend(
     prerequisites =
     {
       "tech-blue-circuit",
+      "angels-components-construction-5",
     },
     effects =
     {

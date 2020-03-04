@@ -60,6 +60,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   --TECHS
   require("prototypes.technology.components-electronics-technology")
   require("prototypes.technology.components-mechanical-technology")
+  require("prototypes.technology.components-construction-technology")
 end
 
 --TECH

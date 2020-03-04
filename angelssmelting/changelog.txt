@@ -7,6 +7,7 @@ Date: ??
       - Non-expendable Mold from Metalurgy 2 to Stone Smelting 2
   Bugfixes:
     - Fixed solder mixture was unlocked from the start
+    - Fixed tungsten smelting 1 and 2 did not have cobalt and nickel smelting prerequisites
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
 Date: 22.02.2020

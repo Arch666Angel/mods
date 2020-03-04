@@ -415,7 +415,7 @@ data:extend(
     ingredients = {
       {type = "item", name = "motor-casing-3", amount = 1},
       {type = "item", name = "solid-rubber", amount = 1},
-      {type = "fluid", name = "lubricant", amount = 10}
+      --{type = "fluid", name = "lubricant", amount = 10}
     },
     results = {
       {type = "item", name = "motor-block-3", amount = 1}
@@ -447,7 +447,7 @@ data:extend(
     ingredients = {
       {type = "item", name = "motor-casing-5", amount = 1},
       {type = "item", name = "solid-rubber", amount = 1},
-      {type = "fluid", name = "lubricant", amount = 10}
+      {type = "fluid", name = "lubricant", amount = 15}
     },
     results = {
       {type = "item", name = "motor-block-5", amount = 1}
@@ -510,8 +510,7 @@ data:extend(
       {type = "item", name = "angels-gear", amount = 1},
       {type = "item", name = "angels-axle", amount = 1},
       {type = "item", name = "angels-roller-chain", amount = 1},
-      {type = "item", name = "angels-spring", amount = 1},
-      {type = "fluid", name = "lubricant", amount = 10}
+      {type = "item", name = "angels-spring", amount = 1}
     },
     result = "motor-4",
     icon_size = 32
@@ -528,7 +527,7 @@ data:extend(
       {type = "item", name = "angels-axle", amount = 1},
       {type = "item", name = "angels-roller-chain", amount = 1},
       {type = "item", name = "angels-spring", amount = 1},
-      {type = "item", name = "angels-bearing", amount = 15}
+      {type = "item", name = "angels-bearing", amount = 1}
     },
     result = "motor-5",
     icon_size = 32
