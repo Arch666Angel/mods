@@ -682,7 +682,8 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "tech-specialised-labs-basic-exploration-1"
+      "tech-specialised-labs-basic-exploration-1",
+      "angels-components-mechanical-1",
     },
     effects =
     {
@@ -719,6 +720,7 @@ data:extend(
     {
       "tech-green-packs",
       "tech-specialised-labs-basic-processing-1",
+      "angels-components-mechanical-2",
     },
     effects =
     {
@@ -748,6 +750,7 @@ data:extend(
     {
       "tech-orange-packs",
       "tech-specialised-labs-basic-processing-2",
+      "angels-components-mechanical-3",
     },
     effects =
     {
@@ -778,6 +781,7 @@ data:extend(
     {
       "tech-specialised-labs-advanced-exploration-1",
       "tech-specialised-labs-basic-processing-3",
+      "angels-components-mechanical-4",
     },
     effects =
     {
@@ -817,6 +821,7 @@ data:extend(
     {
       "tech-yellow-packs",
       "tech-specialised-labs-advanced-processing-1",
+      "angels-components-mechanical-5",
     },
     effects =
     {

@@ -51,8 +51,8 @@ data:extend(
 OV.add_unlock("angels-iron-smelting-2", "angels-casing-iron-1")
 OV.add_unlock("angels-iron-smelting-3", "angels-casing-iron-2")
 OV.add_prereq("angels-iron-smelting-2", "angels-components-mechanical-1")
-OV.add_prereq("angels-iron-smelting-2", "angels-metallurgy-2")
-OV.add_prereq("angels-iron-smelting-3", "angels-metallurgy-3")
+OV.add_prereq("angels-iron-smelting-2", "angels-stone-smelting-1")
+OV.add_prereq("angels-iron-smelting-3", "angels-stone-smelting-2")
 
 -------------------------------------------------------------------------------
 -- MECHANICAL PARTS 2 ---------------------------------------------------------
@@ -67,7 +67,7 @@ data:extend(
     prerequisites =
     {
         "angels-components-mechanical-1",
-        "angels-metallurgy-2",
+        "angels-stone-smelting-1",
         "angels-steel-smelting-1"
     },
     effects =
@@ -98,7 +98,6 @@ data:extend(
       count = 64,
       ingredients = {
         {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
       },
       time = 60
     },
@@ -108,7 +107,7 @@ data:extend(
 )
 OV.add_unlock("angels-steel-smelting-2", "angels-casing-steel-2")
 OV.add_prereq("angels-steel-smelting-2", "angels-components-mechanical-2")
-OV.add_prereq("angels-steel-smelting-2", "angels-metallurgy-3")
+OV.add_prereq("angels-steel-smelting-2", "angels-stone-smelting-2")
 
 -------------------------------------------------------------------------------
 -- MECHANICAL PARTS 3 ---------------------------------------------------------
@@ -123,7 +122,7 @@ data:extend(
     prerequisites =
     {
         "angels-components-mechanical-2",
-        --"angels-metallurgy-2",
+        --"angels-stone-smelting-1",
         "angels-aluminium-smelting-1"
     },
     effects =
@@ -164,7 +163,7 @@ data:extend(
 )
 OV.add_unlock("angels-aluminium-smelting-2", "angels-casing-aluminium-2")
 OV.add_prereq("angels-aluminium-smelting-2", "angels-components-mechanical-3")
-OV.add_prereq("angels-aluminium-smelting-2", "angels-metallurgy-3")
+OV.add_prereq("angels-aluminium-smelting-2", "angels-stone-smelting-2")
 
 -------------------------------------------------------------------------------
 -- MECHANICAL PARTS 4 ---------------------------------------------------------
@@ -179,8 +178,9 @@ data:extend(
     prerequisites =
     {
         "angels-components-mechanical-3",
-        --"angels-metallurgy-2",
-        "angels-titanium-smelting-1"
+        --"angels-stone-smelting-1",
+        "angels-titanium-smelting-1",
+        "lubricant"
     },
     effects =
     {
@@ -220,7 +220,7 @@ data:extend(
 )
 OV.add_unlock("angels-titanium-smelting-2", "angels-casing-titanium-2")
 OV.add_prereq("angels-titanium-smelting-2", "angels-components-mechanical-4")
-OV.add_prereq("angels-titanium-smelting-2", "angels-metallurgy-3")
+OV.add_prereq("angels-titanium-smelting-2", "angels-stone-smelting-2")
 
 -------------------------------------------------------------------------------
 -- MECHANICAL PARTS 5 ---------------------------------------------------------
@@ -235,7 +235,7 @@ data:extend(
     prerequisites =
     {
         "angels-components-mechanical-4",
-        --"angels-metallurgy-2",
+        --"angels-stone-smelting-1",
         "angels-tungsten-smelting-1"
     },
     effects =
@@ -278,4 +278,4 @@ data:extend(
 OV.add_unlock("angels-tungsten-smelting-2", "angels-casing-tungsten-green")
 OV.add_unlock("angels-tungsten-smelting-2", "angels-casing-tungsten-2")
 OV.add_prereq("angels-tungsten-smelting-2", "angels-components-mechanical-5")
-OV.add_prereq("angels-tungsten-smelting-2", "angels-metallurgy-3")
+OV.add_prereq("angels-tungsten-smelting-2", "angels-stone-smelting-2")

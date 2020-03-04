@@ -510,7 +510,8 @@ data:extend(
       {type = "item", name = "angels-gear", amount = 1},
       {type = "item", name = "angels-axle", amount = 1},
       {type = "item", name = "angels-roller-chain", amount = 1},
-      {type = "item", name = "angels-spring", amount = 1}
+      {type = "item", name = "angels-spring", amount = 1},
+      {type = "fluid", name = "lubricant", amount = 10}
     },
     result = "motor-4",
     icon_size = 32
@@ -527,7 +528,7 @@ data:extend(
       {type = "item", name = "angels-axle", amount = 1},
       {type = "item", name = "angels-roller-chain", amount = 1},
       {type = "item", name = "angels-spring", amount = 1},
-      {type = "item", name = "angels-bearing", amount = 1}
+      {type = "item", name = "angels-bearing", amount = 15}
     },
     result = "motor-5",
     icon_size = 32

@@ -15,6 +15,7 @@ else
       prerequisites =
       {
         "tech-red-circuit",
+        "angels-components-mechanical-1",
       },
       effects =
       {
@@ -70,6 +71,7 @@ else
       {
         "angels-basic-blocks-1",
         "logistic-science-pack",
+        "angels-components-mechanical-2",
       },
       effects =
       {
@@ -127,6 +129,7 @@ else
       {
         "angels-basic-blocks-2",
         "military-science-pack",
+        "angels-components-mechanical-3",
       },
       effects =
       {
@@ -186,6 +189,7 @@ else
       {
         "angels-basic-blocks-3",
         "chemical-science-pack",
+        "angels-components-mechanical-4",
       },
       effects =
       {
@@ -244,6 +248,7 @@ else
       {
         "angels-advanced-blocks-1",
         "utility-science-pack",
+        "angels-components-mechanical-5",
       },
       effects =
       {

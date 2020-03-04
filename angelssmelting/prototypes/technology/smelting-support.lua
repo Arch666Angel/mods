@@ -47,7 +47,6 @@ data:extend(
     prerequisites =
     {
       "angels-metallurgy-1",
-      "angels-stone-smelting-1",
     },
     effects =
     {
@@ -66,10 +65,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "casting-machine-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-expendable"
       },
     },
     unit =
@@ -92,7 +87,6 @@ data:extend(
     prerequisites =
     {
       "angels-metallurgy-2",
-      "angels-stone-smelting-2",
     },
     effects =
     {
@@ -111,10 +105,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "casting-machine-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-non-expendable"
       },
     },
     unit =

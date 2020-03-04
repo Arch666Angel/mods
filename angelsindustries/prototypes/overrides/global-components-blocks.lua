@@ -29,4 +29,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
     end
   end
   OV.execute()
+
+  -- UPDATE TECH TO ANGELS COMPONENTS
+  OV.global_replace_technology("engine", "angels-components-mechanical-2")
+  OV.global_replace_technology("electric-engine", "angels-components-mechanical-4")
 end

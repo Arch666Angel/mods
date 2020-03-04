@@ -45,45 +45,49 @@ data:extend(
     name = "angels-components",
     order = "la[angels]-e[industries]-aa",
     inventory_order = "la[angels]-e[industries]-a",
-    icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/components-tech.png",
+    icons = {
+      {
+        icon = "__base__/graphics/item-group/intermediate-products.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
+      }
+    }
   },
   {
     type = "item-subgroup",
     name = "angels-basic-intermediate", -- like what doesn't fit in other groups
-    group = "intermediate-products",
+    group = "angels-components",
     order = "a[basic]-a",
   },
   {
     type = "item-subgroup",
     name = "angels-board",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-a[basic-board]",
   },
   {
     type = "item-subgroup",
     name = "angels-circuit-board",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-b[circuit-board]",
   },
   {
     type = "item-subgroup",
     name = "angels-loaded-circuit-board",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-c[loaded-circuit-board]",
   },
   {
     type = "item-subgroup",
     name = "angels-circuit-components",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-d[circuit-components]",
   },
-  -- {
-  --   type = "item-subgroup",
-  --   name = "angels-electronics",
-  --   group = "angels-components",
-  --   order = "b[electronics]-e[basic-components]",
-  -- },
   {
     type = "item-subgroup",
     name = "angels-motor-casing",

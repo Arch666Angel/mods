@@ -21,6 +21,7 @@ for _,tech_name in pairs({
   "bio-paper-1",
   -- INDUSTRIES
   "tech-red-circuit",
+  "angels-components-mechanical-1",
 }) do
   pack_replace(tech_name,"red","grey")
 end
@@ -32,6 +33,8 @@ end
 pack_replace("armor-making-2","green","red") --move armour making down a tier
 angelsmods.functions.add_flag("automation-science-pack", "hidden")
 OV.disable_recipe({"automation-science-pack"})
+-- SMELTING
+pack_replace("angels-steel-smelting-1","green","red")
 -- BIO PROCESSING
 pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
 pack_replace("bio-fermentation","green","red")
@@ -99,6 +102,7 @@ pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 --INDUSTRIES
 pack_replace("tech-blue-circuit", "green","orange")
+pack_replace("angels-components-mechanical-4","green","orange")
 
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------
