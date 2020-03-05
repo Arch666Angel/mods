@@ -18,14 +18,16 @@ data:extend(
     {
       {type = "item", name = "motor-casing-1", amount = 1}
     },
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/plate-iron.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       }
     },
     icon_size = 32,
@@ -49,14 +51,16 @@ data:extend(
       --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
     },
     main_product = "motor-casing-1",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -82,14 +86,16 @@ data:extend(
       {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
     },
     main_product = "motor-casing-1",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -102,23 +108,27 @@ data:extend(
     subgroup = "angels-steel-casting",
     enabled = "false",
     energy_required = 4,
-    ingredients = {
+    ingredients =
+    {
       {type = "fluid", name = "liquid-molten-steel", amount = 15},
       {type = "item", name = "mold-expendable", amount = 1}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-casing-2", amount = 1},
       --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
     },
     main_product = "motor-casing-2",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-2.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -144,14 +154,16 @@ data:extend(
       {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
     },
     main_product = "motor-casing-2",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-2.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -175,14 +187,16 @@ data:extend(
       --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
     },
     main_product = "motor-casing-3",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-3.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -208,14 +222,16 @@ data:extend(
       {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
     },
     main_product = "motor-casing-3",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-3.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -239,14 +255,16 @@ data:extend(
       --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
     },
     main_product = "motor-casing-4",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-4.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -272,14 +290,16 @@ data:extend(
       {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
     },
     main_product = "motor-casing-4",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-4.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -303,14 +323,16 @@ data:extend(
       --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
     },
     main_product = "motor-casing-5",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-5.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -323,16 +345,19 @@ data:extend(
     subgroup = "angels-tungsten-casting",
     enabled = "false",
     energy_required = 4,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "casting-powder-tungsten", amount = 2},
       {type = "item", name = "mold-non-expendable", amount = 1}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-casing-5-green", amount = 1},
       {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.80, catalyst_amount=1}
     },
     main_product = "motor-casing-5-green",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
         tint={r=0.7, g=0.7, b=0.7}
@@ -340,7 +365,8 @@ data:extend(
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -353,21 +379,25 @@ data:extend(
     subgroup = "angels-tungsten-casting",
     enabled = "false",
     energy_required = 4,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-casing-5-green", amount = 1}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-casing-5", amount = 1}
     },
     main_product = "motor-casing-5",
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/motor-casing-5.png"
       },
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       },
     },
     icon_size = 32,
@@ -382,11 +412,13 @@ data:extend(
     enabled = "false",
     category = "crafting",
     energy_required = 1,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-casing-1", amount = 1},
       {type = "item", name = "cellulose-fiber", amount = 1}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-block-1", amount = 1}
     },
     icon_size = 32
@@ -397,11 +429,13 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-casing-2", amount = 1},
       {type = "item", name = "cellulose-fiber", amount = 1}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-block-2", amount = 1}
     },
     icon_size = 32
@@ -412,12 +446,14 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-casing-3", amount = 1},
       {type = "item", name = "solid-rubber", amount = 1},
       --{type = "fluid", name = "lubricant", amount = 10}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-block-3", amount = 1}
     },
     icon_size = 32
@@ -428,12 +464,14 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-casing-4", amount = 1},
       {type = "item", name = "solid-rubber", amount = 1},
       {type = "fluid", name = "lubricant", amount = 10}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-block-4", amount = 1}
     },
     icon_size = 32
@@ -444,12 +482,14 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-casing-5", amount = 1},
       {type = "item", name = "solid-rubber", amount = 1},
       {type = "fluid", name = "lubricant", amount = 15}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "motor-block-5", amount = 1}
     },
     icon_size = 32
@@ -463,7 +503,8 @@ data:extend(
     energy_required = 3,
     category = "crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-block-1", amount = 1},
       {type = "item", name = "angels-gear", amount = 1}
     },
@@ -476,7 +517,8 @@ data:extend(
     energy_required = 3,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-block-2", amount = 1},
       {type = "item", name = "angels-gear", amount = 1},
       {type = "item", name = "angels-axle", amount = 1}
@@ -490,7 +532,8 @@ data:extend(
     energy_required = 3,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-block-3", amount = 1},
       {type = "item", name = "angels-gear", amount = 1},
       {type = "item", name = "angels-axle", amount = 1},
@@ -505,7 +548,8 @@ data:extend(
     energy_required = 3,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-block-4", amount = 1},
       {type = "item", name = "angels-gear", amount = 1},
       {type = "item", name = "angels-axle", amount = 1},
@@ -521,7 +565,8 @@ data:extend(
     energy_required = 3,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "motor-block-5", amount = 1},
       {type = "item", name = "angels-gear", amount = 1},
       {type = "item", name = "angels-axle", amount = 1},
@@ -541,10 +586,12 @@ data:extend(
     energy_required = 0.5,
     category = "crafting",
     enabled = "true", -- enabled from the start
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-rod-iron", amount = 1}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "angels-gear", amount = 2}
     },
     icon_size = 32
@@ -555,7 +602,8 @@ data:extend(
     energy_required = 0.5,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-rod-steel", amount = 1}
     },
     result = "angels-axle",
@@ -567,7 +615,8 @@ data:extend(
     energy_required = 0.5,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-plate-aluminium", amount = 1}
     },
     result = "angels-roller-chain",
@@ -579,7 +628,8 @@ data:extend(
     energy_required = 0.5,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-plate-titanium", amount = 1}
     },
     result = "angels-spring",
@@ -591,7 +641,8 @@ data:extend(
     energy_required = 0.5,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-plate-tungsten", amount = 1},
       {type = "item", name = "steel-plate", amount = 1},
       {type = "fluid", name = "lubricant", amount = 1}
@@ -610,20 +661,24 @@ data:extend(
     energy_required = 1,
     category = "crafting",
     enabled = "true", -- enabled from the start
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-gear", amount = 2}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "mechanical-parts", amount = 2}
     },
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/mechanical-parts.png"
       },
       {
         icon = "__angelsindustries__/graphics/icons/gear.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       }
     },
     icon_size = 32
@@ -636,20 +691,24 @@ data:extend(
     energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-axle", amount = 2}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "mechanical-parts", amount = 3}
     },
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/mechanical-parts.png"
       },
       {
         icon = "__angelsindustries__/graphics/icons/axle.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       }
     },
     icon_size = 32
@@ -662,20 +721,24 @@ data:extend(
     energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-roller-chain", amount = 2}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "mechanical-parts", amount = 4}
     },
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/mechanical-parts.png"
       },
       {
         icon = "__angelsindustries__/graphics/icons/roller-chain.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       }
     },
     icon_size = 32
@@ -688,20 +751,24 @@ data:extend(
     energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-spring", amount = 2}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "mechanical-parts", amount = 5}
     },
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/mechanical-parts.png"
       },
       {
         icon = "__angelsindustries__/graphics/icons/spring.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       }
     },
     icon_size = 32
@@ -714,20 +781,24 @@ data:extend(
     energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients = {
+    ingredients =
+    {
       {type = "item", name = "angels-bearing", amount = 2}
     },
-    results = {
+    results =
+    {
       {type = "item", name = "mechanical-parts", amount = 6}
     },
-    icons = {
+    icons =
+    {
       {
         icon = "__angelsindustries__/graphics/icons/mechanical-parts.png"
       },
       {
         icon = "__angelsindustries__/graphics/icons/bearing.png",
         scale = 0.4375,
-        shift = {-10, -10}
+        shift =
+    {-10, -10}
       }
     },
     icon_size = 32

@@ -9,7 +9,8 @@ data:extend(
     enabled = "true",
     category = "crafting",
     energy_required = 2,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-rod-iron", amount = 2},
     },
     results=
@@ -24,7 +25,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 2,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-rod-steel", amount = 2},
     },
     results=
@@ -39,7 +41,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 2,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plate-aluminium", amount = 2},
     },
     results=
@@ -54,7 +57,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 2,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plate-titanium", amount = 2},
     },
     results=
@@ -69,7 +73,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 2,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plate-tungsten", amount = 2},
     },
     results=
@@ -87,7 +92,8 @@ data:extend(
     enabled = "true",
     category = "crafting",
     energy_required = 3,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "grate-iron", amount = 1},
       {type="item", name = "angels-girder", amount = 1},
     },
@@ -103,7 +109,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 3,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "grate-steel", amount = 1},
       {type="item", name = "angels-girder", amount = 1},
       {type="item", name = "angels-rivet", amount = 1},
@@ -120,7 +127,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 3,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "grate-aluminium", amount = 1},
       {type="item", name = "angels-girder", amount = 1},
       {type="item", name = "angels-rivet", amount = 1},
@@ -138,7 +146,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 3,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "grate-titanium", amount = 1},
       {type="item", name = "angels-girder", amount = 1},
       {type="item", name = "angels-rivet", amount = 1},
@@ -157,7 +166,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 3,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "grate-tungsten", amount = 1},
       {type="item", name = "angels-girder", amount = 1},
       {type="item", name = "angels-rivet", amount = 1},
@@ -180,7 +190,8 @@ data:extend(
     enabled = "true",
     category = "crafting",
     energy_required = 0.5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "iron-plate", amount = 1},
     },
     results=
@@ -195,7 +206,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 0.5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "steel-plate", amount = 1},
     },
     results=
@@ -210,7 +222,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 0.5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plate-aluminium", amount = 1},
     },
     results=
@@ -225,7 +238,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 0.5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plate-titanium", amount = 1},
     },
     results=
@@ -240,7 +254,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 0.5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plate-tungsten", amount = 1},
     },
     results=
@@ -260,7 +275,8 @@ data:extend(
     enabled = "true",
     category = "crafting",
     energy_required = 1,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-girder", amount = 2},
     },
     results=
@@ -287,7 +303,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-rivet", amount = 2},
     },
     results=
@@ -314,7 +331,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-bracket", amount = 2},
     },
     results=
@@ -341,7 +359,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-plating", amount = 2},
     },
     results=
@@ -368,7 +387,8 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 1,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "angels-strut", amount = 2},
     },
     results=

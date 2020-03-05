@@ -22,6 +22,7 @@ for _,tech_name in pairs({
   -- INDUSTRIES
   "tech-red-circuit",
   "angels-components-mechanical-1",
+  "angels-components-weapons-basic",
 }) do
   pack_replace(tech_name,"red","grey")
 end
@@ -110,6 +111,7 @@ pack_replace("tech-blue-circuit", "green","orange")
 pack_replace("angels-components-mechanical-4","green","orange")
 OV.add_prereq("angels-components-construction-4","tech-orange-packs")
 pack_replace("angels-components-construction-4", "blue","orange")
+pack_replace("angels-components-weapons-advanced", "green","orange")
 
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------

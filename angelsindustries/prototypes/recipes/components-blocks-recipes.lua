@@ -9,7 +9,8 @@ data:extend(
     enabled = true,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-1", amount = 1},
       {type="item", name = "stone", amount = 3},
     },
@@ -96,7 +97,8 @@ data:extend(
     enabled = true,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-1", amount = 1},
       {type="item", name = "circuit-grey", amount = 3},
     },
@@ -112,7 +114,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "cable-harness-1", amount = 1},
@@ -129,7 +132,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "cable-harness-2", amount = 1},
@@ -146,7 +150,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "cable-harness-3", amount = 1},
@@ -163,7 +168,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "cable-harness-4", amount = 1},
@@ -180,7 +186,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "cable-harness-5", amount = 1},
@@ -200,7 +207,8 @@ data:extend(
     enabled = true,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-1", amount = 1},
       {type="item", name = "pipe", amount = 2},
     },
@@ -216,7 +224,8 @@ data:extend(
     enabled = false, -- tier 2.5
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "pipe", amount = 2},
     },
@@ -235,7 +244,8 @@ data:extend(
     enabled = true,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-1", amount = 1},
       {type="item", name = "mechanical-parts", amount = 2},
     },
@@ -251,7 +261,8 @@ data:extend(
     enabled = false, -- tier 2.5
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "mechanical-parts", amount = 2},
     },
@@ -270,7 +281,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "stone-brick", amount = 3},
@@ -287,7 +299,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "clay-brick", amount = 3},
@@ -304,7 +317,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "concrete-brick", amount = 3},
@@ -321,7 +335,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -338,7 +353,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -358,7 +374,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "cable-harness-1", amount = 1},
@@ -376,7 +393,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "cable-harness-2", amount = 1},
@@ -394,7 +412,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "cable-harness-3", amount = 1},
@@ -412,7 +431,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "cable-harness-4", amount = 1},
@@ -430,7 +450,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "cable-harness-5", amount = 1},
@@ -451,7 +472,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "stone-brick", amount = 3},
@@ -468,7 +490,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "clay-brick", amount = 3},
@@ -485,7 +508,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "concrete-brick", amount = 3},
@@ -502,7 +526,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -519,7 +544,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -539,7 +565,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "construction-frame-1", amount = 1},
@@ -558,7 +585,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "construction-frame-2", amount = 1},
@@ -577,7 +605,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "construction-frame-3", amount = 1},
@@ -596,7 +625,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "construction-frame-4", amount = 1},
@@ -615,7 +645,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "construction-frame-5", amount = 1},
@@ -637,7 +668,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "motor-1", amount = 1},
@@ -656,7 +688,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "motor-2", amount = 1},
@@ -675,7 +708,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "motor-3", amount = 1},
@@ -694,7 +728,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "motor-4", amount = 1},
@@ -713,7 +748,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "motor-5", amount = 1},
@@ -735,7 +771,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "motor-3", amount = 1},
@@ -754,7 +791,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "motor-4", amount = 1},
@@ -773,7 +811,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "motor-5", amount = 1},
@@ -795,7 +834,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "concrete-brick", amount = 3},
@@ -813,7 +853,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -831,7 +872,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -852,7 +894,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "concrete-brick", amount = 5},
@@ -871,7 +914,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 4},
@@ -890,7 +934,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 5},
@@ -912,7 +957,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "concrete-brick", amount = 5},
@@ -931,7 +977,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 5},
@@ -950,7 +997,8 @@ data:extend(
     enabled = true,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 5},
@@ -972,7 +1020,8 @@ data:extend(
     enabled = false,
     category = "crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "weapon-1", amount = 1},
@@ -991,7 +1040,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "weapon-2", amount = 1},
@@ -1010,7 +1060,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "weapon-3", amount = 1},
@@ -1029,7 +1080,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "weapon-4", amount = 1},
@@ -1048,7 +1100,8 @@ data:extend(
     enabled = false,
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
+    ingredients =
+    {
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "weapon-5", amount = 1},
