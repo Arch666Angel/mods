@@ -40,7 +40,8 @@ pack_count_update("bio-temperate-farming","angels-science-pack-red", 4)
 pack_replace("bio-fermentation","green","red")
 pack_replace("bio-arboretum-temperate-1","green","red")
 -- INDUSTRIES
-OV.add_prereq("angels-components-construction-2","tech-red-packs")
+pack_replace("tech-green-circuit","green","red")
+pack_replace("angels-components-construction-2","green","red")
 
 -------------------------------------------------------------------------------
 -- GREEN SCIENCE PACKS --------------------------------------------------------
