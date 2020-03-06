@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.5
 Date: ???
+  Changes:
+    - Powdered refining depends on lubricant tech now
   Bugfixes:
     - When a resource is removed, the preset should be removed as well (otherwise it would/could crash)
 ---------------------------------------------------------------------------------------------------
