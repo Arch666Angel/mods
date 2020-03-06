@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: ??
+  Balancing:
+    - Balanced Fish Water to have a higher alien spore yield
+      - Fish tank now yields 100 fish water/recipe instead of 20 (increase of x5)
+      - Polluted Fish Water yields twice the spores (incease of x2)
+      - Polluted Fish water yields less sulfuric waste water (compensation of the higher use)
+    - Alien Bacteria now requires 50 Alien Spores instead of 100 (increase of x2)
+    - Alien Bacteria can now seed 5 dishes instead of 3 (increase of x1.667)
+    - Puffer Breeding now has a higher yield of their own eggs (other types remain the same)
+      - Gaseous and Rancid eggs from 50% to 75%
+      - Rancid, Acidic and Corodent eggs from 50% to 70%
+    - Biter zoo recipes now gives 1 crystal/biter (increase of x4)
+---------------------------------------------------------------------------------------------------
 Version: 0.7.3
 Date: 22.02.2020
   Changes:

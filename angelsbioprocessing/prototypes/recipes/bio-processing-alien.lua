@@ -31,8 +31,8 @@ data:extend(
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       results = {
-        {type = "fluid", name = "alien-spores", amount_min = 25, amount_max = 50},
-        {type = "fluid", name = "water-yellow-waste", amount_min = 80, amount_max = 100}
+        {type = "fluid", name = "alien-spores", amount_min = 70, amount_max = 80},
+        {type = "fluid", name = "water-yellow-waste", amount_min = 30, amount_max = 40}
       },
       main_product = "alien-spores",
       --icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
@@ -47,7 +47,7 @@ data:extend(
       enabled = "false",
       energy_required = 3,
       ingredients = {
-        {type = "fluid", name = "alien-spores", amount = 100},
+        {type = "fluid", name = "alien-spores", amount = 50},
         {type = "item", name = "solid-calcium-carbonate", amount = 1},
         {type = "fluid", name = "liquid-perchloric-acid", amount = 50}
       },
@@ -121,11 +121,11 @@ data:extend(
       enabled = "false",
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "substrate-dish", amount = 3},
+        {type = "item", name = "substrate-dish", amount = 5},
         {type = "item", name = "alien-bacteria", amount = 1}
       },
       results = {
-        {type = "item", name = "seeded-dish", amount = 3}
+        {type = "item", name = "seeded-dish", amount = 5}
       },
       main_product = "seeded-dish",
       --icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact.png",

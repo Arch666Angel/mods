@@ -167,7 +167,7 @@ data:extend(
       results = {
         {type = "item", name = "biter-small", amount = 3},
         {type = "item", name = "biter-small", amount = 1, probability = 0.9},
-        {type = "item", name = "crystal-splinter-raw", amount = 1}
+        {type = "item", name = "crystal-splinter-raw", amount = 4}
       },
       main_product = "biter-small",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -190,7 +190,7 @@ data:extend(
       results = {
         {type = "item", name = "biter-medium", amount = 3},
         {type = "item", name = "biter-medium", amount = 1, probability = 0.85},
-        {type = "item", name = "crystal-shard-raw", amount = 1}
+        {type = "item", name = "crystal-shard-raw", amount = 4}
       },
       main_product = "biter-medium",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -213,7 +213,7 @@ data:extend(
       results = {
         {type = "item", name = "biter-big", amount = 3},
         {type = "item", name = "biter-big", amount = 1, probability = 0.75},
-        {type = "item", name = "crystal-full-raw", amount = 1}
+        {type = "item", name = "crystal-full-raw", amount = 4}
       },
       main_product = "biter-big",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",

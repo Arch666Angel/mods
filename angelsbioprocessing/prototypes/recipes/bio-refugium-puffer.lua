@@ -150,7 +150,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-puffer-1", amount = 2},
-        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
@@ -183,7 +183,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-2", amount = 2},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
@@ -216,7 +216,7 @@ data:extend(
         {type = "item", name = "bio-puffer-3", amount = 2},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.7},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
       },
@@ -249,7 +249,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.7},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
       },
       icons = {
@@ -282,7 +282,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.5}
+        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.7}
       },
       icons = {
         {
