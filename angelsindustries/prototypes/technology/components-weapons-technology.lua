@@ -61,6 +61,7 @@ OV.add_unlock("military-2", "body-3")
 OV.add_unlock("military-2", "weapon-3")
 OV.add_unlock("military-2", "angels-fluidchamber")
 OV.add_unlock("military-2", "weapon-parts-fluidchamber")
+OV.add_prereq("military-2", "steel-processing")
 
 -------------------------------------------------------------------------------
 -- WEAPON PARTS 4 -------------------------------------------------------------
@@ -74,7 +75,8 @@ data:extend(
     icon_size = 128,
     prerequisites =
     {
-      "military-2"
+      "military-science-pack",
+      "angels-titanium-smelting-1",
     },
     effects =
     {
@@ -118,3 +120,4 @@ OV.add_unlock("military-3", "weapon-5")
 OV.add_unlock("military-3", "angels-acceleratorcoil")
 OV.add_unlock("military-3", "weapon-parts-acceleratorcoil")
 OV.add_prereq("military-3", "angels-components-weapons-advanced")
+OV.add_prereq("military-3", "angels-tungsten-smelting-1")

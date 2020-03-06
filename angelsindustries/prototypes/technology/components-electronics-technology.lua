@@ -55,6 +55,7 @@ data:extend(
     {
       "tech-red-circuit",
       "angels-components-construction-2",
+      "angels-components-cabling-2",
     },
     effects =
     {
@@ -103,6 +104,7 @@ data:extend(
     {
       "tech-green-circuit",
       "angels-components-construction-3",
+      "angels-components-cabling-3",
     },
     effects =
     {
@@ -151,6 +153,7 @@ data:extend(
     {
       "tech-orange-circuit",
       "angels-components-construction-4",
+      "angels-components-cabling-4",
     },
     effects =
     {
@@ -200,6 +203,7 @@ data:extend(
     {
       "tech-blue-circuit",
       "angels-components-construction-5",
+      "angels-components-cabling-5",
     },
     effects =
     {

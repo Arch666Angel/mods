@@ -5,6 +5,7 @@ Date: ??
     - Moved the unlocks for the molds further away:
       - Expendable Mold from Metalurgy 1 to Stone Smelting 1
       - Non-expendable Mold from Metalurgy 2 to Stone Smelting 2
+    - Steel smelting 1 now prerequisites on steel processing
   Bugfixes:
     - Fixed solder mixture was unlocked from the start
     - Fixed tungsten smelting 1 and 2 did not have cobalt and nickel smelting prerequisites

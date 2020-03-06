@@ -150,9 +150,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "angels-cable-shielding",
+    group = "angels-components",
+    order = "g[cables]-a[shielding]",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-cable-harness",
     group = "angels-components",
-    order = "g[cables]",
+    order = "g[cables]-b[harness]",
   },
   {
     type = "item-subgroup",

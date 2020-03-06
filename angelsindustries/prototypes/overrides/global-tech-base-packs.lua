@@ -43,6 +43,7 @@ pack_replace("bio-arboretum-temperate-1","green","red")
 -- INDUSTRIES
 pack_replace("tech-green-circuit","green","red")
 pack_replace("angels-components-construction-2","green","red")
+pack_replace("angels-components-cabling-2","green","red")
 
 -------------------------------------------------------------------------------
 -- GREEN SCIENCE PACKS --------------------------------------------------------
@@ -111,7 +112,10 @@ pack_replace("tech-blue-circuit", "green","orange")
 pack_replace("angels-components-mechanical-4","green","orange")
 OV.add_prereq("angels-components-construction-4","tech-orange-packs")
 pack_replace("angels-components-construction-4", "blue","orange")
+OV.remove_prereq("angels-components-construction-4", "chemical-science-pack")
 pack_replace("angels-components-weapons-advanced", "green","orange")
+pack_replace("angels-components-cabling-4","blue","orange")
+OV.remove_prereq("angels-components-cabling-4", "chemical-science-pack")
 
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -123,7 +127,9 @@ pack_replace("logistic-robotics","green","blue")
 angelsmods.functions.add_flag("chemical-science-pack", "hidden")
 OV.disable_recipe({"chemical-science-pack"})
 -- INDUSTRIES
-OV.add_prereq("angels-components-construction-5","tech-blue-packs")
+OV.remove_prereq("angels-components-construction-5", "utility-science-pack")
+pack_replace("angels-components-cabling-5","yellow","blue")
+OV.remove_prereq("angels-components-cabling-5", "utility-science-pack")
 
 -------------------------------------------------------------------------------
 -- YELOW SCIENCE PACKS --------------------------------------------------------

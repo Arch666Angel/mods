@@ -109,6 +109,7 @@ data:extend(
     {
       "angels-components-construction-3",
       "angels-titanium-smelting-1",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -154,6 +155,7 @@ data:extend(
     {
       "angels-components-construction-4",
       "angels-tungsten-smelting-1",
+      "utility-science-pack",
     },
     effects =
     {

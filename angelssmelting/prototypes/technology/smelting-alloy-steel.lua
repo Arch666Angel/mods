@@ -7,6 +7,7 @@ data:extend({
     prerequisites =
     {
       "angels-iron-smelting-1",
+      "steel-processing",
     },
     effects =
     {
