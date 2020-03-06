@@ -12,6 +12,11 @@ Date: ??
       - Gaseous and Rancid eggs from 50% to 75%
       - Rancid, Acidic and Corodent eggs from 50% to 70%
     - Biter zoo recipes now gives 1 crystal/biter (increase of x4)
+    - Made green algae a bit more productive
+      - Green Algae I ratio brown:green algae increased to 25:5 (was 20:5)
+      - Green Algae II crafts faster (was 20 seconds, now 15) to reduce power consumption
+      - Green Algae II inputs lowered from 100 to 80 (+20% productivity)
+      - Green Algae II output increased from 40 to 50 (+25% productivity)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.3
 Date: 22.02.2020
