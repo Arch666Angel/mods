@@ -428,6 +428,11 @@ if bobmods then
       }
     )
 
+    -- lithium-salt
+    if mods["bobplates"] then
+       OV.global_replace_item("lithium-chloride", "solid-lithium")
+    end
+
     OV.remove_unlock("chemical-processing-1", "carbon")
 
     --ferric chloride solution
