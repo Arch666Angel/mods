@@ -1,13 +1,9 @@
 --------------------------------------------------------------------------------------------------- 
-Version: 0.9.5
-Date: ???
-  Bugfixes:
-    - Fully replaced Bob's Lithium Chloride with Angels Lithia Salt
---------------------------------------------------------------------------------------------------- 
 Version: 0.9.4
 Date: ???
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
+    - Fully replaced Bob's Lithium Chloride with Angels Lithia Salt 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 22.02.2020
