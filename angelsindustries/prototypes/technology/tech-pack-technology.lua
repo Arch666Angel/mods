@@ -1,3 +1,6 @@
+local pack_amount_base = 64
+local pack_time_base = 15
+
 data:extend(
 {
   --TIER 1
@@ -16,14 +19,18 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-science-pack-red",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-main-lab-2",
+      },
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
       },
-      time = 60
+      time = pack_time_base
     },
     order = "a-5"
   },
@@ -48,15 +55,19 @@ data:extend(
         type = "unlock-recipe",
         recipe = "science-force-analyzer",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-main-lab-3",
+      },
     },
     unit =
     {
-      count = 128,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base
     },
     order = "a-5"
   },
@@ -77,16 +88,20 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-science-pack-orange",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-main-lab-4",
+      },
     },
     unit =
     {
-      count = 256,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base
     },
     order = "a-5"
   },
@@ -111,17 +126,21 @@ data:extend(
         type = "unlock-recipe",
         recipe = "science-harmonics-analyzer",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-main-lab-5",
+      },
     },
     unit =
     {
-      count = 512,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base
     },
     order = "a-5"
   },
@@ -142,10 +161,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-science-pack-yellow",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-main-lab-6",
+      },
     },
     unit =
     {
-      count = 1024,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -153,7 +176,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base
     },
     order = "a-5"
   },

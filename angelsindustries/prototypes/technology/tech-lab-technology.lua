@@ -1,3 +1,6 @@
+local pack_amount_base = 64/2 -- half the amount, and the lab has double the speed, so 4x increase
+local pack_time_base = 15
+
 data:extend(
 {
   -----------------------------------------------------------------------------
@@ -29,12 +32,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -57,13 +60,13 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -86,14 +89,14 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -124,7 +127,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -132,7 +135,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -155,7 +158,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -164,7 +167,7 @@ data:extend(
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -197,12 +200,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -225,13 +228,13 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -254,14 +257,14 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -292,7 +295,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -300,7 +303,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -323,7 +326,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -332,7 +335,7 @@ data:extend(
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -365,12 +368,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -393,13 +396,13 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -422,14 +425,14 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -460,7 +463,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -468,7 +471,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -491,7 +494,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -500,7 +503,7 @@ data:extend(
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -533,12 +536,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -561,13 +564,13 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -590,14 +593,14 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -628,7 +631,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -636,7 +639,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -659,7 +662,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -668,7 +671,7 @@ data:extend(
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -702,12 +705,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -731,13 +734,13 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -761,14 +764,14 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -800,7 +803,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -808,7 +811,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -832,7 +835,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -841,7 +844,7 @@ data:extend(
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -875,12 +878,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -904,13 +907,13 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 2,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -934,14 +937,14 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 4,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
         {"angels-science-pack-green", 1},
         {"angels-science-pack-orange", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -973,7 +976,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 8,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -981,7 +984,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -1005,7 +1008,7 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base * 16,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
@@ -1014,7 +1017,7 @@ data:extend(
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },
@@ -1044,12 +1047,12 @@ data:extend(
     },
     unit =
     {
-      count = 64,
+      count = pack_amount_base,
       ingredients = {
         {"angels-science-pack-grey", 1},
         {"angels-science-pack-red", 1},
       },
-      time = 60
+      time = pack_time_base,
     },
     order = "b-5"
   },

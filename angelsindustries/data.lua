@@ -5,6 +5,7 @@ end
 if not angelsmods.industries then
   angelsmods.industries = {}
 end
+angelsmods.industries.number_tint = {r = 1, g = 0.4, b = 0.7, a = 0.5}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
@@ -71,7 +72,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.items.tech-science-packs")
 
   --ENTITIES
-  require("prototypes.buildings.angels-labs")
+  require("prototypes.buildings.angels-labs-main")
+  require("prototypes.buildings.angels-labs-basic")
   require("prototypes.buildings.angels-labs-enhance")
   require("prototypes.buildings.angels-labs-exploration")
   require("prototypes.buildings.angels-labs-energy")

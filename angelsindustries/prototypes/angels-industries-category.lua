@@ -289,13 +289,19 @@ data:extend(
     type = "item-subgroup",
     name = "angels-labs-1",
     group = "angels-tech",
-    order = "y",
+    order = "z[labs]-a[specialized]-a[mk1]",
   },
   {
     type = "item-subgroup",
     name = "angels-labs-2",
     group = "angels-tech",
-    order = "z",
+    order = "z[labs]-a[specialized]-b[mk2]",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-labs-3",
+    group = "angels-tech",
+    order = "z[labs]-b[archive]",
   },
   -- EQUIPMENT
   --{

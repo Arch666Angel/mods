@@ -2,7 +2,7 @@ script.on_configuration_changed(
   function(event)
     if event.mod_changes["angelsindustries"] or event.mod_startup_settings_changed then
       -- settings have changed
-      gifted_main_lab = game.entity_prototypes["angels-main-lab"] and gifted_main_lab or false
+      gifted_main_lab = game.entity_prototypes["angels-main-lab-1"] and gifted_main_lab or false
     end
   end
 )
@@ -14,8 +14,8 @@ script.on_event(
   },
   function(event)
     local iteminsert = game.players[event.player_index].insert
-    if game.entity_prototypes["angels-main-lab"] and (not gifted_main_lab) then
-      gifted_main_lab = iteminsert{name = "angels-main-lab", count = 1} > 0
+    if game.entity_prototypes["angels-main-lab-1"] and (not gifted_main_lab) then
+      gifted_main_lab = iteminsert{name = "angels-main-lab-1", count = 1} > 0
     end
 
     -- iteminsert{name="angels-basic-lab", count=10}
