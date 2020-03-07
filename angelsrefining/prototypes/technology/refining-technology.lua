@@ -867,7 +867,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-advanced-crushing",
-        "oil-processing"
+        "lubricant"
       },
       effects = {
         {
