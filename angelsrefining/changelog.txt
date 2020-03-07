@@ -3,6 +3,7 @@ Version: 0.11.5
 Date: ???
   Bugfixes:
     - When a resource is removed, the preset should be removed as well (otherwise it would/could crash)
+    - Fixed that mixed uranium sorting (from crystals) did not allow productivity modules
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.4
 Date: 22.02.2020
