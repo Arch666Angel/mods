@@ -1,19 +1,16 @@
 if bobmods then
-  if bobmods.plates then
+  local OV = angelsmods.functions.OV
+  local move_item = angelsmods.functions.move_item
 
+  if bobmods.plates then
     -- move fluid tanks
-    data.raw["item"]["bob-small-inline-storage-tank"].subgroup = "angels-fluid-tanks"
-    data.raw["item"]["bob-small-inline-storage-tank"].order = "a[small-tank]-a"
-    data.raw["item"]["bob-small-storage-tank"].subgroup = "angels-fluid-tanks"
-    data.raw["item"]["bob-small-storage-tank"].order = "a[small-tank]-b"
-    data.raw["item"]["storage-tank"].subgroup = "angels-fluid-tanks"
-    data.raw["item"]["storage-tank"].order = "b[medium-tank]-a[mk1]-a[regular]"
-    data.raw["item"]["angels-storage-tank-1"].subgroup = "angels-fluid-tanks"
-    data.raw["item"]["angels-storage-tank-1"].order = "c[large-tank]-c[gas]"
-    data.raw["item"]["angels-storage-tank-2"].subgroup = "angels-fluid-tanks"
-    data.raw["item"]["angels-storage-tank-2"].order = "c[large-tank]-b[oil]"
-    data.raw["item"]["angels-storage-tank-3"].subgroup = "angels-fluid-tanks"
-    data.raw["item"]["angels-storage-tank-3"].order = "c[large-tank]-a[inline]"
+    move_item("bob-small-inline-storage-tank", "angels-fluid-tanks", "a[small-tank]-a")
+    move_item("bob-small-storage-tank", "angels-fluid-tanks", "a[small-tank]-b")
+    move_item("storage-tank", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-a[regular]")
+    move_item("angels-storage-tank-1", "angels-fluid-tanks", "c[large-tank]-c[gas]")
+    move_item("angels-storage-tank-2", "angels-fluid-tanks", "c[large-tank]-b[oil]")
+    move_item("angels-storage-tank-3", "angels-fluid-tanks", "c[large-tank]-a[inline]")
+
     OV.patch_recipes(
       {
         {
@@ -32,21 +29,16 @@ if bobmods then
         }
       }
     )
+
     if bobmods.logistics then
-      data.raw["item"]["bob-storage-tank-all-corners"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["bob-storage-tank-all-corners"].order = "b[medium-tank]-a[mk1]-b[all-corners]"
-      data.raw["item"]["storage-tank-2"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["storage-tank-2"].order = "b[medium-tank]-b[mk2]-a[regular]"
-      data.raw["item"]["bob-storage-tank-all-corners-2"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["bob-storage-tank-all-corners-2"].order = "b[medium-tank]-b[mk2]-b[all-corners]"
-      data.raw["item"]["storage-tank-3"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["storage-tank-3"].order = "b[medium-tank]-c[mk3]-a[regular]"
-      data.raw["item"]["bob-storage-tank-all-corners-3"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["bob-storage-tank-all-corners-3"].order = "b[medium-tank]-c[mk3]-b[all-corners]"
-      data.raw["item"]["storage-tank-4"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["storage-tank-4"].order = "b[medium-tank]-d[mk4]-a[regular]"
-      data.raw["item"]["bob-storage-tank-all-corners-4"].subgroup = "angels-fluid-tanks"
-      data.raw["item"]["bob-storage-tank-all-corners-4"].order = "b[medium-tank]-d[mk4]-b[all-corners]"
+      move_item("bob-storage-tank-all-corners", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-b[all-corners]")
+      move_item("storage-tank-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-a[regular]")
+      move_item("bob-storage-tank-all-corners-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-b[all-corners]")
+      move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-a[regular]")
+      move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-b[all-corners]")
+      move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-a[regular]")
+      move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-b[all-corners]")
+
       OV.patch_recipes(
         {
           {
@@ -62,22 +54,9 @@ if bobmods then
               {name = "bob-small-inline-storage-tank", amount = 1}
             }
           }
-          --{
-          --  name = "angels-storage-tank-2",
-          --  ingredients =
-          --  {
-          --    { name = "storage-tank-4", amount = 1},
-          --  }
-          --},
-          --{
-          --  name = "angels-storage-tank-1",
-          --  ingredients =
-          --  {
-          --    { name = "bob-storage-tank-all-corners-4", amount = 1},
-          --  }
-          --},
         }
       )
+
       data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.base_area = 2000
       data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.base_area = 1500
 
@@ -90,36 +69,25 @@ if bobmods then
       OV.remove_unlock("fluid-handling", "bob-topup-valve")
 
       -- move pumps over
-      data.raw["item"]["pump"].subgroup = "angels-fluid-control"
-      data.raw["item"]["pump"].order = "b[pump]-a[mk1]"
-      data.raw["item"]["bob-pump-2"].subgroup = "angels-fluid-control"
-      data.raw["item"]["bob-pump-2"].order = "b[pump]-b[mk2]"
-      data.raw["item"]["bob-pump-3"].subgroup = "angels-fluid-control"
-      data.raw["item"]["bob-pump-3"].order = "b[pump]-c[mk3]"
-      data.raw["item"]["bob-pump-4"].subgroup = "angels-fluid-control"
-      data.raw["item"]["bob-pump-4"].order = "b[pump]-d[mk4]"
+      move_item("pump", "angels-fluid-control", "b[pump]-a[mk1]")
+      move_item("bob-pump-2", "angels-fluid-control", "b[pump]-b[mk2]")
+      move_item("bob-pump-3", "angels-fluid-control", "b[pump]-c[mk3]")
+      move_item("bob-pump-4", "angels-fluid-control", "b[pump]-d[mk4]")
     end
 
     -- move chemical plants
-    if bobmods.assembly and data.raw["item"]["chemical-plant-2"] then
-      data.raw["item"]["chemical-plant-2"].subgroup = "petrochem-buildings-chemical-plant"
-      data.raw["item"]["chemical-plant-2"].order = "a[regular]-ab[bob]-a"
-      data.raw["item"]["chemical-plant-3"].subgroup = "petrochem-buildings-chemical-plant"
-      data.raw["item"]["chemical-plant-3"].order = "a[regular]-ab[bob]-b"
-      data.raw["item"]["chemical-plant-4"].subgroup = "petrochem-buildings-chemical-plant"
-      data.raw["item"]["chemical-plant-4"].order = "a[regular]-ab[bob]-c"
+    if bobmods.assembly then
+      move_item("chemical-plant-2", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-a")
+      move_item("chemical-plant-3", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-b")
+      move_item("chemical-plant-4", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-c")
     end
 
     -- move electrolysers
-    data.raw["item"]["electrolyser"].subgroup = "petrochem-buildings-electrolyser"
-    data.raw["item"]["electrolyser"].order = "aa[bobs-electrolyser]-a"
+    move_item("electrolyser", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-a")
     if bobmods.assembly and data.raw["item"]["electrolyser-2"] then
-      data.raw["item"]["electrolyser-2"].subgroup = "petrochem-buildings-electrolyser"
-      data.raw["item"]["electrolyser-2"].order = "aa[bobs-electrolyser]-b"
-      data.raw["item"]["electrolyser-3"].subgroup = "petrochem-buildings-electrolyser"
-      data.raw["item"]["electrolyser-3"].order = "aa[bobs-electrolyser]-c"
-      data.raw["item"]["electrolyser-4"].subgroup = "petrochem-buildings-electrolyser"
-      data.raw["item"]["electrolyser-4"].order = "aa[bobs-electrolyser]-d"
+      move_item("electrolyser-2", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-b")
+      move_item("electrolyser-3", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-c")
+      move_item("electrolyser-4", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-d")
     end
 
     -- generic replace
@@ -152,8 +120,7 @@ if bobmods then
 
     OV.global_replace_item({"solid-resin"}, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
-    data.raw["item"]["resin"].subgroup = "petrochem-solids"
-    data.raw["item"]["resin"].order = "a[petrochem-solids]-b[resin]"
+    move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
     OV.patch_recipes(
       {
         {
@@ -194,16 +161,18 @@ if bobmods then
         }
       }
     )
+
     OV.remove_unlock("plastics", "synthetic-wood")
     OV.disable_recipe({"synthetic-wood"})
+
     OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
     angelsmods.functions.add_flag("calcium-chloride", "hidden")
     OV.disable_recipe("calcium-chloride")
     OV.remove_unlock("chemical-processing-2", "calcium-chloride")
+
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
-    data.raw["item"]["rubber"].subgroup = "petrochem-solids"
-    data.raw["item"]["rubber"].order = "a[petrochem-solids]-c[rubber]-a"
+    move_item("rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
     OV.patch_recipes(
       {
         {
@@ -247,11 +216,9 @@ if bobmods then
       }
     )
 
-    if data.raw.item["insulated-cable"] then -- bob electronics
-      data.raw.item["insulated-cable"].subgroup = "petrochem-solids"
-      data.raw.item["insulated-cable"].order = "a[petrochem-solids]-c[rubber]-b"
-      OV.patch_recipes({{name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"}})
-    end
+    -- bob electronics
+    move_item("insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
+    OV.patch_recipes({{name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"}})
 
     if data.raw.recipe["pure-water-pump"] then
       data.raw.recipe["pure-water-pump"].icon = nil
@@ -259,20 +226,29 @@ if bobmods then
       data.raw.recipe["pure-water-pump"].icons = {{icon = "__angelsrefining__/graphics/icons/water-purified.png"}}
     end
 
+    -- Add bobs electrolysis to angels
+    table.insert(data.raw["assembling-machine"]["angels-electrolyser"].crafting_categories, "electrolysis")
+    table.insert(data.raw["assembling-machine"]["angels-electrolyser-2"].crafting_categories, "electrolysis")
+    table.insert(data.raw["assembling-machine"]["angels-electrolyser-3"].crafting_categories, "electrolysis")
+    table.insert(data.raw["assembling-machine"]["angels-electrolyser-4"].crafting_categories, "electrolysis")
+
+    -- add angels electrolysis to bobs
     table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
     if bobmods and bobmods.assembly and data.raw["assembling-machine"]["electrolyser-2"] then
       table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
       table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
       table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
     end
-    data.raw.fluid["heavy-water"].subgroup = "water-treatment-fluid"
-    data.raw.fluid["heavy-water"].order = "eb"
-    data.raw.fluid["deuterium"].subgroup = "petrochem-basic-fluids"
-    data.raw.fluid["deuterium"].order = "i"
-    data.raw.recipe["bob-heavy-water"].subgroup = "water-treatment"
-    data.raw.recipe["bob-heavy-water"].order = "b[bob-heavy-water]"
-    data.raw.recipe["heavy-water-electrolysis"].subgroup = "petrochem-basics"
-    data.raw.recipe["heavy-water-electrolysis"].order = "a[water-separation]-a[heavy-water-electrolysis]"
+
+    move_item("heavy-water", "water-treatment-fluid", "eb")
+    move_item("deuterium", "petrochem-basic-fluids", "i")
+    move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
+    move_item(
+      "heavy-water-electrolysis",
+      "petrochem-basics",
+      "a[water-separation]-a[heavy-water-electrolysis]",
+      "recipe"
+    )
 
     OV.patch_recipes(
       {
@@ -327,8 +303,7 @@ if bobmods then
     OV.remove_unlock("plastics", "plastic-bar")
 
     --oil processing
-    data.raw["fluid"]["liquid-fuel"].subgroup = "petrochem-carbon-fluids"
-    data.raw["fluid"]["liquid-fuel"].order = "dac"
+    move_item("liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
     OV.patch_recipes(
       {
         {
@@ -347,8 +322,7 @@ if bobmods then
       }
     )
     OV.add_unlock("angels-oil-processing", "liquid-fuel")
-    data.raw["item"]["enriched-fuel"].subgroup = "petrochem-fuel"
-    data.raw["item"]["enriched-fuel"].order = "a[solid-fuel]-b"
+    move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
     OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
 
     OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
