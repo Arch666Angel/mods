@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: ???
+  Changes:
+    - Moved bobplates overrides in separate file
+    - Added bobs electrolysis to angels electrolysers #56
+    - Added option to disable bobs electrolysers #56
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
     - Added missing (water) void recipe for Sodium Hydroxide Solution

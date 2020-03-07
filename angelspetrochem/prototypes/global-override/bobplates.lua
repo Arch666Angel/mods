@@ -233,11 +233,18 @@ if bobmods then
     table.insert(data.raw["assembling-machine"]["angels-electrolyser-4"].crafting_categories, "electrolysis")
 
     -- add angels electrolysis to bobs
-    table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
-    if bobmods and bobmods.assembly and data.raw["assembling-machine"]["electrolyser-2"] then
-      table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
-      table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
-      table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
+    if angelsmods.trigger.disable_bobs_electrolysers then
+      OV.disable_recipe("electrolyser")
+      OV.disable_recipe("electrolyser-2")
+      OV.disable_recipe("electrolyser-3")
+      OV.disable_recipe("electrolyser-4")
+    else
+      table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
+      if bobmods.assembly and data.raw["assembling-machine"]["electrolyser-2"] then
+        table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
+        table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
+        table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
+      end
     end
 
     move_item("heavy-water", "water-treatment-fluid", "eb")
