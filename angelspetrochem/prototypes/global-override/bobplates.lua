@@ -247,6 +247,13 @@ if bobmods then
       end
     end
 
+    if angelsmods.trigger.disable_bobs_chemical_plants then
+      OV.disable_recipe("chemical-plant")
+      OV.disable_recipe("chemical-plant-2")
+      OV.disable_recipe("chemical-plant-3")
+      OV.disable_recipe("chemical-plant-4")
+    end
+
     move_item("heavy-water", "water-treatment-fluid", "eb")
     move_item("deuterium", "petrochem-basic-fluids", "i")
     move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
