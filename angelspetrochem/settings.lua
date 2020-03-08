@@ -33,7 +33,7 @@ data:extend(
       name = "angels-disable-bobs-chemical-plants",
       setting_type = "startup",
       default_value = true,
-      order = "d"
+      order = "e"
     }
   }
 )
