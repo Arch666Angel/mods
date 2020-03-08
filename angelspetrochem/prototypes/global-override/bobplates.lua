@@ -118,6 +118,9 @@ if bobmods then
     OV.global_replace_item("hydrogen-sulfide", "gas-hydrogen-sulfide")
     data.raw.fluid["hydrogen-sulfide"].hidden = true
 
+    OV.global_replace_item("lithium-chloride", "solid-lithium")
+    -- data.raw.fluid["lithium-chloride"].hidden = true
+
     OV.global_replace_item({"solid-resin"}, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
     move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
