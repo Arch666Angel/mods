@@ -6,10 +6,11 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-1",
-    energy_required = 3,
+    energy_required = 1,
     category = "crafting",
     enabled = "true",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "copper-cable", amount = 1},
     },
     result = "cable-shielding-1",
@@ -18,10 +19,11 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-2",
-    energy_required = 3,
+    energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-tin", amount = 1},
     },
     result = "cable-shielding-2",
@@ -30,10 +32,11 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-3",
-    energy_required = 3,
+    energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-silver", amount = 1},
     },
     result = "cable-shielding-3",
@@ -42,10 +45,11 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-4",
-    energy_required = 3,
+    energy_required = 1,
     category = "crafting-with-fluid",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-gold", amount = 1},
     },
     result = "cable-shielding-4",
@@ -54,10 +58,11 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-5",
-    energy_required = 3,
+    energy_required = 1,
     category = "crafting-with-fluid",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-platinum", amount = 1},
     },
     result = "cable-shielding-5",
@@ -72,7 +77,8 @@ data:extend(
     energy_required = 3,
     category = "crafting",
     enabled = "true",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "copper-cable", amount = 1},
       {type = "item", name = "cable-shielding-1", amount = 1},
       {type = "item", name = "cellulose-fiber", amount = 1},
@@ -86,7 +92,8 @@ data:extend(
     energy_required = 3,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-tin", amount = 1},
       {type = "item", name = "cable-shielding-2", amount = 1},
       {type = "item", name = "cellulose-fiber", amount = 1},
@@ -100,10 +107,11 @@ data:extend(
     energy_required = 3,
     category = "advanced-crafting",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-silver", amount = 1},
       {type = "item", name = "cable-shielding-3", amount = 1},
-      {type = "item", name = "solid-rubber", amount = 1},
+      {type = "fluid", name = "liquid-rubber", amount = 1},
     },
     result = "cable-harness-3",
     icon_size = 32,
@@ -114,7 +122,8 @@ data:extend(
     energy_required = 3,
     category = "crafting-with-fluid",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-gold", amount = 1},
       {type = "item", name = "cable-shielding-4", amount = 1},
       {type = "fluid", name = "liquid-plastic", amount = 1},
@@ -128,7 +137,8 @@ data:extend(
     energy_required = 3,
     category = "crafting-with-fluid",
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type = "item", name = "angels-wire-platinum", amount = 1},
       {type = "item", name = "cable-shielding-5", amount = 1},
       {type = "fluid", name = "liquid-plastic", amount = 1},
@@ -147,12 +157,13 @@ data:extend(
     enabled = "true",
     category = "crafting",
     energy_required = 5,
-    ingredients ={
-      {type="item", name = "cable-harness-1", amount = 5},
+    ingredients =
+    {
+      {type="item", name = "cable-harness-1", amount = 3},
     },
     results=
     {
-      {type="item", name="angels-cabling", amount=1},
+      {type="item", name="angels-cabling", amount = 2},
     },
     icons = {
       {
@@ -174,12 +185,13 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
-      {type="item", name = "cable-harness-2", amount = 5},
+    ingredients =
+    {
+      {type="item", name = "cable-harness-2", amount = 3},
     },
     results=
     {
-      {type="item", name="angels-cabling", amount=2},
+      {type="item", name="angels-cabling", amount = 3},
     },
     icons = {
       {
@@ -201,12 +213,13 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
-      {type="item", name = "cable-harness-3", amount = 5},
+    ingredients =
+    {
+      {type="item", name = "cable-harness-3", amount = 3},
     },
     results=
     {
-      {type="item", name="angels-cabling", amount=3},
+      {type="item", name="angels-cabling", amount = 4},
     },
     icons = {
       {
@@ -228,12 +241,13 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
-      {type="item", name = "cable-harness-4", amount = 5},
+    ingredients =
+    {
+      {type="item", name = "cable-harness-4", amount = 3},
     },
     results=
     {
-      {type="item", name="angels-cabling", amount=4},
+      {type="item", name="angels-cabling", amount = 5},
     },
     icons = {
       {
@@ -255,12 +269,13 @@ data:extend(
     enabled = "false",
     category = "advanced-crafting",
     energy_required = 5,
-    ingredients ={
-      {type="item", name = "cable-harness-5", amount = 5},
+    ingredients =
+    {
+      {type="item", name = "cable-harness-5", amount = 3},
     },
     results=
     {
-      {type="item", name="angels-cabling", amount=5},
+      {type="item", name="angels-cabling", amount = 6},
     },
     icons = {
       {
@@ -272,6 +287,84 @@ data:extend(
         shift = { -10, -10},
       },
     },
+    icon_size = 32,
+  },
+  -----------------------------------------------------------------------------
+  -- SERVO MOTORS -------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  {
+    type = "recipe",
+    name = "angels-servo-motor-1",
+    energy_required = 3,
+    category = "crafting",
+    enabled = "true",
+    ingredients =
+    {
+      {type = "item", name = "cable-harness-1", amount = 1},
+      {type = "item", name = "cable-shielding-1", amount = 1},
+      {type = "item", name = "angels-cabling", amount = 1},
+    },
+    result = "angels-servo-motor-1",
+    icon_size = 32,
+  },
+  {
+    type = "recipe",
+    name = "angels-servo-motor-2",
+    energy_required = 3,
+    category = "advanced-crafting",
+    enabled = "false",
+    ingredients =
+    {
+      {type = "item", name = "cable-harness-2", amount = 1},
+      {type = "item", name = "cable-shielding-2", amount = 1},
+      {type = "item", name = "angels-cabling", amount = 1},
+    },
+    result = "angels-servo-motor-2",
+    icon_size = 32,
+  },
+  {
+    type = "recipe",
+    name = "angels-servo-motor-3",
+    energy_required = 3,
+    category = "advanced-crafting",
+    enabled = "false",
+    ingredients =
+    {
+      {type = "item", name = "cable-harness-3", amount = 1},
+      {type = "item", name = "angels-cabling", amount = 1},
+      {type = "item", name = "cable-shielding-3", amount = 1},
+    },
+    result = "angels-servo-motor-3",
+    icon_size = 32,
+  },
+  {
+    type = "recipe",
+    name = "angels-servo-motor-4",
+    energy_required = 3,
+    category = "crafting-with-fluid",
+    enabled = "false",
+    ingredients =
+    {
+      {type = "item", name = "cable-harness-4", amount = 1},
+      {type = "item", name = "angels-cabling", amount = 1},
+      {type = "item", name = "cable-shielding-4", amount = 1},
+    },
+    result = "angels-servo-motor-4",
+    icon_size = 32,
+  },
+  {
+    type = "recipe",
+    name = "angels-servo-motor-5",
+    energy_required = 3,
+    category = "crafting-with-fluid",
+    enabled = "false",
+    ingredients =
+    {
+      {type = "item", name = "cable-harness-5", amount = 1},
+      {type = "item", name = "angels-cabling", amount = 1},
+      {type = "item", name = "cable-shielding-5", amount = 1},
+    },
+    result = "angels-servo-motor-5",
     icon_size = 32,
   },
 }

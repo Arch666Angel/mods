@@ -96,6 +96,8 @@ pack_replace("water-treatment-3","green","orange")
 pack_replace("ore-leaching","blue","orange")
 pack_replace("geode-processing-2","green","orange")
 pack_replace("advanced-ore-refining-2","green","orange")
+--SMELTING
+pack_replace("angels-stone-smelting-3","blue","orange")
 --BIOPROCESSING
 pack_replace("bio-wood-processing-3","green","orange")
 --PETROCHEM

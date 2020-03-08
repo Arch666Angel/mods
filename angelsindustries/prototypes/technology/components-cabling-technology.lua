@@ -28,6 +28,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "cabling-cable-harness-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-servo-motor-2"
+      },
     },
     unit =
     {
@@ -63,6 +67,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "cabling-cable-harness-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-servo-motor-3"
       },
     },
     unit =
@@ -101,6 +109,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "cabling-cable-harness-4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-servo-motor-4"
+      },
     },
     unit =
     {
@@ -138,6 +150,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "cabling-cable-harness-5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-servo-motor-5"
       },
     },
     unit =

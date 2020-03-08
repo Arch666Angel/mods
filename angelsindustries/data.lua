@@ -47,10 +47,10 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.items.components-cabling")
 
   --ENTITIES
-  require("prototypes.buildings.angels-assemblers")
+  --require("prototypes.buildings.angels-assemblers")
 
   --RECIPES
-  require("prototypes.recipes.components-entity")
+  --require("prototypes.recipes.components-entity")
   require("prototypes.recipes.components-electronics-recipes")
   require("prototypes.recipes.components-mechanical-recipes")
   require("prototypes.recipes.components-construction-recipes")

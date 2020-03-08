@@ -109,6 +109,7 @@ data:extend(
     {
       "tech-blue-packs",
       "tech-specialised-labs-basic-exploration-3",
+      "angels-stone-smelting-3",
     },
     effects =
     {

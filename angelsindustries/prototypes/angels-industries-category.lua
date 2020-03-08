@@ -162,6 +162,12 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "angels-servo-motor",
+    group = "angels-components",
+    order = "g[cables]-c[servo-motor]",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-tool",
     group = "angels-components",
     order = "h[tools]",

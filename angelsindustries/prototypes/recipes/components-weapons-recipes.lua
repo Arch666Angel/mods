@@ -249,10 +249,10 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type = "item", name = "angels-trigger", amount = 5},
+      {type = "item", name = "angels-trigger", amount = 4},
     },
     results = {
-      {type = "item", name = "weapon-parts", amount = 1},
+      {type = "item", name = "weapon-parts", amount = 2},
     },
     icons = {
       {
@@ -276,10 +276,10 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type = "item", name = "angels-explosionchamber", amount = 5},
+      {type = "item", name = "angels-explosionchamber", amount = 4},
     },
     results = {
-      {type = "item", name = "weapon-parts", amount = 2},
+      {type = "item", name = "weapon-parts", amount = 3},
     },
     icons = {
       {
@@ -303,10 +303,10 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type = "item", name = "angels-fluidchamber", amount = 5},
+      {type = "item", name = "angels-fluidchamber", amount = 4},
     },
     results = {
-      {type = "item", name = "weapon-parts", amount = 3},
+      {type = "item", name = "weapon-parts", amount = 4},
     },
     icons = {
       {
@@ -330,10 +330,10 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type = "item", name = "angels-energycrystal", amount = 5},
+      {type = "item", name = "angels-energycrystal", amount = 4},
     },
     results = {
-      {type = "item", name = "weapon-parts", amount = 4},
+      {type = "item", name = "weapon-parts", amount = 5},
     },
     icons = {
       {
@@ -357,10 +357,10 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type = "item", name = "angels-acceleratorcoil", amount = 5},
+      {type = "item", name = "angels-acceleratorcoil", amount = 4},
     },
     results = {
-      {type = "item", name = "weapon-parts", amount = 5},
+      {type = "item", name = "weapon-parts", amount = 6},
     },
     icons = {
       {

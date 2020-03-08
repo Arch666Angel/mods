@@ -28,6 +28,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-construction-1", amount = 1},
       {type="item", name = "construction-frame-2", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
     },
@@ -45,6 +46,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
     },
@@ -62,6 +64,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "construction-frame-4", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
     },
@@ -79,6 +82,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "construction-frame-5", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
@@ -116,6 +120,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-electronics-0", amount = 1},
       {type="item", name = "construction-frame-1", amount = 1},
       {type="item", name = "circuit-red-loaded", amount = 3},
       {type="item", name = "cable-harness-1", amount = 1},
@@ -134,6 +139,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-electronics-1", amount = 1},
       {type="item", name = "construction-frame-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "cable-harness-2", amount = 1},
@@ -152,6 +158,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-electronics-2", amount = 1},
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "cable-harness-3", amount = 1},
@@ -170,6 +177,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-electronics-3", amount = 1},
       {type="item", name = "construction-frame-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "cable-harness-4", amount = 1},
@@ -188,6 +196,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-electronics-4", amount = 1},
       {type="item", name = "construction-frame-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "cable-harness-5", amount = 1},
@@ -226,6 +235,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-fluidbox-1", amount = 1},
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "pipe", amount = 2},
     },
@@ -263,6 +273,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-mechanical-1", amount = 1},
       {type="item", name = "construction-frame-3", amount = 1},
       {type="item", name = "mechanical-parts", amount = 2},
     },
@@ -283,8 +294,9 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-1", amount = 1},
-      {type="item", name = "circuit-red-loaded", amount = 3},
+      {type="item", name = "block-electronics-1", amount = 1},
+      {type="item", name = "angels-servo-motor-1", amount = 1},
+      {type="item", name = "electronic-parts", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
     },
     results=
@@ -301,8 +313,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-2", amount = 1},
-      {type="item", name = "circuit-green-loaded", amount = 3},
+      {type="item", name = "block-enhancement-1", amount = 1},
+      {type="item", name = "block-electronics-2", amount = 1},
+      {type="item", name = "angels-servo-motor-2", amount = 1},
+      {type="item", name = "electronic-parts", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
     },
     results=
@@ -319,8 +333,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-3", amount = 1},
-      {type="item", name = "circuit-orange-loaded", amount = 3},
+      {type="item", name = "block-enhancement-2", amount = 1},
+      {type="item", name = "block-electronics-3", amount = 1},
+      {type="item", name = "angels-servo-motor-3", amount = 1},
+      {type="item", name = "electronic-parts", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
     },
     results=
@@ -337,8 +353,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-4", amount = 1},
-      {type="item", name = "circuit-blue-loaded", amount = 3},
+      {type="item", name = "block-enhancement-3", amount = 1},
+      {type="item", name = "block-electronics-4", amount = 1},
+      {type="item", name = "angels-servo-motor-4", amount = 1},
+      {type="item", name = "electronic-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
     results=
@@ -355,8 +373,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-5", amount = 1},
-      {type="item", name = "circuit-yellow-loaded", amount = 3},
+      {type="item", name = "block-enhancement-4", amount = 1},
+      {type="item", name = "block-electronics-5", amount = 1},
+      {type="item", name = "angels-servo-motor-5", amount = 1},
+      {type="item", name = "electronic-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
     results=
@@ -376,9 +396,9 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-1", amount = 1},
-      {type="item", name = "circuit-red-loaded", amount = 3},
+      {type="item", name = "block-electronics-1", amount = 1},
       {type="item", name = "cable-harness-1", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
     },
     results=
@@ -395,9 +415,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-2", amount = 1},
-      {type="item", name = "circuit-green-loaded", amount = 3},
+      {type="item", name = "block-energy-1", amount = 1},
+      {type="item", name = "block-electronics-2", amount = 1},
       {type="item", name = "cable-harness-2", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
     },
     results=
@@ -414,9 +435,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-3", amount = 1},
-      {type="item", name = "circuit-orange-loaded", amount = 3},
+      {type="item", name = "block-energy-2", amount = 1},
+      {type="item", name = "block-electronics-3", amount = 1},
       {type="item", name = "cable-harness-3", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
     },
     results=
@@ -433,9 +455,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-4", amount = 1},
-      {type="item", name = "circuit-blue-loaded", amount = 3},
+      {type="item", name = "block-energy-3", amount = 1},
+      {type="item", name = "block-electronics-4", amount = 1},
       {type="item", name = "cable-harness-4", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
     results=
@@ -452,9 +475,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-5", amount = 1},
-      {type="item", name = "circuit-yellow-loaded", amount = 3},
+      {type="item", name = "block-energy-4", amount = 1},
+      {type="item", name = "block-electronics-5", amount = 1},
       {type="item", name = "cable-harness-5", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
     results=
@@ -492,6 +516,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-exploration-1", amount = 1},
       {type="item", name = "block-construction-2", amount = 1},
       {type="item", name = "circuit-green-loaded", amount = 3},
       {type="item", name = "clay-brick", amount = 3},
@@ -510,6 +535,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-exploration-2", amount = 1},
       {type="item", name = "block-construction-3", amount = 1},
       {type="item", name = "circuit-orange-loaded", amount = 3},
       {type="item", name = "concrete-brick", amount = 3},
@@ -528,6 +554,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-exploration-3", amount = 1},
       {type="item", name = "block-construction-4", amount = 1},
       {type="item", name = "circuit-blue-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -546,6 +573,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
+      {type="item", name = "block-exploration-4", amount = 1},
       {type="item", name = "block-construction-5", amount = 1},
       {type="item", name = "circuit-yellow-loaded", amount = 3},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
@@ -567,11 +595,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-1", amount = 1},
-      {type="item", name = "circuit-red-loaded", amount = 3},
-      {type="item", name = "construction-frame-1", amount = 1},
+      {type="item", name = "block-electronics-1", amount = 1},
+      {type="item", name = "angels-servo-motor-1", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -587,11 +614,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-2", amount = 1},
-      {type="item", name = "circuit-green-loaded", amount = 3},
-      {type="item", name = "construction-frame-2", amount = 1},
+      {type="item", name = "block-logistic-1", amount = 1},
+      {type="item", name = "block-electronics-2", amount = 1},
+      {type="item", name = "angels-servo-motor-2", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -607,11 +634,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-3", amount = 1},
-      {type="item", name = "circuit-orange-loaded", amount = 3},
-      {type="item", name = "construction-frame-3", amount = 1},
+      {type="item", name = "block-logistic-2", amount = 1},
+      {type="item", name = "block-electronics-3", amount = 1},
+      {type="item", name = "angels-servo-motor-3", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -627,11 +654,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-4", amount = 1},
-      {type="item", name = "circuit-blue-loaded", amount = 3},
-      {type="item", name = "construction-frame-4", amount = 1},
+      {type="item", name = "block-logistic-3", amount = 1},
+      {type="item", name = "block-electronics-4", amount = 1},
+      {type="item", name = "angels-servo-motor-4", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -647,11 +674,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-5", amount = 1},
-      {type="item", name = "circuit-yellow-loaded", amount = 3},
-      {type="item", name = "construction-frame-5", amount = 1},
+      {type="item", name = "block-logistic-4", amount = 1},
+      {type="item", name = "block-electronics-5", amount = 1},
+      {type="item", name = "angels-servo-motor-5", amount = 1},
+      {type="item", name = "angels-cabling", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -670,11 +697,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-1", amount = 1},
-      {type="item", name = "circuit-red-loaded", amount = 3},
+      {type="item", name = "block-electronics-1", amount = 1},
       {type="item", name = "motor-1", amount = 1},
+      {type="item", name = "mechanical-parts", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -690,11 +716,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-2", amount = 1},
-      {type="item", name = "circuit-green-loaded", amount = 3},
+      {type="item", name = "block-production-1", amount = 1},
+      {type="item", name = "block-electronics-2", amount = 1},
       {type="item", name = "motor-2", amount = 1},
+      {type="item", name = "mechanical-parts", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -710,11 +736,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-3", amount = 1},
-      {type="item", name = "circuit-orange-loaded", amount = 3},
+      {type="item", name = "block-production-2", amount = 1},
+      {type="item", name = "block-electronics-3", amount = 1},
       {type="item", name = "motor-3", amount = 1},
+      {type="item", name = "mechanical-parts", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -730,11 +756,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-4", amount = 1},
-      {type="item", name = "circuit-blue-loaded", amount = 3},
+      {type="item", name = "block-production-3", amount = 1},
+      {type="item", name = "block-electronics-4", amount = 1},
       {type="item", name = "motor-4", amount = 1},
+      {type="item", name = "mechanical-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -750,11 +776,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-5", amount = 1},
-      {type="item", name = "circuit-yellow-loaded", amount = 3},
+      {type="item", name = "block-production-4", amount = 1},
+      {type="item", name = "block-electronics-5", amount = 1},
       {type="item", name = "motor-5", amount = 1},
+      {type="item", name = "mechanical-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -1022,11 +1048,10 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-1", amount = 1},
-      {type="item", name = "circuit-red-loaded", amount = 3},
+      {type="item", name = "block-electronics-1", amount = 1},
       {type="item", name = "weapon-1", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -1042,11 +1067,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-2", amount = 1},
-      {type="item", name = "circuit-green-loaded", amount = 3},
+      {type="item", name = "block-warfare-1", amount = 1},
+      {type="item", name = "block-electronics-2", amount = 1},
       {type="item", name = "weapon-2", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -1062,11 +1087,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-3", amount = 1},
-      {type="item", name = "circuit-orange-loaded", amount = 3},
+      {type="item", name = "block-warfare-2", amount = 1},
+      {type="item", name = "block-electronics-3", amount = 1},
       {type="item", name = "weapon-3", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -1082,11 +1107,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-4", amount = 1},
-      {type="item", name = "circuit-blue-loaded", amount = 3},
+      {type="item", name = "block-warfare-3", amount = 1},
+      {type="item", name = "block-electronics-4", amount = 1},
       {type="item", name = "weapon-4", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {
@@ -1102,11 +1127,11 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-5", amount = 1},
-      {type="item", name = "circuit-yellow-loaded", amount = 3},
+      {type="item", name = "block-warfare-4", amount = 1},
+      {type="item", name = "block-electronics-5", amount = 1},
       {type="item", name = "weapon-5", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
-      {type="item", name = "pipe", amount = 2},
     },
     results=
     {

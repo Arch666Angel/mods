@@ -153,7 +153,17 @@ data:extend(
   {
     type = "item",
     name = "block-enhancement-1",
-    icon = "__angelsindustries__/graphics/icons/block-enhancement-1.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-enhancement-1.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-enhancement",
     order = "a",
@@ -162,7 +172,17 @@ data:extend(
   {
     type = "item",
     name = "block-enhancement-2",
-    icon = "__angelsindustries__/graphics/icons/block-enhancement-2.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-enhancement-2.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-enhancement",
     order = "b",
@@ -171,7 +191,17 @@ data:extend(
   {
     type = "item",
     name = "block-enhancement-3",
-    icon = "__angelsindustries__/graphics/icons/block-enhancement-3.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-enhancement-3.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-enhancement",
     order = "c",
@@ -180,7 +210,17 @@ data:extend(
   {
     type = "item",
     name = "block-enhancement-4",
-    icon = "__angelsindustries__/graphics/icons/block-enhancement-4.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-enhancement-4.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-enhancement",
     order = "d",
@@ -189,7 +229,17 @@ data:extend(
   {
     type = "item",
     name = "block-enhancement-5",
-    icon = "__angelsindustries__/graphics/icons/block-enhancement-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-enhancement-5.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-enhancement",
     order = "e",
@@ -201,7 +251,17 @@ data:extend(
   {
     type = "item",
     name = "block-energy-1",
-    icon = "__angelsindustries__/graphics/icons/block-energy-1.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-energy-1.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-energy",
     order = "a",
@@ -210,7 +270,17 @@ data:extend(
   {
     type = "item",
     name = "block-energy-2",
-    icon = "__angelsindustries__/graphics/icons/block-energy-2.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-energy-2.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-energy",
     order = "b",
@@ -219,7 +289,17 @@ data:extend(
   {
     type = "item",
     name = "block-energy-3",
-    icon = "__angelsindustries__/graphics/icons/block-energy-3.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-energy-3.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-energy",
     order = "c",
@@ -228,7 +308,17 @@ data:extend(
   {
     type = "item",
     name = "block-energy-4",
-    icon = "__angelsindustries__/graphics/icons/block-energy-4.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-energy-4.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-energy",
     order = "d",
@@ -237,7 +327,17 @@ data:extend(
   {
     type = "item",
     name = "block-energy-5",
-    icon = "__angelsindustries__/graphics/icons/block-energy-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-energy-5.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-energy",
     order = "e",
@@ -297,7 +397,17 @@ data:extend(
   {
     type = "item",
     name = "block-logistic-1",
-    icon = "__angelsindustries__/graphics/icons/block-logistic-1.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-logistic-1.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-logistic",
     order = "a",
@@ -306,7 +416,17 @@ data:extend(
   {
     type = "item",
     name = "block-logistic-2",
-    icon = "__angelsindustries__/graphics/icons/block-logistic-2.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-logistic-2.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-logistic",
     order = "b",
@@ -315,7 +435,17 @@ data:extend(
   {
     type = "item",
     name = "block-logistic-3",
-    icon = "__angelsindustries__/graphics/icons/block-logistic-3.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-logistic-3.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-logistic",
     order = "c",
@@ -324,7 +454,17 @@ data:extend(
   {
     type = "item",
     name = "block-logistic-4",
-    icon = "__angelsindustries__/graphics/icons/block-logistic-4.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-logistic-4.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-logistic",
     order = "d",
@@ -333,7 +473,17 @@ data:extend(
   {
     type = "item",
     name = "block-logistic-5",
-    icon = "__angelsindustries__/graphics/icons/block-logistic-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-logistic-5.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-logistic",
     order = "e",
@@ -345,7 +495,17 @@ data:extend(
   {
     type = "item",
     name = "block-production-1",
-    icon = "__angelsindustries__/graphics/icons/block-production-1.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-production-1.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-production",
     order = "a",
@@ -354,7 +514,17 @@ data:extend(
   {
     type = "item",
     name = "block-production-2",
-    icon = "__angelsindustries__/graphics/icons/block-production-2.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-production-2.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-production",
     order = "b",
@@ -363,7 +533,17 @@ data:extend(
   {
     type = "item",
     name = "block-production-3",
-    icon = "__angelsindustries__/graphics/icons/block-production-3.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-production-3.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-production",
     order = "c",
@@ -372,7 +552,17 @@ data:extend(
   {
     type = "item",
     name = "block-production-4",
-    icon = "__angelsindustries__/graphics/icons/block-production-4.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-production-4.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-production",
     order = "d",
@@ -381,7 +571,17 @@ data:extend(
   {
     type = "item",
     name = "block-production-5",
-    icon = "__angelsindustries__/graphics/icons/block-production-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-production-5.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-production",
     order = "e",
@@ -513,7 +713,17 @@ data:extend(
   {
     type = "item",
     name = "block-warfare-1",
-    icon = "__angelsindustries__/graphics/icons/block-warfare-1.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-warfare-1.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-warfare",
     order = "a",
@@ -522,7 +732,17 @@ data:extend(
   {
     type = "item",
     name = "block-warfare-2",
-    icon = "__angelsindustries__/graphics/icons/block-warfare-2.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-warfare-2.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-warfare",
     order = "b",
@@ -531,7 +751,17 @@ data:extend(
   {
     type = "item",
     name = "block-warfare-3",
-    icon = "__angelsindustries__/graphics/icons/block-warfare-3.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-warfare-3.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-warfare",
     order = "c",
@@ -540,7 +770,17 @@ data:extend(
   {
     type = "item",
     name = "block-warfare-4",
-    icon = "__angelsindustries__/graphics/icons/block-warfare-4.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-warfare-4.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-warfare",
     order = "d",
@@ -549,7 +789,17 @@ data:extend(
   {
     type = "item",
     name = "block-warfare-5",
-    icon = "__angelsindustries__/graphics/icons/block-warfare-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-warfare-5.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-warfare",
     order = "e",
