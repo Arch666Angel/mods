@@ -16,9 +16,12 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/seafloor-pump-ico.png",
       icon_size = 32,
       flags = {"placeable-neutral", "player-creation", "filter-directions"},
-      collision_mask = {"ground-tile", "object-layer"},
+      collision_mask = {"object-layer", "train-layer"}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+      center_collision_mask = {"water-tile", "object-layer", "player-layer"}, -- to test that tile directly under the pump is ground
       fluid_box_tile_collision_test = {"ground-tile"},
       adjacent_tile_collision_test = {"water-tile"},
+      adjacent_tile_collision_mask = {"ground-tile"}, -- to prevent building on edge of map :(
+      adjacent_tile_collision_box = {{-2, -3}, {2, -2}},
       minable = {mining_time = 1, result = "seafloor-pump"},
       max_health = 80,
       corpse = "small-remnants",
@@ -46,6 +49,7 @@ data:extend(
       },
       pumping_speed = 5,
       tile_width = 3,
+      tile_height = 3,
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       picture = {
         north = {

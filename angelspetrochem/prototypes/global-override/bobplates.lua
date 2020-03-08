@@ -38,6 +38,8 @@ if bobmods then
       move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-b[all-corners]")
       move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-a[regular]")
       move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-b[all-corners]")
+      move_item("storage-tank-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-a[regular]")
+      move_item("bob-storage-tank-all-corners-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-b[all-corners]")
 
       OV.patch_recipes(
         {
