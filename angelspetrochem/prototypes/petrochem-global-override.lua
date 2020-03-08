@@ -98,6 +98,10 @@ OV.disable_recipe({"plastic-bar"})
 OV.global_replace_technology("oil-processing", "angels-oil-processing")
 OV.global_replace_technology("advanced-oil-processing", "angels-advanced-oil-processing")
 
+-- Disable coal-liquefaction, enough other recipes that works for this
+OV.disable_technology({"coal-liquefaction"})
+OV.disable_recipe({"coal-liquefaction"})
+
 --sulfur processing
 OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
 
@@ -174,12 +178,10 @@ if bobmods then
 
   if bobmods.warfare then
     if data.raw.fluid["sulfuric-nitric-acid"] then
-      data.raw["fluid"]["sulfuric-nitric-acid"].subgroup = "petrochem-nitrogen-fluids"
-      data.raw["fluid"]["sulfuric-nitric-acid"].order = "oa"
+      angelsmods.functions.move_item("sulfuric-nitric-acid", "petrochem-nitrogen-fluids", "oa", "fluid")
       OV.patch_recipes({{name = "sulfuric-nitric-acid", subgroup = "petrochem-rocket", order = "ia"}})
     end
-    data.raw["fluid"]["nitroglycerin"].subgroup = "petrochem-nitrogen-fluids"
-    data.raw["fluid"]["nitroglycerin"].order = "ob"
+    angelsmods.functions.move_item("nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
     OV.patch_recipes({{name = "nitroglycerin", subgroup = "petrochem-rocket", order = "ib"}})
     OV.global_replace_item("glycerol", "gas-glycerol")
     data.raw.fluid["glycerol"].hidden = true
@@ -220,8 +222,7 @@ if bobmods then
     OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
   end
   if data.raw["fluid"]["sour-gas"] then --BOBS REVAMP
-    OV.disable_technology({"coal-liquefaction"})
-    OV.disable_recipe({"coal-liquefaction", "petroleum-gas-sweetening"})
+    OV.disable_recipe("petroleum-gas-sweetening")
     data.raw.fluid["sour-gas"].hidden = true
   end
 end
