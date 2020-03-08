@@ -7,12 +7,34 @@ data.raw["item"]["sulfur"].icon_mipmaps = 1
 OV.global_replace_item("heavy-oil", "liquid-naphtha")
 OV.global_replace_item("light-oil", "liquid-fuel-oil")
 OV.disable_recipe("lubricant")
+OV.add_unlock("lubricant", "mineral-oil-lubricant")
 OV.global_replace_item("petroleum-gas", "gas-methane")
 OV.global_replace_item("sulfuric-acid", "liquid-sulfuric-acid")
 OV.global_replace_icon(
   {"__base__/graphics/icons/fluid/sulfuric-acid.png"},
   {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
 )
+
+-- Balance/fix rocket fuel
+OV.add_prereq("rocket-fuel", "angels-nitrogen-processing-4")
+OV.add_unlock("rocket-fuel", "rocket-oxidizer-capsule")
+OV.add_unlock("rocket-fuel", "rocket-fuel-capsule")
+OV.set_science_pack(
+  "rocket-fuel",
+  {
+    "automation-science-pack",
+    "logistic-science-pack",
+    "chemical-science-pack",
+    "utility-science-pack"
+  },
+  1
+)
+OV.set_research_difficulty("rocket-fuel", 15, 50)
+
+-- Update kovarex for nuclear fuel separation
+OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
+OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
+
 --hide vanilla fluids if converter recipes setting not active
 if not angelsmods.trigger.enableconverter then
   data.raw["fluid"]["heavy-oil"].hidden = true
@@ -202,10 +224,6 @@ if bobmods then
     OV.disable_recipe({"coal-liquefaction", "petroleum-gas-sweetening"})
     data.raw.fluid["sour-gas"].hidden = true
   end
-end
-
-if data.raw["technology"]["solid-fuel"] then
-  OV.disable_technology("solid-fuel")
 end
 
 --URANIUM POWER OVERRIDE

@@ -6,6 +6,9 @@ Date: ???
     - Added bobs electrolysis to angels electrolysers #56
     - Added option to disable bobs electrolysers #56
     - Added option to disable bobs chemical plants #56
+    - Merged the rocket-fuel recipes #66
+    - Removed seperate solid fuel check completely #66
+    - Added nuclear fuel tech since requirements for rocket fuel is different #66
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
     - Added missing (water) void recipe for Sodium Hydroxide Solution
