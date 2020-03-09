@@ -349,7 +349,17 @@ data:extend(
   {
     type = "item",
     name = "block-exploration-1",
-    icon = "__angelsindustries__/graphics/icons/block-exploration-1.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-exploration-1.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-exploration",
     order = "a",
@@ -358,7 +368,17 @@ data:extend(
   {
     type = "item",
     name = "block-exploration-2",
-    icon = "__angelsindustries__/graphics/icons/block-exploration-2.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-exploration-2.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-exploration",
     order = "b",
@@ -367,7 +387,17 @@ data:extend(
   {
     type = "item",
     name = "block-exploration-3",
-    icon = "__angelsindustries__/graphics/icons/block-exploration-3.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-exploration-3.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-exploration",
     order = "c",
@@ -376,7 +406,17 @@ data:extend(
   {
     type = "item",
     name = "block-exploration-4",
-    icon = "__angelsindustries__/graphics/icons/block-exploration-4.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-exploration-4.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-exploration",
     order = "d",
@@ -385,7 +425,17 @@ data:extend(
   {
     type = "item",
     name = "block-exploration-5",
-    icon = "__angelsindustries__/graphics/icons/block-exploration-5.png",
+    icons = {
+      {
+        icon = "__angelsindustries__/graphics/icons/block-exploration-5.png",
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
+        tint = angelsmods.industries.number_tint,
+        scale = 0.32,
+        shift = {-12, -12},
+      }
+    },
     icon_size = 32,
     subgroup = "blocks-exploration",
     order = "e",

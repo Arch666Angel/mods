@@ -5,7 +5,7 @@ end
 if not angelsmods.industries then
   angelsmods.industries = {}
 end
-angelsmods.industries.number_tint = {r = 1, g = 0.4, b = 0.7, a = 0.5}
+angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 0}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul

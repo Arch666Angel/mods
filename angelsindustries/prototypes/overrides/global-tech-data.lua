@@ -36,7 +36,7 @@ angelsmods.functions.add_exception("tech-specialised-labs-basic-war-2")
 angelsmods.functions.add_exception("tech-specialised-labs-basic-war-3")
 angelsmods.functions.add_exception("tech-specialised-labs-advanced-war-1")
 angelsmods.functions.add_exception("tech-specialised-labs-advanced-war-2")
-angelsmods.functions.add_exception("tech-specialised-labs-basic-basic")
+angelsmods.functions.add_exception("tech-specialised-labs-basic")
 
 --BIO PROCESSING (not sure these are activated... i may have overridden these anyway)
 angelsmods.functions.add_exception("bio-temperate-farming")

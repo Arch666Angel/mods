@@ -498,8 +498,9 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {type="item", name = "block-construction-1", amount = 1},
-      {type="item", name = "circuit-red-loaded", amount = 3},
+      {type="item", name = "block-electronics-1", amount = 1},
+      {type="item", name = "angels-servo-motor-1", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "stone-brick", amount = 3},
     },
     results=
@@ -517,8 +518,9 @@ data:extend(
     ingredients =
     {
       {type="item", name = "block-exploration-1", amount = 1},
-      {type="item", name = "block-construction-2", amount = 1},
-      {type="item", name = "circuit-green-loaded", amount = 3},
+      {type="item", name = "block-electronics-2", amount = 1},
+      {type="item", name = "angels-servo-motor-2", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "clay-brick", amount = 3},
     },
     results=
@@ -536,8 +538,9 @@ data:extend(
     ingredients =
     {
       {type="item", name = "block-exploration-2", amount = 1},
-      {type="item", name = "block-construction-3", amount = 1},
-      {type="item", name = "circuit-orange-loaded", amount = 3},
+      {type="item", name = "block-electronics-3", amount = 1},
+      {type="item", name = "angels-servo-motor-3", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "concrete-brick", amount = 3},
     },
     results=
@@ -555,8 +558,9 @@ data:extend(
     ingredients =
     {
       {type="item", name = "block-exploration-3", amount = 1},
-      {type="item", name = "block-construction-4", amount = 1},
-      {type="item", name = "circuit-blue-loaded", amount = 3},
+      {type="item", name = "block-electronics-4", amount = 1},
+      {type="item", name = "angels-servo-motor-4", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
     results=
@@ -574,8 +578,9 @@ data:extend(
     ingredients =
     {
       {type="item", name = "block-exploration-4", amount = 1},
-      {type="item", name = "block-construction-5", amount = 1},
-      {type="item", name = "circuit-yellow-loaded", amount = 3},
+      {type="item", name = "block-electronics-5", amount = 1},
+      {type="item", name = "angels-servo-motor-5", amount = 1},
+      {type="item", name = "weapon-parts", amount = 1},
       {type="item", name = "reinforced-concrete-brick", amount = 3},
     },
     results=

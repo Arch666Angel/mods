@@ -50,6 +50,7 @@ data:extend(
     {
       "tech-green-packs",
       "tech-specialised-labs-basic-exploration-1",
+      "angels-stone-smelting-1"
     },
     effects =
     {
@@ -79,6 +80,7 @@ data:extend(
     {
       "tech-orange-packs",
       "tech-specialised-labs-basic-exploration-2",
+      "angels-stone-smelting-2"
     },
     effects =
     {
@@ -219,6 +221,7 @@ data:extend(
     {
       "tech-green-packs",
       "tech-specialised-labs-basic-energy-1",
+      "angels-stone-smelting-1"
     },
     effects =
     {
@@ -248,6 +251,7 @@ data:extend(
     {
       "tech-orange-packs",
       "tech-specialised-labs-basic-energy-2",
+      "angels-stone-smelting-2"
     },
     effects =
     {
@@ -278,6 +282,7 @@ data:extend(
     {
       "tech-specialised-labs-advanced-exploration-1",
       "tech-specialised-labs-basic-energy-3",
+      "angels-stone-smelting-3"
     },
     effects =
     {
@@ -387,6 +392,7 @@ data:extend(
     {
       "tech-green-packs",
       "tech-specialised-labs-basic-logistic-1",
+      "angels-stone-smelting-1"
     },
     effects =
     {
@@ -416,6 +422,7 @@ data:extend(
     {
       "tech-orange-packs",
       "tech-specialised-labs-basic-logistic-2",
+      "angels-stone-smelting-2"
     },
     effects =
     {
@@ -446,6 +453,7 @@ data:extend(
     {
       "tech-specialised-labs-advanced-exploration-1",
       "tech-specialised-labs-basic-logistic-3",
+      "angels-stone-smelting-3"
     },
     effects =
     {
@@ -555,6 +563,7 @@ data:extend(
     {
       "tech-green-packs",
       "tech-specialised-labs-basic-enhance-1",
+      "angels-stone-smelting-1"
     },
     effects =
     {
@@ -584,6 +593,7 @@ data:extend(
     {
       "tech-orange-packs",
       "tech-specialised-labs-basic-enhance-2",
+      "angels-stone-smelting-2"
     },
     effects =
     {
@@ -614,6 +624,7 @@ data:extend(
     {
       "tech-specialised-labs-advanced-exploration-1",
       "tech-specialised-labs-basic-enhance-3",
+      "angels-stone-smelting-3"
     },
     effects =
     {
@@ -725,6 +736,7 @@ data:extend(
       "tech-green-packs",
       "tech-specialised-labs-basic-processing-1",
       "angels-components-mechanical-2",
+      "angels-stone-smelting-1"
     },
     effects =
     {
@@ -755,6 +767,7 @@ data:extend(
       "tech-orange-packs",
       "tech-specialised-labs-basic-processing-2",
       "angels-components-mechanical-3",
+      "angels-stone-smelting-2"
     },
     effects =
     {
@@ -786,6 +799,7 @@ data:extend(
       "tech-specialised-labs-advanced-exploration-1",
       "tech-specialised-labs-basic-processing-3",
       "angels-components-mechanical-4",
+      "angels-stone-smelting-3"
     },
     effects =
     {
@@ -898,6 +912,7 @@ data:extend(
       "tech-green-packs",
       "tech-specialised-labs-basic-war-1",
       "military",
+      "angels-stone-smelting-1"
     },
     effects =
     {
@@ -928,6 +943,7 @@ data:extend(
       "tech-orange-packs",
       "tech-specialised-labs-basic-war-2",
       "military-2",
+      "angels-stone-smelting-2"
     },
     effects =
     {
@@ -959,6 +975,7 @@ data:extend(
       "tech-specialised-labs-advanced-exploration-1",
       "tech-specialised-labs-basic-war-3",
       "angels-components-weapons-advanced",
+      "angels-stone-smelting-3"
     },
     effects =
     {
