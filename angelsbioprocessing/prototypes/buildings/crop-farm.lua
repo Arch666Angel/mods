@@ -220,7 +220,7 @@ data:extend(
       usage_priority = "secondary-input",
       emissions_per_minute = -0.04 * 60
     },
-    energy_usage = "200kW",
+    energy_usage = "125kW",
     --ingredient_count = 4,
     animation={
         layers={
@@ -312,7 +312,7 @@ data:extend(
       usage_priority = "secondary-input",
       emissions_per_minute = -0.04 * 60
     },
-    energy_usage = "100kW",
+    energy_usage = "125kW",
     --ingredient_count = 4,
     animation={
         layers={

@@ -10,8 +10,13 @@ Date: ??
   Balancing:
     - Balanced (crop) farming to reduce overal power consumption
       - Farms now craft at double the speed (basic at speed 1, upgraded at speed 2)
+      - All upgraded farms now consume the same amount of power
       - Farming now takes less time (all take 30 seconds, was 60 before, except swamp was 45)
       - Bio Processor crafts at speed of 1 (was 0.75)
+      - Seeds of the tier 1 and 2 crops only require 5 (instead of 10) crops to extract seeds from
+    - Balanced nutrient pulp to increase yield
+      - Now requires only 5 (instead of 10) crops
+      - Crafts twice as fast (2 seconds, was 4)
     - Balanced Fish Water to have a higher alien spore yield
       - Fish tank now yields 100 fish water/recipe instead of 20 (increase of x5)
       - Polluted Fish Water yields twice the spores (incease of x2)

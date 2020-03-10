@@ -142,7 +142,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "temperate-1", amount= 10}
+      {type="item", name= "temperate-1", amount= 5}
     },
     results=
     {
@@ -160,7 +160,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "temperate-2", amount= 10}
+      {type="item", name= "temperate-2", amount= 5}
     },
     results=
     {
@@ -376,7 +376,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "desert-1", amount= 10}
+      {type="item", name= "desert-1", amount= 5}
     },
     results=
     {
@@ -394,7 +394,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "desert-2", amount= 10}
+      {type="item", name= "desert-2", amount= 5}
     },
     results=
     {
@@ -610,7 +610,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "swamp-1", amount= 10}
+      {type="item", name= "swamp-1", amount= 5}
     },
     results=
     {
@@ -628,7 +628,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "swamp-2", amount= 10}
+      {type="item", name= "swamp-2", amount= 5}
     },
     results=
     {
