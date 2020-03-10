@@ -6,7 +6,7 @@ OV.remove_output("algae-brown-burning", "angels-void")
 
 --BASE
 data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
-data.raw["capsule"]["raw-fish"].order = "ba"
+data.raw["capsule"]["raw-fish"].order = "aa"
 
 data.raw["item"]["wood"].subgroup = "bio-processing-wood"
 data.raw["item"]["wood"].order = "a[wood]"

@@ -11,7 +11,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/liquid-fish-atmosphere.png",
     icon_size = 32,
     subgroup = "bio-fish",
-    order = "ca",
+    order = "ba",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
@@ -26,7 +26,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/liquid-polluted-fish-atmosphere.png",
     icon_size = 32,
     subgroup = "bio-fish",
-    order = "cb",
+    order = "bb",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
@@ -69,7 +69,7 @@ data:extend(
       }
     },
     subgroup = "bio-fish",
-    order = "bb",
+    order = "ab",
     stack_size = 100
   },
   {
@@ -107,7 +107,7 @@ data:extend(
       }
     },
     subgroup = "bio-fish",
-    order = "bc",
+    order = "ac",
     stack_size = 100
   },
   {
@@ -145,7 +145,7 @@ data:extend(
       }
     },
     subgroup = "bio-fish",
-    order = "bd",
+    order = "ad",
     stack_size = 100
   },
 }

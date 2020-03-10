@@ -70,7 +70,7 @@ data:extend(
         {type = "item", name = "alien-bacteria", amount = 1}
       },
       results = {
-        {type = "fluid", name = "alien-goo", amount = 10}
+        {type = "fluid", name = "alien-goo", amount_min = 5, amount_max = 10}
       },
       main_product = "alien-goo",
       --icon = "__angelsbioprocessing__/graphics/icons/alien-goo.png",
@@ -192,9 +192,37 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "crystal-powder-from-dust",
+      category = "ore-sorting-t1-5",
+      subgroup = "bio-biter-processing-powder",
+      enabled = "false",
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "crystal-dust", amount = 10},
+        {type = "item", name = "milling-drum", amount = 1}
+      },
+      results = {
+        {type = "item", name = "crystal-powder", amount = 25},
+        {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/crystal-dust.png",
+          scale = 0.4375,
+          shift = {-10, -10}
+        }
+      },
+      icon_size = 32,
+      order = "d[slurry]"
+    },
+    {
+      type = "recipe",
       name = "crystal-powder-slurry",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-cutting",
       enabled = "false",
       energy_required = 2,
       ingredients = {
