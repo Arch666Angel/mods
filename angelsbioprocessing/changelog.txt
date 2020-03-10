@@ -7,6 +7,7 @@ Date: ??
       - Basic and Upgraded Farms, Bio Processor, Bio Press and Nutrient Extractor
     - Added Biter Queens as alternative way of creating biter eggs
     - Added converter recipe from crystal dust to crystal powder (less efficient for slurry)
+    - Puffer breeding now returns Acid Gas instead of just consuming the Puffer Atmosphere
   Balancing:
     - Balanced (crop) farming to reduce overal power consumption
       - Farms now craft at double the speed (basic at speed 1, upgraded at speed 2)
@@ -36,6 +37,7 @@ Date: ??
       - Green Algae II inputs lowered from 100 to 80 (+20% productivity)
       - Green Algae II output increased from 40 to 50 (+25% productivity)
   Bugfixes:
+    - Fixed fish, puffers and biters did count (fully) towards production stats for breeding
     - Fixed the working animation on the hatchery and biter refugium
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.3

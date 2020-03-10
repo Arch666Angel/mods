@@ -38,6 +38,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-1", amount = 3},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "fluid", name = "gas-acid", amount = 200}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
@@ -153,7 +154,8 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-1", amount = 2},
+        {type = "item", name = "bio-puffer-1", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
@@ -185,7 +187,8 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-2", amount = 2},
+        {type = "item", name = "bio-puffer-2", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
@@ -217,7 +220,8 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-3", amount = 2},
+        {type = "item", name = "bio-puffer-3", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.7},
@@ -249,7 +253,8 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-4", amount = 2},
+        {type = "item", name = "bio-puffer-4", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
@@ -281,7 +286,8 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-5", amount = 2},
+        {type = "item", name = "bio-puffer-5", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
