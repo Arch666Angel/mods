@@ -2,10 +2,16 @@
 Version: 0.7.4
 Date: ??
   Changes:
-    - Removed ingredient limit on the Fish Tank, Puffer Refugium and Biter Refugium
+    - Removed the (unneeded) ingredient limit on different bio buildings
+      - Fish Tank, Puffer Refugium and Biter Refugium
+      - Basic and Upgraded Farms, Bio Processor, Bio Press and Nutrient Extractor
     - Added Biter Queens as alternative way of creating biter eggs
     - Added converter recipe from crystal dust to crystal powder (less efficient for slurry)
   Balancing:
+    - Balanced (crop) farming to reduce overal power consumption
+      - Farms now craft at double the speed (basic at speed 1, upgraded at speed 2)
+      - Farming now takes less time (all take 30 seconds, was 60 before, except swamp was 45)
+      - Bio Processor crafts at speed of 1 (was 0.75)
     - Balanced Fish Water to have a higher alien spore yield
       - Fish tank now yields 100 fish water/recipe instead of 20 (increase of x5)
       - Polluted Fish Water yields twice the spores (incease of x2)

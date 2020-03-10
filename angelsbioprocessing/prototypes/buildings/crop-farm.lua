@@ -29,7 +29,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"temperate-farming", "desert-farming", "swamp-farming"},
-    crafting_speed = 0.5,
+    crafting_speed = 1,
     energy_source =
     {
       type = "electric",
@@ -37,7 +37,7 @@ data:extend(
       emissions_per_minute = -0.02 * 60
     },
     energy_usage = "100kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation={
         layers={
           {
@@ -121,7 +121,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"temperate-farming"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
       type = "electric",
@@ -129,7 +129,7 @@ data:extend(
       emissions_per_minute = -0.04 * 60
     },
     energy_usage = "125kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation={
         layers={
           {
@@ -213,7 +213,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"desert-farming"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
       type = "electric",
@@ -221,7 +221,7 @@ data:extend(
       emissions_per_minute = -0.04 * 60
     },
     energy_usage = "200kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation={
         layers={
           {
@@ -305,7 +305,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"swamp-farming"},
-    crafting_speed = 1,
+    crafting_speed = 2,
     energy_source =
     {
       type = "electric",
@@ -313,7 +313,7 @@ data:extend(
       emissions_per_minute = -0.04 * 60
     },
     energy_usage = "100kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation={
         layers={
           {
