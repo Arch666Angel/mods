@@ -252,7 +252,7 @@ data:extend(
       subgroup = "bio-fish-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 7.5,
       ingredients = {
         {type = "item", name = "raw-fish", amount = 1}
       },
@@ -270,7 +270,7 @@ data:extend(
       subgroup = "bio-fish-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 7.5,
       ingredients = {
         {type = "item", name = "alien-fish-1-raw", amount = 1}
       },
@@ -288,7 +288,7 @@ data:extend(
       subgroup = "bio-fish-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 7.5,
       ingredients = {
         {type = "item", name = "alien-fish-2-raw", amount = 1}
       },
@@ -306,7 +306,7 @@ data:extend(
       subgroup = "bio-fish-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 7.5,
       ingredients = {
         {type = "item", name = "alien-fish-3-raw", amount = 1}
       },

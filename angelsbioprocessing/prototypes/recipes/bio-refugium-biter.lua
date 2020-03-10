@@ -9,7 +9,7 @@ data:extend(
       enabled = "false",
       energy_required = 1,
       ingredients = {
-        {type = "fluid", name = "alien-goo", amount = 1},
+        {type = "fluid", name = "alien-goo", amount = 2},
         {type = "item", name = "bio-raw-meat", amount = 1},
       },
       results = {
@@ -259,7 +259,7 @@ data:extend(
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-small", amount = 4},
-        {type = "item", name = "bio-alien-processed-meat", amount = 4},
+        {type = "item", name = "bio-alien-processed-meat", amount = 2},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
       },
       results = {
@@ -282,7 +282,7 @@ data:extend(
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-medium", amount = 4},
-        {type = "item", name = "bio-alien-processed-meat", amount = 6},
+        {type = "item", name = "bio-alien-processed-meat", amount = 3},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40}
       },
       results = {
@@ -305,7 +305,7 @@ data:extend(
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-big", amount = 4},
-        {type = "item", name = "bio-alien-processed-meat", amount = 8},
+        {type = "item", name = "bio-alien-processed-meat", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 60}
       },
       results = {
@@ -327,7 +327,7 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-biter-small",
       enabled = "false",
-      energy_required = 60,
+      energy_required = 45,
       ingredients = {
         {type = "item", name = "biter-queen-small", amount = 1}
       },
@@ -345,7 +345,7 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-biter-small",
       enabled = "false",
-      energy_required = 60,
+      energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-small", amount = 1}
       },
@@ -362,7 +362,7 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-biter-medium",
       enabled = "false",
-      energy_required = 60,
+      energy_required = 45,
       ingredients = {
         {type = "item", name = "biter-queen-medium", amount = 1}
       },
@@ -380,7 +380,7 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-biter-medium",
       enabled = "false",
-      energy_required = 60,
+      energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-medium", amount = 1}
       },
@@ -397,7 +397,7 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-biter-big",
       enabled = "false",
-      energy_required = 60,
+      energy_required = 45,
       ingredients = {
         {type = "item", name = "biter-queen-big", amount = 1}
       },
@@ -415,7 +415,7 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-biter-big",
       enabled = "false",
-      energy_required = 60,
+      energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-big", amount = 1}
       },

@@ -34,7 +34,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-splinter-blue", amount = 1}
+        {type = "item", name = "crystal-splinter-blue", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-splinter-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -54,7 +55,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-splinter-red", amount = 1}
+        {type = "item", name = "crystal-splinter-red", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-splinter-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -74,7 +76,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-splinter-green", amount = 1}
+        {type = "item", name = "crystal-splinter-green", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-splinter-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -215,7 +218,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-shard-blue", amount = 1}
+        {type = "item", name = "crystal-shard-blue", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-shard-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -235,7 +239,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-shard-red", amount = 1}
+        {type = "item", name = "crystal-shard-red", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-shard-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -255,7 +260,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-shard-green", amount = 1}
+        {type = "item", name = "crystal-shard-green", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-shard-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -396,7 +402,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-full-blue", amount = 1}
+        {type = "item", name = "crystal-full-blue", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-full-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -416,7 +423,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-full-red", amount = 1}
+        {type = "item", name = "crystal-full-red", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-full-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -436,7 +444,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-full-green", amount = 1}
+        {type = "item", name = "crystal-full-green", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-full-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",

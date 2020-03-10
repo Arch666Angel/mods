@@ -29,7 +29,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-1", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -50,7 +50,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-2", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -73,7 +73,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-3", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -96,7 +96,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-4", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -119,7 +119,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-5", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -309,7 +309,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 10,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-1", amount = 1}
       },
@@ -328,7 +328,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-2", amount = 1}
       },
@@ -347,7 +347,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 20,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-3", amount = 1}
       },
@@ -366,7 +366,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 25,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-4", amount = 1}
       },
@@ -385,7 +385,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-5", amount = 1}
       },
@@ -407,7 +407,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-1", amount = 1}
       },
@@ -425,7 +425,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-2", amount = 1}
       },
@@ -443,7 +443,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-3", amount = 1}
       },
@@ -461,7 +461,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-4", amount = 1}
       },
@@ -479,7 +479,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-5", amount = 1}
       },
