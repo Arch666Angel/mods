@@ -134,6 +134,8 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40}
       },
       results = {
+        {type = "item", name = "biter-queen-medium", amount = 1, catalyst_amount = 1},
+        {type = "item", name = "biter-queen-medium", amount = 1, catalyst_amount = 1, probability = 0.99},
         {type = "item", name = "biter-medium-egg", amount = 1},
         {type = "item", name = "biter-medium-egg", amount = 1, probability = 0.5}
       },
@@ -164,6 +166,8 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 60}
       },
       results = {
+        {type = "item", name = "biter-queen-big", amount = 1, catalyst_amount = 1},
+        {type = "item", name = "biter-queen-big", amount = 1, catalyst_amount = 1, probability = 0.99},
         {type = "item", name = "biter-big-egg", amount = 1},
         {type = "item", name = "biter-big-egg", amount = 1, probability = 0.5}
       },
