@@ -219,7 +219,8 @@ if bobmods then
     data.raw.fluid["hydrazine"].hidden = true
 
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
-    OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
+    --OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
+    OV.remove_unlock("rocket-fuel","dinitrogen-tetroxide")
   end
   if data.raw["fluid"]["sour-gas"] then --BOBS REVAMP
     OV.disable_recipe("petroleum-gas-sweetening")
