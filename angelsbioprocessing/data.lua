@@ -66,7 +66,6 @@ if angelsmods.bioprocessing then
   require("prototypes.recipes.bio-refugium-puffer")
   require("prototypes.recipes.bio-refugium-biter")
   require("prototypes.recipes.bio-refugium-hogger")
-  --require("prototypes.recipes.bio-refugium")
 
   require("prototypes.technology.bio-processing-algae")
   require("prototypes.technology.bio-processing-wood-paper")

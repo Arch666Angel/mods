@@ -73,15 +73,20 @@ data:extend(
         },
       },
     },
-    working_visualisation =
+    working_visualisations =
     {
-      filename = "__angelsbioprocessing__/graphics/entity/bio-hatchery/bio-hatchery-animation.png",
-      width = 160,
-      height = 160,
-      frame_count = 25,
-      line_length = 5,
-      shift = {0, 0},
-      animation_speed = 0.5
+      {
+        animation =
+        {
+          filename = "__angelsbioprocessing__/graphics/entity/bio-hatchery/bio-hatchery-animation.png",
+          width = 160,
+          height = 160,
+          line_length = 5,
+          frame_count = 25,
+          shift = {0, 0},
+          animation_speed = 0.35
+        },
+      },
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
