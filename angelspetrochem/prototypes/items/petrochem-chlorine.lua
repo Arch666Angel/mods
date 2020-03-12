@@ -152,8 +152,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-ferric-chloride-solution",
-    icon = "__angelspetrochem__/graphics/icons/liquid-ferric-chloride-solution.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {104,112,113}, {104,112,113}, {099,146,191}, {099,146,191} }),
     subgroup = "petrochem-chlorine-fluids",
     order = "ia",
     default_temperature = 25,
@@ -167,8 +166,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-cupric-chloride-solution",
-    icon = "__angelspetrochem__/graphics/icons/liquid-cupric-chloride-solution.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {095,106,090}, {095,106,090}, {165,093,051}, {165,093,051} }),
     subgroup = "petrochem-chlorine-fluids",
     order = "ib",
     default_temperature = 25,

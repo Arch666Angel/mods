@@ -72,8 +72,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-naphtha",
-    icon = "__angelspetrochem__/graphics/icons/liquid-naphtha.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {196,075,085}, {148,066,075} }),
     subgroup = "petrochem-carbon-fluids",
     order = "dba",
     default_temperature = 25,
@@ -87,8 +86,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-mineral-oil",
-    icon = "__angelspetrochem__/graphics/icons/liquid-mineral-oil.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {063,189,063}, {053,159,053} }),
     subgroup = "petrochem-carbon-fluids",
     order = "dca",
     default_temperature = 25,
@@ -102,8 +100,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-fuel-oil",
-    icon = "__angelspetrochem__/graphics/icons/liquid-fuel-oil.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {247,216,081}, {237,212,104} }),
     subgroup = "petrochem-carbon-fluids",
     order = "daa",
     default_temperature = 25,
@@ -182,8 +179,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-toluene",
-    icon = "__angelspetrochem__/graphics/icons/liquid-toluene.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {077,072,072}, {077,072,072}, {052,035,034}, {052,035,034} }),
+    --icon_size = 32,
     subgroup = "petrochem-carbon-fluids",
     order = "ea",
     default_temperature = 25,
@@ -340,3 +337,7 @@ data:extend(
   }
 }
 )
+
+data.raw.fluid["lubricant"].icon = nil
+data.raw.fluid["lubricant"].icon_size = nil
+data.raw.fluid["lubricant"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {063,189,063}, nil, {060,209,60} })

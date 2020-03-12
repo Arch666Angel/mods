@@ -42,6 +42,18 @@ local function unify_tint(tint)
   end
 end
 
+local function clean_table(t)
+  -- removes nil values from a table so it becomes a table without holes
+  if type(t) ~= "table" then return t end
+  local i = 0
+  for k,v in pairs(t or {}) do
+    i = i + 1
+    t[k] = nil
+    t[i] = v
+  end
+  return t
+end
+
 local gas_icon_tint_table = {
   c = { { 044, 044, 044 }, { 140, 000, 000 }, { 140, 000, 000 } }, -- Carbon
   h = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, -- Hydrogen
@@ -224,6 +236,120 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
   }
 end
 
+-- CREATE VISCOUS LIQUID FLUID ICONS (NOT FOR RECIPES)
+function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, tints)
+  -- molecule_icon can be a string (assumes icon_size 32)
+  -- or be a table with size defined
+  if molecule_icon then
+    if type(molecule_icon) ~= "table" then
+      molecule_icon = {
+        icon = molecule_icon,
+        icon_size = 32
+      }
+    else
+      molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
+      if molecule_icon.icon then
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+      else
+        --something is wrong here but we need to return something
+        molecule_icon.icon = "__angelsrefining__/graphics/icons/void.png"
+        molecule_icon.icon_size = 32
+      end
+    end
+
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+
+    molecule_icon[1] = nil
+    molecule_icon[2] = nil
+    molecule_icon[3] = nil
+    molecule_icon[4] = nil
+  else
+    molecule_icon = nil
+  end
+
+  -- tints is a table of 5 tints, for the top, bot_left top_mask, bot_mask, bot_right,
+  -- if bot_left is present, but not bot_right (nil), then both bottom sides will have
+  -- the same tint as defined in bot_left
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        -- TODO
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.bot_left  = unify_tint(tints.bot_left  or tints[2] or nil)
+      tints.bot_right = unify_tint(tints.bot_right or tints[5] or nil)
+
+      tints.top_mask = unify_tint(tints.top_mask or tints[3] or nil)
+      tints.bot_mask = unify_tint(tints.bot_mask or tints[4] or nil)
+
+      if tints.bot_left and tints.bot_right then
+        tints.bot = nil
+      else
+        tints.bot = tints.bot_left or tints.bot_right or nil
+        tints.bot_left  = nil
+        tints.bot_right = nil
+      end
+    end
+  else
+    tints = {}
+  end
+
+  return clean_table{
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = {a=0.5},
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot_left and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot_left,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot_left and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot_right,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot_mask and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot_mask,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.top,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    tints.top_mask and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.top_mask,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    molecule_icon,
+  }
+end
+
 --COMPARES ARGUMENT (ARG) AGAINST A TABLE (EXCEP), RETURNS FALSE IF ARG == EXCEP ELSE TRUE
 function angelsmods.functions.check_exception(arg, excep)
   for _, exception in pairs(excep) do
@@ -266,8 +392,8 @@ end
 
 --MODIFY FLAGS
 function angelsmods.functions.add_flag(entity, flag)
-  if data.raw.item[entity] then
-    local to_add = data.raw.item[entity]
+  local to_add = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
+  if to_add then
     if to_add.flags then
       table.insert(to_add.flags, flag)
     else

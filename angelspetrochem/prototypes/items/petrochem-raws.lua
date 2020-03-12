@@ -33,8 +33,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-multi-phase-oil",
-    icon = "__angelspetrochem__/graphics/icons/liquid-multi-phase-oil.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {100,100,100}, {127,163,109}, nil, nil, {171,161,055} }),
     subgroup = "petrochem-raw-fluids",
     order = "ba", --bb=crude oil
     default_temperature = 25,
