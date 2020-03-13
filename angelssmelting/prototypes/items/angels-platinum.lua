@@ -1,3 +1,5 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   -- ORE
@@ -32,8 +34,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-hexachloroplatinic-acid",
-    icon = "__angelssmelting__/graphics/icons/liquid-hexachloroplatinic-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]6[/font]Cl[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]2[/font]Pt"} or nil,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {230,191,163}, {230,191,163}, {086,112,192,0.8}, {092,218,079,0.8} }),
     subgroup = "angels-platinum",
     order = "d",
     default_temperature = 100,
