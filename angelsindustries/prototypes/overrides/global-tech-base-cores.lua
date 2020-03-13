@@ -36,8 +36,11 @@ OV.set_science_pack("tech-orange-circuit", "datacore-basic", 2)
 OV.set_science_pack("tech-blue-circuit", "datacore-basic", 2)
 OV.set_science_pack("tech-yellow-circuit", "datacore-basic", 2)
 -- DECORATION ADDONS
-if angelsmods.addons.decorations then
+if mods["angelsaddons-nilaus"]--[[angelsmods.addons.decorations]] then
+--if angelsmods.addons.decorations then
   OV.set_science_pack("nilaus", "datacore-basic", 2)
+end
+if mods["angelsaddons-shred"]--[[angelsmods.addons.decorations]] then
   OV.set_science_pack("deco-shred", "datacore-basic", 2)
 end
 
@@ -51,11 +54,11 @@ core_replace("space-science-pack", "processing", "exploration")
 -- EXPLORATION
 OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
 -- CAB ADDONS
-if angelsmods.addons.cab then
+if mods["angelsaddons-cab"]--[[angelsmods.addons.cab]] then
   OV.set_science_pack("angels-cab", "datacore-exploration-1", 2)
 end
 -- DECORATION ADDONS
-if angelsmods.addons.decorations then
+if mods["angelsaddons-nilaus"]--[[angelsmods.addons.decorations]] then
   OV.set_science_pack("nilaus-truck", "datacore-exploration-1", 2)
 end
 
@@ -86,11 +89,11 @@ OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
 -- PRESSURE TANKS ADDONS
-if angelsmods.addons.pressuretanks then
+if mods["angelsmods-pressuretanks"]--[[angelsmods.addons.pressuretanks]] then
   OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
 end
 --ORE SILO ADDONS
-if angelsmods.addons.oresilos then
+if mods["angelsmods-oresilos"]--[[angelsmods.addons.oresilos]] then
   core_replace("ore-silos", "processing", "logistic")
 end
 
@@ -132,7 +135,6 @@ core_replace("rocket-booster-1","war","processing")
 core_replace("rocket-booster-2","war","processing")
 angelsmods.functions.add_flag("production-science-pack", "hidden")
 OV.disable_recipe({"production-science-pack"})
-
 OV.execute() ------------------------------------------------------------------
 
 -- now upgrade the cores to tier 2 and let them depend on the correct technology

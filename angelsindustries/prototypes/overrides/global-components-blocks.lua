@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   -- MODIFY MINABLE RESULTS TO DROP BLOCKS
-  for _, recipes in pairs(data.raw.recipe) do
+  --[[for _, recipes in pairs(data.raw.recipe) do
     if recipes.normal and recipes.normal.ingredients then
       for _, subtab in pairs(recipes.normal.ingredients) do
         for _, ingredient in pairs(subtab) do
@@ -28,7 +28,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
       end
     end
   end
-  OV.execute()
+  OV.execute()]]
 
   -- UPDATE TECH TO ANGELS COMPONENTS
   OV.global_replace_technology("engine", "angels-components-mechanical-2")

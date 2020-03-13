@@ -46,7 +46,7 @@ function core_builder()
     if angelsmods.functions.check_exception(rec_4tech, angelsmods.industries.tech_exceptions) then
       --personal-equipment and other enhancements take priority
       if
-        string.find(rec_4tech, "module") ~= nil or 
+        string.find(rec_4tech, "module") ~= nil or
         string.find(rec_4tech, "equipment") ~= nil or
         string.find(rec_4tech, "armor") ~= nil or
         string.find(rec_4tech, "axe") ~= nil or
@@ -75,6 +75,7 @@ function core_builder()
       elseif
         string.find(rec_4tech, "energy") ~= nil or
         string.find(rec_4tech, "power") ~= nil or
+        string.find(rec_4tech, "cabling") ~= nil or
         string.find(rec_4tech, "boiler") ~= nil
       then
         set_core(rec_4tech, "datacore-energy-1", 2)
@@ -117,9 +118,9 @@ function core_builder()
       elseif
         string.find(rec_4tech, "bio") ~= nil or
         string.find(rec_4tech, "farm") ~= nil or
-          string.find(rec_4tech, "arbor") ~= nil or
-          string.find(rec_4tech, "cool") ~= nil or
-          string.find(rec_4tech, "garden") ~= nil
+        string.find(rec_4tech, "arbor") ~= nil or
+        string.find(rec_4tech, "cool") ~= nil or
+        string.find(rec_4tech, "garden") ~= nil
        then
         set_core(rec_4tech, "datacore-processing-1", 2)
 
@@ -491,7 +492,6 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
     n = n + 1
   end
 end
-
 --Replace non-construction components with angels components
 function replace_gen_mats()
   --bobs replacements first (mainly for electronics reasons)
@@ -570,17 +570,20 @@ end
 
 --REPLACE CONSTRUCTION ELECTRONIC BLOCKS
 function replace_con_mats(buildings)
-  for assembly_check in pairs(data.raw[buildings]) do
+  for assembly_check, build in pairs(data.raw[buildings]) do
     if data.raw.recipe[assembly_check] then
       local rec_check = data.raw.recipe[assembly_check]
       if rec_check.normal then
         ing_list = rec_check.normal.ingredients
         replace_blocks_list(ing_list)
+        data.raw[build.type][assembly_check].minable.results=ing_list
         ing_list = rec_check.expensive.ingredients
         replace_blocks_list(ing_list)
       else
         ing_list = rec_check.ingredients
+        log(serpent.block(ing_list))
         replace_blocks_list(ing_list)
+        data.raw[build.type][assembly_check].minable.results=ing_list
       end
     end
   end

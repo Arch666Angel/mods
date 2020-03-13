@@ -34,6 +34,7 @@ end
 pack_replace("armor-making-2","green","red") --move armour making down a tier
 angelsmods.functions.add_flag("automation-science-pack", "hidden")
 OV.disable_recipe({"automation-science-pack"})
+pack_replace("automation-2","green","red")
 -- SMELTING
 pack_replace("angels-steel-smelting-1","green","red")
 -- BIO PROCESSING
@@ -44,6 +45,7 @@ pack_replace("bio-arboretum-temperate-1","green","red")
 pack_replace("tech-green-circuit","green","red")
 pack_replace("angels-components-construction-2","green","red")
 pack_replace("angels-components-cabling-2","green","red")
+pack_replace("angels-components-mechanical-2","green","red")
 
 -------------------------------------------------------------------------------
 -- GREEN SCIENCE PACKS --------------------------------------------------------
