@@ -63,26 +63,3 @@ funcs.generate_train_technology(
   },
   tiers
 )
--- data:extend(
---   {
---     {
---       type = "technology",
---       name = "angels-smelting-train",
---       icon = "__angelsaddons-smeltingtrain__/graphics/technology/smelting-loco-1-tech.png",
---       icon_size = 128,
---       prerequisites = {
---         "railway"
---       },
---       effects = get_unlocks("angels-smelting-train", {}),
---       unit = {
---         count = 60,
---         ingredients = {
---           {"automation-science-pack", 1},
---           {"logistic-science-pack", 1},
---         },
---         time = 15
---       },
---       order = "c-a"
---     }
---   }
--- )
