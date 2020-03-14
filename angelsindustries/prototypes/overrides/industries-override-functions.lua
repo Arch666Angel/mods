@@ -581,7 +581,6 @@ function replace_con_mats(buildings)
         replace_blocks_list(ing_list)
       else
         ing_list = rec_check.ingredients
-        log(serpent.block(ing_list))
         replace_blocks_list(ing_list)
         data.raw[build.type][assembly_check].minable.results=ing_list
       end
