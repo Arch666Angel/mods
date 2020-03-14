@@ -77,10 +77,9 @@ end
 
 -- Move flamethrower stuff
 local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
-remove_item(turret_params, {"crude-oil", "heavy-oil", "light-oil"})
+remove_item(turret_params, {"heavy-oil", "light-oil"})
 table.insert(turret_params, {type = "liquid-naphtha", damage_modifier = 1.05})
-table.insert(turret_params, {type = "liquid-fuel-oil", damage_modifier = 1.25})
-
+table.insert(turret_params, {type = "liquid-fuel-oil", damage_modifier = 1.1})
 
 if angelsmods.smelting then
   move_item("coal", "petrochem-coal", "a[carbon]-a")
