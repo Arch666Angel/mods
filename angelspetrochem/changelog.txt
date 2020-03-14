@@ -11,6 +11,7 @@ Date: ???
     - Added nuclear fuel tech since requirements for rocket fuel is different #66
     - Disabled coal liquefaction
     - Fully replaced Bob's Lithium Chloride with Angels Lithia Salt #71
+    - Replaced oil in flamethrower and ammo for naptha/fuel-oil #88
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
     - Added missing (water) void recipe for Sodium Hydroxide Solution
