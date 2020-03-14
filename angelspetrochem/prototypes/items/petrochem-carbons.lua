@@ -163,7 +163,7 @@ data:extend(
   {
     type = "fluid",
     name = "gas-synthesis",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil, { {210,120,210}, {175,100,175}, {140,80,140} }),
+    icons = angelsmods.functions.create_gas_fluid_icon(nil, { {210,120,210}, {175,100,175}, {140,080,140} }),
     --icon_size = 32,
     subgroup = "petrochem-carbon-fluids",
     order = "dd",

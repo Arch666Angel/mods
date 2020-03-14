@@ -14,15 +14,17 @@ data:extend(
     },
     results=
     {
-      --{type="item", name="sulfur", amount=1},
       {type="fluid", name="gas-hydrogen-sulfide", amount=60},
       {type="fluid", name="gas-carbon-dioxide", amount=20},
       {type="fluid", name="liquid-hydrofluoric-acid", amount=20},
-      --{type="fluid", name="gas-hydrogen", amount=1},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-cracking-7.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+    }, "shh"),
     order = "a[gas-acid-catalyst]",
   },
   {
@@ -40,8 +42,10 @@ data:extend(
     {
       {type="item", name="sulfur", amount=3},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-11.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 },
+    }, "sss"),
     order = "b[solid-sulfur]",
   },
   {
@@ -59,8 +63,10 @@ data:extend(
     {
       {type="fluid", name="gas-sulfur-dioxide", amount=60},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-9.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+    }, "soo"),
     order = "ca[gas-sulfur-dioxide]",
   },
   {
@@ -79,8 +85,10 @@ data:extend(
       {type="fluid", name="gas-sulfur-dioxide", amount=50},
       {type="item", name="angels-void", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-9.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+    }, "soo"),
     order = "cb[gas-sulfur-dioxide-calcium-sulfate]",
   },
   {
@@ -118,8 +126,10 @@ data:extend(
       {type="fluid", name="liquid-hydrofluoric-acid", amount=50},
       {type="item", name="solid-calcium-sulfate", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-7.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+    }, "fhh"),
     order = "e[liquid-hydrofluoric-acid]",
   },
   {
@@ -129,7 +139,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="filter-frame", amount=1},
       {type="item", name="stone-crushed", amount=5},
     },
@@ -148,17 +159,20 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 10,
     enabled = "false",
-    ingredients ={
-    {type="item", name="filter-lime", amount=1},
-    {type="fluid", name="water", amount=20},
+    ingredients =
+    {
+      {type="item", name="filter-lime", amount=1},
+      {type="fluid", name="water", amount=20},
     },
     results=
     {
       {type="item", name="filter-lime-used", amount=1},
-    {type="fluid", name="water-yellow-waste", amount=20},
+      {type="fluid", name="water-yellow-waste", amount=20},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-11.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 },
+    }, "sss"),
     order = "g",
   },
   {
@@ -177,8 +191,8 @@ data:extend(
       {type="item", name="filter-frame", amount=1},
     },
     main_product = "gas-acid",
-    --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon(nil, "sss"),
     order = "h",
   },
 }

@@ -137,7 +137,7 @@ data:extend(
     type = "fluid",
     name = "gas-phosgene",
     localised_description = show_formula and {"tooltip-description.chemical-formula", "COCl[font=default-tiny-bold]2[/font]"} or nil,
-    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72 }, "clo"),
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72 }, "clc"),
     --icon_size = 32,
     subgroup = "petrochem-chlorine-fluids",
     order = "h",

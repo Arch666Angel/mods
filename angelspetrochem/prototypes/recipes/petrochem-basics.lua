@@ -17,18 +17,28 @@ data:extend(
       {type="fluid", name="gas-hydrogen", amount=40},
       {type="item", name="slag", amount=1}
     },
-    icons = {
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }
+    }, "ohh", {
       {
-        icon = "__angelspetrochem__/graphics/icons/raw-separation-4.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon_size = 32,
+          tint = angelsmods.petrochem.number_tint,
+          --scale = 0.32,
+          --shift = {-12, -12},
+        }
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
+        {
+          icon = "__base__/graphics/icons/fluid/water.png",
+          icon_size = 64,
+          scale = 32/64,
+        }
       }
-    },
-    icon_size = 32,
+    }),
     order = "a[water-separation]",
     crafting_machine_tint =
     {
@@ -55,18 +65,28 @@ data:extend(
       {type="item", name="slag", amount=1},
       {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1}
     },
-    icons = {
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }
+    }, "ohh", {
       {
-        icon = "__angelspetrochem__/graphics/icons/raw-separation-4.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon_size = 32,
+          tint = angelsmods.petrochem.number_tint,
+          --scale = 0.32,
+          --shift = {-12, -12},
+        }
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
+        {
+          icon = "__base__/graphics/icons/fluid/water.png",
+          icon_size = 64,
+          scale = 32/64,
+        }
       }
-    },
-    icon_size = 32,
+    }),
     order = "a[water-separation]",
     crafting_machine_tint =
     {
@@ -90,18 +110,22 @@ data:extend(
       {type="fluid", name="gas-oxygen", amount=40},
       {type="fluid", name="gas-hydrogen", amount=60},
     },
-      icons = {
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }
+    }, "ohh", {
       {
-        icon = "__angelspetrochem__/graphics/icons/raw-separation-4.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon_size = 32,
+          tint = angelsmods.petrochem.number_tint,
+          --scale = 0.32,
+          --shift = {-12, -12},
+        }
       },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      "water-purified"
+    }),
     order = "a[water-separation]",
     crafting_machine_tint =
     {
@@ -127,18 +151,22 @@ data:extend(
       {type="fluid", name="gas-hydrogen", amount=60},
       {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1}
     },
-    icons = {
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }
+    }, "ohh", {
       {
-        icon = "__angelspetrochem__/graphics/icons/raw-separation-4.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon_size = 32,
+          tint = angelsmods.petrochem.number_tint,
+          --scale = 0.32,
+          --shift = {-12, -12},
+        }
       },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      "water-purified"
+    }),
     order = "a[water-separation]",
     crafting_machine_tint =
     {
@@ -187,8 +215,8 @@ data:extend(
     {
       {type="fluid", name="gas-carbon-monoxide", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/raw-separation-7.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72 } }, "ccc"),
     order = "b[carbon-separation-1]",
     crafting_machine_tint =
     {
@@ -211,8 +239,8 @@ data:extend(
     {
       {type="fluid", name="gas-carbon-dioxide", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/raw-separation-6.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 } }, "ccc"),
     order = "d[carbon-separation-2]",
     crafting_machine_tint =
     {
@@ -262,8 +290,11 @@ data:extend(
       {type="fluid", name="gas-carbon-dioxide", amount=50},
       {type="fluid", name="gas-hydrogen", amount=50}
     },
-    icon = "__angelspetrochem__/graphics/icons/basic-08.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+    }, "whk"),
     order = "f",
     crafting_machine_tint =
     {
@@ -288,8 +319,11 @@ data:extend(
       {type="fluid", name="water-purified", amount=50},
       {type="fluid", name="gas-carbon-monoxide", amount=50}
     },
-    icon = "__angelspetrochem__/graphics/icons/basic-09.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      "water-purified",
+      { "__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72 },
+    }, "whk"),
     order = "g",
     crafting_machine_tint =
     {
@@ -316,8 +350,12 @@ data:extend(
       {type="fluid", name="gas-methane", amount=70},
       {type="item", name="solid-coke", amount=6},      --COKE
     },
-    icon = "__angelspetrochem__/graphics/icons/coal-cracking-1.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/benzene.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+    }, "kkk"),
     order = "f[coal-cracking-1]",
     crafting_machine_tint =
     {
@@ -344,10 +382,14 @@ data:extend(
       {type="fluid", name="liquid-ngl", amount=30},
       {type="fluid", name="liquid-mineral-oil", amount=20},
       {type="item", name="solid-coke", amount=6},      --COKE
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/coal-cracking-2.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      "liquid-mineral-oil",
+      "liquid-ngl",
+      "liquid-naphtha",
+    }, "kkk"),
     order = "g[coal-cracking-2]",
     crafting_machine_tint =
     {
@@ -376,8 +418,12 @@ data:extend(
       -- {type="fluid", name="gas-hydrogen", amount=1},
       -- {type="fluid", name="gas-methane", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/coal-cracking-3.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      "gas-synthesis",
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+    }, "kkk"),
     order = "h[coal-cracking-3]",
     crafting_machine_tint =
     {

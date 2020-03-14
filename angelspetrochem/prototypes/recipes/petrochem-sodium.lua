@@ -18,8 +18,11 @@ data:extend(
       {type="item", name="solid-sodium", amount=5},
       {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1}
     },
-    icon = "__angelspetrochem__/graphics/icons/raw-separation-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 },
+      "solid-sodium"
+    }, "lll"),
     order = "a[sodium]-a[generation]",
   },
   { -- from hydroxide
@@ -102,7 +105,7 @@ data:extend(
     {
       {type="item", name="solid-sodium-cyanide", amount=5},
       {type="fluid", name="gas-hydrogen", amount=30},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     main_product= "solid-sodium-cyanide",
     icon_size = 32,
@@ -275,7 +278,7 @@ data:extend(
     results=
     {
       {type="item", name="solid-sodium-perchlorate", amount=5},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     icon = "__angelspetrochem__/graphics/icons/solid-sodium-perchlorate.png",
     icon_size = 32,

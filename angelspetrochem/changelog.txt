@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: ???
+  Changes:
+    - Chemical recipes now always show the result products for lookup convenience
+    - Added high resolution gas and liquid icons, including higher resolution molecules
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
 ---------------------------------------------------------------------------------------------------

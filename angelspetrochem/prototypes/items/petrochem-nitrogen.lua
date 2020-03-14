@@ -135,7 +135,7 @@ data:extend(
     type = "fluid",
     name = "liquid-nitric-acid",
     localised_description = show_formula and {"tooltip-description.chemical-formula", "HNO[font=default-tiny-bold]3[/font]"} or nil,
-    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }, "nho"),
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }, "noh"),
     --icon_size = 32,
     subgroup = "petrochem-nitrogen-fluids",
     order = "i",
