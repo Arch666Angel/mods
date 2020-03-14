@@ -7,7 +7,7 @@ data:extend(
     type = "recipe",
     name = "circuit-resistor",
     energy_required = 3,
-    category = "advanced-crafting",
+    category = "crafting", --to allow hand crafting
     enabled = "false",
     ingredients =
     {
@@ -326,7 +326,7 @@ data:extend(
     type = "recipe",
     name = "circuit-yellow-board",
     energy_required = 3,
-    category = "advanced-crafting",
+    category = "chemistry",
     enabled = "false",
     ingredients =
     {

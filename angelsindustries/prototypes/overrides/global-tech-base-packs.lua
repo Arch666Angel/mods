@@ -57,24 +57,29 @@ angelsmods.functions.add_flag("logistic-science-pack", "hidden")
 OV.disable_recipe({"logistic-science-pack"})
 -- INDUSTRIES
 OV.add_prereq("angels-components-construction-3","tech-green-packs")
+pack_replace("plastics","orange","green")
+pack_replace("battery","orange","green")
+pack_replace("circuit-network","orange","green")
 
 -------------------------------------------------------------------------------
 -- ORANGE SCIENCE PACKS -------------------------------------------------------
 -------------------------------------------------------------------------------
 -- BASE GAME
-pack_replace("battery","green","orange")
+--pack_replace("battery","green","orange")
 pack_replace("oil-processing","green","orange")
-pack_replace("circuit-network","green","orange")
+--pack_replace("circuit-network","green","orange")
+pack_replace("modular-armor","green","orange")
 pack_replace("armor-making-3","green","orange")
+pack_replace("belt-immunity-equipment","green","orange")
 pack_replace("solar-energy","green","orange")
 pack_replace("electric-engine","green","orange")
-pack_replace("electric-energy-accumulators-1","green","orange")
+pack_replace("electric-energy-accumulators","green","orange")
 pack_replace("energy-shield-equipment","green","orange")
 pack_replace("night-vision-equipment","green","orange")
 pack_replace("battery-equipment","green","orange")
 pack_replace("solar-panel-equipment","green","orange")
 pack_replace("sulfur-processing","green","orange")
-pack_replace("plastics","green","orange")
+--pack_replace("plastics","green","orange")
 pack_replace("modules","green","orange")
 pack_replace("speed-module","green","orange")
 pack_replace("productivity-module","green","orange")
@@ -105,7 +110,7 @@ pack_replace("bio-wood-processing-3","green","orange")
 --PETROCHEM
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("plastic-1", "green","orange")
-pack_replace("resin-2", "blue","orange")
+--pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
 pack_replace("rubber", "green","orange")
 pack_replace("rocket-booster-1", "green","orange")
 pack_replace("rocket-explosives-1", "green","orange")
@@ -120,7 +125,8 @@ OV.remove_prereq("angels-components-construction-4", "chemical-science-pack")
 pack_replace("angels-components-weapons-advanced", "green","orange")
 pack_replace("angels-components-cabling-4","blue","orange")
 OV.remove_prereq("angels-components-cabling-4", "chemical-science-pack")
-
+pack_replace("cargo-robots-3","green","orange")
+OV.add_prereq("cargo-robots-3","angels-components-mechanical-4")
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -128,6 +134,7 @@ OV.remove_prereq("angels-components-cabling-4", "chemical-science-pack")
 OV.global_replace_technology("chemical-science-pack", "tech-blue-packs")
 OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
 pack_replace("logistic-robotics","green","blue")
+pack_replace("electric-energy-distribution-2","orange","blue")
 angelsmods.functions.add_flag("chemical-science-pack", "hidden")
 OV.disable_recipe({"chemical-science-pack"})
 -- INDUSTRIES
