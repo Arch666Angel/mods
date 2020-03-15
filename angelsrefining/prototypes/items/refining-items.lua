@@ -976,8 +976,7 @@ data:extend(
     {
       type = "fluid",
       name = "crystal-slurry",
-      icon = "__angelsrefining__/graphics/icons/crystal-slurry.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {105,237,038}, {211,255,052}, {100,255,000}, {147,207,47} }),
       subgroup = "ore-sorting-fluid",
       order = "c[crystal]-a",
       default_temperature = 25,
@@ -991,8 +990,7 @@ data:extend(
     {
       type = "fluid",
       name = "crystal-seedling",
-      icon = "__angelsrefining__/graphics/icons/crystal-seedling.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {105,237,038}, nil, {100,255,000} }),
       subgroup = "ore-sorting-fluid",
       order = "c[crystal]-b",
       default_temperature = 25,
@@ -1006,8 +1004,7 @@ data:extend(
     {
       type = "fluid",
       name = "crystal-matrix",
-      icon = "__angelsrefining__/graphics/icons/crystal-matrix.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {105,237,038}, {135,071,028}, {100,255,000} }),
       subgroup = "ore-sorting-fluid",
       order = "c[crystal]-c",
       default_temperature = 25,

@@ -179,7 +179,7 @@ end
 function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = bot_molecules_icon or {}
+  bot_molecules_icon = clean_table(bot_molecules_icon) or {}
   for molecule_index ,molecule_icon in pairs(bot_molecules_icon) do
     if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
       bot_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
@@ -243,7 +243,7 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
   end
   bot_molecules_icon = clean_table(bot_molecules_icon)
 
-  top_molecules_icon = top_molecules_icon or {}
+  top_molecules_icon = clean_table(top_molecules_icon) or {}
   for molecule_index ,molecule_icon in pairs(top_molecules_icon) do
     if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
       top_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
