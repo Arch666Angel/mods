@@ -1,20 +1,37 @@
 global.is_lab_given = false
-local main_lab = "angels-main-lab"
+local main_lab = {
+  "angels-main-lab"
+}
 
 local function remove_lab_from_inv(inventory)
-  if inventory and inventory.get_item_count(main_lab) then
-    inventory.remove {name = main_lab}
-    global.is_lab_given = false
+  if inventory then
+    local items = game.item_prototypes
+    for key, lab in pairs(main_lab) do
+      if items[lab] and inventory.get_item_count(lab) > 0 then
+        inventory.remove {name = lab}
+        global.is_lab_given = false
+        return true
+      end
+    end
   end
+end
+
+local function table_contains(table, value)
+  for key, val in pairs(table) do
+    if val == value then
+      return true
+    end
+  end
+  return false
 end
 
 script.on_event(
   {defines.events.on_player_created, defines.events.on_player_respawned},
   function(event)
-    if not global.is_lab_given and game.entity_prototypes[main_lab] then
+    if not global.is_lab_given and game.entity_prototypes[main_lab[1]] then
       local player = game.players[event.player_index]
       if player and player.valid then
-        global.is_lab_given = player.insert {name = main_lab, count = 1} > 0
+        global.is_lab_given = player.insert {name = main_lab[1], count = 1} > 0
       end
     end
   end
@@ -23,9 +40,9 @@ script.on_event(
 script.on_event(
   defines.events.on_entity_died,
   function(event)
-    if game.entity_prototypes[main_lab] then
+    if game.entity_prototypes[main_lab[1]] then
       local etype = event.entity.type
-      if event.entity.name == main_lab then
+      if table_contains(main_lab, event.entity.name) then
         global.is_lab_given = false
       elseif etype == "container" or etype == "logistic-container" then
         remove_lab_from_inv(event.entity.get_inventory(defines.inventory.chest))
@@ -39,7 +56,7 @@ script.on_event(
 script.on_event(
   defines.events.on_pre_player_died,
   function(event)
-    if game.entity_prototypes[main_lab] then
+    if game.entity_prototypes[main_lab[1]] then
       remove_lab_from_inv(game.players[event.player_index].get_main_inventory())
     end
   end
