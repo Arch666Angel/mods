@@ -515,7 +515,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "angels-electrode", amount = 1},
-        {type = "fluid", name = "water-mineralized", amount = 40}
+        {type = "fluid", name = "water-mineralized", amount = 50}
       },
       icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
       icon_size = 32,
