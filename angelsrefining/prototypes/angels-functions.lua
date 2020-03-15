@@ -19,6 +19,21 @@ local function get_icons(object_name)
   --something is wrong here but we need to return something
   return "__angelsrefining__/graphics/icons/void.png"
 end
+angelsmods.functions.get_object_icons = get_icons
+
+function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add)
+  local icon_layers = util.table.deepcopy(icon_layers)
+  
+  if layers_to_add[1] then
+    for _,layer_to_add in pairs(layers_to_add) do
+      table.insert(icon_layers, layer_to_add)
+    end
+  else
+    table.insert(icon_layers, layers_to_add)
+  end
+
+  return icon_layers
+end
 
 local function unify_tint(tint)
   -- allows tints to be defined as {255, 255, 255, 255}
@@ -132,7 +147,7 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-base.png",
       icon_size = 596,
       scale = 32/596,
-      tint = {a=0.7},
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
       shift = (not molecule_icon) and {-3.5, 0} or nil,
     },
     {
@@ -315,7 +330,7 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-base.png",
       icon_size = 750,
       scale = 32/750,
-      tint = {a=0.7},
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-top.png",
@@ -404,7 +419,7 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-base.png",
       icon_size = 330,
       scale = 32/330,
-      tint = {a=0.7},
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
       shift = molecule_icon and {3.5, 0} or nil,
     },
     {
@@ -586,26 +601,26 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
   local recipe_icons = {
     { -- base layer required for background shadow
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-base.png",
-      icon_size = 512,
-      scale = 32/512,
-      tint = {a=0.7},
+      icon_size = 600,
+      scale = 32/600,
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-top.png",
-      icon_size = 512,
-      scale = 32/512,
+      icon_size = 600,
+      scale = 32/600,
       tint = tints.top,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
-      icon_size = 512,
-      scale = 32/512,
+      icon_size = 600,
+      scale = 32/600,
       tint = tints.mid,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
-      icon_size = 512,
-      scale = 32/512,
+      icon_size = 600,
+      scale = 32/600,
       tint = tints.bot,
     },
   }
@@ -687,7 +702,7 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
       icon_size = 256,
       scale = 32/256,
-      tint = {a=0.7},
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
       shift = molecule_icon and {3.5, 0} or nil,
     } or nil,
     tints.bot and {

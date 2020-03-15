@@ -1,5 +1,19 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
+local function create_icon(name, number_icon_layer)
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(name), number_icon_layer)
+end
+
+local function create_solid_fuel_recipe_icon(fluid_name)
+  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(fluid_name))
+  for layer_index, layer in pairs(icon_layers or {}) do
+    layer.shift = layer.shift or {}
+    layer.shift = {(layer.shift[1] or 0)/2-8, (layer.shift[2] or 0)/2+8}
+    layer.scale = (layer.scale or 1)/2
+  end
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons("solid-fuel"), icon_layers)
+end
+
 data:extend(
 {
 --SOLIDS
@@ -12,16 +26,28 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={{type="fluid", name="liquid-plastic", amount=40}},
-      results={{type="item", name="plastic-bar", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-plastic", amount=40}
       },
-      expensive =
+      results =
+      {
+        {type="item", name="plastic-bar", amount=4}
+      },
+    },
+    expensive =
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={{type="fluid", name="liquid-plastic", amount=50 * intermediatemulti}},
-      results={{type="item", name="plastic-bar", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-plastic", amount=50 * intermediatemulti}
       },
+      results =
+      {
+        {type="item", name="plastic-bar", amount=4}
+      },
+    },
     icon_size = 32,
     order = "a[plastic]-b[solid]",
   },
@@ -32,25 +58,22 @@ data:extend(
     subgroup = "petrochem-solids",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-propene", amount=40},
     },
     results=
     {
-        {type="fluid", name="liquid-plastic", amount=10},
+      {type="fluid", name="liquid-plastic", amount=10},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-plastic.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-plastic", {
+      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "a[plastic]-a[liquid]-a",
   },
   {
@@ -60,7 +83,8 @@ data:extend(
     subgroup = "petrochem-solids",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="liquid-naphtha", amount=20},
       {type="fluid", name="gas-polyethylene", amount=20},
     },
@@ -68,18 +92,14 @@ data:extend(
     {
         {type="fluid", name="liquid-plastic", amount=20},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-plastic.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-plastic", {
+      icon = "__angelspetrochem__/graphics/icons/num_2.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "a[plastic]-a[liquid]-b",
   },
   {
@@ -89,7 +109,8 @@ data:extend(
     subgroup = "petrochem-solids",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-formaldehyde", amount=20},
       {type="fluid", name="gas-phenol", amount=20},
     },
@@ -97,18 +118,14 @@ data:extend(
     {
         {type="fluid", name="liquid-plastic", amount=30},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-plastic.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-plastic", {
+      icon = "__angelspetrochem__/graphics/icons/num_3.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "a[plastic]-a[liquid]-c",
   },
   --RESIN
@@ -122,15 +139,27 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={{type="fluid", name="liquid-resin", amount=40}},
-      results={{type="item", name="solid-resin", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-resin", amount=40}
+      },
+      results =
+      {
+        {type="item", name="solid-resin", amount=4}
+      },
     },
     expensive =
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={{type="fluid", name="liquid-resin", amount=50 * intermediatemulti}},
-      results={{type="item", name="solid-resin", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-resin", amount=50 * intermediatemulti}
+      },
+      results =
+      {
+        {type="item", name="solid-resin", amount=4}
+      },
     },
     icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
     icon_size = 32,
@@ -143,7 +172,8 @@ data:extend(
     subgroup = "petrochem-solids",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-urea", amount=20},
       {type="fluid", name="gas-formaldehyde", amount=20},
     },
@@ -151,18 +181,14 @@ data:extend(
     {
       {type="fluid", name="liquid-resin", amount=10},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-resin.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-resin", {
+      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "b[resin]-a[liquid]-a",
   },
   {
@@ -172,7 +198,8 @@ data:extend(
     subgroup = "petrochem-solids",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-melamine", amount=20},
       {type="fluid", name="gas-formaldehyde", amount=20},
     },
@@ -180,18 +207,14 @@ data:extend(
     {
       {type="fluid", name="liquid-resin", amount=20},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-resin.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-resin", {
+      icon = "__angelspetrochem__/graphics/icons/num_2.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "b[resin]-a[liquid]-b",
   },
   {
@@ -201,7 +224,8 @@ data:extend(
     subgroup = "petrochem-solids",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-bisphenol-a", amount=20},
       {type="fluid", name="gas-epichlorhydrin", amount=20},
     },
@@ -209,18 +233,14 @@ data:extend(
     {
       {type="fluid", name="liquid-resin", amount=30},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-resin.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-resin", {
+      icon = "__angelspetrochem__/graphics/icons/num_3.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "b[resin]-a[liquid]-c",
   },
   --RUBBER
@@ -234,15 +254,27 @@ data:extend(
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={{type="fluid", name="liquid-rubber", amount=40}},
-      results={{type="item", name="solid-rubber", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-rubber", amount=40}
+      },
+      results =
+      {
+        {type="item", name="solid-rubber", amount=4}
+      },
     },
     expensive =
     {
       enabled = "false",
       energy_required = 2,
-      ingredients ={{type="fluid", name="liquid-rubber", amount=50 * intermediatemulti}},
-      results={{type="item", name="solid-rubber", amount=4}},
+      ingredients =
+      {
+        {type="fluid", name="liquid-rubber", amount=50 * intermediatemulti}
+      },
+      results =
+      {
+        {type="item", name="solid-rubber", amount=4}
+      },
     },
     icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
     icon_size = 32,
@@ -255,7 +287,8 @@ data:extend(
     subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-styrene", amount=20},
       {type="fluid", name="gas-butadiene", amount=20},
     },
@@ -263,18 +296,14 @@ data:extend(
     {
       {type="fluid", name="liquid-rubber", amount=10},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-rubber.png",
-      },
-      {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    always_show_products = "true",
+    icons = create_icon("liquid-rubber", {
+      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+      icon_size = 32,
+      tint = angelsmods.petrochem.number_tint,
+      scale = 0.32,
+      shift = {-12, -12},
+    }),
     order = "b[rubber]-a[liquid]",
   },
   --GLASS
@@ -287,12 +316,14 @@ data:extend(
     -- {
       -- enabled = "false",
       -- energy_required = 2,
-      -- ingredients ={
+      -- ingredients =
+      -- {
         -- {type="fluid", name="gas-bisphenol-a", amount=20},
         -- {type="fluid", name="gas-phosgene", amount=20},
         -- {type="item", name="solid-sodium-hydroxide", amount=1},
       -- },
-      -- results={
+      -- results=
+      -- {
         -- {type="item", name="solid-glas", amount=4}},
       -- },
     -- },
@@ -300,12 +331,14 @@ data:extend(
     -- {
       -- enabled = "false",
       -- energy_required = 2,
-      -- ingredients ={
+      -- ingredients =
+      -- {
         -- {type="fluid", name="gas-bisphenol-a", amount=25 * intermediatemulti},
         -- {type="fluid", name="gas-phosgene", amount=25 * intermediatemulti},
         -- {type="item", name="solid-sodium-hydroxide", amount=1 * intermediatemulti},
       -- },
-      -- results={
+      -- results=
+      -- {
         -- {type="item", name="solid-glas", amount=4}},
       -- },
     -- },
@@ -321,7 +354,8 @@ data:extend(
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-coke", amount=1},
       {type="fluid", name="gas-methane", amount=100},
     },
@@ -329,8 +363,7 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-fuel-methane.png",
-    icon_size = 32,
+    icons = create_solid_fuel_recipe_icon("gas-methane"),
     order = "a[solid-fuel-methane]",
   },
   {
@@ -340,7 +373,8 @@ data:extend(
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-coke", amount=1},
       {type="fluid", name="liquid-naphtha", amount=100},
     },
@@ -348,8 +382,7 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-fuel-naphtha.png",
-    icon_size = 32,
+    icons = create_solid_fuel_recipe_icon("liquid-naphtha"),
     order = "b[solid-fuel-naphtha]",
   },
   {
@@ -359,7 +392,8 @@ data:extend(
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-coke", amount=1},
       {type="fluid", name="liquid-fuel-oil", amount=50},
     },
@@ -367,8 +401,7 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-fuel-fuel-oil.png",
-    icon_size = 32,
+    icons = create_solid_fuel_recipe_icon("liquid-fuel-oil"),
     order = "c[solid-fuel-fuel-oil]",
   },
   {
@@ -378,7 +411,8 @@ data:extend(
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-coke", amount=1},
       {type="fluid", name="gas-synthesis", amount=100},
     },
@@ -386,8 +420,7 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-fuel-synthesis.png",
-    icon_size = 32,
+    icons = create_solid_fuel_recipe_icon("gas-synthesis"),
     order = "d[solid-fuel-synthesis]",
   },
   {
@@ -397,15 +430,15 @@ data:extend(
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-hydrazine", amount=50},
     },
     results=
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-fuel-hydrazine.png",
-    icon_size = 32,
+    icons = create_solid_fuel_recipe_icon("gas-hydrazine"),
     order = "e[solid-fuel-hydrazine]",
   },
   --CATALYSTS
@@ -416,7 +449,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="iron-plate", amount=5},
     },
     results=
@@ -434,7 +468,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="catalyst-metal-carrier", amount=10},
       -- {type="item", name="iron-ore", amount=1},
       -- {type="item", name="copper-ore", amount=1},
@@ -454,7 +489,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="catalyst-metal-carrier", amount=10},
       -- {type="item", name="bauxite-ore", amount=1},
       -- {type="item", name="silver-ore", amount=1},
@@ -474,7 +510,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="catalyst-metal-carrier", amount=10},
       -- {type="item", name="rutile-ore", amount=1},
       -- {type="item", name="cobalt-ore", amount=1},
@@ -494,7 +531,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="catalyst-metal-carrier", amount=10},
       -- {type="item", name="tungsten-ore", amount=1},
       -- {type="item", name="nickel-ore", amount=1},
@@ -515,7 +553,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 1,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="steel-plate", amount=1},
       {type="item", name="solid-carbon", amount=1}
     },
@@ -533,7 +572,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 1,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="angels-electrode-used", amount=1}
     },
     results=
@@ -553,7 +593,8 @@ data:extend(
     subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-glycerol", amount=50},
       {type="fluid", name="liquid-sulfuric-acid", amount=25},
       {type="fluid", name="liquid-nitric-acid", amount=25},
@@ -586,7 +627,8 @@ data:extend(
     subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="liquid-toluene", amount=50},
       {type="fluid", name="liquid-sulfuric-acid", amount=25},
       {type="fluid", name="liquid-nitric-acid", amount=25},

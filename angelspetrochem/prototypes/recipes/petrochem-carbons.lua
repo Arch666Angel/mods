@@ -245,8 +245,11 @@ data:extend(
         {type="fluid", name="water-yellow-waste", amount=10},
       },
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-08.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "crude-oil",
+      "gas-raw-1",
+    }, { {100,100,100}, {171,161,055}, {127,163,109} }),
     order = "a[oil-separation]",
   },
   {
@@ -267,8 +270,12 @@ data:extend(
       {type="fluid", name="liquid-naphtha", amount=50},
       {type="item", name="solid-oil-residual", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-09.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "liquid-fuel-oil",
+      "liquid-naphtha",
+      "liquid-mineral-oil",
+    }, "kkk"),
     order = "b[oil-refining]"
   },
   {
@@ -290,8 +297,14 @@ data:extend(
       {type="fluid", name="liquid-naphtha", amount=70},
       {type="item", name="solid-oil-residual", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "liquid-fuel-oil",
+      "liquid-naphtha",
+      "liquid-mineral-oil",
+    }, "kkk", {
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }
+    }),
     order = "c[advanced-oil-refining]"
   },
   {
@@ -313,8 +326,14 @@ data:extend(
       {type="fluid", name="liquid-naphtha", amount=30},
       {type="item", name="solid-oil-residual", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-11.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "liquid-fuel-oil",
+      "liquid-naphtha",
+      "liquid-mineral-oil",
+    }, "kkk", {
+      "liquid-condensates"
+    }),
     order = "d[condensates-oil-refining]"
   },
   {
@@ -336,8 +355,14 @@ data:extend(
       {type="fluid", name="liquid-naphtha", amount=10},
       {type="item", name="solid-oil-residual", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-12.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "liquid-fuel-oil",
+      "liquid-naphtha",
+      "liquid-mineral-oil",
+    }, "kkk", {
+      "gas-residual"
+    }),
     order = "e"
   },
   {
@@ -357,8 +382,10 @@ data:extend(
       {type="fluid", name="gas-synthesis", amount=150},
       {type="fluid", name="gas-residual", amount=10},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-07.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "gas-synthesis",
+    }, { {196,075,085}, {170,071,081}, {148,066,075} }),
     order = "e[steam-cracking-naphtha]",
   },
   {
@@ -378,8 +405,10 @@ data:extend(
     {
       {type="fluid", name="liquid-mineral-oil", amount=100},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-13.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "liquid-mineral-oil",
+    }, { {192,096,096}, {089,102,157}, {036,036,036} }),
     order = "f",
   },
   {
@@ -399,8 +428,10 @@ data:extend(
       {type="fluid", name="gas-synthesis", amount=100},
       {type="fluid", name="gas-residual", amount=10},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-14.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "gas-synthesis",
+    }, { {063,189,063}, {058,173,58}, {053,159,053} }),
     order = "f[catalyst-steam-cracking-mineral-oil]",
   },
   {
@@ -420,8 +451,10 @@ data:extend(
       {type="fluid", name="gas-synthesis", amount=100},
       {type="fluid", name="gas-residual", amount=10},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-15.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "gas-synthesis",
+    }, { {237,212,104}, {239,210,093}, {247,216,081} }),
     order = "g[catalyst-steam-cracking-fuel-oil]",
   },
   {
@@ -440,8 +473,10 @@ data:extend(
     {
       {type="fluid", name="lubricant", amount=50},
     },
-    icon = "__base__/graphics/icons/fluid/lubricant.png",
-    icon_size = 64,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "lubricant",
+    }, { {063,189,063}, {058,173,58}, {053,159,053} }),
     order = "g",
   },
   --SYNTHESIS
@@ -724,8 +759,10 @@ data:extend(
       {type="fluid", name="gas-propene", amount=100},
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-27.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/propene.png", 72 }
+    }, { {196,075,085}, {170,071,081}, {148,066,075} }),
     order = "e[catalyst-steam-cracking-naphtha]",
   },
   --CHEMISTRY
@@ -817,8 +854,10 @@ data:extend(
       {type="fluid", name="liquid-toluene", amount=100},
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/carbon-31.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "liquid-toluene"
+    }, { {196,075,085}, {170,071,081}, {148,066,075} }),
     order = "d",
   },
   {
