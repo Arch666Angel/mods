@@ -13,6 +13,7 @@ script.on_event(
   function(event)
     if not global.is_lab_given and game.entity_prototypes[main_lab] then
       game.players[event.player_index].insert {name = main_lab, count = 1}
+      global.is_lab_given = true
     end
   end
 )
