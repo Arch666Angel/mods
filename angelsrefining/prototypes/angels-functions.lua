@@ -199,8 +199,9 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
       bot_molecules_icon[molecule_index] = {
         {
           icon = mi.icon or mi[1] or nil,
-          shift = molecule_icon.shift or molecule_icon[3] or nil,
-          scale = molecule_icon.scale or molecule_icon[4] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
         }
       }
       if bot_molecules_icon[molecule_index][1].icon then
@@ -263,8 +264,9 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
       top_molecules_icon[molecule_index] = {
         {
           icon = mi.icon or mi[1] or nil,
-          shift = molecule_icon.shift or molecule_icon[3] or nil,
-          scale = molecule_icon.scale or molecule_icon[4] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
         }
       }
       if top_molecules_icon[molecule_index][1].icon then
@@ -472,8 +474,9 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
       bot_molecules_icon[molecule_index] = {
         {
           icon = mi.icon or mi[1] or nil,
-          shift = molecule_icon.shift or molecule_icon[3] or nil,
-          scale = molecule_icon.scale or molecule_icon[4] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
         }
       }
       if bot_molecules_icon[molecule_index][1].icon then
@@ -536,8 +539,9 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
       top_molecules_icon[molecule_index] = {
         {
           icon = mi.icon or mi[1] or nil,
-          shift = molecule_icon.shift or molecule_icon[3] or nil,
-          scale = molecule_icon.scale or molecule_icon[4] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
         }
       }
       if top_molecules_icon[molecule_index][1].icon then

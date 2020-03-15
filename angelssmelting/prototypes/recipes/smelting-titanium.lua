@@ -57,18 +57,17 @@ data:extend(
     {
       {type="fluid", name="liquid-titanium-tetrachloride", amount=120},
     },
-    icons = {
-      {
-        icon = "__angelssmelting__/graphics/icons/liquid-titanium-tetrachloride.png",
-      },
+    main_product = "liquid-titanium-tetrachloride",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 }
+    }, "ill", {
       {
         icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon_size = 32,
         tint = angelsmods.smelting.number_tint,
-        scale = 0.32,
-        shift = {-12, 0}, --{-12, -12},
       }
-    },
-    icon_size = 32,
+    }),
     order = "d[liquid-titanium-tetrachloride]-a",
   },
   {
@@ -88,18 +87,17 @@ data:extend(
     {
       {type="fluid", name="liquid-titanium-tetrachloride", amount=120},
     },
-    icons = {
-      {
-        icon = "__angelssmelting__/graphics/icons/liquid-titanium-tetrachloride.png",
-      },
+    main_product = "liquid-titanium-tetrachloride",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 }
+    }, "ill", {
       {
         icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon_size = 32,
         tint = angelsmods.smelting.number_tint,
-        scale = 0.32,
-        shift = {-12, 0}, --{-12, -12},
       }
-    },
-    icon_size = 32,
+    }),
     order = "d[liquid-titanium-tetrachloride]-b",
   },
   {
