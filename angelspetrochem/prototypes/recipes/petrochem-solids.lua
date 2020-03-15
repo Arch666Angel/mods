@@ -505,17 +505,18 @@ data:extend(
     {
       type = "recipe",
       name = "angels-electrode-used",
-      category = "crafting-with-fluid",
+      category = "chemistry",
       subgroup = "petrochem-catalysts",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-electrode-used", amount = 1},
         {type = "fluid", name = "water-purified", amount = 50}
       },
       results = {
         {type = "item", name = "angels-electrode", amount = 1},
-        {type = "fluid", name = "water-mineralized", amount = 50}
+        {type = "fluid", name = "water-mineralized", amount = 10},
+        {type = "fluid", name = "water", amount = 40}
       },
       icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
       icon_size = 32,
