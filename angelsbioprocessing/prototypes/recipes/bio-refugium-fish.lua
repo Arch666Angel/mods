@@ -15,8 +15,8 @@ data:extend(
         {type = "fluid", name = "liquid-fish-atmosphere", amount = 40}
       },
       main_product = "liquid-fish-atmosphere",
-      --icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
-      --icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {190,255,000}, {205,255,000}, {205,255,000} }),
       order = "b"
     },
     -- KEEPING

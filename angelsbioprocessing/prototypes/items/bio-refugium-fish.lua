@@ -3,7 +3,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-fish-atmosphere",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {190,255,000}, {190,255,000}, {205,255,000}, {205,255,000} }),
+    icons = angelsmods.functions.create_liquid_fluid_icon(nil, { {190,255,000}, {205,255,000}, {205,255,000} }),
     subgroup = "bio-fish",
     order = "ba",
     default_temperature = 25,
@@ -17,7 +17,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-polluted-fish-atmosphere",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {241,050,238}, {241,050,238}, {190,255,000}, {190,255,000} }),
+    icons = angelsmods.functions.create_liquid_fluid_icon(nil, { {190,255,000}, {241,050,238}, {241,050,238} }),
     subgroup = "bio-fish",
     order = "bb",
     default_temperature = 25,
