@@ -8,7 +8,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="water-saline", amount=100}
     },
     results=
@@ -31,7 +32,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-chlorine", amount=50},
       {type="fluid", name="gas-hydrogen", amount=50},
     },
@@ -52,7 +54,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-hydrogen-chloride", amount=100},
     },
     results=
@@ -74,7 +77,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-chlorine", amount=60},
       {type="fluid", name="gas-methane", amount=40},
     },
@@ -95,7 +99,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-hydrogen-chloride", amount=100},
       {type="fluid", name="water-purified", amount=50},
     },
@@ -103,8 +108,10 @@ data:extend(
     {
       {type="fluid", name="liquid-hydrochloric-acid", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 }
+    }, "lho"),
     order = "f[liquid-hydrochloric-acid]",
   },
   {
@@ -114,7 +121,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="item", name="solid-salt", amount=6},
       {type="fluid", name="liquid-sulfuric-acid", amount=120},
     },
@@ -123,8 +131,10 @@ data:extend(
       {type="fluid", name="liquid-hydrochloric-acid", amount=70},
       {type="item", name="solid-sodium-sulfate", amount=3},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 }
+    }, "lho"),
     order = "g",
   },
   {
@@ -134,7 +144,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="item", name="iron-ore", amount=2},
       {type="fluid", name="gas-hydrogen-chloride", amount=40},
     },
@@ -142,6 +153,8 @@ data:extend(
     {
       {type="fluid", name="liquid-ferric-chloride-solution", amount=40},
     },
+    main_product = "liquid-ferric-chloride-solution",
+    always_show_products = "true",
     --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
     icon_size = 32,
     order = "h",
@@ -153,7 +166,8 @@ data:extend(
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="item", name="copper-ore", amount=2},
       {type="fluid", name="gas-hydrogen-chloride", amount=40},
     },
@@ -161,6 +175,8 @@ data:extend(
     {
       {type="fluid", name="liquid-cupric-chloride-solution", amount=40},
     },
+    main_product = "liquid-cupric-chloride-solution",
+    always_show_products = "true",
     --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
     icon_size = 32,
     order = "i",
@@ -172,7 +188,8 @@ data:extend(
     subgroup = "petrochem-chlorine-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-propene", amount=50},
       {type="fluid", name="gas-chlorine", amount=50},
     },
@@ -194,7 +211,8 @@ data:extend(
     subgroup = "petrochem-chlorine-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-allylchlorid", amount=100},
       {type="fluid", name="liquid-hydrochloric-acid", amount=50},
       {type="item", name="solid-sodium-hydroxide", amount=5},
@@ -216,7 +234,8 @@ data:extend(
     subgroup = "petrochem-chlorine-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="fluid", name="gas-epichlorhydrin", amount=100},
       {type="fluid", name="water-purified", amount=50},
     },
@@ -237,7 +256,8 @@ data:extend(
     subgroup = "petrochem-chlorine-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients   =
+    {
       {type="item", name="solid-sodium-perchlorate", amount=2},
       {type="fluid", name="liquid-hydrochloric-acid", amount=50},
     },
@@ -245,8 +265,10 @@ data:extend(
     {
       {type="fluid", name="liquid-perchloric-acid", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-33.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/perchloric-acid.png", 72 }
+    }, "lho"),
     order = "k[liquid-perchloric-acid]",
   },
   {
@@ -256,7 +278,8 @@ data:extend(
     subgroup = "petrochem-chlorine-2",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-carbon", amount=1},
       {type="fluid", name="gas-carbon-monoxide", amount=60},
       {type="fluid", name="gas-chlorine", amount=40},

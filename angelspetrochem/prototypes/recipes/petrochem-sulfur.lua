@@ -106,8 +106,10 @@ data:extend(
     {
       {type="fluid", name="liquid-sulfuric-acid", amount=60},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/sulfuric-acid.png", 72 }
+    }, "sho"),
     order = "d[liquid-sulfuric-acid]",
   },
   {
@@ -127,7 +129,7 @@ data:extend(
       {type="item", name="solid-calcium-sulfate", amount=1},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({
+    icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
     }, "fhh"),
     order = "e[liquid-hydrofluoric-acid]",

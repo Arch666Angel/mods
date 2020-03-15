@@ -190,8 +190,10 @@ data:extend(
     {
       {type="fluid", name="water-purified", amount=100}
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-27.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      "water-purified"
+    }, "www"),
     order = "a[water-synthesis]",
     crafting_machine_tint =
     {

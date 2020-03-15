@@ -158,8 +158,9 @@ data:extend(
       {type="fluid", name="liquid-nitric-acid", amount=50},
     },
     always_show_products = "true",
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-08.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }
+    }, "noh"),
     order = "h",
   },
   {
