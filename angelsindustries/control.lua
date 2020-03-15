@@ -12,8 +12,10 @@ script.on_event(
   {defines.events.on_player_created, defines.events.on_player_respawned},
   function(event)
     if not global.is_lab_given and game.entity_prototypes[main_lab] then
-      game.players[event.player_index].insert {name = main_lab, count = 1}
-      global.is_lab_given = true
+      local player = game.players[event.player_index]
+      if player and player.valid then
+        global.is_lab_given = player.insert {name = main_lab, count = 1} > 0
+      end
     end
   end
 )
