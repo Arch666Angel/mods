@@ -1,44 +1,43 @@
+global.is_lab_given = false
+local main_lab = "angels-main-lab"
+
+local function remove_lab_from_inv(inventory)
+  if inventory and inventory.get_item_count(main_lab) then
+    inventory.remove {name = main_lab}
+    global.is_lab_given = false
+  end
+end
+
 script.on_event(
-	defines.events.on_player_created,
-	function(event)
-		local iteminsert = game.players[event.player_index].insert
-		if game.entity_prototypes["angels-main-lab"] then
-			iteminsert {name = "angels-main-lab", count = 1}
-		end
+  {defines.events.on_player_created, defines.events.on_player_respawned},
+  function(event)
+    if not global.is_lab_given and game.entity_prototypes[main_lab] then
+      game.players[event.player_index].insert {name = main_lab, count = 1}
+    end
+  end
+)
 
-		-- iteminsert{name="angels-basic-lab", count=10}
+script.on_event(
+  defines.events.on_entity_died,
+  function(event)
+    if game.entity_prototypes[main_lab] then
+      local etype = event.entity.type
+      if event.entity.name == main_lab then
+        global.is_lab_given = false
+      elseif etype == "container" or etype == "logistic-container" then
+        remove_lab_from_inv(event.entity.get_inventory(defines.inventory.chest))
+      elseif etype == "construction-robot" or etype == "logistic-robot" then
+        remove_lab_from_inv(event.entity.get_inventory(defines.inventory.robot_cargo))
+      end
+    end
+  end
+)
 
-		-- iteminsert{name="angels-enhance-lab-1", count=10}
-
-		-- iteminsert{name="angels-exploration-lab-1", count=10}
-
-		-- iteminsert{name="angels-energy-lab-1", count=10}
-
-		-- iteminsert{name="angels-logistic-lab-1", count=10}
-
-		-- iteminsert{name="angels-processing-lab-1", count=10}
-
-		-- iteminsert{name="angels-war-lab-1", count=10}
-
-		-- iteminsert{name="datacore-basic", count=100}
-		-- iteminsert{name="datacore-exploration-1", count=100}
-		-- iteminsert{name="datacore-exploration-2", count=100}
-		-- iteminsert{name="datacore-enhance-1", count=100}
-		-- iteminsert{name="datacore-enhance-2", count=100}
-		-- iteminsert{name="datacore-energy-1", count=100}
-		-- iteminsert{name="datacore-energy-2", count=100}
-		-- iteminsert{name="datacore-logistic-1", count=100}
-		-- iteminsert{name="datacore-logistic-2", count=100}
-		-- iteminsert{name="datacore-processing-1", count=100}
-		-- iteminsert{name="datacore-processing-2", count=100}
-		-- iteminsert{name="datacore-war-1", count=100}
-		-- iteminsert{name="datacore-war-2", count=100}
-
-		-- iteminsert{name="angels-science-pack-grey", count=100}
-		-- iteminsert{name="angels-science-pack-red", count=100}
-		-- iteminsert{name="angels-science-pack-green", count=100}
-		-- iteminsert{name="angels-science-pack-orange", count=100}
-		-- iteminsert{name="angels-science-pack-blue", count=100}
-		-- iteminsert{name="angels-science-pack-yellow", count=100}
-	end
+script.on_event(
+  defines.events.on_pre_player_died,
+  function(event)
+    if game.entity_prototypes[main_lab] then
+      remove_lab_from_inv(game.players[event.player_index].get_main_inventory())
+    end
+  end
 )
