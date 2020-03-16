@@ -58,7 +58,6 @@ funcs.generate_train_technology(
     prerequisites = {
       "railway"
     },
-    unit = tiers[1],
     order = "c-a"
   },
   tiers
