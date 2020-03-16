@@ -11,7 +11,12 @@ data:extend(
     },
     {
       type = "ammo-category",
-      name = "bio"
+      name = "bio",
+      bonus_gui_order = "m-b"
+    },
+    {
+      type = "ammo-category",
+      name = "electric"
     },
     --DAMAGE TYPE
     {

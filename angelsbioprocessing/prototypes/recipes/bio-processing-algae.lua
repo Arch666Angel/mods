@@ -100,7 +100,7 @@ data:extend(
         {type = "fluid", name = "water", amount = 100}
       },
       results = {
-        {type = "item", name = "algae-green", amount = 20},
+        {type = "item", name = "algae-green", amount = 25},
         {type = "item", name = "algae-brown", amount = 5}
       },
       icons = {
@@ -123,13 +123,13 @@ data:extend(
       category = "bio-processing",
       subgroup = "bio-processing-green",
       enabled = "false",
-      energy_required = 20,
+      energy_required = 15,
       ingredients = {
-        {type = "fluid", name = "water-mineralized", amount = 100},
-        {type = "fluid", name = "gas-carbon-dioxide", amount = 100}
+        {type = "fluid", name = "water-mineralized", amount = 80},
+        {type = "fluid", name = "gas-carbon-dioxide", amount = 80}
       },
       results = {
-        {type = "item", name = "algae-green", amount = 40}
+        {type = "item", name = "algae-green", amount = 50}
       },
       icons = {
         {

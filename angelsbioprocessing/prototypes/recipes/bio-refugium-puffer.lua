@@ -20,14 +20,16 @@ data:extend(
       icons = angelsmods.functions.create_gas_recipe_icon(nil, { {194,227,091}, {184,239,000}, {156,207,000} }),
       order = "b"
     },
-    -- PUFFING
+    ---------------------------------------------------------------------------
+    -- PUFFING ----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "puffer-puffing-1",
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-1", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -36,6 +38,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-1", amount = 3},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "fluid", name = "gas-acid", amount = 200}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
@@ -48,7 +51,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-2", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -71,7 +74,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-3", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -94,7 +97,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-4", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -117,7 +120,7 @@ data:extend(
       category = "bio-refugium-puffer",
       subgroup = "bio-puffer",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-5", amount = 4},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
@@ -134,7 +137,9 @@ data:extend(
       icon_size = 32,
       order = "ae"
     },
-    -- BREEDING
+    ---------------------------------------------------------------------------
+    -- BREEDING ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "puffer-breeding-1",
@@ -149,8 +154,9 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-1", amount = 2},
-        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-1", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
@@ -181,9 +187,10 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-2", amount = 2},
+        {type = "item", name = "bio-puffer-2", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
@@ -213,10 +220,11 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-3", amount = 2},
+        {type = "item", name = "bio-puffer-3", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.7},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
       },
@@ -245,11 +253,12 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-4", amount = 2},
+        {type = "item", name = "bio-puffer-4", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.5},
+        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.7},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
       },
       icons = {
@@ -277,12 +286,13 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20}
       },
       results = {
-        {type = "item", name = "bio-puffer-5", amount = 2},
+        {type = "item", name = "bio-puffer-5", amount = 2, catalyst_amount = 2},
+        {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.5}
+        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.7}
       },
       icons = {
         {
@@ -295,7 +305,9 @@ data:extend(
       icon_size = 32,
       order = "ae"
     },
-    --HATCHERY
+    ---------------------------------------------------------------------------
+    -- HATCHERY ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "puffer-egg-1",
@@ -303,7 +315,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 10,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-1", amount = 1}
       },
@@ -322,7 +334,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-2", amount = 1}
       },
@@ -341,7 +353,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 20,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-3", amount = 1}
       },
@@ -360,7 +372,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 25,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-4", amount = 1}
       },
@@ -379,7 +391,7 @@ data:extend(
       subgroup = "bio-puffer-egg",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-puffer-egg-5", amount = 1}
       },
@@ -391,7 +403,9 @@ data:extend(
       icon_size = 32,
       order = "ae"
     },
-    --BUTCHERY
+    ---------------------------------------------------------------------------
+    -- BUTCHERY ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "puffer-butchery-1",
@@ -399,7 +413,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-1", amount = 1}
       },
@@ -417,7 +431,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-2", amount = 1}
       },
@@ -435,7 +449,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-3", amount = 1}
       },
@@ -453,7 +467,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-4", amount = 1}
       },
@@ -471,7 +485,7 @@ data:extend(
       subgroup = "bio-puffer-butchery",
       enabled = "false",
       hidden = "false",
-      energy_required = 60,
+      energy_required = 15,
       ingredients = {
         {type = "item", name = "bio-puffer-5", amount = 1}
       },

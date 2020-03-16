@@ -3,6 +3,7 @@ Version: 0.3.2
 Date: ???
   Changes:
     - Settings were surrounded by quotes
+    - Higher tiers are now unlocked by separate techs
   Bugfixes:
     - Allow robot deployment when in automatic mode #48
 ---------------------------------------------------------------------------------------------------

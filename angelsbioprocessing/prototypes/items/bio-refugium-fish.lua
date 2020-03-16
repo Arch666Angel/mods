@@ -67,7 +67,7 @@ data:extend(
       }
     },
     subgroup = "bio-fish",
-    order = "bb",
+    order = "ab",
     stack_size = 100
   },
   {
@@ -105,7 +105,7 @@ data:extend(
       }
     },
     subgroup = "bio-fish",
-    order = "bc",
+    order = "ac",
     stack_size = 100
   },
   {
@@ -143,7 +143,7 @@ data:extend(
       }
     },
     subgroup = "bio-fish",
-    order = "bd",
+    order = "ad",
     stack_size = 100
   },
 }

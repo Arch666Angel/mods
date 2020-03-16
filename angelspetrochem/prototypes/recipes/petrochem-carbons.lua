@@ -15,13 +15,13 @@ data:extend(
       energy_required = 2,
       ingredients =
       {
-        {type="fluid", name="gas-natural-1", amount=100}
+        {type = "fluid", name = "gas-natural-1", amount = 100}
       },
-      results=
+      results =
       {
-        {type="fluid", name="gas-raw-1", amount=60},
-        {type="fluid", name="liquid-condensates", amount=30},
-        {type="fluid", name="water-yellow-waste", amount=10},
+        {type = "fluid", name = "gas-raw-1", amount = 60},
+        {type = "fluid", name = "liquid-condensates", amount = 30},
+        {type = "fluid", name = "water-yellow-waste", amount = 10},
       },
       always_show_products = "true",
     },
@@ -31,13 +31,13 @@ data:extend(
       energy_required = 2,
       ingredients =
       {
-        {type="fluid", name="gas-natural-1", amount=120 * rawmulti}
+        {type = "fluid", name = "gas-natural-1", amount = 120 * rawmulti}
       },
-      results=
+      results =
       {
-        {type="fluid", name="gas-raw-1", amount=60},
-        {type="fluid", name="liquid-condensates", amount=30},
-        {type="fluid", name="water-yellow-waste", amount=10},
+        {type = "fluid", name = "gas-raw-1", amount = 60},
+        {type = "fluid", name = "liquid-condensates", amount = 30},
+        {type = "fluid", name = "water-yellow-waste", amount = 10},
       },
       always_show_products = "true",
     },
@@ -56,13 +56,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-raw-1", amount=100},
-      --{type="item", name="membrane", amount=1}
+      {type = "fluid", name = "gas-raw-1", amount = 100},
+      --{type = "item", name = "membrane", amount = 1}
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-acid", amount=20},
-      {type="fluid", name="liquid-ngl", amount=80},
+      {type = "fluid", name = "gas-acid", amount = 20},
+      {type = "fluid", name = "liquid-ngl", amount = 80},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -80,13 +80,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-ngl", amount=100}
+      {type = "fluid", name = "liquid-ngl", amount = 100}
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methane", amount=50},
-      {type="fluid", name="gas-ethane", amount=30},
-      {type="fluid", name="gas-butane", amount=20},
+      {type = "fluid", name = "gas-methane", amount = 50},
+      {type = "fluid", name = "gas-ethane", amount = 30},
+      {type = "fluid", name = "gas-butane", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -105,15 +105,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-ngl", amount=100},
-      {type="fluid", name="gas-synthesis", amount=50}
+      {type = "fluid", name = "liquid-ngl", amount = 100},
+      {type = "fluid", name = "gas-synthesis", amount = 50}
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methane", amount=90},
-      {type="fluid", name="gas-ethane", amount=30},
-      {type="fluid", name="gas-butane", amount=20},
-      {type="fluid", name="gas-carbon-monoxide", amount=10},
+      {type = "fluid", name = "gas-methane", amount = 90},
+      {type = "fluid", name = "gas-ethane", amount = 30},
+      {type = "fluid", name = "gas-butane", amount = 20},
+      {type = "fluid", name = "gas-carbon-monoxide", amount = 10},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -134,15 +134,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-ngl", amount=100},
-      {type="fluid", name="liquid-condensates", amount=50}
+      {type = "fluid", name = "liquid-ngl", amount = 100},
+      {type = "fluid", name = "liquid-condensates", amount = 50}
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methane", amount=30},
-      {type="fluid", name="gas-ethane", amount=30},
-      {type="fluid", name="gas-butane", amount=70},
-      {type="fluid", name="liquid-naphtha", amount=20},
+      {type = "fluid", name = "gas-methane", amount = 30},
+      {type = "fluid", name = "gas-ethane", amount = 30},
+      {type = "fluid", name = "gas-butane", amount = 70},
+      {type = "fluid", name = "liquid-naphtha", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -163,15 +163,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-ngl", amount=100},
-      {type="fluid", name="gas-residual", amount=50}
+      {type = "fluid", name = "liquid-ngl", amount = 100},
+      {type = "fluid", name = "gas-residual", amount = 50}
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methane", amount=40},
-      {type="fluid", name="gas-ethane", amount=40},
-      {type="fluid", name="gas-butane", amount=50},
-      {type="fluid", name="liquid-toluene", amount=20},
+      {type = "fluid", name = "gas-methane", amount = 40},
+      {type = "fluid", name = "gas-ethane", amount = 40},
+      {type = "fluid", name = "gas-butane", amount = 50},
+      {type = "fluid", name = "liquid-toluene", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -192,15 +192,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-condensates", amount=60},
-      {type="fluid", name="thermal-water", amount=20},
-      {type="fluid", name="gas-carbon-monoxide", amount=20},
+      {type = "fluid", name = "liquid-condensates", amount = 60},
+      {type = "fluid", name = "thermal-water", amount = 20},
+      {type = "fluid", name = "gas-carbon-monoxide", amount = 20},
     },
-    results=
+    results =
     {
-      {type="item", name="solid-coke", amount=2},
-      {type="fluid", name="liquid-naphtha", amount=50},
-      {type="fluid", name="gas-methane", amount=30},
+      {type = "item", name = "solid-coke", amount = 2},
+      {type = "fluid", name = "liquid-naphtha", amount = 50},
+      {type = "fluid", name = "gas-methane", amount = 30},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -221,13 +221,13 @@ data:extend(
       energy_required = 2,
       ingredients =
       {
-        {type="fluid", name="liquid-multi-phase-oil", amount=100}
+        {type = "fluid", name = "liquid-multi-phase-oil", amount = 100}
       },
-      results=
+      results =
       {
-        {type="fluid", name="gas-raw-1", amount=20},
-        {type="fluid", name="crude-oil", amount=70},
-        {type="fluid", name="water-yellow-waste", amount=10},
+        {type = "fluid", name = "gas-raw-1", amount = 20},
+        {type = "fluid", name = "crude-oil", amount = 70},
+        {type = "fluid", name = "water-yellow-waste", amount = 10},
       },
     },
     expensive =
@@ -236,13 +236,13 @@ data:extend(
       energy_required = 2,
       ingredients =
       {
-        {type="fluid", name="liquid-multi-phase-oil", amount=120 * rawmulti}
+        {type = "fluid", name = "liquid-multi-phase-oil", amount = 120 * rawmulti}
       },
-      results=
+      results =
       {
-        {type="fluid", name="gas-raw-1", amount=20},
-        {type="fluid", name="crude-oil", amount=70},
-        {type="fluid", name="water-yellow-waste", amount=10},
+        {type = "fluid", name = "gas-raw-1", amount = 20},
+        {type = "fluid", name = "crude-oil", amount = 70},
+        {type = "fluid", name = "water-yellow-waste", amount = 10},
       },
     },
     always_show_products = "true",
@@ -261,14 +261,14 @@ data:extend(
     energy_required = 6,
     ingredients =
     {
-      {type="fluid", name="crude-oil", amount=100}
+      {type = "fluid", name = "crude-oil", amount = 100}
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=20},
-      {type="fluid", name="liquid-fuel-oil", amount=30},
-      {type="fluid", name="liquid-naphtha", amount=50},
-      {type="item", name="solid-oil-residual", amount=1},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 20},
+      {type = "fluid", name = "liquid-fuel-oil", amount = 30},
+      {type = "fluid", name = "liquid-naphtha", amount = 50},
+      {type = "item", name = "solid-oil-residual", amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -287,15 +287,15 @@ data:extend(
     energy_required = 6,
     ingredients =
     {
-      {type="fluid", name="crude-oil", amount=90},
-      {type="fluid", name="gas-hydrogen", amount=20}
+      {type = "fluid", name = "crude-oil", amount = 90},
+      {type = "fluid", name = "gas-hydrogen", amount = 20}
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=20},
-      {type="fluid", name="liquid-fuel-oil", amount=20},
-      {type="fluid", name="liquid-naphtha", amount=70},
-      {type="item", name="solid-oil-residual", amount=1},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 20},
+      {type = "fluid", name = "liquid-fuel-oil", amount = 20},
+      {type = "fluid", name = "liquid-naphtha", amount = 70},
+      {type = "item", name = "solid-oil-residual", amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -316,15 +316,15 @@ data:extend(
     energy_required = 6,
     ingredients =
     {
-      {type="fluid", name="crude-oil", amount=40},
-      {type="fluid", name="liquid-condensates", amount=60}
+      {type = "fluid", name = "crude-oil", amount = 40},
+      {type = "fluid", name = "liquid-condensates", amount = 60}
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=40},
-      {type="fluid", name="liquid-fuel-oil", amount=30},
-      {type="fluid", name="liquid-naphtha", amount=30},
-      {type="item", name="solid-oil-residual", amount=1},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 40},
+      {type = "fluid", name = "liquid-fuel-oil", amount = 30},
+      {type = "fluid", name = "liquid-naphtha", amount = 30},
+      {type = "item", name = "solid-oil-residual", amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -345,15 +345,15 @@ data:extend(
     energy_required = 6,
     ingredients =
     {
-      {type="fluid", name="crude-oil", amount=60},
-      {type="fluid", name="gas-residual", amount=40}
+      {type = "fluid", name = "crude-oil", amount = 60},
+      {type = "fluid", name = "gas-residual", amount = 40}
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=60},
-      {type="fluid", name="liquid-fuel-oil", amount=30},
-      {type="fluid", name="liquid-naphtha", amount=10},
-      {type="item", name="solid-oil-residual", amount=1},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 60},
+      {type = "fluid", name = "liquid-fuel-oil", amount = 30},
+      {type = "fluid", name = "liquid-naphtha", amount = 10},
+      {type = "item", name = "solid-oil-residual", amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -374,13 +374,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-naphtha", amount=100},
-      {type="fluid", name="steam", amount=100},
+      {type = "fluid", name = "liquid-naphtha", amount = 100},
+      {type = "fluid", name = "steam", amount = 100},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-synthesis", amount=150},
-      {type="fluid", name="gas-residual", amount=10},
+      {type = "fluid", name = "gas-synthesis", amount = 150},
+      {type = "fluid", name = "gas-residual", amount = 10},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -397,13 +397,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-naphtha", amount=60},
-      {type="fluid", name="thermal-water", amount=20},
-      {type="fluid", name="gas-carbon-monoxide", amount=20},
+      {type = "fluid", name = "liquid-naphtha", amount = 60},
+      {type = "fluid", name = "thermal-water", amount = 20},
+      {type = "fluid", name = "gas-carbon-monoxide", amount = 20},
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=100},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 100},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -420,13 +420,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=100},
-      {type="fluid", name="steam", amount=100},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 100},
+      {type = "fluid", name = "steam", amount = 100},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-synthesis", amount=100},
-      {type="fluid", name="gas-residual", amount=10},
+      {type = "fluid", name = "gas-synthesis", amount = 100},
+      {type = "fluid", name = "gas-residual", amount = 10},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -443,13 +443,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-fuel-oil", amount=100},
-      {type="fluid", name="steam", amount=100},
+      {type = "fluid", name = "liquid-fuel-oil", amount = 100},
+      {type = "fluid", name = "steam", amount = 100},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-synthesis", amount=100},
-      {type="fluid", name="gas-residual", amount=10},
+      {type = "fluid", name = "gas-synthesis", amount = 100},
+      {type = "fluid", name = "gas-residual", amount = 10},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -466,12 +466,12 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-mineral-oil", amount=40},
-      {type="fluid", name="gas-residual", amount=10},
+      {type = "fluid", name = "liquid-mineral-oil", amount = 40},
+      {type = "fluid", name = "gas-residual", amount = 10},
     },
-    results=
+    results =
     {
-      {type="fluid", name="lubricant", amount=50},
+      {type = "fluid", name = "lubricant", amount = 50},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -489,12 +489,12 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-synthesis", amount=100},
+      {type = "fluid", name = "gas-synthesis", amount = 100},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-carbon-monoxide", amount=40},
-      {type="fluid", name="gas-hydrogen", amount=60},
+      {type = "fluid", name = "gas-carbon-monoxide", amount = 40},
+      {type = "fluid", name = "gas-hydrogen", amount = 60},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -512,12 +512,12 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-carbon-monoxide", amount=60},
-      {type="fluid", name="gas-hydrogen", amount=90},
+      {type = "fluid", name = "gas-carbon-monoxide", amount = 60},
+      {type = "fluid", name = "gas-hydrogen", amount = 90},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-synthesis", amount=100},
+      {type = "fluid", name = "gas-synthesis", amount = 100},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -534,16 +534,16 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-synthesis", amount=100},
-      {type="fluid", name="gas-hydrogen", amount=40},
-      {type="item", name="catalyst-metal-blue", amount=1},  --Co
+      {type = "fluid", name = "gas-synthesis", amount = 100},
+      {type = "fluid", name = "gas-hydrogen", amount = 40},
+      {type = "item", name = "catalyst-metal-blue", amount = 1},  --Co
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methane", amount=60},
-      {type="fluid", name="gas-ethane", amount=20},
-      {type="fluid", name="gas-butane", amount=20},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-methane", amount = 60},
+      {type = "fluid", name = "gas-ethane", amount = 20},
+      {type = "fluid", name = "gas-butane", amount = 20},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -562,14 +562,14 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-synthesis", amount=150},
-      {type="fluid", name="gas-carbon-monoxide", amount=50},
-      {type="item", name="catalyst-metal-red", amount=1},    --Fe
+      {type = "fluid", name = "gas-synthesis", amount = 150},
+      {type = "fluid", name = "gas-carbon-monoxide", amount = 50},
+      {type = "item", name = "catalyst-metal-red", amount = 1},    --Fe
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-naphtha", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "liquid-naphtha", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -586,15 +586,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-synthesis", amount=100},
-      {type="fluid", name="gas-carbon-dioxide", amount=40},
-      {type="item", name="catalyst-metal-green", amount=1},      --Zn and Al
+      {type = "fluid", name = "gas-synthesis", amount = 100},
+      {type = "fluid", name = "gas-carbon-dioxide", amount = 40},
+      {type = "item", name = "catalyst-metal-green", amount = 1},      --Zn and Al
     },
-    results=
+    results =
     {
-      {type="fluid", name="water-purified", amount=20},
-      {type="fluid", name="gas-methanol", amount=80},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "water-purified", amount = 20},
+      {type = "fluid", name = "gas-methanol", amount = 80},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -611,12 +611,12 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-residual", amount=100},
-      {type="fluid", name="steam", amount=100},
+      {type = "fluid", name = "gas-residual", amount = 100},
+      {type = "fluid", name = "steam", amount = 100},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-synthesis", amount=150},
+      {type = "fluid", name = "gas-synthesis", amount = 150},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -633,12 +633,12 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="item", name="solid-oil-residual", amount=10},
-      {type="fluid", name="steam", amount=100},
+      {type = "item", name = "solid-oil-residual", amount = 10},
+      {type = "fluid", name = "steam", amount = 100},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-residual", amount=100},
+      {type = "fluid", name = "gas-residual", amount = 100},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -656,13 +656,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-methane", amount=60},
-      {type="fluid", name="steam", amount=60},
+      {type = "fluid", name = "gas-methane", amount = 60},
+      {type = "fluid", name = "steam", amount = 60},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methanol", amount=80},
-      {type="fluid", name="gas-residual", amount=20},
+      {type = "fluid", name = "gas-methanol", amount = 80},
+      {type = "fluid", name = "gas-residual", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -679,13 +679,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-ethane", amount=60},
-      {type="fluid", name="steam", amount=60},
+      {type = "fluid", name = "gas-ethane", amount = 60},
+      {type = "fluid", name = "steam", amount = 60},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-ethylene", amount=80},
-      {type="fluid", name="gas-residual", amount=20},
+      {type = "fluid", name = "gas-ethylene", amount = 80},
+      {type = "fluid", name = "gas-residual", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -702,13 +702,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-butane", amount=60},
-      {type="fluid", name="steam", amount=60},
+      {type = "fluid", name = "gas-butane", amount = 60},
+      {type = "fluid", name = "steam", amount = 60},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-benzene", amount=80},
-      {type="fluid", name="gas-residual", amount=20},
+      {type = "fluid", name = "gas-benzene", amount = 80},
+      {type = "fluid", name = "gas-residual", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -725,15 +725,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-naphtha", amount=60},
-      {type="fluid", name="steam", amount=60},
-      {type="item", name="catalyst-metal-green", amount=1},  --Ag
+      {type = "fluid", name = "liquid-naphtha", amount = 60},
+      {type = "fluid", name = "steam", amount = 60},
+      {type = "item", name = "catalyst-metal-green", amount = 1},  --Ag
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-butadiene", amount=80},
-      {type="fluid", name="gas-residual", amount=20},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-butadiene", amount = 80},
+      {type = "fluid", name = "gas-residual", amount = 20},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -750,14 +750,14 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-naphtha", amount=100},
-      {type="fluid", name="steam", amount=100},
-      {type="item", name="catalyst-metal-red", amount=1},  --Fe
+      {type = "fluid", name = "liquid-naphtha", amount = 100},
+      {type = "fluid", name = "steam", amount = 100},
+      {type = "item", name = "catalyst-metal-red", amount = 1},  --Fe
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-propene", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-propene", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -775,13 +775,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-methane", amount=100},
-      {type="item", name="catalyst-metal-green", amount=1},
+      {type = "fluid", name = "gas-methane", amount = 100},
+      {type = "item", name = "catalyst-metal-green", amount = 1},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-benzene", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-benzene", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -798,13 +798,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-ethylene", amount=100},
-      {type="item", name="catalyst-metal-blue", amount=1}, --Ti OR Cr
+      {type = "fluid", name = "gas-ethylene", amount = 100},
+      {type = "item", name = "catalyst-metal-blue", amount = 1}, --Ti OR Cr
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-polyethylene", amount=50},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-polyethylene", amount = 50},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -821,14 +821,14 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-carbon-dioxide", amount=100},
-      {type="fluid", name="gas-hydrogen", amount=100},
-      {type="item", name="catalyst-metal-green", amount=1},  --Zinc, Copper, Aluminium
+      {type = "fluid", name = "gas-carbon-dioxide", amount = 100},
+      {type = "fluid", name = "gas-hydrogen", amount = 100},
+      {type = "item", name = "catalyst-metal-green", amount = 1},  --Zinc, Copper, Aluminium
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-methanol", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-methanol", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -845,14 +845,14 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-naphtha", amount=100},
-      {type="fluid", name="gas-hydrogen", amount=100},
-      {type="item", name="catalyst-metal-green", amount=1},  --Aluminium
+      {type = "fluid", name = "liquid-naphtha", amount = 100},
+      {type = "fluid", name = "gas-hydrogen", amount = 100},
+      {type = "item", name = "catalyst-metal-green", amount = 1},  --Aluminium
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-toluene", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "liquid-toluene", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -869,15 +869,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-benzene", amount=100},
-      {type="fluid", name="gas-chlor-methane", amount=50},
-      {type="item", name="catalyst-metal-green", amount=1},  --Aluminium
+      {type = "fluid", name = "gas-benzene", amount = 100},
+      {type = "fluid", name = "gas-chlor-methane", amount = 50},
+      {type = "item", name = "catalyst-metal-green", amount = 1},  --Aluminium
     },
-    results=
+    results =
     {
-      {type="fluid", name="liquid-toluene", amount=100},
-      {type="fluid", name="gas-hydrogen-chloride", amount=50},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "liquid-toluene", amount = 100},
+      {type = "fluid", name = "gas-hydrogen-chloride", amount = 50},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -894,13 +894,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-methanol", amount=100},
-      {type="item", name="catalyst-metal-green", amount=1}, --Ag, Or FeO & Mo and/or V
+      {type = "fluid", name = "gas-methanol", amount = 100},
+      {type = "item", name = "catalyst-metal-green", amount = 1}, --Ag, Or FeO & Mo and/or V
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-formaldehyde", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-formaldehyde", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -917,13 +917,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-ethylbenzene", amount=100},
-      {type="item", name="catalyst-metal-green", amount=1},    --Fe
+      {type = "fluid", name = "gas-ethylbenzene", amount = 100},
+      {type = "item", name = "catalyst-metal-green", amount = 1},    --Fe
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-styrene", amount=50},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-styrene", amount = 50},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -940,14 +940,14 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-benzene", amount=100},
-      {type="fluid", name="gas-oxygen", amount=100},
-      {type="item", name="catalyst-metal-yellow", amount=1},    --Fe
+      {type = "fluid", name = "gas-benzene", amount = 100},
+      {type = "fluid", name = "gas-oxygen", amount = 100},
+      {type = "item", name = "catalyst-metal-yellow", amount = 1},    --Fe
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-phenol", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-phenol", amount = 100},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -964,13 +964,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-methanol", amount=100},
-      {type="fluid", name="steam", amount=50},
+      {type = "fluid", name = "gas-methanol", amount = 100},
+      {type = "fluid", name = "steam", amount = 50},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-propene", amount=80},
-      {type="fluid", name="gas-residual", amount=20},
+      {type = "fluid", name = "gas-propene", amount = 80},
+      {type = "fluid", name = "gas-residual", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -988,14 +988,14 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-benzene", amount=50},
-      {type="fluid", name="gas-ethylene", amount=50},
-      {type="fluid", name="liquid-hydrofluoric-acid", amount=20},
+      {type = "fluid", name = "gas-benzene", amount = 50},
+      {type = "fluid", name = "gas-ethylene", amount = 50},
+      {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 20},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-ethylbenzene", amount=80},
-      {type="fluid", name="gas-hydrogen", amount=20},
+      {type = "fluid", name = "gas-ethylbenzene", amount = 80},
+      {type = "fluid", name = "gas-hydrogen", amount = 20},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -1012,16 +1012,16 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-benzene", amount=50},
-      {type="fluid", name="gas-propene", amount=50},
-      {type="fluid", name="gas-oxygen", amount=20},
-      {type="item", name="catalyst-metal-blue", amount=1},
+      {type = "fluid", name = "gas-benzene", amount = 50},
+      {type = "fluid", name = "gas-propene", amount = 50},
+      {type = "fluid", name = "gas-oxygen", amount = 20},
+      {type = "item", name = "catalyst-metal-blue", amount = 1},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-phenol", amount=60},
-      {type="fluid", name="gas-acetone", amount=60},
-      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
+      {type = "fluid", name = "gas-phenol", amount = 60},
+      {type = "fluid", name = "gas-acetone", amount = 60},
+      {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -1039,13 +1039,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="gas-phenol", amount=60},
-      {type="fluid", name="gas-acetone", amount=40},
-      {type="fluid", name="liquid-hydrochloric-acid", amount=20},
+      {type = "fluid", name = "gas-phenol", amount = 60},
+      {type = "fluid", name = "gas-acetone", amount = 40},
+      {type = "fluid", name = "liquid-hydrochloric-acid", amount = 20},
     },
-    results=
+    results =
     {
-      {type="fluid", name="gas-bisphenol-a", amount=100},
+      {type = "fluid", name = "gas-bisphenol-a", amount = 100},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({

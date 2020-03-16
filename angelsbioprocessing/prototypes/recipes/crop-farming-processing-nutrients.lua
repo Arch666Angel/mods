@@ -16,9 +16,9 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp-seed",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-beans", amount = 10}
+        {type = "item", name = "solid-beans", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 80}
@@ -33,9 +33,9 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp-seed",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-corn", amount = 10}
+        {type = "item", name = "solid-corn", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 70}
@@ -50,9 +50,9 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp-seed",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-leafs", amount = 10}
+        {type = "item", name = "solid-leafs", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 10}
@@ -67,9 +67,9 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-nuts", amount = 10}
+        {type = "item", name = "solid-nuts", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40}
@@ -84,9 +84,9 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-pips", amount = 10}
+        {type = "item", name = "solid-pips", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
@@ -101,9 +101,9 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-fruit", amount = 10}
+        {type = "item", name = "solid-fruit", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 60}
