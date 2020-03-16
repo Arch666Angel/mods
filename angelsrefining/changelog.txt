@@ -2,8 +2,11 @@
 Version: 0.11.5
 Date: ???
   Changes:
+    - Added new graphics for fluid icons
     - Powdered refining depends on lubricant tech now
     - Moved seafloor pump more landinwards to be in line with 18.10 #78
+  Modding:
+    - Added angels fluid icon base icons
   Bugfixes:
     - When a resource is removed, the preset should be removed as well (otherwise it would/could crash)
     - Fixed that mixed uranium sorting (from crystals) did not allow productivity modules

@@ -61,8 +61,11 @@ data:extend(
       {type="fluid", name="liquid-trichlorosilane", amount=120},
       {type="fluid", name="gas-hydrogen", amount=30},
     },
-    main_product= "liquid-trichlorosilane",
-    icon_size = 32,
+    main_product = "liquid-trichlorosilane",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelssmelting__/graphics/icons/molecule-trichlorosilane.png", 72 }
+    }, "ihl"),
     order = "d[liquid-trichlorosilane]",
   },
   {
@@ -83,8 +86,11 @@ data:extend(
       {type="fluid", name="gas-silane", amount=120},
       {type="item", name="solid-aluminium-oxide", amount=6},
     },
-    main_product= "gas-silane",
-    icon_size = 32,
+    main_product = "gas-silane",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelssmelting__/graphics/icons/molecule-silane.png", 72 }
+    }, "ihh"),
     order = "e[gas-silane]",
   },
   -- SMELTING RESULTS

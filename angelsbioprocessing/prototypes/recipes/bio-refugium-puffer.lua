@@ -16,8 +16,8 @@ data:extend(
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 60}
       },
       main_product = "gas-puffer-atmosphere",
-      --icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
-      --icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_gas_recipe_icon(nil, { {194,227,091}, {184,239,000}, {156,207,000} }),
       order = "b"
     },
     ---------------------------------------------------------------------------

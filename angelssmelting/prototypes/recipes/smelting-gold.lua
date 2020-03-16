@@ -84,7 +84,9 @@ data:extend(
     {
       {type="fluid", name="liquid-chlorauric-acid", amount=120},
     },
-    icon_size = 32,
+    main_product = "liquid-chlorauric-acid",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {241,214,020}, {120,203,000}, {120,203,000} }),
     order = "e[liquid-chlorauric-acid]",
   },
   {

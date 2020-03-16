@@ -231,17 +231,9 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
-      icons = {
-        {
-          icon = "__angelsrefining__/graphics/icons/liquify-blank.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      main_product = "crystal-slurry",
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "crystal-powder" }),
       order = "d[slurry]"
     }
   }

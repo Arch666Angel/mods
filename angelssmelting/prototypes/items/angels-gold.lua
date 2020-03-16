@@ -1,3 +1,5 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   -- ORE
@@ -41,8 +43,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-chlorauric-acid",
-    icon = "__angelssmelting__/graphics/icons/liquid-chlorauric-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "HAuCl[font=default-tiny-bold]4[/font]"} or nil,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {120,203,000}, {120,203,000}, {241,214,020}, {241,214,020} }),
     subgroup = "angels-gold",
     order = "e",
     default_temperature = 100,
