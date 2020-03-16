@@ -2,7 +2,7 @@ data:extend(
 {
   --PROCESSING
   {
-    type = "capsule",
+    type = "item",
     name = "bio-raw-meat",
     icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
     icon_size = 32,
@@ -29,14 +29,23 @@ data:extend(
               target_effects =
               {
                 type = "damage",
-                damage = {type = "physical", amount = -80}
+                damage = {type = "physical", amount = -60}
               }
             }
           }
         }
       }
     },
-    order = "a",
+    order = "ca",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "bio-alien-processed-meat",
+    icon = "__angelsbioprocessing__/graphics/icons/alien-processed-meat.png",
+    icon_size = 32,
+    subgroup = "bio-fish",
+    order = "cb",
     stack_size = 200
   },
 }

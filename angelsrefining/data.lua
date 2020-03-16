@@ -2,7 +2,7 @@
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
-angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0.5}
+angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}

@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+local move_item = angelsmods.functions.move_item
 
 --PREPARATIONS
 OV.remove_output("gas-sulfur-dioxide-calcium-sulfate", "angels-void")
@@ -30,40 +31,59 @@ OV.remove_prereq("rocketry", "rocket-fuel")
 data.raw["item"]["rocket-fuel"].icon = "__angelspetrochem__/graphics/icons/rocket-fuel.png"
 data.raw["item"]["rocket-fuel"].icon_size = 32
 data.raw["item"]["rocket-fuel"].icon_mipmaps = 1
-data.raw["item"]["rocket-fuel"].subgroup = "petrochem-fuel"
-data.raw["item"]["rocket-fuel"].order = "b[rocket-fuel]-c"
-
-data.raw["item"]["nuclear-fuel"].subgroup = "petrochem-fuel"
-data.raw["item"]["nuclear-fuel"].order = "d[nuclear-fuel]"
+move_item("rocket-fuel", "petrochem-fuel", "b[rocket-fuel]-c")
+move_item("nuclear-fuel", "petrochem-fuel", "d[nuclear-fuel]")
 OV.patch_recipes({{name = "nuclear-fuel", subgroup = "petrochem-fuel", order = "j"}})
 
-data.raw["item"]["solid-fuel"].subgroup = "petrochem-fuel"
-data.raw["item"]["solid-fuel"].order = "a[solid-fuel]-a"
+move_item("solid-fuel", "petrochem-fuel", "a[solid-fuel]-a")
+move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
+move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
+move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
+move_item("steam", "petrochem-basic-fluids", "a", "fluid")
+move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
+move_item("petroleum-gas", "petrochem-carbon-fluids", "a", "fluid")
+move_item("light-oil", "petrochem-carbon-fluids", "dab", "fluid")
+move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
+move_item("heavy-oil", "petrochem-carbon-fluids", "ddd", "fluid")
+move_item("sulfuric-acid", "petrochem-sulfer-fluids", "cb", "fluid")
 
-data.raw["item"]["sulfur"].subgroup = "petrochem-sulfur"
-data.raw["item"]["sulfur"].order = "a[sulfer]-a[sulfer]"
-data.raw["item"]["plastic-bar"].subgroup = "petrochem-solids"
-data.raw["item"]["plastic-bar"].order = "a[petrochem-solids]-a[plastic]"
-data.raw["item"]["explosives"].subgroup = "petrochem-solids"
-data.raw["item"]["explosives"].order = "b[petrochem-solids-2]-a[explosives]"
-if angelsmods.smelting then
-  data.raw["item"]["coal"].subgroup = "petrochem-coal"
-  data.raw["item"]["coal"].order = "a[carbon]-a"
+OV.patch_recipes(
+  {
+    {
+      name = "flamethrower-ammo",
+      ingredients = {
+        {"!!"},
+        {name = "steel-plate", type = "item", amount = 5},
+        {name = "liquid-fuel-oil", type = "fluid", amount = 50},
+        {name = "liquid-naphtha", type = "fluid", amount = 50}
+      }
+    }
+  }
+)
+
+local function remove_item(tab, liquid)
+  if type(liquid) == "table" then
+    for _, liq in pairs(liquid) do
+      remove_item(tab, liq)
+    end
+  else
+    for k, v in pairs(tab) do
+      if v.type == liquid then
+        table.remove(tab, k)
+      end
+    end
+  end
 end
-data.raw["fluid"]["steam"].subgroup = "petrochem-basic-fluids"
-data.raw["fluid"]["steam"].order = "a"
-data.raw["fluid"]["crude-oil"].subgroup = "petrochem-raw-fluids"
-data.raw["fluid"]["crude-oil"].order = "bb"
-data.raw["fluid"]["petroleum-gas"].subgroup = "petrochem-carbon-fluids"
-data.raw["fluid"]["petroleum-gas"].order = "a"
-data.raw["fluid"]["light-oil"].subgroup = "petrochem-carbon-fluids"
-data.raw["fluid"]["light-oil"].order = "dab"
-data.raw["fluid"]["heavy-oil"].subgroup = "petrochem-carbon-fluids"
-data.raw["fluid"]["heavy-oil"].order = "dbb"
-data.raw["fluid"]["lubricant"].subgroup = "petrochem-carbon-fluids"
-data.raw["fluid"]["lubricant"].order = "dcb"
-data.raw["fluid"]["sulfuric-acid"].subgroup = "petrochem-sulfer-fluids"
-data.raw["fluid"]["sulfuric-acid"].order = "cb"
+
+-- Move flamethrower stuff
+local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
+remove_item(turret_params, {"heavy-oil", "light-oil"})
+table.insert(turret_params, {type = "liquid-naphtha", damage_modifier = 1.05})
+table.insert(turret_params, {type = "liquid-fuel-oil", damage_modifier = 1.1})
+
+if angelsmods.smelting then
+  move_item("coal", "petrochem-coal", "a[carbon]-a")
+end
 
 --OVERRIDE FOR ANGELS
 --REFINING
@@ -71,17 +91,13 @@ if angelsmods.refining then
   --MOVE LIQUIFIER AND ADD CATEGORY
   table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories, "liquifying")
   table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories, "liquifying")
-  data.raw["item"]["liquifier"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier"].order = "c[liquifier]-a"
+  move_item("liquifier", "petrochem-buildings-electrolyser", "c[liquifier]-a")
   data.raw["item"]["liquifier"].icons[2].tint = angelsmods.petrochem.number_tint
-  data.raw["item"]["liquifier-2"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-2"].order = "c[liquifier]-b"
+  move_item("liquifier-2", "petrochem-buildings-electrolyser", "c[liquifier]-b")
   data.raw["item"]["liquifier-2"].icons[2].tint = angelsmods.petrochem.number_tint
-  data.raw["item"]["liquifier-3"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-3"].order = "c[liquifier]-c"
+  move_item("liquifier-3", "petrochem-buildings-electrolyser", "c[liquifier]-c")
   data.raw["item"]["liquifier-3"].icons[2].tint = angelsmods.petrochem.number_tint
-  data.raw["item"]["liquifier-4"].subgroup = "petrochem-buildings-electrolyser"
-  data.raw["item"]["liquifier-4"].order = "c[liquifier]-d"
+  move_item("liquifier-4", "petrochem-buildings-electrolyser", "c[liquifier]-d")
   data.raw["item"]["liquifier-4"].icons[2].tint = angelsmods.petrochem.number_tint
   OV.patch_recipes(
     {
@@ -114,10 +130,8 @@ if angelsmods.refining then
     OV.add_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")
     OV.add_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
   end
-  data.raw["fluid"]["liquid-ferric-chloride-solution"].subgroup = "ore-processing-fluid"
-  data.raw["fluid"]["liquid-ferric-chloride-solution"].order = "a[ferrous]-e"
-  data.raw["fluid"]["liquid-cupric-chloride-solution"].subgroup = "ore-processing-fluid"
-  data.raw["fluid"]["liquid-cupric-chloride-solution"].order = "b[cupric]-e"
+  move_item("liquid-ferric-chloride-solution", "ore-processing-fluid", "a[ferrous]-e", "fluid")
+  move_item("liquid-cupric-chloride-solution", "ore-processing-fluid", "b[cupric]-e", "fluid")
 end
 
 --SMELTING

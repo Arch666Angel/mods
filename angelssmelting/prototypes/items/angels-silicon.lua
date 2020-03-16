@@ -1,3 +1,5 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   -- ORE
@@ -32,8 +34,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-trichlorosilane",
-    icon = "__angelssmelting__/graphics/icons/liquid-trichlorosilane.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "HCl[font=default-tiny-bold]3[/font]Si"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-trichlorosilane.png", 72 }, "ihl"),
     subgroup = "angels-silicon",
     order = "d",
     default_temperature = 100,
@@ -47,8 +49,8 @@ data:extend(
   {
     type = "fluid",
     name = "gas-silane",
-    icon = "__angelssmelting__/graphics/icons/gas-silane.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]4[/font]Si"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-silane.png", 72 }, "ihh"),
     subgroup = "angels-silicon",
     order = "e",
     default_temperature = 100,

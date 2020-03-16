@@ -1,3 +1,13 @@
+local function create_recipe_icon(fluid_name, product_name)
+  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
+  for layer_index, layer in pairs(icon_layers or {}) do
+    layer.shift = layer.shift or {}
+    layer.shift = {(layer.shift[1] or 0)/2-10, (layer.shift[2] or 0)/2-10}
+    layer.scale = (layer.scale or 1)/2
+  end
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+end
+
 data:extend(
   {
     {
@@ -6,25 +16,16 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp-seed",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-beans", amount = 10}
+        {type = "item", name = "solid-beans", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 80}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-beans"),
       order = "ba",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-nutrient-pulp.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-beans.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -32,25 +33,16 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp-seed",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-corn", amount = 10}
+        {type = "item", name = "solid-corn", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 70}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-corn"),
       order = "bb",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-nutrient-pulp.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-corn.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -58,25 +50,16 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp-seed",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-leafs", amount = 10}
+        {type = "item", name = "solid-leafs", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 10}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-leafs"),
       order = "bc",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-nutrient-pulp.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-leafs.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -84,25 +67,16 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-nuts", amount = 10}
+        {type = "item", name = "solid-nuts", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-nuts"),
       order = "ba",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-nutrient-pulp.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-nuts.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -110,25 +84,16 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-pips", amount = 10}
+        {type = "item", name = "solid-pips", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-pips"),
       order = "bb",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-nutrient-pulp.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-pips.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -136,25 +101,16 @@ data:extend(
       category = "nutrient-extractor",
       subgroup = "farming-swamp",
       enabled = "false",
-      energy_required = 4,
+      energy_required = 2,
       ingredients = {
-        {type = "item", name = "solid-fruit", amount = 10}
+        {type = "item", name = "solid-fruit", amount = 5}
       },
       results = {
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 60}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-fruit"),
       order = "bc",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-nutrient-pulp.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-fruit.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     -- REFINING
     {
@@ -172,9 +128,13 @@ data:extend(
         {type = "fluid", name = "gas-acetone", amount = 40},
         {type = "fluid", name = "gas-synthesis", amount = 20}
       },
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "liquid-fuel-oil",
+        "gas-synthesis",
+        { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
+      }, { {214,146,040}, {169,130,039}, {120,083,004} }),
       order = "ba",
-      icon = "__angelsbioprocessing__/graphics/icons/biomass-refining-1.png",
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -191,9 +151,13 @@ data:extend(
         {type = "fluid", name = "gas-glycerol", amount = 40}
         --{type="fluid", name="gas-synthesis", amount=10},
       },
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "liquid-fuel-oil",
+        --"gas-synthesis",
+        { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 },
+      }, { {214,146,040}, {169,130,039}, {120,083,004} }),
       order = "bb",
-      icon = "__angelsbioprocessing__/graphics/icons/biomass-refining-2.png",
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -210,9 +174,13 @@ data:extend(
         {type = "fluid", name = "gas-ethanol", amount = 30},
         {type = "fluid", name = "gas-butane", amount = 10}
       },
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
+        { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
+        { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 },
+      }, { {214,146,040}, {169,130,039}, {120,083,004} }),
       order = "bc",
-      icon = "__angelsbioprocessing__/graphics/icons/biomass-refining-3.png",
-      icon_size = 32
     }
   }
 )

@@ -39,7 +39,7 @@ data:extend(
       emissions_per_minute = -0.02 * 60
     },
     energy_usage = "150kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation=
     {
       layers = {
@@ -150,7 +150,7 @@ data:extend(
       emissions_per_minute = -0.02 * 60
     },
     energy_usage = "150kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation =
     {
       filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-puffer-off.png",
@@ -265,7 +265,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"bio-refugium-biter"},
-    crafting_speed = 0.75,
+    crafting_speed = 2,
     energy_source =
     {
       type = "electric",
@@ -273,7 +273,7 @@ data:extend(
       emissions_per_minute = -0.02 * 60
     },
     energy_usage = "150kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation=
     {
       filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-biter-off.png",
@@ -284,7 +284,7 @@ data:extend(
       shift = {0, 0},
       --animation_speed = 0.5,
     },
-    working_visualisation =
+    working_visualisations =
     {
       {
         animation =
@@ -295,7 +295,7 @@ data:extend(
           line_length = 4,
           frame_count = 16,
           shift = {0, 0},
-          animation_speed = 0.5,
+          animation_speed = 0.5 * 0.75/2,
         },
       },
     },
@@ -366,7 +366,7 @@ data:extend(
       emissions_per_minute = -0.02 * 60
     },
     energy_usage = "150kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation=
     {
       filename = "__angelsbioprocessing__/graphics/entity/7x7.png",

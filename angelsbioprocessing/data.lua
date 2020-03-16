@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.bioprocessing = angelsmods.bioprocessing or {}
-angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 0.5}
+angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 0}
 
 --TRIGGER CHECKS
 angelsmods.triggers = angelsmods.triggers or {}
@@ -66,7 +66,6 @@ if angelsmods.bioprocessing then
   require("prototypes.recipes.bio-refugium-puffer")
   require("prototypes.recipes.bio-refugium-biter")
   require("prototypes.recipes.bio-refugium-hogger")
-  --require("prototypes.recipes.bio-refugium")
 
   require("prototypes.technology.bio-processing-algae")
   require("prototypes.technology.bio-processing-wood-paper")

@@ -54,8 +54,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-saline",
-      icon = "__angelsrefining__/graphics/icons/water-saline.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {039,112,194}, {168,173,173}, {070,133,232}, {185,185,185,0.8} }),
       subgroup = "water-treatment-fluid",
       order = "c",
       default_temperature = 25,
@@ -69,8 +68,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-purified",
-      icon = "__angelsrefining__/graphics/icons/water-purified.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {116,140,211}, nil, {122,148,221} }),
       subgroup = "water-treatment-fluid",
       order = "b",
       default_temperature = 25,
@@ -84,8 +82,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-yellow-waste",
-      icon = "__angelsrefining__/graphics/icons/water-yellow-waste.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {116,140,211}, {255,219,051}, {109,070,020,0.8}, {254,204,049} }),
       subgroup = "water-cleaning-fluid",
       order = "a",
       default_temperature = 25,
@@ -99,8 +96,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-red-waste",
-      icon = "__angelsrefining__/graphics/icons/water-red-waste.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {116,140,211}, {155,063,061}, {109,070,020,0.8}, {124,050,048} }),
       subgroup = "water-cleaning-fluid",
       order = "b",
       default_temperature = 25,
@@ -114,8 +110,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-green-waste",
-      icon = "__angelsrefining__/graphics/icons/water-green-waste.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {116,140,211}, {102,204,049}, {109,070,020,0.8}, {096,207,052} }),
       subgroup = "water-cleaning-fluid",
       order = "c",
       default_temperature = 25,
@@ -129,8 +124,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-greenyellow-waste",
-      icon = "__angelsrefining__/graphics/icons/water-greenyellow-waste.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {116,140,211}, {218,253,064}, {109,070,020,0.8}, {173,210,042} }),
       subgroup = "water-cleaning-fluid",
       order = "d",
       default_temperature = 25,
@@ -144,8 +138,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-mineralized",
-      icon = "__angelsrefining__/graphics/icons/water-mineralized.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {039,112,194}, {093,067,049}, {070,133,232}, {109,070,020,0.8} }),
       subgroup = "water-treatment-fluid",
       order = "d",
       default_temperature = 25,
@@ -160,8 +153,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-viscous-mud",
-      icon = "__angelsrefining__/graphics/icons/water-viscous-mud.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {117,089,036}, {117,089,036}, {102,076,029,0.8}, {102,076,029,0.8} }),
       subgroup = "water-washing-fluid",
       order = "a",
       default_temperature = 25,
@@ -175,8 +167,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-heavy-mud",
-      icon = "__angelsrefining__/graphics/icons/water-heavy-mud.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {070,133,232}, {117,089,036}, {102,076,029,0.8}, {102,076,029,0.8} }),
       subgroup = "water-washing-fluid",
       order = "b",
       default_temperature = 25,
@@ -190,8 +181,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-concentrated-mud",
-      icon = "__angelsrefining__/graphics/icons/water-concentrated-mud.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {070,133,232}, {070,133,232}, {109,070,020,0.8}, {109,070,020,0.8} }),
       subgroup = "water-washing-fluid",
       order = "c",
       default_temperature = 25,
@@ -205,8 +195,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-light-mud",
-      icon = "__angelsrefining__/graphics/icons/water-light-mud.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {109,070,020}, {109,070,020}, {070,133,232,0.8}, {070,133,232,0.8} }),
       subgroup = "water-washing-fluid",
       order = "d",
       default_temperature = 25,
@@ -220,8 +209,7 @@ data:extend(
     {
       type = "fluid",
       name = "water-thin-mud",
-      icon = "__angelsrefining__/graphics/icons/water-thin-mud.png",
-      icon_size = 32,
+      icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {039,112,194}, {109,070,020}, {070,133,232,0.8}, {070,133,232,0.8} }),
       subgroup = "water-washing-fluid",
       order = "e",
       default_temperature = 25,

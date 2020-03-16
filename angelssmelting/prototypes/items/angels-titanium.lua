@@ -1,3 +1,5 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   -- ORE
@@ -32,8 +34,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-titanium-tetrachloride",
-    icon = "__angelssmelting__/graphics/icons/liquid-titanium-tetrachloride.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "TiCl[font=default-tiny-bold]4[/font]"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 }, "ill"),
     subgroup = "angels-titanium",
     order = "d",
     default_temperature = 100,

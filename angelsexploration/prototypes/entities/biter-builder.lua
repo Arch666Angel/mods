@@ -71,10 +71,8 @@ local function enemy_worm_autoplace(distance)
 end
 local function make_die_animation(data_die)
   if data_die.type == "scarab" then
-    return
-    {
-      layers=
-      {
+    return {
+      layers = {
         {
           width = 160,
           height = 160,
@@ -83,32 +81,31 @@ local function make_die_animation(data_die)
           shift = {0, 0},
           animation_speed = 0.75,
           scale = data_die.scale,
-          stripes =
-          {
+          stripes = {
             {
               filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
-              height_in_frames = 8,
+              height_in_frames = 8
             },
             {
               filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
-              height_in_frames = 8,
+              height_in_frames = 8
             },
             {
               filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
-              height_in_frames = 8,
+              height_in_frames = 8
             },
             {
               filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
-              height_in_frames = 8,
+              height_in_frames = 8
             }
           }
         },
         {
-          flags = { "mask" },
+          flags = {"mask"},
           width = 160,
           height = 160,
           frame_count = 16,
@@ -117,22 +114,24 @@ local function make_die_animation(data_die)
           animation_speed = 0.75,
           scale = data_die.scale,
           tint = data_die.tint1,
-          stripes = util.multiplystripes(16,
-          {
+          stripes = util.multiplystripes(
+            16,
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
+              {
+                filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+                width_in_frames = 1,
+                height_in_frames = 8
+              },
+              {
+                filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+                width_in_frames = 1,
+                height_in_frames = 8
+              }
             }
-          })
+          )
         },
         {
-          flags = { "mask" },
+          flags = {"mask"},
           width = 160,
           height = 160,
           frame_count = 16,
@@ -141,20 +140,22 @@ local function make_die_animation(data_die)
           animation_speed = 0.75,
           scale = data_die.scale,
           tint = data_die.tint2,
-          stripes = util.multiplystripes(16,
-          {
+          stripes = util.multiplystripes(
+            16,
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
-            },
-            {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
-              width_in_frames = 1,
-              height_in_frames = 8,
+              {
+                filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+                width_in_frames = 1,
+                height_in_frames = 8
+              },
+              {
+                filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+                width_in_frames = 1,
+                height_in_frames = 8
+              }
             }
-          })
-        },
+          )
+        }
       }
     }
   end
@@ -435,7 +436,6 @@ local function make_roar_sound(type, volume)
         volume = volume
       }
     }
-
   end
   if type == "worm" then
     return {
@@ -773,23 +773,20 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.type = "stream"
     data_dmg.ammo_category = "biological"
     data_dmg.cooldown_deviation = 0.15
-    data_dmg.damage_modifier = (data_dmg.damage_modifier or 1) * (data_dmg.damage/50) -- this will make sure damage/sec equals data_dmg.damage
+    data_dmg.damage_modifier = (data_dmg.damage_modifier or 1) * (data_dmg.damage / 50) -- this will make sure damage/sec equals data_dmg.damage
     data_dmg.roarvolume = 0.4
 
     data_dmg.warmup = 30
     --projectile_creation_parameters = spitter_shoot_shiftings(data.scale, data.scale * scale_spitter_stream),
     data_dmg.use_shooter_direction = true
 
-    data_dmg.lead_target_for_projectile_speed = 0.2* 0.75 * 1.5 *1.5 -- this is same as particle horizontal speed of flamethrower fire stream
+    data_dmg.lead_target_for_projectile_speed = 0.2 * 0.75 * 1.5 * 1.5 -- this is same as particle horizontal speed of flamethrower fire stream
 
-    data_dmg.ammo =
-    {
+    data_dmg.ammo = {
       category = "biological",
-      action =
-      {
+      action = {
         type = "direct",
-        action_delivery =
-        {
+        action_delivery = {
           type = "stream",
           stream = "bio-stream"
         }
@@ -799,9 +796,9 @@ local function make_attack_parameter(data_app, data_dmg)
   if data_app.type == "psyker" then
     make_projectile(data_app, data_dmg)
     data_dmg.type = "beam"
-    data_dmg.category = "combat-robot-beam"
+    data_dmg.category = "electric"
     data_dmg.ammo = {
-      category = "combat-robot-beam",
+      category = "electric",
       action = {
         type = "direct",
         action_delivery = {
@@ -832,65 +829,83 @@ end
 function angelsmods.functions.make_alien(def_data)
   --log(serpent.block(def_data))
   if def_data ~= nil then
-    local c_name=def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
-    if def_data.appearance.type=="psyker" or def_data.appearance.type=="psyker" then
-      c_type="big-spitter-corpse"
+    local c_name = def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
+    if def_data.appearance.type == "psyker" or def_data.appearance.type == "psyker" then
+      c_type = "big-spitter-corpse"
     else
-      c_type="big-biter-corpse"
+      c_type = "big-biter-corpse"
     end
     --utilise the vanilla script to add the death animation and corpses in one go
-    local corpse_base={
+    local corpse_base = {
       type = "corpse",
       name = c_name,
       icon = "__base__/graphics/icons/big-biter-corpse.png",
-      icon_size=64,
+      icon_size = 64,
       icon_mipmaps = 4,
-      tint=def_data.appearance.tint1,
+      tint = def_data.appearance.tint1,
       selection_box = {{-1, -1}, {1, 1}},
       selectable_in_game = false,
       subgroup = "corpses",
-      order = "c[corpse]-a["..def_data.appearance.type.."]-a["..def_data.appearance.name.."]",
-      flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map"},
+      order = "c[corpse]-a[" .. def_data.appearance.type .. "]-a[" .. def_data.appearance.name .. "]",
+      flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map"}
     }
     data:extend({corpse_base})
-     if def_data.appearance.type=="scarab" then
-       data.raw.corpse[c_name].animation=make_die_animation(def_data.appearance)
-     elseif def_data.appearance.type=="biter" then
+    if def_data.appearance.type == "scarab" then
+      data.raw.corpse[c_name].animation = make_die_animation(def_data.appearance)
+    elseif def_data.appearance.type == "biter" then
       --both share biter animations
-      add_biter_die_animation(def_data.appearance.scale, def_data.appearance.tint1, def_data.appearance.tint2, corpse_base)
+      add_biter_die_animation(
+        def_data.appearance.scale,
+        def_data.appearance.tint1,
+        def_data.appearance.tint2,
+        corpse_base
+      )
     else --psyker and spitter share spitter ones, any custom ones would have to be isolated or paired with these
-      add_spitter_die_animation(def_data.appearance.scale, def_data.appearance.tint1, def_data.appearance.tint2, corpse_base)
+      add_spitter_die_animation(
+        def_data.appearance.scale,
+        def_data.appearance.tint1,
+        def_data.appearance.tint2,
+        corpse_base
+      )
     end
     data:extend(
-    {
       {
-        type = "unit",
-        name = def_data.appearance.name .. "-" .. def_data.appearance.type,
-        icons = make_icon(def_data.appearance),
-        icon_size = 32,
-        flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-        max_health = def_data.appearance.health,
-        resistances = def_data.resistance,
-        order = def_data.appearance.order or "b-z-a",
-        subgroup = "enemies",
-        healing_per_tick = 0.01,
-        collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
-        selection_box = {{-0.4, -0.7}, {0.7, 0.4}},
-        attack_parameters = make_attack_parameter(def_data.appearance, def_data.attack),
-        vision_distance = 30,
-        movement_speed = def_data.appearance.speed,
-        distance_per_frame = 0.1,
-        pollution_to_join_attack = 200,
-        distraction_cooldown = 300,
-        min_pursue_time = 10 * 60,
-        max_pursue_distance = 50,
-        corpse = c_name,--c_type,
-        dying_explosion = "blood-explosion-big",
-        dying_sound = make_die_sound(def_data.appearance.type, 0.4),
-        working_sound = make_call_sounds(0.3),
-        run_animation = make_run_animation(def_data.appearance)
-      },
-    })
+        {
+          type = "unit",
+          name = def_data.appearance.name .. "-" .. def_data.appearance.type,
+          icons = make_icon(def_data.appearance),
+          icon_size = 32,
+          flags = {
+            "placeable-player",
+            "placeable-enemy",
+            "placeable-off-grid",
+            "not-repairable",
+            "breaths-air"
+          },
+          max_health = def_data.appearance.health,
+          resistances = def_data.resistance,
+          order = def_data.appearance.order or "b-z-a",
+          subgroup = "enemies",
+          healing_per_tick = 0.01,
+          collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
+          selection_box = {{-0.4, -0.7}, {0.7, 0.4}},
+          attack_parameters = make_attack_parameter(def_data.appearance, def_data.attack),
+          vision_distance = 30,
+          movement_speed = def_data.appearance.speed,
+          distance_per_frame = 0.1,
+          pollution_to_join_attack = 200,
+          distraction_cooldown = 300,
+          min_pursue_time = 10 * 60,
+          max_pursue_distance = 50,
+          corpse = c_name,
+          --c_type,
+          dying_explosion = "blood-explosion-big",
+          dying_sound = make_die_sound(def_data.appearance.type, 0.4),
+          working_sound = make_call_sounds(0.3),
+          run_animation = make_run_animation(def_data.appearance)
+        }
+      }
+    )
   end
 end
 
@@ -995,10 +1010,10 @@ function angelsmods.functions.update_spawner(us_data)
   if data.raw["unit-spawner"][s_name] then
     spawner = data.raw["unit-spawner"][s_name]
     --log(serpent.block(spawner))
-    table.insert(spawner.resistances,us_data.resistance)
+    table.insert(spawner.resistances, us_data.resistance)
     spawner.max_health = us_data.appearance.health
     spawner.spawning_cooldown = us_data.appearance.spawn_cooldown
-    table.insert(spawner.result_units,us_data.results)
+    table.insert(spawner.result_units, us_data.results)
   end
 end
 

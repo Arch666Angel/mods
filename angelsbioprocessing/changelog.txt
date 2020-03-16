@@ -1,4 +1,45 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: ??
+  Changes:
+    - Removed the (unneeded) ingredient limit on different bio buildings
+      - Fish Tank, Puffer Refugium and Biter Refugium
+      - Basic and Upgraded Farms, Bio Processor, Bio Press and Nutrient Extractor
+    - Added Biter Queens as alternative way of creating biter eggs
+    - Added converter recipe from crystal dust to crystal powder (less efficient for slurry)
+    - Puffer breeding now returns Acid Gas instead of just consuming the Puffer Atmosphere
+  Balancing:
+    - Balanced (crop) farming to reduce overal power consumption
+      - Farms now craft at double the speed (basic at speed 1, upgraded at speed 2)
+      - All upgraded farms now consume the same amount of power
+      - Farming now takes less time (all take 30 seconds, was 60 before, except swamp was 45)
+      - Bio Processor crafts at speed of 1 (was 0.75)
+      - Seeds of the tier 1 and 2 crops only require 5 (instead of 10) crops to extract seeds from
+    - Balanced nutrient pulp to increase yield
+      - Now requires only 5 (instead of 10) crops
+      - Crafts twice as fast (2 seconds, was 4)
+    - Balanced Fish Water to have a higher alien spore yield
+      - Fish tank now yields 100 fish water/recipe instead of 20 (increase of x5)
+      - Polluted Fish Water yields twice the spores (incease of x2)
+      - Polluted Fish water yields less sulfuric waste water (compensation of the higher use)
+    - Alien Bacteria now requires 50 Alien Spores instead of 100 (increase of x2)
+    - Alien Bacteria can now seed 5 dishes instead of 3 (increase of x1.667)
+    - Puffer Breeding now has a higher yield of their own eggs (other types remain the same)
+      - Gaseous and Rancid eggs from 50% to 75%
+      - Rancid, Acidic and Corodent eggs from 50% to 70%
+    - Puffer Eggs Hatching now takes less time (10, 15, 20, 25, 30 sec instead of all 60)
+    - Biter zoo recipes now gives 1 crystal/biter (increase of x4)
+    - Increased crafting speed of Biter Refugium to 2 (was 0.75)
+    - Grinding crystals have a chance of returning the grindstone (usage reduced to 1/3rd)
+    - Made green algae a bit more productive
+      - Green Algae I ratio brown:green algae increased to 25:5 (was 20:5)
+      - Green Algae II crafts faster (was 20 seconds, now 15) to reduce power consumption
+      - Green Algae II inputs lowered from 100 to 80 (+20% productivity)
+      - Green Algae II output increased from 40 to 50 (+25% productivity)
+  Bugfixes:
+    - Fixed fish, puffers and biters did count (fully) towards production stats for breeding
+    - Fixed the working animation on the hatchery and biter refugium
+---------------------------------------------------------------------------------------------------
 Version: 0.7.3
 Date: 22.02.2020
   Changes:

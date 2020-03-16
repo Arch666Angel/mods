@@ -1,11 +1,15 @@
 --GET ICON/ICONS FROM FLUID/ITEM
-local function get_icon_or_icons(object_name)
-  local prototype_list = {"item", "fluid"}
-  for _, prototype in pairs(prototype_list) do
+local function get_icons(object_name)
+  for _, prototype in pairs({"item", "fluid"}) do
     local object = data.raw[prototype][object_name]
     if object then
       if object.icon then
-        return object.icon
+        local scale = 32/(object.icon_size or 32)
+        return {{
+          icon = object.icon,
+          icon_size = object.icon_size or 32,
+          scale = scale ~= 1 and scale or nil,
+        }}
       end
       if object.icons then
         return object.icons
@@ -14,6 +18,741 @@ local function get_icon_or_icons(object_name)
   end
   --something is wrong here but we need to return something
   return "__angelsrefining__/graphics/icons/void.png"
+end
+angelsmods.functions.get_object_icons = get_icons
+
+function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add)
+  local icon_layers = util.table.deepcopy(icon_layers)
+  
+  if layers_to_add[1] then
+    for _,layer_to_add in pairs(layers_to_add) do
+      table.insert(icon_layers, layer_to_add)
+    end
+  else
+    table.insert(icon_layers, layers_to_add)
+  end
+
+  return icon_layers
+end
+
+local function unify_tint(tint)
+  -- allows tints to be defined as {255, 255, 255, 255}
+  -- meaing doesn't need keys rgba (but assumes that order)
+  -- doesn't need to be in range 0..1, but up to 255 as well
+  if tint then
+    local unified_tint = {}
+
+    unified_tint.r = tint.r or tint[1] or 0
+    unified_tint.g = tint.g or tint[2] or 0
+    unified_tint.b = tint.b or tint[3] or 0
+
+    if unified_tint.r > 1 or unified_tint.g > 1 or unified_tint.b > 1 then
+      unified_tint.r = (unified_tint.r <= 255 and unified_tint.r or 255) / 255
+      unified_tint.g = (unified_tint.g <= 255 and unified_tint.g or 255) / 255
+      unified_tint.b = (unified_tint.b <= 255 and unified_tint.b or 255) / 255
+    end
+
+    unified_tint.a = tint.a or tint[4] or 1
+    unified_tint.a = unified_tint.a > 1 and unified_tint.a / 255 or unified_tint.a
+
+    return unified_tint
+  else
+    return nil
+  end
+end
+
+local function clean_table(t)
+  -- removes nil values from a table so it becomes a table without holes
+  if type(t) ~= "table" then return t end
+  local i = 0
+  for k,v in pairs(t or {}) do
+    i = i + 1
+    t[k] = nil
+    t[i] = v
+  end
+  return t
+end
+
+local icon_tint_table = {
+  c = { { 044, 044, 044 }, { 140, 000, 000 }, { 140, 000, 000 } }, -- Carbon
+  k = { { 069, 069, 069 }, { 054, 054, 054 }, { 036, 036, 036 } }, -- Coal/Oil
+  h = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, -- Hydrogen
+  o = { { 249, 013, 013 }, { 214, 012, 012 }, { 198, 011, 011 } }, -- Oxygen
+  n = { { 045, 075, 180 }, { 045, 076, 175 }, { 038, 063, 150 } }, -- Nitrogen
+  l = { { 031, 229, 031 }, { 057, 211, 040 }, { 075, 195, 045 } }, -- Chlorine
+  s = { { 225, 210, 000 }, { 216, 196, 017 }, { 210, 187, 030 } }, -- Sulfur
+  a = { { 105, 135, 090 }, { 096, 122, 082 }, { 088, 113, 075 } }, -- Natural Gas
+  f = { { 181, 208, 000 }, { 181, 208, 000 }, { 181, 208, 000 } }, -- Fluoride
+  i = { { 142, 148, 148 }, { 142, 148, 148 }, { 142, 148, 148 } }, -- Silicon
+  t = { { 135, 090, 023 }, { nil, nil, nil }, { nil, nil, nil } }, -- Tungsten
+  w = { { 094, 114, 174 }, { 088, 104, 163 }, { 088, 101, 155 } }, -- Water/Steam
+  --m = { r = 041, g = 041, b = 180 }, -- Complex
+  --s = { r = 115, g = 063, b = 163 }, -- Sodium
+  --p = { r = 244, g = 125, b = 001 }, -- Phosphorus
+  --y = { r = 255, g = 105, b = 180 }, -- Syngas
+}
+
+-- CREATE GAS FLUID ICONS (NOT FOR RECIPES)
+function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
+  -- molecule_icon can be a string (assumes icon_size 32)
+  -- or be a table with size defined
+  if molecule_icon then
+    if type(molecule_icon) ~= "table" then
+      molecule_icon = {
+        icon = molecule_icon,
+        icon_size = 32
+      }
+    else
+      molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
+      if molecule_icon.icon then
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+      else
+        --something is wrong here but we need to return something
+        molecule_icon.icon = "__angelsrefining__/graphics/icons/void.png"
+        molecule_icon.icon_size = 32
+      end
+    end
+
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+
+    molecule_icon[1] = nil
+    molecule_icon[2] = nil
+    molecule_icon[3] = nil
+    molecule_icon[4] = nil
+  else
+    molecule_icon = nil
+  end
+
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((icon_tint_table[string.sub(tints,1,1)] or {})[1]),
+        mid = unify_tint((icon_tint_table[string.sub(tints,2,2)] or {})[2]),
+        bot = unify_tint((icon_tint_table[string.sub(tints,3,3)] or {})[3]),
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
+  return {
+    { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-base.png",
+      icon_size = 596,
+      scale = 32/596,
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-top.png",
+      icon_size = 596,
+      scale = 32/596,
+      tint = tints.top,
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-mid.png",
+      icon_size = 596,
+      scale = 32/596,
+      tint = tints.mid,
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-bot.png",
+      icon_size = 596,
+      scale = 32/596,
+      tint = tints.bot,
+      shift = (not molecule_icon) and {-3.5, 0} or nil,
+    },
+    molecule_icon,
+  }
+end
+
+-- CREATE GAS RECIPE ICONS (NOT FOR FLUIDS)
+function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
+  -- bot_molecules_icon is a table of molecule_icon, which can be a string
+  -- (assumes icon_size 32) or be a table with size defined
+  bot_molecules_icon = clean_table(bot_molecules_icon) or {}
+  for molecule_index ,molecule_icon in pairs(bot_molecules_icon) do
+    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
+      bot_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
+    end
+  end
+  
+  for molecule_index,molecule_icon in pairs(bot_molecules_icon) do
+    if type(molecule_icon) ~= "table" then
+      bot_molecules_icon[molecule_index] = {
+        {
+          icon = molecule_icon,
+          icon_size = 32
+        }
+      }
+    elseif type(molecule_icon[1]) ~= "table" then
+      local mi = util.table.deepcopy(molecule_icon)
+      bot_molecules_icon[molecule_index] = {
+        {
+          icon = mi.icon or mi[1] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
+        }
+      }
+      if bot_molecules_icon[molecule_index][1].icon then
+        bot_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
+        if bot_molecules_icon[molecule_index][1].icon_size ~= 32 then
+          bot_molecules_icon[molecule_index][1].scale = (bot_molecules_icon[molecule_index][1].scale or 1) * 32/bot_molecules_icon[molecule_index][1].icon_size
+        end
+      else
+        --something is wrong here but we need to return something
+        bot_molecules_icon[molecule_index] = {
+          {
+            icon = "__angelsrefining__/graphics/icons/void.png",
+            icon_size = 32
+          }
+        }
+      end
+    else
+      for molecule_icon_layer_index,molecule_icon_layer in pairs(molecule_icon) do
+        if not molecule_icon_layer.icon_size then
+          bot_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
+        end
+      end
+    end
+    molecule_icon = bot_molecules_icon[molecule_index]
+
+    -- now shift this icon to its correct position
+    molecule_shift = ({ {-11.5, 12}, {11.5, 12}, {0, 12} })[molecule_index] or {0,0}
+    molecule_scale = 10.24/32 -- assume base size 32
+    for layer_index, layer in pairs(molecule_icon) do
+      layer.scale = layer.scale or 1
+      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
+
+      layer.shift = {layer.shift[1] * molecule_scale + molecule_shift[1], layer.shift[2] * molecule_scale + molecule_shift[2]}
+      layer.scale = layer.scale * molecule_scale
+
+      molecule_icon[layer_index].scale = layer.scale
+      molecule_icon[layer_index].shift = layer.shift
+    end
+    bot_molecules_icon[molecule_index] = clean_table(molecule_icon)
+  end
+  bot_molecules_icon = clean_table(bot_molecules_icon)
+
+  top_molecules_icon = clean_table(top_molecules_icon) or {}
+  for molecule_index ,molecule_icon in pairs(top_molecules_icon) do
+    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
+      top_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
+    end
+  end
+  
+  for molecule_index,molecule_icon in pairs(top_molecules_icon) do
+    if type(molecule_icon) ~= "table" then
+      top_molecules_icon[molecule_index] = {
+        {
+          icon = molecule_icon,
+          icon_size = 32
+        }
+      }
+    elseif type(molecule_icon[1]) ~= "table" then
+      local mi = util.table.deepcopy(molecule_icon)
+      top_molecules_icon[molecule_index] = {
+        {
+          icon = mi.icon or mi[1] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
+        }
+      }
+      if top_molecules_icon[molecule_index][1].icon then
+        top_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
+        if top_molecules_icon[molecule_index][1].icon_size ~= 32 then
+          top_molecules_icon[molecule_index][1].scale = (top_molecules_icon[molecule_index][1].scale or 1) * 32/top_molecules_icon[molecule_index][1].icon_size
+        end
+      else
+        --something is wrong here but we need to return something
+        top_molecules_icon[molecule_index] = {
+          {
+            icon = "__angelsrefining__/graphics/icons/void.png",
+            icon_size = 32
+          }
+        }
+      end
+    else
+      for molecule_icon_layer_index,molecule_icon_layer in pairs(molecule_icon) do
+        if not molecule_icon_layer.icon_size then
+          top_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
+        end
+      end
+    end
+    molecule_icon = top_molecules_icon[molecule_index]
+
+    -- now shift this icon to its correct position
+    molecule_shift = ({ {-11.5, -12}, {11.5, -12}, {0, -12} })[molecule_index] or {0,0}
+    molecule_scale = 10.24/32 -- assume base size 32
+    for layer_index, layer in pairs(molecule_icon) do
+      layer.scale = layer.scale or 1
+      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
+
+      layer.shift = {layer.shift[1] * molecule_scale + molecule_shift[1], layer.shift[2] * molecule_scale + molecule_shift[2]}
+      layer.scale = layer.scale * molecule_scale
+
+      molecule_icon[layer_index].scale = layer.scale
+      molecule_icon[layer_index].shift = layer.shift
+    end
+    top_molecules_icon[molecule_index] = clean_table(molecule_icon)
+  end
+  top_molecules_icon = clean_table(top_molecules_icon)
+
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((icon_tint_table[string.sub(tints,1,1)] or {})[1]),
+        mid = unify_tint((icon_tint_table[string.sub(tints,2,2)] or {})[2]),
+        bot = unify_tint((icon_tint_table[string.sub(tints,3,3)] or {})[3]),
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
+  local recipe_icons = {
+    { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-base.png",
+      icon_size = 750,
+      scale = 32/750,
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-top.png",
+      icon_size = 750,
+      scale = 32/750,
+      tint = tints.top,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-mid.png",
+      icon_size = 750,
+      scale = 32/750,
+      tint = tints.mid,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-bot.png",
+      icon_size = 750,
+      scale = 32/750,
+      tint = tints.bot,
+    },
+  }
+  for _,bot_molecule_icon in pairs(bot_molecules_icon) do
+    for _,bot_molecule_icon_layer in pairs(bot_molecule_icon) do
+      table.insert(recipe_icons, bot_molecule_icon_layer)
+    end
+  end
+  for _,top_molecule_icon in pairs(top_molecules_icon) do
+    for _,top_molecule_icon_layer in pairs(top_molecule_icon) do
+      table.insert(recipe_icons, top_molecule_icon_layer)
+    end
+  end
+  return recipe_icons
+end
+
+-- CREATE LIQUID FLUID ICONS (NOT FOR RECIPES)
+function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
+  -- molecule_icon can be a string (assumes icon_size 32)
+  -- or be a table with size defined
+  if molecule_icon then
+    if type(molecule_icon) ~= "table" then
+      molecule_icon = {
+        icon = molecule_icon,
+        icon_size = 32
+      }
+    else
+      molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
+      if molecule_icon.icon then
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+      else
+        --something is wrong here but we need to return something
+        molecule_icon.icon = "__angelsrefining__/graphics/icons/void.png"
+        molecule_icon.icon_size = 32
+      end
+    end
+
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+
+    molecule_icon[1] = nil
+    molecule_icon[2] = nil
+    molecule_icon[3] = nil
+    molecule_icon[4] = nil
+  else
+    molecule_icon = nil
+  end
+
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((icon_tint_table[string.sub(tints,1,1)] or {})[1]),
+        mid = unify_tint((icon_tint_table[string.sub(tints,2,2)] or {})[2]),
+        bot = unify_tint((icon_tint_table[string.sub(tints,3,3)] or {})[3]),
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
+  return {
+    { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-base.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-top.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = tints.top,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-mid.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = tints.mid,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-bot.png",
+      icon_size = 330,
+      scale = 32/330,
+      tint = tints.bot,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    molecule_icon,
+  }
+end
+
+
+-- CREATE LIQUID RECIPE ICONS (NOT FOR FLUIDS)
+function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
+  -- bot_molecules_icon is a table of molecule_icon, which can be a string
+  -- (assumes icon_size 32) or be a table with size defined
+  bot_molecules_icon = bot_molecules_icon or {}
+  for molecule_index ,molecule_icon in pairs(bot_molecules_icon) do
+    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
+      bot_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
+    end
+  end
+  
+  for molecule_index,molecule_icon in pairs(bot_molecules_icon) do
+    if type(molecule_icon) ~= "table" then
+      bot_molecules_icon[molecule_index] = {
+        {
+          icon = molecule_icon,
+          icon_size = 32
+        }
+      }
+    elseif type(molecule_icon[1]) ~= "table" then
+      local mi = util.table.deepcopy(molecule_icon)
+      bot_molecules_icon[molecule_index] = {
+        {
+          icon = mi.icon or mi[1] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
+        }
+      }
+      if bot_molecules_icon[molecule_index][1].icon then
+        bot_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
+        if bot_molecules_icon[molecule_index][1].icon_size ~= 32 then
+          bot_molecules_icon[molecule_index][1].scale = (bot_molecules_icon[molecule_index][1].scale or 1) * 32/bot_molecules_icon[molecule_index][1].icon_size
+        end
+      else
+        --something is wrong here but we need to return something
+        bot_molecules_icon[molecule_index] = {
+          {
+            icon = "__angelsrefining__/graphics/icons/void.png",
+            icon_size = 32
+          }
+        }
+      end
+    else
+      for molecule_icon_layer_index,molecule_icon_layer in pairs(molecule_icon) do
+        if not molecule_icon_layer.icon_size then
+          bot_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
+        end
+      end
+    end
+    molecule_icon = bot_molecules_icon[molecule_index]
+
+    -- now shift this icon to its correct position
+    molecule_shift = ({ {-11.5, 12}, {11.5, 12}, {0, 12} })[molecule_index] or {0,0}
+    molecule_scale = 10.24/32 -- assume base size 32
+    for layer_index, layer in pairs(molecule_icon) do
+      layer.scale = layer.scale or 1
+      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
+
+      layer.shift = {layer.shift[1] * molecule_scale + molecule_shift[1], layer.shift[2] * molecule_scale + molecule_shift[2]}
+      layer.scale = layer.scale * molecule_scale
+
+      molecule_icon[layer_index].scale = layer.scale
+      molecule_icon[layer_index].shift = layer.shift
+    end
+    bot_molecules_icon[molecule_index] = clean_table(molecule_icon)
+  end
+  bot_molecules_icon = clean_table(bot_molecules_icon)
+
+  top_molecules_icon = top_molecules_icon or {}
+  for molecule_index ,molecule_icon in pairs(top_molecules_icon) do
+    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
+      top_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
+    end
+  end
+  
+  for molecule_index,molecule_icon in pairs(top_molecules_icon) do
+    if type(molecule_icon) ~= "table" then
+      top_molecules_icon[molecule_index] = {
+        {
+          icon = molecule_icon,
+          icon_size = 32
+        }
+      }
+    elseif type(molecule_icon[1]) ~= "table" then
+      local mi = util.table.deepcopy(molecule_icon)
+      top_molecules_icon[molecule_index] = {
+        {
+          icon = mi.icon or mi[1] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil,
+        }
+      }
+      if top_molecules_icon[molecule_index][1].icon then
+        top_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
+        if top_molecules_icon[molecule_index][1].icon_size ~= 32 then
+          top_molecules_icon[molecule_index][1].scale = (top_molecules_icon[molecule_index][1].scale or 1) * 32/top_molecules_icon[molecule_index][1].icon_size
+        end
+      else
+        --something is wrong here but we need to return something
+        top_molecules_icon[molecule_index] = {
+          {
+            icon = "__angelsrefining__/graphics/icons/void.png",
+            icon_size = 32
+          }
+        }
+      end
+    else
+      for molecule_icon_layer_index,molecule_icon_layer in pairs(molecule_icon) do
+        if not molecule_icon_layer.icon_size then
+          top_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
+        end
+      end
+    end
+    molecule_icon = top_molecules_icon[molecule_index]
+
+    -- now shift this icon to its correct position
+    molecule_shift = ({ {-11.5, -12}, {11.5, -12}, {0, -12} })[molecule_index] or {0,0}
+    molecule_scale = 10.24/32 -- assume base size 32
+    for layer_index, layer in pairs(molecule_icon) do
+      layer.scale = layer.scale or 1
+      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
+
+      layer.shift = {layer.shift[1] * molecule_scale + molecule_shift[1], layer.shift[2] * molecule_scale + molecule_shift[2]}
+      layer.scale = layer.scale * molecule_scale
+
+      molecule_icon[layer_index].scale = layer.scale
+      molecule_icon[layer_index].shift = layer.shift
+    end
+    top_molecules_icon[molecule_index] = clean_table(molecule_icon)
+  end
+  top_molecules_icon = clean_table(top_molecules_icon)
+
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((icon_tint_table[string.sub(tints,1,1)] or {})[1]),
+        mid = unify_tint((icon_tint_table[string.sub(tints,2,2)] or {})[2]),
+        bot = unify_tint((icon_tint_table[string.sub(tints,3,3)] or {})[3]),
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
+  local recipe_icons = {
+    { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-base.png",
+      icon_size = 600,
+      scale = 32/600,
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-top.png",
+      icon_size = 600,
+      scale = 32/600,
+      tint = tints.top,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
+      icon_size = 600,
+      scale = 32/600,
+      tint = tints.mid,
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
+      icon_size = 600,
+      scale = 32/600,
+      tint = tints.bot,
+    },
+  }
+  for _,bot_molecule_icon in pairs(bot_molecules_icon) do
+    for _,bot_molecule_icon_layer in pairs(bot_molecule_icon) do
+      table.insert(recipe_icons, bot_molecule_icon_layer)
+    end
+  end
+  for _,top_molecule_icon in pairs(top_molecules_icon) do
+    for _,top_molecule_icon_layer in pairs(top_molecule_icon) do
+      table.insert(recipe_icons, top_molecule_icon_layer)
+    end
+  end
+  return recipe_icons
+end
+
+-- CREATE VISCOUS LIQUID FLUID ICONS (NOT FOR RECIPES)
+function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, tints)
+  -- molecule_icon can be a string (assumes icon_size 32)
+  -- or be a table with size defined
+  if molecule_icon then
+    if type(molecule_icon) ~= "table" then
+      molecule_icon = {
+        icon = molecule_icon,
+        icon_size = 32
+      }
+    else
+      molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
+      if molecule_icon.icon then
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+      else
+        --something is wrong here but we need to return something
+        molecule_icon.icon = "__angelsrefining__/graphics/icons/void.png"
+        molecule_icon.icon_size = 32
+      end
+    end
+
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+
+    molecule_icon[1] = nil
+    molecule_icon[2] = nil
+    molecule_icon[3] = nil
+    molecule_icon[4] = nil
+  else
+    molecule_icon = nil
+  end
+
+  -- tints is a table of 5 tints, for the top, bot_left top_mask, bot_mask, bot_right,
+  -- if bot_left is present, but not bot_right (nil), then both bottom sides will have
+  -- the same tint as defined in bot_left
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        -- TODO
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.bot_left  = unify_tint(tints.bot_left  or tints[2] or nil)
+      tints.bot_right = unify_tint(tints.bot_right or tints[5] or nil)
+
+      tints.top_mask = unify_tint(tints.top_mask or tints[3] or nil)
+      tints.bot_mask = unify_tint(tints.bot_mask or tints[4] or nil)
+
+      if tints.bot_left and tints.bot_right then
+        tints.bot = nil
+      else
+        tints.bot = tints.bot_left or tints.bot_right or nil
+        tints.bot_left  = nil
+        tints.bot_right = nil
+      end
+    end
+  else
+    tints = {}
+  end
+
+  return clean_table{
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and { -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = {r=0.25,g=0.25,b=0.25,a=0.7},
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot_left and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot_left,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot_left and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot_right,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    tints.bot_mask and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.bot_mask,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.top,
+      shift = molecule_icon and {3.5, 0} or nil,
+    },
+    tints.top_mask and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
+      icon_size = 256,
+      scale = 32/256,
+      tint = tints.top_mask,
+      shift = molecule_icon and {3.5, 0} or nil,
+    } or nil,
+    molecule_icon,
+  }
 end
 
 --COMPARES ARGUMENT (ARG) AGAINST A TABLE (EXCEP), RETURNS FALSE IF ARG == EXCEP ELSE TRUE
@@ -146,7 +885,7 @@ function angelsmods.functions.make_void(fluid_name, void_category) --categories:
   local recipe = {}
 
   if data.raw.fluid[fluid_name] then
-    local fluid_icon = get_icon_or_icons(fluid_name)
+    local fluid_icon = get_icons(fluid_name)
     if type(fluid_icon) == "table" then
       recipe.icons = fluid_icon
     else

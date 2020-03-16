@@ -170,7 +170,7 @@ function tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
-      if technology.unit.ingredients and not technology.max_level then
+      if technology.unit.ingredients and not technology.max_level and technology.unit.ingredients[1] then
         for i, ingredients in pairs(technology.unit.ingredients[1]) do
           if ingredients == "angels-science-pack-grey" then
             OV.set_research_difficulty(

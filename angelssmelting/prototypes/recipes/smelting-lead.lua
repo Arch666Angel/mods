@@ -100,7 +100,11 @@ data:extend(
     {
       {type="fluid", name="liquid-hexafluorosilicic-acid", amount=60},
     },
-    icon_size = 32,
+    main_product = "liquid-hexafluorosilicic-acid",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelssmelting__/graphics/icons/molecule-hexafluorosilicic-acid.png", 72 }
+    }, "iff"),
     order = "f[liquid-hexafluorosilicic-acid]",
   },
   -- SMELTING RESULTS

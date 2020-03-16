@@ -9,9 +9,11 @@ Date: ???
     - Changed Solder amount on Electronics Boards to the amount of components that are needed
     - Changed the Lab Archive icon and added different tiers to speed up research process
   Bugfixes:
+    - Extra check if recipe ingredients exists #52
     - Allow robot deployment when in automatic mode #48
     - Fixed Microchip requiring liquid plastic as ingredient
     - Fixed that the Lab Archive was unobtainable when enabling angels science mid-game
+    - Science pack for datacores for angels rocket fuel fixed to default rocket fuel #66
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 22.02.2020
