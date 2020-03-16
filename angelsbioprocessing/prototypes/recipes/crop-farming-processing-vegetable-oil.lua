@@ -1,3 +1,13 @@
+local function create_recipe_icon(fluid_name, product_name)
+  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
+  for layer_index, layer in pairs(icon_layers or {}) do
+    layer.shift = layer.shift or {}
+    layer.shift = {(layer.shift[1] or 0)/2.3-9, (layer.shift[2] or 0)/2.3-9}
+    layer.scale = (layer.scale or 1)/2.3
+  end
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+end
+
 data:extend(
   {
     {
@@ -13,18 +23,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-raw-vegetable-oil", amount = 50}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-nuts"),
       order = "ba",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-nuts.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -39,18 +40,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-raw-vegetable-oil", amount = 40}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-pips"),
       order = "bb",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-pips.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     {
       type = "recipe",
@@ -65,18 +57,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-raw-vegetable-oil", amount = 30}
       },
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-beans"),
       order = "bc",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil.png"
-        },
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-beans.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32
     },
     -- PROCESSING
     {
@@ -94,7 +77,7 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-vegetable-oil", amount = 160},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40},
-        {type = "item", name = "filter-frame", amount = 1}
+        {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
       },
       order = "ba",
       icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil-filtering-1.png",
@@ -115,7 +98,7 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-vegetable-oil", amount = 180},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
-        {type = "item", name = "filter-ceramic-used", amount = 1}
+        {type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1}
       },
       order = "bb",
       icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil-filtering-2.png",
@@ -135,9 +118,12 @@ data:extend(
         {type = "fluid", name = "liquid-fuel-oil", amount = 70},
         {type = "fluid", name = "liquid-mineral-oil", amount = 30}
       },
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "liquid-fuel-oil",
+        "liquid-mineral-oil",
+      }, { {255,255,056}, {255,205,040}, {201,155,030} }),
       order = "bc",
-      icon = "__angelsbioprocessing__/graphics/icons/vegetable-oil-refining-1.png",
-      icon_size = 32
     }
   }
 )

@@ -1,3 +1,5 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   -- ORE
@@ -32,8 +34,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-tungstic-acid",
-    icon = "__angelssmelting__/graphics/icons/liquid-tungstic-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]WO[font=default-tiny-bold]4[/font]"} or nil,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {235,235,240}, {235,235,240}, {135,090,023,0.75}, {135,090,023,0.75} }),
     subgroup = "angels-tungsten",
     order = "d",
     default_temperature = 100,
@@ -56,8 +58,8 @@ data:extend(
   {
     type = "fluid",
     name = "gas-tungsten-hexafluoride",
-    icon = "__angelssmelting__/graphics/icons/gas-tungsten-hexafluoride.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "WF[font=default-tiny-bold]6[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 }, "tff"),
     subgroup = "angels-tungsten",
     order = "f",
     default_temperature = 100,

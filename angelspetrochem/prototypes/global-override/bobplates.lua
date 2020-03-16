@@ -342,7 +342,12 @@ if bobmods then
     )
     OV.add_unlock("angels-oil-processing", "liquid-fuel")
     move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
+    data.raw["fluid"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_fluid_icon(nil, { {237,212,104}, {247,216,081}, {247,216,081} })
+    data.raw["fluid"]["liquid-fuel"].icon = nil
     OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
+    data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon({ "liquid-fuel" }, { {237,212,104}, {247,216,081}, {247,216,081} })
+    data.raw["recipe"]["liquid-fuel"].icon = nil
+    data.raw["recipe"]["liquid-fuel"].always_show_products = "true"
 
     OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
   end

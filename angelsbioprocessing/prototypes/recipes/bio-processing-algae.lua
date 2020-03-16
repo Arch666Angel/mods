@@ -108,7 +108,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/algae-green.png"
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/num_1.png",
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -136,7 +136,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/algae-green.png"
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/num_2.png",
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -175,8 +175,10 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-methanol", amount = 100}
       },
-      icon = "__angelspetrochem__/graphics/icons/gas-methanol.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_gas_recipe_icon({
+        { "__angelspetrochem__/graphics/icons/molecules/methanol.png", 72 },
+      }, "coh"),
       order = "k[gas-methanol-from-wood]"
     },
     --BLUE
@@ -228,8 +230,10 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-ammonia", amount = 100}
       },
-      icon = "__angelspetrochem__/graphics/icons/gas-ammonia.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_gas_recipe_icon({
+        { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 },
+      }, "nhh"),
       order = "c[gas-ammonia-from-blue-fiber]"
     },
     --RED

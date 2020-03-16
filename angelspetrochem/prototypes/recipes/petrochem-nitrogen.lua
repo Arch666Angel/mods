@@ -1,3 +1,4 @@
+
 data:extend(
 {
   --NITROGEN
@@ -14,8 +15,8 @@ data:extend(
     {
       {type="fluid", name="gas-compressed-air", amount=200},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-01.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({"gas-compressed-air"}, { {180,180,225}, {150,150,187}, {120,120,150} }),
     order = "a",
   },
   {
@@ -34,8 +35,10 @@ data:extend(
       {type="fluid", name="gas-oxygen", amount=50},
       --{type="fluid", name="gas-inert", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-02.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitrogen.png", 64 },
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png"  , 72 }}, "noo"),
     order = "b[air-separation]",
   },
   {
@@ -53,10 +56,10 @@ data:extend(
     results=
     {
       {type="fluid", name="gas-nitrogen-monoxide", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-03.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 } }, "noo"),
     order = "c[gas-nitrogen-dioxide]",
   },
   {
@@ -74,8 +77,8 @@ data:extend(
     {
       {type="fluid", name="gas-nitrogen-dioxide", amount=100},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-04.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 } }, "noo"),
     order = "d",
   },
 
@@ -94,10 +97,10 @@ data:extend(
     results=
     {
       {type="fluid", name="gas-ammonia", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-05.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 } }, "nhh"),
     order = "e",
   },
   {
@@ -115,8 +118,8 @@ data:extend(
     {
       {type="fluid", name="gas-ammonium-chloride", amount=100},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-06.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/ammonium-chloride.png", 72 } }, "nhl"),
     order = "f",
   },
   {
@@ -135,8 +138,8 @@ data:extend(
       {type="fluid", name="gas-urea", amount=80},
       {type="fluid", name="water-purified", amount=20},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-07.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/urea.png", 72 }, "water-purified" }, "cno"),
     order = "g",
   },
   {
@@ -154,8 +157,10 @@ data:extend(
     {
       {type="fluid", name="liquid-nitric-acid", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-08.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }
+    }, "noh"),
     order = "h",
   },
   {
@@ -172,10 +177,10 @@ data:extend(
     results=
     {
       {type="fluid", name="gas-melamine", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-09.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/melamine.png", 72 } }, "chn"),
     order = "i",
   },
   --ROCKET FUEL
@@ -194,8 +199,8 @@ data:extend(
     {
       {type="fluid", name="gas-monochloramine", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/chloramine.png", 72 } }, "nhl"),
     order = "a",
   },
   {
@@ -214,10 +219,10 @@ data:extend(
     {
       {type="fluid", name="gas-hydrazine", amount=100},
       {type="fluid", name="gas-hydrogen-chloride", amount=100},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-11.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 } }, "nhh"),
     order = "b",
   },
   {
@@ -236,8 +241,8 @@ data:extend(
       {type="fluid", name="gas-methylamine", amount=200},
       {type="fluid", name="water-purified", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-12.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/methylamine.png", 72 }, "water-purified" }, "chn"),
     order = "c",
   },
   {
@@ -256,8 +261,8 @@ data:extend(
       {type="fluid", name="gas-dimethylamine", amount=200},
       {type="fluid", name="water-purified", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-13.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/dimethylamine.png", 72 }, "water-purified" }, "chn"),
     order = "d",
   },
   {
@@ -276,8 +281,8 @@ data:extend(
       {type="fluid", name="gas-dimethylhydrazine", amount=200},
       {type="fluid", name="water-purified", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-14.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/dimethylhydrazine.png", 72 }, "water-purified" }, "chn"),
     order = "e",
   },
   {
@@ -294,8 +299,8 @@ data:extend(
     {
       {type="fluid", name="gas-dinitrogen-tetroxide", amount=50},
     },
-    icon = "__angelspetrochem__/graphics/icons/nitrogen-15.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 } }, "noo"),
     order = "f",
   },
   --SOLID ROCKET FUEL

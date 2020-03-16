@@ -904,15 +904,17 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "slag", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "slag-slurry", amount = 50}
       },
-      icon = "__angelsrefining__/graphics/icons/slag-slurry.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {142,079,028}, {107,062,021}, {075,040,015} }, { "slag" }),
       order = "i [slag-processing-dissolution]"
     },
     {
@@ -929,8 +931,8 @@ data:extend(
       results = {
         {type = "fluid", name = "slag-slurry", amount = 50}
       },
-      icon = "__angelsrefining__/graphics/icons/stone-slurry.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {142,079,028}, {107,062,021}, {075,040,015} }, { "stone-crushed" }),
       order = "j [stone-crushed-dissolution]"
     },
     --FILTERING
@@ -1030,8 +1032,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 20}
       },
-      icon = "__angelsrefining__/graphics/icons/liquify-blue.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-blue" }),
       order = "a [geode-blue-liquify]"
     },
     {
@@ -1048,8 +1050,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
-      icon = "__angelsrefining__/graphics/icons/liquify-cyan.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-cyan" }),
       order = "b [geode-cyan-liquify]"
     },
     {
@@ -1066,8 +1068,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
-      icon = "__angelsrefining__/graphics/icons/liquify-lightgreen.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-lightgreen" }),
       order = "c [geode-lightgreen-liquify]"
     },
     {
@@ -1084,8 +1086,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 40}
       },
-      icon = "__angelsrefining__/graphics/icons/liquify-purple.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-purple" }),
       order = "d [geode-purple-liquify]"
     },
     {
@@ -1102,8 +1104,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 20}
       },
-      icon = "__angelsrefining__/graphics/icons/liquify-red.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-red" }),
       order = "e [geode-red-liquify]"
     },
     {
@@ -1120,8 +1122,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 30}
       },
-      icon = "__angelsrefining__/graphics/icons/liquify-yellow.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-yellow" }),
       order = "f [geode-yellow-liquify]"
     },
     {
@@ -1138,17 +1140,8 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
-      icons = {
-        {
-          icon = "__angelsrefining__/graphics/icons/liquify-blank.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/crystal-dust.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "crystal-dust" }),
       order = "g"
     },
     --FILTERING

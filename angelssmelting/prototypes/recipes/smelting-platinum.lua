@@ -57,7 +57,9 @@ data:extend(
     {
       {type="fluid", name="liquid-hexachloroplatinic-acid", amount=60},
     },
-    icon_size = 32,
+    main_product = "liquid-hexachloroplatinic-acid",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {230,191,163}, {092,218,079}, {086,112,192} }),
     order = "d[liquid-hexachloroplatinic-acid]",
   },
   {
