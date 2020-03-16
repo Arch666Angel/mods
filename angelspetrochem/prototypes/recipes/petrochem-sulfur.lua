@@ -220,35 +220,13 @@ data:extend(
     results=
     {
       {type="fluid", name="water-purified", amount=50},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide-hot", amount=50},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }
     }, "sww"),
     order = "i[enriched-hydrogen-sulfide]-a[enrichment]",
-  },
-  {
-    type = "recipe",
-    name = "angels-hydrogen-sulfide-cooling",
-    localised_name = {"recipe-name.angels-hydrogen-sulfide-cooling"},
-    category = mods["angelssmelting"] and "cooling" or "chemistry",
-    subgroup = "petrochem-sulfur",
-    energy_required = 5,
-    enabled = "false",
-    ingredients =
-    {
-      {type="fluid", name="gas-enriched-hydrogen-sulfide-hot", amount=100},
-    },
-    results=
-    {
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=100},
-    },
-    always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }
-    }, "sww"),
-    order = "i[enriched-hydrogen-sulfide]-b[cooling]",
   },
 }
 )

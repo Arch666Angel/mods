@@ -389,11 +389,13 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
 
     molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
     molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+    molecule_icon.tint = molecule_icon.tint or molecule_icon[5] or nil
 
     molecule_icon[1] = nil
     molecule_icon[2] = nil
     molecule_icon[3] = nil
     molecule_icon[4] = nil
+    molecule_icon[5] = nil
   else
     molecule_icon = nil
   end

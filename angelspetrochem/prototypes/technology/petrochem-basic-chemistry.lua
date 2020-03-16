@@ -119,6 +119,47 @@ data:extend(
   },
   {
     type = "technology",
+    name = "water-chemistry-1",
+    icon = "__angelspetrochem__/graphics/technology/sulfur-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-sulfur-processing-2",
+      "water-treatment-4",
+      "angels-advanced-chemistry-3",
+      mods["angelssmelting"] and "angels-coolant-1" or "basic-chemistry-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-hydrogen-sulfide-enrichment"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-water-enrichment-1"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-water-enrichment-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-water-enrichment-3"
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1}
+      },
+      time = 15
+    },
+    order = "c-a"
+  },
+  {
+    type = "technology",
     name = "angels-coal-processing",
     icon = "__angelspetrochem__/graphics/technology/coal-tech.png",
     icon_size = 128,
@@ -311,38 +352,6 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
-      },
-      time = 15
-    },
-    order = "c-a"
-  },
-  {
-    type = "technology",
-    name = "angels-sulfur-processing-4",
-    icon = "__angelspetrochem__/graphics/technology/sulfur-tech.png",
-    icon_size = 128,
-    prerequisites = {
-      "angels-sulfur-processing-3",
-      "water-treatment-4",
-      mods["angelssmelting"] and "angels-coolant-1" or "basic-chemistry-2",
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-hydrogen-sulfide-enrichment"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-hydrogen-sulfide-cooling"
-      },
-    },
-    unit = {
-      count = 50,
-      ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"utility-science-pack", 1}
       },
       time = 15
     },

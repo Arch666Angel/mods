@@ -8,7 +8,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="water", amount=100}
     },
     results=
@@ -54,7 +55,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="water", amount=100},
       {type="item", name="angels-electrode", amount=1}
     },
@@ -102,7 +104,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="water-purified", amount=100}
     },
     results=
@@ -141,7 +144,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="water-purified", amount=100},
       {type="item", name="angels-electrode", amount=1}
     },
@@ -182,7 +186,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-oxygen", amount=60},
       {type="fluid", name="gas-hydrogen", amount=90},
     },
@@ -209,7 +214,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-carbon", amount=1},
       {type="fluid", name="water-purified", amount=50}
     },
@@ -234,7 +240,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal", amount=1}
     },
     results=
@@ -258,7 +265,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="stone-crushed", amount=6},
       {type="fluid", name="gas-hydrogen-chloride", amount=30},
     },
@@ -283,7 +291,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-carbon-monoxide", amount=50},
       {type="fluid", name="steam", amount=50},
     },
@@ -312,7 +321,8 @@ data:extend(
     subgroup = "petrochem-basics",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-hydrogen", amount=50},
       {type="fluid", name="gas-carbon-dioxide", amount=50},
     },
@@ -342,7 +352,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal", amount=5},
     },
     results=
@@ -373,7 +384,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal", amount=5},
       {type="fluid", name="gas-hydrogen", amount=50},
       {type="item", name="catalyst-metal-red", amount=1},    --Fe
@@ -407,7 +419,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal", amount=5},
       {type="fluid", name="steam", amount=50},
       {type="fluid", name="gas-oxygen", amount=50},
@@ -441,7 +454,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-coke", amount=2},
       {type="fluid", name="steam", amount=30},
     },
@@ -476,7 +490,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-coke", amount=4},
       {type="item", name="solid-sodium-hydroxide", amount=1},
       {type="fluid", name="gas-nitrogen", amount=30},
@@ -514,7 +529,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 1,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal", amount=1},  
     },
     results=
@@ -532,7 +548,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 1,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal-crushed", amount=2},
     },
     results=
@@ -560,7 +577,8 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="coal-crushed", amount=2},
       {type="fluid", name="water-purified", amount=50},
     },
@@ -596,8 +614,9 @@ data:extend(
     subgroup = "petrochem-coal",
     energy_required = 1,
     enabled = "false",
-    ingredients ={
-      {type="item", name="solid-coke", amount=5},  
+    ingredients =
+    {
+      {type="item", name="solid-coke", amount=5},
     },
     results=
     {
@@ -606,6 +625,94 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/pellet-coke.png",
     icon_size = 32,
     order = "e[pellet-coke]",
+  },
+  --ENRICHED WATER
+  {
+    type = "recipe",
+    name = "angels-water-enrichment-1",
+    localised_name = {"recipe-name.angels-water-enrichment", "0", "7.5"},
+    category = "advanced-chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="water-saline", amount=50},
+      {type="fluid", name="water-purified", amount=25},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=75},
+    },
+    results=
+    {
+      {type="fluid", name="water-yellow-waste", amount=50},
+      {type="fluid", name="liquid-water-enriched-1-hot", amount=25},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=75},
+    },
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        icon_size = 32,
+        tint = angelsmods.petrochem.number_tint,
+      }
+    }),
+    order = "k[water-enrichment]-a[mk1]-a[enriching]",
+  },
+  {
+    type = "recipe",
+    name = "angels-water-enrichment-2",
+    localised_name = {"recipe-name.angels-water-enrichment", "7.5", "12.5"},
+    category = "advanced-chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="water-saline", amount=50},
+      {type="fluid", name="liquid-water-enriched-1", amount=25},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=75},
+    },
+    results=
+    {
+      {type="fluid", name="water-yellow-waste", amount=50},
+      {type="fluid", name="liquid-water-enriched-2-hot", amount=25},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=75},
+    },
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        icon_size = 32,
+        tint = angelsmods.petrochem.number_tint,
+      }
+    }),
+    order = "k[water-enrichment]-a[mk1]-a[enriching]",
+  },
+  {
+    type = "recipe",
+    name = "angels-water-enrichment-3",
+    localised_name = {"recipe-name.angels-water-enrichment", "12.5", "15"},
+    category = "advanced-chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="water-saline", amount=50},
+      {type="fluid", name="liquid-water-enriched-2", amount=25},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=75},
+    },
+    results=
+    {
+      {type="fluid", name="water-yellow-waste", amount=50},
+      {type="fluid", name="liquid-water-enriched-3-hot", amount=25},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=75},
+    },
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        icon_size = 32,
+        tint = angelsmods.petrochem.number_tint,
+      }
+    }),
+    order = "k[water-enrichment]-a[mk1]-a[enriching]",
   },
 }
 )
