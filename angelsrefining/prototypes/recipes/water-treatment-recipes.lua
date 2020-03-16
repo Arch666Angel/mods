@@ -7,11 +7,13 @@ data:extend(
       subgroup = "water-treatment",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water", amount = 100},
         {type = "item", name = "stone-crushed", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-mineralized", amount = 100}
       },
       icon = "__angelsrefining__/graphics/icons/water-mineralized.png",
@@ -25,10 +27,12 @@ data:extend(
       subgroup = "water-treatment",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water", amount = 150}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-saline", amount = 20},
         {type = "fluid", name = "water-purified", amount = 100}
       },
@@ -43,10 +47,12 @@ data:extend(
       subgroup = "water-treatment",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "thermal-water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 20},
         {type = "fluid", name = "water-purified", amount = 30}
       },
@@ -62,10 +68,12 @@ data:extend(
       subgroup = "water-cleaning",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-yellow-waste", amount = 100}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-mineralized", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70},
         {type = "item", name = "sulfur", amount = 1}
@@ -81,10 +89,12 @@ data:extend(
       subgroup = "water-cleaning",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-red-waste", amount = 100}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-mineralized", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70}
       },
@@ -99,10 +109,12 @@ data:extend(
       subgroup = "water-cleaning",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-green-waste", amount = 100}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-saline", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70}
       },
@@ -117,10 +129,12 @@ data:extend(
       subgroup = "water-cleaning",
       energy_required = 1,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-greenyellow-waste", amount = 100}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-mineralized", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70}
         --{type="item", name="fluorite-ore", amount=1},
@@ -137,15 +151,37 @@ data:extend(
       subgroup = "water-salination",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water", amount = 1000}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-saline", amount = 400}
       },
       icon = "__angelsrefining__/graphics/icons/water-saline.png",
       icon_size = 32,
-      order = "a[water-saline]"
+      order = "a[water-saline]-a[water]"
+    },
+    {
+      type = "recipe",
+      name = "solid-salt-dissolving",
+      category = "salination-plant",
+      subgroup = "petrochem-sodium",
+      energy_required = 2,
+      enabled = "false",
+      ingredients =
+      {
+        {type="item", name="solid-salt", amount=10},
+        {type="fluid", name="water-purified", amount=1000}
+      },
+      results =
+      {
+        {type="fluid", name="water-saline", amount=400}
+      },
+      icon = "__angelspetrochem__/graphics/icons/solid-salt.png",
+      icon_size = 32,
+      order = "a[water-saline]-b[salt]"
     },
     {
       type = "recipe",
@@ -154,10 +190,12 @@ data:extend(
       subgroup = "water-salination",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-saline", amount = 1000}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "solid-salt", amount = 25}
       },
       icon_size = 32,
@@ -170,10 +208,12 @@ data:extend(
       subgroup = "water-salination",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water", amount = 1000}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "solid-salt", amount = 10}
       },
       icon_size = 32,
@@ -186,10 +226,12 @@ data:extend(
       subgroup = "water-salination",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "thermal-water", amount = 1000}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "solid-lithium", amount = 20}
       },
       icon_size = 32,
@@ -203,11 +245,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-viscous-mud", amount = 200},
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-heavy-mud", amount = 200},
         {type = "item", name = "solid-mud", amount_min = 0, amount_max = 3, probability = 0.5}
       },
@@ -222,11 +266,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-heavy-mud", amount = 200},
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-concentrated-mud", amount = 200},
         {type = "item", name = "solid-mud", amount_min = 0, amount_max = 3, probability = 0.5}
       },
@@ -241,11 +287,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-concentrated-mud", amount = 200},
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-light-mud", amount = 200},
         {type = "item", name = "solid-mud", amount_min = 0, amount_max = 3, probability = 0.5}
       },
@@ -260,11 +308,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-light-mud", amount = 200},
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-thin-mud", amount = 200},
         {type = "item", name = "solid-mud", amount_min = 0, amount_max = 3, probability = 0.5}
       },
@@ -279,11 +329,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-thin-mud", amount = 200},
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-saline", amount = 200},
         {type = "item", name = "solid-mud", amount_min = 0, amount_max = 3, probability = 0.5}
       },
@@ -298,11 +350,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "solid-mud", amount = 10},
         {type = "fluid", name = "water", amount = 150}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-viscous-mud", amount = 150}
       },
       icon_size = 32,
@@ -315,10 +369,12 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "solid-mud", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "landfill", amount = 1}
       },
       icon_size = 32,
@@ -332,11 +388,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-heavy-mud", amount = 40},
         {type = "fluid", name = "water", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "geode-blue", amount = 2, probability = 0.75},
         {type = "item", name = "geode-cyan", amount = 1, probability = 0.6},
         {type = "item", name = "geode-lightgreen", amount = 1, probability = 0.6},
@@ -355,11 +413,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-concentrated-mud", amount = 30},
         {type = "fluid", name = "water", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "solid-clay", amount = 3}
       },
       icon_size = 32,
@@ -372,11 +432,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-light-mud", amount = 20},
         {type = "fluid", name = "water", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "solid-limestone", amount = 3}
       },
       icon_size = 32,
@@ -389,11 +451,13 @@ data:extend(
       subgroup = "water-washing",
       energy_required = 5,
       enabled = "false",
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water-thin-mud", amount = 10},
         {type = "fluid", name = "water", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "solid-sand", amount = 5}
       },
       icon_size = 32,

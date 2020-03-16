@@ -36,7 +36,8 @@ else
   OV.disable_recipe({
     "red-waste-water-purification",
     "green-waste-water-purification",
-    "greenyellow-waste-water-purification"
+    "greenyellow-waste-water-purification",
+    "solid-salt-dissolving",
   })
 end
 

@@ -147,7 +147,8 @@ data:extend(
     subgroup = "petrochem-sodium",
     order = "b[sodium]-b[solid-sodium-nitrate]",
     stack_size = 200
-  },  {
+  },
+  {
     type = "fluid",
     name = "liquid-aqueous-sodium-hydroxide",
     icon = "__angelspetrochem__/graphics/icons/liquid-aqueous-sodium-hydroxide.png",
