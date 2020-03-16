@@ -62,10 +62,6 @@ data:extend(
           type = "unlock-recipe",
           recipe = "red-waste-water-purification"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-salt-dissolving"
-        },
       },
       unit = {
         count = 30,
@@ -96,6 +92,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "water-saline"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-salt-dissolving"
         },
         {
           type = "unlock-recipe",

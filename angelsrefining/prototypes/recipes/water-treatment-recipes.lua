@@ -1,3 +1,14 @@
+local function create_viscous_recipe_icon(fluid_name, overlay_icon)
+  if not overlay_icon then return angelsmods.functions.get_object_icons(fluid_name) end
+  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(overlay_icon))
+  for layer_index, layer in pairs(icon_layers) do
+    layer.shift = layer.shift or {}
+    layer.shift = {(layer.shift[1] or 0)/2.3-9, (layer.shift[2] or 0)/2.3-9}
+    layer.scale = (layer.scale or 1)/2.3
+  end
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+end
+
 data:extend(
   {
     {
@@ -112,8 +123,8 @@ data:extend(
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "water-mineralized",
         "water-purified",
-      }, { {094,114,174}, {120,052,049}, {107,043,040} }),
-      order = "e[yellow-waste-water-purification]"
+      }, "wcc"),
+      order = "g[yellow-waste-water-purification]"
     },
     {
       type = "recipe",
@@ -135,7 +146,8 @@ data:extend(
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "water-saline",
         "water-purified",
-      }, { {094,114,174}, {070,158,044}, {039,106,016} }),
+        mods["angelspetrochem"] and "solid-salt" or nil
+      }, "wll"),
       order = "f[yellow-waste-water-purification]"
     },
     {
@@ -159,9 +171,9 @@ data:extend(
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "water-saline",
         "water-purified",
-        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 } or "sulfur"
-      }, { {094,114,174}, {168,159,065}, {144,135,056} }),
-      order = "g[yellow-waste-water-purification]"
+        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/ore-fluorite.png", 32 } or nil
+      }, "wff"),
+      order = "e[yellow-waste-water-purification]"
     },
     --SALINATION
     {
@@ -181,13 +193,14 @@ data:extend(
       },
       main_product = "water-saline",
       always_show_products = "true",
+      icons = create_viscous_recipe_icon("water-saline", "water"),
       order = "a[water-saline]-a[water]"
     },
     {
       type = "recipe",
       name = "solid-salt-dissolving",
       category = "salination-plant",
-      subgroup = "petrochem-sodium",
+      subgroup = "water-salination",
       energy_required = 2,
       enabled = "false",
       ingredients =
@@ -201,6 +214,7 @@ data:extend(
       },
       main_product = "water-saline",
       always_show_products = "true",
+      icons = create_viscous_recipe_icon("water-saline", "solid-salt"),
       order = "a[water-saline]-b[salt]"
     },
     {
