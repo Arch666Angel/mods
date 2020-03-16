@@ -137,6 +137,15 @@ data:extend(
     stack_size = 200
   },
   {
+    type = "item",
+    name = "solid-sodium-nitrate",
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png",
+    icon_size = 32,
+    subgroup = "petrochem-sodium",
+    order = "b[sodium]-c[solid-sodium-nitrate]",
+    stack_size = 200
+  },
+  {
     type = "fluid",
     name = "liquid-aqueous-sodium-hydroxide",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {151,212,255}, {255,255,255} }),

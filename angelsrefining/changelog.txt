@@ -5,6 +5,8 @@ Date: ???
     - Added new graphics for fluid icons
     - Powdered refining depends on lubricant tech now
     - Moved seafloor pump more landinwards to be in line with 18.10 #78
+    - Added Salt to Chloric Waste Water when petrochem is enabled
+    - Added Sodium Nitrate to Nitric Waste Water when petrochem is enabled
   Modding:
     - Added angels fluid icon base icons
   Bugfixes:

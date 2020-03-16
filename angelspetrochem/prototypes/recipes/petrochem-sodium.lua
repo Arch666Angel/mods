@@ -13,7 +13,7 @@ data:extend(
       {type="item", name="solid-salt", amount=10},
       {type="item", name="angels-electrode", amount=1}
     },
-    results=
+    results =
     {
       {type="fluid", name="gas-chlorine", amount=200},
       {type="item", name="solid-sodium", amount=5},
@@ -38,7 +38,7 @@ data:extend(
       {type="item", name="solid-sodium-hydroxide", amount=5},
       {type="item", name="angels-electrode", amount=1}
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium", amount=5},
       {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1},
@@ -60,7 +60,7 @@ data:extend(
     {
       {type="item", name="solid-sodium-sulfate", amount=2}
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium", amount=4},
       {type="item", name="sulfur", amount=2},
@@ -85,7 +85,7 @@ data:extend(
       {type="item", name="solid-sodium", amount=5},
       {type="fluid", name="gas-carbon-dioxide", amount=50},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-carbonate", amount=5},
     },
@@ -106,7 +106,7 @@ data:extend(
       {type="fluid", name="gas-ammonia", amount=30},
       {type="item", name="catalyst-metal-green", amount=1},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-cyanide", amount=5},
       {type="fluid", name="gas-hydrogen", amount=30},
@@ -132,7 +132,7 @@ data:extend(
       {type="item", name="solid-sodium", amount=5},
       {type="fluid", name="water-purified", amount=50},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-hydroxide", amount=5},
     },
@@ -151,7 +151,7 @@ data:extend(
     {
       {type="fluid", name="liquid-aqueous-sodium-hydroxide", amount=50},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-hydroxide", amount=5},
       {type="fluid", name="water-purified", amount=50}
@@ -176,7 +176,7 @@ data:extend(
       {type="item", name="solid-sodium-hydroxide", amount=4},
       {type="fluid", name="liquid-sulfuric-acid", amount=80},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-sulfate", amount=2},
       {type="fluid", name="water-purified", amount=60},
@@ -203,7 +203,7 @@ data:extend(
       {type="item", name="angels-electrode", amount=1},
       {type="fluid", name="water-purified", amount=50},
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-aqueous-sodium-hydroxide", amount=50},
       {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1},
@@ -226,7 +226,7 @@ data:extend(
       {type="item", name="solid-sodium-hydroxide", amount=5},
       {type="fluid", name="water-purified", amount=50}
     },
-    results=
+    results =
     {
       {type="fluid", name="liquid-aqueous-sodium-hydroxide", amount=50},
     },
@@ -251,7 +251,7 @@ data:extend(
       {type="fluid", name="liquid-aqueous-sodium-hydroxide", amount=50},
       {type="fluid", name="gas-chlorine", amount=200},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-hypochlorite", amount=5},
     },
@@ -272,7 +272,7 @@ data:extend(
       {type="fluid", name="liquid-aqueous-sodium-hydroxide", amount=50},
       {type="fluid", name="gas-hydrogen-chloride", amount=50},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-chlorate", amount=5},
     },
@@ -294,7 +294,7 @@ data:extend(
       {type="fluid", name="water-purified", amount=50},
       {type="item", name="catalyst-metal-blue", amount=1},
     },
-    results=
+    results =
     {
       {type="item", name="solid-sodium-perchlorate", amount=5},
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},

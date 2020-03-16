@@ -22,13 +22,22 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     {
       name = "greenyellow-waste-water-purification",
       results = {{"fluorite-ore"}}
+    },
+    {
+      name = "red-waste-water-purification",
+      results = {{name = "solid-sodium-nitrate", type = "item", amount = 1}}
+    },
+    {
+      name = "green-waste-water-purification",
+      results = {{name = "solid-salt", type = "item", amount = 1}}
     }
   })
 else
   OV.disable_recipe({
     "red-waste-water-purification",
     "green-waste-water-purification",
-    "greenyellow-waste-water-purification"
+    "greenyellow-waste-water-purification",
+    "solid-salt-dissolving",
   })
 end
 
