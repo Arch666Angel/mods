@@ -45,6 +45,9 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   angelsmods.trigger.smelting_products["silver"].ingot = true
 end
 --alloy-steel
+if angelsmods.trigger.smelting_products["iron"].rod then
+  angelsmods.trigger.smelting_products["steel"].rod = true
+end
 if angelsmods.trigger.smelting_products["steel"].rod then
   angelsmods.trigger.smelting_products["steel"].plate = true
 end
