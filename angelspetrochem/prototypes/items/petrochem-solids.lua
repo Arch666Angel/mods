@@ -4,8 +4,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-plastic",
-    icon = "__angelspetrochem__/graphics/icons/liquid-plastic.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {255,255,255}, {255,255,255} }),
     subgroup = "petrochem-solids-fluids",
     order = "a[plastic]",
     default_temperature = 25,
@@ -19,8 +18,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-resin",
-    icon = "__angelspetrochem__/graphics/icons/liquid-resin.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {255,225,155}, {255,225,155} }),
     subgroup = "petrochem-solids-fluids",
     order = "b[resin]",
     default_temperature = 25,
@@ -34,8 +32,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-rubber",
-    icon = "__angelspetrochem__/graphics/icons/liquid-rubber.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {193,197,255}, {193,197,255} }),
     subgroup = "petrochem-solids-fluids",
     order = "c[rubber]",
     default_temperature = 25,
@@ -151,8 +148,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-aqueous-sodium-hydroxide",
-    icon = "__angelspetrochem__/graphics/icons/liquid-aqueous-sodium-hydroxide.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {151,212,255}, {255,255,255} }),
     subgroup = "petrochem-chlorine-fluids",
     order = "j",
     default_temperature = 25,

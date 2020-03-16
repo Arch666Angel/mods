@@ -5,7 +5,7 @@ data:extend(
       type = "recipe",
       name = "crystal-splinter-cutting",
       category = "crafting",
-      subgroup = "bio-biter",
+      subgroup = "bio-biter-small",
       enabled = "false",
       energy_required = 2,
       ingredients = {
@@ -19,7 +19,7 @@ data:extend(
       },
       icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-harmonic.png",
       icon_size = 32,
-      order = "ba"
+      order = "d[crystal]-a[cutting]"
     },
     {
       type = "recipe",
@@ -34,7 +34,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-splinter-blue", amount = 1}
+        {type = "item", name = "crystal-splinter-blue", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-splinter-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -54,7 +55,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-splinter-red", amount = 1}
+        {type = "item", name = "crystal-splinter-red", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-splinter-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -74,7 +76,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-splinter-green", amount = 1}
+        {type = "item", name = "crystal-splinter-green", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-splinter-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -86,7 +89,7 @@ data:extend(
       name = "crystal-splinter-harmonic",
       localised_name = {"recipe-name.crystal-splinter-harmonic"},
       category = "crafting",
-      subgroup = "bio-biter",
+      subgroup = "bio-biter-small",
       enabled = "false",
       energy_required = 2,
       ingredients = {
@@ -101,7 +104,7 @@ data:extend(
       main_product = "crystal-splinter-harmonic",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "bb"
+      order = "d[crystal]-b[harmonic]"
     },
     {
       type = "recipe",
@@ -186,7 +189,7 @@ data:extend(
       type = "recipe",
       name = "crystal-shard-cutting",
       category = "crafting",
-      subgroup = "bio-biter-breeding",
+      subgroup = "bio-biter-medium",
       enabled = "false",
       energy_required = 2,
       ingredients = {
@@ -200,7 +203,7 @@ data:extend(
       },
       icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-harmonic.png",
       icon_size = 32,
-      order = "ba"
+      order = "d[crystal]-a[cutting]"
     },
     {
       type = "recipe",
@@ -215,7 +218,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-shard-blue", amount = 1}
+        {type = "item", name = "crystal-shard-blue", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-shard-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -235,7 +239,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-shard-red", amount = 1}
+        {type = "item", name = "crystal-shard-red", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-shard-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -255,7 +260,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-shard-green", amount = 1}
+        {type = "item", name = "crystal-shard-green", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-shard-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -267,7 +273,7 @@ data:extend(
       name = "crystal-shard-harmonic",
       localised_name = {"recipe-name.crystal-shard-harmonic"},
       category = "crafting",
-      subgroup = "bio-biter-breeding",
+      subgroup = "bio-biter-medium",
       enabled = "false",
       energy_required = 2,
       ingredients = {
@@ -282,7 +288,7 @@ data:extend(
       main_product = "crystal-shard-harmonic",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "bb"
+      order = "d[crystal]-b[harmonic]"
     },
     {
       type = "recipe",
@@ -367,7 +373,7 @@ data:extend(
       type = "recipe",
       name = "crystal-full-cutting",
       category = "crafting",
-      subgroup = "bio-biter-eggs",
+      subgroup = "bio-biter-big",
       enabled = "false",
       energy_required = 2,
       ingredients = {
@@ -381,7 +387,7 @@ data:extend(
       },
       icon = "__angelsbioprocessing__/graphics/icons/crystal-full-harmonic.png",
       icon_size = 32,
-      order = "ba"
+      order = "d[crystal]-a[cutting]"
     },
     {
       type = "recipe",
@@ -396,7 +402,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-full-blue", amount = 1}
+        {type = "item", name = "crystal-full-blue", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-full-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -416,7 +423,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-full-red", amount = 1}
+        {type = "item", name = "crystal-full-red", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-full-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -436,7 +444,8 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-full-green", amount = 1}
+        {type = "item", name = "crystal-full-green", amount = 1},
+        {type = "item", name = "crystal-grindstone", amount = 1, catalyst_amount = 1, probability = 2/3}
       },
       main_product = "crystal-full-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
@@ -448,7 +457,7 @@ data:extend(
       name = "crystal-full-harmonic",
       localised_name = {"recipe-name.crystal-full-harmonic"},
       category = "crafting",
-      subgroup = "bio-biter-eggs",
+      subgroup = "bio-biter-big",
       enabled = "false",
       energy_required = 2,
       ingredients = {
@@ -463,7 +472,7 @@ data:extend(
       main_product = "crystal-full-harmonic",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "bb"
+      order = "d[crystal]-b[harmonic]"
     },
     {
       type = "recipe",

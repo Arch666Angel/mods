@@ -1,3 +1,5 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   -- ORE
@@ -50,8 +52,8 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-hexafluorosilicic-acid",
-    icon = "__angelssmelting__/graphics/icons/liquid-hexafluorosilicic-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "F[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]2[/font]Si"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-hexafluorosilicic-acid.png", 72 }, "iff"),
     subgroup = "angels-lead",
     order = "f",
     default_temperature = 25,

@@ -19,8 +19,11 @@ data:extend(
       {type="item", name="solid-sodium", amount=5},
       {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1}
     },
-    icon = "__angelspetrochem__/graphics/icons/raw-separation-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 },
+      "solid-sodium"
+    }, "lll"),
     order = "a[sodium]-a[generation]",
   },
   { -- from hydroxide
@@ -63,7 +66,7 @@ data:extend(
       {type="item", name="sulfur", amount=2},
     },
     main_product= "solid-sodium",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium.png",
+    --icon = "__angelspetrochem__/graphics/icons/solid-sodium.png",
     icon_size = 32,
     order = "a[sodium]-c[sulfate]",
   },
@@ -107,7 +110,7 @@ data:extend(
     {
       {type="item", name="solid-sodium-cyanide", amount=5},
       {type="fluid", name="gas-hydrogen", amount=30},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     main_product= "solid-sodium-cyanide",
     icon_size = 32,
@@ -173,6 +176,7 @@ data:extend(
     {
       {type="item", name="solid-sodium-hydroxide", amount=5},
     },
+    main_product = "solid-sodium-hydroxide",
     icon_size = 32,
     order = "c[sodium-hydroxide]-a[generation]",
   },
@@ -217,7 +221,8 @@ data:extend(
       {type="item", name="solid-sodium-sulfate", amount=2},
       {type="fluid", name="water-purified", amount=60},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
+    main_product = "solid-sodium-sulfate",
+    --icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
     icon_size = 32,
     order = "d[sodium-hydroxide]",
   },
@@ -245,7 +250,8 @@ data:extend(
       {type="fluid", name="gas-carbon-dioxide", amount=50},
     },
     main_product= "liquid-aqueous-sodium-hydroxide",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {151,212,255}, {255,255,255}, {255,255,255} }),
     order = "e[liquid-sodium-hydroxide]-a[generation]",
   },
   { -- from solid
@@ -265,7 +271,8 @@ data:extend(
       {type="fluid", name="liquid-aqueous-sodium-hydroxide", amount=50},
     },
     main_product = "liquid-aqueous-sodium-hydroxide",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {151,212,255}, {255,255,255}, {255,255,255} }),
     order = "e[liquid-sodium-hydroxide]-b[hydroxide]",
   },
 
@@ -288,7 +295,8 @@ data:extend(
     {
       {type="item", name="solid-sodium-hypochlorite", amount=5},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-hypochlorite.png",
+    main_product = "solid-sodium-hypochlorite",
+    --icon = "__angelspetrochem__/graphics/icons/solid-sodium-hypochlorite.png",
     icon_size = 32,
     order = "f[liquid-sodium-hydroxide]-a[sodium-hypochlorite]",
   },
@@ -308,7 +316,8 @@ data:extend(
     {
       {type="item", name="solid-sodium-chlorate", amount=5},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-chlorate.png",
+    main_product = "solid-sodium-chlorate",
+    --icon = "__angelspetrochem__/graphics/icons/solid-sodium-chlorate.png",
     icon_size = 32,
     order = "f[liquid-sodium-hydroxide]-b[solid-sodium-chlorate]",
   },
@@ -328,9 +337,10 @@ data:extend(
     results =
     {
       {type="item", name="solid-sodium-perchlorate", amount=5},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-perchlorate.png",
+    main_product = "solid-sodium-perchlorate",
+    --icon = "__angelspetrochem__/graphics/icons/solid-sodium-perchlorate.png",
     icon_size = 32,
     order = "f[liquid-sodium-hydroxide]-c[solid-sodium-perchlorate]",
   },

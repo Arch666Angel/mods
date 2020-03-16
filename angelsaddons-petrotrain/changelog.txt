@@ -3,6 +3,7 @@ Version: 0.5.2
 Date: ???
   Changes:
     - Settings were surrounded by quotes
+    - Higher tiers are now unlocked by separate techs
   Bugfixes:
     - Allow robot dispatch when in automatic mode #48
 ---------------------------------------------------------------------------------------------------

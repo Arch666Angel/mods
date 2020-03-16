@@ -55,7 +55,8 @@ data:extend(
       {type="item", name="solid-calcium-chloride", amount=2},
     },
     main_product= "liquid-tungstic-acid",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {135,090,023}, {170,170,180}, {170,170,180} }),
     order = "d[liquid-tungstic-acid]",
   },
   {
@@ -135,7 +136,9 @@ data:extend(
     {
       {type="fluid", name="gas-tungsten-hexafluoride", amount=60},
     },
-    icon_size = 32,
+    main_product= "gas-tungsten-hexafluoride",
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 } }, "tff"),
     order = "f[gas-tungsten-hexafluoride]",
   },
   {

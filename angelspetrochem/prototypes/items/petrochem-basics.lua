@@ -1,11 +1,13 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   --CHEMICAL BASIC
   {
     type = "fluid",
     name = "gas-compressed-air",
-    icon = "__angelspetrochem__/graphics/icons/gas-compressed-air.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_gas_fluid_icon(nil, { {180,180,225}, {150,150,187}, {120,120,150} }),
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "b",
     default_temperature = 25,
@@ -19,8 +21,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-hydrogen",
-    icon = "__angelspetrochem__/graphics/icons/gas-hydrogen.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 }, "hhh"),
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "h",
     default_temperature = 25,
@@ -34,8 +37,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-oxygen",
-    icon = "__angelspetrochem__/graphics/icons/gas-oxygen.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "O[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 }, "ooo"),
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "d",
     default_temperature = 25,
@@ -49,8 +53,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-hydrogen-peroxide",
-    icon = "__angelspetrochem__/graphics/icons/gas-hydrogen-peroxide.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]O[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrogen-peroxide.png", 72 }, "ooh"),
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "e",
     default_temperature = 25,
@@ -64,8 +69,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-carbon-monoxide",
-    icon = "__angelspetrochem__/graphics/icons/gas-carbon-monoxide.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "CO"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72 }, "ccc"),
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "f",
     default_temperature = 25,
@@ -79,8 +85,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-carbon-dioxide",
-    icon = "__angelspetrochem__/graphics/icons/gas-carbon-dioxide.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "CO[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 }, "ccc"),
+    --icon_size = 32,
     subgroup = "petrochem-basic-fluids",
     order = "g",
     default_temperature = 25,
@@ -94,8 +101,9 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-hydrofluoric-acid",
-    icon = "__angelspetrochem__/graphics/icons/liquid-hydrofluoric-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "HF"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 }, "fhh"),
+    --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "e",
     default_temperature = 25,
@@ -110,7 +118,7 @@ data:extend(
   {
     type = "item",
     name = "chemical-void",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-hydroxide.png",
+    icon = "__angelsrefining__/graphics/icons/void.png",
     icon_size = 32,
     flags = {"hidden"},
     subgroup = "petrochem-basic-fluids",

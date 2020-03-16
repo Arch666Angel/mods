@@ -110,8 +110,7 @@ data:extend(
   {
     type = "fluid",
     name = "thermal-water",
-    icon = "__angelsrefining__/graphics/icons/water-thermal.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {243,135,000}, nil, {247,140,003} }),
     subgroup = "ore-sorting-fluid",
     order = "a[slag]-a[thermal]",
     default_temperature = 25,

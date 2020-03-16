@@ -1,11 +1,14 @@
+local show_formula = settings.startup["angels-show-chemical-formula"].value
+
 data:extend(
 {
   --SULFUR
   {
     type = "fluid",
     name = "gas-hydrogen-sulfide",
-    icon = "__angelspetrochem__/graphics/icons/gas-hydrogen-sulfide.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]S"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }, "shh"),
+    --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "a",
     default_temperature = 25,
@@ -19,8 +22,9 @@ data:extend(
   {
     type = "fluid",
     name = "gas-sulfur-dioxide",
-    icon = "__angelspetrochem__/graphics/icons/gas-sulfur-dioxide.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "SO[font=default-tiny-bold]2[/font]"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 }, "soo"),
+    --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "b",
     default_temperature = 25,
@@ -34,8 +38,9 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-sulfuric-acid",
-    icon = "__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png",
-    icon_size = 32,
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]SO[font=default-tiny-bold]4[/font]"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/sulfuric-acid.png", 72 }, "sho"),
+    --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "ca",
     default_temperature = 25,

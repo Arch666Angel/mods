@@ -29,7 +29,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"bio-processor"},
-    crafting_speed = 0.75,
+    crafting_speed = 1,
     energy_source =
     {
       type = "electric",
@@ -37,7 +37,7 @@ data:extend(
       emissions_per_minute = 0.03 * 60
     },
     energy_usage = "150kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation={
         filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor.png",
         width = 224,

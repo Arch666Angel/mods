@@ -16,8 +16,8 @@ data:extend(
       {
         {type = "fluid", name = "water-mineralized", amount = 100}
       },
-      icon = "__angelsrefining__/graphics/icons/water-mineralized.png",
-      icon_size = 32,
+      main_product = "water-mineralized",
+      always_show_products = "true",
       order = "a[water-water-mineralized]"
     },
     {
@@ -36,8 +36,11 @@ data:extend(
         {type = "fluid", name = "water-saline", amount = 20},
         {type = "fluid", name = "water-purified", amount = 100}
       },
-      icon = "__angelsrefining__/graphics/icons/water-purification.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "water-saline",
+        "water-purified",
+      }, "www"),
       order = "b[water-purification]"
     },
     {
@@ -56,8 +59,11 @@ data:extend(
         {type = "fluid", name = "mineral-sludge", amount = 20},
         {type = "fluid", name = "water-purified", amount = 30}
       },
-      icon = "__angelsrefining__/graphics/icons/water-thermal-purification.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "water-purified",
+        "mineral-sludge",
+      }, { {238,113,022}, {203,099,015}, {167,078,013} }),
       order = "c[thermal-water-purification]"
     },
     --WASTE WATER TREATMENT
@@ -78,8 +84,12 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 70},
         {type = "item", name = "sulfur", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/water-yellow-waste-purification.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "water-mineralized",
+        "water-purified",
+        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 } or "sulfur"
+      }, "wss"),
       order = "d[yellow-waste-water-purification]"
     },
     {
@@ -98,8 +108,11 @@ data:extend(
         {type = "fluid", name = "water-mineralized", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70}
       },
-      icon = "__angelsrefining__/graphics/icons/water-red-waste-purification.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "water-mineralized",
+        "water-purified",
+      }, { {094,114,174}, {120,052,049}, {107,043,040} }),
       order = "e[yellow-waste-water-purification]"
     },
     {
@@ -118,8 +131,11 @@ data:extend(
         {type = "fluid", name = "water-saline", amount = 20},
         {type = "fluid", name = "water-purified", amount = 70}
       },
-      icon = "__angelsrefining__/graphics/icons/water-green-waste-purification.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "water-saline",
+        "water-purified",
+      }, { {094,114,174}, {070,158,044}, {039,106,016} }),
       order = "f[yellow-waste-water-purification]"
     },
     {
@@ -139,8 +155,12 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 70}
         --{type="item", name="fluorite-ore", amount=1},
       },
-      icon = "__angelsrefining__/graphics/icons/water-greenyellow-waste-purification.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "water-saline",
+        "water-purified",
+        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 } or "sulfur"
+      }, { {094,114,174}, {168,159,065}, {144,135,056} }),
       order = "g[yellow-waste-water-purification]"
     },
     --SALINATION
@@ -159,8 +179,8 @@ data:extend(
       {
         {type = "fluid", name = "water-saline", amount = 400}
       },
-      icon = "__angelsrefining__/graphics/icons/water-saline.png",
-      icon_size = 32,
+      main_product = "water-saline",
+      always_show_products = "true",
       order = "a[water-saline]-a[water]"
     },
     {
@@ -179,8 +199,8 @@ data:extend(
       {
         {type="fluid", name="water-saline", amount=400}
       },
-      icon = "__angelspetrochem__/graphics/icons/solid-salt.png",
-      icon_size = 32,
+      main_product = "water-saline",
+      always_show_products = "true",
       order = "a[water-saline]-b[salt]"
     },
     {
@@ -198,6 +218,7 @@ data:extend(
       {
         {type = "item", name = "solid-salt", amount = 25}
       },
+      main_product = "solid-salt",
       icon_size = 32,
       order = "b[solid-salt-from-saline]"
     },
@@ -216,6 +237,7 @@ data:extend(
       {
         {type = "item", name = "solid-salt", amount = 10}
       },
+      main_product = "solid-salt",
       icon_size = 32,
       order = "c[solid-salt]"
     },
@@ -257,7 +279,7 @@ data:extend(
       },
       main_product = "water-heavy-mud",
       icon_size = 32,
-      order = "a"
+      order = "b"
     },
     {
       type = "recipe",
@@ -278,7 +300,7 @@ data:extend(
       },
       main_product = "water-concentrated-mud",
       icon_size = 32,
-      order = "b"
+      order = "c"
     },
     {
       type = "recipe",
@@ -299,7 +321,7 @@ data:extend(
       },
       main_product = "water-light-mud",
       icon_size = 32,
-      order = "c"
+      order = "d"
     },
     {
       type = "recipe",
@@ -320,7 +342,7 @@ data:extend(
       },
       main_product = "water-thin-mud",
       icon_size = 32,
-      order = "d"
+      order = "e"
     },
     {
       type = "recipe",
@@ -341,7 +363,7 @@ data:extend(
       },
       main_product = "water-saline",
       icon_size = 32,
-      order = "e"
+      order = "f"
     },
     {
       type = "recipe",
@@ -360,7 +382,7 @@ data:extend(
         {type = "fluid", name = "water-viscous-mud", amount = 150}
       },
       icon_size = 32,
-      order = "f"
+      order = "a"
     },
     {
       type = "recipe",

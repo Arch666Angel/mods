@@ -259,11 +259,15 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small-egg"
+        recipe = "biter-small-eggsperiment"
       },
       {
         type = "unlock-recipe",
         recipe = "biter-small"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-small-breeding"
       },
       {
         type = "unlock-recipe",
@@ -272,6 +276,14 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "biter-small-butchering"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-queen-small-butchering"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "alien-processed-meat"
       },
     },
     unit =
@@ -300,11 +312,15 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "biter-medium-egg"
+        recipe = "biter-medium-eggsperiment"
       },
       {
         type = "unlock-recipe",
         recipe = "biter-medium"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-medium-breeding"
       },
       {
         type = "unlock-recipe",
@@ -313,6 +329,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "biter-medium-butchering"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-queen-medium-butchering"
       },
     },
     unit =
@@ -340,11 +360,15 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "biter-big-egg"
+        recipe = "biter-big-eggsperiment"
       },
       {
         type = "unlock-recipe",
         recipe = "biter-big"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-big-breeding"
       },
       {
         type = "unlock-recipe",
@@ -353,6 +377,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "biter-big-butchering"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "biter-queen-big-butchering"
       },
     },
     unit =

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: ???
+  Changes:
+    - Added technology for bonus damage on the pez ammo
+  Bugfixes:
+    - Fixed spykers were showing up in bonus gui
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 22.02.2020
   Bugfixes:
