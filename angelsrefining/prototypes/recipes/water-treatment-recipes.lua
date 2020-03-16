@@ -123,6 +123,7 @@ data:extend(
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "water-mineralized",
         "water-purified",
+        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png", 32 } or nil
       }, "wcc"),
       order = "g[yellow-waste-water-purification]"
     },

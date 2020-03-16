@@ -38,8 +38,32 @@ data:extend(
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/nitrogen.png", 64 },
-      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png"  , 72 }}, "noo"),
-    order = "b[air-separation]",
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png"  , 72 }}, "nno"),
+    order = "b[air]-a[separation]",
+  },
+  {
+    type = "recipe",
+    name = "solid-sodium-nitrate-processing",
+    category = "chemistry",
+    subgroup = "petrochem-nitrogen",
+    energy_required = 2,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="solid-sodium-nitrate", amount=5},
+      {type="fluid", name="gas-compressed-air", amount=60}
+    },
+    results =
+    {
+      {type="fluid", name="gas-nitrogen-monoxide", amount=40},
+      {type="fluid", name="gas-nitrogen-dioxide", amount=20}
+    },
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 }
+    }, "nno"),
+    order = "b[air]-b[nitrate-processing]",
   },
   {
     type = "recipe",
@@ -59,7 +83,9 @@ data:extend(
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 } }, "noo"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 }
+    }, "noo"),
     order = "c[gas-nitrogen-dioxide]",
   },
   {
@@ -78,7 +104,9 @@ data:extend(
       {type="fluid", name="gas-nitrogen-dioxide", amount=100},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 } }, "noo"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 }
+    }, "noo"),
     order = "d",
   },
 
@@ -100,7 +128,9 @@ data:extend(
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 } }, "nhh"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 }
+    }, "nhh"),
     order = "e",
   },
   {
@@ -119,7 +149,9 @@ data:extend(
       {type="fluid", name="gas-ammonium-chloride", amount=100},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/ammonium-chloride.png", 72 } }, "nhl"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/ammonium-chloride.png", 72 }
+    }, "nhl"),
     order = "f",
   },
   {
@@ -139,7 +171,10 @@ data:extend(
       {type="fluid", name="water-purified", amount=20},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/urea.png", 72 }, "water-purified" }, "cno"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/urea.png", 72 },
+      "water-purified"
+    }, "cno"),
     order = "g",
   },
   {
@@ -160,8 +195,34 @@ data:extend(
     always_show_products = "true",
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }
-    }, "noh"),
-    order = "h",
+    }, "noh", {
+      { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 }
+    }),
+    order = "h[nitric-acid]-a[water-purified]",
+  },
+  {
+    type = "recipe",
+    name = "sodium-nitrate-acid-processing",
+    category = "chemistry",
+    subgroup = "petrochem-nitrogen",
+    energy_required = 2,
+    enabled = "false",
+    ingredients =
+    {
+      {type="item", name="solid-sodium-nitrate", amount=5},
+      {type="fluid", name="liquid-sulfuric-acid", amount=40}
+    },
+    results =
+    {
+      {type="fluid", name="liquid-nitric-acid", amount=40}
+    },
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 }
+    }, "noh", {
+      "solid-sodium-nitrate"
+    }),
+    order = "h[nitric-acid]-b[sulfuric-acid]",
   },
   {
     type = "recipe",
@@ -180,7 +241,9 @@ data:extend(
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/melamine.png", 72 } }, "chn"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/melamine.png", 72 }
+    }, "chn"),
     order = "i",
   },
   --ROCKET FUEL
@@ -200,7 +263,9 @@ data:extend(
       {type="fluid", name="gas-monochloramine", amount=50},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/chloramine.png", 72 } }, "nhl"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/chloramine.png", 72 }
+    }, "nhl"),
     order = "a",
   },
   {
@@ -222,7 +287,9 @@ data:extend(
       {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 } }, "nhh"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 }
+    }, "nhh"),
     order = "b",
   },
   {
@@ -242,7 +309,10 @@ data:extend(
       {type="fluid", name="water-purified", amount=50},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/methylamine.png", 72 }, "water-purified" }, "chn"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/methylamine.png", 72 },
+      "water-purified"
+    }, "chn"),
     order = "c",
   },
   {
@@ -262,7 +332,10 @@ data:extend(
       {type="fluid", name="water-purified", amount=50},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/dimethylamine.png", 72 }, "water-purified" }, "chn"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/dimethylamine.png", 72 },
+      "water-purified"
+    }, "chn"),
     order = "d",
   },
   {
@@ -282,7 +355,10 @@ data:extend(
       {type="fluid", name="water-purified", amount=50},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/dimethylhydrazine.png", 72 }, "water-purified" }, "chn"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
+      "water-purified" },
+      "chn"),
     order = "e",
   },
   {
@@ -300,7 +376,9 @@ data:extend(
       {type="fluid", name="gas-dinitrogen-tetroxide", amount=50},
     },
     always_show_products = "true",
-    icons = angelsmods.functions.create_gas_recipe_icon({ { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 } }, "noo"),
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 }
+    }, "noo"),
     order = "f",
   },
   --SOLID ROCKET FUEL

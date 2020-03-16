@@ -118,48 +118,8 @@ data:extend(
   },
 
 
-  -- SODIUM NITRATE
-  { -- Nitrogen Monoxide and Nitrogen Dioxide
-    type = "recipe",
-    name = "solid-sodium-nitrate-processing",
-    category = "chemistry",
-    subgroup = "petrochem-sodium",
-    energy_required = 2,
-    enabled = "false",
-    ingredients =
-    {
-      {type="item", name="solid-sodium-nitrate", amount=5},
-      {type="fluid", name="gas-compressed-air", amount=60}
-    },
-    results =
-    {
-      {type="fluid", name="gas-nitrogen-monoxide", amount=40},
-      {type="fluid", name="gas-nitrogen-dioxide", amount=20}
-    },
-    icon_size = 32,
-    icon = "__angelspetrochem__/graphics/icons/gas-nitrogen-monoxide.png",
-    order = "b[sodium]-b[solid-sodium-nitride]",
-  },  
-  { -- Nitric Acid
-    type = "recipe",
-    name = "sodium-nitrate-acid-processing",
-    category = "chemistry",
-    subgroup = "petrochem-sodium",
-    energy_required = 2,
-    enabled = "false",
-    ingredients =
-    {
-      {type="item", name="solid-sodium-nitrate", amount=5},
-      {type="fluid", name="liquid-sulfuric-acid", amount=40}
-    },
-    results =
-    {
-      {type="fluid", name="liquid-nitric-acid", amount=40}
-    },
-    icon_size = 32,
-    icon = "__angelspetrochem__/graphics/icons/liquid-nitric-acid.png",
-    order = "b[sodium]-b[solid-sodium-nitride]",
-  },    -- SODIUM HYDROXIDE
+
+  -- SODIUM HYDROXIDE
   { -- generation
     type = "recipe",
     name = "solid-sodium-hydroxide",
