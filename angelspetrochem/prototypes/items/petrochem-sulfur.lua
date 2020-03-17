@@ -26,7 +26,7 @@ data:extend(
     --icon_size = 32,
     subgroup = "petrochem-sulfer-fluids",
     order = "a[hydrogen-sulfide]-b[enriched]-b[normal]",
-    default_temperature = 100,
+    default_temperature = 25,
     heat_capacity = "0.1KJ",
     base_color = {r = 1, g = 1, b = 0.3},
     flow_color = {r = 1, g = 1, b = 0.3},

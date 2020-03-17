@@ -214,13 +214,13 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="steam", amount=50},
-      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
+      {type="fluid", name="steam", amount=30, minimum_temperature=125, maximum_temperature=165},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=30},
     },
     results=
     {
-      {type="fluid", name="water-purified", amount=50},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50},
+      {type="fluid", name="water-purified", amount=30},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=30, temperature=100},
     },
     always_show_products = "true",
     icons = angelsmods.functions.create_gas_recipe_icon({

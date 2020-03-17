@@ -630,89 +630,194 @@ data:extend(
   {
     type = "recipe",
     name = "angels-water-enrichment-1",
-    localised_name = {"recipe-name.angels-water-enrichment", "0", "7.5"},
+    localised_name = {"recipe-name.angels-water-enrichment", "1", "0", "7.5"},
     category = "advanced-chemistry",
     subgroup = "water-enrichment",
     energy_required = 5,
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="water-saline", amount=50},
+      {type="fluid", name="water-saline", amount=30},
       {type="fluid", name="water-purified", amount=25},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=75},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
     },
     results=
     {
-      {type="fluid", name="water-yellow-waste", amount=50},
-      {type="fluid", name="liquid-water-enriched-1-hot", amount=25},
-      {type="fluid", name="gas-hydrogen-sulfide", amount=75},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
+      {type="fluid", name="liquid-water-enriched-1", amount=25, temperature=100},
+      {type="fluid", name="water-green-waste", amount=30},
     },
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+    main_product = "liquid-water-enriched-1",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      angelsmods.functions.create_liquid_fluid_icon(nil, "sww"),
+    }, "sww", {
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
         icon_size = 32,
         tint = angelsmods.petrochem.number_tint,
       }
     }),
-    order = "k[water-enrichment]-a[mk1]-a[enriching]",
+    order = "k[water-enrichment]-a[enriching]-a[1/3]",
   },
   {
     type = "recipe",
     name = "angels-water-enrichment-2",
-    localised_name = {"recipe-name.angels-water-enrichment", "7.5", "12.5"},
+    localised_name = {"recipe-name.angels-water-enrichment", "2", "7.5", "12.5"},
     category = "advanced-chemistry",
     subgroup = "water-enrichment",
     energy_required = 5,
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="water-saline", amount=50},
-      {type="fluid", name="liquid-water-enriched-1", amount=25},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=75},
+      {type="fluid", name="water-saline", amount=30},
+      {type="fluid", name="liquid-water-enriched-1", amount=25, maximum_temperature=30},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
     },
     results=
     {
-      {type="fluid", name="water-yellow-waste", amount=50},
-      {type="fluid", name="liquid-water-enriched-2-hot", amount=25},
-      {type="fluid", name="gas-hydrogen-sulfide", amount=75},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
+      {type="fluid", name="liquid-water-enriched-2", amount=25, temperature=100},
+      {type="fluid", name="water-green-waste", amount=30},
     },
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+    main_product = "liquid-water-enriched-2",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      angelsmods.functions.create_liquid_fluid_icon(nil, "sww"),
+    }, "sww", {
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
         icon_size = 32,
         tint = angelsmods.petrochem.number_tint,
       }
     }),
-    order = "k[water-enrichment]-a[mk1]-a[enriching]",
+    order = "k[water-enrichment]-a[enriching]-b[2/3]",
   },
   {
     type = "recipe",
     name = "angels-water-enrichment-3",
-    localised_name = {"recipe-name.angels-water-enrichment", "12.5", "15"},
+    localised_name = {"recipe-name.angels-water-enrichment", "3", "12.5", "15"},
     category = "advanced-chemistry",
     subgroup = "water-enrichment",
     energy_required = 5,
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="water-saline", amount=50},
-      {type="fluid", name="liquid-water-enriched-2", amount=25},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=75},
+      {type="fluid", name="water-saline", amount=30},
+      {type="fluid", name="liquid-water-enriched-2", amount=25, maximum_temperature=30},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
     },
     results=
     {
-      {type="fluid", name="water-yellow-waste", amount=50},
-      {type="fluid", name="liquid-water-enriched-3-hot", amount=25},
-      {type="fluid", name="gas-hydrogen-sulfide", amount=75},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
+      {type="fluid", name="liquid-water-enriched-3", amount=25, temperature=100},
+      {type="fluid", name="water-green-waste", amount=30},
     },
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+    main_product = "liquid-water-enriched-3",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      angelsmods.functions.create_liquid_fluid_icon(nil, "sww"),
+    }, "sww", {
       {
         icon = "__angelsrefining__/graphics/icons/num_3.png",
         icon_size = 32,
         tint = angelsmods.petrochem.number_tint,
       }
     }),
-    order = "k[water-enrichment]-a[mk1]-a[enriching]",
+    order = "k[water-enrichment]-a[enriching]-c[3/3]",
+  },
+  {
+    type = "recipe",
+    name = "angels-water-enriched-cooling-1",
+    localised_name = {"recipe-name.angels-water-enriched-cooling", "1"},
+    category = mods["angelssmelting"] and "cooling" or "chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 15,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-enriched-1", amount=200, minimum_temperature=26},
+      {type="fluid", name="water-purified", amount=100},
+    },
+    results=
+    {
+      {type="fluid", name="liquid-water-enriched-1", amount=200, temperature=25},
+      {type="fluid", name="steam", amount=100, temperature = 125},
+    },
+    main_product = "liquid-water-enriched-1",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+      {
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
+        icon_size = 32,
+        tint = angelsmods.petrochem.number_tint,
+      },
+      mods["angelssmelting"] and {
+        icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
+        icon_size = 32,
+      } or nil,
+    }),
+    order = "k[water-enrichment]-b[cooling]-a[1/3]",
+  },
+  {
+    type = "recipe",
+    name = "angels-water-enriched-cooling-2",
+    localised_name = {"recipe-name.angels-water-enriched-cooling", "2"},
+    category = mods["angelssmelting"] and "cooling" or "chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 15,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-enriched-2", amount=200, minimum_temperature=26},
+      {type="fluid", name="water-purified", amount=100},
+    },
+    results=
+    {
+      {type="fluid", name="liquid-water-enriched-2", amount=200, temperature=25},
+      {type="fluid", name="steam", amount=100, temperature = 125},
+    },
+    main_product = "liquid-water-enriched-2",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+      {
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
+        icon_size = 32,
+        tint = angelsmods.petrochem.number_tint,
+      },
+      mods["angelssmelting"] and {
+        icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
+        icon_size = 32,
+      } or nil,
+    }),
+    order = "k[water-enrichment]-b[cooling]-b[2/3]",
+  },
+  {
+    type = "recipe",
+    name = "angels-water-enriched-cooling-3",
+    localised_name = {"recipe-name.angels-water-enriched-cooling", "3"},
+    category = mods["angelssmelting"] and "cooling" or "chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 15,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-enriched-3", amount=200, minimum_temperature=26},
+      {type="fluid", name="water-purified", amount=100},
+    },
+    results=
+    {
+      {type="fluid", name="liquid-water-enriched-3", amount=200, temperature=25},
+      {type="fluid", name="steam", amount=100, temperature = 125},
+    },
+    main_product = "liquid-water-enriched-3",
+    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+      {
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
+        icon_size = 32,
+        tint = angelsmods.petrochem.number_tint,
+      },
+      mods["angelssmelting"] and {
+        icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
+        icon_size = 32,
+      } or nil,
+    }),
+    order = "k[water-enrichment]-b[cooling]-c[3/3]",
   },
 }
 )

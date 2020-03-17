@@ -118,7 +118,7 @@ data:extend(
   {
     type = "fluid",
     name = "liquid-water-enriched-1",
-    localised_name = {"fluid-name.liquid-water-enriched", "7.5", "25"},
+    localised_name = {"fluid-name.liquid-water-enriched", "7.5"},
     icons = angelsmods.functions.create_liquid_fluid_icon({
       "__angelsrefining__/graphics/icons/num_1.png",
       32, {-12, -12}, 0.32, angelsmods.petrochem.number_tint
@@ -135,27 +135,8 @@ data:extend(
   },
   {
     type = "fluid",
-    name = "liquid-water-enriched-1-hot",
-    localised_name = {"fluid-name.liquid-water-enriched", "7.5", "100"},
-    icons = angelsmods.functions.create_liquid_fluid_icon(
-      {"__angelsrefining__/graphics/icons/num_1.png",
-      32, {-12, -12}, 0.32, angelsmods.petrochem.number_tint
-    }, "sww"),
-    subgroup = "water-enrichment",
-    order = "h[water-enriched]-a[mk1]-b[hot]",
-    default_temperature = 100,
-    heat_capacity = "0.1KJ",
-    base_color = {r = 0.7, g = 0.7, b = 1},
-    flow_color = {r = 0.7, g = 0.7, b = 1},
-    max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
-    auto_barrel = false
-  },
-  {
-    type = "fluid",
     name = "liquid-water-enriched-2",
-    localised_name = {"fluid-name.liquid-water-enriched", "12.5", "25"},
+    localised_name = {"fluid-name.liquid-water-enriched", "12.5"},
     icons = angelsmods.functions.create_liquid_fluid_icon(
       {"__angelsrefining__/graphics/icons/num_2.png",
       32, {-12, -12}, 0.32, angelsmods.petrochem.number_tint
@@ -172,29 +153,10 @@ data:extend(
   },
   {
     type = "fluid",
-    name = "liquid-water-enriched-2-hot",
-    localised_name = {"fluid-name.liquid-water-enriched", "12.5", "100"},
-    icons = angelsmods.functions.create_liquid_fluid_icon(
-      {"__angelsrefining__/graphics/icons/num_2.png",
-      32, {-12, -12}, 0.32, angelsmods.petrochem.number_tint
-    }, "sww"),
-    subgroup = "water-enrichment",
-    order = "h[water-enriched]-b[mk2]-b[hot]",
-    default_temperature = 100,
-    heat_capacity = "0.1KJ",
-    base_color = {r = 0.7, g = 0.7, b = 1},
-    flow_color = {r = 0.7, g = 0.7, b = 1},
-    max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
-    auto_barrel = false
-  },
-  {
-    type = "fluid",
     name = "liquid-water-enriched-3",
-    localised_name = {"fluid-name.liquid-water-enriched", "15", "25"},
-    icons = angelsmods.functions.create_liquid_fluid_icon(
-      {"__angelsrefining__/graphics/icons/num_3.png",
+    localised_name = {"fluid-name.liquid-water-enriched", "15"},
+    icons = angelsmods.functions.create_liquid_fluid_icon({
+      "__angelsrefining__/graphics/icons/num_3.png",
       32, {-12, -12}, 0.32, angelsmods.petrochem.number_tint
     }, "sww"),
     subgroup = "water-enrichment",
@@ -206,25 +168,6 @@ data:extend(
     max_temperature = 100,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59
-  },
-  {
-    type = "fluid",
-    name = "liquid-water-enriched-3-hot",
-    localised_name = {"fluid-name.liquid-water-enriched", "15", "100"},
-    icons = angelsmods.functions.create_liquid_fluid_icon(
-      {"__angelsrefining__/graphics/icons/num_3.png",
-      32, {-12, -12}, 0.32, angelsmods.petrochem.number_tint
-    }, "sww"),
-    subgroup = "water-enrichment",
-    order = "h[water-enriched]-c[mk2]-b[hot]",
-    default_temperature = 100,
-    heat_capacity = "0.1KJ",
-    base_color = {r = 0.7, g = 0.7, b = 1},
-    flow_color = {r = 0.7, g = 0.7, b = 1},
-    max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
-    auto_barrel = false
   },
   --VOID
   {

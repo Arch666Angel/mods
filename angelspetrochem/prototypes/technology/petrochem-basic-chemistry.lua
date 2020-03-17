@@ -145,6 +145,18 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-water-enrichment-3"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-water-enriched-cooling-1"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-water-enriched-cooling-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-water-enriched-cooling-3"
+      },
     },
     unit = {
       count = 50,
