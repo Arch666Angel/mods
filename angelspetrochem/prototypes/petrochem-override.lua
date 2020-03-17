@@ -134,6 +134,37 @@ if angelsmods.refining then
   move_item("liquid-cupric-chloride-solution", "ore-processing-fluid", "b[cupric]-e", "fluid")
 end
 
+--PETROCHEM
+if mods["bobplates"] and data.raw["fluid"]["deuterium"] then -- deuterium processing
+  OV.global_replace_item("deuterium", "gas-deuterium")
+  data.raw.fluid["deuterium"].hidden = true
+  OV.global_replace_item("heavy-water", "liquid-water-heavy")
+  data.raw.fluid["heavy-water"].hidden = true
+
+  OV.disable_recipe({"bob-heavy-water", "heavy-water-electrolysis"})
+
+  OV.global_replace_technology("heavy-water-processing", "water-chemistry-1")
+  OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
+else
+  data.raw.fluid["gas-enriched-hydrogen-sulfide"].hidden = true
+  data.raw.fluid["liquid-water-semiheavy-1"].hidden = true
+  data.raw.fluid["liquid-water-semiheavy-2"].hidden = true
+  data.raw.fluid["liquid-water-semiheavy-3"].hidden = true
+  data.raw.fluid["liquid-water-heavy"].hidden = true
+  data.raw.fluid["gas-deuterium"].hidden = true
+
+  OV.disable_recipe({
+    "angels-hydrogen-sulfide-enrichment",
+    "angels-water-enrichment-1", "angels-water-enriched-cooling-1",
+    "angels-water-enrichment-2", "angels-water-enriched-cooling-2",
+    "angels-water-enrichment-3", "angels-water-enriched-cooling-3",
+    "angels-heavy-water-extraction", "angels-heavy-water-cooling",
+    "angels-heavy-water-separation", "angels-heavy-water-separation-2"
+  })
+
+  OV.disable_technology({"water-chemistry-1", "water-chemistry-2"})
+end
+
 --SMELTING
 if not angelsmods.smelting then
   OV.disable_recipe({"solid-sodium-cyanide", "solid-sodium-carbonate", "solid-sodium-sulfate-separation"})
@@ -326,6 +357,7 @@ else
     )
   end
 end
+
 --hide bobs fluids if converter recipes setting not active
 if not angelsmods.trigger.enableconverter and mods.bobplates then
   data.raw["fluid"]["sulfur-dioxide"].hidden = true
@@ -348,6 +380,7 @@ if not angelsmods.trigger.enableconverter and mods.bobplates then
     data.raw["fluid"]["nitric-oxide"].hidden = true
   end
 end
+
 --if bobs is active, add fuel values to fluids
 --Do this regardless of settings
 --base fluid is methane, all others are based on relative real values
