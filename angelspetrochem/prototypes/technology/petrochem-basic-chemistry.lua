@@ -120,12 +120,13 @@ data:extend(
   {
     type = "technology",
     name = "water-chemistry-1",
-    icon = "__angelspetrochem__/graphics/technology/sulfur-tech.png",
+    icon = "__angelspetrochem__/graphics/technology/water-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-sulfur-processing-2",
       "water-treatment-4",
       "angels-advanced-chemistry-3",
+      "production-science-pack",
       mods["angelssmelting"] and "angels-coolant-1" or "basic-chemistry-2",
     },
     effects = {
@@ -165,6 +166,47 @@ data:extend(
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"production-science-pack", 1}
+      },
+      time = 15
+    },
+    order = "c-a"
+  },
+  {
+    type = "technology",
+    name = "water-chemistry-2",
+    icon = "__angelspetrochem__/graphics/technology/water-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "water-chemistry-1",
+      "basic-chemistry-3",
+      "utility-science-pack"
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-heavy-water-extraction"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-heavy-water-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-heavy-water-separation"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-heavy-water-separation-2"
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1}
+        {"utility-science-pack", 1}
       },
       time = 15
     },

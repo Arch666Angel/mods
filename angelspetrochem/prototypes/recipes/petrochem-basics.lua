@@ -32,15 +32,9 @@ data:extend(
           --shift = {-12, -12},
         }
       },
-      {
-        {
-          icon = "__base__/graphics/icons/fluid/water.png",
-          icon_size = 64,
-          scale = 32/64,
-        }
-      }
+      "water"
     }),
-    order = "a[water-separation]",
+    order = "a[water-separation]-a[water]-a",
     crafting_machine_tint =
     {
       primary = {r = 1, g = 0, b = 0, a = 0},
@@ -81,15 +75,9 @@ data:extend(
           --shift = {-12, -12},
         }
       },
-      {
-        {
-          icon = "__base__/graphics/icons/fluid/water.png",
-          icon_size = 64,
-          scale = 32/64,
-        }
-      }
+      "water"
     }),
-    order = "a[water-separation]",
+    order = "a[water-separation]-a[water]-b",
     crafting_machine_tint =
     {
       primary = {r = 1, g = 0, b = 0, a = 0},
@@ -129,7 +117,7 @@ data:extend(
       },
       "water-purified"
     }),
-    order = "a[water-separation]",
+    order = "a[water-separation]-b[water-purified]-a",
     crafting_machine_tint =
     {
       primary = {r = 1, g = 0, b = 0, a = 0},
@@ -171,7 +159,7 @@ data:extend(
       },
       "water-purified"
     }),
-    order = "a[water-separation]",
+    order = "a[water-separation]-b[water-purified]-b",
     crafting_machine_tint =
     {
       primary = {r = 1, g = 0, b = 0, a = 0},
@@ -644,20 +632,24 @@ data:extend(
     results=
     {
       {type="fluid", name="gas-hydrogen-sulfide", amount=50},
-      {type="fluid", name="liquid-water-enriched-1", amount=25, temperature=100},
+      {type="fluid", name="liquid-water-semiheavy-1", amount=25, temperature=100},
       {type="fluid", name="water-green-waste", amount=30},
     },
-    main_product = "liquid-water-enriched-1",
+    main_product = "liquid-water-semiheavy-1",
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      angelsmods.functions.create_liquid_fluid_icon(nil, "sww"),
-    }, "sww", {
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }, "odh", {
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
         icon_size = 32,
         tint = angelsmods.petrochem.number_tint,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
+        icon_size = 72
       }
     }),
-    order = "k[water-enrichment]-a[enriching]-a[1/3]",
+    order = "k[water-enrichment]-a[enriching]-a[semiheavy-1]",
   },
   {
     type = "recipe",
@@ -670,26 +662,30 @@ data:extend(
     ingredients =
     {
       {type="fluid", name="water-saline", amount=30},
-      {type="fluid", name="liquid-water-enriched-1", amount=25, maximum_temperature=30},
+      {type="fluid", name="liquid-water-semiheavy-1", amount=25, maximum_temperature=30},
       {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
     },
     results=
     {
       {type="fluid", name="gas-hydrogen-sulfide", amount=50},
-      {type="fluid", name="liquid-water-enriched-2", amount=25, temperature=100},
+      {type="fluid", name="liquid-water-semiheavy-2", amount=25, temperature=100},
       {type="fluid", name="water-green-waste", amount=30},
     },
-    main_product = "liquid-water-enriched-2",
+    main_product = "liquid-water-semiheavy-2",
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      angelsmods.functions.create_liquid_fluid_icon(nil, "sww"),
-    }, "sww", {
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }, "odh", {
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
         icon_size = 32,
         tint = angelsmods.petrochem.number_tint,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
+        icon_size = 72
       }
     }),
-    order = "k[water-enrichment]-a[enriching]-b[2/3]",
+    order = "k[water-enrichment]-a[enriching]-b[semiheavy-2]",
   },
   {
     type = "recipe",
@@ -702,26 +698,30 @@ data:extend(
     ingredients =
     {
       {type="fluid", name="water-saline", amount=30},
-      {type="fluid", name="liquid-water-enriched-2", amount=25, maximum_temperature=30},
+      {type="fluid", name="liquid-water-semiheavy-2", amount=25, maximum_temperature=30},
       {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
     },
     results=
     {
       {type="fluid", name="gas-hydrogen-sulfide", amount=50},
-      {type="fluid", name="liquid-water-enriched-3", amount=25, temperature=100},
+      {type="fluid", name="liquid-water-semiheavy-3", amount=25, temperature=100},
       {type="fluid", name="water-green-waste", amount=30},
     },
-    main_product = "liquid-water-enriched-3",
+    main_product = "liquid-water-semiheavy-3",
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      angelsmods.functions.create_liquid_fluid_icon(nil, "sww"),
-    }, "sww", {
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }, "odh", {
       {
         icon = "__angelsrefining__/graphics/icons/num_3.png",
         icon_size = 32,
         tint = angelsmods.petrochem.number_tint,
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
+        icon_size = 72
       }
     }),
-    order = "k[water-enrichment]-a[enriching]-c[3/3]",
+    order = "k[water-enrichment]-a[enriching]-c[semiheavy-3]",
   },
   {
     type = "recipe",
@@ -729,20 +729,22 @@ data:extend(
     localised_name = {"recipe-name.angels-water-enriched-cooling", "1"},
     category = mods["angelssmelting"] and "cooling" or "chemistry",
     subgroup = "water-enrichment",
-    energy_required = 15,
+    energy_required = 4,
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-water-enriched-1", amount=200, minimum_temperature=26},
-      {type="fluid", name="water-purified", amount=100},
+      {type="fluid", name="liquid-water-semiheavy-1", amount=200, minimum_temperature=26},
+      {type="fluid", name="water-purified", amount=50},
     },
     results=
     {
-      {type="fluid", name="liquid-water-enriched-1", amount=200, temperature=25},
-      {type="fluid", name="steam", amount=100, temperature = 125},
+      {type="fluid", name="liquid-water-semiheavy-1", amount=200, temperature=25},
+      {type="fluid", name="steam", amount=50, temperature = 125},
     },
-    main_product = "liquid-water-enriched-1",
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+    main_product = "liquid-water-semiheavy-1",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }, "odh", {
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
         icon_size = 32,
@@ -753,7 +755,7 @@ data:extend(
         icon_size = 32,
       } or nil,
     }),
-    order = "k[water-enrichment]-b[cooling]-a[1/3]",
+    order = "k[water-enrichment]-b[cooling]-a[semiheavy-1]",
   },
   {
     type = "recipe",
@@ -761,20 +763,22 @@ data:extend(
     localised_name = {"recipe-name.angels-water-enriched-cooling", "2"},
     category = mods["angelssmelting"] and "cooling" or "chemistry",
     subgroup = "water-enrichment",
-    energy_required = 15,
+    energy_required = 4,
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-water-enriched-2", amount=200, minimum_temperature=26},
-      {type="fluid", name="water-purified", amount=100},
+      {type="fluid", name="liquid-water-semiheavy-2", amount=200, minimum_temperature=26},
+      {type="fluid", name="water-purified", amount=50},
     },
     results=
     {
-      {type="fluid", name="liquid-water-enriched-2", amount=200, temperature=25},
-      {type="fluid", name="steam", amount=100, temperature = 125},
+      {type="fluid", name="liquid-water-semiheavy-2", amount=200, temperature=25},
+      {type="fluid", name="steam", amount=50, temperature = 125},
     },
-    main_product = "liquid-water-enriched-2",
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+    main_product = "liquid-water-semiheavy-2",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }, "odh", {
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
         icon_size = 32,
@@ -785,7 +789,7 @@ data:extend(
         icon_size = 32,
       } or nil,
     }),
-    order = "k[water-enrichment]-b[cooling]-b[2/3]",
+    order = "k[water-enrichment]-b[cooling]-b[semiheavy-2]",
   },
   {
     type = "recipe",
@@ -793,20 +797,22 @@ data:extend(
     localised_name = {"recipe-name.angels-water-enriched-cooling", "3"},
     category = mods["angelssmelting"] and "cooling" or "chemistry",
     subgroup = "water-enrichment",
-    energy_required = 15,
+    energy_required = 4,
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="liquid-water-enriched-3", amount=200, minimum_temperature=26},
-      {type="fluid", name="water-purified", amount=100},
+      {type="fluid", name="liquid-water-semiheavy-3", amount=200, minimum_temperature=26},
+      {type="fluid", name="water-purified", amount=50},
     },
     results=
     {
-      {type="fluid", name="liquid-water-enriched-3", amount=200, temperature=25},
-      {type="fluid", name="steam", amount=100, temperature = 125},
+      {type="fluid", name="liquid-water-semiheavy-3", amount=200, temperature=25},
+      {type="fluid", name="steam", amount=50, temperature = 125},
     },
-    main_product = "liquid-water-enriched-3",
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil, "sww", {
+    main_product = "liquid-water-semiheavy-3",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }, "odh", {
       {
         icon = "__angelsrefining__/graphics/icons/num_3.png",
         icon_size = 32,
@@ -817,7 +823,143 @@ data:extend(
         icon_size = 32,
       } or nil,
     }),
-    order = "k[water-enrichment]-b[cooling]-c[3/3]",
+    order = "k[water-enrichment]-b[cooling]-c[semiheavy-3]",
+  },
+  {
+    type = "recipe",
+    name = "angels-heavy-water-extraction",
+    category = "chemistry", -- todo: convert to electric boiler
+    subgroup = "water-enrichment",
+    energy_required = 10,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-semiheavy-3", amount=100,  maximum_temperature=30},
+    },
+    results=
+    {
+      {type="fluid", name="liquid-water-heavy", amount=5, temperature = 100},
+      {type="fluid", name="steam", amount=95, temperature = 125},
+    },
+    main_product = "liquid-water-heavy",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64 }
+    }, "odd", {
+      nil,
+      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 }
+    }),
+    order = "k[water-enrichment]-a[enriching]-d[heavy]",
+  },
+  {
+    type = "recipe",
+    name = "angels-heavy-water-cooling",
+    category = mods["angelssmelting"] and "cooling" or "chemistry",
+    subgroup = "water-enrichment",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-heavy", amount=100, minimum_temperature = 26},
+      {type="fluid", name="water-purified", amount=25},
+    },
+    results=
+    {
+      {type="fluid", name="liquid-water-heavy", amount=100, temperature = 25},
+      {type="fluid", name="steam", amount=25, temperature = 125},
+    },
+    main_product = "liquid-water-heavy",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64 }
+    }, "odd", {
+      nil,
+      mods["angelssmelting"] and {
+        icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
+        icon_size = 32,
+      } or nil,
+    }),
+    order = "k[water-enrichment]-b[cooling]-d[heavy-water]",
+  },
+  {
+    type = "recipe",
+    name = "angels-heavy-water-separation",
+    category = "petrochem-electrolyser",
+    subgroup = "petrochem-basics",
+    energy_required = 4,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-heavy", amount=100}
+    },
+    results=
+    {
+      {type="fluid", name="gas-oxygen", amount=40},
+      {type="fluid", name="gas-deuterium", amount=60},
+    },
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/deuterium.png", 64 },
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 }
+    }, "odd", {
+      {
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon_size = 32,
+          tint = angelsmods.petrochem.number_tint,
+          --scale = 0.32,
+          --shift = {-12, -12},
+        }
+      },
+      { "__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64 }
+    }),
+    order = "a[water-separation]-c[water-heavy]-a",
+    crafting_machine_tint =
+    {
+      primary = {r = 1, g = 0, b = 0, a = 0},
+      secondary = {r = 1, g = 1, b = 1, a = 0},
+      tertiary = {r = 167/255, g = 75/255, b = 5/255, a = 0/255},
+    }
+  },
+  {
+    type = "recipe",
+    name = "angels-heavy-water-separation-2",
+    category = "petrochem-electrolyser",
+    subgroup = "petrochem-basics",
+    energy_required = 2,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="liquid-water-heavy", amount=100},
+      {type="item", name="angels-electrode", amount=1}
+    },
+    results=
+    {
+      {type="fluid", name="gas-oxygen", amount=40},
+      {type="fluid", name="gas-deuterium", amount=60},
+      {type="item", name="angels-electrode-used", amount=1, catalyst_amount=1}
+    },
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/deuterium.png", 64 },
+      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 }
+    }, "odd", {
+      {
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon_size = 32,
+          tint = angelsmods.petrochem.number_tint,
+          --scale = 0.32,
+          --shift = {-12, -12},
+        }
+      },
+      { "__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64 }
+    }),
+    order = "a[water-separation]-c[water-heavy]-b",
+    crafting_machine_tint =
+    {
+      primary = {r = 1, g = 0, b = 0, a = 0},
+      secondary = {r = 1, g = 1, b = 1, a = 0},
+      tertiary = {r = 167/255, g = 75/255, b = 5/255, a = 0/255},
+    }
   },
 }
 )
