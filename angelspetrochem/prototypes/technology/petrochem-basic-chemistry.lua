@@ -178,6 +178,7 @@ data:extend(
     icon_size = 128,
     prerequisites = {
       "water-chemistry-1",
+      "angels-electric-boiler",
       "basic-chemistry-3",
       "utility-science-pack"
     },
@@ -205,7 +206,7 @@ data:extend(
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"production-science-pack", 1}
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
       time = 15

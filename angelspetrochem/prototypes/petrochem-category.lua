@@ -31,6 +31,10 @@ data:extend(
   },
   {
     type = "recipe-category",
+    name = "petrochem-boiler",
+  },
+  {
+    type = "recipe-category",
     name = "petrochem-air-filtering",
   },
   {

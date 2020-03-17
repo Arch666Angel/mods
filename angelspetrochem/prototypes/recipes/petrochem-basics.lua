@@ -1,6 +1,44 @@
 data:extend(
 {
---BASIC CHEMISTRY
+  --BASIC CHEMISTRY
+  {
+    type = "recipe",
+    name = "angels-steam-water",
+    category = "petrochem-boiler",
+    subgroup = "petrochem-basics",
+    energy_required = 1,
+    enabled = "false",
+    hide_from_player_crafting = "true",
+    ingredients =
+    {
+      {type="fluid", name="water", amount=40}
+    },
+    results=
+    {
+      {type="fluid", name="steam", amount=40, temperature=165, fluidbox_index=2},
+    },
+    always_show_products = "true",
+    order = "zzz[steam]",
+  },
+  {
+    type = "recipe",
+    name = "angels-steam-water-purified",
+    category = "petrochem-boiler",
+    subgroup = "petrochem-basics",
+    energy_required = 1,
+    enabled = "false",
+    hide_from_player_crafting = "true",
+    ingredients =
+    {
+      {type="fluid", name="water-purified", amount=40}
+    },
+    results=
+    {
+      {type="fluid", name="steam", amount=40, temperature=165, fluidbox_index=2},
+    },
+    always_show_products = "true",
+    order = "zzz[steam]",
+  },
   {
     type = "recipe",
     name = "dirt-water-separation",
@@ -625,15 +663,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="water-saline", amount=30},
-      {type="fluid", name="water-purified", amount=25},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
+      {type="fluid", name="water-saline", amount=60},
+      {type="fluid", name="water-purified", amount=50},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=100, minimum_temperature=95},
     },
     results=
     {
-      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
-      {type="fluid", name="liquid-water-semiheavy-1", amount=25, temperature=100},
-      {type="fluid", name="water-green-waste", amount=30},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=100},
+      {type="fluid", name="liquid-water-semiheavy-1", amount=50, temperature=100},
+      {type="fluid", name="water-green-waste", amount=60},
     },
     main_product = "liquid-water-semiheavy-1",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -661,15 +699,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="water-saline", amount=30},
-      {type="fluid", name="liquid-water-semiheavy-1", amount=25, maximum_temperature=30},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
+      {type="fluid", name="water-saline", amount=60},
+      {type="fluid", name="liquid-water-semiheavy-1", amount=50, maximum_temperature=30},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=100, minimum_temperature=95},
     },
     results=
     {
-      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
-      {type="fluid", name="liquid-water-semiheavy-2", amount=25, temperature=100},
-      {type="fluid", name="water-green-waste", amount=30},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=100},
+      {type="fluid", name="liquid-water-semiheavy-2", amount=50, temperature=100},
+      {type="fluid", name="water-green-waste", amount=60},
     },
     main_product = "liquid-water-semiheavy-2",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -697,15 +735,15 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type="fluid", name="water-saline", amount=30},
-      {type="fluid", name="liquid-water-semiheavy-2", amount=25, maximum_temperature=30},
-      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, minimum_temperature=95},
+      {type="fluid", name="water-saline", amount=60},
+      {type="fluid", name="liquid-water-semiheavy-2", amount=50, maximum_temperature=30},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=100, minimum_temperature=95},
     },
     results=
     {
-      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
-      {type="fluid", name="liquid-water-semiheavy-3", amount=25, temperature=100},
-      {type="fluid", name="water-green-waste", amount=30},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=100},
+      {type="fluid", name="liquid-water-semiheavy-3", amount=50, temperature=100},
+      {type="fluid", name="water-green-waste", amount=60},
     },
     main_product = "liquid-water-semiheavy-3",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -828,9 +866,10 @@ data:extend(
   {
     type = "recipe",
     name = "angels-heavy-water-extraction",
-    category = "chemistry", -- todo: convert to electric boiler
+    localised_name = {"recipe-name.angels-heavy-water-extraction"},
+    category = "petrochem-boiler",
     subgroup = "water-enrichment",
-    energy_required = 10,
+    energy_required = 2,
     enabled = "false",
     ingredients =
     {
@@ -838,8 +877,8 @@ data:extend(
     },
     results=
     {
-      {type="fluid", name="liquid-water-heavy", amount=5, temperature = 100},
-      {type="fluid", name="steam", amount=95, temperature = 125},
+      {type="fluid", name="liquid-water-heavy", amount=5, temperature = 100, fluidbox_index=1},
+      {type="fluid", name="steam", amount=95, temperature = 125, fluidbox_index=2},
     },
     main_product = "liquid-water-heavy",
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -853,6 +892,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-heavy-water-cooling",
+    localised_name = {"recipe-name.angels-heavy-water-cooling"},
     category = mods["angelssmelting"] and "cooling" or "chemistry",
     subgroup = "water-enrichment",
     energy_required = 4,
