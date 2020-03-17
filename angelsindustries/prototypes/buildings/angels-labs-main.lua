@@ -9,7 +9,7 @@ local lab_item =
     }
   },
   icon_size = 32,
-  subgroup = "angels-labs-3",
+  subgroup = "angels-labs-4",
   order = "h[angels-main-lab]",
   --place_result = "angels-main-lab",
   stack_size = 10
@@ -162,6 +162,3 @@ for tier_index, tier_props in pairs(lab_tiers) do
 
   angelsmods.triggers.lab_ignore_token[lab_entity_tier.name] = true
 end
-
-
-

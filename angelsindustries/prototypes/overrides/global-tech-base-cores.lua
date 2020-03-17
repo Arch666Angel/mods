@@ -89,11 +89,12 @@ OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
 -- PRESSURE TANKS ADDONS
-if mods["angelsmods-pressuretanks"]--[[angelsmods.addons.pressuretanks]] then
+if mods["angelsaddons-pressuretanks"]--[[angelsmods.addons.pressuretanks]] then
   OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
+  OV.add_prereq("pressure-tanks","tech-specialised-labs-basic-logistic-2")
 end
 --ORE SILO ADDONS
-if mods["angelsmods-oresilos"]--[[angelsmods.addons.oresilos]] then
+if mods["angelsaddons-oresilos"]--[[angelsmods.addons.oresilos]] then
   core_replace("ore-silos", "processing", "logistic")
 end
 
@@ -108,6 +109,16 @@ for rec_4tech,_ in pairs(data.raw.technology) do --fix follower robot count tech
 end
 angelsmods.functions.add_flag("military-science-pack", "hidden")
 OV.disable_recipe({"military-science-pack"})
+if mods["angelsexploration"] then
+  core_replace("angels-bio-gun","processing","war")
+  core_replace("angels-refined-biological-1","processing","war")
+  core_replace("angels-refined-biological-2","processing","war")
+  core_replace("angels-refined-biological-3","processing","war")
+  core_replace("angels-refined-biological-4","processing","war")
+  core_replace("angels-refined-biological-5","processing","war")
+  core_replace("angels-refined-biological-6","processing","war")
+  core_replace("angels-refined-biological-7","processing","war")
+end
 
 -------------------------------------------------------------------------------
 -- PRODUCTION CORES -----------------------------------------------------------
@@ -139,4 +150,7 @@ OV.execute() ------------------------------------------------------------------
 
 -- now upgrade the cores to tier 2 and let them depend on the correct technology
 core_tier_upgrade()
+OV.execute()
+-- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
+tech_unlock_reset()
 OV.execute()

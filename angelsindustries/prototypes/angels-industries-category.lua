@@ -307,6 +307,12 @@ data:extend(
     type = "item-subgroup",
     name = "angels-labs-3",
     group = "angels-tech",
+    order = "z[labs]-b[mk3]",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-labs-4",
+    group = "angels-tech",
     order = "z[labs]-b[archive]",
   },
   -- EQUIPMENT

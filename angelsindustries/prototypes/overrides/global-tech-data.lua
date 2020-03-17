@@ -37,6 +37,7 @@ angelsmods.functions.add_exception("tech-specialised-labs-basic-war-3")
 angelsmods.functions.add_exception("tech-specialised-labs-advanced-war-1")
 angelsmods.functions.add_exception("tech-specialised-labs-advanced-war-2")
 angelsmods.functions.add_exception("tech-specialised-labs-basic")
+angelsmods.functions.add_exception("tech-specialised-labs-advanced")
 
 --BIO PROCESSING (not sure these are activated... i may have overridden these anyway)
 angelsmods.functions.add_exception("bio-temperate-farming")
@@ -45,3 +46,14 @@ angelsmods.functions.add_exception("bio-desert-farming")
 angelsmods.functions.add_exception("bio-desert-farm")
 angelsmods.functions.add_exception("bio-swamp-farming")
 angelsmods.functions.add_exception("bio-swamp-farm")
+-- EXCLUDE BOBS MODULES
+if mods['bobmodules'] then
+  angelsmods.functions.add_exception("module-merging")
+	--removes enhancement core from module techs (not modules)
+	for rec_4tech in pairs(data.raw.technology) do
+	  --fix modules to still work in bobs module lab
+	  if string.find(rec_4tech,"-module-")~=nil  then
+	    angelsmods.functions.add_exception(rec_4tech)
+		end
+	end
+end

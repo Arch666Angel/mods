@@ -1,6 +1,8 @@
 local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
-
+-------------------------------------------------------------------------------
+-- BASE BOBS (MCI) ------------------------------------------------------------
+-------------------------------------------------------------------------------
 if mods['bobplates'] then
 	--Adds bobplates cores
 	OV.set_science_pack("electrolysis-1", "datacore-processing-1", 2)
@@ -11,35 +13,102 @@ if mods['bobplates'] then
 	OV.set_science_pack("electrolysis-2", "datacore-processing-1", 2)
 	OV.set_science_pack("ceramics", "datacore-processing-2", 2)
 end
+-------------------------------------------------------------------------------
+-- BOB ASSMBLY ----------------------------------------------------------------
+-------------------------------------------------------------------------------
 if mods['bobassembly'] then
 	--adds bobassembly stuffs
+	--higher assembly
+	pack_replace("automation-4","blue","orange")
 	--chemplants
-	OV.set_science_pack("chemical-plant-2", "datacore-processing-2", 2)
-	OV.set_science_pack("chemical-plant-3", "datacore-processing-2", 2)
+	if settings.startup["bobmods-assembly-chemicalplants"].value == true then
+		OV.set_science_pack("chemical-plant-2", "datacore-processing-2", 2)
+		OV.set_science_pack("chemical-plant-3", "datacore-processing-2", 2)
+	end
 	--oil-furnaces (and metal-mixing)
-	OV.set_science_pack("oil-steel-furnace", "datacore-processing-1", 2)
-	OV.set_science_pack("oil-mixing-steel-furnace", "datacore-processing-1", 2)
-	OV.set_science_pack("oil-chemical-steel-furnace", "datacore-processing-1", 2)
-	OV.set_science_pack("multi-purpose-furnace-1", "datacore-processing-2", 2)
+	if settings.startup["bobmods-assembly-oilfurnaces"] then
+		OV.set_science_pack("oil-steel-furnace", "datacore-processing-1", 2)
+		OV.set_science_pack("oil-mixing-steel-furnace", "datacore-processing-1", 2)
+		OV.set_science_pack("oil-chemical-steel-furnace", "datacore-processing-1", 2)
+	end
+	if settings.startup["bobmods-assembly-multipurposefurnaces"] then
+		OV.set_science_pack("multi-purpose-furnace-1", "datacore-processing-2", 2)
+	end
 	--electrolysers
-	OV.set_science_pack("electrolyser-2", "datacore-processing-1", 2)
-	OV.set_science_pack("electrolyser-3", "datacore-processing-2", 2)
+	if settings.startup["bobmods-assembly-electrolysers"] then
+		OV.set_science_pack("electrolyser-2", "datacore-processing-1", 2)
+		OV.set_science_pack("electrolyser-3", "datacore-processing-2", 2)
+	end
 	--distillery
-	OV.set_science_pack("bob-distillery-2", "datacore-processing-1", 2)
-	pack_replace("bob-distillery-3","blue","orange")
-	OV.set_science_pack("bob-distillery-3", "datacore-processing-1", 2)
-	core_tier_up("bob-distillery-5","processing")
+	if settings.startup["bobmods-assembly-distilleries"] then
+		OV.set_science_pack("bob-distillery-2", "datacore-processing-1", 2)
+		pack_replace("bob-distillery-3","blue","orange")
+		OV.set_science_pack("bob-distillery-3", "datacore-processing-1", 2)
+	end
+	-----------------------------------------------------------------------------
+	-- ADD ELECTRONIC RECIPES TO ELECTRONIC ASSMBLY -----------------------------
+	-----------------------------------------------------------------------------
+	if settings.startup["bobmods-assembly-electronicmachines"].value == true then
+		--create list of recipes to add to the electronicmachines
+		for _, elec in pairs({
+			"copper-cable",
+			"angels-wire-coil-copper-converting",
+			"angels-wire-gold",
+			"angels-wire-coil-gold-converting",
+			"basic-platinated-copper-wire",
+			"angels-wire-coil-platinum-converting",
+			"basic-silvered-copper-wire",
+			"angels-wire-coil-silver-converting",
+			"basic-tinned-copper-wire",
+			"angels-wire-coil-tin-converting",
+			"angels-roll-solder-converting",
+			"circuit-red-board",
+			"circuit-green-board",
+			"circuit-orange-board",
+			"circuit-blue-board",
+			--"circuit-yellow-board"
+			"circuit-grey-board",
+			"circuit-grey-board-alternative",
+			"circuit-red",
+			"circuit-green",
+			"circuit-orange",
+			"circuit-blue",
+			"circuit-yellow",
+			"circuit-grey",
+			"circuit-red-loaded",
+			"circuit-green-loaded",
+			"circuit-orange-loaded",
+			"circuit-blue-loaded",
+			"circuit-yellow-loaded",
+			"circuit-resistor",
+			"circuit-transistor",
+			"circuit-microchip",
+			"circuit-transformer",
+			"circuit-cpu"
+		}) do
+			data.raw.recipe[elec].category="electronics"
+		end
+	end
 end
+-------------------------------------------------------------------------------
+-- BOBS GREENHOUSE ------------------------------------------------------------
+-------------------------------------------------------------------------------
 if mods['bobgreenhouse'] then
 	--adds bob greenhouse stuffs
 	OV.set_science_pack("bob-greenhouse", "datacore-processing-1", 2)
 	OV.set_science_pack("bob-fertiliser", "datacore-processing-1", 2)
 end
 --bob adjustable inserters automatically gets grabbed :D
+-------------------------------------------------------------------------------
+-- BOBS CLASSES ---------------------------------------------------------------
+-------------------------------------------------------------------------------
 if mods['bobclasses'] then
 	--adds bob classes stuffs
 	OV.set_science_pack("bodies", "datacore-enhance-2", 2)
 end
+-------------------------------------------------------------------------------
+-- BOBS MINING ----------------------------------------------------------------
+-------------------------------------------------------------------------------
 if mods['bobmining'] then
 	--adds bob classes stuffs
 	--regular drills
@@ -53,31 +122,16 @@ if mods['bobmining'] then
 	--pumpjacks
 	OV.set_science_pack("bob-pumpjacks-1", "datacore-processing-1", 2)
 	OV.set_science_pack("bob-pumpjacks-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-pumpjacks-3", "datacore-processing-2", 2)
+	OV.set_science_pack("bob-pumpjacks-3", "datacore-processing-1", 2)
 	--axe(s)
-	OV.remove_science_pack("steel-axe-5", "datacore-processing-1")
-	core_tier_up("steel-axe-5","enhance")
-	OV.remove_science_pack("steel-axe-6", "datacore-processing-1")
-	core_tier_up("steel-axe-6","enhance")
+	pack_replace("steel-axe-4","blue","orange")
 end
 if mods['bobmodules'] then
-	--removes enhancement core from module techs (not modules)
-	for rec_4tech in pairs(data.raw.technology) do
-	  --fix modules to still work in bobs module lab
-	  if string.find(rec_4tech,"-module-")~=nil  then
-	    OV.remove_science_pack(rec_4tech, "datacore-enhance-1")
-		end
-	end
-	OV.remove_science_pack("speed-module", "angels-science-pack-orange")
-	OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
-	OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
-	OV.remove_science_pack("effect-transmission-2", "datacore-processing-2")
-	OV.set_science_pack("effect-transmission-2", "datacore-enhance-2", 2)
-	core_replace("effect-transmission-3","processing","enhance")
-	core_tier_up("effect-transmission-3","enhance")
-	OV.remove_science_pack("module-merging", "datacore-enhance-1")
+	core_replace("effect-transmission-2", "processing", "enhance")
+	core_replace("effect-transmission-3", "processing", "enhance")
 end
 if mods['boblogistics'] then
+	--[[
 	--adds bob classes stuffs
 	OV.remove_science_pack("logistics-4", "datacore-processing-1")
 	core_tier_up("logistics-4","logistic")
@@ -154,7 +208,7 @@ if mods['boblogistics'] then
 	OV.remove_science_pack("bob-robo-modular-3", "datacore-processing-2")
 	OV.set_science_pack("bob-robo-modular-3", "datacore-logistic-2", 2)
 	OV.remove_science_pack("bob-robo-modular-4", "datacore-processing-1")
-	OV.set_science_pack("bob-robo-modular-4", "datacore-logistic-2", 2)
+	OV.set_science_pack("bob-robo-modular-4", "datacore-logistic-2", 2)]]
 end
 --bob ores stuffs automatically gets grabbed :D (may want to swap the nuclear stuff to power?)
 --bob enemies recipes automatically gets grabbed :D
@@ -187,7 +241,7 @@ if mods['bobwarfare'] then
 	pack_replace("radars-3","blue","orange")
 	OV.set_science_pack("radars-3", "datacore-exploration-1", 2)
 	OV.set_science_pack("radars-4", "datacore-exploration-2", 2)
-	OV.remove_science_pack("radars-4", "datacore-war-2")
+	OV.remove_science_pack("radars-4", "datacore-war-1")
 	OV.set_science_pack("poison-mine", "datacore-war-2", 2)
 	OV.set_science_pack("slowdown-mine", "datacore-war-2", 2)
 	OV.set_science_pack("distractor-mine", "datacore-war-2", 2)
@@ -391,3 +445,7 @@ if mods['bobtech'] then
 	OV.remove_science_pack("bob-shotgun-plasma-shells", "datacore-war-2")
 	OV.remove_science_pack("bob-plasma-rocket", "datacore-war-2")
 end
+OV.execute() ------------------------------------------------------------------
+-- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
+tech_unlock_reset() -----------------------------------------------------------
+OV.execute() ------------------------------------------------------------------

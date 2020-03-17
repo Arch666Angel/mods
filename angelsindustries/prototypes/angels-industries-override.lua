@@ -64,6 +64,12 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   OV.remove_science_pack("tech-blue-circuit", "chemical-science-pack")
   OV.remove_science_pack("tech-yellow-circuit", "utility-science-pack")
   OV.remove_science_pack("angels-components-construction-5", "utility-science-pack")
+  if data.raw.tool["space-science-pack"].icon then
+    data.raw.tool["space-science-pack"].icon="__angelsindustries__/graphics/icons/science-pack-white.png"
+    data.raw.tool["space-science-pack"].icon_size=32
+  elseif data.raw.tool["space-science-pack"].icons[1] then
+    data.raw.tool["space-science-pack"].icons[1]={icon="__angelsindustries__/graphics/icons/science-pack-white.png", icon_size=32}
+  end
 end
 
 -- ordening

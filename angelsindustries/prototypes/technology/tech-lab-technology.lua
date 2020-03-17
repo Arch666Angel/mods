@@ -1074,5 +1074,51 @@ data:extend(
     },
     order = "b-5"
   },
+  -----------------------------------------------------------------------------
+  -- POST ROCKET LABS ---------------------------------------------------------
+  -----------------------------------------------------------------------------
+  {
+    type = "technology",
+    name = "tech-specialised-labs-advanced",
+    icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+    icon_size = 128,
+    prerequisites =
+    {
+      "space-science-pack"
+    },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-basic-lab-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-processing-lab-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-war-lab-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-logistic-lab-3"
+      },
+    },
+    unit =
+    {
+      count = pack_amount_base,
+      ingredients = {
+        {"angels-science-pack-grey", 1},
+        {"angels-science-pack-red", 1},
+        {"angels-science-pack-green", 1},
+        {"angels-science-pack-orange", 1},
+        {"angels-science-pack-blue", 1},
+        {"angels-science-pack-yellow", 1},
+      },
+      time = 1000,--pack_time_base,
+    },
+    order = "b-5"
+  },
 }
 )

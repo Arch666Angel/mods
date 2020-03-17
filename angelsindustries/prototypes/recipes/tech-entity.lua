@@ -36,6 +36,27 @@ data:extend(
     subgroup="angels-labs-2",
     order="g"
   },
+  {
+    type = "recipe",
+    name = "angels-basic-lab-3",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"block-construction-4", 3},
+      {"block-exploration-4", 1},
+      {"block-electronics-4", 1},
+      {"block-energy-4", 1},
+      {"block-logistic-4", 1},
+      {"block-enhancement-4", 1},
+      {"block-production-4", 1},
+      {"block-warfare-4", 1},
+    },
+    result= "angels-basic-lab-3",
+    icon_size = 32,
+    subgroup="angels-labs-3",
+    order="g"
+  },
   -----------------------------------------------------------------------------
   -- EXPLORATION LABS ---------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -132,6 +153,21 @@ data:extend(
     result= "angels-logistic-lab-2",
     icon_size = 32,
   },
+  {
+    type = "recipe",
+    name = "angels-logistic-lab-3",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"block-exploration-5", 4},
+      {"block-logistic-5", 4},
+      {"block-electronics-5", 4},
+      {"block-construction-5", 4},
+    },
+    result= "angels-logistic-lab-3",
+    icon_size = 32,
+  },
   -----------------------------------------------------------------------------
   -- ENCHANTMENT LABS ---------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -198,6 +234,21 @@ data:extend(
     result= "angels-processing-lab-2",
     icon_size = 32,
   },
+  {
+    type = "recipe",
+    name = "angels-processing-lab-3",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"block-exploration-5", 4},
+      {"block-production-5", 4},
+      {"block-electronics-5", 4},
+      {"block-construction-5", 4},
+    },
+    result= "angels-processing-lab-3",
+    icon_size = 32,
+  },
   -----------------------------------------------------------------------------
   -- WARFARE LABS -------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -229,6 +280,21 @@ data:extend(
       {"block-construction-4", 4},
     },
     result= "angels-war-lab-2",
+    icon_size = 32,
+  },
+  {
+    type = "recipe",
+    name = "angels-war-lab-3",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"block-exploration-5", 4},
+      {"block-warfare-5", 4},
+      {"block-electronics-5", 4},
+      {"block-construction-5", 4},
+    },
+    result= "angels-war-lab-3",
     icon_size = 32,
   },
   -----------------------------------------------------------------------------

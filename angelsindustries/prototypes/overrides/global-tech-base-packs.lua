@@ -151,6 +151,13 @@ angelsmods.functions.add_flag("utility-science-pack", "hidden")
 OV.disable_recipe({"utility-science-pack"})
 --REFINING
 pack_replace("advanced-ore-refining-4","blue","yellow")
+--ADDONS
+if mods["angelsaddons-warehouses"] then
+  pack_replace("angels-logistic-warehouses","blue","yellow")
+end
+if mods["angelsaddons-oresilos"] then
+  pack_replace("logistic-silos","blue","yellow")
+end
 
 -------------------------------------------------------------------------------
 -- WHITE SCIENCE PACKS --------------------------------------------------------
@@ -162,4 +169,7 @@ OV.set_science_pack("rocket-silo", "angels-science-pack-green")
 OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
 OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
 
+OV.execute() ------------------------------------------------------------------
+-- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
+tech_unlock_reset() -----------------------------------------------------------
 OV.execute() ------------------------------------------------------------------

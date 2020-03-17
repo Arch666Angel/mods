@@ -5,16 +5,17 @@ function pack_replace(techname, old_c, new_c) --tech tier swapping script (for c
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
 end
 
-function core_replace(techname, old_c, new_c) --tech core swapping script (for cleaner code) (assumes tier 1)
+function core_replace(techname, old_c, new_c,tier) -- tech core swapping script
+  tier = tier or 1
   if old_c == "basic" then
     OV.remove_science_pack(techname, "datacore-basic")
   else
-    OV.remove_science_pack(techname, "datacore-" .. old_c .. "-1")
+    OV.remove_science_pack(techname, "datacore-" .. old_c .. "-"..tier)
   end
   if new_c == "basic" then
     OV.set_science_pack(techname, "datacore-basic", 2)
   else
-    OV.set_science_pack(techname, "datacore-" .. new_c .. "-1", 2)
+    OV.set_science_pack(techname, "datacore-" .. new_c .. "-"..tier, 2)
   end
 end
 
@@ -358,6 +359,17 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
     T5=??,??,w-platinum
     ]]
     --apply bobs replacements first (mainly for electronics reasons)
+    if mods["bobelectronics"] then
+      if ing_list[n].name == "electronic-circuit" then
+        ing_list[n].name = "block-electronics-2"
+      end
+      if ing_list[n].name == "advanced-circuit" then
+        ing_list[n].name = "block-electronics-3"
+      end
+      if ing_list[n].name == "processing-unit" then
+        ing_list[n].name = "block-electronics-4"
+      end
+    end
     if mods["bobplates"] then
       --bobs electronic boards
       if ing_list[n].name == "basic-circuit-board" then
@@ -497,21 +509,27 @@ function replace_gen_mats()
   --bobs replacements first (mainly for electronics reasons)
   if mods["bobelectronics"] then
     --bobs electronic boards
+    -- BCB -->GREY
     OV.global_replace_item("basic-circuit-board", "circuit-grey")
-    --clean-up tech unlocks, recipe and item lists
     data.raw.recipe["basic-circuit-board"].hidden = true
     data.raw.item["basic-circuit-board"].hidden = true
+    -- BEB -->RED
     OV.global_replace_item("basic-electronic-board", "circuit-red-loaded")
     OV.remove_unlock("electronics", "electronic-circuit")
     data.raw.recipe["electronic-circuit"].hidden = true
     data.raw.item["electronic-circuit"].hidden = true
-    --OV.global_replace_item("advanced-circuit","circuit-green-loaded" )
-    --OV.global_replace_item("processing-unit","circuit-orange-loaded")
+    -- ECB -->Green
+    OV.global_replace_item("advanced-circuit","circuit-green-loaded" )
+    -- ELB -->Orange
+    OV.global_replace_item("processing-unit","circuit-orange-loaded")
+    data.raw.recipe["advanced-processing-unit"].hidden = true
+    -- EPB --> Yellow
     OV.global_replace_item("advanced-processing-unit", "circuit-yellow-loaded")
     OV.remove_unlock("advanced-electronics-3", "advanced-processing-unit")
-    data.raw.recipe["advanced-processing-unit"].hidden = true
     data.raw.item["advanced-processing-unit"].hidden = true
-  elseif mods["bobplates"] then
+    OV.execute()
+  end
+  if mods["bobplates"] then
     --bobs gears
     --OV.global_replace_item("iron-gear-wheel","angels-gear")
     OV.global_replace_item("steel-gear-wheel", "angels-gear") --swap the gear from the iron gear wheel
@@ -539,21 +557,25 @@ function replace_gen_mats()
     OV.remove_unlock("advanced-electronics-3", "advanced-processing-unit")
     data.raw.recipe["advanced-processing-unit"].hidden = true
     data.raw.item["advanced-processing-unit"].hidden = true
+    OV.execute()
   end
   --vanilla replacements
   --electronics
-  OV.global_replace_item("electronic-circuit", "circuit-red-loaded")
-  OV.remove_unlock("electronics", "electronic-circuit")
-  angelsmods.functions.add_flag("electronic-circuit", "hidden")
-  OV.disable_recipe({"electronic-circuit"})
-  OV.global_replace_item("advanced-circuit", "circuit-green-loaded")
-  OV.remove_unlock("advanced-electronics", "advanced-circuit")
-  angelsmods.functions.add_flag("advanced-circuit", "hidden")
-  OV.disable_recipe({"advanced-circuit"})
-  OV.global_replace_item("processing-unit", "circuit-blue-loaded")
-  OV.remove_unlock("advanced-electronics-2", "processing-unit")
-  angelsmods.functions.add_flag("processing-unit", "hidden")
-  OV.disable_recipe({"processing-unit"})
+  if (mods["bobplates"] or mods["bobelectronics"]) then
+    OV.global_replace_item("electronic-circuit", "circuit-red-loaded")
+    OV.remove_unlock("electronics", "electronic-circuit")
+    angelsmods.functions.add_flag("electronic-circuit", "hidden")
+    OV.disable_recipe({"electronic-circuit"})
+    OV.global_replace_item("advanced-circuit", "circuit-green-loaded")
+    OV.remove_unlock("advanced-electronics", "advanced-circuit")
+    angelsmods.functions.add_flag("advanced-circuit", "hidden")
+    OV.disable_recipe({"advanced-circuit"})
+    OV.global_replace_item("processing-unit", "circuit-blue-loaded")
+    OV.remove_unlock("advanced-electronics-2", "processing-unit")
+    angelsmods.functions.add_flag("processing-unit", "hidden")
+    OV.disable_recipe({"processing-unit"})
+    OV.execute()
+  end
 
   --intermediates
   OV.global_replace_item("engine-unit", "motor-2")
@@ -566,6 +588,7 @@ function replace_gen_mats()
   data.raw.item["electric-engine-unit"].hidden = true
   OV.global_replace_item("iron-stick", "angels-rod-iron")
   data.raw.recipe["iron-stick"].hidden = true
+  OV.execute()
 end
 
 --REPLACE CONSTRUCTION ELECTRONIC BLOCKS
