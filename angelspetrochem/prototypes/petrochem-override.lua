@@ -145,6 +145,8 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then -- deuterium proces
 
   OV.global_replace_technology("heavy-water-processing", "water-chemistry-1")
   OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
+
+  OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
 else
   data.raw.fluid["gas-enriched-hydrogen-sulfide"].hidden = true
   data.raw.fluid["liquid-water-semiheavy-1"].hidden = true
