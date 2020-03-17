@@ -57,7 +57,11 @@ require("prototypes.recipes.petrochem-sulfur")
 require("prototypes.recipes.petrochem-chlorine")
 require("prototypes.recipes.petrochem-entity")
 
-require("prototypes.technology.petrochem-technology")
+require("prototypes.technology.petrochem-basics")
+require("prototypes.technology.petrochem-basic-chemistry")
+require("prototypes.technology.petrochem-petro-chemistry")
+require("prototypes.technology.petrochem-solids")
+require("prototypes.technology.petrochem-weaponary")
 
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()
