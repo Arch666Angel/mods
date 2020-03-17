@@ -5,6 +5,7 @@ Date: ???
     - Extra check if recipe ingredients exists #52
     - Allow robot deployment when in automatic mode #48
     - Science pack for datacores for angels rocket fuel fixed to default rocket fuel #66
+    - Enforces single main-lab to exist
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 22.02.2020
