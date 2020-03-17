@@ -40,6 +40,7 @@ Date: ??
     - Fixed fish, puffers and biters did count (fully) towards production stats for breeding
     - Fixed the working animation on the hatchery and biter refugium
     - Fixed butchering biters would not give crystals in the butchery
+    - Fixed that alien-spores could not be voided
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.3
 Date: 22.02.2020

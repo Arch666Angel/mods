@@ -18,6 +18,7 @@ Date: ???
     - Added Sodium Nitrate and related recipes
     - Added Saline Water from Water & Salt recipe
     - Moved solid fuels for bobrevamps
+    - Added processing cycle for deuterium when it is present
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
     - Added missing (water) void recipe for Sodium Hydroxide Solution
