@@ -1,6 +1,12 @@
 global.is_lab_given = false
 local main_lab = {
-  "angels-main-lab"
+  "angels-main-lab-1",
+  "angels-main-lab-2",
+  "angels-main-lab-3",
+  "angels-main-lab-4",
+  "angels-main-lab-5",
+  "angels-main-lab-6",
+  "angels-main-lab-7"
 }
 
 local function remove_lab_from_inv(inventory)
@@ -24,7 +30,6 @@ local function table_contains(table, value)
   end
   return false
 end
-
 script.on_event(
   {defines.events.on_player_created, defines.events.on_player_respawned},
   function(event)
