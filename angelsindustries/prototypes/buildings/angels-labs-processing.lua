@@ -188,3 +188,4 @@ data:extend(
     }
   }
 )
+angelsmods.triggers.lab_ignore_token["angels-processing-lab-3"] = true

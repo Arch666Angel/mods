@@ -87,8 +87,22 @@ data:extend(
     result= "angels-exploration-lab-2",
     icon_size = 32,
   },
+  {
+    type = "recipe",
+    name = "angels-exploration-lab-3",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"block-exploration-5", 1},
+      {"block-electronics-5", 4},
+      {"block-construction-5", 4},
+    },
+    result= "angels-exploration-lab-3",
+    icon_size = 32,
+  },
   -----------------------------------------------------------------------------
-  -- energy LABS --------------------------------------------------------------
+  -- ENERGY LABS --------------------------------------------------------------
   -----------------------------------------------------------------------------
   {
     type = "recipe",
@@ -199,6 +213,21 @@ data:extend(
       {"block-construction-4", 4},
     },
     result= "angels-enhance-lab-2",
+    icon_size = 32,
+  },
+  {
+    type = "recipe",
+    name = "angels-enhance-lab-3",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"block-exploration-5", 1},
+      {"block-enhancement-5", 1},
+      {"block-electronics-5", 4},
+      {"block-construction-5", 4},
+    },
+    result= "angels-enhance-lab-3",
     icon_size = 32,
   },
   -----------------------------------------------------------------------------

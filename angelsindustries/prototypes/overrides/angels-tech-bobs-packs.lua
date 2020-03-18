@@ -12,6 +12,18 @@ if mods['bobplates'] then
 	OV.set_science_pack("gas-canisters", "datacore-processing-1", 2)
 	OV.set_science_pack("electrolysis-2", "datacore-processing-1", 2)
 	OV.set_science_pack("ceramics", "datacore-processing-2", 2)
+	pack_replace("battery-2","blue","orange")
+	pack_replace("gem-processing-2","blue","orange")
+	OV.remove_science_pack("lubricant", "angels-science-pack-green")
+	if not mods["bobtech"] then
+		--alien resources
+		pack_replace("alien-blue-research","yellow","blue")
+		pack_replace("alien-orange-research","yellow","blue")
+		pack_replace("alien-purple-research","yellow","blue")
+		pack_replace("alien-yellow-research","yellow","blue")
+		pack_replace("alien-green-research","yellow","blue")
+		pack_replace("alien-red-research","yellow","blue")
+	end
 end
 -------------------------------------------------------------------------------
 -- BOB ASSMBLY ----------------------------------------------------------------
@@ -112,338 +124,162 @@ end
 if mods['bobmining'] then
 	--adds bob classes stuffs
 	--regular drills
-	OV.set_science_pack("bob-drills-1", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-drills-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-drills-3", "datacore-processing-2", 2)
+	if settings.startup["bobmods-mining-miningdrills"].value == true then
+		OV.set_science_pack("bob-drills-1", "datacore-processing-1", 2)
+		OV.set_science_pack("bob-drills-2", "datacore-processing-1", 2)
+		OV.set_science_pack("bob-drills-3", "datacore-processing-2", 2)
+	end
 	--area drills
-	OV.set_science_pack("bob-area-drills-1", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-area-drills-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-area-drills-3", "datacore-processing-2", 2)
+	if settings.startup["bobmods-mining-areadrills"].value == true then
+		OV.set_science_pack("bob-area-drills-1", "datacore-processing-1", 2)
+		OV.set_science_pack("bob-area-drills-2", "datacore-processing-1", 2)
+		OV.set_science_pack("bob-area-drills-3", "datacore-processing-2", 2)
+	end
 	--pumpjacks
-	OV.set_science_pack("bob-pumpjacks-1", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-pumpjacks-2", "datacore-processing-1", 2)
-	OV.set_science_pack("bob-pumpjacks-3", "datacore-processing-1", 2)
+	if settings.startup["bobmods-mining-pumpjacks"].value == true then
+		OV.set_science_pack("bob-pumpjacks-1", "datacore-processing-1", 2)
+		OV.set_science_pack("bob-pumpjacks-2", "datacore-processing-1", 2)
+		OV.set_science_pack("bob-pumpjacks-3", "datacore-processing-1", 2)
+	end
 	--axe(s)
-	pack_replace("steel-axe-4","blue","orange")
+	if settings.startup["bobmods-mining-miningaxes"].value == true then
+		pack_replace("steel-axe-4","blue","orange")
+	end
 end
 if mods['bobmodules'] then
 	core_replace("effect-transmission-2", "processing", "enhance")
 	core_replace("effect-transmission-3", "processing", "enhance")
 end
 if mods['boblogistics'] then
-	--[[
-	--adds bob classes stuffs
-	OV.remove_science_pack("logistics-4", "datacore-processing-1")
-	core_tier_up("logistics-4","logistic")
-	OV.remove_science_pack("logistics-5", "datacore-processing-1")
-	core_tier_up("logistics-5","logistic")
-	OV.remove_science_pack("bob-armoured-railway-2", "datacore-processing-1")
-	core_tier_up("bob-armoured-railway-2","logistic")
-	OV.remove_science_pack("bob-armoured-fluid-wagon-2", "datacore-processing-1")
-	core_tier_up("bob-armoured-fluid-wagon-2","logistic")
-	OV.remove_science_pack("bob-robotics-3", "datacore-processing-1")
-	core_tier_up("bob-robotics-3","logistic")
-	OV.remove_science_pack("bob-robotics-4", "datacore-processing-1")
-	core_tier_up("bob-robotics-4","logistic")
-	OV.remove_science_pack("bob-robots-2", "datacore-processing-1")
-	core_tier_up("bob-robots-2","logistic")
-	OV.remove_science_pack("bob-robots-3", "datacore-processing-1")
-	core_tier_up("bob-robots-3","logistic")
-	OV.remove_science_pack("bob-robots-4", "datacore-processing-1")
-	core_tier_up("bob-robots-4","logistic")
+	--adds bob logistics stuffs
+	--basic-logistics
+	pack_replace("logistics-0","red","grey")
+	--repair packs
 	OV.set_science_pack("bob-repair-pack-2", "datacore-enhance-1", 2)
 	OV.set_science_pack("bob-repair-pack-3", "datacore-enhance-1", 2)
 	OV.set_science_pack("bob-repair-pack-4", "datacore-enhance-1", 2)
+	pack_replace("bob-repair-pack-4","green","blue")
 	OV.set_science_pack("bob-repair-pack-5", "datacore-enhance-1", 2)
-	OV.set_science_pack("bob-repair-pack-6", "datacore-enhance-1", 2)
-	pack_replace("toolbelt-2","blue","green")
+	pack_replace("bob-repair-pack-5","green","yellow")
+	--toolbelts
+	pack_replace("toolbelt-2","blue","orange")
 	OV.set_science_pack("toolbelt-2", "datacore-enhance-1", 2)
-	OV.remove_science_pack("toolbelt-3", "datacore-processing-2")
-	OV.set_science_pack("toolbelt-3", "datacore-enhance-2", 2)
-	OV.remove_science_pack("toolbelt-4", "datacore-processing-1")
-	OV.set_science_pack("toolbelt-4", "datacore-enhance-2", 2)
-	OV.remove_science_pack("toolbelt-5", "datacore-processing-1")
-	OV.set_science_pack("toolbelt-5", "datacore-enhance-2", 2)
-	pack_replace("express-inserters","blue","orange")
-	OV.remove_science_pack("express-inserters", "datacore-logistic-2")
-	OV.set_science_pack("express-inserters", "datacore-logistic-1", 2)
-	pack_replace("stack-inserter-2","blue","orange")
-	OV.remove_science_pack("stack-inserter-2", "datacore-logistic-2")
-	OV.set_science_pack("stack-inserter-2", "datacore-logistic-1", 2)
-	OV.remove_science_pack("turbo-inserter", "datacore-processing-1")
-	core_tier_up("turbo-inserter","logistic")
-	OV.remove_science_pack("ultimate-inserter", "datacore-processing-1")
-	core_tier_up("ultimate-inserter","logistic")
-	OV.remove_science_pack("stack-inserter-3", "datacore-processing-1")
-	core_tier_up("stack-inserter-3","logistic")
-	OV.remove_science_pack("stack-inserter-4", "datacore-processing-1")
-	core_tier_up("stack-inserter-4","logistic")
-	OV.remove_science_pack("logistic-system-2", "datacore-processing-1")
-	core_tier_up("logistic-system-2","logistic")
-	OV.remove_science_pack("logistic-system-3", "datacore-processing-1")
-	core_tier_up("logistic-system-3","logistic")
-	OV.remove_science_pack("character-logistic-slots-7", "datacore-processing-1")
-	core_tier_up("character-logistic-slots-7","logistic")
-	OV.remove_science_pack("character-logistic-slots-8", "datacore-processing-1")
-	core_tier_up("character-logistic-slots-8","logistic")
-	OV.remove_science_pack("character-logistic-slots-9", "datacore-processing-1")
-	core_tier_up("character-logistic-slots-9","logistic")
-	OV.remove_science_pack("character-logistic-slots-10", "datacore-processing-1")
-	core_tier_up("character-logistic-slots-10","logistic")
-	OV.remove_science_pack("inserter-stack-size-bonus-3", "datacore-processing-1")
-	core_tier_up("inserter-stack-size-bonus-3","logistic")
-	OV.remove_science_pack("inserter-stack-size-bonus-4", "datacore-processing-1")
-	core_tier_up("inserter-stack-size-bonus-4","logistic")
-	OV.remove_science_pack("inserter-capacity-bonus-8", "datacore-processing-1")
-	core_tier_up("inserter-capacity-bonus-8","logistic")
-	OV.remove_science_pack("bob-fluid-handling-4", "datacore-processing-1")
-	core_tier_up("bob-fluid-handling-4","logistic")
-	OV.remove_science_pack("bob-infinite-worker-robots-storage-1", "datacore-processing-1")
-	core_tier_up("bob-infinite-worker-robots-storage-1","logistic")
-	OV.remove_science_pack("bob-infinite-character-logistic-trash-slots-1", "datacore-processing-1")
-	core_tier_up("bob-infinite-character-logistic-trash-slots-1","logistic")
+	core_replace("toolbelt-3","processing","enhance")
+	--modular roboports
+  OV.set_science_pack("bob-robo-modular-1", "datacore-logistic-1", 2)
+	pack_replace("bob-robo-modular-1","green","orange")
 	pack_replace("bob-robo-modular-2","blue","orange")
-	OV.set_science_pack("bob-robo-modular-1", "datacore-enhance-1", 2)
-	OV.set_science_pack("bob-robo-modular-2", "datacore-enhance-1", 2)
-	OV.remove_science_pack("bob-robo-modular-3", "datacore-processing-2")
-	OV.set_science_pack("bob-robo-modular-3", "datacore-logistic-2", 2)
-	OV.remove_science_pack("bob-robo-modular-4", "datacore-processing-1")
-	OV.set_science_pack("bob-robo-modular-4", "datacore-logistic-2", 2)]]
+	OV.set_science_pack("bob-robo-modular-2", "datacore-logistic-1", 2)
 end
 --bob ores stuffs automatically gets grabbed :D (may want to swap the nuclear stuff to power?)
 --bob enemies recipes automatically gets grabbed :D
 --bob electronics recipes automatically gets grabbed :D
 if mods['bobwarfare'] then
 	--adds bob warfare stuffs
-	OV.remove_science_pack("bob-power-armor-3", "datacore-war-1")
-	core_tier_up("bob-power-armor-3","enhance")
-	OV.remove_science_pack("bob-power-armor-4", "datacore-war-1")
-	core_tier_up("bob-power-armor-4","enhance")
-	OV.remove_science_pack("bob-power-armor-5", "datacore-war-1")
-	core_tier_up("bob-power-armor-5","enhance")
-	OV.remove_science_pack("bob-robot-attack-drones", "datacore-logistic-1")
-	OV.remove_science_pack("bob-robot-plasma-drones", "datacore-logistic-1")
-	OV.remove_science_pack("bob-robot-gun-drones", "datacore-logistic-1")
-	core_tier_up("bob-laser-turrets-5","war")
-	core_tier_up("bob-plasma-rocket","war")
-	core_tier_up("bob-sniper-turrets-3","war")
-	core_tier_up("bob-tanks-3","war")
-	core_tier_up("bob-artillery-turret-2","war")
-	core_tier_up("bob-artillery-turret-3","war")
-	core_tier_up("bob-artillery-wagon-2","war")
-	core_tier_up("bob-artillery-wagon-3","war")
-	core_tier_up("bob-plasma-turrets-5","war")
-	core_tier_up("combat-robotics-4","war")
-	OV.remove_science_pack("nitroglycerin-processing", "datacore-war-1")
-	OV.remove_science_pack("cordite-processing", "datacore-war-1")
+  --turrets
+	pack_replace("bob-plasma-turrets-3","blue","orange")
+	pack_replace("bob-turrets-3","green","orange")
+	pack_replace("bob-turrets-5","blue","yellow")
+	pack_replace("bob-laser-turrets-2","green","orange")
+	pack_replace("bob-plasma-turrets-2","green","orange")
+	pack_replace("bob-sniper-turrets-2","blue","orange")
+	if mods["angelsexploration"] then
+		pack_replace("angels-rocket-turret","green","orange")
+	end
+  --laser rifles
+	pack_replace("bob-laser-rifle","green","blue")
+	pack_replace("bob-laser-rifle-ammo-1","green","blue")
+	pack_replace("bob-laser-rifle-ammo-4","blue","yellow")
+	pack_replace("bob-laser-rifle-ammo-5","blue","yellow")
+	pack_replace("bob-laser-rifle-ammo-6","blue","yellow")
+	--Drones/CombatBots
+	pack_replace("bob-robot-gun-1","green","orange")
+	pack_replace("bob-robot-gun-drones","green","orange")
+	pack_replace("bob-robot-plasma-drones","green","orange")
+	pack_replace("bob-robot-laser-drones","green","orange")
+	pack_replace("bob-robot-flamethrower-drones","green","orange")
+  --Rockets
+	pack_replace("rocketry","green","orange")
+	pack_replace("bob-rocket","green","orange")
+  --radars
 	OV.set_science_pack("radars", "datacore-exploration-1", 2)
 	OV.set_science_pack("radars-2", "datacore-exploration-1", 2)
-	pack_replace("radars-3","blue","orange")
 	OV.set_science_pack("radars-3", "datacore-exploration-1", 2)
-	OV.set_science_pack("radars-4", "datacore-exploration-2", 2)
-	OV.remove_science_pack("radars-4", "datacore-war-1")
+	pack_replace("radars-4","blue","yellow")
+	--mines
 	OV.set_science_pack("poison-mine", "datacore-war-2", 2)
 	OV.set_science_pack("slowdown-mine", "datacore-war-2", 2)
 	OV.set_science_pack("distractor-mine", "datacore-war-2", 2)
-	core_tier_up("bob-plasma-bullets","war")
-	core_tier_up("bob-shotgun-plasma-shells","war")
+	--small fixes
+	pack_replace("follower-robot-count-1","green","orange")
+	pack_replace("follower-robot-count-2","green","orange")
 end
 if mods['bobvehicleequipment'] then
 	--adds bob vehicle equipment stuffs
-	OV.remove_science_pack("vehicle-engine-equipment", "datacore-processing-1")
-	core_tier_up("vehicle-engine-equipment","enhance")
-	OV.remove_science_pack("vehicle-battery-equipment-4", "datacore-processing-1")
-	core_tier_up("vehicle-battery-equipment-4","enhance")
-	OV.remove_science_pack("vehicle-battery-equipment-5", "datacore-processing-1")
-	core_tier_up("vehicle-battery-equipment-5","enhance")
-	OV.remove_science_pack("vehicle-battery-equipment-6", "datacore-processing-1")
-	core_tier_up("vehicle-battery-equipment-6","enhance")
-	OV.remove_science_pack("vehicle-solar-panel-equipment-4", "datacore-processing-1")
-	core_tier_up("vehicle-solar-panel-equipment-4","enhance")
-	OV.remove_science_pack("vehicle-solar-panel-equipment-5", "datacore-processing-1")
-	core_tier_up("vehicle-solar-panel-equipment-5","enhance")
-	OV.remove_science_pack("vehicle-solar-panel-equipment-6", "datacore-processing-1")
-	core_tier_up("vehicle-solar-panel-equipment-6","enhance")
-	OV.remove_science_pack("vehicle-fusion-cell-equipment-2", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-cell-equipment-2","enhance")
-	OV.remove_science_pack("vehicle-fusion-cell-equipment-3", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-cell-equipment-3","enhance")
-	OV.remove_science_pack("vehicle-fusion-cell-equipment-4", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-cell-equipment-4","enhance")
-	OV.remove_science_pack("vehicle-fusion-cell-equipment-5", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-cell-equipment-5","enhance")
-	OV.remove_science_pack("vehicle-fusion-cell-equipment-6", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-cell-equipment-6","enhance")
-	OV.remove_science_pack("vehicle-fusion-reactor-equipment-2", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-reactor-equipment-2","enhance")
-	OV.remove_science_pack("vehicle-fusion-reactor-equipment-3", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-reactor-equipment-3","enhance")
-	OV.remove_science_pack("vehicle-fusion-reactor-equipment-4", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-reactor-equipment-4","enhance")
-	OV.remove_science_pack("vehicle-fusion-reactor-equipment-5", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-reactor-equipment-5","enhance")
-	OV.remove_science_pack("vehicle-fusion-reactor-equipment-6", "datacore-processing-1")
-	core_tier_up("vehicle-fusion-reactor-equipment-6","enhance")
-	OV.remove_science_pack("vehicle-roboport-equipment-4", "datacore-processing-1")
-	core_tier_up("vehicle-roboport-equipment-4","enhance")
-	core_replace("vehicle-roboport-modular-equipment-4","processing","enhance")
-	core_tier_up("vehicle-roboport-modular-equipment-4","enhance")
+	pack_replace("vehicle-roboport-equipment","green","orange")
+	pack_replace("vehicle-roboport-modular-equipment-1","green","orange")
+	pack_replace("vehicle-roboport-equipment","green","orange")
 	pack_replace("vehicle-roboport-modular-equipment-1","green","orange")
 	OV.set_science_pack("vehicle-roboport-modular-equipment-1", "datacore-enhance-1", 2)
-end
+	OV.set_science_pack("vehicle-roboport-modular-equipment-2", "datacore-enhance-2", 2)
+	OV.set_science_pack("vehicle-roboport-modular-equipment-3", "datacore-enhance-2", 2)
+	end
 if mods['bobequipment'] then
 	--adds bob personal equipment stuffs
-	OV.remove_science_pack("night-vision-equipment-3", "datacore-processing-1")
-	core_tier_up("night-vision-equipment-3","enhance")
-	OV.remove_science_pack("exoskeleton-equipment-3", "datacore-processing-1")
-	core_tier_up("exoskeleton-equipment-3","enhance")
-	OV.remove_science_pack("bob-battery-equipment-4", "datacore-processing-1")
-	core_tier_up("bob-battery-equipment-4","enhance")
-	OV.remove_science_pack("bob-battery-equipment-5", "datacore-processing-1")
-	core_tier_up("bob-battery-equipment-5","enhance")
-	OV.remove_science_pack("bob-battery-equipment-6", "datacore-processing-1")
-	core_tier_up("bob-battery-equipment-6","enhance")
-	OV.remove_science_pack("solar-panel-equipment-4", "datacore-processing-1")
-	core_tier_up("solar-panel-equipment-4","enhance")
-	OV.remove_science_pack("fusion-reactor-equipment-2", "datacore-processing-1")
-	core_tier_up("fusion-reactor-equipment-2","enhance")
-	OV.remove_science_pack("fusion-reactor-equipment-3", "datacore-processing-1")
-	core_tier_up("fusion-reactor-equipment-3","enhance")
-	OV.remove_science_pack("fusion-reactor-equipment-4", "datacore-processing-1")
-	core_tier_up("fusion-reactor-equipment-4","enhance")
-	OV.remove_science_pack("personal-roboport-mk4-equipment", "datacore-processing-1")
-	core_tier_up("personal-roboport-mk4-equipment","enhance")
+	pack_replace("personal-roboport-equipment","green","orange")
 	pack_replace("personal-roboport-modular-equipment-1","green","orange")
+	pack_replace("exoskeleton-equipment","green","orange")
+	pack_replace("solar-panel-equipment-2","green","orange")
+	pack_replace("solar-panel-equipment-4","blue","yellow")
 	OV.set_science_pack("personal-roboport-modular-equipment-1", "datacore-enhance-1", 2)
-	core_replace("personal-roboport-modular-equipment-4","processing","enhance")
-	core_tier_up("personal-roboport-modular-equipment-4","enhance")
+	OV.set_science_pack("personal-roboport-modular-equipment-2", "datacore-enhance-2", 2)
+	OV.set_science_pack("personal-roboport-modular-equipment-3", "datacore-enhance-2", 2)
 end
 if mods['bobpower'] then
 	--adds bob power stuffs
-	core_replace("fluid-generator-1","logistic","energy")
-	pack_replace("fluid-generator-2","blue","orange")
-	OV.remove_science_pack("fluid-generator-2", "datacore-logistic-2")
-	OV.set_science_pack("fluid-generator-2", "datacore-energy-1", 2)
-	OV.remove_science_pack("fluid-generator-3", "datacore-logistic-1")
-	core_replace("fluid-generator-3","processing","energy")
-	core_tier_up("fluid-generator-3","energy")
-	OV.remove_science_pack("bob-electric-energy-accumulators-4", "datacore-processing-1")
-	core_tier_up("bob-electric-energy-accumulators-4","energy")
-	OV.set_science_pack("bob-oil-generator-1", "datacore-energy-1", 2)
-	OV.set_science_pack("bob-oil-generator-2", "datacore-energy-1", 2)
-	pack_replace("bob-oil-generator-3","blue","orange")
-	OV.set_science_pack("bob-oil-generator-3", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-oil-generator-4", "datacore-processing-2")
-	OV.set_science_pack("bob-oil-generator-4", "datacore-energy-2", 2)
-	OV.set_science_pack("bob-steam-engine-2", "datacore-energy-1", 2)
-	OV.set_science_pack("bob-steam-engine-3", "datacore-energy-1", 2)
-	pack_replace("bob-steam-engine-4","blue","orange")
-	OV.set_science_pack("bob-steam-engine-4", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-steam-engine-5", "datacore-processing-2")
-	OV.set_science_pack("bob-steam-engine-5", "datacore-energy-2", 2)
-	OV.set_science_pack("bob-steam-turbine-1", "datacore-energy-1", 2)
-	pack_replace("bob-steam-turbine-2","blue","orange")
-	OV.set_science_pack("bob-steam-turbine-2", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-steam-turbine-3", "datacore-processing-2")
-	OV.set_science_pack("bob-steam-turbine-3", "datacore-energy-2", 2)
-	OV.set_science_pack("bob-boiler-2", "datacore-energy-1", 2)
-	OV.set_science_pack("bob-boiler-3", "datacore-energy-1", 2)
-	pack_replace("bob-boiler-4","blue","orange")
-	OV.set_science_pack("bob-boiler-4", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-boiler-5", "datacore-processing-2")
-	OV.set_science_pack("bob-boiler-5", "datacore-energy-2", 2)
-	OV.set_science_pack("bob-oil-boiler-1", "datacore-energy-1", 2)
-	OV.set_science_pack("bob-oil-boiler-2", "datacore-energy-1", 2)
-	pack_replace("bob-oil-boiler-3","blue","orange")
-	OV.set_science_pack("bob-oil-boiler-3", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-oil-boiler-4", "datacore-processing-2")
-	OV.set_science_pack("bob-oil-boiler-4", "datacore-energy-2", 2)
-	OV.set_science_pack("bob-heat-exchanger-1", "datacore-energy-1", 2)
-	pack_replace("bob-heat-exchanger-2","blue","orange")
-	OV.set_science_pack("bob-heat-exchanger-2", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-heat-exchanger-3", "datacore-processing-2")
-	OV.set_science_pack("bob-heat-exchanger-3", "datacore-energy-2", 2)
-	OV.set_science_pack("bob-heat-pipe-1", "datacore-energy-1", 2)
-	pack_replace("bob-heat-pipe-2","blue","orange")
-	OV.set_science_pack("bob-heat-pipe-2", "datacore-energy-1", 2)
-	OV.remove_science_pack("bob-heat-pipe-3", "datacore-processing-2")
-	OV.set_science_pack("bob-heat-pipe-3", "datacore-energy-2", 2)
-	OV.remove_science_pack("bob-nuclear-power-2", "datacore-processing-1")
-	core_tier_up("bob-nuclear-power-2","energy")
-	OV.remove_science_pack("bob-nuclear-power-3", "datacore-processing-1")
-	core_tier_up("bob-nuclear-power-3","energy")
-	OV.set_science_pack("electric-pole-2", "datacore-energy-1", 2)
-	pack_replace("electric-pole-3","blue","orange")
-	OV.set_science_pack("electric-pole-3", "datacore-energy-1", 2)
-	OV.remove_science_pack("electric-pole-4", "datacore-processing-2")
-	OV.set_science_pack("electric-pole-4", "datacore-energy-2", 2)
-	OV.set_science_pack("electric-substation-2", "datacore-energy-1", 2)
-	pack_replace("electric-substation-3","blue","orange")
-	OV.set_science_pack("electric-substation-3", "datacore-energy-1", 2)
-	OV.remove_science_pack("electric-substation-4", "datacore-processing-2")
-	OV.set_science_pack("electric-substation-4", "datacore-energy-2", 2)
-	OV.set_science_pack("burner-reactor-1", "datacore-energy-1", 2)
-	pack_replace("burner-reactor-2","blue","orange")
-	OV.set_science_pack("burner-reactor-2", "datacore-energy-1", 2)
-	OV.remove_science_pack("burner-reactor-3", "datacore-processing-2")
-	OV.set_science_pack("burner-reactor-3", "datacore-energy-2", 2)
-	OV.set_science_pack("fluid-reactor-1", "datacore-energy-1", 2)
-	OV.remove_science_pack("fluid-reactor-1", "datacore-logistic-1")
-	pack_replace("fluid-reactor-2","blue","orange")
-	OV.set_science_pack("fluid-reactor-2", "datacore-energy-1", 2)
-	OV.remove_science_pack("fluid-reactor-2", "datacore-logistic-2")
-	OV.remove_science_pack("fluid-reactor-3", "datacore-processing-1")
-	core_replace("fluid-reactor-3","logistic","energy")
-	core_tier_up("fluid-reactor-3","energy")
+	if settings.startup["bobmods-power-solar"].value == true then
+		pack_replace("bob-solar-energy-2","green","orange")
+	end
+	if settings.startup["bobmods-power-accumulators"].value == true then
+		pack_replace("bob-electric-energy-accumulators-2","green","orange")
+	end
+	if settings.startup["bobmods-power-fluidgenerator"].value == true then
+		pack_replace("fluid-generator-1","green","orange")
+	end
+	if settings.startup["bobmods-power-steam"].value == true then
+		OV.set_science_pack("bob-steam-engine-2", "datacore-energy-1", 2)
+		OV.set_science_pack("bob-steam-engine-3", "datacore-energy-1", 2)
+		OV.set_science_pack("bob-steam-engine-4", "datacore-energy-2", 2)
+		OV.set_science_pack("bob-steam-engine-5", "datacore-energy-2", 2)
+		pack_replace("bob-steam-engine-3","green","orange")
+		pack_replace("bob-steam-turbine-1","green","orange")
+	end
+
 end
 if mods['bobrevamp'] then
 	--adds bob revamp stuffs
-	OV.set_science_pack("hydrazine-generator", "datacore-energy-2", 2)
-	OV.remove_science_pack("hydrazine-generator", "datacore-processing-1")
 	OV.set_science_pack("chemical-plant", "datacore-processing-1", 2)
+	OV.set_science_pack("solid-fuel", "datacore-processing-1", 2)
 	OV.set_science_pack("pumpjack", "datacore-processing-1", 2)
+	if mods['bobpower'] then
+		OV.set_science_pack("hydrazine-generator", "datacore-energy-2", 2)
+	end
+	pre_req_replace("turrets", "military", "angels-components-weapons-basic")
 end
 if mods['bobtech'] then
+	data.raw.recipe["science-pack-gold"].ingredients=
+	{
+		{"angels-science-pack-blue",1},
+		{"datacore-processing-2",1},
+		{"datacore-enhance-2",1}
+	}
 	--adds bob revamp stuffs
 	for rec_4tech in pairs(data.raw.technology) do
 		--remove all advanced-logistics packs
 		OV.remove_science_pack(rec_4tech, "advanced-logistic-science-pack")
+		data.raw.recipe["advanced-logistic-science-pack"].hidden = true
+		data.raw.tool["advanced-logistic-science-pack"].hidden = true
 	end
-	--update alien-science systems
-	--blue artifact tech
-	OV.remove_science_pack("alien-blue-research", "datacore-processing-1")
-	OV.remove_science_pack("bob-ap-bullets", "datacore-war-1")
-	OV.remove_science_pack("bob-shotgun-ap-shells", "datacore-war-1")
-	OV.remove_science_pack("bob-piercing-rocket", "datacore-war-1")
-	--orange artifact tech
-	OV.remove_science_pack("alien-orange-research", "datacore-processing-1")
-	OV.remove_science_pack("bob-electric-bullets", "datacore-war-1")
-	OV.remove_science_pack("bob-shotgun-electric-shells", "datacore-war-1")
-	OV.remove_science_pack("bob-electric-rocket", "datacore-war-1")
-	--purple artifact tech
-	OV.remove_science_pack("alien-purple-research", "datacore-processing-1")
-	OV.remove_science_pack("bob-acid-bullets", "datacore-war-1")
-	OV.remove_science_pack("bob-shotgun-acid-shells", "datacore-war-1")
-	OV.remove_science_pack("bob-acid-rocket", "datacore-war-1")
-	--yellow artifact tech
-	OV.remove_science_pack("alien-yellow-research", "datacore-processing-1")
-	OV.remove_science_pack("bob-he-bullets", "datacore-war-1")
-	OV.remove_science_pack("bob-shotgun-explosive-shells", "datacore-war-1")
-	OV.remove_science_pack("bob-explosive-rocket", "datacore-war-1")
-	--green artifact tech
-	OV.remove_science_pack("alien-green-research", "datacore-processing-1")
-	OV.remove_science_pack("bob-poison-bullets", "datacore-war-1")
-	OV.remove_science_pack("bob-shotgun-poison-shells", "datacore-war-1")
-	OV.remove_science_pack("bob-poison-rocket", "datacore-war-1")
-	--red artifact tech
-	OV.remove_science_pack("alien-red-research", "datacore-processing-1")
-	OV.remove_science_pack("bob-flame-bullets", "datacore-war-1")
-	OV.remove_science_pack("bob-shotgun-flame-shells", "datacore-war-1")
-	OV.remove_science_pack("bob-flame-rocket", "datacore-war-1")
-	--Plasma Updates
-	OV.remove_science_pack("bob-plasma-bullets", "datacore-war-2")
-	OV.remove_science_pack("bob-shotgun-plasma-shells", "datacore-war-2")
-	OV.remove_science_pack("bob-plasma-rocket", "datacore-war-2")
 end
 OV.execute() ------------------------------------------------------------------
 -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES

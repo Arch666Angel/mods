@@ -10,12 +10,20 @@ function core_replace(techname, old_c, new_c,tier) -- tech core swapping script
   if old_c == "basic" then
     OV.remove_science_pack(techname, "datacore-basic")
   else
-    OV.remove_science_pack(techname, "datacore-" .. old_c .. "-"..tier)
+    OV.remove_science_pack(techname, "datacore-" .. old_c .. "-1")
+    OV.remove_science_pack(techname, "datacore-" .. old_c .. "-2")
   end
   if new_c == "basic" then
     OV.set_science_pack(techname, "datacore-basic", 2)
   else
     OV.set_science_pack(techname, "datacore-" .. new_c .. "-"..tier, 2)
+  end
+end
+function pre_req_replace(techname, old_tech, new_tech1,new_tech2) -- tech prerequisite replacements
+  OV.remove_prereq(techname,old_tech)
+  OV.add_prereq(techname,new_tech1)
+  if new_tech2 then
+    OV.add_prereq(techname,new_tech2)
   end
 end
 
@@ -77,6 +85,12 @@ function core_builder()
         string.find(rec_4tech, "energy") ~= nil or
         string.find(rec_4tech, "power") ~= nil or
         string.find(rec_4tech, "cabling") ~= nil or
+        string.find(rec_4tech, "steam-engine") ~= nil or
+        string.find(rec_4tech, "heat") ~= nil or
+        string.find(rec_4tech, "turbine") ~= nil or
+        string.find(rec_4tech, "reactor") ~= nil or
+        string.find(rec_4tech, "pole") ~= nil or
+        string.find(rec_4tech, "substation") ~= nil or
         string.find(rec_4tech, "boiler") ~= nil
       then
         set_core(rec_4tech, "datacore-energy-1", 2)

@@ -57,3 +57,43 @@ if mods['bobmodules'] then
 		end
 	end
 end
+if mods["bobtech"] then
+  for _, ignore in pairs({
+    --blue artifact tech
+    "alien-blue-research",
+    "bob-ap-bullets",
+    "bob-shotgun-ap-shells",
+    "bob-piercing-rocket",
+    --orange artifact tech
+    "alien-orange-research",
+    "bob-electric-bullets",
+    "bob-shotgun-electric-shells",
+    "bob-electric-rocket",
+    --purple artifact tech
+    "alien-purple-research",
+    "bob-acid-bullets",
+    "bob-shotgun-acid-shells",
+    "bob-acid-rocket",
+    --yellow artifact tech
+    "alien-yellow-research",
+    "bob-he-bullets",
+    "bob-shotgun-explosive-shells",
+    "bob-explosive-rocket",
+    --green artifact tech
+    "alien-green-research",
+    "bob-poison-bullets",
+    "bob-shotgun-poison-shells",
+    "bob-poison-rocket",
+    --red artifact tech
+    "alien-red-research",
+    "bob-flame-bullets",
+    "bob-shotgun-flame-shells",
+    "bob-flame-rocket",
+    --Plasma Updates
+    "bob-plasma-bullets",
+    "bob-shotgun-plasma-shells",
+    "bob-plasma-rocket",
+  }) do
+    angelsmods.functions.add_exception(ignore)
+  end
+end

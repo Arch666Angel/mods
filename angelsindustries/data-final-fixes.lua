@@ -39,6 +39,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.overrides.global-tech-base-packs")
   -- MANUAL OVERRIDES FOR BOBS
   require("prototypes.overrides.angels-tech-bobs-packs")
+  --Popular Mod Updates
+  require("prototypes.overrides.angels-tech-popular-addons")
   -- GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS CORES
   OV.global_replace_science_packs(
     "military-science-pack",
@@ -60,24 +62,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   -- I HAVE NO CLUE WHY THESE ARE NOT WORKING  elsewhere ----------------------
   -- FINAL TWEAKS TO TECH PRE-REQUISITES --------------------------------------
   -----------------------------------------------------------------------------
-  OV.remove_prereq("automation-2","tech-green-packs")
-  OV.add_prereq("automation-2","tech-red-packs")
-  OV.add_prereq("automation-2","angels-components-construction-2")
-  OV.add_prereq("tech-green-circuit","automation-2")
-  if mods["bobassembly"] then
-    OV.remove_prereq("automation-4","tech-blue-packs")
-    OV.add_prereq("automation-4","tech-orange-packs")
-    OV.add_prereq("automation-4","angels-components-construction-4")
-    OV.add_prereq("tech-blue-circuit","automation-4")
-    if settings.startup["bobmods-assembly-distilleries"] then
-      OV.remove_prereq("bob-distillery-3","tech-blue-packs")
-      OV.add_prereq("bob-distillery-3","tech-orange-packs")
-      OV.add_prereq("bob-distillery-3","angels-components-construction-4")
-      OV.add_prereq("tech-blue-circuit","bob-distillery-3")
-    end
-  end
+  require("prototypes.angels-tech-final-fixes") --clean up resiliant tech ordering issues
 
-  OV.execute()
 
   --if mods["bobplates"] then
   --  require("prototypes.overrides.angels-tech-bobs")

@@ -110,6 +110,7 @@ pack_replace("bio-wood-processing-3","green","orange")
 --PETROCHEM
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("plastic-1", "green","orange")
+pack_replace("resin-3","blue","yellow")
 --pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
 pack_replace("rubber", "green","orange")
 pack_replace("rocket-booster-1", "green","orange")

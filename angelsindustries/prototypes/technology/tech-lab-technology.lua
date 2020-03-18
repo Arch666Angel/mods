@@ -1104,6 +1104,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "angels-logistic-lab-3"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-exploration-lab-3"
+      },
     },
     unit =
     {
