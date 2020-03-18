@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-require("prototypes.angels-refining-triggers")
 
 angelsmods.functions.move_item("water", "water-treatment-fluid", "a", "fluid")
 
