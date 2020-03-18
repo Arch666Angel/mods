@@ -4,7 +4,17 @@ data:extend(
     {
       type = "item",
       name = "angels-war-lab-1",
-      icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "angels-labs-1",
       order = "e",
@@ -14,7 +24,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-war-lab-1",
-      icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 1, result = "angels-war-lab-1"},
@@ -69,7 +89,17 @@ data:extend(
     {
       type = "item",
       name = "angels-war-lab-2",
-      icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "angels-labs-2",
       order = "e",
@@ -79,7 +109,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-war-lab-2",
-      icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 1, result = "angels-war-lab-2"},
@@ -109,7 +149,7 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input"
       },
-      energy_usage = "250W",
+      energy_usage = "250kW",
       researching_speed = 2,
       inputs = {
         "angels-science-pack-blue",
@@ -126,7 +166,17 @@ data:extend(
     {
       type = "item",
       name = "angels-war-lab-3",
-      icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "angels-labs-3",
       order = "e",
@@ -136,7 +186,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-war-lab-3",
-      icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 1, result = "angels-war-lab-3"},
@@ -166,10 +226,10 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input"
       },
-      energy_usage = "300W",
+      energy_usage = "300kW",
       researching_speed = 2,
       inputs = {
-        "space-science-pack",
+        "angels-science-pack-white",
         "angels-science-pack-yellow",
         "datacore-war-2"
       },

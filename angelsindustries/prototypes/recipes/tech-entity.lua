@@ -19,7 +19,7 @@ data:extend(
     type = "recipe",
     name = "angels-basic-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-construction-1", 3},
@@ -40,7 +40,7 @@ data:extend(
     type = "recipe",
     name = "angels-basic-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-construction-4", 3},
@@ -64,7 +64,7 @@ data:extend(
     type = "recipe",
     name = "angels-exploration-lab-1",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-1", 2},
@@ -77,7 +77,7 @@ data:extend(
     type = "recipe",
     name = "angels-exploration-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-4", 1},
@@ -91,7 +91,7 @@ data:extend(
     type = "recipe",
     name = "angels-exploration-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-5", 1},
@@ -108,7 +108,7 @@ data:extend(
     type = "recipe",
     name = "angels-energy-lab-1",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-1", 1},
@@ -123,7 +123,7 @@ data:extend(
     type = "recipe",
     name = "angels-energy-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-4", 1},
@@ -134,6 +134,21 @@ data:extend(
     result= "angels-energy-lab-2",
     icon_size = 32,
   },
+  {
+    type = "recipe",
+    name = "angels-energy-lab-3",
+    energy_required = 5,
+    enabled = false,
+    ingredients =
+    {
+      {"block-exploration-5", 1},
+      {"block-energy-5", 1},
+      {"block-electronics-5", 4},
+      {"block-construction-5", 4},
+    },
+    result= "angels-energy-lab-3",
+    icon_size = 32,
+  },
   -----------------------------------------------------------------------------
   -- LOGISTIC LABS ------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -141,7 +156,7 @@ data:extend(
     type = "recipe",
     name = "angels-logistic-lab-1",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-1", 1},
@@ -156,7 +171,7 @@ data:extend(
     type = "recipe",
     name = "angels-logistic-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-4", 1},
@@ -171,7 +186,7 @@ data:extend(
     type = "recipe",
     name = "angels-logistic-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-5", 4},
@@ -189,7 +204,7 @@ data:extend(
     type = "recipe",
     name = "angels-enhance-lab-1",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-1", 1},
@@ -204,7 +219,7 @@ data:extend(
     type = "recipe",
     name = "angels-enhance-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-4", 1},
@@ -219,7 +234,7 @@ data:extend(
     type = "recipe",
     name = "angels-enhance-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-5", 1},
@@ -237,7 +252,7 @@ data:extend(
     type = "recipe",
     name = "angels-processing-lab-1",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-1", 1},
@@ -252,7 +267,7 @@ data:extend(
     type = "recipe",
     name = "angels-processing-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-4", 1},
@@ -267,7 +282,7 @@ data:extend(
     type = "recipe",
     name = "angels-processing-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-5", 4},
@@ -285,7 +300,7 @@ data:extend(
     type = "recipe",
     name = "angels-war-lab-1",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-1", 1},
@@ -300,7 +315,7 @@ data:extend(
     type = "recipe",
     name = "angels-war-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-4", 1},
@@ -315,7 +330,7 @@ data:extend(
     type = "recipe",
     name = "angels-war-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"block-exploration-5", 4},
@@ -333,7 +348,7 @@ data:extend(
     type = "recipe",
     name = "angels-main-lab-2",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"angels-main-lab-1", 1},
@@ -347,7 +362,7 @@ data:extend(
     type = "recipe",
     name = "angels-main-lab-3",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"angels-main-lab-2", 1},
@@ -366,7 +381,7 @@ data:extend(
     type = "recipe",
     name = "angels-main-lab-4",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"angels-main-lab-3", 1},
@@ -385,7 +400,7 @@ data:extend(
     type = "recipe",
     name = "angels-main-lab-5",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"angels-main-lab-4", 1},
@@ -404,7 +419,7 @@ data:extend(
     type = "recipe",
     name = "angels-main-lab-6",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"angels-main-lab-5", 1},
@@ -423,7 +438,7 @@ data:extend(
     type = "recipe",
     name = "angels-main-lab-7",
     energy_required = 5,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {"angels-main-lab-6", 1},

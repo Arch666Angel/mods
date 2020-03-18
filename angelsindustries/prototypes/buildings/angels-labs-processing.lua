@@ -4,7 +4,17 @@ data:extend(
     {
       type = "item",
       name = "angels-processing-lab-1",
-      icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "angels-labs-1",
       order = "f",
@@ -14,7 +24,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-processing-lab-1",
-      icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 1, result = "angels-processing-lab-1"},
@@ -69,7 +89,17 @@ data:extend(
     {
       type = "item",
       name = "angels-processing-lab-2",
-      icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "angels-labs-2",
       order = "f",
@@ -79,7 +109,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-processing-lab-2",
-      icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 1, result = "angels-processing-lab-2"},
@@ -109,12 +149,12 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input"
       },
-      energy_usage = "250W",
+      energy_usage = "250kW",
       researching_speed = 2,
       inputs = {
         "angels-science-pack-blue",
         "angels-science-pack-yellow",
-        "datacore-processing-2",
+        "datacore-processing-2"
         --"datacore-processing-3",
         --"datacore-processing-4",
         --"datacore-processing-5"
@@ -129,7 +169,17 @@ data:extend(
     {
       type = "item",
       name = "angels-processing-lab-3",
-      icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "angels-labs-3",
       order = "f",
@@ -139,7 +189,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-processing-lab-3",
-      icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+      icons = {
+        {
+          icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 1, result = "angels-processing-lab-3"},
@@ -169,12 +229,12 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input"
       },
-      energy_usage = "300W",
-      researching_speed = 2.5,
+      energy_usage = "300kW",
+      researching_speed = 3,
       inputs = {
-        "space-science-pack",
+        "angels-science-pack-white",
         "angels-science-pack-yellow",
-        "datacore-processing-2",
+        "datacore-processing-2"
         --"datacore-processing-3",
         --"datacore-processing-4",
         --"datacore-processing-5"
