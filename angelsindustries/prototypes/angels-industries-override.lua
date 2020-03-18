@@ -26,8 +26,6 @@ end
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   --UPDATE RECIPES FOR ENTITIES
   OV.execute()
-  --require("prototypes.recipes.components-entity-update")
-  OV.execute()
   require("prototypes.overrides.components-entity-update")
 
   --UPDATE NON-BLOCK COMPONENTS
@@ -61,15 +59,11 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 end
 
 if angelsmods.industries.overhaul and angelsmods.industries.tech then
-  OV.remove_science_pack("tech-blue-circuit", "chemical-science-pack")
-  OV.remove_science_pack("tech-yellow-circuit", "utility-science-pack")
-  OV.remove_science_pack("angels-components-construction-5", "utility-science-pack")
-  if data.raw.tool["space-science-pack"].icon then
-    data.raw.tool["space-science-pack"].icon="__angelsindustries__/graphics/icons/science-pack-white.png"
-    data.raw.tool["space-science-pack"].icon_size=32
-  elseif data.raw.tool["space-science-pack"].icons[1] then
-    data.raw.tool["space-science-pack"].icons[1]={icon="__angelsindustries__/graphics/icons/science-pack-white.png", icon_size=32}
-  end
+  data.raw["item"]["satellite"].rocket_launch_product = {"science-gravitational-analyzer", 1000}
+  data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"
+  data.raw.technology["space-science-pack"].icon_size = 128
+  OV.add_unlock("space-science-pack", "angels-science-pack-white")
+  OV.add_unlock("space-science-pack", "angels-main-lab-7")
 end
 
 -- ordening

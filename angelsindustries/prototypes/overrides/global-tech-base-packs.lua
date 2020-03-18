@@ -118,7 +118,8 @@ pack_replace("rocket-explosives-1", "green","orange")
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 pack_replace("angels-advanced-chemistry-2", "green","orange")
 --INDUSTRIES
-pack_replace("tech-blue-circuit", "green","orange")
+pack_replace("tech-blue-circuit", "blue","orange")
+OV.remove_science_pack("tech-blue-circuit", "chemical-science-pack")
 pack_replace("angels-components-mechanical-4","green","orange")
 OV.add_prereq("angels-components-construction-4","tech-orange-packs")
 pack_replace("angels-components-construction-4", "blue","orange")
@@ -128,6 +129,7 @@ pack_replace("angels-components-cabling-4","blue","orange")
 OV.remove_prereq("angels-components-cabling-4", "chemical-science-pack")
 pack_replace("cargo-robots-3","green","orange")
 OV.add_prereq("cargo-robots-3","angels-components-mechanical-4")
+
 -------------------------------------------------------------------------------
 -- BLUE SCIENCE PACKS ---------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -139,9 +141,11 @@ pack_replace("electric-energy-distribution-2","orange","blue")
 angelsmods.functions.add_flag("chemical-science-pack", "hidden")
 OV.disable_recipe({"chemical-science-pack"})
 -- INDUSTRIES
+pack_replace("angels-components-construction-5","yellow","blue")
 OV.remove_prereq("angels-components-construction-5", "utility-science-pack")
 pack_replace("angels-components-cabling-5","yellow","blue")
 OV.remove_prereq("angels-components-cabling-5", "utility-science-pack")
+pack_replace("tech-yellow-circuit","yellow","blue")
 
 -------------------------------------------------------------------------------
 -- YELOW SCIENCE PACKS --------------------------------------------------------
@@ -169,8 +173,3 @@ OV.set_science_pack("rocket-silo", "angels-science-pack-red")
 OV.set_science_pack("rocket-silo", "angels-science-pack-green")
 OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
 OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
-
-OV.execute() ------------------------------------------------------------------
--- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
-tech_unlock_reset() -----------------------------------------------------------
-OV.execute() ------------------------------------------------------------------

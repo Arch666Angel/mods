@@ -22,6 +22,7 @@ OV.execute()
 core_replace("automation", "processing", "basic")
 core_replace("logistics", "logistic", "basic")
 core_replace("turrets","war","basic")
+core_replace("flammables", "war", "enhance")
 -- REFINING
 core_replace("water-treatment", "processing", "basic")
 -- SMELTING
@@ -51,7 +52,7 @@ end
 OV.set_science_pack("landfill", "datacore-exploration-1", 2)
 OV.set_science_pack("automobilism", "datacore-exploration-1", 2)
 core_replace("space-science-pack", "processing", "exploration")
-core_replace("artillery-shell-range-1", "war", "exploration",2)
+core_replace("artillery-shell-range-1", "war", "exploration")
 -- EXPLORATION
 OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
 -- CAB ADDONS

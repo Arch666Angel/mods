@@ -184,7 +184,6 @@ data:extend(
     energy_usage = "200kW",
     researching_speed = 1.75,
     inputs = {
-      "angels-science-pack-yellow",
       "space-science-pack",
       "datacore-basic"
     },

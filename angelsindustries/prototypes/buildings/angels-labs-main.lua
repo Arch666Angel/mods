@@ -127,12 +127,18 @@ local lab_tiers = {
     speed_multiplier = 2,
     modules = 1,
   },
+  {
+    new_pack = "angels-science-pack-white",
+    health_inc = 5000,
+    speed_multiplier = 2,
+    modules = 1,
+  },
 }
 for tier_index, tier_props in pairs(lab_tiers) do
   -- tier props
   if tier_props then
     if tier_props.new_pack then table.insert(lab_entity.inputs, tier_props.new_pack) end
-    lab_entity.max_health = lab_entity.max_health + (tier_props.healt_inc or 0)
+    lab_entity.max_health = lab_entity.max_health + (tier_props.health_inc or 0)
     lab_entity.researching_speed = lab_entity.researching_speed * (tier_props.speed_multiplier or 1)
     lab_entity.module_specification.module_slots = lab_entity.module_specification.module_slots + (tier_props.modules or 0)
   end

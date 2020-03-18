@@ -56,6 +56,7 @@ data:extend(
       "tech-red-circuit",
       "angels-components-construction-2",
       "angels-components-cabling-2",
+      "automation-2",
     },
     effects =
     {

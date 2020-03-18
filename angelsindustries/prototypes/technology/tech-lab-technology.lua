@@ -1119,6 +1119,7 @@ data:extend(
         {"angels-science-pack-orange", 1},
         {"angels-science-pack-blue", 1},
         {"angels-science-pack-yellow", 1},
+        {"angels-science-pack-white", 1},
       },
       time = 1000,--pack_time_base,
     },

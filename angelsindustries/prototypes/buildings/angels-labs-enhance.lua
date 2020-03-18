@@ -170,7 +170,6 @@ data:extend(
       researching_speed = 2,
       inputs = {
         "space-science-pack",
-        "angels-science-pack-yellow",
         "datacore-enhance-2"
       },
       module_specification = {

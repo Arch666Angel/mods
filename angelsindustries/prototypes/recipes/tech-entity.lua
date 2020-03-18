@@ -419,5 +419,24 @@ data:extend(
     result= "angels-main-lab-6",
     icon_size = 32,
   },
+  {
+    type = "recipe",
+    name = "angels-main-lab-7",
+    energy_required = 5,
+    enabled = "false",
+    ingredients =
+    {
+      {"angels-main-lab-6", 1},
+      {"block-electronics-5", 1},
+      {"block-exploration-5", 1},
+      {"block-energy-5", 1},
+      {"block-logistic-5", 1},
+      {"block-enhancement-5", 1},
+      {"block-production-5", 1},
+      {"block-warfare-5", 1},
+    },
+    result= "angels-main-lab-7",
+    icon_size = 32,
+  },
 }
 )

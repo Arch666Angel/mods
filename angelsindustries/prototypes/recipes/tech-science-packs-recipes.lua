@@ -85,6 +85,20 @@ data:extend(
     result = "angels-science-pack-yellow",
     icon_size = 32,
   },
+  {
+    type = "recipe",
+    name = "angels-science-pack-white",
+    energy_required = 10,
+    enabled = "false",
+    ingredients =
+    {
+      {"angels-science-pack-yellow", 1},
+      {"science-gravitational-analyzer", 1},--addition
+      --{"circuit-yellow-loaded", 1},
+    },
+    result = "angels-science-pack-white",
+    icon_size = 32,
+  },
 --SCIENCE PACKS COMPONENTS
   {
     type = "recipe",
@@ -127,44 +141,5 @@ data:extend(
     result = "science-harmonics-analyzer",
     icon_size = 32,
   },
-  -- {
-  --   type = "recipe",
-  --   name = "angels-science-pack-orange",
-  --   energy_required = 10,
-  --   enabled = "false",
-  --   ingredients =
-  --   {
-    --   {"angels-science-pack-green", 1},
-    --   {"circuit-orange-loaded", 1},
-  --   },
-  --   result = "angels-science-pack-orange",
-  --   icon_size = 32,
-  -- },
-  -- {
-  --   type = "recipe",
-  --   name = "angels-science-pack-blue",
-  --   energy_required = 10,
-  --   enabled = "false",
-  --   ingredients =
-  --   {
-    --   {"angels-science-pack-orange", 1},
-    --   {"circuit-blue-loaded", 1},
-  --   },
-  --   result = "angels-science-pack-blue",
-  --   icon_size = 32,
-  -- },
-  -- {
-  --   type = "recipe",
-  --   name = "angels-science-pack-yellow",
-  --   energy_required = 10,
-  --   enabled = "false",
-  --   ingredients =
-  --   {
-  --     {"angels-science-pack-blue", 1},
-  --     {"circuit-yellow-loaded", 1},
-  --   },
-  --   result = "angels-science-pack-yellow",
-  --   icon_size = 32,
-  -- },
 }
 )

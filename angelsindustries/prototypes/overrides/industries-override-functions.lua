@@ -234,6 +234,14 @@ function tech_unlock_reset()
               angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi
             )
           end
+          if ingredients == "angels-science-pack-white" then
+            OV.add_prereq(techname, "space-science-pack")
+            --OV.set_research_difficulty(
+            --  techname,
+            --  angelsmods.industries.techtiers.white.time * angelsmods.marathon.tech_time_multi,
+            --  angelsmods.industries.techtiers.white.amount * angelsmods.marathon.tech_amount_multi
+            --)
+          end
         end
       end
     end
@@ -268,8 +276,10 @@ function core_tier_upgrade()
             ["orange"] = "tech-specialised-labs-basic-%s-3",
             ["blue"  ] = "tech-specialised-labs-advanced-%s-1",
             ["yellow"] = "tech-specialised-labs-advanced-%s-2",
+            ["white" ] = "tech-specialised-labs-advanced",
           }
           for pack_color, tier_up in pairs({
+            ["white"] = true,
             ["yellow"] = true,
             ["blue"  ] = true,
             ["orange"] = false,

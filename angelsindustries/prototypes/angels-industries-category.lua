@@ -307,7 +307,7 @@ data:extend(
     type = "item-subgroup",
     name = "angels-labs-3",
     group = "angels-tech",
-    order = "z[labs]-b[mk3]",
+    order = "z[labs]-a[specialized]-c[mk3]",
   },
   {
     type = "item-subgroup",

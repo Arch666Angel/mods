@@ -8,6 +8,7 @@ require("prototypes.overrides.industries-override-functions")
 if mods["Warehousing"] then
   pack_replace("warehouse-logistics-research-1","green","orange")
 end
+
 -------------------------------------------------------------------------------
 -- AAI INDUSTRIES -------------------------------------------------------------
 -------------------------------------------------------------------------------
