@@ -354,6 +354,12 @@ data:extend(
     },
     {
       type = "item-subgroup",
+      name = "water-enrichment",
+      group = "water-treatment",
+      order = "g"
+    },
+    {
+      type = "item-subgroup",
       name = "water-treatment-building",
       group = "water-treatment",
       order = "z[building]-a"

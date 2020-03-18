@@ -650,6 +650,9 @@ ov_functions.execute = function()
         end
       end
       if modifications then
+        if not tech.effects then
+          tech.effects = {}
+        end
         for name, add in pairs(modifications) do
           if add and not dup_table[name] then
             table.insert(tech.effects, {type = "unlock-recipe", recipe = name})

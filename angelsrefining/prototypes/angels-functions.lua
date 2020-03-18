@@ -78,6 +78,7 @@ local icon_tint_table = {
   k = { { 069, 069, 069 }, { 054, 054, 054 }, { 036, 036, 036 } }, -- Coal/Oil
   h = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, -- Hydrogen
   o = { { 249, 013, 013 }, { 214, 012, 012 }, { 198, 011, 011 } }, -- Oxygen
+  d = { { 224, 244, 202 }, { 206, 206, 173} , { 196, 196, 156 } }, -- Deuterium
   n = { { 045, 075, 180 }, { 045, 076, 175 }, { 038, 063, 150 } }, -- Nitrogen
   l = { { 031, 229, 031 }, { 057, 211, 040 }, { 075, 195, 045 } }, -- Chlorine
   s = { { 225, 210, 000 }, { 216, 196, 017 }, { 210, 187, 030 } }, -- Sulfur
@@ -389,11 +390,13 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
 
     molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
     molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15/molecule_icon.icon_size
+    molecule_icon.tint = molecule_icon.tint or molecule_icon[5] or nil
 
     molecule_icon[1] = nil
     molecule_icon[2] = nil
     molecule_icon[3] = nil
     molecule_icon[4] = nil
+    molecule_icon[5] = nil
   else
     molecule_icon = nil
   end

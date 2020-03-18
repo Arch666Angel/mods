@@ -24,7 +24,7 @@ data:extend(
     subgroup = "petrochem-solids",
     normal =
     {
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients =
       {
@@ -37,7 +37,7 @@ data:extend(
     },
     expensive =
     {
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients =
       {
@@ -57,7 +57,7 @@ data:extend(
     category = "liquifying",
     subgroup = "petrochem-solids",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-propene", amount=40},
@@ -82,7 +82,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="liquid-naphtha", amount=20},
@@ -108,7 +108,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-formaldehyde", amount=20},
@@ -134,10 +134,10 @@ data:extend(
     name = "solid-resin",
     category = "crafting-with-fluid",
     subgroup = "petrochem-solids",
-    enabled = "false",
+    enabled = false,
     normal =
     {
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients =
       {
@@ -150,7 +150,7 @@ data:extend(
     },
     expensive =
     {
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients =
       {
@@ -171,7 +171,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-urea", amount=20},
@@ -197,7 +197,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-melamine", amount=20},
@@ -223,7 +223,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-bisphenol-a", amount=20},
@@ -249,10 +249,10 @@ data:extend(
     name = "solid-rubber",
     category = "crafting-with-fluid",
     subgroup = "petrochem-solids-2",
-    enabled = "false",
+    enabled = false,
     normal =
     {
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients =
       {
@@ -265,7 +265,7 @@ data:extend(
     },
     expensive =
     {
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients =
       {
@@ -286,7 +286,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids-2",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-styrene", amount=20},
@@ -314,7 +314,7 @@ data:extend(
     -- subgroup = "petrochem-solids",
     -- normal =
     -- {
-      -- enabled = "false",
+      -- enabled = false,
       -- energy_required = 2,
       -- ingredients =
       -- {
@@ -329,7 +329,7 @@ data:extend(
     -- },
     -- expensive =
     -- {
-      -- enabled = "false",
+      -- enabled = false,
       -- energy_required = 2,
       -- ingredients =
       -- {
@@ -353,7 +353,7 @@ data:extend(
     category = "liquifying",
     subgroup = "petrochem-fuel",
     energy_required = 4,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="solid-coke", amount=1},
@@ -372,7 +372,7 @@ data:extend(
     category = "liquifying",
     subgroup = "petrochem-fuel",
     energy_required = 4,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="solid-coke", amount=1},
@@ -391,7 +391,7 @@ data:extend(
     category = "liquifying",
     subgroup = "petrochem-fuel",
     energy_required = 4,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="solid-coke", amount=1},
@@ -410,7 +410,7 @@ data:extend(
     category = "liquifying",
     subgroup = "petrochem-fuel",
     energy_required = 4,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="solid-coke", amount=1},
@@ -429,7 +429,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-fuel",
     energy_required = 4,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-hydrazine", amount=50},
@@ -448,7 +448,7 @@ data:extend(
     category = "crafting",
     subgroup = "petrochem-catalysts",
     energy_required = 4,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="iron-plate", amount=5},
@@ -467,7 +467,7 @@ data:extend(
     category = "crafting",
     subgroup = "petrochem-catalysts",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="catalyst-metal-carrier", amount=10},
@@ -488,7 +488,7 @@ data:extend(
     category = "crafting",
     subgroup = "petrochem-catalysts",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="catalyst-metal-carrier", amount=10},
@@ -509,7 +509,7 @@ data:extend(
     category = "crafting",
     subgroup = "petrochem-catalysts",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="catalyst-metal-carrier", amount=10},
@@ -530,7 +530,7 @@ data:extend(
     category = "crafting",
     subgroup = "petrochem-catalysts",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="catalyst-metal-carrier", amount=10},
@@ -552,7 +552,7 @@ data:extend(
     category = "crafting",
     subgroup = "petrochem-catalysts",
     energy_required = 1,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="item", name="steel-plate", amount=1},
@@ -568,31 +568,33 @@ data:extend(
   {
     type = "recipe",
     name = "angels-electrode-used",
-    category = "crafting",
+    category = "chemistry",
     subgroup = "petrochem-catalysts",
     energy_required = 1,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
-      {type="item", name="angels-electrode-used", amount=1}
+      {type="item", name="angels-electrode-used", amount=1},
+      {type = "fluid", name = "water-purified", amount = 50}
     },
     results=
     {
-      {type="item", name="steel-plate", amount=1, probability=0.95},
-      {type="item", name="solid-carbon", amount=1, probability=0.7}
+      {type = "item", name = "angels-electrode", amount = 1},
+      {type = "fluid", name = "water-mineralized", amount = 10},
+      {type = "fluid", name = "water", amount = 40}
     },
     icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
     icon_size = 32,
     order = "a[electrode]-b[recycle]",
   },
---EXPLOSIVES
+  --EXPLOSIVES
   {
     type = "recipe",
     name = "solid-nitroglycerin",
     category = "chemistry",
     subgroup = "petrochem-solids-2",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="gas-glycerol", amount=50},
@@ -626,7 +628,7 @@ data:extend(
     category = "chemistry",
     subgroup = "petrochem-solids-2",
     energy_required = 2,
-    enabled = "false",
+    enabled = false,
     ingredients =
     {
       {type="fluid", name="liquid-toluene", amount=50},

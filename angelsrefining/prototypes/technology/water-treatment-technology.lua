@@ -52,16 +52,16 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "green-waste-water-purification"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "greenyellow-waste-water-purification"
         },
         {
           type = "unlock-recipe",
+          recipe = "green-waste-water-purification"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "red-waste-water-purification"
-        }
+        },
       },
       unit = {
         count = 30,
@@ -92,6 +92,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "water-saline"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-salt-dissolving"
         },
         {
           type = "unlock-recipe",

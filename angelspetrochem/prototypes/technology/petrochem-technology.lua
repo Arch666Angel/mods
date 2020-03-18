@@ -409,12 +409,17 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-nitrogen-processing-1",
-        "angels-advanced-chemistry-1"
+        "angels-advanced-chemistry-1",
+        "water-treatment-2",
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-air-filter-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-sodium-nitrate-processing"
         },
         {
           type = "unlock-recipe",
@@ -435,6 +440,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquid-nitric-acid"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "sodium-nitrate-acid-processing"
         }
       },
       unit = {

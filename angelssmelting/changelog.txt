@@ -10,6 +10,7 @@ Date: ??
   Bugfixes:
     - Fixed solder mixture was unlocked from the start
     - Fixed tungsten smelting 1 and 2 did not have cobalt and nickel smelting prerequisites
+    - Reinforced concrete bricks use steel rods when these are present (used steel plates before)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
 Date: 22.02.2020

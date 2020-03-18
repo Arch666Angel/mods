@@ -75,3 +75,18 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or
     }
   })
 end
+
+if angelsmods.trigger.smelting_products["steel"].rod then
+  -- if steel rod is present, concrete should use these instead of steel plates
+  OV.patch_recipes({
+    {
+      name = "angels-reinforced-concrete-brick",
+      ingredients =
+      {
+        { name = "steel-plate", type = "item", amount = 0 }, -- was 4 plates
+        { name = "angels-plate-steel", type = "item", amount = 0 }, -- was 4 plates
+        { name = "angels-rod-steel", type = "item", amount = 2 }, -- replaced with 2 rods (equal to 4 plates)
+      }
+    }
+  })
+end

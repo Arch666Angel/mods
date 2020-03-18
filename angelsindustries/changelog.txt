@@ -14,6 +14,7 @@ Date: ???
     - Fixed Microchip requiring liquid plastic as ingredient
     - Fixed that the Lab Archive was unobtainable when enabling angels science mid-game
     - Science pack for datacores for angels rocket fuel fixed to default rocket fuel #66
+    - Enforces single main-lab to exist
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 22.02.2020
