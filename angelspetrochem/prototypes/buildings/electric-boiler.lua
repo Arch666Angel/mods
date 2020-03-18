@@ -3,7 +3,17 @@ data:extend(
     {
       type = "item",
       name = "angels-electric-boiler",
-      icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+      icons = {
+        {
+          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+        },
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          tint = angelsmods.petrochem.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "boiler-building",
       order = "c[electric-boiler]-a",
@@ -148,7 +158,17 @@ data:extend(
     {
       type = "item",
       name = "angels-electric-boiler-2",
-      icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+      icons = {
+        {
+          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+        },
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          tint = angelsmods.petrochem.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "boiler-building",
       order = "c[electric-boiler]-b",
@@ -293,7 +313,17 @@ data:extend(
     {
       type = "item",
       name = "angels-electric-boiler-3",
-      icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+      icons = {
+        {
+          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+        },
+        {
+          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          tint = angelsmods.petrochem.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
       subgroup = "boiler-building",
       order = "c[electric-boiler]-c",
