@@ -178,7 +178,7 @@ data:extend(
     icon_size = 128,
     prerequisites = {
       "water-chemistry-1",
-      "angels-electric-boiler",
+      "angels-electric-boiler-2",
       "basic-chemistry-3",
       "utility-science-pack"
     },

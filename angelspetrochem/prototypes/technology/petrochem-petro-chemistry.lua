@@ -652,6 +652,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-electric-boiler"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-steam-water"
         }
       },
       unit = {
@@ -676,6 +680,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-electric-boiler-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-steam-water-purified"
         }
       },
       unit = {

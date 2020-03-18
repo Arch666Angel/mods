@@ -1170,10 +1170,10 @@ angelsmods.functions.RB.build(
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
-          {"t1-plate", 1 * buildingmulti},
-          {"t1-circuit", 2 * buildingmulti},
-          {"t1-brick", 1 * buildingmulti},
-          {"t1-pipe", 5 * buildingmulti},
+          {"t3-plate", 1 * buildingmulti},
+          {"t3-circuit", 2 * buildingmulti},
+          {"t3-brick", 1 * buildingmulti},
+          {"t3-pipe", 5 * buildingmulti},
           {"angels-electric-boiler-2", 1 * buildingmulti}
         },
         result = "angels-electric-boiler-3"

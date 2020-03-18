@@ -5,7 +5,7 @@ data:extend(
       name = "angels-electric-boiler",
       icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
       icon_size = 32,
-      subgroup = "petrochem-buildings-steam",
+      subgroup = "boiler-building",
       order = "c[electric-boiler]-a",
       place_result = "angels-electric-boiler",
       stack_size = 10
@@ -150,7 +150,7 @@ data:extend(
       name = "angels-electric-boiler-2",
       icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
       icon_size = 32,
-      subgroup = "petrochem-buildings-steam",
+      subgroup = "boiler-building",
       order = "c[electric-boiler]-b",
       place_result = "angels-electric-boiler-2",
       stack_size = 10
@@ -295,7 +295,7 @@ data:extend(
       name = "angels-electric-boiler-3",
       icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
       icon_size = 32,
-      subgroup = "petrochem-buildings-steam",
+      subgroup = "boiler-building",
       order = "c[electric-boiler]-c",
       place_result = "angels-electric-boiler-3",
       stack_size = 10
