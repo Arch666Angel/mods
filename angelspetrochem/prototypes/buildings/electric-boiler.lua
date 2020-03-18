@@ -318,7 +318,7 @@ data:extend(
           icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon = "__angelspetrochem__/graphics/icons/num_3.png",
           tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
