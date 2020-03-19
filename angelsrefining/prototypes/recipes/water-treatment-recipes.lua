@@ -1,4 +1,4 @@
-local function create_viscous_recipe_icon(fluid_name, overlay_icon)
+local function create_recipe_icon(fluid_name, overlay_icon)
   if not overlay_icon then return angelsmods.functions.get_object_icons(fluid_name) end
   local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(overlay_icon))
   for layer_index, layer in pairs(icon_layers) do
@@ -194,7 +194,7 @@ data:extend(
       },
       main_product = "water-saline",
       always_show_products = "true",
-      icons = create_viscous_recipe_icon("water-saline", "water"),
+      icons = create_recipe_icon("water-saline", "water"),
       order = "a[water-saline]-a[water]"
     },
     {
@@ -215,7 +215,7 @@ data:extend(
       },
       main_product = "water-saline",
       always_show_products = "true",
-      icons = create_viscous_recipe_icon("water-saline", "solid-salt"),
+      icons = create_recipe_icon("water-saline", "solid-salt"),
       order = "a[water-saline]-b[salt]"
     },
     {
@@ -234,7 +234,7 @@ data:extend(
         {type = "item", name = "solid-salt", amount = 25}
       },
       main_product = "solid-salt",
-      icon_size = 32,
+      icons = create_recipe_icon("solid-salt", "water-saline"),
       order = "b[solid-salt-from-saline]"
     },
     {
@@ -253,7 +253,7 @@ data:extend(
         {type = "item", name = "solid-salt", amount = 10}
       },
       main_product = "solid-salt",
-      icon_size = 32,
+      icons = create_recipe_icon("solid-salt", "water"),
       order = "c[solid-salt]"
     },
     {
@@ -403,7 +403,7 @@ data:extend(
       type = "recipe",
       name = "solid-mud-landfill",
       category = "crafting",
-      subgroup = "water-washing",
+      subgroup = "water-washing-filtering",
       energy_required = 5,
       enabled = "false",
       ingredients =
@@ -415,14 +415,14 @@ data:extend(
         {type = "item", name = "landfill", amount = 1}
       },
       icon_size = 32,
-      order = "g"
+      order = "a"
     },
     --WASHING FILTERING
     {
       type = "recipe",
       name = "solid-geodes",
       category = "washing-plant",
-      subgroup = "water-washing",
+      subgroup = "water-washing-filtering",
       energy_required = 5,
       enabled = "false",
       ingredients =
@@ -441,13 +441,13 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/geode-blue.png",
       icon_size = 32,
-      order = "h"
+      order = "b"
     },
     {
       type = "recipe",
       name = "solid-clay",
       category = "washing-plant",
-      subgroup = "water-washing",
+      subgroup = "water-washing-filtering",
       energy_required = 5,
       enabled = "false",
       ingredients =
@@ -460,13 +460,13 @@ data:extend(
         {type = "item", name = "solid-clay", amount = 3}
       },
       icon_size = 32,
-      order = "i"
+      order = "c"
     },
     {
       type = "recipe",
       name = "solid-limestone",
       category = "washing-plant",
-      subgroup = "water-washing",
+      subgroup = "water-washing-filtering",
       energy_required = 5,
       enabled = "false",
       ingredients =
@@ -479,13 +479,13 @@ data:extend(
         {type = "item", name = "solid-limestone", amount = 3}
       },
       icon_size = 32,
-      order = "j"
+      order = "d"
     },
     {
       type = "recipe",
       name = "solid-sand",
       category = "washing-plant",
-      subgroup = "water-washing",
+      subgroup = "water-washing-filtering",
       energy_required = 5,
       enabled = "false",
       ingredients =
@@ -498,7 +498,7 @@ data:extend(
         {type = "item", name = "solid-sand", amount = 5}
       },
       icon_size = 32,
-      order = "k"
+      order = "e"
     }
   }
 )

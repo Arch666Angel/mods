@@ -19,6 +19,8 @@ Date: ???
     - Added Saline Water from Water & Salt recipe
     - Moved solid fuels for bobrevamps
     - Added processing cycle for deuterium when it is present
+    - Added multiple tiers for electric boilers
+    - Separated tech for boilers, included recipe for steam
   Bugfixes:
     - Fixed crashes when bobs assembly was enabled with electrolysers disabled
     - Added missing (water) void recipe for Sodium Hydroxide Solution
