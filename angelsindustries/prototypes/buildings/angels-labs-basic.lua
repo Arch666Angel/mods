@@ -1,3 +1,11 @@
+local function create_rich_text_icons(inputs)
+  local rich_text_icons = {""}
+  for _,input in pairs(inputs) do
+    table.insert(rich_text_icons, string.format("[img=item/%s]", input))
+  end
+  return rich_text_icons
+end
+
 data:extend(
   {
     --BASIC LABs
@@ -24,6 +32,13 @@ data:extend(
     {
       type = "lab",
       name = "angels-basic-lab",
+      localised_description = {"",
+        {"entity-description.angels-basic-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-grey",
+          "datacore-basic"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png"
@@ -107,6 +122,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-basic-lab-2",
+      localised_description = {"",
+        {"entity-description.angels-basic-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-red",
+          "angels-science-pack-green",
+          "angels-science-pack-orange",
+          "angels-science-pack-blue",
+          "angels-science-pack-yellow",
+          "datacore-basic"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png"
@@ -155,7 +181,7 @@ data:extend(
         usage_priority = "secondary-input"
       },
       energy_usage = "150kW",
-      researching_speed = 1.5,
+      researching_speed = 2,
       inputs = {
         "angels-science-pack-red",
         "angels-science-pack-green",
@@ -194,6 +220,13 @@ data:extend(
     {
       type = "lab",
       name = "angels-basic-lab-3",
+      localised_description = {"",
+        {"entity-description.angels-basic-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-white",
+          "datacore-basic"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png"
@@ -242,7 +275,7 @@ data:extend(
         usage_priority = "secondary-input"
       },
       energy_usage = "200kW",
-      researching_speed = 1.75,
+      researching_speed = 2.5,
       inputs = {
         "angels-science-pack-white",
         "datacore-basic"

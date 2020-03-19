@@ -1,3 +1,11 @@
+local function create_rich_text_icons(inputs)
+  local rich_text_icons = {""}
+  for _,input in pairs(inputs) do
+    table.insert(rich_text_icons, string.format("[img=item/%s]", input))
+  end
+  return rich_text_icons
+end
+
 data:extend(
   {
     --EXPLORATION LAB
@@ -24,6 +32,15 @@ data:extend(
     {
       type = "lab",
       name = "angels-exploration-lab-1",
+      localised_description = {"",
+        {"entity-description.angels-exploration-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-red",
+          "angels-science-pack-green",
+          "angels-science-pack-orange",
+          "datacore-exploration-1"
+        }}
+    },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/exploration-lab-ico.png"
@@ -109,6 +126,14 @@ data:extend(
     {
       type = "lab",
       name = "angels-exploration-lab-2",
+      localised_description = {"",
+        {"entity-description.angels-exploration-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-blue",
+          "angels-science-pack-yellow",
+          "datacore-exploration-2"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/exploration-lab-ico.png"
@@ -186,6 +211,13 @@ data:extend(
     {
       type = "lab",
       name = "angels-exploration-lab-3",
+      localised_description = {"",
+        {"entity-description.angels-exploration-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-white",
+          "datacore-exploration-2"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/exploration-lab-ico.png"

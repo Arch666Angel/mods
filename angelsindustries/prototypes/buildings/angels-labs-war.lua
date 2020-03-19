@@ -1,3 +1,11 @@
+local function create_rich_text_icons(inputs)
+  local rich_text_icons = {""}
+  for _,input in pairs(inputs) do
+    table.insert(rich_text_icons, string.format("[img=item/%s]", input))
+  end
+  return rich_text_icons
+end
+
 data:extend(
   {
     --WAR LAB
@@ -24,6 +32,15 @@ data:extend(
     {
       type = "lab",
       name = "angels-war-lab-1",
+      localised_description = {"",
+        {"entity-description.angels-war-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-red",
+          "angels-science-pack-green",
+          "angels-science-pack-orange",
+          "datacore-war-1"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
@@ -109,6 +126,14 @@ data:extend(
     {
       type = "lab",
       name = "angels-war-lab-2",
+      localised_description = {"",
+        {"entity-description.angels-war-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-blue",
+          "angels-science-pack-yellow",
+          "datacore-war-2"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
@@ -186,6 +211,13 @@ data:extend(
     {
       type = "lab",
       name = "angels-war-lab-3",
+      localised_description = {"",
+        {"entity-description.angels-war-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-white",
+          "datacore-war-2"
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/war-lab-ico.png",
@@ -227,10 +259,9 @@ data:extend(
         usage_priority = "secondary-input"
       },
       energy_usage = "300kW",
-      researching_speed = 2,
+      researching_speed = 3,
       inputs = {
         "angels-science-pack-white",
-        "angels-science-pack-yellow",
         "datacore-war-2"
       },
       module_specification = {

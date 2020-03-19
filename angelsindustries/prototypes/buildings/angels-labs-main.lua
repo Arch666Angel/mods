@@ -95,6 +95,14 @@ local lab_entity =
   }
 }
 
+local function create_rich_text_icons(inputs)
+  local rich_text_icons = {""}
+  for _,input in pairs(inputs) do
+    table.insert(rich_text_icons, string.format("[img=item/%s]", input))
+  end
+  return rich_text_icons
+end
+
 local lab_tiers = {
   {
     new_pack = "angels-science-pack-grey",
@@ -159,7 +167,13 @@ for tier_index, tier_props in pairs(lab_tiers) do
   local lab_entity_tier = util.table.deepcopy(lab_entity)
   lab_entity_tier.name = lab_item_tier.place_result
   lab_entity_tier.localised_name = {"entity-name.angels-main-lab", tier_index}
+  lab_entity_tier.localised_description = {"",
+    {"entity-description.angels-main-lab"}, "\n",
+    {"entity-description.angels-main-lab-warning"}, "\n",
+    {"entity-description.angels-lab-inputs", create_rich_text_icons(lab_entity_tier.inputs)}
+  }
   lab_entity_tier.minable.result = lab_item_tier.name
+  lab_entity_tier.energy_usage = string.format("%iMW", lab_entity_tier.researching_speed)
 
   data:extend({
     lab_item_tier,

@@ -1,3 +1,11 @@
+local function create_rich_text_icons(inputs)
+  local rich_text_icons = {""}
+  for _,input in pairs(inputs) do
+    table.insert(rich_text_icons, string.format("[img=item/%s]", input))
+  end
+  return rich_text_icons
+end
+
 data:extend(
   {
     --PROCESSING LAB
@@ -24,6 +32,16 @@ data:extend(
     {
       type = "lab",
       name = "angels-processing-lab-1",
+      localised_description = {"",
+        {"entity-description.angels-processing-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-red",
+          "angels-science-pack-green",
+          "angels-science-pack-orange",
+          "datacore-processing-1",
+          "token-bio",
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
@@ -109,6 +127,15 @@ data:extend(
     {
       type = "lab",
       name = "angels-processing-lab-2",
+      localised_description = {"",
+        {"entity-description.angels-processing-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-blue",
+          "angels-science-pack-yellow",
+          "datacore-processing-2",
+          "token-bio",
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
@@ -189,6 +216,14 @@ data:extend(
     {
       type = "lab",
       name = "angels-processing-lab-3",
+      localised_description = {"",
+        {"entity-description.angels-processing-lab"}, "\n",
+        {"entity-description.angels-lab-inputs", create_rich_text_icons{
+          "angels-science-pack-white",
+          "datacore-processing-2",
+          "token-bio",
+        }}
+      },
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
@@ -233,7 +268,6 @@ data:extend(
       researching_speed = 3,
       inputs = {
         "angels-science-pack-white",
-        "angels-science-pack-yellow",
         "datacore-processing-2"
         --"datacore-processing-3",
         --"datacore-processing-4",
