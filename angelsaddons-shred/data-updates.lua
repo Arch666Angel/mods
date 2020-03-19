@@ -9,7 +9,7 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul and angelsmods.in
   }) do
     local itemName = "offering-"..decoName.."-1"
     data.raw.item[itemName].subgroup = "angels-pack-components"
-    data.raw.item[itemName].order = "e"
+    data.raw.item[itemName].order = "dbb"
     data.raw.item[itemName].rocket_launch_product = {"science-gravitational-analyzer", 1000}
   end
 end

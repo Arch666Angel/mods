@@ -324,7 +324,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/science-gravitational-analyzer.png",
     icon_size = 32,
     subgroup = "angels-pack-components",
-    order = "d",
+    order = "da",
     stack_size = 200
   },
 }
