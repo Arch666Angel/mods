@@ -554,6 +554,7 @@ function replace_gen_mats()
     -- ELECTRONIC INTERMEDIATES
     --wooden board
     OV.global_replace_item("wooden-board", "circuit-grey-board")
+    OV.disable_recipe({"wooden-board"})
     OV.remove_unlock("bio-paper-1", "wooden-board-paper")
     data.raw.item["wooden-board"].hidden = true
     --phenolic board
@@ -562,9 +563,8 @@ function replace_gen_mats()
     data.raw.item["phenolic-board"].hidden = true
     --angels-glass-fiber board
     OV.global_replace_item("fibreglass-board", "circuit-blue-board")
-    --OV.remove_unlock("angels-glass-smelting-3", "angels-glass-fiber-board")
-    --data.raw.item["angels-glass-fiber-board"].hidden = true
-    --NEED TO UPDATE THE ICON for the smelting recipe i think...
+    OV.remove_unlock("angels-glass-smelting-3", "angels-glass-fiber-board")
+    data.raw.item["fibreglass-board"].hidden = true
     --circuit board
     OV.global_replace_item("circuit-board", "circuit-orange")
     OV.remove_unlock("advanced-electronics", "circuit-board")
