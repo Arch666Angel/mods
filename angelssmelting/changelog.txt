@@ -2,7 +2,15 @@
 Version: 0.6.2
 Date: ??
   Changes:
+    - Moved the unlocks for the molds further away:
+      - Expendable Mold from Metalurgy 1 to Stone Smelting 1
+      - Non-expendable Mold from Metalurgy 2 to Stone Smelting 2
+    - Steel smelting 1 now prerequisites on steel processing
     - Added higher quality fluid icons
+    - Moved angels glass fiber coil unlock from glass 3 to glass 1 tech
+  Bugfixes:
+    - Fixed solder mixture was unlocked from the start
+    - Fixed tungsten smelting 1 and 2 did not have cobalt and nickel smelting prerequisites
     - Reinforced concrete bricks use steel rods when these are present (used steel plates before)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1

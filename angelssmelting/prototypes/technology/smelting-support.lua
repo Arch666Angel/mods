@@ -27,10 +27,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "casting-machine"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-expendable"
-      },
     },
     unit =
     {
@@ -69,10 +65,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "casting-machine-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-non-expendable"
       },
     },
     unit =

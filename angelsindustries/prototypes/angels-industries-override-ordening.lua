@@ -650,11 +650,18 @@ if angelsmods.industries.overhaul then
   -- basics
   move_item("iron-stick", "angels-basic-intermediate", "a[basic]-a")
   if bobmods and bobmods.plates then
-    move_item("iron-gear-wheel", "bob-gears", "a[iron]")
-    data.raw["item-subgroup"]["bob-gears"].group = "intermediate-products"
-    data.raw["item-subgroup"]["bob-gears"].order = "a[basic]-b"
-    data.raw["item-subgroup"]["bob-bearings"].group = "intermediate-products"
-    data.raw["item-subgroup"]["bob-bearings"].order = "a[basic]-c"
+    if angelsmods.industries.components then
+      data.raw["item-subgroup"]["bob-gears"].group = "angels-components"
+      data.raw["item-subgroup"]["bob-gears"].order = "c[mechanics]-e[bob-gears]"
+      data.raw["item-subgroup"]["bob-bearings"].group = "angels-components"
+      data.raw["item-subgroup"]["bob-bearings"].order = "c[mechanics]-f[bob-bearings]"
+    else
+      move_item("iron-gear-wheel", "bob-gears", "a[iron]")
+      data.raw["item-subgroup"]["bob-gears"].group = "intermediate-products"
+      data.raw["item-subgroup"]["bob-gears"].order = "a[basic]-b"
+      data.raw["item-subgroup"]["bob-bearings"].group = "intermediate-products"
+      data.raw["item-subgroup"]["bob-bearings"].order = "a[basic]-c"
+    end
   else
     move_item("iron-gear-wheel", "angels-basic-intermediate", "a[basic]-b")
   end
@@ -673,27 +680,58 @@ if angelsmods.industries.overhaul then
   if data.raw.item["heat-shield-tile"] then
     move_item("heat-shield-tile", "angels-basic-intermediate", "z[rocket]-c[heat-shield]")
   end
-  move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")
+  if angelsmods.industries.overhaul and angelsmods.industries.tech then
+    move_item("satellite", "angels-pack-components", "dba")
+  else
+    move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")
+  end
   move_item("rocket-silo", "production-machine", "z[rocket]-a[silo]")
-  -- electronics
-  if bobmods and bobmods.electronics then
-    move_item("basic-electronic-components", "angels-circuit-components", "z[bob]-a")
-    move_item("electronic-components", "angels-circuit-components", "z[bob]-b")
-    move_item("intergrated-electronics", "angels-circuit-components", "z[bob]-c")
-    move_item("processing-electronics", "angels-circuit-components", "z[bob]-d")
+  --bob classes
+  if bobmods then
+    if bobmods.classes then
+      data.raw["item-subgroup"]["body-parts"].group = "angels-blocks"
+      data.raw["item-subgroup"]["body-parts"].order = "z[bob-parts]-a"
+    end
+    -- electronics
+    if bobmods.electronics then
+      move_item("basic-electronic-components", "angels-circuit-components", "z[bob]-a")
+      move_item("electronic-components", "angels-circuit-components", "z[bob]-b")
+      move_item("intergrated-electronics", "angels-circuit-components", "z[bob]-c")
+      move_item("processing-electronics", "angels-circuit-components", "z[bob]-d")
 
-    move_item("wooden-board", "angels-board", "z[bob]-a")
-    move_item("phenolic-board", "angels-board", "z[bob]-b")
-    move_item("fibreglass-board", "angels-board", "z[bob]-c")
+      move_item("wooden-board", "angels-board", "z[bob]-a")
+      move_item("phenolic-board", "angels-board", "z[bob]-b")
+      move_item("fibreglass-board", "angels-board", "z[bob]-c")
 
-    move_item("basic-circuit-board", "angels-circuit-board", "z[bob]-a")
-    move_item("circuit-board", "angels-circuit-board", "z[bob]-b")
-    move_item("superior-circuit-board", "angels-circuit-board", "z[bob]-c")
-    move_item("multi-layer-circuit-board", "angels-circuit-board", "z[bob]-d")
+      move_item("basic-circuit-board", "angels-circuit-board", "z[bob]-a")
+      move_item("circuit-board", "angels-circuit-board", "z[bob]-b")
+      move_item("superior-circuit-board", "angels-circuit-board", "z[bob]-c")
+      move_item("multi-layer-circuit-board", "angels-circuit-board", "z[bob]-d")
 
-    move_item("electronic-circuit", "angels-loaded-circuit-board", "z[bob]-a")
-    move_item("advanced-circuit", "angels-loaded-circuit-board", "z[bob]-b")
-    move_item("processing-unit", "angels-loaded-circuit-board", "z[bob]-c")
-    move_item("advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-d")
+      move_item("electronic-circuit", "angels-loaded-circuit-board", "z[bob]-a")
+      move_item("advanced-circuit", "angels-loaded-circuit-board", "z[bob]-b")
+      move_item("processing-unit", "angels-loaded-circuit-board", "z[bob]-c")
+      move_item("advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-d")
+    end
+    -- bob tech
+    if bobmods.tech and angelsmods.industries.components then
+      data.raw["item-subgroup"]["science-pack"].group="angels-tech"
+      data.raw["item-subgroup"]["science-pack"].order="aa[science-packs]-b[bobs-alien]"
+    end
+    if mods["bobrevamp"] then --- THIS SHOULD BE DONE IN PETROCHEM, and killed if conversion valves are off
+      move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a","recipe")
+      move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b","recipe")
+      move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c","recipe")
+      move_item("solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d","recipe")
+      move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a")
+      move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b")
+      move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c")
+      move_item("solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d")
+    end
+    --fluids
+    if bobmods.plates then
+      data.raw["item-subgroup"]["bob-fluid-pump"].group="water-treatment"
+      data.raw["item-subgroup"]["bob-fluid-pump"].order="c[water]-z[bob-fluid-pump]"
+    end
   end
 end

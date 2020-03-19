@@ -9,6 +9,7 @@ Date: ???
     - Added Sodium Nitrate to Nitric Waste Water when petrochem is enabled
   Modding:
     - Added angels fluid icon base icons
+    - Added angels overlay numbers 6 and 7
   Bugfixes:
     - When a resource is removed, the preset should be removed as well (otherwise it would/could crash)
     - Fixed that mixed uranium sorting (from crystals) did not allow productivity modules

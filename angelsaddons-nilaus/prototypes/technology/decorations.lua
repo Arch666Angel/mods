@@ -5,7 +5,10 @@ data:extend(
       name = "nilaus",
       icon = "__angelsaddons-nilaus__/graphics/technology/nilaus-tech.png",
       icon_size = 128,
-      prerequisites = {},
+      prerequisites =
+      {
+        "optics"
+      },
       effects = {
         {
           type = "unlock-recipe",
@@ -35,7 +38,8 @@ data:extend(
       icon = "__angelsaddons-nilaus__/graphics/technology/nilaus-tech.png",
       icon_size = 128,
       prerequisites = {
-        "automobilism"
+        "automobilism",
+        "nilaus"
       },
       effects = {
         {

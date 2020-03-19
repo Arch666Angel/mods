@@ -5,6 +5,7 @@ end
 if not angelsmods.industries then
   angelsmods.industries = {}
 end
+angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 0}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
@@ -46,16 +47,23 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.items.components-cabling")
 
   --ENTITIES
-  require("prototypes.buildings.angels-assemblers")
+  --require("prototypes.buildings.angels-assemblers")
 
   --RECIPES
-  require("prototypes.recipes.components-entity")
+  --require("prototypes.recipes.components-entity")
   require("prototypes.recipes.components-electronics-recipes")
   require("prototypes.recipes.components-mechanical-recipes")
   require("prototypes.recipes.components-construction-recipes")
   require("prototypes.recipes.components-cabling-recipes")
   require("prototypes.recipes.components-blocks-recipes")
   require("prototypes.recipes.components-weapons-recipes")
+
+  --TECHS
+  require("prototypes.technology.components-electronics-technology")
+  require("prototypes.technology.components-mechanical-technology")
+  require("prototypes.technology.components-construction-technology")
+  require("prototypes.technology.components-weapons-technology")
+  require("prototypes.technology.components-cabling-technology")
 end
 
 --TECH
@@ -64,7 +72,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.items.tech-science-packs")
 
   --ENTITIES
-  require("prototypes.buildings.angels-labs")
+  require("prototypes.buildings.angels-labs-main")
+  require("prototypes.buildings.angels-labs-basic")
   require("prototypes.buildings.angels-labs-enhance")
   require("prototypes.buildings.angels-labs-exploration")
   require("prototypes.buildings.angels-labs-energy")
@@ -75,11 +84,13 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.buildings.angels-accelerator")
 
   --RECIPES
+  require("prototypes.recipes.tech-science-cores-recipes")
   require("prototypes.recipes.tech-science-packs-recipes")
   require("prototypes.recipes.tech-entity")
 
   --TECHS
-  require("prototypes.technology.angels-tech-technology")
+  require("prototypes.technology.tech-lab-technology")
+  require("prototypes.technology.tech-pack-technology")
 end
 
 --ENTITIES
@@ -99,5 +110,5 @@ require("prototypes.recipes.equipment-recipes")
 require("prototypes.recipes.logistics-entity")
 require("prototypes.recipes.vehicles-recipe")
 
-require("prototypes.technology.angels-vequip-technology")
+require("prototypes.technology.vequip-technology")
 require("prototypes.technology.logistics-technology")

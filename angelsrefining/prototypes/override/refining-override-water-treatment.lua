@@ -44,7 +44,7 @@ end
 -------------------------------------------------------------------------------
 -- WASHING --------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if not angelsmods.smelting then
+if angelsmods.trigger.washing_tech == false then--not angelsmods.smelting then
   OV.disable_technology({ "water-washing-1", "water-washing-2" })
 end
 
@@ -115,7 +115,7 @@ end
 -------------------------------------------------------------------------------
 -- PURE-WATER -----------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then 
+if mods["bobplates"] then
   if data.raw.fluid["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({"pure-water", "pure-water-from-lithia"})

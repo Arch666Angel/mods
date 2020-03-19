@@ -190,6 +190,7 @@ local function generate_train_technology(item, tiers)
     end
   else
     item.effects = get_unlocks(item.name, {})
+    item.unit = item.unit or tiers[1]
     table.insert(entries, item)
   end
 

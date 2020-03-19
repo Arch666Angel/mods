@@ -1,6 +1,8 @@
 data:extend(
 {
-  --BOARDS
+  -----------------------------------------------------------------------------
+  -- BOARDS -------------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "circuit-grey-board",
@@ -55,7 +57,9 @@ data:extend(
     order = "e[yellow-board]",
     stack_size = 200,
   },
-  --CIRCUIT BOARDS
+  -----------------------------------------------------------------------------
+  -- CIRCUIT BOARDS -----------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "circuit-grey",
@@ -110,7 +114,9 @@ data:extend(
     order = "e[yellow-circuit]",
     stack_size = 200,
   },
-  --LOADED CIRCUIT BOARD
+  -----------------------------------------------------------------------------
+  -- LOADED CIRCUIT BOARDS ----------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "circuit-red-loaded",
@@ -156,7 +162,9 @@ data:extend(
     order = "e[yellow-circuit-full]",
     stack_size = 200,
   },
-  --COMPONENTS
+  -----------------------------------------------------------------------------
+  -- COMPONENTS ---------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "circuit-resistor",
@@ -212,24 +220,5 @@ data:extend(
     order = "f",
     stack_size = 200,
   },
-  --INTERMEDIATES
-  --{
-  --  type = "item",
-  --  name = "angels-silicon-wafer",
-  --  icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
-  --  icon_size = 32,
-  --  subgroup = "angels-silicon-casting",
-  --  order = "h",
-  --  stack_size = 200
-  --},
-  --{
-  --  type = "item",
-  --  name = "angels-solder-mixture",
-  --  icon = "__angelsindustries__/graphics/icons/silicon-wafer.png",
-  --  icon_size = 32,
-  --  subgroup = "angels-solder-casting",
-  --  order = "h",
-  --  stack_size = 200
-  --},
 }
 )

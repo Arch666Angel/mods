@@ -528,7 +528,7 @@ data:extend(
     name = "angels-solder-mixture",
     category = "crafting",
     subgroup = "angels-alloys",
-    enabled = "true",
+    enabled = "false",
     energy_required = 2,
     ingredients ={
       {type="item", name="angels-plate-tin", amount=2},

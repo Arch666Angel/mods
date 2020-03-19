@@ -43,47 +43,51 @@ data:extend(
   {
     type = "item-group",
     name = "angels-components",
-    order = "la[angels]-e[industries]-a",
+    order = "la[angels]-e[industries]-aa",
     inventory_order = "la[angels]-e[industries]-a",
-    icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/components-tech.png",
+    icons = {
+      {
+        icon = "__base__/graphics/item-group/intermediate-products.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon_size = 32,
+        scale = 64 / 32 * 0.35,
+        shift = {20, -20}
+      }
+    }
   },
   {
     type = "item-subgroup",
     name = "angels-basic-intermediate", -- like what doesn't fit in other groups
-    group = "intermediate-products",
+    group = "angels-components",
     order = "a[basic]-a",
   },
   {
     type = "item-subgroup",
     name = "angels-board",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-a[basic-board]",
   },
   {
     type = "item-subgroup",
     name = "angels-circuit-board",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-b[circuit-board]",
   },
   {
     type = "item-subgroup",
     name = "angels-loaded-circuit-board",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-c[loaded-circuit-board]",
   },
   {
     type = "item-subgroup",
     name = "angels-circuit-components",
-    group = "intermediate-products",
+    group = "angels-components",
     order = "b[electronics]-d[circuit-components]",
   },
-  -- {
-  --   type = "item-subgroup",
-  --   name = "angels-electronics",
-  --   group = "angels-components",
-  --   order = "b[electronics]-e[basic-components]",
-  -- },
   {
     type = "item-subgroup",
     name = "angels-motor-casing",
@@ -146,9 +150,21 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "angels-cable-shielding",
+    group = "angels-components",
+    order = "g[cables]-a[shielding]",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-cable-harness",
     group = "angels-components",
-    order = "g[cables]",
+    order = "g[cables]-b[harness]",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-servo-motor",
+    group = "angels-components",
+    order = "g[cables]-c[servo-motor]",
   },
   {
     type = "item-subgroup",
@@ -157,63 +173,71 @@ data:extend(
     order = "h[tools]",
   },
   {
+    type = "item-group",
+    name = "angels-blocks",
+    order = "la[angels]-e[industries]-ab",
+    inventory_order = "la[angels]-e[industries]-ab",
+    icon_size = 64,
+    icon = "__angelsindustries__/graphics/item-group/components-tech.png",
+  },
+  {
     type = "item-subgroup",
     name = "blocks-frames",
-    group = "angels-components",
+    group = "angels-blocks",
     order = "u[blocks]-aa[frame]",
   },
   {
     type = "item-subgroup",
     name = "blocks-electronics",
-    group = "angels-components",
+    group = "angels-blocks",
     order = "u[blocks]-ab[electronics]",
   },
   {
     type = "item-subgroup",
     name = "blocks-basic",
-    group = "angels-components",
+    group = "angels-blocks",
     order = "u[blocks]-ac[basic]",
   },
   {
     type = "item-subgroup",
     name = "blocks-enhancement",
-    group = "angels-tech",
+    group = "angels-blocks",
     order = "u[blocks]-ba[enhancement]",
   },
   {
     type = "item-subgroup",
     name = "blocks-energy",
-    group = "angels-tech",
+    group = "angels-blocks",
     order = "u[blocks]-bb[energy]",
   },
   {
     type = "item-subgroup",
     name = "blocks-exploration",
-    group = "angels-tech",
+    group = "angels-blocks",
     order = "u[blocks]-bc[exploration]",
   },
   {
     type = "item-subgroup",
     name = "blocks-logistic",
-    group = "angels-tech",
+    group = "angels-blocks",
     order = "u[blocks]-bd[logistic]",
   },
   {
     type = "item-subgroup",
     name = "blocks-production",
-    group = "angels-components",
+    group = "angels-blocks",
     order = "u[blocks]-be[production]",
   },
   {
     type = "item-subgroup",
     name = "blocks-processing",
-    group = "angels-tech",
+    group = "angels-blocks",
     order = "u[blocks]-bf[processing]",
   },
   {
     type = "item-subgroup",
     name = "blocks-warfare",
-    group = "angels-tech",
+    group = "angels-blocks",
     order = "u[blocks]-bg[warfare]",
   },
   {
@@ -271,13 +295,25 @@ data:extend(
     type = "item-subgroup",
     name = "angels-labs-1",
     group = "angels-tech",
-    order = "y",
+    order = "z[labs]-a[specialized]-a[mk1]",
   },
   {
     type = "item-subgroup",
     name = "angels-labs-2",
     group = "angels-tech",
-    order = "z",
+    order = "z[labs]-a[specialized]-b[mk2]",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-labs-3",
+    group = "angels-tech",
+    order = "z[labs]-a[specialized]-c[mk3]",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-labs-4",
+    group = "angels-tech",
+    order = "z[labs]-b[archive]",
   },
   -- EQUIPMENT
   --{
