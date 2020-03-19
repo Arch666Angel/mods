@@ -987,7 +987,7 @@ data:extend(
     {
       type = "technology",
       name = "tech-specialised-labs-advanced",
-      icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+      icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "space-science-pack"

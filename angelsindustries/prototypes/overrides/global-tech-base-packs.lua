@@ -35,6 +35,7 @@ pack_replace("armor-making-2","green","red") --move armour making down a tier
 angelsmods.functions.add_flag("automation-science-pack", "hidden")
 OV.disable_recipe({"automation-science-pack"})
 pack_replace("automation-2","green","red")
+OV.remove_prereq("automation-2","logistic-science-pack")
 -- SMELTING
 pack_replace("angels-steel-smelting-1","green","red")
 -- BIO PROCESSING

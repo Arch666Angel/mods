@@ -551,6 +551,49 @@ function replace_gen_mats()
     OV.global_replace_item("advanced-processing-unit", "circuit-yellow-loaded")
     OV.remove_unlock("advanced-electronics-3", "advanced-processing-unit")
     data.raw.item["advanced-processing-unit"].hidden = true
+    -- ELECTRONIC INTERMEDIATES
+    --wooden board
+    OV.global_replace_item("wooden-board", "circuit-grey-board")
+    OV.remove_unlock("bio-paper-1", "wooden-board")
+    data.raw.item["wooden-board"].hidden = true
+    --phenolic board
+    OV.global_replace_item("phenolic-board", "circuit-orange-board")
+    OV.remove_unlock("advanced-electronics", "phenolic-board")
+    data.raw.item["phenolic-board"].hidden = true
+    --angels-glass-fiber board
+    OV.global_replace_item("fibreglass-board", "circuit-blue-board")
+    --OV.remove_unlock("angels-glass-smelting-3", "angels-glass-fiber-board")
+    --data.raw.item["angels-glass-fiber-board"].hidden = true
+    --NEED TO UPDATE THE ICON for the smelting recipe i think...
+    --circuit board
+    OV.global_replace_item("circuit-board", "circuit-orange")
+    OV.remove_unlock("advanced-electronics", "circuit-board")
+    data.raw.item["circuit-board"].hidden = true
+    --superior circuit board
+    OV.global_replace_item("superior-circuit-board", "circuit-blue")
+    OV.remove_unlock("advanced-electronics-2", "superior-circuit-board")
+    data.raw.item["superior-circuit-board"].hidden = true
+    --multi-layer circuit board
+    OV.global_replace_item("multi-layer-circuit-board", "circuit-yellow")
+    OV.remove_unlock("advanced-electronics-3", "multi-layer-circuit-board")
+    data.raw.item["multi-layer-circuit-board"].hidden = true
+    --basic-electronic-components
+    OV.global_replace_item("basic-electronic-components", "circuit-resistor")
+    OV.remove_unlock("electronics", "basic-electronic-components")
+    data.raw.item["basic-electronic-components"].hidden = true
+    --electronic-components
+    OV.global_replace_item("electronic-components", "circuit-transistor")
+    OV.remove_unlock("advanced-electronics", "electronic-components")
+    data.raw.item["electronic-components"].hidden = true
+    --intergrated-electronics
+    OV.global_replace_item("intergrated-electronics", "circuit-microchip")
+    OV.remove_unlock("advanced-electronics-2", "intergrated-electronics")
+    data.raw.item["intergrated-electronics"].hidden = true
+    --SKIP THE TRANSFORMER
+    --processing-electronics
+    OV.global_replace_item("processing-electronics", "circuit-cpu")
+    OV.remove_unlock("advanced-electronics-3", "processing-electronics")
+    data.raw.item["processing-electronics"].hidden = true
     OV.execute()
   end
   if mods["bobplates"] then

@@ -31,7 +31,6 @@ if mods["bobassembly"] then
   end
   --higher assembly
   pack_replace("automation", "grey", "red")
-  OV.remove_prereq("automation-2", "logistic-science-pack")
   OV.add_prereq("automation-3", "tech-orange-circuit")
   pack_replace("automation-4", "blue", "orange")
   OV.remove_prereq("automation-4", "chemical-science-pack")
