@@ -9,7 +9,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
+          tint = angelsmods.refining.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -29,7 +29,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
+          tint = angelsmods.refining.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -164,7 +164,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
+          tint = angelsmods.refining.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -184,7 +184,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
+          tint = angelsmods.refining.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -207,9 +207,9 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.015 * 60,
-        drain = "55kW"
+        drain = "60kW"
       },
-      energy_usage = "1595kW", -- with drain power this comes exactly to 1.65 MW, produces 60/s steam (at speed 1.5)
+      energy_usage = "1740kW", -- with drain power this comes exactly to 1.8 MW, produces 60/s steam (at speed 1.5)
       animation = {
         north = {
           filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
@@ -319,7 +319,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
+          tint = angelsmods.refining.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -339,7 +339,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
+          tint = angelsmods.refining.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }

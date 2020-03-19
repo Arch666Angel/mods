@@ -332,7 +332,13 @@ data:extend(
       type = "item-subgroup",
       name = "water-washing",
       group = "water-treatment",
-      order = "d"
+      order = "da"
+    },
+    {
+      type = "item-subgroup",
+      name = "water-washing-filtering",
+      group = "water-treatment",
+      order = "db"
     },
     {
       type = "item-subgroup",

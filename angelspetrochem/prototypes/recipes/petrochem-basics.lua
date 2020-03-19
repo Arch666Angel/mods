@@ -1,3 +1,13 @@
+local function create_steam_recipe_icon(fluid_name)
+  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(fluid_name))
+  for layer_index, layer in pairs(icon_layers or {}) do
+    layer.shift = layer.shift or {}
+    layer.shift = {(layer.shift[1] or 0)/2.3-9, (layer.shift[2] or 0)/2.3-9}
+    layer.scale = (layer.scale or 1)/2.3
+  end
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons("steam"), icon_layers)
+end
+
 data:extend(
   {
     --BASIC CHEMISTRY
@@ -15,6 +25,7 @@ data:extend(
         {type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2}
       },
       always_show_products = true,
+      icons = create_steam_recipe_icon("water"),
       order = "a[steam]-b"
     },
     {
@@ -31,6 +42,7 @@ data:extend(
         {type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2}
       },
       always_show_products = true,
+      icons = create_steam_recipe_icon("water-purified"),
       order = "a[steam]-b"
     },
     {

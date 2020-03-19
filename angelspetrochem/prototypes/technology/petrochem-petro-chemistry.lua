@@ -674,7 +674,9 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-electric-boiler"
+        "angels-electric-boiler",
+        "oil-steam-cracking-2",
+        "gas-steam-cracking-2"
       },
       effects = {
         {
@@ -703,7 +705,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-electric-boiler-2"
+        "angels-electric-boiler-2",
+        "angels-advanced-chemistry-4"
       },
       effects = {
         {
