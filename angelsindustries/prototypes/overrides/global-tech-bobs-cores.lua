@@ -59,8 +59,10 @@ end
 -- BOBS GREENHOUSE ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods['bobgreenhouse'] then
-  OV.set_science_pack("bob-greenhouse", "datacore-processing-1", 2)
-  OV.set_science_pack("bob-fertiliser", "datacore-processing-1", 2)
+  --OV.set_science_pack("bob-greenhouse", "datacore-processing-1", 2)
+  core_replace("bob-greenhouse","basic","processing")
+  --OV.set_science_pack("bob-fertiliser", "datacore-processing-1", 2)
+  core_replace("bob-fertiliser","basic","processing")
 end
 
 -------------------------------------------------------------------------------

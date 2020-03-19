@@ -554,7 +554,7 @@ function replace_gen_mats()
     -- ELECTRONIC INTERMEDIATES
     --wooden board
     OV.global_replace_item("wooden-board", "circuit-grey-board")
-    OV.remove_unlock("bio-paper-1", "wooden-board")
+    OV.remove_unlock("bio-paper-1", "wooden-board-paper")
     data.raw.item["wooden-board"].hidden = true
     --phenolic board
     OV.global_replace_item("phenolic-board", "circuit-orange-board")

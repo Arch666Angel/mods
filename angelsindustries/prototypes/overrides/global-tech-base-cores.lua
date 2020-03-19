@@ -72,13 +72,16 @@ core_replace("effect-transmission", "processing", "enhance")
 OV.set_science_pack("toolbelt", "datacore-enhance-1", 2)
 OV.set_science_pack("optics", "datacore-enhance-1", 2)
 core_replace("rocket-fuel","war","enhance")
+core_replace("artillery-shell-speed-1","war","enhance")
+core_replace("follower-robot-count-7","war","enhance")
 -- PETROCHEM
 core_replace("angels-rocket-fuel","war","enhance")
 
 -------------------------------------------------------------------------------
 -- ENERGY CORES ---------------------------------------------------------------
 -------------------------------------------------------------------------------
-
+-- BASE GAME
+core_replace("energy-weapons-damage-7","war","energy")
 -------------------------------------------------------------------------------
 -- LOGISTIC CORES -------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -109,6 +112,8 @@ for rec_4tech,_ in pairs(data.raw.technology) do --fix follower robot count tech
     core_replace(rec_4tech, "logistic", "war")
   end
 end
+--undo the change for the infinite tech (would normally be in with enhancement)
+core_replace("follower-robot-count-7","war","enhance")
 angelsmods.functions.add_flag("military-science-pack", "hidden")
 OV.disable_recipe({"military-science-pack"})
 if mods["angelsexploration"] then
