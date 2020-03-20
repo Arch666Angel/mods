@@ -10,6 +10,10 @@ Date: ???
   Modding:
     - Added angels fluid icon base icons
     - Added angels overlay numbers 6 and 7
+  Balancing:
+    - With the components mostly done, cupric sorting recipes received minimal changes:
+      - Tier 2 now gives tin instead of silicon
+      - Tier 3 now gives silicon instead of silver
   Bugfixes:
     - When a resource is removed, the preset should be removed as well (otherwise it would/could crash)
     - Fixed that mixed uranium sorting (from crystals) did not allow productivity modules
