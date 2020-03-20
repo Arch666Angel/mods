@@ -1,77 +1,72 @@
 local OV = angelsmods.functions.OV
 
-local move_item = function(i_name, i_subgroup, i_order, i_type)
-  if not i_type then
-    i_type = "item"
-  end
-  if not data.raw[i_type] then
-    return
-  end
-  if not data.raw[i_type][i_name] then
-    return
-  end
-
-  if i_subgroup then
-    data.raw[i_type][i_name].subgroup = i_subgroup
-  end
-  if i_order then
-    data.raw[i_type][i_name].order = i_order
-  end
-end
+local move_item = angelsmods.functions.move_item
 
 if angelsmods.industries.overhaul then
-  -----------------------------------------------------------------------------
-  -- GUN, TURRET, AMMO, CAPSULES ----------------------------------------------
-  -----------------------------------------------------------------------------
-  -- Regular gun
-  move_item("pistol", "angels-warfare-bullet-guns", "a[gun]-a[pistol]", "gun")
-  move_item("submachine-gun", "angels-warfare-bullet-guns", "a[gun]-b[submachine]", "gun")
-  move_item("gun-turret", "angels-warfare-bullet-guns", "b[turret]-a[gun]")
-  move_item("firearm-magazine", "angels-warfare-bullet-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
-  move_item("piercing-rounds-magazine", "angels-warfare-bullet-guns", "c[basic-ammo]-b[piercing-rounds]", "ammo")
-  move_item("uranium-rounds-magazine", "angels-warfare-bullet-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
-  -- Shotgun
-  move_item("shotgun", "angels-warfare-shotgun-guns", "a[gun]-a[shotgun]", "gun")
-  move_item("combat-shotgun", "angels-warfare-shotgun-guns", "a[gun]-b[combat-shotgun]", "gun")
-  move_item("shotgun-shell", "angels-warfare-shotgun-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
-  move_item("piercing-shotgun-shell", "angels-warfare-shotgun-guns", "c[basic-ammo]-b[piercing-rounds]", "ammo")
-  -- Rockets
-  move_item("rocket-launcher", "angels-warfare-rocket-guns", "a[gun]-a[rocket-launcher]", "gun")
-  move_item("rocket", "angels-warfare-rocket-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
-  move_item("explosive-rocket", "angels-warfare-rocket-guns", "c[basic-ammo]-b[explosive-rounds]", "ammo")
-  move_item("atomic-bomb", "angels-warfare-rocket-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
-  -- Flamethrower
-  move_item("flamethrower", "angels-warfare-flamethrower-guns", "a[gun]-a[flamethrower]", "gun")
-  move_item("flamethrower-turret", "angels-warfare-flamethrower-guns", "b[turret]-a[flame]")
-  move_item("flamethrower-ammo", "angels-warfare-flamethrower-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
-  -- Laser
-  move_item("laser-turret", "angels-warfare-laser-guns", "b[turret]-a[laser]")
-  -- Cannon
-  move_item("cannon-shell", "angels-warfare-tank-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
-  move_item("explosive-cannon-shell", "angels-warfare-tank-guns", "c[basic-ammo]-b[explosive-rounds]", "ammo")
-  move_item("uranium-cannon-shell", "angels-warfare-tank-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
-  move_item(
-    "explosive-uranium-cannon-shell",
-    "angels-warfare-tank-guns",
-    "c[basic-ammo]-d[explosive-uranium-rounds]",
-    "ammo"
-  )
-  -- Artillery
-  move_item("artillery-targeting-remote", "angels-warfare-artillery-guns", "a[gun]-a[remote]", "capsule")
-  move_item("artillery-turret", "angels-warfare-artillery-guns", "b[turret]-a[artillery]")
-  move_item("artillery-shell", "angels-warfare-artillery-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
-  -- Capsules
-  move_item("land-mine", "angels-warfare-capsules-manual", "a[mine]-a[basic]")
-  move_item("grenade", "angels-warfare-capsules-manual", "b[grenade]-a[single]", "capsule")
-  move_item("cluster-grenade", "angels-warfare-capsules-manual", "b[grenade]-b[cluster]", "capsule")
-  move_item("poison-capsule", "angels-warfare-capsules-manual", "c[clouds]-a[poison]", "capsule")
-  move_item("slowdown-capsule", "angels-warfare-capsules-manual", "c[clouds]-b[slowdown]", "capsule")
-  move_item("defender-capsule", "angels-warfare-capsules-manual", "d[troups]-a[defender]", "capsule")
-  move_item("distractor-capsule", "angels-warfare-capsules-manual", "d[troups]-b[distractor]", "capsule")
-  move_item("destroyer-capsule", "angels-warfare-capsules-manual", "d[troups]-c[destroyer]", "capsule")
-  -- Move walls
-  move_item("stone-wall", "angels-warfare-wall", "a[wall]-a[stone]-a[wall]")
-  move_item("gate", "angels-warfare-wall", "a[wall]-a[stone]-b[gate]")
+  if angelsmods.industries.components then
+    -- Move categories
+    local function replace_group(list, from_group, to_group)
+      for k, v in pairs(list) do
+        if v.group == from_group then
+          v.group = to_group
+        end
+      end
+    end
+    replace_group(data.raw["item-subgroup"], "combat", "angels-warfare")
+
+    -----------------------------------------------------------------------------
+    -- GUN, TURRET, AMMO, CAPSULES ----------------------------------------------
+    -----------------------------------------------------------------------------
+    -- Regular gun
+    move_item("pistol", "angels-warfare-bullet-guns", "a[gun]-a[pistol]", "gun")
+    move_item("submachine-gun", "angels-warfare-bullet-guns", "a[gun]-b[submachine]", "gun")
+    move_item("gun-turret", "angels-warfare-bullet-guns", "b[turret]-a[gun]")
+    move_item("firearm-magazine", "angels-warfare-bullet-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
+    move_item("piercing-rounds-magazine", "angels-warfare-bullet-guns", "c[basic-ammo]-b[piercing-rounds]", "ammo")
+    move_item("uranium-rounds-magazine", "angels-warfare-bullet-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
+    -- Shotgun
+    move_item("shotgun", "angels-warfare-shotgun-guns", "a[gun]-a[shotgun]", "gun")
+    move_item("combat-shotgun", "angels-warfare-shotgun-guns", "a[gun]-b[combat-shotgun]", "gun")
+    move_item("shotgun-shell", "angels-warfare-shotgun-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
+    move_item("piercing-shotgun-shell", "angels-warfare-shotgun-guns", "c[basic-ammo]-b[piercing-rounds]", "ammo")
+    -- Rockets
+    move_item("rocket-launcher", "angels-warfare-rocket-guns", "a[gun]-a[rocket-launcher]", "gun")
+    move_item("rocket", "angels-warfare-rocket-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
+    move_item("explosive-rocket", "angels-warfare-rocket-guns", "c[basic-ammo]-b[explosive-rounds]", "ammo")
+    move_item("atomic-bomb", "angels-warfare-rocket-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
+    -- Flamethrower
+    move_item("flamethrower", "angels-warfare-flamethrower-guns", "a[gun]-a[flamethrower]", "gun")
+    move_item("flamethrower-turret", "angels-warfare-flamethrower-guns", "b[turret]-a[flame]")
+    move_item("flamethrower-ammo", "angels-warfare-flamethrower-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
+    -- Laser
+    move_item("laser-turret", "angels-warfare-laser-guns", "b[turret]-a[laser]")
+    -- Cannon
+    move_item("cannon-shell", "angels-warfare-tank-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
+    move_item("explosive-cannon-shell", "angels-warfare-tank-guns", "c[basic-ammo]-b[explosive-rounds]", "ammo")
+    move_item("uranium-cannon-shell", "angels-warfare-tank-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
+    move_item(
+      "explosive-uranium-cannon-shell",
+      "angels-warfare-tank-guns",
+      "c[basic-ammo]-d[explosive-uranium-rounds]",
+      "ammo"
+    )
+    -- Artillery
+    move_item("artillery-targeting-remote", "angels-warfare-artillery-guns", "a[gun]-a[remote]", "capsule")
+    move_item("artillery-turret", "angels-warfare-artillery-guns", "b[turret]-a[artillery]")
+    move_item("artillery-shell", "angels-warfare-artillery-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
+    -- Capsules
+    move_item("land-mine", "angels-warfare-capsules-manual", "a[mine]-a[basic]")
+    move_item("grenade", "angels-warfare-capsules-manual", "b[grenade]-a[single]", "capsule")
+    move_item("cluster-grenade", "angels-warfare-capsules-manual", "b[grenade]-b[cluster]", "capsule")
+    move_item("poison-capsule", "angels-warfare-capsules-manual", "c[clouds]-a[poison]", "capsule")
+    move_item("slowdown-capsule", "angels-warfare-capsules-manual", "c[clouds]-b[slowdown]", "capsule")
+    move_item("defender-capsule", "angels-warfare-capsules-manual", "d[troups]-a[defender]", "capsule")
+    move_item("distractor-capsule", "angels-warfare-capsules-manual", "d[troups]-b[distractor]", "capsule")
+    move_item("destroyer-capsule", "angels-warfare-capsules-manual", "d[troups]-c[destroyer]", "capsule")
+    -- Move walls
+    move_item("stone-wall", "angels-warfare-wall", "a[wall]-a[stone]-a[wall]")
+    move_item("gate", "angels-warfare-wall", "a[wall]-a[stone]-b[gate]")
+  end
 
   -----------------------------------------------------------------------------
   -- VEHICLES -----------------------------------------------------------------
@@ -117,8 +112,6 @@ if angelsmods.industries.overhaul then
     move_item("fluid-wagon", "angels-vehicle-train-vanilla", false, "item-with-entity-data")
     move_item("artillery-wagon", "angels-vehicle-train-vanilla", false, "item-with-entity-data")
   end
-
-
 
   -----------------------------------------------------------------------------
   -- ROBOTS -------------------------------------------------------------------
@@ -322,8 +315,6 @@ if angelsmods.industries.overhaul then
       }
     }
   end
-
-
 
   -----------------------------------------------------------------------------
   -- POWER --------------------------------------------------------------------
@@ -633,16 +624,12 @@ if angelsmods.industries.overhaul then
     end
   end
 
-
-
   -----------------------------------------------------------------------------
   -- Fluid --------------------------------------------------------------------
   -----------------------------------------------------------------------------
   if bobmods and bobmods.plates then
     move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]", "recipe")
   end
-
-
 
   -----------------------------------------------------------------------------
   -- INTERMEDIATES ------------------------------------------------------------
@@ -715,14 +702,14 @@ if angelsmods.industries.overhaul then
     end
     -- bob tech
     if bobmods.tech and angelsmods.industries.components then
-      data.raw["item-subgroup"]["science-pack"].group="angels-tech"
-      data.raw["item-subgroup"]["science-pack"].order="aa[science-packs]-b[bobs-alien]"
+      data.raw["item-subgroup"]["science-pack"].group = "angels-tech"
+      data.raw["item-subgroup"]["science-pack"].order = "aa[science-packs]-b[bobs-alien]"
     end
     if mods["bobrevamp"] then --- THIS SHOULD BE DONE IN PETROCHEM, and killed if conversion valves are off
-      move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a","recipe")
-      move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b","recipe")
-      move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c","recipe")
-      move_item("solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d","recipe")
+      move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a", "recipe")
+      move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b", "recipe")
+      move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c", "recipe")
+      move_item("solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d", "recipe")
       move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a")
       move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b")
       move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c")
@@ -730,8 +717,8 @@ if angelsmods.industries.overhaul then
     end
     --fluids
     if bobmods.plates then
-      data.raw["item-subgroup"]["bob-fluid-pump"].group="water-treatment"
-      data.raw["item-subgroup"]["bob-fluid-pump"].order="c[water]-z[bob-fluid-pump]"
+      data.raw["item-subgroup"]["bob-fluid-pump"].group = "water-treatment"
+      data.raw["item-subgroup"]["bob-fluid-pump"].order = "c[water]-z[bob-fluid-pump]"
     end
   end
 end
