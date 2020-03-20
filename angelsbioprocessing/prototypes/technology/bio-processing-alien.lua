@@ -123,10 +123,15 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
-      "bio-processing-alien-1"
+      "bio-processing-alien-1",
+      "ore-powderizer"
     },
     effects =
     {
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-powder-from-dust"
+      },
       {
         type = "unlock-recipe",
         recipe = "crystal-powder-slurry"

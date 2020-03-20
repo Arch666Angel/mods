@@ -278,6 +278,18 @@ data:extend(
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
   },
+  {
+    type = "tool",
+    name = "angels-science-pack-white",
+    icon = "__angelsindustries__/graphics/icons/science-pack-white.png",
+    icon_size = 32,
+    subgroup = "angels-science-pack",
+    order = "g[science-pack-white]",
+    stack_size = 200,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+  },
   --COMPONENTS
   {
     type = "item",
@@ -304,6 +316,15 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-pack-components",
     order = "c",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "science-gravitational-analyzer",
+    icon = "__angelsindustries__/graphics/icons/science-gravitational-analyzer.png",
+    icon_size = 32,
+    subgroup = "angels-pack-components",
+    order = "da",
     stack_size = 200
   },
 }

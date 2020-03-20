@@ -2,13 +2,14 @@
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
-angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0.5}
+angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
 angelsmods.trigger.enable_auto_barreling = settings.startup["angels-enable-auto-barreling"].value
 angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"].value
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
+angelsmods.trigger.washing_tech = angelsmods.trigger.washing_tech or false
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}

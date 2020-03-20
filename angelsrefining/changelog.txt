@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.5
+Date: 20-03-2020
+  Changes:
+    - Added new graphics for fluid icons
+    - Powdered refining depends on lubricant tech now
+    - Moved seafloor pump more landinwards to be in line with 18.10 #78
+    - Added Salt to Chloric Waste Water when petrochem is enabled
+    - Added Sodium Nitrate to Nitric Waste Water when petrochem is enabled
+  Modding:
+    - Added angels fluid icon base icons
+    - Added angels overlay numbers 6 and 7
+  Balancing:
+    - With the components mostly done, cupric sorting recipes received minimal changes:
+      - Tier 2 now gives tin instead of silicon
+      - Tier 3 now gives silicon instead of silver
+  Bugfixes:
+    - When a resource is removed, the preset should be removed as well (otherwise it would/could crash)
+    - Fixed that mixed uranium sorting (from crystals) did not allow productivity modules
+---------------------------------------------------------------------------------------------------
 Version: 0.11.4
 Date: 22.02.2020
   Bugfixes:

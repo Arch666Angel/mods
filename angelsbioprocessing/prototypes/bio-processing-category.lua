@@ -406,27 +406,21 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-biter",
+    name = "bio-biter-small",
     group = "bio-processing-alien",
     order = "da",
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-breeding",
+    name = "bio-biter-medium",
     group = "bio-processing-alien",
     order = "db",
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-eggs",
+    name = "bio-biter-big",
     group = "bio-processing-alien",
     order = "dc",
-  },
-  {
-    type = "item-subgroup",
-    name = "bio-biter-butchery",
-    group = "bio-processing-alien",
-    order = "dd",
   },
   {
     type = "item-subgroup",

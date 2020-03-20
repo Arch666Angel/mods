@@ -9,6 +9,8 @@ angelsmods.trigger = angelsmods.trigger or {}
 --CONVERTER RECIPES
 angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"].value
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
+angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
+angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
 
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
@@ -55,7 +57,11 @@ require("prototypes.recipes.petrochem-sulfur")
 require("prototypes.recipes.petrochem-chlorine")
 require("prototypes.recipes.petrochem-entity")
 
-require("prototypes.technology.petrochem-technology")
+require("prototypes.technology.petrochem-basics")
+require("prototypes.technology.petrochem-basic-chemistry")
+require("prototypes.technology.petrochem-petro-chemistry")
+require("prototypes.technology.petrochem-solids")
+require("prototypes.technology.petrochem-weaponary")
 
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()

@@ -7,6 +7,7 @@ data:extend({
     prerequisites =
     {
       "powder-metallurgy-1",
+      "angels-cobalt-smelting-2",
       "chlorine-processing-1",
     },
     effects =
@@ -57,6 +58,7 @@ data:extend({
     prerequisites =
     {
       "angels-tungsten-smelting-1",
+      "angels-nickel-smelting-2",
       "ore-processing-1",
       "angels-nitrogen-processing-1",
     },

@@ -15,7 +15,7 @@ function process() {
 
 # Insert version and date if not defined
   if [ -f "${dirname}/changelog.txt" ]; then
-    date=`date +"%d.%m.%Y"`
+    date=`date +"%d-%m-%Y"`
     awk '!f && /Date:\s*\?+/ {$0="Date: '"${date}"'"; f=1}1' "${dirname}/changelog.txt" > tmp.txt
     mv tmp.txt "${dirname}/changelog.txt"
     awk '!f && /Version:\s*\?+/ {$0="Version: '"${version}"'"; f=1}1' "${dirname}/changelog.txt" > tmp.txt

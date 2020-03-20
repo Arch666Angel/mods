@@ -287,8 +287,8 @@ OV.patch_recipes(merge_table_of_tables{
   create_sorting_recipes("cupric", "angelsore9%s", {
     ["!!"          ] = (not special_vanilla) and {true, true, true, true},
     ["copper-ore"  ] = (not special_vanilla) and {2, 3, 4, 4},
-    ["quartz"      ] = (not special_vanilla) and {2, 2, 2, 2},
-    ["silver-ore"  ] = (not special_vanilla) and {0, 1, 1, 1},
+    ["tin-ore"     ] = (not special_vanilla) and {2, 2, 2, 2},
+    ["quartz"      ] = (not special_vanilla) and {0, 1, 1, 1},
     ["gold-ore"    ] = (not special_vanilla) and {0, 0, 1, 1},
     ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1},
   }, true),
@@ -428,6 +428,7 @@ OV.patch_recipes(merge_table_of_tables{
 -------------------------------------------------------------------------------
 -- SLAG SORTING ---------------------------------------------------------------
 -------------------------------------------------------------------------------
+local slag_color = { {202,099,017}, {097,052,020}, {097,052,020} }
 OV.patch_recipes(merge_table_of_tables{
   create_slag_recipes("slag-processing%s", {
     ["iron-ore"             ] = { special_vanilla and 0.8 or 0.4, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -452,33 +453,44 @@ OV.patch_recipes(merge_table_of_tables{
     ["fluorite-ore"         ] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.2 },
     ["thorium-ore"          ] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.005 },
   },{
-    --[[1]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla1.png" or "__angelsrefining__/graphics/icons/slag-processing-bob1.png",
-    --[[2]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla2.png" or "__angelsrefining__/graphics/icons/slag-processing-bob2.png",
-    --[[3]] "__angelsrefining__/graphics/icons/slag-processing-angel3.png",
-    --[[4]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla3.png" or "__angelsrefining__/graphics/icons/slag-processing-angel5.png",
-    --[[5]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla4.png" or {
-      { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__angelsrefining__/graphics/icons/ore-zinc.png", scale = 0.32, shift = {-12, 12} },
-      { icon = "__angelsrefining__/graphics/icons/ore-rutile.png", scale = 0.32, shift = {12, 12} },
-    },
-    --[[6]] {
-      { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__angelsrefining__/graphics/icons/ore-bauxite.png", scale = 0.32, shift = {-12, 12} },
-      ore_exists("manganese-ore") and { icon = "__angelsrefining__/graphics/icons/ore-manganese.png", scale = 0.32, shift = {12, 12} } or nil,
-      (not ore_exists("platinum-ore")) and ore_exists("chrome-ore") and { icon = "__angelsrefining__/graphics/icons/ore-chrome.png", scale = 0.32, shift = {0, 12} } or nil,
-    },
-    --[[7]] ore_exists("platinum-ore") and {
-      { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__angelsrefining__/graphics/icons/ore-platinum.png", scale = 0.32, shift = {-12, 12} },
-      { icon = "__angelsrefining__/graphics/icons/ore-chrome.png", scale = 0.32, shift = {12, 12} },
-    } or nil,
-    --[[8]] "__angelsrefining__/graphics/icons/slag-processing-angel6.png",
-    --[[9]] {
-      { icon = "__angelsrefining__/graphics/icons/slag-processing-blank.png" },
-      { icon = "__base__/graphics/icons/uranium-ore.png", scale = 32/64 * 0.32, shift = {-12, 12}, icon_size = 64 },
-      ore_exists("fluorite-ore") and { icon = "__angelsrefining__/graphics/icons/ore-fluorite.png", scale = 0.32, shift = {12, 12} } or nil,
-      ore_exists("thorium-ore") and { icon = "__boblibrary__/graphics/icons/ore-5.png", tint = { b=0.25, g=1, r=1 }, scale = 0.32, shift = {0, 12} } or nil,
-    },
+    --[[1]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla1.png" or angelsmods.functions.create_liquid_recipe_icon({
+      "iron-ore",
+      "copper-ore"
+    }, slag_color),
+    --[[2]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla2.png" or angelsmods.functions.create_liquid_recipe_icon({
+      "lead-ore",
+      "tin-ore"
+    }, slag_color),
+    --[[3]] angelsmods.functions.create_liquid_recipe_icon({
+      "silver-ore",
+      "quartz"
+    }, slag_color),
+    --[[4]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla3.png" or angelsmods.functions.create_liquid_recipe_icon({
+      "gold-ore",
+      "nickel-ore"
+    }, slag_color),
+    --[[5]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla4.png" or angelsmods.functions.create_liquid_recipe_icon({
+      "zinc-ore",
+      "rutile-ore"
+    }, slag_color),
+    --[[6]] angelsmods.functions.create_liquid_recipe_icon({
+      "bauxite-ore",
+      ore_exists("manganese-ore") and "manganese-ore" or nil,
+      (not ore_exists("platinum-ore")) and ore_exists("chrome-ore") and "chrome-ore" or nil,
+    }, slag_color),
+    --[[7]] ore_exists("platinum-ore") and angelsmods.functions.create_liquid_recipe_icon({
+      "platinum-ore",
+      "chrome-ore",
+    }, slag_color) or nil,
+    --[[8]] angelsmods.functions.create_liquid_recipe_icon({
+      "cobalt-ore",
+      "tungsten-ore",
+    }, slag_color),
+    --[[9]] angelsmods.functions.create_liquid_recipe_icon({
+      "uranium-ore",
+      ore_exists("fluorite-ore") and "fluorite-ore" or nil,
+      ore_exists("thorium-ore") and "thorium-ore" or nil,
+    }, slag_color),
   }),
   {
     mods["angelssmelting"] and {name = "filter-ceramic", ingredients = {{"solid-aluminium-oxide", amount = 1}}},

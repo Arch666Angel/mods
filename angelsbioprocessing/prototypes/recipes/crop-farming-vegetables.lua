@@ -7,7 +7,7 @@ data:extend(
     category = "temperate-farming",
     subgroup = "farming-temperate",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="temperate-1-seed", amount=5},
@@ -32,7 +32,7 @@ data:extend(
     category = "temperate-farming",
     subgroup = "farming-temperate",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="temperate-2-seed", amount=5},
@@ -57,7 +57,7 @@ data:extend(
     category = "temperate-farming",
     subgroup = "farming-temperate",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="temperate-3-seed", amount=5},
@@ -83,7 +83,7 @@ data:extend(
     category = "temperate-farming",
     subgroup = "farming-temperate",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="temperate-4-seed", amount=5},
@@ -110,7 +110,7 @@ data:extend(
     category = "temperate-farming",
     subgroup = "farming-temperate",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="temperate-5-seed", amount=5},
@@ -142,7 +142,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "temperate-1", amount= 10}
+      {type="item", name= "temperate-1", amount= 5}
     },
     results=
     {
@@ -160,7 +160,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "temperate-2", amount= 10}
+      {type="item", name= "temperate-2", amount= 5}
     },
     results=
     {
@@ -239,7 +239,7 @@ data:extend(
     category = "desert-farming",
     subgroup = "farming-desert",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="desert-1-seed", amount=5},
@@ -264,7 +264,7 @@ data:extend(
     category = "desert-farming",
     subgroup = "farming-desert",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="desert-2-seed", amount=5},
@@ -289,7 +289,7 @@ data:extend(
     category = "desert-farming",
     subgroup = "farming-desert",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="desert-3-seed", amount=5},
@@ -315,7 +315,7 @@ data:extend(
     category = "desert-farming",
     subgroup = "farming-desert",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="desert-4-seed", amount=5},
@@ -342,7 +342,7 @@ data:extend(
     category = "desert-farming",
     subgroup = "farming-desert",
     enabled = "false",
-    energy_required = 60,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="desert-5-seed", amount=5},
@@ -376,7 +376,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "desert-1", amount= 10}
+      {type="item", name= "desert-1", amount= 5}
     },
     results=
     {
@@ -394,7 +394,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "desert-2", amount= 10}
+      {type="item", name= "desert-2", amount= 5}
     },
     results=
     {
@@ -473,7 +473,7 @@ data:extend(
     category = "swamp-farming",
     subgroup = "farming-swamp",
     enabled = "false",
-    energy_required = 45,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="swamp-1-seed", amount=5},
@@ -498,7 +498,7 @@ data:extend(
     category = "swamp-farming",
     subgroup = "farming-swamp",
     enabled = "false",
-    energy_required = 45,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="swamp-2-seed", amount=5},
@@ -523,7 +523,7 @@ data:extend(
     category = "swamp-farming",
     subgroup = "farming-swamp",
     enabled = "false",
-    energy_required = 45,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="swamp-3-seed", amount=5},
@@ -549,7 +549,7 @@ data:extend(
     category = "swamp-farming",
     subgroup = "farming-swamp",
     enabled = "false",
-    energy_required = 45,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="swamp-4-seed", amount=5},
@@ -576,7 +576,7 @@ data:extend(
     category = "swamp-farming",
     subgroup = "farming-swamp",
     enabled = "false",
-    energy_required = 45,
+    energy_required = 30,
     ingredients =
     {
       {type="item", name="swamp-5-seed", amount=5},
@@ -610,7 +610,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "swamp-1", amount= 10}
+      {type="item", name= "swamp-1", amount= 5}
     },
     results=
     {
@@ -628,7 +628,7 @@ data:extend(
     energy_required = 0.5,
     ingredients =
     {
-      {type="item", name= "swamp-2", amount= 10}
+      {type="item", name= "swamp-2", amount= 5}
     },
     results=
     {

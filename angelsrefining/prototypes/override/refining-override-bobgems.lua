@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 
-local create_single_gem_crystallization = function(recipe_bace_name, ores, recipe_icons)
+local create_single_gem_crystallization = function(recipe_bace_name, ores)
   local recipes = {}
   for ore_index, ore_data in pairs(ores or {}) do
     local recipe = { name = string.format(recipe_bace_name, ore_index), results = { {"!!"} }, subgroup = "bob-gems-crystallization" }
@@ -10,7 +10,7 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores, recip
     if data.raw.item[ore_name] and ore_amount > 0 then
       table.insert(recipe.results, {ore_name, ore_amount})
       recipe.order = type(ore_data)=="table" and ore_data[3] or nil
-      recipe.icon = recipe_icons[ore_index] and "__angelsrefining__/graphics/icons/"..recipe_icons[ore_index] or nil
+      recipe.icons = angelsmods.functions.create_liquid_recipe_icon({ ore_name }, { {184,231,043}, {080,172,033}, {055,126,017} })
       recipe.localised_name = {
         string.format("recipe-name.%s", recipe.name),
         {string.format("item-name.%s", ore_name)}
@@ -81,19 +81,12 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   OV.patch_recipes(create_single_gem_crystallization("angelsore7-crystallization-%i", {
-      {"sapphire-ore", 1, "b"},
-      {"topaz-ore"   , 1, "e"},
-      {"ruby-ore"    , 1, "a"},
-      {"emerald-ore" , 1, "c"},
-      {"amethyst-ore", 1, "d"},
-      {"diamond-ore" , 1, "f"},
-    },{
-      "gem-crystallization-sapphire.png",
-      "gem-crystallization-topaz.png",
-      "gem-crystallization-ruby.png",
-      "gem-crystallization-emerald.png",
-      "gem-crystallization-amethyst.png",
-      "gem-crystallization-diamond.png",
+    {"sapphire-ore", 1, "b"},
+    {"topaz-ore"   , 1, "e"},
+    {"ruby-ore"    , 1, "a"},
+    {"emerald-ore" , 1, "c"},
+    {"amethyst-ore", 1, "d"},
+    {"diamond-ore" , 1, "f"},
   }))
 else
   OV.disable_recipe("angelsore7-crystallization-1")

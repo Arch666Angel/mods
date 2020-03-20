@@ -16,7 +16,16 @@ data:extend(
     {
       {type="fluid", name="water-purified", amount=100},
     },
-    icon_size = 32,
+    always_show_products = true,
+    icons = angelsmods.functions.create_liquid_recipe_icon(
+      {
+        "water-purified"
+      },
+      "www",
+      {
+        "steam"
+      }
+    ),
     order = "a",
   },
   {

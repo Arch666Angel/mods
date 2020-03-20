@@ -23,6 +23,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-clay-brick"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-expendable"
+      },
     },
     unit =
     {
@@ -63,6 +67,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-concrete-brick"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-non-expendable"
       },
     },
     unit =

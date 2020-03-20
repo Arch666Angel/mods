@@ -37,7 +37,7 @@ data:extend(
       emissions_per_minute = 0.03 * 60
     },
     energy_usage = "150kW",
-    ingredient_count = 4,
+    --ingredient_count = 4,
     animation=
     {
         filename = "__angelsbioprocessing__/graphics/entity/nutrient-extractor/nutrient-extractor.png",

@@ -8,21 +8,24 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 4,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-acid", amount=100},
       {type="item", name="catalyst-metal-green", amount=1},    --Al
     },
     results=
     {
-      --{type="item", name="sulfur", amount=1},
       {type="fluid", name="gas-hydrogen-sulfide", amount=60},
       {type="fluid", name="gas-carbon-dioxide", amount=20},
       {type="fluid", name="liquid-hydrofluoric-acid", amount=20},
-      --{type="fluid", name="gas-hydrogen", amount=1},
-      {type="item", name="catalyst-metal-carrier", amount=1},
+      {type="item", name="catalyst-metal-carrier", amount=1, catalyst_amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-cracking-7.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+    }, "shh"),
     order = "a[gas-acid-catalyst]",
   },
   {
@@ -32,7 +35,8 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-hydrogen-sulfide", amount=60},
       {type="fluid", name="gas-oxygen", amount=40},
     },
@@ -40,8 +44,10 @@ data:extend(
     {
       {type="item", name="sulfur", amount=3},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-11.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 },
+    }, "sss"),
     order = "b[solid-sulfur]",
   },
   {
@@ -51,7 +57,8 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="sulfur", amount=1},
       {type="fluid", name="gas-oxygen", amount=60},
     },
@@ -59,8 +66,10 @@ data:extend(
     {
       {type="fluid", name="gas-sulfur-dioxide", amount=60},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-9.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+    }, "soo"),
     order = "ca[gas-sulfur-dioxide]",
   },
   {
@@ -70,7 +79,8 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="solid-calcium-sulfate", amount=2},
       {type="fluid", name="water-purified", amount=50},
     },
@@ -79,8 +89,10 @@ data:extend(
       {type="fluid", name="gas-sulfur-dioxide", amount=50},
       {type="item", name="angels-void", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-9.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+    }, "soo"),
     order = "cb[gas-sulfur-dioxide-calcium-sulfate]",
   },
   {
@@ -90,7 +102,8 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="fluid", name="gas-sulfur-dioxide", amount=90},
       {type="fluid", name="water-purified", amount=40},
     },
@@ -98,8 +111,10 @@ data:extend(
     {
       {type="fluid", name="liquid-sulfuric-acid", amount=60},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/sulfuric-acid.png", 72 }
+    }, "sho"),
     order = "d[liquid-sulfuric-acid]",
   },
   {
@@ -109,7 +124,8 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="fluorite-ore", amount=5},
       {type="fluid", name="sulfuric-acid", amount=50},
     },
@@ -118,8 +134,10 @@ data:extend(
       {type="fluid", name="liquid-hydrofluoric-acid", amount=50},
       {type="item", name="solid-calcium-sulfate", amount=1},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-7.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_liquid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+    }, "fhh"),
     order = "e[liquid-hydrofluoric-acid]",
   },
   {
@@ -129,7 +147,8 @@ data:extend(
     subgroup = "petrochem-catalysts",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="filter-frame", amount=1},
       {type="item", name="stone-crushed", amount=5},
     },
@@ -148,17 +167,20 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 10,
     enabled = "false",
-    ingredients ={
-    {type="item", name="filter-lime", amount=1},
-    {type="fluid", name="water", amount=20},
+    ingredients =
+    {
+      {type="item", name="filter-lime", amount=1},
+      {type="fluid", name="water", amount=20},
     },
     results=
     {
       {type="item", name="filter-lime-used", amount=1},
-    {type="fluid", name="water-yellow-waste", amount=20},
+      {type="fluid", name="water-yellow-waste", amount=20},
     },
-    icon = "__angelspetrochem__/graphics/icons/inter-chemistry-11.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 },
+    }, "sss"),
     order = "g",
   },
   {
@@ -168,7 +190,8 @@ data:extend(
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = "false",
-    ingredients ={
+    ingredients =
+    {
       {type="item", name="filter-lime-used", amount=1},
     },
     results=
@@ -177,9 +200,33 @@ data:extend(
       {type="item", name="filter-frame", amount=1},
     },
     main_product = "gas-acid",
-    --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-10.png",
-    icon_size = 32,
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon(nil, "sss"),
     order = "h",
+  },
+  {
+    type = "recipe",
+    name = "angels-hydrogen-sulfide-enrichment",
+    localised_name = {"recipe-name.angels-hydrogen-sulfide-enrichment"},
+    category = "steam-cracking",
+    subgroup = "petrochem-sulfur",
+    energy_required = 2.5,
+    enabled = "false",
+    ingredients =
+    {
+      {type="fluid", name="steam", amount=50, minimum_temperature=125, maximum_temperature=165},
+      {type="fluid", name="gas-hydrogen-sulfide", amount=50},
+    },
+    results=
+    {
+      {type="fluid", name="water-purified", amount=50},
+      {type="fluid", name="gas-enriched-hydrogen-sulfide", amount=50, temperature=100},
+    },
+    always_show_products = "true",
+    icons = angelsmods.functions.create_gas_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 }
+    }, "sww"),
+    order = "i[enriched-hydrogen-sulfide]-a[enrichment]",
   },
 }
 )

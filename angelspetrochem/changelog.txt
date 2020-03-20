@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.4
+Date: 20-03-2020
+  Changes:
+    - Chemical recipes now always show the result products for lookup convenience
+    - Added high resolution gas and liquid icons, including higher resolution molecules
+    - Moved bobplates overrides in separate file
+    - Added bobs electrolysis to angels electrolysers #56
+    - Added option to disable bobs electrolysers #56
+    - Added option to disable bobs chemical plants #56
+    - Merged the rocket-fuel recipes #66
+    - Removed seperate solid fuel check completely #66
+    - Added nuclear fuel tech since requirements for rocket fuel is different #66
+    - Disabled coal liquefaction
+    - Fully replaced Bob's Lithium Chloride with Angels Lithia Salt #71
+    - Replaced oil in flamethrower and ammo for naptha/fuel-oil #88
+    - Changed used electrode recipe to use purified water
+    - Added Sodium Nitrate and related recipes
+    - Added Saline Water from Water & Salt recipe
+    - Moved solid fuels for bobrevamps
+    - Added processing cycle for deuterium when it is present
+    - Added multiple tiers for electric boilers
+    - Separated tech for boilers, included recipe for steam
+  Bugfixes:
+    - Fixed crashes when bobs assembly was enabled with electrolysers disabled
+    - Added missing (water) void recipe for Sodium Hydroxide Solution
+---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 22.02.2020
   Bugfixes:

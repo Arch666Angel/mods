@@ -40,3 +40,4 @@ require("prototypes.recipes.bio-gun")
 require("prototypes.recipes.turret")
 
 require("prototypes.technology.exploration-technology")
+require("prototypes.technology.refined-biological")

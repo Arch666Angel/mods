@@ -64,8 +64,10 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-carbon-dioxide", amount = 70}
       },
-      icon = "__angelspetrochem__/graphics/icons/gas-carbon-dioxide.png",
-      icon_size = 32,
+      always_show_products = "true",
+      icons = angelsmods.functions.create_gas_recipe_icon({
+        { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      }, "ccc"),
       order = "e"
     },
     {
@@ -122,7 +124,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -147,8 +149,8 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-pulping-liquor", amount = 100}
       },
-      --icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-      icon_size = 32,
+      main_product = "liquid-pulping-liquor",
+      always_show_products = "true",
       order = "ba"
     },
     {
@@ -201,7 +203,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -226,8 +228,8 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-white-liquor", amount = 40}
       },
-      --icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png",
-      icon_size = 32,
+      main_product = "liquid-white-liquor",
+      always_show_products = "true",
       order = "caa"
     },
     {
@@ -243,8 +245,8 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-green-liquor", amount = 40} --+energy gain
       },
-      icon = "__angelsbioprocessing__/graphics/icons/liquid-green-liquor.png",
-      icon_size = 32,
+      main_product = "liquid-green-liquor",
+      always_show_products = "true",
       order = "cb"
     },
     {
@@ -263,8 +265,8 @@ data:extend(
         {type = "fluid", name = "liquid-white-liquor", amount = 55},
         {type = "item", name = "solid-limestone", amount = 4}
       },
-      icon = "__angelsbioprocessing__/graphics/icons/liquid-white-liquor.png",
-      icon_size = 32,
+      main_product = "liquid-white-liquor",
+      always_show_products = "true",
       order = "cab"
     },
     {
@@ -282,12 +284,13 @@ data:extend(
         {type = "item", name = "solid-wood-pulp", amount = 30},
         {type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40}
       },
+      always_show_products = "true",
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_3.png",
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -316,7 +319,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -347,7 +350,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -381,7 +384,7 @@ data:extend(
           icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_3.png",
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
           tint = angelsmods.bioprocessing.number_tint,
           scale = 0.32,
           shift = {-12, -12}

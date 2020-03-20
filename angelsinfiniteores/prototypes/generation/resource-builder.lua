@@ -1086,7 +1086,10 @@ function angelsmods.functions.remove_resource(resource)
     data.raw.resource[resource] = nil
     data.raw["autoplace-control"][resource] = nil
   end
+
+  local infinite_resource = nil
   if data.raw.resource["infinite-" .. resource] then
+    infinite_resource = "infinite-" .. resource
     data.raw.resource["infinite-" .. resource] = nil
     data.raw["autoplace-control"]["infinite-" .. resource] = nil
   end
@@ -1098,6 +1101,12 @@ function angelsmods.functions.remove_resource(resource)
         preset.basic_settings.autoplace_controls[resource]
      then
       preset.basic_settings.autoplace_controls[resource] = nil
+    end
+    if
+      infinite_resource and preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
+        preset.basic_settings.autoplace_controls[infinite_resource]
+     then
+      preset.basic_settings.autoplace_controls[infinite_resource] = nil
     end
   end
 

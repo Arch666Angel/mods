@@ -6,7 +6,7 @@ OV.remove_output("algae-brown-burning", "angels-void")
 
 --BASE
 data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
-data.raw["capsule"]["raw-fish"].order = "ba"
+data.raw["capsule"]["raw-fish"].order = "aa"
 
 data.raw["item"]["wood"].subgroup = "bio-processing-wood"
 data.raw["item"]["wood"].order = "a[wood]"
@@ -201,7 +201,7 @@ if bobmods then
               scale = 0.35
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_1.png",
+              icon = "__angelsrefining__/graphics/icons/num_1.png",
               tint = angelsmods.bioprocessing.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -231,7 +231,7 @@ if bobmods then
               scale = 0.35
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_2.png",
+              icon = "__angelsrefining__/graphics/icons/num_2.png",
               tint = angelsmods.bioprocessing.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -274,7 +274,7 @@ if bobmods then
               scale = 0.35
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_1.png",
+              icon = "__angelsrefining__/graphics/icons/num_1.png",
               tint = angelsmods.bioprocessing.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -294,7 +294,7 @@ if bobmods then
               scale = 0.35
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_2.png",
+              icon = "__angelsrefining__/graphics/icons/num_2.png",
               tint = angelsmods.bioprocessing.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -314,7 +314,7 @@ if bobmods then
               scale = 0.35
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_3.png",
+              icon = "__angelsrefining__/graphics/icons/num_3.png",
               tint = angelsmods.bioprocessing.number_tint,
               scale = 0.32,
               shift = {-12, -12}

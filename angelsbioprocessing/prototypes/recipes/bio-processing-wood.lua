@@ -1,3 +1,13 @@
+local function create_recipe_icon(fluid_name, product_name)
+  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
+  for layer_index, layer in pairs(icon_layers or {}) do
+    layer.shift = layer.shift or {}
+    layer.shift = {(layer.shift[1] or 0)/2-10, (layer.shift[2] or 0)/2-10}
+    layer.scale = (layer.scale or 1)/2
+  end
+  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+end
+
 data:extend(
 {
   -- RAW WOOD GENERATOR
@@ -22,7 +32,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -53,7 +63,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -85,7 +95,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -120,7 +130,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -156,7 +166,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -193,7 +203,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -291,7 +301,7 @@ data:extend(
         scale = 0.5
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -325,7 +335,7 @@ data:extend(
         scale = 0.5
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -359,7 +369,7 @@ data:extend(
         scale = 0.5
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -393,7 +403,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -424,7 +434,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -456,7 +466,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -492,7 +502,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -529,7 +539,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -562,17 +572,9 @@ data:extend(
     {
       {type="fluid", name="liquid-resin", amount=5},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-resin.png",
-      },
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
-        scale = 0.5,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    main_product = "liquid-resin",
+    always_show_products = "true",
+    icons = create_recipe_icon("liquid-resin", "bio-resin"),
     order = "c[processing]",
   },
 
@@ -600,7 +602,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -635,7 +637,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -671,7 +673,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -711,7 +713,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -748,7 +750,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -781,17 +783,9 @@ data:extend(
     {
       {type="fluid", name="liquid-plastic", amount=5},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-plastic.png",
-      },
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
-        scale = 0.5,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    main_product = "liquid-plastic",
+    always_show_products = "true",
+    icons = create_recipe_icon("liquid-plastic", "bio-plastic"),
     order = "c[processing]",
   },
 
@@ -819,7 +813,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -854,7 +848,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -890,7 +884,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -930,7 +924,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -967,7 +961,7 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.bioprocessing.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -1000,17 +994,9 @@ data:extend(
     {
       {type="fluid", name="liquid-rubber", amount=5},
     },
-    icons = {
-      {
-        icon = "__angelspetrochem__/graphics/icons/liquid-rubber.png",
-      },
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
-        scale = 0.5,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+    main_product = "liquid-rubber",
+    always_show_products = "true",
+    icons = create_recipe_icon("liquid-rubber", "bio-rubber"),
     order = "c[processing]",
   },
 }

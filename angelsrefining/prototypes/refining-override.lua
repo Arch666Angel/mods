@@ -444,6 +444,7 @@ angelsmods.functions.allow_productivity("angelsore-crystal-mix1-processing")
 angelsmods.functions.allow_productivity("angelsore-crystal-mix2-processing")
 angelsmods.functions.allow_productivity("angelsore-crystal-mix3-processing")
 angelsmods.functions.allow_productivity("angelsore-crystal-mix4-processing")
+angelsmods.functions.allow_productivity("angelsore-crystal-mix5-processing")
 
 angelsmods.functions.allow_productivity("angelsore-pure-mix1-processing")
 angelsmods.functions.allow_productivity("angelsore-pure-mix2-processing")

@@ -332,7 +332,13 @@ data:extend(
       type = "item-subgroup",
       name = "water-washing",
       group = "water-treatment",
-      order = "d"
+      order = "da"
+    },
+    {
+      type = "item-subgroup",
+      name = "water-washing-filtering",
+      group = "water-treatment",
+      order = "db"
     },
     {
       type = "item-subgroup",
@@ -351,6 +357,12 @@ data:extend(
       name = "coolant",
       group = "water-treatment",
       order = "f"
+    },
+    {
+      type = "item-subgroup",
+      name = "water-enrichment",
+      group = "water-treatment",
+      order = "g"
     },
     {
       type = "item-subgroup",

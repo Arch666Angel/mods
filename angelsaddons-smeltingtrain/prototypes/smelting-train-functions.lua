@@ -39,11 +39,15 @@ local function generate_train_recipe(item, add_unlock)
       table.insert(entries, copy)
 
       if add_unlock then
-        if not tech_unlocks[add_unlock] then
-          tech_unlocks[add_unlock] = {}
+        local tech = add_unlock
+        if i > 1 then
+          tech = tech .. "-" .. i
+        end
+        if not tech_unlocks[tech] then
+          tech_unlocks[tech] = {}
         end
 
-        tech_unlocks[add_unlock][name] = true
+        tech_unlocks[tech][name] = true
       end
     end
   else
@@ -143,8 +147,59 @@ local function generate_train_entities(item)
   data:extend(entries)
 end
 
+local function get_unlocks(tech, base_effects)
+  if tech_unlocks[tech] then
+    for name, _ in pairs(tech_unlocks[tech]) do
+      table.insert(
+        base_effects,
+        {
+          type = "unlock-recipe",
+          recipe = name
+        }
+      )
+    end
+  end
+
+  return base_effects
+end
+
+local function generate_train_technology(item, tiers)
+  local entries = {}
+  if angelsmods.addons.smeltingtrain.enable_tiers and angelsmods.addons.smeltingtrain.tier_amount > 1 then
+    for i = 1, angelsmods.addons.smeltingtrain.tier_amount, 1 do
+      local copy = table.deepcopy(item)
+      local name = item.name
+      local prerequisites = item.prerequisites
+      if i > 1 then
+        name = name .. "-" .. i
+        if i == 2 then
+          prerequisites = {item.name}
+        else
+          prerequisites = {item.name .. "-" .. (i - 1)}
+        end
+      end
+
+      copy.order = copy.order .. "-" .. i
+      copy.name = name
+      copy.localised_name = {"", {"technology-name." .. item.name}, " MK" .. i}
+      copy.localised_description = {"technology-description." .. item.name}
+      copy.effects = get_unlocks(name, {})
+      copy.unit = tiers[i]
+      copy.prerequisites = prerequisites
+      table.insert(entries, copy)
+    end
+  else
+    item.effects = get_unlocks(item.name, {})
+    item.unit = item.unit or tiers[1]
+    table.insert(entries, item)
+  end
+
+  data:extend(entries)
+end
+
 return {
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,
-  generate_train_recipe = generate_train_recipe
+  generate_train_recipe = generate_train_recipe,
+  generate_train_technology = generate_train_technology
 }
