@@ -30,6 +30,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
 
   --UPDATE NON-BLOCK COMPONENTS
   require("prototypes.overrides.components-recipe-update")
+  require("prototypes.overrides.components-productivity-update")
   OV.execute()
 
   --UPDATE BLOCK COMPONENTS

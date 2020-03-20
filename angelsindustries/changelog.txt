@@ -8,6 +8,7 @@ Date: ???
     - Changed Electronics Board ingredients to use Cupric instead of Ferrous Chloride Solution
     - Changed Solder amount on Electronics Boards to the amount of components that are needed
     - Changed the Lab Archive icon and added different tiers to speed up research process
+    - Allow productivity modules on components
   Bugfixes:
     - Extra check if recipe ingredients exists #52
     - Allow robot deployment when in automatic mode #48
