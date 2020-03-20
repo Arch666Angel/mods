@@ -9,6 +9,7 @@ Date: ???
     - Changed Solder amount on Electronics Boards to the amount of components that are needed
     - Changed the Lab Archive icon and added different tiers to speed up research process
     - Allow productivity modules on components
+    - Changed ratios between component ingredients to bring diversity between tiers
   Bugfixes:
     - Extra check if recipe ingredients exists #52
     - Allow robot deployment when in automatic mode #48

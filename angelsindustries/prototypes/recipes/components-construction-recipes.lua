@@ -8,7 +8,7 @@ data:extend(
     name = "grate-iron",
     enabled = "true",
     category = "crafting",
-    energy_required = 2,
+    energy_required = 0.5,
     ingredients =
     {
       {type="item", name = "angels-rod-iron", amount = 2},
@@ -24,7 +24,7 @@ data:extend(
     name = "grate-steel",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 2,
+    energy_required = 1,
     ingredients =
     {
       {type="item", name = "angels-rod-steel", amount = 2},
@@ -40,7 +40,7 @@ data:extend(
     name = "grate-aluminium",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 2,
+    energy_required = 1.5,
     ingredients =
     {
       {type="item", name = "angels-plate-aluminium", amount = 2},
@@ -72,7 +72,7 @@ data:extend(
     name = "grate-tungsten",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 2,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-plate-tungsten", amount = 2},
@@ -91,7 +91,7 @@ data:extend(
     name = "construction-frame-1",
     enabled = "true",
     category = "crafting",
-    energy_required = 3,
+    energy_required = 1, --1:2 ratio to grate
     ingredients =
     {
       {type="item", name = "grate-iron", amount = 1},
@@ -108,7 +108,7 @@ data:extend(
     name = "construction-frame-2",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 3,
+    energy_required = 1.5, --2:3 ratio to grate
     ingredients =
     {
       {type="item", name = "grate-steel", amount = 1},
@@ -126,7 +126,7 @@ data:extend(
     name = "construction-frame-3",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 3,
+    energy_required = 2, -- 3:4 ratio to grate
     ingredients =
     {
       {type="item", name = "grate-aluminium", amount = 1},
@@ -145,7 +145,7 @@ data:extend(
     name = "construction-frame-4",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 3,
+    energy_required = 3.5, -- 4:7 ratio to grate
     ingredients =
     {
       {type="item", name = "grate-titanium", amount = 1},
@@ -165,7 +165,7 @@ data:extend(
     name = "construction-frame-5",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 3,
+    energy_required = 5, -- 3:5 ratio to grate
     ingredients =
     {
       {type="item", name = "grate-tungsten", amount = 1},
@@ -205,7 +205,7 @@ data:extend(
     name = "angels-rivet",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 0.5,
+    energy_required = 1,
     ingredients =
     {
       {type="item", name = "steel-plate", amount = 1},
@@ -221,7 +221,7 @@ data:extend(
     name = "angels-bracket",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 0.5,
+    energy_required = 1.5,
     ingredients =
     {
       {type="item", name = "angels-plate-aluminium", amount = 1},
@@ -237,7 +237,7 @@ data:extend(
     name = "angels-plating",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 0.5,
+    energy_required = 2,
     ingredients =
     {
       {type="item", name = "angels-plate-titanium", amount = 1},
@@ -253,7 +253,7 @@ data:extend(
     name = "angels-strut",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 0.5,
+    energy_required = 2.5,
     ingredients =
     {
       {type="item", name = "angels-plate-tungsten", amount = 1},
@@ -274,7 +274,7 @@ data:extend(
     order = "f",
     enabled = "true",
     category = "crafting",
-    energy_required = 1,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-girder", amount = 2},
@@ -302,7 +302,7 @@ data:extend(
     order = "g",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 1,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-rivet", amount = 2},
@@ -330,7 +330,7 @@ data:extend(
     order = "h",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 1,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-bracket", amount = 2},
@@ -358,7 +358,7 @@ data:extend(
     order = "h",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 1,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-plating", amount = 2},
@@ -386,7 +386,7 @@ data:extend(
     order = "h",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 1,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-strut", amount = 2},

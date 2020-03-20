@@ -6,7 +6,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-1",
-    energy_required = 1,
+    energy_required = 0.5,
     category = "crafting",
     enabled = "true",
     ingredients =
@@ -32,7 +32,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-3",
-    energy_required = 1,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -45,7 +45,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-4",
-    energy_required = 1,
+    energy_required = 2,
     category = "crafting-with-fluid",
     enabled = "false",
     ingredients =
@@ -58,7 +58,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-shielding-5",
-    energy_required = 1,
+    energy_required = 3,
     category = "crafting-with-fluid",
     enabled = "false",
     ingredients =
@@ -74,7 +74,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-harness-1",
-    energy_required = 3,
+    energy_required = 1,
     category = "crafting",
     enabled = "true",
     ingredients =
@@ -89,7 +89,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-harness-2",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -104,7 +104,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-harness-3",
-    energy_required = 3,
+    energy_required = 2,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -119,7 +119,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-harness-4",
-    energy_required = 3,
+    energy_required = 3.5,
     category = "crafting-with-fluid",
     enabled = "false",
     ingredients =
@@ -134,7 +134,7 @@ data:extend(
   {
     type = "recipe",
     name = "cable-harness-5",
-    energy_required = 3,
+    energy_required = 5,
     category = "crafting-with-fluid",
     enabled = "false",
     ingredients =
@@ -156,7 +156,7 @@ data:extend(
     order = "f",
     enabled = "true",
     category = "crafting",
-    energy_required = 5,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "cable-harness-1", amount = 3},
@@ -184,7 +184,7 @@ data:extend(
     order = "g",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "cable-harness-2", amount = 3},
@@ -212,7 +212,7 @@ data:extend(
     order = "h",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "cable-harness-3", amount = 3},
@@ -240,7 +240,7 @@ data:extend(
     order = "h",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "cable-harness-4", amount = 3},
@@ -268,7 +268,7 @@ data:extend(
     order = "h",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "cable-harness-5", amount = 3},
@@ -295,7 +295,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-servo-motor-1",
-    energy_required = 3,
+    energy_required = 1,
     category = "crafting",
     enabled = "true",
     ingredients =
@@ -310,7 +310,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-servo-motor-2",
-    energy_required = 3,
+    energy_required = 2,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -340,7 +340,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-servo-motor-4",
-    energy_required = 3,
+    energy_required = 4,
     category = "crafting-with-fluid",
     enabled = "false",
     ingredients =
@@ -355,7 +355,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-servo-motor-5",
-    energy_required = 3,
+    energy_required = 6,
     category = "crafting-with-fluid",
     enabled = "false",
     ingredients =

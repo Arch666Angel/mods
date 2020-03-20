@@ -6,7 +6,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-resistor",
-    energy_required = 3,
+    energy_required = 0.5,
     category = "crafting", --to allow hand crafting
     enabled = "false",
     ingredients =
@@ -37,7 +37,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-transistor",
-    energy_required = 3,
+    energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -51,7 +51,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-microchip",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -66,7 +66,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-transformer",
-    energy_required = 3,
+    energy_required = 2,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -80,7 +80,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-cpu",
-    energy_required = 3,
+    energy_required = 2.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -100,7 +100,7 @@ data:extend(
     name = "electronic-parts-resistor",
     subgroup = "angels-circuit-components",
     order = "f",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -128,7 +128,7 @@ data:extend(
     name = "electronic-parts-transistor",
     subgroup = "angels-circuit-components",
     order = "g",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -156,7 +156,7 @@ data:extend(
     name = "electronic-parts-microchip",
     subgroup = "angels-circuit-components",
     order = "h",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -184,7 +184,7 @@ data:extend(
     name = "electronic-parts-transformer",
     subgroup = "angels-circuit-components",
     order = "i",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -212,7 +212,7 @@ data:extend(
     name = "electronic-parts-cpu",
     subgroup = "angels-circuit-components",
     order = "j",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -241,7 +241,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-grey-board",
-    energy_required = 1,
+    energy_required = 0.25,
     category = "crafting",
     enabled = "true",
     ingredients =
@@ -254,7 +254,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-grey-board-alternative",
-    energy_required = 1,
+    energy_required = 0.5,
     category = "crafting",
     subgroup = "angels-board",
     enabled = "true",
@@ -272,7 +272,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-red-board",
-    energy_required = 3,
+    energy_required = 0.5,
     category = "crafting",
     enabled = "false",
     ingredients =
@@ -285,7 +285,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-green-board",
-    energy_required = 3,
+    energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -299,7 +299,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-orange-board",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -313,7 +313,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-blue-board",
-    energy_required = 3,
+    energy_required = 2,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -345,7 +345,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-grey",
-    energy_required = 1,
+    energy_required = 0.25, -- 1:1 ratio to boards
     category = "crafting",
     enabled = "true",
     ingredients =
@@ -359,7 +359,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-red",
-    energy_required = 1,
+    energy_required = 1, --1:2 ratio to boards
     category = "crafting",
     enabled = "false",
     ingredients =
@@ -373,7 +373,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-green",
-    energy_required = 1,
+    energy_required = 1.5, --2:3 ratio to boards
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -387,7 +387,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-orange",
-    energy_required = 1,
+    energy_required = 2, -- 3:4 ratio to boards
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -402,7 +402,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-blue",
-    energy_required = 1,
+    energy_required = 3.5, -- 4:7 ratio to boards
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -417,7 +417,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-yellow",
-    energy_required = 1,
+    energy_required = 5, -- 3:5 ratio to boards
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -435,7 +435,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-red-loaded",
-    energy_required = 3,
+    energy_required = 1,
     category = "crafting",
     enabled = "false",
     ingredients =
@@ -450,7 +450,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-green-loaded",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -466,7 +466,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-orange-loaded",
-    energy_required = 3,
+    energy_required = 2,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -483,7 +483,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-blue-loaded",
-    energy_required = 3,
+    energy_required = 3.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -501,7 +501,7 @@ data:extend(
   {
     type = "recipe",
     name = "circuit-yellow-loaded",
-    energy_required = 3,
+    energy_required = 5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =

@@ -8,7 +8,7 @@ data:extend(
     name = "body-1",
     enabled = "false",
     category = "crafting",
-    energy_required = 5,
+    energy_required = 0.5,
     ingredients =
     {
       {type="item", name = "iron-plate", amount = 2},
@@ -24,7 +24,7 @@ data:extend(
     name = "body-2",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 1,
     ingredients =
     {
       {type="item", name = "steel-plate", amount = 2},
@@ -40,7 +40,7 @@ data:extend(
     name = "body-3",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 1.5,
     ingredients =
     {
       {type="item", name = "angels-plate-aluminium", amount = 2},
@@ -56,7 +56,7 @@ data:extend(
     name = "body-4",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 2,
     ingredients =
     {
       {type="item", name = "angels-plate-titanium", amount = 2},
@@ -72,7 +72,7 @@ data:extend(
     name = "body-5",
     enabled = "false",
     category = "advanced-crafting",
-    energy_required = 5,
+    energy_required = 3,
     ingredients =
     {
       {type="item", name = "angels-plate-tungsten", amount = 2},
@@ -89,7 +89,7 @@ data:extend(
   {
     type = "recipe",
     name = "weapon-1",
-    energy_required = 3,
+    energy_required = 1, -- 1:2 ratio with body
     category = "crafting",
     enabled = "false",
     ingredients =
@@ -103,7 +103,7 @@ data:extend(
   {
     type = "recipe",
     name = "weapon-2",
-    energy_required = 3,
+    energy_required = 1.5, -- 2:3 ratio with body
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -118,7 +118,7 @@ data:extend(
   {
     type = "recipe",
     name = "weapon-3",
-    energy_required = 3,
+    energy_required = 2, -- 3:4 ratio with body
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -134,7 +134,7 @@ data:extend(
   {
     type = "recipe",
     name = "weapon-4",
-    energy_required = 3,
+    energy_required = 3.5, -- 4:7 ratio with body
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -151,7 +151,7 @@ data:extend(
   {
     type = "recipe",
     name = "weapon-5",
-    energy_required = 3,
+    energy_required = 5, -- 3:5 ratio with body
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -172,7 +172,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-trigger",
-    energy_required = 3,
+    energy_required = 0.5,
     category = "crafting",
     enabled = "false",
     ingredients =
@@ -185,7 +185,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-explosionchamber",
-    energy_required = 3,
+    energy_required = 1,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -198,7 +198,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-fluidchamber",
-    energy_required = 3,
+    energy_required = 1.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -211,7 +211,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-energycrystal",
-    energy_required = 3,
+    energy_required = 2,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
@@ -224,7 +224,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-acceleratorcoil",
-    energy_required = 3,
+    energy_required = 2.5,
     category = "advanced-crafting",
     enabled = "false",
     ingredients =
