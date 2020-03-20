@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
-Date: ???
+Date: 20-03-2020
   Changes:
     - Added dedicated icon to the Electronics Block 0
     - Added dedicated researched to unlock the components

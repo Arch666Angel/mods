@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
-Date: ???
+Date: 20-03-2020
   Changes:
     - Chemical recipes now always show the result products for lookup convenience
     - Added high resolution gas and liquid icons, including higher resolution molecules
