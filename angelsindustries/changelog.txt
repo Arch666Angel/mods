@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.3
+Version: 0.3.4
 Date: ???
   Changes:
     - Components:
@@ -7,6 +7,11 @@ Date: ???
   Bugfixes:
     - Offshore pump returned Electronic block 1 while using block 0 for making
     - With bobs assembly, assembling machine 2 returned Electronic block 1 while using block 2 for making
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 21-03-2020
+  Changes:
+    - Fixed an error relating to composite entities which don't have a minable property
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 20-03-2020
