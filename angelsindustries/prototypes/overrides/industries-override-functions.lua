@@ -666,13 +666,17 @@ function replace_con_mats(buildings)
       if rec_check.normal then
         ing_list = rec_check.normal.ingredients
         replace_blocks_list(ing_list)
-        data.raw[build.type][assembly_check].minable.results=ing_list
+        if data.raw[build.type][assembly_check].minable then
+          data.raw[build.type][assembly_check].minable.results=ing_list
+        end
         ing_list = rec_check.expensive.ingredients
         replace_blocks_list(ing_list)
       else
         ing_list = rec_check.ingredients
         replace_blocks_list(ing_list)
-        data.raw[build.type][assembly_check].minable.results=ing_list
+        if data.raw[build.type][assembly_check].minable then
+          data.raw[build.type][assembly_check].minable.results=ing_list
+        end
       end
     end
   end
