@@ -1,5 +1,24 @@
 local OV = angelsmods.functions.OV
-
+--set local table for use in multiple functions
+local building_types = {
+  "assembling-machine",
+  "mining-drill",
+  "lab",
+  "furnace",
+  "offshore-pump",
+  "pump",
+  "rocket-silo",
+  "radar",
+  "beacon",
+  "boiler",
+  "generator",
+  "solar-panel",
+  "accumulator",
+  "reactor",
+  "electric-pole",
+  "wall",
+  "gate"
+}
 function pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
   OV.remove_science_pack(techname, "angels-science-pack-" .. old_c)
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
@@ -325,29 +344,18 @@ end
 
 --ADD BUILDING BLOCKS TO BUILDINGS
 function add_con_mats()
-  local building_types = {
-    "assembling-machine",
-    "mining-drill",
-    "lab",
-    "furnace",
-    "offshore-pump",
-    "pump",
-    "rocket-silo",
-    "radar",
-    "beacon",
-    "boiler",
-    "generator",
-    "solar-panel",
-    "accumulator",
-    "reactor",
-    "electric-pole",
-    "wall",
-    "gate"
-  }
   building_count = table_rows(building_types)
   local n = 1
   while (n < building_count + 1) do
     replace_con_mats(building_types[n])
+    n = n + 1
+  end
+end
+function add_minable_results()
+  building_count = table_rows(building_types)
+  local n = 1
+  while (n < building_count + 1) do
+    replace_minable_results(building_types[n])
     n = n + 1
   end
 end
@@ -658,7 +666,7 @@ function replace_gen_mats()
   OV.execute()
 end
 
---REPLACE CONSTRUCTION ELECTRONIC BLOCKS
+--REPLACE CONSTRUCTION BLOCKS
 function replace_con_mats(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
     if data.raw.recipe[assembly_check] then
@@ -666,17 +674,27 @@ function replace_con_mats(buildings)
       if rec_check.normal then
         ing_list = rec_check.normal.ingredients
         replace_blocks_list(ing_list)
-        if data.raw[build.type][assembly_check].minable then
-          data.raw[build.type][assembly_check].minable.results=ing_list
-        end
         ing_list = rec_check.expensive.ingredients
         replace_blocks_list(ing_list)
       else
         ing_list = rec_check.ingredients
         replace_blocks_list(ing_list)
-        if data.raw[build.type][assembly_check].minable then
-          data.raw[build.type][assembly_check].minable.results=ing_list
-        end
+      end
+    end
+  end
+end
+--REPLACE ON MINED RESULTS
+function replace_minable_results(buildings)
+  for assembly_check, build in pairs(data.raw[buildings]) do
+    if data.raw.recipe[assembly_check] then
+      local rec_check = data.raw.recipe[assembly_check]
+      if rec_check.normal then
+        ing_list = rec_check.normal.ingredients
+      else
+        ing_list = rec_check.ingredients
+      end
+      if data.raw[build.type][assembly_check].minable then
+        data.raw[build.type][assembly_check].minable.results=ing_list
       end
     end
   end

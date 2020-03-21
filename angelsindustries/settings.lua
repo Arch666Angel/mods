@@ -20,6 +20,13 @@ data:extend(
       setting_type = "startup",
       default_value = false,
       order = "c"
+    },
+    {
+      type = "bool-setting",
+      name = "angels-return-ingredients",
+      setting_type = "startup",
+      default_value = true,
+      order = "c"
     }
   }
 )

@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Components:
       - assembling-machine-1 in vanilla requires Electronic block 0 instead of 1 #109
+      - Added a setting to return the building return to vanilla style
+        - Decoupled the function update from version 0.3.2 to split recipe replacements and component return
   Bugfixes:
     - Offshore pump returned Electronic block 1 while using block 0 for making
     - With bobs assembly, assembling machine 2 returned Electronic block 1 while using block 2 for making
@@ -24,6 +26,12 @@ Date: 20-03-2020
     - Changed the Lab Archive icon and added different tiers to speed up research process
     - Allow productivity modules on components
     - Changed ratios between component ingredients to bring diversity between tiers
+    - Updated the replace_con_mats function to also update minable results to the ingredients
+    - Some small changes to what is unlocked at certain points
+    - Added a new tier of labs for infinite research
+    - Added white research for infinite research
+    - Fully integrated bobs into angels tech tree
+    - Fully replaced bobs electronics with angels variants
   Bugfixes:
     - Extra check if recipe ingredients exists #52
     - Allow robot deployment when in automatic mode #48
@@ -31,6 +39,8 @@ Date: 20-03-2020
     - Fixed that the Lab Archive was unobtainable when enabling angels science mid-game
     - Science pack for datacores for angels rocket fuel fixed to default rocket fuel #66
     - Enforces single main-lab to exist
+    - Fixed that yellow board was not craftable (now made in a chemical plant)
+    - Various bobs group and tech clean-ups
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 22.02.2020
