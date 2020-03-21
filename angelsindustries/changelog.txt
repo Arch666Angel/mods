@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: ???
+  Changes:
+    - Components:
+      - assembling-machine-1 in vanilla requires Electronic block 0 instead of 1
+  Bugfixes:
+    - Offshore pump returned Electronic block 1 while using block 0 for making
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 20-03-2020
   Changes:
