@@ -1,5 +1,24 @@
 local OV = angelsmods.functions.OV
-
+--set local table for use in multiple functions
+local building_types = {
+  "assembling-machine",
+  "mining-drill",
+  "lab",
+  "furnace",
+  "offshore-pump",
+  "pump",
+  "rocket-silo",
+  "radar",
+  "beacon",
+  "boiler",
+  "generator",
+  "solar-panel",
+  "accumulator",
+  "reactor",
+  "electric-pole",
+  "wall",
+  "gate"
+}
 function pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
   OV.remove_science_pack(techname, "angels-science-pack-" .. old_c)
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
@@ -175,11 +194,20 @@ angelsmods.industries.techtiers = {
   green = {amount = 128, time = 30}, --TRAINS
   orange = {amount = 256, time = 40}, --OIL
   blue = {amount = 512, time = 50}, --ROBOTS
-  yellow = {amount = 1024, time = 60} --ENDGAME
+  yellow = {amount = 1024, time = 60}, --ENDGAME
+  white = {amount = 2024, time = 75} --MEGABASE
 }
 
 angelsmods.marathon.tech_amount_multi = 1
 angelsmods.marathon.tech_time_multi = 1
+
+local function set_research_tiers(tech_name, tech_time, tech_amount)
+  if data.raw.technology[tech_name] and (data.raw.technology[tech_name].unit or {}).count then
+    OV.set_research_difficulty(tech_name, tech_time, tech_amount)
+  else
+    -- todo: what in the case of a count_formula?
+  end
+end
 
 function tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
@@ -188,7 +216,7 @@ function tech_unlock_reset()
       if technology.unit.ingredients and not technology.max_level and technology.unit.ingredients[1] then
         for i, ingredients in pairs(technology.unit.ingredients[1]) do
           if ingredients == "angels-science-pack-grey" then
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi
@@ -196,7 +224,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-red" then
             OV.add_prereq(techname, "tech-red-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.red.amount * angelsmods.marathon.tech_amount_multi
@@ -204,7 +232,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-green" then
             OV.add_prereq(techname, "tech-green-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.green.amount * angelsmods.marathon.tech_amount_multi
@@ -212,7 +240,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-orange" then
             OV.add_prereq(techname, "tech-orange-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi
@@ -220,7 +248,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-blue" then
             OV.add_prereq(techname, "tech-blue-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi
@@ -228,7 +256,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-yellow" then
             OV.add_prereq(techname, "tech-yellow-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi
@@ -236,11 +264,11 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-white" then
             OV.add_prereq(techname, "space-science-pack")
-            --OV.set_research_difficulty(
-            --  techname,
-            --  angelsmods.industries.techtiers.white.time * angelsmods.marathon.tech_time_multi,
-            --  angelsmods.industries.techtiers.white.amount * angelsmods.marathon.tech_amount_multi
-            --)
+            set_research_tiers(
+              techname,
+              angelsmods.industries.techtiers.white.time * angelsmods.marathon.tech_time_multi,
+              angelsmods.industries.techtiers.white.amount * angelsmods.marathon.tech_amount_multi
+            )
           end
         end
       end
@@ -325,37 +353,19 @@ end
 
 --ADD BUILDING BLOCKS TO BUILDINGS
 function add_con_mats()
-  local building_types = {
-    "assembling-machine",
-    "mining-drill",
-    "lab",
-    "furnace",
-    "offshore-pump",
-    "pump",
-    "rocket-silo",
-    "radar",
-    "beacon",
-    "boiler",
-    "generator",
-    "solar-panel",
-    "accumulator",
-    "reactor",
-    "electric-pole",
-    "wall",
-    "gate"
-  }
-  building_count = table_rows(building_types)
-  local n = 1
-  while (n < building_count + 1) do
+  for n,_ in pairs(building_types) do
     replace_con_mats(building_types[n])
-    n = n + 1
+  end
+end
+
+function add_minable_results()
+  for n,_ in pairs(building_types) do
+    replace_minable_results(building_types[n])
   end
 end
 
 function replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
-  local rows = table_rows(ing_list)
-  local n = 1
-  while (n < rows + 1) do
+  for n,_ in pairs(ing_list) do
     --[[
     ==Bob materials Tiers:
     T0 materials: iron, copper, stone, wood, bcb, iron gear
@@ -525,9 +535,9 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
     if ing_list[n].name == "electric-engine-unit" then
       ing_list[n].name = "motor-4"
     end
-    n = n + 1
   end
 end
+
 --Replace non-construction components with angels components
 function replace_gen_mats()
   --bobs replacements first (mainly for electronics reasons)
@@ -658,7 +668,7 @@ function replace_gen_mats()
   OV.execute()
 end
 
---REPLACE CONSTRUCTION ELECTRONIC BLOCKS
+--REPLACE CONSTRUCTION BLOCKS
 function replace_con_mats(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
     if data.raw.recipe[assembly_check] then
@@ -666,17 +676,27 @@ function replace_con_mats(buildings)
       if rec_check.normal then
         ing_list = rec_check.normal.ingredients
         replace_blocks_list(ing_list)
-        if data.raw[build.type][assembly_check].minable then
-          data.raw[build.type][assembly_check].minable.results=ing_list
-        end
         ing_list = rec_check.expensive.ingredients
         replace_blocks_list(ing_list)
       else
         ing_list = rec_check.ingredients
         replace_blocks_list(ing_list)
-        if data.raw[build.type][assembly_check].minable then
-          data.raw[build.type][assembly_check].minable.results=ing_list
-        end
+      end
+    end
+  end
+end
+--REPLACE ON MINED RESULTS
+function replace_minable_results(buildings)
+  for assembly_check, build in pairs(data.raw[buildings]) do
+    if data.raw.recipe[assembly_check] then
+      local rec_check = data.raw.recipe[assembly_check]
+      if rec_check.normal then
+        ing_list = rec_check.normal.ingredients
+      else
+        ing_list = rec_check.ingredients
+      end
+      if data.raw[build.type][assembly_check].minable then
+        data.raw[build.type][assembly_check].minable.results=ing_list
       end
     end
   end

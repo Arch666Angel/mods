@@ -57,8 +57,12 @@ if mods["bobplates"] then
           local acid = string.find(fluid_n.name, "acid")
           OV.barrel_overrides(fluid_n.name, "acid")
         end
-        data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
-        data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
+        if data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"] then
+          data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
+        end
+        if data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"] then
+          data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
+        end
       end
     end
     --insert custom barrel replacements

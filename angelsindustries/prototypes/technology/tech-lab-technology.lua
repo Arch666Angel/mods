@@ -1023,7 +1023,7 @@ data:extend(
         }
       },
       unit = {
-        count = pack_amount_base,
+        count = pack_amount_base * 32,
         ingredients = {
           {"angels-science-pack-grey", 1},
           {"angels-science-pack-red", 1},
@@ -1033,7 +1033,7 @@ data:extend(
           {"angels-science-pack-yellow", 1},
           {"angels-science-pack-white", 1}
         },
-        time = 1000
+        time = pack_time_base
        --pack_time_base,
       },
       order = "b-5"

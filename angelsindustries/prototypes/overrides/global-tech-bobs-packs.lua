@@ -239,4 +239,5 @@ if mods["bobtech"] then
     OV.remove_science_pack(rec_4tech, "advanced-logistic-science-pack")
     OV.remove_prereq(rec_4tech, "advanced-logistic-science-pack")
   end
+  OV.disable_technology({"advanced-logistic-science-pack"})
 end
