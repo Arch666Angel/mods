@@ -344,26 +344,19 @@ end
 
 --ADD BUILDING BLOCKS TO BUILDINGS
 function add_con_mats()
-  building_count = table_rows(building_types)
-  local n = 1
-  while (n < building_count + 1) do
+  for n,_ in pairs(building_types) do
     replace_con_mats(building_types[n])
-    n = n + 1
   end
 end
+
 function add_minable_results()
-  building_count = table_rows(building_types)
-  local n = 1
-  while (n < building_count + 1) do
+  for n,_ in pairs(building_types) do
     replace_minable_results(building_types[n])
-    n = n + 1
   end
 end
 
 function replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
-  local rows = table_rows(ing_list)
-  local n = 1
-  while (n < rows + 1) do
+  for n,_ in pairs(ing_list) do
     --[[
     ==Bob materials Tiers:
     T0 materials: iron, copper, stone, wood, bcb, iron gear
@@ -533,9 +526,9 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
     if ing_list[n].name == "electric-engine-unit" then
       ing_list[n].name = "motor-4"
     end
-    n = n + 1
   end
 end
+
 --Replace non-construction components with angels components
 function replace_gen_mats()
   --bobs replacements first (mainly for electronics reasons)
