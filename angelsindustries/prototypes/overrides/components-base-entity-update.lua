@@ -16,7 +16,7 @@ OV.patch_recipes(
   }
 )
 
-if not data.raw.item["wooden-board"] then
+if not (mods["bobassembly"] or mods["bobelectronics"]) then
   OV.patch_recipes(
     {
       {
