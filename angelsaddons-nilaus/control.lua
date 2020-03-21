@@ -71,18 +71,28 @@ function execute_event_part1()
 end
 function execute_event_part2()
   -- set event entity to wander next to player for now
-  event_entity.set_command{
-    type = defines.command.stop,
-    distraction = defines.distraction.none,
-    ticks_to_wait = 60 * 10,
-  }
-  event_entity.surface.create_entity{
-    name = "compi-speech-bubble",
-    position = event_entity.position,
-    target = event_entity,
-    text = {"compilatron-message.nilaus-paper"},
-    lifetime = 60 * 9
-  }
+  local player = game.players["Nilaus"]
+  if player and player.valid then
+    event_entity.set_command{
+      type = defines.command.stop,
+      distraction = defines.distraction.none,
+      ticks_to_wait = 60 * 10,
+    }
+    event_entity.surface.create_entity{
+      name = "compi-speech-bubble",
+      position = event_entity.position,
+      target = event_entity,
+      text = {"compilatron-message.nilaus-paper"},
+      lifetime = 60 * 9
+    }
+    player.insert{name="solid-paper", amount=1}
+  else
+    event_entity.set_command{
+      type = defines.command.stop,
+      distraction = defines.distraction.none,
+      ticks_to_wait = 10,
+    }
+  end
   event_part = 3
 end
 function execute_event_part3()
