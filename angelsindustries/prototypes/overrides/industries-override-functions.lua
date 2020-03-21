@@ -194,11 +194,20 @@ angelsmods.industries.techtiers = {
   green = {amount = 128, time = 30}, --TRAINS
   orange = {amount = 256, time = 40}, --OIL
   blue = {amount = 512, time = 50}, --ROBOTS
-  yellow = {amount = 1024, time = 60} --ENDGAME
+  yellow = {amount = 1024, time = 60}, --ENDGAME
+  white = {amount = 2024, time = 75} --MEGABASE
 }
 
 angelsmods.marathon.tech_amount_multi = 1
 angelsmods.marathon.tech_time_multi = 1
+
+local function set_research_tiers(tech_name, tech_time, tech_amount)
+  if data.raw.technology[tech_name] and (data.raw.technology[tech_name].unit or {}).count then
+    OV.set_research_difficulty(tech_name, tech_time, tech_amount)
+  else
+    -- todo: what in the case of a count_formula?
+  end
+end
 
 function tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
@@ -207,7 +216,7 @@ function tech_unlock_reset()
       if technology.unit.ingredients and not technology.max_level and technology.unit.ingredients[1] then
         for i, ingredients in pairs(technology.unit.ingredients[1]) do
           if ingredients == "angels-science-pack-grey" then
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi
@@ -215,7 +224,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-red" then
             OV.add_prereq(techname, "tech-red-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.red.amount * angelsmods.marathon.tech_amount_multi
@@ -223,7 +232,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-green" then
             OV.add_prereq(techname, "tech-green-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.green.amount * angelsmods.marathon.tech_amount_multi
@@ -231,7 +240,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-orange" then
             OV.add_prereq(techname, "tech-orange-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi
@@ -239,7 +248,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-blue" then
             OV.add_prereq(techname, "tech-blue-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi
@@ -247,7 +256,7 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-yellow" then
             OV.add_prereq(techname, "tech-yellow-packs")
-            OV.set_research_difficulty(
+            set_research_tiers(
               techname,
               angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi,
               angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi
@@ -255,11 +264,11 @@ function tech_unlock_reset()
           end
           if ingredients == "angels-science-pack-white" then
             OV.add_prereq(techname, "space-science-pack")
-            --OV.set_research_difficulty(
-            --  techname,
-            --  angelsmods.industries.techtiers.white.time * angelsmods.marathon.tech_time_multi,
-            --  angelsmods.industries.techtiers.white.amount * angelsmods.marathon.tech_amount_multi
-            --)
+            set_research_tiers(
+              techname,
+              angelsmods.industries.techtiers.white.time * angelsmods.marathon.tech_time_multi,
+              angelsmods.industries.techtiers.white.amount * angelsmods.marathon.tech_amount_multi
+            )
           end
         end
       end
