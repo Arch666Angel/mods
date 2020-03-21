@@ -65,6 +65,8 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   data.raw.technology["space-science-pack"].icon_size = 128
   OV.add_unlock("space-science-pack", "angels-science-pack-white")
   OV.add_unlock("space-science-pack", "angels-main-lab-7")
+
+  require("prototypes.overrides.tech-productivity-update")
 end
 
 -- ordening
