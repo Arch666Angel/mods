@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 21-03-2020
+  Bugfixes:
+    - Science:
+      - Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
-Date: ???
+Date: 21-03-2020
   Changes:
     - Components:
       - assembling-machine-1 in vanilla requires Electronic block 0 instead of 1 #109
