@@ -1,11 +1,5 @@
 local function create_recipe_icon(fluid_name, product_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2.3-9, (layer.shift[2] or 0)/2.3-9}
-    layer.scale = (layer.scale or 1)/2.3
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+  return angelsmods.functions.create_viscous_liquid_fluid_recipe_icon(fluid_name, product_name, 2.3, 9)
 end
 
 data:extend(
@@ -25,7 +19,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-nuts"),
-      order = "ba",
+      order = "ba"
     },
     {
       type = "recipe",
@@ -42,7 +36,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-pips"),
-      order = "bb",
+      order = "bb"
     },
     {
       type = "recipe",
@@ -59,7 +53,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-beans"),
-      order = "bc",
+      order = "bc"
     },
     -- PROCESSING
     {
@@ -119,11 +113,14 @@ data:extend(
         {type = "fluid", name = "liquid-mineral-oil", amount = 30}
       },
       always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        "liquid-fuel-oil",
-        "liquid-mineral-oil",
-      }, { {255,255,056}, {255,205,040}, {201,155,030} }),
-      order = "bc",
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          "liquid-fuel-oil",
+          "liquid-mineral-oil"
+        },
+        {{255, 255, 056}, {255, 205, 040}, {201, 155, 030}}
+      ),
+      order = "bc"
     }
   }
 )

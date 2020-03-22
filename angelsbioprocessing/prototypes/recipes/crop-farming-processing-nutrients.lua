@@ -1,11 +1,5 @@
 local function create_recipe_icon(fluid_name, product_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2-10, (layer.shift[2] or 0)/2-10}
-    layer.scale = (layer.scale or 1)/2
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+  return angelsmods.functions.create_viscous_liquid_fluid_recipe_icon(fluid_name, product_name)
 end
 
 data:extend(
@@ -25,7 +19,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-nutrient-pulp", "solid-beans"),
-      order = "ba",
+      order = "ba"
     },
     {
       type = "recipe",
@@ -42,7 +36,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-nutrient-pulp", "solid-corn"),
-      order = "bb",
+      order = "bb"
     },
     {
       type = "recipe",
@@ -59,7 +53,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-nutrient-pulp", "solid-leafs"),
-      order = "bc",
+      order = "bc"
     },
     {
       type = "recipe",
@@ -76,7 +70,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-nutrient-pulp", "solid-nuts"),
-      order = "ba",
+      order = "ba"
     },
     {
       type = "recipe",
@@ -93,7 +87,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-nutrient-pulp", "solid-pips"),
-      order = "bb",
+      order = "bb"
     },
     {
       type = "recipe",
@@ -110,7 +104,7 @@ data:extend(
       },
       always_show_products = "true",
       icons = create_recipe_icon("liquid-nutrient-pulp", "solid-fruit"),
-      order = "bc",
+      order = "bc"
     },
     -- REFINING
     {
@@ -129,12 +123,15 @@ data:extend(
         {type = "fluid", name = "gas-synthesis", amount = 20}
       },
       always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        "liquid-fuel-oil",
-        "gas-synthesis",
-        { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
-      }, { {214,146,040}, {169,130,039}, {120,083,004} }),
-      order = "ba",
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          "liquid-fuel-oil",
+          "gas-synthesis",
+          {"__angelspetrochem__/graphics/icons/molecules/acetone.png", 72}
+        },
+        {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
+      ),
+      order = "ba"
     },
     {
       type = "recipe",
@@ -152,12 +149,15 @@ data:extend(
         --{type="fluid", name="gas-synthesis", amount=10},
       },
       always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        "liquid-fuel-oil",
-        --"gas-synthesis",
-        { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 },
-      }, { {214,146,040}, {169,130,039}, {120,083,004} }),
-      order = "bb",
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          "liquid-fuel-oil",
+          --"gas-synthesis",
+          {"__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72}
+        },
+        {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
+      ),
+      order = "bb"
     },
     {
       type = "recipe",
@@ -175,12 +175,15 @@ data:extend(
         {type = "fluid", name = "gas-butane", amount = 10}
       },
       always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
-        { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
-        { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 },
-      }, { {214,146,040}, {169,130,039}, {120,083,004} }),
-      order = "bc",
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/acetone.png", 72},
+          {"__angelspetrochem__/graphics/icons/molecules/butane.png", 72},
+          {"__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72}
+        },
+        {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
+      ),
+      order = "bc"
     }
   }
 )

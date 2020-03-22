@@ -1,1003 +1,889 @@
 local function create_recipe_icon(fluid_name, product_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2-10, (layer.shift[2] or 0)/2-10}
-    layer.scale = (layer.scale or 1)/2
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
+  return angelsmods.functions.create_viscous_liquid_fluid_recipe_icon(fluid_name, product_name)
 end
 
 data:extend(
-{
-  -- RAW WOOD GENERATOR
   {
-    type = "recipe",
-    name = "tree-generator-1",
-    category = "angels-tree",
-    subgroup = "bio-arboretum",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
+    -- RAW WOOD GENERATOR
     {
-      {type="item", name="solid-soil", amount=5},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-seed", amount=4},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
+      type = "recipe",
+      name = "tree-generator-1",
+      category = "angels-tree",
+      subgroup = "bio-arboretum",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "fluid", name = "water", amount = 50}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[generator]-a",
-  },
-  {
-    type = "recipe",
-    name = "tree-generator-2",
-    category = "angels-tree",
-    subgroup = "bio-arboretum",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-seed", amount=6},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
+      results = {
+        {type = "item", name = "tree-seed", amount = 4}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[generator]-b",
-  },
-  {
-    type = "recipe",
-    name = "tree-generator-3",
-    category = "angels-tree",
-    subgroup = "bio-arboretum",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-      {type="fluid", name="gas-carbon-dioxide", amount=20},
-    },
-    results=
-    {
-      {type="item", name="tree-seed", amount=8},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      icon_size = 32,
+      order = "a[generator]-a"
     },
-    icon_size = 32,
-    order = "a[generator]-c",
-  },
-
-
-
-  -- RAW WOOD ARBORETUM
-  {
-    type = "recipe",
-    name = "tree-arboretum-1",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
     {
-      {type="item", name="tree-seed", amount=2},
-      {type="item", name="solid-soil", amount=5},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="solid-tree", amount=4},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+      type = "recipe",
+      name = "tree-generator-2",
+      category = "angels-tree",
+      subgroup = "bio-arboretum",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 100/255, g = 100/255, b = 100/255, a = 1},
-    },
-    order = "b[arboretum]-a",
-  },
-  {
-    type = "recipe",
-    name = "tree-arboretum-2",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-seed", amount=2},
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="solid-tree", amount=6},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+      results = {
+        {type = "item", name = "tree-seed", amount = 6}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 100/255, g = 100/255, b = 100/255, a = 1},
-    },
-    order = "b[arboretum]-b",
-  },
-  {
-    type = "recipe",
-    name = "tree-arboretum-3",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-seed", amount=2},
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-      {type="fluid", name="liquid-nutrient-pulp", amount=10},
-    },
-    results=
-    {
-      {type="item", name="solid-tree", amount=8},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      icon_size = 32,
+      order = "a[generator]-b"
     },
-    icon_size = 32,
-    crafting_machine_tint =
     {
-      primary = {r = 100/255, g = 100/255, b = 100/255, a = 1},
-    },
-    order = "b[arboretum]-c",
-  },
-
-
-
-  -- RAW WOOD PROCESSING
-  {
-    type = "recipe",
-    name = "solid-saw",
-    category = "crafting",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 0.5,
-    ingredients =
-    {
-      {type="item", name="iron-plate", amount=1},
-    },
-    results=
-    {
-      {type="item", name="solid-saw", amount=1},
-    },
-    --icon_size = 32,
-    order = "b[saw]-a[iron]",
-  },
-  {
-    type = "recipe",
-    name = "solid-crystal-tipped-saw",
-    category = "crafting",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients =
-    {
-      {type="item", name="solid-saw", amount=1},
-      {type="item", name="crystal-splinter-harmonic", amount=1},
-    },
-    results=
-    {
-      {type="item", name="solid-crystal-tipped-saw", amount=1},
-    },
-    --icon_size = 32,
-    order = "b[saw]-b[crystal-tipped]",
-  },
-  {
-    type = "recipe",
-    name = "solid-crystal-full-saw",
-    category = "crafting",
-    subgroup = "bio-wood",
-    enabled = "false",
-    energy_required = 5,
-    ingredients =
-    {
-      {type="item", name="solid-crystal-tipped-saw", amount=1},
-      {type="item", name="crystal-shard-harmonic", amount=1},
-    },
-    results=
-    {
-      {type="item", name="solid-crystal-full-saw", amount=1},
-    },
-    --icon_size = 32,
-    order = "b[saw]-c[crystal-full]",
-  },
-  {
-    type = "recipe",
-    name = "wood-sawing-1",
-    category = "advanced-crafting",
-    subgroup = "bio-processing-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients =
-    {
-      {type="item", name="solid-tree", amount=1},
-      {type="item", name="solid-saw", amount=1},
-    },
-    results=
-    {
-      {type="item", name="wood", amount_min=6, amount_max=8},
-      {type="item", name="solid-saw", amount=1, catalyst_amount=1, probability= 0.9},
-    },
-    main_product = "wood",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        scale = 0.5
+      type = "recipe",
+      name = "tree-generator-3",
+      category = "angels-tree",
+      subgroup = "bio-arboretum",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50},
+        {type = "fluid", name = "gas-carbon-dioxide", amount = 20}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[wood]-b[iron-saw]", -- order a[wood]-a[manual] reserved for manual wood crafting (bob greenhouse)
-  },
-  {
-    type = "recipe",
-    name = "wood-sawing-2",
-    category = "advanced-crafting",
-    subgroup = "bio-processing-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients =
-    {
-      {type="item", name="solid-tree", amount=1},
-      {type="item", name="solid-crystal-tipped-saw", amount=1},
-    },
-    results=
-    {
-      {type="item", name="wood", amount_min=6, amount_max=8},
-      {type="item", name="solid-crystal-tipped-saw", amount=1, catalyst_amount=1, probability= 0.95},
-    },
-    main_product = "wood",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        scale = 0.5
+      results = {
+        {type = "item", name = "tree-seed", amount = 8}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[wood]-c[crystal-tipped-saw]",
-  },
-  {
-    type = "recipe",
-    name = "wood-sawing-3",
-    category = "advanced-crafting",
-    subgroup = "bio-processing-wood",
-    enabled = "false",
-    energy_required = 2,
-    ingredients =
-    {
-      {type="item", name="solid-tree", amount=1},
-      {type="item", name="solid-crystal-full-saw", amount=1},
-    },
-    results=
-    {
-      {type="item", name="wood", amount_min=6, amount_max=8},
-      {type="item", name="solid-crystal-full-saw", amount=1, catalyst_amount=1, probability= 0.99},
-    },
-    main_product = "wood",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        scale = 0.5
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      icon_size = 32,
+      order = "a[generator]-c"
     },
-    icon_size = 32,
-    order = "a[wood]-d[crystal-full-saw]",
-  },
-
-
-
-  -- TEMPERATE WOOD GENERATOR
-  {
-    type = "recipe",
-    name = "temperate-tree-generator-1",
-    category = "angels-tree-temperate",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
+    -- RAW WOOD ARBORETUM
     {
-      {type="item", name="solid-soil", amount=5},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-temperate-seed", amount=4},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png",
+      type = "recipe",
+      name = "tree-arboretum-1",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-seed", amount = 2},
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "fluid", name = "water", amount = 50}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[generator]-a",
-  },
-  {
-    type = "recipe",
-    name = "temperate-tree-generator-2",
-    category = "angels-tree-temperate",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-temperate-seed", amount=6},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png",
+      results = {
+        {type = "item", name = "solid-tree", amount = 4}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[generator]-b",
-  },
-  {
-    type = "recipe",
-    name = "temperate-tree-generator-3",
-    category = "angels-tree-temperate",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-      {type="fluid", name="gas-carbon-dioxide", amount=20},
-    },
-    results=
-    {
-      {type="item", name="tree-temperate-seed", amount=8},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png",
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    order = "a[generator]-c",
-  },
-
-
-
-  -- TEMPERATE WOOD ARBORETUM
-  {
-    type = "recipe",
-    name = "temperate-tree-arboretum-1",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-temperate-seed", amount=2},
-      {type="item", name="solid-soil", amount=5},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="bio-resin", amount=2},
-      {type="item", name="solid-tree", amount=2},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      order = "b[arboretum]-a"
     },
-    icon_size = 32,
-    crafting_machine_tint =
     {
-      primary = {r = 0/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "b[arboretum]-a",
-  },
-  {
-    type = "recipe",
-    name = "temperate-tree-arboretum-2",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-temperate-seed", amount=2},
-      {type="item", name="solid-soil", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water", amount=50},
-    },
-    results=
-    {
-      {type="item", name="bio-resin", amount=4},
-      {type="item", name="solid-tree", amount=3},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
+      type = "recipe",
+      name = "tree-arboretum-2",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-seed", amount = 2},
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 0/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "b[arboretum]-b",
-  },
-
-
-
-  -- TEMPERATE WOOD PROCESSING
-  {
-    type = "recipe",
-    name = "bio-resin",
-    category = "liquifying",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 4,
-    ingredients =
-    {
-      {type="fluid", name="gas-ethanol", amount=20},
-      {type="item", name="bio-resin", amount=1},
-    },
-    results=
-    {
-      {type="fluid", name="liquid-resin", amount=5},
-    },
-    main_product = "liquid-resin",
-    always_show_products = "true",
-    icons = create_recipe_icon("liquid-resin", "bio-resin"),
-    order = "c[processing]",
-  },
-
-
-
-  -- SWAMP WOOD GENERATOR
-  {
-    type = "recipe",
-    name = "swamp-tree-generator-1",
-    category = "angels-tree-swamp",
-    subgroup = "bio-arboretum-swamp",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-mud", amount=5},
-      {type="fluid", name="water-light-mud", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-swamp-seed", amount=4},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png",
+      results = {
+        {type = "item", name = "solid-tree", amount = 6}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
-    },
-    order = "a[generator]-a",
-  },
-  {
-    type = "recipe",
-    name = "swamp-tree-generator-2",
-    category = "angels-tree-swamp",
-    subgroup = "bio-arboretum-swamp",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-mud", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water-light-mud", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-swamp-seed", amount=6},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png",
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
-    },
-    order = "a[generator]-b",
-  },
-  {
-    type = "recipe",
-    name = "swamp-tree-generator-3",
-    category = "angels-tree-swamp",
-    subgroup = "bio-arboretum-swamp",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-mud", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water-light-mud", amount=50},
-      {type="fluid", name="gas-nitrogen", amount=20},
-    },
-    results=
-    {
-      {type="item", name="tree-swamp-seed", amount=8},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png",
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      order = "b[arboretum]-b"
     },
-    icon_size = 32,
-    crafting_machine_tint =
     {
-      primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
-    },
-    order = "a[generator]-c",
-  },
-
-
-
-  -- SWAMP WOOD ARBORETUM
-  {
-    type = "recipe",
-    name = "swamp-tree-arboretum-1",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-swamp",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-swamp-seed", amount=2},
-      {type="item", name="solid-mud", amount=5},
-      {type="fluid", name="water-light-mud", amount=50},
-    },
-    results=
-    {
-      {type="item", name="bio-plastic", amount=2},
-      {type="item", name="solid-tree", amount=2},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
+      type = "recipe",
+      name = "tree-arboretum-3",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-seed", amount = 2},
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50},
+        {type = "fluid", name = "liquid-nutrient-pulp", amount = 10}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
-    },
-    order = "b[arboretum]-a",
-  },
-  {
-    type = "recipe",
-    name = "swamp-tree-arboretum-2",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-swamp",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-swamp-seed", amount=2},
-      {type="item", name="solid-mud", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water-light-mud", amount=50},
-    },
-    results=
-    {
-      {type="item", name="bio-plastic", amount=4},
-      {type="item", name="solid-tree", amount=3},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
+      results = {
+        {type = "item", name = "solid-tree", amount = 8}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 0/255, g = 0/255, b = 100/255, a = 1},
-    },
-    order = "b[arboretum]-b",
-  },
-
-
-
-  -- SWAMP WOOD PROCESSING
-  {
-    type = "recipe",
-    name = "bio-plastic",
-    category = "liquifying",
-    subgroup = "bio-arboretum-swamp",
-    enabled = "false",
-    energy_required = 4,
-    ingredients =
-    {
-      {type="fluid", name="gas-acetone", amount=20},
-      {type="item", name="bio-plastic", amount=1},
-    },
-    results=
-    {
-      {type="fluid", name="liquid-plastic", amount=5},
-    },
-    main_product = "liquid-plastic",
-    always_show_products = "true",
-    icons = create_recipe_icon("liquid-plastic", "bio-plastic"),
-    order = "c[processing]",
-  },
-
-
-
-  -- DESERT WOOD GENERATOR
-  {
-    type = "recipe",
-    name = "desert-tree-generator-1",
-    category = "angels-tree-desert",
-    subgroup = "bio-arboretum-desert",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-sand", amount=5},
-      {type="fluid", name="water-saline", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-desert-seed", amount=4},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png",
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "a[generator]-a",
-  },
-  {
-    type = "recipe",
-    name = "desert-tree-generator-2",
-    category = "angels-tree-desert",
-    subgroup = "bio-arboretum-desert",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-sand", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water-saline", amount=50},
-    },
-    results=
-    {
-      {type="item", name="tree-desert-seed", amount=6},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png",
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      order = "b[arboretum]-c"
     },
-    icon_size = 32,
-    crafting_machine_tint =
+    -- RAW WOOD PROCESSING
     {
-      primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "a[generator]-b",
-  },
-  {
-    type = "recipe",
-    name = "desert-tree-generator-3",
-    category = "angels-tree-desert",
-    subgroup = "bio-arboretum-desert",
-    enabled = "false",
-    energy_required = 15,
-    ingredients =
-    {
-      {type="item", name="solid-sand", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water-saline", amount=50},
-      {type="fluid", name="gas-nitrogen", amount=20},
-    },
-    results=
-    {
-      {type="item", name="tree-desert-seed", amount=8},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png",
+      type = "recipe",
+      name = "solid-saw",
+      category = "crafting",
+      subgroup = "bio-wood",
+      enabled = "false",
+      energy_required = 0.5,
+      ingredients = {
+        {type = "item", name = "iron-plate", amount = 1}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "a[generator]-c",
-  },
-
-
-
-  -- DESERT WOOD ARBORETUM
-  {
-    type = "recipe",
-    name = "desert-tree-arboretum-1",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-desert",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-desert-seed", amount=2},
-      {type="item", name="solid-sand", amount=5},
-      {type="fluid", name="water-saline", amount=50},
-    },
-    results=
-    {
-      {type="item", name="bio-rubber", amount=2},
-      {type="item", name="solid-tree", amount=2},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
+      results = {
+        {type = "item", name = "solid-saw", amount = 1}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      --icon_size = 32,
+      order = "b[saw]-a[iron]"
     },
-    icon_size = 32,
-    crafting_machine_tint =
     {
-      primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "b[arboretum]-a",
-  },
-  {
-    type = "recipe",
-    name = "desert-tree-arboretum-2",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-desert",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="tree-desert-seed", amount=2},
-      {type="item", name="solid-sand", amount=5},
-      {type="item", name="solid-fertilizer", amount=1},
-      {type="fluid", name="water-saline", amount=50},
-    },
-    results=
-    {
-      {type="item", name="bio-rubber", amount=4},
-      {type="item", name="solid-tree", amount=3},
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
+      type = "recipe",
+      name = "solid-crystal-tipped-saw",
+      category = "crafting",
+      subgroup = "bio-wood",
+      enabled = "false",
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "solid-saw", amount = 1},
+        {type = "item", name = "crystal-splinter-harmonic", amount = 1}
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
+      results = {
+        {type = "item", name = "solid-crystal-tipped-saw", amount = 1}
+      },
+      --icon_size = 32,
+      order = "b[saw]-b[crystal-tipped]"
     },
-    icon_size = 32,
-    crafting_machine_tint =
     {
-      primary = {r = 100/255, g = 100/255, b = 0/255, a = 1},
+      type = "recipe",
+      name = "solid-crystal-full-saw",
+      category = "crafting",
+      subgroup = "bio-wood",
+      enabled = "false",
+      energy_required = 5,
+      ingredients = {
+        {type = "item", name = "solid-crystal-tipped-saw", amount = 1},
+        {type = "item", name = "crystal-shard-harmonic", amount = 1}
+      },
+      results = {
+        {type = "item", name = "solid-crystal-full-saw", amount = 1}
+      },
+      --icon_size = 32,
+      order = "b[saw]-c[crystal-full]"
     },
-    order = "b[arboretum]-b",
-  },
-
-
-
-  -- DESERT WOOD PROCESSING
-  {
-    type = "recipe",
-    name = "bio-rubber",
-    category = "liquifying",
-    subgroup = "bio-arboretum-desert",
-    enabled = "false",
-    energy_required = 4,
-    ingredients =
     {
-      {type="fluid", name="gas-acetone", amount=20},
-      {type="item", name="bio-rubber", amount=1},
+      type = "recipe",
+      name = "wood-sawing-1",
+      category = "advanced-crafting",
+      subgroup = "bio-processing-wood",
+      enabled = "false",
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "solid-tree", amount = 1},
+        {type = "item", name = "solid-saw", amount = 1}
+      },
+      results = {
+        {type = "item", name = "wood", amount_min = 6, amount_max = 8},
+        {type = "item", name = "solid-saw", amount = 1, catalyst_amount = 1, probability = 0.9}
+      },
+      main_product = "wood",
+      icons = {
+        {
+          icon = "__base__/graphics/icons/wood.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "a[wood]-b[iron-saw]" -- order a[wood]-a[manual] reserved for manual wood crafting (bob greenhouse)
     },
-    results=
     {
-      {type="fluid", name="liquid-rubber", amount=5},
+      type = "recipe",
+      name = "wood-sawing-2",
+      category = "advanced-crafting",
+      subgroup = "bio-processing-wood",
+      enabled = "false",
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "solid-tree", amount = 1},
+        {type = "item", name = "solid-crystal-tipped-saw", amount = 1}
+      },
+      results = {
+        {type = "item", name = "wood", amount_min = 6, amount_max = 8},
+        {type = "item", name = "solid-crystal-tipped-saw", amount = 1, catalyst_amount = 1, probability = 0.95}
+      },
+      main_product = "wood",
+      icons = {
+        {
+          icon = "__base__/graphics/icons/wood.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "a[wood]-c[crystal-tipped-saw]"
     },
-    main_product = "liquid-rubber",
-    always_show_products = "true",
-    icons = create_recipe_icon("liquid-rubber", "bio-rubber"),
-    order = "c[processing]",
-  },
-}
+    {
+      type = "recipe",
+      name = "wood-sawing-3",
+      category = "advanced-crafting",
+      subgroup = "bio-processing-wood",
+      enabled = "false",
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "solid-tree", amount = 1},
+        {type = "item", name = "solid-crystal-full-saw", amount = 1}
+      },
+      results = {
+        {type = "item", name = "wood", amount_min = 6, amount_max = 8},
+        {type = "item", name = "solid-crystal-full-saw", amount = 1, catalyst_amount = 1, probability = 0.99}
+      },
+      main_product = "wood",
+      icons = {
+        {
+          icon = "__base__/graphics/icons/wood.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "a[wood]-d[crystal-full-saw]"
+    },
+    -- TEMPERATE WOOD GENERATOR
+    {
+      type = "recipe",
+      name = "temperate-tree-generator-1",
+      category = "angels-tree-temperate",
+      subgroup = "bio-arboretum-temperate",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "fluid", name = "water", amount = 50}
+      },
+      results = {
+        {type = "item", name = "tree-temperate-seed", amount = 4}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "a[generator]-a"
+    },
+    {
+      type = "recipe",
+      name = "temperate-tree-generator-2",
+      category = "angels-tree-temperate",
+      subgroup = "bio-arboretum-temperate",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50}
+      },
+      results = {
+        {type = "item", name = "tree-temperate-seed", amount = 6}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "a[generator]-b"
+    },
+    {
+      type = "recipe",
+      name = "temperate-tree-generator-3",
+      category = "angels-tree-temperate",
+      subgroup = "bio-arboretum-temperate",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50},
+        {type = "fluid", name = "gas-carbon-dioxide", amount = 20}
+      },
+      results = {
+        {type = "item", name = "tree-temperate-seed", amount = 8}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "a[generator]-c"
+    },
+    -- TEMPERATE WOOD ARBORETUM
+    {
+      type = "recipe",
+      name = "temperate-tree-arboretum-1",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-temperate",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-temperate-seed", amount = 2},
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "fluid", name = "water", amount = 50}
+      },
+      results = {
+        {type = "item", name = "bio-resin", amount = 2},
+        {type = "item", name = "solid-tree", amount = 2}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "b[arboretum]-a"
+    },
+    {
+      type = "recipe",
+      name = "temperate-tree-arboretum-2",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-temperate",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-temperate-seed", amount = 2},
+        {type = "item", name = "solid-soil", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water", amount = 50}
+      },
+      results = {
+        {type = "item", name = "bio-resin", amount = 4},
+        {type = "item", name = "solid-tree", amount = 3}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "b[arboretum]-b"
+    },
+    -- TEMPERATE WOOD PROCESSING
+    {
+      type = "recipe",
+      name = "bio-resin",
+      category = "liquifying",
+      subgroup = "bio-arboretum-temperate",
+      enabled = "false",
+      energy_required = 4,
+      ingredients = {
+        {type = "fluid", name = "gas-ethanol", amount = 20},
+        {type = "item", name = "bio-resin", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-resin", amount = 5}
+      },
+      main_product = "liquid-resin",
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-resin", "bio-resin"),
+      order = "c[processing]"
+    },
+    -- SWAMP WOOD GENERATOR
+    {
+      type = "recipe",
+      name = "swamp-tree-generator-1",
+      category = "angels-tree-swamp",
+      subgroup = "bio-arboretum-swamp",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-mud", amount = 5},
+        {type = "fluid", name = "water-light-mud", amount = 50}
+      },
+      results = {
+        {type = "item", name = "tree-swamp-seed", amount = 4}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
+      },
+      order = "a[generator]-a"
+    },
+    {
+      type = "recipe",
+      name = "swamp-tree-generator-2",
+      category = "angels-tree-swamp",
+      subgroup = "bio-arboretum-swamp",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-mud", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water-light-mud", amount = 50}
+      },
+      results = {
+        {type = "item", name = "tree-swamp-seed", amount = 6}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
+      },
+      order = "a[generator]-b"
+    },
+    {
+      type = "recipe",
+      name = "swamp-tree-generator-3",
+      category = "angels-tree-swamp",
+      subgroup = "bio-arboretum-swamp",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-mud", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water-light-mud", amount = 50},
+        {type = "fluid", name = "gas-nitrogen", amount = 20}
+      },
+      results = {
+        {type = "item", name = "tree-swamp-seed", amount = 8}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
+      },
+      order = "a[generator]-c"
+    },
+    -- SWAMP WOOD ARBORETUM
+    {
+      type = "recipe",
+      name = "swamp-tree-arboretum-1",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-swamp",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-swamp-seed", amount = 2},
+        {type = "item", name = "solid-mud", amount = 5},
+        {type = "fluid", name = "water-light-mud", amount = 50}
+      },
+      results = {
+        {type = "item", name = "bio-plastic", amount = 2},
+        {type = "item", name = "solid-tree", amount = 2}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
+      },
+      order = "b[arboretum]-a"
+    },
+    {
+      type = "recipe",
+      name = "swamp-tree-arboretum-2",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-swamp",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-swamp-seed", amount = 2},
+        {type = "item", name = "solid-mud", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water-light-mud", amount = 50}
+      },
+      results = {
+        {type = "item", name = "bio-plastic", amount = 4},
+        {type = "item", name = "solid-tree", amount = 3}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
+      },
+      order = "b[arboretum]-b"
+    },
+    -- SWAMP WOOD PROCESSING
+    {
+      type = "recipe",
+      name = "bio-plastic",
+      category = "liquifying",
+      subgroup = "bio-arboretum-swamp",
+      enabled = "false",
+      energy_required = 4,
+      ingredients = {
+        {type = "fluid", name = "gas-acetone", amount = 20},
+        {type = "item", name = "bio-plastic", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-plastic", amount = 5}
+      },
+      main_product = "liquid-plastic",
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-plastic", "bio-plastic"),
+      order = "c[processing]"
+    },
+    -- DESERT WOOD GENERATOR
+    {
+      type = "recipe",
+      name = "desert-tree-generator-1",
+      category = "angels-tree-desert",
+      subgroup = "bio-arboretum-desert",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-sand", amount = 5},
+        {type = "fluid", name = "water-saline", amount = 50}
+      },
+      results = {
+        {type = "item", name = "tree-desert-seed", amount = 4}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "a[generator]-a"
+    },
+    {
+      type = "recipe",
+      name = "desert-tree-generator-2",
+      category = "angels-tree-desert",
+      subgroup = "bio-arboretum-desert",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-sand", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water-saline", amount = 50}
+      },
+      results = {
+        {type = "item", name = "tree-desert-seed", amount = 6}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "a[generator]-b"
+    },
+    {
+      type = "recipe",
+      name = "desert-tree-generator-3",
+      category = "angels-tree-desert",
+      subgroup = "bio-arboretum-desert",
+      enabled = "false",
+      energy_required = 15,
+      ingredients = {
+        {type = "item", name = "solid-sand", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water-saline", amount = 50},
+        {type = "fluid", name = "gas-nitrogen", amount = 20}
+      },
+      results = {
+        {type = "item", name = "tree-desert-seed", amount = 8}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "a[generator]-c"
+    },
+    -- DESERT WOOD ARBORETUM
+    {
+      type = "recipe",
+      name = "desert-tree-arboretum-1",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-desert",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-desert-seed", amount = 2},
+        {type = "item", name = "solid-sand", amount = 5},
+        {type = "fluid", name = "water-saline", amount = 50}
+      },
+      results = {
+        {type = "item", name = "bio-rubber", amount = 2},
+        {type = "item", name = "solid-tree", amount = 2}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "b[arboretum]-a"
+    },
+    {
+      type = "recipe",
+      name = "desert-tree-arboretum-2",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-desert",
+      enabled = "false",
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "tree-desert-seed", amount = 2},
+        {type = "item", name = "solid-sand", amount = 5},
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "water-saline", amount = 50}
+      },
+      results = {
+        {type = "item", name = "bio-rubber", amount = 4},
+        {type = "item", name = "solid-tree", amount = 3}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "b[arboretum]-b"
+    },
+    -- DESERT WOOD PROCESSING
+    {
+      type = "recipe",
+      name = "bio-rubber",
+      category = "liquifying",
+      subgroup = "bio-arboretum-desert",
+      enabled = "false",
+      energy_required = 4,
+      ingredients = {
+        {type = "fluid", name = "gas-acetone", amount = 20},
+        {type = "item", name = "bio-rubber", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-rubber", amount = 5}
+      },
+      main_product = "liquid-rubber",
+      always_show_products = "true",
+      icons = create_recipe_icon("liquid-rubber", "bio-rubber"),
+      order = "c[processing]"
+    }
+  }
 )
