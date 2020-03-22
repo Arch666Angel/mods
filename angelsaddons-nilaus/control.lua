@@ -25,21 +25,23 @@ function get_next_event_tick(current_tick)
 end
 
 function get_event_spawn_location(player_location)
-  local offset_radius = 20 * (math.random() < 0.5 and -1 or 1) -- minimum 20 tiles away from the player
-  local spawn_radius = 10 * math.random() * (offset_radius < 0 and -1 or 1) -- maximum 20+10 tiles away from the player
+  local radius_min = 10
+  local radius_max = 20
+  local offset_radius = radius_min * (math.random() < 0.5 and -1 or 1) -- minimum 20 tiles away from the player
+  local spawn_radius = (radius_max-radius_min) * math.random() * (offset_radius < 0 and -1 or 1) -- maximum 20+10 tiles away from the player
   local x = offset_radius + spawn_radius
 
-  offset_radius = 20 * (math.random() < 0.5 and -1 or 1) -- minimum 20 tiles away from the player
-  spawn_radius = 10 * math.random() * (offset_radius < 0 and -1 or 1) -- maximum 20+10 tiles away from the player
+  offset_radius = radius_min * (math.random() < 0.5 and -1 or 1) -- minimum 20 tiles away from the player
+  spawn_radius = (radius_max-radius_min) * math.random() * (offset_radius < 0 and -1 or 1) -- maximum 20+10 tiles away from the player
   local y = offset_radius + spawn_radius
 
   return {x = player_location.x + x, y = player_location.y + y}
 end
 
 global.event_part = 0
-global.event_entity = -1
-global.event_unit = nil
-global.next_event_tick = 0
+global.event_entity = nil
+global.event_unit = -1
+global.next_event_tick = nil
 
 function show_event_stats()
   game.print(
@@ -47,7 +49,8 @@ function show_event_stats()
       {
         event_part = global.event_part,
         event_entity = global.event_entity,
-        event_unit = global.event_unit
+        event_unit = global.event_unit,
+        next_event = string.format("%d minutes", ((global.next_event_tick or 0) - game.tick)/60/60),
       }
     )
   )
@@ -55,13 +58,13 @@ end
 function execute_event_part1()
   local player = game.players["Nilaus"]
   if
-    player and player.valid and player.connected and player.character and player.character.valid and -- nilaus is ingame and alive!
-      game.item_prototypes["solid-paper"] and
-      player.get_item_count("solid-paper") < 200 and
+      player and player.valid and player.connected and player.character and player.character.valid and -- nilaus is ingame and alive!
+      game.item_prototypes["solid-paper"] and -- TP enabled
+      player.get_item_count("solid-paper") < 1000 and -- running low
       player.can_insert {name = "solid-paper"} and -- can insert TP as he is running low
       global.event_unit == -1 and
       global.event_part < 1
-   then -- event not in progress
+  then -- event not in progress
     global.event_part = 1
     local surface = player.surface
     local spawn_data = {
@@ -83,10 +86,10 @@ function execute_event_part1()
       type = defines.command.go_to_location,
       destination_entity = player.character,
       distraction = defines.distraction.none,
-      radius = 0.5
+      radius = 1
     }
     global.event_entity.destructible = false
-    global.event_unit = event_entity.unit_number
+    global.event_unit = global.event_entity.unit_number
     global.event_part = 2
   else
     global.event_part = 0
@@ -121,9 +124,9 @@ end
 function execute_event_part3()
   -- clean up and reset
   for i = 1, 5 do
-    event_entity.surface.create_trivial_smoke {
+    global.event_entity.surface.create_trivial_smoke {
       name = "car-smoke",
-      position = event_entity.position
+      position = global.event_entity.position
     }
   end
   global.event_entity.destroy()
@@ -144,9 +147,18 @@ script.on_nth_tick(
   60 * 5,
   function(event)
     local tick = event.tick
+    if global.event_part < 3 and global.event_entity then -- failsafe in case it fails
+      if global.event_entity.valid then
+        global.event_entity.destroy()
+      end
+      global.event_unit = -1
+      global.event_part = 0
+      global.event_entity = nil
+      execute_event_part1()
+    end
     if global.next_event_tick == nil then
       -- dirty way of initializing variable
-      next_event_tick = get_next_event_tick(60 * 60 * 60 * 1.5) -- first event will happen between 1.5 and 2 hours of gameplay
+      global.next_event_tick = get_next_event_tick(60 * 60 * 60 * 1.5) -- first event will happen between 1.5 and 2 hours of gameplay
       global.event_unit = -1
       global.event_part = 0
       global.event_entity = nil
