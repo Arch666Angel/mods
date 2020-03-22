@@ -253,9 +253,17 @@ if bobmods then
     end
 
     if angelsmods.trigger.disable_bobs_chemical_plants then
+      --angelsmods.functions.add_flag("chemical-plant", "hidden")
+      OV.global_replace_item("chemical-plant", "angels-chemical-plant")
       OV.disable_recipe("chemical-plant")
+      --angelsmods.functions.add_flag("chemical-plant-2", "hidden")
+      OV.global_replace_item("chemical-plant-2", "angels-chemical-plant-2")
       OV.disable_recipe("chemical-plant-2")
+      --angelsmods.functions.add_flag("chemical-plant-3", "hidden")
+      OV.global_replace_item("chemical-plant-3", "angels-chemical-plant-3")
       OV.disable_recipe("chemical-plant-3")
+      --angelsmods.functions.add_flag("chemical-plant-4", "hidden")
+      OV.global_replace_item("chemical-plant-4", "angels-chemical-plant-4")
       OV.disable_recipe("chemical-plant-4")
     end
 
