@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: ???
+  Changes:
+    - Make buildings upgradeable #119
   Bugfixes:
     - Fixed wire recipes from plates could not be made in bobs electronics assembler
 ---------------------------------------------------------------------------------------------------

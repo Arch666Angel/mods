@@ -38,6 +38,7 @@ data:extend(
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "filtration-unit"},
       fast_replaceable_group = "filtration-unit",
+      next_upgrade = "filtration-unit-2",
       max_health = 300,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
