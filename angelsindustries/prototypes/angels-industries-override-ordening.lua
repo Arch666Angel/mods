@@ -701,7 +701,7 @@ if angelsmods.industries.overhaul then
       move_item("advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-d")
     end
     -- bob tech
-    if bobmods.tech and angelsmods.industries.components then
+    if bobmods.tech and angelsmods.industries.tech then
       data.raw["item-subgroup"]["science-pack"].group = "angels-tech"
       data.raw["item-subgroup"]["science-pack"].order = "aa[science-packs]-b[bobs-alien]"
     end
