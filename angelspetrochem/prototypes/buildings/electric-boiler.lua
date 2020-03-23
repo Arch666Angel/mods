@@ -9,7 +9,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
+          tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -29,7 +29,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
+          tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -38,6 +38,7 @@ data:extend(
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-electric-boiler"},
       fast_replaceable_group = "angels-electric-boiler",
+      next_upgrade = "angels-electric-boiler-2",
       max_health = 200,
       corpse = "small-remnants",
       collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
@@ -164,7 +165,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
+          tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -184,7 +185,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
+          tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -193,6 +194,7 @@ data:extend(
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-electric-boiler-2"},
       fast_replaceable_group = "angels-electric-boiler",
+      next_upgrade = "angels-electric-boiler-3",
       max_health = 400,
       corpse = "small-remnants",
       collision_box = {{-1.29, -1.29}, {1.29, 1.29}},
@@ -319,7 +321,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
+          tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -339,7 +341,7 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
+          tint = angelsmods.petrochem.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }

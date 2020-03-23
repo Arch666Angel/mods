@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: ???
+  Changes:
+    - Make buildings upgradeable #119
+    - Make number icon for boiler use petrochem instead of refining
   Bugfixes:
     - Fixed production science pack required bobs chemical plant instead of angels version
     - Re-enable rocket-fuel on existing saves.
