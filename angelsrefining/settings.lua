@@ -96,7 +96,7 @@ data:extend(
     type = "bool-setting",
     name = "angels-starting-resource-ore6",
     setting_type = "startup",
-    default_value = false,
+    default_value = true,
     order = "caf"
   },
   {
