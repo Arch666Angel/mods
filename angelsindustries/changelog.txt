@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
-Date: 21-03-2020
+Date: ???
+  Changes:
+    - Added dedicated graphic to the weapon trigger (it was the same as Gear before)
   Bugfixes:
-    - Science:
+    - Overhaul mode:
+      - Fixed production science packs require bobs chemical plants instead of angels version
+    - Component mode:
+      - Fixed that some recipes would use iron sticks and iron gear wheels instead of Angels alternative
+    - Science mode:
       - Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+      - Fixed that gun turrets technology was locked behind red science (military) instead of grey (basic-military)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 21-03-2020
