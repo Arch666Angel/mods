@@ -57,11 +57,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "g",
-    default_temperature = 100,
+    default_temperature = 1085,
     heat_capacity = "0KJ",
     base_color = {r = 154/255, g = 101/255, b = 86/255},
     flow_color = {r = 154/255, g = 101/255, b = 86/255},
-    max_temperature = 100,
+    max_temperature = 1085,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

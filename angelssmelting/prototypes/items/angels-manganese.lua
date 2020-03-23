@@ -74,11 +74,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-manganese-casting",
     order = "h",
-    default_temperature = 100,
+    default_temperature = 1246,
     heat_capacity = "0KJ",
     base_color = {r = 242/255, g = 97/255, b = 97/255},
     flow_color = {r = 242/255, g = 97/255, b = 97/255},
-    max_temperature = 100,
+    max_temperature = 1246,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

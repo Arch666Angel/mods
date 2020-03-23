@@ -5,6 +5,7 @@ Date: ???
     - Make buildings upgradeable #119
   Bugfixes:
     - Fixed wire recipes from plates could not be made in bobs electronics assembler
+    - Fixed temperatures on molten liquids
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 20-03-2020
