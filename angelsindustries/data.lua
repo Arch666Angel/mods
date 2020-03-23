@@ -81,7 +81,7 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.buildings.angels-labs-processing")
   require("prototypes.buildings.angels-labs-war")
 
-  require("prototypes.buildings.angels-accelerator")
+  --require("prototypes.buildings.angels-accelerator")
 
   --RECIPES
   require("prototypes.recipes.tech-science-cores-recipes")

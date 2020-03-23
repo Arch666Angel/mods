@@ -48,8 +48,17 @@ end
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["platinum"].wire then
-  if data.raw.item["gilded-copper-cable"] then -- bob electronics
-    OV.patch_recipes({ { name = "angels-wire-coil-platinum-converting", category = "electronics-machine" } })
+  if mods['bobassembly'] then
+    OV.patch_recipes({
+      {
+        name = "basic-platinated-copper-wire",
+        category = "electronics"
+      },
+      {
+        name = "angels-wire-coil-platinum-converting",
+        category = "electronics-machine"
+      }
+    })
   end
 else
   angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
