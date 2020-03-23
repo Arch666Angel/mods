@@ -61,6 +61,18 @@ data:extend(
         },
         results = {{type = "item", name = "nilaus-truck", amount = 1}}
       }
-    }
+    },
+    {
+      type = "recipe",
+      name = "deco-nilaus-start",
+      energy_required = 2,
+      enabled = "false",
+      ingredients ={
+        {"iron-plate", 5},
+        {"steel-plate", 5},
+        {"stone-brick", 5},
+      },
+      result= "deco-nilaus-start",
+    },
   }
 )

@@ -257,7 +257,7 @@ data:extend(
     energy_required = 0.5,
     category = "crafting",
     subgroup = "angels-board",
-    enabled = "true",
+    enabled = "false",
     ingredients =
     {
       {type="item", name="solid-paper", amount=2},

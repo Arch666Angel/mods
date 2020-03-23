@@ -1,3 +1,7 @@
+local OV = angelsmods.functions.OV
+OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
+OV.execute()
+
 data:extend(
 {
   {
@@ -8,6 +12,7 @@ data:extend(
     prerequisites =
     {
       "angels-solder-smelting-basic",
+      "bio-paper-1",
     },
     effects =
     {
