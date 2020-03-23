@@ -102,7 +102,7 @@ data:extend(
   {
     type = "item",
     name = "angels-trigger",
-    icon = "__angelsindustries__/graphics/icons/gear.png",
+    icon = "__angelsindustries__/graphics/icons/trigger.png",
     icon_size = 32,
     subgroup = "angels-weapons-parts",
     order = "a",
