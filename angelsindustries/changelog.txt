@@ -11,6 +11,7 @@ Date: ???
     - Science mode:
       - Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
       - Fixed that gun turrets technology was locked behind red science (military) instead of grey (basic-military)
+      - Fixed that the vanilla lab was not hidden when playing pure angels
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 21-03-2020
