@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: ???
+Date: 24-03-2020
   Changes:
     - Fixed the TP bot...
     - Changed localised names of nilaus decorations
