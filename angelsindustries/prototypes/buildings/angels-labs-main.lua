@@ -1,3 +1,5 @@
+local OV = angelsmods.functions.OV
+
 local lab_item =
 {
   type = "item",
@@ -182,3 +184,7 @@ for tier_index, tier_props in pairs(lab_tiers) do
 
   angelsmods.triggers.lab_ignore_token[lab_entity_tier.name] = true
 end
+
+-- disable base game lab as it is obsolete
+OV.disable_recipe("lab")
+angelsmods.functions.add_flag("lab", "hidden")

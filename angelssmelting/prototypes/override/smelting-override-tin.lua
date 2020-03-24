@@ -107,7 +107,18 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     angelsmods.functions.add_flag("angels-wire-tin", "hidden")
     angelsmods.functions.move_item("tinned-copper-cable", "angels-tin-casting", "j")
     OV.disable_recipe({"tinned-copper-cable"})
-    OV.patch_recipes({ { name = "angels-wire-coil-tin-converting", category = "electronics-machine" } })
+    if mods['bobassembly'] then
+      OV.patch_recipes({
+        {
+          name = "basic-tinned-copper-wire",
+          category = "electronics"
+        },
+        {
+          name = "angels-wire-coil-tin-converting",
+          category = "electronics-machine"
+        }
+      })
+    end
   end
 else
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")

@@ -259,7 +259,7 @@ data:extend(
         icon = "__angelsindustries__/graphics/icons/weapon-parts.png"
       },
       {
-        icon = "__angelsindustries__/graphics/icons/gear.png",
+        icon = "__angelsindustries__/graphics/icons/trigger.png",
         scale = 0.4375,
         shift = { -10, -10},
       },

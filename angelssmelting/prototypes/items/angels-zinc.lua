@@ -74,11 +74,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-zinc-casting",
     order = "h",
-    default_temperature = 100,
+    default_temperature = 419.5,
     heat_capacity = "0KJ",
     base_color = {r = 100/255, g = 183/255, b = 177/255},
     flow_color = {r = 100/255, g = 183/255, b = 177/255},
-    max_temperature = 100,
+    max_temperature = 419.5,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

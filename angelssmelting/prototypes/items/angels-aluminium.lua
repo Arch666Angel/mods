@@ -83,11 +83,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-aluminium-casting",
     order = "i",
-    default_temperature = 100,
+    default_temperature = 660.3,
     heat_capacity = "0KJ",
     base_color = {r = 172/255, g = 161/255, b = 84/255},
     flow_color = {r = 172/255, g = 161/255, b = 84/255},
-    max_temperature = 100,
+    max_temperature = 660.3,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

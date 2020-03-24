@@ -38,6 +38,7 @@ data:extend(
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "crystallizer"},
       fast_replaceable_group = "crystallizer",
+      next_upgrade = "crystallizer-2",
       max_health = 300,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",

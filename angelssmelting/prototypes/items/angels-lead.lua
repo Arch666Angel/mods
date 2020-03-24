@@ -91,11 +91,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-lead-casting",
     order = "i",
-    default_temperature = 100,
+    default_temperature = 327.5,
     heat_capacity = "0KJ",
     base_color = {r = 77/255, g = 78/255, b = 90/255},
     flow_color = {r = 77/255, g = 78/255, b = 90/255},
-    max_temperature = 100,
+    max_temperature = 327.5,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

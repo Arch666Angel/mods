@@ -124,8 +124,17 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   OV.global_replace_item("angels-wire-copper", "copper-cable")
   angelsmods.functions.add_flag("angels-wire-copper", "hidden")
 
-  if mods['bobelectronics'] then
-    OV.patch_recipes({ { name = "angels-wire-coil-copper-converting", category = "electronics-machine"} })
+  if mods['bobassembly'] then
+    OV.patch_recipes({
+      {
+        name = "copper-cable",
+        category = "electronics"
+      },
+      {
+        name = "angels-wire-coil-copper-converting",
+        category = "electronics-machine"
+      }
+    })
   end
 else
   -- todo

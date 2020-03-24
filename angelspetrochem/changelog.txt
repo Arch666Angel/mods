@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: 24-03-2020
+  Changes:
+    - Make buildings upgradeable #119
+  Bugfixes:
+    - Fixed production science pack required bobs chemical plant instead of angels version
+    - Re-enable rocket-fuel on existing saves.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 20-03-2020
   Changes:

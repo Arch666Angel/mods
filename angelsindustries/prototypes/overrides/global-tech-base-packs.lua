@@ -26,6 +26,10 @@ for _,tech_name in pairs({
 }) do
   pack_replace(tech_name,"red","grey")
 end
+OV.remove_prereq("turrets", "military")
+OV.add_prereq("turrets","angels-components-weapons-basic")
+OV.remove_unlock("military", "submachine-gun")
+OV.add_unlock("turrets", "submachine-gun")
 
 -------------------------------------------------------------------------------
 -- RED SCIENCE PACKS ----------------------------------------------------------

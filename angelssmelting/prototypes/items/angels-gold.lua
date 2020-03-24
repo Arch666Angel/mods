@@ -91,11 +91,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "i",
-    default_temperature = 100,
+    default_temperature = 1064,
     heat_capacity = "0KJ",
     base_color = {r = 237/255, g = 191/255, b = 29/255},
     flow_color = {r = 237/255, g = 191/255, b = 29/255},
-    max_temperature = 100,
+    max_temperature = 1064,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

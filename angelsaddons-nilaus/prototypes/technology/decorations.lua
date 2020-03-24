@@ -20,6 +20,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "deco-nilaus-start"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "deco-nilaus-lamp"
         }
       },

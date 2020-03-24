@@ -1,4 +1,4 @@
-if mods["angelsbioprocessing"] then
+if mods["angelsbioprocessing"] and data.raw.item["solid-paper"] then
   -- replace paper with nilaus TP
   data.raw.item["solid-paper"].icon = "__angelsaddons-nilaus__/graphics/icons/nilaus-paper.png"
   data.raw.item["solid-paper"].icon_size = 256

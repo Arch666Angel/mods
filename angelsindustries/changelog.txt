@@ -1,6 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 24-03-2020
+  Changes:
+    - Added dedicated graphic to the weapon trigger (it was the same as Gear before)
+  Bugfixes:
+    - Overhaul mode:
+      - Fixed production science packs require bobs chemical plants instead of angels version
+    - Component mode:
+      - Fixed that some recipes would use iron sticks and iron gear wheels instead of Angels alternative
+      - Added alternative Grey Board recipe unlock to Paper Making 1
+      - Added missing prerequisite of Paper Making 1 to Red Circuits
+    - Science mode:
+      - Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+      - Fixed that gun turrets technology was locked behind red science (military) instead of grey (basic-military)
+      - Fixed that the vanilla lab was not hidden when playing pure angels
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
-Date: ???
+Date: 21-03-2020
   Changes:
     - Components:
       - assembling-machine-1 in vanilla requires Electronic block 0 instead of 1 #109

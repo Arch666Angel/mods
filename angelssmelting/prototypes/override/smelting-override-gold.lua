@@ -61,7 +61,18 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     angelsmods.functions.add_flag("angels-wire-gold", "hidden")
     angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "m")
     OV.disable_recipe({"gilded-copper-cable"})
-    OV.patch_recipes({ { name = "angels-wire-coil-gold-converting", category = "electronics-machine" } })
+    if mods['bobassembly'] then
+      OV.patch_recipes({
+        {
+          name = "angels-wire-gold",
+          category = "electronics"
+        },
+        {
+          name = "angels-wire-coil-gold-converting",
+          category = "electronics-machine"
+        }
+      })
+    end
   end
 else
   angelsmods.functions.add_flag("angels-wire-gold", "hidden")

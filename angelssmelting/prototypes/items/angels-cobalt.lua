@@ -74,11 +74,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-cobalt-casting",
     order = "h",
-    default_temperature = 100,
+    default_temperature = 1495,
     heat_capacity = "0KJ",
     base_color = {r = 51/255, g = 74/255, b = 109/255},
     flow_color = {r = 51/255, g = 74/255, b = 109/255},
-    max_temperature = 100,
+    max_temperature = 1495,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
     auto_barrel = false

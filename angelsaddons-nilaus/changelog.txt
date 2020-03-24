@@ -1,6 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 24-03-2020
+  Changes:
+    - Fixed the TP bot...
+    - Changed localised names of nilaus decorations
+    - Added Nilaus' Floor Lamp
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
-Date: ???
+Date: 22-03-2020
   Changes:
     - Tweakes some technologies, recipes and items after the previous update
 ---------------------------------------------------------------------------------------------------

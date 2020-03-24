@@ -116,6 +116,8 @@ end
 -------------------------------------------------------------------------------
 if mods['boblogistics'] then
   core_replace("logistics-0","logistic","basic")
+  core_replace("logistics","basic","logistic")
+  core_replace("automation","basic","processing")
   -- toolbelts
   core_replace("toolbelt-2","basic","enhance")
   core_replace("toolbelt-4","basic","enhance")
