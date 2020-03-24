@@ -373,7 +373,9 @@ if not angelsmods.trigger.enableconverter and mods.bobplates then
   data.raw["fluid"]["hydrogen-chloride"].hidden = true
   data.raw["fluid"]["ferric-chloride-solution"].hidden = true
   data.raw["fluid"]["chlorine"].hidden = true
-  data.raw["fluid"]["pure-water"].hidden = true
+  if settings.startup["bobmods-plates-purewater"].value == true then
+    data.raw["fluid"]["pure-water"].hidden = true
+  end
   if mods.bobrevamp then
     data.raw["fluid"]["ammonia"].hidden = true
     data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true

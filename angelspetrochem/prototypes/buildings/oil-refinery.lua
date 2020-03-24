@@ -1,5 +1,6 @@
 -- mark default oil ref to be upgradeable to oil-refinery-2
 
+data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 data.raw["assembling-machine"]["oil-refinery"].next_upgrade = "oil-refinery-2"
 
 data:extend(

@@ -1,4 +1,4 @@
-## Angelsmods
+## Angels Mods
 
 - I. [Angel's Infinite Ores](https://forums.factorio.com/viewtopic.php?f=93&t=21909)
 - II. [Angel's Refining](https://forums.factorio.com/viewtopic.php?f=93&t=24906)

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.6
+Date: 24-03-2020
+  Bugfixes:
+    - Fixed oil refinery didn't have fast_replaceable_group set
+    - Fixed crash when bob pure water was disabled
+---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: 24-03-2020
   Changes:
