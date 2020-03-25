@@ -13,7 +13,7 @@ OV.disable_recipe("solid-lithium")
 -------------------------------------------------------------------------------
 -- CRUSHED SMELTING -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["angelssmelting"] and ore_exists("lead") then
+if mods["angelssmelting"] and ore_exists("lead-ore") then
   OV.patch_recipes({
     {
       name = "angelsore5-crushed-smelting",
@@ -25,7 +25,7 @@ if mods["angelssmelting"] and ore_exists("lead") then
     }
   })
 end
-if mods["angelssmelting"] and ore_exists("tin") then
+if mods["angelssmelting"] and ore_exists("tin-ore") then
   OV.patch_recipes({
     {
       name = "angelsore6-crushed-smelting",

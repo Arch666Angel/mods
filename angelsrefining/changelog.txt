@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.8
 Date: ???
+  Bugfixes:
+    - Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
   Modding:
     - angelsmods.functions.make_void(...) now supports an optional quantity as input argument
 ---------------------------------------------------------------------------------------------------
