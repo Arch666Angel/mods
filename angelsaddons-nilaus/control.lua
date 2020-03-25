@@ -148,7 +148,7 @@ script.on_nth_tick(
   function(event)
     local tick = event.tick
     if global.event_part < 3 and global.event_entity then -- failsafe in case it fails
-      if global.event_entity.valid then
+      if type(global.event_entity) == "table" and global.event_entity.valid then
         global.event_entity.destroy()
       end
       global.event_unit = -1
@@ -181,3 +181,15 @@ script.on_event(
     end
   end
 )
+
+script.on_configuration_changed(function(configurationData)
+  local modChanges = configurationData.mod_changes["angelsaddons-nilaus"]
+  if modChanges and modChanges.new_version ~= (modChanges.old_version or "") then
+    log(string.format("Updating 'angelsaddons-nilaus' from version %q to version %q", modChanges.old_version or "nil", modChanges.new_version))
+    -- reset event
+    if type(global.event_entity) == "table" and global.event_entity.valid then global.event_entity.destroy() end
+    global.event_unit = -1
+    global.event_part = 0
+    global.event_entity = nil
+  end
+end)
