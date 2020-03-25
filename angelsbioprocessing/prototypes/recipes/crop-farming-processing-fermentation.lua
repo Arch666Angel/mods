@@ -72,7 +72,7 @@ data:extend(
       },
       results = {
         {type = "fluid", name = "liquid-acetic-acid", amount = 50},
-        {type = "item", name = "solid-compost", amount = 1}
+        {type = "item", name = "solid-compost", amount = 1, probability = 0.5}
       },
       main_product = "liquid-acetic-acid",
       always_show_products = "true",
@@ -94,7 +94,7 @@ data:extend(
       },
       results = {
         {type = "fluid", name = "gas-ethanol", amount = 50},
-        {type = "item", name = "solid-compost", amount = 1}
+        {type = "item", name = "solid-compost", amount = 1, probability = 0.5}
       },
       main_product = "gas-ethanol",
       always_show_products = "true",

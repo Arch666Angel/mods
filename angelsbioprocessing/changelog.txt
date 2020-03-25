@@ -6,6 +6,7 @@ Date: ???
   Balancing:
     - Increase usage of bio sink (Compost)
       - Fertilizer now takes twice the amount of Compost
+      - Fermentation Base processing now produces half the amount of compost
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.5
 Date: 24-03-2020
