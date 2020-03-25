@@ -7,6 +7,14 @@ Date: ???
     - Increase usage of bio sink (Compost)
       - Fertilizer now takes twice the amount of Compost
       - Fermentation Base processing now produces half the amount of compost
+    - Decrease production of Compost
+      - Require 2 vegetables to create 1 Compost (required 1 before)
+      - Require 20 vegetable seeds to create 1 Compost (required 1 before)
+      - Require 2 Gardens to create 1 Compost (required 1 before)
+      - Require 2 Cellulose Fibers to create 1 Compost (required 1 before)
+      - Require 4 Green Algae to create 1 Compost (required 1 before)
+      - Require 3 Brown Algae to create 1 Compost (required 1 before)
+      - Require 2 Blue Algae to create 1 Compost (required 1 before)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.5
 Date: 24-03-2020
