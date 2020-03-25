@@ -525,13 +525,13 @@ data:extend(
       category = "crafting-with-fluid",
       subgroup = "bio-wood",
       enabled = "false",
-      energy_required = 2,
+      energy_required = 1,
       ingredients = {
         {type = "item", name = "solid-compost", amount = 2},
-        {type = "fluid", name = "gas-urea", amount = 40}
+        {type = "fluid", name = "gas-urea", amount = 20}
       },
       results = {
-        {type = "item", name = "solid-fertilizer", amount = 2}
+        {type = "item", name = "solid-fertilizer", amount = 1}
       },
       icon_size = 32,
       order = "a[support]-ca" -- order a[support]-cb reserved for bob fertilizer
