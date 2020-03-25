@@ -673,7 +673,7 @@ data:extend(
           {
             icon = "__angelsrefining__/graphics/icons/num_1.png",
             icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
+            tint = angelsmods.refining.number_tint
           },
           {
             icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
@@ -711,7 +711,7 @@ data:extend(
           {
             icon = "__angelsrefining__/graphics/icons/num_2.png",
             icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
+            tint = angelsmods.refining.number_tint
           },
           {
             icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
@@ -749,7 +749,7 @@ data:extend(
           {
             icon = "__angelsrefining__/graphics/icons/num_3.png",
             icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
+            tint = angelsmods.refining.number_tint
           },
           {
             icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
@@ -785,7 +785,7 @@ data:extend(
           {
             icon = "__angelsrefining__/graphics/icons/num_1.png",
             icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
+            tint = angelsmods.refining.number_tint
           },
           mods["angelssmelting"] and
             {
@@ -823,7 +823,7 @@ data:extend(
           {
             icon = "__angelsrefining__/graphics/icons/num_2.png",
             icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
+            tint = angelsmods.refining.number_tint
           },
           mods["angelssmelting"] and
             {
@@ -861,7 +861,7 @@ data:extend(
           {
             icon = "__angelsrefining__/graphics/icons/num_3.png",
             icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
+            tint = angelsmods.refining.number_tint
           },
           mods["angelssmelting"] and
             {
