@@ -128,6 +128,8 @@ data:extend(
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -164,6 +166,8 @@ data:extend(
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
@@ -201,6 +205,8 @@ data:extend(
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_3.png",
@@ -499,7 +505,9 @@ data:extend(
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
+        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -536,7 +544,9 @@ data:extend(
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-resin.png",
+        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
@@ -710,7 +720,9 @@ data:extend(
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
+        icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -747,7 +759,9 @@ data:extend(
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-plastic.png",
+        icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",
@@ -921,7 +935,9 @@ data:extend(
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
+        icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -958,7 +974,9 @@ data:extend(
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-bio-rubber.png",
+        icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
+        icon_size = 64,
+        scale = 0.5
       },
       {
         icon = "__angelsrefining__/graphics/icons/num_2.png",

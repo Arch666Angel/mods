@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.6
 Date: ???
+  Changes:
+    - Changed graphics on tree recipes to represent the trees instead of their product
   Bugfixes:
     - Fixed missing localised description on Alien Plant Life Sample
   Balancing:

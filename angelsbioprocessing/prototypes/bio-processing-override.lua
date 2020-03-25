@@ -266,7 +266,9 @@ if bobmods then
           name = "tree-arboretum-1",
           icons = {
             {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+              icon_size = 64,
+              scale = 0.5
             },
             {
               icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
@@ -286,7 +288,9 @@ if bobmods then
           name = "tree-arboretum-2",
           icons = {
             {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+              icon_size = 64,
+              scale = 0.5
             },
             {
               icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
@@ -306,7 +310,9 @@ if bobmods then
           name = "tree-arboretum-3",
           icons = {
             {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+              icon_size = 64,
+              scale = 0.5
             },
             {
               icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
