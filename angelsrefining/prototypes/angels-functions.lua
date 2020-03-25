@@ -882,62 +882,85 @@ function angelsmods.functions.modify_barreling_recipes()
 end
 
 --CREATE VOID RECIPES
-function angelsmods.functions.make_void(fluid_name, void_category) --categories: chemical (flare-stack), water(clarifier)
-  --LOCAL DEFINITIONS
-  local void_hidden = angelsmods.trigger.enable_hide_void
+function angelsmods.functions.make_void(fluid_name, void_category, void_amount) --categories: chemical (flare-stack), water(clarifier)
+  --LOCAL DEFINITIONS                                                           --amount(optional): amount of input/output
   local recipe = {}
 
-  if data.raw.fluid[fluid_name] then
+  if data.raw.fluid[fluid_name] then -- fluid voids
     local fluid_icon = get_icons(fluid_name)
-    if type(fluid_icon) == "table" then
-      recipe.icons = fluid_icon
-    else
-      recipe.icon = fluid_icon
-    end
-    if data.raw.fluid[fluid_name].icon_size then
-      recipe.icon_size = data.raw.fluid[fluid_name].icon_size
-    else
-      recipe.icon_size = 32
-    end
+    recipe.icons = type(fluid_icon) == "table" and fluid_icon or nil
+    recipe.icon = type(fluid_icon) ~= "table" and fluid_icon or nil
+    recipe.icon_size = data.raw.fluid[fluid_name].icon_size or 32
+    
     if void_category == "water" then
-      void_amount = 400
-      void_item = "water-void"
-      void_time = 5
-      void_type = "fluid"
-      void = 0
+      void_amount = void_amount or 400
+      void_input_amount = void_amount >= 1 and void_amount or 1
+      void_input_type = "fluid"
+      void_process_time = 5
+      void_output_item = "water-void"
+      void_output_amount = void_amount < 1 and void_amount or 1
+      void_output_probability = 0
+
+    elseif void_category == "chemical" then
+      void_amount = void_amount or 100
+      void_input_amount = void_amount >= 1 and void_amount or 1
+      void_input_type = "fluid"
+      void_process_time = 1
+      void_output_item = "chemical-void"
+      void_output_amount = void_amount < 1 and void_amount or 1
+      void_output_probability = 0
+
+    else
+      recipe = nil -- no valid void category found
     end
-    if void_category == "chemical" then
-      void_amount = 100
-      void_item = "chemical-void"
-      void_time = 1
-      void_type = "fluid"
-      void = 0
+
+  elseif data.raw.item[fluid_name] then -- item voids
+    if void_category == "bio" then
+      void_amount = void_amount or 1
+      void_input_amount = void_amount >= 1 and void_amount or 1
+      void_input_type = "item"
+      void_process_time = 1
+      void_output_item = "solid-compost"
+      void_output_amount = void_amount < 1 and 1/void_amount or 1
+      void_output_probability = 1
+
+    else
+      recipe = nil -- no valid void category found
     end
+
   else
-    if data.raw.item[fluid_name] then
-      fluid_icon = data.raw.item[fluid_name].icon
-      if void_category == "bio" then
-        void_amount = 1
-        void_item = "solid-compost"
-        void_time = 1
-        void_type = "item"
-        void = 1
-      end
-    end
+    recipe = nil -- no valid void object found
   end
 
-  recipe.type = "recipe"
-  recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
-  recipe.category = "angels-" .. void_category .. "-void"
-  recipe.enabled = "true"
-  recipe.hidden = void_hidden
-  recipe.energy_required = void_time
-  recipe.ingredients = {{type = void_type, name = fluid_name, amount = void_amount}}
-  recipe.results = {{type = "item", name = void_item, amount = 1, probability = void}}
-  recipe.subgroup = "angels-void"
-  recipe.order = "angels-" .. void_category .. "-void-" .. fluid_name
+  if recipe then -- valid
+    recipe.type = "recipe"
+    recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
+    recipe.category = "angels-" .. void_category .. "-void"
+    recipe.enabled = "true"
+    recipe.hidden = angelsmods.trigger.enable_hide_void
+    recipe.energy_required = void_process_time
+    recipe.ingredients =
+    {
+      {
+        type = void_input_type,
+        name = fluid_name,
+        amount = void_input_amount
+      }
+    }
+    recipe.results =
+    {
+      {
+        type = "item",
+        name = void_output_item,
+        amount = void_output_amount,
+        probability = void_output_probability
+      }
+    }
+    recipe.subgroup = "angels-void"
+    recipe.order = "angels-" .. void_category .. "-void-" .. fluid_name
 
-  data:extend({recipe})
+    data:extend({recipe})
+  end
 end
 
 --CREATE CONVERTER RECIPES (PETROCHEM)
