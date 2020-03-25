@@ -12,6 +12,12 @@ OV.patch_recipes(
           {"block-electronics-0", "block-electronics-1"}
         }
       }
+    },
+    {
+      name = "stone-wall",
+      ingredients = {
+        {"block-construction-2", 1}
+      },
     }
   }
 )
