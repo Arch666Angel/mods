@@ -6,6 +6,7 @@ Date: ???
     - Fixed crash when bob pure water was disabled
     - Fixed missing localisation for heavy water seperation recipes
     - Fixed failed attempt (in 0.9.5) on re-enabling rocket-fuel on existing saves
+    - Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: 24-03-2020
