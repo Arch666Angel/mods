@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Component mode:
       - Stone wall now require only 1 Construction Block 2 instead of 5
+      - Fixed recipes would use the unobtainable advanced processing blocks
     - Removed crawler train - moved to separate mod #124
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
