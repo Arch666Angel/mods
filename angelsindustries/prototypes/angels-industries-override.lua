@@ -7,20 +7,6 @@ if mods['bobvehicleequipment'] then
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories,"car")
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories,"vehicle")
 
-  -- crawler locomotive
-  table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories,"train")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories,"vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-locomotive"].equipment_categories,"locomotive")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories,"train")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories,"vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-loco-wagon"].equipment_categories,"locomotive")
-  -- crawler wagon
-  table.insert(data.raw["equipment-grid"]["angels-crawler-wagon"].equipment_categories,"train")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-wagon"].equipment_categories,"vehicle")
-  -- crawler bot wagon
-  table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories,"train")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories,"vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-crawler-bot-wagon"].equipment_categories,"cargo-wagon")
 end
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then

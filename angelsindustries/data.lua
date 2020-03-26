@@ -101,7 +101,6 @@ require("prototypes.buildings.construction-robot")
 require("prototypes.buildings.chests")
 
 require("prototypes.entities.crawler")
-require("prototypes.entities.crawler-train")
 require("prototypes.entities.equipment")
 require("prototypes.entities.bio-tile")
 

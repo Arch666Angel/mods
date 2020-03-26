@@ -89,7 +89,6 @@ core_replace("energy-weapons-damage-7","war","energy")
 OV.set_science_pack("angels-fluid-control", "datacore-logistic-1", 2)
 -- INDUSTRIES
 OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
-OV.set_science_pack("angels-crawler-train", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
 OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
