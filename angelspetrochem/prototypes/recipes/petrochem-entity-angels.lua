@@ -999,7 +999,7 @@ angelsmods.functions.RB.build(
         },
         result = "angels-chemical-plant"
       },
-      expensive = {
+      expensive = angelsmods.industries and angelsmods.industries.tech and {
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
@@ -1008,6 +1008,17 @@ angelsmods.functions.RB.build(
           {"t1-gears", 1 * buildingmulti},
           {"t1-circuit", 1 * buildingmulti},
           {"t1-pipe", 4 * buildingmulti}
+        },
+        result = "angels-chemical-plant"
+      } or { -- chem plant required for science, excluding it from marathon effects
+        energy_required = 5,
+        enabled = false,
+        ingredients = {
+          {"chem-1", 1},
+          {"t1-plate", 2},
+          {"t1-gears", 1},
+          {"t1-circuit", 1},
+          {"t1-pipe", 4}
         },
         result = "angels-chemical-plant"
       }
