@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.8
 Date: ???
+  Changes:
+    - Changed mining time of burner ore crusher so it's easier to pick up in early game
   Bugfixes:
     - Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
   Modding:
