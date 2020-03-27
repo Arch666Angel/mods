@@ -30,6 +30,8 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --RECIPES
       --SMELTING
       {
@@ -60,7 +62,8 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           -- }
         },
         icon_size = 32,
-        order = "d[invar]-a[liquid-molten-invar]"
+        order = "d[invar]-a[liquid-molten-invar]",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-invar")
       },
       --CASTING
       {

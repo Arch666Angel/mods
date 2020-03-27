@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -56,7 +58,8 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           -- }
         },
         icon_size = 32,
-        order = "f[nitinol]-a[liquid-molten-nitinol]"
+        order = "f[nitinol]-a[liquid-molten-nitinol]",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nitinol")
       },
       --CASTING
       {

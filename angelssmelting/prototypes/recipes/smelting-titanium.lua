@@ -228,6 +228,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-titanium]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
   },
   {
     type = "recipe",
@@ -258,6 +259,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-titanium]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
   },
   {
     type = "recipe",
@@ -288,6 +290,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-titanium]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
   },
   {
     type = "recipe",
@@ -319,6 +322,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-titanium]-d",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
   },
   {
     type = "recipe",
@@ -350,6 +354,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-titanium]-e",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
   },
   {
     type = "recipe",

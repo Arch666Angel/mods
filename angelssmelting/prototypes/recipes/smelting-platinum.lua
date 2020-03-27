@@ -205,6 +205,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-platinum]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
   },
   {
     type = "recipe",

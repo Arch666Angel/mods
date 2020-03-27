@@ -145,6 +145,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-glass]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-glass")
   },
   {
     type = "recipe",

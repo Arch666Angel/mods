@@ -758,6 +758,27 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
   }
 end
 
+function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
+  -- returns a crafting_machine_tint depending on the fluid color
+  local fluid = data.raw.fluid[fluid_name]
+  return fluid and {
+    primary =
+    {
+      r = fluid.base_color.r or 0,
+      g = fluid.base_color.g or 0,
+      b = fluid.base_color.b or 0,
+      a = 185/255
+    },
+    secondary =
+    {
+      r = fluid.flow_color.r or 0,
+      g = fluid.flow_color.g or 0,
+      b = fluid.flow_color.b or 0,
+      a = 185/255
+    }
+  } or nil
+end
+
 --COMPARES ARGUMENT (ARG) AGAINST A TABLE (EXCEP), RETURNS FALSE IF ARG == EXCEP ELSE TRUE
 function angelsmods.functions.check_exception(arg, excep)
   for _, exception in pairs(excep) do
