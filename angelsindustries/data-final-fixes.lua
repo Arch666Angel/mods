@@ -3,7 +3,6 @@ require("prototypes.overrides.industries-override-functions")
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.overrides.global-components-recipe")
-  require("prototypes.overrides.global-components-blocks")
 
   --hide the unused advanced tech blocks
   data.raw.recipe["block-extraction-3"].hidden = true
