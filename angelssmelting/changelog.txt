@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Changed the name from Non Expendable mold to Reusable Mold
     - Added basic recipe tints to the induction furnace + recipes
+    - Changed stack size of pavement items to use refinings setting (was 1000, now 200 by default)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 24-03-2020

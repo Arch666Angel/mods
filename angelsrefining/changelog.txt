@@ -2,9 +2,13 @@
 Version: 0.11.8
 Date: ???
   Changes:
-    - Changed mining time of burner ore crusher so it's easier to pick up in early game
+    - Changed mining time of Burner Ore Crusher so it's easier to pick up in early game
+    - Added setting to change stack size of (all) pavement items between 200 to 1000 (default 200)
+    - Changed stack size of Stone Brick to use the pavement item stack size (was 100, now 200 by default)
+    - Changed stack size of (all) Concrete to use the pavement item stack size (was 100, now 200 by default)
+    - Changed stack size of Landfill to use the pavement item stack size (was 100, now 200 by default)
   Bugfixes:
-    - Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    - Fixed missing Tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
   Modding:
     - angelsmods.functions.make_void(...) now supports an optional quantity as input argument
     - added equivalent function to create viscous liquid recipe icons

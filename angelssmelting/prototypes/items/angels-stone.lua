@@ -37,7 +37,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-stone",
     order = "e",
-    stack_size = 1000,
+    stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
       result = "clay-bricks",
@@ -72,7 +72,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "i",
-    stack_size = 1000,
+    stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
       result = "concrete",
@@ -87,7 +87,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "j",
-    stack_size = 1000,
+    stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
       result = "concrete",

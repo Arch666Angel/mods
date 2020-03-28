@@ -9,6 +9,7 @@ angelsmods.trigger = angelsmods.trigger or {}
 angelsmods.trigger.enable_auto_barreling = settings.startup["angels-enable-auto-barreling"].value
 angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"].value
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
+angelsmods.trigger.pavement_stack_size = settings.startup["angels-pavement-stack-size"].value -- Stack size for items you can use to pave the world
 angelsmods.trigger.washing_tech = angelsmods.trigger.washing_tech or false
 
 --REFINERY SORTING TRIGGERS
