@@ -1,14 +1,3 @@
-local function create_recipe_icon(fluid_name, overlay_icon)
-  if not overlay_icon then return angelsmods.functions.get_object_icons(fluid_name) end
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(overlay_icon))
-  for layer_index, layer in pairs(icon_layers) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2.3-9, (layer.shift[2] or 0)/2.3-9}
-    layer.scale = (layer.scale or 1)/2.3
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
-end
-
 data:extend(
   {
     {
@@ -194,7 +183,9 @@ data:extend(
       },
       main_product = "water-saline",
       always_show_products = "true",
-      icons = create_recipe_icon("water-saline", "water"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {039,112,194}, {168,173,173}, {070,133,232}, {185,185,185,0.8} }, {
+        "water"
+      }),
       order = "a[water-saline]-a[water]"
     },
     {
@@ -215,7 +206,9 @@ data:extend(
       },
       main_product = "water-saline",
       always_show_products = "true",
-      icons = create_recipe_icon("water-saline", "solid-salt"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {039,112,194}, {168,173,173}, {070,133,232}, {185,185,185,0.8} }, {
+        "solid-salt"
+      }),
       order = "a[water-saline]-b[salt]"
     },
     {
@@ -234,7 +227,7 @@ data:extend(
         {type = "item", name = "solid-salt", amount = 25}
       },
       main_product = "solid-salt",
-      icons = create_recipe_icon("solid-salt", "water-saline"),
+      icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-salt", {"water-saline"}),
       order = "b[solid-salt-from-saline]"
     },
     {
@@ -253,7 +246,7 @@ data:extend(
         {type = "item", name = "solid-salt", amount = 10}
       },
       main_product = "solid-salt",
-      icons = create_recipe_icon("solid-salt", "water"),
+      icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-salt", {"water"}),
       order = "c[solid-salt]"
     },
     {

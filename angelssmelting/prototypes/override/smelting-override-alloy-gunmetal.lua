@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
             icon = "__angelssmelting__/graphics/icons/molten-gunmetal.png",
           },
           -- {
-          -- icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          -- icon = "__angelsrefining__/graphics/icons/num_1.png",
           -- tint = angelsmods.smelting.number_tint,
           -- scale = 0.32,
           -- shift = {-12, -12},

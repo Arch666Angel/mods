@@ -1,13 +1,3 @@
-local function create_recipe_icon(fluid_name, product_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2-10, (layer.shift[2] or 0)/2-10}
-    layer.scale = (layer.scale or 1)/2
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
-end
-
 data:extend(
 {
   -- RAW WOOD GENERATOR
@@ -584,7 +574,9 @@ data:extend(
     },
     main_product = "liquid-resin",
     always_show_products = "true",
-    icons = create_recipe_icon("liquid-resin", "bio-resin"),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {
+      "bio-resin"
+    }),
     order = "c[processing]",
   },
 
@@ -799,7 +791,9 @@ data:extend(
     },
     main_product = "liquid-plastic",
     always_show_products = "true",
-    icons = create_recipe_icon("liquid-plastic", "bio-plastic"),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {
+      "bio-plastic"
+    }),
     order = "c[processing]",
   },
 
@@ -1014,7 +1008,9 @@ data:extend(
     },
     main_product = "liquid-rubber",
     always_show_products = "true",
-    icons = create_recipe_icon("liquid-rubber", "bio-rubber"),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {193,197,255}, {193,197,255} }, {
+      "bio-rubber"
+    }),
     order = "c[processing]",
   },
 }

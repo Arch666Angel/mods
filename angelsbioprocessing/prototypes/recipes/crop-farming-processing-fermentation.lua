@@ -1,7 +1,3 @@
-local function create_icon(name, number_icon_layer)
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(name), number_icon_layer)
-end
-
 data:extend(
   {
     {
@@ -230,13 +226,11 @@ data:extend(
       },
       main_product = "liquid-plastic",
       always_show_products = "true",
-      icons = create_icon("liquid-plastic", {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         icon_size = 32,
         tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }),
+      }}),
       order = "e",
     },
     {
@@ -280,13 +274,11 @@ data:extend(
       },
       main_product = "liquid-plastic",
       always_show_products = "true",
-      icons = create_icon("liquid-plastic", {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         icon_size = 32,
         tint = angelsmods.bioprocessing.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }),
+      }}),
       order = "g",
     }
   }

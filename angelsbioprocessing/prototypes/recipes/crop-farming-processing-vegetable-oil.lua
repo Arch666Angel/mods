@@ -1,13 +1,3 @@
-local function create_recipe_icon(fluid_name, product_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2.3-9, (layer.shift[2] or 0)/2.3-9}
-    layer.scale = (layer.scale or 1)/2.3
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
-end
-
 data:extend(
   {
     {
@@ -24,7 +14,9 @@ data:extend(
         {type = "fluid", name = "liquid-raw-vegetable-oil", amount = 50}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-nuts"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,184,062}, {255,184,062}, {255,221,061,0.8}, {255,221,061,0.8} }, {
+        "solid-nuts"
+      }),
       order = "ba",
     },
     {
@@ -41,7 +33,9 @@ data:extend(
         {type = "fluid", name = "liquid-raw-vegetable-oil", amount = 40}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-pips"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,184,062}, {255,184,062}, {255,221,061,0.8}, {255,221,061,0.8} }, {
+        "solid-pips"
+      }),
       order = "bb",
     },
     {
@@ -58,7 +52,9 @@ data:extend(
         {type = "fluid", name = "liquid-raw-vegetable-oil", amount = 30}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-raw-vegetable-oil", "solid-beans"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,184,062}, {255,184,062}, {255,221,061,0.8}, {255,221,061,0.8} }, {
+        "solid-beans"
+      }),
       order = "bc",
     },
     -- PROCESSING

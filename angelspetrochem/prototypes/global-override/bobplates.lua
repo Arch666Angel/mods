@@ -140,7 +140,7 @@ if bobmods then
               icon = "__bobplates__/graphics/icons/resin.png"
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_1.png",
+              icon = "__angelsrefining__/graphics/icons/num_1.png",
               tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -156,7 +156,7 @@ if bobmods then
               icon = "__bobplates__/graphics/icons/resin.png"
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_2.png",
+              icon = "__angelsrefining__/graphics/icons/num_2.png",
               tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -193,7 +193,7 @@ if bobmods then
               icon = "__bobplates__/graphics/icons/rubber.png"
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_1.png",
+              icon = "__angelsrefining__/graphics/icons/num_1.png",
               tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
@@ -210,7 +210,7 @@ if bobmods then
               icon = "__bobplates__/graphics/icons/rubber.png"
             },
             {
-              icon = "__angelspetrochem__/graphics/icons/num_2.png",
+              icon = "__angelsrefining__/graphics/icons/num_2.png",
               tint = angelsmods.petrochem.number_tint,
               scale = 0.32,
               shift = {-12, -12}
