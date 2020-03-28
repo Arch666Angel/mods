@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: ???
+  Changes:
+    - Updated grid size to a 9x9 grid (instead of default bob-cars size) #143
+    - Hide grid button when in vanilla, aka missing vehicle grid (car, vehicle, angels-...) #143
+    - Truck now stears as a car, not a tank #143
+---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 24-03-2020
   Changes:

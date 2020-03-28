@@ -1,7 +1,25 @@
 require("util")
 
+if not data.raw["equipment-category"]["equipment-void"] then
+  data:extend(
+    {
+      {
+        type = "equipment-category",
+        name = "equipment-void"
+      }
+    }
+  )
+end
+
 data:extend(
   {
+    {
+      type = "equipment-grid",
+      name = "deco-nilaustruck",
+      width = 9,
+      height = 9,
+      equipment_categories = {"equipment-void"}
+    },
     {
       type = "item",
       name = "deco-nilaus-1",
@@ -505,7 +523,7 @@ data:extend(
       open_sound = {filename = "__base__/sound/car-door-open.ogg", volume = 0.7},
       close_sound = {filename = "__base__/sound/car-door-close.ogg", volume = 0.7},
       rotation_speed = 0.005,
-      tank_driving = true,
+      tank_driving = false,
       weight = 2000,
       inventory_size = 120
       --guns = {},
@@ -520,7 +538,7 @@ data:extend(
       subgroup = "storage",
       order = "zd",
       place_result = "deco-nilaus-start",
-      stack_size = 10,
+      stack_size = 10
     },
     {
       type = "lamp",
@@ -536,21 +554,19 @@ data:extend(
       corpse = "big-remnants",
       collision_box = {{-5.4, -0.4}, {5.4, 10.4}},
       selection_box = {{-5.5, -0.5}, {5.5, 10.5}},
-      vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-      energy_source =
-      {
+      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      energy_source = {
         type = "electric",
         usage_priority = "lamp"
       },
       energy_usage_per_tick = "50KW",
       darkness_for_all_lamps_on = 0.5,
       darkness_for_all_lamps_off = 0.3,
-      light = {intensity = 0.9, size = 40, color = {r=1.0, g=1.0, b=1.0}},
-      light_when_colored = {intensity = 1, size = 6, color = {r=1.0, g=1.0, b=1.0}},
+      light = {intensity = 0.9, size = 40, color = {r = 1.0, g = 1.0, b = 1.0}},
+      light_when_colored = {intensity = 1, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}},
       glow_size = 6,
       glow_color_intensity = 0.135,
-      picture_off =
-      {
+      picture_off = {
         filename = "__angelsaddons-nilaus__/graphics/entity/deco-nilaus-start-off.png",
         priority = "high",
         width = 416,
@@ -558,10 +574,9 @@ data:extend(
         frame_count = 1,
         axially_symmetrical = false,
         direction_count = 1,
-        shift = {0, 5},
+        shift = {0, 5}
       },
-      picture_on =
-      {
+      picture_on = {
         filename = "__angelsaddons-nilaus__/graphics/entity/deco-nilaus-start-on.png",
         priority = "high",
         width = 416,
@@ -569,21 +584,19 @@ data:extend(
         frame_count = 1,
         axially_symmetrical = false,
         direction_count = 1,
-        shift = {0, 5},
+        shift = {0, 5}
       },
-      signal_to_color_mapping =
-      {
-        {type="virtual", name="signal-red", color={r=1,g=0,b=0}},
-        {type="virtual", name="signal-green", color={r=0,g=1,b=0}},
-        {type="virtual", name="signal-blue", color={r=0,g=0,b=1}},
-        {type="virtual", name="signal-yellow", color={r=1,g=1,b=0}},
-        {type="virtual", name="signal-pink", color={r=1,g=0,b=1}},
-        {type="virtual", name="signal-cyan", color={r=0,g=1,b=1}}
+      signal_to_color_mapping = {
+        {type = "virtual", name = "signal-red", color = {r = 1, g = 0, b = 0}},
+        {type = "virtual", name = "signal-green", color = {r = 0, g = 1, b = 0}},
+        {type = "virtual", name = "signal-blue", color = {r = 0, g = 0, b = 1}},
+        {type = "virtual", name = "signal-yellow", color = {r = 1, g = 1, b = 0}},
+        {type = "virtual", name = "signal-pink", color = {r = 1, g = 0, b = 1}},
+        {type = "virtual", name = "signal-cyan", color = {r = 0, g = 1, b = 1}}
       },
-
       circuit_wire_connection_point = circuit_connector_definitions["lamp"].points,
       circuit_connector_sprites = circuit_connector_definitions["lamp"].sprites,
       circuit_wire_max_distance = default_circuit_wire_max_distance
-    },
+    }
   }
 )
