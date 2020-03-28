@@ -243,12 +243,18 @@ if bobmods then
       OV.disable_recipe("electrolyser-2")
       OV.disable_recipe("electrolyser-3")
       OV.disable_recipe("electrolyser-4")
+      OV.disable_recipe("electrolyser-5")
+      OV.disable_technology("electrolyser-2")
+      OV.disable_technology("electrolyser-3")
+      OV.disable_technology("electrolyser-4")
+      OV.disable_technology("electrolyser-5")
     else
       table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
       if bobmods.assembly and data.raw["assembling-machine"]["electrolyser-2"] then
         table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
         table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
         table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
+        table.insert(data.raw["assembling-machine"]["electrolyser-5"].crafting_categories, "petrochem-electrolyser")
       end
     end
 
@@ -259,12 +265,15 @@ if bobmods then
       --angelsmods.functions.add_flag("chemical-plant-2", "hidden")
       OV.global_replace_item("chemical-plant-2", "angels-chemical-plant-2")
       OV.disable_recipe("chemical-plant-2")
+      OV.disable_technology("chemical-plant-2")
       --angelsmods.functions.add_flag("chemical-plant-3", "hidden")
       OV.global_replace_item("chemical-plant-3", "angels-chemical-plant-3")
       OV.disable_recipe("chemical-plant-3")
+      OV.disable_technology("chemical-plant-3")
       --angelsmods.functions.add_flag("chemical-plant-4", "hidden")
       OV.global_replace_item("chemical-plant-4", "angels-chemical-plant-4")
       OV.disable_recipe("chemical-plant-4")
+      OV.disable_technology("chemical-plant-4")
     end
 
     move_item("heavy-water", "water-treatment-fluid", "eb")
@@ -350,10 +359,15 @@ if bobmods then
     )
     OV.add_unlock("angels-oil-processing", "liquid-fuel")
     move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
-    data.raw["fluid"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_fluid_icon(nil, { {237,212,104}, {247,216,081}, {247,216,081} })
+    data.raw["fluid"]["liquid-fuel"].icons =
+      angelsmods.functions.create_liquid_fluid_icon(nil, {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}})
     data.raw["fluid"]["liquid-fuel"].icon = nil
     OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
-    data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon({ "liquid-fuel" }, { {237,212,104}, {247,216,081}, {247,216,081} })
+    data.raw["recipe"]["liquid-fuel"].icons =
+      angelsmods.functions.create_liquid_recipe_icon(
+      {"liquid-fuel"},
+      {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
+    )
     data.raw["recipe"]["liquid-fuel"].icon = nil
     data.raw["recipe"]["liquid-fuel"].always_show_products = "true"
 

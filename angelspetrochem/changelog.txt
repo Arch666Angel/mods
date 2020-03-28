@@ -3,6 +3,7 @@ Version: 0.9.6
 Date: ???
   Changes:
     - Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+    - Remove tech for electrolyser/chem plant 2+ when its disabled #132
   Bugfixes:
     - Fixed oil refinery didn't have fast_replaceable_group set
     - Fixed crash when bob pure water was disabled
