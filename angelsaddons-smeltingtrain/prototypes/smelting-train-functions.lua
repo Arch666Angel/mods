@@ -140,6 +140,8 @@ local function generate_train_entities(item)
         copy.reversing_power_modifier = item.reversing_power_modifier * multiplier
       elseif item.type == "cargo-wagon" then
         copy.inventory_size = math.floor(item.inventory_size * (multiplier * 1.5))
+      elseif item.type == "fluid-wagon" then
+        copy.capacity = math.floor(item.capacity * i)
       end
       table.insert(entries, copy)
     end

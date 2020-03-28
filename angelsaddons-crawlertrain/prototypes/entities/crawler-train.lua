@@ -20,7 +20,7 @@ funcs.generate_train_items(
   {
     type = "item-with-entity-data",
     name = "crawler-locomotive-wagon",
-    icon = "__angelsindustries__/graphics/icons/crawler-loco-wagon-ico.png",
+    icon = "__angelsaddons-crawlertrain__/graphics/icons/crawler-loco-wagon-ico.png",
     icon_size = 32,
     subgroup = "angels-vehicle-train-crawler",
     order = "b[crawler-locomotive-wagon]",

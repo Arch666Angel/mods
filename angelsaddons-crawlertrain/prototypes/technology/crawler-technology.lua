@@ -1,5 +1,12 @@
 local funcs = require("prototypes/crawler-train-functions")
 
+local prerequisites = {
+  "railway"
+}
+if mods.angelsindustries then
+  table.insert(prerequisites, "angels-crawler")
+end
+
 local tiers = {
   {
     count = 60,
@@ -55,10 +62,7 @@ funcs.generate_train_technology(
     name = "angels-crawler-train",
     icon = "__angelsaddons-crawlertrain__/graphics/technology/crawlertrain.png",
     icon_size = 128,
-    prerequisites = {
-      "angels-crawler",
-      "railway"
-    },
+    prerequisites = prerequisites,
     order = "c-a"
   },
   tiers
