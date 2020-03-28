@@ -69,6 +69,8 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
+
   },
   {
     type = "recipe",
@@ -99,6 +101,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -129,6 +132,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -160,6 +164,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-d",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -191,6 +196,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-e",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -569,6 +575,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -599,6 +606,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -629,6 +637,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -660,6 +669,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-d",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",

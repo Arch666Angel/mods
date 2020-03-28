@@ -216,6 +216,7 @@ data:extend(
     },
     icon_size = 32,
     order = "h[liquid-molten-cobalt]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
   },
   {
     type = "recipe",

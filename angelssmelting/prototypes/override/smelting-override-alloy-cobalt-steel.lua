@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -57,7 +59,8 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           -- }
         },
         icon_size = 32,
-        order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]"
+        order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt-steel")
       },
       --CASTING
       {

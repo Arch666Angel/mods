@@ -186,6 +186,7 @@ data:extend(
     },
     icon_size = 32,
     order = "g[liquid-molten-copper]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
   },
   {
     type = "recipe",

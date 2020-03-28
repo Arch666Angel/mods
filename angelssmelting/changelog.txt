@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: ???
+  Changes:
+    - Changed the name from Non Expendable mold to Reusable Mold
+    - Added basic recipe tints to the induction furnace + recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 24-03-2020
   Changes:

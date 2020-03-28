@@ -7,11 +7,11 @@ OV.patch_recipes(
       ingredients = {
         {"block-electronics-0", "block-electronics-1"}
       },
-      minable = {
-        results = {
-          {"block-electronics-0", "block-electronics-1"}
-        }
-      }
+      --minable = {
+      --  results = {
+      --    {"block-electronics-0", "block-electronics-1"}
+      --  }
+      --}
     },
     {
       name = "stone-wall",

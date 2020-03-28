@@ -59,25 +59,43 @@ data:extend(
     },
     energy_usage = "150kW",
     ingredient_count = 2,
-    animation ={
-      layers={
+    animation =
+    {
+      layers =
       {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
-        width = 224,
-        height = 256,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, -0.5},
-        animation_speed = 0.5,
-      },
-      -- {
-        -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-        -- tint = {r=1, g=0, b=0},
-        -- width = 224,
-        -- height = 224,
-        -- frame_count = 1,
-        -- shift = {0, 0},
-      -- },
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        },
+        -- {
+          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
+          -- tint = {r=1, g=0, b=0},
+          -- width = 224,
+          -- height = 224,
+          -- frame_count = 1,
+          -- shift = {0, 0},
+        -- },
+      }
+    },
+    working_visualisations =
+    {
+      {
+        apply_recipe_tint = "primary",
+        animation =
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        }
       }
     },
     fluid_boxes =
@@ -165,25 +183,41 @@ data:extend(
     },
     energy_usage = "200kW",
     ingredient_count = 4,
-    animation ={
-      layers={
+    animation = {
+      layers = {
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        },
+        -- {
+          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
+          -- tint = {r=1, g=0, b=0},
+          -- width = 224,
+          -- height = 224,
+          -- frame_count = 1,
+          -- shift = {0, 0},
+        -- },
+      }
+    },
+    working_visualisations =
+    {
       {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
-        width = 224,
-        height = 256,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, -0.5},
-        animation_speed = 0.5,
-      },
-      -- {
-        -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-        -- tint = {r=1, g=0, b=0},
-        -- width = 224,
-        -- height = 224,
-        -- frame_count = 1,
-        -- shift = {0, 0},
-      -- },
+        apply_recipe_tint = "primary",
+        animation =
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        }
       }
     },
     fluid_boxes =
@@ -263,25 +297,41 @@ data:extend(
     },
     energy_usage = "250kW",
     ingredient_count = 6,
-    animation ={
-      layers={
+    animation = {
+      layers = {
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        },
+        -- {
+          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
+          -- tint = {r=1, g=0, b=0},
+          -- width = 224,
+          -- height = 224,
+          -- frame_count = 1,
+          -- shift = {0, 0},
+        -- },
+        }
+    },
+    working_visualisations =
+    {
       {
-        filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
-        width = 224,
-        height = 256,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, -0.5},
-        animation_speed = 0.5,
-      },
-      -- {
-        -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-        -- tint = {r=1, g=0, b=0},
-        -- width = 224,
-        -- height = 224,
-        -- frame_count = 1,
-        -- shift = {0, 0},
-      -- },
+        apply_recipe_tint = "primary",
+        animation =
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        }
       }
     },
     fluid_boxes =
@@ -360,26 +410,42 @@ data:extend(
     },
     energy_usage = "250kW",
     ingredient_count = 6,
-    animation ={
-    layers={
-    {
-      filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
-      width = 224,
-      height = 256,
-      line_length = 6,
-      frame_count = 36,
-      shift = {0, -0.5},
-      animation_speed = 0.5,
+    animation = {
+      layers = {
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        },
+        -- {
+          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
+          -- tint = {r=1, g=0, b=0},
+          -- width = 224,
+          -- height = 224,
+          -- frame_count = 1,
+          -- shift = {0, 0},
+        -- },
+      }
     },
-    -- {
-      -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-      -- tint = {r=1, g=0, b=0},
-      -- width = 224,
-      -- height = 224,
-      -- frame_count = 1,
-      -- shift = {0, 0},
-    -- },
-    }
+    working_visualisations =
+    {
+      {
+        apply_recipe_tint = "primary",
+        animation =
+        {
+          filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
+          width = 224,
+          height = 256,
+          line_length = 6,
+          frame_count = 36,
+          shift = {0, -0.5},
+          animation_speed = 0.5,
+        }
+      }
     },
     fluid_boxes =
     {

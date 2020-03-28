@@ -246,6 +246,7 @@ data:extend(
     --icon = "__angelssmelting__/graphics/icons/molten-gold.png",
     icon_size = 32,
     order = "i[liquid-molten-gold]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
   },
   {
     type = "recipe",

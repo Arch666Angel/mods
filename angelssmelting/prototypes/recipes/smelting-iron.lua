@@ -213,6 +213,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-iron]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
   },
   {
     type = "recipe",
@@ -243,6 +244,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-iron]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
   },
   {
     type = "recipe",
@@ -273,6 +275,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-iron]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
   },
   {
     type = "recipe",
@@ -304,6 +307,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-iron]-d",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
   },
   {
     type = "recipe",
@@ -335,6 +339,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-iron]-e",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
   },
   {
     type = "recipe",

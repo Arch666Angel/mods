@@ -167,6 +167,7 @@ data:extend(
     main_product= "liquid-molten-tin",
     icon_size = 32,
     order = "f[liquid-molten-tin]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
   },
   {
     type = "recipe",

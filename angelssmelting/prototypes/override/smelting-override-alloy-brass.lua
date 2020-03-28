@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -57,7 +59,8 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           }
         },
         icon_size = 32,
-        order = "b[brass]-a[liquid-molten-brass]-a"
+        order = "b[brass]-a[liquid-molten-brass]-a",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
       },
       {
         type = "recipe",
@@ -88,7 +91,8 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           }
         },
         icon_size = 32,
-        order = "b[brass]-a[liquid-molten-brass]-b"
+        order = "b[brass]-a[liquid-molten-brass]-b",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
       },
       {
         type = "recipe",
@@ -119,7 +123,8 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           }
         },
         icon_size = 32,
-        order = "b[brass]-a[liquid-molten-brass]-c"
+        order = "b[brass]-a[liquid-molten-brass]-c",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
       },
       --CASTING
       {

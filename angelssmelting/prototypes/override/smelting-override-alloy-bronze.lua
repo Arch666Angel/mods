@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -58,6 +60,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         },
         icon_size = 32,
         order = "a[bronze]-a[liquid-molten-bronze]-a",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-bronze")
       },
       {
         type = "recipe",
@@ -89,6 +92,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         },
         icon_size = 32,
         order = "a[bronze]-a[liquid-molten-bronze]-b",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-bronze")
       },
       {
         type = "recipe",
@@ -119,6 +123,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         },
         icon_size = 32,
         order = "a[bronze]-a[liquid-molten-bronze]-c",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-bronze")
       },
       --CASTING
       {
