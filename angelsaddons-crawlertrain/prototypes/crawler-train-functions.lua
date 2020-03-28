@@ -3,8 +3,8 @@ require("util")
 local function generate_train_recipe(item, add_unlock)
   add_unlock = add_unlock or false
   local entries = {}
-  if angelsmods.addons.smeltingtrain.enable_tiers and angelsmods.addons.smeltingtrain.tier_amount > 1 then
-    for i = 1, angelsmods.addons.smeltingtrain.tier_amount, 1 do
+  if angelsmods.addons.crawlertrain.enable_tiers and angelsmods.addons.crawlertrain.tier_amount > 1 then
+    for i = 1, angelsmods.addons.crawlertrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
       local ingredients = table.deepcopy(item.ingredients)
@@ -65,8 +65,8 @@ end
 
 local function generate_train_items(item)
   local entries = {}
-  if angelsmods.addons.smeltingtrain.enable_tiers and angelsmods.addons.smeltingtrain.tier_amount > 1 then
-    for i = 1, angelsmods.addons.smeltingtrain.tier_amount, 1 do
+  if angelsmods.addons.crawlertrain.enable_tiers and angelsmods.addons.crawlertrain.tier_amount > 1 then
+    for i = 1, angelsmods.addons.crawlertrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
       if i > 1 then
@@ -84,8 +84,8 @@ local function generate_train_items(item)
           icon_size = item.icon_size
         },
         {
-          icon = "__angelsaddons-smeltingtrain__/graphics/icons/num_" .. i .. ".png",
-          tint = angelsmods.addons.smeltingtrain.number_tint,
+          icon = "__angelsaddons-crawlertrain__/graphics/icons/num_" .. i .. ".png",
+          tint = angelsmods.addons.crawlertrain.number_tint,
           scale = 0.32,
           shift = {12, -12}
         }
@@ -102,11 +102,12 @@ end
 
 local function generate_train_entities(item)
   local entries = {}
-  if angelsmods.addons.smeltingtrain.enable_tiers and angelsmods.addons.smeltingtrain.tier_amount > 1 then
+  if angelsmods.addons.crawlertrain.enable_tiers and angelsmods.addons.crawlertrain.tier_amount > 1 then
     if item.inventory_size then
       item.inventory_size = item.inventory_size / (1.25 * 1.5)
     end
-    for i = 1, angelsmods.addons.smeltingtrain.tier_amount, 1 do
+
+    for i = 1, angelsmods.addons.crawlertrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
       if i > 1 then
@@ -122,8 +123,8 @@ local function generate_train_entities(item)
           icon_size = item.icon_size
         },
         {
-          icon = "__angelsaddons-smeltingtrain__/graphics/icons/num_" .. i .. ".png",
-          tint = angelsmods.addons.smeltingtrain.number_tint,
+          icon = "__angelsaddons-crawlertrain__/graphics/icons/num_" .. i .. ".png",
+          tint = angelsmods.addons.crawlertrain.number_tint,
           scale = 0.32,
           shift = {12, -12}
         }
@@ -170,8 +171,8 @@ end
 
 local function generate_train_technology(item, tiers)
   local entries = {}
-  if angelsmods.addons.smeltingtrain.enable_tiers and angelsmods.addons.smeltingtrain.tier_amount > 1 then
-    for i = 1, angelsmods.addons.smeltingtrain.tier_amount, 1 do
+  if angelsmods.addons.crawlertrain.enable_tiers and angelsmods.addons.crawlertrain.tier_amount > 1 then
+    for i = 1, angelsmods.addons.crawlertrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
       local prerequisites = item.prerequisites

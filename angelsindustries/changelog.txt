@@ -5,6 +5,7 @@ Date: ???
     - Component mode:
       - Stone wall now require only 1 Construction Block 2 instead of 5
       - Fixed recipes would use the unobtainable advanced processing blocks
+    - Removed crawler train - moved to separate mod #124
   Bugfixes:
     - Component mode:
       - Fixed submachine gun was unlocking with Turrets instead of Basic Military technology

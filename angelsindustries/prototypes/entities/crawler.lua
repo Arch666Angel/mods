@@ -329,7 +329,6 @@ data:extend(
       tank_driving = false,
       weight = 20000,
       inventory_size = 768,
-      --guns = {},
       equipment_grid = "angels-crawler"
     }
   }

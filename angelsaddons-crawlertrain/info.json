@@ -1,12 +1,12 @@
 {
-  "name": "angelsaddons-smeltingtrain",
-  "version": "0.3.3",
+  "name": "angelsaddons-crawlertrain",
+  "version": "0.1.0",
   "factorio_version": "0.18",
-  "title": "Angel's Addons - Smelting Train",
+  "title": "Angel's Addons - Crawler Train",
   "author": "Arch666Angel",
   "contact": "",
   "homepage": "",
-  "description": "Adds a Smelting themed train",
+  "description": "Adds a Crawler themed train",
   "dependencies": [
     "base >= 0.18.0",
     "? WagonColors"

@@ -103,6 +103,9 @@ end
 local function generate_train_entities(item)
   local entries = {}
   if angelsmods.addons.petrotrain.enable_tiers and angelsmods.addons.petrotrain.tier_amount > 1 then
+    if item.inventory_size then
+      item.inventory_size = item.inventory_size / (1.25 * 1.5)
+    end
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
@@ -137,6 +140,8 @@ local function generate_train_entities(item)
         copy.reversing_power_modifier = item.reversing_power_modifier * multiplier
       elseif item.type == "cargo-wagon" then
         copy.inventory_size = math.floor(item.inventory_size * (multiplier * 1.5))
+      elseif item.type == "fluid-wagon" then
+        copy.capacity = math.floor(item.capacity * i)
       end
       table.insert(entries, copy)
     end
