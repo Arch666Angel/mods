@@ -25,12 +25,12 @@ end
 -------------------------------------------------------------------------------
 if mods["bobassembly"] then
   --adds bobassembly stuffs
-  -- burner assemblers
+  -- burner assemblers and/ore tier 1 electric
   if settings.startup["bobmods-assembly-burner"].value == true then
     pack_replace("basic-automation", "red", "grey")
+    pack_replace("automation", "grey", "red")
   end
-  --higher assembly
-  pack_replace("automation", "grey", "red")
+  -- assemblers tier 2+
   OV.add_prereq("automation-3", "tech-orange-circuit")
   pack_replace("automation-4", "blue", "orange")
   OV.remove_prereq("automation-4", "chemical-science-pack")
@@ -40,15 +40,15 @@ if mods["bobassembly"] then
   if settings.startup["bobmods-assembly-chemicalplants"].value == true then
   end
   --oil-furnaces (and metal-mixing)
-  if settings.startup["bobmods-assembly-oilfurnaces"] then
+  if settings.startup["bobmods-assembly-oilfurnaces"].value then
   end
-  if settings.startup["bobmods-assembly-multipurposefurnaces"] then
+  if settings.startup["bobmods-assembly-multipurposefurnaces"].value then
   end
   --electrolysers
-  if settings.startup["bobmods-assembly-electrolysers"] then
+  if settings.startup["bobmods-assembly-electrolysers"].value then
   end
   --distillery
-  if settings.startup["bobmods-assembly-distilleries"] then
+  if settings.startup["bobmods-assembly-distilleries"].value then
     pack_replace("bob-distillery-3", "blue", "orange")
     OV.remove_prereq("bob-distillery-3", "chemical-science-pack")
     OV.add_prereq("tech-blue-circuit", "bob-distillery-3")

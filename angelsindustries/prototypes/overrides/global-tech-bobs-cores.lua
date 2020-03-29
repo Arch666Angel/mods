@@ -27,29 +27,33 @@ end
 -- BOB ASSMBLY ----------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods['bobassembly'] then
-  core_replace("basic-automation","processing","basic")
-
+  --assemblers
+  if settings.startup["bobmods-assembly-burner"].value == true then
+    core_replace("basic-automation","processing","basic")
+  else
+    core_replace("automation","processing","basic")
+  end
   --chemplants
   if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     core_replace("chemical-plant-2", "basic", "processing")
     core_replace("chemical-plant-3", "basic", "processing")
   end
   --oil-furnaces (and metal-mixing)
-  if settings.startup["bobmods-assembly-oilfurnaces"] then
+  if settings.startup["bobmods-assembly-oilfurnaces"].value then
     core_replace("oil-steel-furnace","basic","processing")
     core_replace("oil-mixing-steel-furnace","basic","processing")
     core_replace("oil-chemical-steel-furnace","basic","processing")
   end
-  if settings.startup["bobmods-assembly-multipurposefurnaces"] then
+  if settings.startup["bobmods-assembly-multipurposefurnaces"].value then
     core_replace("multi-purpose-furnace-1","basic","processing")
   end
   --electrolysers
-  if settings.startup["bobmods-assembly-electrolysers"] then
+  if settings.startup["bobmods-assembly-electrolysers"].value then
     core_replace("electrolyser-2","basic","processing")
     core_replace("electrolyser-3","basic","processing")
   end
   --distillery
-  if settings.startup["bobmods-assembly-distilleries"] then
+  if settings.startup["bobmods-assembly-distilleries"].value then
     core_replace("bob-distillery-2","basic","processing")
     core_replace("bob-distillery-3","basic","processing")
   end
@@ -117,7 +121,6 @@ end
 if mods['boblogistics'] then
   core_replace("logistics-0","logistic","basic")
   core_replace("logistics","basic","logistic")
-  core_replace("automation","basic","processing")
   -- toolbelts
   core_replace("toolbelt-2","basic","enhance")
   core_replace("toolbelt-4","basic","enhance")
