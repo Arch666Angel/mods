@@ -5,6 +5,8 @@ Date: ???
     - Changed the name from Non Expendable mold to Reusable Mold
     - Added basic recipe tints to the induction furnace + recipes
     - Changed stack size of pavement items to use refinings setting (was 1000, now 200 by default)
+  Bugfixes:
+    - Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 24-03-2020

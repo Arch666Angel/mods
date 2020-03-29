@@ -41,7 +41,7 @@ data:extend(
     place_as_tile =
     {
       result = "clay-bricks",
-      condition_size = 4,
+      condition_size = 2,
       condition = { "water-tile" }
     }
   },
@@ -76,7 +76,7 @@ data:extend(
     place_as_tile =
     {
       result = "concrete",
-      condition_size = 4,
+      condition_size = 1,
       condition = { "water-tile" }
     }
   },
@@ -91,7 +91,7 @@ data:extend(
     place_as_tile =
     {
       result = "concrete",
-      condition_size = 4,
+      condition_size = 1,
       condition = { "water-tile" }
     }
   },
