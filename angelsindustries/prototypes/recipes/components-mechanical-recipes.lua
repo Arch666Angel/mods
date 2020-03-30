@@ -3,6 +3,7 @@ data:extend(
   -----------------------------------------------------------------------------
   -- MOTOR CASTING ------------------------------------------------------------
   -----------------------------------------------------------------------------
+  -- STEP 1: craft a soft material motor by hand to be used in mold making
   {
     type = "recipe",
     name = "angels-casing-iron-plate",
@@ -12,7 +13,7 @@ data:extend(
     enabled = "false",
     ingredients =
     {
-      {type = "item", name = "angels-plate-iron", amount = 2}
+      {type = "item", name = "angels-plate-iron", amount = 5}
     },
     results =
     {
@@ -32,270 +33,195 @@ data:extend(
     icon_size = 32,
     order = "n[motor-casing-1]-a"
   },
+})
+  --STEP 2 Perishable: Sand baking a negative
+  --override default smelting recipe
+  local m_e=data.raw.recipe["mold-expendable"]
+  m_e.category="sintering"
+  m_e.ingredients={
+    {type = "item", name = "motor-casing-1", amount = 1},
+    {type = "item", name = "solid-sand", amount = 40}
+  }
+  m_e.results ={
+    {type = "item", name = "mold-expendable", amount = 1},
+    {type = "item", name = "solid-iron-hydroxide",amount=3}
+  }
+  m_e.icons ={
+    {icon = "__angelssmelting__/graphics/icons/expendable-mold.png",},
+    {
+      icon = "__angelsindustries__/graphics/icons/motor-casing-1.png",
+      scale = 0.4375,
+      shift = {10, -10}
+    },
+  }
+  m_e.localised_name={"recipe-name.mold","Expendable"}
+  --data:extend(m_e)
+  --STEP 2 Advanced: Clay baking a negative
+  local m_ne=data.raw.recipe["mold-non-expendable"]
+  m_ne.category = "sintering"
+  m_ne.ingredients =
   {
-    type = "recipe",
-    name = "angels-casing-iron-1",
-    category = "casting",
-    subgroup = "angels-iron-casting",
-    enabled = "false",
-    energy_required = 4,
-    ingredients =
+    {type = "item", name = "motor-casing-1", amount = 1},
+    {type = "item", name = "solid-clay", amount = 50}
+  }
+  m_ne.results =
+  {
+    {type = "item", name = "mold-non-expendable", amount = 1},
+    {type = "item", name = "solid-iron-hydroxide",amount=4}
+  }
+  m_ne.icons ={
+    {icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",},
     {
-      {type = "fluid", name = "liquid-molten-iron", amount = 15},
-      {type = "item", name = "mold-expendable", amount = 1}
+      icon = "__angelsindustries__/graphics/icons/motor-casing-1.png",
+      scale = 0.4375,
+      shift = {10, -10}
     },
-    results =
     {
-      {type = "item", name = "motor-casing-1", amount = 1},
-      --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
+      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+      tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+      scale = 0.32,
+      shift = {-12, -12},
     },
-    main_product = "motor-casing-1",
-    icons =
+  }
+  m_ne.localised_name={"recipe-name.mold","Reusable"}
+  --data:extend(m_ne)
+--STEP 3 Perishable: use the die
+for _,metal in pairs({"iron","steel","aluminium","titanium"--[[,"tungsten"]]}) do --all of the metals in one go
+  if metal=="iron" then
+    num=1
+    molten1={type = "fluid", name = "liquid-molten-iron", amount = 15}
+    molten2={type = "fluid", name = "liquid-molten-iron", amount = 20}
+  elseif metal=="steel" then
+    num=2
+    molten1={type = "fluid", name = "liquid-molten-steel", amount = 15}
+    molten2={type = "fluid", name = "liquid-molten-steel", amount = 20}
+  elseif metal=="aluminium" then
+    num=3
+    molten1={type = "fluid", name = "liquid-molten-aluminium", amount = 15}
+    molten2={type = "fluid", name = "liquid-molten-aluminium", amount = 20}
+  elseif metal=="titanium" then
+    num=4
+    molten1={type = "fluid", name = "liquid-molten-titanium", amount = 15}
+    molten2={type = "fluid", name = "liquid-molten-titanium", amount = 20}
+    --[[elseif metal=="tungsten" then
+    num=5
+    molten1={type = "item", name = "casting-powder-tungsten", amount = 3}
+    molten2={type = "item", name = "casting-powder-tungsten", amount = 20}]]
+  end
+  data:extend(
+  {
     {
+      type = "recipe",
+      name = "angels-casing-"..metal.."-1",
+      category = "casting",
+      subgroup = "angels-"..metal.."-casting",
+      localised_name={"recipe-name.casing",metal,num,"expendable"},
+      enabled = "false",
+      energy_required = 3*num,
+      ingredients =
       {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
+        molten1,--{type = "fluid", name = "liquid-molten-steel", amount = 15},
+        {type = "item", name = "mold-expendable", amount = 1}
       },
+      results =
       {
-        icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
+        {type = "item", name = "motor-casing-"..num, amount = 1},
+        {type = "item", name = "solid-sand", amount = 10}
       },
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/motor-casing-"..num..".png"
+        },
+        {
+          icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
+          scale = 0.4375,
+          shift = {-10, -10}
+        },
+      },
+      icon_size = 32,
+      order = "n[motor-casing-"..num.."]-b"
     },
+    --STEP 3 Advanced: use the die with coolant
+    {
+      type = "recipe",
+      name = "angels-casing-"..metal.."-2",
+      category = "casting",
+      subgroup = "angels-"..metal.."-casting",
+      localised_name={"recipe-name.casing",metal,num,"reusable"},
+      enabled = "false",
+      energy_required = 2*num,
+      ingredients =
+      {
+        molten2,--{type = "fluid", name = "liquid-molten-steel", amount = 20},
+        {type = "item", name = "mold-non-expendable", amount = 1},
+        {type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50}
+      },
+      results =
+      {
+        {type = "item", name = "motor-casing-"..num, amount = 2},
+        {type = "item", name = "spent-mold-non-expendable", amount = 1, catalyst_amount=1},
+        {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
+      },
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/motor-casing-"..num..".png"
+        },
+        {
+          icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+          scale = 0.4375,
+          shift = {-10, -10}
+        },
+      },
+      icon_size = 32,
+      order = "n[motor-casing-"..num.."]-c"
+    },
+  })
+end
+--spent-non-expendable mold
+data:extend(
+{
+  {
+    type = "item",
+    name = "spent-mold-non-expendable",
+    icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
-    order = "n[motor-casing-1]-b"
+    subgroup = "angels-mold-casting",
+    order = "c",
+    stack_size = 200
   },
+  --non-expendable mold washing
   {
     type = "recipe",
-    name = "angels-casing-iron-2",
-    category = "casting",
-    subgroup = "angels-iron-casting",
-    enabled = "false",
-    energy_required = 2,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-iron", amount = 10},
-      {type = "item", name = "mold-non-expendable", amount = 1},
-      {type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-1", amount = 1},
-      {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.80, catalyst_amount=1},
-      {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
-    },
-    main_product = "motor-casing-1",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
-      },
+    name="mold-non-expendable-wash",
+    category="crafting-with-fluid",
+    subgroup="angels-mold-casting",
+    energy_required= 3,
+    enabled="true",
+    icons={
       {
         icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
+      },
+      {
+        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+        scale = 0.32,
+        shift = {-12, -12},
       },
     },
-    icon_size = 32,
-    order = "n[motor-casing-1]-c"
+    icon_size=32,
+    ingredients={
+      {type="item", name="spent-mold-non-expendable",amount=1},
+      {type="fluid",name="liquid-nitric-acid", amount=20}
+    },
+    results={
+      {type="item",name="mold-non-expendable",amount=1,probability = 0.90, catalyst_amount=1},
+      {type="fluid",name="water-red-waste", amount=20},
+    },
+    order="c",
   },
-  {
-    type = "recipe",
-    name = "angels-casing-steel-1",
-    category = "casting",
-    subgroup = "angels-steel-casting",
-    enabled = "false",
-    energy_required = 6,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-steel", amount = 15},
-      {type = "item", name = "mold-expendable", amount = 1}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-2", amount = 1},
-      --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
-    },
-    main_product = "motor-casing-2",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-2.png"
-      },
-      {
-        icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
-      },
-    },
-    icon_size = 32,
-    order = "n[motor-casing-2]-a"
-  },
-  {
-    type = "recipe",
-    name = "angels-casing-steel-2",
-    category = "casting",
-    subgroup = "angels-steel-casting",
-    enabled = "false",
-    energy_required = 3,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-steel", amount = 10},
-      {type = "item", name = "mold-non-expendable", amount = 1},
-      {type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-2", amount = 1},
-      {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.80, catalyst_amount=1},
-      {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
-    },
-    main_product = "motor-casing-2",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-2.png"
-      },
-      {
-        icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
-      },
-    },
-    icon_size = 32,
-    order = "n[motor-casing-2]-b"
-  },
-  {
-    type = "recipe",
-    name = "angels-casing-aluminium-1",
-    category = "casting",
-    subgroup = "angels-aluminium-casting",
-    enabled = "false",
-    energy_required = 8,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-aluminium", amount = 15},
-      {type = "item", name = "mold-expendable", amount = 1}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-3", amount = 1},
-      --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
-    },
-    main_product = "motor-casing-3",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-3.png"
-      },
-      {
-        icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
-      },
-    },
-    icon_size = 32,
-    order = "l[motor-casing-3]-a"
-  },
-  {
-    type = "recipe",
-    name = "angels-casing-aluminium-2",
-    category = "casting",
-    subgroup = "angels-aluminium-casting",
-    enabled = "false",
-    energy_required = 4,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-aluminium", amount = 10},
-      {type = "item", name = "mold-non-expendable", amount = 1},
-      {type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-3", amount = 1},
-      {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.80, catalyst_amount=1},
-      {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
-    },
-    main_product = "motor-casing-3",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-3.png"
-      },
-      {
-        icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
-      },
-    },
-    icon_size = 32,
-    order = "l[motor-casing-3]-b"
-  },
-  {
-    type = "recipe",
-    name = "angels-casing-titanium-1",
-    category = "casting",
-    subgroup = "angels-titanium-casting",
-    enabled = "false",
-    energy_required = 14,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-titanium", amount = 15},
-      {type = "item", name = "mold-expendable", amount = 1}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-4", amount = 1},
-      --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
-    },
-    main_product = "motor-casing-4",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-4.png"
-      },
-      {
-        icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
-      },
-    },
-    icon_size = 32,
-    order = "k[motor-casing-4]-a"
-  },
-  {
-    type = "recipe",
-    name = "angels-casing-titanium-2",
-    category = "casting",
-    subgroup = "angels-titanium-casting",
-    enabled = "false",
-    energy_required = 7,
-    ingredients =
-    {
-      {type = "fluid", name = "liquid-molten-titanium", amount = 10},
-      {type = "item", name = "mold-non-expendable", amount = 1},
-      {type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50}
-    },
-    results =
-    {
-      {type = "item", name = "motor-casing-4", amount = 1},
-      {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.80, catalyst_amount=1},
-      {type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300}
-    },
-    main_product = "motor-casing-4",
-    icons =
-    {
-      {
-        icon = "__angelsindustries__/graphics/icons/motor-casing-4.png"
-      },
-      {
-        icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
-        scale = 0.4375,
-        shift = {-10, -10}
-      },
-    },
-    icon_size = 32,
-    order = "k[motor-casing-4]-b"
-  },
+  -- TUNGSTEN MOTORS, keep interesting...
   {
     type = "recipe",
     name = "angels-casing-tungsten-1",
@@ -311,7 +237,7 @@ data:extend(
     results =
     {
       {type = "item", name = "motor-casing-5", amount = 1},
-      --{type = "item", name = "mold-expendable", amount = 1, catalyst_amount=1}
+      {type = "item", name = "solid-sand", amount = 10}
     },
     main_product = "motor-casing-5",
     icons =
@@ -343,7 +269,7 @@ data:extend(
     results =
     {
       {type = "item", name = "motor-casing-5-green", amount = 1},
-      {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.80, catalyst_amount=1}
+      {type = "item", name = "spent-mold-non-expendable", amount = 1, probability = 0.90, catalyst_amount=1}
     },
     main_product = "motor-casing-5-green",
     icons =
