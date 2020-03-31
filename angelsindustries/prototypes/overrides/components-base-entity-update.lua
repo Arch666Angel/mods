@@ -6,7 +6,7 @@ OV.patch_recipes(
       name = "offshore-pump",
       ingredients = {
         {"block-electronics-0", "block-electronics-1"}
-      },
+      }
       --minable = {
       --  results = {
       --    {"block-electronics-0", "block-electronics-1"}
@@ -17,7 +17,23 @@ OV.patch_recipes(
       name = "stone-wall",
       ingredients = {
         {"block-construction-2", 1}
+      }
+    },
+    {
+      name = "small-electric-pole",
+      ingredients = {
+        {"wood", 1},
+        {"cable-harness-1", 1}
       },
+      results = {
+        {"small-electric-pole", 1}
+      },
+      minable = {
+        results = {
+          {"wood", 1},
+          {"cable-harness-1", 1}
+        }
+      }
     }
   }
 )
