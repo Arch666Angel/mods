@@ -1,6 +1,7 @@
 if angelsmods.industries then
   if angelsmods.industries.components then
-    require("prototypes.recipes.crawlertrain-updates")
+  -- Todo: implement proper components for the train
+  -- require("prototypes.recipes.crawlertrain-updates")
   end
 
   -- Add data core replace?
