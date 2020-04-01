@@ -3,8 +3,6 @@ Version: 0.7.6
 Date: ???
   Changes:
     - Changed graphics on tree recipes to represent the trees instead of their product
-  Bugfixes:
-    - Fixed missing localised description on Alien Plant Life Sample
   Balancing:
     - Increase usage of bio sink (Compost)
       - Fertilizer now takes twice the amount of Compost
@@ -17,6 +15,9 @@ Date: ???
       - Require 4 Green Algae to create 1 Compost (required 1 before)
       - Require 3 Brown Algae to create 1 Compost (required 1 before)
       - Require 2 Blue Algae to create 1 Compost (required 1 before)
+  Bugfixes:
+    - Fixed missing localised description on Alien Plant Life Sample
+    - Fixed ore pastes would enable when you don't need them
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.5
 Date: 24-03-2020

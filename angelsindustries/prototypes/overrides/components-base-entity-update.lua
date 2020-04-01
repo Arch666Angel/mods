@@ -55,3 +55,4 @@ if not (mods["bobassembly"] or mods["bobelectronics"]) then
     }
   )
 end
+OV.add_prereq("automation-2", "angels-components-construction-2")

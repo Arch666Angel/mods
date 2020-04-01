@@ -115,7 +115,7 @@ data:extend(
     default_value = 200,
     minimum_value = 200,
     maximum_value = 1000,
-    order = "cb"
+    order = "d"
   },
 }
 )
