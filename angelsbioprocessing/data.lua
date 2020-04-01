@@ -9,6 +9,28 @@ angelsmods.triggers.lab_ignore_token = angelsmods.triggers.lab_ignore_token or {
 angelsmods.triggers.lab_ignore_token["lab-alien"] = true
 angelsmods.triggers.lab_ignore_token["lab-module"] = true
 
+angelsmods.triggers.artifacts = angelsmods.triggers.artifacts or {}
+if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
+  angelsmods.triggers.artifacts["red"   ] = true
+  angelsmods.triggers.artifacts["yellow"] = true
+  angelsmods.triggers.artifacts["orange"] = true
+  angelsmods.triggers.artifacts["blue"  ] = true
+  angelsmods.triggers.artifacts["purple"] = true
+  angelsmods.triggers.artifacts["green" ] = true
+  angelsmods.triggers.artifacts["base"  ] = true -- pink
+end
+
+angelsmods.triggers.bio_pastes = angelsmods.triggers.bio_pastes or {}
+angelsmods.triggers.bio_pastes["cellulose"] = true -- required for petri dish
+if angelsmods.triggers.artifacts["red"   ] then angelsmods.triggers.bio_pastes["copper"  ] = true end
+if angelsmods.triggers.artifacts["yellow"] then angelsmods.triggers.bio_pastes["gold"    ] = true end
+if angelsmods.triggers.artifacts["orange"] then angelsmods.triggers.bio_pastes["tungsten"] = true end
+if angelsmods.triggers.artifacts["blue"  ] then angelsmods.triggers.bio_pastes["cobalt"  ] = true end
+if angelsmods.triggers.artifacts["purple"] then angelsmods.triggers.bio_pastes["titanium"] = true end
+if angelsmods.triggers.artifacts["green" ] then angelsmods.triggers.bio_pastes["zinc"    ] = true end
+if angelsmods.triggers.artifacts["base"  ] then angelsmods.triggers.bio_pastes["iron"    ] = true end
+--angelsmods.triggers.bio_pastes["silver"] = true --unused
+
 -- set triggers for other angel mods
 require("prototypes.bio-processing-triggers")
 
