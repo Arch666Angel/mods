@@ -51,31 +51,9 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   data.raw.technology["space-science-pack"].icon_size = 128
   OV.add_unlock("space-science-pack", "angels-science-pack-white")
   OV.add_unlock("space-science-pack", "angels-main-lab-7")
+  OV.global_replace_item("lab", "angels-basic-lab-2") 
 
   require("prototypes.overrides.tech-productivity-update")
-  --replace ingredient lab with basic-lab-2
-  for _,recipe in pairs(data.raw.recipe) do
-    --check all recipes
-    if recipe.ingredients then
-      for i,ing in pairs(recipe.ingredients) do
-        --search each ingredient
-        if ing.name=="lab" then
-          --replace vanilla lab with basic-lab-2
-          ing.name="angels-basic-lab-2"
-        end
-      end
-    elseif recipe.normal.ingredients then
-      for _,set in pairs({"normal","expensive"}) do
-        if recipe[set].ingredients then
-          for i,ing in pairs(recipe[set].ingredients) do
-            if ing.name=="lab" then
-              ing.name="angels-basic-lab-2"
-            end
-          end
-        end
-      end
-    end
-  end
 end
 
 -- ordening

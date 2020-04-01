@@ -14,6 +14,7 @@ Date: ???
       - Fixed Automation 2 did not depend on Construction Components 2
     - Science mode:
       - Fixed Assembling Machine 1 was locked when playing with bobs Burner Assemblers disabled
+      - Fixed some labs would require the base game Lab as ingredient instead of angels variant
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 24-03-2020
