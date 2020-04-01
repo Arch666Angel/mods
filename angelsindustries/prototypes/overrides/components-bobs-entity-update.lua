@@ -18,5 +18,4 @@ if mods["bobassembly"] then
       }
     }
   )
-  OV.add_prereq("automation-2", "angels-components-construction-2")
 end

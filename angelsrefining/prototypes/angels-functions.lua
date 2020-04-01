@@ -890,7 +890,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
     end
     top_molecules_icon[molecule_index] = clean_table(molecule_icon)
   end
-  log(serpent.block(top_molecules_icon))
   top_molecules_icon = clean_table(top_molecules_icon)
 
   -- tints is a table of 5 tints, for the top, bot_left top_mask, bot_mask, bot_right,
@@ -1118,7 +1117,6 @@ function angelsmods.functions.create_solid_recipe_icon(bot_molecules_icon, solid
     end
     top_molecules_icon[molecule_index] = clean_table(molecule_icon)
   end
-  log(serpent.block(top_molecules_icon))
   top_molecules_icon = clean_table(top_molecules_icon)
 
   local recipe_icons = get_icons(solid_item_name)

@@ -2,14 +2,16 @@
 Version: 0.3.6
 Date: ???
   Changes:
+    - Removed Crawler Train - moved to separate mod #124
     - Component mode:
       - Stone wall now require only 1 Construction Block 2 instead of 5
       - Fixed recipes would use the unobtainable advanced processing blocks
       - Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
-    - Removed Crawler Train - moved to separate mod #124
+      - Added new recipes to create molds for Motor Casting
   Bugfixes:
     - Component mode:
       - Fixed Submachine Gun was unlocking with Turrets instead of Basic Military technology
+      - Fixed Automation 2 did not depend on Construction Components 2
     - Science mode:
       - Fixed Assembling Machine 1 was locked when playing with bobs Burner Assemblers disabled
 ---------------------------------------------------------------------------------------------------
