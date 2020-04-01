@@ -38,6 +38,8 @@ OV.patch_recipes(
   }
 )
 
+OV.add_prereq("automation-2", "angels-components-construction-2")
+
 if not (mods["bobassembly"] or mods["bobelectronics"]) then
   OV.patch_recipes(
     {
