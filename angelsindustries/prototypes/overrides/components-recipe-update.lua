@@ -18,9 +18,9 @@ OV.disable_recipe({"processing-unit"})
 -------------------------------------------------------------------------------
 -- INTERMEDIATES --------------------------------------------------------------
 -------------------------------------------------------------------------------
-OV.global_replace_item("iron-stick", "angels-rod-iron")
-angelsmods.functions.add_flag("iron-stick", "hidden")
-OV.disable_recipe({"iron-stick"})
+-- OV.global_replace_item("iron-stick", "angels-rod-iron")
+-- angelsmods.functions.add_flag("iron-stick", "hidden")
+-- OV.disable_recipe({"iron-stick"})
 
 OV.global_replace_item("iron-gear-wheel", "angels-gear")
 angelsmods.functions.add_flag("iron-gear-wheel", "hidden")

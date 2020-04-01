@@ -30,7 +30,6 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.smelting_products["gold"].plate = true
   angelsmods.trigger.smelting_products["gold"].wire = true
   angelsmods.trigger.smelting_products["iron"].plate = true
-  angelsmods.trigger.smelting_products["iron"].rod = true
   angelsmods.trigger.smelting_products["lead"].plate = true
   angelsmods.trigger.smelting_products["platinum"].wire = true
   angelsmods.trigger.smelting_products["silicon"].wafer = true
@@ -45,4 +44,5 @@ end
 
 if angelsmods.industries.components then
   angelsmods.trigger.smelting_molds = true
+  angelsmods.trigger.smelting_products["iron"].rod = true
 end
