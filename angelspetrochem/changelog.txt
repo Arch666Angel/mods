@@ -10,6 +10,7 @@ Date: ???
     - Fixed missing localisation for heavy water seperation recipes
     - Fixed failed attempt (in 0.9.5) on re-enabling rocket-fuel on existing saves
     - Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    - Fixed startup error with bobrevamp and missing bobplates
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: 24-03-2020
