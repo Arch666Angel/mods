@@ -9,6 +9,8 @@ Date: ???
       - Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
       - Added new recipes to create molds for Motor Casting
   Bugfixes:
+    - General:
+      - Fixed iron stick/rod in wrong mode to be shown (including cleanup) #154
     - Component mode:
       - Fixed Submachine Gun was unlocking with Turrets instead of Basic Military technology
       - Fixed Automation 2 did not depend on Construction Components 2
