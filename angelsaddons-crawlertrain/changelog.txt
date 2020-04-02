@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: ???
+Date: 02.04.2020
   Changes:
     - Initial release
     - Added multiple tiers for crawler train

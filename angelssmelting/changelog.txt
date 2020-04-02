@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.4
-Date: ???
+Date: 02.04.2020
   Changes:
     - Changed the name from Non Expendable mold to Reusable Mold
     - Added basic recipe tints to the induction furnace + recipes
@@ -10,7 +10,7 @@ Date: ???
     - Ensures iron-rods are properly updated/disabled when need be #154
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
-Date: 24-03-2020
+Date: 24.03.2020
   Changes:
     - Make buildings upgradeable #119
   Bugfixes:
@@ -18,7 +18,7 @@ Date: 24-03-2020
     - Fixed temperatures on molten liquids
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - Moved the unlocks for the molds further away:
       - Expendable Mold from Metalurgy 1 to Stone Smelting 1

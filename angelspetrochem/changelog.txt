@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.6
-Date: ???
+Date: 02.04.2020
   Changes:
     - Excluded Chemical Plant recipe from marathon mode when it is required for science packs
     - Remove tech for electrolyser/chem plant 2+ when its disabled #132
@@ -13,7 +13,7 @@ Date: ???
     - Fixed startup error with bobrevamp and missing bobplates
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
-Date: 24-03-2020
+Date: 24.03.2020
   Changes:
     - Make buildings upgradeable #119
   Bugfixes:
@@ -21,7 +21,7 @@ Date: 24-03-2020
     - Re-enable rocket-fuel on existing saves.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - Chemical recipes now always show the result products for lookup convenience
     - Added high resolution gas and liquid icons, including higher resolution molecules
