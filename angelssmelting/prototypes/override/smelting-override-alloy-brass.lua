@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -50,14 +52,15 @@ if angelsmods.trigger.smelting_products["brass"].plate then
             icon = "__angelssmelting__/graphics/icons/molten-brass.png",
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_1.png",
+            icon = "__angelsrefining__/graphics/icons/num_1.png",
             tint = angelsmods.smelting.number_tint,
             scale = 0.32,
             shift = {-12, -12},
           }
         },
         icon_size = 32,
-        order = "b[brass]-a[liquid-molten-brass]-a"
+        order = "b[brass]-a[liquid-molten-brass]-a",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
       },
       {
         type = "recipe",
@@ -81,14 +84,15 @@ if angelsmods.trigger.smelting_products["brass"].plate then
             icon = "__angelssmelting__/graphics/icons/molten-brass.png",
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_2.png",
+            icon = "__angelsrefining__/graphics/icons/num_2.png",
             tint = angelsmods.smelting.number_tint,
             scale = 0.32,
             shift = {-12, -12},
           }
         },
         icon_size = 32,
-        order = "b[brass]-a[liquid-molten-brass]-b"
+        order = "b[brass]-a[liquid-molten-brass]-b",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
       },
       {
         type = "recipe",
@@ -112,14 +116,15 @@ if angelsmods.trigger.smelting_products["brass"].plate then
             icon = "__angelssmelting__/graphics/icons/molten-brass.png",
           },
           {
-            icon = "__angelspetrochem__/graphics/icons/num_3.png",
+            icon = "__angelsrefining__/graphics/icons/num_3.png",
             tint = angelsmods.smelting.number_tint,
             scale = 0.32,
             shift = {-12, -12},
           }
         },
         icon_size = 32,
-        order = "b[brass]-a[liquid-molten-brass]-c"
+        order = "b[brass]-a[liquid-molten-brass]-c",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
       },
       --CASTING
       {

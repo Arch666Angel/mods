@@ -534,5 +534,25 @@ data:extend(
     },
     result= "angels-electric-boiler",
   },
+  {
+    type = "recipe",
+    name = "angels-electric-boiler-2",
+    energy_required = 5,
+    enabled = false,
+    ingredients ={
+      {"angels-electric-boiler", 1},
+    },
+    result= "angels-electric-boiler-2",
+  },
+  {
+    type = "recipe",
+    name = "angels-electric-boiler-3",
+    energy_required = 5,
+    enabled = false,
+    ingredients ={
+      {"angels-electric-boiler-2", 1},
+    },
+    result= "angels-electric-boiler-3",
+  },
 }
 )

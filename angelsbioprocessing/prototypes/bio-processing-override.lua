@@ -35,6 +35,9 @@ for i, labs in pairs(data.raw["lab"]) do
   end
 end
 
+--PASTE
+require("prototypes.bio-processing-override-paste")
+
 --CONDITIONAL
 if angelsmods.industries then
   OV.patch_recipes(
@@ -74,37 +77,6 @@ else
   else
     OV.modify_input("substrate-dish", {"paste-copper", "paste-silver"})
     OV.disable_recipe("algae-brown-burning")
-    OV.disable_recipe({"paste-cobalt", "paste-gold", "paste-silver", "paste-titanium", "paste-tungsten", "paste-zinc"})
-    OV.disable_recipe(
-      {
-        "alien-pre-artifact-yellow",
-        "alien-pre-artifact-blue",
-        "alien-pre-artifact-green",
-        "alien-pre-artifact-purple",
-        "alien-pre-artifact-orange",
-        "alien-pre-artifact-red"
-      }
-    )
-    OV.disable_recipe(
-      {
-        "small-alien-artifact-red",
-        "small-alien-artifact-yellow",
-        "small-alien-artifact-orange",
-        "small-alien-artifact-blue",
-        "small-alien-artifact-purple",
-        "small-alien-artifact-green"
-      }
-    )
-    OV.disable_recipe(
-      {
-        "alien-artifact-red",
-        "alien-artifact-yellow",
-        "alien-artifact-orange",
-        "alien-artifact-blue",
-        "alien-artifact-purple",
-        "alien-artifact-green"
-      }
-    )
   end
 end
 
@@ -266,7 +238,9 @@ if bobmods then
           name = "tree-arboretum-1",
           icons = {
             {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+              icon_size = 64,
+              scale = 0.5
             },
             {
               icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
@@ -286,7 +260,9 @@ if bobmods then
           name = "tree-arboretum-2",
           icons = {
             {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+              icon_size = 64,
+              scale = 0.5
             },
             {
               icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
@@ -306,7 +282,9 @@ if bobmods then
           name = "tree-arboretum-3",
           icons = {
             {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png"
+              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+              icon_size = 64,
+              scale = 0.5
             },
             {
               icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",

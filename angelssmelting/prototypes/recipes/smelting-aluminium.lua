@@ -85,7 +85,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -115,7 +115,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -144,7 +144,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -177,7 +177,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -245,7 +245,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -253,6 +253,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-aluminium]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
   },
   {
     type = "recipe",
@@ -275,7 +276,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
@@ -283,6 +284,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-aluminium]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
   },
   {
     type = "recipe",
@@ -306,7 +308,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
@@ -314,6 +316,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-aluminium]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
   },
   {
     type = "recipe",
@@ -353,7 +356,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-aluminium.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
@@ -404,7 +407,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-aluminium.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},

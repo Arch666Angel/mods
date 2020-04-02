@@ -61,7 +61,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/ingot-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -91,7 +91,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/ingot-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -121,7 +121,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/ingot-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -167,6 +167,7 @@ data:extend(
     main_product= "liquid-molten-tin",
     icon_size = 32,
     order = "f[liquid-molten-tin]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
   },
   {
     type = "recipe",
@@ -206,7 +207,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
@@ -257,7 +258,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
         scale = 0.32,
         shift = {-12, -12},
@@ -306,7 +307,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -359,7 +360,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},

@@ -37,11 +37,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-stone",
     order = "e",
-    stack_size = 1000,
+    stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
       result = "clay-bricks",
-      condition_size = 4,
+      condition_size = 2,
       condition = { "water-tile" }
     }
   },
@@ -72,11 +72,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "i",
-    stack_size = 1000,
+    stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
       result = "concrete",
-      condition_size = 4,
+      condition_size = 1,
       condition = { "water-tile" }
     }
   },
@@ -87,11 +87,11 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "j",
-    stack_size = 1000,
+    stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
       result = "concrete",
-      condition_size = 4,
+      condition_size = 1,
       condition = { "water-tile" }
     }
   },

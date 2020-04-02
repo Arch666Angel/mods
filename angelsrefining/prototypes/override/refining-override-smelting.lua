@@ -13,25 +13,25 @@ OV.disable_recipe("solid-lithium")
 -------------------------------------------------------------------------------
 -- CRUSHED SMELTING -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["angelssmelting"] and ore_exists("lead") then
+if ore_exists("lead") then
   OV.patch_recipes({
     {
       name = "angelsore5-crushed-smelting",
       results = {
         {"!!"},
-        {"angels-plate-lead", 1}
+        {mods["angelssmelting"] and "angels-plate-lead" or "lead-plate", 1}
       },
       icon = "__angelsrefining__/graphics/icons/lead-plate-crushed.png"
     }
   })
 end
-if mods["angelssmelting"] and ore_exists("tin") then
+if ore_exists("tin") then
   OV.patch_recipes({
     {
       name = "angelsore6-crushed-smelting",
       results = {
         {"!!"},
-        {"angels-plate-tin", 1}
+        {mods["angelssmelting"] and "angels-plate-tin" or "tin-plate", 1}
       },
       icon = "__angelsrefining__/graphics/icons/tin-plate-crushed.png"
     }

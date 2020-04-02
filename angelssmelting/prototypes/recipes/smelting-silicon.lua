@@ -115,7 +115,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -145,7 +145,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -175,7 +175,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -222,6 +222,7 @@ data:extend(
     --icon = "__angelssmelting__/graphics/icons/molten-silicon.png",
     icon_size = 32,
     order = "h[liquid-molten-silicon]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silicon")
   },
   {
     type = "recipe",
@@ -332,7 +333,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/silicon-mono.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -385,7 +386,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/silicon-mono.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},

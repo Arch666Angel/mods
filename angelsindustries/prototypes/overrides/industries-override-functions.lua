@@ -663,8 +663,8 @@ function replace_gen_mats()
   OV.remove_unlock("electric-engine", "electric-engine-unit")
   data.raw.recipe["electric-engine-unit"].hidden = true
   data.raw.item["electric-engine-unit"].hidden = true
-  OV.global_replace_item("iron-stick", "angels-rod-iron")
-  data.raw.recipe["iron-stick"].hidden = true
+  -- OV.global_replace_item("iron-stick", "angels-rod-iron")
+  -- data.raw.recipe["iron-stick"].hidden = true
   OV.execute()
 end
 

@@ -1,13 +1,3 @@
-local function create_recipe_icon(fluid_name, product_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(product_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2-10, (layer.shift[2] or 0)/2-10}
-    layer.scale = (layer.scale or 1)/2
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(fluid_name), icon_layers)
-end
-
 data:extend(
   {
     {
@@ -24,7 +14,9 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 80}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-beans"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {214,135,010}, nil, {239,168,044} }, {
+        "solid-beans"
+      }),
       order = "ba",
     },
     {
@@ -41,7 +33,9 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 70}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-corn"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {214,135,010}, nil, {239,168,044} }, {
+        "solid-corn"
+      }),
       order = "bb",
     },
     {
@@ -58,7 +52,9 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 10}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-leafs"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {214,135,010}, nil, {239,168,044} }, {
+        "solid-leafs"
+      }),
       order = "bc",
     },
     {
@@ -75,7 +71,9 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-nuts"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {214,135,010}, nil, {239,168,044} }, {
+        "solid-nuts"
+      }),
       order = "ba",
     },
     {
@@ -92,7 +90,9 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-pips"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {214,135,010}, nil, {239,168,044} }, {
+        "solid-pips"
+      }),
       order = "bb",
     },
     {
@@ -109,7 +109,9 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 60}
       },
       always_show_products = "true",
-      icons = create_recipe_icon("liquid-nutrient-pulp", "solid-fruit"),
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {214,135,010}, nil, {239,168,044} }, {
+        "solid-fruit"
+      }),
       order = "bc",
     },
     -- REFINING

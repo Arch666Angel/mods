@@ -1,6 +1,6 @@
 {
   "name": "angelsindustries",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "factorio_version": "0.18",
   "title": "Angel's Industries",
   "author": "Arch666Angel",
@@ -12,6 +12,7 @@
     "angelsrefining >= 0.11.5",
     "angelspetrochem >= 0.9.0",
     "angelsbioprocessing >= 0.7.3",
-    "angelssmelting >= 0.6.1"
+    "angelssmelting >= 0.6.1",
+    "angelsaddons-crawlertrain >= 0.1.0"
   ]
 }

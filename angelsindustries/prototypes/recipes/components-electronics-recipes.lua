@@ -258,6 +258,7 @@ data:extend(
     category = "crafting",
     subgroup = "angels-board",
     enabled = "false",
+    allow_as_intermediate = "false", -- prefer the wood recipe for handcrafing
     ingredients =
     {
       {type="item", name="solid-paper", amount=2},

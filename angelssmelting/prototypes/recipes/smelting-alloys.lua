@@ -61,7 +61,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -69,6 +69,8 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
+
   },
   {
     type = "recipe",
@@ -91,7 +93,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -99,6 +101,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -121,7 +124,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -129,6 +132,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -152,7 +156,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -160,6 +164,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-d",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -183,7 +188,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_5.png",
+        icon = "__angelsrefining__/graphics/icons/num_5.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -191,6 +196,7 @@ data:extend(
     },
     icon_size = 32,
     order = "i[liquid-molten-steel]-e",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
   },
   {
     type = "recipe",
@@ -230,7 +236,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -281,7 +287,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -328,7 +334,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/rod-stack-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -379,7 +385,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/rod-stack-steel.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -561,7 +567,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -569,6 +575,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -591,7 +598,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -599,6 +606,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-b",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -621,7 +629,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -629,6 +637,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-c",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -652,7 +661,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/molten-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_4.png",
+        icon = "__angelsrefining__/graphics/icons/num_4.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -660,6 +669,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[liquid-molten-solder]-d",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
   },
   {
     type = "recipe",
@@ -699,7 +709,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -750,7 +760,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/roll-solder.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},

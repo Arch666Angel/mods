@@ -1,6 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.8
+Date: 02.04.2020
+  Changes:
+    - Changed mining time of Burner Ore Crusher so it's easier to pick up in early game
+    - Added setting to change stack size of (all) pavement items between 200 to 1000 (default 200)
+    - Changed stack size of Stone Brick to use the pavement item stack size (was 100, now 200 by default)
+    - Changed stack size of (all) Concrete to use the pavement item stack size (was 100, now 200 by default)
+    - Changed stack size of Landfill to use the pavement item stack size (was 100, now 200 by default)
+  Bugfixes:
+    - Fixed missing Tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+  Modding:
+    - angelsmods.functions.make_void(...) now supports an optional quantity as input argument
+    - added equivalent function to create viscous liquid recipe icons
+    - added equivalent function to create solid recipe icons
+---------------------------------------------------------------------------------------------------
 Version: 0.11.7
-Date: 24-03-2020
+Date: 24.03.2020
   Changes:
     - Make buildings upgradeable #119
   Bugfixes:
@@ -12,7 +27,7 @@ Date: 21-03-2020
     - Fixed crash when barrreling recipe did not exist
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.5
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - Added new graphics for fluid icons
     - Powdered refining depends on lubricant tech now

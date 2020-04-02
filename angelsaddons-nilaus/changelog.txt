@@ -1,23 +1,40 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 02.04.2020
+  Changes:
+    - Updated grid size to a 9x9 grid (instead of default bob-cars size) #143
+    - Hide grid button when in vanilla, aka missing vehicle grid (car, vehicle, angels-...) #143
+    - Truck now stears as a car, not a tank #143
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 24.03.2020
+  Changes:
+    - Fixed crash
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 24.03.2020
+  Changes:
+    - Fixed crash
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: 24-03-2020
+Date: 24.03.2020
   Changes:
     - Fixed the TP bot...
     - Changed localised names of nilaus decorations
     - Added Nilaus' Floor Lamp
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
-Date: 22-03-2020
+Date: 22.03.2020
   Changes:
     - Tweakes some technologies, recipes and items after the previous update
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - Added technology prerequisites
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: 09-02-2020
+Date: 09.02.2020
   Changes:
     - update to 0.18
     - Integrate into angels industries overhaul tabs

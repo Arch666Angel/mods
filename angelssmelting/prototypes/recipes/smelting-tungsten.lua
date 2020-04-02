@@ -81,7 +81,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -111,7 +111,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -183,7 +183,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/powder-tungsten.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -213,7 +213,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/powder-tungsten.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -244,7 +244,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/powder-tungsten-mixture.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_1.png",
+        icon = "__angelsrefining__/graphics/icons/num_1.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -274,7 +274,7 @@ data:extend(
         icon = "__angelssmelting__/graphics/icons/powder-tungsten-mixture.png",
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.smelting.number_tint,
         scale = 0.32,
         shift = {-12, -12},

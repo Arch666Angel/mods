@@ -1,11 +1,31 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+Date: 02.04.2020
+  Changes:
+    - Changed graphics on tree recipes to represent the trees instead of their product
+  Balancing:
+    - Increase usage of bio sink (Compost)
+      - Fertilizer now takes twice the amount of Compost
+      - Fermentation Base processing now produces half the amount of compost
+    - Decrease production of Compost
+      - Require 2 vegetables to create 1 Compost (required 1 before)
+      - Require 20 vegetable seeds to create 1 Compost (required 1 before)
+      - Require 2 Gardens to create 1 Compost (required 1 before)
+      - Require 2 Cellulose Fibers to create 1 Compost (required 1 before)
+      - Require 4 Green Algae to create 1 Compost (required 1 before)
+      - Require 3 Brown Algae to create 1 Compost (required 1 before)
+      - Require 2 Blue Algae to create 1 Compost (required 1 before)
+  Bugfixes:
+    - Fixed missing localised description on Alien Plant Life Sample
+    - Fixed ore pastes would enable when you don't need them
+---------------------------------------------------------------------------------------------------
 Version: 0.7.5
-Date: 24-03-2020
+Date: 24.03.2020
   Changes:
     - Make buildings upgradeable #119
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.4
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - Removed the (unneeded) ingredient limit on different bio buildings
       - Fish Tank, Puffer Refugium and Biter Refugium

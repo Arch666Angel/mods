@@ -13,11 +13,19 @@ require("prototypes.override.refining-override-smelting")
 --OVERRIDE FOR WATER TREATMENT
 require("prototypes.override.refining-override-water-treatment")
 
+--OVERRIDE FOR ANGELs
+-- change stack size
+data.raw.item["stone-brick"].stack_size = angelsmods.trigger.pavement_stack_size
+data.raw.item["concrete"].stack_size = angelsmods.trigger.pavement_stack_size
+data.raw.item["hazard-concrete"].stack_size = angelsmods.trigger.pavement_stack_size
+data.raw.item["refined-concrete"].stack_size = angelsmods.trigger.pavement_stack_size
+data.raw.item["refined-hazard-concrete"].stack_size = angelsmods.trigger.pavement_stack_size
+data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
+
 --OVERRIDE FOR BOBs
 --if bobmods and bobmods.plates then
 require("prototypes.override.refining-override-bobgems")
 if mods["bobplates"] then
-
 
   --OVERRIDE BARRELING
   if data.raw["item-subgroup"]["bob-gas-bottle"] then

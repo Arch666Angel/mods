@@ -999,7 +999,7 @@ angelsmods.functions.RB.build(
         },
         result = "angels-chemical-plant"
       },
-      expensive = {
+      expensive = angelsmods.industries and angelsmods.industries.tech and {
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
@@ -1008,6 +1008,17 @@ angelsmods.functions.RB.build(
           {"t1-gears", 1 * buildingmulti},
           {"t1-circuit", 1 * buildingmulti},
           {"t1-pipe", 4 * buildingmulti}
+        },
+        result = "angels-chemical-plant"
+      } or { -- chem plant required for science, excluding it from marathon effects
+        energy_required = 5,
+        enabled = false,
+        ingredients = {
+          {"chem-1", 1},
+          {"t1-plate", 2},
+          {"t1-gears", 1},
+          {"t1-circuit", 1},
+          {"t1-pipe", 4}
         },
         result = "angels-chemical-plant"
       }
@@ -1130,11 +1141,11 @@ angelsmods.functions.RB.build(
         energy_required = 5,
         enabled = false,
         ingredients = {
+          {"angels-electric-boiler", 1},
           {"t2-plate", 1},
           {"t2-circuit", 2},
           {"t2-brick", 1},
-          {"t2-pipe", 5},
-          {"angels-electric-boiler", 1}
+          {"t2-pipe", 5}
         },
         result = "angels-electric-boiler-2"
       },
@@ -1142,11 +1153,11 @@ angelsmods.functions.RB.build(
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
+          {"angels-electric-boiler", 1},
           {"t2-plate", 1 * buildingmulti},
           {"t2-circuit", 2 * buildingmulti},
           {"t2-brick", 1 * buildingmulti},
-          {"t2-pipe", 5 * buildingmulti},
-          {"angels-electric-boiler", 1 * buildingmulti}
+          {"t2-pipe", 5 * buildingmulti}
         },
         result = "angels-electric-boiler-2"
       }
@@ -1158,11 +1169,11 @@ angelsmods.functions.RB.build(
         energy_required = 5,
         enabled = false,
         ingredients = {
+          {"angels-electric-boiler-2", 1},
           {"t3-plate", 1},
           {"t3-circuit", 2},
           {"t3-brick", 1},
-          {"t3-pipe", 5},
-          {"angels-electric-boiler-2", 1}
+          {"t3-pipe", 5}
         },
         result = "angels-electric-boiler-3"
       },
@@ -1170,11 +1181,11 @@ angelsmods.functions.RB.build(
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
+          {"angels-electric-boiler-2", 1},
           {"t3-plate", 1 * buildingmulti},
           {"t3-circuit", 2 * buildingmulti},
           {"t3-brick", 1 * buildingmulti},
-          {"t3-pipe", 5 * buildingmulti},
-          {"angels-electric-boiler-2", 1 * buildingmulti}
+          {"t3-pipe", 5 * buildingmulti}
         },
         result = "angels-electric-boiler-3"
       }

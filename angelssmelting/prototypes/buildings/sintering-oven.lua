@@ -8,7 +8,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -28,7 +28,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -93,7 +93,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -113,7 +113,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_2.png",
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -178,7 +178,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_3.png",
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -198,7 +198,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_3.png",
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -263,7 +263,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_4.png",
+          icon = "__angelsrefining__/graphics/icons/num_4.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -283,7 +283,7 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/num_4.png",
+          icon = "__angelsrefining__/graphics/icons/num_4.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}

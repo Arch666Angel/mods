@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -51,14 +53,15 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
             icon = "__angelssmelting__/graphics/icons/molten-gunmetal.png",
           },
           -- {
-          -- icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          -- icon = "__angelsrefining__/graphics/icons/num_1.png",
           -- tint = angelsmods.smelting.number_tint,
           -- scale = 0.32,
           -- shift = {-12, -12},
           -- }
         },
         icon_size = 32,
-        order = "c[gunmetal]-a[liquid-molten-gunmetal]"
+        order = "c[gunmetal]-a[liquid-molten-gunmetal]",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gunmetal")
       },
       --CASTING
       {

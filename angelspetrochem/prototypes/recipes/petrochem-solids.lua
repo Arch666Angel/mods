@@ -1,19 +1,5 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
-local function create_icon(name, number_icon_layer)
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons(name), number_icon_layer)
-end
-
-local function create_solid_fuel_recipe_icon(fluid_name)
-  local icon_layers = util.table.deepcopy(angelsmods.functions.get_object_icons(fluid_name))
-  for layer_index, layer in pairs(icon_layers or {}) do
-    layer.shift = layer.shift or {}
-    layer.shift = {(layer.shift[1] or 0)/2-8, (layer.shift[2] or 0)/2+8}
-    layer.scale = (layer.scale or 1)/2
-  end
-  return angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons("solid-fuel"), icon_layers)
-end
-
 data:extend(
 {
 --SOLIDS
@@ -67,13 +53,11 @@ data:extend(
       {type="fluid", name="liquid-plastic", amount=10},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-plastic", {
-      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_1.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "a[plastic]-a[liquid]-a",
   },
   {
@@ -93,13 +77,11 @@ data:extend(
         {type="fluid", name="liquid-plastic", amount=20},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-plastic", {
-      icon = "__angelspetrochem__/graphics/icons/num_2.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_2.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "a[plastic]-a[liquid]-b",
   },
   {
@@ -119,13 +101,11 @@ data:extend(
         {type="fluid", name="liquid-plastic", amount=30},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-plastic", {
-      icon = "__angelspetrochem__/graphics/icons/num_3.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_3.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "a[plastic]-a[liquid]-c",
   },
   --RESIN
@@ -182,13 +162,11 @@ data:extend(
       {type="fluid", name="liquid-resin", amount=10},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-resin", {
-      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_1.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "b[resin]-a[liquid]-a",
   },
   {
@@ -208,13 +186,11 @@ data:extend(
       {type="fluid", name="liquid-resin", amount=20},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-resin", {
-      icon = "__angelspetrochem__/graphics/icons/num_2.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_2.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "b[resin]-a[liquid]-b",
   },
   {
@@ -234,13 +210,11 @@ data:extend(
       {type="fluid", name="liquid-resin", amount=30},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-resin", {
-      icon = "__angelspetrochem__/graphics/icons/num_3.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_3.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "b[resin]-a[liquid]-c",
   },
   --RUBBER
@@ -297,13 +271,11 @@ data:extend(
       {type="fluid", name="liquid-rubber", amount=10},
     },
     always_show_products = "true",
-    icons = create_icon("liquid-rubber", {
-      icon = "__angelspetrochem__/graphics/icons/num_1.png",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {193,197,255}, {193,197,255} }, {{
+      icon = "__angelsrefining__/graphics/icons/num_1.png",
       icon_size = 32,
       tint = angelsmods.petrochem.number_tint,
-      scale = 0.32,
-      shift = {-12, -12},
-    }),
+    }}),
     order = "b[rubber]-a[liquid]",
   },
   --GLASS
@@ -363,7 +335,9 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icons = create_solid_fuel_recipe_icon("gas-methane"),
+    icons = angelsmods.functions.create_solid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 }
+    }, "solid-fuel"),
     order = "a[solid-fuel-methane]",
   },
   {
@@ -382,7 +356,9 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icons = create_solid_fuel_recipe_icon("liquid-naphtha"),
+    icons = angelsmods.functions.create_solid_recipe_icon({
+      "liquid-naphtha"
+    }, "solid-fuel"),
     order = "b[solid-fuel-naphtha]",
   },
   {
@@ -401,7 +377,9 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icons = create_solid_fuel_recipe_icon("liquid-fuel-oil"),
+    icons = angelsmods.functions.create_solid_recipe_icon({
+      "liquid-fuel-oil"
+    }, "solid-fuel"),
     order = "c[solid-fuel-fuel-oil]",
   },
   {
@@ -420,7 +398,9 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icons = create_solid_fuel_recipe_icon("gas-synthesis"),
+    icons = angelsmods.functions.create_solid_recipe_icon({
+      "gas-synthesis"
+    }, "solid-fuel"),
     order = "d[solid-fuel-synthesis]",
   },
   {
@@ -438,7 +418,9 @@ data:extend(
     {
       {type="item", name="solid-fuel", amount=2},
     },
-    icons = create_solid_fuel_recipe_icon("gas-hydrazine"),
+    icons = angelsmods.functions.create_solid_recipe_icon({
+      { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 }
+    }, "solid-fuel"),
     order = "e[solid-fuel-hydrazine]",
   },
   --CATALYSTS
@@ -612,7 +594,7 @@ data:extend(
         icon_size=64,
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_2.png",
+        icon = "__angelsrefining__/graphics/icons/num_2.png",
         tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},
@@ -647,7 +629,7 @@ data:extend(
         icon_size=64,
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/num_3.png",
+        icon = "__angelsrefining__/graphics/icons/num_3.png",
         tint = angelsmods.petrochem.number_tint,
         scale = 0.32,
         shift = {-12, -12},

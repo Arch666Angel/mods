@@ -37,7 +37,7 @@ data:extend(
       },
       icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "burner-ore-crusher"},
+      minable = {mining_time = 0.5, result = "burner-ore-crusher"},
       fast_replaceable_group = "ore-crusher",
       next_upgrade = "ore-crusher",
       max_health = 300,

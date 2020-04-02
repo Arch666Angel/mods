@@ -18,9 +18,9 @@ OV.disable_recipe({"processing-unit"})
 -------------------------------------------------------------------------------
 -- INTERMEDIATES --------------------------------------------------------------
 -------------------------------------------------------------------------------
-OV.global_replace_item("iron-stick", "angels-rod-iron")
-angelsmods.functions.add_flag("iron-stick", "hidden")
-OV.disable_recipe({"iron-stick"})
+-- OV.global_replace_item("iron-stick", "angels-rod-iron")
+-- angelsmods.functions.add_flag("iron-stick", "hidden")
+-- OV.disable_recipe({"iron-stick"})
 
 OV.global_replace_item("iron-gear-wheel", "angels-gear")
 angelsmods.functions.add_flag("iron-gear-wheel", "hidden")
@@ -33,3 +33,8 @@ OV.disable_recipe({"engine-unit"})
 OV.global_replace_item("electric-engine-unit", "motor-4")
 angelsmods.functions.add_flag("electric-engine-unit", "hidden")
 OV.disable_recipe({"electric-engine-unit"})
+
+-- custom fixes
+OV.execute()
+require("prototypes.overrides.components-base-recipe-update")
+OV.execute()

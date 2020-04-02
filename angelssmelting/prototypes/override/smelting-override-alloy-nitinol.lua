@@ -28,6 +28,8 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         flow_to_energy_ratio = 0.59,
         auto_barrel = false
       },
+    })
+    data:extend({
       --SMELTING
       {
         type = "recipe",
@@ -49,14 +51,15 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
             icon = "__angelssmelting__/graphics/icons/molten-nitinol.png",
           },
           -- {
-          -- icon = "__angelspetrochem__/graphics/icons/num_1.png",
+          -- icon = "__angelsrefining__/graphics/icons/num_1.png",
           -- tint = angelsmods.smelting.number_tint,
           -- scale = 0.32,
           -- shift = {-12, -12},
           -- }
         },
         icon_size = 32,
-        order = "f[nitinol]-a[liquid-molten-nitinol]"
+        order = "f[nitinol]-a[liquid-molten-nitinol]",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nitinol")
       },
       --CASTING
       {
