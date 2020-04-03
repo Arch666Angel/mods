@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.6
+Date: 03.04.2020
+  Bugfixes:
+    - Nilaus lamp would return small lamp #160
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
 Date: 02.04.2020
   Changes:
     - Updated grid size to a 9x9 grid (instead of default bob-cars size) #143
