@@ -115,7 +115,7 @@ data:extend(
       icon = "__angelsaddons-nilaus__/graphics/icons/lamp-ico.png",
       icon_size = 64,
       flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 0.1, result = "small-lamp"},
+      minable = {mining_time = 0.1, result = "deco-nilaus-lamp"},
       max_health = 100,
       corpse = "lamp-remnants",
       collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
