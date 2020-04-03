@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: ???
+  Changes:
+    - Renamed Tank wagon to Fluid wagon
+    - Removed enabled setting
+    - Rebalancing of capactiy
+      - Gas Fluid wagon was 25k is now 40k with angelspetrochem
+      - Oil Fluid wagon was 25k is now 40k with angelspetrochem
+---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 02.04.2020
   Bugfixes:

@@ -3,7 +3,7 @@ require("util")
 local function generate_train_recipe(item, add_unlock)
   add_unlock = add_unlock or false
   local entries = {}
-  if angelsmods.addons.petrotrain.enable_tiers and angelsmods.addons.petrotrain.tier_amount > 1 then
+  if angelsmods.addons.petrotrain.enable_tiers then
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name

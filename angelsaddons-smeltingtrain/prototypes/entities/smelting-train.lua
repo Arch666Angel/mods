@@ -58,7 +58,7 @@ funcs.generate_train_items(
     icon = "__angelsaddons-smeltingtrain__/graphics/icons/smelting-wagon1.png",
     icon_size = 32,
     subgroup = "angels-smeltingtrain",
-    order = "a-b[smelting-wagon-1]",
+    order = "b-a[smelting-wagon-1]",
     place_result = "smelting-wagon-1",
     stack_size = 5
   }

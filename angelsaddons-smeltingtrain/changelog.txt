@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: ???
+  Changes:
+    - Renamed Smelting Wagon to Smelting Cargo Wagon
+    - Removed enabled setting
+    - Moved Cargo wagon after locomotives
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 02.04.2020
   Bugfixes:
