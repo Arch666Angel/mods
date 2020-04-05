@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: ???
+  Changes:
+    - Reduced collision box of the zone expanders, charging boxes and robo hub stays the same #163
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 02.04.2020
   Changes:
