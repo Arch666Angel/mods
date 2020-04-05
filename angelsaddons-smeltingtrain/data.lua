@@ -4,7 +4,7 @@ angelsmods = angelsmods or {}
 angelsmods.addons = angelsmods.addons or {}
 angelsmods.addons.smeltingtrain = angelsmods.addons.smeltingtrain or {}
 angelsmods.addons.smeltingtrain.tier_amount = settings.startup["angels-smeltingtrain-tier-amount"].value
-angelsmods.addons.smeltingtrain.enable_tiers = angelsmods.addons.smeltingtrain.tier_amount > 1 and true or false
+angelsmods.addons.smeltingtrain.enable_tiers = angelsmods.addons.smeltingtrain.tier_amount > 1
 angelsmods.addons.smeltingtrain.number_tint = {r = 1, g = 0.38, b = 0, a = 1}
 
 tech_unlocks = {}
