@@ -5,6 +5,8 @@ local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].mini
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
 local funcs = require("prototypes/smelting-train-functions")
+local fixed_tint = { r = 119/255, g = 127/255, b = 113/255, a = 0.8 }
+local tintable_tint = { r = 1, g = 0.38, b = 0.0, a = 0.5 } -- alpha must be 0.5 due to base game...
 
 data:extend(
   {
@@ -81,10 +83,10 @@ funcs.generate_train_entities(
     drawing_box = {{-1, -4}, {1, 3}},
     --alert_icon_shift = util.by_pixel(0, -24),
     weight = 3000,
-    max_speed = 1,
-    max_power = "1200kW",
+    max_speed = 1.2,
+    max_power = "900kW",
     reversing_power_modifier = 0.6,
-    braking_force = 20,
+    braking_force = 10,
     friction_force = 0.60,
     vertical_selection_shift = -0.5,
     air_resistance = 0.0075, -- this is a percentage of current speed that will be subtracted
@@ -96,7 +98,7 @@ funcs.generate_train_entities(
     minimap_representation = minimap_representation,
     selected_minimap_representation = selected_minimap_representation,
     allow_manual_color = true,
-    color = {r = 1, g = 0.38, b = 0.0, a = 1},
+    color = tintable_tint,
     resistances = {
       {
         type = "fire",
@@ -228,6 +230,21 @@ funcs.generate_train_entities(
         },
         {
           priority = "very-low",
+          width = 256,
+          height = 256,
+          direction_count = 128,
+          filenames = {
+            "__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco1/smelting-loco1-1-tint.png",
+            "__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco1/smelting-loco1-2-tint.png"
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
+          shift = {0.0, -0.75}
+        },
+        {
+          priority = "very-low",
           flags = {"mask"},
           width = 256,
           height = 256,
@@ -327,10 +344,10 @@ funcs.generate_train_entities(
     selection_box = {{-1, -3}, {1, 3}},
     drawing_box = {{-1, -4}, {1, 3}},
     weight = 3000,
-    max_speed = 1,
-    max_power = "1400kW",
+    max_speed = 1.2,
+    max_power = "1000kW",
     reversing_power_modifier = 0.6,
-    braking_force = 25,
+    braking_force = 15,
     friction_force = 0.60,
     vertical_selection_shift = -0.5,
     air_resistance = 0.0075, -- this is a percentage of current speed that will be subtracted
@@ -342,7 +359,7 @@ funcs.generate_train_entities(
     minimap_representation = minimap_representation,
     selected_minimap_representation = selected_minimap_representation,
     allow_manual_color = true,
-    color = {r = 1, g = 0.38, b = 0.0, a = 1},
+    color = tintable_tint,
     resistances = {
       {
         type = "fire",
@@ -457,7 +474,6 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
     pictures = {
       layers = {
         {
@@ -471,6 +487,21 @@ funcs.generate_train_entities(
           },
           line_length = 8,
           lines_per_file = 8,
+          shift = {0.0, -0.75}
+        },
+        {
+          priority = "very-low",
+          width = 256,
+          height = 256,
+          direction_count = 128,
+          filenames = {
+            "__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco2/smelting-loco2-1-tint.png",
+            "__angelsaddons-smeltingtrain__/graphics/entity/smelting-loco2/smelting-loco2-2-tint.png"
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
           shift = {0.0, -0.75}
         },
         {
@@ -598,9 +629,9 @@ funcs.generate_train_entities(
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
     selection_box = {{-1, -2.703125}, {1, 3.296875}},
     vertical_selection_shift = -0.796875,
-    weight = 1500,
+    weight = 2000,
     max_speed = 1.5,
-    braking_force = 3,
+    braking_force = 0.1,
     friction_force = 0.50,
     air_resistance = 0.01,
     connection_distance = 3,
@@ -611,6 +642,7 @@ funcs.generate_train_entities(
     minimap_representation = cargo_minimap_representation,
     selected_minimap_representation = cargo_selected_minimap_representation,
     allow_manual_color = true,
+    color = tintable_tint,
     resistances = {
       {
         type = "fire",
@@ -640,7 +672,6 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = {r = 0.43, g = 0.23, b = 0, a = 0.5},
     pictures = {
       layers = {
         {
@@ -653,6 +684,21 @@ funcs.generate_train_entities(
           },
           line_length = 8,
           lines_per_file = 8,
+          shift = {0.0, -0.75},
+          back_equals_front = true
+        },
+        {
+          priority = "very-low",
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-1-tint.png"
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
           shift = {0.0, -0.75},
           back_equals_front = true
         },
@@ -698,13 +744,23 @@ funcs.generate_train_entities(
           shift = {0.0, -0.75}
         },
         {
-          flags = {"mask"},
-          apply_runtime_tint = true,
           filename = "__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-door-horizontal-tint.png",
           line_length = 8,
           width = 256,
           height = 256,
           frame_count = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
+          shift = {0.0, -0.75}
+        },
+        {
+          flags = {"mask"},
+          filename = "__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-door-horizontal-tint.png",
+          line_length = 8,
+          width = 256,
+          height = 256,
+          frame_count = 8,
+          apply_runtime_tint = true,
           shift = {0.0, -0.75}
         }
       }
@@ -720,13 +776,23 @@ funcs.generate_train_entities(
           shift = {0.0, -0.75}
         },
         {
-          flags = {"mask"},
-          apply_runtime_tint = true,
           filename = "__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-door-vertical-tint.png",
           line_length = 8,
           width = 256,
           height = 256,
           frame_count = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
+          shift = {0.0, -0.75}
+        },
+        {
+          flags = {"mask"},
+          filename = "__angelsaddons-smeltingtrain__/graphics/entity/smelting-wagon1/smelting-wagon1-door-vertical-tint.png",
+          line_length = 8,
+          width = 256,
+          height = 256,
+          frame_count = 8,
+          apply_runtime_tint = true,
           shift = {0.0, -0.75}
         }
       }
