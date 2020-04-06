@@ -42,7 +42,7 @@ m_e.ingredients = {
 }
 m_e.results = {
   {type = "item", name = "mold-expendable", amount = 1},
-  {type = "item", name = "solid-iron-hydroxide", amount = 3}
+  {type = "item", name = "slag", amount = 2}--iron hydroxide gets unlockd at blue tech
 }
 m_e.icons = {
   {icon = "__angelssmelting__/graphics/icons/expendable-mold.png"},
