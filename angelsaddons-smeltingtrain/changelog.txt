@@ -5,7 +5,7 @@ Date: ???
     - Renamed Smelting Wagon to Smelting Cargo Wagon
     - Removed enabled setting
     - Moved Cargo wagon recipe after locomotives for consistency
-    - Added ability to copy paste color from locomotives to the cargo wagons
+    - Added ability to copy paste color to the cargo wagons
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 02.04.2020

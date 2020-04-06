@@ -6,6 +6,9 @@ local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wag
 
 local funcs = require("prototypes/petro-train-functions")
 
+local fixed_tint = { r = 000/255, g = 000/255, b = 000/255, a = 0.4 }
+local tintable_tint = { r = 210/255, g = 020/255, b = 000/255, a = 0.5 } -- alpha must be 0.5 due to base game...
+
 data:extend(
   {
     {
@@ -173,7 +176,7 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
+    color = tintable_tint,
     pictures = {
       layers = {
         {
@@ -202,6 +205,22 @@ funcs.generate_train_entities(
           line_length = 8,
           lines_per_file = 8,
           apply_runtime_tint = true,
+          shift = {0.0, -0.75}
+        },
+        {
+          priority = "very-low",
+          flags = {"mask"},
+          width = 256,
+          height = 256,
+          direction_count = 128,
+          filenames = {
+            "__angelsaddons-petrotrain__/graphics/entity/petro-loco1/petro-loco1-1-tint.png",
+            "__angelsaddons-petrotrain__/graphics/entity/petro-loco1/petro-loco1-2-tint.png"
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
           shift = {0.0, -0.75}
         },
         {
@@ -369,7 +388,7 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
+    color = tintable_tint,
     pictures = {
       layers = {
         {
@@ -396,6 +415,22 @@ funcs.generate_train_entities(
           line_length = 8,
           lines_per_file = 8,
           apply_runtime_tint = true,
+          shift = {0.0, -0.75},
+          back_equals_front = true
+        },
+        {
+          priority = "very-low",
+          flags = {"mask"},
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-petrotrain__/graphics/entity/petro-tank1/petro-tank1-tint.png"
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
           shift = {0.0, -0.75},
           back_equals_front = true
         },
@@ -538,7 +573,7 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
+    color = tintable_tint,
     pictures = {
       layers = {
         {
@@ -570,6 +605,21 @@ funcs.generate_train_entities(
         },
         {
           priority = "very-low",
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-petrotrain__/graphics/entity/petro-tank2/petro-tank2-tint.png"
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
+          shift = {0.0, -0.75},
+          back_equals_front = true
+        },
+        {
+          priority = "very-low",
           flags = {"mask"},
           width = 256,
           height = 256,
@@ -579,12 +629,13 @@ funcs.generate_train_entities(
           },
           line_length = 8,
           lines_per_file = 8,
-          tint = {r = 1, g = 1, b = 1, a = .1},
+          apply_runtime_tint = false,
+          tint = {r = 0.2, g = 0.2, b = 0.2, a = 10/255},
           shift = {0.0, -0.75},
           back_equals_front = true
         },
         {
-          --flags = { "compressed" },
+          flags = { "compressed" },
           width = 256,
           height = 256,
           draw_as_shadow = true,

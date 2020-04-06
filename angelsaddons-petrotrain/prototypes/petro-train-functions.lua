@@ -104,7 +104,7 @@ local function generate_train_entities(item)
   local entries = {}
   if angelsmods.addons.petrotrain.enable_tiers and angelsmods.addons.petrotrain.tier_amount > 1 then
     if item.inventory_size then
-      item.inventory_size = item.inventory_size / (1.25 * 1.5)
+      item.inventory_size = item.inventory_size / 1.5
     end
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
@@ -112,7 +112,7 @@ local function generate_train_entities(item)
       if i > 1 then
         name = name .. "-" .. i
       end
-      local multiplier = math.pow(1.25, i)
+      local multiplier = math.pow(1.25, i-1)
 
       copy.name = name
       copy.localised_name = {"", {"entity-name." .. item.name}, " MK" .. i}
