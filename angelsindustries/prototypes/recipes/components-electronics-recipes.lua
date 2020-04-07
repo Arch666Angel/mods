@@ -7,7 +7,7 @@ data:extend(
     type = "recipe",
     name = "circuit-resistor",
     energy_required = 0.5,
-    category = "crafting", --to allow hand crafting
+    category = mods["bobassembly"] and "electronics" or "crafting", --to allow hand crafting
     enabled = "false",
     ingredients =
     {
@@ -38,7 +38,7 @@ data:extend(
     type = "recipe",
     name = "circuit-transistor",
     energy_required = 1,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -52,7 +52,7 @@ data:extend(
     type = "recipe",
     name = "circuit-microchip",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -67,7 +67,7 @@ data:extend(
     type = "recipe",
     name = "circuit-transformer",
     energy_required = 2,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -81,7 +81,7 @@ data:extend(
     type = "recipe",
     name = "circuit-cpu",
     energy_required = 2.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -101,7 +101,7 @@ data:extend(
     subgroup = "angels-circuit-components",
     order = "f",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -129,7 +129,7 @@ data:extend(
     subgroup = "angels-circuit-components",
     order = "g",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -157,7 +157,7 @@ data:extend(
     subgroup = "angels-circuit-components",
     order = "h",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -185,7 +185,7 @@ data:extend(
     subgroup = "angels-circuit-components",
     order = "i",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -213,7 +213,7 @@ data:extend(
     subgroup = "angels-circuit-components",
     order = "j",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -242,7 +242,7 @@ data:extend(
     type = "recipe",
     name = "circuit-grey-board",
     energy_required = 0.25,
-    category = "crafting",
+    category = mods["bobassembly"] and "electronics" or "crafting",
     enabled = "true",
     ingredients =
     {
@@ -255,7 +255,7 @@ data:extend(
     type = "recipe",
     name = "circuit-grey-board-alternative",
     energy_required = 0.5,
-    category = "crafting",
+    category = mods["bobassembly"] and "electronics" or "crafting",
     subgroup = "angels-board",
     enabled = "false",
     allow_as_intermediate = "false", -- prefer the wood recipe for handcrafing
@@ -274,7 +274,7 @@ data:extend(
     type = "recipe",
     name = "circuit-red-board",
     energy_required = 0.5,
-    category = "crafting",
+    category = mods["bobassembly"] and "electronics" or "crafting",
     enabled = "false",
     ingredients =
     {
@@ -287,7 +287,7 @@ data:extend(
     type = "recipe",
     name = "circuit-green-board",
     energy_required = 1,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -301,7 +301,7 @@ data:extend(
     type = "recipe",
     name = "circuit-orange-board",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -315,7 +315,7 @@ data:extend(
     type = "recipe",
     name = "circuit-blue-board",
     energy_required = 2,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -347,7 +347,7 @@ data:extend(
     type = "recipe",
     name = "circuit-grey",
     energy_required = 0.25, -- 1:1 ratio to boards
-    category = "crafting",
+    category = mods["bobassembly"] and "electronics" or "crafting",
     enabled = "true",
     ingredients =
     {
@@ -361,7 +361,7 @@ data:extend(
     type = "recipe",
     name = "circuit-red",
     energy_required = 1, --1:2 ratio to boards
-    category = "crafting",
+    category = mods["bobassembly"] and "electronics" or "crafting",
     enabled = "false",
     ingredients =
     {
@@ -375,7 +375,7 @@ data:extend(
     type = "recipe",
     name = "circuit-green",
     energy_required = 1.5, --2:3 ratio to boards
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -389,7 +389,7 @@ data:extend(
     type = "recipe",
     name = "circuit-orange",
     energy_required = 2, -- 3:4 ratio to boards
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -404,7 +404,7 @@ data:extend(
     type = "recipe",
     name = "circuit-blue",
     energy_required = 3.5, -- 4:7 ratio to boards
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -419,7 +419,7 @@ data:extend(
     type = "recipe",
     name = "circuit-yellow",
     energy_required = 5, -- 3:5 ratio to boards
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -437,7 +437,7 @@ data:extend(
     type = "recipe",
     name = "circuit-red-loaded",
     energy_required = 1,
-    category = "crafting",
+    category = mods["bobassembly"] and "electronics" or "crafting",
     enabled = "false",
     ingredients =
     {
@@ -452,7 +452,7 @@ data:extend(
     type = "recipe",
     name = "circuit-green-loaded",
     energy_required = 1.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -468,7 +468,7 @@ data:extend(
     type = "recipe",
     name = "circuit-orange-loaded",
     energy_required = 2,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -485,7 +485,7 @@ data:extend(
     type = "recipe",
     name = "circuit-blue-loaded",
     energy_required = 3.5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
@@ -503,7 +503,7 @@ data:extend(
     type = "recipe",
     name = "circuit-yellow-loaded",
     energy_required = 5,
-    category = "advanced-crafting",
+    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
     enabled = "false",
     ingredients =
     {
