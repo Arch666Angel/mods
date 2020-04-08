@@ -1,16 +1,3 @@
-if mods["bobassembly"] {
-  data:extend(
-    {
-      type = "recipe-category",
-      name = "electronics"
-    },
-    {
-      type = "recipe-category",
-      name = "electronics-machine"
-    }
-  )
-}
-
 data:extend(
   {
     --RECIPE CATEGORY
