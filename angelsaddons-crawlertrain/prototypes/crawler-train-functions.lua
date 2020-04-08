@@ -203,9 +203,42 @@ local function generate_train_technology(item, tiers)
   data:extend(entries)
 end
 
+local function update_equipment_grid(grid, add, remove)
+  local function flip_t(tab)
+    local new_t = {}
+    for k, v in pairs(tab) do
+      new_t[v] = k
+    end
+    return new_t
+  end
+  if type(add) == "string" then
+    add = {add}
+  end
+  if type(remove) == "string" then
+    remove = {remove}
+  end
+
+  add = add or {}
+  remove = remove or {}
+
+  local equipgrid = data.raw["equipment-grid"][grid].equipment_categories
+  local flip_equipgrid = flip_t(equipgrid)
+  for name, value in pairs(remove) do
+    if flip_equipgrid[value] then
+      equipgrid[flip_equipgrid[value]] = nil
+    end
+  end
+  for name, value in pairs(add) do
+    if not flip_equipgrid[value] then
+      table.insert(equipgrid, value)
+    end
+  end
+end
+
 return {
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,
   generate_train_recipe = generate_train_recipe,
-  generate_train_technology = generate_train_technology
+  generate_train_technology = generate_train_technology,
+  update_equipment_grid = update_equipment_grid
 }

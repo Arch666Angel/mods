@@ -10,23 +10,24 @@ data:extend(
   {
     {
       type = "equipment-grid",
-      name = "angels-crawler-wagon",
+      name = "angels-crawler-bot-wagon",
       width = 12,
       height = 12,
       equipment_categories = {"angels-void"}
-    },
+    }
   }
 )
+
 
 funcs.generate_train_items(
   {
     type = "item-with-entity-data",
-    name = "crawler-wagon",
-    icon = "__angelsaddons-crawlertrain__/graphics/icons/crawler-wagon-ico.png",
+    name = "crawler-bot-wagon",
+    icon = "__angelsaddons-crawlertrain__/graphics/icons/crawler-bot-wagon-ico.png",
     icon_size = 32,
     subgroup = "angels-vehicle-train-crawler",
-    order = "c[wagon]",
-    place_result = "crawler-wagon",
+    order = "d[bot-wagon]",
+    place_result = "crawler-bot-wagon",
     stack_size = 5
   }
 )
@@ -34,12 +35,12 @@ funcs.generate_train_items(
 funcs.generate_train_entities(
   {
     type = "cargo-wagon",
-    name = "crawler-wagon",
-    icon = "__angelsaddons-crawlertrain__/graphics/icons/crawler-wagon-ico.png",
+    name = "crawler-bot-wagon",
+    icon = "__angelsaddons-crawlertrain__/graphics/icons/crawler-bot-wagon-ico.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
-    inventory_size = 64, 
-    minable = {mining_time = 1, result = "crawler-wagon"},
+    inventory_size = 64,
+    minable = {mining_time = 1, result = "crawler-bot-wagon"},
     mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
     max_health = 1000,
     corpse = "medium-remnants",
@@ -49,7 +50,7 @@ funcs.generate_train_entities(
     color = {r = 0.43, g = 0.23, b = 0, a = 0.5},
     allow_manual_color = true,
     vertical_selection_shift = -0.796875,
-    weight = 1500,
+    weight = 3000,
     max_speed = 1.5,
     braking_force = 3,
     friction_force = 0.50,
@@ -57,7 +58,7 @@ funcs.generate_train_entities(
     connection_distance = 3,
     joint_distance = 4,
     energy_per_hit_point = 5,
-    equipment_grid = "angels-crawler-wagon",
+    equipment_grid = "angels-crawler-bot-wagon",
     allow_robot_dispatch_in_automatic_mode = true,
     minimap_representation = cargo_minimap_representation,
     selected_minimap_representation = cargo_selected_minimap_representation,
@@ -94,9 +95,10 @@ funcs.generate_train_entities(
       priority = "very-low",
       width = 256,
       height = 256,
+      --back_equals_front = true,
       direction_count = 64,
       filenames = {
-        "__angelsaddons-crawlertrain__/graphics/entity/crawler-train/crawler-wagon.png"
+        "__angelsaddons-crawlertrain__/graphics/entity/crawler-train/crawler-bot-wagon.png"
       },
       line_length = 8,
       lines_per_file = 8,

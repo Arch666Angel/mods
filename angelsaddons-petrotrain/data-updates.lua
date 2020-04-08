@@ -1,3 +1,5 @@
+local funcs = require("prototypes/petro-train-functions")
+
 if angelsmods.petrochem then
   local OV = angelsmods.functions.OV
   for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
@@ -14,14 +16,64 @@ if angelsmods.industries then
   end
   data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"
+
+  funcs.update_equipment_grid(
+    "angels-petro-locomotive",
+    {
+      "angels-energy",
+      "angels-heavy-defense",
+      "angels-movement"
+    },
+    "angels-void"
+  )
+  funcs.update_equipment_grid(
+    "angels-petro-tank1",
+    {
+      "angels-energy",
+      "angels-heavy-defense",
+      "angels-movement",
+
+      "angels-repair"
+    },
+    "angels-void"
+  )
+  funcs.update_equipment_grid(
+    "angels-petro-tank2",
+    {
+      "angels-energy",
+      "angels-heavy-defense",
+      "angels-movement",
+
+      "angels-repair"
+    },
+    "angels-void"
+  )
 end
 
 if mods["bobvehicleequipment"] then
-  -- petro locomotive
-  table.insert(data.raw["equipment-grid"]["angels-petro-locomotive"].equipment_categories, "train")
-  table.insert(data.raw["equipment-grid"]["angels-petro-locomotive"].equipment_categories, "vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-petro-locomotive"].equipment_categories, "locomotive")
-  -- petro tank wagon
-  table.insert(data.raw["equipment-grid"]["angels-petro-tank-wagon"].equipment_categories, "train")
-  table.insert(data.raw["equipment-grid"]["angels-petro-tank-wagon"].equipment_categories, "vehicle")
+  funcs.update_equipment_grid(
+    "angels-petro-locomotive",
+    {
+      "train",
+      "vehicle",
+      "locomotive"
+    },
+    "angels-void"
+  )
+  funcs.update_equipment_grid(
+    "angels-petro-tank1",
+    {
+      "train",
+      "vehicle",
+    },
+    "angels-void"
+  )
+  funcs.update_equipment_grid(
+    "angels-petro-tank2",
+    {
+      "train",
+      "vehicle",
+    },
+    "angels-void"
+  )
 end

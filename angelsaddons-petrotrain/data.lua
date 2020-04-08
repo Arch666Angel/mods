@@ -8,8 +8,13 @@ angelsmods.addons.petrotrain.number_tint = {r = 0.92, g = 0.07, b = 0, a = 0.5}
 tech_unlocks = {}
 
 require("prototypes.category")
-require("prototypes.entities.petrotrain")
+
+require("prototypes.entities.petro-locomotive")
+require("prototypes.entities.petro-tank1")
+require("prototypes.entities.petro-tank2")
+
 require("prototypes.recipes.petrotrain")
+
 require("prototypes.technology.petro-technology")
 
 tech_unlocks = nil
