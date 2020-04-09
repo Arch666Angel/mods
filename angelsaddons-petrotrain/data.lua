@@ -13,7 +13,7 @@ require("prototypes.entities.petro-locomotive")
 require("prototypes.entities.petro-tank1")
 require("prototypes.entities.petro-tank2")
 
-require("prototypes.recipes.petrotrain")
+require("prototypes.recipes.petro-recipe")
 
 require("prototypes.technology.petro-technology")
 

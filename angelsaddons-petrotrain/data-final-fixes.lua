@@ -1,16 +1,16 @@
 local fluid_wagons =
 {
-  angelsmods.addons.smeltingtrain.tier_amount >= 1 and "petro-tank1"   or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 2 and "petro-tank1-2" or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 3 and "petro-tank1-3" or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 4 and "petro-tank1-4" or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 5 and "petro-tank1-5" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 1 and "petro-tank1"   or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 2 and "petro-tank1-2" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 3 and "petro-tank1-3" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 4 and "petro-tank1-4" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 5 and "petro-tank1-5" or nil,
 
-  angelsmods.addons.smeltingtrain.tier_amount >= 1 and "petro-tank2"   or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 2 and "petro-tank2-2" or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 3 and "petro-tank2-3" or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 4 and "petro-tank2-4" or nil,
-  angelsmods.addons.smeltingtrain.tier_amount >= 5 and "petro-tank2-5" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 1 and "petro-tank2"   or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 2 and "petro-tank2-2" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 3 and "petro-tank2-3" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 4 and "petro-tank2-4" or nil,
+  angelsmods.addons.petrotrain.tier_amount >= 5 and "petro-tank2-5" or nil,
 }
 
 for _, prototype_type in pairs{

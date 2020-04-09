@@ -63,6 +63,7 @@ funcs.generate_train_entities(
     joint_distance = 4,
     energy_per_hit_point = 5,
     equipment_grid = "angels-petro-locomotive",
+    fast_replaceable_group = "angels-petro-locomotive",
     allow_robot_dispatch_in_automatic_mode = true,
     minimap_representation = minimap_representation,
     selected_minimap_representation = selected_minimap_representation,

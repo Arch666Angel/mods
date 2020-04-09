@@ -220,6 +220,7 @@ funcs.generate_train_entities(
     sound_minimum_speed = 0.5,
     vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
     equipment_grid = "angels-petro-tank2",
+    fast_replaceable_group = "angels-petro-tank2",
     minimap_representation = {
       filename = "__base__/graphics/entity/fluid-wagon/fluid-wagon-minimap-representation.png",
       flags = {"icon"},
