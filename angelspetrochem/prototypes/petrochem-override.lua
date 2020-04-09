@@ -377,11 +377,15 @@ if not angelsmods.trigger.enableconverter and mods.bobplates then
     data.raw["fluid"]["pure-water"].hidden = true
   end
   if mods.bobrevamp then
-    data.raw["fluid"]["ammonia"].hidden = true
-    data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true
-    data.raw["fluid"]["hydrazine"].hidden = true
-    data.raw["fluid"]["hydrogen-peroxide"].hidden = true
-    data.raw["fluid"]["nitric-oxide"].hidden = true
+    data.raw["item"]["salt"].hidden= true
+    if settings.startup["bobmods-revamp-hardmode"].value then
+      data.raw["fluid"]["ammonia"].hidden = true
+      data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true
+      data.raw["fluid"]["hydrazine"].hidden = true
+      data.raw["fluid"]["hydrogen-peroxide"].hidden = true
+      data.raw["fluid"]["nitric-oxide"].hidden = true
+      --data.raw["fluid"]["carbon-dioxide"].hidden= true
+    end
   end
 end
 
