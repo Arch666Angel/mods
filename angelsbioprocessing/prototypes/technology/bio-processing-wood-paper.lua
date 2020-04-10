@@ -263,8 +263,16 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "temperate-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "bio-resin"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-resin-2"
+      }
     },
     unit =
     {
