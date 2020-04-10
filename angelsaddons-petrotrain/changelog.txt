@@ -8,8 +8,9 @@ Date: ???
       - Gas Fluid wagon was 25k is now 40k with angelspetrochem
       - Oil Fluid wagon was 25k is now 40k with angelspetrochem
     - Added ability to copy paste color to the fluid wagons
+    - Updated recipes to be more realistic and diverse
   Bugfixes:
-    - Fixed the red tint was way to bright
+    - Fixed the red (default) tint was way to bright
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 02.04.2020
