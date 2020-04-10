@@ -2,13 +2,13 @@ local funcs = require("prototypes/crawler-train-functions")
 
 if angelsmods.industries then
   if angelsmods.industries.components then
-  -- Todo: implement proper components for the train
-  -- require("prototypes.recipes.crawlertrain-updates")
+    require("prototypes.recipes.crawler-recipe-updates")
+    require("prototypes.technology.crawler-technology-components-updates")
   end
 
   -- Add data core replace?
   if angelsmods.industries.overhaul and angelsmods.industries.tech then
-  -- OV.set_science_pack("angels-crawler-train", "datacore-logistic-1", 2)
+    require("prototypes.technology.crawler-technology-technology-updates")
   end
   data.raw["item-subgroup"]["angels-vehicle-train-crawler"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-vehicle-train-crawler"].order = "bc[crawler-train]"
