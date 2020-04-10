@@ -34,7 +34,12 @@ OV.global_replace_item("electric-engine-unit", "motor-4")
 angelsmods.functions.add_flag("electric-engine-unit", "hidden")
 OV.disable_recipe({"electric-engine-unit"})
 
--- custom fixes
 OV.execute()
+-- custom fixes
+
 require("prototypes.overrides.components-base-recipe-update")
+
+if angelsmods.industries.components and not angelsmods.industries.return_ingredients then
+  require("prototypes.overrides.components-lab-recipe-update")
+end
 OV.execute()
