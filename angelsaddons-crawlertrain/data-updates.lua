@@ -6,10 +6,10 @@ if angelsmods.industries then
     require("prototypes.technology.crawler-technology-components-updates")
   end
 
-  -- Add data core replace?
   if angelsmods.industries.overhaul and angelsmods.industries.tech then
-    require("prototypes.technology.crawler-technology-technology-updates")
+    require("prototypes.technology.crawler-technology-tech-updates")
   end
+
   data.raw["item-subgroup"]["angels-vehicle-train-crawler"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-vehicle-train-crawler"].order = "bc[crawler-train]"
 

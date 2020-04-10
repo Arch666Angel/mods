@@ -12,8 +12,14 @@ end
 
 if angelsmods.industries then
   if angelsmods.industries.components then
-    require("prototypes.recipes.petrotrain-updates")
+    require("prototypes.recipes.petro-recipe-updates")
+    require("prototypes.technology.petro-technology-component-updates")
   end
+
+  if angelsmods.industries.overhaul and angelsmods.industries.tech then
+    require("prototypes.technology.petro-technology-tech-updates")
+  end
+
   data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"
 

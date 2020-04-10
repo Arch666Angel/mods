@@ -2,8 +2,14 @@ local funcs = require("prototypes/smelting-train-functions")
 
 if angelsmods.industries then
   if angelsmods.industries.components then
-    require("prototypes.recipes.smeltingtrain-updates")
+    require("prototypes.recipes.smelting-recipe-updates")
+    require("prototypes.technology.smelting-technology-component-updates")
   end
+
+  if angelsmods.industries.overhaul and angelsmods.industries.tech then
+    require("prototypes.technology.smelting-technology-tech-updates")
+  end
+
   data.raw["item-subgroup"]["angels-smeltingtrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-smeltingtrain"].order = "bc[smelting-train]"
 
