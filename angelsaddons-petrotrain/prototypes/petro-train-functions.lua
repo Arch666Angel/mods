@@ -1,19 +1,21 @@
 require("util")
 
 local function generate_tiered_ingredients(tier, ingredients)
-  if tier < 1 then return {} end
+  if tier < 1 then
+    return {}
+  end
 
   local generated_ingredients = {}
   for _, ingredient in pairs(ingredients) do
     local ingredient_name = ingredient.name or ingredient[1]
     local ingredient_amount = ingredient.amount or ingredient[2]
 
-    if type(ingredient_amount) == 'table' then
+    if type(ingredient_amount) == "table" then
       ingredient_amount = ingredient_amount[tier] or 0
 
       if type(ingredient_amount) == "string" then
         local previous_tier_amount = 0
-        for _,ingredient in pairs(generate_tiered_ingredients(tier-1, ingredients) or {}) do
+        for _, ingredient in pairs(generate_tiered_ingredients(tier - 1, ingredients) or {}) do
           if (ingredient.name or ingredient[1]) == ingredient_name then
             previous_tier_amount = previous_tier_amount + (ingredient.amount or ingredient[2] or 0)
           end
@@ -27,15 +29,17 @@ local function generate_tiered_ingredients(tier, ingredients)
         else
           ingredient_amount = tonumber(ingredient_amount)
         end
-
       end
     end
 
     if ingredient_amount > 0 then
-      table.insert(generated_ingredients, {
-        name = ingredient_name,
-        amount = ingredient_amount
-      })
+      table.insert(
+        generated_ingredients,
+        {
+          name = ingredient_name,
+          amount = ingredient_amount
+        }
+      )
     end
   end
 
@@ -49,7 +53,6 @@ local function generate_train_recipe(item, add_unlock)
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
-      local multiplier = math.pow(1.2, i)
       local ingredients = generate_tiered_ingredients(i, item.ingredients)
 
       if i > 1 then
@@ -152,10 +155,10 @@ local function generate_train_entities(item)
       if i > 1 then
         name = name .. "-" .. i
       end
-      local multiplier = math.pow(1.25, i-1)
+      local multiplier = math.pow(1.25, i - 1)
 
       if item.fast_replaceable_group and i < angelsmods.addons.petrotrain.tier_amount then
-        copy.next_upgrade = item.name .. "-" .. (i+1)
+        copy.next_upgrade = item.name .. "-" .. (i + 1)
       end
 
       copy.name = name

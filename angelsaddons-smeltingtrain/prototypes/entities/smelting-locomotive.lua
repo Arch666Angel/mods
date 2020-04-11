@@ -1,13 +1,10 @@
 local minimap_representation = data.raw["locomotive"]["locomotive"].minimap_representation
 local selected_minimap_representation = data.raw["locomotive"]["locomotive"].selected_minimap_representation
 
-local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].minimap_representation
-local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
-
 local funcs = require("prototypes/smelting-train-functions")
 
-local fixed_tint = { r = 119/255, g = 127/255, b = 113/255, a = 0.8 }
-local tintable_tint = { r = 1, g = 0.38, b = 0.0, a = 0.5 } -- alpha must be 0.5 due to base game...
+local fixed_tint = {r = 119 / 255, g = 127 / 255, b = 113 / 255, a = 0.8}
+local tintable_tint = {r = 1, g = 0.38, b = 0.0, a = 0.5} -- alpha must be 0.5 due to base game...
 
 data:extend(
   {

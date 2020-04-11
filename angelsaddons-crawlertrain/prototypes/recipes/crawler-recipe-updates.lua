@@ -1,4 +1,6 @@
-angelsmods.functions.RB.build(
+local RB = angelsmods.functions.RB
+
+RB.build(
   {
     {
       type = "recipe",
@@ -56,7 +58,7 @@ angelsmods.functions.RB.build(
 )
 
 if angelsmods.addons.crawlertrain.tier_amount >= 2 then
-  angelsmods.functions.RB.build(
+  RB.build(
     {
       {
         type = "recipe",
@@ -119,7 +121,7 @@ if angelsmods.addons.crawlertrain.tier_amount >= 2 then
 end
 
 if angelsmods.addons.crawlertrain.tier_amount >= 3 then
-  angelsmods.functions.RB.build(
+  RB.build(
     {
       {
         type = "recipe",
@@ -182,7 +184,7 @@ if angelsmods.addons.crawlertrain.tier_amount >= 3 then
 end
 
 if angelsmods.addons.crawlertrain.tier_amount >= 4 then
-  angelsmods.functions.RB.build(
+  RB.build(
     {
       {
         type = "recipe",
@@ -245,7 +247,7 @@ if angelsmods.addons.crawlertrain.tier_amount >= 4 then
 end
 
 if angelsmods.addons.crawlertrain.tier_amount >= 5 then
-  angelsmods.functions.RB.build(
+  RB.build(
     {
       {
         type = "recipe",

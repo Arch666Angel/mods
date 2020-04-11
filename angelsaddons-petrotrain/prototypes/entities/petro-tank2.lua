@@ -1,13 +1,10 @@
-local minimap_representation = data.raw["locomotive"]["locomotive"].minimap_representation
-local selected_minimap_representation = data.raw["locomotive"]["locomotive"].selected_minimap_representation
-
 local fluid_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].minimap_representation
 local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].selected_minimap_representation
 
 local funcs = require("prototypes/petro-train-functions")
 
-local fixed_tint = { r = 000/255, g = 000/255, b = 000/255, a = 0.4 }
-local tintable_tint = { r = 210/255, g = 020/255, b = 000/255, a = 0.5 } -- alpha must be 0.5 due to base game...
+local fixed_tint = {r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4}
+local tintable_tint = {r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5} -- alpha must be 0.5 due to base game...
 
 data:extend(
   {
@@ -49,6 +46,7 @@ funcs.generate_train_entities(
     dying_explosion = "medium-explosion",
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
     selection_box = {{-1, -2.703125}, {1, 3.296875}},
+    color = tintable_tint,
     gui_front_tank = {
       filename = "__base__/graphics/entity/fluid-wagon/gui/front-tank.png",
       width = 64,
@@ -129,7 +127,6 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = tintable_tint,
     pictures = {
       layers = {
         {
@@ -186,12 +183,12 @@ funcs.generate_train_entities(
           line_length = 8,
           lines_per_file = 8,
           apply_runtime_tint = false,
-          tint = {r = 0.2, g = 0.2, b = 0.2, a = 10/255},
+          tint = {r = 0.2, g = 0.2, b = 0.2, a = 10 / 255},
           shift = {0.0, -0.75},
           back_equals_front = true
         },
         {
-          flags = { "compressed" },
+          flags = {"compressed"},
           width = 256,
           height = 256,
           draw_as_shadow = true,
@@ -221,17 +218,7 @@ funcs.generate_train_entities(
     vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
     equipment_grid = "angels-petro-tank2",
     fast_replaceable_group = "angels-petro-tank2",
-    minimap_representation = {
-      filename = "__base__/graphics/entity/fluid-wagon/fluid-wagon-minimap-representation.png",
-      flags = {"icon"},
-      size = {20, 40},
-      scale = 0.5
-    },
-    selected_minimap_representation = {
-      filename = "__base__/graphics/entity/fluid-wagon/fluid-wagon-selected-minimap-representation.png",
-      flags = {"icon"},
-      size = {20, 40},
-      scale = 0.5
-    }
+    minimap_representation = fluid_minimap_representation,
+    selected_minimap_representation = fluid_selected_minimap_representation
   }
 )

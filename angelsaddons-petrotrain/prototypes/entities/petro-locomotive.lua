@@ -1,13 +1,10 @@
 local minimap_representation = data.raw["locomotive"]["locomotive"].minimap_representation
 local selected_minimap_representation = data.raw["locomotive"]["locomotive"].selected_minimap_representation
 
-local fluid_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].minimap_representation
-local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].selected_minimap_representation
-
 local funcs = require("prototypes/petro-train-functions")
 
-local fixed_tint = { r = 000/255, g = 000/255, b = 000/255, a = 0.4 }
-local tintable_tint = { r = 210/255, g = 020/255, b = 000/255, a = 0.5 } -- alpha must be 0.5 due to base game...
+local fixed_tint = {r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4}
+local tintable_tint = {r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5} -- alpha must be 0.5 due to base game...
 
 data:extend(
   {
@@ -17,7 +14,7 @@ data:extend(
       width = 6,
       height = 6,
       equipment_categories = {"angels-void"} --"angels-energy", "angels-heavy-defense", "angels-movement"
-    },
+    }
   }
 )
 
@@ -49,7 +46,7 @@ funcs.generate_train_entities(
     collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
     selection_box = {{-1, -3}, {1, 3}},
     drawing_box = {{-1, -4}, {1, 3}},
-    color = {r = 54, g = 2, b = 0},
+    color = tintable_tint,
     allow_manual_color = true,
     weight = 3000,
     max_speed = 1.2,
@@ -145,7 +142,6 @@ funcs.generate_train_entities(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    color = tintable_tint,
     pictures = {
       layers = {
         {
