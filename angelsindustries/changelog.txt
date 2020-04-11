@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: ???
+  Changes:
+    - Component mode:
+      - Electronics can now be made in electronic assembler when playing with bobassembly
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 02.04.2020
   Changes:
