@@ -1,6 +1,3 @@
-local minimap_representation = data.raw["locomotive"]["locomotive"].minimap_representation
-local selected_minimap_representation = data.raw["locomotive"]["locomotive"].selected_minimap_representation
-
 local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].minimap_representation
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
@@ -14,7 +11,7 @@ data:extend(
       width = 12,
       height = 12,
       equipment_categories = {"angels-void"}
-    },
+    }
   }
 )
 
@@ -38,7 +35,7 @@ funcs.generate_train_entities(
     icon = "__angelsaddons-crawlertrain__/graphics/icons/crawler-wagon-ico.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
-    inventory_size = 60, 
+    inventory_size = 60,
     minable = {mining_time = 1, result = "crawler-wagon"},
     mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
     max_health = 1000,

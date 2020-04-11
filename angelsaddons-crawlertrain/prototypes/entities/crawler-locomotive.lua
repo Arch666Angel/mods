@@ -11,10 +11,9 @@ data:extend(
       width = 6,
       height = 6,
       equipment_categories = {"angels-void"}
-    },
+    }
   }
 )
-
 
 funcs.generate_train_items(
   {
@@ -47,7 +46,7 @@ funcs.generate_train_entities(
     color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
     allow_manual_color = true,
     weight = 3000,
-    max_speed = 1.2 * 300/259,
+    max_speed = 1.2 * 300 / 259,
     max_power = "800kW",
     reversing_power_modifier = 0.6,
     braking_force = 15,
