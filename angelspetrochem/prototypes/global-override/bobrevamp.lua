@@ -33,5 +33,14 @@ if bobmods then
         "solid-fuel"
       )
     end
+    if settings.startup["bobmods-revamp-hardmode"].value then
+      --disable all the recipes
+      --NaClO3+H2O-->NaClO4+H2
+      OV.remove_unlock("lithium-processing", "sodium-perchlorate")
+      --NaCl+H2O-->NaClO3+H2O
+      OV.remove_unlock("lithium-processing", "sodium-chlorate")
+      --make pre-reqs match new unlock point
+      OV.add_prereq("battery-2", "chlorine-processing-3")
+    end
   end
 end

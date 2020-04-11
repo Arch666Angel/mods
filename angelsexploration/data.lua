@@ -24,6 +24,7 @@ require("prototypes.entities.ammo-cannon-turret-shells")
 require("prototypes.entities.ammo-heavy-cannon-shells")
 --require("prototypes.entities.ammo-rocket")
 require("prototypes.entities.ammo-bio")
+require("prototypes.entities.defensive-structures")
 
 require("prototypes.entities.vehicles")
 
