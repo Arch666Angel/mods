@@ -16,8 +16,8 @@ data:extend(
     {
       type = "equipment-grid",
       name = "deco-nilaustruck",
-      width = 9,
-      height = 9,
+      width = 10,
+      height = 10,
       equipment_categories = {"equipment-void"}
     },
     {
