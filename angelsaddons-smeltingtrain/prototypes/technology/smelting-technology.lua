@@ -49,6 +49,14 @@ local tiers = {
   }
 }
 
+local extra_prereq = {
+  nil,
+  {"speed-module", "effectivity-module"},
+  {"speed-module-2", "effectivity-module-2", "low-density-structure", "electric-engine"},
+  {"speed-module-3", "effectivity-module-3"},
+  {"rocket-control-unit"}
+}
+
 funcs.generate_train_technology(
   {
     type = "technology",

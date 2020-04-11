@@ -13,9 +13,9 @@ data:extend(
   {
     {
       type = "item-subgroup",
-      name = "angels-smeltingtrain",
+      name = "angels-petrotrain",
       group = "logistics",
-      order = "z[angel-train]-c[smelting]"
+      order = "za"
     }
   }
 )

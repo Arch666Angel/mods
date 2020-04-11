@@ -6,6 +6,7 @@ if angelsmods.industries then
   end
   OV.remove_prereq("angels-cab", "automobilism")
   OV.add_prereq("angels-cab", "angels-crawler")
+  OV.execute()
 end
 
 require "prototypes.entities.cab-updates"

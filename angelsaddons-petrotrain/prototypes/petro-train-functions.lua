@@ -1,5 +1,51 @@
 require("util")
 
+local function generate_tiered_ingredients(tier, ingredients)
+  if tier < 1 then
+    return {}
+  end
+
+  local generated_ingredients = {}
+  for _, ingredient in pairs(ingredients) do
+    local ingredient_name = ingredient.name or ingredient[1]
+    local ingredient_amount = ingredient.amount or ingredient[2]
+
+    if type(ingredient_amount) == "table" then
+      ingredient_amount = ingredient_amount[tier] or 0
+
+      if type(ingredient_amount) == "string" then
+        local previous_tier_amount = 0
+        for _, ingredient in pairs(generate_tiered_ingredients(tier - 1, ingredients) or {}) do
+          if (ingredient.name or ingredient[1]) == ingredient_name then
+            previous_tier_amount = previous_tier_amount + (ingredient.amount or ingredient[2] or 0)
+          end
+        end
+
+        local sign = string.sub(ingredient_amount, 1, 1)
+        if sign == "-" then
+          ingredient_amount = previous_tier_amount - tonumber(string.sub(ingredient_amount, 2))
+        elseif sign == "+" then
+          ingredient_amount = previous_tier_amount + tonumber(string.sub(ingredient_amount, 2))
+        else
+          ingredient_amount = tonumber(ingredient_amount)
+        end
+      end
+    end
+
+    if ingredient_amount > 0 then
+      table.insert(
+        generated_ingredients,
+        {
+          name = ingredient_name,
+          amount = ingredient_amount
+        }
+      )
+    end
+  end
+
+  return generated_ingredients
+end
+
 local function generate_train_recipe(item, add_unlock)
   add_unlock = add_unlock or false
   local entries = {}
@@ -7,15 +53,10 @@ local function generate_train_recipe(item, add_unlock)
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
-      local ingredients = table.deepcopy(item.ingredients)
-      local multiplier = math.pow(1.2, i)
+      local ingredients = generate_tiered_ingredients(i, item.ingredients)
 
       if i > 1 then
         name = name .. "-" .. i
-
-        for _, ingredient in pairs(ingredients) do
-          ingredient[2] = math.floor(ingredient[2] * multiplier)
-        end
 
         table.insert(
           ingredients,
@@ -51,6 +92,7 @@ local function generate_train_recipe(item, add_unlock)
       end
     end
   else
+    item.ingredients = generate_tiered_ingredients(1, item.ingredients)
     table.insert(entries, item)
     if add_unlock then
       if not tech_unlocks[add_unlock] then
@@ -104,15 +146,20 @@ local function generate_train_entities(item)
   local entries = {}
   if angelsmods.addons.petrotrain.enable_tiers and angelsmods.addons.petrotrain.tier_amount > 1 then
     if item.inventory_size then
-      item.inventory_size = item.inventory_size / (1.25 * 1.5)
+      item.inventory_size = item.inventory_size / 1.5
     end
+
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
       if i > 1 then
         name = name .. "-" .. i
       end
-      local multiplier = math.pow(1.25, i)
+      local multiplier = math.pow(1.25, i - 1)
+
+      if item.fast_replaceable_group and i < angelsmods.addons.petrotrain.tier_amount then
+        copy.next_upgrade = item.name .. "-" .. (i + 1)
+      end
 
       copy.name = name
       copy.localised_name = {"", {"entity-name." .. item.name}, " MK" .. i}
@@ -168,12 +215,13 @@ local function get_unlocks(tech, base_effects)
   return base_effects
 end
 
-local function generate_train_technology(item, tiers)
+local function generate_train_technology(item, tiers, extra_prereqs)
   local entries = {}
   if angelsmods.addons.petrotrain.enable_tiers and angelsmods.addons.petrotrain.tier_amount > 1 then
     for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
       local copy = table.deepcopy(item)
       local name = item.name
+
       local prerequisites = item.prerequisites
       if i > 1 then
         name = name .. "-" .. i
@@ -182,6 +230,9 @@ local function generate_train_technology(item, tiers)
         else
           prerequisites = {item.name .. "-" .. (i - 1)}
         end
+      end
+      for _, prereq in pairs(extra_prereqs and extra_prereqs[i] or {}) do
+        table.insert(prerequisites, prereq)
       end
 
       copy.order = copy.order .. "-" .. i
@@ -202,9 +253,42 @@ local function generate_train_technology(item, tiers)
   data:extend(entries)
 end
 
+local function update_equipment_grid(grid, add, remove)
+  local function flip_t(tab)
+    local new_t = {}
+    for k, v in pairs(tab) do
+      new_t[v] = k
+    end
+    return new_t
+  end
+  if type(add) == "string" then
+    add = {add}
+  end
+  if type(remove) == "string" then
+    remove = {remove}
+  end
+
+  add = add or {}
+  remove = remove or {}
+
+  local equipgrid = data.raw["equipment-grid"][grid].equipment_categories
+  local flip_equipgrid = flip_t(equipgrid)
+  for name, value in pairs(remove) do
+    if flip_equipgrid[value] then
+      equipgrid[flip_equipgrid[value]] = nil
+    end
+  end
+  for name, value in pairs(add) do
+    if not flip_equipgrid[value] then
+      table.insert(equipgrid, value)
+    end
+  end
+end
+
 return {
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,
   generate_train_recipe = generate_train_recipe,
-  generate_train_technology = generate_train_technology
+  generate_train_technology = generate_train_technology,
+  update_equipment_grid = update_equipment_grid
 }
