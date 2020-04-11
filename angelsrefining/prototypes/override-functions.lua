@@ -677,12 +677,17 @@ ov_functions.execute = function()
             to_remove[pk] = true
           end
         end
+        local actual_remove = {}
         for pk, prereq in pairs(tech.prerequisites) do
           if to_remove[pk] then
-            table.remove(tech.prerequisites, pk)
+            table.insert(actual_remove, pk)
+            -- table.remove(tech.prerequisites, pk)
           else
             dup_table[tech.prerequisites[pk]] = true
           end
+        end
+        for i = #actual_remove, 1, -1 do
+          table.remove(tech.prerequisites, actual_remove[i])
         end
       end
       if modifications then

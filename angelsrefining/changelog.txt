@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed that crushed bobmonium and rubyte smelting recipes were showing when those ores were not present
     - Added localisation for salt, which was hiding in petrochem (a temp fix)
+    - Override function remove_prereq was incorrectly removing items when there were multiple
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.8
 Date: 02.04.2020

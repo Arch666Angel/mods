@@ -43,3 +43,6 @@ if angelsmods.industries.components and not angelsmods.industries.return_ingredi
   require("prototypes.overrides.components-lab-recipe-update")
 end
 OV.execute()
+
+require("prototypes.overrides.components-bobs-recipe-update")
+OV.execute()

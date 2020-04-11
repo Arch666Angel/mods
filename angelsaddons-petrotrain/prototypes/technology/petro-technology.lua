@@ -49,6 +49,14 @@ local tiers = {
   }
 }
 
+local extra_prereq = {
+  nil,
+  {"speed-module", "effectivity-module"},
+  {"speed-module-2", "effectivity-module-2", "low-density-structure", "electric-engine"},
+  {"speed-module-3", "effectivity-module-3"},
+  {"rocket-control-unit"}
+}
+
 funcs.generate_train_technology(
   {
     type = "technology",
@@ -56,9 +64,10 @@ funcs.generate_train_technology(
     icon = "__angelsaddons-petrotrain__/graphics/technology/petro-loco-1-tech.png",
     icon_size = 128,
     prerequisites = {
-      "railway"
+      "fluid-wagon"
     },
     order = "c-a"
   },
-  tiers
+  tiers,
+  extra_prereq
 )

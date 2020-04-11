@@ -22,9 +22,10 @@ function process() {
     mv tmp.txt "${dirname}/changelog.txt"
   fi
   $(eval $cmd)
-  cd "${dirname}../"
-  zip -r "${release}.zip" "${release}/"
+  cd "${dirname}/../"
+  zip -q -r "${release}.zip" "${release}/"
   rm -rf "${release}/"
+  echo "Released ${release}"
 }
 
 dirs=$1
