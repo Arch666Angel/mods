@@ -96,11 +96,14 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
 end
 
 --ENTITIES
-require("prototypes.buildings.cargo-roboport")
-require("prototypes.buildings.cargo-robot")
-require("prototypes.buildings.zone-expander")
-require("prototypes.buildings.construction-robot")
-require("prototypes.buildings.chests")
+require("prototypes.buildings.angels-logistics-roboport")
+require("prototypes.buildings.angels-logistics-charging-station")
+require("prototypes.buildings.angels-logistics-zone-expander")
+require("prototypes.buildings.angels-logistics-construction-zone-expander")
+require("prototypes.buildings.angels-logistics-relay-station")
+require("prototypes.buildings.angels-logistics-big-chest")
+require("prototypes.buildings.angels-logistics-robot-construction")
+require("prototypes.buildings.angels-logistics-robot-cargo")
 
 require("prototypes.entities.crawler")
 require("prototypes.entities.equipment")
