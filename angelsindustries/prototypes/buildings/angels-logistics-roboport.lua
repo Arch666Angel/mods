@@ -145,7 +145,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/cargo-hub.png",
     icon_size = 32,
     subgroup = "angels-cargo-ports",
-    order = "a[roboport]-b",
+    order = "a[roboport]-c",
     place_result = "cargo-hub",
     stack_size = 50
   },
@@ -276,7 +276,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/cargo-box-icon.png",
     icon_size = 32,
     subgroup = "angels-cargo-ports",
-    order = "a[roboport]-c",
+    order = "a[roboport]-b",
     place_result = "cargo-box",
     stack_size = 50
   },
