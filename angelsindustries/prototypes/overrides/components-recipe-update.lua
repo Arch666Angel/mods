@@ -38,10 +38,6 @@ OV.execute()
 -- custom fixes
 
 require("prototypes.overrides.components-base-recipe-update")
-
-if angelsmods.industries.components and not angelsmods.industries.return_ingredients then
-  require("prototypes.overrides.components-lab-recipe-update")
-end
 OV.execute()
 
 require("prototypes.overrides.components-bobs-recipe-update")

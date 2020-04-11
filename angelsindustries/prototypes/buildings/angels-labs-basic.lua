@@ -1,6 +1,6 @@
 local function create_rich_text_icons(inputs)
   local rich_text_icons = {""}
-  for _,input in pairs(inputs) do
+  for _, input in pairs(inputs) do
     table.insert(rich_text_icons, string.format("[img=item/%s]", input))
   end
   return rich_text_icons
@@ -32,12 +32,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-basic-lab",
-      localised_description = {"",
-        {"entity-description.angels-basic-lab"}, "\n",
-        {"entity-description.angels-lab-inputs", create_rich_text_icons{
-          "angels-science-pack-grey",
-          "datacore-basic"
-        }}
+      localised_description = {
+        "",
+        {"entity-description.angels-basic-lab"},
+        "\n",
+        {
+          "entity-description.angels-lab-inputs",
+          create_rich_text_icons {
+            "angels-science-pack-grey",
+            "datacore-basic"
+          }
+        }
       },
       icons = {
         {
@@ -122,16 +127,21 @@ data:extend(
     {
       type = "lab",
       name = "angels-basic-lab-2",
-      localised_description = {"",
-        {"entity-description.angels-basic-lab"}, "\n",
-        {"entity-description.angels-lab-inputs", create_rich_text_icons{
-          "angels-science-pack-red",
-          "angels-science-pack-green",
-          "angels-science-pack-orange",
-          "angels-science-pack-blue",
-          "angels-science-pack-yellow",
-          "datacore-basic"
-        }}
+      localised_description = {
+        "",
+        {"entity-description.angels-basic-lab"},
+        "\n",
+        {
+          "entity-description.angels-lab-inputs",
+          create_rich_text_icons {
+            "angels-science-pack-red",
+            "angels-science-pack-green",
+            "angels-science-pack-orange",
+            "angels-science-pack-blue",
+            "angels-science-pack-yellow",
+            "datacore-basic"
+          }
+        }
       },
       icons = {
         {
@@ -220,12 +230,17 @@ data:extend(
     {
       type = "lab",
       name = "angels-basic-lab-3",
-      localised_description = {"",
-        {"entity-description.angels-basic-lab"}, "\n",
-        {"entity-description.angels-lab-inputs", create_rich_text_icons{
-          "angels-science-pack-white",
-          "datacore-basic"
-        }}
+      localised_description = {
+        "",
+        {"entity-description.angels-basic-lab"},
+        "\n",
+        {
+          "entity-description.angels-lab-inputs",
+          create_rich_text_icons {
+            "angels-science-pack-white",
+            "datacore-basic"
+          }
+        }
       },
       icons = {
         {
