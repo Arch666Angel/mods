@@ -5,7 +5,7 @@ class ModBuilder:
 
   def __init__(self):
     self.modNames = [modName for modName in next(os.walk('.'))[1] if self.__isReleased(modName)]
-    self.modFolderDir = "C:/Users/Laurens/AppData/Roaming/Factorio/mods/"
+    self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
 
   def __isReleased(self, modName):
     if modName.find("angels") >= 0:
