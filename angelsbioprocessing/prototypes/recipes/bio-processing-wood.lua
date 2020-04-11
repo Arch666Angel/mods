@@ -552,35 +552,7 @@ data:extend(
     },
     order = "b[arboretum]-b",
   },
-  {
-    type = "recipe",
-    name = "temperate-tree-arboretum-0",
-    category = "angels-arboretum",
-    subgroup = "bio-arboretum-temperate",
-    enabled = "false",
-    energy_required = 30,
-    ingredients =
-    {
-      {type="item", name="wood", amount=12}
-    },
-    results=
-    {
-      {type="item", name="bio-resin", amount=1}
-    },
-    icons = {
-      {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
-        icon_size = 64,
-        scale = 0.5
-      }
-    },
-    icon_size = 32,
-    crafting_machine_tint =
-    {
-      primary = {r = 0/255, g = 100/255, b = 0/255, a = 1},
-    },
-    order = "b[arboretum]-b",
-  },
+
 
 
   -- TEMPERATE WOOD PROCESSING
@@ -605,27 +577,47 @@ data:extend(
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {
       "bio-resin"
     }),
-    order = "c[processing]",
+    order = "c[processing]-a[bio-resin]",
   },
   {
     type = "recipe",
-    name = "bio-resin-2",
+    name = "bio-resin-resin-liquification",
     category = "liquifying",
     subgroup = "bio-arboretum-temperate",
     enabled = false,
-    energy_required = 4,
+    energy_required = 10,
     ingredients = {
-      {type="item", name="bio-resin", amount=3}
+      {type="fluid", name="gas-ethanol", amount=100}, -- 20 ethanol / 5 liquid resin
+      {type="item", name="solid-resin", amount=4}
     },
-    results = {
-      {type="fluid", name="liquid-resin",amount=2}
+    results=
+    {
+      {type="fluid", name="liquid-resin", amount_min=10, amount_max=40}, -- average 25 liquid resin / 40 wood
     },
     main_product = "liquid-resin",
     always_show_products = "true",
+    show_amount_in_title = "false",
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {
-      "bio-resin"
+      mods["bobplates"] and {"__bobplates__/graphics/icons/resin.png", 32} or "solid-resin"
     }),
-    order = "c[processing]"
+    order = "c[processing]-b[solid-resin]-a[liquification]"
+  },
+  {
+    type = "recipe",
+    name = "bio-resin-wood-reprocessing",
+    category = "bio-processor",
+    subgroup = "bio-arboretum-temperate",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+      {type="item", name="wood", amount=10}
+    },
+    results = {
+      {type="item", name="solid-resin", amount=1}
+    },
+    main_product = "solid-resin",
+    always_show_products = "true",
+    order = "c[processing]-b[solid-resin]-b[wood-reprocessing]"
   },
 
 
