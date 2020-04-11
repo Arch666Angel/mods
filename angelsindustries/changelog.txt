@@ -12,6 +12,7 @@ Date: ???
       - All tech labs now require previous tier as an ingredient
       - Proper datacores for tech in bobs burner phase #169
       - Removed red science pack when bobs burner phase is enabled #169
+      - Added basic military as a prereq for exploration-1 #169
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 02.04.2020
