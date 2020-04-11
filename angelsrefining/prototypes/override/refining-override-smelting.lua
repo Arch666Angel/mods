@@ -24,6 +24,8 @@ if ore_exists("lead") then
       icon = "__angelsrefining__/graphics/icons/lead-plate-crushed.png"
     }
   })
+else
+  OV.disable_recipe("angelsore5-crushed-smelting")
 end
 if ore_exists("tin") then
   OV.patch_recipes({
@@ -36,4 +38,6 @@ if ore_exists("tin") then
       icon = "__angelsrefining__/graphics/icons/tin-plate-crushed.png"
     }
   })
+else
+  OV.disable_recipe("angelsore6-crushed-smelting")
 end

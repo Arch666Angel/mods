@@ -26,7 +26,11 @@ data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 --if bobmods and bobmods.plates then
 require("prototypes.override.refining-override-bobgems")
 if mods["bobplates"] then
-
+--revamp override
+if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+  OV.global_replace_item("brine","water-saline")
+  OV.disable_recipe("brine")
+end
   --OVERRIDE BARRELING
   if data.raw["item-subgroup"]["bob-gas-bottle"] then
     data.raw.item["empty-canister"].subgroup = "angels-fluid-control"

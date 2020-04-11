@@ -377,11 +377,15 @@ if not angelsmods.trigger.enableconverter and mods.bobplates then
     data.raw["fluid"]["pure-water"].hidden = true
   end
   if mods.bobrevamp then
-    data.raw["fluid"]["ammonia"].hidden = true
-    data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true
-    data.raw["fluid"]["hydrazine"].hidden = true
-    data.raw["fluid"]["hydrogen-peroxide"].hidden = true
-    data.raw["fluid"]["nitric-oxide"].hidden = true
+    data.raw["item"]["salt"].hidden= true
+    if settings.startup["bobmods-revamp-hardmode"].value then
+      data.raw["fluid"]["ammonia"].hidden = true
+      data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true
+      data.raw["fluid"]["hydrazine"].hidden = true
+      data.raw["fluid"]["hydrogen-peroxide"].hidden = true
+      data.raw["fluid"]["nitric-oxide"].hidden = true
+      --data.raw["fluid"]["carbon-dioxide"].hidden= true
+    end
   end
 end
 
@@ -394,7 +398,7 @@ if mods.bobplates then
   data.raw.fluid["liquid-naphtha"].fuel_value = "244.7kJ"
   data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3
   --liquid Fuel oil (light oil), bobs value 1.5MJ (light fuel oil 39 MJ/L)(40.6 MJ/kg)
-  data.raw.fluid["liquid-fuel-oil"].fuel_value = "24.99kJ"
+  data.raw.fluid["liquid-fuel-oil"].fuel_value = "249.9kJ" -- was 24.99kJ
   data.raw.fluid["liquid-fuel-oil"].emissions_multiplier = 2
   --gas methane (petrogas), bobs value 2.3MJ (methane 35.9 MJ/L)(49.85 MJ/kg)
   data.raw.fluid["gas-methane"].fuel_value = "230.0kJ"
@@ -420,6 +424,9 @@ if mods.bobplates then
   --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
   data.raw.fluid["gas-hydrazine"].fuel_value = "126.9kJ"
   data.raw.fluid["gas-hydrazine"].emissions_multiplier = 0.1
+  --fuel oil balancing
+  data.raw.fluid["liquid-fuel"].fuel_value= "300kJ" --down from 2.3MJ
+  data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients={{type = "fluid", name = "liquid-fuel", amount = 100}}--up from 20
   if mods["angelsbioprocessing"] then
     --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
     data.raw.fluid["gas-ethanol"].fuel_value = "135.2kJ"

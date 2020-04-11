@@ -51,6 +51,28 @@ end
 -------------------------------------------------------------------------------
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
+if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+  data.raw.item["limestone"].icon=nil
+  data.raw.item["limestone"].icons={{icon = "__angelsrefining__/graphics/icons/solid-limestone.png",icon_size = 32,}}
+  data.raw.recipe["limestone"].icon=nil
+  data.raw.recipe["limestone"].icons={{icon = "__angelsrefining__/graphics/icons/solid-limestone.png",icon_size = 32,}}
+  if angelsmods.trigger.washing_tech then --washing/limestone is active
+    OV.global_replace_item("limestone", "solid-limestone")
+    data.raw.item["limestone"].hidden = true
+    OV.disable_recipe({"limestone"})
+  end
+  data.raw.recipe["ammonium-chloride-recycling"].icon = nil
+  if angelsmods.petrochem then
+    data.raw.recipe["ammonium-chloride-recycling"].icons =
+    angelsmods.functions.create_solid_recipe_icon({"solid-limestone","gas-ammonium-chloride"},"solid-calcium-chloride",{"gas-ammonia"})
+  else
+    data.raw.recipe["ammonium-chloride-recycling"].icons =
+    angelsmods.functions.create_solid_recipe_icon({"limestone","ammonium-chloride"},"calcium-chloride",{"ammonia"})
+  end
+end
+-------------------------------------------------------------------------------
+-- SALT -----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 if mods["bobplates"] then
   angelsmods.functions.add_flag("salt", "hidden")
 

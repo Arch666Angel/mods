@@ -397,6 +397,7 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     reorder("item", "bob-robot-plasma-drone", "angels-warfare-capsules-manual", "e[drone]-b[robot]-d[plasma]")
 
     -- wall
+    reorder("item", "wall-0", "angels-warfare-wall", "a[wall]-a[primitive]-a[wall]")
     reorder("item", "reinforced-wall", "angels-warfare-wall", "a[wall]-b[reinforced]-a[wall]")
     reorder("item", "reinforced-gate", "angels-warfare-wall", "a[wall]-b[reinforced]-b[gate]")
   end
