@@ -99,7 +99,7 @@ data:extend(
     type = "recipe",
     name = "block-electronics-0",
     enabled = true,
-    category = mods["bobassembly"] and "electronics" or "crafting",
+    category = "crafting",
     energy_required = 5,
     ingredients =
     {
@@ -116,7 +116,7 @@ data:extend(
     type = "recipe",
     name = "block-electronics-1",
     enabled = false,
-    category = mods["bobassembly"] and "electronics" or "crafting",
+    category = "crafting",
     energy_required = 5,
     ingredients =
     {
@@ -135,7 +135,7 @@ data:extend(
     type = "recipe",
     name = "block-electronics-2",
     enabled = false,
-    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
+    category = "advanced-crafting",
     energy_required = 5,
     ingredients =
     {
@@ -154,7 +154,7 @@ data:extend(
     type = "recipe",
     name = "block-electronics-3",
     enabled = false,
-    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
+    category = "advanced-crafting",
     energy_required = 5,
     ingredients =
     {
@@ -173,7 +173,7 @@ data:extend(
     type = "recipe",
     name = "block-electronics-4",
     enabled = false,
-    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
+    category = "advanced-crafting",
     energy_required = 5,
     ingredients =
     {
@@ -192,7 +192,7 @@ data:extend(
     type = "recipe",
     name = "block-electronics-5",
     enabled = false,
-    category = mods["bobassembly"] and "electronics-machine" or "advanced-crafting",
+    category = "advanced-crafting",
     energy_required = 5,
     ingredients =
     {
