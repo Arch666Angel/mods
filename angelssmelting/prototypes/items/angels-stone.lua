@@ -75,7 +75,7 @@ data:extend(
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
-      result = "concrete",
+      result = "tutorial-grid",
       condition_size = 1,
       condition = { "water-tile" }
     }
@@ -90,7 +90,7 @@ data:extend(
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile =
     {
-      result = "concrete",
+      result = "tutorial-grid",
       condition_size = 1,
       condition = { "water-tile" }
     }
