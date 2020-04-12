@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
-Date: ???
+Date: 12.04.2020
   Changes:
     - Rebalanced bobs liquid fuel (energy value) and 
     - Rebalanced bobs enriched fuel block recipe to need more liquid fuel

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
-Date: ???
+Date: 12.04.2020
   Changes:
     - Renamed wagons to more standard Crawler train
     - Removed enabled setting

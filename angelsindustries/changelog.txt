@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.7
-Date: ???
+Date: 12.04.2020
   Changes:
     - General:
       - Reduced the collision box so you can walk past them (#163)
