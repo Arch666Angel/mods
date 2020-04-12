@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.demo-sounds")
+
 data:extend(
 {
   {

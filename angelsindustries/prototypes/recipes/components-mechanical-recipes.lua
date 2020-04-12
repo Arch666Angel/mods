@@ -3,7 +3,6 @@ data:extend(
     -----------------------------------------------------------------------------
     -- MOTOR CASTING ------------------------------------------------------------
     -----------------------------------------------------------------------------
-    -- STEP 1: craft a soft material motor by hand to be used in mold making
     {
       type = "recipe",
       name = "angels-casing-iron-plate",
@@ -32,56 +31,6 @@ data:extend(
     }
   }
 )
---STEP 2 Perishable: Sand baking a negative
---override default smelting recipe
-local m_e = data.raw.recipe["mold-expendable"]
-m_e.category = "sintering"
-m_e.ingredients = {
-  {type = "item", name = "motor-casing-1", amount = 1},
-  {type = "item", name = "solid-sand", amount = 40}
-}
-m_e.results = {
-  {type = "item", name = "mold-expendable", amount = 1},
-  {type = "item", name = "solid-iron-hydroxide", amount = 3}
-}
-m_e.icons = {
-  {icon = "__angelssmelting__/graphics/icons/expendable-mold.png"},
-  {
-    icon = "__angelsindustries__/graphics/icons/motor-casing-1.png",
-    scale = 0.4375,
-    shift = {10, -10}
-  }
-}
-m_e.localised_name = {"recipe-name.mold", "Expendable"}
---data:extend(m_e)
---STEP 2 Advanced: Clay baking a negative
-local m_ne = data.raw.recipe["mold-non-expendable"]
-m_ne.category = "sintering"
-m_ne.ingredients = {
-  {type = "item", name = "motor-casing-1", amount = 1},
-  {type = "item", name = "solid-clay", amount = 50}
-}
-m_ne.results = {
-  {type = "item", name = "mold-non-expendable", amount = 1},
-  {type = "item", name = "solid-iron-hydroxide", amount = 4}
-}
-m_ne.icons = {
-  {icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png"},
-  {
-    icon = "__angelsindustries__/graphics/icons/motor-casing-1.png",
-    scale = 0.4375,
-    shift = {10, -10}
-  },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
-m_ne.localised_name = {"recipe-name.mold", "Reusable"}
---data:extend(m_ne)
---STEP 3 Perishable: use the die
 for _, metal in pairs({"iron", "steel", "aluminium", "titanium" --[[,"tungsten"]]}) do --all of the metals in one go
   if metal == "iron" then
     num = 1
@@ -172,49 +121,8 @@ for _, metal in pairs({"iron", "steel", "aluminium", "titanium" --[[,"tungsten"]
     }
   )
 end
---spent-non-expendable mold
 data:extend(
   {
-    {
-      type = "item",
-      name = "spent-mold-non-expendable",
-      icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
-      icon_size = 32,
-      subgroup = "angels-mold-casting",
-      order = "c",
-      stack_size = 200
-    },
-    --non-expendable mold washing
-    {
-      type = "recipe",
-      name = "mold-non-expendable-wash",
-      category = "crafting-with-fluid",
-      subgroup = "angels-mold-casting",
-      energy_required = 3,
-      enabled = "true",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
-      ingredients = {
-        {type = "item", name = "spent-mold-non-expendable", amount = 1},
-        {type = "fluid", name = "liquid-nitric-acid", amount = 20}
-      },
-      results = {
-        {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.90, catalyst_amount = 1},
-        {type = "fluid", name = "water-red-waste", amount = 20}
-      },
-      order = "c"
-    },
-    -- TUNGSTEN MOTORS, keep interesting...
     {
       type = "recipe",
       name = "angels-casing-tungsten-1",

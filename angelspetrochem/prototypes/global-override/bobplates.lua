@@ -155,17 +155,22 @@ if bobmods then
             {
               icon = "__bobplates__/graphics/icons/resin.png"
             },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              tint = angelsmods.petrochem.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
+            (not mods["angelsbioprocessing"]) and
+              {
+                icon = "__angelsrefining__/graphics/icons/num_2.png",
+                tint = angelsmods.petrochem.number_tint,
+                scale = 0.32,
+                shift = {-12, -12}
+              } or
+              nil
           },
           icon_size = 32
         }
       }
     )
+    if mods["angelsbioprocessing"] then
+      OV.disable_recipe({"bob-resin-wood"})
+    end
 
     OV.remove_unlock("plastics", "synthetic-wood")
     OV.disable_recipe({"synthetic-wood"})

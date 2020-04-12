@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 12.04.2020
+  Changes:
+    - Added in a lower tier wall (no gates)
+    - The new wall is made from stone and wood and has 2/3 the health of the vanilla wall (same resistances)
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - Added technology for bonus damage on the pez ammo
   Bugfixes:

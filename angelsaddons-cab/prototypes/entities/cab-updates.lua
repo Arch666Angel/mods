@@ -4,7 +4,6 @@ if not mods["angelsindustries"] then
   local equipmentCategories = util.table.deepcopy(cabEquipmentCategories)
   for _,equipmentCategory in pairs(equipmentCategories) do
     if not data.raw["equipment-category"][equipmentCategory] then
-      log(string.format("removing %q", equipmentCategory))
       for index, category in pairs(cabEquipmentCategories) do
         if category == equipmentCategory then
           table.remove(cabEquipmentCategories, index)

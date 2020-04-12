@@ -1,4 +1,31 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 12.04.2020
+  Changes:
+    - General:
+      - Reduced the collision box so you can walk past them (#163)
+        - Reduced collision box of the Construction and Zone expanders to the size of a medium power pole
+        - Reduced collsion box of the Recharge Stations to the size of a big power pole 
+      - Increased connection distance for Construction Zone Expanders and Remote Charging Station MK2 to fit with big power poles
+      - Increased construction area on Construction Zone Expanders to fit with big power poles
+      - Removed the logistics zone on the Construction Zone Expanders as these are obsolete in 0.18
+      - Removed the logistics zone on the Charging Basestation as these are obsolete in 0.18
+      - Reduced animation speed on the Logistic Zone Expander
+    - Component mode:
+      - Electronics can now be made in electronic assembler when playing with bobassembly
+      - Updated sintering oven to be craftable with components turned on to make motor casings
+      - All tech labs now require previous tier as an ingredient
+      - Integrated components into crawler robots and base game robotics
+      - Added basic military as a prereq for exploration-1 #169
+    - Science mode:
+      - Made crawler construction bots available in red science
+      - Proper datacores for tech in bobs burner phase #169
+      - Removed red science pack when bobs burner phase is enabled #169
+  Bugfixes:
+    - General:
+      - Fixed circuit network connector sprites on the big chests
+      - Fixed the drawing box was too small on the Zone Expanders and Recharge Stations
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 02.04.2020
   Changes:

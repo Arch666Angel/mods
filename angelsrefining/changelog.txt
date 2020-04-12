@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.9
+Date: 12.04.2020
+  Bugfixes:
+    - Fixed that crushed bobmonium and rubyte smelting recipes were showing when those ores were not present
+    - Added localisation for salt, which was hiding in petrochem (a temp fix)
+    - Override function remove_prereq was incorrectly removing items when there were multiple
+---------------------------------------------------------------------------------------------------
 Version: 0.11.8
 Date: 02.04.2020
   Changes:
@@ -22,7 +29,7 @@ Date: 24.03.2020
     - Fixed bobmonium setting to spawn in starting area by default
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.6
-Date: 21-03-2020
+Date: 21.03.2020
   Bugfixes:
     - Fixed crash when barrreling recipe did not exist
 ---------------------------------------------------------------------------------------------------

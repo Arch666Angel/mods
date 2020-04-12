@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 12.04.2020
+  Changes:
+    - Renamed Smelting Wagon to Smelting Cargo Wagon
+    - Removed enabled setting
+    - Moved Cargo wagon recipe after locomotives for consistency
+    - Added ability to copy paste color to the cargo wagons
+    - Updated recipes to be more realistic and diverse
+  Bugfixes:
+    - Fixed the orange (default) tint was way to dark
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 02.04.2020
   Bugfixes:

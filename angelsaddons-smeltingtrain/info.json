@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-smeltingtrain",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "factorio_version": "0.18",
   "title": "Angel's Addons - Smelting Train",
   "author": "Arch666Angel",
@@ -8,7 +8,6 @@
   "homepage": "",
   "description": "Adds a Smelting themed train",
   "dependencies": [
-    "base >= 0.18.0",
-    "? WagonColors"
+    "base >= 0.18.18"
   ]
 }

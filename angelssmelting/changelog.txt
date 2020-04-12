@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 12.04.2020
+  Changes:
+    - Swapped the Iron Hydroxide out in the single-use mold to give slag instead, Iron Hydroxide
+      is not returnable to iron ingots till production science (or blue tech) so it would be a
+      new mid game sodium hydroxide
+    - Concrete Brick and Reinforced Concrete Brick now lay tutorial grid tiles
+  Bugfixes:
+    - Fixed cycle in steel molding production
+---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 02.04.2020
   Changes:

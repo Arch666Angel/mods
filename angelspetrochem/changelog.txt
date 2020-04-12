@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 12.04.2020
+  Changes:
+    - Rebalanced bobs liquid fuel (energy value) and 
+    - Rebalanced bobs enriched fuel block recipe to need more liquid fuel
+    - Prefer the new solid resin recipe from bio over bob mods
+  Bugfixes:
+    - Fixed typo on liquid fuel oil's fuel_value (#167)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 02.04.2020
   Changes:
