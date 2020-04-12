@@ -1,6 +1,7 @@
 -- STONE WALL TIER 0 -----------------------------------------------------------
 --entity:
 local st_wall= table.deepcopy(data.raw["wall"]["stone-wall"])
+st_wall.next_upgrade=st_wall.name
 st_wall.name="wall-0"
 st_wall.minable.result="wall-0"
 st_wall.max_health = st_wall.max_health*2/3
