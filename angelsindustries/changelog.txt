@@ -16,8 +16,11 @@ Date: 12.04.2020
       - Updated sintering oven to be craftable with components turned on to make motor casings
       - All tech labs now require previous tier as an ingredient
       - Integrated components into crawler robots and base game robotics
+      - Added basic military as a prereq for exploration-1 #169
     - Science mode:
       - Made crawler construction bots available in red science
+      - Proper datacores for tech in bobs burner phase #169
+      - Removed red science pack when bobs burner phase is enabled #169
   Bugfixes:
     - General:
       - Fixed circuit network connector sprites on the big chests
