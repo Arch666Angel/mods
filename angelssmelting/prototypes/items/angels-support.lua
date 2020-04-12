@@ -39,7 +39,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
-    order = "a",
+    order = "a[expendable]",
     stack_size = 200
   },
   {
@@ -48,7 +48,16 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
-    order = "b",
+    order = "b[non-expendable]-a[new]",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "spent-mold-non-expendable",
+    icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+    icon_size = 32,
+    subgroup = "angels-mold-casting",
+    order = "b[non-expendable]-b[used]",
     stack_size = 200
   },
 }
