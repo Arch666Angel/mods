@@ -7,12 +7,10 @@ if mods.bobtech then
     OV.disable_recipe("lab")
     OV.disable_technology("lab")
 
-    -- Allow steam science in main lab
-    for i = 1, 7 do
-      local lab = data.raw.lab["angels-main-lab-" .. i]
-      if lab then
-        table.insert(lab.inputs, 1, "steam-science-pack")
-      end
+    -- Allow steam science in basic lab
+    local lab = data.raw.lab["angels-basic-lab"]
+    if lab then
+      table.insert(lab.inputs, 1, "steam-science-pack")
     end
   end
 end
