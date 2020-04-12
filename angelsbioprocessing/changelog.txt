@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.7
-Date: ???
+Date: 12.04.2020
   Changes:
     - Added alternative to liquid resin early game from temperate trees
     - Reduced the amount of Advanced Chemical Plants required to make fish water
