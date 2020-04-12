@@ -10,7 +10,7 @@ local destinationEntityTypes = {
   ["fluid-wagon"] = true
 }
 
-local tier_amount = settings.startup["angels-smeltingtrain-tier-amount"].value
+local tier_amount = settings.startup["angels-petrotrain-tier-amount"].value
 local wagonsToCopy = {
   ["petro-tank1"] = tier_amount >= 1,
   ["petro-tank1-2"] = tier_amount >= 2,
