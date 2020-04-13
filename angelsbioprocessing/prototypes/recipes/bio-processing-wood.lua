@@ -584,7 +584,7 @@ data:extend(
     name = "bio-resin-resin-liquification",
     category = "liquifying",
     subgroup = "bio-arboretum-temperate",
-    enabled = false,
+    enabled = "false",
     energy_required = 10,
     ingredients = {
       {type="fluid", name="gas-ethanol", amount=100}, -- 20 ethanol / 5 liquid resin
@@ -607,7 +607,6 @@ data:extend(
     name = "bio-resin-wood-reprocessing",
     category = "bio-processor",
     subgroup = "bio-arboretum-temperate",
-    enabled = false,
     energy_required = 3,
     ingredients = {
       {type="item", name="wood", amount=10}

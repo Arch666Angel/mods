@@ -97,6 +97,16 @@ if data.raw.tile["frozen-snow-0"] then
 end
 
 --ADDED RECIPES BOBS
+if bobmods then --has player research resin-1 if bobmods.electronics is not activated.
+  if not bobmods.electronics then
+    OV.disable_recipe("bio-resin-wood-reprocessing")
+    OV.add_unlock("bio-arboretum-temperate-1", "bio-resin-wood-reprocessing")
+  end
+else
+  OV.disable_recipe("bio-resin-wood-reprocessing")
+  OV.add_unlock("bio-arboretum-temperate-1", "bio-resin-wood-reprocessing")
+end
+
 if bobmods then
   if bobmods.electronics then
     data:extend(
@@ -121,6 +131,7 @@ if bobmods then
       }
     )
     OV.add_unlock("bio-paper-1", "wooden-board-paper")
+    OV.disable_recipe("bob-resin-wood")
   end
 
   if bobmods.greenhouse then

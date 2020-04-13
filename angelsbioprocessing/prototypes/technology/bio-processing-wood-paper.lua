@@ -269,10 +269,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "bio-resin-resin-liquification"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing"
-      }
     },
     unit =
     {
