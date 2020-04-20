@@ -157,10 +157,6 @@ local function generate_train_entities(item)
       end
       local multiplier = math.pow(1.25, i - 1)
 
-      if item.fast_replaceable_group and i < angelsmods.addons.petrotrain.tier_amount then
-        copy.next_upgrade = item.name .. "-" .. (i + 1)
-      end
-
       copy.name = name
       copy.localised_name = {"", {"entity-name." .. item.name}, " MK" .. i}
       copy.icons = {
