@@ -226,36 +226,56 @@ if bobmods then
   end
 
   --if data.raw["fluid"]["dinitrogen-tetroxide"] then --BOBS REVAMP hardmode
-  if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
-    OV.global_replace_item("carbon-dioxide", "gas-hydrogen-sulfide")
-    data.raw.fluid["carbon-dioxide"].hidden = true
+  if mods.bobrevamp and settings.startup["bobmods-revamp-hardmode"].value then
+    if data.raw.fluid["carbon-dioxide"] then
+      OV.global_replace_item("carbon-dioxide", "gas-hydrogen-sulfide")
+      data.raw.fluid["carbon-dioxide"].hidden = true
+    end
 
-    OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
-    data.raw.item["sodium-carbonate"].hidden = true
+    if data.raw.item["sodium-carbonate"] then
+      OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
+      data.raw.item["sodium-carbonate"].hidden = true
+    end
 
-    OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
-    data.raw.item["sodium-perchlorate"].hidden = true
+    if data.raw.item["sodium-perchlorate"] then
+      OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
+      data.raw.item["sodium-perchlorate"].hidden = true
+    end
 
-    OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
-    data.raw.item["sodium-chlorate"].hidden = true
+    if data.raw.item["sodium-chlorate"] then
+      OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
+      data.raw.item["sodium-chlorate"].hidden = true
+    end
 
-    OV.global_replace_item("ammonia", "gas-ammonia")
-    data.raw.fluid["ammonia"].hidden = true
+    if data.raw.fluid["ammonia"] then
+      OV.global_replace_item("ammonia", "gas-ammonia")
+      data.raw.fluid["ammonia"].hidden = true
+    end
 
-    OV.global_replace_item("nitric-oxide", "gas-nitrogen-monoxide")
-    data.raw.fluid["nitric-oxide"].hidden = true
+    if data.raw.fluid["nitric-oxide"] then
+      OV.global_replace_item("nitric-oxide", "gas-nitrogen-monoxide")
+      data.raw.fluid["nitric-oxide"].hidden = true
+    end
 
-    OV.global_replace_item("nitric-dioxide", "gas-nitrogen-dioxide")
+    if data.raw.fluid["nitric-dioxide"] then
+      OV.global_replace_item("nitric-dioxide", "gas-nitrogen-dioxide")
     --data.raw.fluid["nitric-dioxide"].hidden = true
+    end
 
-    OV.global_replace_item("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
-    data.raw.fluid["dinitrogen-tetroxide"].hidden = true
+    if data.raw.fluid["dinitrogen-tetroxide"] then
+      OV.global_replace_item("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
+      data.raw.fluid["dinitrogen-tetroxide"].hidden = true
+    end
 
-    OV.global_replace_item("hydrogen-peroxide", "gas-hydrogen-peroxide")
-    data.raw.fluid["hydrogen-peroxide"].hidden = true
+    if data.raw.fluid["hydrogen-peroxide"] then
+      OV.global_replace_item("hydrogen-peroxide", "gas-hydrogen-peroxide")
+      data.raw.fluid["hydrogen-peroxide"].hidden = true
+    end
 
-    OV.global_replace_item("hydrazine", "gas-hydrazine")
-    data.raw.fluid["hydrazine"].hidden = true
+    if data.raw.fluid["hydrazine"] then
+      OV.global_replace_item("hydrazine", "gas-hydrazine")
+      data.raw.fluid["hydrazine"].hidden = true
+    end
 
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
     --OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
@@ -267,7 +287,7 @@ if bobmods then
           ingredients = {
             --{name = "solid-limestone", type = "item", amount = 1},
             {name = "gas-ammonium-chloride", type = "fluid", amount = 20},
-            {name = "ammonium-chloride", type = "item", amount = 0},
+            {name = "ammonium-chloride", type = "item", amount = 0}
           }
         },
         {
@@ -275,16 +295,19 @@ if bobmods then
           results = {
             --{name = "solid-limestone", type = "item", amount = 1},
             {name = "gas-ammonium-chloride", type = "fluid", amount = 10},
-            {name = "ammonium-chloride", type = "item", amount = 0},
+            {name = "ammonium-chloride", type = "item", amount = 0}
           }
-        },
+        }
       }
     )
     --update icons
-
-    data.raw.recipe["ammonium-chloride-recycling"].icon = nil
-    data.raw.recipe["sodium-carbonate"].icons =
-    angelsmods.functions.create_solid_recipe_icon({"sodium-bicarbonate"},"solid-sodium-carbonate")
+    if data.raw.recipe["ammonium-chloride-recycling"] then
+      data.raw.recipe["ammonium-chloride-recycling"].icon = nil
+    end
+    if data.raw.recipe["sodium-carbonate"] then
+      data.raw.recipe["sodium-carbonate"].icons =
+        angelsmods.functions.create_solid_recipe_icon({"sodium-bicarbonate"}, "solid-sodium-carbonate")
+    end
   end
   if data.raw.item["salt"] then
     OV.global_replace_item("salt", "solid-salt")
