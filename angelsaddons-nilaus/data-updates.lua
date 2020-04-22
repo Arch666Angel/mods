@@ -24,6 +24,7 @@ end
 
 if has_vehicle_equipment() then
   data.raw["car"]["nilaus-truck"].equipment_grid = "deco-nilaustruck"
+  data.raw["car"]["nilaus-truck-2"].equipment_grid = "deco-nilaustruck"
   add_equip_category_if_exists("deco-nilaustruck", "car")
   add_equip_category_if_exists("deco-nilaustruck", "vehicle")
   add_equip_category_if_exists("deco-nilaustruck", "angels-energy")
@@ -34,6 +35,8 @@ if has_vehicle_equipment() then
 
   if angelsmods and angelsmods.industries then
     data.raw["item-with-entity-data"]["nilaus-truck"].subgroup = "angels-vehicle-car"
-    data.raw["item-with-entity-data"]["nilaus-truck"].order = "a[car]-b"
+    data.raw["item-with-entity-data"]["nilaus-truck"].order = "a[car]-b[nilaus-truck]"
+    data.raw["item-with-entity-data"]["nilaus-truck-2"].subgroup = "angels-vehicle-car"
+    data.raw["item-with-entity-data"]["nilaus-truck-2"].order = "a[car]-b[nilaus-truck-mk2]"
   end
 end
