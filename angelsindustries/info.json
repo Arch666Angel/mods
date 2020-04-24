@@ -14,6 +14,7 @@
     "angelsbioprocessing >= 0.7.3",
     "angelssmelting >= 0.6.5",
     "angelsaddons-crawlertrain >= 0.1.0",
-    "(?)bobtech >= 0.18.3"
+    "(?)bobtech >= 0.18.3",
+    "(?)aai-industry >=0.4.5"
   ]
 }

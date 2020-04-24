@@ -1,4 +1,6 @@
 local OV = angelsmods.functions.OV
+--replacement tables
+require("prototypes.overrides.replacement-fallbacks")
 --set local table for use in multiple functions
 local building_types = {
   "assembling-machine",
@@ -19,6 +21,7 @@ local building_types = {
   "wall",
   "gate"
 }
+   
 function pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
   OV.remove_science_pack(techname, "angels-science-pack-" .. old_c)
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
@@ -336,7 +339,6 @@ function core_tier_upgrade()
         end
       end
     end
-
   end
 end
 
@@ -364,307 +366,58 @@ function add_minable_results()
   end
 end
 
+-- uses block_replace table from /overrides/replacement-fallbacks.lua
 function replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
+--reset existing each call
+  local existing={}
+  --run through each list first and check if it exists
+  for n,_ in pairs(ing_list) do 
+    existing[n]={name=ing_list[n].name,amount=ing_list[n].amount}
+  end
+  log(serpent.block(existing))
+  --now do the replacements -- id rather not have to do a double loop
   for n,_ in pairs(ing_list) do
-    --[[
-    ==Bob materials Tiers:
-    T0 materials: iron, copper, stone, wood, bcb, iron gear
-    T1 materials: iron, tin, iron gear, bcb
-    T2 materials: steel, bronze, steel gear, beb
-    T3 materials: cobalt-steel, aluminium, CS-gear, ecb, CS-bearing
-    T4a materials: brass gear, steel bearing, ecb, aluminium plate
-    T4 materials: all the titanium, elb, invar
-    T5 materials: all the nitinol, EPB, tungsten-carbide, copper-tungsten
-    --NOTES:
-    DO NOT REPLACE:
-    ==tungsten-carbide
-    ==copper-tungsten-alloy
-    ==nitinol
-    ==cobalt-steel
-    ==silicon-nitride
-    ==brass
-    ==bronze
-    ==angels block tiers materials:
-    T0=iron,stone,E-grey, w-copper
-    T1=steel,brick,E-red, w-solder
-    T2=aluminium,clay-brick,E-green, w-tin
-    T3=titanium,crete-brick,E-orange, w-silver
-    T4=tungsten,re-inforced-brick,w-gold
-    T5=??,??,w-platinum
-    ]]
-    --apply bobs replacements first (mainly for electronics reasons)
-    if mods["bobelectronics"] then
-      if ing_list[n].name == "electronic-circuit" then
-        ing_list[n].name = "block-electronics-2"
+    nme=ing_list[n].name
+    log(nme)
+    if block_replace[nme] then
+      new=block_replace[nme].new
+      amt_multi=block_replace[nme].amt_multi
+      log(serpent.block(new))
+      log(serpent.block(amt_multi))
+      log(serpent.block(existing[new]))
+      if existing[new] then --if it exists, just add more? may just remove this
+        if ing_list[n].amount then ing_list[n].amount=ing_list[n].amount+existing[new][amount] end
+      else --check if replacement is already listed
+        ing_list[n].name = block_replace[nme].new
+        ing_list[n].amount = (ing_list[n].amount or 1)*amt_multi 
       end
-      if ing_list[n].name == "advanced-circuit" then
-        ing_list[n].name = "block-electronics-3"
-      end
-      if ing_list[n].name == "processing-unit" then
-        ing_list[n].name = "block-electronics-4"
-      end
-    end
-    if mods["bobplates"] then
-      --bobs electronic boards
-      if ing_list[n].name == "basic-circuit-board" then
-        ing_list[n].name = "block-electronics-0"
-      end
-      if ing_list[n].name == "basic-electronic-board" then
-        ing_list[n].name = "block-electronics-1"
-      end
-      if ing_list[n].name == "advanced-processing-unit" then
-        ing_list[n].name = "block-electronics-5"
-      end
-      --bobs gears
-      if ing_list[n].name == "steel-gear-wheel" then
-        ing_list[n].name = "angels-gear"
-      end --swap the gear from the iron gear wheel
-      if ing_list[n].name == "brass-gear-wheel" then
-        ing_list[n].name = "angels-axle"
-      end --no brass component, take the steel level
-      if ing_list[n].name == "cobalt-steel-gear-wheel" then
-        ing_list[n].name = "angels-roller-chain"
-      end --no cobalt-steel component, replace with aluminium
-      if ing_list[n].name == "titanium-gear-wheel" then
-        ing_list[n].name = "angels-spring"
-      end
-      if ing_list[n].name == "tungsten-gear-wheel" then
-        ing_list[n].name = "angels-bearing"
-      end
-      --bobs plates
-      if ing_list[n].name == "aluminium-plate" then
-        ing_list[n].name = "construction-frame-3"
-      end
-      if ing_list[n].name == "titanium-plate" then
-        ing_list[n].name = "construction-frame-4"
-      end
-      if ing_list[n].name == "tungsten-plate" then
-        ing_list[n].name = "construction-frame-5"
-      end
-      --bobs pipes (T1: copper, iron, stone, steel, bronze,plastic, brass) others T2
-      if ing_list[n].name == "copper-pipe" then
-        ing_list[n].name = "block-fluidbox-1"
-      end
-      if ing_list[n].name == "stone-pipe" then
-        ing_list[n].name = "block-fluidbox-1"
-      end
-      if ing_list[n].name == "steel-pipe" then
-        ing_list[n].name = "block-fluidbox-1"
-      end
-      if ing_list[n].name == "bronze-pipe" then
-        ing_list[n].name = "block-fluidbox-1"
-      end
-      if ing_list[n].name == "plastic-pipe" then
-        ing_list[n].name = "block-fluidbox-1"
-      end
-      if ing_list[n].name == "brass-pipe" then
-        ing_list[n].name = "block-fluidbox-1"
-      end
-      if ing_list[n].name == "titanium-pipe" then
-        ing_list[n].name = "block-fluidbox-2"
-      end
-      if ing_list[n].name == "ceramic-pipe" then
-        ing_list[n].name = "block-fluidbox-2"
-      end
-      if ing_list[n].name == "tungsten-pipe" then
-        ing_list[n].name = "block-fluidbox-2"
-      end
-      if ing_list[n].name == "nitinol-pipe" then
-        ing_list[n].name = "block-fluidbox-2"
-      end
-      if ing_list[n].name == "copper-tungsten-pipe" then
-        ing_list[n].name = "block-fluidbox-2"
-      end
-      --bobs wire
-      if ing_list[n].name == "tinned-copper-cable" then
-        ing_list[n].name = "cable-harness-2"
-      end
-      if ing_list[n].name == "insulated-cable" then
-        ing_list[n].name = "cable-harness-3"
-      end
-      if ing_list[n].name == "gilded-copper-cable" then
-        ing_list[n].name = "cable-harness-4"
-      end
-    end
-    --vanilla replacements
-    --ceramic materials (stone, brick, crete)
-    if ing_list[n].name == "stone" then
-      ing_list[n].name = "block-construction-1"
-      ing_list[n].amount = ing_list[n].amount / 2 --don't want to make it too hard too early
-    end
-    if ing_list[n].name == "stone-brick" then
-      ing_list[n].name = "block-construction-2"
-    end
-    if ing_list[n].name == "concrete" then
-      ing_list[n].name = "block-construction-4"
-    end
-    --metallic replacements (iron/steel/plastic)
-    if ing_list[n].name == "iron-plate" then
-      ing_list[n].name = "construction-frame-1"
-    end
-    if ing_list[n].name == "steel-plate" then
-      ing_list[n].name = "construction-frame-2"
-    end
-    --if ing_list[n].name=="copper-plate"           then ing_list[n].name="construction-frame-1" end
-    --electronics
-    if ing_list[n].name == "electronic-circuit" then
-      ing_list[n].name = "block-electronics-1"
-    end
-    if ing_list[n].name == "advanced-circuit" then
-      ing_list[n].name = "block-electronics-2"
-    end
-    if ing_list[n].name == "processing-unit" then
-      ing_list[n].name = "block-electronics-4"
-    end
-    --intermediates
-    if ing_list[n].name == "iron-stick" then
-      ing_list[n].name = "construction-components"
-    end
-    if ing_list[n].name == "iron-gear-wheel" then
-      ing_list[n].name = "mechanical-parts"
-    end
-    if ing_list[n].name == "copper-cable" then
-      ing_list[n].name = "cable-harness-1"
-    end
-    if ing_list[n].name == "pipe" then
-      ing_list[n].name = "block-fluidbox-1"
-    end
-    if ing_list[n].name == "engine-unit" then
-      ing_list[n].name = "motor-2"
-    end
-    if ing_list[n].name == "electric-engine-unit" then
-      ing_list[n].name = "motor-4"
+      log(serpent.block(ing_list))
+    -- else not on the replacement list
     end
   end
 end
 
 --Replace non-construction components with angels components
+-- uses general_replace table from /overrides/replacement-fallbacks.lua
 function replace_gen_mats()
-  --bobs replacements first (mainly for electronics reasons)
-  if mods["bobelectronics"] then
-    --bobs electronic boards
-    -- BCB -->GREY
-    OV.global_replace_item("basic-circuit-board", "circuit-grey")
-    data.raw.recipe["basic-circuit-board"].hidden = true
-    data.raw.item["basic-circuit-board"].hidden = true
-    -- BEB -->RED
-    OV.global_replace_item("basic-electronic-board", "circuit-red-loaded")
-    OV.remove_unlock("electronics", "electronic-circuit")
-    data.raw.recipe["electronic-circuit"].hidden = true
-    data.raw.item["electronic-circuit"].hidden = true
-    -- ECB -->Green
-    OV.global_replace_item("advanced-circuit","circuit-green-loaded" )
-    -- ELB -->Orange
-    OV.global_replace_item("processing-unit","circuit-orange-loaded")
-    data.raw.recipe["advanced-processing-unit"].hidden = true
-    -- EPB --> Yellow
-    OV.global_replace_item("advanced-processing-unit", "circuit-yellow-loaded")
-    OV.remove_unlock("advanced-electronics-3", "advanced-processing-unit")
-    data.raw.item["advanced-processing-unit"].hidden = true
-    -- ELECTRONIC INTERMEDIATES
-    --wooden board
-    OV.global_replace_item("wooden-board", "circuit-grey-board")
-    OV.disable_recipe({"wooden-board"})
-    OV.remove_unlock("bio-paper-1", "wooden-board-paper")
-    data.raw.item["wooden-board"].hidden = true
-    --phenolic board
-    OV.global_replace_item("phenolic-board", "circuit-orange-board")
-    OV.remove_unlock("advanced-electronics", "phenolic-board")
-    data.raw.item["phenolic-board"].hidden = true
-    --angels-glass-fiber board
-    OV.global_replace_item("fibreglass-board", "circuit-blue-board")
-    OV.remove_unlock("angels-glass-smelting-3", "angels-glass-fiber-board")
-    data.raw.item["fibreglass-board"].hidden = true
-    --circuit board
-    OV.global_replace_item("circuit-board", "circuit-orange")
-    OV.remove_unlock("advanced-electronics", "circuit-board")
-    data.raw.item["circuit-board"].hidden = true
-    --superior circuit board
-    OV.global_replace_item("superior-circuit-board", "circuit-blue")
-    OV.remove_unlock("advanced-electronics-2", "superior-circuit-board")
-    data.raw.item["superior-circuit-board"].hidden = true
-    --multi-layer circuit board
-    OV.global_replace_item("multi-layer-circuit-board", "circuit-yellow")
-    OV.remove_unlock("advanced-electronics-3", "multi-layer-circuit-board")
-    data.raw.item["multi-layer-circuit-board"].hidden = true
-    --basic-electronic-components
-    OV.global_replace_item("basic-electronic-components", "circuit-resistor")
-    OV.remove_unlock("electronics", "basic-electronic-components")
-    data.raw.item["basic-electronic-components"].hidden = true
-    --electronic-components
-    OV.global_replace_item("electronic-components", "circuit-transistor")
-    OV.remove_unlock("advanced-electronics", "electronic-components")
-    data.raw.item["electronic-components"].hidden = true
-    --intergrated-electronics
-    OV.global_replace_item("intergrated-electronics", "circuit-microchip")
-    OV.remove_unlock("advanced-electronics-2", "intergrated-electronics")
-    data.raw.item["intergrated-electronics"].hidden = true
-    --SKIP THE TRANSFORMER
-    --processing-electronics
-    OV.global_replace_item("processing-electronics", "circuit-cpu")
-    OV.remove_unlock("advanced-electronics-3", "processing-electronics")
-    data.raw.item["processing-electronics"].hidden = true
-    OV.execute()
+  for nme,info in pairs(general_replace) do
+    if nme and data.raw.item[nme] then
+      OV.global_replace_item(nme, info.new)
+      data.raw.recipe[nme].hidden = true
+      data.raw.item[nme].hidden = true
+      OV.disable_recipe({nme})--in case hiding is not enough
+      angelsmods.functions.add_flag(nme, "hidden")
+      if info.unlock_by then
+        OV.remove_unlock(info.unlock_by, nme)
+        if info.alt_rec and data.raw.recipe[alt_rec] then --check if recipe actually exists
+          OV.remove_unlock(info.unlock_by, alt_rec)
+        end
+      end
+      if info.alt_rec and data.raw.recipe[alt_rec] then --check if recipe actually exists
+        data.raw.recipe[alt_rec].hidden = true
+      end
+    end
   end
-  if mods["bobplates"] then
-    --bobs gears
-    --OV.global_replace_item("iron-gear-wheel","angels-gear")
-    OV.global_replace_item("steel-gear-wheel", "angels-gear") --swap the gear from the iron gear wheel
-    OV.remove_unlock("steel-processing", "steel-gear-wheel")
-    data.raw.recipe["steel-gear-wheel"].hidden = true
-    data.raw.item["steel-gear-wheel"].hidden = true
-    OV.global_replace_item("brass-gear-wheel", "angels-axle") --no brass component, take the steel level
-    OV.remove_unlock("zinc-processing", "brass-gear-wheel")
-    data.raw.recipe["brass-gear-wheel"].hidden = true
-    data.raw.item["brass-gear-wheel"].hidden = true
-    OV.global_replace_item("cobalt-steel-gear-wheel", "angels-roller-chain") --no cobalt-steel component, replace with aluminium
-    OV.remove_unlock("cobalt-processing", "cobalt-steel-gear-wheel")
-    data.raw.recipe["cobalt-steel-gear-wheel"].hidden = true
-    data.raw.item["cobalt-steel-gear-wheel"].hidden = true
-    OV.global_replace_item("titanium-gear-wheel", "angels-spring")
-    OV.remove_unlock("titanium-processing", "titanium-gear-wheel")
-    data.raw.recipe["titanium-gear-wheel"].hidden = true
-    data.raw.item["titanium-gear-wheel"].hidden = true
-    OV.global_replace_item("tungsten-gear-wheel", "angels-bearing")
-    OV.remove_unlock("tungsten-processing", "tungsten-gear-wheel")
-    data.raw.recipe["tungsten-gear-wheel"].hidden = true
-    data.raw.item["tungsten-gear-wheel"].hidden = true
-    --OV.global_replace_item("nitinol-gear-wheel","mechanical-parts-gear") --no nitinol component
-    OV.global_replace_item("advanced-processing-unit", "circuit-yellow-loaded")
-    OV.remove_unlock("advanced-electronics-3", "advanced-processing-unit")
-    data.raw.recipe["advanced-processing-unit"].hidden = true
-    data.raw.item["advanced-processing-unit"].hidden = true
-    OV.execute()
-  end
-  --vanilla replacements
-  --electronics
-  if (mods["bobplates"] or mods["bobelectronics"]) then
-    OV.global_replace_item("electronic-circuit", "circuit-red-loaded")
-    OV.remove_unlock("electronics", "electronic-circuit")
-    angelsmods.functions.add_flag("electronic-circuit", "hidden")
-    OV.disable_recipe({"electronic-circuit"})
-    OV.global_replace_item("advanced-circuit", "circuit-green-loaded")
-    OV.remove_unlock("advanced-electronics", "advanced-circuit")
-    angelsmods.functions.add_flag("advanced-circuit", "hidden")
-    OV.disable_recipe({"advanced-circuit"})
-    OV.global_replace_item("processing-unit", "circuit-blue-loaded")
-    OV.remove_unlock("advanced-electronics-2", "processing-unit")
-    angelsmods.functions.add_flag("processing-unit", "hidden")
-    OV.disable_recipe({"processing-unit"})
-    OV.execute()
-  end
-
-  --intermediates
-  OV.global_replace_item("engine-unit", "motor-2")
-  OV.remove_unlock("engine", "engine-unit")
-  data.raw.recipe["engine-unit"].hidden = true
-  data.raw.item["engine-unit"].hidden = true
-  OV.global_replace_item("electric-engine-unit", "motor-4")
-  OV.remove_unlock("electric-engine", "electric-engine-unit")
-  data.raw.recipe["electric-engine-unit"].hidden = true
-  data.raw.item["electric-engine-unit"].hidden = true
-  -- OV.global_replace_item("iron-stick", "angels-rod-iron")
-  -- data.raw.recipe["iron-stick"].hidden = true
   OV.execute()
 end
 
@@ -685,6 +438,7 @@ function replace_con_mats(buildings)
     end
   end
 end
+
 --REPLACE ON MINED RESULTS
 function replace_minable_results(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
