@@ -371,27 +371,30 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
 --reset existing each call
   local existing={}
   --run through each list first and check if it exists
-  for n,_ in pairs(ing_list) do 
-    existing[n]={name=ing_list[n].name,amount=ing_list[n].amount}
+  for ni,_ in pairs(ing_list) do 
+    existing[ni]={name=ing_list[ni].name,amount=ing_list[ni].amount}
   end
-  log(serpent.block(existing))
   --now do the replacements -- id rather not have to do a double loop
   for n,_ in pairs(ing_list) do
-    nme=ing_list[n].name
-    log(nme)
+    nme = ing_list[n].name
     if block_replace[nme] then
-      new=block_replace[nme].new
-      amt_multi=block_replace[nme].amt_multi
-      log(serpent.block(new))
-      log(serpent.block(amt_multi))
-      log(serpent.block(existing[new]))
-      if existing[new] then --if it exists, just add more? may just remove this
-        if ing_list[n].amount then ing_list[n].amount=ing_list[n].amount+existing[new][amount] end
+      new = block_replace[nme].new
+      amt_multi = block_replace[nme].amt_multi
+      if existing[new] then
+         --if it exists, just add more? may just remove this
+        if ing_list[n].amount and ing_list[n].amount ~= existing[new][amount] then
+          diff=existing[new][amount]-ing_list[n].amount
+          ing_list[n].amount=0
+          for ch,_ in pairs(ing_list) do
+            if new==ing_list[ch].name then
+              ing_list[ch].amount=ing_list[ch].amount+diff
+            end
+          end
+        end
       else --check if replacement is already listed
         ing_list[n].name = block_replace[nme].new
         ing_list[n].amount = (ing_list[n].amount or 1)*amt_multi 
       end
-      log(serpent.block(ing_list))
     -- else not on the replacement list
     end
   end

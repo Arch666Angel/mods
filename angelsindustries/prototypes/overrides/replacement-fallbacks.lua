@@ -98,7 +98,7 @@ general_replace={
 }
 --update replacement tables depending on mods
 if mods["aai-industry"] then
-  block_replace["stone-brick"]={new="block-construction-0",amt_multi=2}
+  block_replace["stone-brick"]={new="block-construction-1",amt_multi=2}
 end
 if mods["bobelectronics"] then
   block_replace["electronic-circuit"]={new="block-electronics-2",amt_multi=1}
