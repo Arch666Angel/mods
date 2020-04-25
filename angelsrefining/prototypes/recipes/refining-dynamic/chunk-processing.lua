@@ -9,16 +9,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t2",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore1-chunk", 6}},
+        ingredients = {{type = "item", name = "angels-ore1-chunk", amount = 6}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore1-chunk", 9 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore1-chunk", amount = 9 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -33,16 +33,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t2",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore2-chunk", 6}},
+        ingredients = {{type = "item", name = "angels-ore2-chunk", amount = 6}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore2-chunk", 9 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore2-chunk", amount = 9 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -57,16 +57,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t2",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore3-chunk", 6}},
+        ingredients = {{type = "item", name = "angels-ore3-chunk", amount = 6}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore3-chunk", 9 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore3-chunk", amount = 9 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -81,16 +81,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t2",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore4-chunk", 6}},
+        ingredients = {{type = "item", name = "angels-ore4-chunk", amount = 6}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore4-chunk", 9 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore4-chunk", amount = 9 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -105,16 +105,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t2",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore5-chunk", 6}},
+        ingredients = {{type = "item", name = "angels-ore5-chunk", amount = 6}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore5-chunk", 9 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore5-chunk", amount = 9 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -129,16 +129,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t2",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore6-chunk", 6}},
+        ingredients = {{type = "item", name = "angels-ore6-chunk", amount = 6}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore6-chunk", 9 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore6-chunk", amount = 9 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }

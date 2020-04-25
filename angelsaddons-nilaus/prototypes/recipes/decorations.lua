@@ -66,7 +66,7 @@ data:extend(
       type = "recipe",
       name = "deco-nilaus-start",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 5},
         {type = "item", name = "steel-plate", amount = 5},

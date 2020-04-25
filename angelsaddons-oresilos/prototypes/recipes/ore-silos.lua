@@ -5,7 +5,7 @@ data:extend(
       type = "recipe",
       name = "silo",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 20},
         {type = "item", name = "steel-plate", amount = 10},
@@ -17,7 +17,7 @@ data:extend(
       type = "recipe",
       name = "silo-ore1",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -27,7 +27,7 @@ data:extend(
       type = "recipe",
       name = "silo-ore2",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -37,7 +37,7 @@ data:extend(
       type = "recipe",
       name = "silo-ore3",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -47,7 +47,7 @@ data:extend(
       type = "recipe",
       name = "silo-ore4",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -57,7 +57,7 @@ data:extend(
       type = "recipe",
       name = "silo-ore5",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -67,7 +67,7 @@ data:extend(
       type = "recipe",
       name = "silo-ore6",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -77,7 +77,7 @@ data:extend(
       type = "recipe",
       name = "silo-coal",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1}
       },
@@ -88,7 +88,7 @@ data:extend(
       type = "recipe",
       name = "silo-passive-provider",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
@@ -100,7 +100,7 @@ data:extend(
       type = "recipe",
       name = "silo-active-provider",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
@@ -112,7 +112,7 @@ data:extend(
       type = "recipe",
       name = "silo-requester",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
@@ -124,7 +124,7 @@ data:extend(
       type = "recipe",
       name = "silo-storage",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
@@ -136,7 +136,7 @@ data:extend(
       type = "recipe",
       name = "silo-buffer",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},

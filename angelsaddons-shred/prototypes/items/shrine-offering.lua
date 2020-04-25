@@ -35,7 +35,7 @@ if settings.startup["deco-shred-create-shrine-offer"].value then
           type = "recipe",
           name = itemName,
           energy_required = 2,
-          enabled = "true",
+          enabled = true,
           ingredients = {
             {type = "item", name = "deco-" .. decoName .. "-1", amount = 1},
             {type = "item", name = "satellite", amount = 1}

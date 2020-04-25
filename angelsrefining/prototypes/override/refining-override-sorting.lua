@@ -637,7 +637,9 @@ OV.patch_recipes(
       }
     ),
     {
-      mods["angelssmelting"] and {name = "filter-ceramic", ingredients = {{"solid-aluminium-oxide", amount = 1}}}
+      mods["angelssmelting"] and
+        {name = "filter-ceramic", ingredients = {{type = "item", name = "solid-aluminium-oxide", amount = 1}}} or
+        nil
     }
   }
 )

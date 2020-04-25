@@ -9,7 +9,7 @@ data:extend(
       name = "temperate-garden-a",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "temperate-garden", amount = 1}
@@ -25,37 +25,37 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
-          scale = 0.5,
+          scale = 0.5
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-1-seed.png",
           scale = 0.35 / 0.9,
-          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.9},
+          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.9}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-2-seed.png",
           scale = 0.35 / 0.9,
-          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.9},
+          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.9}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-3-seed.png",
           scale = 0.35,
-          shift = {-seed_icon_shift, seed_icon_shift},
+          shift = {-seed_icon_shift, seed_icon_shift}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-4-seed.png",
           scale = 0.35,
-          shift = {0, seed_icon_shift},
+          shift = {0, seed_icon_shift}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-5-seed.png",
           scale = 0.35,
-          shift = {seed_icon_shift, seed_icon_shift},
-        },
+          shift = {seed_icon_shift, seed_icon_shift}
+        }
       },
       icon_size = 32,
       order = "bb"
@@ -65,33 +65,27 @@ data:extend(
       name = "temperate-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
-      normal =
-      {
-        enabled = "false",
+      normal = {
+        enabled = false,
         energy_required = 300,
-        ingredients =
-        {
+        ingredients = {
           {type = "item", name = "temperate-garden", amount = 1}
         },
-        results =
-        {
+        results = {
           {type = "item", name = "token-bio", amount = 32}
-        },
+        }
       },
-      expensive =
-      {
-        enabled = "false",
+      expensive = {
+        enabled = false,
         energy_required = 300,
-        ingredients =
-        {
+        ingredients = {
           {type = "item", name = "temperate-garden", amount = 1}
         },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti) },
+        results = {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
           {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1}
         },
-        main_product = "token-bio",
+        main_product = "token-bio"
       },
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       --icon_size = 32,
@@ -102,7 +96,7 @@ data:extend(
       name = "temperate-garden-b",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "temperate-garden", amount = 1}
@@ -117,33 +111,33 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-1-seed.png",
           scale = 0.35 / 0.75,
-          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.75},
+          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-2-seed.png",
           scale = 0.35 / 0.75,
-          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.75},
+          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-3-seed.png",
           scale = 0.35 / 0.85,
-          shift = {-seed_icon_shift, seed_icon_shift * 0.75},
+          shift = {-seed_icon_shift, seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-4-seed.png",
           scale = 0.35 / 0.85,
-          shift = {0, seed_icon_shift * 0.75},
+          shift = {0, seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/temperate-5-seed.png",
           scale = 0.35 / 0.85,
-          shift = {seed_icon_shift, seed_icon_shift * 0.75},
-        },
+          shift = {seed_icon_shift, seed_icon_shift * 0.75}
+        }
       },
       icon_size = 32,
       order = "bc"
@@ -153,7 +147,7 @@ data:extend(
       name = "temperate-garden-cultivating-b",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "temperate-garden", amount = 1},
@@ -175,7 +169,7 @@ data:extend(
       name = "desert-garden-a",
       category = "seed-extractor",
       subgroup = "bio-processor-temperate",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "desert-garden", amount = 1}
@@ -191,37 +185,37 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
-          scale = 0.5,
+          scale = 0.5
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-1-seed.png",
           scale = 0.35 / 0.9,
-          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.9},
+          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.9}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-2-seed.png",
           scale = 0.35 / 0.9,
-          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.9},
+          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.9}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-3-seed.png",
           scale = 0.35,
-          shift = {-seed_icon_shift, seed_icon_shift},
+          shift = {-seed_icon_shift, seed_icon_shift}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-4-seed.png",
           scale = 0.35,
-          shift = {0, seed_icon_shift},
+          shift = {0, seed_icon_shift}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-5-seed.png",
           scale = 0.35,
-          shift = {seed_icon_shift, seed_icon_shift},
-        },
+          shift = {seed_icon_shift, seed_icon_shift}
+        }
       },
       icon_size = 32,
       order = "bb"
@@ -231,33 +225,27 @@ data:extend(
       name = "desert-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "bio-processor-temperate",
-      normal =
-      {
-        enabled = "false",
+      normal = {
+        enabled = false,
         energy_required = 300,
-        ingredients =
-        {
+        ingredients = {
           {type = "item", name = "desert-garden", amount = 1}
         },
-        results =
-        {
+        results = {
           {type = "item", name = "token-bio", amount = 32}
-        },
+        }
       },
-      expensive =
-      {
-        enabled = "false",
+      expensive = {
+        enabled = false,
         energy_required = 300,
-        ingredients =
-        {
+        ingredients = {
           {type = "item", name = "desert-garden", amount = 1}
         },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti) },
+        results = {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
           {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1}
         },
-        main_product = "token-bio",
+        main_product = "token-bio"
       },
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       --icon_size = 32,
@@ -268,7 +256,7 @@ data:extend(
       name = "desert-garden-b",
       category = "seed-extractor",
       subgroup = "bio-processor-temperate",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "desert-garden", amount = 1}
@@ -283,33 +271,33 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-1-seed.png",
           scale = 0.35 / 0.75,
-          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.75},
+          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-2-seed.png",
           scale = 0.35 / 0.75,
-          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.75},
+          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-3-seed.png",
           scale = 0.35 / 0.85,
-          shift = {-seed_icon_shift, seed_icon_shift * 0.75},
+          shift = {-seed_icon_shift, seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-4-seed.png",
           scale = 0.35 / 0.85,
-          shift = {0, seed_icon_shift * 0.75},
+          shift = {0, seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/desert-5-seed.png",
           scale = 0.35 / 0.85,
-          shift = {seed_icon_shift, seed_icon_shift * 0.75},
-        },
+          shift = {seed_icon_shift, seed_icon_shift * 0.75}
+        }
       },
       icon_size = 32,
       order = "bc"
@@ -319,7 +307,7 @@ data:extend(
       name = "desert-garden-cultivating-b",
       category = "seed-extractor",
       subgroup = "bio-processor-temperate",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "desert-garden", amount = 1},
@@ -341,7 +329,7 @@ data:extend(
       name = "swamp-garden-a",
       category = "seed-extractor",
       subgroup = "farming-temperate",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "swamp-garden", amount = 1}
@@ -357,37 +345,37 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
-          scale = 0.5,
+          scale = 0.5
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-1-seed.png",
           scale = 0.35 / 0.9,
-          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.9},
+          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.9}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-2-seed.png",
           scale = 0.35 / 0.9,
-          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.9},
+          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.9}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-3-seed.png",
           scale = 0.35,
-          shift = {-seed_icon_shift, seed_icon_shift},
+          shift = {-seed_icon_shift, seed_icon_shift}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-4-seed.png",
           scale = 0.35,
-          shift = {0, seed_icon_shift},
+          shift = {0, seed_icon_shift}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-5-seed.png",
           scale = 0.35,
-          shift = {seed_icon_shift, seed_icon_shift},
-        },
+          shift = {seed_icon_shift, seed_icon_shift}
+        }
       },
       icon_size = 32,
       order = "bb"
@@ -397,33 +385,27 @@ data:extend(
       name = "swamp-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-temperate",
-      normal =
-      {
-        enabled = "false",
+      normal = {
+        enabled = false,
         energy_required = 300,
-        ingredients =
-        {
+        ingredients = {
           {type = "item", name = "swamp-garden", amount = 1}
         },
-        results =
-        {
+        results = {
           {type = "item", name = "token-bio", amount = 32}
-        },
+        }
       },
-      expensive =
-      {
-        enabled = "false",
+      expensive = {
+        enabled = false,
         energy_required = 300,
-        ingredients =
-        {
+        ingredients = {
           {type = "item", name = "swamp-garden", amount = 1}
         },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti) },
+        results = {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
           {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1}
         },
-        main_product = "token-bio",
+        main_product = "token-bio"
       },
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       --icon_size = 32,
@@ -434,7 +416,7 @@ data:extend(
       name = "swamp-garden-b",
       category = "seed-extractor",
       subgroup = "farming-temperate",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "swamp-garden", amount = 1}
@@ -449,33 +431,33 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-1-seed.png",
           scale = 0.35 / 0.75,
-          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.75},
+          shift = {-seed_icon_shift * 0.67, -seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-2-seed.png",
           scale = 0.35 / 0.75,
-          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.75},
+          shift = {seed_icon_shift * 0.67, -seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-3-seed.png",
           scale = 0.35 / 0.85,
-          shift = {-seed_icon_shift, seed_icon_shift * 0.75},
+          shift = {-seed_icon_shift, seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-4-seed.png",
           scale = 0.35 / 0.85,
-          shift = {0, seed_icon_shift * 0.75},
+          shift = {0, seed_icon_shift * 0.75}
         },
         {
           icon = "__angelsbioprocessing__/graphics/icons/swamp-5-seed.png",
           scale = 0.35 / 0.85,
-          shift = {seed_icon_shift, seed_icon_shift * 0.75},
-        },
+          shift = {seed_icon_shift, seed_icon_shift * 0.75}
+        }
       },
       icon_size = 32,
       order = "bc"
@@ -485,7 +467,7 @@ data:extend(
       name = "swamp-garden-cultivating-b",
       category = "seed-extractor",
       subgroup = "farming-temperate",
-      enabled = "false",
+      enabled = false,
       energy_required = 300,
       ingredients = {
         {type = "item", name = "swamp-garden", amount = 1},
@@ -507,7 +489,7 @@ data:extend(
       name = "solid-soil",
       category = "crafting",
       subgroup = "bio-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "solid-mud", amount = 1},
@@ -524,7 +506,7 @@ data:extend(
       name = "solid-fertilizer",
       category = "crafting-with-fluid",
       subgroup = "bio-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 1,
       ingredients = {
         {type = "item", name = "solid-compost", amount = 2},
@@ -541,12 +523,12 @@ data:extend(
       name = "solid-nuclear-fertilizer",
       category = "crafting-with-fluid",
       subgroup = "bio-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "solid-fertilizer", amount = 2},
         {type = "item", name = "solid-compost", amount = 25},
-        {type = "item", name = "uranium-235", amount = 1},
+        {type = "item", name = "uranium-235", amount = 1}
       },
       results = {
         {type = "item", name = "solid-nuclear-fertilizer", amount = 1}
@@ -560,7 +542,7 @@ data:extend(
       name = "temperate-upgrade",
       category = "crafting",
       subgroup = "bio-processing-blocks",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "token-bio", amount = 5},
@@ -577,7 +559,7 @@ data:extend(
       name = "desert-upgrade",
       category = "crafting",
       subgroup = "bio-processing-blocks",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "token-bio", amount = 5},
@@ -594,7 +576,7 @@ data:extend(
       name = "swamp-upgrade",
       category = "crafting",
       subgroup = "bio-processing-blocks",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "token-bio", amount = 5},
@@ -617,7 +599,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "desert-garden", amount = 1},
         {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
-        {type = "item", name = "solid-compost", amount = 100},
+        {type = "item", name = "solid-compost", amount = 100}
       },
       results = {
         {type = "item", name = "temperate-garden", amount = 1, probability = 0.02},
@@ -659,7 +641,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "temperate-garden", amount = 1},
         {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
-        {type = "item", name = "solid-soil", amount = 100},
+        {type = "item", name = "solid-soil", amount = 100}
       },
       results = {
         {type = "item", name = "swamp-garden", amount = 1, probability = 0.02},
@@ -701,7 +683,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "swamp-garden", amount = 1},
         {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
-        {type = "item", name = "solid-sand", amount = 100},
+        {type = "item", name = "solid-sand", amount = 100}
       },
       results = {
         {type = "item", name = "desert-garden", amount = 1, probability = 0.02},
@@ -711,7 +693,7 @@ data:extend(
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       --icon_size = 32,
       order = "be"
-    },
+    }
     --{
     --  type = "recipe",
     --  name = "temperate-garden-mutation-desert",

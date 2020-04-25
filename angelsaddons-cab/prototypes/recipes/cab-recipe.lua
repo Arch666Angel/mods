@@ -4,7 +4,7 @@ data:extend(
       type = "recipe",
       name = "angels-cab",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "engine-unit", amount = 20},
         {type = "item", name = "steel-plate", amount = 75},
@@ -17,7 +17,7 @@ data:extend(
       type = "recipe",
       name = "angels-cab-deploy-charge",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 1},
         {type = "item", name = "steel-plate", amount = 1},
@@ -30,7 +30,7 @@ data:extend(
       type = "recipe",
       name = "angels-cab-undeploy-charge",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 1},
         {type = "item", name = "steel-plate", amount = 1},

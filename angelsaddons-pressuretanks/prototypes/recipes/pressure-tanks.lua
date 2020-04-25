@@ -5,7 +5,7 @@ data:extend(
       type = "recipe",
       name = "angels-pressure-tank-1",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "stone-brick", amount = 20},

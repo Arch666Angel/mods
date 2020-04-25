@@ -16,14 +16,14 @@ OV.patch_recipes(
     {
       name = "stone-wall",
       ingredients = {
-        {"block-construction-2", 1}
+        {type = "item", name = "block-construction-2", amount = 1}
       }
     },
     {
       name = "small-electric-pole",
       ingredients = {
-        {"wood", 1},
-        {"cable-harness-1", 1}
+        {type = "item", name = "wood", amount = 1},
+        {type = "item", name = "cable-harness-1", amount = 1}
       },
       results = {
         {type = "item", name = "small-electric-pole", amount = 1}
@@ -67,31 +67,31 @@ OV.patch_recipes(
       name = "angels-construction-robot",
       ingredients = {
         {"!!"},
-        {"motor-1", 1},
-        {"circuit-red-loaded", 2},
-        {"construction-components", 4},
-        {"mechanical-parts", 5}
+        {type = "item", name = "motor-1", amount = 1},
+        {type = "item", name = "circuit-red-loaded", amount = 2},
+        {type = "item", name = "construction-components", amount = 4},
+        {type = "item", name = "mechanical-parts", amount = 5}
       }
     },
     {
       name = "cargo-robot",
       ingredients = {
         {"!!"},
-        {"motor-2", 1},
-        {"circuit-green-loaded", 2},
-        {"angels-servo-motor-2", 1},
-        {"mechanical-parts", 5}
+        {type = "item", name = "motor-2", amount = 1},
+        {type = "item", name = "circuit-green-loaded", amount = 2},
+        {type = "item", name = "angels-servo-motor-2", amount = 1},
+        {type = "item", name = "mechanical-parts", amount = 5}
       }
     },
     {
       name = "cargo-robot-2",
       ingredients = {
         {"!!"},
-        {"cargo-robot", 1},
-        {"motor-3", 1},
-        {"circuit-orange-loaded", 2},
-        {"cable-harness-3", 2},
-        {"electronic-parts", 4}
+        {type = "item", name = "cargo-robot", amount = 1},
+        {type = "item", name = "motor-3", amount = 1},
+        {type = "item", name = "circuit-orange-loaded", amount = 2},
+        {type = "item", name = "cable-harness-3", amount = 2},
+        {type = "item", name = "electronic-parts", amount = 4}
       }
     },
     -- base game late robots
@@ -99,26 +99,26 @@ OV.patch_recipes(
       name = "flying-robot-frame",
       ingredients = {
         {"!!"},
-        {"motor-4", 1},
-        {"circuit-blue-loaded", 1},
-        {"battery", 2},
-        {"construction-frame-4", 1}
+        {type = "item", name = "motor-4", amount = 1},
+        {type = "item", name = "circuit-blue-loaded", amount = 1},
+        {type = "item", name = "battery", amount = 2},
+        {type = "item", name = "construction-frame-4", amount = 1}
       }
     },
     {
       name = "construction-robot",
       ingredients = {
         {"!!"},
-        {"flying-robot-frame", 1},
-        {"angels-construction-robot", 1}
+        {type = "item", name = "flying-robot-frame", amount = 1},
+        {type = "item", name = "angels-construction-robot", amount = 1}
       }
     },
     {
       name = "logistic-robot",
       ingredients = {
         {"!!"},
-        {"flying-robot-frame", 1},
-        {"cargo-robot-2", 1}
+        {type = "item", name = "flying-robot-frame", amount = 1},
+        {type = "item", name = "cargo-robot-2", amount = 1}
       }
     },
     -- roboports
@@ -126,30 +126,30 @@ OV.patch_recipes(
       name = "cargo-box",
       ingredients = {
         {"!!"},
-        {"block-electronics-1", 10},
-        {"block-construction-1", 15},
-        {"construction-components", 15},
-        {"mechanical-parts", 20}
+        {type = "item", name = "block-electronics-1", amount = 10},
+        {type = "item", name = "block-construction-1", amount = 15},
+        {type = "item", name = "construction-components", amount = 15},
+        {type = "item", name = "mechanical-parts", amount = 20}
       }
     },
     {
       name = "cargo-hub",
       ingredients = {
         {"!!"},
-        {"block-electronics-3", 5},
-        {"block-construction-3", 10},
-        {"cable-harness-3", 20},
-        {"construction-components", 15}
+        {type = "item", name = "block-electronics-3", amount = 5},
+        {type = "item", name = "block-construction-3", amount = 10},
+        {type = "item", name = "cable-harness-3", amount = 20},
+        {type = "item", name = "construction-components", amount = 15}
       }
     },
     {
       name = "angels-charging-station",
       ingredients = {
         {"!!"},
-        {"angels-relay-station", 4},
-        {"block-electronics-3", 2},
-        {"cable-harness-3", 10},
-        {"angels-cabling", 5}
+        {type = "item", name = "angels-relay-station", amount = 4},
+        {type = "item", name = "block-electronics-3", amount = 2},
+        {type = "item", name = "cable-harness-3", amount = 10},
+        {type = "item", name = "angels-cabling", amount = 5}
       }
     },
     -- construction zone expanders
@@ -157,20 +157,20 @@ OV.patch_recipes(
       name = "angels-construction-zone-expander",
       ingredients = {
         {"!!"},
-        {"block-electronics-1", 2},
-        {"cable-harness-1", 3},
-        {"construction-components", 5},
-        {"angels-cabling", 5}
+        {type = "item", name = "block-electronics-1", amount = 2},
+        {type = "item", name = "cable-harness-1", amount = 3},
+        {type = "item", name = "construction-components", amount = 5},
+        {type = "item", name = "angels-cabling", amount = 5}
       }
     },
     {
       name = "angels-construction-zone-expander-2",
       ingredients = {
         {"!!"},
-        {"angels-construction-zone-expander", 4},
-        {"block-electronics-3", 2},
-        {"cable-harness-3", 10},
-        {"construction-components", 5}
+        {type = "item", name = "angels-construction-zone-expander", amount = 4},
+        {type = "item", name = "block-electronics-3", amount = 2},
+        {type = "item", name = "cable-harness-3", amount = 10},
+        {type = "item", name = "construction-components", amount = 5}
       }
     },
     -- zone expanders
@@ -178,20 +178,20 @@ OV.patch_recipes(
       name = "angels-zone-expander",
       ingredients = {
         {"!!"},
-        {"block-electronics-1", 2},
-        {"cable-harness-1", 3},
-        {"electronic-parts", 5},
-        {"angels-cabling", 5}
+        {type = "item", name = "block-electronics-1", amount = 2},
+        {type = "item", name = "cable-harness-1", amount = 3},
+        {type = "item", name = "electronic-parts", amount = 5},
+        {type = "item", name = "angels-cabling", amount = 5}
       }
     },
     {
       name = "angels-zone-expander-2",
       ingredients = {
         {"!!"},
-        {"angels-zone-expander", 4},
-        {"block-electronics-2", 2},
-        {"cable-harness-2", 10},
-        {"angels-cabling", 5}
+        {type = "item", name = "angels-zone-expander", amount = 4},
+        {type = "item", name = "block-electronics-2", amount = 2},
+        {type = "item", name = "cable-harness-2", amount = 10},
+        {type = "item", name = "angels-cabling", amount = 5}
       }
     },
     -- relay stations
@@ -199,20 +199,20 @@ OV.patch_recipes(
       name = "angels-relay-station",
       ingredients = {
         {"!!"},
-        {"angels-zone-expander", 1},
-        {"block-electronics-2", 3},
-        {"cable-harness-2", 5},
-        {"angels-cabling", 5}
+        {type = "item", name = "angels-zone-expander", amount = 1},
+        {type = "item", name = "block-electronics-2", amount = 3},
+        {type = "item", name = "cable-harness-2", amount = 5},
+        {type = "item", name = "angels-cabling", amount = 5}
       }
     },
     {
       name = "angels-relay-station-2",
       ingredients = {
         {"!!"},
-        {"angels-relay-station", 4},
-        {"block-electronics-3", 3},
-        {"cable-harness-3", 10},
-        {"angels-cabling", 5}
+        {type = "item", name = "angels-relay-station", amount = 4},
+        {type = "item", name = "block-electronics-3", amount = 3},
+        {type = "item", name = "cable-harness-3", amount = 10},
+        {type = "item", name = "angels-cabling", amount = 5}
       }
     }
   }

@@ -12,8 +12,7 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].ingot then
-  if angelsmods.trigger.smelting_products["tin"].plate or
-     angelsmods.trigger.smelting_products["tin"].wire then
+  if angelsmods.trigger.smelting_products["tin"].plate or angelsmods.trigger.smelting_products["tin"].wire then
   else
     -- no need for molten recipe
     data.raw.fluid["liquid-molten-tin"].hidden = true
@@ -35,61 +34,60 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].plate then
   if angelsmods.refining then
-    OV.patch_recipes({
+    OV.patch_recipes(
       {
-        name = "angelsore6-crushed-smelting",
-        subgroup = "angels-tin-casting",
-        order = "i[angels-plate-tin]-a"
+        {
+          name = "angelsore6-crushed-smelting",
+          subgroup = "angels-tin-casting",
+          order = "i[angels-plate-tin]-a"
+        }
       }
-    })
+    )
   end
 
   -- REPLACE ITEMS (use bob version)
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     OV.global_replace_item("angels-plate-tin", "tin-plate")
     angelsmods.functions.add_flag("angels-plate-tin", "hidden")
 
-    OV.patch_recipes({
+    OV.patch_recipes(
       {
-        name = "tin-plate",
-        energy_required = 10.5,
-        normal =
         {
-          ingredients =
-          {
-            { name = "tin-ore", type = "item", amount = "+3" }
+          name = "tin-plate",
+          energy_required = 10.5,
+          normal = {
+            ingredients = {
+              {name = "tin-ore", type = "item", amount = "+3"}
+            },
+            results = {
+              {name = "tin-plate", type = "item", amount = "+2"}
+            }
           },
-          results =
-          {
-            { name = "tin-plate", type = "item", amount = "+2" }
-          }
-        },
-        expensive =
-        {
-          ingredients =
-          { {"!!"},
-            { name = "tin-ore", type = "item", amount = 5 * intermediatemulti }
+          expensive = {
+            ingredients = {
+              {"!!"},
+              {name = "tin-ore", type = "item", amount = 5 * intermediatemulti}
+            },
+            results = {
+              {name = "tin-plate", type = "item", amount = "+2"}
+            }
           },
-          results =
-          {
-            { name = "tin-plate", type = "item", amount = "+2" }
-          }
-        },
-        icons = {
-          { 
-            icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+          icons = {
+            {
+              icon = "__angelssmelting__/graphics/icons/plate-tin.png"
+            },
+            {
+              icon = "__angelssmelting__/graphics/icons/ore-tin.png",
+              scale = 0.4375,
+              shift = {-10, -10}
+            }
           },
-          {
-            icon = "__angelssmelting__/graphics/icons/ore-tin.png",
-            scale = 0.4375,
-            shift = { -10, -10},
-          },
-        },
-        icon_size = 32,
-        subgroup = "angels-tin-casting",
-        order = "i[angels-plate-tin]-b"
-      },
-    })
+          icon_size = 32,
+          subgroup = "angels-tin-casting",
+          order = "i[angels-plate-tin]-b"
+        }
+      }
+    )
   end
 else
   angelsmods.functions.add_flag("angels-plate-tin", "hidden")
@@ -107,17 +105,19 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     angelsmods.functions.add_flag("angels-wire-tin", "hidden")
     angelsmods.functions.move_item("tinned-copper-cable", "angels-tin-casting", "j")
     OV.disable_recipe({"tinned-copper-cable"})
-    if mods['bobassembly'] then
-      OV.patch_recipes({
+    if mods["bobassembly"] then
+      OV.patch_recipes(
         {
-          name = "basic-tinned-copper-wire",
-          category = "electronics"
-        },
-        {
-          name = "angels-wire-coil-tin-converting",
-          category = "electronics-machine"
+          {
+            name = "basic-tinned-copper-wire",
+            category = "electronics"
+          },
+          {
+            name = "angels-wire-coil-tin-converting",
+            category = "electronics-machine"
+          }
         }
-      })
+      )
     end
   end
 else
@@ -133,5 +133,5 @@ end
 if angelsmods.trigger.smelting_products["tin"].powder then
 else
   angelsmods.functions.add_flag("powder-tin", "hidden")
-  OV.disable_recipe({ "powder-tin" })
+  OV.disable_recipe({"powder-tin"})
 end

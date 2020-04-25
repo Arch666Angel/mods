@@ -5,7 +5,7 @@ data:extend(
       type = "recipe",
       name = "angels-warehouse",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 50},
         {type = "item", name = "iron-plate", amount = 100},
@@ -20,7 +20,7 @@ data:extend(
       type = "recipe",
       name = "angels-warehouse-passive-provider",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
@@ -35,7 +35,7 @@ data:extend(
       type = "recipe",
       name = "angels-warehouse-active-provider",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
@@ -50,7 +50,7 @@ data:extend(
       type = "recipe",
       name = "angels-warehouse-storage",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
@@ -65,7 +65,7 @@ data:extend(
       type = "recipe",
       name = "angels-warehouse-requester",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
@@ -80,7 +80,7 @@ data:extend(
       type = "recipe",
       name = "angels-warehouse-buffer",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},

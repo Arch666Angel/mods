@@ -62,7 +62,7 @@ for _, decoName in pairs(
         type = "recipe",
         name = buildingName,
         energy_required = 2,
-        enabled = "true",
+        enabled = true,
         ingredients = {
           {type = "item", name = "iron-plate", amount = 5},
           {type = "item", name = "steel-plate", amount = 5},

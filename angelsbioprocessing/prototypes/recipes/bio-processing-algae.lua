@@ -6,7 +6,7 @@ data:extend(
       name = "algae-brown",
       category = "bio-processing",
       subgroup = "bio-processing-brown",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "fluid", name = "water-saline", amount = 100}
@@ -22,7 +22,7 @@ data:extend(
       name = "algae-brown-burning", --burn for alkali (lithium, iod, kalzium)
       category = "smelting",
       subgroup = "bio-processing-brown",
-      enabled = "false",
+      enabled = false,
       energy_required = 7.5,
       ingredients = {
         {type = "item", name = "algae-brown", amount = 20}
@@ -38,7 +38,7 @@ data:extend(
       name = "algae-brown-burning-wash",
       category = "liquifying",
       subgroup = "bio-processing-brown",
-      enabled = "false",
+      enabled = false,
       energy_required = 7.5,
       ingredients = {
         {type = "item", name = "algae-brown", amount = 20},
@@ -55,7 +55,7 @@ data:extend(
       name = "solid-alginic-acid",
       category = "crafting",
       subgroup = "bio-processing-brown",
-      enabled = "false",
+      enabled = false,
       energy_required = 10,
       ingredients = {
         {type = "item", name = "algae-brown", amount = 10}
@@ -72,7 +72,7 @@ data:extend(
     -- icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
     -- category = "advanced-crafting",
     -- subgroup = "bio-processing-brown",
-    -- enabled = "false",
+    -- enabled = false,
     -- energy_required = 4,
     -- ingredients =
     -- {
@@ -93,7 +93,7 @@ data:extend(
       name = "algae-green-simple",
       category = "bio-processing",
       subgroup = "bio-processing-green",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       main_product = "algae-green",
       ingredients = {
@@ -122,7 +122,7 @@ data:extend(
       name = "algae-green",
       category = "bio-processing",
       subgroup = "bio-processing-green",
-      enabled = "false",
+      enabled = false,
       energy_required = 15,
       ingredients = {
         {type = "fluid", name = "water-mineralized", amount = 80},
@@ -150,7 +150,7 @@ data:extend(
       name = "cellulose-fiber-algae",
       category = "crafting",
       subgroup = "bio-processing-green",
-      enabled = "false",
+      enabled = false,
       energy_required = 3,
       ingredients = {
         {type = "item", name = "algae-green", amount = 10}
@@ -167,7 +167,7 @@ data:extend(
       name = "gas-methanol-from-wood",
       category = "liquifying",
       subgroup = "bio-processing-green",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 20}
@@ -175,10 +175,13 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-methanol", amount = 100}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_gas_recipe_icon({
-        { "__angelspetrochem__/graphics/icons/molecules/methanol.png", 72 },
-      }, "coh"),
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/methanol.png", 72}
+        },
+        "coh"
+      ),
       order = "k[gas-methanol-from-wood]"
     },
     --BLUE
@@ -187,7 +190,7 @@ data:extend(
       name = "algae-blue",
       category = "bio-processing",
       subgroup = "bio-processing-blue",
-      enabled = "false",
+      enabled = false,
       energy_required = 20,
       ingredients = {
         {type = "fluid", name = "water-yellow-waste", amount = 100},
@@ -205,7 +208,7 @@ data:extend(
       name = "blue-fiber-algae",
       category = "crafting",
       subgroup = "bio-processing-blue",
-      enabled = "false",
+      enabled = false,
       energy_required = 3,
       ingredients = {
         {type = "item", name = "algae-blue", amount = 10}
@@ -222,7 +225,7 @@ data:extend(
       name = "gas-ammonia-from-blue-fiber",
       category = "liquifying",
       subgroup = "bio-processing-blue",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "blue-cellulose-fiber", amount = 20}
@@ -230,10 +233,13 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-ammonia", amount = 100}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_gas_recipe_icon({
-        { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 },
-      }, "nhh"),
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72}
+        },
+        "nhh"
+      ),
       order = "c[gas-ammonia-from-blue-fiber]"
     },
     --RED
@@ -242,7 +248,7 @@ data:extend(
       name = "algae-red",
       category = "bio-processing",
       subgroup = "bio-processing-red",
-      enabled = "false",
+      enabled = false,
       energy_required = 20,
       ingredients = {
         {type = "fluid", name = "thermal-water", amount = 100},
@@ -260,7 +266,7 @@ data:extend(
       name = "red-fiber-algae",
       category = "crafting",
       subgroup = "bio-processing-red",
-      enabled = "false",
+      enabled = false,
       energy_required = 3,
       ingredients = {
         {type = "item", name = "algae-red", amount = 10}
@@ -277,7 +283,7 @@ data:extend(
       name = "solid-calcium-carbonate",
       category = "liquifying",
       subgroup = "bio-processing-red",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "red-cellulose-fiber", amount = 20}

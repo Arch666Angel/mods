@@ -1,7 +1,7 @@
 local rawmulti = angelsmods.marathon.rawmulti
 
-data:extend({
-
+data:extend(
+  {
     --ADVANCED GEMs
     {
       type = "recipe",
@@ -9,7 +9,7 @@ data:extend({
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       normal = {
         ingredients = {
           {type = "fluid", name = "crystal-seedling", amount = 50},
@@ -37,7 +37,7 @@ data:extend({
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       normal = {
         ingredients = {
           {type = "fluid", name = "crystal-seedling", amount = 50},
@@ -65,7 +65,7 @@ data:extend({
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       normal = {
         ingredients = {
           {type = "fluid", name = "crystal-seedling", amount = 50},
@@ -93,7 +93,7 @@ data:extend({
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       normal = {
         ingredients = {
           {type = "fluid", name = "crystal-seedling", amount = 50},
@@ -121,7 +121,7 @@ data:extend({
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       normal = {
         ingredients = {
           {type = "fluid", name = "crystal-seedling", amount = 50},
@@ -149,7 +149,7 @@ data:extend({
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       normal = {
         ingredients = {
           {type = "fluid", name = "crystal-seedling", amount = 50},
@@ -171,4 +171,5 @@ data:extend({
       icon_size = 32,
       order = "f[angelsore7-crystallization-6]"
     }
-})
+  }
+)
