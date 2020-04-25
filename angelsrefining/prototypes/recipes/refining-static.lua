@@ -7,8 +7,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "true",
-      ingredients = {{"angels-ore1", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-ore1", amount = 2}},
       results = {
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -23,8 +23,8 @@ data:extend(
       category = "crafting",
       subgroup = "processing-crafting",
       energy_required = 4,
-      enabled = "true",
-      ingredients = {{"angels-ore1", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-ore1", amount = 2}},
       results = {
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -39,8 +39,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {{"angels-ore2", 2}},
+      enabled = false,
+      ingredients = {{type = "item", name = "angels-ore2", amount = 2}},
       results = {
         {type = "item", name = "angels-ore2-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -55,8 +55,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "true",
-      ingredients = {{"angels-ore3", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-ore3", amount = 2}},
       results = {
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -71,8 +71,8 @@ data:extend(
       category = "crafting",
       subgroup = "processing-crafting",
       energy_required = 4,
-      enabled = "true",
-      ingredients = {{"angels-ore3", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-ore3", amount = 2}},
       results = {
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -87,8 +87,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {{"angels-ore4", 2}},
+      enabled = false,
+      ingredients = {{type = "item", name = "angels-ore4", amount = 2}},
       results = {
         {type = "item", name = "angels-ore4-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -103,8 +103,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "true",
-      ingredients = {{"angels-ore5", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-ore5", amount = 2}},
       results = {
         {type = "item", name = "angels-ore5-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -119,8 +119,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "true",
-      ingredients = {{"angels-ore6", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-ore6", amount = 2}},
       results = {
         {type = "item", name = "angels-ore6-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
@@ -136,7 +136,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "item", name = "angels-ore2-crushed", amount = 2},
@@ -155,7 +155,7 @@ data:extend(
       category = "ore-sorting-t1-5",
       subgroup = "ore-processing-a",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore8-crushed", amount = 3},
         {type = "item", name = "milling-drum", amount = 1}
@@ -175,7 +175,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "item", name = "angels-ore4-crushed", amount = 2},
@@ -194,7 +194,7 @@ data:extend(
       category = "ore-sorting-t1-5",
       subgroup = "ore-processing-a",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore9-crushed", amount = 3},
         {type = "item", name = "milling-drum", amount = 1}
@@ -215,7 +215,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -235,7 +235,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore2-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -255,7 +255,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -275,7 +275,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore4-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -295,7 +295,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore5-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -315,7 +315,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore6-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -336,7 +336,7 @@ data:extend(
       category = "chemistry",
       subgroup = "ore-processing-b",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore8-powder", amount = 3},
         {type = "item", name = "angels-ore1-chunk", amount = 1},
@@ -358,7 +358,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore8-sludge", amount = 4}
         --{type="item", name="solid-sodium-hydroxide", amount=2},
@@ -378,7 +378,7 @@ data:extend(
       category = "chemistry",
       subgroup = "ore-processing-b",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore9-powder", amount = 3},
         {type = "item", name = "angels-ore3-chunk", amount = 1},
@@ -400,7 +400,7 @@ data:extend(
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore9-sludge", amount = 4}
         --{type="item", name="solid-sodium-hydroxide", amount=2},
@@ -421,7 +421,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore1-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
@@ -439,7 +439,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore2-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
@@ -457,7 +457,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore3-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
@@ -475,7 +475,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore4-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
@@ -493,7 +493,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore5-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
@@ -511,7 +511,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore6-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
@@ -530,7 +530,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore8-dust", amount = 3},
         {type = "item", name = "angels-ore1-crystal", amount = 1},
@@ -551,7 +551,7 @@ data:extend(
       category = "filtering",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore8-solution", amount = 60},
         {type = "fluid", name = "water-purified", amount = 50},
@@ -573,7 +573,7 @@ data:extend(
       category = "ore-sorting-t3-5",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore8-slime", amount = 60}
         --{type="fluid", name="liquid-ferric-chloride-solution", amount=2},
@@ -594,7 +594,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore8-anode-sludge", amount = 60}
       },
@@ -611,7 +611,7 @@ data:extend(
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore9-dust", amount = 3},
         {type = "item", name = "angels-ore3-crystal", amount = 1},
@@ -632,7 +632,7 @@ data:extend(
       category = "filtering",
       subgroup = "ore-processing-c",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore9-solution", amount = 60},
         {type = "fluid", name = "water-purified", amount = 50},
@@ -654,7 +654,7 @@ data:extend(
       category = "ore-sorting-t3-5",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore9-slime", amount = 60}
         --{type="fluid", name="liquid-cupric-chloride-solution", amount=2},
@@ -675,7 +675,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "angels-ore9-anode-sludge", amount = 60}
       },
@@ -693,7 +693,7 @@ data:extend(
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore1-crystal", amount = 4}
       },
@@ -710,7 +710,7 @@ data:extend(
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore2-crystal", amount = 4}
       },
@@ -727,7 +727,7 @@ data:extend(
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore3-crystal", amount = 4}
       },
@@ -744,7 +744,7 @@ data:extend(
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore4-crystal", amount = 4}
       },
@@ -761,7 +761,7 @@ data:extend(
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore5-crystal", amount = 4}
       },
@@ -778,7 +778,7 @@ data:extend(
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-ore6-crystal", amount = 4}
       },
@@ -796,7 +796,7 @@ data:extend(
       category = "crafting",
       subgroup = "processing-crafting",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 1},
         {type = "item", name = "iron-plate", amount = 1}
@@ -814,7 +814,7 @@ data:extend(
       category = "crafting",
       subgroup = "processing-crafting",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "coal", amount = 1},
         {type = "item", name = "filter-frame", amount = 5}
@@ -832,7 +832,7 @@ data:extend(
       category = "crafting",
       subgroup = "processing-crafting",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "filter-frame", amount = 1}
       },
@@ -849,7 +849,7 @@ data:extend(
       category = "crafting-with-fluid",
       subgroup = "processing-crafting",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "filter-ceramic-used", amount = 1},
         {type = "fluid", name = "water-purified", amount = 50}
@@ -867,7 +867,7 @@ data:extend(
       category = "crafting-with-fluid",
       subgroup = "processing-crafting",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 1},
         {type = "fluid", name = "lubricant", amount = 10}
@@ -885,7 +885,7 @@ data:extend(
       category = "crafting-with-fluid",
       subgroup = "processing-crafting",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "milling-drum-used", amount = 1},
         {type = "fluid", name = "lubricant", amount = 10}
@@ -903,18 +903,20 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
-      ingredients =
-      {
+      enabled = false,
+      ingredients = {
         {type = "item", name = "slag", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results =
-      {
+      results = {
         {type = "fluid", name = "slag-slurry", amount = 50}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {142,079,028}, {107,062,021}, {075,040,015} }, { "slag" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{142, 079, 028}, {107, 062, 021}, {075, 040, 015}},
+        {"slag"}
+      ),
       order = "i [slag-processing-dissolution]"
     },
     {
@@ -923,7 +925,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "stone-crushed", amount = 25},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -931,8 +933,12 @@ data:extend(
       results = {
         {type = "fluid", name = "slag-slurry", amount = 50}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {142,079,028}, {107,062,021}, {075,040,015} }, { "stone-crushed" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{142, 079, 028}, {107, 062, 021}, {075, 040, 015}},
+        {"stone-crushed"}
+      ),
       order = "j [stone-crushed-dissolution]"
     },
     --FILTERING
@@ -942,7 +948,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "slag-slurry", amount = 50},
         {type = "fluid", name = "water-purified", amount = 50},
@@ -963,7 +969,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "slag-slurry", amount = 35},
         {type = "fluid", name = "water-purified", amount = 50},
@@ -984,7 +990,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 4,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "thermal-water", amount = 50},
         {type = "item", name = "filter-coal", amount = 1}
@@ -1003,7 +1009,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "thermal-water", amount = 35},
         {type = "item", name = "filter-ceramic", amount = 1}
@@ -1024,7 +1030,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-blue", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1032,8 +1038,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 20}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-blue" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-blue"}
+      ),
       order = "a [geode-blue-liquify]"
     },
     {
@@ -1042,7 +1052,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-cyan", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1050,8 +1060,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-cyan" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-cyan"}
+      ),
       order = "b [geode-cyan-liquify]"
     },
     {
@@ -1060,7 +1074,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-lightgreen", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1068,8 +1082,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-lightgreen" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-lightgreen"}
+      ),
       order = "c [geode-lightgreen-liquify]"
     },
     {
@@ -1078,7 +1096,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-purple", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1086,8 +1104,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 40}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-purple" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-purple"}
+      ),
       order = "d [geode-purple-liquify]"
     },
     {
@@ -1096,7 +1118,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-red", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1104,8 +1126,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 20}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-red" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-red"}
+      ),
       order = "e [geode-red-liquify]"
     },
     {
@@ -1114,7 +1140,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-yellow", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1122,8 +1148,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 30}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "geode-yellow" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-yellow"}
+      ),
       order = "f [geode-yellow-liquify]"
     },
     {
@@ -1132,7 +1162,7 @@ data:extend(
       category = "liquifying",
       subgroup = "liquifying",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "crystal-dust", amount = 10},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
@@ -1140,8 +1170,12 @@ data:extend(
       results = {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "crystal-dust" }),
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"crystal-dust"}
+      ),
       order = "g"
     },
     --FILTERING
@@ -1151,7 +1185,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "crystal-slurry", amount = 50},
         {type = "fluid", name = "water-purified", amount = 50},
@@ -1172,7 +1206,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "crystal-slurry", amount = 35},
         {type = "fluid", name = "water-purified", amount = 50},
@@ -1193,7 +1227,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 3,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "crystal-slurry", amount = 50},
         {type = "fluid", name = "water-mineralized", amount = 100},
@@ -1214,7 +1248,7 @@ data:extend(
       category = "filtering",
       subgroup = "filtering",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "crystal-slurry", amount = 35},
         {type = "fluid", name = "water-mineralized", amount = 100},
@@ -1236,7 +1270,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "mineral-sludge", amount = 25}
       },
@@ -1253,7 +1287,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "fluid", name = "crystal-seedling", amount = 25}
       },
@@ -1270,7 +1304,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "geode-crystallization",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "catalysator-brown", amount = 2},
         {type = "item", name = "catalysator-green", amount = 2}
@@ -1290,8 +1324,8 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = "true",
-      ingredients = {{"angels-iron-pebbles", 4}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-iron-pebbles", amount = 4}},
       results = {
         {type = "item", name = "iron-plate", amount = 2}
       },
@@ -1305,8 +1339,8 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = "true",
-      ingredients = {{"angels-iron-nugget", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-iron-nugget", amount = 2}},
       results = {
         {type = "item", name = "iron-plate", amount = 3}
       },
@@ -1320,8 +1354,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "true",
-      ingredients = {{"iron-ore", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "iron-ore", amount = 2}},
       results = {
         {type = "item", name = "angels-iron-pebbles", amount = 4}
       },
@@ -1336,8 +1370,8 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = "true",
-      ingredients = {{"angels-copper-pebbles", 4}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-copper-pebbles", amount = 4}},
       results = {
         {type = "item", name = "copper-plate", amount = 2}
       },
@@ -1351,8 +1385,8 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = "true",
-      ingredients = {{"angels-copper-nugget", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "angels-copper-nugget", amount = 2}},
       results = {
         {type = "item", name = "copper-plate", amount = 3}
       },
@@ -1366,8 +1400,8 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "true",
-      ingredients = {{"copper-ore", 2}},
+      enabled = true,
+      ingredients = {{type = "item", name = "copper-ore", amount = 2}},
       results = {
         {type = "item", name = "angels-copper-pebbles", amount = 4}
       },

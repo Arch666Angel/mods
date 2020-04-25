@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: ???
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 20.04.2020
   Changes:
@@ -20,7 +25,7 @@ Date: 12.04.2020
     - General:
       - Reduced the collision box so you can walk past them (#163)
         - Reduced collision box of the Construction and Zone expanders to the size of a medium power pole
-        - Reduced collsion box of the Recharge Stations to the size of a big power pole 
+        - Reduced collsion box of the Recharge Stations to the size of a big power pole
       - Increased connection distance for Construction Zone Expanders and Remote Charging Station MK2 to fit with big power poles
       - Increased construction area on Construction Zone Expanders to fit with big power poles
       - Removed the logistics zone on the Construction Zone Expanders as these are obsolete in 0.18

@@ -7,7 +7,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-blue", amount = 2}
       },
@@ -25,7 +25,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-purple", amount = 2}
       },
@@ -43,7 +43,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-yellow", amount = 2}
       },
@@ -61,7 +61,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-lightgreen", amount = 2}
       },
@@ -79,7 +79,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-cyan", amount = 2}
       },
@@ -97,7 +97,7 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "geode-red", amount = 2}
       },

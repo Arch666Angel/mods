@@ -186,7 +186,7 @@ if bobmods and bobmods.plates then
   end
   OV.patch_recipes(
     {
-      {name = "steel-plate", ingredients = {{"iron-plate", 8}}}
+      {name = "steel-plate", ingredients = {{type = "item", name = "iron-plate", amount = 8}}}
     }
   )
 end

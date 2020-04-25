@@ -155,7 +155,7 @@ if bobmods then
             {
               icon = "__bobplates__/graphics/icons/resin.png"
             },
-            (not mods["angelsbioprocessing"]) and
+            not mods["angelsbioprocessing"] and
               {
                 icon = "__angelsrefining__/graphics/icons/num_2.png",
                 tint = angelsmods.petrochem.number_tint,
@@ -189,7 +189,7 @@ if bobmods then
           name = "bob-rubber",
           ingredients = {
             {"!!"},
-            {"resin", 3}
+            {type = "item", name = "resin", amount = 3}
           },
           subgroup = "petrochem-solids-2",
           order = "b[rubber]-b[solid]-a",
@@ -374,7 +374,7 @@ if bobmods then
       {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
     )
     data.raw["recipe"]["liquid-fuel"].icon = nil
-    data.raw["recipe"]["liquid-fuel"].always_show_products = "true"
+    data.raw["recipe"]["liquid-fuel"].always_show_products = true
 
     OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
   end

@@ -26,11 +26,11 @@ data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 --if bobmods and bobmods.plates then
 require("prototypes.override.refining-override-bobgems")
 if mods["bobplates"] then
---revamp override
-if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
-  OV.global_replace_item("brine","water-saline")
-  OV.disable_recipe("brine")
-end
+  --revamp override
+  if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+    OV.global_replace_item("brine", "water-saline")
+    OV.disable_recipe("brine")
+  end
   --OVERRIDE BARRELING
   if data.raw["item-subgroup"]["bob-gas-bottle"] then
     data.raw.item["empty-canister"].subgroup = "angels-fluid-control"
@@ -62,7 +62,7 @@ end
 
     --local fluid_n=data.raw["fluid"]
     for _, fluid_n in pairs(data.raw.fluid) do
-      if not (fluid_n.auto_barrel == false or fluid_n.auto_barrel == "false") then
+      if not (fluid_n.auto_barrel == false or fluid_n.auto_barrel == false) then
         if string.sub(fluid_n.name, 1, 3) == "gas" then
           OV.barrel_overrides(fluid_n.name, "gas")
         elseif not string.find(fluid_n.name, "acid") == nil or string.sub(fluid_n.name, -4) == "acid" then
@@ -81,8 +81,6 @@ end
     OV.barrel_overrides("liquid-ferric-chloride-solution", "acid")
     OV.barrel_overrides("liquid-cupric-chloride-solution", "acid")
   end
-
-
 end
 
 --OVERRIDE FOR YUOKI
@@ -134,7 +132,7 @@ if data.raw.item["y-res1"] then
         category = "crystallizing",
         subgroup = "slag-processing-1",
         energy_required = 8,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -152,7 +150,7 @@ if data.raw.item["y-res1"] then
         category = "ore-sorting",
         subgroup = "ore-sorting-advanced",
         energy_required = 1.5,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "item", name = "angels-ore1-chunk", amount = 2},
           {type = "item", name = "angels-ore3-chunk", amount = 2},
@@ -171,7 +169,7 @@ if data.raw.item["y-res1"] then
         category = "ore-sorting",
         subgroup = "ore-sorting-advanced",
         energy_required = 1.5,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "item", name = "angels-ore2-chunk", amount = 2},
           {type = "item", name = "angels-ore4-chunk", amount = 2},
@@ -190,7 +188,7 @@ if data.raw.item["y-res1"] then
         category = "water-treatment",
         subgroup = "water-treatment",
         energy_required = 1,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "fluid", name = "water-yellow-waste", amount = 100}
         },
@@ -261,7 +259,7 @@ if data.raw.item["uraninite"] then
         category = "crystallizing",
         subgroup = "slag-processing-1",
         energy_required = 8,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -279,7 +277,7 @@ if data.raw.item["uraninite"] then
         category = "ore-sorting",
         subgroup = "ore-sorting-advanced",
         energy_required = 1.5,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "item", name = "angels-ore1-crystal", amount = 2},
           {type = "item", name = "angels-ore5-crystal", amount = 2},
@@ -299,7 +297,7 @@ if data.raw.item["uraninite"] then
         category = "ore-sorting",
         subgroup = "ore-sorting-advanced",
         energy_required = 1.5,
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "item", name = "angels-ore2-crystal", amount = 2},
           {type = "item", name = "angels-ore3-crystal", amount = 2},
@@ -353,7 +351,7 @@ end
 -- category = "crystallizing",
 -- subgroup = "slag-processing-1",
 -- energy_required = 8,
--- enabled = "false",
+-- enabled = false,
 -- ingredients ={
 -- {type="fluid", name="mineral-sludge", amount=50},
 -- },
@@ -370,7 +368,7 @@ end
 -- category = "ore-sorting",
 -- subgroup = "ore-sorting-advanced",
 -- energy_required = 1.5,
--- enabled = "false",
+-- enabled = false,
 -- ingredients ={
 -- {type="item", name="angels-ore3-crystal", amount=2},
 -- {type="item", name="angels-ore4-crystal", amount=2},

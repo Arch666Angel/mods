@@ -9,7 +9,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -42,7 +42,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -75,7 +75,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -108,7 +108,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -141,7 +141,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -177,18 +177,18 @@ data:extend(
       energy_required = 1.5,
       allow_decomposition = false,
       normal = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore8-crystal", 9}
+          {type = "item", name = "angels-ore8-crystal", amount = 9}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore8-crystal", 10 * rawmulti}
+          {type = "item", name = "angels-ore8-crystal", amount = 10 * rawmulti}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
@@ -209,18 +209,18 @@ data:extend(
       energy_required = 1.5,
       allow_decomposition = false,
       normal = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore9-crystal", 9}
+          {type = "item", name = "angels-ore9-crystal", amount = 9}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore9-crystal", 10 * rawmulti}
+          {type = "item", name = "angels-ore9-crystal", amount = 10 * rawmulti}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
@@ -242,7 +242,7 @@ data:extend(
       energy_required = 1.5,
       allow_decomposition = false,
       normal = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "item", name = "angels-ore8-crystal", amount = 2},
           {type = "item", name = "angels-ore9-crystal", amount = 2},
@@ -253,7 +253,7 @@ data:extend(
         }
       },
       expensive = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
           {type = "item", name = "angels-ore8-crystal", amount = 3 * rawmulti},
           {type = "item", name = "angels-ore9-crystal", amount = 3 * rawmulti},

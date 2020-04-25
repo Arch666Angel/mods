@@ -12,8 +12,7 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].ingot then
-  if angelsmods.trigger.smelting_products["silicon"].mono or
-     angelsmods.trigger.smelting_products["silicon"].wafer then
+  if angelsmods.trigger.smelting_products["silicon"].mono or angelsmods.trigger.smelting_products["silicon"].wafer then
   else
     -- no need for molten recipe
     data.raw.fluid["liquid-molten-silicon"].hidden = true
@@ -37,40 +36,44 @@ end
 -- MONO -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].mono then
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     OV.global_replace_item("silicon", "angels-mono-silicon")
     angelsmods.functions.add_flag("silicon", "hidden")
-    OV.disable_recipe({ "bob-silicon-plate" })
+    OV.disable_recipe({"bob-silicon-plate"})
   end
 else
   angelsmods.functions.add_flag("angels-mono-silicon-seed", "hidden")
   angelsmods.functions.add_flag("angels-quartz-crucible", "hidden")
   angelsmods.functions.add_flag("angels-mono-silicon", "hidden")
-  OV.disable_recipe({"angels-mono-silicon-seed", "angels-mono-silicon-1", "angels-mono-silicon-2", "angels-quartz-crucible"})
+  OV.disable_recipe(
+    {"angels-mono-silicon-seed", "angels-mono-silicon-1", "angels-mono-silicon-2", "angels-quartz-crucible"}
+  )
 end
 
 -------------------------------------------------------------------------------
 -- WAFER ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].wafer then
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     OV.global_replace_item("angels-silicon-wafer", "silicon-wafer")
     angelsmods.functions.add_flag("angels-silicon-wafer", "hidden")
-    OV.disable_recipe({ "angels-silicon-wafer" })
+    OV.disable_recipe({"angels-silicon-wafer"})
 
     angelsmods.functions.move_item("silicon-wafer", "angels-silicon-casting", "l[angels-silicon-wafer]")
-    OV.patch_recipes({
+    OV.patch_recipes(
       {
-        name = "silicon-wafer",
-        energy_required = 1,
-        results = {
-          {"silicon-wafer", 6}
-        },
-        subgroup = "angels-silicon-casting",
-        order = "l[angels-silicon-wafer]",
+        {
+          name = "silicon-wafer",
+          energy_required = 1,
+          results = {
+            {type = "item", name = "silicon-wafer", amount = 6}
+          },
+          subgroup = "angels-silicon-casting",
+          order = "l[angels-silicon-wafer]"
+        }
       }
-    })
-    OV.add_prereq( "silicon-processing", "angels-silicon-smelting-1" )
+    )
+    OV.add_prereq("silicon-processing", "angels-silicon-smelting-1")
   end
 else
   angelsmods.functions.add_flag("angels-silicon-wafer", "hidden")
@@ -81,39 +84,43 @@ end
 -- POWDER ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].powder then
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     OV.global_replace_item("powder-silicon", "silicon-powder")
     angelsmods.functions.add_flag("powder-silicon", "hidden")
-    OV.disable_recipe({ "powder-silicon" })
+    OV.disable_recipe({"powder-silicon"})
 
     angelsmods.functions.move_item("silicon-powder", "angels-silicon", "g")
     data.raw.item["silicon-powder"].icon = "__angelssmelting__/graphics/icons/powder-silica.png"
     data.raw.item["silicon-powder"].icon_size = 32
     data.raw.item["silicon-powder"].localised_name = {"item-name.powder-silicon"}
-    OV.patch_recipes({
+    OV.patch_recipes(
       {
-        name = "silicon-powder",
-        subgroup = "angels-silicon",
-        ingredients = {
-          {"!!"},
-          {"ingot-silicon", 1},
-        },
-        order = "g[bobs-silicon]"
+        {
+          name = "silicon-powder",
+          subgroup = "angels-silicon",
+          ingredients = {
+            {"!!"},
+            {"ingot-silicon", 1}
+          },
+          order = "g[bobs-silicon]"
+        }
       }
-    })
-    OV.add_prereq( "silicon-processing", "angels-silicon-smelting-1" )
+    )
+    OV.add_prereq("silicon-processing", "angels-silicon-smelting-1")
   end
 
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     -- silicon powder derivatives
     angelsmods.functions.move_item("silicon-nitride", "angels-silicon-casting", "m[bobs-silicon]-a")
     angelsmods.functions.move_item("silicon-carbide", "angels-silicon-casting", "m[bobs-silicon]-b")
-    OV.patch_recipes({
-      { name = "silicon-nitride", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-a" },
-      { name = "silicon-carbide", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-b" },
-    })
+    OV.patch_recipes(
+      {
+        {name = "silicon-nitride", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-a"},
+        {name = "silicon-carbide", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-b"}
+      }
+    )
   end
 else
   angelsmods.functions.add_flag("powder-silicon", "hidden")
-  OV.disable_recipe({ "powder-silicon" })
+  OV.disable_recipe({"powder-silicon"})
 end
