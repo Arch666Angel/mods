@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.6
+Version: 0.6.7
 Date: ???
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: 20.04.2020
   Bugfixes:
     - Replaced the tutorial grid with the duplicated concrete brick tiles #198 (tutorial grid doesnt remember hidden tiles, so now underlying tile is grass-1)
     - Special vanilla:

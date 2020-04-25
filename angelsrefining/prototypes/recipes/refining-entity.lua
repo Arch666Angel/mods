@@ -5,9 +5,9 @@ data:extend(
       type = "recipe",
       name = "burner-ore-crusher",
       energy_required = 5,
-      enabled = "true",
+      enabled = true,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "burner-ore-crusher"
     },
@@ -15,9 +15,9 @@ data:extend(
       type = "recipe",
       name = "ore-crusher",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"burner-ore-crusher", 1}
+        {type = "item", name = "burner-ore-crusher", amount = 1}
       },
       result = "ore-crusher"
     },
@@ -25,9 +25,9 @@ data:extend(
       type = "recipe",
       name = "ore-crusher-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-crusher", 1}
+        {type = "item", name = "ore-crusher", amount = 1}
       },
       result = "ore-crusher-2"
     },
@@ -35,9 +35,9 @@ data:extend(
       type = "recipe",
       name = "ore-crusher-3",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-crusher-2", 1}
+        {type = "item", name = "ore-crusher-2", amount = 1}
       },
       result = "ore-crusher-3"
     },
@@ -46,9 +46,9 @@ data:extend(
       type = "recipe",
       name = "ore-floatation-cell",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-floatation-cell"
     },
@@ -56,9 +56,9 @@ data:extend(
       type = "recipe",
       name = "ore-floatation-cell-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-floatation-cell", 1}
+        {type = "item", name = "ore-floatation-cell", amount = 1}
       },
       result = "ore-floatation-cell-2"
     },
@@ -66,9 +66,9 @@ data:extend(
       type = "recipe",
       name = "ore-floatation-cell-3",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-floatation-cell-2", 1}
+        {type = "item", name = "ore-floatation-cell-2", amount = 1}
       },
       result = "ore-floatation-cell-3"
     },
@@ -77,9 +77,9 @@ data:extend(
       type = "recipe",
       name = "ore-leaching-plant",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-leaching-plant"
     },
@@ -87,9 +87,9 @@ data:extend(
       type = "recipe",
       name = "ore-leaching-plant-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-leaching-plant", 1}
+        {type = "item", name = "ore-leaching-plant", amount = 1}
       },
       result = "ore-leaching-plant-2"
     },
@@ -97,9 +97,9 @@ data:extend(
       type = "recipe",
       name = "ore-leaching-plant-3",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-leaching-plant-2", 1}
+        {type = "item", name = "ore-leaching-plant-2", amount = 1}
       },
       result = "ore-leaching-plant-3"
     },
@@ -108,9 +108,9 @@ data:extend(
       type = "recipe",
       name = "ore-refinery",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-refinery"
     },
@@ -118,9 +118,9 @@ data:extend(
       type = "recipe",
       name = "ore-refinery-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-refinery", 1}
+        {type = "item", name = "ore-refinery", amount = 1}
       },
       result = "ore-refinery-2"
     },
@@ -129,9 +129,9 @@ data:extend(
       type = "recipe",
       name = "ore-sorting-facility",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-sorting-facility"
     },
@@ -139,9 +139,9 @@ data:extend(
       type = "recipe",
       name = "ore-sorting-facility-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-sorting-facility", 1}
+        {type = "item", name = "ore-sorting-facility", amount = 1}
       },
       result = "ore-sorting-facility-2"
     },
@@ -149,9 +149,9 @@ data:extend(
       type = "recipe",
       name = "ore-sorting-facility-3",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-sorting-facility-2", 1}
+        {type = "item", name = "ore-sorting-facility-2", amount = 1}
       },
       result = "ore-sorting-facility-3"
     },
@@ -159,9 +159,9 @@ data:extend(
       type = "recipe",
       name = "ore-sorting-facility-4",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"ore-sorting-facility-3", 1}
+        {type = "item", name = "ore-sorting-facility-3", amount = 1}
       },
       result = "ore-sorting-facility-4"
     },
@@ -170,9 +170,9 @@ data:extend(
       type = "recipe",
       name = "filtration-unit",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "filtration-unit"
     },
@@ -180,9 +180,9 @@ data:extend(
       type = "recipe",
       name = "filtration-unit-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"filtration-unit", 1}
+        {type = "item", name = "filtration-unit", amount = 1}
       },
       result = "filtration-unit-2"
     },
@@ -191,9 +191,9 @@ data:extend(
       type = "recipe",
       name = "crystallizer",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "crystallizer"
     },
@@ -201,9 +201,9 @@ data:extend(
       type = "recipe",
       name = "crystallizer-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"crystallizer", 1}
+        {type = "item", name = "crystallizer", amount = 1}
       },
       result = "crystallizer-2"
     },
@@ -212,9 +212,9 @@ data:extend(
       type = "recipe",
       name = "liquifier",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "liquifier"
     },
@@ -222,9 +222,9 @@ data:extend(
       type = "recipe",
       name = "liquifier-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"liquifier", 1}
+        {type = "item", name = "liquifier", amount = 1}
       },
       result = "liquifier-2"
     },
@@ -232,9 +232,9 @@ data:extend(
       type = "recipe",
       name = "liquifier-3",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"liquifier-2", 1}
+        {type = "item", name = "liquifier-2", amount = 1}
       },
       result = "liquifier-3"
     },
@@ -242,9 +242,9 @@ data:extend(
       type = "recipe",
       name = "liquifier-4",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"liquifier-3", 1}
+        {type = "item", name = "liquifier-3", amount = 1}
       },
       result = "liquifier-4"
     },
@@ -253,9 +253,9 @@ data:extend(
       type = "recipe",
       name = "thermal-extractor",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "thermal-extractor"
     },
@@ -264,9 +264,9 @@ data:extend(
       type = "recipe",
       name = "hydro-plant",
       energy_required = 10,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "hydro-plant"
     },
@@ -274,9 +274,9 @@ data:extend(
       type = "recipe",
       name = "hydro-plant-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"hydro-plant", 1}
+        {type = "item", name = "hydro-plant", amount = 1}
       },
       result = "hydro-plant-2"
     },
@@ -284,9 +284,9 @@ data:extend(
       type = "recipe",
       name = "hydro-plant-3",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"hydro-plant-2", 1}
+        {type = "item", name = "hydro-plant-2", amount = 1}
       },
       result = "hydro-plant-3"
     },
@@ -295,9 +295,9 @@ data:extend(
       type = "recipe",
       name = "salination-plant",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "salination-plant"
     },
@@ -305,9 +305,9 @@ data:extend(
       type = "recipe",
       name = "salination-plant-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"salination-plant", 1}
+        {type = "item", name = "salination-plant", amount = 1}
       },
       result = "salination-plant-2"
     },
@@ -316,9 +316,9 @@ data:extend(
       type = "recipe",
       name = "washing-plant",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "washing-plant"
     },
@@ -326,9 +326,9 @@ data:extend(
       type = "recipe",
       name = "washing-plant-2",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"washing-plant", 1}
+        {type = "item", name = "washing-plant", amount = 1}
       },
       result = "washing-plant-2"
     },
@@ -337,9 +337,9 @@ data:extend(
       type = "recipe",
       name = "seafloor-pump",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "seafloor-pump"
     },
@@ -348,9 +348,9 @@ data:extend(
       type = "recipe",
       name = "clarifier",
       energy_required = 5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "clarifier"
     },
@@ -361,7 +361,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "barreling-pump"
     },
@@ -372,7 +372,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-powderizer"
     },
@@ -382,7 +382,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-powderizer-2"
     },
@@ -392,7 +392,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "ore-powderizer-3"
     },
@@ -403,7 +403,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "electro-whinning-cell"
     },
@@ -413,7 +413,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "electro-whinning-cell-2"
     },
@@ -423,7 +423,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {"angels-void", 1}
+        {type = "item", name = "angels-void", amount = 1}
       },
       result = "electro-whinning-cell-3"
     }

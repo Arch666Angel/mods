@@ -9,7 +9,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -42,7 +42,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -75,7 +75,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {

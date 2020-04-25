@@ -124,15 +124,15 @@ if mods["bobmodules"] then
   -- MODULES
   if angelsmods.industries and angelsmods.industries.overhaul then
     OV.patch_recipes({
-      { name = "speed-module", ingredients = { {"crystal-splinter-blue", 0} } },
-      { name = "speed-module-2", ingredients = { {"crystal-shard-blue", 0} } },
-      { name = "speed-module-3", ingredients = { {"crystal-full-blue", 0} } },
-      { name = "productivity-module", ingredients = { {"crystal-splinter-red", 0} } },
-      { name = "productivity-module-2", ingredients = { {"crystal-shard-red", 0} } },
-      { name = "productivity-module-3", ingredients = { {"crystal-full-red", 0} } },
-      { name = "effectivity-module", ingredients = { {"crystal-splinter-green", 0} } },
-      { name = "effectivity-module-2", ingredients = { {"crystal-shard-green", 0} } },
-      { name = "effectivity-module-3", ingredients = { {"crystal-full-green", 0} } },
+      { name = "speed-module", ingredients = { {type="item", name="crystal-splinter-blue", amount = 0} } },
+      { name = "speed-module-2", ingredients = { {type="item", name="crystal-shard-blue", amount = 0} } },
+      { name = "speed-module-3", ingredients = { {type="item", name="crystal-full-blue", amount = 0} } },
+      { name = "productivity-module", ingredients = { {type="item", name="crystal-splinter-red", amount = 0} } },
+      { name = "productivity-module-2", ingredients = { {type="item", name="crystal-shard-red", amount = 0} } },
+      { name = "productivity-module-3", ingredients = { {type="item", name="crystal-full-red", amount = 0} } },
+      { name = "effectivity-module", ingredients = { {type="item", name="crystal-splinter-green", amount = 0} } },
+      { name = "effectivity-module-2", ingredients = { {type="item", name="crystal-shard-green", amount = 0} } },
+      { name = "effectivity-module-3", ingredients = { {type="item", name="crystal-full-green", amount = 0} } },
     })
     OV.remove_prereq("speed-module", "bio-processing-crystal-1")
     OV.remove_prereq("productivity-module", "bio-processing-crystal-1")
@@ -146,21 +146,21 @@ if mods["bobmodules"] then
   end
 
   OV.patch_recipes({
-    { name = "speed-processor", ingredients = { {"crystal-splinter-blue", 1} } },
-    { name = "speed-processor-2", ingredients = { {"crystal-shard-blue", 1} } },
-    { name = "speed-processor-3", ingredients = { {"crystal-full-blue", 1} } },
-    { name = "productivity-processor", ingredients = { {"crystal-splinter-red", 1} } },
-    { name = "productivity-processor-2", ingredients = { {"crystal-shard-red", 1} } },
-    { name = "productivity-processor-3", ingredients = { {"crystal-full-red", 1} } },
-    { name = "effectivity-processor", ingredients = { {"crystal-splinter-green", 1} } },
-    { name = "effectivity-processor-2", ingredients = { {"crystal-shard-green", 1} } },
-    { name = "effectivity-processor-3", ingredients = { {"crystal-full-green", 1} } },
-    { name = "pollution-clean-processor", ingredients = { {"crystal-splinter-harmonic", 1} } },
-    { name = "pollution-clean-processor-2", ingredients = { {"crystal-shard-harmonic", 1} } },
-    { name = "pollution-clean-processor-3", ingredients = { {"crystal-full-harmonic", 1} } },
-    { name = "pollution-create-processor", ingredients = { {"crystal-splinter-harmonic", 1} } },
-    { name = "pollution-create-processor-2", ingredients = { {"crystal-shard-harmonic", 1} } },
-    { name = "pollution-create-processor-3", ingredients = { {"crystal-full-harmonic", 1} } },
+    { name = "speed-processor", ingredients = { {type="item", name="crystal-splinter-blue", amount = 1} } },
+    { name = "speed-processor-2", ingredients = { {type="item", name="crystal-shard-blue", amount = 1} } },
+    { name = "speed-processor-3", ingredients = { {type="item", name="crystal-full-blue", amount = 1} } },
+    { name = "productivity-processor", ingredients = { {type="item", name="crystal-splinter-red", amount = 1} } },
+    { name = "productivity-processor-2", ingredients = { {type="item", name="crystal-shard-red", amount = 1} } },
+    { name = "productivity-processor-3", ingredients = { {type="item", name="crystal-full-red", amount = 1} } },
+    { name = "effectivity-processor", ingredients = { {type="item", name="crystal-splinter-green", amount = 1} } },
+    { name = "effectivity-processor-2", ingredients = { {type="item", name="crystal-shard-green", amount = 1} } },
+    { name = "effectivity-processor-3", ingredients = { {type="item", name="crystal-full-green", amount = 1} } },
+    { name = "pollution-clean-processor", ingredients = { {type="item", name="crystal-splinter-harmonic", amount = 1} } },
+    { name = "pollution-clean-processor-2", ingredients = { {type="item", name="crystal-shard-harmonic", amount = 1} } },
+    { name = "pollution-clean-processor-3", ingredients = { {type="item", name="crystal-full-harmonic", amount = 1} } },
+    { name = "pollution-create-processor", ingredients = { {type="item", name="crystal-splinter-harmonic", amount = 1} } },
+    { name = "pollution-create-processor-2", ingredients = { {type="item", name="crystal-shard-harmonic", amount = 1} } },
+    { name = "pollution-create-processor-3", ingredients = { {type="item", name="crystal-full-harmonic", amount = 1} } },
   })
 
   OV.add_prereq("modules", "bio-processing-crystal-1")
@@ -209,9 +209,9 @@ if mods["bobmodules"] then
         count = 100,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type="item", name="automation-science-pack", amount = 1},
+          {type="item", name="logistic-science-pack", amount = 1},
+          {type="item", name="chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -274,9 +274,9 @@ if mods["bobmodules"] then
         count = 100,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type="item", name="automation-science-pack", amount = 1},
+          {type="item", name="logistic-science-pack", amount = 1},
+          {type="item", name="chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -309,15 +309,15 @@ if mods["bobmodules"] then
   -- BEACONS
   if angelsmods.industries and angelsmods.industries.overhaul then
     OV.patch_recipes({
-      { name = "beacon", ingredients = { {"crystal-full-harmonic", 0} } },
+      { name = "beacon", ingredients = { {type="item", name="crystal-full-harmonic", amount = 0} } },
     })
     OV.remove_prereq("effect-transmission", "bio-processing-crystal-3")
   end
 
   OV.patch_recipes({
-    { name = "beacon", ingredients = { {"crystal-splinter-harmonic", 1} } },
-    { name = "beacon-2", ingredients = { {"crystal-shard-harmonic", 1} } },
-    { name = "beacon-3", ingredients = { {"crystal-full-harmonic", 1} } },
+    { name = "beacon", ingredients = { {type="item", name="crystal-splinter-harmonic", amount = 1} } },
+    { name = "beacon-2", ingredients = { {type="item", name="crystal-shard-harmonic", amount = 1} } },
+    { name = "beacon-3", ingredients = { {type="item", name="crystal-full-harmonic", amount = 1} } },
   })
 
   OV.add_prereq("effect-transmission", "modules")

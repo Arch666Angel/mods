@@ -6,7 +6,7 @@ funcs.generate_train_recipe(
     type = "recipe",
     name = "smelting-locomotive-1",
     energy_required = 10,
-    enabled = "false",
+    enabled = false,
     ingredients = {
       {"locomotive", {1, 0, 0, 0, 0}},
       {"engine-unit", {25, "+5", 0, 0, 0}},
@@ -29,7 +29,7 @@ funcs.generate_train_recipe(
     type = "recipe",
     name = "smelting-locomotive-tender",
     energy_required = 10,
-    enabled = "false",
+    enabled = false,
     ingredients = {
       {"locomotive", {1, 0, 0, 0, 0}},
       {"engine-unit", {25, "+5", 0, 0, 0}},
@@ -55,7 +55,7 @@ funcs.generate_train_recipe(
     type = "recipe",
     name = "smelting-wagon-1",
     energy_required = 10,
-    enabled = "false",
+    enabled = false,
     ingredients = {
       {"cargo-wagon", {1, 0, 0, 0, 0}},
       {"electronic-circuit", {15, 0, 0, 0, 0}},

@@ -6,11 +6,11 @@ data:extend(
       localised_name = {"recipe-name.biter-small-eggsperiment"},
       category = "crafting-with-fluid",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 1,
       ingredients = {
         {type = "fluid", name = "alien-goo", amount = 2},
-        {type = "item", name = "bio-raw-meat", amount = 1},
+        {type = "item", name = "bio-raw-meat", amount = 1}
       },
       results = {
         {type = "item", name = "bio-alien-processed-meat", amount = 1}
@@ -27,7 +27,7 @@ data:extend(
       localised_name = {"recipe-name.biter-small-eggsperiment"},
       category = "advanced-crafting",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "crystal-seed", amount = 1},
@@ -47,7 +47,7 @@ data:extend(
       localised_name = {"recipe-name.biter-medium-eggsperiment"},
       category = "advanced-crafting",
       subgroup = "bio-biter-medium",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "crystal-seed", amount = 1},
@@ -68,7 +68,7 @@ data:extend(
       localised_name = {"recipe-name.biter-big-eggsperiment"},
       category = "advanced-crafting",
       subgroup = "bio-biter-big",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "crystal-seed", amount = 1},
@@ -92,7 +92,7 @@ data:extend(
       localised_name = {"recipe-name.biter-small-breeding"},
       category = "bio-refugium-biter",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "biter-queen-small", amount = 2},
@@ -126,7 +126,7 @@ data:extend(
       localised_name = {"recipe-name.biter-medium-breeding"},
       category = "bio-refugium-biter",
       subgroup = "bio-biter-medium",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "biter-queen-medium", amount = 2},
@@ -143,10 +143,10 @@ data:extend(
       main_product = "biter-medium-egg",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+          icon = "__angelsbioprocessing__/graphics/icons/breeding.png"
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/biter-medium.png",
+          icon = "__angelsbioprocessing__/graphics/icons/biter-medium.png"
         }
       },
       icon_size = 32,
@@ -158,7 +158,7 @@ data:extend(
       localised_name = {"recipe-name.biter-big-breeding"},
       category = "bio-refugium-biter",
       subgroup = "bio-biter-big",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "biter-queen-big", amount = 2},
@@ -175,10 +175,10 @@ data:extend(
       main_product = "biter-big-egg",
       icons = {
         {
-          icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+          icon = "__angelsbioprocessing__/graphics/icons/breeding.png"
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/biter-big.png",
+          icon = "__angelsbioprocessing__/graphics/icons/biter-big.png"
         }
       },
       icon_size = 32,
@@ -192,7 +192,7 @@ data:extend(
       name = "biter-small",
       category = "bio-refugium-biter",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "biter-small-egg", amount = 1},
@@ -213,7 +213,7 @@ data:extend(
       name = "biter-medium",
       category = "bio-refugium-biter",
       subgroup = "bio-biter-medium",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "biter-medium-egg", amount = 1},
@@ -234,7 +234,7 @@ data:extend(
       name = "biter-big",
       category = "bio-refugium-biter",
       subgroup = "bio-biter-big",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "biter-big-egg", amount = 1},
@@ -259,7 +259,7 @@ data:extend(
       localised_name = {"recipe-name.biter-small-keeping"},
       category = "bio-refugium-biter",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-small", amount = 4},
@@ -282,7 +282,7 @@ data:extend(
       localised_name = {"recipe-name.biter-medium-keeping"},
       category = "bio-refugium-biter",
       subgroup = "bio-biter-medium",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-medium", amount = 4},
@@ -305,7 +305,7 @@ data:extend(
       localised_name = {"recipe-name.biter-big-keeping"},
       category = "bio-refugium-biter",
       subgroup = "bio-biter-big",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-big", amount = 4},
@@ -330,7 +330,7 @@ data:extend(
       name = "biter-queen-small-butchering",
       category = "bio-butchery",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 45,
       ingredients = {
         {type = "item", name = "biter-queen-small", amount = 1}
@@ -348,7 +348,7 @@ data:extend(
       name = "biter-small-butchering",
       category = "bio-butchery",
       subgroup = "bio-biter-small",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-small", amount = 1}
@@ -365,7 +365,7 @@ data:extend(
       name = "biter-queen-medium-butchering",
       category = "bio-butchery",
       subgroup = "bio-biter-medium",
-      enabled = "false",
+      enabled = false,
       energy_required = 45,
       ingredients = {
         {type = "item", name = "biter-queen-medium", amount = 1}
@@ -383,7 +383,7 @@ data:extend(
       name = "biter-medium-butchering",
       category = "bio-butchery",
       subgroup = "bio-biter-medium",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-medium", amount = 1}
@@ -400,7 +400,7 @@ data:extend(
       name = "biter-queen-big-butchering",
       category = "bio-butchery",
       subgroup = "bio-biter-big",
-      enabled = "false",
+      enabled = false,
       energy_required = 45,
       ingredients = {
         {type = "item", name = "biter-queen-big", amount = 1}
@@ -418,7 +418,7 @@ data:extend(
       name = "biter-big-butchering",
       category = "bio-butchery",
       subgroup = "bio-biter-big",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "biter-big", amount = 1}

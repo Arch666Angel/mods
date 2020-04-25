@@ -6,7 +6,7 @@ data:extend(
       name = "paste-cellulose",
       category = "liquifying",
       subgroup = "bio-processing-green",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 5},
@@ -25,7 +25,7 @@ data:extend(
       name = "paste-copper",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -43,7 +43,7 @@ data:extend(
       name = "paste-gold",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -61,7 +61,7 @@ data:extend(
       name = "paste-tungsten",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -79,7 +79,7 @@ data:extend(
       name = "paste-cobalt",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -97,7 +97,7 @@ data:extend(
       name = "paste-titanium",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -115,7 +115,7 @@ data:extend(
       name = "paste-zinc",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -133,7 +133,7 @@ data:extend(
       name = "paste-iron",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},
@@ -151,7 +151,7 @@ data:extend(
       name = "paste-silver",
       category = "crafting",
       subgroup = "bio-processing-paste",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "paste-cellulose", amount = 1},

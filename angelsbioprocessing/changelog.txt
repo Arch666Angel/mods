@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.7.8
+Version: 0.7.9
 Date: ???
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+---------------------------------------------------------------------------------------------------
+Version: 0.7.8
+Date: 20.04.2020
   Changes:
     - Added missing translation for crystal-powder-from-dust
     - Removed duplicate nutrient-beans in recipe unlock for tech nutrient paste

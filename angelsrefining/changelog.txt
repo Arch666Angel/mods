@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.11.10
+Version: 0.12.0
 Date: ???
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+---------------------------------------------------------------------------------------------------
+Version: 0.11.10
+Date: 20.04.2020
   Bugfixes:
     - With bobs revamp solves startup crash (limestone)
     - Disable ferrous and cupric in special vanilla mode unlocks

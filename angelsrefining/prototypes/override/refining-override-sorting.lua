@@ -128,7 +128,10 @@ local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products
   for recipe_index, ore_result_product in pairs(ore_result_products) do
     local ore_name = type(ore_result_product) == "table" and ore_result_product[1] or ore_result_product
     local ore_amount = type(ore_result_product) == "table" and ore_result_product[2] or 1
-    local recipe = {name = string.format(recipe_base_name, recipe_index), results = {{"!!"}, {ore_name, ore_amount}}}
+    local recipe = {
+      name = string.format(recipe_base_name, recipe_index),
+      results = {{"!!"}, {name = ore_name, amount = ore_amount}}
+    }
     if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] and ore_amount > 0 then
       local icon_name = (icon_names or {})[recipe_index]
       if icon_name then
@@ -694,7 +697,9 @@ OV.patch_recipes(
       }
     ),
     {
-      mods["angelssmelting"] and {name = "filter-ceramic", ingredients = {{"solid-aluminium-oxide", amount = 1}}}
+      mods["angelssmelting"] and
+        {name = "filter-ceramic", ingredients = {{type = "item", name = "solid-aluminium-oxide", amount = 1}}} or
+        nil
     }
   }
 )

@@ -66,7 +66,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
           ingredients =
           {
             { name = "silver-ore", type = "item", amount = "+3" }
-          }, 
+          },
           results =
           {
             { name = "silver-plate", type = "item", amount = "+2" }
@@ -84,7 +84,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
           }
         },
         icons = {
-          { 
+          {
             icon = "__angelssmelting__/graphics/icons/plate-silver.png",
           },
           {

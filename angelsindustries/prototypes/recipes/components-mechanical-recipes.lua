@@ -9,7 +9,7 @@ data:extend(
       category = "crafting",
       subgroup = "angels-iron-casting",
       energy_required = 0.5,
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-plate-iron", amount = 5}
       },
@@ -61,11 +61,11 @@ for _, metal in pairs({"iron", "steel", "aluminium", "titanium" --[[,"tungsten"]
         category = "casting",
         subgroup = "angels-" .. metal .. "-casting",
         localised_name = {"recipe-name.casing", metal, num, "expendable"},
-        enabled = "false",
+        enabled = false,
         energy_required = 3 * num,
         ingredients = {
           molten1,
-           --{type = "fluid", name = "liquid-molten-steel", amount = 15},
+          --{type = "fluid", name = "liquid-molten-steel", amount = 15},
           {type = "item", name = "mold-expendable", amount = 1}
         },
         results = {
@@ -92,11 +92,11 @@ for _, metal in pairs({"iron", "steel", "aluminium", "titanium" --[[,"tungsten"]
         category = "casting",
         subgroup = "angels-" .. metal .. "-casting",
         localised_name = {"recipe-name.casing", metal, num, "reusable"},
-        enabled = "false",
+        enabled = false,
         energy_required = 2 * num,
         ingredients = {
           molten2,
-           --{type = "fluid", name = "liquid-molten-steel", amount = 20},
+          --{type = "fluid", name = "liquid-molten-steel", amount = 20},
           {type = "item", name = "mold-non-expendable", amount = 1},
           {type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50}
         },
@@ -128,7 +128,7 @@ data:extend(
       name = "angels-casing-tungsten-1",
       category = "sintering",
       subgroup = "angels-tungsten-casting",
-      enabled = "false",
+      enabled = false,
       energy_required = 20,
       ingredients = {
         {type = "item", name = "casting-powder-tungsten", amount = 3},
@@ -157,7 +157,7 @@ data:extend(
       name = "angels-casing-tungsten-green",
       category = "crafting",
       subgroup = "angels-tungsten-casting",
-      enabled = "false",
+      enabled = false,
       energy_required = 10,
       ingredients = {
         {type = "item", name = "casting-powder-tungsten", amount = 2},
@@ -187,7 +187,7 @@ data:extend(
       name = "angels-casing-tungsten-2",
       category = "sintering",
       subgroup = "angels-tungsten-casting",
-      enabled = "false",
+      enabled = false,
       energy_required = 10,
       ingredients = {
         {type = "item", name = "motor-casing-5-green", amount = 1}
@@ -215,7 +215,7 @@ data:extend(
     {
       type = "recipe",
       name = "motor-block-1",
-      enabled = "false",
+      enabled = false,
       category = "crafting",
       energy_required = 1, -- 1:2 ratio with motor
       ingredients = {
@@ -230,7 +230,7 @@ data:extend(
     {
       type = "recipe",
       name = "motor-block-2",
-      enabled = "false",
+      enabled = false,
       category = "advanced-crafting",
       energy_required = 2, -- 2:3 ratio with motor
       ingredients = {
@@ -245,7 +245,7 @@ data:extend(
     {
       type = "recipe",
       name = "motor-block-3",
-      enabled = "false",
+      enabled = false,
       category = "advanced-crafting",
       energy_required = 3, -- 3:4 ratio with motor
       ingredients = {
@@ -261,7 +261,7 @@ data:extend(
     {
       type = "recipe",
       name = "motor-block-4",
-      enabled = "false",
+      enabled = false,
       category = "advanced-crafting",
       energy_required = 4, -- 4:7 ratio with motor
       ingredients = {
@@ -277,7 +277,7 @@ data:extend(
     {
       type = "recipe",
       name = "motor-block-5",
-      enabled = "false",
+      enabled = false,
       category = "advanced-crafting",
       energy_required = 6, -- 3:5 ratio with motor
       ingredients = {
@@ -298,7 +298,7 @@ data:extend(
       name = "motor-1",
       energy_required = 2,
       category = "crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "motor-block-1", amount = 1},
         {type = "item", name = "angels-gear", amount = 1}
@@ -311,7 +311,7 @@ data:extend(
       name = "motor-2",
       energy_required = 3,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "motor-block-2", amount = 1},
         {type = "item", name = "angels-gear", amount = 1},
@@ -325,7 +325,7 @@ data:extend(
       name = "motor-3",
       energy_required = 4,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "motor-block-3", amount = 1},
         {type = "item", name = "angels-gear", amount = 1},
@@ -340,7 +340,7 @@ data:extend(
       name = "motor-4",
       energy_required = 7,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "motor-block-4", amount = 1},
         {type = "item", name = "angels-gear", amount = 1},
@@ -356,7 +356,7 @@ data:extend(
       name = "motor-5",
       energy_required = 10,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "motor-block-5", amount = 1},
         {type = "item", name = "angels-gear", amount = 1},
@@ -376,7 +376,7 @@ data:extend(
       name = "angels-gear",
       energy_required = 1,
       category = "crafting",
-      enabled = "true", -- enabled from the start
+      enabled = true, -- enabled from the start
       ingredients = {
         {type = "item", name = "angels-rod-iron", amount = 1}
       },
@@ -390,7 +390,7 @@ data:extend(
       name = "angels-axle",
       energy_required = 1,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-rod-steel", amount = 1}
       },
@@ -402,7 +402,7 @@ data:extend(
       name = "angels-roller-chain",
       energy_required = 1.5,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-plate-aluminium", amount = 1}
       },
@@ -414,7 +414,7 @@ data:extend(
       name = "angels-spring",
       energy_required = 2,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-plate-titanium", amount = 1}
       },
@@ -426,7 +426,7 @@ data:extend(
       name = "angels-bearing",
       energy_required = 2.5,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-plate-tungsten", amount = 1},
         {type = "item", name = "steel-plate", amount = 1},
@@ -445,7 +445,7 @@ data:extend(
       order = "f",
       energy_required = 3,
       category = "crafting",
-      enabled = "true", -- enabled from the start
+      enabled = true, -- enabled from the start
       ingredients = {
         {type = "item", name = "angels-gear", amount = 2}
       },
@@ -471,7 +471,7 @@ data:extend(
       order = "g",
       energy_required = 3,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-axle", amount = 2}
       },
@@ -497,7 +497,7 @@ data:extend(
       order = "h",
       energy_required = 3,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-roller-chain", amount = 2}
       },
@@ -523,7 +523,7 @@ data:extend(
       order = "i",
       energy_required = 3,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-spring", amount = 2}
       },
@@ -549,7 +549,7 @@ data:extend(
       order = "j",
       energy_required = 3,
       category = "advanced-crafting",
-      enabled = "false",
+      enabled = false,
       ingredients = {
         {type = "item", name = "angels-bearing", amount = 2}
       },

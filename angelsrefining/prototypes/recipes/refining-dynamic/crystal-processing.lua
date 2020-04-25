@@ -9,16 +9,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t3",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore1-crystal", 8}},
+        ingredients = {{type = "item", name = "angels-ore1-crystal", amount = 8}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore1-crystal", 12 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore1-crystal", amount = 12 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -33,16 +33,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t3",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore2-crystal", 8}},
+        ingredients = {{type = "item", name = "angels-ore2-crystal", amount = 8}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore2-crystal", 12 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore2-crystal", amount = 12 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -57,16 +57,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t3",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore3-crystal", 8}},
+        ingredients = {{type = "item", name = "angels-ore3-crystal", amount = 8}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore3-crystal", 12 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore3-crystal", amount = 12 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -81,16 +81,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t3",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore4-crystal", 8}},
+        ingredients = {{type = "item", name = "angels-ore4-crystal", amount = 8}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore4-crystal", 12 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore4-crystal", amount = 12 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -105,16 +105,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t3",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore5-crystal", 8}},
+        ingredients = {{type = "item", name = "angels-ore5-crystal", amount = 8}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore5-crystal", 12 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore5-crystal", amount = 12 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -129,16 +129,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t3",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore6-crystal", 8}},
+        ingredients = {{type = "item", name = "angels-ore6-crystal", amount = 8}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore6-crystal", 12 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore6-crystal", amount = 12 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
