@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-petrotrain",
-  "version": "0.5.3",
+  "version": "0.5.6",
   "factorio_version": "0.18",
   "title": "Angel's Addons - Petrochem Train",
   "author": "Arch666Angel",
@@ -8,6 +8,6 @@
   "homepage": "",
   "description": "Adds a Petrochem themed train",
   "dependencies": [
-    "base >= 0.18.0"
+    "base >= 0.18.19"
   ]
 }

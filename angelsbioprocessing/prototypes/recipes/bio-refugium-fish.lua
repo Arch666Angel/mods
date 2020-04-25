@@ -6,13 +6,13 @@ data:extend(
       category = "advanced-chemistry",
       subgroup = "bio-fish",
       enabled = "false",
-      energy_required = 30,
+      energy_required = 15,
       ingredients = {
-        {type = "fluid", name = "water", amount = 20},
-        {type = "fluid", name = "water-saline", amount = 20}
+        {type = "fluid", name = "water", amount = 50},
+        {type = "fluid", name = "water-saline", amount = 50}
       },
       results = {
-        {type = "fluid", name = "liquid-fish-atmosphere", amount = 40}
+        {type = "fluid", name = "liquid-fish-atmosphere", amount = 100}
       },
       main_product = "liquid-fish-atmosphere",
       always_show_products = "true",

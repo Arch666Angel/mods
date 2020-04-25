@@ -12,6 +12,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
       icon_size = 128,
       prerequisites = {
+        "angels-components-weapons-basic",
         "tech-red-packs"
       },
       effects = {

@@ -72,6 +72,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "mold-non-expendable"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-non-expendable-wash"
+      },
     },
     unit =
     {

@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+Date: 20.04.2020
+  Bugfixes:
+    - Removed next_upgrade since its removed from base game
+---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 12.04.2020
+  Bugfixes:
+    - Fix getting the proper tier amount in control.lua #189
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 12.04.2020
+  Changes:
+    - Renamed Tank wagon to Fluid wagon
+    - Removed enabled setting
+    - Rebalancing of capactiy
+      - Gas Fluid wagon was 25k is now 40k with angelspetrochem
+      - Oil Fluid wagon was 25k is now 40k with angelspetrochem
+    - Added ability to copy paste color to the fluid wagons
+    - Updated recipes to be more realistic and diverse
+  Bugfixes:
+    - Fixed the red (default) tint was way to bright
+---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 02.04.2020
   Bugfixes:

@@ -225,11 +225,25 @@ end
 -------------------------------------------------------------------------------
 -- BOBS TECH ------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobtech"] then
+if mods.bobtech then
   if data.raw.tool["science-pack-gold"] and data.raw.recipe["science-pack-gold"] then
     data.raw.recipe["science-pack-gold"].ingredients = {
       {"angels-science-pack-blue", 1}
     }
+  end
+
+  if settings.startup["bobmods-burnerphase"].value then
+    --remove all re-added automation science packs
+    for tech in pairs(data.raw.technology) do
+      OV.remove_science_pack(tech, "automation-science-pack")
+      OV.remove_prereq(tech, "automation-science-pack")
+    end
+    OV.disable_technology({"automation-science-pack"})
+    OV.add_prereq("automation", "steam-automation")
+
+    OV.set_science_pack("steam-automation", "angels-science-pack-grey", 1)
+    OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
+    OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
   end
 
   --remove all advanced-logistics packs

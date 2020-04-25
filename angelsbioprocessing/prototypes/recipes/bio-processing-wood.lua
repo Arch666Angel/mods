@@ -577,7 +577,47 @@ data:extend(
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {
       "bio-resin"
     }),
-    order = "c[processing]",
+    order = "c[processing]-a[bio-resin]",
+  },
+  {
+    type = "recipe",
+    name = "bio-resin-resin-liquification",
+    category = "liquifying",
+    subgroup = "bio-arboretum-temperate",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+      {type="fluid", name="gas-ethanol", amount=100}, -- 20 ethanol / 5 liquid resin
+      {type="item", name="solid-resin", amount=4}
+    },
+    results=
+    {
+      {type="fluid", name="liquid-resin", amount_min=10, amount_max=40}, -- average 25 liquid resin / 40 wood
+    },
+    main_product = "liquid-resin",
+    always_show_products = "true",
+    show_amount_in_title = "false",
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,225,155}, {255,225,155} }, {
+      mods["bobplates"] and {"__bobplates__/graphics/icons/resin.png", 32} or "solid-resin"
+    }),
+    order = "c[processing]-b[solid-resin]-a[liquification]"
+  },
+  {
+    type = "recipe",
+    name = "bio-resin-wood-reprocessing",
+    category = "bio-processor",
+    subgroup = "bio-arboretum-temperate",
+    enabled = false,
+    energy_required = 3,
+    ingredients = {
+      {type="item", name="wood", amount=10}
+    },
+    results = {
+      {type="item", name="solid-resin", amount=1}
+    },
+    main_product = "solid-resin",
+    always_show_products = "true",
+    order = "c[processing]-b[solid-resin]-b[wood-reprocessing]"
   },
 
 
