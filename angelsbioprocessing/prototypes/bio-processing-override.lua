@@ -68,7 +68,7 @@ else
   if bobmods and bobmods.plates then
     OV.patch_recipes(
       {
-        {name = "algae-brown-burning", results = {{"lithium-chloride", 1}}}
+        {name = "algae-brown-burning", results = {{name = "lithium-chloride", amount = 1, type = "item"}}}
         -- { name = "temperate-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
         -- { name = "desert-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
         -- { name = "swamp-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
