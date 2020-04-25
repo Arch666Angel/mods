@@ -64,7 +64,7 @@ if angelsmods.triggers.artifacts["red"] then
 
   if bobmods and bobmods.plates then
     OV.patch_recipes({
-      { name = "alien-pre-artifact-red", ingredients = {{"ruby-4", 1}} }
+      { name = "alien-pre-artifact-red", ingredients = {{type="item", name="ruby-4", amount=1}} }
     })
   end
 
@@ -141,7 +141,7 @@ if angelsmods.triggers.artifacts["yellow"] then
 
   if bobmods and bobmods.plates then
     OV.patch_recipes({
-      { name = "alien-pre-artifact-yellow", ingredients = {{"diamond-4", 1}} }
+      { name = "alien-pre-artifact-yellow", ingredients = {{type="item", name="diamond-4", amount=1}} }
     })
   end
 
@@ -218,7 +218,7 @@ if angelsmods.triggers.artifacts["orange"] then
 
   if bobmods and bobmods.plates then
     OV.patch_recipes({
-      { name = "alien-pre-artifact-orange", ingredients = {{"topaz-4", 1}} }
+      { name = "alien-pre-artifact-orange", ingredients = {{type="item", name="topaz-4", amount=1}} }
     })
   end
 
@@ -295,7 +295,7 @@ if angelsmods.triggers.artifacts["blue"] then
 
   if bobmods and bobmods.plates then
     OV.patch_recipes({
-      { name = "alien-pre-artifact-blue", ingredients = {{"sapphire-4", 1}} }
+      { name = "alien-pre-artifact-blue", ingredients = {{type="item", name="sapphire-4", amount=1}} }
     })
   end
 
@@ -372,7 +372,7 @@ if angelsmods.triggers.artifacts["purple"] then
 
   if bobmods and bobmods.plates then
     OV.patch_recipes({
-      { name = "alien-pre-artifact-purple", ingredients = {{"amethyst-4", 1}} }
+      { name = "alien-pre-artifact-purple", ingredients = {{type="item", name="amethyst-4", amount=1}} }
     })
   end
 
@@ -449,7 +449,7 @@ if angelsmods.triggers.artifacts["green"] then
 
   if bobmods and bobmods.plates then
     OV.patch_recipes({
-      { name = "alien-pre-artifact-green", ingredients = {{"emerald-4", 1}} }
+      { name = "alien-pre-artifact-green", ingredients = {{type="item", name="emerald-4", amount=1}} }
     })
   end
 

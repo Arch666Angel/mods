@@ -7,7 +7,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "algae-farm"
     },
@@ -17,7 +17,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"algae-farm", 1}
+        {type = "item", name = "algae-farm", amount = 1}
       },
       result = "algae-farm-2"
     },
@@ -27,7 +27,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"algae-farm-2", 1}
+        {type = "item", name = "algae-farm-2", amount = 1}
       },
       result = "algae-farm-3"
     },
@@ -38,7 +38,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "crop-farm"
     },
@@ -48,7 +48,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "temperate-farm"
     },
@@ -58,7 +58,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "desert-farm"
     },
@@ -68,7 +68,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "swamp-farm"
     },
@@ -79,7 +79,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "composter"
     },
@@ -90,7 +90,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "seed-extractor"
     },
@@ -101,7 +101,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-press"
     },
@@ -112,7 +112,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-processor"
     },
@@ -123,7 +123,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "nutrient-extractor"
     },
@@ -134,7 +134,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"temperate-tree", 1}
+        {type = "item", name = "temperate-tree", amount = 1}
       },
       result = "bio-generator-temperate-1"
     },
@@ -144,7 +144,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"swamp-tree", 1}
+        {type = "item", name = "swamp-tree", amount = 1}
       },
       result = "bio-generator-swamp-1"
     },
@@ -154,7 +154,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"desert-tree", 1}
+        {type = "item", name = "desert-tree", amount = 1}
       },
       result = "bio-generator-desert-1"
     },
@@ -165,7 +165,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-arboretum-1"
     },
@@ -176,7 +176,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-refugium-puffer"
     },
@@ -186,7 +186,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-refugium-hogger"
     },
@@ -196,7 +196,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-refugium-fish"
     },
@@ -206,7 +206,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-refugium-biter"
     },
@@ -217,7 +217,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-hatchery"
     },
@@ -227,7 +227,7 @@ data:extend(
       energy_required = 5,
       enabled = "false",
       ingredients = {
-        {"iron-plate", 1}
+        {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-butchery"
     }

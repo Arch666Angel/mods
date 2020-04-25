@@ -59,9 +59,9 @@ for _,decoName in pairs({
       energy_required = 2,
       enabled = "true",
       ingredients ={
-        {"iron-plate", 5},
-        {"steel-plate", 5},
-        {"stone-brick", 5},
+        {type="item", name="iron-plate", amount = 5},
+        {type="item", name="steel-plate", amount = 5},
+        {type="item", name="stone-brick", amount = 5},
       },
       result= buildingName,
     },

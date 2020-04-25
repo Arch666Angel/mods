@@ -40,7 +40,7 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       }
@@ -79,7 +79,7 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       }
@@ -158,8 +158,8 @@ data:extend(
       unit = {
         count = 32,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -194,9 +194,9 @@ data:extend(
       unit = {
         count = 64,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"logistic-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -275,8 +275,8 @@ data:extend(
       unit = {
         count = 32,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -311,9 +311,9 @@ data:extend(
       unit = {
         count = 64,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"logistic-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -392,8 +392,8 @@ data:extend(
       unit = {
         count = 32,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -428,9 +428,9 @@ data:extend(
       unit = {
         count = 64,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"logistic-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -489,8 +489,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -537,8 +537,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -581,8 +581,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -621,8 +621,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -649,9 +649,9 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -703,11 +703,11 @@ data:extend(
       unit = {
         count = 200,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"token-bio", 2}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "token-bio", amount = 2}
         },
         time = 30
       }

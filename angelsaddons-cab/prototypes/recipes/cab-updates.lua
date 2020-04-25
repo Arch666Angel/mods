@@ -1,19 +1,19 @@
-angelsmods.functions.RB.build({
+angelsmods.functions.RB.build(
   {
-    type = "recipe",
-    name = "angels-cab",
-    energy_required = 10,
-    enabled = "false",
-    ingredients =
     {
-      {"motor-3", 5},
-      {"mechanical-parts", 10},
-      {"construction-frame-3", 5},
-      {"construction-components", 20},
-      {"circuit-orange-loaded", 2},
-      mods["angelsindustries"] and {"angels-crawler", 1} or nil,
-    },
-    result = "angels-cab"
-  },
-}
+      type = "recipe",
+      name = "angels-cab",
+      energy_required = 10,
+      enabled = "false",
+      ingredients = {
+        {type = "item", name = "motor-3", amount = 5},
+        {type = "item", name = "mechanical-parts", amount = 10},
+        {type = "item", name = "construction-frame-3", amount = 5},
+        {type = "item", name = "construction-components", amount = 20},
+        {type = "item", name = "circuit-orange-loaded", amount = 2},
+        mods["angelsindustries"] and {"angels-crawler", amount = 1} or nil
+      },
+      result = "angels-cab"
+    }
+  }
 )

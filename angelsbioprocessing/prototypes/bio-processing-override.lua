@@ -46,7 +46,7 @@ if angelsmods.industries then
         name = "petri-dish",
         ingredients = {
           {"!!"},
-          {data.raw.item["glass"] and "glass" or "angels-plate-glass", 1} -- bob glass
+          {type="item", name=data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 1} -- bob glass
         }
       },
       {
@@ -356,18 +356,18 @@ if bobmods then
     -- alter angels wood production to require seedlings
     OV.patch_recipes(
       {
-        {name = "tree-generator-1", ingredients = {{"seedling", 4}}},
-        {name = "tree-generator-2", ingredients = {{"seedling", 6}}},
-        {name = "tree-generator-3", ingredients = {{"seedling", 8}}},
-        {name = "temperate-tree-generator-1", ingredients = {{"seedling", 4}}},
-        {name = "temperate-tree-generator-2", ingredients = {{"seedling", 6}}},
-        {name = "temperate-tree-generator-3", ingredients = {{"seedling", 8}}},
-        {name = "swamp-tree-generator-1", ingredients = {{"seedling", 4}}},
-        {name = "swamp-tree-generator-2", ingredients = {{"seedling", 6}}},
-        {name = "swamp-tree-generator-3", ingredients = {{"seedling", 8}}},
-        {name = "desert-tree-generator-1", ingredients = {{"seedling", 4}}},
-        {name = "desert-tree-generator-2", ingredients = {{"seedling", 6}}},
-        {name = "desert-tree-generator-3", ingredients = {{"seedling", 8}}}
+        {name = "tree-generator-1", ingredients = {{type="item", name="seedling", amount = 4}}},
+        {name = "tree-generator-2", ingredients = {{type="item", name="seedling", amount = 6}}},
+        {name = "tree-generator-3", ingredients = {{type="item", name="seedling", amount = 8}}},
+        {name = "temperate-tree-generator-1", ingredients = {{type="item", name="seedling", amount = 4}}},
+        {name = "temperate-tree-generator-2", ingredients = {{type="item", name="seedling", amount = 6}}},
+        {name = "temperate-tree-generator-3", ingredients = {{type="item", name="seedling", amount = 8}}},
+        {name = "swamp-tree-generator-1", ingredients = {{type="item", name="seedling", amount = 4}}},
+        {name = "swamp-tree-generator-2", ingredients = {{type="item", name="seedling", amount = 6}}},
+        {name = "swamp-tree-generator-3", ingredients = {{type="item", name="seedling", amount = 8}}},
+        {name = "desert-tree-generator-1", ingredients = {{type="item", name="seedling", amount = 4}}},
+        {name = "desert-tree-generator-2", ingredients = {{type="item", name="seedling", amount = 6}}},
+        {name = "desert-tree-generator-3", ingredients = {{type="item", name="seedling", amount = 8}}}
       }
     )
 

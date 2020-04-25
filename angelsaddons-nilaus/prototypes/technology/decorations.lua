@@ -30,7 +30,7 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type="item", name="automation-science-pack", amount = 1}
         },
         time = 15
       },
@@ -54,8 +54,8 @@ data:extend(
       unit = {
         count = 60,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type="item", name="automation-science-pack", amount = 1},
+          {type="item", name="logistic-science-pack", amount = 1}
         },
         time = 15
       },
