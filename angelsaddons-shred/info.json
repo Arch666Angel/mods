@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-shred",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "factorio_version": "0.18",
   "title": "Angel's Addons - Decorations - Shred",
   "author": "Arch666Angel",
@@ -9,5 +9,5 @@
   "description": "",
   "dependencies": [
     "base >= 0.18.0"
-	]
+  ]
 }

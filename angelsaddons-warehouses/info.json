@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-warehouses",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "factorio_version": "0.18",
   "title": "Angel's Addons - Warehouses",
   "author": "Arch666Angel",
@@ -10,5 +10,5 @@
   "dependencies": [
     "base >= 0.18.0",
     "? angelsrefining >= 0.11.0"
-	]
+  ]
 }

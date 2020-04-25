@@ -9,16 +9,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t4",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore1-pure", 9}},
+        ingredients = {{type = "item", name = "angels-ore1-pure", amount = 9}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore1-pure", 13 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore1-pure", amount = 13 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
@@ -33,16 +33,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t4",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore2-pure", 9}},
+        ingredients = {{type = "item", name = "angels-ore2-pure", amount = 9}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore2-pure", 13 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore2-pure", amount = 13 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
@@ -57,16 +57,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t4",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore3-pure", 9}},
+        ingredients = {{type = "item", name = "angels-ore3-pure", amount = 9}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore3-pure", 13 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore3-pure", amount = 13 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
@@ -84,16 +84,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t4",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore4-pure", 9}},
+        ingredients = {{type = "item", name = "angels-ore4-pure", amount = 9}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore4-pure", 13 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore4-pure", amount = 13 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
@@ -108,16 +108,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t4",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore5-pure", 9}},
+        ingredients = {{type = "item", name = "angels-ore5-pure", amount = 9}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore5-pure", 13 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore5-pure", amount = 13 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
@@ -132,16 +132,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t4",
       energy_required = 2,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore6-pure", 9}},
+        ingredients = {{type = "item", name = "angels-ore6-pure", amount = 9}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore6-pure", 13 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore6-pure", amount = 13 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }

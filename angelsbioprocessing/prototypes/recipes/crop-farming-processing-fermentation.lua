@@ -5,7 +5,7 @@ data:extend(
       name = "fermentation-corn",
       category = "liquifying",
       subgroup = "bio-processor-fermentation",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "solid-corn", amount = 10},
@@ -14,7 +14,7 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-fermentation-raw", amount = 75}
       },
-      always_show_products = "true",
+      always_show_products = true,
       order = "a",
       icons = {
         {
@@ -33,7 +33,7 @@ data:extend(
       name = "fermentation-fruit",
       category = "liquifying",
       subgroup = "bio-processor-fermentation",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "solid-fruit", amount = 10},
@@ -42,7 +42,7 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-fermentation-raw", amount = 100}
       },
-      always_show_products = "true",
+      always_show_products = true,
       order = "b",
       icons = {
         {
@@ -61,7 +61,7 @@ data:extend(
       name = "aerobic-fermentation",
       category = "chemistry",
       subgroup = "bio-processor-fermentation",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-fermentation-raw", amount = 100}
@@ -71,11 +71,14 @@ data:extend(
         {type = "item", name = "solid-compost", amount = 1, probability = 0.5}
       },
       main_product = "liquid-acetic-acid",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72 }
-      }, "coh"),
-      order = "c",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72}
+        },
+        "coh"
+      ),
+      order = "c"
     },
     -- PROCESSING
     {
@@ -83,7 +86,7 @@ data:extend(
       name = "anaerobic-fermentation",
       category = "chemistry",
       subgroup = "bio-processor-fermentation",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-fermentation-raw", amount = 100}
@@ -93,18 +96,21 @@ data:extend(
         {type = "item", name = "solid-compost", amount = 1, probability = 0.5}
       },
       main_product = "gas-ethanol",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_gas_recipe_icon({
-        { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 }
-      }, "coh"),
-      order = "d",
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72}
+        },
+        "coh"
+      ),
+      order = "d"
     },
     {
       type = "recipe",
       name = "ethanol-to-ethylene-synthesis",
       category = "chemistry",
       subgroup = "bio-processor-fermentation",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "gas-ethanol", amount = 50},
@@ -115,11 +121,14 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50}
       },
       main_product = "gas-ethylene",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_gas_recipe_icon({
-        { "__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72 }
-      }, "chh"),
-      order = "e",
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72}
+        },
+        "chh"
+      ),
+      order = "e"
     },
     --BIO PLASTICS
     {
@@ -127,7 +136,7 @@ data:extend(
       name = "liquid-acetic-acid-catalyst",
       category = "advanced-chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "gas-methanol", amount = 70},
@@ -140,18 +149,21 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1}
       },
       main_product = "liquid-acetic-acid",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72 }
-      }, "coh"),
-      order = "a",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72}
+        },
+        "coh"
+      ),
+      order = "a"
     },
     {
       type = "recipe",
       name = "liquid-acetic-anhydride",
       category = "advanced-chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-acetic-acid", amount = 100},
@@ -162,18 +174,21 @@ data:extend(
         {type = "fluid", name = "liquid-acetic-anhydride", amount = 150}
       },
       main_product = "liquid-acetic-anhydride",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelsbioprocessing__/graphics/icons/molecule-acetic-anhydride.png", 72 }
-      }, "coh"),
-      order = "b",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelsbioprocessing__/graphics/icons/molecule-acetic-anhydride.png", 72}
+        },
+        "coh"
+      ),
+      order = "b"
     },
     {
       type = "recipe",
       name = "liquid-acetate-mixture",
       category = "advanced-chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 10},
@@ -185,15 +200,15 @@ data:extend(
         {type = "fluid", name = "liquid-cellulose-acetate-mixture", amount = 100}
       },
       main_product = "liquid-cellulose-acetate-mixture",
-      always_show_products = "true",
-      order = "c",
+      always_show_products = true,
+      order = "c"
     },
     {
       type = "recipe",
       name = "liquid-cellulose-acetate",
       category = "chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-cellulose-acetate-mixture", amount = 50},
@@ -204,18 +219,21 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
       main_product = "liquid-cellulose-acetate",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelsbioprocessing__/graphics/icons/molecule-cellulose-acetate.png", 72 }
-      }, "coh"),
-      order = "d",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelsbioprocessing__/graphics/icons/molecule-cellulose-acetate.png", 72}
+        },
+        "coh"
+      ),
+      order = "d"
     },
     {
       type = "recipe",
       name = "bio-plastic-1",
       category = "chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-cellulose-acetate", amount = 25},
@@ -225,20 +243,26 @@ data:extend(
         {type = "fluid", name = "liquid-plastic", amount = 15}
       },
       main_product = "liquid-plastic",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        icon_size = 32,
-        tint = angelsmods.bioprocessing.number_tint,
-      }}),
-      order = "e",
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        {{255, 255, 255}, {255, 255, 255}},
+        {
+          {
+            icon = "__angelsrefining__/graphics/icons/num_1.png",
+            icon_size = 32,
+            tint = angelsmods.bioprocessing.number_tint
+          }
+        }
+      ),
+      order = "e"
     },
     {
       type = "recipe",
       name = "liquid-propionic-acid-catalyst",
       category = "advanced-chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "gas-ethylene", amount = 50},
@@ -251,18 +275,21 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1}
       },
       main_product = "liquid-propionic-acid",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelsbioprocessing__/graphics/icons/molecule-propionic-acid.png", 72 }
-      }, "coh"),
-      order = "f",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelsbioprocessing__/graphics/icons/molecule-propionic-acid.png", 72}
+        },
+        "coh"
+      ),
+      order = "f"
     },
     {
       type = "recipe",
       name = "bio-plastic-2",
       category = "advanced-chemistry",
       subgroup = "bio-plastic",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 10},
@@ -273,13 +300,19 @@ data:extend(
         {type = "fluid", name = "liquid-plastic", amount = 25}
       },
       main_product = "liquid-plastic",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { {255,255,255}, {255,255,255} }, {{
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        icon_size = 32,
-        tint = angelsmods.bioprocessing.number_tint,
-      }}),
-      order = "g",
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        {{255, 255, 255}, {255, 255, 255}},
+        {
+          {
+            icon = "__angelsrefining__/graphics/icons/num_2.png",
+            icon_size = 32,
+            tint = angelsmods.bioprocessing.number_tint
+          }
+        }
+      ),
+      order = "g"
     }
   }
 )

@@ -12,15 +12,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["lead"].ingot then
   -- REPLACE ITEMS (use bob version)
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     OV.global_replace_item("solid-lead-oxide", "lead-oxide")
     angelsmods.functions.add_flag("solid-lead-oxide", "hidden")
-    
+
     OV.global_replace_technology("lead-processing", "angels-lead-smelting-1")
   end
 
-  if angelsmods.trigger.smelting_products["lead"].plate or
-     angelsmods.trigger.smelting_products["zinc"].ingot then
+  if angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["zinc"].ingot then
   else
     -- no need for molten recipe
     data.raw.fluid["liquid-molten-lead"].hidden = true
@@ -46,60 +45,59 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["lead"].plate then
   if angelsmods.refining then
-    OV.patch_recipes({
+    OV.patch_recipes(
       {
-        name = "angelsore5-crushed-smelting",
-        subgroup = "angels-lead-casting",
-        order = "k[angels-plate-lead]-a"
-      },
-    })
+        {
+          name = "angelsore5-crushed-smelting",
+          subgroup = "angels-lead-casting",
+          order = "k[angels-plate-lead]-a"
+        }
+      }
+    )
   end
 
-  if mods['bobplates'] then
+  if mods["bobplates"] then
     OV.global_replace_item("angels-plate-lead", "lead-plate")
     angelsmods.functions.add_flag("angels-plate-lead", "hidden")
 
-    OV.patch_recipes({
+    OV.patch_recipes(
       {
-        name = "lead-plate",
-        energy_required = 10.5,
-        normal =
         {
-          ingredients =
-          {
-            { name = "lead-ore", type = "item", amount = "+3" }
+          name = "lead-plate",
+          energy_required = 10.5,
+          normal = {
+            ingredients = {
+              {name = "lead-ore", type = "item", amount = "+3"}
+            },
+            results = {
+              {name = "lead-plate", type = "item", amount = "+2"}
+            }
           },
-          results =
-          {
-            { name = "lead-plate", type = "item", amount = "+2" }
-          }
-        },
-        expensive =
-        {
-          ingredients = 
-          { {"!!"},
-            { name = "lead-ore", type = "item", amount = 5 * intermediatemulti } 
+          expensive = {
+            ingredients = {
+              {"!!"},
+              {name = "lead-ore", type = "item", amount = 5 * intermediatemulti}
+            },
+            results = {
+              {name = "lead-plate", type = "item", amount = "+2"}
+            }
           },
-          results =
-          {
-            { name = "lead-plate", type = "item", amount = "+2" }
+          icons = {
+            {
+              icon = "__angelssmelting__/graphics/icons/plate-lead.png"
+            },
+            {
+              icon = "__angelssmelting__/graphics/icons/ore-lead.png",
+              scale = 0.4375,
+              shift = {-10, -10}
+            }
           },
-        },
-        icons = {
-          { 
-            icon = "__angelssmelting__/graphics/icons/plate-lead.png",
-          },
-          {
-            icon = "__angelssmelting__/graphics/icons/ore-lead.png",
-            scale = 0.4375,
-            shift = { -10, -10},
-          },
-        },
-        icon_size = 32,
-        subgroup = "angels-lead-casting",
-        order = "k[angels-plate-lead]-b"
-      },
-    })
+          icon_size = 32,
+          subgroup = "angels-lead-casting",
+          order = "k[angels-plate-lead]-b"
+        }
+      }
+    )
   end
 else
   angelsmods.functions.add_flag("angels-plate-lead", "hidden")
@@ -114,5 +112,5 @@ end
 if angelsmods.trigger.smelting_products["lead"].powder then
 else
   angelsmods.functions.add_flag("powder-lead", "hidden")
-  OV.disable_recipe({ "powder-lead" })
+  OV.disable_recipe({"powder-lead"})
 end
