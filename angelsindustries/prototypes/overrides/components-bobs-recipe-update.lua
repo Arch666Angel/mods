@@ -10,7 +10,7 @@ if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines
       { name = "circuit-green-board", category = "electronics-machine" },
       { name = "circuit-orange-board", category = "electronics-machine" },
       { name = "circuit-blue-board", category = "electronics-machine" },
-      { name = "circuit-yellow-board", category = "electronics-machine" },
+      --{ name = "circuit-yellow-board", category = "electronics-machine" },
 
       { name = "circuit-grey", category = "electronics" },
       { name = "circuit-red", category = "electronics" },
