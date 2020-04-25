@@ -1,14 +1,5 @@
 if is_special_vanilla(angelsmods.triggers.ores) then
   local OV = angelsmods.functions.OV
-  local ore_exists = angelsmods.functions.ore_exists or function(ore_name)
-      if angelsmods.trigger.ores[ore_name] then
-        return true
-      end
-      if angelsmods.trigger.refinery_products[ore_name] then
-        return true
-      end
-      return false
-    end
 
   -- Require powderizer for milling drum
   data.raw.technology["ore-powderizer"].enabled = true
