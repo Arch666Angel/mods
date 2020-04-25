@@ -22,7 +22,7 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
       },
       {
         name = "greenyellow-waste-water-purification",
-        results = {{"fluorite-ore"}}
+        results = {{name = "fluorite-ore", type = "item", amount = 1}}
       },
       {
         name = "red-waste-water-purification",

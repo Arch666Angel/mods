@@ -26,12 +26,12 @@ OV.patch_recipes(
         {"cable-harness-1", 1}
       },
       results = {
-        {"small-electric-pole", 1}
+        {type = "item", name = "small-electric-pole", amount = 1}
       },
       minable = {
         results = {
-          {"wood", 1},
-          {"cable-harness-1", 1}
+          {type = "item", name = "wood", amount = 1},
+          {type = "item", name = "cable-harness-1", amount = 1}
         }
       }
     }
@@ -70,7 +70,7 @@ OV.patch_recipes(
         {"motor-1", 1},
         {"circuit-red-loaded", 2},
         {"construction-components", 4},
-        {"mechanical-parts", 5},
+        {"mechanical-parts", 5}
       }
     },
     {
@@ -80,7 +80,7 @@ OV.patch_recipes(
         {"motor-2", 1},
         {"circuit-green-loaded", 2},
         {"angels-servo-motor-2", 1},
-        {"mechanical-parts", 5},
+        {"mechanical-parts", 5}
       }
     },
     {
@@ -91,7 +91,7 @@ OV.patch_recipes(
         {"motor-3", 1},
         {"circuit-orange-loaded", 2},
         {"cable-harness-3", 2},
-        {"electronic-parts", 4},
+        {"electronic-parts", 4}
       }
     },
     -- base game late robots
@@ -102,7 +102,7 @@ OV.patch_recipes(
         {"motor-4", 1},
         {"circuit-blue-loaded", 1},
         {"battery", 2},
-        {"construction-frame-4", 1},
+        {"construction-frame-4", 1}
       }
     },
     {
@@ -110,7 +110,7 @@ OV.patch_recipes(
       ingredients = {
         {"!!"},
         {"flying-robot-frame", 1},
-        {"angels-construction-robot", 1},
+        {"angels-construction-robot", 1}
       }
     },
     {
@@ -118,7 +118,7 @@ OV.patch_recipes(
       ingredients = {
         {"!!"},
         {"flying-robot-frame", 1},
-        {"cargo-robot-2", 1},
+        {"cargo-robot-2", 1}
       }
     },
     -- roboports
@@ -129,7 +129,7 @@ OV.patch_recipes(
         {"block-electronics-1", 10},
         {"block-construction-1", 15},
         {"construction-components", 15},
-        {"mechanical-parts", 20},
+        {"mechanical-parts", 20}
       }
     },
     {
@@ -139,7 +139,7 @@ OV.patch_recipes(
         {"block-electronics-3", 5},
         {"block-construction-3", 10},
         {"cable-harness-3", 20},
-        {"construction-components", 15},
+        {"construction-components", 15}
       }
     },
     {
@@ -149,7 +149,7 @@ OV.patch_recipes(
         {"angels-relay-station", 4},
         {"block-electronics-3", 2},
         {"cable-harness-3", 10},
-        {"angels-cabling", 5},
+        {"angels-cabling", 5}
       }
     },
     -- construction zone expanders
@@ -160,7 +160,7 @@ OV.patch_recipes(
         {"block-electronics-1", 2},
         {"cable-harness-1", 3},
         {"construction-components", 5},
-        {"angels-cabling", 5},
+        {"angels-cabling", 5}
       }
     },
     {
@@ -170,7 +170,7 @@ OV.patch_recipes(
         {"angels-construction-zone-expander", 4},
         {"block-electronics-3", 2},
         {"cable-harness-3", 10},
-        {"construction-components", 5},
+        {"construction-components", 5}
       }
     },
     -- zone expanders
@@ -181,7 +181,7 @@ OV.patch_recipes(
         {"block-electronics-1", 2},
         {"cable-harness-1", 3},
         {"electronic-parts", 5},
-        {"angels-cabling", 5},
+        {"angels-cabling", 5}
       }
     },
     {
@@ -191,7 +191,7 @@ OV.patch_recipes(
         {"angels-zone-expander", 4},
         {"block-electronics-2", 2},
         {"cable-harness-2", 10},
-        {"angels-cabling", 5},
+        {"angels-cabling", 5}
       }
     },
     -- relay stations
@@ -202,7 +202,7 @@ OV.patch_recipes(
         {"angels-zone-expander", 1},
         {"block-electronics-2", 3},
         {"cable-harness-2", 5},
-        {"angels-cabling", 5},
+        {"angels-cabling", 5}
       }
     },
     {
@@ -212,9 +212,9 @@ OV.patch_recipes(
         {"angels-relay-station", 4},
         {"block-electronics-3", 3},
         {"cable-harness-3", 10},
-        {"angels-cabling", 5},
+        {"angels-cabling", 5}
       }
-    },
+    }
   }
 )
 
