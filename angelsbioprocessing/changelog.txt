@@ -9,6 +9,8 @@ Date: 20.04.2020
   Changes:
     - Added missing translation for crystal-powder-from-dust
     - Removed duplicate nutrient-beans in recipe unlock for tech nutrient paste
+  Bugfixes:
+    - Re-enable ore-powderizer for alien bio processing 2
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.7
 Date: 12.04.2020

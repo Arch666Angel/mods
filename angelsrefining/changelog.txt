@@ -8,6 +8,8 @@ Version: 0.11.10
 Date: 20.04.2020
   Bugfixes:
     - With bobs revamp solves startup crash (limestone)
+    - Disable ferrous and cupric in special vanilla mode unlocks
+    - When tech is disabled, but later re-enabled disabling of recipe/unlocks had no effect
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.9
 Date: 12.04.2020

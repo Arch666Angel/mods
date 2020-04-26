@@ -8,6 +8,8 @@ Version: 0.6.6
 Date: 20.04.2020
   Bugfixes:
     - Replaced the tutorial grid with the duplicated concrete brick tiles #198 (tutorial grid doesnt remember hidden tiles, so now underlying tile is grass-1)
+    - Special vanilla:
+      - Fixed steel processing tech research
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: 12.04.2020

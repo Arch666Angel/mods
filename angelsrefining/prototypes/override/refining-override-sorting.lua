@@ -54,6 +54,7 @@ local ore_exists = function(ore_name)
   end
   return false
 end
+angelsmods.functions.ore_exists = ore_exists
 
 -- function to create the (regular) sorted results for an ore, disables it if it is unused
 local create_sorting_recipes = function(refinery_product, recipe_base_name, sorted_ore_results, advanced_sorting)
@@ -324,33 +325,37 @@ OV.patch_recipes(
       }
     ),
     -- FERROUS
-    create_sorting_recipes(
-      "ferrous",
-      "angelsore8%s",
-      {
-        ["!!"] = (not special_vanilla) and {true, true, true, true},
-        ["iron-ore"] = (not special_vanilla) and {2, 3, 4, 4},
-        ["manganese-ore"] = (not special_vanilla) and {2, 2, 2, 2},
-        ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["chrome-ore"] = (not special_vanilla) and {0, 0, 0, 1}
-      },
-      true
-    ),
+    ore_exists("ferrous") and
+      create_sorting_recipes(
+        "ferrous",
+        "angelsore8%s",
+        {
+          ["!!"] = (not special_vanilla) and {true, true, true, true},
+          ["iron-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+          ["manganese-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+          ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+          ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+          ["chrome-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        },
+        true
+      ) or
+      nil,
     -- CUPRIC
-    create_sorting_recipes(
-      "cupric",
-      "angelsore9%s",
-      {
-        ["!!"] = (not special_vanilla) and {true, true, true, true},
-        ["copper-ore"] = (not special_vanilla) and {2, 3, 4, 4},
-        ["tin-ore"] = (not special_vanilla) and {2, 2, 2, 2},
-        ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
-      },
-      true
-    )
+    ore_exists("cupric") and
+      create_sorting_recipes(
+        "cupric",
+        "angelsore9%s",
+        {
+          ["!!"] = (not special_vanilla) and {true, true, true, true},
+          ["copper-ore"] = (not special_vanilla) and {2, 3, 4, 4},
+          ["tin-ore"] = (not special_vanilla) and {2, 2, 2, 2},
+          ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
+          ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+          ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        },
+        true
+      ) or
+      nil
   }
 )
 
@@ -385,6 +390,31 @@ else
   data.raw.fluid["angels-ore8-solution"].hidden = true
   data.raw.fluid["angels-ore8-anode-sludge"].hidden = true
   data.raw.fluid["angels-ore8-slime"].hidden = true
+  OV.remove_unlock("ore-powderizer", "angelsore8-powder")
+  OV.remove_unlock("ore-powderizer", "angelsore8-powder-processing")
+  OV.remove_unlock("ore-advanced-floatation", "angelsore8-sludge")
+  OV.remove_unlock("ore-advanced-floatation", "angelsore8-dust")
+  OV.remove_unlock("ore-advanced-floatation", "angelsore8-dust-processing")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-solution")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-anode-sludge")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-anode-sludge-filtering")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-crystal")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-crystal-processing")
+
+  OV.disable_recipe(
+    {
+      "angelsore8-powder",
+      "angelsore8-powder-processing",
+      "angelsore8-sludge",
+      "angelsore8-dust",
+      "angelsore8-dust-processing",
+      "angelsore8-solution",
+      "angelsore8-anode-sludge",
+      "angelsore8-anode-sludge-filtering",
+      "angelsore8-crystal",
+      "angelsore8-crystal-processing"
+    }
+  )
 end
 if ore_exists("cupric") then
   angelsmods.functions.move_item("angels-ore9-sludge", "ore-processing-fluid", "b[cupric]-a", "fluid")
@@ -396,7 +426,32 @@ else
   data.raw.fluid["angels-ore9-solution"].hidden = true
   data.raw.fluid["angels-ore9-anode-sludge"].hidden = true
   data.raw.fluid["angels-ore9-slime"].hidden = true
+  OV.remove_unlock("ore-powderizer", "angelsore9-powder")
+  OV.remove_unlock("ore-powderizer", "angelsore9-powder-processing")
+  OV.remove_unlock("ore-advanced-floatation", "angelsore9-sludge")
+  OV.remove_unlock("ore-advanced-floatation", "angelsore9-dust")
+  OV.remove_unlock("ore-advanced-floatation", "angelsore9-dust-processing")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-solution")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-anode-sludge")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-anode-sludge-filtering")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal")
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal-processing")
+  OV.disable_recipe(
+    {
+      "angelsore9-powder",
+      "angelsore9-powder-processing",
+      "angelsore9-sludge",
+      "angelsore9-dust",
+      "angelsore9-dust-processing",
+      "angelsore9-solution",
+      "angelsore9-anode-sludge",
+      "angelsore9-anode-sludge-filtering",
+      "angelsore9-crystal",
+      "angelsore9-crystal-processing"
+    }
+  )
 end
+
 if not (ore_exists("ferrous") or ore_exists("cupric")) then
   OV.disable_technology(
     {
@@ -406,6 +461,11 @@ if not (ore_exists("ferrous") or ore_exists("cupric")) then
       "ore-electro-whinning-cell"
     }
   )
+end
+
+if not ore_exists("ferrous") and not ore_exists("cupric") then
+  OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
+  OV.disable_recipe("angelsore-crystal-mix6-processing")
 end
 
 -------------------------------------------------------------------------------
