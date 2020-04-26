@@ -35,6 +35,36 @@ data:extend(
     order = "a[radioactive-element]-e[americium-241]",
     stack_size = 50,
   },
+  --Cm-245
+  {
+    type = "item",
+    name = "curium-245", -- yellowed silver
+    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-processing",
+    order = "a[radioactive-element]-f[curium-245]",
+    stack_size = 50,
+  },
+  --U-234
+  {
+    type = "item",
+    name = "uranium-234", -- green (the rarest of the shiny rocks)
+    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-processing",
+    order = "a[radioactive-element]-g[uranium-234]",
+    stack_size = 50,
+  },
+  --Th-232
+  {
+    type = "item",
+    name = "thorium-232", -- red (almost maroon)
+    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-processing",
+    order = "a[radioactive-element]-h[thorium-232]",
+    stack_size = 50,
+  },
 })
 
 -------------------------------------------------------------------------------
@@ -62,6 +92,20 @@ data:extend(
   --uranium-cell
     --order "a[uranium]-a" reserved for uranium-fuel-cell
     --order "a[uranium]-b" reserved for used-up-uranium-fuel-cell
+  --U-234-cell
+  {
+    type = "item",
+    name = "angels-uranium-fuel-cell",
+    icon = "__angelsindustries__/graphics/icons/uranium-fuel-cell.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "a[uranium]-c",
+    fuel_category = "nuclear",
+    burnt_result = "used-up-uranium-fuel-cell",
+    fuel_value = "6GJ",
+    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    stack_size = 20,
+  },
   --AMOX-cell
   {
     type = "item",
@@ -85,6 +129,29 @@ data:extend(
     order = "b[AMOX]-b",
     stack_size = 20,
   },
+  --thorium-cell
+  {
+    type = "item",
+    name = "angels-thorium-fuel-cell",
+    icon = "__angelsindustries__/graphics/icons/plutonium-fuel-cell.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "c[thorium]-a",
+    fuel_category = "nuclear",
+    burnt_result = "used-up-angels-deuterium-fuel-cell",
+    fuel_value = "50GJ",
+    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "used-up-angels-thorium-fuel-cell",
+    icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "c[thorium]-b",
+    stack_size = 20,
+  },
   --deuterium-cell
   {
     type = "item",
@@ -92,7 +159,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/deuterium-fuel-cell.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
-    order = "c[deuterium]-a",
+    order = "d[deuterium]-a",
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-deuterium-fuel-cell",
     fuel_value = "80GJ",
@@ -105,7 +172,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
-    order = "c[deuterium]-b",
+    order = "d[deuterium]-b",
     stack_size = 20,
   },
 })
