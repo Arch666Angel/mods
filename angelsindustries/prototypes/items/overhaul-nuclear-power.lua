@@ -8,7 +8,7 @@ data:extend(
   --Np-240
   {
     type = "item",
-    name = "neptunium-240", -- blue
+    name = "neptunium-240", -- cyan/blue
     icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
@@ -39,7 +39,7 @@ data:extend(
   {
     type = "item",
     name = "curium-245", -- yellowed silver
-    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon = "__angelsindustries__/graphics/icons/curium-245.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-f[curium-245]",
@@ -49,7 +49,7 @@ data:extend(
   {
     type = "item",
     name = "uranium-234", -- green (the rarest of the shiny rocks)
-    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon = "__angelsindustries__/graphics/icons/uranium-234.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-g[uranium-234]",
@@ -59,7 +59,7 @@ data:extend(
   {
     type = "item",
     name = "thorium-232", -- red (almost maroon)
-    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon = "__angelsindustries__/graphics/icons/thorium-232.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-h[thorium-232]",
@@ -133,7 +133,7 @@ data:extend(
   {
     type = "item",
     name = "angels-thorium-fuel-cell",
-    icon = "__angelsindustries__/graphics/icons/plutonium-fuel-cell.png",
+    icon = "__angelsindustries__/graphics/icons/thorium-fuel-cell.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-a",
@@ -146,7 +146,7 @@ data:extend(
   {
     type = "item",
     name = "used-up-angels-thorium-fuel-cell",
-    icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
+    icon = "__angelsindustries__/graphics/icons/used-up-thorium-fuel-cell.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-b",

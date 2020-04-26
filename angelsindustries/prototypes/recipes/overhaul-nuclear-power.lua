@@ -232,8 +232,14 @@ data:extend(
       {
         icon = "__angelsindustries__/graphics/icons/americium-241.png",
         icon_size = 64,
-        scale = 32/64 * 2/3,
-        shift = {7.5,5}
+        scale = 32/64 * 0.58,
+        shift = {7.5,3}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/curium-245.png",
+        icon_size = 64,
+        scale = 32/64 * 0.58,
+        shift = {2,9}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -278,10 +284,16 @@ data:extend(
         shift = {-7,-5}
       },
       {
-        icon = "__angelsindustries__/graphics/icons/americium-241.png",
+        icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
         icon_size = 64,
-        scale = 32/64 * 2/3,
-        shift = {7.5,5}
+        scale = 32/64 * 0.58,
+        shift = {7.5,3}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/curium-245.png",
+        icon_size = 64,
+        scale = 32/64 * 0.58,
+        shift = {2,9}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -290,7 +302,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "b[AMOX]-b",
+    order = "b[AMOX]-c",
   },
   --Thorium
   --fuel-cell
@@ -345,16 +357,22 @@ data:extend(
         scale = 32/64
       },
       {
-        icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
+        icon = "__angelsindustries__/graphics/icons/used-up-thorium-fuel-cell.png",
         icon_size = 64,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
+        icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
+        icon_size = 64,
+        scale = 32/64 * 0.58,
+        shift = {7.5,3}
+      },
+      {
         icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
         icon_size = 64,
-        scale = 32/64 * 0.5,
-        shift = {5,7}
+        scale = 32/64 * 0.48,
+        shift = {2,9}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
