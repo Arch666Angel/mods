@@ -83,4 +83,5 @@ OV.patch_recipes(
       {type="item",name="slag",amount=6}}
     }
   })
+  OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
 OV.execute()
