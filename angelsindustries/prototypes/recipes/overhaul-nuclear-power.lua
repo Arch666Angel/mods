@@ -1,31 +1,10 @@
+-------------------------------------------------------------------------------
+-- RADIOACTIVE PROCESSISSING
+-------------------------------------------------------------------------------
 data:extend(
 {
-  {
-    type = "recipe",
-    name = "angels-uranium-reprocessing",
-    enabled = true,
-    category = "advanced-chemistry",
-    subgroup = "angels-power-nuclear-processing",
-    energy_required = 1080,
-    ingredients =
-    {
-      {type="item", name = "used-up-uranium-fuel-cell", amount = 10},
-      {type="fluid", name = "liquid-hydrofluoric-acid", amount = 60},
-    },
-    results=
-    {
-      {type="item", name="uranium-238", amount=5},
-      {type="item", name="slag", amount=1},
-      {type="item", name="neptunium-240", amount=2},
-      {type="fluid", name="water-greenyellow-waste", amount=60},
-    },
-    icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/used-up-uranium-fuel-cell.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/plutonium-239.png",icon_size = 64,scale=0.4,shift={8,8}},
-    }
-  },
+  --order a[uranium]-a[processing] reserved for uranium processing
+  --order a[uranium]-b[enrichment] reserved for kovarkex enrichment process
   {
     type = "recipe",
     name = "angels-plutonium-synthesis",
@@ -37,63 +16,39 @@ data:extend(
     {
       {type="item", name = "neptunium-240", amount = 8},
     },
-    results=
+    results =
     {
       {type="item", name="plutonium-240", amount=8},
     },
-    icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/uranium-235.png",icon_size = 64,scale=0.4,shift={-8,-8}},
-      {icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/plutonium-239.png",icon_size = 64,scale=0.4,shift={8,8}},
-    }
-  },
-  {
-    type = "recipe",
-    name = "angels-mixed-oxide-cell",
-    enabled = true,
-    category = "centrifuging",
-    subgroup = "angels-power-nuclear-processing",
-    energy_required = 540,
-    ingredients =
+    main_product = "plutonium-240",
+    always_show_products = true,
+    icons =
     {
-      {type="item", name = "uranium-238", amount = 5},
-      {type="item", name = "plutonium-240", amount = 5},
-      {type="item", name = "angels-plate-lead", amount = 10},
-    },
-    results=
-    {
-      {type="item", name="AMOX-cell", amount=10},
-    },
-    icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/plutonium-fuel-cell.png",icon_size = 64},
-    }
-  },
-  {
-    type = "recipe",
-    name = "angels-mixed-oxide-reprocessing",
-    enabled = true,
-    category = "centrifuging",
-    subgroup = "angels-power-nuclear-processing",
-    energy_required = 660,
-    ingredients =
-    {
-      {type="item", name="used-up-AMOX-cell", amount=10}
-    },
-    results=
-    {
-      {type="item", name="uranium-238", amount=2},
-      {type="item", name="slag", amount=1},
-      {type="item", name="americium-241", amount=1},
-      {type="item", name="angels-fusion-catalyst", amount=1, probability = 0.2},
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
+        icon_size = 64,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
+        icon_size = 64,
+        scale = 32/64 * 2/3,
+        shift = {5,7}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
     },
     icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/plutonium-239.png",icon_size = 64,scale=0.4,shift={8,8}},
-    }
+    order = "b[AMOX]-a[processing]",
   },
   {
     type = "recipe",
@@ -107,47 +62,197 @@ data:extend(
       {type="item", name="americium-241", amount=5},
       {type="item", name="uranium-235", amount=25},
     },
-    results=
+    results =
     {
-      {type="item", name="uranium-238", amount=2},
+      {type="item", name="uranium-238", amount=4},
       {type="item", name="plutonium-240", amount=1},
       {type="item", name="uranium-235", amount=15,catalyst_amount =15},
     },
+    icons =
+    {
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/americium-241.png",
+        icon_size = 64,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
+        icon_size = 64,
+        scale = 32/64 * 2/3,
+        shift = {5,7}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+    },
     icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/plutonium-239.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/uranium-238.png",icon_size = 64,scale=0.4,shift={8,8}},
-    }
+    order = "b[AMOX]-b[recovery]",
   },
+})
+
+-------------------------------------------------------------------------------
+-- NUCLEAR FUEL CELLS ---------------------------------------------------------
+-------------------------------------------------------------------------------
+data:extend(
+{
+  --uranium-cell
+  {
+    type = "recipe",
+    name = "angels-uranium-reprocessing",
+    enabled = true,
+    category = "advanced-chemistry",
+    subgroup = "angels-power-nuclear-fuel-cell",
+    energy_required = 1080,
+    ingredients =
+    {
+      {type="item", name = "used-up-uranium-fuel-cell", amount = 10},
+      {type="fluid", name = "liquid-hydrofluoric-acid", amount = 60},
+    },
+    results =
+    {
+      {type="item", name="uranium-238", amount=5},
+      {type="item", name="slag", amount=1},
+      {type="item", name="neptunium-240", amount=2},
+      {type="fluid", name="water-greenyellow-waste", amount=60},
+    },
+    icons =
+    {
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/used-up-uranium-fuel-cell.png",
+        icon_size = 64,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
+        icon_size = 64,
+        scale = 32/64 * 2/3,
+        shift = {5,7}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+    },
+    icon_size = 32,
+    order = "a[uranium]-bb" -- "a[uranium]-ba" reserved for vanilla reprocessing
+  },
+  --AMOX-cell
+  {
+    type = "recipe",
+    name = "angels-mixed-oxide-cell",
+    enabled = true,
+    category = "centrifuging",
+    subgroup = "angels-power-nuclear-fuel-cell",
+    energy_required = 540,
+    ingredients =
+    {
+      {type="item", name = "uranium-238", amount = 15},
+      {type="item", name = "plutonium-240", amount = 5},
+      {type="item", name = "angels-plate-lead", amount = 10},
+    },
+    results =
+    {
+      {type="item", name="AMOX-cell", amount=10},
+    },
+    main_product = "AMOX-cell",
+    icon_size = 32,
+    order = "b[AMOX]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-mixed-oxide-reprocessing",
+    enabled = true,
+    category = "centrifuging",
+    subgroup = "angels-power-nuclear-fuel-cell",
+    energy_required = 660,
+    ingredients =
+    {
+      {type="item", name="used-up-AMOX-cell", amount=10}
+    },
+    results =
+    {
+      {type="item", name="uranium-238", amount=2},
+      {type="item", name="slag", amount=1},
+      {type="item", name="americium-241", amount=1},
+      {type="item", name="angels-muon-fusion-catalyst", amount=1, probability = 0.2},
+    },
+    icons=
+    {
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
+        icon_size = 64,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/americium-241.png",
+        icon_size = 64,
+        scale = 32/64 * 2/3,
+        shift = {7.5,5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
+        icon_size = 64,
+        scale = 32/64 * 0.5,
+        shift = {2,8}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+    },
+    icon_size = 32,
+    order = "b[AMOX]-b",
+  },
+  --deuterium-cell
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
     enabled = true,
     category = "chemistry",
-    subgroup = "angels-power-nuclear-processing",
+    subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 5400,
     ingredients =
     {
       {type="fluid", name="gas-deuterium", amount=600},
       {type="item", name="angels-plate-zinc", amount=4},
-      {type="item", name="angels-fusion-catalyst", amount=1},
+      {type="item", name="angels-muon-fusion-catalyst", amount=1},
     },
-    results=
+    results =
     {
       {type="item", name="angels-deuterium-fuel-cell", amount=1},
     },
+    main_product = "angels-deuterium-fuel-cell",
     icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/deuterium-fuel-cell.png",icon_size = 64},
-    }
+    order = "c[deuterium]-a",
   },
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell-reprocessing",
     enabled = true,
     category = "advanced-crafting",
-    subgroup = "angels-power-nuclear-processing",
+    subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 6000,
     ingredients =
     {
@@ -156,12 +261,35 @@ data:extend(
     results=
     {
       {type="item", name="angels-plate-zinc", amount=4},
+      {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=0.995},
+    },
+    icons =
+    {
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
+        icon_size = 64,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
+        icon_size = 64,
+        scale = 32/64 * 0.5,
+        shift = {5,7}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
     },
     icon_size = 32,
-    icons={
-      {icon = "__angelsindustries__/graphics/icons/deuterium-fuel-cell.png",icon_size = 64},
-      {icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",icon_size = 64},
-    }
+    order = "c[deuterium]-b",
   },
 })
 
@@ -193,7 +321,7 @@ plutonium-240
 AMOX-cell
 used-up-AMOX-cell
 americium-241
-angels-fusion-catalyst
+angels-muon-fusion-catalyst
 used-up-angels-deuterium-fuel-cell
 angels-deuterium-fuel-cell
 ]]

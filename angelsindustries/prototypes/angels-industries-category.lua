@@ -412,6 +412,12 @@ data:extend(
     },
     {
       type = "item-subgroup",
+      name = "angels-power-nuclear-fuel-cell",
+      group = "angels-power",
+      order = "d[nuclear-processing]-b"
+    },
+    {
+      type = "item-subgroup",
       name = "angels-power-poles",
       group = "angels-power",
       order = "e[power-poles]-a"

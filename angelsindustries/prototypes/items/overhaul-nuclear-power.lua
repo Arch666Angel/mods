@@ -1,77 +1,88 @@
+-------------------------------------------------------------------------------
+-- RADIOACTIVE ELEMENTS -------------------------------------------------------
+-------------------------------------------------------------------------------
 data:extend(
 {
+  --order a[radioactive-element]-a[uranium-235] reserved for uranium-235
+  --order a[radioactive-element]-b[uranium-238] reserved for uranium-238
   --Np-240
   {
     type = "item",
-    name = "neptunium-240",
-    icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
-    icon_size = 64,
+    name = "neptunium-240", -- blue
+    icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a",
+    order = "a[radioactive-element]-c[neptunium-240]",
     stack_size = 50,
   },
   --Pu-240
   {
     type = "item",
-    name = "plutonium-240",
+    name = "plutonium-240", -- orange
     icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a",
+    order = "a[radioactive-element]-d[plutonium-240]",
     stack_size = 50,
   },
   --Am-241
   {
     type = "item",
-    name = "americium-241",
-    icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
-    icon_size = 64,
+    name = "americium-241", -- translucent white (bleeched color)
+    icon = "__angelsindustries__/graphics/icons/americium-241.png",
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a",
+    order = "a[radioactive-element]-e[americium-241]",
     stack_size = 50,
   },
-  --used-up-AMOX-cell
+})
+
+-------------------------------------------------------------------------------
+-- OTHER INTERMEDIATES --------------------------------------------------------
+-------------------------------------------------------------------------------
+data:extend(
+{
+  --muon-fusion-catalyst
   {
     type = "item",
-    name = "used-up-AMOX-cell",
-    icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
-    icon_size = 64,
-    subgroup = "angels-power-nuclear-processing",
-    order = "a",
-    stack_size = 20,
-  },
-  --AMOX-cell
-  {
-    type = "item",
-    name = "AMOX-cell",
-    icon = "__angelsindustries__/graphics/icons/plutonium-fuel-cell.png",
-    icon_size = 64,
-    subgroup = "angels-power-nuclear-processing",
-    order = "a",
-    fuel_category = "nuclear",
-    burnt_result = "used-up-AMOX-cell",
-    fuel_value = "18GJ",
-    fuel_glow_color = {r = 0.7, g = 1, b = 0},
-    stack_size = 20,
-  },
-  --angels-fusion-catalyst
-  {
-    type = "item",
-    name = "angels-fusion-catalyst",
+    name = "angels-muon-fusion-catalyst",
     icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a",
     stack_size = 1,
   },
-  --used-up-deuterium-cell
+})
+
+-------------------------------------------------------------------------------
+-- NUCLEAR FUEL CELLS ---------------------------------------------------------
+-------------------------------------------------------------------------------
+data:extend(
+{
+  --uranium-cell
+    --order "a[uranium]-a" reserved for uranium-fuel-cell
+    --order "a[uranium]-b" reserved for used-up-uranium-fuel-cell
+  --AMOX-cell
   {
     type = "item",
-    name = "used-up-angels-deuterium-fuel-cell",
-    icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
-    icon_size = 64,
-    subgroup = "angels-power-nuclear-processing",
-    order = "a",
+    name = "AMOX-cell",
+    icon = "__angelsindustries__/graphics/icons/plutonium-fuel-cell.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "b[AMOX]-a",
+    fuel_category = "nuclear",
+    burnt_result = "used-up-AMOX-cell",
+    fuel_value = "18GJ",
+    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "used-up-AMOX-cell",
+    icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "b[AMOX]-b",
     stack_size = 20,
   },
   --deuterium-cell
@@ -79,13 +90,22 @@ data:extend(
     type = "item",
     name = "angels-deuterium-fuel-cell",
     icon = "__angelsindustries__/graphics/icons/deuterium-fuel-cell.png",
-    icon_size = 64,
-    subgroup = "angels-power-nuclear-processing",
-    order = "a",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "c[deuterium]-a",
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-deuterium-fuel-cell",
     fuel_value = "80GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "used-up-angels-deuterium-fuel-cell",
+    icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-fuel-cell",
+    order = "c[deuterium]-b",
     stack_size = 20,
   },
 })
@@ -110,7 +130,7 @@ Pu-240
 AMOX-cell
 used-up-AMOX-cell
 Am-241
-angels-fusion-catalyst
+muon-fusion-catalyst
 == LIST OF RECIPES
 angels-uranium-reprocessing
 10 cells + 20 HF.acid -> 5 U-238 + 2 Np-240 + 1 slag + 20 FWW
