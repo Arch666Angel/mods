@@ -145,10 +145,10 @@ local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products
         local ingredients_override_used = false
         local ingredients = {{"!!"}}
         for _, ingredient in pairs(ingredients_override) do
-          local ingredient_name = ingredient[1]
-          local ingredient_amount = ingredient[2]
+          local ingredient_name = ingredient.name or ingredient[1]
+          local ingredient_amount = ingredient.amount or ingredient[2]
           if ingredient_amount > 0 then -- todo: check if ingredient exist in triggers?
-            table.insert(ingredients, {ingredient_name, ingredient_amount})
+            table.insert(ingredients, {type = ingredient.type or "item", name = ingredient_name, amount = ingredient_amount})
             ingredients_override_used = true
           end
         end
