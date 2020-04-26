@@ -93,5 +93,21 @@ script.on_event(
         unlock(event.research.force, shortcut)
       end
     end
+
+    local ghosting = {
+      ["angels-ghosting-construction-robots"] = true,
+      ["angels-ghosting-angels-construction-robots"] = true
+    }
+    if ghosting[research.name] then
+      research.force.technologies["angels-hidden-ghosting"].researched = true
+      for tech in pairs(ghosting) do
+        if research.force.technologies[tech] then
+          research.force.technologies[tech].researched = true
+        end
+      end
+    end
   end
 )
+
+script.on_event('toggle-ghosting', function(event)
+end)
