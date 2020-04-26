@@ -80,7 +80,7 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
             ore_amount = 0
           end
           if ore_amount and ore_amount > 0 then
-            table.insert(recipe.results, {ore_name, ore_amount})
+            table.insert(recipe.results, {type = "item", name = ore_name, amount = ore_amount})
             local string_index = string.find(ore_name, "-ore")
             if string_index then
               table.insert(localised_ores, string.sub(ore_name, 1, string_index - 1))
@@ -148,7 +148,10 @@ local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products
           local ingredient_name = ingredient.name or ingredient[1]
           local ingredient_amount = ingredient.amount or ingredient[2]
           if ingredient_amount > 0 then -- todo: check if ingredient exist in triggers?
-            table.insert(ingredients, {type = ingredient.type or "item", name = ingredient_name, amount = ingredient_amount})
+            table.insert(
+              ingredients,
+              {type = ingredient.type or "item", name = ingredient_name, amount = ingredient_amount}
+            )
             ingredients_override_used = true
           end
         end
