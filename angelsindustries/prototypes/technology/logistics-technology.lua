@@ -32,6 +32,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-logistic-chest-storage"
+        },
+        {
+          type = "ghost-time-to-live",
+          modifier = 60 * 60 * 60 * 24 * 7
         }
       },
       unit = {

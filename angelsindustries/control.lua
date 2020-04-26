@@ -66,3 +66,36 @@ script.on_event(
     end
   end
 )
+
+local function unlock(force, condition, shortcut)
+  for t, _ in pairs(condition) do
+    if not force.technologies[t].researched then
+      return
+    end
+  end
+  for _, p in pairs(force.players) do
+    p.set_shortcut_available(shortcut, true)
+  end
+end
+
+script.on_event(
+  defines.events.on_research_finished,
+  function(event)
+    local unlocks = {
+      [{["angels-construction-robots"] = true}] = "undo",
+      [{["angels-construction-robots"] = true}] = "copy",
+      [{["angels-construction-robots"] = true}] = "cut",
+      [{["angels-construction-robots"] = true}] = "paste",
+      [{["angels-construction-robots"] = true}] = "import-string",
+      [{["angels-construction-robots"] = true}] = "give-blueprint",
+      [{["angels-construction-robots"] = true}] = "give-blueprint-book",
+      [{["angels-construction-robots"] = true}] = "give-deconstruction-planner",
+      [{["angels-construction-robots"] = true}] = "give-upgrade-planner"
+    }
+    for t, s in pairs(unlocks) do
+      if t[event.research.name] then
+        unlock(event.research.force, t, s)
+      end
+    end
+  end
+)
