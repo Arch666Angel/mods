@@ -449,4 +449,4 @@ angelsmods.functions.allow_productivity("liquid-resin-1")
 angelsmods.functions.allow_productivity("liquid-resin-2")
 angelsmods.functions.allow_productivity("liquid-resin-3")
 
-angelsmods.functions.allow_productivity("solid-rubber")
+angelsmods.functions.allow_productivity("liquid-rubber-1")

@@ -390,3 +390,9 @@ end
 
 --ENABLE PRODUCTIVITY
 --angelsmods.functions.allow_productivity("slag-processing-1")
+angelsmods.functions.allow_productivity("bio-resin")
+angelsmods.functions.allow_productivity("bio-resin-resin-liquification")
+angelsmods.functions.allow_productivity("bio-plastic")
+angelsmods.functions.allow_productivity("bio-plastic-1")
+angelsmods.functions.allow_productivity("bio-plastic-2")
+angelsmods.functions.allow_productivity("bio-rubber")

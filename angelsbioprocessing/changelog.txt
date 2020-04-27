@@ -3,6 +3,7 @@ Version: 0.7.9
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+    - Added productivity to liquid resin, plastic and rubber, similar to the petrochem equivalents
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.8
 Date: 20.04.2020
