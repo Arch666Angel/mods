@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Added productivity to liquid resin, plastic and rubber, similar to the petrochem equivalents
+  Balancing:
+    - Moved resin from wood recipe to tree arboretums, so it doesn't require garden exploration
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.8
 Date: 20.04.2020

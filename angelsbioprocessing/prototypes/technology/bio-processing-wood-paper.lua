@@ -100,6 +100,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing",
+      "bio-farm",
     },
     effects =
     {
@@ -130,6 +131,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "wood-sawing-1"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-resin-wood-reprocessing"
       },
       {
         type = "unlock-recipe",
@@ -268,10 +273,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-resin-resin-liquification"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing"
       }
     },
     unit =
