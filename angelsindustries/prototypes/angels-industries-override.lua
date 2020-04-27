@@ -72,16 +72,17 @@ OV.patch_recipes(
     { name = "uranium-fuel-cell", ingredients = {
       {type="item",name="uranium-235",amount=1},
       {type="item",name="uranium-238",amount=29},
-      {type="item",name="angels-plate-lead",amount=30}},
+      --[[{type="item",name="angels-plate-lead",amount=30}]]},
       results={
-        {type="item",name="uranium-fuel-cell",amount=30}}
+        {type="item",name="uranium-fuel-cell",amount=15}}
     },
-    { name = "uranium-fuel-reprocessing",ingredients = {
+    --[[{ name = "uranium-fuel-reprocessing",ingredients = {
       {type="item",name="used-uranium-fuel-cell",amount=24}},
     results={
       {type="item",name="uranium-238",amount=4},
       {type="item",name="slag",amount=6}}
-    }
+    }]]
   })
   OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
+  data.raw.item["uranium-fuel-cell"].fuel_value="2GJ"
 OV.execute()

@@ -1,4 +1,19 @@
 -------------------------------------------------------------------------------
+-- create dummy thorium ore
+-------------------------------------------------------------------------------
+data:extend(
+{
+  {
+    type = "item",
+    name = "thorium-ore", 
+    icon = "__angelsrefining__/graphics/icons/nodule-crushed.png",
+    icon_size = 32, --for now
+    subgroup = "angels-power-nuclear-processing", --for now
+    order = "a[radioactive-element]-c[neptunium-240]",--for now
+    stack_size = 100,
+  },
+})
+-------------------------------------------------------------------------------
 -- RADIOACTIVE ELEMENTS -------------------------------------------------------
 -------------------------------------------------------------------------------
 data:extend(
@@ -102,7 +117,7 @@ data:extend(
     order = "a[uranium]-c",
     fuel_category = "nuclear",
     burnt_result = "used-up-uranium-fuel-cell",
-    fuel_value = "6GJ",
+    fuel_value = "1.5GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
     stack_size = 20,
   },
@@ -138,7 +153,7 @@ data:extend(
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-angels-deuterium-fuel-cell",
+    burnt_result = "used-up-angels-thorium-fuel-cell",
     fuel_value = "50GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
     stack_size = 20,
