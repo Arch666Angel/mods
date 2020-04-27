@@ -3,6 +3,7 @@ Version: 0.12.0
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+    - Reordered the geode liquifying recipes to be the same order as the geode processing recipes
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.10
 Date: 20.04.2020

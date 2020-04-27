@@ -137,12 +137,14 @@ data:extend(
       subgroup = "ore-processing-a",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "item", name = "angels-ore2-crushed", amount = 2},
         {type = "item", name = "angels-ore5-crushed", amount = 2}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore8-crushed", amount = 6}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
@@ -156,11 +158,13 @@ data:extend(
       subgroup = "ore-processing-a",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore8-crushed", amount = 3},
         {type = "item", name = "milling-drum", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore8-powder", amount = 3},
         {type = "item", name = "milling-drum-used", amount = 1}
       },
@@ -176,12 +180,14 @@ data:extend(
       subgroup = "ore-processing-a",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "item", name = "angels-ore4-crushed", amount = 2},
         {type = "item", name = "angels-ore6-crushed", amount = 2}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore9-crushed", amount = 6}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
@@ -195,11 +201,13 @@ data:extend(
       subgroup = "ore-processing-a",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore9-crushed", amount = 3},
         {type = "item", name = "milling-drum", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore9-powder", amount = 3},
         {type = "item", name = "milling-drum-used", amount = 1}
       },
@@ -216,11 +224,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore1-chunk", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-blue", amount = 1, probability = 0.5}
@@ -236,11 +246,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore2-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore2-chunk", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-purple", amount = 1, probability = 0.5}
@@ -256,11 +268,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore3-chunk", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-yellow", amount = 1, probability = 0.5}
@@ -276,11 +290,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore4-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore4-chunk", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-lightgreen", amount = 1, probability = 0.5}
@@ -296,11 +312,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore5-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore5-chunk", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-cyan", amount = 1, probability = 0.5}
@@ -316,11 +334,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore6-crushed", amount = 2},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore6-chunk", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-red", amount = 1, probability = 0.5}
@@ -337,7 +357,8 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore8-powder", amount = 3},
         {type = "item", name = "angels-ore1-chunk", amount = 1},
         {type = "item", name = "angels-ore2-chunk", amount = 1},
@@ -345,7 +366,8 @@ data:extend(
         {type = "fluid", name = "thermal-water", amount = 20},
         {type = "fluid", name = "sulfuric-acid", amount = 20}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore8-sludge", amount = 6}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
@@ -359,11 +381,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore8-sludge", amount = 4}
         --{type="item", name="solid-sodium-hydroxide", amount=2},
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore8-dust", amount = 4},
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
@@ -379,7 +403,8 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore9-powder", amount = 3},
         {type = "item", name = "angels-ore3-chunk", amount = 1},
         {type = "item", name = "angels-ore4-chunk", amount = 1},
@@ -387,7 +412,8 @@ data:extend(
         {type = "fluid", name = "thermal-water", amount = 20},
         {type = "fluid", name = "sulfuric-acid", amount = 20}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore9-sludge", amount = 6}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
@@ -401,11 +427,13 @@ data:extend(
       subgroup = "ore-processing-b",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore9-sludge", amount = 4}
         --{type="item", name="solid-sodium-hydroxide", amount=2},
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore9-dust", amount = 4},
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
@@ -422,11 +450,13 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore1-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore1-crystal", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore1-crystal.png",
@@ -440,11 +470,13 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore2-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore2-crystal", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore2-crystal.png",
@@ -458,11 +490,13 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore3-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore3-crystal", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore3-crystal.png",
@@ -476,11 +510,13 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore4-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore4-crystal", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore4-crystal.png",
@@ -494,11 +530,13 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore5-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore5-crystal", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore5-crystal.png",
@@ -512,11 +550,13 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore6-chunk", amount = 2},
         {type = "fluid", name = "sulfuric-acid", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore6-crystal", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
@@ -531,14 +571,16 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore8-dust", amount = 3},
         {type = "item", name = "angels-ore1-crystal", amount = 1},
         {type = "item", name = "angels-ore2-crystal", amount = 1},
         {type = "item", name = "angels-ore5-crystal", amount = 1},
         {type = "fluid", name = "sulfuric-acid", amount = 20}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore8-solution", amount = 60}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
@@ -552,12 +594,14 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore8-solution", amount = 60},
         {type = "fluid", name = "water-purified", amount = 50},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore8-slime", amount = 60},
         {type = "fluid", name = "water-yellow-waste", amount = 10},
         {type = "item", name = "filter-ceramic-used", amount = 1}
@@ -574,11 +618,13 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore8-slime", amount = 60}
         --{type="fluid", name="liquid-ferric-chloride-solution", amount=2},
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore8-anode-sludge", amount = 60},
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "slag", amount = 1}
@@ -595,10 +641,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore8-anode-sludge", amount = 60}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore8-crystal", amount = 6}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
@@ -612,14 +660,16 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore9-dust", amount = 3},
         {type = "item", name = "angels-ore3-crystal", amount = 1},
         {type = "item", name = "angels-ore4-crystal", amount = 1},
         {type = "item", name = "angels-ore6-crystal", amount = 1},
         {type = "fluid", name = "sulfuric-acid", amount = 20}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore9-solution", amount = 60}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
@@ -633,12 +683,14 @@ data:extend(
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore9-solution", amount = 60},
         {type = "fluid", name = "water-purified", amount = 50},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore9-slime", amount = 60},
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
@@ -655,11 +707,13 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore9-slime", amount = 60}
         --{type="fluid", name="liquid-cupric-chloride-solution", amount=2},
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "angels-ore9-anode-sludge", amount = 60},
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "slag", amount = 1}
@@ -676,10 +730,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "angels-ore9-anode-sludge", amount = 60}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore9-crystal", amount = 6}
       },
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
@@ -694,10 +750,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore1-crystal", amount = 4}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore1-pure", amount = 4}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png",
@@ -711,10 +769,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore2-crystal", amount = 4}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore2-pure", amount = 4}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png",
@@ -728,10 +788,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore3-crystal", amount = 4}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore3-pure", amount = 4}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png",
@@ -745,10 +807,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore4-crystal", amount = 4}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore4-pure", amount = 4}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png",
@@ -762,10 +826,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore5-crystal", amount = 4}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore5-pure", amount = 4}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png",
@@ -779,10 +845,12 @@ data:extend(
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "angels-ore6-crystal", amount = 4}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "angels-ore6-pure", amount = 4}
       },
       icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png",
@@ -797,11 +865,13 @@ data:extend(
       subgroup = "processing-crafting",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "steel-plate", amount = 1},
         {type = "item", name = "iron-plate", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "filter-frame", amount = 1}
       },
       icon = "__angelsrefining__/graphics/icons/filter-frame.png",
@@ -815,11 +885,13 @@ data:extend(
       subgroup = "processing-crafting",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "coal", amount = 1},
         {type = "item", name = "filter-frame", amount = 5}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "filter-coal", amount = 5}
       },
       icon = "__angelsrefining__/graphics/icons/filter-coal.png",
@@ -833,10 +905,12 @@ data:extend(
       subgroup = "processing-crafting",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "filter-frame", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "filter-ceramic", amount = 1}
       },
       icon = "__angelsrefining__/graphics/icons/filter-ceramic.png",
@@ -850,11 +924,13 @@ data:extend(
       subgroup = "processing-crafting",
       energy_required = 0.5,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "filter-ceramic-used", amount = 1},
         {type = "fluid", name = "water-purified", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "filter-ceramic", amount = 1}
       },
       icon = "__angelsrefining__/graphics/icons/filter-ceramic.png",
@@ -868,11 +944,13 @@ data:extend(
       subgroup = "processing-crafting",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "steel-plate", amount = 1},
         {type = "fluid", name = "lubricant", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "milling-drum", amount = 1}
       },
       icon = "__angelsrefining__/graphics/icons/milling-drum.png",
@@ -886,11 +964,13 @@ data:extend(
       subgroup = "processing-crafting",
       energy_required = 1,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "milling-drum-used", amount = 1},
         {type = "fluid", name = "lubricant", amount = 10}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "milling-drum", amount = 1}
       },
       icon = "__angelsrefining__/graphics/icons/milling-drum-used.png",
@@ -904,11 +984,13 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "slag", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "slag-slurry", amount = 50}
       },
       always_show_products = true,
@@ -926,11 +1008,13 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "stone-crushed", amount = 25},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "slag-slurry", amount = 50}
       },
       always_show_products = true,
@@ -949,12 +1033,14 @@ data:extend(
       subgroup = "filtering",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "slag-slurry", amount = 50},
         {type = "fluid", name = "water-purified", amount = 50},
         {type = "item", name = "filter-coal", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 50},
         {type = "fluid", name = "water-yellow-waste", amount = 40},
         {type = "item", name = "filter-frame", amount = 1}
@@ -970,12 +1056,14 @@ data:extend(
       subgroup = "filtering",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "slag-slurry", amount = 35},
         {type = "fluid", name = "water-purified", amount = 50},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 35},
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
@@ -991,11 +1079,13 @@ data:extend(
       subgroup = "filtering",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "thermal-water", amount = 50},
         {type = "item", name = "filter-coal", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 50},
         {type = "item", name = "filter-frame", amount = 1}
       },
@@ -1010,11 +1100,13 @@ data:extend(
       subgroup = "filtering",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "thermal-water", amount = 35},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 35},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
@@ -1031,11 +1123,13 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "geode-blue", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 20}
       },
       always_show_products = true,
@@ -1044,73 +1138,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-blue"}
       ),
-      order = "a [geode-blue-liquify]"
-    },
-    {
-      type = "recipe",
-      name = "geode-cyan-liquify",
-      category = "liquifying",
-      subgroup = "liquifying",
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "geode-cyan", amount = 5},
-        {type = "fluid", name = "sulfuric-acid", amount = 15}
-      },
-      results = {
-        {type = "fluid", name = "crystal-slurry", amount = 50}
-      },
-      always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
-        nil,
-        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
-        {"geode-cyan"}
-      ),
-      order = "b [geode-cyan-liquify]"
-    },
-    {
-      type = "recipe",
-      name = "geode-lightgreen-liquify",
-      category = "liquifying",
-      subgroup = "liquifying",
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "geode-lightgreen", amount = 5},
-        {type = "fluid", name = "sulfuric-acid", amount = 15}
-      },
-      results = {
-        {type = "fluid", name = "crystal-slurry", amount = 50}
-      },
-      always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
-        nil,
-        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
-        {"geode-lightgreen"}
-      ),
-      order = "c [geode-lightgreen-liquify]"
-    },
-    {
-      type = "recipe",
-      name = "geode-purple-liquify",
-      category = "liquifying",
-      subgroup = "liquifying",
-      energy_required = 3,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "geode-purple", amount = 5},
-        {type = "fluid", name = "sulfuric-acid", amount = 15}
-      },
-      results = {
-        {type = "fluid", name = "crystal-slurry", amount = 40}
-      },
-      always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
-        nil,
-        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
-        {"geode-purple"}
-      ),
-      order = "d [geode-purple-liquify]"
+      order = "a[geode-blue-liquify]"
     },
     {
       type = "recipe",
@@ -1119,11 +1147,13 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "geode-red", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 20}
       },
       always_show_products = true,
@@ -1132,7 +1162,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-red"}
       ),
-      order = "e [geode-red-liquify]"
+      order = "b[geode-red-liquify]"
     },
     {
       type = "recipe",
@@ -1141,11 +1171,13 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "geode-yellow", amount = 5},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 30}
       },
       always_show_products = true,
@@ -1154,7 +1186,79 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-yellow"}
       ),
-      order = "f [geode-yellow-liquify]"
+      order = "c[geode-yellow-liquify]"
+    },
+    {
+      type = "recipe",
+      name = "geode-purple-liquify",
+      category = "liquifying",
+      subgroup = "liquifying",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "geode-purple", amount = 5},
+        {type = "fluid", name = "sulfuric-acid", amount = 15}
+      },
+      results =
+      {
+        {type = "fluid", name = "crystal-slurry", amount = 40}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-purple"}
+      ),
+      order = "d[geode-purple-liquify]"
+    },
+    {
+      type = "recipe",
+      name = "geode-cyan-liquify",
+      category = "liquifying",
+      subgroup = "liquifying",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "geode-cyan", amount = 5},
+        {type = "fluid", name = "sulfuric-acid", amount = 15}
+      },
+      results =
+      {
+        {type = "fluid", name = "crystal-slurry", amount = 50}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-cyan"}
+      ),
+      order = "e[geode-cyan-liquify]"
+    },
+    {
+      type = "recipe",
+      name = "geode-lightgreen-liquify",
+      category = "liquifying",
+      subgroup = "liquifying",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "geode-lightgreen", amount = 5},
+        {type = "fluid", name = "sulfuric-acid", amount = 15}
+      },
+      results =
+      {
+        {type = "fluid", name = "crystal-slurry", amount = 50}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"geode-lightgreen"}
+      ),
+      order = "f[geode-lightgreen-liquify]"
     },
     {
       type = "recipe",
@@ -1163,11 +1267,13 @@ data:extend(
       subgroup = "liquifying",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "crystal-dust", amount = 10},
         {type = "fluid", name = "sulfuric-acid", amount = 15}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 50}
       },
       always_show_products = true,
@@ -1186,12 +1292,14 @@ data:extend(
       subgroup = "filtering",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 50},
         {type = "fluid", name = "water-purified", amount = 50},
         {type = "item", name = "filter-coal", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "crystal-seedling", amount = 50},
         {type = "fluid", name = "water-yellow-waste", amount = 40},
         {type = "item", name = "filter-frame", amount = 1}
@@ -1207,12 +1315,14 @@ data:extend(
       subgroup = "filtering",
       energy_required = 1.5,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 35},
         {type = "fluid", name = "water-purified", amount = 50},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "crystal-seedling", amount = 35},
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
@@ -1228,12 +1338,14 @@ data:extend(
       subgroup = "filtering",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 50},
         {type = "fluid", name = "water-mineralized", amount = 100},
         {type = "item", name = "filter-coal", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 50},
         {type = "fluid", name = "water-yellow-waste", amount = 40},
         {type = "item", name = "filter-frame", amount = 1}
@@ -1249,12 +1361,14 @@ data:extend(
       subgroup = "filtering",
       energy_required = 1.5,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "crystal-slurry", amount = 35},
         {type = "fluid", name = "water-mineralized", amount = 100},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 35},
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
@@ -1271,10 +1385,12 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 0.5,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "mineral-sludge", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "catalysator-brown", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-brown.png",
@@ -1288,10 +1404,12 @@ data:extend(
       subgroup = "geode-crystallization",
       energy_required = 0.5,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "crystal-seedling", amount = 25}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "catalysator-green", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-green.png",
@@ -1305,11 +1423,13 @@ data:extend(
       subgroup = "geode-crystallization",
       energy_required = 0.5,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "catalysator-brown", amount = 2},
         {type = "item", name = "catalysator-green", amount = 2}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "catalysator-orange", amount = 2}
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-orange.png",
