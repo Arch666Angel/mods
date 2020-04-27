@@ -1244,6 +1244,20 @@ function angelsmods.functions.allow_productivity(recipe_name)
   end
 end
 
+function angelsmods.functions.remove_productivity(recipe_name)
+  if data.raw.recipe[recipe_name] then
+    for i, module in pairs(data.raw.module) do
+      if module.limitation and module.effect.productivity then
+        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
+          if limitationRecipeName == recipe_name then
+            table.remove(module.limitation, limitationIndex)
+          end
+        end
+      end
+    end
+  end
+end
+
 --OVERRIDES SET CONDITION FOR LIST OF ITEMS
 function angelsmods.functions.override_item_conditions(override)
   for i, items in pairs(override.list) do

@@ -3,6 +3,7 @@ Version: 0.6.7
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+    - Removed productivity from copper wire, as productivity is achieved by making cable coils
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.6
 Date: 20.04.2020
