@@ -8,6 +8,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-plutonium-synthesis",
+    localised_name = {"recipe-name.angels-plutonium-synthesis"},
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
@@ -22,6 +23,7 @@ data:extend(
     },
     main_product = "plutonium-240",
     always_show_products = true,
+    show_amount_in_title = false,
     icons =
     {
       { -- need to have something as bottom layer
