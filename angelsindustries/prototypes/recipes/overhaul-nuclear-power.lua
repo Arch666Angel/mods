@@ -1,3 +1,11 @@
+local tint_colors =
+{
+  green = {r=000/255, g=255/255, b=000/255, a=1},
+  orange = {r=232/255, g=139/255, b=000/255, a=1},
+  red = {r=244/255, g=008/255, b=000/255, a=1},
+  blue = {r=000/255, g=067/255, b=237/255, a=1},
+}
+
 -------------------------------------------------------------------------------
 -- RADIOACTIVE MATERIAL PROCESSING
 -------------------------------------------------------------------------------
@@ -51,6 +59,10 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-a[processing]",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.orange,
+    },
   },
   {
     type = "recipe",
@@ -99,6 +111,10 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-b[recovery]",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.orange,
+    },
   },
   {
     type = "recipe",
@@ -145,6 +161,10 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-b[recovery]",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.red,
+    },
   },
 })
 
@@ -178,6 +198,10 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "a[uranium]-b",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.green,
+    },
   },
   --advanced reprocessing
   {
@@ -225,7 +249,11 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "a[uranium]-d" -- "a[uranium]-c" reserved for vanilla reprocessing
+    order = "a[uranium]-d", -- "a[uranium]-c" reserved for vanilla reprocessing
+    crafting_machine_tint =
+    {
+      primary = tint_colors.green,
+    },
   },
   --AMOX FUEL
   --fuel cell
@@ -251,6 +279,10 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "b[AMOX]-a",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.orange,
+    },
   },
   --basic reprocessing
   {
@@ -299,6 +331,10 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-b",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.orange,
+    },
   },
   --advanced reprocessing
   {
@@ -354,6 +390,10 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-c",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.orange,
+    },
   },
   --THORIUM FUEL
   --basic fuel cell
@@ -380,6 +420,10 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "c[thorium]-a",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.red,
+    },
   },
   --advanced fuel cell
   {
@@ -405,6 +449,10 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "c[thorium]-b",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.red,
+    },
   },
   --basic reprocessing
   {
@@ -458,6 +506,10 @@ data:extend(
     },
     icon_size = 32,
     order = "c[thorium]-c",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.red,
+    },
   },
   -- advanced reprocessing
   {
@@ -513,6 +565,10 @@ data:extend(
     },
     icon_size = 32,
     order = "c[thorium]-d",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.red,
+    },
   },
   --DEUTERIUM FUEL
   --fuel cell
@@ -538,6 +594,10 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "d[deuterium]-a",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.blue,
+    },
   },
   --reprocessing
   {
@@ -584,6 +644,10 @@ data:extend(
     },
     icon_size = 32,
     order = "d[deuterium]-b",
+    crafting_machine_tint =
+    {
+      primary = tint_colors.blue,
+    },
   },
 })
 

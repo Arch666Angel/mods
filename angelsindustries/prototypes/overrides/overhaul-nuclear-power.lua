@@ -1,4 +1,11 @@
 local OV = angelsmods.functions.OV
+local tint_colors =
+{
+  green = {r=000/255, g=255/255, b=000/255, a=1},
+  orange = {r=232/255, g=139/255, b=000/255, a=1},
+  red = {r=244/255, g=008/255, b=000/255, a=1},
+  blue = {r=000/255, g=067/255, b=237/255, a=1},
+}
 
 -------------------------------------------------------------------------------
 -- Patch existing nuclear recipes
@@ -15,7 +22,11 @@ OV.patch_recipes(
       results =
       {
         {type="item",name="uranium-234" , amount=1 , probability=0.000055}
-      }
+      },
+      crafting_machine_tint =
+      {
+        primary = tint_colors.green,
+      },
     },
     {
       name = "uranium-fuel-cell",
@@ -33,21 +44,27 @@ OV.patch_recipes(
       },
       always_show_products = true,
       show_amount_in_title = false,
-    },
-    --[[
-    {
-      name = "uranium-fuel-reprocessing",
-      ingredients =
+      crafting_machine_tint =
       {
-        {type="item",name="used-uranium-fuel-cell",amount=24}
+        primary = tint_colors.green,
       },
-      results =
+    },
+    {
+      name = "nuclear-fuel-reprocessing",
+      --ingredients =
+      --{
+      --  {type="item",name="used-uranium-fuel-cell",amount=24}
+      --},
+      --results =
+      --{
+      --  {type="item",name="uranium-238",amount=4},
+      --  {type="item",name="slag",amount=6}
+      --},
+      crafting_machine_tint =
       {
-        {type="item",name="uranium-238",amount=4},
-        {type="item",name="slag",amount=6}
-      }
+        primary = tint_colors.green,
+      },
     }
-    ]]
   }
 )
 OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")

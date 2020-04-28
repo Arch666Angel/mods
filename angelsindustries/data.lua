@@ -62,6 +62,9 @@ require("prototypes.technology.logistics-technology")
 
 --OVERHAUL
 if angelsmods.industries.overhaul then
+  --ENTITIES
+  require("prototypes.buildings.centrifuge")
+
   --ITEMS
   require("prototypes.items.overhaul-nuclear-power")
   
