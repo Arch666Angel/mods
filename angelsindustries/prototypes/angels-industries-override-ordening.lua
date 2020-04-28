@@ -330,15 +330,15 @@ if angelsmods.industries.overhaul then
   move_item("heat-pipe", "angels-power-nuclear", "b[heat-pipe]")
   move_item("heat-exchanger", "angels-power-nuclear", "c[heat-exchanger]")
 
-  move_item("uranium-235", "angels-power-nuclear-processing", "a[radioactive-element]-a[uranium-235]")
-  move_item("uranium-238", "angels-power-nuclear-processing", "a[radioactive-element]-b[uranium-238]")
+  move_item("uranium-235", "angels-power-nuclear-processing", "a[radioactive-element]-b[uranium-235]")
+  move_item("uranium-238", "angels-power-nuclear-processing", "a[radioactive-element]-c[uranium-238]")
   move_item("uranium-processing", "angels-power-nuclear-processing", "a[uranium]-a[processing]", "recipe")
   move_item("kovarex-enrichment-process", "angels-power-nuclear-processing", "a[uranium]-b[enrichment]", "recipe")
 
-  move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-a")
-  move_item("used-up-uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-b")
+  move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-b")
+  move_item("used-up-uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-c")
   move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-a", "recipe")
-  move_item("nuclear-fuel-reprocessing", "angels-power-nuclear-fuel-cell", "a[uranium]-ba", "recipe")
+  move_item("nuclear-fuel-reprocessing", "angels-power-nuclear-fuel-cell", "a[uranium]-c", "recipe")
 
   move_item("small-electric-pole", "angels-power-poles", "a[small]")
   move_item("medium-electric-pole", "angels-power-poles", "b[medium]")

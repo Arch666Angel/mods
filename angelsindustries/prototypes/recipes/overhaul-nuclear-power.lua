@@ -68,7 +68,7 @@ data:extend(
       --{type="item", name="uranium-235", amount=1,probability=0.3},
       {type="item", name="plutonium-240", amount=6,catalyst_amount=5},
       {type="item", name="uranium-238", amount=15,catalyst_amount =15},
-      {type="item", name="solid-lead-oxide", amount=5},
+      {type="item", name="solid-lead-oxide", amount=5}, -- equals 5 lead plates
     },
     icons =
     {
@@ -117,26 +117,28 @@ data:extend(
     icons =
     {
       { -- need to have something as bottom layer
-        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon = "__base__/graphics/icons/uranium-processing.png",
         icon_size = 64,
-        scale = 32/64
+        scale = 32/64,
+        tint = {a=0.01},
       },
       {
-        icon = "__angelsindustries__/graphics/icons/americium-241.png",
+        icon = "__angelssmelting__/graphics/icons/ore-thorium.png",
         icon_size = 64,
-        scale = 32/64 * 45/64,
-        shift = {-7,-5}
+        scale = 32/64 * 40/64,
+        shift = {0,-6}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/thorium-232.png",
+        icon_size = 64,
+        scale = 32/64 * 32/64,
+        shift = {-8,8}
       },
       {
         icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
         icon_size = 64,
-        scale = 32/64 * 2/3,
-        shift = {5,7}
-      },
-      {
-        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
-        icon_size = 64,
-        scale = 32/64
+        scale = 32/64 * 32/64,
+        shift = {8,8}
       },
     },
     icon_size = 32,
@@ -149,13 +151,14 @@ data:extend(
 -------------------------------------------------------------------------------
 data:extend(
 {
-  --Uranium Fuel
-  --adv. cell
+  --URANIUM FUEL
+  --advanced fuel cell
   {
     type = "recipe",
     name = "angels-uranium-fuel-cell",
+    localised_name = {"recipe-name.angels-uranium-fuel-cell"},
     enabled = true,
-    category = "advanced-crafting",
+    category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800,
     ingredients =
@@ -169,13 +172,15 @@ data:extend(
       {type="item", name="angels-uranium-fuel-cell", amount=100},
     },
     main_product = "angels-uranium-fuel-cell",
+    always_show_products = true,
+    show_amount_in_title = false,
     icon_size = 32,
-    order = "a[angels-uranium-fuel-cell]-c",
+    order = "a[uranium]-b",
   },
-  --adv. reprocessing
+  --advanced reprocessing
   {
     type = "recipe",
-    name = "angels-uranium-reprocessing",
+    name = "angels-advanced-uranium-reprocessing",
     enabled = true,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -218,10 +223,10 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "a[uranium]-bb" -- "a[uranium]-ba" reserved for vanilla reprocessing
+    order = "a[uranium]-d" -- "a[uranium]-c" reserved for vanilla reprocessing
   },
-  --AMOX
-  --cell
+  --AMOX FUEL
+  --fuel cell
   {
     type = "recipe",
     name = "angels-mixed-oxide-cell",
@@ -240,10 +245,12 @@ data:extend(
       {type="item", name="AMOX-cell", amount=20},
     },
     main_product = "AMOX-cell",
+    always_show_products = true,
+    show_amount_in_title = false,
     icon_size = 32,
     order = "b[AMOX]-a",
   },
-  --AMOX reprocessing 1
+  --basic reprocessing
   {
     type = "recipe",
     name = "angels-mixed-oxide-reprocessing",
@@ -263,7 +270,7 @@ data:extend(
       {type="item", name="uranium-238", amount=1},
       --{type="item", name="slag", amount=5},
     },
-    icons=
+    icons =
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -279,14 +286,8 @@ data:extend(
       {
         icon = "__angelsindustries__/graphics/icons/americium-241.png",
         icon_size = 64,
-        scale = 32/64 * 0.58,
-        shift = {7.5,3}
-      },
-      {
-        icon = "__angelsindustries__/graphics/icons/curium-245.png",
-        icon_size = 64,
-        scale = 32/64 * 0.58,
-        shift = {2,9}
+        scale = 32/64 * 2/3,
+        shift = {5,7}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -297,7 +298,7 @@ data:extend(
     icon_size = 32,
     order = "b[AMOX]-b",
   },
-  --AMOX reprocessing 2
+  --advanced reprocessing
   {
     type = "recipe",
     name = "angels-advanced-mixed-oxide-reprocessing",
@@ -352,8 +353,8 @@ data:extend(
     icon_size = 32,
     order = "b[AMOX]-c",
   },
-  --Thorium
-  --fuel-cell
+  --THORIUM FUEL
+  --basic fuel cell
   {
     type = "recipe",
     name = "angels-thorium-fuel-cell",
@@ -373,10 +374,12 @@ data:extend(
       {type="item", name="angels-thorium-fuel-cell", amount=10},
     },
     main_product = "angels-thorium-fuel-cell",
+    always_show_products = true,
+    show_amount_in_title = false,
     icon_size = 32,
     order = "c[thorium]-a",
   },
-  --fuel-cell
+  --advanced fuel cell
   {
     type = "recipe",
     name = "angels-thorium-fuel-cell-2",
@@ -396,13 +399,68 @@ data:extend(
       {type="item", name="angels-thorium-fuel-cell", amount=10},
     },
     main_product = "angels-thorium-fuel-cell",
+    always_show_products = true,
+    show_amount_in_title = false,
     icon_size = 32,
-    order = "c[thorium]-a",
+    order = "c[thorium]-b",
   },
-  --reprocessing
+  --basic reprocessing
   {
     type = "recipe",
-    name = "angels-thorium-fuel-cell-reprocessing-advanced",
+    name = "angels-thorium-fuel-cell-reprocessing",
+    enabled = true,
+    category = "centrifuging",
+    subgroup = "angels-power-nuclear-fuel-cell",
+    energy_required = 600,
+    ingredients =
+    {
+      {type="item", name="used-up-angels-thorium-fuel-cell", amount=5},
+    },
+    results=
+    {
+      {type="item", name="angels-plate-zinc", amount=5},
+      {type="item", name="neptunium-240", amount=1},
+      {type="item", name="thorium-232", amount=2},
+      {type="item", name="uranium-234", amount=1,probability=0.05},
+    },
+    icons =
+    {
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/used-up-thorium-fuel-cell.png",
+        icon_size = 64,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
+        icon_size = 64,
+        scale = 32/64 * 0.58,
+        shift = {7.5,3}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/thorium-232.png",
+        icon_size = 64,
+        scale = 32/64 * 0.58,
+        shift = {2,9}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        scale = 32/64
+      },
+    },
+    icon_size = 32,
+    order = "c[thorium]-c",
+  },
+  -- advanced reprocessing
+  {
+    type = "recipe",
+    name = "angels-advanced-thorium-fuel-cell-reprocessing",
     enabled = true,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -452,61 +510,10 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "c[thorium]-b",
+    order = "c[thorium]-d",
   },
-  {
-    type = "recipe",
-    name = "angels-thorium-fuel-cell-reprocessing",
-    enabled = true,
-    category = "centrifuging",
-    subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 600,
-    ingredients =
-    {
-      {type="item", name="used-up-angels-thorium-fuel-cell", amount=5},
-    },
-    results=
-    {
-      {type="item", name="angels-plate-zinc", amount=5},
-      {type="item", name="neptunium-240", amount=1},
-      {type="item", name="thorium-232", amount=2},
-      {type="item", name="uranium-234", amount=1,probability=0.05},
-    },
-    icons =
-    {
-      { -- need to have something as bottom layer
-        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
-        icon_size = 64,
-        scale = 32/64
-      },
-      {
-        icon = "__angelsindustries__/graphics/icons/used-up-thorium-fuel-cell.png",
-        icon_size = 64,
-        scale = 32/64 * 45/64,
-        shift = {-7,-5}
-      },
-      {
-        icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
-        icon_size = 64,
-        scale = 32/64 * 0.58,
-        shift = {7.5,3}
-      },
-      {
-        icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
-        icon_size = 64,
-        scale = 32/64 * 0.48,
-        shift = {2,9}
-      },
-      {
-        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
-        icon_size = 64,
-        scale = 32/64
-      },
-    },
-    icon_size = 32,
-    order = "c[thorium]-b",
-  },
-  --deuterium-cell
+  --DEUTERIUM FUEL
+  --fuel cell
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
@@ -525,14 +532,17 @@ data:extend(
       {type="item", name="angels-deuterium-fuel-cell", amount=1},
     },
     main_product = "angels-deuterium-fuel-cell",
+    always_show_products = true,
+    show_amount_in_title = false,
     icon_size = 32,
     order = "d[deuterium]-a",
   },
+  --reprocessing
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell-reprocessing",
     enabled = true,
-    category = "advanced-crafting",
+    category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 6000,
     ingredients =

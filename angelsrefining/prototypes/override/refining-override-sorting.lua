@@ -410,7 +410,9 @@ OV.patch_recipes(merge_table_of_tables{
     },
     {
       {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-      {icon = "__boblibrary__/graphics/icons/ore-5.png", tint = {b=0.25,g=1,r=1}, scale = 0.5, shift = {10, 10}}
+      {icon = mods["bobplates"] and "__boblibrary__/graphics/icons/ore-5.png" or "__angelssmelting__/graphics/icons/ore-thorium.png",
+       icon_size = mods["bobplates"] and 32 or 64,
+       tint = {b=0.25,g=1,r=1}, scale = 0.5 * (mods["bobplates"] and 1 or 0.5), shift = {10, 10}}
     },
   }),
   -- PURE

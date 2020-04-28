@@ -1,25 +1,20 @@
 -------------------------------------------------------------------------------
--- create dummy thorium ore
--------------------------------------------------------------------------------
-data:extend(
-{
-  {
-    type = "item",
-    name = "thorium-ore", 
-    icon = "__angelsrefining__/graphics/icons/nodule-crushed.png",
-    icon_size = 32, --for now
-    subgroup = "angels-power-nuclear-processing", --for now
-    order = "a[radioactive-element]-c[neptunium-240]",--for now
-    stack_size = 100,
-  },
-})
--------------------------------------------------------------------------------
 -- RADIOACTIVE ELEMENTS -------------------------------------------------------
 -------------------------------------------------------------------------------
 data:extend(
 {
-  --order a[radioactive-element]-a[uranium-235] reserved for uranium-235
-  --order a[radioactive-element]-b[uranium-238] reserved for uranium-238
+  --U-234
+  {
+    type = "item",
+    name = "uranium-234", -- green (the rarest of the shiny rocks)
+    icon = "__angelsindustries__/graphics/icons/uranium-234.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "angels-power-nuclear-processing",
+    order = "a[radioactive-element]-a[uranium-234]",
+    stack_size = 50,
+  },
+  --order a[radioactive-element]-b[uranium-235] reserved for uranium-235
+  --order a[radioactive-element]-c[uranium-238] reserved for uranium-238
   --Np-240
   {
     type = "item",
@@ -27,7 +22,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a[radioactive-element]-c[neptunium-240]",
+    order = "a[radioactive-element]-d[neptunium-240]",
     stack_size = 50,
   },
   --Pu-240
@@ -37,7 +32,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a[radioactive-element]-d[plutonium-240]",
+    order = "a[radioactive-element]-e[plutonium-240]",
     stack_size = 50,
   },
   --Am-241
@@ -47,7 +42,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/americium-241.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a[radioactive-element]-e[americium-241]",
+    order = "a[radioactive-element]-f[americium-241]",
     stack_size = 50,
   },
   --Cm-245
@@ -57,17 +52,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/curium-245.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
-    order = "a[radioactive-element]-f[curium-245]",
-    stack_size = 50,
-  },
-  --U-234
-  {
-    type = "item",
-    name = "uranium-234", -- green (the rarest of the shiny rocks)
-    icon = "__angelsindustries__/graphics/icons/uranium-234.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "angels-power-nuclear-processing",
-    order = "a[radioactive-element]-g[uranium-234]",
+    order = "a[radioactive-element]-g[curium-245]",
     stack_size = 50,
   },
   --Th-232
@@ -94,7 +79,7 @@ data:extend(
     icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
-    order = "a",
+    order = "b[nuclear-intermediate]-a",
     stack_size = 1,
   },
 })
@@ -105,22 +90,21 @@ data:extend(
 data:extend(
 {
   --uranium-cell
-    --order "a[uranium]-a" reserved for uranium-fuel-cell
-    --order "a[uranium]-b" reserved for used-up-uranium-fuel-cell
-  --U-234-cell
   {
     type = "item",
     name = "angels-uranium-fuel-cell",
-    icon = "__angelsindustries__/graphics/icons/uranium-fuel-cell.png",
+    icon = "__angelsindustries__/graphics/icons/uranium-234-fuel-cell.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
-    order = "a[uranium]-c",
+    order = "a[uranium]-a",
     fuel_category = "nuclear",
     burnt_result = "used-up-uranium-fuel-cell",
     fuel_value = "1.5GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
     stack_size = 20,
   },
+  --order "a[uranium]-b" reserved for uranium-fuel-cell
+  --order "a[uranium]-c" reserved for used-up-uranium-fuel-cell
   --AMOX-cell
   {
     type = "item",
