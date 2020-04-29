@@ -325,7 +325,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-pack-components",
     order = "da",
-    stack_size = 200
+    stack_size = 1000 -- must be at least 1000 for rocket silo
   },
 }
 )
