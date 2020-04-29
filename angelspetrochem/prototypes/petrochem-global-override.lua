@@ -193,7 +193,7 @@ if bobmods then
         "nso"
       )
       data.raw["recipe"]["sulfuric-nitric-acid"].icon = nil
-      data.raw["recipe"]["sulfuric-nitric-acid"].always_show_products = "true"
+      data.raw["recipe"]["sulfuric-nitric-acid"].always_show_products = true
     end
     angelsmods.functions.move_item("nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
     data.raw["fluid"]["nitroglycerin"].icons =
@@ -203,7 +203,7 @@ if bobmods then
     data.raw["recipe"]["nitroglycerin"].icons =
       angelsmods.functions.create_liquid_recipe_icon({{"__bobwarfare__/graphics/icons/nitroglycerin.png", 64}}, "cno")
     data.raw["recipe"]["nitroglycerin"].icon = nil
-    data.raw["recipe"]["nitroglycerin"].always_show_products = "true"
+    data.raw["recipe"]["nitroglycerin"].always_show_products = true
     OV.global_replace_item("glycerol", "gas-glycerol")
     data.raw.fluid["glycerol"].hidden = true
 

@@ -6,7 +6,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
       icon_size = 128,
       prerequisites = {
-        "engine",
+        "engine"
       },
       effects = {
         {
@@ -32,13 +32,13 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-logistic-chest-storage"
-        },
+        }
       },
       unit = {
         count = 50,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -68,13 +68,13 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-logistic-chest-requester"
-        },
+        }
       },
       unit = {
         count = 100,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -87,7 +87,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "cargo-robots",
-        "advanced-electronics",
+        "advanced-electronics"
       },
       effects = {
         {
@@ -106,8 +106,8 @@ data:extend(
       unit = {
         count = 100,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -134,14 +134,13 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-construction-zone-expander-2"
-        },
-
+        }
       },
       unit = {
         count = 100,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -169,9 +168,9 @@ data:extend(
       unit = {
         count = 200,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -199,13 +198,13 @@ data:extend(
       unit = {
         count = 60,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 15
       },
       order = "c-a"
-    },
+    }
     --LOADERS
     -- {
     -- type = "technology",
@@ -226,7 +225,7 @@ data:extend(
     -- {
     -- count = 60,
     -- ingredients = {
-    -- {"automation-science-pack", 1},
+    -- {type="item", name="automation-science-pack", amount = 1},
     -- },
     -- time = 15
     -- },
@@ -251,8 +250,8 @@ data:extend(
     -- {
     -- count = 60,
     -- ingredients = {
-    -- {"automation-science-pack", 1},
-    -- {"logistic-science-pack", 1},
+    -- {type="item", name="automation-science-pack", amount = 1},
+    -- {type="item", name="logistic-science-pack", amount = 1},
     -- },
     -- time = 15
     -- },
@@ -277,9 +276,9 @@ data:extend(
     -- {
     -- count = 60,
     -- ingredients = {
-    -- {"automation-science-pack", 1},
-    -- {"logistic-science-pack", 1},
-    -- {"chemical-science-pack", 1},
+    -- {type="item", name="automation-science-pack", amount = 1},
+    -- {type="item", name="logistic-science-pack", amount = 1},
+    -- {type="item", name="chemical-science-pack", amount = 1},
     -- },
     -- time = 15
     -- },

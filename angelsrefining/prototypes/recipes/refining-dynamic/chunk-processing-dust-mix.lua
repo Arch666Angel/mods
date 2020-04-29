@@ -9,7 +9,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -40,7 +40,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -71,7 +71,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -102,7 +102,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -133,7 +133,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -164,7 +164,7 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -198,18 +198,18 @@ data:extend(
       energy_required = 1.5,
       allow_decomposition = false,
       normal = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore8-dust", 8}
+          {type = "item", name = "angels-ore8-dust", amount = 8}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore8-dust", 9 * rawmulti}
+          {type = "item", name = "angels-ore8-dust", amount = 9 * rawmulti}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
@@ -230,18 +230,18 @@ data:extend(
       energy_required = 1.5,
       allow_decomposition = false,
       normal = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore9-dust", 8}
+          {type = "item", name = "angels-ore9-dust", amount = 8}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
-        enabled = "false",
+        enabled = false,
         ingredients = {
-          {"angels-ore9-dust", 9 * rawmulti}
+          {type = "item", name = "angels-ore9-dust", amount = 9 * rawmulti}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}

@@ -19,7 +19,7 @@ data:extend(
       type = "recipe",
       name = "wall-0",
       enabled = true,
-      ingredients = {{"stone", 5}, {"wood", 1}},
+      ingredients = {{type = "item", name = "stone", amount = 5}, {type = "item", name = "wood", amount = 1}},
       result = "wall-0"
     }
   }

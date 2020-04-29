@@ -22,9 +22,9 @@ data:extend(
       unit = {
         count = 100 * 1,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"military-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1}
         },
         time = 30
       },
@@ -52,9 +52,9 @@ data:extend(
       unit = {
         count = 100 * 2,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"military-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1}
         },
         time = 30
       },
@@ -82,10 +82,10 @@ data:extend(
       unit = {
         count = 100 * 3,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"military-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 60
       },
@@ -113,11 +113,11 @@ data:extend(
       unit = {
         count = 100 * 4,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"military-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"utility-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 60
       },
@@ -145,11 +145,11 @@ data:extend(
       unit = {
         count = 100 * 5,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"military-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"utility-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 60
       },
@@ -177,11 +177,11 @@ data:extend(
       unit = {
         count = 100 * 6,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"utility-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 60
       },
@@ -209,12 +209,12 @@ data:extend(
       unit = {
         count_formula = "2^(L-7)*1000",
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1},
+          {type = "item", name = "space-science-pack", amount = 1}
         },
         time = 60
       },

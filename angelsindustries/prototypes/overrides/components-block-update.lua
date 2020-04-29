@@ -93,7 +93,7 @@ else
         unit = {
           count = 100,
           ingredients = {
-            {"automation-science-pack", 1}
+            {type = "item", name = "automation-science-pack", amount = 1}
           },
           time = 60
         },
@@ -146,8 +146,8 @@ else
         unit = {
           count = 64,
           ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1}
+            {type = "item", name = "automation-science-pack", amount = 1},
+            {type = "item", name = "logistic-science-pack", amount = 1}
           },
           time = 60
         },
@@ -201,8 +201,8 @@ else
         unit = {
           count = 64,
           ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1}
+            {type = "item", name = "automation-science-pack", amount = 1},
+            {type = "item", name = "logistic-science-pack", amount = 1}
           },
           time = 60
         },
@@ -258,9 +258,9 @@ else
         unit = {
           count = 64,
           ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1}
+            {type = "item", name = "automation-science-pack", amount = 1},
+            {type = "item", name = "logistic-science-pack", amount = 1},
+            {type = "item", name = "chemical-science-pack", amount = 1}
           },
           time = 60
         },
@@ -314,10 +314,10 @@ else
         unit = {
           count = 64,
           ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"utility-science-pack", 1}
+            {type = "item", name = "automation-science-pack", amount = 1},
+            {type = "item", name = "logistic-science-pack", amount = 1},
+            {type = "item", name = "chemical-science-pack", amount = 1},
+            {type = "item", name = "utility-science-pack", amount = 1}
           },
           time = 60
         },

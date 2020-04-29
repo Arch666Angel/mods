@@ -9,7 +9,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -39,7 +39,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -66,7 +66,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -93,7 +93,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -120,7 +120,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -147,7 +147,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -174,7 +174,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -201,7 +201,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -228,7 +228,7 @@ data:extend(
       category = "crystallizing",
       subgroup = "slag-processing-1",
       energy_required = 8,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
         ingredients = {
@@ -255,9 +255,9 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "processing-crafting",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
-      ingredients = {{"slag", 1}},
+      ingredients = {{type = "item", name = "slag", amount = 1}},
       results = {
         {type = "item", name = "stone-crushed", amount = 2}
       },
@@ -272,10 +272,10 @@ data:extend(
       category = "crafting",
       subgroup = "processing-crafting",
       energy_required = 0.5,
-      enabled = "true",
+      enabled = true,
       normal = {
         ingredients = {
-          {"stone-crushed", 2}
+          {type = "item", name = "stone-crushed", amount = 2}
         },
         results = {
           {type = "item", name = "stone", amount = 1}
@@ -283,7 +283,7 @@ data:extend(
       },
       expensive = {
         ingredients = {
-          {"stone-crushed", 3 * rawmulti}
+          {type = "item", name = "stone-crushed", amount = 3 * rawmulti}
         },
         results = {
           {type = "item", name = "stone", amount = 1}

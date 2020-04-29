@@ -5,7 +5,7 @@ data:extend(
       name = "cellulose-fiber-raw-wood",
       category = "crafting",
       subgroup = "bio-processing-wood",
-      enabled = "true",
+      enabled = true,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "wood", amount = 2}
@@ -22,7 +22,7 @@ data:extend(
       name = "wood-pellets",
       category = "crafting",
       subgroup = "bio-processing-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 12}
@@ -39,7 +39,7 @@ data:extend(
       name = "wood-bricks",
       category = "crafting",
       subgroup = "bio-processing-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "wood-pellets", amount = 8}
@@ -56,7 +56,7 @@ data:extend(
       name = "gas-carbon-dioxide-from-wood",
       category = "liquifying",
       subgroup = "bio-processing-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "wood-pellets", amount = 1}
@@ -64,10 +64,13 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-carbon-dioxide", amount = 70}
       },
-      always_show_products = "true",
-      icons = angelsmods.functions.create_gas_recipe_icon({
-        { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
-      }, "ccc"),
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72}
+        },
+        "ccc"
+      ),
       order = "e"
     },
     {
@@ -75,7 +78,7 @@ data:extend(
       name = "wood-charcoal",
       category = "smelting",
       subgroup = "bio-processing-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "wood-pellets", amount = 2}
@@ -91,7 +94,7 @@ data:extend(
       name = "carbon-from-charcoal",
       category = "liquifying",
       subgroup = "bio-processing-wood",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "wood-charcoal", amount = 1},
@@ -110,7 +113,7 @@ data:extend(
       name = "solid-wood-pulp",
       category = "crafting",
       subgroup = "bio-paper",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 20},
@@ -139,7 +142,7 @@ data:extend(
       name = "liquid-pulping-liquor",
       category = "advanced-chemistry",
       subgroup = "bio-liquor",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 100},
@@ -150,7 +153,7 @@ data:extend(
         {type = "fluid", name = "liquid-pulping-liquor", amount = 100}
       },
       main_product = "liquid-pulping-liquor",
-      always_show_products = "true",
+      always_show_products = true,
       order = "ba"
     },
     {
@@ -158,7 +161,7 @@ data:extend(
       name = "brown-liquor-recovery",
       category = "liquifying",
       subgroup = "bio-liquor",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-brown-liquor", amount = 50},
@@ -186,7 +189,7 @@ data:extend(
       name = "sulfite-pulping",
       category = "advanced-chemistry",
       subgroup = "bio-paper",
-      enabled = "false",
+      enabled = false,
       energy_required = 6,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 20},
@@ -218,7 +221,7 @@ data:extend(
       name = "liquid-white-liquor",
       category = "liquifying",
       subgroup = "bio-liquor",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "solid-sodium-hydroxide", amount = 2},
@@ -229,7 +232,7 @@ data:extend(
         {type = "fluid", name = "liquid-white-liquor", amount = 40}
       },
       main_product = "liquid-white-liquor",
-      always_show_products = "true",
+      always_show_products = true,
       order = "caa"
     },
     {
@@ -237,7 +240,7 @@ data:extend(
       name = "kraft-recovery",
       category = "liquifying",
       subgroup = "bio-liquor",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-black-liquor", amount = 40}
@@ -246,7 +249,7 @@ data:extend(
         {type = "fluid", name = "liquid-green-liquor", amount = 40} --+energy gain
       },
       main_product = "liquid-green-liquor",
-      always_show_products = "true",
+      always_show_products = true,
       order = "cb"
     },
     {
@@ -254,7 +257,7 @@ data:extend(
       name = "kraft-causting",
       category = "chemistry",
       subgroup = "bio-liquor",
-      enabled = "false",
+      enabled = false,
       energy_required = 6,
       ingredients = {
         {type = "fluid", name = "liquid-green-liquor", amount = 60},
@@ -266,7 +269,7 @@ data:extend(
         {type = "item", name = "solid-limestone", amount = 4}
       },
       main_product = "liquid-white-liquor",
-      always_show_products = "true",
+      always_show_products = true,
       order = "cab"
     },
     {
@@ -274,7 +277,7 @@ data:extend(
       name = "kraft-cooking-washing",
       category = "liquifying",
       subgroup = "bio-paper",
-      enabled = "false",
+      enabled = false,
       energy_required = 6,
       ingredients = {
         {type = "item", name = "cellulose-fiber", amount = 20},
@@ -284,7 +287,7 @@ data:extend(
         {type = "item", name = "solid-wood-pulp", amount = 30},
         {type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40}
       },
-      always_show_products = "true",
+      always_show_products = true,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
@@ -305,7 +308,7 @@ data:extend(
       name = "paper-bleaching-1",
       category = "crafting",
       subgroup = "bio-paper",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "solid-wood-pulp", amount = 2}
@@ -333,7 +336,7 @@ data:extend(
       name = "paper-bleaching-2",
       category = "liquifying",
       subgroup = "bio-paper",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "solid-wood-pulp", amount = 2},
@@ -364,7 +367,7 @@ data:extend(
       name = "paper-bleaching-3",
       category = "advanced-chemistry",
       subgroup = "bio-paper",
-      enabled = "false",
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "item", name = "solid-wood-pulp", amount = 2},

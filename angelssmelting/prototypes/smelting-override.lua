@@ -4,26 +4,36 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 --PREPARATIONS
 
 --OVERRIDE FOR BASE
-angelsmods.functions.override_item_conditions({
-  value = 200,
-  list = {
-    "coal",
-    "uranium-ore"
+angelsmods.functions.override_item_conditions(
+  {
+    value = 200,
+    list = {
+      "coal",
+      "uranium-ore"
+    }
   }
-})
+)
 
 angelsmods.functions.move_item("uranium-ore", "angels-ores", "h[uranium-ore]")
 
 if angelsmods.smelting then
   -- this should be moved to petrochem
-  OV.patch_recipes({
-    { name = "gas-sulfur-dioxide-calcium-sulfate", results = {
-      { "solid-lime", 1 }
-    } },
-    { name = "filter-lime", ingredients = {
-      { name = "solid-lime", type = "item", amount = "stone-crushed" }
-    } },
-  })
+  OV.patch_recipes(
+    {
+      {
+        name = "gas-sulfur-dioxide-calcium-sulfate",
+        results = {
+          {name = "solid-lime", type = "item", amount = 1}
+        }
+      },
+      {
+        name = "filter-lime",
+        ingredients = {
+          {name = "solid-lime", type = "item", amount = "stone-crushed"}
+        }
+      }
+    }
+  )
 end
 
 --DYNAMIC OVERRIDES

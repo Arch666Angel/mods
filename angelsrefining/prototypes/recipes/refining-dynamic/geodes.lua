@@ -7,11 +7,13 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {
+      enabled = false,
+      ingredients =
+      {
         {type = "item", name = "geode-blue", amount = 2}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "crystal-dust", amount = 1},
         {type = "item", name = "stone-crushed", amount = 2}
       },
@@ -21,21 +23,23 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "geode-purple-processing",
+      name = "geode-red-processing",
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {
-        {type = "item", name = "geode-purple", amount = 2}
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "geode-red", amount = 2}
       },
-      results = {
-        {type = "item", name = "crystal-dust", amount = 2},
-        {type = "item", name = "stone-crushed", amount = 3}
+      results =
+      {
+        {type = "item", name = "crystal-dust", amount = 1},
+        {type = "item", name = "stone-crushed", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/geode-purple.png",
+      icon = "__angelsrefining__/graphics/icons/geode-red.png",
       icon_size = 32,
-      order = "b[geode-purple-processing]"
+      order = "b[geode-red-processing]"
     },
     {
       type = "recipe",
@@ -43,11 +47,13 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {
+      enabled = false,
+      ingredients =
+      {
         {type = "item", name = "geode-yellow", amount = 2}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "crystal-dust", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
@@ -57,21 +63,23 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "geode-lightgreen-processing",
+      name = "geode-purple-processing",
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {
-        {type = "item", name = "geode-lightgreen", amount = 2}
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "geode-purple", amount = 2}
       },
-      results = {
-        {type = "item", name = "crystal-dust", amount = 3},
-        {type = "item", name = "stone-crushed", amount = 2}
+      results =
+      {
+        {type = "item", name = "crystal-dust", amount = 2},
+        {type = "item", name = "stone-crushed", amount = 3}
       },
-      icon = "__angelsrefining__/graphics/icons/geode-lightgreen.png",
+      icon = "__angelsrefining__/graphics/icons/geode-purple.png",
       icon_size = 32,
-      order = "d[geode-lightgreen-processing]"
+      order = "d[geode-purple-processing]"
     },
     {
       type = "recipe",
@@ -79,11 +87,13 @@ data:extend(
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {
+      enabled = false,
+      ingredients =
+      {
         {type = "item", name = "geode-cyan", amount = 2}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "crystal-dust", amount = 3},
         {type = "item", name = "stone-crushed", amount = 2}
       },
@@ -93,21 +103,23 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "geode-red-processing",
+      name = "geode-lightgreen-processing",
       category = "ore-sorting-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
-      enabled = "false",
-      ingredients = {
-        {type = "item", name = "geode-red", amount = 2}
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "geode-lightgreen", amount = 2}
       },
-      results = {
-        {type = "item", name = "crystal-dust", amount = 1},
+      results =
+      {
+        {type = "item", name = "crystal-dust", amount = 3},
         {type = "item", name = "stone-crushed", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/geode-red.png",
+      icon = "__angelsrefining__/graphics/icons/geode-lightgreen.png",
       icon_size = 32,
-      order = "f[geode-red-processing]"
-    }
+      order = "f[geode-lightgreen-processing]"
+    },
   }
 )
