@@ -70,7 +70,7 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
-    energy_required = 5400,
+    energy_required = 540,
     ingredients =
     {
       {type="item", name="americium-241", amount=5},
@@ -80,7 +80,7 @@ data:extend(
     results =
     {
       --{type="item", name="uranium-235", amount=1,probability=0.3},
-      {type="item", name="plutonium-240", amount=6,catalyst_amount=5},
+      {type="item", name="plutonium-240", amount=6,catalyst_amount=1},
       {type="item", name="uranium-238", amount=15,catalyst_amount =15},
       {type="item", name="solid-lead-oxide", amount=5}, -- equals 5 lead plates
     },
@@ -122,7 +122,7 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
-    energy_required = 50,
+    energy_required = 20,
     ingredients =
     {
       {type="item", name="thorium-ore", amount=5},
@@ -182,7 +182,7 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 800,
+    energy_required = 7000,
     ingredients =
     {
       {type="item", name = "uranium-234", amount = 1},
@@ -210,7 +210,7 @@ data:extend(
     enabled = true,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 1080,
+    energy_required = 120,
     ingredients =
     {
       {type="item", name = "used-up-uranium-fuel-cell", amount = 10},
@@ -263,7 +263,7 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 540,
+    energy_required = 1200,
     ingredients =
     {
       {type="item", name = "uranium-238", amount = 38},
@@ -291,7 +291,7 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 660,
+    energy_required = 330,
     ingredients =
     {
       {type="item", name="used-up-AMOX-cell", amount=5}
@@ -299,8 +299,8 @@ data:extend(
     results =
     {
       {type="item", name="americium-241", amount=1},
-      {type="item", name="americium-241", amount=1,probability=0.25},
-      --{type="item", name="curium-245",amount=1,probability=0.5},
+      {type="item", name="americium-241", amount=1,probability=0.95},
+      {type="item", name="curium-245",amount=1,probability=0.05},
       {type="item", name="uranium-238", amount=1},
       --{type="item", name="slag", amount=5},
     },
@@ -353,7 +353,7 @@ data:extend(
     {
       {type="item", name="plutonium-240", amount=4},
       {type="item", name="slag", amount=10},
-      {type="item", name="curium-245",amount=1,probability=0.45},
+      {type="item", name="curium-245",amount=2,probability=0.45},
       {type="item", name="uranium-235",amount=1,probability=0.2},
       {type="fluid", name="water-greenyellow-waste", amount=60},
     },
@@ -403,7 +403,7 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 540,
+    energy_required = 1000,
     ingredients =
     {
       {type="item", name="thorium-232", amount=17},
@@ -426,17 +426,17 @@ data:extend(
     },
   },
   --advanced fuel cell
-  {
+  --[[{
     type = "recipe",
     name = "angels-thorium-fuel-cell-2",
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 540,
+    energy_required = 900,
     ingredients =
     {
-      {type="item", name="thorium-232", amount=16},
-      --{type="item", name="curium-245", amount=1},
+      {type="item", name="thorium-232", amount=15},
+      {type="item", name="americium-241", amount=2},
       {type="item", name="plutonium-240", amount=4},
       {type="item", name = "angels-plate-zinc", amount = 10},
     },
@@ -453,7 +453,7 @@ data:extend(
     {
       primary = tint_colors.red,
     },
-  },
+  },]]
   --basic reprocessing
   {
     type = "recipe",
@@ -461,17 +461,18 @@ data:extend(
     enabled = true,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 600,
+    energy_required = 450,
     ingredients =
     {
       {type="item", name="used-up-angels-thorium-fuel-cell", amount=5},
     },
     results=
     {
-      {type="item", name="angels-plate-zinc", amount=5},
+      {type="item", name="slag", amount=5},
       {type="item", name="neptunium-240", amount=1},
       {type="item", name="thorium-232", amount=2},
       {type="item", name="uranium-234", amount=1,probability=0.05},
+      {type="item", name="curium-245", amount=1,probability=0.1},
     },
     icons =
     {
@@ -518,19 +519,19 @@ data:extend(
     enabled = true,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 600,
+    energy_required = 1000,
     ingredients =
     {
-      {type="item", name="used-up-angels-thorium-fuel-cell", amount=15},
+      {type="item", name="used-up-angels-thorium-fuel-cell", amount=10},
       {type="fluid", name = "liquid-hydrofluoric-acid", amount = 60},
     },
     results=
     {
-      {type="item", name="angels-plate-zinc", amount=15},
-      {type="item", name="neptunium-240", amount=5},
-      {type="item", name="uranium-234", amount=3,probability=0.05},
+      {type="item", name="slag", amount=10},
+      {type="item", name="neptunium-240", amount=2},
+      {type="item", name="uranium-234", amount=2,probability=0.05},
       {type="fluid", name="water-greenyellow-waste", amount=60},
-      {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=0.2},
+      {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=4/30},
     },
     icons =
     {
@@ -578,7 +579,7 @@ data:extend(
     enabled = true,
     category = "chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 5400,
+    energy_required = 1500,
     ingredients =
     {
       {type="fluid", name="gas-deuterium", amount=600},
@@ -613,7 +614,7 @@ data:extend(
     },
     results=
     {
-      {type="item", name="angels-plate-zinc", amount=4},
+      {type="item", name="slag", amount=4},
       {type="item", name="angels-muon-fusion-catalyst", amount=3, catalyst_amount = 3}, --make it lose 5%
       {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=0.95},
     },

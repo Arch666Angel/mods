@@ -115,7 +115,7 @@ data:extend(
     order = "b[AMOX]-a",
     fuel_category = "nuclear",
     burnt_result = "used-up-AMOX-cell",
-    fuel_value = "18GJ",
+    fuel_value = "8GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
     stack_size = 20,
   },

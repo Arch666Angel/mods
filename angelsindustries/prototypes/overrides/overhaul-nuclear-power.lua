@@ -69,3 +69,11 @@ OV.patch_recipes(
 )
 OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
 data.raw.item["uranium-fuel-cell"].fuel_value="2GJ"
+-- productivity additions
+angelsmods.functions.allow_productivity("angels-thorium-processing")
+angelsmods.functions.allow_productivity("angelsore-crystal-mix6-processing") --thorium ore
+angelsmods.functions.allow_productivity("angels-uranium-fuel-cell")
+angelsmods.functions.allow_productivity("angels-mixed-oxide-cell")
+angelsmods.functions.allow_productivity("angels-thorium-fuel-cell")
+angelsmods.functions.allow_productivity("angels-thorium-fuel-cell-2")
+--angelsmods.functions.allow_productivity("angels-deuterium-fuel-cell")
