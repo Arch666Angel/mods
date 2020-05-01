@@ -29,6 +29,22 @@ OV.patch_recipes(
       },
     },
     {
+      name = "atomic-bomb",
+      ingredients = {{type="item",name="uranium-235",amount=15}},--halve
+      icons={
+        {icon = "__base__/graphics/icons/atomic-bomb.png",icon_size = 64, icon_mipmaps = 4},
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          icon_size=32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size=32,
+      icon=nil,
+    },
+    {
       name = "uranium-fuel-cell",
       localised_name = {"recipe-name.uranium-fuel-cell"},
       category = "centrifuging",
@@ -68,6 +84,7 @@ OV.patch_recipes(
   }
 )
 OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
+OV.add_unlock("uranium-processing","angels-uranium-fuel-cell")
 data.raw.item["uranium-fuel-cell"].fuel_value="2GJ"
 -- productivity additions
 angelsmods.functions.allow_productivity("angels-thorium-processing")
@@ -77,3 +94,8 @@ angelsmods.functions.allow_productivity("angels-mixed-oxide-cell")
 angelsmods.functions.allow_productivity("angels-thorium-fuel-cell")
 angelsmods.functions.allow_productivity("angels-thorium-fuel-cell-2")
 --angelsmods.functions.allow_productivity("angels-deuterium-fuel-cell")
+--unlock new bombs and fuel recipes
+OV.add_unlock("atomic-bomb","angels-atomic-bomb-2")
+OV.add_unlock("atomic-bomb","angels-atomic-bomb")
+OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel")
+OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel-2")

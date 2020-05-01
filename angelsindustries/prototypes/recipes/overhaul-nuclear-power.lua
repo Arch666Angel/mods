@@ -17,7 +17,7 @@ data:extend(
     type = "recipe",
     name = "angels-plutonium-synthesis",
     localised_name = {"recipe-name.angels-plutonium-synthesis"},
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 180,
@@ -67,7 +67,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-americium-regeneration",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 540,
@@ -119,7 +119,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-thorium-processing",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
@@ -179,7 +179,7 @@ data:extend(
     type = "recipe",
     name = "angels-uranium-fuel-cell",
     localised_name = {"recipe-name.angels-uranium-fuel-cell"},
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 7000,
@@ -207,7 +207,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-advanced-uranium-reprocessing",
-    enabled = true,
+    enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 120,
@@ -260,7 +260,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-mixed-oxide-cell",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 1200,
@@ -288,7 +288,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-mixed-oxide-reprocessing",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 330,
@@ -340,7 +340,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-advanced-mixed-oxide-reprocessing",
-    enabled = true,
+    enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 660,
@@ -400,7 +400,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-thorium-fuel-cell",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 1000,
@@ -429,7 +429,7 @@ data:extend(
   --[[{
     type = "recipe",
     name = "angels-thorium-fuel-cell-2",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 900,
@@ -458,7 +458,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-thorium-fuel-cell-reprocessing",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 450,
@@ -516,7 +516,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-advanced-thorium-fuel-cell-reprocessing",
-    enabled = true,
+    enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 1000,
@@ -576,7 +576,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
-    enabled = true,
+    enabled = false,
     category = "chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 1500,
@@ -604,7 +604,7 @@ data:extend(
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell-reprocessing",
-    enabled = true,
+    enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 6000,
@@ -651,53 +651,92 @@ data:extend(
     },
   },
 })
-
---[[
-== LIST OF RECIPES
-
-Fuel cell  (3% 235, 97% 238) {energy value-same as vanilla}
-1 U-235 + 29 U-238 + 3 lead plate --> 30 U_fuel_cell
-"advanced-crafting" (no-hand crafting)
-
-Fuel cell2 (0.5% 234, 99.5% 238) {energy value-should balance cells based on energy}
-1 U-234 + 199 U-238 + 20 lead plate --> 200 U_fuel_cell
-"advanced-crafting" (no-hand crafting)
-
-fuel cell reprocessing
-24 U_fuel_cell--> 4 U-238 + 6 lead used in cell
-"centrifuging" (centrifuge)
-
-angels-uranium-reprocessing
-10 U_fuel_cell + 60 HF.acid -> 3 U-238 + 2 Np-240 + 1 slag + 60 FWW
-"advanced-chemistry" (big chem plant)
-
-angels-plutonium-synth
-8 Np-240 -> 8 Pu-240
-"centrifuging" (centrifuge)
-
-angels-mixed-oxide-cell
-5 Pu-240 + 37 U-238 + 2 Pb.plate -> 20 AMOX-cells
-"advanced-crafting" (no-hand crafting)
-
-angels-mixed-oxide-reprocessing
-10 used-up-AMOX-cells -> 1 U-238 + 2 slag + 1 Am-241
-"centrifuging" (centrifuge)
-
-angels-americium-regeneration
-5 Am-241 + 25 U-235 -> 2 U-238 + 1 Pu-240 + 15 U-235
-"centrifuging" (centrifuge)
-
-angels-mixed-oxide-reprocessing
-10 used-up-AMOX-cells + 60 HF.acid-> 1 slag + 3 Pu-240 + 1 Cm-245
-"centrifuging" (centrifuge)
-
-Thorium Fuel cell:
-20 Th-232 + 1 Cm-245 + 1 Pu-240 + 1 lead plate -->10 Th_Fuel_cells
-"advanced-crafting" (no-hand crafting)
-
-Fuel cell reprocessing
-15 Th_Fuel_cells + 60 HF.acid --> 1 lead plate + 2 U-234 + 1 Np-240 + 1 Fusion Catalyst
-"advanced-crafting" (no-hand crafting)
-
-]]
+-------------------------------------------------------------------------------
+-- NUCLEAR ADDITIONS ----------------------------------------------------------
+-------------------------------------------------------------------------------
+data:extend(
+  {
+    {
+      type = "recipe",
+      name = "angels-nuclear-fuel",
+      energy_required = 90,
+      enabled = false,
+      category = "centrifuging",
+      ingredients = {
+        {type= "item",name="plutonium-240",amount=1},
+        {type= "item",name="rocket-fuel",amount=1}
+      },
+      --icon = "__base__/graphics/icons/nuclear-fuel.png",
+      --icon_size = 64, icon_mipmaps = 4,
+      results = {{type= "item",name="angels-nuclear-fuel",amount=1}}
+    },
+    { --do i want this?
+      type = "recipe",
+      name = "angels-nuclear-fuel-2",
+      energy_required = 90,
+      enabled = false,
+      category = "centrifuging",
+      ingredients = {
+        {type= "item",name="plutonium-240",amount=2},
+        {type= "item",name="rocket-fuel",amount=3},
+        {type= "item",name="thorium-232",amount=1}
+      },
+      --icon = "__base__/graphics/icons/nuclear-fuel.png",
+      --icon_size = 64, icon_mipmaps = 4,
+      results = {{type= "item",name="angels-nuclear-fuel-2",amount=3}}
+    },
+    {
+      type = "recipe",
+      name = "angels-atomic-bomb",
+      enabled = false,
+      energy_required = 50,
+      icons={
+        {icon = "__base__/graphics/icons/atomic-bomb.png",icon_size = 64, icon_mipmaps = 4},
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.industries.number_tint,
+          icon_size=32,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size=32,
+      ingredients =
+      {
+        {type= "item",name="rocket-control-unit",amount=10},
+        {type= "item",name="explosives",amount=10},
+        {type= "item",name="plutonium-240",amount=30}
+      },
+      results = {{type= "item",name="atomic-bomb",amount=1}},
+      order="c[basic-ammo]-c[uranium-ammo]-a"
+    },
+    {
+      type = "recipe",
+      name = "angels-atomic-bomb-2",
+      category = "advanced-chemistry",
+      enabled = false,
+      energy_required = 50,
+      icons={
+        {icon = "__base__/graphics/icons/atomic-bomb.png",icon_size = 64, icon_mipmaps = 4},
+        {
+          icon = "__angelsrefining__/graphics/icons/num_3.png",
+          tint = angelsmods.industries.number_tint,
+          scale = 0.32,
+          icon_size=32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size=32,
+      ingredients =
+      {
+        {type= "item",name="rocket-control-unit",amount=20},
+        {type= "item",name="explosives",amount=20},
+        {type="fluid", name="gas-deuterium", amount=3600},
+        {type= "item",name="angels-muon-fusion-catalyst",amount=1}
+      },
+      results = {{type= "item",name="atomic-bomb",amount=2}},
+      order="c[basic-ammo]-c[uranium-ammo]-b"
+    },
+  }
+)
 

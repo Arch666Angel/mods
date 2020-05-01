@@ -72,7 +72,7 @@ if angelsmods.industries.overhaul then
   require("prototypes.recipes.overhaul-nuclear-power")
 
   --TECHS
-  --todo!
+  require("prototypes.technology.overhaul-nuclear-power")
 end
 
 --COMPONENTS

@@ -82,7 +82,42 @@ data:extend(
     order = "b[nuclear-intermediate]-a",
     stack_size = 1,
   },
+-- NUCLEAR TRAIN FUEL
+  {
+    type = "item",
+    name = "angels-nuclear-fuel",
+    icons={
+      {icon = "__base__/graphics/icons/nuclear-fuel.png",icon_size = 64, icon_mipmaps = 4},--custom tint?
+      {icon = "__angelsindustries__/graphics/icons/plutonium-239.png", icon_size = 64, icon_mipmaps = 4,scale=0.4,shift={-5,5}}
+    },
+    icon_size = 64,
+    fuel_category = "chemical",
+    fuel_value = "1.4641GJ",--1.21*1.21
+    fuel_acceleration_multiplier = 2.5,
+    fuel_top_speed_multiplier = 1.15,
+    subgroup = "petrochem-fuel",
+    order = "k",
+    stack_size = 1
+  },
+  {
+    type = "item",
+    name = "angels-nuclear-fuel-2",
+    icons={
+      {icon = "__base__/graphics/icons/nuclear-fuel.png",icon_size = 64, icon_mipmaps = 4}, --custom tint?
+      {icon = "__angelsindustries__/graphics/icons/plutonium-239.png", icon_size = 64, icon_mipmaps = 4,scale=0.4,shift={-5,5}},
+      {icon = "__angelsindustries__/graphics/icons/thorium-232.png", icon_size = 64, icon_mipmaps = 4,scale=0.4,shift={-5,-5}}
+    },
+    icon_size = 64,
+    fuel_category = "chemical",
+    fuel_value = "2.1962GJ",--1.21*(1.21*1.5)
+    fuel_acceleration_multiplier = 2.5,
+    fuel_top_speed_multiplier = 1.15,
+    subgroup = "petrochem-fuel",
+    order = "k",
+    stack_size = 1
+  },
 })
+
 
 -------------------------------------------------------------------------------
 -- NUCLEAR FUEL CELLS ---------------------------------------------------------
