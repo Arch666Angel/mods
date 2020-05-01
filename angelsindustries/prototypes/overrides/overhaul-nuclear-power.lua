@@ -99,3 +99,10 @@ OV.add_unlock("atomic-bomb","angels-atomic-bomb-2")
 OV.add_unlock("atomic-bomb","angels-atomic-bomb")
 OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel")
 OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel-2")
+if bobmods and bobmods.plates then
+--clean up bobs nuclear processing stuff
+  OV.remove_unlock("thorium-processing", "thorium-processing")
+  OV.remove_unlock("thorium-processing", "thorium-fuel-cell")
+  OV.remove_unlock("thorium-fuel-processing", "thorium-fuel-reprocessing")
+  OV.remove_unlock("deuterium-fuel-processing", "deuterium-fuel-reprocessing")
+end
