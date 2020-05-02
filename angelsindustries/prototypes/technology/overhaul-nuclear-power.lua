@@ -94,10 +94,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "angels-advanced-thorium-fuel-cell-reprocessing"
         },
-        {
+        --[[{ --unlocked by water-chemistry-2
           type = "unlock-recipe",
           recipe = "angels-deuterium-fuel-cell"
-        },
+        },]]
         {
           type = "unlock-recipe",
           recipe = "angels-deuterium-fuel-cell-reprocessing"

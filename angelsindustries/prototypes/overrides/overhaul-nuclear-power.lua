@@ -99,10 +99,30 @@ OV.add_unlock("atomic-bomb","angels-atomic-bomb-2")
 OV.add_unlock("atomic-bomb","angels-atomic-bomb")
 OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel")
 OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel-2")
+OV.add_unlock("water-chemistry-2","angels-deuterium-fuel-cell")
 if bobmods and bobmods.plates then
---clean up bobs nuclear processing stuff
+  OV.global_replace_item("plutonium-240","plutonium-239") --use bobs plutonium
+--basically remove all of bobs things (Sorry bob)
+  --bobs setting specific changes:
+  if not (bobmods.revamp and settings.startup["bobmods-revamp-rtg"].value) then
+    --if not rtg, remove bobingabout process
+    OV.remove_unlock("bobingabout-process", "bobingabout-process")
+  end
   OV.remove_unlock("thorium-processing", "thorium-processing")
-  OV.remove_unlock("thorium-processing", "thorium-fuel-cell")
-  OV.remove_unlock("thorium-fuel-processing", "thorium-fuel-reprocessing")
-  OV.remove_unlock("deuterium-fuel-processing", "deuterium-fuel-reprocessing")
+  OV.remove_unlock("thorium-fuel-reprocessing", "thorium-fuel-reprocessing")
+  OV.remove_unlock("deuterium-fuel-reprocessing", "deuterium-fuel-reprocessing")
+  OV.remove_unlock("thorium-plutonium-fuel-cell", "thorium-plutonium-fuel-cell")
+  OV.remove_unlock("water-chemistry-2","deuterium-fuel-cell")
+  if (bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value) then
+    --if overhaul, remove unlocks in each reactor tech
+    --add each cell to each reactor... or would it be quicker to just set the setting?
+    OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell")--keep as "uranium tier"
+    OV.remove_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
+    data.raw.item["angels-thorium-fuel-cell"].fuel_category="thorium"
+    OV.remove_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
+    data.raw.item["angels-deuterium-fuel-cell"].fuel_category="deuterium"
+  else --remove them from their individual techs
+    OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell")
+    OV.remove_unlock("thorium-processing", "thorium-fuel-cell")
+  end
 end
