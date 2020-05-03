@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-require("prototypes.overrides.industries-override-functions")
+--require("prototypes.overrides.industries-override-functions")
 
 -- now the custom fixes
 OV.global_replace_technology("military-science-pack", "tech-green-packs")

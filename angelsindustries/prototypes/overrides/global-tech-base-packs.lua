@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-require("prototypes.overrides.industries-override-functions")
+--require("prototypes.overrides.industries-override-functions")
 --this is where pack_replace(techname,old_c,new_c),core_replace(techname,old_c,new_c),core_tier_up(techname,core_n) functions are stored
 --SET COLOURED PACKS BEFORE ADDING CORES
 
