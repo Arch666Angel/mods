@@ -667,7 +667,7 @@ if angelsmods.industries.overhaul then
   if data.raw.item["heat-shield-tile"] then
     move_item("heat-shield-tile", "angels-basic-intermediate", "z[rocket]-c[heat-shield]")
   end
-  if angelsmods.industries.overhaul and angelsmods.industries.tech then
+  if angelsmods.industries.tech then
     move_item("satellite", "angels-pack-components", "dba")
   else
     move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")

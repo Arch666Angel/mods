@@ -1,4 +1,4 @@
-if angelsmods.industries and angelsmods.industries.overhaul and angelsmods.industries.tech then
+if angelsmods.industries and angelsmods.industries.tech then
   local OV = angelsmods.functions.OV
 
   OV.remove_science_pack("angels-smelting-train-3", "automation-science-pack")
