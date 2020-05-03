@@ -1,4 +1,5 @@
-data:extend(
+if angelsmods.industries.tech then
+  data:extend(
   {
     --DATACORES
     {
@@ -241,3 +242,4 @@ data:extend(
     }
   }
 )
+end

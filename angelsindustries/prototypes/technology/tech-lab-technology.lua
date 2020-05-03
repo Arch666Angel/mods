@@ -1,6 +1,6 @@
 local pack_amount_base = 64 / 2 -- half the amount, and the lab has double the speed, so 4x increase
 local pack_time_base = 15
-
+if angelsmods.industries.tech then
 data:extend(
   {
     -----------------------------------------------------------------------------
@@ -1041,3 +1041,4 @@ data:extend(
     }
   }
 )
+end

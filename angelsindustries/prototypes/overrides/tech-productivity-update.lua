@@ -1,4 +1,5 @@
--------------------------------------------------------------------------------
+if angelsmods.industries.tech then
+  -------------------------------------------------------------------------------
 -- SCIENCE PACKS --------------------------------------------------------------
 -------------------------------------------------------------------------------
 -- science packs
@@ -32,3 +33,4 @@ angelsmods.functions.allow_productivity("datacore-energy-2")
 angelsmods.functions.allow_productivity("datacore-logistic-2")
 angelsmods.functions.allow_productivity("datacore-war-2")
 angelsmods.functions.allow_productivity("datacore-processing-2")
+end

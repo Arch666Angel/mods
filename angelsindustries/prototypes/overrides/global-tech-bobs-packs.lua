@@ -1,9 +1,10 @@
 local OV = angelsmods.functions.OV
-require("prototypes.overrides.industries-override-functions")
+--require("prototypes.overrides.industries-override-functions")
 -------------------------------------------------------------------------------
 -- BASE BOBS (MCI) ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then
+if angelsmods.industries.tech then
+  if mods["bobplates"] then
   pack_replace("battery-2", "blue", "orange")
   OV.remove_prereq("battery-2", "chemical-science-pack")
   pack_replace("gem-processing-2", "blue", "orange")
@@ -254,4 +255,5 @@ if mods.bobtech then
     OV.remove_prereq(rec_4tech, "advanced-logistic-science-pack")
   end
   OV.disable_technology({"advanced-logistic-science-pack"})
+end
 end

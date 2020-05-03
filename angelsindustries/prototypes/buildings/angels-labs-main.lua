@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-
+if angelsmods.industries.tech then
 local lab_item = {
   type = "item",
   name = "angels-main-lab",
@@ -190,3 +190,4 @@ end
 -- disable base game lab as it is obsolete
 OV.disable_recipe("lab")
 angelsmods.functions.add_flag("lab", "hidden")
+end

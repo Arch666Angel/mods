@@ -1,5 +1,5 @@
 --require ("util")
-
+if angelsmods.industries.tech then
 data:extend(
 {
   {
@@ -878,3 +878,4 @@ data:extend(
   },
 }
 )
+end

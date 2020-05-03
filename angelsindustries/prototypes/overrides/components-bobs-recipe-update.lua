@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 -- CUSTOM FIXES FOR BOBS
-
+if angelsmods.industries.components then
 if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then -- electronic assemblers
   OV.patch_recipes(
     {
@@ -44,4 +44,5 @@ if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines
       { name = "block-electronics-5", category = "electronics-machine" },
     }
   )
+end
 end

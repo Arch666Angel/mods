@@ -1,3 +1,4 @@
+if angelsmods.industries.tech then
 --KEY TECHs
 angelsmods.functions.add_exception("tech-red-packs")
 angelsmods.functions.add_exception("tech-green-packs")
@@ -96,4 +97,5 @@ if mods["bobtech"] then
   }) do
     angelsmods.functions.add_exception(ignore)
   end
+end
 end

@@ -1,6 +1,6 @@
 local pack_amount_base = 64
 local pack_time_base = 15
-
+if angelsmods.industries.tech then
 data:extend(
   {
     --TIER 1
@@ -167,3 +167,4 @@ data:extend(
     }
   }
 )
+end

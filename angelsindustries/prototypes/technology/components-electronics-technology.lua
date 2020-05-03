@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+if angelsmods.industries.components then
 OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
 OV.execute()
 
@@ -238,3 +239,4 @@ data:extend(
     }
   }
 )
+end
