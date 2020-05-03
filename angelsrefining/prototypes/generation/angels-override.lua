@@ -5,7 +5,7 @@ if not angelsmods.refining.disable_ore_override then
   angelsmods.functions.remove_resource("stone")
 
   --ANGELS
-  if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods.bobplates) then
+  if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
     angelsmods.functions.remove_resource("angels-ore5")
     angelsmods.functions.remove_resource("angels-ore6")
   end

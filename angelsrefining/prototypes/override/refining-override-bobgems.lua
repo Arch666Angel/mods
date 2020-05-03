@@ -41,9 +41,9 @@ end
 -------------------------------------------------------------------------------
 --GEM SORTING -----------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods.bobplates then
+if mods["bobplates"] then
   angelsmods.functions.move_item("gem-ore", "bob-gems-crystallization", "g")
-  if mods.bobores and settings.startup["bobmods-ores-unsortedgemore"].value == true then
+  if mods["bobores"] and settings.startup["bobmods-ores-unsortedgemore"].value == true then
     data:extend(
       {
         {
@@ -74,7 +74,7 @@ end
 -------------------------------------------------------------------------------
 --GEM PROCESSING ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods.bobplates then
+if mods["bobplates"] then
   data.raw.recipe["bob-ruby-3"].result_count = 1
   data.raw.recipe["bob-sapphire-3"].result_count = 1
   data.raw.recipe["bob-emerald-3"].result_count = 1
@@ -86,7 +86,7 @@ end
 -------------------------------------------------------------------------------
 --SINGLE GEM CRYSTALLIZATION --------------------------------------------------
 -------------------------------------------------------------------------------
-if mods.bobplates then
+if mods["bobplates"] then
   OV.patch_recipes(
     create_single_gem_crystallization(
       "angelsore7-crystallization-%i",

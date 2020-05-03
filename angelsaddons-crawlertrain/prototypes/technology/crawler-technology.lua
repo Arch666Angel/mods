@@ -3,7 +3,7 @@ local funcs = require("prototypes/crawler-train-functions")
 local prerequisites = {
   "railway"
 }
-if mods.angelsindustries then
+if mods["angelsindustries"] then
   table.insert(prerequisites, "angels-crawler")
 end
 
@@ -58,10 +58,10 @@ local tiers = {
 
 local extra_prereq = {
   nil,
-  { "speed-module", "effectivity-module" },
-  { "speed-module-2", "effectivity-module-2", "low-density-structure", "electric-engine" },
-  { "speed-module-3", "effectivity-module-3", "construction-robotics" },
-  { "rocket-control-unit", "logistic-system" },
+  {"speed-module", "effectivity-module"},
+  {"speed-module-2", "effectivity-module-2", "low-density-structure", "electric-engine"},
+  {"speed-module-3", "effectivity-module-3", "construction-robotics"},
+  {"rocket-control-unit", "logistic-system"}
 }
 
 funcs.generate_train_technology(

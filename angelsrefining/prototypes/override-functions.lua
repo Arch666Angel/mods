@@ -750,7 +750,7 @@ ov_functions.execute = function()
     if modifications then
       for name, add in pairs(modifications) do
         if add > 0 and not dup_table[name] then
-          table.insert(tech.unit.ingredients, {name, add})
+          table.insert(tech.unit.ingredients, {type = "item", name = name, amount = add})
         end
       end
     end

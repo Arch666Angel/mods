@@ -1,4 +1,4 @@
-if not mods.angelsindustries then
+if not mods["angelsindustries"] then
   -- remove none existing angels stuff
   local cabEquipmentCategories = data.raw["equipment-grid"]["angels-cab"].equipment_categories
   local equipmentCategories = util.table.deepcopy(cabEquipmentCategories)
