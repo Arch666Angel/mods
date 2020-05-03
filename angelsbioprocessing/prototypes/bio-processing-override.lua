@@ -1,3 +1,12 @@
+require("prototypes.overrides.bio-processing-override-special-vanilla")
+--UPDATE BUILDING RECIPES
+require("prototypes.recipes.bio-processing-entity-angels")
+--PASTE
+require("prototypes.overrides.bio-processing-override-paste")
+
+require("prototypes.overrides.bio-processing-override-angel")
+
+-- body
 local OV = angelsmods.functions.OV
 local lab_ignore = angelsmods.triggers.lab_ignore_token
 
@@ -18,10 +27,6 @@ if angelsmods.refining then
   --MOVE UNLOCKS
   OV.add_unlock("bio-processing-brown", "water-mineralized")
   OV.remove_unlock("water-treatment", "water-mineralized")
-
-  if is_special_vanilla(angelsmods.trigger.ores) then
-    require("prototypes.overrides.bio-processing-override-special-vanilla")
-  end
 end
 
 --SMELTING
@@ -29,18 +34,12 @@ if not angelsmods.smelting then
   OV.disable_recipe("algae-brown-burning-wash")
 end
 
---UPDATE BUILDING RECIPES
-require("prototypes.recipes.bio-processing-entity-angels")
-
 --UPDATE LABS INPUT
 for i, labs in pairs(data.raw["lab"]) do
   if not lab_ignore[labs.name] then
     table.insert(labs.inputs, "token-bio")
   end
 end
-
---PASTE
-require("prototypes.overrides.bio-processing-override-paste")
 
 --CONDITIONAL
 if angelsmods.industries then
@@ -62,10 +61,6 @@ if angelsmods.industries then
       }
     }
   )
-
-  if angelsmods.industries.overhaul then
-    require("prototypes.overrides.bio-processing-override-angel")
-  end
 else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")
 
@@ -380,13 +375,13 @@ if bobmods then
     OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
     OV.add_prereq("bio-arboretum-1", "bob-greenhouse")
   end
-
-  --ADDED RECIPES FOR BOBS ARTIFACTS
-  require("prototypes.overrides.bio-processing-override-bob-artifacts")
-
-  --OTHER BOB OVERRIDES
-  require("prototypes.overrides.bio-processing-override-bob")
 end
+
+--ADDED RECIPES FOR BOBS ARTIFACTS
+require("prototypes.overrides.bio-processing-override-bob-artifacts")
+
+--OTHER BOB OVERRIDES
+require("prototypes.overrides.bio-processing-override-bob")
 
 --ENABLE PRODUCTIVITY
 --angelsmods.functions.allow_productivity("slag-processing-1")

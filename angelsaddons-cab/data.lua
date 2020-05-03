@@ -1,12 +1,6 @@
-if not angelsmods then
-  angelsmods = {}
-end
-if not angelsmods.addons then
-  angelsmods.addons = {}
-end
-if not angelsmods.addons.cab then
-  angelsmods.addons.cab = {}
-end
+angelsmods = angelsmods or {}
+angelsmods.addons = angelsmods.addons or {}
+angelsmods.addons.cab = angelsmods.addons.cab or {}
 
 require("prototypes.cab-category")
 

@@ -1,15 +1,10 @@
 local funcs = require("prototypes/crawler-train-functions")
 
+require("prototypes.recipes.crawler-recipe-updates")
+require("prototypes.technology.crawler-technology-components-updates")
+require("prototypes.technology.crawler-technology-tech-updates")
+
 if angelsmods.industries then
-  if angelsmods.industries.components then
-    require("prototypes.recipes.crawler-recipe-updates")
-    require("prototypes.technology.crawler-technology-components-updates")
-  end
-
-  if angelsmods.industries.overhaul and angelsmods.industries.tech then
-    require("prototypes.technology.crawler-technology-tech-updates")
-  end
-
   data.raw["item-subgroup"]["angels-vehicle-train-crawler"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-vehicle-train-crawler"].order = "bc[crawler-train]"
 

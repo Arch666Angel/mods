@@ -1,5 +1,9 @@
 local funcs = require("prototypes/petro-train-functions")
 
+require("prototypes.recipes.petro-recipe-updates")
+require("prototypes.technology.petro-technology-component-updates")
+require("prototypes.technology.petro-technology-tech-updates")
+
 if angelsmods.petrochem then
   local OV = angelsmods.functions.OV
   for i = 1, angelsmods.addons.petrotrain.tier_amount, 1 do
@@ -8,18 +12,10 @@ if angelsmods.petrochem then
     OV.modify_input(tank1, {"angels-storage-tank-1", "storage-tank"})
     OV.modify_input(tank2, {"angels-storage-tank-2", "storage-tank"})
   end
+  OV.execute()
 end
 
 if angelsmods.industries then
-  if angelsmods.industries.components then
-    require("prototypes.recipes.petro-recipe-updates")
-    require("prototypes.technology.petro-technology-component-updates")
-  end
-
-  if angelsmods.industries.overhaul and angelsmods.industries.tech then
-    require("prototypes.technology.petro-technology-tech-updates")
-  end
-
   data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"
 

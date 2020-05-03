@@ -404,7 +404,7 @@ if angelsmods.industries and angelsmods.industries.overhaul then
 
   -- ORDENING OF EQUIPMENT
   if bobmods and bobmods.equipment then
-    if mods["bobvehicleequipment"] then -- vehicle equipment
+    if mods.bobvehicleequipment then -- vehicle equipment
       -- power equipment
       data:extend(
         {
