@@ -1,7 +1,7 @@
 if bobmods then
   local OV = angelsmods.functions.OV
 
-  if mods.bobplates then
+  if mods["bobplates"] then
     -- CATEGORY
     if angelsmods.industries and angelsmods.industries.overhaul then
       if data.raw["item-group"]["bob-gems"] then
@@ -68,7 +68,7 @@ if bobmods then
     OV.add_prereq("bio-processing-crystal-1", "grinding")
   end
 
-  if mods.bobmodules then
+  if mods["bobmodules"] then
     -- CATEGORY
     if angelsmods.industries and angelsmods.industries.overhaul then
       -- modules group
@@ -345,7 +345,7 @@ if bobmods then
     OV.add_prereq("effect-transmission-3", "modules-3")
   end
 
-  if mods.bobwarfare then
+  if mods["bobwarfare"] then
     OV.add_prereq("nitroglycerin-processing", "bio-nutrient-paste")
   end
 end

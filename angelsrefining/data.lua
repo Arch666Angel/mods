@@ -14,13 +14,15 @@ angelsmods.trigger.washing_tech = angelsmods.trigger.washing_tech or false
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}
-local ore_exist = function (ore_name) return data.raw.item[ore_name] and true or false end
+local ore_exist = function(ore_name)
+  return data.raw.item[ore_name] and true or false
+end
 -- angels refining default mode is to be special-vanilla, aka iron and copper only
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
-angelsmods.trigger.ores["uranium"] = mods.bobplates and true or false
+angelsmods.trigger.ores["uranium"] = mods["bobplates"] and true or false
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
-if mods.bobplates then
+if mods["bobplates"] then
   angelsmods.trigger.ores["tin"] = ore_exist("tin-ore")
   angelsmods.trigger.ores["lead"] = ore_exist("lead-ore")
   angelsmods.trigger.ores["nickel"] = ore_exist("nickel-ore")
@@ -34,13 +36,13 @@ if mods.bobplates then
   angelsmods.trigger.ores["tungsten"] = ore_exist("tungsten-ore")
   angelsmods.trigger.ores["thorium"] = ore_exist("thorium-ore")
 
-  --angelsmods.trigger.ores["gem-ore"] = ore_exist("gem-ore")
-  --angelsmods.trigger.ores["gem-ruby"] = ore_exist("ruby-ore")
-  --angelsmods.trigger.ores["gem-sapphire"] = ore_exist("sapphire-ore")
-  --angelsmods.trigger.ores["gem-emerald"] = ore_exist("emerald-ore")
-  --angelsmods.trigger.ores["gem-amethyst"] = ore_exist("amethyst-ore")
-  --angelsmods.trigger.ores["gem-topaz"] = ore_exist("topaz-ore")
-  --angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
+--angelsmods.trigger.ores["gem-ore"] = ore_exist("gem-ore")
+--angelsmods.trigger.ores["gem-ruby"] = ore_exist("ruby-ore")
+--angelsmods.trigger.ores["gem-sapphire"] = ore_exist("sapphire-ore")
+--angelsmods.trigger.ores["gem-emerald"] = ore_exist("emerald-ore")
+--angelsmods.trigger.ores["gem-amethyst"] = ore_exist("amethyst-ore")
+--angelsmods.trigger.ores["gem-topaz"] = ore_exist("topaz-ore")
+--angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
 end
 angelsmods.trigger.ores["fluorite"] = false -- angels petrochem enables this
 angelsmods.trigger.ores["platinum"] = false -- angels petrochem enables this

@@ -226,7 +226,7 @@ if bobmods then
   end
 
   --if data.raw["fluid"]["dinitrogen-tetroxide"] then --BOBS REVAMP hardmode
-  if mods.bobrevamp and settings.startup["bobmods-revamp-hardmode"].value then
+  if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
     if data.raw.fluid["carbon-dioxide"] then
       OV.global_replace_item("carbon-dioxide", "gas-hydrogen-sulfide")
       data.raw.fluid["carbon-dioxide"].hidden = true

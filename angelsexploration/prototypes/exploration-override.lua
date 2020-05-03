@@ -210,7 +210,7 @@ if angelsmods.industries then
   end
 end
 
-if mods.bobvehicleequipment then
+if mods["bobvehicleequipment"] then
   data:extend(
     {
       {

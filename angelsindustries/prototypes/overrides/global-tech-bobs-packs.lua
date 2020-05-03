@@ -226,7 +226,7 @@ end
 -------------------------------------------------------------------------------
 -- BOBS TECH ------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods.bobtech then
+if mods["bobtech"] then
   if data.raw.tool["science-pack-gold"] and data.raw.recipe["science-pack-gold"] then
     data.raw.recipe["science-pack-gold"].ingredients = {
       {type = "item", name = "angels-science-pack-blue", amount = 1}

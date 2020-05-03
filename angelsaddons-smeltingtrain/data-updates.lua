@@ -38,7 +38,7 @@ if angelsmods.industries then
   )
 end
 
-if mods.bobvehicleequipment then
+if mods["bobvehicleequipment"] then
   funcs.update_equipment_grid(
     "angels-smelting-locomotive",
     {
