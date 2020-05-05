@@ -24,7 +24,8 @@ if mods["bobplates"] or angelsmods.industries.components then
 end
 --angelsmods.industries.overhaul=false --temp overrides
 
-angelsmods.industries.return_ingredients = angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
+angelsmods.industries.return_ingredients =
+  angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
 
 -- set triggers for other angel mods
 require("prototypes.angels-industries-triggers")
@@ -37,6 +38,7 @@ end
 --LOAD PROTOTYPES
 --CATEGORIES
 require("prototypes.angels-industries-category")
+require("prototypes.robotics-ghosting")
 
 --COMPONENTS
 if angelsmods.industries.overhaul and angelsmods.industries.components then

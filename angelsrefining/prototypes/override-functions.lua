@@ -680,8 +680,8 @@ ov_functions.execute = function()
         local actual_remove = {}
         for pk, prereq in pairs(tech.prerequisites) do
           if to_remove[pk] then
-            table.insert(actual_remove, pk)
             -- table.remove(tech.prerequisites, pk)
+            table.insert(actual_remove, pk)
           else
             dup_table[tech.prerequisites[pk]] = true
           end
@@ -720,47 +720,49 @@ ov_functions.execute = function()
         modifications = nil
       end
       to_remove = {}
-      for pk, pack in pairs(tech.unit.ingredients) do
-        local nk
-        if pack.name then
-          nk = "name"
-        else
-          nk = 1
-        end
-        if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
-          for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
-            to_remove[rem] = true
+      if tech.unit and tech.unit.ingredients then
+        for pk, pack in pairs(tech.unit.ingredients) do
+          local nk
+          if pack.name then
+            nk = "name"
+          else
+            nk = 1
+          end
+          if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
+            for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
+              to_remove[rem] = true
+            end
           end
         end
-      end
-      for i = #tech.unit.ingredients, 1, -1 do
-        local pack = tech.unit.ingredients[i]
-        local nk, ak
-        if pack.name then
-          nk = "name"
-          ak = "amount"
-        else
-          nk = 1
-          ak = 2
-        end
-        if to_remove[pack[nk]] then
-          table.remove(tech.unit.ingredients, i)
-        else
-          if substitution_table.science_packs[pack[nk]] then
-            pack[ak] = substitution_table.science_packs[pack[nk]].amount
-            pack[nk] = substitution_table.science_packs[pack[nk]].add
+        for i = #tech.unit.ingredients, 1, -1 do
+          local pack = tech.unit.ingredients[i]
+          local nk, ak
+          if pack.name then
+            nk = "name"
+            ak = "amount"
+          else
+            nk = 1
+            ak = 2
           end
-          if modifications and modifications[pack[nk]] == 0 then
+          if to_remove[pack[nk]] then
             table.remove(tech.unit.ingredients, i)
           else
-            dup_table[pack[nk]] = true
+            if substitution_table.science_packs[pack[nk]] then
+              pack[ak] = substitution_table.science_packs[pack[nk]].amount
+              pack[nk] = substitution_table.science_packs[pack[nk]].add
+            end
+            if modifications and modifications[pack[nk]] == 0 then
+              table.remove(tech.unit.ingredients, i)
+            else
+              dup_table[pack[nk]] = true
+            end
           end
         end
-      end
-      if modifications then
-        for name, add in pairs(modifications) do
-          if add > 0 and not dup_table[name] then
-            table.insert(tech.unit.ingredients, {name, add})
+        if modifications then
+          for name, add in pairs(modifications) do
+            if add > 0 and not dup_table[name] then
+              table.insert(tech.unit.ingredients, {name, add})
+            end
           end
         end
       end
