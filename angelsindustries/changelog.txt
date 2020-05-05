@@ -5,6 +5,9 @@ Date: ???
     - Properly use name, amount in result and ingredient prototypes
     - Added ghost unlocks for angels construction robots
     - Angels robots unlocks the shortcuts as well
+  Bugfixes:
+    - Science mode:
+      - Fixed rocket silo would only give 200 Gravitational Analyzers instead of 1000 (stack size)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 20.04.2020

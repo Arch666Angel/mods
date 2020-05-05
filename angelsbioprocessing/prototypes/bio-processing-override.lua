@@ -18,6 +18,10 @@ if angelsmods.refining then
   --MOVE UNLOCKS
   OV.add_unlock("bio-processing-brown", "water-mineralized")
   OV.remove_unlock("water-treatment", "water-mineralized")
+
+  if is_special_vanilla(angelsmods.trigger.ores) then
+    require("prototypes.overrides.bio-processing-override-special-vanilla")
+  end
 end
 
 --SMELTING
@@ -36,7 +40,7 @@ for i, labs in pairs(data.raw["lab"]) do
 end
 
 --PASTE
-require("prototypes.bio-processing-override-paste")
+require("prototypes.overrides.bio-processing-override-paste")
 
 --CONDITIONAL
 if angelsmods.industries then
@@ -60,7 +64,7 @@ if angelsmods.industries then
   )
 
   if angelsmods.industries.overhaul then
-    require("prototypes.bio-processing-override-angel")
+    require("prototypes.overrides.bio-processing-override-angel")
   end
 else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")
@@ -378,11 +382,17 @@ if bobmods then
   end
 
   --ADDED RECIPES FOR BOBS ARTIFACTS
-  require("prototypes.bio-processing-override-bob-artifacts")
+  require("prototypes.overrides.bio-processing-override-bob-artifacts")
 
   --OTHER BOB OVERRIDES
-  require("prototypes.bio-processing-override-bob")
+  require("prototypes.overrides.bio-processing-override-bob")
 end
 
 --ENABLE PRODUCTIVITY
 --angelsmods.functions.allow_productivity("slag-processing-1")
+angelsmods.functions.allow_productivity("bio-resin")
+angelsmods.functions.allow_productivity("bio-resin-resin-liquification")
+angelsmods.functions.allow_productivity("bio-plastic")
+angelsmods.functions.allow_productivity("bio-plastic-1")
+angelsmods.functions.allow_productivity("bio-plastic-2")
+angelsmods.functions.allow_productivity("bio-rubber")

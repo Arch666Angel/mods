@@ -64,6 +64,34 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "nilaus-truck-2",
+      normal = {
+        energy_required = 10,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "nilaus-truck", amount = 1},
+          {type = "item", name = "speed-module-2", amount = 2},
+          {type = "item", name = "effectivity-module-2", amount = 1},
+          {type = "item", name = "advanced-circuit", amount = 20},
+          {type = "item", name = "electric-engine-unit", amount = 25}
+        },
+        results = {{type = "item", name = "nilaus-truck-2", amount = 1}}
+      },
+      expensive = {
+        energy_required = 10,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "nilaus-truck", amount = 1},
+          {type = "item", name = "speed-module-2", amount = 2},
+          {type = "item", name = "effectivity-module-2", amount = 2},
+          {type = "item", name = "advanced-circuit", amount = 30},
+          {type = "item", name = "electric-engine-unit", amount = 55}
+        },
+        results = {{type = "item", name = "nilaus-truck-2", amount = 1}}
+      }
+    },
+    {
+      type = "recipe",
       name = "deco-nilaus-start",
       energy_required = 2,
       enabled = false,

@@ -124,6 +124,7 @@ if angelsmods.trigger.smelting_products["copper"].wire then
       }
     }
   )
+  angelsmods.functions.remove_productivity("copper-cable")
   OV.global_replace_item("angels-wire-copper", "copper-cable")
   angelsmods.functions.add_flag("angels-wire-copper", "hidden")
 

@@ -89,8 +89,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-silicon-smelting-2",
-        "ore-processing-2",
-        "basic-chemistry"
+        "ore-processing-2"
       },
       effects = {
         {

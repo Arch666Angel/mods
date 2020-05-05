@@ -5,8 +5,7 @@ data:extend(
       name = "nilaus",
       icon = "__angelsaddons-nilaus__/graphics/technology/nilaus-tech.png",
       icon_size = 128,
-      prerequisites =
-      {
+      prerequisites = {
         "optics"
       },
       effects = {
@@ -30,7 +29,7 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {type="item", name="automation-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 15
       },
@@ -54,8 +53,34 @@ data:extend(
       unit = {
         count = 60,
         ingredients = {
-          {type="item", name="automation-science-pack", amount = 1},
-          {type="item", name="logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "nilaus-truck-2",
+      icon = "__angelsaddons-nilaus__/graphics/technology/nilaus-tech.png",
+      icon_size = 128,
+      prerequisites = {
+        "nilaus-truck"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "nilaus-truck-2"
+        }
+      },
+      unit = {
+        count = 120,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 15
       },
