@@ -25,7 +25,7 @@ T3=titanium,crete-brick,E-orange, w-silver
 T4=tungsten,re-inforced-brick,w-gold
 T5=??,??,w-platinum
 ]]
-block_replace={
+angelsmods.industries.block_replace={
   --construction materials
     --ceramic style
   ["stone"]={new="block-construction-1",amt_multi=0.5},
@@ -65,7 +65,7 @@ block_replace={
   --intermediates (vanilla)
   ["iron-stick"]={new="construction-components",amt_multi=1},
 }
-general_replace={
+angelsmods.industries.general_replace={
   --electronics
   ["basic-circuit-board"]={new="circuit-grey",amt_multi=1},
   ["basic-electronic-board"]={new="circuit-red-loaded",amt_multi=1,unlock_by="electronics"},
@@ -98,11 +98,11 @@ general_replace={
 }
 --update replacement tables depending on mods
 if mods["aai-industry"] then
-  block_replace["stone-brick"]={new="block-construction-1",amt_multi=2}
+  angelsmods.industries.block_replace["stone-brick"]={new="block-construction-1",amt_multi=2}
 end
 if mods["bobelectronics"] then
-  block_replace["electronic-circuit"]={new="block-electronics-2",amt_multi=1}
-  block_replace["advanced-circuit"]={new="block-electronics-3",amt_multi=1}
-  general_replace["electronic-circuit"]={new="circuit-red-loaded",amt_multi=1,unlock_by="electronics"}
-  general_replace["advanced-circuit"]={new="circuit-orange-loaded",amt_multi=1,unlock_by="advanced-electronics"}
+  angelsmods.industries.block_replace["electronic-circuit"]={new="block-electronics-2",amt_multi=1}
+  angelsmods.industries.block_replace["advanced-circuit"]={new="block-electronics-3",amt_multi=1}
+  angelsmods.industries.general_replace["electronic-circuit"]={new="circuit-red-loaded",amt_multi=1,unlock_by="electronics"}
+  angelsmods.industries.general_replace["advanced-circuit"]={new="circuit-orange-loaded",amt_multi=1,unlock_by="advanced-electronics"}
 end

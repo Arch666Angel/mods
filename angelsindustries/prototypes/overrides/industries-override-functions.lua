@@ -368,6 +368,7 @@ end
 
 -- uses block_replace table from /overrides/replacement-fallbacks.lua
 function replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
+  local block_replace=angelsmods.industries.block_replace
 --reset existing each call
   local existing={}
   --run through each list first and check if it exists
@@ -403,7 +404,7 @@ end
 --Replace non-construction components with angels components
 -- uses general_replace table from /overrides/replacement-fallbacks.lua
 function replace_gen_mats()
-  for nme,info in pairs(general_replace) do
+  for nme,info in pairs(angelsmods.industries.general_replace) do
     if nme and data.raw.item[nme] then
       OV.global_replace_item(nme, info.new)
       data.raw.recipe[nme].hidden = true
