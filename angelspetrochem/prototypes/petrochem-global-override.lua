@@ -156,10 +156,9 @@ if angelsmods.trigger.enableacids then
 end
 
 --OVERRIDE FOR BOBs
+require("prototypes.global-override.bobplates")
+require("prototypes.global-override.bobrevamp")
 if bobmods then
-  require("prototypes.global-override.bobplates")
-  require("prototypes.global-override.bobrevamp")
-
   if bobmods.greenhouse then
     OV.patch_recipes(
       {
