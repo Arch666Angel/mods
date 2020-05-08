@@ -60,19 +60,5 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.overrides.tech-mod-update")
   require("prototypes.overrides.tech-productivity-update")
 end
---nuclear updates [make nuclear reprocessing not give that catalyst ever]
-if angelsmods.industries.overhaul then
-  data.raw.recipe["nuclear-fuel-reprocessing"].ingredients={
-  {type="item",name="used-up-uranium-fuel-cell",amount=5}
-}
-data.raw.recipe["nuclear-fuel-reprocessing"].results={
-  {type="item",name="slag",amount=6},
-  {type="item",name="uranium-238",amount=3}
-}
---need to update the icon back to the vanilla one
-data.raw.recipe["nuclear-fuel-reprocessing"].icon=nil
-data.raw.recipe["nuclear-fuel-reprocessing"].icons={{icon = "__base__/graphics/icons/nuclear-fuel-reprocessing.png",icon_size = 64, icon_mipmaps = 4,}}
-data.raw.recipe["nuclear-fuel-reprocessing"].icon_size=64
-end
 -- ordening
 require("prototypes.angels-industries-override-ordening")

@@ -67,19 +67,30 @@ OV.patch_recipes(
     },
     {
       name = "nuclear-fuel-reprocessing",
-      --ingredients =
-      --{
-      --  {type="item",name="used-uranium-fuel-cell",amount=24}
-      --},
-      --results =
-      --{
-      --  {type="item",name="uranium-238",amount=4},
-      --  {type="item",name="slag",amount=6}
-      --},
+      ingredients =
+      {
+        {"!!"},
+        {type="item",name="used-up-uranium-fuel-cell",amount=5}
+      },
+      results =
+      {
+        {"!!"},
+        {type = "item", name = "uranium-238", amount = 3},
+        {type = "item", name = "slag", amount = 5}
+      },
       crafting_machine_tint =
       {
         primary = tint_colors.green,
       },
+      icons =
+      {
+        {
+          icon = "__base__/graphics/icons/nuclear-fuel-reprocessing.png",
+          icon_size = 64,
+          icon_mipmaps = 4,
+        }
+      },
+      icon_size = 64
     }
   }
 )

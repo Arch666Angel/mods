@@ -302,7 +302,7 @@ data:extend(
       {type="item", name="americium-241", amount=1,probability=0.95},
       {type="item", name="curium-245",amount=1,probability=0.05},
       {type="item", name="uranium-238", amount=1},
-      --{type="item", name="slag", amount=5},
+      {type="item", name="slag", amount=5},
     },
     icons =
     {
@@ -610,12 +610,12 @@ data:extend(
     energy_required = 6000,
     ingredients =
     {
-      {type="item", name="used-up-angels-deuterium-fuel-cell", amount=4},
+      {type="item", name="used-up-angels-deuterium-fuel-cell", amount=5},
     },
     results=
     {
-      {type="item", name="slag", amount=4},
-      {type="item", name="angels-muon-fusion-catalyst", amount=3, catalyst_amount = 3}, --make it lose 5%
+      {type="item", name="slag", amount = 5},
+      {type="item", name="angels-muon-fusion-catalyst", amount=4, catalyst_amount = 4}, -- make it lose 1%; 99% of 5 = 4.95 return
       {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=0.95},
     },
     icons =
