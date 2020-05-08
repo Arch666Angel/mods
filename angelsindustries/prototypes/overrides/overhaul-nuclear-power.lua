@@ -86,7 +86,10 @@ OV.patch_recipes(
 OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
 OV.add_unlock("uranium-processing","angels-uranium-fuel-cell")
 data.raw.item["uranium-fuel-cell"].fuel_value="2GJ"
--- productivity additions
+
+-------------------------------------------------------------------------------
+-- Productivity
+-------------------------------------------------------------------------------
 angelsmods.functions.allow_productivity("angels-thorium-processing")
 angelsmods.functions.allow_productivity("angelsore-crystal-mix6-processing") --thorium ore
 angelsmods.functions.allow_productivity("angels-uranium-fuel-cell")
@@ -94,14 +97,19 @@ angelsmods.functions.allow_productivity("angels-mixed-oxide-cell")
 angelsmods.functions.allow_productivity("angels-thorium-fuel-cell")
 angelsmods.functions.allow_productivity("angels-thorium-fuel-cell-2")
 --angelsmods.functions.allow_productivity("angels-deuterium-fuel-cell")
---unlock new bombs and fuel recipes
+
+-------------------------------------------------------------------------------
+-- New recipe unlocks
+-------------------------------------------------------------------------------
 OV.add_unlock("atomic-bomb","angels-atomic-bomb-2")
 OV.add_unlock("atomic-bomb","angels-atomic-bomb")
 OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel")
 OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel-2")
-OV.add_unlock("water-chemistry-2","angels-deuterium-fuel-cell")
+--OV.add_unlock("water-chemistry-2","angels-deuterium-fuel-cell")
+
 if bobmods and bobmods.plates then
   OV.global_replace_item("plutonium-240","plutonium-239") --use bobs plutonium
+
 --basically remove all of bobs things (Sorry bob)
   --bobs setting specific changes:
   if not (bobmods.revamp and settings.startup["bobmods-revamp-rtg"].value) then
@@ -113,6 +121,7 @@ if bobmods and bobmods.plates then
   OV.remove_unlock("deuterium-fuel-reprocessing", "deuterium-fuel-reprocessing")
   OV.remove_unlock("thorium-plutonium-fuel-cell", "thorium-plutonium-fuel-cell")
   OV.remove_unlock("water-chemistry-2","deuterium-fuel-cell")
+
   if (bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value) then
     --if overhaul, remove unlocks in each reactor tech
     --add each cell to each reactor... or would it be quicker to just set the setting?

@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Moved productivity from solid rubber to liquid rubber so it is similar to plastic and resin
+    - Enable deuterium when playing with angels industry overhaul
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 20.04.2020

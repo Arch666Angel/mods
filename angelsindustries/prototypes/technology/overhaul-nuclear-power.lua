@@ -3,7 +3,7 @@ data:extend(
     {
       type = "technology",
       name = "angels-plutonium-power",
-      icon = "__angelsrefining__/graphics/technology/barrel-tech.png", --to change later
+      icon = "__angelsindustries__/graphics/technology/plutonium-processing.png",
       icon_size = 128,
       prerequisites = {
         "nuclear-fuel-reprocessing"
@@ -45,10 +45,11 @@ data:extend(
     {
       type = "technology",
       name = "angels-thorium-power",
-      icon = "__angelsrefining__/graphics/technology/barrel-tech.png", --to change later
+      icon = "__angelsindustries__/graphics/technology/thorium-processing.png",
       icon_size = 128,
       prerequisites = {
-        "angels-plutonium-power"
+        "angels-plutonium-power",
+        "ore-electro-whinning-cell"
       },
       effects = {
         {
@@ -84,20 +85,38 @@ data:extend(
     {
       type = "technology",
       name = "angels-fusion-power",
-      icon = "__angelsrefining__/graphics/technology/barrel-tech.png", --to change later
+      icons = angelsmods.functions.add_icon_layer(
+        { -- bottom placeholder layer
+          {
+            icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png"
+          },
+        },
+        angelsmods.functions.add_icon_layer(
+          angelsmods.functions.modify_icon_layers(angelsmods.functions.create_gas_recipe_icon(nil, "ddd", nil), {-25, -20}, 85/32),
+          {
+            {
+              icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-cell.png"
+            },
+            {
+              icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png"
+            },
+          }
+        )
+      ),
       icon_size = 128,
       prerequisites = {
-        "angels-thorium-power"
+        "angels-thorium-power",
+        "water-chemistry-2"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-advanced-thorium-fuel-cell-reprocessing"
         },
-        --[[{ --unlocked by water-chemistry-2
+        {
           type = "unlock-recipe",
           recipe = "angels-deuterium-fuel-cell"
-        },]]
+        },
         {
           type = "unlock-recipe",
           recipe = "angels-deuterium-fuel-cell-reprocessing"

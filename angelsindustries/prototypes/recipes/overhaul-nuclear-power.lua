@@ -187,7 +187,7 @@ data:extend(
     {
       {type="item", name = "uranium-234", amount = 1},
       {type="item", name = "uranium-238", amount = 199},
-      {type="item", name = "angels-plate-lead", amount = 100},
+      {type="item", name = "iron-plate", amount = 100},
     },
     results =
     {

@@ -23,19 +23,48 @@ local function get_icons(object_name)
 end
 angelsmods.functions.get_object_icons = get_icons
 
-function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add)
+function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_shift, layer_scale)
   local icon_layers = util.table.deepcopy(icon_layers)
 
   if layers_to_add[1] then
     for _, layer_to_add in pairs(layers_to_add) do
-      table.insert(icon_layers, layer_to_add)
+      table.insert(icon_layers,
+        {
+          icon = layer_to_add.icon,
+          icon_size = layer_to_add.icon_size,
+          tint = layer_to_add.tint,
+          scale = (layer_to_add.scale or 1) * (layer_scale or 1),
+          shift =
+          {
+            (layer_to_add.shift and (layer_to_add.shift[1] or layer_to_add.shift.x) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
+            (layer_to_add.shift and (layer_to_add.shift[2] or layer_to_add.shift.y) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
+          }
+        }
+      )
     end
   else
-    table.insert(icon_layers, layers_to_add)
+    table.insert(icon_layers,
+      {
+        icon = layers_to_add.icon,
+        icon_size = layers_to_add.icon_size,
+        tint = layers_to_add.tint,
+        scale = (layer_to_add.scale or 1) * (layer_scale or 1),
+        shift =
+        {
+            (layer_to_add.shift and (layer_to_add.shift[1] or layer_to_add.shift.x) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
+            (layer_to_add.shift and (layer_to_add.shift[2] or layer_to_add.shift.y) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
+        }
+      }
+    )
   end
 
   return icon_layers
 end
+
+function angelsmods.functions.modify_icon_layers(icon_layers, layer_shift, layer_scale)
+  return angelsmods.functions.add_icon_layer({}, icon_layers, layer_shift, layer_scale)
+end
+
 
 local function unify_tint(tint)
   -- allows tints to be defined as {255, 255, 255, 255}
