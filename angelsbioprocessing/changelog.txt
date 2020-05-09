@@ -6,6 +6,11 @@ Date: ???
     - Added productivity to liquid resin, plastic and rubber, similar to the petrochem equivalents
   Balancing:
     - Moved resin from wood recipe to tree arboretums, so it doesn't require garden exploration
+    - Gardens are now easier to produce:
+      - Replaced Garden Mutation with Garden Cultivation, which is now red science
+      - Altered the Garden duplication recipes to give certainly more gardens as output
+      - Garden duplication recipes now require Alien Goo as ingredient through Alienated Fertilizer
+      - Added polluted fish water from meat as extra Alien Goo source
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.8
 Date: 20.04.2020

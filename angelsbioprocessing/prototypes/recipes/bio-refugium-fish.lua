@@ -19,6 +19,25 @@ data:extend(
       icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{190, 255, 000}, {205, 255, 000}, {205, 255, 000}}),
       order = "b"
     },
+    {
+      type = "recipe",
+      name = "liquid-polluted-fish-atmosphere",
+      category = "liquifying",
+      subgroup = "bio-fish-breeding",
+      enabled = false,
+      energy_required = 15,
+      ingredients = {
+        {type = "fluid", name = "liquid-fish-atmosphere", amount = 100},
+        {type = "item", name = "bio-raw-meat", amount = 25}
+      },
+      results = {
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
+      },
+      main_product = "liquid-polluted-fish-atmosphere",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{190,255,000}, {241,050,238}, {241,050,238}}),
+      order = "b"
+    },
     ---------------------------------------------------------------------------
     -- KEEPING ----------------------------------------------------------------
     ---------------------------------------------------------------------------

@@ -10,6 +10,10 @@ data:extend(
   },
   {
     type = "recipe-category",
+    name = "basic-farming",
+  },
+  {
+    type = "recipe-category",
     name = "temperate-farming",
   },
   {

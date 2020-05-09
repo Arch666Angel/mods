@@ -6,6 +6,59 @@ data:extend(
     --TEMPERATE
     {
       type = "recipe",
+      name = "temperate-garden-cultivating-a",
+      category = "seed-extractor",
+      subgroup = "farming-temperate-seed",
+      normal = {
+        enabled = false,
+        energy_required = 300,
+        ingredients = {
+          {type = "item", name = "temperate-garden", amount = 1}
+        },
+        results = {
+          {type = "item", name = "token-bio", amount = 32}
+        }
+      },
+      expensive = {
+        enabled = false,
+        energy_required = 300,
+        ingredients = {
+          {type = "item", name = "temperate-garden", amount = 1}
+        },
+        results = {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
+          {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1}
+        },
+        main_product = "token-bio"
+      },
+      --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+      --icon_size = 32,
+      order = "ba"
+    },
+    {
+      type = "recipe",
+      name = "temperate-garden-cultivating-b",
+      category = "temperate-farming",
+      subgroup = "farming-temperate-seed",
+      enabled = false,
+      energy_required = 60,
+      ingredients = {
+        {type = "item", name = "temperate-garden", amount = 1},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "fluid", name = "water-mineralized", amount = 50}
+      },
+      results = {
+        --{type = "item", name = "token-bio", amount = 8, probability = 0.25},
+        {type = "item", name = "temperate-garden", amount = 2, catalyst_amount = 1},
+      },
+      main_product = "temperate-garden",
+      --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+      --icon_size = 32,
+      order = "bb"
+    },
+    {
+      type = "recipe",
       name = "temperate-garden-a",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
@@ -58,38 +111,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bb"
-    },
-    {
-      type = "recipe",
-      name = "temperate-garden-cultivating-a",
-      category = "seed-extractor",
-      subgroup = "farming-temperate-seed",
-      normal = {
-        enabled = false,
-        energy_required = 300,
-        ingredients = {
-          {type = "item", name = "temperate-garden", amount = 1}
-        },
-        results = {
-          {type = "item", name = "token-bio", amount = 32}
-        }
-      },
-      expensive = {
-        enabled = false,
-        energy_required = 300,
-        ingredients = {
-          {type = "item", name = "temperate-garden", amount = 1}
-        },
-        results = {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
-          {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1}
-        },
-        main_product = "token-bio"
-      },
-      --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
-      --icon_size = 32,
-      order = "ba"
+      order = "bc"
     },
     {
       type = "recipe",
@@ -140,30 +162,62 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bc"
-    },
-    {
-      type = "recipe",
-      name = "temperate-garden-cultivating-b",
-      category = "seed-extractor",
-      subgroup = "farming-temperate-seed",
-      enabled = false,
-      energy_required = 300,
-      ingredients = {
-        {type = "item", name = "temperate-garden", amount = 1},
-        {type = "item", name = "solid-fertilizer", amount = 2}
-      },
-      results = {
-        {type = "item", name = "token-bio", amount = 8, probability = 0.25},
-        {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1},
-        {type = "item", name = "temperate-garden", amount = 1, probability = 0.05}
-      },
-      main_product = "temperate-garden",
-      --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
-      --icon_size = 32,
       order = "bd"
     },
     --DESERT
+    {
+      type = "recipe",
+      name = "desert-garden-cultivating-a",
+      category = "seed-extractor",
+      subgroup = "bio-processor-temperate",
+      normal = {
+        enabled = false,
+        energy_required = 300,
+        ingredients = {
+          {type = "item", name = "desert-garden", amount = 1}
+        },
+        results = {
+          {type = "item", name = "token-bio", amount = 32}
+        }
+      },
+      expensive = {
+        enabled = false,
+        energy_required = 300,
+        ingredients = {
+          {type = "item", name = "desert-garden", amount = 1}
+        },
+        results = {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
+          {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1}
+        },
+        main_product = "token-bio"
+      },
+      --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+      --icon_size = 32,
+      order = "ba"
+    },
+    {
+      type = "recipe",
+      name = "desert-garden-cultivating-b",
+      category = "desert-farming",
+      subgroup = "bio-processor-temperate",
+      enabled = false,
+      energy_required = 60,
+      ingredients = {
+        {type = "item", name = "desert-garden", amount = 1},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "fluid", name = "water-mineralized", amount = 50}
+      },
+      results = {
+        --{type = "item", name = "token-bio", amount = 8, probability = 0.25},
+        {type = "item", name = "desert-garden", amount = 2, catalyst_amount = 1},
+      },
+      main_product = "desert-garden",
+      --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+      --icon_size = 32,
+      order = "bb"
+    },
     {
       type = "recipe",
       name = "desert-garden-a",
@@ -218,38 +272,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bb"
-    },
-    {
-      type = "recipe",
-      name = "desert-garden-cultivating-a",
-      category = "seed-extractor",
-      subgroup = "bio-processor-temperate",
-      normal = {
-        enabled = false,
-        energy_required = 300,
-        ingredients = {
-          {type = "item", name = "desert-garden", amount = 1}
-        },
-        results = {
-          {type = "item", name = "token-bio", amount = 32}
-        }
-      },
-      expensive = {
-        enabled = false,
-        energy_required = 300,
-        ingredients = {
-          {type = "item", name = "desert-garden", amount = 1}
-        },
-        results = {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
-          {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1}
-        },
-        main_product = "token-bio"
-      },
-      --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
-      --icon_size = 32,
-      order = "ba"
+      order = "bc"
     },
     {
       type = "recipe",
@@ -300,30 +323,62 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bc"
-    },
-    {
-      type = "recipe",
-      name = "desert-garden-cultivating-b",
-      category = "seed-extractor",
-      subgroup = "bio-processor-temperate",
-      enabled = false,
-      energy_required = 300,
-      ingredients = {
-        {type = "item", name = "desert-garden", amount = 1},
-        {type = "item", name = "solid-fertilizer", amount = 2}
-      },
-      results = {
-        {type = "item", name = "token-bio", amount = 8, probability = 0.25},
-        {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1},
-        {type = "item", name = "desert-garden", amount = 1, probability = 0.05}
-      },
-      main_product = "desert-garden",
-      --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
-      --icon_size = 32,
       order = "bd"
     },
     --SWAMP
+    {
+      type = "recipe",
+      name = "swamp-garden-cultivating-a",
+      category = "seed-extractor",
+      subgroup = "farming-temperate",
+      normal = {
+        enabled = false,
+        energy_required = 300,
+        ingredients = {
+          {type = "item", name = "swamp-garden", amount = 1}
+        },
+        results = {
+          {type = "item", name = "token-bio", amount = 32}
+        }
+      },
+      expensive = {
+        enabled = false,
+        energy_required = 300,
+        ingredients = {
+          {type = "item", name = "swamp-garden", amount = 1}
+        },
+        results = {
+          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
+          {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1}
+        },
+        main_product = "token-bio"
+      },
+      --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+      --icon_size = 32,
+      order = "ba"
+    },
+    {
+      type = "recipe",
+      name = "swamp-garden-cultivating-b",
+      category = "swamp-farming",
+      subgroup = "farming-temperate",
+      enabled = false,
+      energy_required = 60,
+      ingredients = {
+        {type = "item", name = "swamp-garden", amount = 1},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "fluid", name = "water-mineralized", amount = 50}
+      },
+      results = {
+        --{type = "item", name = "token-bio", amount = 8, probability = 0.25},
+        {type = "item", name = "swamp-garden", amount = 2, catalyst_amount = 1},
+      },
+      main_product = "swamp-garden",
+      --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+      --icon_size = 32,
+      order = "bb"
+    },
     {
       type = "recipe",
       name = "swamp-garden-a",
@@ -378,38 +433,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bb"
-    },
-    {
-      type = "recipe",
-      name = "swamp-garden-cultivating-a",
-      category = "seed-extractor",
-      subgroup = "farming-temperate",
-      normal = {
-        enabled = false,
-        energy_required = 300,
-        ingredients = {
-          {type = "item", name = "swamp-garden", amount = 1}
-        },
-        results = {
-          {type = "item", name = "token-bio", amount = 32}
-        }
-      },
-      expensive = {
-        enabled = false,
-        energy_required = 300,
-        ingredients = {
-          {type = "item", name = "swamp-garden", amount = 1}
-        },
-        results = {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
-          {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1}
-        },
-        main_product = "token-bio"
-      },
-      --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
-      --icon_size = 32,
-      order = "ba"
+      order = "bc"
     },
     {
       type = "recipe",
@@ -460,27 +484,6 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bc"
-    },
-    {
-      type = "recipe",
-      name = "swamp-garden-cultivating-b",
-      category = "seed-extractor",
-      subgroup = "farming-temperate",
-      enabled = false,
-      energy_required = 300,
-      ingredients = {
-        {type = "item", name = "swamp-garden", amount = 1},
-        {type = "item", name = "solid-fertilizer", amount = 2}
-      },
-      results = {
-        {type = "item", name = "token-bio", amount = 8, probability = 0.25},
-        {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1},
-        {type = "item", name = "swamp-garden", amount = 1, probability = 0.05}
-      },
-      main_product = "swamp-garden",
-      --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
-      --icon_size = 32,
       order = "bd"
     },
     --COMPOST
@@ -520,6 +523,23 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "solid-alienated-fertilizer",
+      category = "crafting-with-fluid",
+      subgroup = "bio-wood",
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "solid-fertilizer", amount = 1},
+        {type = "fluid", name = "alien-goo", amount = 10}
+      },
+      results = {
+        {type = "item", name = "solid-alienated-fertilizer", amount = 1}
+      },
+      icon_size = 32,
+      order = "a[support]-d"
+    },
+    {
+      type = "recipe",
       name = "solid-nuclear-fertilizer",
       category = "crafting-with-fluid",
       subgroup = "bio-wood",
@@ -534,7 +554,7 @@ data:extend(
         {type = "item", name = "solid-nuclear-fertilizer", amount = 1}
       },
       icon_size = 32,
-      order = "a[support]-d"
+      order = "a[support]-e"
     },
     --UPGRADES
     {
@@ -589,27 +609,27 @@ data:extend(
       order = "d"
     },
     --MUTATION
-    {
-      type = "recipe",
-      name = "desert-garden-mutation-temperate",
-      category = "seed-extractor",
-      subgroup = "farming-temperate-seed",
-      enabled = false,
-      energy_required = 600,
-      ingredients = {
-        {type = "item", name = "desert-garden", amount = 1},
-        {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
-        {type = "item", name = "solid-compost", amount = 100}
-      },
-      results = {
-        {type = "item", name = "temperate-garden", amount = 1, probability = 0.02},
-        {type = "item", name = "temperate-tree", amount = 1, probability = 0.001}
-      },
-      main_product = "temperate-garden",
-      --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
-      --icon_size = 32,
-      order = "be"
-    },
+    --{
+    --  type = "recipe",
+    --  name = "desert-garden-mutation-temperate",
+    --  category = "seed-extractor",
+    --  subgroup = "farming-temperate-seed",
+    --  enabled = false,
+    --  energy_required = 600,
+    --  ingredients = {
+    --    {type = "item", name = "desert-garden", amount = 1},
+    --    {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
+    --    {type = "item", name = "solid-compost", amount = 100}
+    --  },
+    --  results = {
+    --    {type = "item", name = "temperate-garden", amount = 1, probability = 0.02},
+    --    {type = "item", name = "temperate-tree", amount = 1, probability = 0.001}
+    --  },
+    --  main_product = "temperate-garden",
+    --  --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    --  --icon_size = 32,
+    --  order = "be"
+    --},
     --{
     --  type = "recipe",
     --  name = "swamp-garden-mutation-temperate",
@@ -631,27 +651,27 @@ data:extend(
     --  icon_size = 32,
     --  order = "be"
     --},
-    {
-      type = "recipe",
-      name = "temperate-garden-mutation-swamp",
-      category = "seed-extractor",
-      subgroup = "farming-temperate",
-      enabled = false,
-      energy_required = 600,
-      ingredients = {
-        {type = "item", name = "temperate-garden", amount = 1},
-        {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
-        {type = "item", name = "solid-soil", amount = 100}
-      },
-      results = {
-        {type = "item", name = "swamp-garden", amount = 1, probability = 0.02},
-        {type = "item", name = "swamp-tree", amount = 1, probability = 0.001}
-      },
-      main_product = "swamp-garden",
-      --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
-      --icon_size = 32,
-      order = "be"
-    },
+    --{
+    --  type = "recipe",
+    --  name = "temperate-garden-mutation-swamp",
+    --  category = "seed-extractor",
+    --  subgroup = "farming-temperate",
+    --  enabled = false,
+    --  energy_required = 600,
+    --  ingredients = {
+    --    {type = "item", name = "temperate-garden", amount = 1},
+    --    {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
+    --    {type = "item", name = "solid-soil", amount = 100}
+    --  },
+    --  results = {
+    --    {type = "item", name = "swamp-garden", amount = 1, probability = 0.02},
+    --    {type = "item", name = "swamp-tree", amount = 1, probability = 0.001}
+    --  },
+    --  main_product = "swamp-garden",
+    --  --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    --  --icon_size = 32,
+    --  order = "be"
+    --},
     --{
     --  type = "recipe",
     --  name = "desert-garden-mutation-swamp",
@@ -673,27 +693,27 @@ data:extend(
     --  icon_size = 32,
     --  order = "be"
     --},
-    {
-      type = "recipe",
-      name = "swamp-garden-mutation-desert",
-      category = "seed-extractor",
-      subgroup = "bio-processor-temperate",
-      enabled = false,
-      energy_required = 600,
-      ingredients = {
-        {type = "item", name = "swamp-garden", amount = 1},
-        {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
-        {type = "item", name = "solid-sand", amount = 100}
-      },
-      results = {
-        {type = "item", name = "desert-garden", amount = 1, probability = 0.02},
-        {type = "item", name = "desert-tree", amount = 1, probability = 0.001}
-      },
-      main_product = "desert-garden",
-      --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
-      --icon_size = 32,
-      order = "be"
-    }
+    --{
+    --  type = "recipe",
+    --  name = "swamp-garden-mutation-desert",
+    --  category = "seed-extractor",
+    --  subgroup = "bio-processor-temperate",
+    --  enabled = false,
+    --  energy_required = 600,
+    --  ingredients = {
+    --    {type = "item", name = "swamp-garden", amount = 1},
+    --    {type = "item", name = "solid-nuclear-fertilizer", amount = 4},
+    --    {type = "item", name = "solid-sand", amount = 100}
+    --  },
+    --  results = {
+    --    {type = "item", name = "desert-garden", amount = 1, probability = 0.02},
+    --    {type = "item", name = "desert-tree", amount = 1, probability = 0.001}
+    --  },
+    --  main_product = "desert-garden",
+    --  --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    --  --icon_size = 32,
+    --  order = "be"
+    --}
     --{
     --  type = "recipe",
     --  name = "temperate-garden-mutation-desert",
@@ -715,5 +735,51 @@ data:extend(
     --  icon_size = 32,
     --  order = "be"
     --},
+    --GENERATION
+    {
+      type = "recipe",
+      name = "garden-cultivating",
+      category = "basic-farming",
+      subgroup = "farming-temperate-seed",
+      enabled = false,
+      energy_required = 100,
+      ingredients = {
+        {type = "item", name = "token-bio", amount = 1},
+        {type = "item", name = "solid-wood-pulp", amount = 5},
+        {type = "fluid", name = "water-mineralized", amount = 50}
+      },
+      results = {
+        {type = "item", name = "temperate-garden", amount = 1, probability = 0.01},
+        {type = "item", name = "desert-garden", amount = 1, probability = 0.01},
+        {type = "item", name = "swamp-garden", amount = 1, probability = 0.01},
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png"
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+          scale = 0.5,
+          shift = {0,-5}
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+          scale = 0.35,
+          shift = {-seed_icon_shift, seed_icon_shift-5}
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+          scale = 0.35,
+          shift = {0, seed_icon_shift-5}
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+          scale = 0.35,
+          shift = {seed_icon_shift, seed_icon_shift-5}
+        }
+      },
+      icon_size = 32,
+      order = "bf"
+    },
   }
 )
