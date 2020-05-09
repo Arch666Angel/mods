@@ -49,7 +49,7 @@ data:extend(
       ingredients = {
         {type = "fluid", name = "alien-spores", amount = 50},
         {type = "item", name = "solid-calcium-carbonate", amount = 1},
-        {type = "fluid", name = "liquid-perchloric-acid", amount = 50}
+        {type = "fluid", name = "liquid-hydrochloric-acid", amount = 50}
       },
       results = {
         {type = "item", name = "alien-bacteria", amount = 1}

@@ -66,7 +66,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-processing-paste",
-        "bio-refugium-fish-1"
+        "bio-refugium-fish-1",
+        "chlorine-processing-1"
       },
       effects = {
         {
