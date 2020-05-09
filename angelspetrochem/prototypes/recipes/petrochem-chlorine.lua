@@ -227,7 +227,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72}
         },
-        "clo"
+        "clc"
       ),
       order = "i[gas-epichlorhydrin]"
     },
@@ -297,7 +297,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72}
         },
-        "clo"
+        "clc"
       ),
       order = "l"
     }
