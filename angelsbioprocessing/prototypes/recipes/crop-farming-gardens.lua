@@ -45,7 +45,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "temperate-garden", amount = 1},
         {type = "item", name = "solid-alienated-fertilizer", amount = 2},
-        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "token-bio", amount = 30},
         {type = "fluid", name = "water-mineralized", amount = 50}
       },
       results = {
@@ -53,6 +53,8 @@ data:extend(
         {type = "item", name = "temperate-garden", amount = 2, catalyst_amount = 1},
       },
       main_product = "temperate-garden",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       --icon_size = 32,
       order = "bb"
@@ -206,7 +208,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "desert-garden", amount = 1},
         {type = "item", name = "solid-alienated-fertilizer", amount = 2},
-        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "token-bio", amount = 30},
         {type = "fluid", name = "water-mineralized", amount = 50}
       },
       results = {
@@ -214,6 +216,8 @@ data:extend(
         {type = "item", name = "desert-garden", amount = 2, catalyst_amount = 1},
       },
       main_product = "desert-garden",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       --icon_size = 32,
       order = "bb"
@@ -367,7 +371,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "swamp-garden", amount = 1},
         {type = "item", name = "solid-alienated-fertilizer", amount = 2},
-        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "token-bio", amount = 30},
         {type = "fluid", name = "water-mineralized", amount = 50}
       },
       results = {
@@ -375,6 +379,8 @@ data:extend(
         {type = "item", name = "swamp-garden", amount = 2, catalyst_amount = 1},
       },
       main_product = "swamp-garden",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       --icon_size = 32,
       order = "bb"
