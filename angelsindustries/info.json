@@ -13,7 +13,7 @@
     "angelspetrochem >= 0.9.0",
     "angelsbioprocessing >= 0.7.3",
     "angelssmelting >= 0.6.5",
-    "angelsaddons-crawlertrain >= 0.1.0",
+    "? angelsaddons-crawlertrain >= 0.1.0",
     "(?)bobtech >= 0.18.3"
   ]
 }
