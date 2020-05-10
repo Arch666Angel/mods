@@ -6,7 +6,6 @@ data:extend(
   {
     type = "item",
     name = "biter-queen-small",
-    localised_name = {"item-name.biter-queen", "__ITEM__biter-small__"},
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/icons/biter-small.png",
@@ -35,7 +34,6 @@ data:extend(
   {
     type = "item",
     name = "biter-queen-medium",
-    localised_name = {"item-name.biter-queen", "__ITEM__biter-medium__"},
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/icons/biter-medium.png",
@@ -64,7 +62,6 @@ data:extend(
   {
     type = "item",
     name = "biter-queen-big",
-    localised_name = {"item-name.biter-queen", "__ITEM__biter-big__"},
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/icons/biter-big.png",
