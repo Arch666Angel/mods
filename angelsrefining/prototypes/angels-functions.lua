@@ -65,13 +65,13 @@ end
 
 local function clean_table(t)
   -- removes nil values from a table so it becomes a table without holes
-  if type(t) ~= "table" then
-    return t
-  end
-  local i = 0
-  for k, v in pairs(t or {}) do
-    i = i + 1
+  if type(t) ~= "table" then return t end
+  local clone = {}
+  for k,v in pairs(t or {}) do
     t[k] = nil
+    table.insert(clone, v)
+  end
+  for i,v in ipairs(clone) do
     t[i] = v
   end
   return t
@@ -1317,20 +1317,16 @@ end
 function angelsmods.functions.modify_barreling_icon()
   for ix, item in pairs(data.raw.item) do
     if item.subgroup == "fill-barrel" then
-      icon_name = string.sub(item.name, 1, -8)
+      local icon_name = string.sub(item.name, 1, -8)
       for kx, fluid in pairs(data.raw.fluid) do
         if fluid.name == icon_name then
           if item.icons then
+            local icon_size = fluid.icon_size or 32
             if fluid.icon then
-              if fluid.icon_size then
-                size = fluid.icon_size
-              else
-                size = 32
-              end
-              table.insert(item.icons, {icon = fluid.icon, icon_size = size, shift = {0, 5}, scale = 16 / size})
+              table.insert(item.icons, {icon = fluid.icon, icon_size = icon_size, shift = {0, 5}, scale = 16 / icon_size})
             end
             if fluid.icons then
-              item.icons = util.combine_icons(item.icons, fluid.icons, {scale = 16 / size, shift = {0, 5}})
+              item.icons = util.combine_icons(item.icons, fluid.icons, {scale = 16 / icon_size, shift = {0, 5}})
             end
           end
         end
