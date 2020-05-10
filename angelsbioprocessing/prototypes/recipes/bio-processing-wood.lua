@@ -481,7 +481,7 @@ data:extend(
         {type = "fluid", name = "water", amount = 50}
       },
       results = {
-        {type = "item", name = "temperate-tree", amount = 1, probability = 0.25}
+        {type = "item", name = "temperate-tree", amount = 1, probability = 0.5}
       },
       main_product = "temperate-tree",
       always_show_products = true,
@@ -773,7 +773,7 @@ data:extend(
         {type = "fluid", name = "water-light-mud", amount = 50}
       },
       results = {
-        {type = "item", name = "swamp-tree", amount = 1, probability = 0.25}
+        {type = "item", name = "swamp-tree", amount = 1, probability = 0.5}
       },
       main_product = "swamp-tree",
       always_show_products = true,
@@ -1022,7 +1022,7 @@ data:extend(
         {type = "fluid", name = "water-saline", amount = 50}
       },
       results = {
-        {type = "item", name = "desert-tree", amount = 1, probability = 0.25}
+        {type = "item", name = "desert-tree", amount = 1, probability = 0.5}
       },
       main_product = "desert-tree",
       always_show_products = true,
