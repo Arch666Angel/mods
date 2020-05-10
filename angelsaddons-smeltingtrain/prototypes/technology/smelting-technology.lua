@@ -68,5 +68,6 @@ funcs.generate_train_technology(
     },
     order = "c-a"
   },
-  tiers
+  tiers,
+  extra_prereq
 )

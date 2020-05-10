@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
@@ -147,6 +148,9 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then -- deuterium proces
   OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+elseif angelsmods.industries and angelsmods.industries.overhaul then
+elseif data.raw["fluid"]["deuterium"] then
+  -- does this ever happen? Leaving this here "just in case"
 else
   data.raw.fluid["gas-enriched-hydrogen-sulfide"].hidden = true
   data.raw.fluid["liquid-water-semiheavy-1"].hidden = true

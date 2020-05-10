@@ -33,6 +33,7 @@ require("prototypes.angels-industries-triggers")
 if not angelsmods.industries.tech_exceptions then
   angelsmods.industries.tech_exceptions = {}
 end
+
 require("prototypes.overrides.industries-override-functions")
 
 --LOAD PROTOTYPES

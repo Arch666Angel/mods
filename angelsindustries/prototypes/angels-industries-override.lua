@@ -14,7 +14,10 @@ require("prototypes.overrides.components-entity-update")
 require("prototypes.overrides.components-recipe-update")
 require("prototypes.overrides.components-productivity-update")
 require("prototypes.overrides.components-block-update")
-if angelsmods.industries.components then
+OV.execute()
+
+require("prototypes.overrides.overhaul-nuclear-power")
+
 --MODIFY ASSEMBLING MACHINES
 --data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
 --data.raw["item"]["assembling-machine-1"].order = "a"

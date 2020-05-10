@@ -472,38 +472,35 @@ end
 -- MIXED SORTING --------------------------------------------------------------
 -------------------------------------------------------------------------------
 OV.patch_recipes(
-  merge_table_of_tables {
+  merge_table_of_tables{
     -- CRUSHED
     create_sorting_mix_recipe(
       "angelsore-crushed-mix%i-processing",
       {
         {type = "item", name = "iron-ore", amount = 4},
-        special_vanilla and "unused" or {type = "item", name = "copper-ore", amount = 4},
-        special_vanilla and {type = "item", name = "copper-ore", amount = 4} or
-          {type = "item", name = "lead-ore", amount = 4},
-        special_vanilla and "unused" or {type = "item", name = "tin-ore", amount = 4}
+        special_vanilla and "unused"          or {type = "item", name = "copper-ore", amount = 4},
+        special_vanilla and {type = "item", name ="copper-ore", amount = 4} or
+          {type = "item", name ="lead-ore", amount = 4},
+        special_vanilla and "unused"          or {type = "item", name ="tin-ore", amount = 4},
       },
       {
         "angels-ore-mix-iron-sorting.png",
         "angels-ore-mix-copper-sorting.png",
         special_vanilla and "angels-ore-mix-copper-sorting.png" or "angels-ore-mix-lead-sorting.png",
-        "angels-ore-mix-tin-sorting.png"
+        "angels-ore-mix-tin-sorting.png",
       },
       {
         special_vanilla and
-          {
-            {type = "item", name = "angels-iron-pebbles", amount = 4},
-            {type = "item", name = "angels-iron-nugget", amount = 1}
-          } or
-          nil,
+        {
+          {type = "item", name = "angels-iron-pebbles", amount = 4},
+          {type = "item", name = "angels-iron-nugget", amount = 1}
+        } or nil,
         nil,
-        special_vanilla and
-          {
-            {type = "item", name = "angels-copper-pebbles", amount = 4},
-            {type = "item", name = "angels-copper-nugget", amount = 1}
-          } or
-          nil,
-        nil
+        special_vanilla and {
+          {type = "item", name = "angels-copper-pebbles", amount = 4},
+          {type = "item", name = "angels-copper-nugget", amount = 1}
+        } or nil,
+        nil,
       }
     ),
     -- CHUNK
@@ -517,7 +514,7 @@ OV.patch_recipes(
         {type = "item", name = "bauxite-ore", amount = 4},
         {type = "item", name = "zinc-ore", amount = 4},
         {type = "item", name = "fluorite-ore", amount = 2},
-        "unused"
+        "unused",
       },
       {
         special_vanilla and "angels-ore-mix-iron-sorting.png" or "angels-ore-mix-silica-sorting.png",
@@ -528,37 +525,35 @@ OV.patch_recipes(
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png", scale = 0.5, shift = {10, 10}}
         },
-        nil
+        nil,
       },
       {
+        special_vanilla and 
+        { 
+          {type = "item", name = "angels-iron-pebbles", amount = 3}, 
+          {type = "item", name = "angels-iron-slag", amount = 1}
+        } or nil,
         special_vanilla and
-          {
-            {type = "item", name = "angels-iron-pebbles", amount = 3},
-            {type = "item", name = "angels-iron-slag", amount = 1}
-          } or
-          nil,
-        special_vanilla and
-          {
-            {type = "item", name = "angels-copper-pebbles", amount = 3},
-            {type = "item", name = "angels-copper-slag", amount = 1}
-          } or
-          nil,
+        {
+          {type = "item", name = "angels-copper-pebbles", amount = 3},
+          {type = "item", name = "angels-copper-slag", amount = 1}
+        } or nil,
         nil,
         nil,
         nil,
-        nil
+        nil,
       }
     ),
     -- CRYSTAL
     create_sorting_mix_recipe(
       "angelsore-crystal-mix%i-processing",
       {
-        {type = "item", name = "rutile-ore", amount = 6},
-        {type = "item", name = "gold-ore", amount = 6},
-        {type = "item", name = "cobalt-ore", amount = 6},
-        {type = "item", name = "silver-ore", amount = 6},
-        {type = "item", name = "uranium-ore", amount = special_vanilla and 0 or 3},
-        {type = "item", name = "thorium-ore", amount = 1}
+        {type = "item", name ="rutile-ore",amount = 6},
+        {type = "item", name ="gold-ore",amount = 6},
+        {type = "item", name ="cobalt-ore",amount = 6},
+        {type = "item", name ="silver-ore",amount = 6},
+        {type = "item", name ="uranium-ore",amount = special_vanilla and 0 or 3},
+        {type = "item", name ="thorium-ore",amount = 1},
       },
       {
         "angels-ore-mix-titanium-sorting.png",
@@ -567,17 +562,14 @@ OV.patch_recipes(
         "angels-ore-mix-silver-sorting.png",
         {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__base__/graphics/icons/uranium-ore.png", scale = 32 / 64 * 0.5, shift = {10, 10}, icon_size = 64}
+          {icon = "__base__/graphics/icons/uranium-ore.png", scale = 32/64 * 0.5, shift = {10, 10}, icon_size = 64}
         },
         {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {
-            icon = "__boblibrary__/graphics/icons/ore-5.png",
-            tint = {b = 0.25, g = 1, r = 1},
-            scale = 0.5,
-            shift = {10, 10}
-          }
-        }
+          {icon = mods["bobplates"] and "__boblibrary__/graphics/icons/ore-5.png" or "__angelssmelting__/graphics/icons/ore-thorium.png",
+          icon_size = mods["bobplates"] and 32 or 64,
+          tint = {b=0.25,g=1,r=1}, scale = 0.5 * (mods["bobplates"] and 1 or 0.5), shift = {10, 10}}
+        },
       }
     ),
     -- PURE
@@ -586,14 +578,14 @@ OV.patch_recipes(
       {
         {type = "item", name = "tungsten-ore", amount = 6},
         {type = "item", name = "platinum-ore", amount = 3},
-        "unused"
+        "unused",
       },
       {
         "angels-ore-mix-tungsten-sorting.png",
         "angels-ore-mix-platinum-sorting.png",
-        nil
+        nil,
       }
-    )
+    ),
   }
 )
 
@@ -619,28 +611,8 @@ OV.patch_recipes(
         ["zinc-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["rutile-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["bauxite-ore"] = {0, 0, 0, 0, 0, 0.4, 0, 0, 0},
-        ["manganese-ore"] = {
-          0,
-          0,
-          0,
-          0,
-          0,
-          ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4,
-          0,
-          0,
-          0
-        },
-        ["chrome-ore"] = {
-          0,
-          0,
-          0,
-          0,
-          0,
-          ore_exists("platinum-ore") and 0 or 0.2,
-          ore_exists("platinum-ore") and 0.4 or 0,
-          0,
-          0
-        },
+        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
+        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
         ["platinum-ore"] = {0, 0, 0, 0, 0, 0, 0.4, 0, 0},
         ["cobalt-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
         ["tungsten-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},

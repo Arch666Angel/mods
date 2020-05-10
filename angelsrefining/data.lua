@@ -21,6 +21,7 @@ end
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
 angelsmods.trigger.ores["uranium"] = mods["bobplates"] and true or false
+angelsmods.trigger.ores["thorium"] = mods["angelsindustries"] and true or false
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods["bobplates"] then
   angelsmods.trigger.ores["tin"] = ore_exist("tin-ore")
@@ -34,15 +35,14 @@ if mods["bobplates"] then
   angelsmods.trigger.ores["titanium"] = ore_exist("rutile-ore")
   angelsmods.trigger.ores["gold"] = ore_exist("gold-ore")
   angelsmods.trigger.ores["tungsten"] = ore_exist("tungsten-ore")
-  angelsmods.trigger.ores["thorium"] = ore_exist("thorium-ore")
-
---angelsmods.trigger.ores["gem-ore"] = ore_exist("gem-ore")
---angelsmods.trigger.ores["gem-ruby"] = ore_exist("ruby-ore")
---angelsmods.trigger.ores["gem-sapphire"] = ore_exist("sapphire-ore")
---angelsmods.trigger.ores["gem-emerald"] = ore_exist("emerald-ore")
---angelsmods.trigger.ores["gem-amethyst"] = ore_exist("amethyst-ore")
---angelsmods.trigger.ores["gem-topaz"] = ore_exist("topaz-ore")
---angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
+  angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or ore_exist("thorium-ore")
+  --angelsmods.trigger.ores["gem-ore"] = ore_exist("gem-ore")
+  --angelsmods.trigger.ores["gem-ruby"] = ore_exist("ruby-ore")
+  --angelsmods.trigger.ores["gem-sapphire"] = ore_exist("sapphire-ore")
+  --angelsmods.trigger.ores["gem-emerald"] = ore_exist("emerald-ore")
+  --angelsmods.trigger.ores["gem-amethyst"] = ore_exist("amethyst-ore")
+  --angelsmods.trigger.ores["gem-topaz"] = ore_exist("topaz-ore")
+  --angelsmods.trigger.ores["gem-diamond"] = ore_exist("diamond-ore")
 end
 angelsmods.trigger.ores["fluorite"] = false -- angels petrochem enables this
 angelsmods.trigger.ores["platinum"] = false -- angels petrochem enables this
