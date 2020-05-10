@@ -9,10 +9,7 @@ if mods["bobvehicleequipment"] then
 end
 OV.execute()
 
-if angelsmods.industries.overhaul then
-  --UPDATE RECIPES
-  require("prototypes.overrides.overhaul-nuclear-power")
-end
+require("prototypes.overrides.overhaul-nuclear-power")
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   --UPDATE RECIPES FOR ENTITIES

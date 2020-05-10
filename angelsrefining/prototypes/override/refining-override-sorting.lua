@@ -477,10 +477,11 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-crushed-mix%i-processing",
       {
-        {"iron-ore", 4},
-        special_vanilla and "unused"          or {"copper-ore", 4},
-        special_vanilla and {"copper-ore", 4} or {"lead-ore", 4},
-        special_vanilla and "unused"          or {"tin-ore", 4},
+        {type = "item", name = "iron-ore", amount = 4},
+        special_vanilla and "unused"          or {type = "item", name = "copper-ore", amount = 4},
+        special_vanilla and {type = "item", name ="copper-ore", amount = 4} or
+          {type = "item", name ="lead-ore", amount = 4},
+        special_vanilla and "unused"          or {type = "item", name ="tin-ore", amount = 4},
       },
       {
         "angels-ore-mix-iron-sorting.png",
@@ -489,9 +490,16 @@ OV.patch_recipes(
         "angels-ore-mix-tin-sorting.png",
       },
       {
-        special_vanilla and { {"angels-iron-pebbles", 4}, {"angels-iron-nugget", 1} } or nil,
+        special_vanilla and
+        {
+          {type = "item", name = "angels-iron-pebbles", amount = 4},
+          {type = "item", name = "angels-iron-nugget", amount = 1}
+        } or nil,
         nil,
-        special_vanilla and { {"angels-copper-pebbles", 4}, {"angels-copper-nugget", 1} } or nil,
+        special_vanilla and {
+          {type = "item", name = "angels-copper-pebbles", amount = 4},
+          {type = "item", name = "angels-copper-nugget", amount = 1}
+        } or nil,
         nil,
       }
     ),
@@ -499,11 +507,13 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-chunk-mix%i-processing",
       {
-        special_vanilla and {"iron-ore", 3} or {"quartz", 4},
-        special_vanilla and {"copper-ore", 3}or {"nickel-ore", 4},
-        {"bauxite-ore", 4},
-        {"zinc-ore", 4},
-        {"fluorite-ore", 2},
+        special_vanilla and {type = "item", name = "iron-ore", amount = 3} or
+          {type = "item", name = "quartz", amount = 4},
+        special_vanilla and {type = "item", name = "copper-ore", amount = 3} or
+          {type = "item", name = "nickel-ore", amount = 4},
+        {type = "item", name = "bauxite-ore", amount = 4},
+        {type = "item", name = "zinc-ore", amount = 4},
+        {type = "item", name = "fluorite-ore", amount = 2},
         "unused",
       },
       {
@@ -518,8 +528,16 @@ OV.patch_recipes(
         nil,
       },
       {
-        special_vanilla and { {"angels-iron-pebbles", 3}, {"angels-iron-slag", 1} } or nil,
-        special_vanilla and { {"angels-copper-pebbles", 3}, {"angels-copper-slag", 1} } or nil,
+        special_vanilla and 
+        { 
+          {type = "item", name = "angels-iron-pebbles", amount = 3}, 
+          {type = "item", name = "angels-iron-slag", amount = 1}
+        } or nil,
+        special_vanilla and
+        {
+          {type = "item", name = "angels-copper-pebbles", amount = 3},
+          {type = "item", name = "angels-copper-slag", amount = 1}
+        } or nil,
         nil,
         nil,
         nil,
@@ -530,12 +548,12 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-crystal-mix%i-processing",
       {
-        {"rutile-ore", 6},
-        {"gold-ore", 6},
-        {"cobalt-ore", 6},
-        {"silver-ore", 6},
-        {"uranium-ore", special_vanilla and 0 or 3},
-        {"thorium-ore", 1},
+        {type = "item", name ="rutile-ore",amount = 6},
+        {type = "item", name ="gold-ore",amount = 6},
+        {type = "item", name ="cobalt-ore",amount = 6},
+        {type = "item", name ="silver-ore",amount = 6},
+        {type = "item", name ="uranium-ore",amount = special_vanilla and 0 or 3},
+        {type = "item", name ="thorium-ore",amount = 1},
       },
       {
         "angels-ore-mix-titanium-sorting.png",
@@ -558,8 +576,8 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-pure-mix%i-processing",
       {
-        {"tungsten-ore", 6},
-        {"platinum-ore", 3},
+        {type = "item", name = "tungsten-ore", amount = 6},
+        {type = "item", name = "platinum-ore", amount = 3},
         "unused",
       },
       {
@@ -593,28 +611,8 @@ OV.patch_recipes(
         ["zinc-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["rutile-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["bauxite-ore"] = {0, 0, 0, 0, 0, 0.4, 0, 0, 0},
-        ["manganese-ore"] = {
-          0,
-          0,
-          0,
-          0,
-          0,
-          ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4,
-          0,
-          0,
-          0
-        },
-        ["chrome-ore"] = {
-          0,
-          0,
-          0,
-          0,
-          0,
-          ore_exists("platinum-ore") and 0 or 0.2,
-          ore_exists("platinum-ore") and 0.4 or 0,
-          0,
-          0
-        },
+        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
+        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
         ["platinum-ore"] = {0, 0, 0, 0, 0, 0, 0.4, 0, 0},
         ["cobalt-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
         ["tungsten-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
