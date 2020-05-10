@@ -28,7 +28,7 @@ data:extend(
       module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"temperate-farming", "desert-farming", "swamp-farming"},
+    crafting_categories = {"temperate-farming", "desert-farming", "swamp-farming", "basic-farming"},
     crafting_speed = 1,
     energy_source =
     {
