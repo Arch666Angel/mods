@@ -4,7 +4,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-nuts",
       category = "bio-pressing",
-      subgroup = "farming-desert-seed",
+      subgroup = "bio-processor-press",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -21,13 +21,13 @@ data:extend(
           "solid-nuts"
         }
       ),
-      order = "ba"
+      order = "a[oil-extraction]-a"
     },
     {
       type = "recipe",
       name = "liquid-raw-vegetable-oil-pips",
       category = "bio-pressing",
-      subgroup = "farming-desert-seed",
+      subgroup = "bio-processor-press",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -44,13 +44,13 @@ data:extend(
           "solid-pips"
         }
       ),
-      order = "bb"
+      order = "a[oil-extraction]-b"
     },
     {
       type = "recipe",
       name = "liquid-raw-vegetable-oil-beans",
       category = "bio-pressing",
-      subgroup = "farming-desert-seed",
+      subgroup = "bio-processor-press",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -67,14 +67,14 @@ data:extend(
           "solid-beans"
         }
       ),
-      order = "bc"
+      order = "a[oil-extraction]-c"
     },
     -- PROCESSING
     {
       type = "recipe",
       name = "liquid-raw-vegetable-oil-filtering-1",
       category = "filtering",
-      subgroup = "farming-desert",
+      subgroup = "bio-processor-press",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -87,7 +87,7 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 40},
         {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
       },
-      order = "ba",
+      order = "b[oil-processing]-a",
       icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil-filtering-1.png",
       icon_size = 32
     },
@@ -95,7 +95,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-filtering-2",
       category = "filtering",
-      subgroup = "farming-desert",
+      subgroup = "bio-processor-press",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -108,7 +108,7 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1}
       },
-      order = "bb",
+      order = "b[oil-processing]-b",
       icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil-filtering-2.png",
       icon_size = 32
     },
@@ -116,7 +116,7 @@ data:extend(
       type = "recipe",
       name = "liquid-vegetable-oil-refining",
       category = "oil-processing",
-      subgroup = "farming-desert",
+      subgroup = "bio-processor-press",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -134,7 +134,7 @@ data:extend(
         },
         {{255, 255, 056}, {255, 205, 040}, {201, 155, 030}}
       ),
-      order = "bc"
+      order = "b[oil-processing]-c"
     }
   }
 )

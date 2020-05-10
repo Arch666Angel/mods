@@ -33,7 +33,7 @@ data:extend(
       },
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       --icon_size = 32,
-      order = "ba"
+      order = "bb"
     },
     {
       type = "recipe",
@@ -57,7 +57,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
       --icon_size = 32,
-      order = "bb"
+      order = "ba"
     },
     {
       type = "recipe",
@@ -171,7 +171,7 @@ data:extend(
       type = "recipe",
       name = "desert-garden-cultivating-a",
       category = "seed-extractor",
-      subgroup = "bio-processor-temperate",
+      subgroup = "farming-desert-seed",
       normal = {
         enabled = false,
         energy_required = 300,
@@ -196,13 +196,13 @@ data:extend(
       },
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       --icon_size = 32,
-      order = "ba"
+      order = "bb"
     },
     {
       type = "recipe",
       name = "desert-garden-cultivating-b",
       category = "desert-farming",
-      subgroup = "bio-processor-temperate",
+      subgroup = "farming-desert-seed",
       enabled = false,
       energy_required = 60,
       ingredients = {
@@ -220,13 +220,13 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
       --icon_size = 32,
-      order = "bb"
+      order = "ba"
     },
     {
       type = "recipe",
       name = "desert-garden-a",
       category = "seed-extractor",
-      subgroup = "bio-processor-temperate",
+      subgroup = "farming-desert-seed",
       enabled = false,
       energy_required = 300,
       ingredients = {
@@ -282,7 +282,7 @@ data:extend(
       type = "recipe",
       name = "desert-garden-b",
       category = "seed-extractor",
-      subgroup = "bio-processor-temperate",
+      subgroup = "farming-desert-seed",
       enabled = false,
       energy_required = 300,
       ingredients = {
@@ -334,7 +334,7 @@ data:extend(
       type = "recipe",
       name = "swamp-garden-cultivating-a",
       category = "seed-extractor",
-      subgroup = "farming-temperate",
+      subgroup = "farming-swamp-seed",
       normal = {
         enabled = false,
         energy_required = 300,
@@ -359,13 +359,13 @@ data:extend(
       },
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       --icon_size = 32,
-      order = "ba"
+      order = "bb"
     },
     {
       type = "recipe",
       name = "swamp-garden-cultivating-b",
       category = "swamp-farming",
-      subgroup = "farming-temperate",
+      subgroup = "farming-swamp-seed",
       enabled = false,
       energy_required = 60,
       ingredients = {
@@ -383,13 +383,13 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
       --icon_size = 32,
-      order = "bb"
+      order = "ba"
     },
     {
       type = "recipe",
       name = "swamp-garden-a",
       category = "seed-extractor",
-      subgroup = "farming-temperate",
+      subgroup = "farming-swamp-seed",
       enabled = false,
       energy_required = 300,
       ingredients = {
@@ -445,7 +445,7 @@ data:extend(
       type = "recipe",
       name = "swamp-garden-b",
       category = "seed-extractor",
-      subgroup = "farming-temperate",
+      subgroup = "farming-swamp-seed",
       enabled = false,
       energy_required = 300,
       ingredients = {
@@ -544,24 +544,24 @@ data:extend(
       icon_size = 32,
       order = "a[support]-d"
     },
-    {
-      type = "recipe",
-      name = "solid-nuclear-fertilizer",
-      category = "crafting-with-fluid",
-      subgroup = "bio-wood",
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        {type = "item", name = "solid-fertilizer", amount = 2},
-        {type = "item", name = "solid-compost", amount = 25},
-        {type = "item", name = "uranium-235", amount = 1}
-      },
-      results = {
-        {type = "item", name = "solid-nuclear-fertilizer", amount = 1}
-      },
-      icon_size = 32,
-      order = "a[support]-e"
-    },
+    --{
+    --  type = "recipe",
+    --  name = "solid-nuclear-fertilizer",
+    --  category = "crafting-with-fluid",
+    --  subgroup = "bio-wood",
+    --  enabled = false,
+    --  energy_required = 2,
+    --  ingredients = {
+    --    {type = "item", name = "solid-fertilizer", amount = 2},
+    --    {type = "item", name = "solid-compost", amount = 25},
+    --    {type = "item", name = "uranium-235", amount = 1}
+    --  },
+    --  results = {
+    --    {type = "item", name = "solid-nuclear-fertilizer", amount = 1}
+    --  },
+    --  icon_size = 32,
+    --  order = "a[support]-e"
+    --},
     --UPGRADES
     {
       type = "recipe",
@@ -785,7 +785,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bf"
+      order = "be"
     },
   }
 )
