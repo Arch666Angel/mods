@@ -10,6 +10,10 @@ data:extend(
   },
   {
     type = "recipe-category",
+    name = "basic-farming",
+  },
+  {
+    type = "recipe-category",
     name = "temperate-farming",
   },
   {
@@ -237,12 +241,6 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-temperate",
-    group = "bio-processing-vegetables",
-    order = "b[temperate]-c",
-  },
-  {
-    type = "item-subgroup",
     name = "farming-swamp-seed",
     group = "bio-processing-vegetables",
     order = "c[swamp]-a",
@@ -255,12 +253,6 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-swamp",
-    group = "bio-processing-vegetables",
-    order = "c[swamp]-c",
-  },
-  {
-    type = "item-subgroup",
     name = "farming-desert-seed",
     group = "bio-processing-vegetables",
     order = "d[desert]-a",
@@ -270,12 +262,6 @@ data:extend(
     name = "farming-desert",
     group = "bio-processing-vegetables",
     order = "d[desert]-b",
-  },
-  {
-    type = "item-subgroup",
-    name = "bio-processor-desert",
-    group = "bio-processing-vegetables",
-    order = "d[desert]-c",
   },
   {
     type = "item-subgroup",

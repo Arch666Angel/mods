@@ -88,6 +88,43 @@ data:extend(
       icon_size = 32,
       order = "a[generator]-c"
     },
+    -- SPECIAL TREE GENERATION
+    {
+      type = "recipe",
+      name = "tree-arboretum-0",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum",
+      enabled = false,
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "tree-seed", amount = 2},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "fluid", name = "water", amount = 50}
+      },
+      results = {
+        {type = "item", name = "temperate-tree", amount = 1, probability = 0.25},
+        {type = "item", name = "swamp-tree", amount = 1, probability = 0.25},
+        {type = "item", name = "desert-tree", amount = 1, probability = 0.25}
+      },
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
+      },
+      order = "b[arboretum]-a[special-trees]"
+    },
     -- RAW WOOD ARBORETUM
     {
       type = "recipe",
@@ -121,7 +158,7 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
-      order = "b[arboretum]-a"
+      order = "b[arboretum]-b[tree-generation]-a"
     },
     {
       type = "recipe",
@@ -156,7 +193,7 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
-      order = "b[arboretum]-b"
+      order = "b[arboretum]-b[tree-generation]-b"
     },
     {
       type = "recipe",
@@ -192,7 +229,7 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
-      order = "b[arboretum]-c"
+      order = "b[arboretum]-b[tree-generation]-c"
     },
     -- RAW WOOD PROCESSING
     {
@@ -432,6 +469,43 @@ data:extend(
     -- TEMPERATE WOOD ARBORETUM
     {
       type = "recipe",
+      name = "temperate-tree-arboretum-0",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-temperate",
+      enabled = false,
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "tree-temperate-seed", amount = 2},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "fluid", name = "water", amount = 50}
+      },
+      results = {
+        {type = "item", name = "temperate-tree", amount = 1, probability = 0.5}
+      },
+      main_product = "temperate-tree",
+      always_show_products = true,
+      show_amount_in_title = false,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "b[arboretum]-a[special-trees]"
+    },
+    {
+      type = "recipe",
       name = "temperate-tree-arboretum-1",
       category = "angels-arboretum",
       subgroup = "bio-arboretum-temperate",
@@ -463,7 +537,7 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
-      order = "b[arboretum]-a"
+      order = "b[arboretum]-b[tree-generation]-a"
     },
     {
       type = "recipe",
@@ -499,9 +573,26 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
-      order = "b[arboretum]-b"
+      order = "b[arboretum]-b[tree-generation]-b"
     },
     -- TEMPERATE WOOD PROCESSING
+    {
+      type = "recipe",
+      name = "bio-resin-tree",
+      category = "seed-extractor",
+      subgroup = "bio-arboretum-temperate",
+      enabled = false,
+      energy_required = 4,
+      ingredients = {
+        {type = "item", name = "temperate-tree", amount = 1},
+      },
+      results = {
+        {type = "item", name = "bio-resin", amount = 6}
+      },
+      main_product = "bio-resin",
+      always_show_products = true,
+      order = "b[arboretum]-c[tree-processing]"
+    },
     {
       type = "recipe",
       name = "bio-resin",
@@ -670,6 +761,43 @@ data:extend(
     -- SWAMP WOOD ARBORETUM
     {
       type = "recipe",
+      name = "swamp-tree-arboretum-0",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-swamp",
+      enabled = false,
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "tree-swamp-seed", amount = 2},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "fluid", name = "water-light-mud", amount = 50}
+      },
+      results = {
+        {type = "item", name = "swamp-tree", amount = 1, probability = 0.5}
+      },
+      main_product = "swamp-tree",
+      always_show_products = true,
+      show_amount_in_title = false,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
+      },
+      order = "b[arboretum]-a[special-trees]"
+    },
+    {
+      type = "recipe",
       name = "swamp-tree-arboretum-1",
       category = "angels-arboretum",
       subgroup = "bio-arboretum-swamp",
@@ -701,7 +829,7 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
-      order = "b[arboretum]-a"
+      order = "b[arboretum]-b[tree-generation]-a"
     },
     {
       type = "recipe",
@@ -737,9 +865,26 @@ data:extend(
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
-      order = "b[arboretum]-b"
+      order = "b[arboretum]-b[tree-generation]-b"
     },
     -- SWAMP WOOD PROCESSING
+    {
+      type = "recipe",
+      name = "bio-plastic-tree",
+      category = "seed-extractor",
+      subgroup = "bio-arboretum-swamp",
+      enabled = false,
+      energy_required = 4,
+      ingredients = {
+        {type = "item", name = "swamp-tree", amount = 1},
+      },
+      results = {
+        {type = "item", name = "bio-plastic", amount = 6}
+      },
+      main_product = "bio-plastic",
+      always_show_products = true,
+      order = "b[arboretum]-c[tree-processing]"
+    },
     {
       type = "recipe",
       name = "bio-plastic",
@@ -865,6 +1010,43 @@ data:extend(
     -- DESERT WOOD ARBORETUM
     {
       type = "recipe",
+      name = "desert-tree-arboretum-0",
+      category = "angels-arboretum",
+      subgroup = "bio-arboretum-desert",
+      enabled = false,
+      energy_required = 30,
+      ingredients = {
+        {type = "item", name = "token-bio", amount = 16},
+        {type = "item", name = "tree-desert-seed", amount = 2},
+        {type = "item", name = "solid-alienated-fertilizer", amount = 2},
+        {type = "fluid", name = "water-saline", amount = 50}
+      },
+      results = {
+        {type = "item", name = "desert-tree", amount = 1, probability = 0.5}
+      },
+      main_product = "desert-tree",
+      always_show_products = true,
+      show_amount_in_title = false,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
+          icon_size = 64,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      crafting_machine_tint = {
+        primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
+      },
+      order = "b[arboretum]-a"
+    },
+    {
+      type = "recipe",
       name = "desert-tree-arboretum-1",
       category = "angels-arboretum",
       subgroup = "bio-arboretum-desert",
@@ -935,6 +1117,23 @@ data:extend(
       order = "b[arboretum]-b"
     },
     -- DESERT WOOD PROCESSING
+    {
+      type = "recipe",
+      name = "bio-rubber-tree",
+      category = "seed-extractor",
+      subgroup = "bio-arboretum-desert",
+      enabled = false,
+      energy_required = 4,
+      ingredients = {
+        {type = "item", name = "swamp-tree", amount = 1},
+      },
+      results = {
+        {type = "item", name = "bio-rubber", amount = 6}
+      },
+      main_product = "bio-rubber",
+      always_show_products = true,
+      order = "b[arboretum]-c[tree-processing]"
+    },
     {
       type = "recipe",
       name = "bio-rubber",

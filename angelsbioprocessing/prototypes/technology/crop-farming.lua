@@ -47,6 +47,31 @@ data:extend(
     },
     {
       type = "technology",
+      name = "gardens-2",
+      icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-farm",
+        --"bio-processing-brown",
+        "bio-paper-1",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "garden-cultivating"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
       name = "bio-farm",
       icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
       icon_size = 128,
@@ -80,6 +105,35 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-farm-alien",
+      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-processing-alien-1",
+        "gardens-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-polluted-fish-atmosphere"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-alienated-fertilizer"
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
         },
         time = 30
       }
@@ -171,7 +225,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-temperate-farming"
+        "bio-temperate-farming",
+        "bio-farm-alien"
       },
       effects = {
         {
@@ -288,7 +343,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-desert-farming"
+        "bio-desert-farming",
+        "bio-farm-alien"
       },
       effects = {
         {
@@ -405,7 +461,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-swamp-farming"
+        "bio-swamp-farming",
+        "bio-farm-alien"
       },
       effects = {
         {
@@ -656,61 +713,61 @@ data:extend(
         time = 30
       }
     },
-    {
-      type = "technology",
-      name = "angels-garden-mutations",
-      icons = {
-        {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
-      },
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "uranium-processing",
-        "bio-temperate-farm",
-        "bio-swamp-farm",
-        "bio-desert-farm"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-nuclear-fertilizer"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-mutation-temperate"
-        },
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "swamp-garden-mutation-temperate"
-        --},
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-mutation-swamp"
-        },
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "desert-garden-mutation-swamp"
-        --},
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-mutation-desert"
-        }
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "temperate-garden-mutation-desert"
-        --},
-      },
-      unit = {
-        count = 200,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1},
-          {type = "item", name = "token-bio", amount = 2}
-        },
-        time = 30
-      }
-    }
+    --{
+    --  type = "technology",
+    --  name = "angels-garden-mutations",
+    --  icons = {
+    --    {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
+    --  },
+    --  icon_size = 128,
+    --  order = "c-a",
+    --  prerequisites = {
+    --    "uranium-processing",
+    --    "bio-temperate-farm",
+    --    "bio-swamp-farm",
+    --    "bio-desert-farm"
+    --  },
+    --  effects = {
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "solid-nuclear-fertilizer"
+    --    },
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "desert-garden-mutation-temperate"
+    --    },
+    --    --{
+    --    --  type = "unlock-recipe",
+    --    --  recipe = "swamp-garden-mutation-temperate"
+    --    --},
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "temperate-garden-mutation-swamp"
+    --    },
+    --    --{
+    --    --  type = "unlock-recipe",
+    --    --  recipe = "desert-garden-mutation-swamp"
+    --    --},
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "swamp-garden-mutation-desert"
+    --    }
+    --    --{
+    --    --  type = "unlock-recipe",
+    --    --  recipe = "temperate-garden-mutation-desert"
+    --    --},
+    --  },
+    --  unit = {
+    --    count = 200,
+    --    ingredients = {
+    --      {type = "item", name = "automation-science-pack", amount = 1},
+    --      {type = "item", name = "logistic-science-pack", amount = 1},
+    --      {type = "item", name = "chemical-science-pack", amount = 1},
+    --      {type = "item", name = "production-science-pack", amount = 1},
+    --      {type = "item", name = "token-bio", amount = 2}
+    --    },
+    --    time = 30
+    --  }
+    --}
   }
 )
