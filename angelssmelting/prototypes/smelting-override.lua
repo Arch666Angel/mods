@@ -15,9 +15,6 @@ angelsmods.functions.override_item_conditions(
 )
 
 angelsmods.functions.move_item("uranium-ore", "angels-ores", "h[uranium-ore]")
-if data.raw["item"]["thorium-ore"] then
-  angelsmods.functions.move_item("thorium-ore", "angels-ores", "i[thorium-ore]")
-end
 
 if angelsmods.smelting then
   -- this should be moved to petrochem
@@ -66,6 +63,7 @@ require("prototypes.override.smelting-override-platinum")
 require("prototypes.override.smelting-override-silicon")
 require("prototypes.override.smelting-override-silver")
 require("prototypes.override.smelting-override-stone")
+require("prototypes.override.smelting-override-thorium")
 require("prototypes.override.smelting-override-tin")
 require("prototypes.override.smelting-override-titanium")
 require("prototypes.override.smelting-override-tungsten")

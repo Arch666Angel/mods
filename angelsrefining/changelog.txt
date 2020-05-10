@@ -4,6 +4,9 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Reordered the geode liquifying recipes to be the same order as the geode processing recipes
+  Modding:
+    - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
+    - added function angelsmods.functions.modify_icon_layers(...)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.10
 Date: 20.04.2020
