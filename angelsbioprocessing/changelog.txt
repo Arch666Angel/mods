@@ -6,6 +6,8 @@ Date: ???
     - Added productivity to liquid resin, plastic and rubber, similar to the petrochem equivalents
     - Reorganisation of the farming recipe tab
     - Altered definition of biter queen localisation
+    - Crystal powder liquification now requres liquifier instead of assembler (228)
+    - Crystal crushing to powder now requires powderizer instead of liquifier (228)
   Bugfixes:
     - Fixed Alien Bacteria was using Perchloric Acid instead of Hydrochloric acid
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria

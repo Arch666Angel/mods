@@ -202,7 +202,7 @@ data:extend(
         {type = "item", name = "milling-drum", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-powder", amount = 25},
+        {type = "item", name = "crystal-powder", amount = 20},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
       icons = {
@@ -221,7 +221,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-slurry",
-      category = "crafting-with-fluid",
+      category = "liquifying",
       subgroup = "bio-biter-processing-cutting",
       enabled = false,
       energy_required = 2,
