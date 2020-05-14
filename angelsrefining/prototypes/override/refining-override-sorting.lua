@@ -126,11 +126,18 @@ end
 local create_sorting_mix_recipe = function(recipe_base_name, ore_result_products, icon_names, ingredients_overrides)
   local recipes = {}
   for recipe_index, ore_result_product in pairs(ore_result_products) do
-    local ore_name = type(ore_result_product) == "table" and ore_result_product[1] or ore_result_product
-    local ore_amount = type(ore_result_product) == "table" and ore_result_product[2] or 1
+    local ore_name = type(ore_result_product) == "table" and (ore_result_product[1] or ore_result_product.name) or ore_result_product
+    local ore_amount = type(ore_result_product) == "table" and (ore_result_product[2] or ore_result_product.amount) or 1
     local recipe = {
       name = string.format(recipe_base_name, recipe_index),
-      results = {{"!!"}, {name = ore_name, amount = ore_amount}}
+      results = {
+        {"!!"},
+        {
+          type = type(ore_result_product) == "table" and ore_result_product.type or "item",
+          name = ore_name,
+          amount = ore_amount
+        }
+      }
     }
     if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] and ore_amount > 0 then
       local icon_name = (icon_names or {})[recipe_index]
@@ -566,9 +573,13 @@ OV.patch_recipes(
         },
         {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = mods["bobplates"] and "__boblibrary__/graphics/icons/ore-5.png" or "__angelssmelting__/graphics/icons/ore-thorium.png",
-          icon_size = mods["bobplates"] and 32 or 64,
-          tint = {b=0.25,g=1,r=1}, scale = 0.5 * (mods["bobplates"] and 1 or 0.5), shift = {10, 10}}
+          {icon = mods["angelsindustries"] and angelsmods.industries.overhaul and "__angelssmelting__/graphics/icons/ore-thorium.png" or
+                  mods["bobplates"] and "__boblibrary__/graphics/icons/ore-5.png" or
+                  "__angelsrefining__/graphics/icons/sort-icon.png",
+          icon_size = mods["angelsindustries"] and angelsmods.industries.overhaul and 64 or
+                      mods["bobplates"] and 32 or
+                      32,
+          tint = {b=0.25,g=1,r=1}, scale = 0.5 * (mods["angelsindustries"] and angelsmods.industries.overhaul and 0.5 or 1), shift = {10, 10}}
         },
       }
     ),

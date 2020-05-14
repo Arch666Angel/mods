@@ -144,7 +144,9 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then -- deuterium proces
   OV.disable_recipe({"bob-heavy-water", "heavy-water-electrolysis"})
 
   OV.global_replace_technology("heavy-water-processing", "water-chemistry-1")
+  OV.disable_technology("heavy-water-processing")
   OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
+  OV.disable_technology("deuterium-processing")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
 elseif angelsmods.industries and angelsmods.industries.overhaul then

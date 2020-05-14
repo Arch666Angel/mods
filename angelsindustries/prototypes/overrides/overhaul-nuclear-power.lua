@@ -6,6 +6,7 @@ local tint_colors =
   red = {r=244/255, g=008/255, b=000/255, a=1},
   blue = {r=000/255, g=067/255, b=237/255, a=1},
 }
+
 if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- Patch existing nuclear recipes
@@ -90,12 +91,12 @@ if angelsmods.industries.overhaul then
             icon_mipmaps = 4,
           }
         },
-        icon_size = 64
+        icon_size = 64,
       }
     }
   )
   OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
-  OV.add_unlock("uranium-processing","angels-uranium-fuel-cell")
+  OV.add_unlock("uranium-processing", "angels-uranium-fuel-cell")
   data.raw.item["uranium-fuel-cell"].fuel_value="2GJ"
 
   -------------------------------------------------------------------------------
@@ -116,34 +117,73 @@ if angelsmods.industries.overhaul then
   OV.add_unlock("atomic-bomb","angels-atomic-bomb")
   OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel")
   OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel-2")
-  --OV.add_unlock("water-chemistry-2","angels-deuterium-fuel-cell")
 
+  -------------------------------------------------------------------------------
+  -- Bob nuclear addaption
+  -------------------------------------------------------------------------------
   if bobmods and bobmods.plates then
+    --basically remove all of bobs things (Sorry bob)
     OV.global_replace_item("plutonium-240","plutonium-239") --use bobs plutonium
-
-  --basically remove all of bobs things (Sorry bob)
-    --bobs setting specific changes:
-    if not (bobmods.revamp and settings.startup["bobmods-revamp-rtg"].value) then
+    angelsmods.functions.move_item("plutonium-239", "angels-power-nuclear-processing", "a[radioactive-element]-e[plutonium-239]")
+    angelsmods.functions.add_flag("plutonium-240", "hidden")
+    
+    -- plutonium enrichment process
+    if bobmods.revamp and settings.startup["bobmods-revamp-rtg"].value then
+      OV.add_prereq("bobingabout-process", "angels-plutonium-power")
+    else
       --if not rtg, remove bobingabout process
       OV.remove_unlock("bobingabout-process", "bobingabout-process")
     end
+    angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
+    
+    -- thorium processing
     OV.remove_unlock("thorium-processing", "thorium-processing")
+    OV.global_replace_technology("thorium-processing", "angels-thorium-power")
+    OV.disable_technology("thorium-processing")
+    angelsmods.functions.add_flag("thorium-fuel-cell", "hidden")
+    
     OV.remove_unlock("thorium-fuel-reprocessing", "thorium-fuel-reprocessing")
-    OV.remove_unlock("deuterium-fuel-reprocessing", "deuterium-fuel-reprocessing")
+    OV.disable_technology("thorium-fuel-reprocessing")
+    angelsmods.functions.add_flag("used-up-thorium-fuel-cell", "hidden")
+    
     OV.remove_unlock("thorium-plutonium-fuel-cell", "thorium-plutonium-fuel-cell")
+    OV.disable_technology("thorium-plutonium-fuel-cell")
+    angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hidden")
+    
+    -- deuterium processing
     OV.remove_unlock("water-chemistry-2","deuterium-fuel-cell")
+    angelsmods.functions.add_flag("deuterium-fuel-cell", "hidden")
+    
+    OV.global_replace_item("fusion-catalyst", "angels-muon-fusion-catalyst")
+    angelsmods.functions.add_flag("fusion-catalyst", "hidden")
 
+    OV.remove_unlock("deuterium-fuel-reprocessing", "deuterium-fuel-reprocessing")
+    OV.global_replace_technology("deuterium-fuel-reprocessing", "angels-fusion-power")
+    OV.disable_technology("deuterium-fuel-reprocessing")
+    angelsmods.functions.add_flag("used-up-deuterium-fuel-cell", "hidden")
+
+    -- plutonium processing
     if (bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value) then
       --if overhaul, remove unlocks in each reactor tech
       --add each cell to each reactor... or would it be quicker to just set the setting?
-      OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell")--keep as "uranium tier"
+      OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell") --keep as "uranium tier"
+      OV.global_replace_technology("plutonium-fuel-cell", "angels-plutonium-power")
+      OV.disable_technology("plutonium-fuel-cell")
+
       OV.remove_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
       data.raw.item["angels-thorium-fuel-cell"].fuel_category="thorium"
+      OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
+
       OV.remove_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
       data.raw.item["angels-deuterium-fuel-cell"].fuel_category="deuterium"
+      OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power")
     else --remove them from their individual techs
       OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell")
+      OV.global_replace_technology("plutonium-fuel-cell", "angels-plutonium-power")
+      OV.disable_technology("plutonium-fuel-cell")
+
       OV.remove_unlock("thorium-processing", "thorium-fuel-cell")
     end
   end
+
 end

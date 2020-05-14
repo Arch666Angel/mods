@@ -26,7 +26,6 @@ if angelsmods.trigger.refinery_products["cupric"] then
   angelsmods.trigger.refinery_products["bobmonium"] = true
 end
 
-
 if angelsmods.refining then
   --Fallbacks for the recipe builder
   require("prototypes.recipe-builder-fallbacks")

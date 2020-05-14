@@ -11,7 +11,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-a[uranium-234]",
-    stack_size = 50,
+    stack_size = 100,
   },
   --order a[radioactive-element]-b[uranium-235] reserved for uranium-235
   --order a[radioactive-element]-c[uranium-238] reserved for uranium-238
@@ -23,7 +23,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-d[neptunium-240]",
-    stack_size = 50,
+    stack_size = 100,
   },
   --Pu-240
   {
@@ -33,7 +33,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-e[plutonium-240]",
-    stack_size = 50,
+    stack_size = 100,
   },
   --Am-241
   {
@@ -43,7 +43,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-f[americium-241]",
-    stack_size = 50,
+    stack_size = 100,
   },
   --Cm-245
   {
@@ -53,7 +53,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-g[curium-245]",
-    stack_size = 50,
+    stack_size = 100,
   },
   --Th-232
   {
@@ -63,7 +63,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-h[thorium-232]",
-    stack_size = 50,
+    stack_size = 100,
   },
 })
 
@@ -129,7 +129,7 @@ data:extend(
     burnt_result = "used-up-uranium-fuel-cell",
     fuel_value = "1.5GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
-    stack_size = 20,
+    stack_size = 50,
   },
   --order "a[uranium]-b" reserved for uranium-fuel-cell
   --order "a[uranium]-c" reserved for used-up-uranium-fuel-cell
@@ -145,7 +145,7 @@ data:extend(
     burnt_result = "used-up-AMOX-cell",
     fuel_value = "8GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
-    stack_size = 20,
+    stack_size = 50,
   },
   {
     type = "item",
@@ -154,7 +154,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "b[AMOX]-b",
-    stack_size = 20,
+    stack_size = 50,
   },
   --thorium-cell
   {
@@ -168,7 +168,7 @@ data:extend(
     burnt_result = "used-up-angels-thorium-fuel-cell",
     fuel_value = "50GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
-    stack_size = 20,
+    stack_size = 50,
   },
   {
     type = "item",
@@ -177,7 +177,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-b",
-    stack_size = 20,
+    stack_size = 50,
   },
   --deuterium-cell
   {
@@ -191,7 +191,7 @@ data:extend(
     burnt_result = "used-up-angels-deuterium-fuel-cell",
     fuel_value = "80GJ",
     fuel_glow_color = {r = 0.7, g = 1, b = 0},
-    stack_size = 20,
+    stack_size = 50,
   },
   {
     type = "item",
@@ -200,7 +200,7 @@ data:extend(
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "d[deuterium]-b",
-    stack_size = 20,
+    stack_size = 50,
   },
 })
 --[[THE PLAN
