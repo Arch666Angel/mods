@@ -109,6 +109,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-splinter-blue",
+      localised_name = {"recipe-name.crystal-powder-from-splinter"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -137,6 +138,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-splinter-red",
+      localised_name = {"recipe-name.crystal-powder-from-splinter"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -165,6 +167,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-splinter-green",
+      localised_name = {"recipe-name.crystal-powder-from-splinter"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -299,6 +302,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-shard-blue",
+      localised_name = {"recipe-name.crystal-powder-from-shard"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -327,6 +331,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-shard-red",
+      localised_name = {"recipe-name.crystal-powder-from-shard"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -355,6 +360,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-shard-green",
+      localised_name = {"recipe-name.crystal-powder-from-shard"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -489,6 +495,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-full-blue",
+      localised_name = {"recipe-name.crystal-powder-from-full"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -517,6 +524,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-full-red",
+      localised_name = {"recipe-name.crystal-powder-from-full"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
@@ -545,6 +553,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-full-green",
+      localised_name = {"recipe-name.crystal-powder-from-full"},
       category = "ore-sorting-t1-5",
       subgroup = "bio-biter-processing-powder",
       enabled = false,
