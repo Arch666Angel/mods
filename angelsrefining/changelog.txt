@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Reordered the geode liquifying recipes to be the same order as the geode processing recipes
+    - Moved crystal slurry ceramic filtering to geode crystallization
   Modding:
     - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
     - added function angelsmods.functions.modify_icon_layers(...)

@@ -398,15 +398,15 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "catalysator-green"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-1"
         },
         {
           type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-conversion-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalysator-green"
         }
       },
       unit = {
@@ -475,14 +475,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "slag-processing-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-slurry-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-slurry-filtering-conversion-2"
         }
       },
       unit = {
@@ -695,6 +687,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore7-crystallization-6"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-slurry-filtering-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-slurry-filtering-conversion-2"
         }
       },
       unit = {
