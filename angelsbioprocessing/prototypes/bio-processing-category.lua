@@ -131,13 +131,13 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-processing-blue",
+    name = "bio-processing-red",
     group = "bio-processing-nauvis",
     order = "c",
   },
   {
     type = "item-subgroup",
-    name = "bio-processing-red",
+    name = "bio-processing-blue",
     group = "bio-processing-nauvis",
     order = "d",
   },
