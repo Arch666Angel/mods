@@ -1162,7 +1162,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-red"}
       ),
-      order = "b[geode-red-liquify]"
+      order = "f[geode-red-liquify]"
     },
     {
       type = "recipe",
@@ -1210,7 +1210,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-purple"}
       ),
-      order = "d[geode-purple-liquify]"
+      order = "b[geode-purple-liquify]"
     },
     {
       type = "recipe",
@@ -1258,7 +1258,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-lightgreen"}
       ),
-      order = "f[geode-lightgreen-liquify]"
+      order = "d[geode-lightgreen-liquify]"
     },
     {
       type = "recipe",

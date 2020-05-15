@@ -39,7 +39,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/geode-red.png",
       icon_size = 32,
-      order = "b[geode-red-processing]"
+      order = "f[geode-red-processing]"
     },
     {
       type = "recipe",
@@ -79,7 +79,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/geode-purple.png",
       icon_size = 32,
-      order = "d[geode-purple-processing]"
+      order = "b[geode-purple-processing]"
     },
     {
       type = "recipe",
@@ -119,7 +119,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/geode-lightgreen.png",
       icon_size = 32,
-      order = "f[geode-lightgreen-processing]"
+      order = "d[geode-lightgreen-processing]"
     },
   }
 )
