@@ -119,7 +119,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-treatment-3",
-        "thermal-water-extraction"
+        "thermal-water-processing"
       },
       effects = {
         {

@@ -500,8 +500,54 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "thermal-extractor"
+          recipe = "thermal-bore"
+        }
+      },
+      unit = {
+        count = 30,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
         },
+        time = 15
+      },
+      order = "a-a-a1"
+    },
+    {
+      type = "technology",
+      name = "thermal-water-extraction-2",
+      icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+      icon_size = 128,
+      prerequisites = {
+        "thermal-water-extraction"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "thermal-extractor"
+        }
+      },
+      unit = {
+        count = 30,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "a-a-a1"
+    },
+    {
+      type = "technology",
+      name = "thermal-water-processing",
+      icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+      icon_size = 64,
+      prerequisites = {
+        "thermal-water-extraction",
+        "slag-processing-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "thermal-water-filtering-1"
@@ -916,7 +962,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-powderizer",
-        "thermal-water-extraction"
+        "thermal-water-extraction-2"
       },
       effects = {
         {
