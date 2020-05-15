@@ -163,7 +163,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-1",
-      "bio-processing-crystal-1",
+      "bio-processing-crystal-splinter-1",
       "bio-farm-alien"
     },
     effects =

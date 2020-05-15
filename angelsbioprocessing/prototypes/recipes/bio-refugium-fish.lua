@@ -335,6 +335,68 @@ data:extend(
       icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
       icon_size = 32,
       order = "ad"
+    },
+    ---------------------------------------------------------------------------
+    -- CRYSTALIZATION ---------------------------------------------------------
+    ---------------------------------------------------------------------------
+    {
+      type = "recipe",
+      name = "crystal-splinter-crystalization-1",
+      category = "crystallizing",
+      subgroup = "bio-fish-butchery",
+      enabled = false,
+      hidden = false,
+      energy_required = 8,
+      ingredients = {
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50}
+      },
+      results = {
+        {type = "item", name = "crystal-splinter-raw", amount = 1, probability = 0.4}
+      },
+      always_show_products = true,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-raw.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "ba"
+    },
+    {
+      type = "recipe",
+      name = "crystal-splinter-crystalization-2",
+      category = "crystallizing",
+      subgroup = "bio-fish-butchery",
+      enabled = false,
+      hidden = false,
+      energy_required = 8,
+      ingredients = {
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50},
+        {type = "item", name = "crystal-seed", amount = 1}
+      },
+      results = {
+        {type = "item", name = "crystal-splinter-raw", amount = 1}
+      },
+      always_show_products = true,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-raw.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "bb"
     }
   }
 )

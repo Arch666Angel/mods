@@ -15,7 +15,7 @@ data:extend(
         {type = "item", name = "crystal-splinter-blue-cut", amount = 1},
         {type = "item", name = "crystal-splinter-red-cut", amount = 1},
         {type = "item", name = "crystal-splinter-green-cut", amount = 1},
-        {type = "item", name = "crystal-dust", amount = 1}
+        {type = "item", name = "crystal-powder", amount = 1}
       },
       icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-harmonic.png",
       icon_size = 32,

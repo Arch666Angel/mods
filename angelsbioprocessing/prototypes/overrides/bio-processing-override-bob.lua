@@ -61,7 +61,7 @@ if mods["bobplates"] then
 
   -- CRYSTALS
   OV.modify_input("crystal-grindstone", {"grinding-wheel", "iron-plate"})
-  OV.add_prereq("bio-processing-crystal-1", "grinding")
+  OV.add_prereq("bio-processing-crystal-splinter-1", "grinding")
 end
 
 
@@ -134,9 +134,9 @@ if mods["bobmodules"] then
       { name = "effectivity-module-2", ingredients = { {type="item", name="crystal-shard-green", amount = 0} } },
       { name = "effectivity-module-3", ingredients = { {type="item", name="crystal-full-green", amount = 0} } },
     })
-    OV.remove_prereq("speed-module", "bio-processing-crystal-1")
-    OV.remove_prereq("productivity-module", "bio-processing-crystal-1")
-    OV.remove_prereq("effectivity-module", "bio-processing-crystal-1")
+    OV.remove_prereq("speed-module", "bio-processing-crystal-splinter-1")
+    OV.remove_prereq("productivity-module", "bio-processing-crystal-splinter-1")
+    OV.remove_prereq("effectivity-module", "bio-processing-crystal-splinter-1")
     OV.remove_prereq("speed-module-2", "bio-processing-crystal-2")
     OV.remove_prereq("productivity-module-2", "bio-processing-crystal-2")
     OV.remove_prereq("effectivity-module-2", "bio-processing-crystal-2")
@@ -163,7 +163,7 @@ if mods["bobmodules"] then
     { name = "pollution-create-processor-3", ingredients = { {type="item", name="crystal-full-harmonic", amount = 1} } },
   })
 
-  OV.add_prereq("modules", "bio-processing-crystal-1")
+  OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
   data:extend(
   {
     {

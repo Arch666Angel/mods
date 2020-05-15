@@ -589,7 +589,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "basic-chemistry-2",
-        "water-treatment"
+        "water-treatment",
+        "gas-processing"
       },
       effects = {
         {

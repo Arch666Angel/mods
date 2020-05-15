@@ -4,10 +4,15 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Reordered the geode liquifying recipes to be the same order as the geode processing recipes
-    - Moving thermal water extraction to green science
-      - Moved crystal slurry ceramic filtering to geode crystallization
-      - Split thermal water processing into a seperate blue tech
-      - Added second othermal water extraction tech and added a (slower) mk1 thermal water bore
+  Balancing:
+    - Making thermal water extraction available at green science
+      - Added a (slower) mk1 thermal water bore to extract thermal water at a slow rate
+      - Split thermal water processing into a seperate blue tech (so that part remains blue)
+      - Mode the termal water extractor an upgrade of the thermal water bore
+  Bugfixes:
+    - Added missing dependencies
+      - Added blue science packs to powder refining (due to the requirement of lubricant)
+      - Moved crystal slurry ceramic filtering to geode crystallization (blue tech, due to ceramic filters)
   Modding:
     - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
     - added function angelsmods.functions.modify_icon_layers(...)

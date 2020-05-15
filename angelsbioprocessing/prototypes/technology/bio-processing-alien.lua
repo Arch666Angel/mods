@@ -9,7 +9,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-processing-brown",
-        "bio-nutrient-paste"
+        "bio-nutrient-paste",
+        "chlorine-processing-1"
       },
       effects = {
         {
@@ -65,9 +66,9 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-paste",
         "bio-refugium-fish-1",
-        "chlorine-processing-1"
+        "bio-processing-red",
+        "bio-processing-paste"
       },
       effects = {
         {
@@ -81,10 +82,6 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-goo"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "petri-dish"
         },
         {
@@ -94,10 +91,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "seeded-dish"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-seed"
         }
       },
       unit = {
@@ -117,8 +110,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-alien-1",
-        "ore-powderizer"
+        "bio-processing-alien-1"
       },
       effects = {
         {
@@ -147,14 +139,19 @@ data:extend(
     -- CRYSTAL
     {
       type = "technology",
-      name = "bio-processing-crystal-1",
+      name = "bio-processing-crystal-splinter-1",
       icon = "__angelsbioprocessing__/graphics/technology/crystal.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-refugium-biter-1"
+        "bio-refugium-fish-1",
+        "geode-processing-2"
       },
       effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-splinter-crystalization-1"
+        },
         {
           type = "unlock-recipe",
           recipe = "crystal-splinter-cutting"
@@ -171,22 +168,18 @@ data:extend(
           type = "unlock-recipe",
           recipe = "crystal-splinter-green"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-splinter-harmonic"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-powder-splinter-blue"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-powder-splinter-red"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-powder-splinter-green"
-        },
+        --{
+        --  type = "unlock-recipe",
+        --  recipe = "crystal-powder-splinter-blue"
+        --},
+        --{
+        --  type = "unlock-recipe",
+        --  recipe = "crystal-powder-splinter-red"
+        --},
+        --{
+        --  type = "unlock-recipe",
+        --  recipe = "crystal-powder-splinter-green"
+        --},
         {
           type = "unlock-recipe",
           recipe = "crystal-grindstone"
@@ -197,7 +190,39 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
-          --{"chemical-science-pack", amount = 1},
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-processing-crystal-splinter-2",
+      icon = "__angelsbioprocessing__/graphics/technology/crystal.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-processing-crystal-splinter-1",
+        "bio-processing-alien-1"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-seed"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-splinter-crystalization-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-splinter-harmonic"
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -209,7 +234,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-crystal-1",
+        "bio-processing-crystal-splinter-1",
         "bio-refugium-biter-2"
       },
       effects = {
