@@ -51,7 +51,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-splinter-blue-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-splinter-blue", amount = 1},
@@ -72,7 +72,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-splinter-red-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-splinter-red", amount = 1},
@@ -93,7 +93,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-splinter-green-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-splinter-green", amount = 1},
@@ -228,7 +228,7 @@ data:extend(
         {type = "item", name = "crystal-shard-blue-cut", amount = 1},
         {type = "item", name = "crystal-shard-red-cut", amount = 1},
         {type = "item", name = "crystal-shard-green-cut", amount = 1},
-        {type = "item", name = "crystal-dust", amount = 1}
+        {type = "item", name = "crystal-powder", amount = 1}
       },
       --icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-harmonic.png",
       icons = {
@@ -264,7 +264,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-shard-blue-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-shard-blue", amount = 1},
@@ -285,7 +285,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-shard-red-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-shard-red", amount = 1},
@@ -306,7 +306,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-shard-green-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-shard-green", amount = 1},
@@ -441,7 +441,7 @@ data:extend(
         {type = "item", name = "crystal-full-blue-cut", amount = 1},
         {type = "item", name = "crystal-full-red-cut", amount = 1},
         {type = "item", name = "crystal-full-green-cut", amount = 1},
-        {type = "item", name = "crystal-dust", amount = 1}
+        {type = "item", name = "crystal-powder", amount = 1}
       },
       --icon = "__angelsbioprocessing__/graphics/icons/crystal-full-harmonic.png",
       icons = {
@@ -477,7 +477,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-full-blue-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-full-blue", amount = 1},
@@ -498,7 +498,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-full-red-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-full-red", amount = 1},
@@ -519,7 +519,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "crystal-full-green-cut", amount = 1},
         {type = "item", name = "crystal-grindstone", amount = 1},
-        {type = "fluid", name = "crystal-slurry", amount = 1}
+        {type = "fluid", name = "crystal-slurry", amount = 2}
       },
       results = {
         {type = "item", name = "crystal-full-green", amount = 1},
