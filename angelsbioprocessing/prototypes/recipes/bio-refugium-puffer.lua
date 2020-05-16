@@ -20,6 +20,25 @@ data:extend(
       icons = angelsmods.functions.create_gas_recipe_icon(nil, {{194, 227, 091}, {184, 239, 000}, {156, 207, 000}}),
       order = "b"
     },
+    {
+      type = "recipe",
+      name = "bio-puffer-egg-shell-powder",
+      category = "ore-sorting-t1-5",
+      subgroup = "bio-puffer-egg",
+      enabled = false,
+      energy_required = 1,
+      ingredients = {
+        {type = "item", name = "bio-puffer-egg-shell", amount = 2},
+        {type = "item", name = "milling-drum", amount = 1}
+      },
+      results = {
+        {type = "item", name = "bio-puffer-egg-shell-powder", amount = 2},
+        {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
+      },
+      main_product = "bio-puffer-egg-shell-powder",
+      icon_size = 32,
+      order = "f"
+    },
     ---------------------------------------------------------------------------
     -- PUFFING ----------------------------------------------------------------
     ---------------------------------------------------------------------------
@@ -320,6 +339,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-1", amount = 1}
       },
       results = {
+        {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95},
         {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.05}
       },
@@ -339,6 +359,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-2", amount = 1}
       },
       results = {
+        {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.8},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.2}
       },
@@ -358,6 +379,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-3", amount = 1}
       },
       results = {
+        {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-3", amount = 1, probability = 0.7},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.3}
       },
@@ -377,6 +399,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-4", amount = 1}
       },
       results = {
+        {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-4", amount = 1, probability = 0.6},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.4}
       },
@@ -396,6 +419,7 @@ data:extend(
         {type = "item", name = "bio-puffer-egg-5", amount = 1}
       },
       results = {
+        {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-5", amount = 1, probability = 0.5},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.5}
       },
@@ -495,6 +519,70 @@ data:extend(
       icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
       icon_size = 32,
       order = "ae"
+    },
+    ---------------------------------------------------------------------------
+    -- CRYSTALIZATION ---------------------------------------------------------
+    ---------------------------------------------------------------------------
+    {
+      type = "recipe",
+      name = "crystal-shard-crystalization-1",
+      category = "crystallizing",
+      subgroup = "bio-puffer-butchery",
+      enabled = false,
+      hidden = false,
+      energy_required = 8,
+      ingredients = {
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50},
+        {type = "item", name = "egg-shell-seed", amount = 1}
+      },
+      results = {
+        {type = "item", name = "crystal-shard-raw", amount = 1, probability = 0.4}
+      },
+      always_show_products = true,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-raw.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "ba"
+    },
+    {
+      type = "recipe",
+      name = "crystal-shard-crystalization-2",
+      category = "crystallizing",
+      subgroup = "bio-puffer-butchery",
+      enabled = false,
+      hidden = false,
+      energy_required = 8,
+      ingredients = {
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50},
+        {type = "item", name = "egg-shell-seed", amount = 1},
+        {type = "item", name = "crystal-enhancer", amount = 1}
+      },
+      results = {
+        {type = "item", name = "crystal-shard-raw", amount = 1}
+      },
+      always_show_products = true,
+      icons = {
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/crystal-shard-raw.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.bioprocessing.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "bb"
     }
   }
 )

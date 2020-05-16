@@ -149,7 +149,26 @@ data:extend(
       main_product = "crystal-seed",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[crystal]-a[seed]"
+      order = "b[dish]-d[seed]-a[crystal]"
+    },
+    {
+      type = "recipe",
+      name = "egg-shell-seed",
+      category = "crafting",
+      subgroup = "bio-processing-alien-intermediate",
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "seeded-dish", amount = 1},
+        {type = "item", name = "bio-puffer-egg-shell-powder", amount = 1}
+      },
+      results = {
+        {type = "item", name = "egg-shell-seed", amount = 1}
+      },
+      main_product = "egg-shell-seed",
+      --icon = "__angelsbioprocessing__/graphics/icons/void.png",
+      --icon_size = 32,
+      order = "b[dish]-d[seed]-a[crystal]"
     },
     {
       type = "recipe",
@@ -169,7 +188,7 @@ data:extend(
       main_product = "crystal-enhancer",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[crystal]-b[enhancer]"
+      order = "c[crystal]-a[enhancer]"
     },
     {
       type = "recipe",
@@ -188,7 +207,7 @@ data:extend(
       main_product = "crystal-grindstone",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[crystal]-c[grindstone]"
+      order = "c[crystal]-b[grindstone]"
     },
     {
       type = "recipe",

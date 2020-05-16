@@ -136,7 +136,9 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-refugium-hatchery",
-        "bio-refugium-fish-1"
+        --"bio-refugium-fish-1"
+        "bio-nutrient-paste",
+        "angels-sulfur-processing-2"
       },
       effects = {
         {

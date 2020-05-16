@@ -14,6 +14,24 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
+  {
+    type = "item",
+    name = "bio-puffer-egg-shell",
+    icon = "__angelsbioprocessing__/graphics/icons/puffer-egg-shell.png",
+    icon_size = 32,
+    subgroup = "bio-puffer-egg",
+    order = "fa",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "bio-puffer-egg-shell-powder",
+    icon = "__angelsbioprocessing__/graphics/icons/puffer-egg-shell-powder.png",
+    icon_size = 32,
+    subgroup = "bio-puffer-egg",
+    order = "fb",
+    stack_size = 200,
+  },
 
 
 
@@ -111,6 +129,6 @@ data:extend(
     subgroup = "bio-puffer-egg",
     order = "e",
     stack_size = 200,
-  },
+  }
 }
 )

@@ -6,7 +6,7 @@ Date: ???
     - Added productivity to liquid resin, plastic and rubber, similar to the petrochem equivalents
     - Reorganisation of the farming recipe tab
     - Altered definition of biter queen localisation
-    - Swapping red algae and blue algae around
+    - Swapping red algae and blue algae around (229)
       - Red algae is now green science (depends on thermal water extraction and nitrogen processing 1)
       - Blue algae is now blue science, as an alternative source for ammonia gas from nitrogen processing
   Bugfixes:
@@ -26,6 +26,9 @@ Date: ???
       - Reduces requirement to explore big sections of the map
       - Added recipes to create trees from Alien Plant Life Samples
       - Added recipes to turn the trees into bio products to get rid of unwanted trees
+    - Added earlier steps to obtain crystals (229)
+      - Crystalizing Polluted Fish Water for crystal splinters (green science)
+      - Crystalizing Puffer Egg Shell Remains for crystal shards (blue science)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.8
 Date: 20.04.2020
