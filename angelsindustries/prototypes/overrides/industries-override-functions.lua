@@ -394,7 +394,7 @@ function replace_blocks_list(ing_list) --specifically build to be used for repla
         end
       else --check if replacement is already listed
         ing_list[n].name = block_replace[nme].new
-        ing_list[n].amount = (ing_list[n].amount or 1)*amt_multi 
+        ing_list[n].amount = math.ceil((ing_list[n].amount or 1)*amt_multi)
       end
     -- else not on the replacement list
     end
