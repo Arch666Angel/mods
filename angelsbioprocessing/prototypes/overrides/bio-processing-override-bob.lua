@@ -23,24 +23,24 @@ if mods["bobplates"] then
       data.raw["item-group"]["bob-gems"].inventory_order = "lb[bobs]-c[gems]"
 
       -- gems subgroups
-      data.raw["item-subgroup"]["bio-biter-processing-raw"].group = "bob-gems"
-      data.raw["item-subgroup"]["bio-biter-processing-raw"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-raw"].order
-      data.raw["item-subgroup"]["bio-biter-processing-cutting"].group = "bob-gems"
-      data.raw["item-subgroup"]["bio-biter-processing-cutting"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-cutting"].order
-      data.raw["item-subgroup"]["bio-biter-processing-powder"].group = "bob-gems"
-      data.raw["item-subgroup"]["bio-biter-processing-powder"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-powder"].order
+      data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].group = "bob-gems"
+      data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order
+      data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].group = "bob-gems"
+      data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order
+      data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].group = "bob-gems"
+      data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order
 
-      data.raw["recipe"]["crystal-splinter-cutting"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-splinter-cutting"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-splinter-cutting"].order = "a[raw]-a[splinter]"
-      data.raw["recipe"]["crystal-shard-cutting"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-shard-cutting"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-shard-cutting"].order = "a[raw]-b[shard]"
-      data.raw["recipe"]["crystal-full-cutting"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-full-cutting"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-full-cutting"].order = "a[raw]-c[full]"
-      data.raw["recipe"]["crystal-splinter-harmonic"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-splinter-harmonic"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-splinter-harmonic"].order = "b[harmonic]-a[splinter]"
-      data.raw["recipe"]["crystal-shard-harmonic"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-shard-harmonic"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-shard-harmonic"].order = "b[harmonic]-b[shard]"
-      data.raw["recipe"]["crystal-full-harmonic"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-full-harmonic"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-full-harmonic"].order = "b[harmonic]-c[full]"
 
       data.raw["item"]["grinding-wheel"].subgroup = "bob-gems-cut"
@@ -52,9 +52,9 @@ if mods["bobplates"] then
       data.raw["recipe"]["polishing-compound"].subgroup = "bob-gems-polished"
       data.raw["recipe"]["polishing-compound"].order = "g-5-b"
 
-      data.raw["item"]["crystal-grindstone"].subgroup = "bio-biter-processing-raw"
+      data.raw["item"]["crystal-grindstone"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["item"]["crystal-grindstone"].order = "d"
-      data.raw["recipe"]["crystal-grindstone"].subgroup = "bio-biter-processing-raw"
+      data.raw["recipe"]["crystal-grindstone"].subgroup = "bio-biter-processing-crystal-splinter"
       data.raw["recipe"]["crystal-grindstone"].order = "c[tool]-a[grindstone]"
     end
   end

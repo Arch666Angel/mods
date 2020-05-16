@@ -5,7 +5,7 @@ data:extend(
       type = "recipe",
       name = "crystal-splinter-cutting",
       category = "crafting",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -39,13 +39,13 @@ data:extend(
         },
       },
       icon_size = 32,
-      order = "a[splinter]-b[cutting]"
+      order = "b[splitting]"
     },
     {
       type = "recipe",
       name = "crystal-splinter-blue",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -60,13 +60,13 @@ data:extend(
       main_product = "crystal-splinter-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "a[blue]-a[splinter]"
+      order = "c[polishing]-a[blue]"
     },
     {
       type = "recipe",
       name = "crystal-splinter-red",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -81,13 +81,13 @@ data:extend(
       main_product = "crystal-splinter-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "b[red]-a[splinter]"
+      order = "c[polishing]-b[red]"
     },
     {
       type = "recipe",
       name = "crystal-splinter-green",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -102,14 +102,14 @@ data:extend(
       main_product = "crystal-splinter-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[green]-a[splinter]"
+      order = "c[polishing]-c[green]"
     },
     {
       type = "recipe",
       name = "crystal-splinter-harmonic",
       localised_name = {"recipe-name.crystal-splinter-harmonic"},
       category = "crafting",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -124,14 +124,14 @@ data:extend(
       main_product = "crystal-splinter-harmonic",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "a[splinter]-c[harmonic]"
+      order = "d[harmonizing]"
     },
     {
       type = "recipe",
       name = "crystal-powder-splinter-blue",
       localised_name = {"recipe-name.crystal-powder-from-splinter"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -153,14 +153,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "a[blue]-a[splinter]"
+      order = "e[powderizing]-a[blue]"
     },
     {
       type = "recipe",
       name = "crystal-powder-splinter-red",
       localised_name = {"recipe-name.crystal-powder-from-splinter"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -182,14 +182,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "b[red]-a[splinter]"
+      order = "e[powderizing]-b[red]"
     },
     {
       type = "recipe",
       name = "crystal-powder-splinter-green",
       localised_name = {"recipe-name.crystal-powder-from-splinter"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -211,14 +211,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[green]-a[splinter]"
+      order = "e[powderizing]-c[green]"
     },
     -- SHARD
     {
       type = "recipe",
       name = "crystal-shard-cutting",
       category = "crafting",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -252,13 +252,13 @@ data:extend(
         },
       },
       icon_size = 32,
-      order = "b[shard]-b[cutting]"
+      order = "b[splitting]"
     },
     {
       type = "recipe",
       name = "crystal-shard-blue",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -273,13 +273,13 @@ data:extend(
       main_product = "crystal-shard-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "a[blue]-b[shard]"
+      order = "c[polishing]-a[blue]"
     },
     {
       type = "recipe",
       name = "crystal-shard-red",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -294,13 +294,13 @@ data:extend(
       main_product = "crystal-shard-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "b[red]-b[shard]"
+      order = "c[polishing]-b[red]"
     },
     {
       type = "recipe",
       name = "crystal-shard-green",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -315,14 +315,14 @@ data:extend(
       main_product = "crystal-shard-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[green]-b[shard]"
+      order = "c[polishing]-c[green]"
     },
     {
       type = "recipe",
       name = "crystal-shard-harmonic",
       localised_name = {"recipe-name.crystal-shard-harmonic"},
       category = "crafting",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -337,14 +337,14 @@ data:extend(
       main_product = "crystal-shard-harmonic",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "b[shard]-c[harmonic]"
+      order = "d[harmonizing]"
     },
     {
       type = "recipe",
       name = "crystal-powder-shard-blue",
       localised_name = {"recipe-name.crystal-powder-from-shard"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -366,14 +366,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "a[blue]-b[shard]"
+      order = "e[powderizing]-a[blue]"
     },
     {
       type = "recipe",
       name = "crystal-powder-shard-red",
       localised_name = {"recipe-name.crystal-powder-from-shard"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -395,14 +395,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "b[red]-b[shard]"
+      order = "e[powderizing]-b[red]"
     },
     {
       type = "recipe",
       name = "crystal-powder-shard-green",
       localised_name = {"recipe-name.crystal-powder-from-shard"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -424,14 +424,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[green]-b[shard]"
+      order = "e[powderizing]-c[green]"
     },
     -- FULL
     {
       type = "recipe",
       name = "crystal-full-cutting",
       category = "crafting",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -465,13 +465,13 @@ data:extend(
         },
       },
       icon_size = 32,
-      order = "c[full]-b[cutting]"
+      order = "b[splitting]"
     },
     {
       type = "recipe",
       name = "crystal-full-blue",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -486,13 +486,13 @@ data:extend(
       main_product = "crystal-full-blue",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "a[blue]-c[full]"
+      order = "c[polishing]-a[blue]"
     },
     {
       type = "recipe",
       name = "crystal-full-red",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -507,13 +507,13 @@ data:extend(
       main_product = "crystal-full-red",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "b[red]-c[full]"
+      order = "c[polishing]-b[red]"
     },
     {
       type = "recipe",
       name = "crystal-full-green",
       category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -528,14 +528,14 @@ data:extend(
       main_product = "crystal-full-green",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[green]-c[full]"
+      order = "c[polishing]-c[green]"
     },
     {
       type = "recipe",
       name = "crystal-full-harmonic",
       localised_name = {"recipe-name.crystal-full-harmonic"},
       category = "crafting",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -550,14 +550,14 @@ data:extend(
       main_product = "crystal-full-harmonic",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[full]-c[harmonic]"
+      order = "d[harmonizing]"
     },
     {
       type = "recipe",
       name = "crystal-powder-full-blue",
       localised_name = {"recipe-name.crystal-powder-from-full"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -579,14 +579,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "a[blue]-c[full]"
+      order = "e[powderizing]-a[blue]"
     },
     {
       type = "recipe",
       name = "crystal-powder-full-red",
       localised_name = {"recipe-name.crystal-powder-from-full"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -608,14 +608,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "b[red]-c[full]"
+      order = "e[powderizing]-b[red]"
     },
     {
       type = "recipe",
       name = "crystal-powder-full-green",
       localised_name = {"recipe-name.crystal-powder-from-full"},
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -637,7 +637,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[green]-c[full]"
+      order = "e[powderizing]-c[green]"
     }
   }
 )

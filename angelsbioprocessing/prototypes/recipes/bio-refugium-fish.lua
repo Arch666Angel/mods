@@ -343,7 +343,7 @@ data:extend(
       type = "recipe",
       name = "crystal-splinter-crystalization-1",
       category = "crystallizing",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       hidden = false,
       energy_required = 8,
@@ -366,13 +366,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "a[splinter]-a[crystalization]-a"
+      order = "a[crystalization]-a"
     },
     {
       type = "recipe",
       name = "crystal-splinter-crystalization-2",
       category = "crystallizing",
-      subgroup = "bio-biter-processing-raw",
+      subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
       hidden = false,
       energy_required = 8,
@@ -396,7 +396,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "a[splinter]-a[crystalization]-b"
+      order = "a[crystalization]-b"
     }
   }
 )

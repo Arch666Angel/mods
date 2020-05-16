@@ -434,19 +434,19 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-processing-raw",
+    name = "bio-biter-processing-crystal-splinter",
     group = "bio-processing-alien",
     order = "fa",
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-processing-cutting",
+    name = "bio-biter-processing-crystal-shard",
     group = "bio-processing-alien",
     order = "fb",
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-processing-powder",
+    name = "bio-biter-processing-crystal-full",
     group = "bio-processing-alien",
     order = "fc",
   },

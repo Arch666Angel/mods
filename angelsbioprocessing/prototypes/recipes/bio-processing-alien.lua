@@ -213,7 +213,7 @@ data:extend(
       type = "recipe",
       name = "crystal-powder-from-dust",
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -235,13 +235,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "d[slurry]"
+      order = "a[creation]-a[powder]"
     },
     {
       type = "recipe",
       name = "crystal-powder-slurry",
       category = "liquifying",
-      subgroup = "bio-biter-processing-cutting",
+      subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -257,7 +257,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"crystal-powder"}
       ),
-      order = "d[slurry]"
+      order = "a[creation]-b[slurry]"
     }
   }
 )
