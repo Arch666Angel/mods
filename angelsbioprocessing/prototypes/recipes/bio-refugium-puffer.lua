@@ -58,7 +58,7 @@ data:extend(
         {type = "item", name = "bio-puffer-1", amount = 3},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95, show_details_in_recipe_tooltip = false},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "fluid", name = "gas-acid", amount = 200}
+        {type = "fluid", name = "gas-acid", amount = 200, show_details_in_recipe_tooltip = false}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
       icon_size = 32,
@@ -176,10 +176,10 @@ data:extend(
         {type = "item", name = "bio-puffer-1", amount = 2, catalyst_amount = 2},
         {type = "fluid", name = "gas-acid", amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.75},
-        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
+        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false}
       },
       icons = {
         {
@@ -208,11 +208,11 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-2", amount = 2, catalyst_amount = 2},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
+        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.75},
-        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
+        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false}
       },
       icons = {
         {
@@ -241,11 +241,11 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-3", amount = 2, catalyst_amount = 2},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
+        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.7},
-        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
+        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false}
       },
       icons = {
         {
@@ -274,11 +274,11 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-4", amount = 2, catalyst_amount = 2},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
+        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.7},
-        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05}
+        {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false}
       },
       icons = {
         {
@@ -307,10 +307,10 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-5", amount = 2, catalyst_amount = 2},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1},
-        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05},
-        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05},
+        {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-egg-4", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.7}
       },
       icons = {
@@ -341,7 +341,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95},
-        {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.05}
+        {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-1-egg.png",
       icon_size = 32,
@@ -361,7 +361,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.8},
-        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.2}
+        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.2, show_details_in_recipe_tooltip = false}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-2-egg.png",
       icon_size = 32,
@@ -381,7 +381,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-3", amount = 1, probability = 0.7},
-        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.3}
+        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.3, show_details_in_recipe_tooltip = false}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-3-egg.png",
       icon_size = 32,
@@ -401,7 +401,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-4", amount = 1, probability = 0.6},
-        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.4}
+        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.4, show_details_in_recipe_tooltip = false}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-4-egg.png",
       icon_size = 32,
@@ -421,7 +421,7 @@ data:extend(
       results = {
         {type = "item", name = "bio-puffer-egg-shell", amount = 1},
         {type = "item", name = "bio-puffer-5", amount = 1, probability = 0.5},
-        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.5}
+        {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.5, show_details_in_recipe_tooltip = false}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-5-egg.png",
       icon_size = 32,
@@ -527,7 +527,7 @@ data:extend(
       type = "recipe",
       name = "crystal-shard-crystalization-1",
       category = "crystallizing",
-      subgroup = "bio-puffer-butchery",
+      subgroup = "bio-biter-processing-raw",
       enabled = false,
       hidden = false,
       energy_required = 8,
@@ -551,13 +551,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "ba"
+      order = "b[shard]-a[crystalization]-a"
     },
     {
       type = "recipe",
       name = "crystal-shard-crystalization-2",
       category = "crystallizing",
-      subgroup = "bio-puffer-butchery",
+      subgroup = "bio-biter-processing-raw",
       enabled = false,
       hidden = false,
       energy_required = 8,
@@ -582,7 +582,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "bb"
+      order = "b[shard]-a[crystalization]-b"
     }
   }
 )

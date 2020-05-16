@@ -227,9 +227,9 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-alien-1",
-        "bio-refugium-puffer-1",
-        "bio-refugium-butchery-2"
+        "bio-farm-alien",
+        "bio-refugium-butchery-2",
+        "bio-processing-crystal-splinter-2",
       },
       effects = {
         {
@@ -283,7 +283,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-refugium-biter-1",
-        "bio-processing-alien-2"
+        "bio-processing-crystal-shard-2",
       },
       effects = {
         {

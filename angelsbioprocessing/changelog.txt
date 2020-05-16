@@ -9,6 +9,7 @@ Date: ???
     - Swapping red algae and blue algae around (229)
       - Red algae is now green science (depends on thermal water extraction and nitrogen processing 1)
       - Blue algae is now blue science, as an alternative source for ammonia gas from nitrogen processing
+    - Changed biter graphic on biter breeding recipes, it now shows the queens
   Bugfixes:
     - Fixed Alien Bacteria was using Perchloric Acid instead of Hydrochloric acid
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria

@@ -140,9 +140,9 @@ if mods["bobmodules"] then
     OV.remove_prereq("speed-module-2", "bio-processing-crystal-shard-1")
     OV.remove_prereq("productivity-module-2", "bio-processing-crystal-shard-1")
     OV.remove_prereq("effectivity-module-2", "bio-processing-crystal-shard-1")
-    OV.remove_prereq("speed-module-3", "bio-processing-crystal-3")
-    OV.remove_prereq("productivity-module-3", "bio-processing-crystal-3")
-    OV.remove_prereq("effectivity-module-3", "bio-processing-crystal-3")
+    OV.remove_prereq("speed-module-3", "bio-processing-crystal-full")
+    OV.remove_prereq("productivity-module-3", "bio-processing-crystal-full")
+    OV.remove_prereq("effectivity-module-3", "bio-processing-crystal-full")
   end
 
   OV.patch_recipes({
@@ -240,7 +240,7 @@ if mods["bobmodules"] then
       prerequisites =
       {
         "modules-2",
-        "bio-processing-crystal-3",
+        "bio-processing-crystal-full",
       },
       effects =
       {
@@ -311,7 +311,7 @@ if mods["bobmodules"] then
     OV.patch_recipes({
       { name = "beacon", ingredients = { {type="item", name="crystal-full-harmonic", amount = 0} } },
     })
-    OV.remove_prereq("effect-transmission", "bio-processing-crystal-3")
+    OV.remove_prereq("effect-transmission", "bio-processing-crystal-full")
   end
 
   OV.patch_recipes({

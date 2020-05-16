@@ -348,7 +348,7 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-processing-crystal-3",
+      name = "bio-processing-crystal-full",
       icon = "__angelsbioprocessing__/graphics/technology/crystal.png",
       icon_size = 128,
       order = "c-a",

@@ -392,21 +392,39 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-small",
+    name = "bio-biter-egg",
     group = "bio-processing-alien",
     order = "da",
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-medium",
+    name = "bio-biter",
     group = "bio-processing-alien",
     order = "db",
   },
   {
     type = "item-subgroup",
-    name = "bio-biter-big",
+    name = "bio-biter-butchery",
     group = "bio-processing-alien",
     order = "dc",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-biter-small",
+    group = "bio-processing-alien",
+    order = "dda",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-biter-medium",
+    group = "bio-processing-alien",
+    order = "ddb",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-biter-big",
+    group = "bio-processing-alien",
+    order = "ddc",
   },
   {
     type = "item-subgroup",
