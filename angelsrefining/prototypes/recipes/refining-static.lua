@@ -1162,7 +1162,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-red"}
       ),
-      order = "b[geode-red-liquify]"
+      order = "f[geode-red-liquify]"
     },
     {
       type = "recipe",
@@ -1210,7 +1210,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-purple"}
       ),
-      order = "d[geode-purple-liquify]"
+      order = "b[geode-purple-liquify]"
     },
     {
       type = "recipe",
@@ -1258,7 +1258,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-lightgreen"}
       ),
-      order = "f[geode-lightgreen-liquify]"
+      order = "d[geode-lightgreen-liquify]"
     },
     {
       type = "recipe",
@@ -1382,7 +1382,8 @@ data:extend(
       type = "recipe",
       name = "catalysator-brown",
       category = "crystallizing",
-      subgroup = "slag-processing-1",
+      subgroup = "geode-crystallization",
+      --subgroup = "slag-processing-1",
       energy_required = 0.5,
       enabled = false,
       ingredients =
@@ -1414,7 +1415,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-green.png",
       icon_size = 32,
-      order = "h [catalysator-green]"
+      order = "j [catalysator-green]"
     },
     {
       type = "recipe",
@@ -1434,7 +1435,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-orange.png",
       icon_size = 32,
-      order = "i"
+      order = "k [catalysator-orange]"
     },
     --VANILLA
     --IRON

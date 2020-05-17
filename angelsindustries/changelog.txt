@@ -6,6 +6,8 @@ Date: ???
     - Added ghost unlocks for angels construction robots
     - Angels robots unlocks the shortcuts as well
   Bugfixes:
+    - Overhaul mode:
+      - Added angels nuclear fuel processes
     - Science mode:
       - Fixed rocket silo would only give 200 Gravitational Analyzers instead of 1000 (stack size)
 ---------------------------------------------------------------------------------------------------

@@ -164,12 +164,17 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-processing-crystal-1",
+      "bio-farm-alien"
     },
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "tree-generator-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "tree-arboretum-0"
       },
       {
         type = "unlock-recipe",
@@ -299,12 +304,21 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-temperate-1",
+      "bio-farm-alien"
     },
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "temperate-tree-generator-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "temperate-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-resin-tree"
       },
     },
     unit =
@@ -313,7 +327,6 @@ data:extend(
       ingredients = {
         {type="item", name="automation-science-pack", amount = 1},
         {type="item", name="logistic-science-pack", amount = 1},
-        {type="item", name="chemical-science-pack", amount = 1},
         {type="item", name="token-bio", amount = 1}
       },
       time = 30
@@ -410,12 +423,21 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-swamp-1",
+      "bio-farm-alien"
     },
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "swamp-tree-generator-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "swamp-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-plastic-tree"
       },
     },
     unit =
@@ -424,7 +446,6 @@ data:extend(
       ingredients = {
         {type="item", name="automation-science-pack", amount = 1},
         {type="item", name="logistic-science-pack", amount = 1},
-        {type="item", name="chemical-science-pack", amount = 1},
         {type="item", name="token-bio", amount = 1}
       },
       time = 30
@@ -521,12 +542,21 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-desert-1",
+      "bio-farm-alien"
     },
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "desert-tree-generator-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "desert-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-rubber-tree"
       },
     },
     unit =
@@ -535,7 +565,6 @@ data:extend(
       ingredients = {
         {type="item", name="automation-science-pack", amount = 1},
         {type="item", name="logistic-science-pack", amount = 1},
-        {type="item", name="chemical-science-pack", amount = 1},
         {type="item", name="token-bio", amount = 1}
       },
       time = 30

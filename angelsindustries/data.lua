@@ -40,6 +40,43 @@ end
 require("prototypes.angels-industries-category")
 require("prototypes.robotics-ghosting")
 
+--ENTITIES
+require("prototypes.buildings.angels-logistics-roboport")
+require("prototypes.buildings.angels-logistics-charging-station")
+require("prototypes.buildings.angels-logistics-zone-expander")
+require("prototypes.buildings.angels-logistics-construction-zone-expander")
+require("prototypes.buildings.angels-logistics-relay-station")
+require("prototypes.buildings.angels-logistics-big-chest")
+require("prototypes.buildings.angels-logistics-robot-construction")
+require("prototypes.buildings.angels-logistics-robot-cargo")
+
+require("prototypes.entities.crawler")
+require("prototypes.entities.equipment")
+require("prototypes.entities.bio-tile")
+
+--RECIPES
+require("prototypes.recipes.equipment-recipes")
+require("prototypes.recipes.logistics-entity")
+require("prototypes.recipes.vehicles-recipe")
+
+require("prototypes.technology.vequip-technology")
+require("prototypes.technology.logistics-technology")
+
+--OVERHAUL
+if angelsmods.industries.overhaul then
+  --ENTITIES
+  require("prototypes.buildings.centrifuge")
+
+  --ITEMS
+  require("prototypes.items.overhaul-nuclear-power")
+  
+  --RECIPES
+  require("prototypes.recipes.overhaul-nuclear-power")
+
+  --TECHS
+  require("prototypes.technology.overhaul-nuclear-power")
+end
+
 --COMPONENTS
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   --ITEMS
@@ -49,7 +86,6 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.items.components-blocks")
   require("prototypes.items.components-weapons")
   require("prototypes.items.components-cabling")
-
   --ENTITIES
   --require("prototypes.buildings.angels-assemblers")
 
@@ -68,6 +104,9 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
   require("prototypes.technology.components-construction-technology")
   require("prototypes.technology.components-weapons-technology")
   require("prototypes.technology.components-cabling-technology")
+
+  --replacement tables
+  require("prototypes.overrides.replacement-fallbacks")
 end
 
 --TECH
@@ -96,25 +135,3 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.technology.tech-lab-technology")
   require("prototypes.technology.tech-pack-technology")
 end
-
---ENTITIES
-require("prototypes.buildings.angels-logistics-roboport")
-require("prototypes.buildings.angels-logistics-charging-station")
-require("prototypes.buildings.angels-logistics-zone-expander")
-require("prototypes.buildings.angels-logistics-construction-zone-expander")
-require("prototypes.buildings.angels-logistics-relay-station")
-require("prototypes.buildings.angels-logistics-big-chest")
-require("prototypes.buildings.angels-logistics-robot-construction")
-require("prototypes.buildings.angels-logistics-robot-cargo")
-
-require("prototypes.entities.crawler")
-require("prototypes.entities.equipment")
-require("prototypes.entities.bio-tile")
-
---RECIPES
-require("prototypes.recipes.equipment-recipes")
-require("prototypes.recipes.logistics-entity")
-require("prototypes.recipes.vehicles-recipe")
-
-require("prototypes.technology.vequip-technology")
-require("prototypes.technology.logistics-technology")

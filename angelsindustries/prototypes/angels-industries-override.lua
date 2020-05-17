@@ -7,10 +7,12 @@ if mods["bobvehicleequipment"] then
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "car")
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "vehicle")
 end
+OV.execute()
+
+require("prototypes.overrides.overhaul-nuclear-power")
 
 if angelsmods.industries.overhaul and angelsmods.industries.components then
   --UPDATE RECIPES FOR ENTITIES
-  OV.execute()
   require("prototypes.overrides.components-entity-update")
 
   --UPDATE NON-BLOCK COMPONENTS
@@ -55,6 +57,5 @@ if angelsmods.industries.overhaul and angelsmods.industries.tech then
   require("prototypes.overrides.tech-mod-update")
   require("prototypes.overrides.tech-productivity-update")
 end
-
 -- ordening
 require("prototypes.angels-industries-override-ordening")

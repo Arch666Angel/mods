@@ -49,7 +49,7 @@ data:extend(
       ingredients = {
         {type = "fluid", name = "alien-spores", amount = 50},
         {type = "item", name = "solid-calcium-carbonate", amount = 1},
-        {type = "fluid", name = "liquid-perchloric-acid", amount = 50}
+        {type = "fluid", name = "liquid-hydrochloric-acid", amount = 50}
       },
       results = {
         {type = "item", name = "alien-bacteria", amount = 1}
@@ -202,7 +202,7 @@ data:extend(
         {type = "item", name = "milling-drum", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-powder", amount = 25},
+        {type = "item", name = "crystal-powder", amount = 20},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
       icons = {
@@ -221,7 +221,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-slurry",
-      category = "crafting-with-fluid",
+      category = "liquifying",
       subgroup = "bio-biter-processing-cutting",
       enabled = false,
       energy_required = 2,

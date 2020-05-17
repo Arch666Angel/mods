@@ -1,8 +1,5 @@
 local OV = angelsmods.functions.OV
 
--- For some reason, it won't remove the effectivity modules from the tech if
--- I don't place the OV.execute() next to each line...
-
 OV.remove_prereq("angels-smelting-train-2", "speed-module")
 OV.remove_prereq("angels-smelting-train-2", "effectivity-module")
 OV.add_prereq("angels-smelting-train-2", "tech-green-circuit")

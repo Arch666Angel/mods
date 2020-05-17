@@ -30,13 +30,22 @@ data:extend(
   },
   {
     type = "item",
-    name = "solid-nuclear-fertilizer",
-    icon = "__angelsbioprocessing__/graphics/icons/solid-nuclear-fertilizer.png",
+    name = "solid-alienated-fertilizer",
+    icon = "__angelsbioprocessing__/graphics/icons/solid-alienated-fertilizer.png",
     icon_size = 32,
     subgroup = "bio-wood",
     order = "a[support]-d",
     stack_size = 500
   },
+  --{
+  --  type = "item",
+  --  name = "solid-nuclear-fertilizer",
+  --  icon = "__angelsbioprocessing__/graphics/icons/solid-nuclear-fertilizer.png",
+  --  icon_size = 32,
+  --  subgroup = "bio-wood",
+  --  order = "a[support]-e",
+  --  stack_size = 500
+  --},
   {
     type = "tool",
     name = "token-bio",

@@ -19,6 +19,7 @@ local ore_exist = function (ore_name) return data.raw.item[ore_name] and true or
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
 angelsmods.trigger.ores["uranium"] = mods.bobplates and true or false
+angelsmods.trigger.ores["thorium"] = mods.angelsindustries and true or false
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods.bobplates then
   angelsmods.trigger.ores["tin"] = ore_exist("tin-ore")
@@ -32,8 +33,7 @@ if mods.bobplates then
   angelsmods.trigger.ores["titanium"] = ore_exist("rutile-ore")
   angelsmods.trigger.ores["gold"] = ore_exist("gold-ore")
   angelsmods.trigger.ores["tungsten"] = ore_exist("tungsten-ore")
-  angelsmods.trigger.ores["thorium"] = ore_exist("thorium-ore")
-
+  angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or ore_exist("thorium-ore")
   --angelsmods.trigger.ores["gem-ore"] = ore_exist("gem-ore")
   --angelsmods.trigger.ores["gem-ruby"] = ore_exist("ruby-ore")
   --angelsmods.trigger.ores["gem-sapphire"] = ore_exist("sapphire-ore")

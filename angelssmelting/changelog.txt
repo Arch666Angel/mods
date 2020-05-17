@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Removed productivity from copper wire, as productivity is achieved by making cable coils
+    - Fixed reuseable mold cleaning recipe was unlocked when not playing with the components
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.6
 Date: 20.04.2020
