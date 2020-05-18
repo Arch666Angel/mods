@@ -172,7 +172,7 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
         if entity.type == "inserter" then
           local inserterStack = entity.held_stack
           if inserterStack and inserterStack.valid and inserterStack.valid_for_read then
-            if inserterStack.count > 0 and itemsToSwap[inserterStack.name or "none"] then
+            if inserterStack.count > 0 and itemsToSwap[inserterStack.name or "none"] and game.item_prototypes[itemsToSwap[inserterStack.name]] then
               inserterStack.set_stack{
                 name = itemsToSwap[inserterStack.name],
                 count = inserterStack.count
@@ -190,7 +190,7 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
             local transportLine = entity.get_transport_line(lineIndex)
             if transportLine and transportLine.valid then
               for oldItem, newItem in pairs(itemsToSwap) do
-                local itemCount = transportLine.get_item_count(oldItem)
+                local itemCount = game.item_prototypes[oldItem] and game.item_prototypes[newItem] and transportLine.get_item_count(oldItem) or 0
                 if itemCount > 0 then
                   transportLine.remove_item{ name = oldItem, count = itemCount }
                   local position = 0
