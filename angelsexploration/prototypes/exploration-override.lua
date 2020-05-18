@@ -208,6 +208,8 @@ if angelsmods.industries then
   -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-attack")
   -- table.insert(data.raw["equipment-grid"]["angels-heavy-tank"].equipment_categories,"angels-heavy-movement")
   end
+
+  OV.execute()
 end
 
 if mods["bobvehicleequipment"] then

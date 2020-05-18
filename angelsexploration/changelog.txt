@@ -3,6 +3,8 @@ Version: 0.3.5
 Date: ???
   Changes:
     - Properly use name, amount in result prototypes
+  Bugfixes:
+    - Added missing call to OV.execute() in data-updates
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 12.04.2020
