@@ -168,6 +168,44 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
           end
         end
 
+        -- swap items in inserter hands
+        if entity.type == "inserter" then
+          local inserterStack = entity.held_stack
+          if inserterStack and inserterStack.valid and inserterStack.valid_for_read then
+            if inserterStack.count > 0 and itemsToSwap[inserterStack.name or "none"] then
+              inserterStack.set_stack{
+                name = itemsToSwap[inserterStack.name],
+                count = inserterStack.count
+              }
+            end
+          end
+
+        -- swap items on belts
+        elseif entity.type == "transport-belt"   or
+               entity.type == "underground-belt" or
+               entity.type == "splitter"
+        then
+          local maxLines = entity.get_max_transport_line_index()
+          for lineIndex = 1, maxLines do
+            local transportLine = entity.get_transport_line(lineIndex)
+            if transportLine and transportLine.valid then
+              for oldItem, newItem in pairs(itemsToSwap) do
+                local itemCount = transportLine.get_item_count(oldItem)
+                if itemCount > 0 then
+                  transportLine.remove_item{ name = oldItem, count = itemCount }
+                  local position = 0
+                  while itemCount > 0 and position <= 1 do
+                    if transportLine.can_insert_at(position) then
+                      itemCount = itemCount - (transportLine.insert_at(position, { name = newItem, count = 1 }) and 1 or 0)
+                    end
+                    position = position + 0.001
+                  end
+                end
+              end
+            end
+          end
+        end
+
         -- swap signals
         local controlBehavior = entity.get_or_create_control_behavior()
         if controlBehavior and controlBehavior.valid then
