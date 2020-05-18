@@ -135,12 +135,14 @@ if angelsmods.industries.overhaul then
       OV.remove_unlock("bobingabout-process", "bobingabout-process")
     end
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
+    angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
     
     -- thorium processing
     OV.remove_unlock("thorium-processing", "thorium-processing")
     OV.global_replace_technology("thorium-processing", "angels-thorium-power")
     OV.disable_technology("thorium-processing")
     angelsmods.functions.add_flag("thorium-fuel-cell", "hidden")
+    angelsmods.functions.add_flag("thorium-fuel-cell", "hide-from-fuel-tooltip")
     
     OV.remove_unlock("thorium-fuel-reprocessing", "thorium-fuel-reprocessing")
     OV.disable_technology("thorium-fuel-reprocessing")
@@ -149,10 +151,12 @@ if angelsmods.industries.overhaul then
     OV.remove_unlock("thorium-plutonium-fuel-cell", "thorium-plutonium-fuel-cell")
     OV.disable_technology("thorium-plutonium-fuel-cell")
     angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hidden")
+    angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hide-from-fuel-tooltip")
     
     -- deuterium processing
     OV.remove_unlock("water-chemistry-2","deuterium-fuel-cell")
     angelsmods.functions.add_flag("deuterium-fuel-cell", "hidden")
+    angelsmods.functions.add_flag("deuterium-fuel-cell", "hide-from-fuel-tooltip")
     
     OV.global_replace_item("fusion-catalyst", "angels-muon-fusion-catalyst")
     angelsmods.functions.add_flag("fusion-catalyst", "hidden")
