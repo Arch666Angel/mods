@@ -138,7 +138,8 @@ data:extend(
         "bio-refugium-hatchery",
         --"bio-refugium-fish-1"
         "bio-nutrient-paste",
-        "angels-sulfur-processing-2"
+        "angels-sulfur-processing-2",
+        "angels-nitrogen-processing-1"
       },
       effects = {
         {
@@ -208,6 +209,83 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "puffer-breeding-5"
+        }
+      },
+      unit = {
+        count = 100,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-refugium-puffer-3",
+      icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-refugium-puffer-2",
+        "water-treatment-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-puffing-12"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-puffing-13"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-puffing-14"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-puffing-15"
+        }
+      },
+      unit = {
+        count = 100,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-refugium-puffer-4",
+      icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-refugium-puffer-3"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-breeding-23"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-breeding-12"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-breeding-13"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-breeding-14"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "puffer-breeding-15"
         }
       },
       unit = {
@@ -502,7 +580,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-refugium-butchery-1",
-        "bio-refugium-hatchery"
+        "bio-refugium-puffer-1"
       },
       effects = {
         {

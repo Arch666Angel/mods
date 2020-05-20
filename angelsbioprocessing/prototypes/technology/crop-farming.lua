@@ -564,7 +564,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm",
+        "slag-processing-1"
       },
       effects = {
         {

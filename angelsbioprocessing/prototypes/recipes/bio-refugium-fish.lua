@@ -54,9 +54,9 @@ data:extend(
         {type = "fluid", name = "liquid-fish-atmosphere", amount = 100}
       },
       results = {
-        {type = "item", name = "raw-fish", amount = 2},
-        {type = "item", name = "raw-fish", amount = 1, probability = 0.75, show_details_in_recipe_tooltip = false},
-        {type = "item", name = "raw-fish", amount = 1, probability = 0.50, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "raw-fish", amount = 2, catalyst_amount = 2},
+        {type = "item", name = "raw-fish", amount = 1, probability = 0.75, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "raw-fish", amount = 1, probability = 0.50, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icon = "__base__/graphics/icons/fish.png",
@@ -76,12 +76,13 @@ data:extend(
         {type = "fluid", name = "liquid-fish-atmosphere", amount = 100}
       },
       results = {
-        {type = "item", name = "alien-fish-1-raw", amount = 3},
+        {type = "item", name = "alien-fish-1-raw", amount = 3, catalyst_amount = 3},
         {
           type = "item",
           name = "alien-fish-1-raw",
           amount = 1,
           probability = 0.85,
+          catalyst_amount = 1,
           show_details_in_recipe_tooltip = false
         },
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
@@ -103,12 +104,13 @@ data:extend(
         {type = "fluid", name = "liquid-fish-atmosphere", amount = 100}
       },
       results = {
-        {type = "item", name = "alien-fish-2-raw", amount = 3},
+        {type = "item", name = "alien-fish-2-raw", amount = 3, catalyst_amount = 3},
         {
           type = "item",
           name = "alien-fish-2-raw",
           amount = 1,
           probability = 0.85,
+          catalyst_amount = 1,
           show_details_in_recipe_tooltip = false
         },
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
@@ -130,12 +132,13 @@ data:extend(
         {type = "fluid", name = "liquid-fish-atmosphere", amount = 100}
       },
       results = {
-        {type = "item", name = "alien-fish-3-raw", amount = 3},
+        {type = "item", name = "alien-fish-3-raw", amount = 3, catalyst_amount = 3},
         {
           type = "item",
           name = "alien-fish-3-raw",
           amount = 1,
           probability = 0.85,
+          catalyst_amount = 1,
           show_details_in_recipe_tooltip = false
         },
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}

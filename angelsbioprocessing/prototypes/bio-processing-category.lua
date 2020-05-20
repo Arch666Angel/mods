@@ -350,15 +350,27 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-puffer",
+    name = "bio-puffer-1",
     group = "bio-processing-alien",
-    order = "ba",
+    order = "baa",
   },
   {
     type = "item-subgroup",
-    name = "bio-puffer-breeding",
+    name = "bio-puffer-2",
     group = "bio-processing-alien",
-    order = "bb",
+    order = "bab",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-puffer-breeding-1",
+    group = "bio-processing-alien",
+    order = "bba",
+  },
+  {
+    type = "item-subgroup",
+    name = "bio-puffer-breeding-2",
+    group = "bio-processing-alien",
+    order = "bbb",
   },
   {
     type = "item-subgroup",
