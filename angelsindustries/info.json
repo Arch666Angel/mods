@@ -9,11 +9,12 @@
   "description": "Adds components, equipment and a tech overhaul as well as the tool you need to expand and grow your base. [Alpha]",
   "dependencies": [
     "base >= 0.18.2",
-    "angelsrefining >= 0.11.5",
+    "angelsrefining >= 0.12.0",
     "angelspetrochem >= 0.9.0",
     "angelsbioprocessing >= 0.7.3",
     "angelssmelting >= 0.6.6",
     "angelsaddons-crawlertrain >= 0.1.0",
-    "(?)bobtech >= 0.18.3"
+    "(?)bobtech >= 0.18.3",
+    "(?)aai-industry >=0.4.5"
   ]
 }

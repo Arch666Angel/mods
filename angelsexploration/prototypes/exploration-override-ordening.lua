@@ -826,6 +826,9 @@ if angelsmods.industries and angelsmods.industries.overhaul then
     reorder("armor", "bob-power-armor-mk4", "angels-personal-equipment-bobarmor-b", "e")
     reorder("armor", "bob-power-armor-mk5", "angels-personal-equipment-bobarmor-b", "f")
   end
+
+  OV.execute()
+
 else -- industries not present
   -- ORDENING OF EQUIPMENT
   -- todo

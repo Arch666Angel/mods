@@ -7,6 +7,8 @@ Date: ???
     - Enable deuterium when playing with angels industry overhaul
   Bugfixes:
     - Fixed some wrong colors on fluid recipe icons of Epichlorohydrin Gas and Phosgene Gas
+    - Hidden some unused bob technologies related to deuterium
+    - Fixed typo in Allyl Chloride Gas localisation
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 20.04.2020

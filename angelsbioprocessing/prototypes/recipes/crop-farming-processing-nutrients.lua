@@ -4,7 +4,7 @@ data:extend(
       type = "recipe",
       name = "solid-beans-nutrients",
       category = "nutrient-extractor",
-      subgroup = "farming-swamp-seed",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -21,13 +21,13 @@ data:extend(
           "solid-beans"
         }
       ),
-      order = "ba"
+      order = "a[nutrient-extraction]-a"
     },
     {
       type = "recipe",
       name = "solid-corn-nutrients",
       category = "nutrient-extractor",
-      subgroup = "farming-swamp-seed",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -44,13 +44,13 @@ data:extend(
           "solid-corn"
         }
       ),
-      order = "bb"
+      order = "a[nutrient-extraction]-b"
     },
     {
       type = "recipe",
       name = "solid-leafs-nutrients",
       category = "nutrient-extractor",
-      subgroup = "farming-swamp-seed",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -67,13 +67,13 @@ data:extend(
           "solid-leafs"
         }
       ),
-      order = "bc"
+      order = "a[nutrient-extraction]-c"
     },
     {
       type = "recipe",
       name = "solid-nuts-nutrients",
       category = "nutrient-extractor",
-      subgroup = "farming-swamp",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -90,13 +90,13 @@ data:extend(
           "solid-nuts"
         }
       ),
-      order = "ba"
+      order = "a[nutrient-extraction]-d"
     },
     {
       type = "recipe",
       name = "solid-pips-nutrients",
       category = "nutrient-extractor",
-      subgroup = "farming-swamp",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -113,13 +113,13 @@ data:extend(
           "solid-pips"
         }
       ),
-      order = "bb"
+      order = "a[nutrient-extraction]-e"
     },
     {
       type = "recipe",
       name = "solid-fruit-nutrients",
       category = "nutrient-extractor",
-      subgroup = "farming-swamp",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -136,14 +136,14 @@ data:extend(
           "solid-fruit"
         }
       ),
-      order = "bc"
+      order = "a[nutrient-extraction]-f"
     },
     -- REFINING
     {
       type = "recipe",
       name = "nutrients-refining-1",
       category = "gas-refining",
-      subgroup = "bio-processor-swamp",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -163,13 +163,13 @@ data:extend(
         },
         {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
       ),
-      order = "ba"
+      order = "b[nutrient-processing]-a"
     },
     {
       type = "recipe",
       name = "nutrients-refining-2",
       category = "gas-refining",
-      subgroup = "bio-processor-swamp",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -189,13 +189,13 @@ data:extend(
         },
         {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
       ),
-      order = "bb"
+      order = "b[nutrient-processing]-b"
     },
     {
       type = "recipe",
       name = "nutrients-refining-3",
       category = "gas-refining",
-      subgroup = "bio-processor-swamp",
+      subgroup = "bio-processor-nutrient",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -215,7 +215,7 @@ data:extend(
         },
         {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
       ),
-      order = "bc"
+      order = "b[nutrient-processing]-c"
     }
   }
 )

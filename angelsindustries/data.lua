@@ -101,3 +101,13 @@ require("prototypes.recipes.vehicles-recipe")
 --TECHS
 require("prototypes.technology.vequip-technology")
 require("prototypes.technology.logistics-technology")
+
+-- NUCLEAR -----------------------------------------------------------
+--ENTITIES
+require("prototypes.buildings.centrifuge")
+--ITEMS
+require("prototypes.items.overhaul-nuclear-power")
+--RECIPES
+require("prototypes.recipes.overhaul-nuclear-power")
+--TECHS
+require("prototypes.technology.overhaul-nuclear-power"
