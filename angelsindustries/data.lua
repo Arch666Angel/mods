@@ -110,4 +110,4 @@ require("prototypes.items.overhaul-nuclear-power")
 --RECIPES
 require("prototypes.recipes.overhaul-nuclear-power")
 --TECHS
-require("prototypes.technology.overhaul-nuclear-power"
+require("prototypes.technology.overhaul-nuclear-power")
