@@ -373,7 +373,7 @@ else
 end
 
 --hide bobs fluids if converter recipes setting not active
-if not angelsmods.trigger.enableconverter and mods.bobplates then
+if not angelsmods.trigger.enableconverter and mods["bobplates"] then
   data.raw["fluid"]["sulfur-dioxide"].hidden = true
   data.raw["fluid"]["oxygen"].hidden = true
   data.raw["fluid"]["nitrogen"].hidden = true
@@ -388,7 +388,7 @@ if not angelsmods.trigger.enableconverter and mods.bobplates then
   if settings.startup["bobmods-plates-purewater"].value == true then
     data.raw["fluid"]["pure-water"].hidden = true
   end
-  if mods.bobrevamp then
+  if mods["bobrevamp"] then
     data.raw["item"]["salt"].hidden = true
     if settings.startup["bobmods-revamp-hardmode"].value then
       data.raw["fluid"]["ammonia"].hidden = true
@@ -405,7 +405,7 @@ end
 --Do this regardless of settings
 --base fluid is methane, all others are based on relative real values
 --==BASED ON VOULMETRIC NUMBERS divided by 10, using methane as the base
-if mods.bobplates then
+if mods["bobplates"] then
   --liquid Naphtha (heavy oil), bobs value is 1MJ (Heavy fuel oil 38.2 MJ/L)(39 MJ/kg)
   data.raw.fluid["liquid-naphtha"].fuel_value = "244.7kJ"
   data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3

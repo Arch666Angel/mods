@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-
+if angelsmods.industries.components then
 -------------------------------------------------------------------------------
 -- WEAPON PARTS 1 -------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -114,3 +114,4 @@ OV.add_unlock("military-3", "angels-acceleratorcoil")
 OV.add_unlock("military-3", "weapon-parts-acceleratorcoil")
 OV.add_prereq("military-3", "angels-components-weapons-advanced")
 OV.add_prereq("military-3", "angels-tungsten-smelting-1")
+end

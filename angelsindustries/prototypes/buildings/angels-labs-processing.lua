@@ -5,7 +5,7 @@ local function create_rich_text_icons(inputs)
   end
   return rich_text_icons
 end
-
+if angelsmods.industries.tech then
 data:extend(
   {
     --PROCESSING LAB
@@ -283,3 +283,4 @@ data:extend(
   }
 )
 angelsmods.triggers.lab_ignore_token["angels-processing-lab-3"] = true
+end

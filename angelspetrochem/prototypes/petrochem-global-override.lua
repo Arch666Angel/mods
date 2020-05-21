@@ -156,10 +156,9 @@ if angelsmods.trigger.enableacids then
 end
 
 --OVERRIDE FOR BOBs
+require("prototypes.global-override.bobplates")
+require("prototypes.global-override.bobrevamp")
 if bobmods then
-  require("prototypes.global-override.bobplates")
-  require("prototypes.global-override.bobrevamp")
-
   if bobmods.greenhouse then
     OV.patch_recipes(
       {
@@ -226,7 +225,7 @@ if bobmods then
   end
 
   --if data.raw["fluid"]["dinitrogen-tetroxide"] then --BOBS REVAMP hardmode
-  if mods.bobrevamp and settings.startup["bobmods-revamp-hardmode"].value then
+  if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
     if data.raw.fluid["carbon-dioxide"] then
       OV.global_replace_item("carbon-dioxide", "gas-hydrogen-sulfide")
       data.raw.fluid["carbon-dioxide"].hidden = true

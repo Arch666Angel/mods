@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-
+if angelsmods.industries.components then
 OV.patch_recipes(
   {
     {
@@ -236,3 +236,4 @@ OV.remove_prereq("cargo-robots-3", "electric-engine")
 OV.remove_science_pack("cargo-robots-3", "chemical-science-pack")
 
 OV.add_prereq("angels-construction-robots-2", "tech-orange-circuit")
+end

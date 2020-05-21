@@ -1,4 +1,5 @@
-data:extend(
+if angelsmods.industries.tech then
+  data:extend(
   {
     --SCIENCE PACKS
     {
@@ -139,3 +140,4 @@ data:extend(
     }
   }
 )
+end

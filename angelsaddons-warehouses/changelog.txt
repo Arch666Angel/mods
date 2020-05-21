@@ -3,6 +3,8 @@ Version: 0.5.1
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+  Bugfixes:
+    - Consistency in assigning angelsmods in data stage
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 09.02.2020

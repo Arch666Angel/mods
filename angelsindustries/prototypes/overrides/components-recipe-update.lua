@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-
+if angelsmods.industries.components then
 -------------------------------------------------------------------------------
 -- ELECTRONICS ----------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -42,3 +42,4 @@ OV.execute()
 
 require("prototypes.overrides.components-bobs-recipe-update")
 OV.execute()
+end

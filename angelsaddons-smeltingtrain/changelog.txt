@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Fixed smelter train tech would miss some prerequisites in some cases
+  Bugfixes:
+    - MP safer method of requiring files (check inside the file instead of arround)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 20.04.2020
