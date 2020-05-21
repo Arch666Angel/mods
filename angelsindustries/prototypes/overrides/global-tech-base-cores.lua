@@ -1,4 +1,4 @@
-if not angelsmods.industries.tech then
+if angelsmods.industries.tech then
   local OV = angelsmods.functions.OV
   --require("prototypes.overrides.industries-override-functions")
 
