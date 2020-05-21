@@ -3,7 +3,6 @@ require("prototypes.overrides.bio-processing-override-special-vanilla")
 require("prototypes.recipes.bio-processing-entity-angels")
 --PASTE
 require("prototypes.overrides.bio-processing-override-paste")
-
 require("prototypes.overrides.bio-processing-override-angel")
 
 -- body

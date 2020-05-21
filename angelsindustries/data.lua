@@ -1,11 +1,8 @@
 --INITIALIZE
-if not angelsmods then
-  angelsmods = {}
-end
-if not angelsmods.industries then
-  angelsmods.industries = {}
-end
+angelsmods = angelsmods or {}
+angelsmods.industries = angelsmods.industries or {}
 angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 0}
+angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or {}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
@@ -24,16 +21,13 @@ if mods["bobplates"] or angelsmods.industries.components then
 end
 --angelsmods.industries.overhaul=false --temp overrides
 
-angelsmods.industries.return_ingredients = angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
+angelsmods.industries.return_ingredients =
+  angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
 
 -- set triggers for other angel mods
 require("prototypes.angels-industries-triggers")
 
 --LOAD FUNCTIONS
-if not angelsmods.industries.tech_exceptions then
-  angelsmods.industries.tech_exceptions = {}
-end
-
 require("prototypes.overrides.industries-override-functions")
 
 --LOAD PROTOTYPES

@@ -10,7 +10,7 @@ end
 --UPDATE RECIPES FOR ENTITIES
 --OV.execute()
 require("prototypes.overrides.components-entity-update")
- --UPDATE NON-BLOCK COMPONENTS
+--UPDATE NON-BLOCK COMPONENTS
 require("prototypes.overrides.components-recipe-update")
 require("prototypes.overrides.components-productivity-update")
 require("prototypes.overrides.components-block-update")
@@ -37,7 +37,7 @@ require("prototypes.overrides.overhaul-nuclear-power")
 --data.raw["item"]["assembling-machine-1"].subgroup = "angels-assemblers-medium"
 --data.raw["item"]["assembling-machine-2"].subgroup = "angels-assemblers-medium"
 --data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
-end
+
 if angelsmods.industries.tech then
   data.raw["item"]["satellite"].rocket_launch_product = {"science-gravitational-analyzer", 1000}
   data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"

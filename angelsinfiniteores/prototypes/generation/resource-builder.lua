@@ -1,8 +1,8 @@
-if not angelsmods.functions.make_resource then
-  local noise = require("noise")
-  local tne = noise.to_noise_expression
-  local resource_autoplace = require("resource-autoplace")
+local noise = require("noise")
+local tne = noise.to_noise_expression
+local resource_autoplace = require("resource-autoplace")
 
+if not angelsmods.functions.make_resource then
   --Create autoplace
   local function make_resautoplace(input)
     data:extend(
@@ -889,7 +889,7 @@ if not angelsmods.functions.make_resource then
       if
         set and set.basic_settings and set.basic_settings.autoplace_controls and
           not set.basic_settings.autoplace_controls[resource]
-      then
+       then
         set.basic_settings.autoplace_controls[resource] = conf
       end
     end
@@ -1008,7 +1008,7 @@ if not angelsmods.functions.make_resource then
           input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq or
             (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
               settings.startup["angels-keepuranacid"].value
-        then
+         then
           input.acid_amount = 10
         end
         --Get map_color and icon from the regular resource
@@ -1100,13 +1100,13 @@ if not angelsmods.functions.make_resource then
       if
         preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
           preset.basic_settings.autoplace_controls[resource]
-      then
+       then
         preset.basic_settings.autoplace_controls[resource] = nil
       end
       if
         infinite_resource and preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
           preset.basic_settings.autoplace_controls[infinite_resource]
-      then
+       then
         preset.basic_settings.autoplace_controls[infinite_resource] = nil
       end
     end
@@ -1157,7 +1157,7 @@ if not angelsmods.functions.make_resource then
               input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq) or
                 (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
                   settings.startup["angels-keepuranacid"].value
-            then
+             then
               if angelsmods.petrochem then
                 if angelsmods.trigger.enableacids then
                   input.acid_req = input.acid_to_mine

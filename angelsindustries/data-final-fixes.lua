@@ -47,7 +47,6 @@ if angelsmods.industries.components then
 end
 --tech updates part 1
 require("prototypes.overrides.global-tech")
-  
 
 --set ingredient return on building pickup
 if angelsmods.industries.components then
