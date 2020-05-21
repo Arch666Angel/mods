@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
