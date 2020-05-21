@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
   Bugfixes:
+    - MP safer method of requiring files (check inside the file instead of arround)
     - Overhaul mode:
       - Added angels nuclear fuel processes
     - Science mode:

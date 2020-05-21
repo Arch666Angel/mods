@@ -3,6 +3,9 @@ Version: 0.2.2
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+    - Consistency in assigning angelsmods in data stage
+  Bugfixes:
+    - MP safer method of requiring files (check inside the file instead of arround)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 12.04.2020
