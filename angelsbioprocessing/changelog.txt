@@ -25,6 +25,10 @@ Date: ???
       - Reduces requirement to explore big sections of the map
       - Added recipes to create trees from Alien Plant Life Samples
       - Added recipes to turn the trees into bio products to get rid of unwanted trees
+    - Increased productivity of liquid products from tree farming:
+      - Increased the bio product yields from tree farming
+        tier 1: 2 -> 4; tier 2: 4 -> 7; extra: special tree gives 10
+      - Increased the liquid yield for each bio product (5 -> 10 liquid/bio product)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.8
 Date: 20.04.2020
