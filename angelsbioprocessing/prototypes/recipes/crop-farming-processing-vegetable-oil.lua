@@ -88,7 +88,10 @@ data:extend(
         {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
       },
       order = "b[oil-processing]-a",
-      icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil-filtering-1.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "coal",
+        { {255,184,062}, {255,255,060}, {255,221,061,0.8}, {255,255,000,0.8} }
+      ),
       icon_size = 32
     },
     {
@@ -109,7 +112,10 @@ data:extend(
         {type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1}
       },
       order = "b[oil-processing]-b",
-      icon = "__angelsbioprocessing__/graphics/icons/liquid-raw-vegetable-oil-filtering-2.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {255,184,062}, {255,255,060}, {255,221,061,0.8}, {255,255,000,0.8} }
+      ),
       icon_size = 32
     },
     {

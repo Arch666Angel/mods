@@ -563,7 +563,10 @@ data:extend(
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
       main_product = "angels-ore8-slime",
-      icon = "__angelsrefining__/graphics/icons/angels-ore8-slime-filtering.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {104,112,113}, {133,196,060}, {133,196,060}, {113,224,028,0.9} }
+      ),
       icon_size = 32,
       order = "h"
     },
@@ -644,7 +647,10 @@ data:extend(
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
       main_product = "angels-ore9-slime",
-      icon = "__angelsrefining__/graphics/icons/angels-ore9-slime-filtering.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {095,106,090}, {254,110,022}, {254,110,022,0.8}, {252,103,005,0.9} }
+      ),
       icon_size = 32,
       order = "j"
     },
@@ -959,9 +965,12 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 40},
         {type = "item", name = "filter-frame", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/slag-filtering-1.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "coal",
+        { {140,073,029}, {230,116,017} }
+      ),
       icon_size = 32,
-      order = "a [slag-processing-filtering-1]"
+      order = "a[filtering-mineral]-a[slag-processing]-a[coal]"
     },
     {
       type = "recipe",
@@ -980,9 +989,12 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/slag-filtering-2.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {140,073,029}, {230,116,017} }
+      ),
       icon_size = 32,
-      order = "b [slag-processing-filtering-2]"
+      order = "a[filtering-mineral]-a[slag-processing]-b[ceramic]"
     },
     {
       type = "recipe",
@@ -999,9 +1011,12 @@ data:extend(
         {type = "fluid", name = "mineral-sludge", amount = 50},
         {type = "item", name = "filter-frame", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/thermal-filtering-1.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "coal",
+        { {243,135,000}, {230,116,017}, {247,140,003} }
+      ),
       icon_size = 32,
-      order = "c [thermal-water-filtering-1]"
+      order = "a[filtering-mineral]-a[thermal-processing]-a[coal]"
     },
     {
       type = "recipe",
@@ -1018,9 +1033,12 @@ data:extend(
         {type = "fluid", name = "mineral-sludge", amount = 35},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/thermal-filtering-2.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {243,135,000}, {230,116,017}, {247,140,003} }
+      ),
       icon_size = 32,
-      order = "d [thermal-water-filtering-2]"
+      order = "a[filtering-mineral]-a[thermal-processing]-b[ceramic]"
     },
     --CRYSTAL SLURRY
     --GEODES LIQUIFY
@@ -1196,9 +1214,12 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 40},
         {type = "item", name = "filter-frame", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/crystal-filtering-1.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "coal",
+        { {105,237,038}, {211,255,052}, {100,255,000}, {147,207,47} }
+      ),
       icon_size = 32,
-      order = "e [crystal-slurry-filtering-1]"
+      order = "b[filtering-crystal]-c[crystal-processing]-a[coal]"
     },
     {
       type = "recipe",
@@ -1217,9 +1238,12 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/crystal-filtering-2.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {105,237,038}, {211,255,052}, {100,255,000}, {147,207,47} }
+      ),
       icon_size = 32,
-      order = "f [crystal-slurry-filtering-2]"
+      order = "b[filtering-crystal]-c[crystal-processing]-b[ceramic]"
     },
     {
       type = "recipe",
@@ -1238,9 +1262,12 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 40},
         {type = "item", name = "filter-frame", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/crystal-filtering-conversion-1.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "coal",
+        { {105,237,038}, {230,116,017}, {100,255,000} }
+      ),
       icon_size = 32,
-      order = "g [crystal-slurry-filtering-1]"
+      order = "a[filtering-mineral]-c[crystal-processing]-a[coal]"
     },
     {
       type = "recipe",
@@ -1259,9 +1286,12 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/crystal-filtering-conversion-2.png",
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {105,237,038}, {230,116,017}, {100,255,000} }
+      ),
       icon_size = 32,
-      order = "h [crystal-slurry-filtering-2]"
+      order = "a[filtering-mineral]-c[crystal-processing]-b[ceramic]"
     },
     --CATALYSTS
     {

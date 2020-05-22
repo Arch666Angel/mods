@@ -10,7 +10,7 @@
   "dependencies": [
     "base >= 0.18.0",
     "angelspetrochem >= 0.9.4",
-    "angelsrefining >= 0.11.10",
+    "angelsrefining >= 0.12.0",
     "? bobplates >= 0.15.0"
   ]
 }

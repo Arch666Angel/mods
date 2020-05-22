@@ -42,7 +42,7 @@ data:extend(
       prerequisites = {
         "angels-cobalt-smelting-1",
         "ore-processing-1",
-        "water-washing-2"
+        "water-washing-1"
       },
       effects = {
         {

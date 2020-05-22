@@ -88,7 +88,7 @@ data:extend(
       prerequisites = {
         "angels-lead-smelting-2",
         "ore-processing-2",
-        "water-washing-2"
+        "water-washing-1"
       },
       effects = {
         {

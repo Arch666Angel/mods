@@ -599,8 +599,29 @@ data:extend(
       {
         {type = "item", name = "solid-soil", amount = 1}
       },
+      icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-soil", {"solid-mud"}),
       icon_size = 32,
-      order = "a[support]-a"
+      order = "a[support]-aa"
+    },
+    {
+      type = "recipe",
+      name = "solid-soil-alternative",
+      category = "crafting",
+      subgroup = "bio-wood",
+      enabled = false,
+      energy_required = 4,
+      ingredients =
+      {
+        {type = "item", name = "solid-sand", amount = 1},
+        {type = "item", name = "solid-compost", amount = 2}
+      },
+      results =
+      {
+        {type = "item", name = "solid-soil", amount = 1}
+      },
+      icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-soil", {"solid-sand"}),
+      icon_size = 32,
+      order = "a[support]-ab"
     },
     {
       type = "recipe",

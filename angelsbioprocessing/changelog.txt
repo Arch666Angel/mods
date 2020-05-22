@@ -10,6 +10,9 @@ Date: ???
       - Red algae is now green science (depends on thermal water extraction and nitrogen processing 1)
       - Blue algae is now blue science, as an alternative source for ammonia gas from nitrogen processing
     - Changed biter graphic on biter breeding recipes, it now shows the queens
+    - Crystal powder liquification now requres liquifier instead of assembler (228)
+    - Crystal crushing to powder now requires powderizer instead of liquifier (228)
+    - Added alternative way of producing soil from sand instead of mud
   Bugfixes:
     - Fixed Alien Bacteria was using Perchloric Acid instead of Hydrochloric acid
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria
@@ -28,6 +31,10 @@ Date: ???
       - Reduces requirement to explore big sections of the map
       - Added recipes to create trees from Alien Plant Life Samples
       - Added recipes to turn the trees into bio products to get rid of unwanted trees
+    - Increased productivity of liquid products from tree farming:
+      - Increased the bio product yields from tree farming
+        tier 1: 2 -> 4; tier 2: 4 -> 7; extra: special tree gives 10
+      - Increased the liquid yield for each bio product (5 -> 10 liquid/bio product)
     - Added earlier steps to obtain crystals (229)
       - Crystalizing Polluted Fish Water for crystal splinters (green science)
       - Crystalizing Puffer Egg Shell Remains for crystal shards (blue science)

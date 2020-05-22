@@ -10,6 +10,7 @@ Date: ???
     - Hidden some unused bob technologies related to deuterium
     - Fixed typo in Allyl Chloride Gas localisation
     - MP safer method of requiring files (check inside the file instead of arround)
+    - Fixed barreling of heavy and semi heavy water, now only possible at 25°
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 20.04.2020

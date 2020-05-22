@@ -517,7 +517,7 @@ data:extend(
         {type = "fluid", name = "water", amount = 50}
       },
       results = {
-        {type = "item", name = "bio-resin", amount = 2},
+        {type = "item", name = "bio-resin", amount = 4},
         {type = "item", name = "solid-tree", amount = 2}
       },
       icons = {
@@ -553,7 +553,7 @@ data:extend(
         {type = "fluid", name = "water", amount = 50}
       },
       results = {
-        {type = "item", name = "bio-resin", amount = 4},
+        {type = "item", name = "bio-resin", amount = 7},
         {type = "item", name = "solid-tree", amount = 3}
       },
       icons = {
@@ -587,7 +587,7 @@ data:extend(
         {type = "item", name = "temperate-tree", amount = 1},
       },
       results = {
-        {type = "item", name = "bio-resin", amount = 6}
+        {type = "item", name = "bio-resin", amount = 10}
       },
       main_product = "bio-resin",
       always_show_products = true,
@@ -601,11 +601,11 @@ data:extend(
       enabled = false,
       energy_required = 4,
       ingredients = {
-        {type = "fluid", name = "gas-ethanol", amount = 20},
+        {type = "fluid", name = "gas-ethanol", amount = 40},
         {type = "item", name = "bio-resin", amount = 1}
       },
       results = {
-        {type = "fluid", name = "liquid-resin", amount = 5}
+        {type = "fluid", name = "liquid-resin", amount = 10}
       },
       main_product = "liquid-resin",
       always_show_products = true,
@@ -809,7 +809,7 @@ data:extend(
         {type = "fluid", name = "water-light-mud", amount = 50}
       },
       results = {
-        {type = "item", name = "bio-plastic", amount = 2},
+        {type = "item", name = "bio-plastic", amount = 4},
         {type = "item", name = "solid-tree", amount = 2}
       },
       icons = {
@@ -845,7 +845,7 @@ data:extend(
         {type = "fluid", name = "water-light-mud", amount = 50}
       },
       results = {
-        {type = "item", name = "bio-plastic", amount = 4},
+        {type = "item", name = "bio-plastic", amount = 7},
         {type = "item", name = "solid-tree", amount = 3}
       },
       icons = {
@@ -879,7 +879,7 @@ data:extend(
         {type = "item", name = "swamp-tree", amount = 1},
       },
       results = {
-        {type = "item", name = "bio-plastic", amount = 6}
+        {type = "item", name = "bio-plastic", amount = 10}
       },
       main_product = "bio-plastic",
       always_show_products = true,
@@ -893,11 +893,11 @@ data:extend(
       enabled = false,
       energy_required = 4,
       ingredients = {
-        {type = "fluid", name = "gas-acetone", amount = 20},
+        {type = "fluid", name = "gas-acetone", amount = 40},
         {type = "item", name = "bio-plastic", amount = 1}
       },
       results = {
-        {type = "fluid", name = "liquid-plastic", amount = 5}
+        {type = "fluid", name = "liquid-plastic", amount = 10}
       },
       main_product = "liquid-plastic",
       always_show_products = true,
@@ -1058,7 +1058,7 @@ data:extend(
         {type = "fluid", name = "water-saline", amount = 50}
       },
       results = {
-        {type = "item", name = "bio-rubber", amount = 2},
+        {type = "item", name = "bio-rubber", amount = 4},
         {type = "item", name = "solid-tree", amount = 2}
       },
       icons = {
@@ -1094,7 +1094,7 @@ data:extend(
         {type = "fluid", name = "water-saline", amount = 50}
       },
       results = {
-        {type = "item", name = "bio-rubber", amount = 4},
+        {type = "item", name = "bio-rubber", amount = 7},
         {type = "item", name = "solid-tree", amount = 3}
       },
       icons = {
@@ -1128,7 +1128,7 @@ data:extend(
         {type = "item", name = "swamp-tree", amount = 1},
       },
       results = {
-        {type = "item", name = "bio-rubber", amount = 6}
+        {type = "item", name = "bio-rubber", amount = 10}
       },
       main_product = "bio-rubber",
       always_show_products = true,
@@ -1142,11 +1142,11 @@ data:extend(
       enabled = false,
       energy_required = 4,
       ingredients = {
-        {type = "fluid", name = "gas-acetone", amount = 20},
+        {type = "fluid", name = "gas-acetone", amount = 40},
         {type = "item", name = "bio-rubber", amount = 1}
       },
       results = {
-        {type = "fluid", name = "liquid-rubber", amount = 5}
+        {type = "fluid", name = "liquid-rubber", amount = 10}
       },
       main_product = "liquid-rubber",
       always_show_products = true,

@@ -473,6 +473,105 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
   end
 end
 
+-- INCOMPLETE FUNCTION: have to duplicate barrel as well
+-- ov_functions.duplicate_barreling_at_temperature = function(fluid, temp, min_temp, max_temp)
+--   temp = temp or nil
+--   min_temp = min_temp or nil
+--   max_temp = max_temp or nil
+
+--   if data.raw.fluid[fluid] then
+--     local fluid = data.raw.fluid[fluid]
+--     local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
+--     local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
+--     local duplicate
+--     if fill_barrel then
+--       duplicate = table.deepcopy(fill_barrel)
+--       duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
+--       for _, ingredient in pairs(duplicate.ingredients) do
+--         if ingredient.type == "fluid" and ingredient.name == fluid.name then
+--           if temp then
+--             ingredient.temperature = temp
+--           else
+--             ingredient.minimum_temperature = min_temp
+--             ingredient.maximum_temperature = max_temp
+--           end
+--         end
+--       end
+--       data:extend(
+--         {
+--           duplicate
+--         }
+--       )
+--     end
+--     if empty_barrel then
+--       duplicate = table.deepcopy(empty_barrel)
+--       duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
+--       for _, ingredient in pairs(empty_barrel.results) do
+--         if ingredient.type == "fluid" and ingredient.name == fluid.name then
+--           if temp then
+--             ingredient.temperature = temp
+--           else
+--             ingredient.minimum_temperature = min_temp
+--             ingredient.maximum_temperature = max_temp
+--           end
+--         end
+--       end
+--       if temp then
+--         fill_barrel.temperature = temp
+--       else
+--         fill_barrel.minimum_temperature = min_temp
+--         fill_barrel.maximum_temperature = max_temp
+--       end
+--       data:extend(
+--         {
+--           duplicate
+--         }
+--       )
+--     end
+--   end
+-- end
+
+ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_temp)
+  temp = temp or nil
+  min_temp = min_temp or nil
+  max_temp = max_temp or nil
+  if data.raw.fluid[fluid] then
+    local fluid = data.raw.fluid[fluid]
+    local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
+    local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
+    if fill_barrel then
+      for _, ingredient in pairs(fill_barrel.ingredients) do
+        if ingredient.type == "fluid" and ingredient.name == fluid.name then
+          if temp then
+            ingredient.temperature = temp
+          else
+            ingredient.minimum_temperature = min_temp
+            ingredient.maximum_temperature = max_temp
+          end
+        end
+      end
+    end
+    if empty_barrel then
+      for _, ingredient in pairs(empty_barrel.results) do
+        if ingredient.type == "fluid" and ingredient.name == fluid.name then
+          if temp then
+            ingredient.temperature = temp
+          else
+            ingredient.minimum_temperature = min_temp
+            ingredient.maximum_temperature = max_temp
+          end
+        end
+      end
+      if temp then
+        fill_barrel.temperature = temp
+      else
+        fill_barrel.minimum_temperature = min_temp
+        fill_barrel.maximum_temperature = max_temp
+      end
+    end
+  end
+end
+
 ov_functions.barrel_overrides = function(fluid, style) --Bottling override functions for icons, localisation and tech unlocks
   if data.raw.fluid[fluid] then
     --declare variables moving forward
@@ -561,6 +660,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
   local function adjust_subtable(parent, subtable, substitution_type)
     local st = parent[subtable]
     if st then
+      local replace = {}
       for ix, item in pairs(st) do
         if item and not item.name then -- shift to uniform format for ease of handling
           item.name = item[1]
@@ -573,6 +673,15 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
         if new then
           item.name = new
         end
+        if replace[item.name] then
+          replace[item.name].amount = item.amount
+        else
+          replace[item.name] = item
+        end
+      end
+      parent[subtable] = {}
+      for i, v in pairs(replace) do
+        table.insert(parent[subtable], v)
       end
     end
   end
