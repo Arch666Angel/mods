@@ -48,11 +48,11 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
         icon = layers_to_add.icon,
         icon_size = layers_to_add.icon_size,
         tint = layers_to_add.tint,
-        scale = (layer_to_add.scale or 1) * (layer_scale or 1),
+        scale = (layers_to_add.scale or 1) * (layer_scale or 1),
         shift =
         {
-            (layer_to_add.shift and (layer_to_add.shift[1] or layer_to_add.shift.x) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
-            (layer_to_add.shift and (layer_to_add.shift[2] or layer_to_add.shift.y) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
+            (layers_to_add.shift and (layers_to_add.shift[1] or layers_to_add.shift.x) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
+            (layers_to_add.shift and (layers_to_add.shift[2] or layers_to_add.shift.y) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
         }
       }
     )

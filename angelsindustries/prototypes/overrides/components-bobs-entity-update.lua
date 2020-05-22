@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 -- CUSTOM FIXES FOR BOBS
-
+if angelsmods.industries.components then
 if mods["bobassembly"] then
   -- burner assemblers
   OV.patch_recipes(
@@ -18,4 +18,5 @@ if mods["bobassembly"] then
       }
     }
   )
+end
 end

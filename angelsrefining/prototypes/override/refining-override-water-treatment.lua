@@ -55,7 +55,7 @@ end
 -------------------------------------------------------------------------------
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods.bobrevamp and settings.startup["bobmods-revamp-hardmode"].value then
+if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
   local limestone = data.raw.item["limestone"]
   if limestone then
     limestone.icon = nil

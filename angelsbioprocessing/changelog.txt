@@ -15,6 +15,7 @@ Date: ???
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria
     - Crystal powder liquification now requres liquifier instead of assembler (228)
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
+    - MP safer method of requiring files (check inside the file instead of arround)
   Balancing:
     - Moved resin from wood recipe to tree arboretums, so it doesn't require garden exploration
     - Special gardens are now easier to produce:

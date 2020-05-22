@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
-require("prototypes.overrides.industries-override-functions")
-
+--require("prototypes.overrides.industries-override-functions")
+if angelsmods.industries.tech then
 -------------------------------------------------------------------------------
 -- BASE BOBS (MCI) ------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -258,4 +258,5 @@ if mods["bobtech"] then
     core_replace("steam-power", "energy", "basic")
     core_replace("steam-automation", "processing", "basic")
   end
+end
 end

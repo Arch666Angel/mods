@@ -1,9 +1,8 @@
 local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
+require("prototypes.overrides.global-components-recipe")
 
-if angelsmods.industries.overhaul and angelsmods.industries.components then
-  require("prototypes.overrides.global-components-recipe")
-
+if angelsmods.industries.components then
   --hide the unused advanced tech blocks
   data.raw.recipe["block-extraction-3"].hidden = true
   data.raw.recipe["block-extraction-4"].hidden = true
@@ -44,14 +43,10 @@ if angelsmods.industries.overhaul and angelsmods.industries.components then
     },
     "block-production-5"
   )
-
   OV.execute()
 end
-
-if angelsmods.industries.overhaul and angelsmods.industries.tech then
-  require("prototypes.overrides.global-tech")
-  OV.execute()
-end
+--tech updates part 1
+require("prototypes.overrides.global-tech")
 
 --set ingredient return on building pickup
 if angelsmods.industries.components then

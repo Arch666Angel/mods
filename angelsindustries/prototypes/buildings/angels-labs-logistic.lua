@@ -5,7 +5,7 @@ local function create_rich_text_icons(inputs)
   end
   return rich_text_icons
 end
-
+if angelsmods.industries.tech then
 data:extend(
   {
     --LOGISTIC LAB
@@ -277,3 +277,4 @@ data:extend(
 angelsmods.triggers.lab_ignore_token["angels-logistic-lab-1"] = true
 angelsmods.triggers.lab_ignore_token["angels-logistic-lab-2"] = true
 angelsmods.triggers.lab_ignore_token["angels-logistic-lab-3"] = true
+end
