@@ -39,7 +39,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
       prerequisites = {
-        "water-treatment"
+        "water-treatment",
+        "electronics"
       },
       effects = {
         {
@@ -78,7 +79,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
       prerequisites = {
-        "water-treatment-2"
+        "water-treatment-2",
+        "advanced-electronics",
       },
       effects = {
         {
@@ -165,6 +167,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "water-viscous-mud"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "washing-1"
         },
         {
@@ -185,15 +191,11 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "water-viscous-mud"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-mud-landfill"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "solid-clay"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-limestone"
         },
         {
           type = "unlock-recipe",
@@ -216,7 +218,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-washing-1",
-        "water-treatment"
+        "water-treatment",
+        "landfill"
       },
       effects = {
         {
@@ -225,12 +228,12 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "solid-limestone"
+          recipe = "solid-geodes"
         },
         {
           type = "unlock-recipe",
-          recipe = "solid-geodes"
-        }
+          recipe = "solid-mud-landfill"
+        },
       },
       unit = {
         count = 30,

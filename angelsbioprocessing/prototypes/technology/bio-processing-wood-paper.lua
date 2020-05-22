@@ -100,7 +100,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing",
-      "bio-farm",
+      "bio-farm-1",
     },
     effects =
     {

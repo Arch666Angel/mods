@@ -100,7 +100,7 @@ data:extend(
       prerequisites = {
         "angels-iron-smelting-2",
         "ore-processing-2",
-        "water-washing-2",
+        "water-washing-1",
         "angels-coolant-1"
       },
       effects = {

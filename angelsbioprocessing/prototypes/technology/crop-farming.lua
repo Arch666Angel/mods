@@ -23,18 +23,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "swamp-garden-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-cultivating-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-cultivating-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-cultivating-a"
         }
       },
       unit = {
@@ -52,11 +40,23 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm",
+        "bio-farm-1",
         --"bio-processing-brown",
         "bio-paper-1",
       },
       effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "temperate-garden-cultivating-a"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "desert-garden-cultivating-a"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "swamp-garden-cultivating-a"
+        },
         {
           type = "unlock-recipe",
           recipe = "garden-cultivating"
@@ -72,12 +72,13 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-farm",
+      name = "bio-farm-1",
       icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "gardens"
+        "gardens",
+        "water-washing-1"
       },
       effects = {
         {
@@ -111,11 +112,41 @@ data:extend(
     },
     {
       type = "technology",
+      name = "bio-farm-2",
+      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-farm-1",
+        "angels-nitrogen-processing-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "solid-soil-alternative"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-fertilizer"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
       name = "bio-farm-alien",
       icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
+        "bio-farm-2",
         "bio-processing-alien-1",
         "gardens-2"
       },
@@ -140,12 +171,12 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-temperate-farming",
+      name = "bio-temperate-farming-1",
       icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -183,7 +214,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "sorting-temperate-3"
+        }
+      },
+      unit = {
+        count = 32,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-temperate-farming-2",
+      icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-temperate-farming-1",
+        "bio-farm-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "temperate-4"
@@ -213,6 +265,7 @@ data:extend(
         count = 32,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -225,7 +278,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-temperate-farming",
+        "bio-temperate-farming-2",
         "bio-farm-alien"
       },
       effects = {
@@ -258,12 +311,12 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-desert-farming",
+      name = "bio-desert-farming-1",
       icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -301,7 +354,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "sorting-desert-3"
+        }
+      },
+      unit = {
+        count = 32,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-desert-farming-2",
+      icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-desert-farming-1",
+        "bio-farm-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "desert-4"
@@ -331,6 +405,7 @@ data:extend(
         count = 32,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -343,7 +418,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-desert-farming",
+        "bio-desert-farming-2",
         "bio-farm-alien"
       },
       effects = {
@@ -376,12 +451,12 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-swamp-farming",
+      name = "bio-swamp-farming-1",
       icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -419,7 +494,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "sorting-swamp-3"
+        }
+      },
+      unit = {
+        count = 32,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-swamp-farming-2",
+      icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-swamp-farming-1",
+        "bio-farm-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "swamp-4"
@@ -449,6 +545,7 @@ data:extend(
         count = 32,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -461,7 +558,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-swamp-farming",
+        "bio-swamp-farming-2",
         "bio-farm-alien"
       },
       effects = {
@@ -499,7 +596,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -559,7 +656,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -607,7 +704,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         -- {
