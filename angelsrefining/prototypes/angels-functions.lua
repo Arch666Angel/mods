@@ -125,6 +125,81 @@ local icon_tint_table = {
   --y = { r = 255, g = 105, b = 180 }, -- Syngas
 }
 
+local function create_recipe_molecule_icons(molecules_icon, molecules_shift, molecules_scale)
+  molecules_icon = clean_table(molecules_icon) or {}
+  molecules_shift = molecules_shift or {{-11.5, 12}, {11.5, 12}, {0, 12}}
+  molecules_scale = molecules_scale or 10.24 / 32 -- assume base 32 size
+
+  for molecule_index, molecule_icon in pairs(molecules_icon) do
+    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
+      molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
+    end
+  end
+
+  for molecule_index, molecule_icon in pairs(molecules_icon) do
+    if type(molecule_icon) ~= "table" then
+      molecules_icon[molecule_index] = {
+        {
+          icon = molecule_icon,
+          icon_size = 32
+        }
+      }
+    elseif type(molecule_icon[1]) ~= "table" then
+      local mi = util.table.deepcopy(molecule_icon)
+      molecules_icon[molecule_index] = {
+        {
+          icon = mi.icon or mi[1] or nil,
+          shift = mi.shift or mi[3] or nil,
+          scale = mi.scale or mi[4] or nil,
+          tint = mi.tint or mi[5] or nil
+        }
+      }
+      if molecules_icon[molecule_index][1].icon then
+        molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
+        if molecules_icon[molecule_index][1].icon_size ~= 32 then
+          molecules_icon[molecule_index][1].scale =
+            (molecules_icon[molecule_index][1].scale or 1) * 32 / molecules_icon[molecule_index][1].icon_size
+        end
+      else
+        --something is wrong here but we need to return something
+        molecules_icon[molecule_index] = {
+          {
+            icon = "__angelsrefining__/graphics/icons/void.png",
+            icon_size = 32
+          }
+        }
+      end
+    else
+      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
+        if not molecule_icon_layer.icon_size then
+          molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
+        end
+      end
+    end
+    molecule_icon = molecules_icon[molecule_index]
+
+    -- now shift this icon to its correct position
+    molecule_shift = molecules_shift[molecule_index] or {0, 0}
+    molecule_scale = molecules_scale
+    for layer_index, layer in pairs(molecule_icon) do
+      layer.scale = layer.scale or 1
+      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
+
+      layer.shift = {
+        layer.shift[1] * molecule_scale + molecule_shift[1],
+        layer.shift[2] * molecule_scale + molecule_shift[2]
+      }
+      layer.scale = layer.scale * molecule_scale
+
+      molecule_icon[layer_index].scale = layer.scale
+      molecule_icon[layer_index].shift = layer.shift
+    end
+    molecules_icon[molecule_index] = clean_table(molecule_icon)
+  end
+
+  return clean_table(molecules_icon)
+end
+
 -- CREATE GAS FLUID ICONS (NOT FOR RECIPES)
 function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
   -- molecule_icon can be a string (assumes icon_size 32)
@@ -211,145 +286,10 @@ end
 
 -- CREATE GAS RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
-  -- bot_molecules_icon is a table of molecule_icon, which can be a string
+  -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = clean_table(bot_molecules_icon) or {}
-  for molecule_index, molecule_icon in pairs(bot_molecules_icon) do
-    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
-      bot_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
-    end
-  end
-
-  for molecule_index, molecule_icon in pairs(bot_molecules_icon) do
-    if type(molecule_icon) ~= "table" then
-      bot_molecules_icon[molecule_index] = {
-        {
-          icon = molecule_icon,
-          icon_size = 32
-        }
-      }
-    elseif type(molecule_icon[1]) ~= "table" then
-      local mi = util.table.deepcopy(molecule_icon)
-      bot_molecules_icon[molecule_index] = {
-        {
-          icon = mi.icon or mi[1] or nil,
-          shift = mi.shift or mi[3] or nil,
-          scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
-      }
-      if bot_molecules_icon[molecule_index][1].icon then
-        bot_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
-        if bot_molecules_icon[molecule_index][1].icon_size ~= 32 then
-          bot_molecules_icon[molecule_index][1].scale =
-            (bot_molecules_icon[molecule_index][1].scale or 1) * 32 / bot_molecules_icon[molecule_index][1].icon_size
-        end
-      else
-        --something is wrong here but we need to return something
-        bot_molecules_icon[molecule_index] = {
-          {
-            icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
-        }
-      end
-    else
-      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
-        if not molecule_icon_layer.icon_size then
-          bot_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
-        end
-      end
-    end
-    molecule_icon = bot_molecules_icon[molecule_index]
-
-    -- now shift this icon to its correct position
-    molecule_shift = ({{-11.5, 12}, {11.5, 12}, {0, 12}})[molecule_index] or {0, 0}
-    molecule_scale = 10.24 / 32 -- assume base size 32
-    for layer_index, layer in pairs(molecule_icon) do
-      layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
-
-      layer.shift = {
-        layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
-      }
-      layer.scale = layer.scale * molecule_scale
-
-      molecule_icon[layer_index].scale = layer.scale
-      molecule_icon[layer_index].shift = layer.shift
-    end
-    bot_molecules_icon[molecule_index] = clean_table(molecule_icon)
-  end
-  bot_molecules_icon = clean_table(bot_molecules_icon)
-
-  top_molecules_icon = clean_table(top_molecules_icon) or {}
-  for molecule_index, molecule_icon in pairs(top_molecules_icon) do
-    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
-      top_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
-    end
-  end
-
-  for molecule_index, molecule_icon in pairs(top_molecules_icon) do
-    if type(molecule_icon) ~= "table" then
-      top_molecules_icon[molecule_index] = {
-        {
-          icon = molecule_icon,
-          icon_size = 32
-        }
-      }
-    elseif type(molecule_icon[1]) ~= "table" then
-      local mi = util.table.deepcopy(molecule_icon)
-      top_molecules_icon[molecule_index] = {
-        {
-          icon = mi.icon or mi[1] or nil,
-          shift = mi.shift or mi[3] or nil,
-          scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
-      }
-      if top_molecules_icon[molecule_index][1].icon then
-        top_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
-        if top_molecules_icon[molecule_index][1].icon_size ~= 32 then
-          top_molecules_icon[molecule_index][1].scale =
-            (top_molecules_icon[molecule_index][1].scale or 1) * 32 / top_molecules_icon[molecule_index][1].icon_size
-        end
-      else
-        --something is wrong here but we need to return something
-        top_molecules_icon[molecule_index] = {
-          {
-            icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
-        }
-      end
-    else
-      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
-        if not molecule_icon_layer.icon_size then
-          top_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
-        end
-      end
-    end
-    molecule_icon = top_molecules_icon[molecule_index]
-
-    -- now shift this icon to its correct position
-    molecule_shift = ({{-11.5, -12}, {11.5, -12}, {0, -12}})[molecule_index] or {0, 0}
-    molecule_scale = 10.24 / 32 -- assume base size 32
-    for layer_index, layer in pairs(molecule_icon) do
-      layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
-
-      layer.shift = {
-        layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
-      }
-      layer.scale = layer.scale * molecule_scale
-
-      molecule_icon[layer_index].scale = layer.scale
-      molecule_icon[layer_index].shift = layer.shift
-    end
-    top_molecules_icon[molecule_index] = clean_table(molecule_icon)
-  end
-  top_molecules_icon = clean_table(top_molecules_icon)
+  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
+  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
   -- allows a string of max 3 characters for default tints
@@ -497,145 +437,10 @@ end
 
 -- CREATE LIQUID RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
-  -- bot_molecules_icon is a table of molecule_icon, which can be a string
+  -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = bot_molecules_icon or {}
-  for molecule_index, molecule_icon in pairs(bot_molecules_icon) do
-    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
-      bot_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
-    end
-  end
-
-  for molecule_index, molecule_icon in pairs(bot_molecules_icon) do
-    if type(molecule_icon) ~= "table" then
-      bot_molecules_icon[molecule_index] = {
-        {
-          icon = molecule_icon,
-          icon_size = 32
-        }
-      }
-    elseif type(molecule_icon[1]) ~= "table" then
-      local mi = util.table.deepcopy(molecule_icon)
-      bot_molecules_icon[molecule_index] = {
-        {
-          icon = mi.icon or mi[1] or nil,
-          shift = mi.shift or mi[3] or nil,
-          scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
-      }
-      if bot_molecules_icon[molecule_index][1].icon then
-        bot_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
-        if bot_molecules_icon[molecule_index][1].icon_size ~= 32 then
-          bot_molecules_icon[molecule_index][1].scale =
-            (bot_molecules_icon[molecule_index][1].scale or 1) * 32 / bot_molecules_icon[molecule_index][1].icon_size
-        end
-      else
-        --something is wrong here but we need to return something
-        bot_molecules_icon[molecule_index] = {
-          {
-            icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
-        }
-      end
-    else
-      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
-        if not molecule_icon_layer.icon_size then
-          bot_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
-        end
-      end
-    end
-    molecule_icon = bot_molecules_icon[molecule_index]
-
-    -- now shift this icon to its correct position
-    molecule_shift = ({{-11.5, 12}, {11.5, 12}, {0, 12}})[molecule_index] or {0, 0}
-    molecule_scale = 10.24 / 32 -- assume base size 32
-    for layer_index, layer in pairs(molecule_icon) do
-      layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
-
-      layer.shift = {
-        layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
-      }
-      layer.scale = layer.scale * molecule_scale
-
-      molecule_icon[layer_index].scale = layer.scale
-      molecule_icon[layer_index].shift = layer.shift
-    end
-    bot_molecules_icon[molecule_index] = clean_table(molecule_icon)
-  end
-  bot_molecules_icon = clean_table(bot_molecules_icon)
-
-  top_molecules_icon = top_molecules_icon or {}
-  for molecule_index, molecule_icon in pairs(top_molecules_icon) do
-    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
-      top_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
-    end
-  end
-
-  for molecule_index, molecule_icon in pairs(top_molecules_icon) do
-    if type(molecule_icon) ~= "table" then
-      top_molecules_icon[molecule_index] = {
-        {
-          icon = molecule_icon,
-          icon_size = 32
-        }
-      }
-    elseif type(molecule_icon[1]) ~= "table" then
-      local mi = util.table.deepcopy(molecule_icon)
-      top_molecules_icon[molecule_index] = {
-        {
-          icon = mi.icon or mi[1] or nil,
-          shift = mi.shift or mi[3] or nil,
-          scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
-      }
-      if top_molecules_icon[molecule_index][1].icon then
-        top_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
-        if top_molecules_icon[molecule_index][1].icon_size ~= 32 then
-          top_molecules_icon[molecule_index][1].scale =
-            (top_molecules_icon[molecule_index][1].scale or 1) * 32 / top_molecules_icon[molecule_index][1].icon_size
-        end
-      else
-        --something is wrong here but we need to return something
-        top_molecules_icon[molecule_index] = {
-          {
-            icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
-        }
-      end
-    else
-      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
-        if not molecule_icon_layer.icon_size then
-          top_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
-        end
-      end
-    end
-    molecule_icon = top_molecules_icon[molecule_index]
-
-    -- now shift this icon to its correct position
-    molecule_shift = ({{-11.5, -12}, {11.5, -12}, {0, -12}})[molecule_index] or {0, 0}
-    molecule_scale = 10.24 / 32 -- assume base size 32
-    for layer_index, layer in pairs(molecule_icon) do
-      layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
-
-      layer.shift = {
-        layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
-      }
-      layer.scale = layer.scale * molecule_scale
-
-      molecule_icon[layer_index].scale = layer.scale
-      molecule_icon[layer_index].shift = layer.shift
-    end
-    top_molecules_icon[molecule_index] = clean_table(molecule_icon)
-  end
-  top_molecules_icon = clean_table(top_molecules_icon)
+  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
+  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
   -- allows a string of max 3 characters for default tints
@@ -822,145 +627,10 @@ end
 
 -- CREATE VISCOUS LIQUID RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
-  -- bot_molecules_icon is a table of molecule_icon, which can be a string
+  -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = bot_molecules_icon or {}
-  for molecule_index, molecule_icon in pairs(bot_molecules_icon) do
-    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
-      bot_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
-    end
-  end
-
-  for molecule_index, molecule_icon in pairs(bot_molecules_icon) do
-    if type(molecule_icon) ~= "table" then
-      bot_molecules_icon[molecule_index] = {
-        {
-          icon = molecule_icon,
-          icon_size = 32
-        }
-      }
-    elseif type(molecule_icon[1]) ~= "table" then
-      local mi = util.table.deepcopy(molecule_icon)
-      bot_molecules_icon[molecule_index] = {
-        {
-          icon = mi.icon or mi[1] or nil,
-          shift = mi.shift or mi[3] or nil,
-          scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
-      }
-      if bot_molecules_icon[molecule_index][1].icon then
-        bot_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
-        if bot_molecules_icon[molecule_index][1].icon_size ~= 32 then
-          bot_molecules_icon[molecule_index][1].scale =
-            (bot_molecules_icon[molecule_index][1].scale or 1) * 32 / bot_molecules_icon[molecule_index][1].icon_size
-        end
-      else
-        --something is wrong here but we need to return something
-        bot_molecules_icon[molecule_index] = {
-          {
-            icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
-        }
-      end
-    else
-      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
-        if not molecule_icon_layer.icon_size then
-          bot_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
-        end
-      end
-    end
-    molecule_icon = bot_molecules_icon[molecule_index]
-
-    -- now shift this icon to its correct position
-    molecule_shift = ({{-11.5, 12}, {11.5, 12}, {0, 12}})[molecule_index] or {0, 0}
-    molecule_scale = 10.24 / 32 -- assume base size 32
-    for layer_index, layer in pairs(molecule_icon) do
-      layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
-
-      layer.shift = {
-        layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
-      }
-      layer.scale = layer.scale * molecule_scale
-
-      molecule_icon[layer_index].scale = layer.scale
-      molecule_icon[layer_index].shift = layer.shift
-    end
-    bot_molecules_icon[molecule_index] = clean_table(molecule_icon)
-  end
-  bot_molecules_icon = clean_table(bot_molecules_icon)
-
-  top_molecules_icon = top_molecules_icon or {}
-  for molecule_index, molecule_icon in pairs(top_molecules_icon) do
-    if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
-      top_molecules_icon[molecule_index] = util.table.deepcopy(get_icons(molecule_icon))
-    end
-  end
-
-  for molecule_index, molecule_icon in pairs(top_molecules_icon) do
-    if type(molecule_icon) ~= "table" then
-      top_molecules_icon[molecule_index] = {
-        {
-          icon = molecule_icon,
-          icon_size = 32
-        }
-      }
-    elseif type(molecule_icon[1]) ~= "table" then
-      local mi = util.table.deepcopy(molecule_icon)
-      top_molecules_icon[molecule_index] = {
-        {
-          icon = mi.icon or mi[1] or nil,
-          shift = mi.shift or mi[3] or nil,
-          scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
-      }
-      if top_molecules_icon[molecule_index][1].icon then
-        top_molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
-        if top_molecules_icon[molecule_index][1].icon_size ~= 32 then
-          top_molecules_icon[molecule_index][1].scale =
-            (top_molecules_icon[molecule_index][1].scale or 1) * 32 / top_molecules_icon[molecule_index][1].icon_size
-        end
-      else
-        --something is wrong here but we need to return something
-        top_molecules_icon[molecule_index] = {
-          {
-            icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
-        }
-      end
-    else
-      for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
-        if not molecule_icon_layer.icon_size then
-          top_molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
-        end
-      end
-    end
-    molecule_icon = top_molecules_icon[molecule_index]
-
-    -- now shift this icon to its correct position
-    molecule_shift = ({{-11.5, -12}, {11.5, -12}, {0, -12}})[molecule_index] or {0, 0}
-    molecule_scale = 10.24 / 32 -- assume base size 32
-    for layer_index, layer in pairs(molecule_icon) do
-      layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
-
-      layer.shift = {
-        layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
-      }
-      layer.scale = layer.scale * molecule_scale
-
-      molecule_icon[layer_index].scale = layer.scale
-      molecule_icon[layer_index].shift = layer.shift
-    end
-    top_molecules_icon[molecule_index] = clean_table(molecule_icon)
-  end
-  top_molecules_icon = clean_table(top_molecules_icon)
+  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
+  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 5 tints, for the top, bot_left top_mask, bot_mask, bot_right,
   -- if bot_left is present, but not bot_right (nil), then both bottom sides will have
@@ -1052,6 +722,55 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
       } or
       nil
   }
+  for _, bot_molecule_icon in pairs(bot_molecules_icon) do
+    for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do
+      table.insert(recipe_icons, bot_molecule_icon_layer)
+    end
+  end
+  for _, top_molecule_icon in pairs(top_molecules_icon) do
+    for _, top_molecule_icon_layer in pairs(top_molecule_icon) do
+      table.insert(recipe_icons, top_molecule_icon_layer)
+    end
+  end
+  return clean_table(recipe_icons)
+end
+
+-- CREATE VISCOUS LIQUID FILTERING RECIPE ICONS (NOT FOR FLUIDS)
+function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(filter_type, tints, bot_molecules_icon, top_molecules_icon)
+  -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
+  -- (assumes icon_size 32) or be a table with size defined
+  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
+  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
+
+  -- filter_type is a string, can be "coal" or "ceramic"
+  local valid_filter_type = {
+    ["coal"] = true,
+    ["ceramic"] = true,
+  }
+  filter_type = valid_filter_type[filter_type] and filter_type or "coal"
+
+  local viscous_liquid_fluid_icon = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, tints)
+
+  local recipe_icons = {
+    viscous_liquid_fluid_icon[1], -- base layer required for background shadow
+    {
+      icon = string.format("__angelsrefining__/graphics/icons/filter-%s.png", filter_type),
+      icon_size = 32,
+      scale = 32 / 32 * 0.85,
+      --shift = {0, -2},
+    }
+  }
+  viscous_liquid_fluid_icon[1] = nil
+  viscous_liquid_fluid_icon = clean_table(viscous_liquid_fluid_icon)
+  for _, viscous_liquid_fluid_icon_layer in pairs(viscous_liquid_fluid_icon) do
+    table.insert(recipe_icons, viscous_liquid_fluid_icon_layer)
+  end
+  table.insert(recipe_icons, {
+    icon = string.format("__angelsrefining__/graphics/icons/angels-liquid/filter-%s-front.png", filter_type),
+    icon_size = 32,
+    scale = 32 / 32 * 0.85,
+    --shift = {0, -2},
+  })
   for _, bot_molecule_icon in pairs(bot_molecules_icon) do
     for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do
       table.insert(recipe_icons, bot_molecule_icon_layer)
