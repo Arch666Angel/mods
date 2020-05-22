@@ -3,6 +3,16 @@ local OV = angelsmods.functions.OV
 angelsmods.functions.move_item("water", "water-treatment-fluid", "a", "fluid")
 
 -------------------------------------------------------------------------------
+-- Enforce semiheavy water temp -----------------------------------------------
+-------------------------------------------------------------------------------
+OV.set_temperature_barreling("liquid-water-semiheavy-1", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-semiheavy-2", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-semiheavy-3", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+
+-------------------------------------------------------------------------------
 -- REFINERY ACID WASTE PRODUCTS -----------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.petrochem and angelsmods.trigger.enableacids then
