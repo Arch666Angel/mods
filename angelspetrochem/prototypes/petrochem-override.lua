@@ -179,6 +179,16 @@ else
   OV.disable_technology({"water-chemistry-1", "water-chemistry-2"})
 end
 
+-- Enforce semiheavy water temp
+OV.set_temperature_barreling("liquid-water-semiheavy-1", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-semiheavy-2", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-semiheavy-3", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-heavy", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-heavy", 100)
+
 --SMELTING
 if not angelsmods.smelting then
   OV.disable_recipe({"solid-sodium-cyanide", "solid-sodium-carbonate", "solid-sodium-sulfate-separation"})
