@@ -120,7 +120,7 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "item", name = "solid-tungsten-oxide", amount = 12},
-        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 30}
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 30}
       },
       results = {
         {type = "fluid", name = "gas-tungsten-hexafluoride", amount = 60}

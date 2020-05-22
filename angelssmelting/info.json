@@ -9,7 +9,7 @@
   "description": "Angel's Smelting provides alternative ways to produce plate and increase ore yield at the expense of space and energy.",
   "dependencies": [
     "base >= 0.18.0",
-    "angelspetrochem >= 0.9.4",
+    "angelspetrochem >= 0.9.8",
     "angelsrefining >= 0.12.0",
     "? bobplates >= 0.15.0"
   ]

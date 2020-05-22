@@ -361,6 +361,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "liquid-hydrogen-fluoride"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "liquid-hydrofluoric-acid"
         },
         {

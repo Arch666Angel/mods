@@ -123,6 +123,25 @@ data:extend(
     },
     {
       type = "fluid",
+      name = "gas-hydrogen-fluoride",
+      localised_description = show_formula and {"tooltip-description.chemical-formula", "HF"} or nil,
+      icons = angelsmods.functions.create_gas_fluid_icon(
+        {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72},
+        "fhh"
+      ),
+      --icon_size = 32,
+      subgroup = "petrochem-sulfer-fluids",
+      order = "e",
+      default_temperature = 25,
+      heat_capacity = "0.1KJ",
+      base_color = {r = 0, g = 1, b = 0.5},
+      flow_color = {r = 0, g = 1, b = 0.5},
+      max_temperature = 100,
+      pressure_to_speed_ratio = 0.4,
+      flow_to_energy_ratio = 0.59
+    },
+    {
+      type = "fluid",
       name = "liquid-hydrofluoric-acid",
       localised_description = show_formula and {"tooltip-description.chemical-formula", "HF"} or nil,
       icons = angelsmods.functions.create_liquid_fluid_icon(
@@ -131,7 +150,7 @@ data:extend(
       ),
       --icon_size = 32,
       subgroup = "petrochem-sulfer-fluids",
-      order = "e",
+      order = "f",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = {r = 0, g = 1, b = 0.5},

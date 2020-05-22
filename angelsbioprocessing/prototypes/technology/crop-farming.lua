@@ -96,10 +96,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-soil"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fertilizer"
         }
       },
       unit = {

@@ -10,7 +10,7 @@ data:extend(
       ingredients =
       {
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 20},
-        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 10},
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 10},
         {type = "fluid", name = "gas-oxygen", amount = 10}
       },
       results =
@@ -187,7 +187,7 @@ data:extend(
         {type = "item", name = "bio-puffer-2", amount = 2},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20},
-        {type = "fluid", name = "water-red-waste", amount = 100}
+        {type = "fluid", name = "water-yellow-waste", amount = 100}
       },
       results =
       {
@@ -196,7 +196,7 @@ data:extend(
         {type = "item", name = "bio-puffer-2", amount = 1, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.99, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "fluid", name = "gas-nitrogen-dioxide", amount = 100}
+        {type = "fluid", name = "gas-hydrogen-sulfide", amount = 100}
       },
       icons =
       {
@@ -230,7 +230,7 @@ data:extend(
         {type = "item", name = "bio-puffer-3", amount = 2},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20},
-        {type = "fluid", name = "water-greenyellow-waste", amount = 100}
+        {type = "fluid", name = "water-red-waste", amount = 100}
       },
       results =
       {
@@ -239,7 +239,7 @@ data:extend(
         {type = "item", name = "bio-puffer-3", amount = 1, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-3", amount = 1, probability = 0.99, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 100}
+        {type = "fluid", name = "gas-ammonia", amount = 100}
       },
       icons =
       {
@@ -273,7 +273,7 @@ data:extend(
         {type = "item", name = "bio-puffer-4", amount = 2},
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
         {type = "fluid", name = "gas-puffer-atmosphere", amount = 20},
-        {type = "fluid", name = "water-yellow-waste", amount = 100}
+        {type = "fluid", name = "water-greenyellow-waste", amount = 100}
       },
       results =
       {
@@ -282,7 +282,7 @@ data:extend(
         {type = "item", name = "bio-puffer-4", amount = 1, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-4", amount = 1, probability = 0.99, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "fluid", name = "gas-hydrogen-sulfide", amount = 100}
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 100}
       },
       icons =
       {
@@ -325,7 +325,7 @@ data:extend(
         {type = "item", name = "bio-puffer-5", amount = 1, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-5", amount = 1, probability = 0.99, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
         {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "fluid", name = "gas-chlorine", amount = 100}
+        {type = "fluid", name = "gas-hydrogen-chloride", amount = 100}
       },
       icons =
       {
