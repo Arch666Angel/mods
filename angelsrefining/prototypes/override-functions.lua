@@ -561,6 +561,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
   local function adjust_subtable(parent, subtable, substitution_type)
     local st = parent[subtable]
     if st then
+      local replace = {}
       for ix, item in pairs(st) do
         if item and not item.name then -- shift to uniform format for ease of handling
           item.name = item[1]
@@ -573,6 +574,15 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
         if new then
           item.name = new
         end
+        if replace[item.name] then
+          replace[item.name].amount = item.amount
+        else
+          replace[item.name] = item
+        end
+      end
+      parent[subtable] = {}
+      for i, v in pairs(replace) do
+        table.insert(parent[subtable], v)
       end
     end
   end
