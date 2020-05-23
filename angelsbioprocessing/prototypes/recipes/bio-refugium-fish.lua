@@ -343,7 +343,7 @@ data:extend(
       name = "fish-pressing-0",
       category = "bio-pressing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 12,
       ingredients = {
         {type = "item", name = "raw-fish", amount = 1}
@@ -368,7 +368,7 @@ data:extend(
       name = "fish-pressing-1",
       category = "bio-pressing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 10,
       ingredients = {
         {type = "item", name = "alien-fish-1-raw", amount = 1}
@@ -393,7 +393,7 @@ data:extend(
       name = "fish-pressing-2",
       category = "bio-pressing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 8,
       ingredients = {
         {type = "item", name = "alien-fish-2-raw", amount = 1}
@@ -418,7 +418,7 @@ data:extend(
       name = "fish-pressing-3",
       category = "bio-pressing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 6,
       ingredients = {
         {type = "item", name = "alien-fish-3-raw", amount = 1}
@@ -443,7 +443,7 @@ data:extend(
       name = "fish-pulp-nutrients",
       category = "nutrient-extractor",
       subgroup = "bio-processor-nutrient",
-      enabled = true,
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "fish-pulp", amount = 5}
@@ -466,7 +466,7 @@ data:extend(
       name = "liquid-raw-fish-oil-filtering-1",
       category = "bio-pressing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 8,
       ingredients = {
         {type = "fluid", name = "liquid-raw-fish-oil", amount = 150},
@@ -491,7 +491,7 @@ data:extend(
       name = "liquid-raw-fish-oil-filtering-2",
       category = "bio-pressing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 8,
       ingredients = {
         {type = "fluid", name = "liquid-raw-fish-oil", amount = 150},
@@ -516,7 +516,7 @@ data:extend(
       name = "liquid-fish-oil-refining",
       category = "oil-processing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-fish-oil", amount = 100}
@@ -540,7 +540,7 @@ data:extend(
       name = "advanced-liquid-fish-oil-refining",
       category = "oil-processing",
       subgroup = "bio-processor-press-fish",
-      enabled = true,
+      enabled = false,
       energy_required = 4,
       ingredients = {
         {type = "fluid", name = "liquid-fish-oil", amount = 100}
