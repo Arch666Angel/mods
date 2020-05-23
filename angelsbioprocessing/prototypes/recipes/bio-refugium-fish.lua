@@ -16,7 +16,7 @@ data:extend(
       },
       main_product = "liquid-fish-atmosphere",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{190, 255, 000}, {205, 255, 000}, {205, 255, 000}}),
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {194, 227, 091}, {184, 239, 000}, {156, 207, 000} }),
       order = "b"
     },
     {
@@ -35,7 +35,7 @@ data:extend(
       },
       main_product = "liquid-polluted-fish-atmosphere",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{190,255,000}, {241,050,238}, {241,050,238}}),
+      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {194, 227, 091}, {241,050,238}, {241,050,238} }),
       order = "b"
     },
     ---------------------------------------------------------------------------

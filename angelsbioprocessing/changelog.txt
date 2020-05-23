@@ -13,6 +13,7 @@ Date: ???
     - Crystal powder liquification now requres liquifier instead of assembler (228)
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
     - Added alternative way of producing soil from sand instead of mud
+    - Changed to color of fish water to be a less vibrant color with the new UI colors
   Bugfixes:
     - Fixed Alien Bacteria was using Perchloric Acid instead of Hydrochloric acid
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria
