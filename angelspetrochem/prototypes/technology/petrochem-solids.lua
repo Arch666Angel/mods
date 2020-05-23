@@ -7,7 +7,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/plastic-1-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-advanced-chemistry-1"
+        "angels-advanced-chemistry-1",
+        "plastics"
       },
       effects = {
         {
@@ -84,10 +85,35 @@ data:extend(
     },
     {
       type = "technology",
+      name = "resins",
+      icon = "__angelspetrochem__/graphics/technology/resins-tech.png",
+      icon_size = 128,
+      prerequisites = {
+        "angels-oil-processing"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "solid-resin"
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
       name = "resin-1",
       icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
       icon_size = 128,
       prerequisites = {
+        "resins",
         "angels-advanced-chemistry-1",
         "angels-nitrogen-processing-2"
       },
@@ -166,10 +192,35 @@ data:extend(
     },
     {
       type = "technology",
+      name = "rubbers",
+      icon = "__angelspetrochem__/graphics/technology/rubbers-tech.png",
+      icon_size = 128,
+      prerequisites = {
+        "angels-oil-processing"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "solid-rubber"
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
       name = "rubber",
       icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
       icon_size = 128,
       prerequisites = {
+        "rubbers",
         "gas-steam-cracking-1",
         "angels-advanced-chemistry-2"
       },

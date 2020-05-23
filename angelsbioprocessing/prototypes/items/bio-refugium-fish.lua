@@ -28,10 +28,9 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
-
-
-
-  -- FISH
+  -----------------------------------------------------------------------------
+  -- FISH ---------------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "capsule",
     name = "alien-fish-1-raw",
@@ -146,5 +145,45 @@ data:extend(
     order = "ad",
     stack_size = 100
   },
+  -----------------------------------------------------------------------------
+  -- PROCESSING ---------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  {
+    type = "fluid",
+    name = "liquid-raw-fish-oil",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} }),
+    subgroup = "bio-fish",
+    order = "da",
+    default_temperature = 25,
+    max_temperature = 100,
+    heat_capacity = "1KJ",
+    base_color = {r=194/255, g=122/255, b=29/255},
+    flow_color = {r=194/255, g=122/255, b=29/255},
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
+  },
+  {
+    type = "fluid",
+    name = "liquid-fish-oil",
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {191,155,037}, {191,155,037}, {244,191,015,0.8}, {244,191,015,0.8} }),
+    subgroup = "bio-fish",
+    order = "db",
+    default_temperature = 25,
+    max_temperature = 100,
+    heat_capacity = "1KJ",
+    base_color = {r=194/255, g=122/255, b=29/255},
+    flow_color = {r=194/255, g=122/255, b=29/255},
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
+  },
+  {
+    type = "item",
+    name = "fish-pulp",
+    icon = "__angelsbioprocessing__/graphics/icons/fish-pulp.png",
+    icon_size = 32,
+    subgroup = "bio-fish",
+    order = "dc",
+    stack_size = 200,
+  }
 }
 )

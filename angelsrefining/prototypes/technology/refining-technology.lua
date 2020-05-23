@@ -425,7 +425,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/slag-processing.png",
       icon_size = 64,
       prerequisites = {
-        "slag-processing-1"
+        "slag-processing-1",
+        "angels-aluminium-smelting-1"
       },
       effects = {
         {

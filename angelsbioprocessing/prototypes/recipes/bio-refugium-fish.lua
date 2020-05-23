@@ -273,7 +273,6 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-fish-butchery",
       enabled = false,
-      hidden = false,
       energy_required = 7.5,
       ingredients = {
         {type = "item", name = "raw-fish", amount = 1}
@@ -291,7 +290,6 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-fish-butchery",
       enabled = false,
-      hidden = false,
       energy_required = 7.5,
       ingredients = {
         {type = "item", name = "alien-fish-1-raw", amount = 1}
@@ -309,7 +307,6 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-fish-butchery",
       enabled = false,
-      hidden = false,
       energy_required = 7.5,
       ingredients = {
         {type = "item", name = "alien-fish-2-raw", amount = 1}
@@ -327,7 +324,6 @@ data:extend(
       category = "bio-butchery",
       subgroup = "bio-fish-butchery",
       enabled = false,
-      hidden = false,
       energy_required = 7.5,
       ingredients = {
         {type = "item", name = "alien-fish-3-raw", amount = 1}
@@ -340,6 +336,230 @@ data:extend(
       order = "ad"
     },
     ---------------------------------------------------------------------------
+    -- FISH OIL ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
+    {
+      type = "recipe",
+      name = "fish-pressing-0",
+      category = "bio-pressing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 12,
+      ingredients = {
+        {type = "item", name = "raw-fish", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-raw-fish-oil", amount = 200},
+        {type = "item", name = "fish-pulp", amount = 5}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
+        {
+          "raw-fish"
+        }
+      ),
+      icon_size = 32,
+      order = "a[oil-extraction]-a[fish-0]"
+    },
+    {
+      type = "recipe",
+      name = "fish-pressing-1",
+      category = "bio-pressing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 10,
+      ingredients = {
+        {type = "item", name = "alien-fish-1-raw", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-raw-fish-oil", amount = 200},
+        {type = "item", name = "fish-pulp", amount = 1}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
+        {
+          "alien-fish-1-raw"
+        }
+      ),
+      icon_size = 32,
+      order = "a[oil-extraction]-b[fish-1]"
+    },
+    {
+      type = "recipe",
+      name = "fish-pressing-2",
+      category = "bio-pressing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 8,
+      ingredients = {
+        {type = "item", name = "alien-fish-2-raw", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-raw-fish-oil", amount = 100},
+        {type = "item", name = "fish-pulp", amount = 2}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
+        {
+          "alien-fish-2-raw"
+        }
+      ),
+      icon_size = 32,
+      order = "a[oil-extraction]-c[fish-2]"
+    },
+    {
+      type = "recipe",
+      name = "fish-pressing-3",
+      category = "bio-pressing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 6,
+      ingredients = {
+        {type = "item", name = "alien-fish-3-raw", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-raw-fish-oil", amount = 50},
+        {type = "item", name = "fish-pulp", amount = 1}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
+        {
+          "alien-fish-3-raw"
+        }
+      ),
+      icon_size = 32,
+      order = "a[oil-extraction]-d[fish-3]"
+    },
+    {
+      type = "recipe",
+      name = "fish-pulp-nutrients",
+      category = "nutrient-extractor",
+      subgroup = "bio-processor-nutrient",
+      enabled = true,
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "fish-pulp", amount = 5}
+      },
+      results = {
+        {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+        nil,
+        {{214, 135, 010}, nil, {239, 168, 044}},
+        {
+          "fish-pulp"
+        }
+      ),
+      order = "a[nutrient-extraction]-g"
+    },
+    {
+      type = "recipe",
+      name = "liquid-raw-fish-oil-filtering-1",
+      category = "bio-pressing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 8,
+      ingredients = {
+        {type = "fluid", name = "liquid-raw-fish-oil", amount = 150},
+        {type = "fluid", name = "thermal-water", amount = 50},
+        {type = "item", name = "filter-coal", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-fish-oil", amount = 100},
+        {type = "fluid", name = "liquid-mineral-oil", amount = 100},
+        {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "coal",
+        { {200,113,048}, {191,155,037}, {241,155,057,0.8}, {244,191,015,0.8} }
+      ),
+      icon_size = 32,
+      order = "b[oil-processing]-b"
+    },
+    {
+      type = "recipe",
+      name = "liquid-raw-fish-oil-filtering-2",
+      category = "bio-pressing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 8,
+      ingredients = {
+        {type = "fluid", name = "liquid-raw-fish-oil", amount = 150},
+        {type = "fluid", name = "thermal-water", amount = 50},
+        {type = "item", name = "filter-ceramic", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-fish-oil", amount = 125},
+        {type = "fluid", name = "liquid-mineral-oil", amount = 75},
+        {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+        "ceramic",
+        { {200,113,048}, {191,155,037}, {241,155,057,0.8}, {244,191,015,0.8} }
+      ),
+      icon_size = 32,
+      order = "b[oil-processing]-c"
+    },
+    {
+      type = "recipe",
+      name = "liquid-fish-oil-refining",
+      category = "oil-processing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 4,
+      ingredients = {
+        {type = "fluid", name = "liquid-fish-oil", amount = 100}
+      },
+      results = {
+        {type = "fluid", name = "liquid-fermentation-raw", amount = 40},
+        {type = "fluid", name = "lubricant", amount = 60}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          "liquid-fermentation-raw",
+          "lubricant"
+        },
+        { {244,191,015}, {214, 168, 029}, {191,155,037} }
+      ),
+      order = "b[oil-processing]-d"
+    },
+    {
+      type = "recipe",
+      name = "advanced-liquid-fish-oil-refining",
+      category = "oil-processing",
+      subgroup = "bio-processor-press-fish",
+      enabled = true,
+      energy_required = 4,
+      ingredients = {
+        {type = "fluid", name = "liquid-fish-oil", amount = 100}
+      },
+      results = {
+        {type = "fluid", name = "liquid-fermentation-raw", amount = 75},
+        {type = "fluid", name = "liquid-mineral-oil", amount = 25}
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          "liquid-fermentation-raw",
+          "liquid-mineral-oil"
+        },
+        { {244,191,015}, {214, 168, 029}, {191,155,037} }
+      ),
+      order = "b[oil-processing]-e"
+    },
+    ---------------------------------------------------------------------------
     -- CRYSTALIZATION ---------------------------------------------------------
     ---------------------------------------------------------------------------
     {
@@ -348,7 +568,6 @@ data:extend(
       category = "crystallizing",
       subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
-      hidden = false,
       energy_required = 8,
       ingredients = {
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50}
@@ -377,7 +596,6 @@ data:extend(
       category = "crystallizing",
       subgroup = "bio-biter-processing-crystal-splinter",
       enabled = false,
-      hidden = false,
       energy_required = 8,
       ingredients = {
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50},

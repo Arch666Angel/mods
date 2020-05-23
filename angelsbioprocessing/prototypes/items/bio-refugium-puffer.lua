@@ -5,7 +5,7 @@ data:extend(
     name = "gas-puffer-atmosphere",
     icons = angelsmods.functions.create_gas_fluid_icon(nil, { {194,227,091}, {184,239,000}, {156,207,000} }),
     subgroup = "bio-puffer-1",
-    order = "f",
+    order = "b",
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
@@ -20,7 +20,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-egg-shell.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "fa",
+    order = "ba",
     stack_size = 200,
   },
   {
@@ -29,20 +29,19 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-egg-shell-powder.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "fb",
+    order = "bb",
     stack_size = 200,
   },
-
-
-
-  -- PUFFERS
+  -----------------------------------------------------------------------------
+  -- PUFFERS ------------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "bio-puffer-1",
     icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
     icon_size = 32,
     subgroup = "bio-puffer-1",
-    order = "a",
+    order = "aa",
     stack_size = 200,
   },
   {
@@ -51,7 +50,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
     icon_size = 32,
     subgroup = "bio-puffer-1",
-    order = "b",
+    order = "ab",
     stack_size = 200,
   },
   {
@@ -60,7 +59,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
     icon_size = 32,
     subgroup = "bio-puffer-1",
-    order = "c",
+    order = "ac",
     stack_size = 200,
   },
   {
@@ -69,7 +68,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-4-icon.png",
     icon_size = 32,
     subgroup = "bio-puffer-1",
-    order = "d",
+    order = "ad",
     stack_size = 200,
   },
   {
@@ -78,20 +77,19 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-5-icon.png",
     icon_size = 32,
     subgroup = "bio-puffer-1",
-    order = "e",
+    order = "ae",
     stack_size = 200,
   },
-
-
-
-  -- EGGS
+  -----------------------------------------------------------------------------
+  -- EGGS ---------------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "bio-puffer-egg-1",
     icon = "__angelsbioprocessing__/graphics/icons/puffer-1-egg.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "a",
+    order = "aa",
     stack_size = 200,
   },
   {
@@ -100,7 +98,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-2-egg.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "b",
+    order = "ab",
     stack_size = 200,
   },
   {
@@ -109,7 +107,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-3-egg.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "c",
+    order = "ac",
     stack_size = 200,
   },
   {
@@ -118,7 +116,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-4-egg.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "d",
+    order = "ad",
     stack_size = 200,
   },
   {
@@ -127,7 +125,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/puffer-5-egg.png",
     icon_size = 32,
     subgroup = "bio-puffer-egg",
-    order = "e",
+    order = "ae",
     stack_size = 200,
   }
 }

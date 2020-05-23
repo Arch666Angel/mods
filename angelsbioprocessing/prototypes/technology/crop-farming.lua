@@ -658,7 +658,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "slag-processing-1"
+        "slag-processing-1",
+        "angels-oil-processing"
       },
       effects = {
         {
@@ -702,7 +703,7 @@ data:extend(
     {
       type = "technology",
       name = "bio-fermentation",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -746,11 +747,12 @@ data:extend(
     {
       type = "technology",
       name = "bio-plastic-1",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-fermentation"
+        "bio-fermentation",
+        "plastics"
       },
       effects = {
         {
@@ -786,7 +788,7 @@ data:extend(
     {
       type = "technology",
       name = "bio-plastic-2",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {

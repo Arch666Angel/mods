@@ -35,9 +35,12 @@ move_item("rocket-fuel", "petrochem-fuel", "b[rocket-fuel]-c")
 move_item("nuclear-fuel", "petrochem-fuel", "d[nuclear-fuel]")
 OV.patch_recipes({{name = "nuclear-fuel", subgroup = "petrochem-fuel", order = "j"}})
 
+-- OIL PRODUCTS
+OV.add_unlock("plastics", "solid-plastic")
+move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
+
 move_item("solid-fuel", "petrochem-fuel", "a[solid-fuel]-a")
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
-move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
 move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")
 move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")

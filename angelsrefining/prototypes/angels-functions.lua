@@ -1,6 +1,6 @@
 --GET ICON/ICONS FROM FLUID/ITEM
 local function get_icons(object_name)
-  for _, prototype in pairs({"item", "fluid"}) do
+  for _, prototype in pairs({"item", "fluid", "capsule"}) do
     local object = data.raw[prototype][object_name]
     if object then
       if object.icon then

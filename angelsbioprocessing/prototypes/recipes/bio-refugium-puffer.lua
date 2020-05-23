@@ -64,8 +64,7 @@ data:extend(
       {
         {type = "item", name = "bio-puffer-1", amount = 3, catalyst_amount = 3},
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
-        {type = "fluid", name = "gas-acid", amount = 20},
-        {type = "fluid", name = "gas-acid", amount = 200, show_details_in_recipe_tooltip = false}
+        {type = "fluid", name = "gas-acid", amount = 220}
       },
       icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
       icon_size = 32,
@@ -174,6 +173,49 @@ data:extend(
     ---------------------------------------------------------------------------
     -- PUFFING MK2 ------------------------------------------------------------
     ---------------------------------------------------------------------------
+    {
+      type = "recipe",
+      name = "puffer-puffing-23",
+      category = "bio-refugium-puffer",
+      subgroup = "bio-puffer-2",
+      enabled = false,
+      energy_required = 15,
+      ingredients =
+      {
+        {type = "item", name = "bio-puffer-2", amount = 2},
+        {type = "item", name = "bio-puffer-3", amount = 2},
+        {type = "fluid", name = "liquid-nutrient-pulp", amount = 20},
+        {type = "fluid", name = "gas-puffer-atmosphere", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 100}
+      },
+      results =
+      {
+        {type = "item", name = "bio-puffer-2", amount = 1, catalyst_amount = 1},
+        {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.98, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
+        {type = "item", name = "bio-puffer-3", amount = 1, catalyst_amount = 1},
+        {type = "item", name = "bio-puffer-3", amount = 1, probability = 0.99, catalyst_amount = 1, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "gas-puffer-atmosphere", amount = 20, catalyst_amount = 20, show_details_in_recipe_tooltip = false},
+        {type = "fluid", name = "gas-puffer-atmosphere", amount = 100}
+      },
+      icons =
+      {
+        {
+          icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+          shift = {-5,5},
+          scale = 0.75,
+        },
+        {
+          icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+          shift = {5,-5},
+          scale = 0.75,
+        }
+      },
+      icon_size = 32,
+      order = "aa"
+    },
     {
       type = "recipe",
       name = "puffer-puffing-12",

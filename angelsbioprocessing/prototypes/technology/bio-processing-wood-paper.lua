@@ -260,6 +260,7 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-fermentation",
+      "resins"
     },
     effects =
     {
@@ -383,6 +384,7 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-nutrient-paste",
+      "plastics"
     },
     effects =
     {
@@ -500,6 +502,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "rubbers",
       "bio-arboretum-1",
       "bio-nutrient-paste",
     },
