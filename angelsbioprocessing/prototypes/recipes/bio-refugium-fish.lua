@@ -352,6 +352,7 @@ data:extend(
         {type = "fluid", name = "liquid-raw-fish-oil", amount = 200},
         {type = "item", name = "fish-pulp", amount = 5}
       },
+      main_product = "liquid-raw-fish-oil",
       always_show_products = true,
       icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
         nil,
@@ -377,6 +378,7 @@ data:extend(
         {type = "fluid", name = "liquid-raw-fish-oil", amount = 200},
         {type = "item", name = "fish-pulp", amount = 1}
       },
+      main_product = "liquid-raw-fish-oil",
       always_show_products = true,
       icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
         nil,
@@ -402,6 +404,7 @@ data:extend(
         {type = "fluid", name = "liquid-raw-fish-oil", amount = 100},
         {type = "item", name = "fish-pulp", amount = 2}
       },
+      main_product = "liquid-raw-fish-oil",
       always_show_products = true,
       icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
         nil,
@@ -427,6 +430,7 @@ data:extend(
         {type = "fluid", name = "liquid-raw-fish-oil", amount = 50},
         {type = "item", name = "fish-pulp", amount = 1}
       },
+      main_product = "liquid-raw-fish-oil",
       always_show_products = true,
       icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
         nil,
@@ -442,7 +446,7 @@ data:extend(
       type = "recipe",
       name = "fish-pulp-nutrients",
       category = "nutrient-extractor",
-      subgroup = "bio-processor-nutrient",
+      subgroup = "bio-processor-press-fish",
       enabled = false,
       energy_required = 2,
       ingredients = {
@@ -459,7 +463,7 @@ data:extend(
           "fish-pulp"
         }
       ),
-      order = "a[nutrient-extraction]-g"
+      order = "c[nutrient-extraction]"
     },
     {
       type = "recipe",

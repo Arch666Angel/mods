@@ -271,14 +271,6 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "bio-processor-press-fish",
-    group = "bio-processing-vegetables",
-    --group = "bio-processing-alien",
-    order = "e[processing]-b",
-    --order = "a[fish]-c[processing]-a[fish-oil]",
-  },
-  {
-    type = "item-subgroup",
     name = "bio-processor-press-vegetables",
     group = "bio-processing-vegetables",
     order = "e[processing]-c",
@@ -430,9 +422,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "bio-processor-press-fish",
+    group = "bio-processing-alien",
+    order = "e[alien-products]-a[intermediates]-a[fish-oil]",
+  },
+  {
+    type = "item-subgroup",
     name = "bio-processing-alien-intermediate",
     group = "bio-processing-alien",
-    order = "e[alien-products]-a[intermediates]",
+    order = "e[alien-products]-a[intermediates]-b[seeding]",
   },
   {
     type = "item-subgroup",
