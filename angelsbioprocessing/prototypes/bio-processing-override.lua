@@ -38,7 +38,7 @@ for i, labs in pairs(data.raw["lab"]) do
   --first check it does not exist
   local found = false
   for i, chk in ipairs(labs.inputs) do
-    for chk == "token-bio" then
+    if chk == "token-bio" then
       found = true
     end
   end
