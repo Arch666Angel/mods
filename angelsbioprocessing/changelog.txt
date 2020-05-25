@@ -24,6 +24,7 @@ Date: ???
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
     - MP safer method of requiring files (check inside the file instead of arround)
     - Altered definition of biter queen localisation for translation purposes
+    - Added some crucial technology dependencies for easier progression and tree connectivity
   Balancing:
     - Moved resin from wood recipe to tree arboretums, so it doesn't require garden exploration
     - Special gardens are now easier to produce:
