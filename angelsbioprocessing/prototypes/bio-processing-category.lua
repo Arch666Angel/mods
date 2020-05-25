@@ -489,5 +489,12 @@ data:extend(
     group = "bio-processing-alien",
     order = "za",
   },
+  -- void
+  {
+    type = "item-subgroup",
+    name = "angels-bio-void",
+    group = "angels-void",
+    order = "a-c[bio]"
+  }
 }
 )

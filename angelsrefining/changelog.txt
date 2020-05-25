@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Reordered the geode liquifying recipes to be the same order as the geode processing recipes
+    - Added better icons for void recipes to distinguish difference between them
   Balancing:
     - Making thermal water extraction available at green science
       - Added a (slower) mk1 thermal water bore to extract thermal water at a slow rate

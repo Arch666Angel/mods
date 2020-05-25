@@ -258,10 +258,19 @@ data:extend(
     {
       type = "item",
       name = "chemical-void",
-      icon = "__angelsrefining__/graphics/icons/void.png",
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+        },
+        {
+          icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
+          scale = 0.4,
+          shift = {9.6, 9.6}
+        }
+      },
       icon_size = 32,
       flags = {"hidden"},
-      subgroup = "petrochem-basic-fluids",
+      subgroup = "angels-void",
       order = "zzz[chemical-void]",
       stack_size = 200
     }
