@@ -919,6 +919,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "ore-powderizer"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "angelsore8-powder"
         },
         {
@@ -940,10 +944,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "milling-drum-used"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ore-powderizer"
         }
       },
       unit = {
@@ -969,6 +969,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "ore-powderizer-2"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "angelsore8-sludge"
         },
         {
@@ -990,10 +994,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore9-dust-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ore-powderizer-2"
         }
       },
       unit = {
@@ -1016,6 +1016,10 @@ data:extend(
         "ore-advanced-floatation"
       },
       effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "ore-powderizer-3"
+        },
         {
           type = "unlock-recipe",
           recipe = "angelsore8-solution"
@@ -1059,10 +1063,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-crystal-mix6-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ore-powderizer-3"
         },
         {
           type = "unlock-recipe",

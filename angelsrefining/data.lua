@@ -20,10 +20,11 @@ end
 -- angels refining default mode is to be special-vanilla, aka iron and copper only
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
-angelsmods.trigger.ores["uranium"] = mods["bobplates"] and true or false
-angelsmods.trigger.ores["thorium"] = mods["angelsindustries"] and true or false
+angelsmods.trigger.ores["uranium"] = mods["angelsindustries"] and settings.startup["angels-enable-industries"].value and true or false
+angelsmods.trigger.ores["thorium"] = mods["angelsindustries"] and settings.startup["angels-enable-industries"].value and true or false
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods["bobplates"] then
+  angelsmods.trigger.ores["uranium"] = true
   angelsmods.trigger.ores["tin"] = ore_exist("tin-ore")
   angelsmods.trigger.ores["lead"] = ore_exist("lead-ore")
   angelsmods.trigger.ores["nickel"] = ore_exist("nickel-ore")
