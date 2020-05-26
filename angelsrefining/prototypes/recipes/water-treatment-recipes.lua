@@ -116,7 +116,7 @@ data:extend(
         },
         "wcc"
       ),
-      order = "g[yellow-waste-water-purification]"
+      order = "g[red-waste-water-purification]"
     },
     {
       type = "recipe",
@@ -141,7 +141,7 @@ data:extend(
         },
         "wll"
       ),
-      order = "f[yellow-waste-water-purification]"
+      order = "f[green-waste-water-purification]"
     },
     {
       type = "recipe",
@@ -167,7 +167,7 @@ data:extend(
         },
         "wff"
       ),
-      order = "e[yellow-waste-water-purification]"
+      order = "e[greenyellow-waste-water-purification]"
     },
     --SALINATION
     {

@@ -96,10 +96,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-soil"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fertilizer"
         }
       },
       unit = {
@@ -148,12 +144,17 @@ data:extend(
       prerequisites = {
         "bio-farm-2",
         "bio-processing-alien-1",
+        "bio-refugium-butchery-1",
         "gardens-2"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "liquid-polluted-fish-atmosphere"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "alien-goo"
         },
         {
           type = "unlock-recipe",
@@ -656,7 +657,9 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm-1"
+        "bio-farm-1",
+        "slag-processing-1",
+        "angels-oil-processing"
       },
       effects = {
         {
@@ -699,8 +702,66 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-fermentation",
+      name = "bio-pressing-fish",
       icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-pressing",
+        "bio-refugium-fish-1",
+        "bio-fermentation",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-0"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pulp-nutrients"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-raw-fish-oil-filtering-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-raw-fish-oil-filtering-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-fish-oil-refining"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "advanced-liquid-fish-oil-refining"
+        }
+      },
+      unit = {
+        count = 40,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-fermentation",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -744,11 +805,12 @@ data:extend(
     {
       type = "technology",
       name = "bio-plastic-1",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-fermentation"
+        "bio-fermentation",
+        "plastics"
       },
       effects = {
         {
@@ -784,7 +846,7 @@ data:extend(
     {
       type = "technology",
       name = "bio-plastic-2",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {

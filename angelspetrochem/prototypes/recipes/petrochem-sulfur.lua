@@ -15,7 +15,7 @@ data:extend(
       results = {
         {type = "fluid", name = "gas-hydrogen-sulfide", amount = 60},
         {type = "fluid", name = "gas-carbon-dioxide", amount = 20},
-        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 20},
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 20},
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
@@ -142,9 +142,39 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
         },
-        "fhh"
+        "fhh",
+        {
+          "fluorite-ore"
+        }
       ),
-      order = "e[liquid-hydrofluoric-acid]"
+      order = "e[liquid-hydrofluoric-acid]-a"
+    },
+    {
+      type = "recipe",
+      name = "liquid-hydrogen-fluoride",
+      category = "chemistry",
+      subgroup = "petrochem-sulfur",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 90},
+        {type = "fluid", name = "water-purified", amount = 40}
+      },
+      results = {
+        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60},
+      },
+      main_product = "liquid-hydrofluoric-acid",
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
+        },
+        "fhh",
+        {
+          "water-purified"
+        }
+      ),
+      order = "e[liquid-hydrofluoric-acid]-b"
     },
     {
       type = "recipe",

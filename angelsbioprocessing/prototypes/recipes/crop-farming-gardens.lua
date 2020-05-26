@@ -652,7 +652,7 @@ data:extend(
       ingredients =
       {
         {type = "item", name = "solid-fertilizer", amount = 1},
-        {type = "fluid", name = "alien-goo", amount = 10}
+        {type = "fluid", name = "alien-goo", amount = 5}
       },
       results =
       {

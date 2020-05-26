@@ -23,7 +23,10 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-pure-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "a[angelsore1-pure-processing]"
     },
@@ -47,7 +50,10 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-pure-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "b[angelsore2-pure-processing]"
     },
@@ -74,7 +80,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-void", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-pure-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "c[angelsore3-pure-processing]"
     },
@@ -98,7 +107,10 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-pure-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "d[angelsore4-pure-processing]"
     },
@@ -122,7 +134,10 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-pure-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "e[angelsore5-pure-processing]"
     },
@@ -146,7 +161,10 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-pure-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "f[angelsore6-pure-processing]"
     }

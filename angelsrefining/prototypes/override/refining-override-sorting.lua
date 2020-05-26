@@ -459,7 +459,8 @@ else
   )
 end
 
-if not (ore_exists("ferrous") or ore_exists("cupric")) then
+if ore_exists("ferrous") or ore_exists("cupric") then
+else
   OV.disable_technology(
     {
       "ore-advanced-crushing",
@@ -470,7 +471,8 @@ if not (ore_exists("ferrous") or ore_exists("cupric")) then
   )
 end
 
-if not ore_exists("ferrous") and not ore_exists("cupric") then
+if ore_exists("ferrous") and ore_exists("cupric") then
+else
   OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
 end

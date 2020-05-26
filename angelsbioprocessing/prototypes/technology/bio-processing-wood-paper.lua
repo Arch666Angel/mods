@@ -163,7 +163,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-1",
-      "bio-processing-crystal-1",
+      "bio-processing-crystal-splinter-2",
       "bio-farm-alien"
     },
     effects =
@@ -213,7 +213,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-2",
-      "bio-processing-crystal-2"
+      "bio-processing-crystal-shard-2"
     },
     effects =
     {
@@ -260,6 +260,7 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-fermentation",
+      "resins"
     },
     effects =
     {
@@ -383,6 +384,7 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-nutrient-paste",
+      "plastics"
     },
     effects =
     {
@@ -500,6 +502,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "rubbers",
       "bio-arboretum-1",
       "bio-nutrient-paste",
     },

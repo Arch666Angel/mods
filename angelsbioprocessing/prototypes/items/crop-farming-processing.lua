@@ -2,7 +2,9 @@ local show_formula = settings.startup["angels-show-chemical-formula"].value
 
 data:extend(
 {
-  -- VEGETABLES
+  -----------------------------------------------------------------------------
+  -- VEGETABLES ---------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "solid-beans",
@@ -57,10 +59,9 @@ data:extend(
     order = "a[vegetables]-f",
     stack_size = 500
   },
-
-
-
-  -- PROCESSING
+  -----------------------------------------------------------------------------
+  -- PROCESSING ---------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "fluid",
     name = "liquid-nutrient-pulp",
@@ -79,7 +80,7 @@ data:extend(
     type = "fluid",
     name = "liquid-raw-vegetable-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {255,184,062}, {255,184,062}, {255,221,061,0.8}, {255,221,061,0.8} }),
-    subgroup = "bio-processor-press",
+    subgroup = "bio-processor-press-vegetables",
     order = "b[processing]-b[results]-a[oil]-a",
     default_temperature = 25,
     max_temperature = 100,
@@ -93,7 +94,7 @@ data:extend(
     type = "fluid",
     name = "liquid-vegetable-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {255,255,060}, {255,255,060}, {255,255,000,0.8}, {255,255,000,0.8} }),
-    subgroup = "bio-processor-press",
+    subgroup = "bio-processor-press-vegetables",
     order = "b[processing]-b[results]-a[oil]-b",
     default_temperature = 25,
     max_temperature = 100,
@@ -108,7 +109,7 @@ data:extend(
     name = "solid-flour",
     icon = "__angelsbioprocessing__/graphics/icons/solid-flour.png",
     icon_size = 32,
-    subgroup = "bio-processor-press",
+    subgroup = "bio-processor-press-vegetables",
     order = "b[processing]-b[results]-a[flour]",
     stack_size = 500
   },
@@ -116,7 +117,7 @@ data:extend(
     type = "fluid",
     name = "liquid-plant-milk",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {255,255,255}, nil, {245,245,245,0.9} }),
-    subgroup = "bio-processor-press",
+    subgroup = "bio-processor-press-vegetables",
     order = "b[processing]-b[results]-b[milk]",
     default_temperature = 25,
     max_temperature = 100,

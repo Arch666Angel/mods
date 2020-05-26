@@ -5,6 +5,7 @@ Date: ???
     - Properly use name, amount in result and ingredient prototypes
     - Moved productivity from solid rubber to liquid rubber so it is similar to plastic and resin
     - Enable deuterium when playing with angels industry overhaul
+    - Introduced Hydrogen Fluoride Gas as intermediate of Hydrofluoric Acid
   Bugfixes:
     - Fixed some wrong colors on fluid recipe icons of Epichlorohydrin Gas and Phosgene Gas
     - Hidden some unused bob technologies related to deuterium

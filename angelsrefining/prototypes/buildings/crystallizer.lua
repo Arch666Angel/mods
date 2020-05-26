@@ -16,7 +16,7 @@ data:extend(
       },
       icon_size = 32,
       subgroup = "refining-buildings",
-      order = "d[crystallizer]",
+      order = "c[crystallizer]-a[mk1]",
       place_result = "crystallizer",
       stack_size = 10
     },
@@ -117,7 +117,7 @@ data:extend(
       },
       icon_size = 32,
       subgroup = "refining-buildings",
-      order = "e[crystallizer-2]",
+      order = "c[crystallizer]-b[mk2]",
       place_result = "crystallizer-2",
       stack_size = 10
     },

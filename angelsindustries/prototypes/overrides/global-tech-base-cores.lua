@@ -54,6 +54,17 @@ if angelsmods.industries.tech then
   OV.set_science_pack("automobilism", "datacore-exploration-1", 2)
   core_replace("space-science-pack", "processing", "exploration")
   core_replace("artillery-shell-range-1", "war", "exploration")
+  -- BIO PROCESSING
+  core_replace("bio-refugium-hatchery", "processing", "exploration")
+  core_replace("bio-refugium-fish-1", "processing", "exploration")
+  core_replace("bio-refugium-fish-2", "processing", "exploration")
+  core_replace("bio-refugium-puffer-1", "processing", "exploration")
+  core_replace("bio-refugium-puffer-2", "processing", "exploration")
+  core_replace("bio-refugium-puffer-3", "processing", "exploration")
+  core_replace("bio-refugium-puffer-4", "processing", "exploration")
+  core_replace("bio-refugium-biter-1", "processing", "exploration")
+  core_replace("bio-refugium-biter-2", "processing", "exploration")
+  core_replace("bio-refugium-biter-3", "processing", "exploration")
   -- EXPLORATION
   OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
   -- CAB ADDONS
@@ -83,6 +94,12 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   core_replace("energy-weapons-damage-7", "war", "energy")
+  core_replace("uranium-processing", "processing", "energy")
+  core_replace("kovarex-enrichment-process", "processing", "energy")
+  core_replace("nuclear-fuel-reprocessing", "processing", "energy")
+  -- PETROCHEM
+  core_replace("nuclear-fuel", "processing", "energy")
+
   -------------------------------------------------------------------------------
   -- LOGISTIC CORES -------------------------------------------------------------
   -------------------------------------------------------------------------------

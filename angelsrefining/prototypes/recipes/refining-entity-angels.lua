@@ -674,6 +674,36 @@ angelsmods.functions.RB.build(
 		--THERMAL EXTRACTOR
 		{
 			type = "recipe",
+			name = "thermal-bore",
+			normal = {
+				energy_required = 5,
+				enabled = false,
+				ingredients = {
+					{type = "item", name = "thermal-1", amount = 1},
+					{type = "item", name = "t2-plate", amount = 6},
+					{type = "item", name = "t2-circuit", amount = 4},
+					{type = "item", name = "t2-pipe", amount = 4},
+					{type = "item", name = "t2-brick", amount = 4},
+					{type = "item", name = "t2-gears", amount = 4}
+				},
+				result = "thermal-bore"
+			},
+			expensive = {
+				energy_required = 5 * buildingtime,
+				enabled = false,
+				ingredients = {
+					{type = "item", name = "thermal-1", amount = 1},
+					{type = "item", name = "t2-plate", amount = 6 * buildingmulti},
+					{type = "item", name = "t2-circuit", amount = 4 * buildingmulti},
+					{type = "item", name = "t2-pipe", amount = 4 * buildingmulti},
+					{type = "item", name = "t2-brick", amount = 4 * buildingmulti},
+					{type = "item", name = "t2-gears", amount = 4 * buildingmulti}
+				},
+				result = "thermal-bore"
+			}
+		},
+		{
+			type = "recipe",
 			name = "thermal-extractor",
 			normal = {
 				energy_required = 5,

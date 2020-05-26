@@ -529,6 +529,6 @@ if bobmods then
   -------------------------------------------------------------------------------
   if bobmods.plates then
     data.raw["item-subgroup"]["bob-alien-resource"].group = "bio-processing-alien"
-    data.raw["item-subgroup"]["bob-alien-resource"].order = "hd"
+    data.raw["item-subgroup"]["bob-alien-resource"].order = "e[alien-products]-d[resources]"
   end
 end

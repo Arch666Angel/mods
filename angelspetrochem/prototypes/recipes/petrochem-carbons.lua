@@ -1025,7 +1025,7 @@ data:extend(
       ingredients = {
         {type = "fluid", name = "gas-benzene", amount = 50},
         {type = "fluid", name = "gas-ethylene", amount = 50},
-        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 20}
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 20}
       },
       results = {
         {type = "fluid", name = "gas-ethylbenzene", amount = 80},
