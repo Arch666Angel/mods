@@ -10,12 +10,17 @@ Date: ???
       - Added a (slower) mk1 thermal water bore to extract thermal water at a slow rate
       - Split thermal water processing into a seperate blue tech (so that part remains blue)
       - Mode the termal water extractor an upgrade of the thermal water bore
+    - Improve refining in special vanilla mode (242)
+      - Improve ratio of copper versus iron yield to reflect the 50/50 use of base game
+      - Improve yield so more advanced recipes produce more ore (up to 100% extra yield)
+      - Improve graphics on sorting recipes and smelting recipes of intermediates
   Bugfixes:
     - Added missing dependencies
       - Added blue science packs to powder refining (due to the requirement of lubricant)
       - Moved crystal slurry ceramic filtering to geode crystallization (blue tech, due to ceramic filters)
     - Fixed error related to the new base game v0.18.27 (247)
   Modding:
+    - fixed potential error in angelsmods.functions.modify_barreling_icon()
     - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
     - added function angelsmods.functions.modify_icon_layers(...)
   Bugfixes:

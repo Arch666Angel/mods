@@ -89,6 +89,16 @@ if angelsmods.trigger.smelting_products["iron"].plate then
           name = "angelsore1-crushed-smelting",
           subgroup = "angels-iron-casting",
           order = "l[angels-plate-iron]-a"
+        },
+        {
+          name = "angels-iron-pebbles-smelting",
+          subgroup = "angels-iron-casting",
+          order = "l[angels-plate-iron]-ab"
+        },
+        {
+          name = "angels-iron-nugget-smelting",
+          subgroup = "angels-iron-casting",
+          order = "l[angels-plate-iron]-ac"
         }
       }
     )

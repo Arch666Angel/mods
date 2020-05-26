@@ -20,9 +20,22 @@ data:extend(
         ingredients = {{type = "item", name = "angels-ore1-crushed", amount = 5 * rawmulti}},
         results = {{type = "item", name = "iron-plate", amount = 1}}
       },
-      icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        } or {
+          icon = "__base__/graphics/icons/iron-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "a-a [angelsore1-crushed-smelting]"
+      order = "b[iron-ore]-a[crushed]"
     },
     {
       type = "recipe",
@@ -41,9 +54,22 @@ data:extend(
         ingredients = {{type = "item", name = "angels-ore3-crushed", amount = 5 * rawmulti}},
         results = {{type = "item", name = "copper-plate", amount = 1}}
       },
-      icon = "__angelsrefining__/graphics/icons/copper-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        } or {
+          icon = "__base__/graphics/icons/copper-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "a-a [angelsore3-crushed-smelting]"
+      order = "c[copper-ore]-a[crushed]"
     },
     {
       type = "recipe",
