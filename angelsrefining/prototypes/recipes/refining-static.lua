@@ -1360,9 +1360,22 @@ data:extend(
       results = {
         {type = "item", name = "iron-plate", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        } or {
+          icon = "__base__/graphics/icons/iron-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/iron-pebbles.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "aa [angels-iron-pebbles-smelting]"
+      order = "b[iron-ore]-c[pebbles]"
     },
     {
       type = "recipe",
@@ -1375,9 +1388,22 @@ data:extend(
       results = {
         {type = "item", name = "iron-plate", amount = 3}
       },
-      icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        } or {
+          icon = "__base__/graphics/icons/iron-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/iron-nugget.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "ab [angels-iron-nugget-smelting]"
+      order = "b[iron-ore]-d[nugget]"
     },
     {
       type = "recipe",
@@ -1392,7 +1418,7 @@ data:extend(
       },
       --icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
       icon_size = 32,
-      order = "aa [angels-iron-pebbles]"
+      order = "g[angels-iron-pebbles]"
     },
     --COPPER
     {
@@ -1406,9 +1432,22 @@ data:extend(
       results = {
         {type = "item", name = "copper-plate", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/copper-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        } or {
+          icon = "__base__/graphics/icons/copper-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/copper-pebbles.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "ba [angels-copper-pebbles-smelting]"
+      order = "c[copper-ore]-c[pebbles]"
     },
     {
       type = "recipe",
@@ -1421,9 +1460,22 @@ data:extend(
       results = {
         {type = "item", name = "copper-plate", amount = 3}
       },
-      icon = "__angelsrefining__/graphics/icons/copper-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        } or {
+          icon = "__base__/graphics/icons/copper-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/copper-nugget.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "bb [angels-copper-nugget-smelting]"
+      order = "c[copper-ore]-d[nugget]"
     },
     {
       type = "recipe",
@@ -1438,7 +1490,7 @@ data:extend(
       },
       --icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
       icon_size = 32,
-      order = "ab [angels-copper-pebbles]"
+      order = "h[angels-copper-pebbles]"
     }
   }
 )
