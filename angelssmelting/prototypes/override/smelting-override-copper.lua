@@ -83,6 +83,16 @@ if angelsmods.trigger.smelting_products["copper"].plate then
           name = "angelsore3-crushed-smelting",
           subgroup = "angels-copper-casting",
           order = "j[angels-plate-copper]-a"
+        },
+        {
+          name = "angels-copper-pebbles-smelting",
+          subgroup = "angels-copper-casting",
+          order = "j[angels-plate-copper]-ab"
+        },
+        {
+          name = "angels-copper-nugget-smelting",
+          subgroup = "angels-copper-casting",
+          order = "j[angels-plate-copper]-ac"
         }
       }
     )
