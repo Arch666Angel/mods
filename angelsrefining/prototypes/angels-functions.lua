@@ -1,6 +1,6 @@
 --GET ICON/ICONS FROM FLUID/ITEM
 local function get_icons(object_name)
-  for _, prototype in pairs({"item", "fluid"}) do
+  for _, prototype in pairs({"item", "fluid", "capsule"}) do
     local object = data.raw[prototype][object_name]
     if object then
       if object.icon then
@@ -961,28 +961,25 @@ function angelsmods.functions.modify_barreling_recipes()
 end
 
 --CREATE VOID RECIPES
-function angelsmods.functions.make_void(fluid_name, void_category, void_amount) --categories: chemical (flare-stack), water(clarifier)
-  --LOCAL DEFINITIONS                                                           --amount(optional): amount of input/output
-  local recipe = {}
-
+function angelsmods.functions.make_void(fluid_name, void_category, void_amount) -- categories: chemical (fluid, flare-stack)
+  --LOCAL DEFINITIONS                                                           --             water (fluild, clarifier)
+  local recipe = {}                                                             --             bio (item, compost)
+                                                                                -- amount(optional): amount of input/output, default 1
   if data.raw.fluid[fluid_name] then -- fluid voids
-    local fluid_icon = get_icons(fluid_name)
-    recipe.icons = type(fluid_icon) == "table" and fluid_icon or nil
-    recipe.icon = type(fluid_icon) ~= "table" and fluid_icon or nil
-    recipe.icon_size = data.raw.fluid[fluid_name].icon_size or 32
-
     if void_category == "water" then
       void_amount = void_amount or 400
-      void_input_amount = void_amount >= 1 and void_amount or 1
+      void_input_amount = void_amount > 1 and void_amount or 1
       void_input_type = "fluid"
+      void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 5
       void_output_item = "water-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
     elseif void_category == "chemical" then
       void_amount = void_amount or 100
-      void_input_amount = void_amount >= 1 and void_amount or 1
+      void_input_amount = void_amount > 1 and void_amount or 1
       void_input_type = "fluid"
+      void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 1
       void_output_item = "chemical-void"
       void_output_amount = void_amount < 1 and void_amount or 1
@@ -990,11 +987,13 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     else
       recipe = nil -- no valid void category found
     end
+
   elseif data.raw.item[fluid_name] then -- item voids
     if void_category == "bio" then
       void_amount = void_amount or 1
-      void_input_amount = void_amount >= 1 and void_amount or 1
+      void_input_amount = void_amount > 1 and void_amount or 1
       void_input_type = "item"
+      void_input_subgroup = data.raw.item[fluid_name].subgroup or "angels-void"
       void_process_time = 1
       void_output_item = "solid-compost"
       void_output_amount = void_amount < 1 and 1 / void_amount or 1
@@ -1002,6 +1001,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     else
       recipe = nil -- no valid void category found
     end
+
   else
     recipe = nil -- no valid void object found
   end
@@ -1025,11 +1025,42 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
         type = "item",
         name = void_output_item,
         amount = void_output_amount,
-        probability = void_output_probability
+        probability = void_output_probability ~= 1 and void_output_probability or nil
       }
     }
-    recipe.subgroup = "angels-void"
-    recipe.order = "angels-" .. void_category .. "-void-" .. fluid_name
+    recipe.main_product = void_output_item
+    recipe.show_amount_in_title = false
+    recipe.always_show_products = void_output_amount * void_output_probability > 0
+    recipe.always_show_made_in = true
+    recipe.allow_decomposition = false
+    recipe.allow_as_intermediate = false
+    recipe.hide_from_stats = false
+    recipe.subgroup = "angels-" .. void_category .. "-void"
+    recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order
+    --recipe.order = recipe.order .. "[" .. data.raw["item-subgroup"][void_input_subgroup].group .. "]"
+    recipe.order = recipe.order .. "-"
+    recipe.order = recipe.order .. data.raw["item-subgroup"][void_input_subgroup].order
+    --recipe.order = recipe.order .. "[" .. void_input_subgroup .. "]"
+    recipe.order = recipe.order .. "-"
+    recipe.order = recipe.order .. (data.raw.fluid[fluid_name] or data.raw.item[fluid_name]).order
+    --recipe.order = recipe.order .. "[" .. fluid_name .. "]"
+    recipe.order = string.len(recipe.order) <= 200 and recipe.order or recipe.order:sub(1, 200) -- order limited to 200 characters
+
+    recipe.icons = util.table.deepcopy(get_icons(void_output_item) or {{icon="__angelsrefining__/graphics/icons/void.png"}})
+    recipe.icon_size = 32
+    local fluid_icon = util.table.deepcopy(get_icons(fluid_name) or {})
+    for _,iconLayer in pairs(fluid_icon) do
+      table.insert(recipe.icons, {
+        icon = iconLayer.icon,
+        icon_size = iconLayer.icon_size and iconLayer.icon_size ~= 32 and iconLayer.icon_size or nil,
+        scale = (iconLayer.scale or recipe.icon_size/(iconLayer.icon_size or 32)) * 0.5,
+        shift = {
+          ((iconLayer.shift or {})[1] or (iconLayer.shift or {})['x'] or 0) * 0.5 - 8,
+          ((iconLayer.shift or {})[2] or (iconLayer.shift or {})['y'] or 0) * 0.5 - 8,
+        },
+        tint = iconLayer.tint
+      })
+    end
 
     data:extend({recipe})
   end

@@ -46,7 +46,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-brown"
+        "bio-processing-brown",
+        "basic-chemistry"
       },
       effects = {
         {
@@ -80,13 +81,15 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-processing-blue",
+      name = "bio-processing-red",
       icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
+        --"bio-processing-brown",
         "bio-processing-green",
-        "bio-processing-brown"
+        "angels-nitrogen-processing-1",
+        "thermal-water-extraction"
       },
       effects = {
         {
@@ -95,15 +98,15 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "algae-blue"
+          recipe = "algae-red"
         },
         {
           type = "unlock-recipe",
-          recipe = "blue-fiber-algae"
+          recipe = "red-fiber-algae"
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-ammonia-from-blue-fiber"
+          recipe = "solid-calcium-carbonate"
         }
       },
       unit = {
@@ -117,29 +120,25 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-processing-red",
+      name = "bio-processing-blue",
       icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-blue"
+        "bio-processing-red"
       },
       effects = {
-        -- {
-        -- type = "unlock-recipe",
-        -- recipe = "algae-farm-3"
-        -- },
         {
           type = "unlock-recipe",
-          recipe = "algae-red"
+          recipe = "algae-blue"
         },
         {
           type = "unlock-recipe",
-          recipe = "red-fiber-algae"
+          recipe = "blue-fiber-algae"
         },
         {
           type = "unlock-recipe",
-          recipe = "solid-calcium-carbonate"
+          recipe = "gas-ammonia-from-blue-fiber"
         }
       },
       unit = {

@@ -674,7 +674,17 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
           item.name = new
         end
         if replace[item.name] then
-          replace[item.name].amount = item.amount
+          if item.probability then
+             if replace[item.name].probability and replace[item.name].probability ~= item.probability then
+              replace[item.name].probability = item.probability
+              --update probability if it exists in both cases
+             else
+              replace[item.name .."-p"]=item
+              --skip, don't touch recipes that add a probability to a static
+             end
+          elseif item.amount ~= replace[item.name].amount then --check both have amount and update old to new
+            replace[item.name].amount = item.amount
+          end
         else
           replace[item.name] = item
         end

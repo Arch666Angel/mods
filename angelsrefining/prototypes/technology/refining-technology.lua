@@ -398,15 +398,15 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "catalysator-green"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-1"
         },
         {
           type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-conversion-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalysator-green"
         }
       },
       unit = {
@@ -425,7 +425,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/slag-processing.png",
       icon_size = 64,
       prerequisites = {
-        "slag-processing-1"
+        "slag-processing-1",
+        "angels-aluminium-smelting-1"
       },
       effects = {
         {
@@ -475,14 +476,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "slag-processing-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-slurry-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "crystal-slurry-filtering-conversion-2"
         }
       },
       unit = {
@@ -508,8 +501,54 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "thermal-extractor"
+          recipe = "thermal-bore"
+        }
+      },
+      unit = {
+        count = 30,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
         },
+        time = 15
+      },
+      order = "a-a-a1"
+    },
+    {
+      type = "technology",
+      name = "thermal-water-extraction-2",
+      icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+      icon_size = 128,
+      prerequisites = {
+        "thermal-water-extraction"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "thermal-extractor"
+        }
+      },
+      unit = {
+        count = 30,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "a-a-a1"
+    },
+    {
+      type = "technology",
+      name = "thermal-water-processing",
+      icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+      icon_size = 64,
+      prerequisites = {
+        "thermal-water-extraction",
+        "slag-processing-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "thermal-water-filtering-1"
@@ -695,6 +734,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore7-crystallization-6"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-slurry-filtering-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystal-slurry-filtering-conversion-2"
         }
       },
       unit = {
@@ -872,6 +919,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "ore-powderizer"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "angelsore8-powder"
         },
         {
@@ -893,17 +944,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "milling-drum-used"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ore-powderizer"
         }
       },
       unit = {
         count = 75,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
@@ -916,9 +964,13 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-powderizer",
-        "thermal-water-extraction"
+        "thermal-water-extraction-2"
       },
       effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "ore-powderizer-2"
+        },
         {
           type = "unlock-recipe",
           recipe = "angelsore8-sludge"
@@ -942,10 +994,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore9-dust-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ore-powderizer-2"
         }
       },
       unit = {
@@ -968,6 +1016,10 @@ data:extend(
         "ore-advanced-floatation"
       },
       effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "ore-powderizer-3"
+        },
         {
           type = "unlock-recipe",
           recipe = "angelsore8-solution"
@@ -1011,10 +1063,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-crystal-mix6-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ore-powderizer-3"
         },
         {
           type = "unlock-recipe",

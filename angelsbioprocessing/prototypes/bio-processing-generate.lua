@@ -56,3 +56,4 @@ angelsmods.functions.make_void("gas-ethanol", "chemical")
 
 angelsmods.functions.make_void("alien-spores", "chemical")
 angelsmods.functions.make_void("alien-bacteria", "bio")
+angelsmods.functions.make_void("bio-puffer-egg-shell", "bio", 10)

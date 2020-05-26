@@ -4,7 +4,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-nuts",
       category = "bio-pressing",
-      subgroup = "bio-processor-press",
+      subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -27,7 +27,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-pips",
       category = "bio-pressing",
-      subgroup = "bio-processor-press",
+      subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -50,7 +50,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-beans",
       category = "bio-pressing",
-      subgroup = "bio-processor-press",
+      subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -74,7 +74,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-filtering-1",
       category = "filtering",
-      subgroup = "bio-processor-press",
+      subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -98,7 +98,7 @@ data:extend(
       type = "recipe",
       name = "liquid-raw-vegetable-oil-filtering-2",
       category = "filtering",
-      subgroup = "bio-processor-press",
+      subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,
       ingredients = {
@@ -122,7 +122,7 @@ data:extend(
       type = "recipe",
       name = "liquid-vegetable-oil-refining",
       category = "oil-processing",
-      subgroup = "bio-processor-press",
+      subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,
       ingredients = {

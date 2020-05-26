@@ -361,6 +361,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "liquid-hydrogen-fluoride"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "liquid-hydrofluoric-acid"
         },
         {
@@ -589,7 +593,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "basic-chemistry-2",
-        "water-treatment"
+        "water-treatment",
+        "gas-processing"
       },
       effects = {
         {

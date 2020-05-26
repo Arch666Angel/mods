@@ -76,16 +76,29 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/crystal-seed.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c[crystal]-a[seed]",
+    order = "b[dish]-d[seed]-a[crystal]",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "egg-shell-seed",
+    icon = "__angelsbioprocessing__/graphics/icons/egg-shell-seed.png",
+    icon_size = 32,
+    subgroup = "bio-processing-alien-intermediate",
+    order = "b[dish]-d[seed]-b[egg-shell]",
+    stack_size = 200
+  },
+
+
+
+  -- DISH USAGE
   {
     type = "item",
     name = "crystal-enhancer",
     icon = "__angelsbioprocessing__/graphics/icons/crystal-enhancer.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c[crystal]-b[enhancer]",
+    order = "c[crystal]-a[enhancer]",
     stack_size = 200
   },
   {
@@ -94,7 +107,7 @@ data:extend(
     icon = "__angelsbioprocessing__/graphics/icons/crystal-grindstone.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
-    order = "c[crystal]-c[grindstone]",
+    order = "c[crystal]-b[grindstone]",
     stack_size = 200
   },
 }

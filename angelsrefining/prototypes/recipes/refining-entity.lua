@@ -251,6 +251,16 @@ data:extend(
     --THERMAL EXTRACTOR
     {
       type = "recipe",
+      name = "thermal-bore",
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "angels-void", amount = 1}
+      },
+      result = "thermal-bore"
+    },
+    {
+      type = "recipe",
       name = "thermal-extractor",
       energy_required = 5,
       enabled = false,

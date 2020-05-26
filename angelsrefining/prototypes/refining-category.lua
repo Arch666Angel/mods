@@ -442,7 +442,13 @@ data:extend(
       type = "item-subgroup",
       name = "angels-void",
       group = "angels-void",
-      order = "a-a"
+      order = "a-z"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-water-void",
+      group = "angels-void",
+      order = "a-a[water]"
     }
   }
 )
