@@ -402,7 +402,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-mineral-oil-catalyst",
-      category = "chemistry",
+      category = "advanced-chemistry",
       subgroup = "petrochem-carbon-oil-feed",
       energy_required = 6,
       enabled = false,

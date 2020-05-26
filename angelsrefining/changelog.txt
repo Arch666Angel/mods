@@ -14,6 +14,7 @@ Date: ???
     - Added missing dependencies
       - Added blue science packs to powder refining (due to the requirement of lubricant)
       - Moved crystal slurry ceramic filtering to geode crystallization (blue tech, due to ceramic filters)
+    - Fixed error related to the new base game v0.18.27 (247)
   Modding:
     - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
     - added function angelsmods.functions.modify_icon_layers(...)
