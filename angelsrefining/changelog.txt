@@ -19,13 +19,12 @@ Date: ???
       - Added blue science packs to powder refining (due to the requirement of lubricant)
       - Moved crystal slurry ceramic filtering to geode crystallization (blue tech, due to ceramic filters)
     - Fixed error related to the new base game v0.18.27 (247)
+    - Cupric dust now takes 4 seconds instead of 1 (#234)
+    - Added some extra dependencies on water treatment technologies
   Modding:
     - fixed potential error in angelsmods.functions.modify_barreling_icon()
     - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
     - added function angelsmods.functions.modify_icon_layers(...)
-  Bugfixes:
-    - Cupric dust now takes 4 seconds instead of 1 (#234)
-    - Added some extra dependencies on water treatment technologies
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.10
 Date: 20.04.2020
