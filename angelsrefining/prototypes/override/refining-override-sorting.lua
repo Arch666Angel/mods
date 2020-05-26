@@ -494,10 +494,28 @@ OV.patch_recipes(
         special_vanilla and "unused" or {type = "item", name = "tin-ore", amount = 4}
       },
       {
-        "angels-ore-mix-iron-sorting.png",
-        "angels-ore-mix-copper-sorting.png",
-        special_vanilla and "angels-ore-mix-copper-sorting.png" or "angels-ore-mix-lead-sorting.png",
-        "angels-ore-mix-tin-sorting.png"
+        --[[1]] special_vanilla and {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelsrefining__/graphics/icons/iron-nugget.png", scale = 0.5, shift = {10, 10} }
+        } or {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64, scale = 32/64 * 0.5, shift = {10, 10} }
+        },
+        --[[2]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64, scale = 32/64 * 0.5, shift = {10, 10} }
+        },
+        --[[3]] special_vanilla and {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelsrefining__/graphics/icons/copper-nugget.png", scale = 0.5, shift = {10, 10} }
+        } or {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-lead.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[4]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-tin.png", scale = 0.5, shift = {10, 10} }
+        }
       },
       {
         special_vanilla and
@@ -530,15 +548,33 @@ OV.patch_recipes(
         "unused"
       },
       {
-        special_vanilla and "angels-ore-mix-iron-sorting.png" or "angels-ore-mix-silica-sorting.png",
-        special_vanilla and "angels-ore-mix-copper-sorting.png" or "angels-ore-mix-nickel-sorting.png",
-        "angels-ore-mix-aluminium-sorting.png",
-        "angels-ore-mix-zinc-sorting.png",
-        {
+        --[[1]] special_vanilla and {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelsrefining__/graphics/icons/iron-slag.png", scale = 0.5, shift = {10, 10} }
+        } or {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-silica.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[2]] special_vanilla and {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelsrefining__/graphics/icons/copper-slag.png", scale = 0.5, shift = {10, 10} }
+        } or {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-nickel.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[3]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-bauxite.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[4]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-zinc.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png", scale = 0.5, shift = {10, 10}}
         },
-        nil
+        --[[6]] nil
       },
       {
         special_vanilla and
@@ -571,15 +607,27 @@ OV.patch_recipes(
         {type = "item", name = "thorium-ore", amount = 1}
       },
       {
-        "angels-ore-mix-titanium-sorting.png",
-        "angels-ore-mix-gold-sorting.png",
-        "angels-ore-mix-cobalt-sorting.png",
-        "angels-ore-mix-silver-sorting.png",
-        {
+        --[[1]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-rutile.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[2]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-gold.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[3]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-cobalt.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[4]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-silver.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           {icon = "__base__/graphics/icons/uranium-ore.png", scale = 32 / 64 * 0.5, shift = {10, 10}, icon_size = 64}
         },
-        {
+        --[[6]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           {
             icon = mods["angelsindustries"] and angelsmods.industries.overhaul and
@@ -604,9 +652,15 @@ OV.patch_recipes(
         "unused"
       },
       {
-        "angels-ore-mix-tungsten-sorting.png",
-        "angels-ore-mix-platinum-sorting.png",
-        nil
+        --[[1]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-tungsten.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[2]] {
+          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+          { icon = "__angelssmelting__/graphics/icons/ore-platinum.png", scale = 0.5, shift = {10, 10} }
+        },
+        --[[3]] nil
       }
     )
   }
@@ -634,28 +688,8 @@ OV.patch_recipes(
         ["zinc-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["rutile-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["bauxite-ore"] = {0, 0, 0, 0, 0, 0.4, 0, 0, 0},
-        ["manganese-ore"] = {
-          0,
-          0,
-          0,
-          0,
-          0,
-          ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4,
-          0,
-          0,
-          0
-        },
-        ["chrome-ore"] = {
-          0,
-          0,
-          0,
-          0,
-          0,
-          ore_exists("platinum-ore") and 0 or 0.2,
-          ore_exists("platinum-ore") and 0.4 or 0,
-          0,
-          0
-        },
+        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
+        ["chrome-ore"] = { 0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
         ["platinum-ore"] = {0, 0, 0, 0, 0, 0, 0.4, 0, 0},
         ["cobalt-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
         ["tungsten-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
@@ -664,19 +698,17 @@ OV.patch_recipes(
         ["thorium-ore"] = {0, 0, 0, 0, 0, 0, 0, 0, 0.005}
       },
       {
-        --[[1]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla1.png" or
-          angelsmods.functions.create_liquid_recipe_icon(
+        --[[1]] angelsmods.functions.create_liquid_recipe_icon(
             {
               "iron-ore",
-              "copper-ore"
+              (not special_vanilla) and "copper-ore" or nil
             },
             slag_color
           ),
-        --[[2]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla2.png" or
-          angelsmods.functions.create_liquid_recipe_icon(
+        --[[2]] angelsmods.functions.create_liquid_recipe_icon(
             {
-              "lead-ore",
-              "tin-ore"
+              special_vanilla and "copper-ore" or "lead-ore",
+              (not special_vanilla) and "tin-ore" or nil
             },
             slag_color
           ),
@@ -687,19 +719,17 @@ OV.patch_recipes(
           },
           slag_color
         ),
-        --[[4]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla3.png" or
-          angelsmods.functions.create_liquid_recipe_icon(
+        --[[4]] angelsmods.functions.create_liquid_recipe_icon(
             {
-              "gold-ore",
-              "nickel-ore"
+              special_vanilla and "angels-iron-pebbles" or "gold-ore",
+              (not special_vanilla) and "nickel-ore" or nil
             },
             slag_color
           ),
-        --[[5]] special_vanilla and "__angelsrefining__/graphics/icons/slag-processing-vanilla4.png" or
-          angelsmods.functions.create_liquid_recipe_icon(
+        --[[5]] angelsmods.functions.create_liquid_recipe_icon(
             {
-              "zinc-ore",
-              "rutile-ore"
+              special_vanilla and "angels-copper-pebbles" or "zinc-ore",
+              (not special_vanilla) and "rutile-ore" or nil
             },
             slag_color
           ),

@@ -18,9 +18,9 @@ else
         name = "iron-plate",
         icons = {
           mods["angelssmelting"] and {
-            icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+            icon = "__angelssmelting__/graphics/icons/plate-iron.png",
           } or {
-            icon = "__base__/graphics/icons/copper-plate.png",
+            icon = "__base__/graphics/icons/iron-plate.png",
             icon_size = 64,
             scale = 32/64
           },
