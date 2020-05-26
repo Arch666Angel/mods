@@ -4,7 +4,7 @@ data:extend(
       type = "simple-entity",
       name = "angels-crystal-rock",
       flags = {"placeable-neutral", "placeable-off-grid", "not-on-map"},
-      icon = "__base__/graphics/icons/rock-huge-icon.png",
+      icon = "__base__/graphics/icons/rock-huge.png",
       icon_size = 32,
       subgroup = "grass",
       order = "b[decorative]-k[stone-rock]-c[crystal]",
