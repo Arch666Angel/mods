@@ -5,6 +5,7 @@ Date: ???
     - Properly use name, amount in result and ingredient prototypes
   Bugfixes:
     - MP safer method of requiring files (check inside the file instead of arround)
+    - Added the missing thumbnail
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 20.04.2020
