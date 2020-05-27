@@ -436,6 +436,7 @@ data:extend(
       results = {
         {type = "item", name = "angels-rod-steel", amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/rod-steel.png"

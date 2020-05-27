@@ -16,6 +16,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "body-1", amount = 1}
         },
+        allow_decomposition = false,
         icon_size = 32
       },
       {
@@ -88,6 +89,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-trigger", amount = 1}
         },
         result = "weapon-1",
+        allow_decomposition = false,
         icon_size = 32
       },
       {
@@ -165,6 +167,7 @@ if angelsmods.industries.components then
           {type = "item", name = "iron-plate", amount = 1}
         },
         result = "angels-trigger",
+        allow_decomposition = false,
         icon_size = 32
       },
       {

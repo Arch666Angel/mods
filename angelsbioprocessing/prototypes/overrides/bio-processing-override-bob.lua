@@ -2,7 +2,6 @@ if bobmods then
   local OV = angelsmods.functions.OV
 
   if mods["bobgreenhouse"] then
-    OV.add_prereq("bob-greenhouse", "bio-arboretum-1")
     OV.add_prereq("bob-fertiliser", "bio-farm-2")
   end
 

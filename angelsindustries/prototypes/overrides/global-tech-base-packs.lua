@@ -71,6 +71,9 @@ if angelsmods.industries.tech then
   -- ORANGE SCIENCE PACKS -------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
+  pack_replace("stack-inserter", "green", "orange")
+  pack_replace("inserter-capacity-bonus-1", "green", "orange")
+  pack_replace("inserter-capacity-bonus-2", "green", "orange")
   --pack_replace("battery","green","orange")
   pack_replace("oil-processing", "green", "orange")
   --pack_replace("circuit-network","green","orange")

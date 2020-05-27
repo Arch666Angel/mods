@@ -245,6 +245,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-saw", amount = 1}
       },
+      allow_decomposition = false,
       --icon_size = 32,
       order = "b[saw]-a[iron]"
     },
@@ -262,6 +263,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-crystal-tipped-saw", amount = 1}
       },
+      allow_decomposition = false,
       --icon_size = 32,
       order = "b[saw]-b[crystal-tipped]"
     },
@@ -279,6 +281,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-crystal-full-saw", amount = 1}
       },
+      allow_decomposition = false,
       --icon_size = 32,
       order = "b[saw]-c[crystal-full]"
     },
@@ -298,6 +301,7 @@ data:extend(
         {type = "item", name = "solid-saw", amount = 1, catalyst_amount = 1, probability = 0.9}
       },
       main_product = "wood",
+      allow_decomposition = false,
       icons = {
         {
           icon = "__base__/graphics/icons/wood.png",
@@ -330,6 +334,7 @@ data:extend(
         {type = "item", name = "solid-crystal-tipped-saw", amount = 1, catalyst_amount = 1, probability = 0.95}
       },
       main_product = "wood",
+      allow_decomposition = false,
       icons = {
         {
           icon = "__base__/graphics/icons/wood.png",
@@ -362,6 +367,7 @@ data:extend(
         {type = "item", name = "solid-crystal-full-saw", amount = 1, catalyst_amount = 1, probability = 0.99}
       },
       main_product = "wood",
+      allow_decomposition = false,
       icons = {
         {
           icon = "__base__/graphics/icons/wood.png",

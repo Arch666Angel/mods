@@ -41,6 +41,7 @@ function core_replace(techname, old_c, new_c, tier) -- tech core swapping script
     OV.set_science_pack(techname, "datacore-" .. new_c .. "-" .. tier, 2)
   end
 end
+
 function pre_req_replace(techname, old_tech, new_tech1, new_tech2) -- tech prerequisite replacements
   OV.remove_prereq(techname, old_tech)
   OV.add_prereq(techname, new_tech1)
@@ -414,14 +415,21 @@ function replace_con_mats(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
     if data.raw.recipe[assembly_check] then
       local rec_check = data.raw.recipe[assembly_check]
-      if rec_check.normal then
-        ing_list = rec_check.normal.ingredients
-        replace_blocks_list(ing_list)
-        ing_list = rec_check.expensive.ingredients
-        replace_blocks_list(ing_list)
+      if rec_check.normal or rec_check.expensive then
+        if rec_check.normal then
+          ing_list = rec_check.normal.ingredients
+          replace_blocks_list(ing_list)
+          rec_check.normal.energy_required = 0.5
+        end
+        if rec_check.expensive then
+          ing_list = rec_check.expensive.ingredients
+          replace_blocks_list(ing_list)
+          rec_check.expensive.energy_required = 0.5
+        end
       else
         ing_list = rec_check.ingredients
         replace_blocks_list(ing_list)
+        rec_check.energy_required = 0.5
       end
     end
   end

@@ -412,6 +412,7 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-tin", amount = 5}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/wire-tin.png"

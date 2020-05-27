@@ -11,7 +11,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-frames",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -20,7 +20,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-frames",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -29,7 +29,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-frames",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -38,7 +38,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-frames",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -47,7 +47,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-frames",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- ELECTRONICS BLOCKS -------------------------------------------------------
@@ -59,7 +59,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-electronics",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -68,7 +68,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-electronics",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -77,7 +77,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-electronics",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -86,7 +86,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-electronics",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -95,7 +95,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-electronics",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -104,7 +104,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-electronics",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- FLUIDBOX BLOCKS ----------------------------------------------------------
@@ -116,7 +116,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-basic",
       order = "f",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -125,7 +125,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-basic",
       order = "g",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- MECHANICAL BLOCKS --------------------------------------------------------
@@ -137,7 +137,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-basic",
       order = "h",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -146,7 +146,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-basic",
       order = "i",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- ENHANCEMENT BLOCKS -------------------------------------------------------
@@ -168,7 +168,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-enhancement",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -187,7 +187,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-enhancement",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -206,7 +206,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-enhancement",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -225,7 +225,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-enhancement",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -244,7 +244,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-enhancement",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- ENERGY BLOCKS ------------------------------------------------------------
@@ -266,7 +266,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-energy",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -285,7 +285,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-energy",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -304,7 +304,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-energy",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -323,7 +323,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-energy",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -342,7 +342,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-energy",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- EXPLORATION BLOCKS -------------------------------------------------------
@@ -364,7 +364,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-exploration",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -383,7 +383,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-exploration",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -402,7 +402,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-exploration",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -421,7 +421,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-exploration",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -440,7 +440,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-exploration",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- LOGISTICS BLOCKS ---------------------------------------------------------
@@ -462,7 +462,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-logistic",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -481,7 +481,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-logistic",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -500,7 +500,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-logistic",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -519,7 +519,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-logistic",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -538,7 +538,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-logistic",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- PRODUCTION BLOCKS --------------------------------------------------------
@@ -560,7 +560,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-production",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -579,7 +579,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-production",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -598,7 +598,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-production",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -617,7 +617,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-production",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -636,7 +636,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-production",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- EXTRACTION BLOCKS --------------------------------------------------------
@@ -648,7 +648,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -657,7 +657,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -666,7 +666,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- METAL PROCESSING BLOCKS --------------------------------------------------
@@ -678,7 +678,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "f",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -687,7 +687,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "g",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -696,7 +696,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "h",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- CHEMICAL PROCESSING BLOCKS -----------------------------------------------
@@ -708,7 +708,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "i",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -717,7 +717,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "j",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -726,7 +726,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "k",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- BIO PROCESSING BLOCKS ----------------------------------------------------
@@ -738,7 +738,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "l",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -747,7 +747,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "m",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -756,7 +756,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-processing",
       order = "n",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     -----------------------------------------------------------------------------
     -- WARFARE BLOCKS -----------------------------------------------------------
@@ -778,7 +778,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-warfare",
       order = "a",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -797,7 +797,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-warfare",
       order = "b",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -816,7 +816,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-warfare",
       order = "c",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -835,7 +835,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-warfare",
       order = "d",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
     {
       type = "item",
@@ -854,7 +854,7 @@ if angelsmods.industries.components then
       icon_size = 32,
       subgroup = "blocks-warfare",
       order = "e",
-      stack_size = 200,
+      stack_size = angelsmods.industries.block_stack_size,
     },
   }
   )

@@ -3,10 +3,18 @@ Version: 0.4.1
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+    - Component mode:
+      - Blocks have a configurable stack size (default 1000) (222)
+      - Block tiers 0 and 1 have lower crafting times for faster progression (222)
+      - Blocks tier 3, 4 and 5 have increased crafting times due to lower amounts of use (222)
+      - All machines that use blocks as a recipe now have an instant crafting time (222)
+      - Added better recipes for inserters to use components better
   Bugfixes:
     - MP safer method of requiring files (check inside the file instead of arround)
     - Overhaul mode:
       - Added angels nuclear fuel processes
+    - Component mode:
+      - Fixed that the manual craftable blocks would be decomposed for total raw calculation (222)
     - Science mode:
       - Fixed rocket silo would only give 200 Gravitational Analyzers instead of 1000 (stack size)
 ---------------------------------------------------------------------------------------------------

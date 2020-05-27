@@ -112,6 +112,17 @@ if angelsmods.industries.tech then
     pack_replace("bob-robo-modular-1", "green", "orange")
     pack_replace("bob-robo-modular-2", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-2", "chemical-science-pack")
+    -- inserter techs
+    if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
+      OV.remove_prereq("stack-inserter", "tech-orange-circuit")
+      pack_replace("stack-inserter", "orange", "green")
+      pack_replace("logistics-3", "blue", "orange")
+      pack_replace("express-inserters", "blue", "orange")
+      pack_replace("stack-inserter-2", "blue", "orange")
+    else
+      pack_replace("express-inserters", "green", "blue")
+      pack_replace("stack-inserter-2", "blue", "yellow")
+    end
   end
 
   -------------------------------------------------------------------------------

@@ -317,6 +317,7 @@ data:extend(
         {type = "item", name = "solid-paper", amount = 4}
       },
       --main_product = "solid-paper",
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
@@ -348,6 +349,7 @@ data:extend(
         {type = "item", name = "solid-sodium-hypochlorite", amount = 2}
       },
       --main_product = "solid-paper",
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
@@ -382,6 +384,7 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 100}
       },
       --main_product = "solid-paper",
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"

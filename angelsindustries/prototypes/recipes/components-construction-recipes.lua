@@ -16,6 +16,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "grate-iron", amount = 1}
         },
+        allow_decomposition = false,
         icon_size = 32
       },
       {
@@ -90,6 +91,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "construction-frame-1", amount = 2}
         },
+        allow_decomposition = false,
         icon_size = 32
       },
       {
@@ -177,6 +179,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "angels-girder", amount = 1}
         },
+        allow_decomposition = false,
         icon_size = 32
       },
       {
@@ -252,6 +255,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "construction-components", amount = 2}
         },
+        allow_decomposition = false,
         icons = {
           {
             icon = "__angelsindustries__/graphics/icons/construction-components.png"

@@ -118,6 +118,7 @@ if angelsmods.trigger.smelting_products["copper"].wire then
     {
       {
         name = "copper-cable",
+        allow_decomposition = false,
         icons = {
           {
             icon = "__angelssmelting__/graphics/icons/wire-copper.png"

@@ -447,6 +447,7 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-platinum", amount = 5}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/wire-platinum.png"

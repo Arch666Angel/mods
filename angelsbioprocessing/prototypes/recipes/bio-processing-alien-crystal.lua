@@ -142,6 +142,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 5},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -171,6 +172,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 5},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -200,6 +202,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 5},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -355,6 +358,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 10},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -384,6 +388,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 10},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -413,6 +418,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 10},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -568,6 +574,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 15},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -597,6 +604,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 15},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"
@@ -626,6 +634,7 @@ data:extend(
         {type = "item", name = "crystal-powder", amount = 15},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
+      allow_decomposition = false,
       icons = {
         {
           icon = "__angelsbioprocessing__/graphics/icons/crystal-powder.png"

@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.8
+Version: 0.9.9
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
@@ -14,7 +14,7 @@ Date: ???
     - Fixed barreling of heavy and semi heavy water, now only possible at 25°
     - Fixed Base Mineral Oil Catalysation was listed as chemistry instead of advanced chemistry (244)
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.7
+Version: 0.9.8
 Date: 20.04.2020
   Bugfixes:
     - Fixed bobs revamp hardmode startup

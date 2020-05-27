@@ -9,7 +9,7 @@ if angelsmods.industries.components then
       name = "block-construction-1",
       enabled = true,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "construction-frame-1", amount = 1},
@@ -19,6 +19,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-construction-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -44,7 +45,7 @@ if angelsmods.industries.components then
       name = "block-construction-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-construction-2", amount = 1},
@@ -62,7 +63,7 @@ if angelsmods.industries.components then
       name = "block-construction-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-construction-3", amount = 1},
@@ -80,7 +81,7 @@ if angelsmods.industries.components then
       name = "block-construction-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-construction-4", amount = 1},
@@ -101,7 +102,7 @@ if angelsmods.industries.components then
       name = "block-electronics-0",
       enabled = true,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 1,
       ingredients =
       {
         {type="item", name = "construction-frame-1", amount = 1},
@@ -111,6 +112,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-electronics-0", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -118,7 +120,7 @@ if angelsmods.industries.components then
       name = "block-electronics-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-0", amount = 1},
@@ -130,6 +132,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-electronics-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -156,7 +159,7 @@ if angelsmods.industries.components then
       name = "block-electronics-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-electronics-2", amount = 1},
@@ -175,7 +178,7 @@ if angelsmods.industries.components then
       name = "block-electronics-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-electronics-3", amount = 1},
@@ -194,7 +197,7 @@ if angelsmods.industries.components then
       name = "block-electronics-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-electronics-4", amount = 1},
@@ -216,7 +219,7 @@ if angelsmods.industries.components then
       name = "block-fluidbox-1",
       enabled = true,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "construction-frame-1", amount = 1},
@@ -226,6 +229,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-fluidbox-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -233,7 +237,7 @@ if angelsmods.industries.components then
       name = "block-fluidbox-2",
       enabled = false, -- tier 2.5
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-fluidbox-1", amount = 1},
@@ -254,7 +258,7 @@ if angelsmods.industries.components then
       name = "block-mechanical-1",
       enabled = true,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "construction-frame-1", amount = 1},
@@ -264,6 +268,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-mechanical-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -271,7 +276,7 @@ if angelsmods.industries.components then
       name = "block-mechanical-2",
       enabled = false, -- tier 2.5
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-mechanical-1", amount = 1},
@@ -292,7 +297,7 @@ if angelsmods.industries.components then
       name = "block-enhancement-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-1", amount = 1},
@@ -304,6 +309,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-enhancement-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -331,7 +337,7 @@ if angelsmods.industries.components then
       name = "block-enhancement-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-enhancement-2", amount = 1},
@@ -351,7 +357,7 @@ if angelsmods.industries.components then
       name = "block-enhancement-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-enhancement-3", amount = 1},
@@ -371,7 +377,7 @@ if angelsmods.industries.components then
       name = "block-enhancement-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-enhancement-4", amount = 1},
@@ -394,7 +400,7 @@ if angelsmods.industries.components then
       name = "block-energy-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-1", amount = 1},
@@ -406,6 +412,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-energy-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -433,7 +440,7 @@ if angelsmods.industries.components then
       name = "block-energy-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-energy-2", amount = 1},
@@ -453,7 +460,7 @@ if angelsmods.industries.components then
       name = "block-energy-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-energy-3", amount = 1},
@@ -473,7 +480,7 @@ if angelsmods.industries.components then
       name = "block-energy-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-energy-4", amount = 1},
@@ -496,7 +503,7 @@ if angelsmods.industries.components then
       name = "block-exploration-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-1", amount = 1},
@@ -508,6 +515,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-exploration-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -535,7 +543,7 @@ if angelsmods.industries.components then
       name = "block-exploration-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-exploration-2", amount = 1},
@@ -555,7 +563,7 @@ if angelsmods.industries.components then
       name = "block-exploration-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-exploration-3", amount = 1},
@@ -575,7 +583,7 @@ if angelsmods.industries.components then
       name = "block-exploration-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-exploration-4", amount = 1},
@@ -598,7 +606,7 @@ if angelsmods.industries.components then
       name = "block-logistic-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-1", amount = 1},
@@ -610,6 +618,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-logistic-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -637,7 +646,7 @@ if angelsmods.industries.components then
       name = "block-logistic-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-logistic-2", amount = 1},
@@ -657,7 +666,7 @@ if angelsmods.industries.components then
       name = "block-logistic-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-logistic-3", amount = 1},
@@ -677,7 +686,7 @@ if angelsmods.industries.components then
       name = "block-logistic-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-logistic-4", amount = 1},
@@ -700,7 +709,7 @@ if angelsmods.industries.components then
       name = "block-production-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-1", amount = 1},
@@ -712,6 +721,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-production-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -739,7 +749,7 @@ if angelsmods.industries.components then
       name = "block-production-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-production-2", amount = 1},
@@ -759,7 +769,7 @@ if angelsmods.industries.components then
       name = "block-production-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-production-3", amount = 1},
@@ -779,7 +789,7 @@ if angelsmods.industries.components then
       name = "block-production-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-production-4", amount = 1},
@@ -802,7 +812,7 @@ if angelsmods.industries.components then
       name = "block-extraction-3",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-construction-3", amount = 1},
@@ -822,7 +832,7 @@ if angelsmods.industries.components then
       name = "block-extraction-4",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-construction-4", amount = 1},
@@ -842,7 +852,7 @@ if angelsmods.industries.components then
       name = "block-extraction-5",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-construction-5", amount = 1},
@@ -865,7 +875,7 @@ if angelsmods.industries.components then
       name = "block-cprocessing-3",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-construction-3", amount = 1},
@@ -884,7 +894,7 @@ if angelsmods.industries.components then
       name = "block-cprocessing-4",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-construction-4", amount = 1},
@@ -903,7 +913,7 @@ if angelsmods.industries.components then
       name = "block-cprocessing-5",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-construction-5", amount = 1},
@@ -925,7 +935,7 @@ if angelsmods.industries.components then
       name = "block-mprocessing-3",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-construction-3", amount = 1},
@@ -945,7 +955,7 @@ if angelsmods.industries.components then
       name = "block-mprocessing-4",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-construction-4", amount = 1},
@@ -965,7 +975,7 @@ if angelsmods.industries.components then
       name = "block-mprocessing-5",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-construction-5", amount = 1},
@@ -988,7 +998,7 @@ if angelsmods.industries.components then
       name = "block-bprocessing-3",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-construction-3", amount = 1},
@@ -1008,7 +1018,7 @@ if angelsmods.industries.components then
       name = "block-bprocessing-4",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-construction-4", amount = 1},
@@ -1028,7 +1038,7 @@ if angelsmods.industries.components then
       name = "block-bprocessing-5",
       enabled = true,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-construction-5", amount = 1},
@@ -1051,7 +1061,7 @@ if angelsmods.industries.components then
       name = "block-warfare-1",
       enabled = false,
       category = "crafting",
-      energy_required = 5,
+      energy_required = 2.5,
       ingredients =
       {
         {type="item", name = "block-electronics-1", amount = 1},
@@ -1063,6 +1073,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-warfare-1", amount=1},
       },
+      allow_decomposition = false,
       icon_size = 32,
     },
     {
@@ -1090,7 +1101,7 @@ if angelsmods.industries.components then
       name = "block-warfare-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 8,
       ingredients =
       {
         {type="item", name = "block-warfare-2", amount = 1},
@@ -1110,7 +1121,7 @@ if angelsmods.industries.components then
       name = "block-warfare-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 15,
       ingredients =
       {
         {type="item", name = "block-warfare-3", amount = 1},
@@ -1130,7 +1141,7 @@ if angelsmods.industries.components then
       name = "block-warfare-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5,
+      energy_required = 25,
       ingredients =
       {
         {type="item", name = "block-warfare-4", amount = 1},

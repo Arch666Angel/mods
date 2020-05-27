@@ -2,6 +2,15 @@ if mods["bobplates"] then
   data.raw["bool-setting"]["bobmods-plates-oreoverride"].hidden = true
   data.raw["bool-setting"]["bobmods-plates-groundwater"].hidden = true
   data.raw["bool-setting"]["bobmods-plates-vanillabarrelling"].hidden = true
+  
+  if mods["angelspetrochem"] then
+    data.raw["bool-setting"]["bobmods-plates-purewater"].hidden = true
+  end
+
+  if mods["angelsindustries"] then
+    data.raw["bool-setting"]["bobmods-plates-bluedeuterium"].hidden = true
+    data.raw["bool-setting"]["bobmods-plates-nuclearupdate"].hidden = true
+  end
 end
 
 if mods["bobores"] then
@@ -38,4 +47,14 @@ if mods["bobores"] then
 
   data.raw["bool-setting"]["bobmods-ores-gemsfromotherores"].hidden = true
   data.raw["double-setting"]["bobmods-ores-gemprobability"].hidden = true
+end
+
+if mods["bobassembly"] then
+  data.raw["bool-setting"]["bobmods-assembly-limits"].hidden = true
+end
+
+if mods["boblogistics"] then
+  if mods["angelsindustries"] then
+    data.raw["bool-setting"]["bobmods-logistics-inserterrequireprevious"].hidden = true
+  end
 end
