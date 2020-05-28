@@ -1,60 +1,66 @@
+local function hide_setting(setting_type, setting_name)
+  if data.raw[setting_type] and data.raw[setting_type][setting_name] then
+    data.raw[setting_type][setting_name].hidden = true
+  end
+end
+
 if mods["bobplates"] then
-  data.raw["bool-setting"]["bobmods-plates-oreoverride"].hidden = true
-  data.raw["bool-setting"]["bobmods-plates-groundwater"].hidden = true
-  data.raw["bool-setting"]["bobmods-plates-vanillabarrelling"].hidden = true
+  hide_setting("bool-setting", "bobmods-plates-oreoverride")
+  hide_setting("bool-setting", "bobmods-plates-groundwater")
+  hide_setting("bool-setting", "bobmods-plates-vanillabarrelling")
   
   if mods["angelspetrochem"] then
-    data.raw["bool-setting"]["bobmods-plates-purewater"].hidden = true
+    hide_setting("bool-setting", "bobmods-plates-purewater")
   end
 
   if mods["angelsindustries"] then
-    data.raw["bool-setting"]["bobmods-plates-bluedeuterium"].hidden = true
-    data.raw["bool-setting"]["bobmods-plates-nuclearupdate"].hidden = true
+    hide_setting("bool-setting", "bobmods-plates-bluedeuterium")
+    hide_setting("bool-setting", "bobmods-plates-nuclearupdate")
   end
 end
 
 if mods["bobores"] then
   --ores
-  data.raw["bool-setting"]["bobmods-ores-enablebauxite"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablecobaltore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablegemsore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablegoldore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enableleadore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablenickelore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablequartz"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablerutile"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablesilverore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablesulfur"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enabletinore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enabletungstenore"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablezincore"].hidden = true
-  --data.raw["bool-setting"]["bobmods-ores-enablewaterores"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-enablethoriumore"].hidden = true
+  hide_setting("bool-setting", "bobmods-ores-enablebauxite")
+  hide_setting("bool-setting", "bobmods-ores-enablecobaltore")
+  hide_setting("bool-setting", "bobmods-ores-enablegemsore")
+  hide_setting("bool-setting", "bobmods-ores-enablegoldore")
+  hide_setting("bool-setting", "bobmods-ores-enableleadore")
+  hide_setting("bool-setting", "bobmods-ores-enablenickelore")
+  hide_setting("bool-setting", "bobmods-ores-enablequartz")
+  hide_setting("bool-setting", "bobmods-ores-enablerutile")
+  hide_setting("bool-setting", "bobmods-ores-enablesilverore")
+  hide_setting("bool-setting", "bobmods-ores-enablesulfur")
+  hide_setting("bool-setting", "bobmods-ores-enabletinore")
+  hide_setting("bool-setting", "bobmods-ores-enabletungstenore")
+  hide_setting("bool-setting", "bobmods-ores-enablezincore")
+  --hide_setting("bool-setting", "bobmods-ores-enablewaterores")
+  hide_setting("bool-setting", "bobmods-ores-enablethoriumore")
 
-  data.raw["bool-setting"]["bobmods-ores-leadgivesnickel"].hidden = true
-  data.raw["double-setting"]["bobmods-ores-leadnickelratio"].hidden = true
-  data.raw["bool-setting"]["bobmods-ores-nickelgivescobalt"].hidden = true
-  data.raw["double-setting"]["bobmods-ores-nickelcobaltratio"].hidden = true
+  hide_setting("bool-setting", "bobmods-ores-leadgivesnickel")
+  hide_setting("double-setting", "bobmods-ores-leadnickelratio")
+  hide_setting("bool-setting", "bobmods-ores-nickelgivescobalt")
+  hide_setting("double-setting", "bobmods-ores-nickelcobaltratio")
 
   --gems
-  data.raw["bool-setting"]["bobmods-ores-unsortedgemore"].hidden = true
-  data.raw["double-setting"]["bobmods-gems-rubyratio"].hidden = true
-  data.raw["double-setting"]["bobmods-gems-sapphireratio"].hidden = true
-  data.raw["double-setting"]["bobmods-gems-emeraldratio"].hidden = true
-  data.raw["double-setting"]["bobmods-gems-amethystratio"].hidden = true
-  data.raw["double-setting"]["bobmods-gems-topazratio"].hidden = true
-  data.raw["double-setting"]["bobmods-gems-diamondratio"].hidden = true
+  hide_setting("bool-setting", "bobmods-ores-unsortedgemore")
+  hide_setting("double-setting", "bobmods-gems-rubyratio")
+  hide_setting("double-setting", "bobmods-gems-sapphireratio")
+  hide_setting("double-setting", "bobmods-gems-emeraldratio")
+  hide_setting("double-setting", "bobmods-gems-amethystratio")
+  hide_setting("double-setting", "bobmods-gems-topazratio")
+  hide_setting("double-setting", "bobmods-gems-diamondratio")
 
-  data.raw["bool-setting"]["bobmods-ores-gemsfromotherores"].hidden = true
-  data.raw["double-setting"]["bobmods-ores-gemprobability"].hidden = true
+  hide_setting("bool-setting", "bobmods-ores-gemsfromotherores")
+  hide_setting("double-setting", "bobmods-ores-gemprobability")
 end
 
 if mods["bobassembly"] then
-  data.raw["bool-setting"]["bobmods-assembly-limits"].hidden = true
+  hide_setting("bool-setting", "bobmods-assembly-limits")
 end
 
 if mods["boblogistics"] then
   if mods["angelsindustries"] then
-    data.raw["bool-setting"]["bobmods-logistics-inserterrequireprevious"].hidden = true
+    hide_setting("bool-setting", "bobmods-logistics-inserterrequireprevious")
   end
 end
