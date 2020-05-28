@@ -604,7 +604,7 @@ OV.patch_recipes(
         {type = "item", name = "cobalt-ore", amount = 6},
         {type = "item", name = "silver-ore", amount = 6},
         {type = "item", name = "uranium-ore", amount = special_vanilla and 0 or 3},
-        {type = "item", name = "thorium-ore", amount = 1}
+        {type = "item", name = "thorium-ore", amount = 3}
       },
       {
         --[[1]] {
