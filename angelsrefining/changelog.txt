@@ -9,7 +9,7 @@ Date: 28.05.2020
     - Making thermal water extraction available at green science
       - Added a (slower) mk1 thermal water bore to extract thermal water at a slow rate
       - Split thermal water processing into a seperate blue tech (so that part remains blue)
-      - Mode the termal water extractor an upgrade of the thermal water bore
+      - Made the termal water extractor an upgrade of the thermal water bore
     - Improve refining in special vanilla mode (242)
       - Improve ratio of copper versus iron yield to reflect the 50/50 use of base game
       - Improve yield so more advanced recipes produce more ore (up to 100% extra yield)
