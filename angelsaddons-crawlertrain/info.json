@@ -8,6 +8,6 @@
   "homepage": "",
   "description": "Adds a Crawler themed train",
   "dependencies": [
-    "base >= 0.18.19"
+    "base >= 0.18.27"
   ]
 }

@@ -8,6 +8,6 @@
   "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
   "description": "",
   "dependencies": [
-    "base >= 0.18.0"
+    "base >= 0.18.27"
   ]
 }

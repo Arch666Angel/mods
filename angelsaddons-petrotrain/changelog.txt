@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
-Date: ???
+Date: 28.05.2020
   Changes:
     - Properly use name, amount in result and ingredient prototypes
   Bugfixes:

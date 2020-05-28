@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
-Date: ???
+Date: 28.05.2020
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Moved productivity from solid rubber to liquid rubber so it is similar to plastic and resin

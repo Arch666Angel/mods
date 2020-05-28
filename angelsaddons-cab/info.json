@@ -8,7 +8,7 @@
   "homepage": "",
   "description": "Adds another type of Crawler",
   "dependencies": [
-    "base >= 0.18.1",
-    "? angelsindustries >= 0.3.0"
+    "base >= 0.18.27",
+    "? angelsindustries >= 0.4.1"
   ]
 }

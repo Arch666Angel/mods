@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
   "description": "Adds pressure tanks (extremly large tanks).",
   "dependencies": [
-    "base >= 0.18.0",
-    "? angelspetrochem >= 0.9.0"
+    "base >= 0.18.27",
+    "? angelspetrochem >= 0.9.9"
   ]
 }

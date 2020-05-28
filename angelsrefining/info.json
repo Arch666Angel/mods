@@ -10,8 +10,8 @@
   "dependencies": [
     "base >= 0.18.27",
     "? rso-mod >= 2.3.3",
-    "? bobplates >= 0.15.0",
-    "? bobrevamp >= 0.18.3",
+    "? bobplates >= 0.18.8",
+    "? bobrevamp >= 0.18.5",
     "? Yuoki >= 0.4.0",
     "? UraniumPower >= 0.6.4",
     "? Nucular >= 0.2.0"

@@ -1,17 +1,16 @@
 local OV = angelsmods.functions.OV
-local tint_colors =
-{
-  green = {r=000/255, g=255/255, b=000/255, a=1},
-  orange = {r=232/255, g=139/255, b=000/255, a=1},
-  red = {r=244/255, g=008/255, b=000/255, a=1},
-  blue = {r=000/255, g=067/255, b=237/255, a=1},
+local tint_colors = {
+  green = {r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1},
+  orange = {r = 232 / 255, g = 139 / 255, b = 000 / 255, a = 1},
+  red = {r = 244 / 255, g = 008 / 255, b = 000 / 255, a = 1},
+  blue = {r = 000 / 255, g = 067 / 255, b = 237 / 255, a = 1}
 }
 
 if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- Patch existing nuclear recipes
   -------------------------------------------------------------------------------
-  --need to also update recipe for uranium fuel cells to the new ratio 
+  --need to also update recipe for uranium fuel cells to the new ratio
   --1 U-235 + 29 U-238 + 3 lead plate --> 30 U_fuel_cell
   --need to kill kovarex entirely (tech and recipe stuffs)
   --update uranium fuel cell reprocessing
@@ -20,84 +19,75 @@ if angelsmods.industries.overhaul then
     {
       {
         name = "uranium-processing",
-        results =
-        {
-          {type="item",name="uranium-234" , amount=1 , probability=0.000055}
+        results = {
+          {type = "item", name = "uranium-234", amount = 1, probability = 0.000055}
         },
-        crafting_machine_tint =
-        {
-          primary = tint_colors.green,
-        },
+        crafting_machine_tint = {
+          primary = tint_colors.green
+        }
       },
       {
         name = "atomic-bomb",
-        ingredients = {{type="item",name="uranium-235",amount=15}},--halve
-        icons={
-          {icon = "__base__/graphics/icons/atomic-bomb.png",icon_size = 64, icon_mipmaps = 4},
+        ingredients = {{type = "item", name = "uranium-235", amount = 15}}, --halve
+        icons = {
+          {icon = "__base__/graphics/icons/atomic-bomb.png", icon_size = 64, icon_mipmaps = 4},
           {
             icon = "__angelsrefining__/graphics/icons/num_1.png",
             tint = angelsmods.industries.number_tint,
             scale = 0.32,
-            icon_size=32,
+            icon_size = 32,
             shift = {-12, -12}
           }
         },
-        icon_size=32,
-        icon=nil,
+        icon_size = 32,
+        icon = nil
       },
       {
         name = "uranium-fuel-cell",
         localised_name = {"recipe-name.uranium-fuel-cell"},
         category = "centrifuging",
-        ingredients =
-        {
-          {type="item",name="uranium-235",amount=1},
-          {type="item",name="uranium-238",amount=29},
+        ingredients = {
+          {type = "item", name = "uranium-235", amount = 1},
+          {type = "item", name = "uranium-238", amount = 29}
           --[[{type="item",name="angels-plate-lead",amount=30}]]
         },
-        results =
-        {
-          {type="item",name="uranium-fuel-cell",amount=15}
+        results = {
+          {type = "item", name = "uranium-fuel-cell", amount = 15}
         },
         always_show_products = true,
         show_amount_in_title = false,
-        crafting_machine_tint =
-        {
-          primary = tint_colors.green,
-        },
+        crafting_machine_tint = {
+          primary = tint_colors.green
+        }
       },
       {
         name = "nuclear-fuel-reprocessing",
-        ingredients =
-        {
+        ingredients = {
           {"!!"},
-          {type="item",name="used-up-uranium-fuel-cell",amount=5}
+          {type = "item", name = "used-up-uranium-fuel-cell", amount = 5}
         },
-        results =
-        {
+        results = {
           {"!!"},
           {type = "item", name = "uranium-238", amount = 3},
           {type = "item", name = "slag", amount = 5}
         },
-        crafting_machine_tint =
-        {
-          primary = tint_colors.green,
+        crafting_machine_tint = {
+          primary = tint_colors.green
         },
-        icons =
-        {
+        icons = {
           {
             icon = "__base__/graphics/icons/nuclear-fuel-reprocessing.png",
             icon_size = 64,
-            icon_mipmaps = 4,
+            icon_mipmaps = 4
           }
         },
-        icon_size = 64,
+        icon_size = 64
       }
     }
   )
   OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
   OV.add_unlock("uranium-processing", "angels-uranium-fuel-cell")
-  data.raw.item["uranium-fuel-cell"].fuel_value="2GJ"
+  data.raw.item["uranium-fuel-cell"].fuel_value = "2GJ"
 
   -------------------------------------------------------------------------------
   -- Productivity
@@ -113,20 +103,24 @@ if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- New recipe unlocks
   -------------------------------------------------------------------------------
-  OV.add_unlock("atomic-bomb","angels-atomic-bomb-2")
-  OV.add_unlock("atomic-bomb","angels-atomic-bomb")
-  OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel")
-  OV.add_unlock("angels-nuclear-fuel","angels-nuclear-fuel-2")
+  OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
+  OV.add_unlock("atomic-bomb", "angels-atomic-bomb")
+  OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel")
+  OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel-2")
 
   -------------------------------------------------------------------------------
   -- Bob nuclear addaption
   -------------------------------------------------------------------------------
   if bobmods and bobmods.plates then
     --basically remove all of bobs things (Sorry bob)
-    OV.global_replace_item("plutonium-240","plutonium-239") --use bobs plutonium
-    angelsmods.functions.move_item("plutonium-239", "angels-power-nuclear-processing", "a[radioactive-element]-e[plutonium-239]")
+    OV.global_replace_item("plutonium-240", "plutonium-239") --use bobs plutonium
+    angelsmods.functions.move_item(
+      "plutonium-239",
+      "angels-power-nuclear-processing",
+      "a[radioactive-element]-e[plutonium-239]"
+    )
     angelsmods.functions.add_flag("plutonium-240", "hidden")
-    
+
     -- plutonium enrichment process
     if bobmods.revamp and settings.startup["bobmods-revamp-rtg"].value then
       OV.add_prereq("bobingabout-process", "angels-plutonium-power")
@@ -136,28 +130,28 @@ if angelsmods.industries.overhaul then
     end
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
-    
+
     -- thorium processing
     OV.remove_unlock("thorium-processing", "thorium-processing")
     OV.global_replace_technology("thorium-processing", "angels-thorium-power")
     OV.disable_technology("thorium-processing")
     angelsmods.functions.add_flag("thorium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("thorium-fuel-cell", "hide-from-fuel-tooltip")
-    
+
     OV.remove_unlock("thorium-fuel-reprocessing", "thorium-fuel-reprocessing")
     OV.disable_technology("thorium-fuel-reprocessing")
     angelsmods.functions.add_flag("used-up-thorium-fuel-cell", "hidden")
-    
+
     OV.remove_unlock("thorium-plutonium-fuel-cell", "thorium-plutonium-fuel-cell")
     OV.disable_technology("thorium-plutonium-fuel-cell")
     angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hide-from-fuel-tooltip")
-    
+
     -- deuterium processing
-    OV.remove_unlock("water-chemistry-2","deuterium-fuel-cell")
+    OV.remove_unlock("water-chemistry-2", "deuterium-fuel-cell")
     angelsmods.functions.add_flag("deuterium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("deuterium-fuel-cell", "hide-from-fuel-tooltip")
-    
+
     OV.global_replace_item("fusion-catalyst", "angels-muon-fusion-catalyst")
     angelsmods.functions.add_flag("fusion-catalyst", "hidden")
 
@@ -167,20 +161,24 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.add_flag("used-up-deuterium-fuel-cell", "hidden")
 
     -- plutonium processing
-    if (bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value) then
+    if bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value then
       --if overhaul, remove unlocks in each reactor tech
       --add each cell to each reactor... or would it be quicker to just set the setting?
       OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell") --keep as "uranium tier"
       OV.global_replace_technology("plutonium-fuel-cell", "angels-plutonium-power")
       OV.disable_technology("plutonium-fuel-cell")
 
-      OV.remove_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
-      data.raw.item["angels-thorium-fuel-cell"].fuel_category="thorium"
-      OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
+      if data.raw.item["thorium-fuel-cell"] and data.raw.reactor["nuclear-reactor-2"] then
+        OV.remove_unlock("bob-nuclear-power-2", "thorium-fuel-cell")
+        data.raw.item["angels-thorium-fuel-cell"].fuel_category = "thorium"
+        OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
+      end
 
-      OV.remove_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
-      data.raw.item["angels-deuterium-fuel-cell"].fuel_category="deuterium"
-      OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power")
+      if data.raw.item["deuterium-fuel-cell"] and data.raw.reactor["nuclear-reactor-3"] then
+        OV.remove_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
+        data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "deuterium"
+        OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power")
+      end
     else --remove them from their individual techs
       OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell")
       OV.global_replace_technology("plutonium-fuel-cell", "angels-plutonium-power")
@@ -189,5 +187,4 @@ if angelsmods.industries.overhaul then
       OV.remove_unlock("thorium-processing", "thorium-fuel-cell")
     end
   end
-
 end
