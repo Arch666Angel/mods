@@ -3,6 +3,22 @@ Version: 0.4.1
 Date: ???
   Changes:
     - Properly use name, amount in result and ingredient prototypes
+    - Added large logistic zone entities (241)
+      - Added large logistic zone expander
+        - Consumes no power
+        - Expands logistic zone by 30x30
+      - Added large Construction zone expander
+        - Expands construction zone by 125x125
+        - Connects up to 60 tiles distance (30 tile radius)
+        - Has 1 recharge port with a recharge rate of 200kW
+      - Added large Remote Relay station
+        - Equivalent logistic zone of 30x30 and connecion up to 60 tiles distance
+        - Has 4 recharge port with a recharge rate of 200kW each
+        - Has 1 inventory space to store robots
+        - Has 1 inventory space to store repair packs
+      - Slightly altered the existing crawler logistics recipes
+      - Increased recharge rate on the charging basestation
+    - Fixed charging issues on the relay stations
     - Component mode:
       - Blocks have a configurable stack size (default 1000) (222)
       - Block tiers 0 and 1 have lower crafting times for faster progression (222)

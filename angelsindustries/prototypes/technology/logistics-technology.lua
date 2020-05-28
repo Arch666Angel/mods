@@ -82,21 +82,17 @@ data:extend(
     },
     {
       type = "technology",
-      name = "cargo-robots-2",
-      icon = "__angelsindustries__/graphics/technology/cargo-robot-tech.png",
+      name = "angels-construction-robots-2",
+      icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
       icon_size = 128,
       prerequisites = {
-        "cargo-robots",
-        "advanced-electronics"
+        "angels-construction-robots",
+        "cargo-robots"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-zone-expander-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-logistic-chest-active-provider"
+          recipe = "angels-construction-zone-expander-2"
         },
         {
           type = "unlock-recipe",
@@ -115,26 +111,26 @@ data:extend(
     },
     {
       type = "technology",
-      name = "angels-construction-robots-2",
-      icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
+      name = "cargo-robots-2",
+      icon = "__angelsindustries__/graphics/technology/cargo-robot-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-construction-robots",
-        "cargo-robots-2"
+        "cargo-robots",
+        "advanced-electronics"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "cargo-hub"
+          recipe = "angels-relay-station-2"
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-charging-station"
+          recipe = "angels-zone-expander-2"
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-construction-zone-expander-2"
-        }
+          recipe = "angels-logistic-chest-active-provider"
+        },
       },
       unit = {
         count = 100,
@@ -148,17 +144,58 @@ data:extend(
     },
     {
       type = "technology",
+      name = "angels-construction-robots-3",
+      icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
+      icon_size = 128,
+      prerequisites = {
+        "angels-construction-robots-2",
+        "advanced-electronics-2",
+        "low-density-structure"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "cargo-hub"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-construction-zone-expander-3"
+        }
+      },
+      unit = {
+        count = 100,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
       name = "cargo-robots-3",
       icon = "__angelsindustries__/graphics/technology/cargo-robot-tech.png",
       icon_size = 128,
       prerequisites = {
         "cargo-robots-2",
-        "electric-engine"
+        "electric-engine",
+        "advanced-electronics-2",
+        "low-density-structure"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-relay-station-2"
+          recipe = "angels-relay-station-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-zone-expander-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-charging-station"
         },
         {
           type = "unlock-recipe",

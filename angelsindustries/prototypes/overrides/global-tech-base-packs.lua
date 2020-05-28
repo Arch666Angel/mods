@@ -136,10 +136,8 @@ if angelsmods.industries.tech then
   pack_replace("angels-components-weapons-advanced", "green", "orange")
   pack_replace("angels-components-cabling-4", "blue", "orange")
   OV.remove_prereq("angels-components-cabling-4", "chemical-science-pack")
-  pack_replace("cargo-robots-3", "green", "orange")
-  OV.add_prereq("cargo-robots-3", "angels-components-mechanical-4")
+  pack_replace("cargo-robots-2", "green", "orange")
   pack_replace("angels-construction-robots-2", "green", "orange")
-  pack_replace("cargo-robots-3", "green", "orange")
 
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------

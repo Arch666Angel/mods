@@ -53,7 +53,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "angels-big-chest", amount = 1},
         {type = "item", name = "iron-plate", amount = 10},
-        {type = "item", name = "electronic-circuit", amount = 5}
+        {type = "item", name = "advanced-circuit", amount = 5}
       },
       results = {
         {type = "item", name = "angels-logistic-chest-active-provider", amount = 1}
@@ -83,7 +83,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "angels-big-chest", amount = 1},
         {type = "item", name = "iron-plate", amount = 10},
-        {type = "item", name = "electronic-circuit", amount = 5}
+        {type = "item", name = "advanced-circuit", amount = 5}
       },
       results = {
         {type = "item", name = "angels-logistic-chest-buffer", amount = 1}
@@ -194,12 +194,29 @@ data:extend(
       enabled = false,
       energy_required = 5,
       ingredients = {
+        {type = "item", name = "angels-zone-expander", amount = 4},
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "iron-plate", amount = 5},
         {type = "item", name = "advanced-circuit", amount = 2}
       },
       results = {
         {type = "item", name = "angels-zone-expander-2", amount = 1}
+      },
+      icon_size = 32
+    },
+    {
+      type = "recipe",
+      name = "angels-zone-expander-3",
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        {type = "item", name = "angels-zone-expander-2", amount = 4},
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 5},
+        {type = "item", name = "processing-unit", amount = 2}
+      },
+      results = {
+        {type = "item", name = "angels-zone-expander-3", amount = 1}
       },
       icon_size = 32
     },
@@ -224,12 +241,29 @@ data:extend(
       enabled = false,
       energy_required = 5,
       ingredients = {
+        {type = "item", name = "angels-construction-zone-expander", amount = 4},
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "iron-plate", amount = 5},
         {type = "item", name = "advanced-circuit", amount = 2}
       },
       results = {
         {type = "item", name = "angels-construction-zone-expander-2", amount = 1}
+      },
+      icon_size = 32
+    },
+    {
+      type = "recipe",
+      name = "angels-construction-zone-expander-3",
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        {type = "item", name = "angels-construction-zone-expander-2", amount = 4},
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 5},
+        {type = "item", name = "processing-unit", amount = 2}
+      },
+      results = {
+        {type = "item", name = "angels-construction-zone-expander-3", amount = 1}
       },
       icon_size = 32
     },
@@ -254,6 +288,7 @@ data:extend(
       enabled = false,
       energy_required = 5,
       ingredients = {
+        {type = "item", name = "angels-relay-station", amount = 4},
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "iron-plate", amount = 5},
         {type = "item", name = "advanced-circuit", amount = 2}
@@ -265,13 +300,30 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "angels-relay-station-3",
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        {type = "item", name = "angels-relay-station-2", amount = 4},
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 5},
+        {type = "item", name = "processing-unit", amount = 2}
+      },
+      results = {
+        {type = "item", name = "angels-relay-station-3", amount = 1}
+      },
+      icon_size = 32
+    },
+    {
+      type = "recipe",
       name = "angels-charging-station",
       enabled = false,
       energy_required = 5,
       ingredients = {
+        {type = "item", name = "angels-relay-station-2", amount = 2},
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "iron-plate", amount = 5},
-        {type = "item", name = "advanced-circuit", amount = 2}
+        {type = "item", name = "processing-unit", amount = 2}
       },
       results = {
         {type = "item", name = "angels-charging-station", amount = 1}
