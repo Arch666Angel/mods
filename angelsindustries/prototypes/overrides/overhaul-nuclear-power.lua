@@ -75,18 +75,35 @@ if angelsmods.industries.overhaul then
           primary = tint_colors.green
         },
         icons = {
-          {
-            icon = "__base__/graphics/icons/nuclear-fuel-reprocessing.png",
+          { -- need to have something as bottom layer
+            icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
             icon_size = 64,
-            icon_mipmaps = 4
-          }
+            scale = 32/64
+          },
+          {
+            icon = "__angelsindustries__/graphics/icons/used-up-uranium-fuel-cell.png",
+            icon_size = 64,
+            scale = 32/64 * 45/64,
+            shift = {-7,-5}
+          },
+          {
+            icon = "__angelsindustries__/graphics/icons/uranium-238.png",
+            icon_size = 64,
+            scale = 32/64 * 2/3,
+            shift = {5,7}
+          },
+          {
+            icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+            icon_size = 64,
+            scale = 32/64
+          },
         },
-        icon_size = 64
+        icon_size = 32
       }
     }
   )
   OV.remove_unlock("kovarex-enrichment-process", "kovarex-enrichment-process")
-  OV.add_unlock("uranium-processing", "angels-uranium-fuel-cell")
+  OV.add_unlock("nuclear-power", "angels-uranium-fuel-cell")
   data.raw.item["uranium-fuel-cell"].fuel_value = "2GJ"
 
   -------------------------------------------------------------------------------
@@ -114,6 +131,11 @@ if angelsmods.industries.overhaul then
   if bobmods and bobmods.plates then
     --basically remove all of bobs things (Sorry bob)
     OV.global_replace_item("plutonium-240", "plutonium-239") --use bobs plutonium
+    if data.raw.item["plutonium-239"] then
+      data.raw.item["plutonium-239"].icon = data.raw.item["plutonium-240"].icon
+      data.raw.item["plutonium-239"].icon_size = data.raw.item["plutonium-240"].icon_size
+      data.raw.item["plutonium-239"].icons = data.raw.item["plutonium-240"].icons
+    end
     angelsmods.functions.move_item(
       "plutonium-239",
       "angels-power-nuclear-processing",

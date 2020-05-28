@@ -229,12 +229,12 @@ if angelsmods.industries.overhaul then
     -- interface
     move_item("bob-logistic-zone-interface", "angels-roboport-a", "c[interface]")
     -- angels cargo ports
-    move_item("angels-relay-station", "angels-cargo-ports", false)
-    move_item("angels-relay-station-2", "angels-cargo-ports", false)
-    move_item("angels-zone-expander", "angels-cargo-ports", false)
-    move_item("angels-zone-expander-2", "angels-cargo-ports", false)
-    move_item("angels-construction-zone-expander", "angels-cargo-ports", false)
-    move_item("angels-construction-zone-expander-2", "angels-cargo-ports", false)
+    --move_item("angels-relay-station", "angels-cargo-ports", false)
+    --move_item("angels-relay-station-2", "angels-cargo-ports", false)
+    --move_item("angels-zone-expander", "angels-cargo-ports", false)
+    --move_item("angels-zone-expander-2", "angels-cargo-ports", false)
+    --move_item("angels-construction-zone-expander", "angels-cargo-ports", false)
+    --move_item("angels-construction-zone-expander-2", "angels-cargo-ports", false)
 
     --UPDATE ROBOTS
     data:extend(

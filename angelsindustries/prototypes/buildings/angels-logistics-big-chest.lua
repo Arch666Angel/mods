@@ -171,7 +171,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "angels-logistic-chest-active-provider",
-    icon = "__base__/graphics/icons/logistic-chest-active-provider.png",
+    icon = "__angelsindustries__/graphics/icons/chest-big-active-provider-ico.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-logistic-chest-active-provider"},
@@ -210,7 +210,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "angels-logistic-chest-storage",
-    icon = "__base__/graphics/icons/logistic-chest-storage.png",
+    icon = "__angelsindustries__/graphics/icons/chest-big-storage-ico.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "angels-logistic-chest-storage"},
