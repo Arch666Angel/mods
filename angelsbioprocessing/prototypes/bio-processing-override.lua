@@ -51,7 +51,7 @@ for i, labs in pairs(data.raw["lab"]) do
 end
 
 --CONDITIONAL
-if angelsmods.industries then
+if angelsmods.trigger.smelting_products["glass"].plate then
   OV.patch_recipes(
     {
       {
@@ -61,6 +61,13 @@ if angelsmods.industries then
           {type = "item", name = data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 1} -- bob glass
         }
       },
+    }
+  )
+end
+
+if angelsmods.industries then
+  OV.patch_recipes(
+    {
       {
         name = "crystal-enhancer",
         ingredients = {
