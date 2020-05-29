@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result prototypes
+    - Consistency in assigning angelsmods in data stage
+  Bugfixes:
+    - Added missing call to OV.execute() in data-updates
+    - MP safer method of requiring files (check inside the file instead of around)
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 12.04.2020
   Changes:
@@ -36,16 +45,16 @@ Date: 09.02.2020
     - minor code clean-ups
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: 20-03-2020
+Date: 20.03.2020
   Changes:
     - update to 0.15
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
-Date: ??
+Date: 10.10.2018
   Changes:
-    - ???
+    - some-change
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: ??
+Date: 10.10.2017
   Changes:
     - first release for 0.14

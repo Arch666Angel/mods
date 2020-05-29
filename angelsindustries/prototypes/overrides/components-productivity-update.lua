@@ -1,3 +1,4 @@
+if angelsmods.industries.components then
 -------------------------------------------------------------------------------
 -- ELECTRONIC COMPONENTS ------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -148,3 +149,4 @@ angelsmods.functions.allow_productivity("angels-servo-motor-2")
 angelsmods.functions.allow_productivity("angels-servo-motor-3")
 angelsmods.functions.allow_productivity("angels-servo-motor-4")
 angelsmods.functions.allow_productivity("angels-servo-motor-5")
+end

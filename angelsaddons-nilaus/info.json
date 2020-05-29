@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-nilaus",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "factorio_version": "0.18",
   "title": "Angel's Addons - Decorations - Nilaus",
   "author": "Arch666Angel",
@@ -8,6 +8,6 @@
   "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
   "description": "",
   "dependencies": [
-    "base >= 0.18.0"
+    "base >= 0.18.27"
   ]
 }

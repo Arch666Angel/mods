@@ -27,7 +27,7 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 15
       },
@@ -39,7 +39,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
       prerequisites = {
-        "water-treatment"
+        "water-treatment",
+        "electronics"
       },
       effects = {
         {
@@ -61,12 +62,12 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "red-waste-water-purification"
-        },
+        }
       },
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 15
       },
@@ -78,7 +79,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
       prerequisites = {
-        "water-treatment-2"
+        "water-treatment-2",
+        "advanced-electronics"
       },
       effects = {
         {
@@ -105,8 +107,8 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 15
       },
@@ -119,7 +121,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-treatment-3",
-        "thermal-water-extraction"
+        "thermal-water-processing"
       },
       effects = {
         {
@@ -138,9 +140,9 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
@@ -165,6 +167,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "water-viscous-mud"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "washing-1"
         },
         {
@@ -185,15 +191,11 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "water-viscous-mud"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-mud-landfill"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "solid-clay"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-limestone"
         },
         {
           type = "unlock-recipe",
@@ -203,7 +205,7 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 15
       },
@@ -216,7 +218,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-washing-1",
-        "water-treatment"
+        "water-treatment",
+        "landfill"
       },
       effects = {
         {
@@ -225,18 +228,18 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "solid-limestone"
+          recipe = "solid-geodes"
         },
         {
           type = "unlock-recipe",
-          recipe = "solid-geodes"
-        }
+          recipe = "solid-mud-landfill"
+        },
       },
       unit = {
         count = 30,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 15
       },

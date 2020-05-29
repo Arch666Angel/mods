@@ -26,7 +26,16 @@ data:extend(
       name = "angels-return-ingredients",
       setting_type = "startup",
       default_value = true,
-      order = "c"
-    }
+      order = "d"
+    },
+    {
+      type = "int-setting",
+      name = "angels-components-stack-size",
+      setting_type = "startup",
+      default_value = 1000,
+      minimum_value = 200,
+      maximum_value = 10000,
+      order = "e"
+    },
   }
 )

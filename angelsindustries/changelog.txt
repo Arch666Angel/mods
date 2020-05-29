@@ -1,4 +1,40 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+    - Added large logistic zone entities (241)
+      - Added large logistic zone expander
+        - Consumes no power
+        - Expands logistic zone by 30x30
+      - Added large Construction zone expander
+        - Expands construction zone by 125x125
+        - Connects up to 60 tiles distance (30 tile radius)
+        - Has 1 recharge port with a recharge rate of 200kW
+      - Added large Remote Relay station
+        - Equivalent logistic zone of 30x30 and connecion up to 60 tiles distance
+        - Has 4 recharge port with a recharge rate of 200kW each
+        - Has 1 inventory space to store robots
+        - Has 1 inventory space to store repair packs
+      - Slightly altered the existing crawler logistics recipes
+      - Increased recharge rate on the charging basestation
+    - Fixed charging issues on the relay stations
+    - Added a crawler themed lamp
+    - Component mode:
+      - Blocks have a configurable stack size (default 1000) (222)
+      - Block tiers 0 and 1 have lower crafting times for faster progression (222)
+      - Blocks tier 3, 4 and 5 have increased crafting times due to lower amounts of use (222)
+      - All machines that use blocks as a recipe now have an instant crafting time (222)
+      - Added better recipes for inserters to use components better
+  Bugfixes:
+    - MP safer method of requiring files (check inside the file instead of around)
+    - Overhaul mode:
+      - Added angels nuclear fuel processes
+    - Component mode:
+      - Fixed that the manual craftable blocks would be decomposed for total raw calculation (222)
+    - Science mode:
+      - Fixed rocket silo would only give 200 Gravitational Analyzers instead of 1000 (stack size)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 20.04.2020
   Changes:
@@ -20,7 +56,7 @@ Date: 12.04.2020
     - General:
       - Reduced the collision box so you can walk past them (#163)
         - Reduced collision box of the Construction and Zone expanders to the size of a medium power pole
-        - Reduced collsion box of the Recharge Stations to the size of a big power pole 
+        - Reduced collsion box of the Recharge Stations to the size of a big power pole
       - Increased connection distance for Construction Zone Expanders and Remote Charging Station MK2 to fit with big power poles
       - Increased construction area on Construction Zone Expanders to fit with big power poles
       - Removed the logistics zone on the Construction Zone Expanders as these are obsolete in 0.18

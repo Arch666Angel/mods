@@ -20,7 +20,7 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
       },
       time = 30
     },
@@ -54,8 +54,8 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
       },
       time = 30
     },
@@ -81,8 +81,8 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
       },
       time = 30
     },
@@ -100,6 +100,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing",
+      "bio-farm-1",
     },
     effects =
     {
@@ -133,6 +134,10 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "bio-resin-wood-reprocessing"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "solid-saw"
       },
     },
@@ -140,7 +145,7 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
       },
       time = 30
     },
@@ -158,13 +163,18 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-1",
-      "bio-processing-crystal-1",
+      "bio-processing-crystal-splinter-2",
+      "bio-farm-alien"
     },
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "tree-generator-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "tree-arboretum-0"
       },
       {
         type = "unlock-recipe",
@@ -183,9 +193,9 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -203,7 +213,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-2",
-      "bio-processing-crystal-2"
+      "bio-processing-crystal-shard-2"
     },
     effects =
     {
@@ -228,10 +238,10 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="chemical-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -250,6 +260,7 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-fermentation",
+      "resins"
     },
     effects =
     {
@@ -268,19 +279,15 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-resin-resin-liquification"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing"
       }
     },
     unit =
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -298,6 +305,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-temperate-1",
+      "bio-farm-alien"
     },
     effects =
     {
@@ -305,15 +313,22 @@ data:extend(
         type = "unlock-recipe",
         recipe = "temperate-tree-generator-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "temperate-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-resin-tree"
+      },
     },
     unit =
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -347,10 +362,10 @@ data:extend(
     {
       count = 100,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="chemical-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -369,6 +384,7 @@ data:extend(
     {
       "bio-arboretum-1",
       "bio-nutrient-paste",
+      "plastics"
     },
     effects =
     {
@@ -389,9 +405,9 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -409,6 +425,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-swamp-1",
+      "bio-farm-alien"
     },
     effects =
     {
@@ -416,15 +433,22 @@ data:extend(
         type = "unlock-recipe",
         recipe = "swamp-tree-generator-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "swamp-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-plastic-tree"
+      },
     },
     unit =
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -458,10 +482,10 @@ data:extend(
     {
       count = 100,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="chemical-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -478,6 +502,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "rubbers",
       "bio-arboretum-1",
       "bio-nutrient-paste",
     },
@@ -500,9 +525,9 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -520,6 +545,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-desert-1",
+      "bio-farm-alien"
     },
     effects =
     {
@@ -527,15 +553,22 @@ data:extend(
         type = "unlock-recipe",
         recipe = "desert-tree-generator-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "desert-tree-arboretum-0"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-rubber-tree"
+      },
     },
     unit =
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -569,10 +602,10 @@ data:extend(
     {
       count = 100,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"token-bio", 1}
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="chemical-science-pack", amount = 1},
+        {type="item", name="token-bio", amount = 1}
       },
       time = 30
     },
@@ -602,7 +635,7 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
       },
       time = 30
     },
@@ -641,8 +674,8 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
       },
       time = 30
     },
@@ -684,9 +717,9 @@ data:extend(
     {
       count = 50,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+        {type="item", name="automation-science-pack", amount = 1},
+        {type="item", name="logistic-science-pack", amount = 1},
+        {type="item", name="chemical-science-pack", amount = 1},
       },
       time = 30
     },

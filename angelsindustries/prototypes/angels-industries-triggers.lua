@@ -18,6 +18,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.ores["tungsten"] = true
   angelsmods.trigger.ores["uranium"] = true
   angelsmods.trigger.ores["zinc"] = true
+  angelsmods.trigger.ores["thorium"] = true
 
   --SMELTING TRIGGERS
   angelsmods.trigger.smelting_products["solder"].wire = true
@@ -39,6 +40,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.smelting_products["tin"].wire = true
   angelsmods.trigger.smelting_products["titanium"].plate = true
   angelsmods.trigger.smelting_products["tungsten"].plate = true
+  angelsmods.trigger.smelting_products["zinc"].plate = true
 end
 
 if angelsmods.industries.components then

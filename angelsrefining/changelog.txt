@@ -1,8 +1,38 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.11
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+    - Reordered the geode liquifying recipes to be the same order as the geode processing recipes (206)
+    - Added better icons for void recipes to distinguish difference between them
+  Balancing:
+    - Making thermal water extraction available at green science
+      - Added a (slower) mk1 thermal water bore to extract thermal water at a slow rate
+      - Split thermal water processing into a seperate blue tech (so that part remains blue)
+      - Made the termal water extractor an upgrade of the thermal water bore
+    - Improve refining in special vanilla mode (242)
+      - Improve ratio of copper versus iron yield to reflect the 50/50 use of base game
+      - Improve yield so more advanced recipes produce more ore (up to 100% extra yield)
+      - Improve graphics on sorting recipes and smelting recipes of intermediates
+    - Crystal mix sorting to thorium is 3x as productive (227)
+  Bugfixes:
+    - Added missing dependencies
+      - Added blue science packs to powder refining (due to the requirement of lubricant)
+      - Moved crystal slurry ceramic filtering to geode crystallization (blue tech, due to ceramic filters)
+    - Fixed error related to the new base game v0.18.27 (247)
+    - Cupric dust now takes 4 seconds instead of 1 (#234)
+    - Added some extra dependencies on water treatment technologies
+  Modding:
+    - fixed potential error in angelsmods.functions.modify_barreling_icon()
+    - angelsmods.functions.add_icon_layer(...) now supports an optional shift and scale
+    - added function angelsmods.functions.modify_icon_layers(...)
+---------------------------------------------------------------------------------------------------
 Version: 0.11.10
 Date: 20.04.2020
   Bugfixes:
     - With bobs revamp solves startup crash (limestone)
+    - Disable ferrous and cupric in special vanilla mode unlocks
+    - When tech is disabled, but later re-enabled disabling of recipe/unlocks had no effect
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.9
 Date: 12.04.2020

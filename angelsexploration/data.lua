@@ -1,10 +1,7 @@
 --INITIALIZE
-if not angelsmods then
-	angelsmods = {}
-end
-if not angelsmods.exploration then
-	angelsmods.exploration = {}
-end
+angelsmods = angelsmods or {}
+angelsmods.exploration = angelsmods.exploration or {}
+angelsmods.functions = angelsmods.functions or {}
 
 --TRIGGER CHECKS
 
@@ -12,12 +9,7 @@ end
 require("prototypes.exploration-category")
 
 --LOAD FUNCTIONS
-if not angelsmods.functions then
-	angelsmods.functions = {}
-end
-if angelsmods.functions then
-	require("prototypes.entities.biter-builder")
-end
+require("prototypes.entities.biter-builder")
 
 --PROTOTYPES
 require("prototypes.entities.ammo-cannon-turret-shells")

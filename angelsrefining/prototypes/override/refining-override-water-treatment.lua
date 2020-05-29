@@ -22,7 +22,7 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
       },
       {
         name = "greenyellow-waste-water-purification",
-        results = {{"fluorite-ore"}}
+        results = {{name = "fluorite-ore", type = "item", amount = 1}}
       },
       {
         name = "red-waste-water-purification",
@@ -55,7 +55,7 @@ end
 -------------------------------------------------------------------------------
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods.bobrevamp and settings.startup["bobmods-revamp-hardmode"].value then
+if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
   local limestone = data.raw.item["limestone"]
   if limestone then
     limestone.icon = nil
@@ -105,7 +105,7 @@ if mods["bobplates"] then
           type = "recipe",
           name = "salt-water-electrolysis-2",
           category = "electrolysis",
-          enabled = "false",
+          enabled = false,
           energy_required = 1,
           ingredients = {
             {type = "fluid", name = "water-saline", amount = 40}
@@ -140,7 +140,7 @@ if mods["bobplates"] then
         name = "water-thermal-lithia",
         category = "water-treatment",
         subgroup = "water-treatment",
-        enabled = "false",
+        enabled = false,
         energy_required = 1,
         ingredients = {
           {type = "fluid", name = "thermal-water", amount = 100}

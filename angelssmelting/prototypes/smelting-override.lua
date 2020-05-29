@@ -4,29 +4,36 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 --PREPARATIONS
 
 --OVERRIDE FOR BASE
-angelsmods.functions.override_item_conditions({
-  value = 200,
-  list = {
-    "coal",
-    "uranium-ore"
+angelsmods.functions.override_item_conditions(
+  {
+    value = 200,
+    list = {
+      "coal",
+      "uranium-ore"
+    }
   }
-})
+)
 
 angelsmods.functions.move_item("uranium-ore", "angels-ores", "h[uranium-ore]")
-if data.raw["item"]["thorium-ore"] then
-  angelsmods.functions.move_item("thorium-ore", "angels-ores", "i[thorium-ore]")
-end
 
 if angelsmods.smelting then
   -- this should be moved to petrochem
-  OV.patch_recipes({
-    { name = "gas-sulfur-dioxide-calcium-sulfate", results = {
-      { "solid-lime", 1 }
-    } },
-    { name = "filter-lime", ingredients = {
-      { name = "solid-lime", type = "item", amount = "stone-crushed" }
-    } },
-  })
+  OV.patch_recipes(
+    {
+      {
+        name = "gas-sulfur-dioxide-calcium-sulfate",
+        results = {
+          {name = "solid-lime", type = "item", amount = 1}
+        }
+      },
+      {
+        name = "filter-lime",
+        ingredients = {
+          {name = "solid-lime", type = "item", amount = "stone-crushed"}
+        }
+      }
+    }
+  )
 end
 
 --DYNAMIC OVERRIDES
@@ -56,6 +63,7 @@ require("prototypes.override.smelting-override-platinum")
 require("prototypes.override.smelting-override-silicon")
 require("prototypes.override.smelting-override-silver")
 require("prototypes.override.smelting-override-stone")
+require("prototypes.override.smelting-override-thorium")
 require("prototypes.override.smelting-override-tin")
 require("prototypes.override.smelting-override-titanium")
 require("prototypes.override.smelting-override-tungsten")

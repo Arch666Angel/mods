@@ -156,10 +156,9 @@ if angelsmods.trigger.enableacids then
 end
 
 --OVERRIDE FOR BOBs
+require("prototypes.global-override.bobplates")
+require("prototypes.global-override.bobrevamp")
 if bobmods then
-  require("prototypes.global-override.bobplates")
-  require("prototypes.global-override.bobrevamp")
-
   if bobmods.greenhouse then
     OV.patch_recipes(
       {
@@ -193,7 +192,7 @@ if bobmods then
         "nso"
       )
       data.raw["recipe"]["sulfuric-nitric-acid"].icon = nil
-      data.raw["recipe"]["sulfuric-nitric-acid"].always_show_products = "true"
+      data.raw["recipe"]["sulfuric-nitric-acid"].always_show_products = true
     end
     angelsmods.functions.move_item("nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
     data.raw["fluid"]["nitroglycerin"].icons =
@@ -203,7 +202,7 @@ if bobmods then
     data.raw["recipe"]["nitroglycerin"].icons =
       angelsmods.functions.create_liquid_recipe_icon({{"__bobwarfare__/graphics/icons/nitroglycerin.png", 64}}, "cno")
     data.raw["recipe"]["nitroglycerin"].icon = nil
-    data.raw["recipe"]["nitroglycerin"].always_show_products = "true"
+    data.raw["recipe"]["nitroglycerin"].always_show_products = true
     OV.global_replace_item("glycerol", "gas-glycerol")
     data.raw.fluid["glycerol"].hidden = true
 
@@ -226,7 +225,7 @@ if bobmods then
   end
 
   --if data.raw["fluid"]["dinitrogen-tetroxide"] then --BOBS REVAMP hardmode
-  if mods.bobrevamp and settings.startup["bobmods-revamp-hardmode"].value then
+  if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
     if data.raw.fluid["carbon-dioxide"] then
       OV.global_replace_item("carbon-dioxide", "gas-hydrogen-sulfide")
       data.raw.fluid["carbon-dioxide"].hidden = true

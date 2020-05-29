@@ -6,7 +6,7 @@ data:extend(
       name = "hogger-hogging-1",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-hogger-1", amount = 4},
@@ -27,7 +27,7 @@ data:extend(
       name = "hogger-hogging-2",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-hogger-2", amount = 4},
@@ -48,7 +48,7 @@ data:extend(
       name = "hogger-hogging-3",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-hogger-3", amount = 4},
@@ -69,7 +69,7 @@ data:extend(
       name = "hogger-hogging-4",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-hogger-4", amount = 4},
@@ -90,7 +90,7 @@ data:extend(
       name = "hogger-hogging-5",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger",
-      enabled = "false",
+      enabled = false,
       energy_required = 30,
       ingredients = {
         {type = "item", name = "bio-hogger-5", amount = 4},
@@ -112,7 +112,7 @@ data:extend(
       name = "hogger-breeding-1",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger-breeding",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-1", amount = 2},
@@ -143,7 +143,7 @@ data:extend(
       name = "hogger-breeding-2",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger-breeding",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-2", amount = 2},
@@ -174,7 +174,7 @@ data:extend(
       name = "hogger-breeding-3",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger-breeding",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-3", amount = 2},
@@ -205,7 +205,7 @@ data:extend(
       name = "hogger-breeding-4",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger-breeding",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-4", amount = 2},
@@ -236,7 +236,7 @@ data:extend(
       name = "hogger-breeding-5",
       category = "bio-refugium-hogger",
       subgroup = "bio-hogger-breeding",
-      enabled = "false",
+      enabled = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-5", amount = 2},
@@ -268,8 +268,8 @@ data:extend(
       name = "hogger-butchery-1",
       category = "bio-butchery",
       subgroup = "bio-hogger-butchery",
-      enabled = "false",
-      hidden = "false",
+      enabled = false,
+      hidden = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-1", amount = 1}
@@ -286,8 +286,8 @@ data:extend(
       name = "hogger-butchery-2",
       category = "bio-butchery",
       subgroup = "bio-hogger-butchery",
-      enabled = "false",
-      hidden = "false",
+      enabled = false,
+      hidden = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-2", amount = 1}
@@ -304,8 +304,8 @@ data:extend(
       name = "hogger-butchery-3",
       category = "bio-butchery",
       subgroup = "bio-hogger-butchery",
-      enabled = "false",
-      hidden = "false",
+      enabled = false,
+      hidden = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-3", amount = 1}
@@ -322,8 +322,8 @@ data:extend(
       name = "hogger-butchery-4",
       category = "bio-butchery",
       subgroup = "bio-hogger-butchery",
-      enabled = "false",
-      hidden = "false",
+      enabled = false,
+      hidden = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-4", amount = 1}
@@ -340,8 +340,8 @@ data:extend(
       name = "hogger-butchery-5",
       category = "bio-butchery",
       subgroup = "bio-hogger-butchery",
-      enabled = "false",
-      hidden = "false",
+      enabled = false,
+      hidden = false,
       energy_required = 60,
       ingredients = {
         {type = "item", name = "bio-hogger-5", amount = 1}

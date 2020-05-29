@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 29.05.2020
+  Changes:
+    - Added nilaus truck mk2 for later game
+    - Properly use name, amount in result and ingredient prototypes
+---------------------------------------------------------------------------------------------------
 Version: 0.3.8
 Date: 10.04.2020
   Changes:

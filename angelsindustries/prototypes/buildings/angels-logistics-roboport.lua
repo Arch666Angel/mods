@@ -174,7 +174,7 @@ data:extend(
     charging_energy = "200kW",
     logistics_radius = 6.5,
     construction_radius = 0,
-    charge_approach_distance = 10,
+    charge_approach_distance = 6,
     robot_slots_count = 7,
     material_slots_count = 7,
     stationing_offset = {-0, -1},
@@ -305,13 +305,13 @@ data:extend(
     charging_energy = "200kW",
     logistics_radius = 7,
     construction_radius = 0,
-    charge_approach_distance = 10,
+    charge_approach_distance = 4,
     robot_slots_count = 12,
     material_slots_count = 2,
     stationing_offset = {-0, -0.5},
     charging_offsets =
     {
-      {1.5, -3}
+      {1.5, -2.25}
     },
     base =
     {

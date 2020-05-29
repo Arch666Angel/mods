@@ -1,7 +1,8 @@
 local OV = angelsmods.functions.OV
+if angelsmods.industries and angelsmods.industries.components then
 
--- For some reason, it won't remove the effectivity modules from the tech if
--- I don't place the OV.execute() next to each line...
+
+local OV = angelsmods.functions.OV
 
 OV.remove_prereq("angels-crawler-train-2", "speed-module")
 OV.remove_prereq("angels-crawler-train-2", "effectivity-module")
@@ -35,3 +36,4 @@ OV.add_prereq("angels-crawler-train-5", "angels-components-cabling-5")
 OV.add_prereq("angels-crawler-train-5", "angels-components-construction-5")
 
 OV.execute()
+end

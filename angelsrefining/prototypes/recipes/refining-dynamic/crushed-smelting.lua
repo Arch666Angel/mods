@@ -8,60 +8,86 @@ data:extend(
       name = "angelsore1-crushed-smelting",
       category = "smelting",
       subgroup = "raw-material",
-      enabled = "true",
+      enabled = true,
       allow_decomposition = false,
       normal = {
         energy_required = 7,
-        ingredients = {{"angels-ore1-crushed", 3}},
+        ingredients = {{type = "item", name = "angels-ore1-crushed", amount = 3}},
         results = {{type = "item", name = "iron-plate", amount = 2}}
       },
       expensive = {
         energy_required = 3.5,
-        ingredients = {{"angels-ore1-crushed", 5 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore1-crushed", amount = 5 * rawmulti}},
         results = {{type = "item", name = "iron-plate", amount = 1}}
       },
-      icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        } or {
+          icon = "__base__/graphics/icons/iron-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "a-a [angelsore1-crushed-smelting]"
+      order = "b[iron-ore]-a[crushed]"
     },
     {
       type = "recipe",
       name = "angelsore3-crushed-smelting",
       category = "smelting",
       subgroup = "raw-material",
-      enabled = "true",
+      enabled = true,
       allow_decomposition = false,
       normal = {
         energy_required = 7,
-        ingredients = {{"angels-ore3-crushed", 3}},
+        ingredients = {{type = "item", name = "angels-ore3-crushed", amount = 3}},
         results = {{type = "item", name = "copper-plate", amount = 2}}
       },
       expensive = {
         energy_required = 3.5,
-        ingredients = {{"angels-ore3-crushed", 5 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore3-crushed", amount = 5 * rawmulti}},
         results = {{type = "item", name = "copper-plate", amount = 1}}
       },
-      icon = "__angelsrefining__/graphics/icons/copper-plate-crushed.png",
+      icons = {
+        mods["angelssmelting"] and {
+          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        } or {
+          icon = "__base__/graphics/icons/copper-plate.png",
+          icon_size = 64,
+          scale = 32/64
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
+          scale = 0.4,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 32,
-      order = "a-a [angelsore3-crushed-smelting]"
+      order = "c[copper-ore]-a[crushed]"
     },
     {
       type = "recipe",
       name = "angelsore5-crushed-smelting",
       category = "smelting",
       subgroup = "raw-material",
-      enabled = "true",
+      enabled = true,
       allow_decomposition = false,
       normal = {
         energy_required = 7,
-        ingredients = {{"angels-ore5-crushed", 3}},
+        ingredients = {{type = "item", name = "angels-ore5-crushed", amount = 3}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
         energy_required = 3.5,
-        ingredients = {{"angels-ore5-crushed", 5 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore5-crushed", amount = 5 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
@@ -77,18 +103,18 @@ data:extend(
       name = "angelsore6-crushed-smelting",
       category = "smelting",
       subgroup = "raw-material",
-      enabled = "true",
+      enabled = true,
       allow_decomposition = false,
       normal = {
         energy_required = 7,
-        ingredients = {{"angels-ore6-crushed", 3}},
+        ingredients = {{type = "item", name = "angels-ore6-crushed", amount = 3}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }
       },
       expensive = {
         energy_required = 3.5,
-        ingredients = {{"angels-ore6-crushed", 5 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore6-crushed", amount = 5 * rawmulti}},
         results = {
           {type = "item", name = "angels-void", amount = 1}
         }

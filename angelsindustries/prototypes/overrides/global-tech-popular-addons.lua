@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
-require("prototypes.overrides.industries-override-functions")
---this is where pack_replace(techname,old_p,new_p),core_replace(techname,old_c,new_c),core_tier_up(techname,core_n) functions are stored
-
+--require("prototypes.overrides.industries-override-functions")
+--this is where pack_replace(techname,old_p,new_p),core_replace(techname,old_c,new_c),core_tier_up(techname,core_n) functions are used
+if angelsmods.industries.tech then
 -------------------------------------------------------------------------------
 -- WAREHOUSES -----------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -20,3 +20,4 @@ end
   core_replace("basic-automation","logistic","basic")
   OV.add_prereq("basic-automation","angels-components-mechanical-1")
 end]]
+end

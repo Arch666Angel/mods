@@ -1,0 +1,12 @@
+{
+  "technology":
+  [
+    ["bio-farm", "bio-farm-1"],
+    ["bio-temperate-farming", "bio-temperate-farming-1"],
+    ["bio-desert-farming", "bio-desert-farming-1"],
+    ["bio-swamp-farming", "bio-swamp-farming-1"],
+    ["bio-processing-crystal-1", "bio-processing-crystal-splinter-1"],
+    ["bio-processing-crystal-2", "bio-processing-crystal-shard-1"],
+    ["bio-processing-crystal-3", "bio-processing-crystal-full"]
+  ] 
+}

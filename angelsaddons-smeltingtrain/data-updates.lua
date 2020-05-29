@@ -1,15 +1,10 @@
 local funcs = require("prototypes/smelting-train-functions")
 
+require("prototypes.recipes.smelting-recipe-updates")
+require("prototypes.technology.smelting-technology-component-updates")
+require("prototypes.technology.smelting-technology-tech-updates")
+
 if angelsmods.industries then
-  if angelsmods.industries.components then
-    require("prototypes.recipes.smelting-recipe-updates")
-    require("prototypes.technology.smelting-technology-component-updates")
-  end
-
-  if angelsmods.industries.overhaul and angelsmods.industries.tech then
-    require("prototypes.technology.smelting-technology-tech-updates")
-  end
-
   data.raw["item-subgroup"]["angels-smeltingtrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-smeltingtrain"].order = "bc[smelting-train]"
 
@@ -43,7 +38,7 @@ if angelsmods.industries then
   )
 end
 
-if mods.bobvehicleequipment then
+if mods["bobvehicleequipment"] then
   funcs.update_equipment_grid(
     "angels-smelting-locomotive",
     {

@@ -17,8 +17,8 @@ OV.patch_recipes(
       name = "rocket-fuel",
       ingredients = {
         {"!!"},
-        {"rocket-fuel-capsule", 10},
-        {"rocket-oxidizer-capsule", 10}
+        {type = "item", name = "rocket-fuel-capsule", amount = 10},
+        {type = "item", name = "rocket-oxidizer-capsule", amount = 10}
       },
       category = "chemistry",
       subgroup = "petrochem-fuel",
@@ -35,9 +35,12 @@ move_item("rocket-fuel", "petrochem-fuel", "b[rocket-fuel]-c")
 move_item("nuclear-fuel", "petrochem-fuel", "d[nuclear-fuel]")
 OV.patch_recipes({{name = "nuclear-fuel", subgroup = "petrochem-fuel", order = "j"}})
 
+-- OIL PRODUCTS
+OV.add_unlock("plastics", "solid-plastic")
+move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
+
 move_item("solid-fuel", "petrochem-fuel", "a[solid-fuel]-a")
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
-move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
 move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")
 move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
@@ -144,9 +147,14 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then -- deuterium proces
   OV.disable_recipe({"bob-heavy-water", "heavy-water-electrolysis"})
 
   OV.global_replace_technology("heavy-water-processing", "water-chemistry-1")
+  OV.disable_technology("heavy-water-processing")
   OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
+  OV.disable_technology("deuterium-processing")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+elseif angelsmods.industries and angelsmods.industries.overhaul then
+elseif data.raw["fluid"]["deuterium"] then
+  -- does this ever happen? Leaving this here "just in case"
 else
   data.raw.fluid["gas-enriched-hydrogen-sulfide"].hidden = true
   data.raw.fluid["liquid-water-semiheavy-1"].hidden = true
@@ -155,17 +163,34 @@ else
   data.raw.fluid["liquid-water-heavy"].hidden = true
   data.raw.fluid["gas-deuterium"].hidden = true
 
-  OV.disable_recipe({
-    "angels-hydrogen-sulfide-enrichment",
-    "angels-water-enrichment-1", "angels-water-enriched-cooling-1",
-    "angels-water-enrichment-2", "angels-water-enriched-cooling-2",
-    "angels-water-enrichment-3", "angels-water-enriched-cooling-3",
-    "angels-heavy-water-extraction", "angels-heavy-water-cooling",
-    "angels-heavy-water-separation", "angels-heavy-water-separation-2"
-  })
+  OV.disable_recipe(
+    {
+      "angels-hydrogen-sulfide-enrichment",
+      "angels-water-enrichment-1",
+      "angels-water-enriched-cooling-1",
+      "angels-water-enrichment-2",
+      "angels-water-enriched-cooling-2",
+      "angels-water-enrichment-3",
+      "angels-water-enriched-cooling-3",
+      "angels-heavy-water-extraction",
+      "angels-heavy-water-cooling",
+      "angels-heavy-water-separation",
+      "angels-heavy-water-separation-2"
+    }
+  )
 
   OV.disable_technology({"water-chemistry-1", "water-chemistry-2"})
 end
+
+-- Enforce semiheavy water temp
+OV.set_temperature_barreling("liquid-water-semiheavy-1", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-semiheavy-2", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-semiheavy-3", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-semiheavy-1", 100)
+OV.set_temperature_barreling("liquid-water-heavy", 25)
+-- OV.duplicate_barreling_at_temperature("liquid-water-heavy", 100)
 
 --SMELTING
 if not angelsmods.smelting then
@@ -184,29 +209,29 @@ if angelsmods.industries and angelsmods.industries.overhaul then
       {
         name = "catalyst-metal-red",
         ingredients = {
-          {"iron-ore", 1},
-          {"copper-ore", 1}
+          {type = "item", name = "iron-ore", amount = 1},
+          {type = "item", name = "copper-ore", amount = 1}
         }
       },
       {
         name = "catalyst-metal-green",
         ingredients = {
-          {"bauxite-ore", 1},
-          {"silver-ore", 1}
+          {type = "item", name = "bauxite-ore", amount = 1},
+          {type = "item", name = "silver-ore", amount = 1}
         }
       },
       {
         name = "catalyst-metal-blue",
         ingredients = {
-          {"rutile-ore", 1},
-          {"gold-ore", 1}
+          {type = "item", name = "rutile-ore", amount = 1},
+          {type = "item", name = "gold-ore", amount = 1}
         }
       },
       {
         name = "catalyst-metal-yellow",
         ingredients = {
-          {"tungsten-ore", 1},
-          {"platinum-ore", 1}
+          {type = "item", name = "tungsten-ore", amount = 1},
+          {type = "item", name = "platinum-ore", amount = 1}
         }
       }
     }
@@ -231,29 +256,29 @@ else
           {
             name = "catalyst-metal-red",
             ingredients = {
-              {"iron-ore", 1},
-              {"copper-ore", 1}
+              {type = "item", name = "iron-ore", amount = 1},
+              {type = "item", name = "copper-ore", amount = 1}
             }
           },
           {
             name = "catalyst-metal-green",
             ingredients = {
-              {"bauxite-ore", 1},
-              {"silver-ore", 1}
+              {type = "item", name = "bauxite-ore", amount = 1},
+              {type = "item", name = "silver-ore", amount = 1}
             }
           },
           {
             name = "catalyst-metal-blue",
             ingredients = {
-              {"rutile-ore", 1},
-              {"cobalt-ore", 1}
+              {type = "item", name = "rutile-ore", amount = 1},
+              {type = "item", name = "cobalt-ore", amount = 1}
             }
           },
           {
             name = "catalyst-metal-yellow",
             ingredients = {
-              {"tungsten-ore", 1},
-              {"nickel-ore", 1}
+              {type = "item", name = "tungsten-ore", amount = 1},
+              {type = "item", name = "nickel-ore", amount = 1}
             }
           }
         }
@@ -330,29 +355,29 @@ else
         {
           name = "catalyst-metal-red",
           ingredients = {
-            {"angels-ore1", 1},
-            {"angels-ore3", 1}
+            {type = "item", name = "angels-ore1", amount = 1},
+            {type = "item", name = "angels-ore3", amount = 1}
           }
         },
         {
           name = "catalyst-metal-green",
           ingredients = {
-            {"angels-ore1", 1},
-            {"angels-ore2", 1}
+            {type = "item", name = "angels-ore1", amount = 1},
+            {type = "item", name = "angels-ore2", amount = 1}
           }
         },
         {
           name = "catalyst-metal-blue",
           ingredients = {
-            {"angels-ore3", 1},
-            {"angels-ore4", 1}
+            {type = "item", name = "angels-ore3", amount = 1},
+            {type = "item", name = "angels-ore4", amount = 1}
           }
         },
         {
           name = "catalyst-metal-yellow",
           ingredients = {
-            {"angels-ore2", 1},
-            {"angels-ore4", 1}
+            {type = "item", name = "angels-ore2", amount = 1},
+            {type = "item", name = "angels-ore4", amount = 1}
           }
         }
       }
@@ -361,7 +386,7 @@ else
 end
 
 --hide bobs fluids if converter recipes setting not active
-if not angelsmods.trigger.enableconverter and mods.bobplates then
+if not angelsmods.trigger.enableconverter and mods["bobplates"] then
   data.raw["fluid"]["sulfur-dioxide"].hidden = true
   data.raw["fluid"]["oxygen"].hidden = true
   data.raw["fluid"]["nitrogen"].hidden = true
@@ -376,15 +401,15 @@ if not angelsmods.trigger.enableconverter and mods.bobplates then
   if settings.startup["bobmods-plates-purewater"].value == true then
     data.raw["fluid"]["pure-water"].hidden = true
   end
-  if mods.bobrevamp then
-    data.raw["item"]["salt"].hidden= true
+  if mods["bobrevamp"] then
+    data.raw["item"]["salt"].hidden = true
     if settings.startup["bobmods-revamp-hardmode"].value then
       data.raw["fluid"]["ammonia"].hidden = true
       data.raw["fluid"]["dinitrogen-tetroxide"].hidden = true
       data.raw["fluid"]["hydrazine"].hidden = true
       data.raw["fluid"]["hydrogen-peroxide"].hidden = true
       data.raw["fluid"]["nitric-oxide"].hidden = true
-      --data.raw["fluid"]["carbon-dioxide"].hidden= true
+    --data.raw["fluid"]["carbon-dioxide"].hidden= true
     end
   end
 end
@@ -393,7 +418,7 @@ end
 --Do this regardless of settings
 --base fluid is methane, all others are based on relative real values
 --==BASED ON VOULMETRIC NUMBERS divided by 10, using methane as the base
-if mods.bobplates then
+if mods["bobplates"] then
   --liquid Naphtha (heavy oil), bobs value is 1MJ (Heavy fuel oil 38.2 MJ/L)(39 MJ/kg)
   data.raw.fluid["liquid-naphtha"].fuel_value = "244.7kJ"
   data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3
@@ -425,8 +450,9 @@ if mods.bobplates then
   data.raw.fluid["gas-hydrazine"].fuel_value = "126.9kJ"
   data.raw.fluid["gas-hydrazine"].emissions_multiplier = 0.1
   --fuel oil balancing
-  data.raw.fluid["liquid-fuel"].fuel_value= "300kJ" --down from 2.3MJ
-  data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients={{type = "fluid", name = "liquid-fuel", amount = 100}}--up from 20
+  data.raw.fluid["liquid-fuel"].fuel_value = "300kJ" --down from 2.3MJ
+  data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients = {{type = "fluid", name = "liquid-fuel", amount = 100}}
+  --up from 20
   if mods["angelsbioprocessing"] then
     --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
     data.raw.fluid["gas-ethanol"].fuel_value = "135.2kJ"
@@ -441,4 +467,4 @@ angelsmods.functions.allow_productivity("liquid-resin-1")
 angelsmods.functions.allow_productivity("liquid-resin-2")
 angelsmods.functions.allow_productivity("liquid-resin-3")
 
-angelsmods.functions.allow_productivity("solid-rubber")
+angelsmods.functions.allow_productivity("liquid-rubber-1")

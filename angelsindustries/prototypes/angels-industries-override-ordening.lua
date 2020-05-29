@@ -229,12 +229,12 @@ if angelsmods.industries.overhaul then
     -- interface
     move_item("bob-logistic-zone-interface", "angels-roboport-a", "c[interface]")
     -- angels cargo ports
-    move_item("angels-relay-station", "angels-cargo-ports", false)
-    move_item("angels-relay-station-2", "angels-cargo-ports", false)
-    move_item("angels-zone-expander", "angels-cargo-ports", false)
-    move_item("angels-zone-expander-2", "angels-cargo-ports", false)
-    move_item("angels-construction-zone-expander", "angels-cargo-ports", false)
-    move_item("angels-construction-zone-expander-2", "angels-cargo-ports", false)
+    --move_item("angels-relay-station", "angels-cargo-ports", false)
+    --move_item("angels-relay-station-2", "angels-cargo-ports", false)
+    --move_item("angels-zone-expander", "angels-cargo-ports", false)
+    --move_item("angels-zone-expander-2", "angels-cargo-ports", false)
+    --move_item("angels-construction-zone-expander", "angels-cargo-ports", false)
+    --move_item("angels-construction-zone-expander-2", "angels-cargo-ports", false)
 
     --UPDATE ROBOTS
     data:extend(
@@ -330,13 +330,15 @@ if angelsmods.industries.overhaul then
   move_item("heat-pipe", "angels-power-nuclear", "b[heat-pipe]")
   move_item("heat-exchanger", "angels-power-nuclear", "c[heat-exchanger]")
 
-  move_item("uranium-235", "angels-power-nuclear-processing", "a[refined-ore]-a")
-  move_item("uranium-238", "angels-power-nuclear-processing", "a[refined-ore]-b")
-  move_item("uranium-processing", "angels-power-nuclear-processing", "a[refined-ore]-a[processing]", "recipe")
-  move_item("kovarex-enrichment-process", "angels-power-nuclear-processing", "a[refined-ore]-b[enrichment]", "recipe")
-  move_item("uranium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-a[new]")
-  move_item("used-up-uranium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-b[used]")
-  move_item("nuclear-fuel-reprocessing", "angels-power-nuclear-processing", "b[fuel-cell]-b[reprocessing]", "recipe")
+  move_item("uranium-235", "angels-power-nuclear-processing", "a[radioactive-element]-b[uranium-235]")
+  move_item("uranium-238", "angels-power-nuclear-processing", "a[radioactive-element]-c[uranium-238]")
+  move_item("uranium-processing", "angels-power-nuclear-processing", "a[uranium]-a[processing]", "recipe")
+  move_item("kovarex-enrichment-process", "angels-power-nuclear-processing", "a[uranium]-b[enrichment]", "recipe")
+
+  move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-b")
+  move_item("used-up-uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-c")
+  move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-a", "recipe")
+  move_item("nuclear-fuel-reprocessing", "angels-power-nuclear-fuel-cell", "a[uranium]-c", "recipe")
 
   move_item("small-electric-pole", "angels-power-poles", "a[small]")
   move_item("medium-electric-pole", "angels-power-poles", "b[medium]")
@@ -557,79 +559,6 @@ if angelsmods.industries.overhaul then
       move_item("heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "c")
     end
   end
-  -- nuclear fuel
-  if bobmods and bobmods.plates then
-    move_item("plutonium-239", "angels-power-nuclear-processing", "a[refined-ore]-c")
-    move_item(
-      "uranium-processing",
-      "angels-power-nuclear-processing",
-      "a[refined-ore]-a[processing]-a[uranium]",
-      "recipe"
-    )
-
-    move_item("uranium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-a[new]-a[uranium]-a")
-    move_item("deuterium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-a[new]-c[deuterium]-a")
-
-    move_item("used-up-uranium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-b[used]-a[uranium]")
-    move_item(
-      "nuclear-fuel-reprocessing",
-      "angels-power-nuclear-processing",
-      "b[fuel-cell]-b[reprocessing]-a[uranium]",
-      "recipe"
-    )
-    move_item("used-up-deuterium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-b[used]-c[deuterium]")
-    move_item(
-      "deuterium-fuel-reprocessing",
-      "angels-power-nuclear-processing",
-      "b[fuel-cell]-b[reprocessing]-c[deuterium]",
-      "recipe"
-    )
-
-    if data.raw.item["thorium-ore"] then
-      move_item("thorium-232", "angels-power-nuclear-processing", "a[refined-ore]-d")
-      move_item(
-        "thorium-processing",
-        "angels-power-nuclear-processing",
-        "a[refined-ore]-a[processing]-b[thorium]",
-        "recipe"
-      )
-
-      move_item(
-        "kovarex-enrichment-process",
-        "angels-power-nuclear-processing",
-        "a[refined-ore]-b[enrichment]-a[uranium]",
-        "recipe"
-      )
-      move_item(
-        "bobingabout-enrichment-process",
-        "angels-power-nuclear-processing",
-        "a[refined-ore]-b[enrichment]-b[thorium]",
-        "recipe"
-      )
-
-      move_item("thorium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-a[new]-b[thorium]-a")
-      move_item("thorium-plutonium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-a[new]-b[thorium]-b")
-
-      move_item("used-up-thorium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-b[used]-b[thorium]")
-      move_item(
-        "thorium-fuel-reprocessing",
-        "angels-power-nuclear-processing",
-        "b[fuel-cell]-b[reprocessing]-b[thorium]",
-        "recipe"
-      )
-    end
-    if data.raw.item["plutonium-fuel-cell"] then
-      move_item("plutonium-fuel-cell", "angels-power-nuclear-processing", "b[fuel-cell]-a[new]-a[uranium]-b")
-      move_item("fusion-catalyst", "angels-power-nuclear-processing", "a[refined-ore]-e")
-    end
-  end
-
-  -----------------------------------------------------------------------------
-  -- Fluid --------------------------------------------------------------------
-  -----------------------------------------------------------------------------
-  if bobmods and bobmods.plates then
-    move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]", "recipe")
-  end
 
   -----------------------------------------------------------------------------
   -- INTERMEDIATES ------------------------------------------------------------
@@ -667,7 +596,7 @@ if angelsmods.industries.overhaul then
   if data.raw.item["heat-shield-tile"] then
     move_item("heat-shield-tile", "angels-basic-intermediate", "z[rocket]-c[heat-shield]")
   end
-  if angelsmods.industries.overhaul and angelsmods.industries.tech then
+  if angelsmods.industries.tech then
     move_item("satellite", "angels-pack-components", "dba")
   else
     move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")

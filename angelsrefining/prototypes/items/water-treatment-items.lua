@@ -224,10 +224,20 @@ data:extend(
     {
       type = "item",
       name = "water-void",
-      icon = "__angelsrefining__/graphics/icons/clarifier.png",
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/clarifier.png",
+          scale = 0.4,
+          shift = {9.6, 9.6}
+        }
+      },
       icon_size = 32,
       flags = {"hidden"},
-      subgroup = "water-salination",
+      subgroup = "angels-void",
+      order = "zzz[water-void]",
       stack_size = 200
     }
   }

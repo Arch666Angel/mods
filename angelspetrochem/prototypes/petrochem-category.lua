@@ -298,6 +298,13 @@ data:extend(
       name = "water-boiling",
       group = "water-treatment",
       order = "h[water-boiling]-a"
+    },
+    -- void
+    {
+      type = "item-subgroup",
+      name = "angels-chemical-void",
+      group = "angels-void",
+      order = "a-b[chemical]"
     }
   }
 )

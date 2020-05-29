@@ -23,7 +23,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "swamp-garden-a"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "gardens-2",
+      icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-farm-1",
+        --"bio-processing-brown",
+        "bio-paper-1",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "temperate-garden-cultivating-a"
@@ -35,24 +56,29 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "swamp-garden-cultivating-a"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "garden-cultivating"
         }
       },
       unit = {
         count = 50,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       }
     },
     {
       type = "technology",
-      name = "bio-farm",
+      name = "bio-farm-1",
       icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "gardens"
+        "gardens",
+        "water-washing-1"
       },
       effects = {
         {
@@ -70,6 +96,30 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-soil"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-farm-2",
+      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-farm-1",
+        "angels-nitrogen-processing-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "solid-soil-alternative"
         },
         {
           type = "unlock-recipe",
@@ -79,19 +129,55 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {"automation-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
     },
     {
       type = "technology",
-      name = "bio-temperate-farming",
+      name = "bio-farm-alien",
+      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-farm-2",
+        "bio-processing-alien-1",
+        "bio-refugium-butchery-1",
+        "gardens-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-polluted-fish-atmosphere"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "alien-goo"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-alienated-fertilizer"
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-temperate-farming-1",
       icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -129,7 +215,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "sorting-temperate-3"
+        }
+      },
+      unit = {
+        count = 32,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-temperate-farming-2",
+      icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-temperate-farming-1",
+        "bio-farm-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "temperate-4"
@@ -158,8 +265,9 @@ data:extend(
       unit = {
         count = 32,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -171,7 +279,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-temperate-farming"
+        "bio-temperate-farming-2",
+        "bio-farm-alien"
       },
       effects = {
         {
@@ -194,21 +303,21 @@ data:extend(
       unit = {
         count = 64,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"logistic-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
     },
     {
       type = "technology",
-      name = "bio-desert-farming",
+      name = "bio-desert-farming-1",
       icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -246,7 +355,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "sorting-desert-3"
+        }
+      },
+      unit = {
+        count = 32,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-desert-farming-2",
+      icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-desert-farming-1",
+        "bio-farm-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "desert-4"
@@ -275,8 +405,9 @@ data:extend(
       unit = {
         count = 32,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -288,7 +419,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-desert-farming"
+        "bio-desert-farming-2",
+        "bio-farm-alien"
       },
       effects = {
         {
@@ -311,21 +443,21 @@ data:extend(
       unit = {
         count = 64,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"logistic-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
     },
     {
       type = "technology",
-      name = "bio-swamp-farming",
+      name = "bio-swamp-farming-1",
       icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -363,7 +495,28 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "sorting-swamp-3"
+        }
+      },
+      unit = {
+        count = 32,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-swamp-farming-2",
+      icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-swamp-farming-1",
+        "bio-farm-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "swamp-4"
@@ -392,8 +545,9 @@ data:extend(
       unit = {
         count = 32,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -405,7 +559,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-swamp-farming"
+        "bio-swamp-farming-2",
+        "bio-farm-alien"
       },
       effects = {
         {
@@ -428,9 +583,9 @@ data:extend(
       unit = {
         count = 64,
         ingredients = {
-          {"automation-science-pack", 4},
-          {"logistic-science-pack", 4},
-          {"token-bio", 1}
+          {type = "item", name = "automation-science-pack", amount = 4},
+          {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }
@@ -442,7 +597,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         {
@@ -489,8 +644,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -502,7 +657,9 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1",
+        "slag-processing-1",
+        "angels-oil-processing"
       },
       effects = {
         {
@@ -537,8 +694,66 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-pressing-fish",
+      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-pressing",
+        "bio-refugium-fish-1",
+        "bio-fermentation",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-0"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pressing-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-pulp-nutrients"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-raw-fish-oil-filtering-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-raw-fish-oil-filtering-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-fish-oil-refining"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "advanced-liquid-fish-oil-refining"
+        }
+      },
+      unit = {
+        count = 40,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -546,11 +761,11 @@ data:extend(
     {
       type = "technology",
       name = "bio-fermentation",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm"
+        "bio-farm-1"
       },
       effects = {
         -- {
@@ -581,8 +796,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -590,11 +805,12 @@ data:extend(
     {
       type = "technology",
       name = "bio-plastic-1",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-fermentation"
+        "bio-fermentation",
+        "plastics"
       },
       effects = {
         {
@@ -621,8 +837,8 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       }
@@ -630,7 +846,7 @@ data:extend(
     {
       type = "technology",
       name = "bio-plastic-2",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -649,68 +865,68 @@ data:extend(
       unit = {
         count = 40,
         ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
     },
-    {
-      type = "technology",
-      name = "angels-garden-mutations",
-      icons = {
-        {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
-      },
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "uranium-processing",
-        "bio-temperate-farm",
-        "bio-swamp-farm",
-        "bio-desert-farm"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-nuclear-fertilizer"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-mutation-temperate"
-        },
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "swamp-garden-mutation-temperate"
-        --},
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-mutation-swamp"
-        },
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "desert-garden-mutation-swamp"
-        --},
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-mutation-desert"
-        }
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "temperate-garden-mutation-desert"
-        --},
-      },
-      unit = {
-        count = 200,
-        ingredients = {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"token-bio", 2}
-        },
-        time = 30
-      }
-    }
+    --{
+    --  type = "technology",
+    --  name = "angels-garden-mutations",
+    --  icons = {
+    --    {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
+    --  },
+    --  icon_size = 128,
+    --  order = "c-a",
+    --  prerequisites = {
+    --    "uranium-processing",
+    --    "bio-temperate-farm",
+    --    "bio-swamp-farm",
+    --    "bio-desert-farm"
+    --  },
+    --  effects = {
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "solid-nuclear-fertilizer"
+    --    },
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "desert-garden-mutation-temperate"
+    --    },
+    --    --{
+    --    --  type = "unlock-recipe",
+    --    --  recipe = "swamp-garden-mutation-temperate"
+    --    --},
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "temperate-garden-mutation-swamp"
+    --    },
+    --    --{
+    --    --  type = "unlock-recipe",
+    --    --  recipe = "desert-garden-mutation-swamp"
+    --    --},
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "swamp-garden-mutation-desert"
+    --    }
+    --    --{
+    --    --  type = "unlock-recipe",
+    --    --  recipe = "temperate-garden-mutation-desert"
+    --    --},
+    --  },
+    --  unit = {
+    --    count = 200,
+    --    ingredients = {
+    --      {type = "item", name = "automation-science-pack", amount = 1},
+    --      {type = "item", name = "logistic-science-pack", amount = 1},
+    --      {type = "item", name = "chemical-science-pack", amount = 1},
+    --      {type = "item", name = "production-science-pack", amount = 1},
+    --      {type = "item", name = "token-bio", amount = 2}
+    --    },
+    --    time = 30
+    --  }
+    --}
   }
 )

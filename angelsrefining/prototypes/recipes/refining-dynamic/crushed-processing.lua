@@ -9,21 +9,24 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore1-crushed", 4}},
+        ingredients = {{type = "item", name = "angels-ore1-crushed", amount = 4}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore1-crushed", 6 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore1-crushed", amount = 6 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "a[angelsore1-crushed-processing]"
     },
@@ -33,21 +36,24 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore2-crushed", 4}},
+        ingredients = {{type = "item", name = "angels-ore2-crushed", amount = 4}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore2-crushed", 6 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore2-crushed", amount = 6 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-crushed-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore2-crushed.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "b[angelsore2-crushed-processing]"
     },
@@ -57,21 +63,24 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore3-crushed", 4}},
+        ingredients = {{type = "item", name = "angels-ore3-crushed", amount = 4}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore3-crushed", 6 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore3-crushed", amount = 6 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "c[angelsore3-crushed-processing]"
     },
@@ -81,21 +90,24 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore4-crushed", 4}},
+        ingredients = {{type = "item", name = "angels-ore4-crushed", amount = 4}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore4-crushed", 6 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore4-crushed", amount = 6 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-crushed-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore4-crushed.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "d[angelsore4-crushed-processing]"
     },
@@ -105,21 +117,24 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore5-crushed", 4}},
+        ingredients = {{type = "item", name = "angels-ore5-crushed", amount = 4}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore5-crushed", 6 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore5-crushed", amount = 6 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-crushed-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore5-crushed.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "e[angelsore5-crushed-processing]"
     },
@@ -129,16 +144,16 @@ data:extend(
       category = "ore-sorting",
       subgroup = "ore-sorting-t1",
       energy_required = 1,
-      enabled = "false",
+      enabled = false,
       allow_decomposition = false,
       normal = {
-        ingredients = {{"angels-ore6-crushed", 4}},
+        ingredients = {{type = "item", name = "angels-ore6-crushed", amount = 4}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
       },
       expensive = {
-        ingredients = {{"angels-ore6-crushed", 6 * rawmulti}},
+        ingredients = {{type = "item", name = "angels-ore6-crushed", amount = 6 * rawmulti}},
         results = {
           {type = "item", name = "slag", amount = 1}
         }
@@ -146,7 +161,10 @@ data:extend(
       results = {
         {type = "item", name = "slag", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed-sorting.png",
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
+        { icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png", scale = 0.5, shift = {-10, 10} }
+      },
       icon_size = 32,
       order = "f[angelsore6-crushed-processing]"
     }

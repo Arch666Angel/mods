@@ -1,6 +1,8 @@
 data:extend(
 {
-  --SUPPORT
+  -----------------------------------------------------------------------------
+  -- SUPPORT ------------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "solid-compost",
@@ -30,13 +32,22 @@ data:extend(
   },
   {
     type = "item",
-    name = "solid-nuclear-fertilizer",
-    icon = "__angelsbioprocessing__/graphics/icons/solid-nuclear-fertilizer.png",
+    name = "solid-alienated-fertilizer",
+    icon = "__angelsbioprocessing__/graphics/icons/solid-alienated-fertilizer.png",
     icon_size = 32,
     subgroup = "bio-wood",
     order = "a[support]-d",
     stack_size = 500
   },
+  --{
+  --  type = "item",
+  --  name = "solid-nuclear-fertilizer",
+  --  icon = "__angelsbioprocessing__/graphics/icons/solid-nuclear-fertilizer.png",
+  --  icon_size = 32,
+  --  subgroup = "bio-wood",
+  --  order = "a[support]-e",
+  --  stack_size = 500
+  --},
   {
     type = "tool",
     name = "token-bio",
@@ -49,10 +60,9 @@ data:extend(
     durability_description_key = "description.science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value"
   },
-
-
-
-  --UPGRADES
+  -----------------------------------------------------------------------------
+  -- UPGRADES -----------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "temperate-upgrade",
@@ -80,10 +90,9 @@ data:extend(
     order = "ac",
     stack_size = 200
   },
-
-
-
-  --TEMPERATE SEEDS
+  -----------------------------------------------------------------------------
+  -- TEMPERATE SEEDS ----------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "temperate-1-seed",
@@ -156,10 +165,9 @@ data:extend(
     order = "b[seed-dormant]-e",
     stack_size = 500
   },
-
-
-
-  -- TEMPERATE VEGETABLES
+  -----------------------------------------------------------------------------
+  -- TEMPERATE VEGETABLES -----------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "temperate-1",
@@ -205,10 +213,9 @@ data:extend(
     order = "a[vegetable]-e",
     stack_size = 500
   },
-
-
-
-  -- DESERT SEEDS
+  -----------------------------------------------------------------------------
+  -- DESERT SEEDS -------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "desert-1-seed",
@@ -281,10 +288,9 @@ data:extend(
     order = "b[seed-dormant]-e",
     stack_size = 500
   },
-
-
-
-  -- DESERT VEGETABLES
+  -----------------------------------------------------------------------------
+  -- DESERT VEGETABLES --------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "desert-1",
@@ -330,10 +336,9 @@ data:extend(
     order = "a[vegetable]-e",
     stack_size = 500
   },
-
-
-
-  -- SWAMP SEEDS
+  -----------------------------------------------------------------------------
+  -- SWAMP SEEDS --------------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "swamp-1-seed",
@@ -406,10 +411,9 @@ data:extend(
     order = "b[seed-dormant]-e",
     stack_size = 500
   },
-
-
-
-  -- SWAMP VEGETABLES
+  -----------------------------------------------------------------------------
+  -- SWAMP VEGETABLES ---------------------------------------------------------
+  -----------------------------------------------------------------------------
   {
     type = "item",
     name = "swamp-1",

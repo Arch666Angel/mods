@@ -7,7 +7,7 @@ data:extend(
     --  name = "alien-air-filtering",
     --  category = "petrochem-air-filtering",
     --  subgroup = "bio-processing-alien-intermediate",
-    --  enabled = "false",
+    --  enabled = false,
     --  energy_required = 20,
     --  ingredients ={
     --    {type="fluid", name="water-purified", amount=50},
@@ -25,7 +25,7 @@ data:extend(
       name = "alien-spores",
       category = "water-treatment",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 10,
       ingredients = {
         {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
@@ -44,12 +44,12 @@ data:extend(
       name = "alien-bacteria",
       category = "bio-processing",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 3,
       ingredients = {
         {type = "fluid", name = "alien-spores", amount = 50},
         {type = "item", name = "solid-calcium-carbonate", amount = 1},
-        {type = "fluid", name = "liquid-perchloric-acid", amount = 50}
+        {type = "fluid", name = "liquid-hydrochloric-acid", amount = 50}
       },
       results = {
         {type = "item", name = "alien-bacteria", amount = 1}
@@ -64,7 +64,7 @@ data:extend(
       name = "alien-goo",
       category = "chemistry",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 3,
       ingredients = {
         {type = "item", name = "alien-bacteria", amount = 1}
@@ -81,7 +81,7 @@ data:extend(
       type = "recipe",
       name = "petri-dish",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 1}
@@ -99,7 +99,7 @@ data:extend(
       name = "substrate-dish",
       category = "crafting",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 5,
       ingredients = {
         {type = "item", name = "petri-dish", amount = 3},
@@ -118,7 +118,7 @@ data:extend(
       name = "seeded-dish",
       category = "crafting",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "substrate-dish", amount = 5},
@@ -137,7 +137,7 @@ data:extend(
       name = "crystal-seed",
       category = "crafting",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "seeded-dish", amount = 1},
@@ -149,14 +149,33 @@ data:extend(
       main_product = "crystal-seed",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[crystal]-a[seed]"
+      order = "b[dish]-d[seed]-a[crystal]"
+    },
+    {
+      type = "recipe",
+      name = "egg-shell-seed",
+      category = "crafting",
+      subgroup = "bio-processing-alien-intermediate",
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        {type = "item", name = "seeded-dish", amount = 1},
+        {type = "item", name = "bio-puffer-egg-shell-powder", amount = 1}
+      },
+      results = {
+        {type = "item", name = "egg-shell-seed", amount = 1}
+      },
+      main_product = "egg-shell-seed",
+      --icon = "__angelsbioprocessing__/graphics/icons/void.png",
+      --icon_size = 32,
+      order = "b[dish]-d[seed]-a[crystal]"
     },
     {
       type = "recipe",
       name = "crystal-enhancer",
       category = "crafting-with-fluid",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "seeded-dish", amount = 1},
@@ -169,14 +188,14 @@ data:extend(
       main_product = "crystal-enhancer",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[crystal]-b[enhancer]"
+      order = "c[crystal]-a[enhancer]"
     },
     {
       type = "recipe",
       name = "crystal-grindstone",
       category = "crafting",
       subgroup = "bio-processing-alien-intermediate",
-      enabled = "false",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 1},
@@ -188,21 +207,21 @@ data:extend(
       main_product = "crystal-grindstone",
       --icon = "__angelsbioprocessing__/graphics/icons/void.png",
       --icon_size = 32,
-      order = "c[crystal]-c[grindstone]"
+      order = "c[crystal]-b[grindstone]"
     },
     {
       type = "recipe",
       name = "crystal-powder-from-dust",
       category = "ore-sorting-t1-5",
-      subgroup = "bio-biter-processing-powder",
-      enabled = "false",
+      subgroup = "bio-biter-processing-crystal-full",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "crystal-dust", amount = 10},
         {type = "item", name = "milling-drum", amount = 1}
       },
       results = {
-        {type = "item", name = "crystal-powder", amount = 25},
+        {type = "item", name = "crystal-powder", amount = 20},
         {type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1}
       },
       icons = {
@@ -216,14 +235,14 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "d[slurry]"
+      order = "a[creation]-a[powder]"
     },
     {
       type = "recipe",
       name = "crystal-powder-slurry",
-      category = "crafting-with-fluid",
-      subgroup = "bio-biter-processing-cutting",
-      enabled = "false",
+      category = "liquifying",
+      subgroup = "bio-biter-processing-crystal-full",
+      enabled = false,
       energy_required = 2,
       ingredients = {
         {type = "item", name = "crystal-powder", amount = 1}
@@ -232,9 +251,13 @@ data:extend(
         {type = "fluid", name = "crystal-slurry", amount = 1}
       },
       main_product = "crystal-slurry",
-      always_show_products = "true",
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {184,231,043}, {080,172,033}, {055,126,017} }, { "crystal-powder" }),
-      order = "d[slurry]"
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        nil,
+        {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
+        {"crystal-powder"}
+      ),
+      order = "a[creation]-b[slurry]"
     }
   }
 )
