@@ -19,6 +19,7 @@ Date: 28.05.2020
       - Slightly altered the existing crawler logistics recipes
       - Increased recharge rate on the charging basestation
     - Fixed charging issues on the relay stations
+    - Added a crawler themed lamp
     - Component mode:
       - Blocks have a configurable stack size (default 1000) (222)
       - Block tiers 0 and 1 have lower crafting times for faster progression (222)

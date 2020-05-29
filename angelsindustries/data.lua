@@ -82,6 +82,7 @@ require("prototypes.technology.tech-pack-technology")
 
 -- LOGISTICS -----------------------------------------------------------
 --ENTITIES
+require("prototypes.buildings.angels-logistics-lamp")
 require("prototypes.buildings.angels-logistics-roboport")
 require("prototypes.buildings.angels-logistics-charging-station")
 require("prototypes.buildings.angels-logistics-zone-expander")

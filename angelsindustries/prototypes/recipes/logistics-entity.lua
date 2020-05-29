@@ -329,6 +329,22 @@ data:extend(
         {type = "item", name = "angels-charging-station", amount = 1}
       },
       icon_size = 32
+    },
+    -- angels lamp
+    {
+      type = "recipe",
+      name = "angels-lamp",
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        {type = "item", name = "electronic-circuit", amount = 1},
+        {type = "item", name = "copper-cable", amount = 3},
+        {type = "item", name = "iron-plate", amount = 1}
+      },
+      results = {
+        {type = "item", name = "angels-lamp", amount = 1}
+      },
+      icon_size = 32
     }
   }
 )
