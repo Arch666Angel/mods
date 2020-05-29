@@ -1042,7 +1042,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.order = recipe.order .. data.raw["item-subgroup"][void_input_subgroup].order
     --recipe.order = recipe.order .. "[" .. void_input_subgroup .. "]"
     recipe.order = recipe.order .. "-"
-    recipe.order = recipe.order .. (data.raw.fluid[fluid_name] or data.raw.item[fluid_name]).order
+    recipe.order = recipe.order .. (data.raw.fluid[fluid_name] or data.raw.item[fluid_name]).order or "z"
     --recipe.order = recipe.order .. "[" .. fluid_name .. "]"
     recipe.order = string.len(recipe.order) <= 200 and recipe.order or recipe.order:sub(1, 200) -- order limited to 200 characters
 
