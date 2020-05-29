@@ -70,13 +70,13 @@ Add big buildings to store bulk amounts (768 slots) of products. Also includes (
 Add 6 silos themed to fit with the compound ores introduced in Angel's Refining, able to store bulk amount of ores (256s lots). Also includes logistic versions!
 
 #### VIII.III. [Ore Silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868)
-Add a high volume pressure tank to store a lot of fluid, usefull when playing with Angel's Petrochem.
+Add a high volume pressure tank to store a lot of fluid, useful when playing with Angel's Petrochem.
 
 #### VIII.IV. [Petrochem Train](https://forums.factorio.com/viewtopic.php?p=396870#p396870)
 Add a petrochem themed train with 1 type of locomotive and 2 types of fluid wagons, themed after the oil and gas tanks added in Angel's Petrochem. There are settings to enable multiple tiers of this train.
 
 #### VIII.V. [Smelting Train](https://forums.factorio.com/viewtopic.php?p=396871#p396871)
-Add a Metallurgy Smelting themed train with 2 types of locomotives (regular for the first locomotive and a tender for inbetween) and a high capacity cargo wagon (64 slots) for long distance traveling between your base and mining outposts! There are settings to enable multiple tiers of this train.
+Add a Metallurgy Smelting themed train with 2 types of locomotives (regular for the first locomotive and a tender for in between) and a high capacity cargo wagon (64 slots) for long distance traveling between your base and mining outposts! There are settings to enable multiple tiers of this train.
 
 #### VIII.VI. [C.A.B.](https://forums.factorio.com/viewtopic.php?p=396874#p396874)
 Another type of crawler, the Crawler Autonomous Base. Deploy the C.A.B. and have a small mobile power unit so you can deploy buildings on the fly to temporary help you craft by hand!

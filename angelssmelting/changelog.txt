@@ -9,7 +9,7 @@ Date: 29.05.2020
 Version: 0.6.6
 Date: 20.04.2020
   Bugfixes:
-    - Replaced the tutorial grid with the duplicated concrete brick tiles #198 (tutorial grid doesnt remember hidden tiles, so now underlying tile is grass-1)
+    - Replaced the tutorial grid with the duplicated concrete brick tiles #198 (tutorial grid doesn't remember hidden tiles, so now underlying tile is grass-1)
     - Special vanilla:
       - Fixed steel processing tech research
 ---------------------------------------------------------------------------------------------------
@@ -45,8 +45,8 @@ Version: 0.6.2
 Date: 20.03.2020
   Changes:
     - Moved the unlocks for the molds further away:
-      - Expendable Mold from Metalurgy 1 to Stone Smelting 1
-      - Non-expendable Mold from Metalurgy 2 to Stone Smelting 2
+      - Expendable Mold from Metallurgy 1 to Stone Smelting 1
+      - Non-expendable Mold from Metallurgy 2 to Stone Smelting 2
     - Steel smelting 1 now prerequisites on steel processing
     - Added higher quality fluid icons
     - Moved angels glass fiber coil unlock from glass 3 to glass 1 tech
@@ -142,7 +142,7 @@ Version: 0.4.3
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
   Changes:
-    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformating them)
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformatting them)
     - added item hide for wires not used with bobs only
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
@@ -260,7 +260,7 @@ Version: 0.2.2
   Changes:
     - changed all coil cutting recipes to only craftable in an assembler
     - added powder mixer machine
-    - tweaking the chains and changed some recipes to diferent machines
+    - tweaking the chains and changed some recipes to different machines
   Bugfixes:
     - added localization string for steel, solder technologies, chemical furnace
     - fixed some of the recipes mentioned here
@@ -282,6 +282,6 @@ Version: 0.1.2
   Changes:
     - tweaked numbers for the recipes to be more like a 1 to 1 resource conversion
     - decreased power usage for blast furnace
-    - increase polution for blast furnace
+    - increase pollution for blast furnace
   Bugfixes:
     - fixed silica smelting chain
