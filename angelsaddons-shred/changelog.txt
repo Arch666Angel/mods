@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.2
-Date: 28.05.2020
+Date: 29.05.2020
   Changes:
     - Properly use name, amount in result and ingredient prototypes
     - Less excessive checks for industries

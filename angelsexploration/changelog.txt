@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
-Date: 28.05.2020
+Date: 29.05.2020
   Changes:
     - Properly use name, amount in result prototypes
     - Consistency in assigning angelsmods in data stage
