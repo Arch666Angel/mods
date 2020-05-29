@@ -5,7 +5,7 @@ Date: 28.05.2020
     - Properly use name, amount in result and ingredient prototypes
     - Consistency in assigning angelsmods in data stage
   Bugfixes:
-    - MP safer method of requiring files (check inside the file instead of arround)
+    - MP safer method of requiring files (check inside the file instead of around)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 09.02.2020

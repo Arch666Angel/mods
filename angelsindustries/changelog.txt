@@ -27,7 +27,7 @@ Date: 28.05.2020
       - All machines that use blocks as a recipe now have an instant crafting time (222)
       - Added better recipes for inserters to use components better
   Bugfixes:
-    - MP safer method of requiring files (check inside the file instead of arround)
+    - MP safer method of requiring files (check inside the file instead of around)
     - Overhaul mode:
       - Added angels nuclear fuel processes
     - Component mode:

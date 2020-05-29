@@ -6,7 +6,7 @@ Date: 28.05.2020
     - Consistency in assigning angelsmods in data stage
   Bugfixes:
     - Added missing call to OV.execute() in data-updates
-    - MP safer method of requiring files (check inside the file instead of arround)
+    - MP safer method of requiring files (check inside the file instead of around)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 12.04.2020
