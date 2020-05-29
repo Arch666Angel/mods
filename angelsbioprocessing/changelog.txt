@@ -9,7 +9,7 @@ Date: 28.05.2020
       - Blue algae is now blue science, as an alternative source for ammonia gas from nitrogen processing
     - Changed biter breeding recipe icons, it now shows the queens so they are more distinguishable (245)
     - Changed compost and void recipe icons for easier finding the correct void recipe (245)
-    - Crystal powder liquification now requres liquifier instead of assembler (228)
+    - Crystal powder liquifaction now requres liquifier instead of assembler (228)
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
     - Added alternative way of producing soil from sand instead of mud
     - Changed to color of fish water to be a less vibrant color with the new UI colors
@@ -20,9 +20,9 @@ Date: 28.05.2020
   Bugfixes:
     - Fixed Alien Bacteria was using Perchloric Acid instead of Hydrochloric acid
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria
-    - Crystal powder liquification now requres liquifier instead of assembler (228)
+    - Crystal powder liquifaction now requres liquifier instead of assembler (228)
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
-    - MP safer method of requiring files (check inside the file instead of arround)
+    - MP safer method of requiring files (check inside the file instead of around)
     - Altered definition of biter queen localisation for translation purposes
     - Added some crucial technology dependencies for easier progression and tree connectivity
   Balancing:

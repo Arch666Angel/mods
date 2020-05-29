@@ -5,7 +5,7 @@ Date: 28.05.2020
     - Properly use name, amount in result and ingredient prototypes
     - Less excessive checks for industries
   Bugfixes:
-    - MP safer method of requiring files (check inside the file instead of arround)
+    - MP safer method of requiring files (check inside the file instead of around)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 20.03.2020
