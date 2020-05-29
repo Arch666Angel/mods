@@ -228,7 +228,7 @@ if bobmods then
         }
       }
     )
-    -- manualy patch the result as the recipe builder is failing
+    -- manually patch the result as the recipe builder is failing
     data.raw.recipe["bob-basic-greenhouse-cycle"].normal.result = nil
     data.raw.recipe["bob-basic-greenhouse-cycle"].normal.results = {
       {type = "item", name = "solid-tree", amount_min = 2, amount_max = 4}
@@ -333,7 +333,7 @@ if bobmods then
       )
     end
 
-    -- allow manualy creating wood without a sawblade (because nerfed bob greenhouse)
+    -- allow manually creating wood without a sawblade (because nerfed bob greenhouse)
     data:extend(
       {
         {

@@ -6,7 +6,7 @@
   "author": "Arch666Angel",
   "contact": "",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
-  "description": "Adds pressure tanks (extremly large tanks).",
+  "description": "Adds pressure tanks (extremely large tanks).",
   "dependencies": [
     "base >= 0.18.27",
     "? angelspetrochem >= 0.9.9"

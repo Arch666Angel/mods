@@ -2,7 +2,7 @@ if bobmods then
   local OV = angelsmods.functions.OV
 
   if mods["bobrevamp"] then
-    -- Move solid fuels arround
+    -- Move solid fuels around
     OV.disable_technology({"solid-fuel"})
 
     OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")

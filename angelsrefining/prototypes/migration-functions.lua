@@ -3,7 +3,7 @@ angelsmods.migration = {}
 
 function angelsmods.migration.replace_recipes(entities_to_check, recipe_replacements)
   -- recipe_replacements is a table of recipe_replacement
-  -- recipe_replacement is a table with 2 entires, first entry is old recipe name
+  -- recipe_replacement is a table with 2 entries, first entry is old recipe name
   -- and second entry is the new recipe name (or nil)
   for _, entity in pairs(entities_to_check or {}) do
     local recipe = entity.get_recipe()

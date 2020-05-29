@@ -36,7 +36,7 @@ Date: 02.04.2020
   Bugfixes:
     - Fixed oil refinery didn't have fast_replaceable_group set
     - Fixed crash when bob pure water was disabled
-    - Fixed missing localisation for heavy water seperation recipes
+    - Fixed missing localisation for heavy water separation recipes
     - Fixed failed attempt (in 0.9.5) on re-enabling rocket-fuel on existing saves
     - Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
     - Fixed startup error with bobrevamp and missing bobplates
@@ -59,7 +59,7 @@ Date: 20.03.2020
     - Added option to disable bobs electrolysers #56
     - Added option to disable bobs chemical plants #56
     - Merged the rocket-fuel recipes #66
-    - Removed seperate solid fuel check completely #66
+    - Removed separate solid fuel check completely #66
     - Added nuclear fuel tech since requirements for rocket fuel is different #66
     - Disabled coal liquefaction
     - Fully replaced Bob's Lithium Chloride with Angels Lithia Salt #71
@@ -190,7 +190,7 @@ Version: 0.7.7
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.6
   Changes:
-    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformating them)
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformatting them)
     - moved liquifiers to the correct subgroup
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.5
@@ -359,7 +359,7 @@ Version: 0.4.2
     - changed/buffed solid fuel recipes
     - added crude oil barrel empty/fill recipes
     - removed vanilla crude oil empty/fill recipes
-    - added vanilla mode (dependecies: angelsinfiniteores, angelsrefining)
+    - added vanilla mode (dependencies: angelsinfiniteores, angelsrefining)
   Bugfixes:
     - fixed icon for dimethylhydrazine
 ---------------------------------------------------------------------------------------------------
@@ -431,7 +431,7 @@ Version: 0.2.1
 Version: 0.2.0
   Changes:
     - increased sulfur from hydrogen sulfide recipe
-    - added tie in for refining to use the other acids avaiable with petrochem
+    - added tie in for refining to use the other acids available with petrochem
     - added earlier recipe for yellow waste water from crushed coal
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.15

@@ -206,7 +206,7 @@ data:extend(
 --[[THE PLAN
 Starting with the vanilla power system and the heavy water cycle added by Lovely_santa
 - Add in a tier 2 reaction that yields plutonium
-- Create a sinc for said plutonium in an advanced cell
+- Create a sink for said plutonium in an advanced cell
 - Create a fusion catalyst from plutonium cell reprocessing
 - Create a deuterium recipe that requires the fuel cell
 ==REFERENCE: VANILLA URANIUM IN-->OUT (1 Fe.plate+ 1 U-235+19 U-238-->(10 cells)-->6 U-238) [U-235 is the shiny rock]

@@ -248,7 +248,7 @@ data:extend(
       order = "za[buildings]-c"
     },
     {
-      -- oil and gas seperator + oil refinery
+      -- oil and gas separator + oil refinery
       type = "item-subgroup",
       name = "petrochem-buildings-oil-refinery",
       group = "petrochem-refining",
