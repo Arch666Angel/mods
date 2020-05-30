@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
-Date: 29.05.2020
+Date: ???
+  Changes:
+    - Reduced the construction range (5 -> 3) of angels vehicle repair equipment
   Bugfixes:
     - Fixed petri dishes requiring glass
 ---------------------------------------------------------------------------------------------------

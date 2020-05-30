@@ -14,6 +14,8 @@ require("prototypes.entities.crawler-locomotive-wagon")
 require("prototypes.entities.crawler-wagon")
 require("prototypes.entities.crawler-bot-wagon")
 
+require("prototypes.crawler-category")
+
 require("prototypes.recipes.crawler-recipe")
 
 require("prototypes.technology.crawler-technology")
