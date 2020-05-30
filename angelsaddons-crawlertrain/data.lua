@@ -7,14 +7,12 @@ angelsmods.addons.crawlertrain.number_tint = {r = 0.95, g = 0.65, b = 0.25, a = 
 
 tech_unlocks = {}
 
-require("prototypes.category")
+require("prototypes.crawler-category")
 
 require("prototypes.entities.crawler-locomotive")
 require("prototypes.entities.crawler-locomotive-wagon")
 require("prototypes.entities.crawler-wagon")
 require("prototypes.entities.crawler-bot-wagon")
-
-require("prototypes.crawler-category")
 
 require("prototypes.recipes.crawler-recipe")
 

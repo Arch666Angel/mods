@@ -281,10 +281,33 @@ local function update_equipment_grid(grid, add, remove)
   end
 end
 
+local function update_equipment(equipment_type, equipment_name, categories_to_add)
+  if type(categories_to_add) == 'table' then
+    for _, category_to_add in pairs(categories_to_add) do
+      update_equipment(equipment_type, equipment_name, category_to_add)
+    end
+  end
+
+  if not data.raw[equipment_type] then return end
+  if not data.raw[equipment_type][equipment_name] then return end
+  if not data.raw["equipment-category"][categories_to_add] then return end
+
+  if data.raw[equipment_type][equipment_name].categories then
+    for _, category in pairs(data.raw[equipment_type][equipment_name].categories) do
+      if category == categories_to_add then return end
+    end
+  else
+    data.raw[equipment_type][equipment_name].categories = {}
+  end
+
+  table.insert(data.raw[equipment_type][equipment_name].categories, categories_to_add)
+end
+
 return {
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,
   generate_train_recipe = generate_train_recipe,
   generate_train_technology = generate_train_technology,
-  update_equipment_grid = update_equipment_grid
+  update_equipment_grid = update_equipment_grid,
+  update_equipment = update_equipment
 }
