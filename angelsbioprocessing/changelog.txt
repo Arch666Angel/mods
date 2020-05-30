@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed missing localisation on waste puffing (259)
     - Added the missing atmosphere puffing recipe (259)
+    - Fixed hatchery not having enough result inventory slots to hold all hatching results
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.9
 Date: 29.05.2020
