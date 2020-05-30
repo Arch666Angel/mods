@@ -233,6 +233,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "puffer-puffing-23"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "puffer-puffing-12"
         },
         {
