@@ -7,7 +7,7 @@ Date: ???
     - Angels robots unlocks the shortcuts as well
   Bugfixes:
     - Science mode:
-      - Fixed that you could not get liquid resin before green science (again)
+      - Fixed that you could not get liquid resin before green science (268)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 29.05.2020
