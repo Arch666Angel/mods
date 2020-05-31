@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Crystal powder liquifying now required purified water similar how to dus requires acid (270)
   Bugfixes:
+    - Fixed petri dishes requiring glass when there was no glass available
     - Fixed missing localisation on waste puffing (259)
     - Added the missing atmosphere puffing recipe (259)
     - Fixed hatchery not having enough result inventory slots to hold all hatching results

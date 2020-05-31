@@ -6,7 +6,8 @@ Date: ???
     - Added ghost unlocks for angels construction robots
     - Angels robots unlocks the shortcuts as well
   Bugfixes:
-    - Fixed petri dishes requiring glass
+    - Science mode:
+      - Fixed that you could not get liquid resin before green science (again)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 29.05.2020
@@ -29,6 +30,8 @@ Date: 29.05.2020
       - Increased recharge rate on the charging basestation
     - Fixed charging issues on the relay stations
     - Added a crawler themed lamp
+    - Overhaul mode:
+      - Added angels nuclear fuel processes
     - Component mode:
       - Blocks have a configurable stack size (default 1000) (222)
       - Block tiers 0 and 1 have lower crafting times for faster progression (222)
@@ -37,8 +40,6 @@ Date: 29.05.2020
       - Added better recipes for inserters to use components better
   Bugfixes:
     - MP safer method of requiring files (check inside the file instead of around)
-    - Overhaul mode:
-      - Added angels nuclear fuel processes
     - Component mode:
       - Fixed that the manual craftable blocks would be decomposed for total raw calculation (222)
     - Science mode:

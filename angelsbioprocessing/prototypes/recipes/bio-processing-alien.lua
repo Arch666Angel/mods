@@ -245,7 +245,7 @@ data:extend(
       enabled = false,
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "crystal-powder", amount = 1}
+        {type = "item", name = "crystal-powder", amount = 1},
         {type = "fluid", name = "water-purified", amount = 1}
       },
       results = {
