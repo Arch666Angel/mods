@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.8
+Date: ???
+  Bugfixes:
+    - Fixed silicon/quartz ore was enabled when bob electronics is enabled without bobplates (257)
+    - Fixed tinned copper wire was enabled when bob electronics is enabled without bobplates (257)
+    - Fixed gilded copper wire was enabled when bob electronics is enabled without bobplates (257)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.7
 Date: 29.05.2020
   Changes:
