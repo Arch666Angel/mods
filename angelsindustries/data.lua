@@ -104,7 +104,7 @@ require("prototypes.recipes.vehicles-recipe")
 require("prototypes.technology.vequip-technology")
 require("prototypes.technology.logistics-technology")
 -- TOOLS
-require("prototypes.angels-robotics-ghosting")
+require("prototypes.angels-logistics-ghosting")
 
 -- NUCLEAR -----------------------------------------------------------
 --ENTITIES

@@ -95,7 +95,7 @@ local icon_lookup_table = {
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/rutile-ore.png"} or
     icon_lookup_table_fallback,
 
-  ["sillica-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-sillica.png"} or
+  ["silica-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-silica.png"} or
     mods["bobores"] and {icon = "__bobores__/graphics/icons/quartz.png"} or
     mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/quartz.png"} or
     icon_lookup_table_fallback,
@@ -644,7 +644,7 @@ OV.patch_recipes(
           tweaked_icon_lookup("iron-slag", 0.5, {10, 10})
         } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("sillica-ore", 0.5, {10, 10})
+          tweaked_icon_lookup("silica-ore", 0.5, {10, 10})
         },
         --[[2]] special_vanilla and {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
