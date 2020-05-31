@@ -45,6 +45,103 @@ local get_trigger_name = {
   ["chrome-ore"] = "chrome",
   ["platinum-ore"] = "platinum"
 }
+
+local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
+local icon_lookup_table = {
+  ["bauxite-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-bauxite.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/bauxite-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/bauxite-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["cobalt-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-cobalt.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/cobalt-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/cobalt-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["copper-nugget"] = {icon = "__angelsrefining__/graphics/icons/copper-nugget.png"},
+
+  ["copper-ore"] = {icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64},
+
+  ["copper-slag"] = {icon = "__angelsrefining__/graphics/icons/copper-slag.png"},
+
+  ["fluorite-ore"] = {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png"},
+
+  ["gold-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-gold.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/gold-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/gold-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["iron-nugget"] = {icon = "__angelsrefining__/graphics/icons/iron-nugget.png"},
+
+  ["iron-ore"] = {icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64},
+
+  ["iron-slag"] = {icon = "__angelsrefining__/graphics/icons/iron-slag.png"},
+
+  ["lead-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-lead.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/lead-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/lead-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["nickel-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-nickel.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/nickel-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/nickel-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["platinum-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-platinum.png"} or
+    icon_lookup_table_fallback,
+
+  ["rutile-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-rutile.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/rutile-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/rutile-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["sillica-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-sillica.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/quartz.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/quartz.png"} or
+    icon_lookup_table_fallback,
+
+  ["silver-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-silver.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/silver-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/silver-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["thorium-ore"] = mods["angelsindustries"] and angelsmods.industries.overhaul and {icon = "__angelssmelting__/graphics/icons/ore-thorium.png", icon_size = 64} or
+    mods["bobplates"] and {icon = "__boblibrary__/graphics/icons/ore-5.png", tint = {b = 0.25, g = 1, r = 1}} or
+    icon_lookup_table_fallback,
+
+  ["tin-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-tin.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/tin-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/tin-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["tungsten-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-tungsten.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/tungsten-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/tungsten-ore.png"} or
+    icon_lookup_table_fallback,
+
+  ["uranium-ore"] = {icon = "__base__/graphics/icons/uranium-ore.png", icon_size = 64},
+
+  ["zinc-ore"] = mods["angelssmelting"] and {icon = "__angelssmelting__/graphics/icons/ore-zinc.png"} or
+    mods["bobores"] and {icon = "__bobores__/graphics/icons/zinc-ore.png"} or
+    mods["bobplates"] and {icon = "__bobplates__/graphics/icons/ore/zinc-ore.png"} or
+    icon_lookup_table_fallback
+}
+local tweaked_icon_lookup = function(icon_name, scale, shift)
+  if not icon_lookup_table[icon_name] then return icon_lookup_table_fallback end
+  if not icon_lookup_table[icon_name].icon then return icon_lookup_table_fallback end
+
+  return {
+    icon = icon_lookup_table[icon_name].icon,
+    icon_size = icon_lookup_table[icon_name].icon_size,
+    scale = 32/(icon_lookup_table[icon_name].icon_size or 32) * (scale or 1),
+    shift = (shift[1] or shift['x'] or shift[2] or shift['y']) and {
+      shift[1] or shift['x'] or 0,
+      shift[2] or shift['y'] or 0
+    } or nil,
+    tint = icon_lookup_table[icon_name].tint
+  }
+end
+
 local ore_exists = function(ore_name)
   if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] then
     return true
@@ -495,42 +592,38 @@ OV.patch_recipes(
       },
       {
         --[[1]] special_vanilla and {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelsrefining__/graphics/icons/iron-nugget.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("iron-nugget", 0.5, {10, 10})
         } or {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64, scale = 32/64 * 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("iron-ore", 0.5, {10, 10})
         },
         --[[2]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64, scale = 32/64 * 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("copper-ore", 0.5, {10, 10})
         },
         --[[3]] special_vanilla and {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelsrefining__/graphics/icons/copper-nugget.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("copper-nugget", 0.5, {10, 10})
         } or {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-lead.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("lead-ore", 0.5, {10, 10})
         },
         --[[4]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-tin.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("tin-ore", 0.5, {10, 10})
         }
       },
       {
-        special_vanilla and
-          {
-            {type = "item", name = "angels-iron-pebbles", amount = 4},
-            {type = "item", name = "angels-iron-nugget", amount = 1}
-          } or
-          nil,
+        special_vanilla and {
+          {type = "item", name = "angels-iron-pebbles", amount = 4},
+          {type = "item", name = "angels-iron-nugget", amount = 1}
+        } or nil,
         nil,
-        special_vanilla and
-          {
-            {type = "item", name = "angels-copper-pebbles", amount = 4},
-            {type = "item", name = "angels-copper-nugget", amount = 1}
-          } or
-          nil,
+        special_vanilla and {
+          {type = "item", name = "angels-copper-pebbles", amount = 4},
+          {type = "item", name = "angels-copper-nugget", amount = 1}
+        } or nil,
         nil
       }
     ),
@@ -538,10 +631,8 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-chunk-mix%i-processing",
       {
-        special_vanilla and {type = "item", name = "iron-ore", amount = 3} or
-          {type = "item", name = "quartz", amount = 4},
-        special_vanilla and {type = "item", name = "copper-ore", amount = 3} or
-          {type = "item", name = "nickel-ore", amount = 4},
+        special_vanilla and {type = "item", name = "iron-ore", amount = 3} or {type = "item", name = "quartz", amount = 4},
+        special_vanilla and {type = "item", name = "copper-ore", amount = 3} or {type = "item", name = "nickel-ore", amount = 4},
         {type = "item", name = "bauxite-ore", amount = 4},
         {type = "item", name = "zinc-ore", amount = 4},
         {type = "item", name = "fluorite-ore", amount = 2},
@@ -549,46 +640,42 @@ OV.patch_recipes(
       },
       {
         --[[1]] special_vanilla and {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelsrefining__/graphics/icons/iron-slag.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("iron-slag", 0.5, {10, 10})
         } or {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-silica.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("sillica-ore", 0.5, {10, 10})
         },
         --[[2]] special_vanilla and {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelsrefining__/graphics/icons/copper-slag.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("copper-slag", 0.5, {10, 10})
         } or {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-nickel.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("nickel-ore", 0.5, {10, 10})
         },
         --[[3]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-bauxite.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("bauxite-ore", 0.5, {10, 10})
         },
         --[[4]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-zinc.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("zinc-ore", 0.5, {10, 10})
         },
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__angelsrefining__/graphics/icons/ore-fluorite.png", scale = 0.5, shift = {10, 10}}
+          tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
         },
         --[[6]] nil
       },
       {
-        special_vanilla and
-          {
-            {type = "item", name = "angels-iron-pebbles", amount = 3},
-            {type = "item", name = "angels-iron-slag", amount = 1}
-          } or
-          nil,
-        special_vanilla and
-          {
-            {type = "item", name = "angels-copper-pebbles", amount = 3},
-            {type = "item", name = "angels-copper-slag", amount = 1}
-          } or
-          nil,
+        special_vanilla and {
+          {type = "item", name = "angels-iron-pebbles", amount = 3},
+          {type = "item", name = "angels-iron-slag", amount = 1}
+        } or nil,
+        special_vanilla and {
+          {type = "item", name = "angels-copper-pebbles", amount = 3},
+          {type = "item", name = "angels-copper-slag", amount = 1}
+        } or nil,
         nil,
         nil,
         nil,
@@ -608,38 +695,28 @@ OV.patch_recipes(
       },
       {
         --[[1]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-rutile.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("rutile-ore", 0.5, {10, 10})
         },
         --[[2]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-gold.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("gold-ore", 0.5, {10, 10})
         },
         --[[3]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-cobalt.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("cobalt-ore", 0.5, {10, 10})
         },
         --[[4]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-silver.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("silver-ore", 0.5, {10, 10})
         },
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {icon = "__base__/graphics/icons/uranium-ore.png", scale = 32 / 64 * 0.5, shift = {10, 10}, icon_size = 64}
+          tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
         },
         --[[6]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {
-            icon = mods["angelsindustries"] and angelsmods.industries.overhaul and
-              "__angelssmelting__/graphics/icons/ore-thorium.png" or
-              mods["bobplates"] and "__boblibrary__/graphics/icons/ore-5.png" or
-              "__angelsrefining__/graphics/icons/sort-icon.png",
-            icon_size = mods["angelsindustries"] and angelsmods.industries.overhaul and 64 or mods["bobplates"] and 32 or
-              32,
-            tint = {b = 0.25, g = 1, r = 1},
-            scale = 0.5 * (mods["angelsindustries"] and angelsmods.industries.overhaul and 0.5 or 1),
-            shift = {10, 10}
-          }
+          tweaked_icon_lookup("thorium-ore", 0.5, {10, 10})
         }
       }
     ),
@@ -653,12 +730,12 @@ OV.patch_recipes(
       },
       {
         --[[1]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-tungsten.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("tungsten-ore", 0.5, {10, 10})
         },
         --[[2]] {
-          { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-          { icon = "__angelssmelting__/graphics/icons/ore-platinum.png", scale = 0.5, shift = {10, 10} }
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          ore_exists("platinum") and tweaked_icon_lookup("platinum-ore", 0.5, {10, 10}) or nil
         },
         --[[3]] nil
       }
@@ -689,7 +766,7 @@ OV.patch_recipes(
         ["rutile-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["bauxite-ore"] = {0, 0, 0, 0, 0, 0.4, 0, 0, 0},
         ["manganese-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
-        ["chrome-ore"] = { 0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
+        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
         ["platinum-ore"] = {0, 0, 0, 0, 0, 0, 0.4, 0, 0},
         ["cobalt-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
         ["tungsten-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
@@ -699,19 +776,19 @@ OV.patch_recipes(
       },
       {
         --[[1]] angelsmods.functions.create_liquid_recipe_icon(
-            {
-              "iron-ore",
-              (not special_vanilla) and "copper-ore" or nil
-            },
-            slag_color
-          ),
+          {
+            "iron-ore",
+            (not special_vanilla) and "copper-ore" or nil
+          },
+          slag_color
+        ),
         --[[2]] angelsmods.functions.create_liquid_recipe_icon(
-            {
-              special_vanilla and "copper-ore" or "lead-ore",
-              (not special_vanilla) and "tin-ore" or nil
-            },
-            slag_color
-          ),
+          {
+            special_vanilla and "copper-ore" or "lead-ore",
+            (not special_vanilla) and "tin-ore" or nil
+          },
+          slag_color
+        ),
         --[[3]] angelsmods.functions.create_liquid_recipe_icon(
           {
             "silver-ore",
@@ -720,19 +797,19 @@ OV.patch_recipes(
           slag_color
         ),
         --[[4]] angelsmods.functions.create_liquid_recipe_icon(
-            {
-              special_vanilla and "angels-iron-pebbles" or "gold-ore",
-              (not special_vanilla) and "nickel-ore" or nil
-            },
-            slag_color
-          ),
+          {
+            special_vanilla and "angels-iron-pebbles" or "gold-ore",
+            (not special_vanilla) and "nickel-ore" or nil
+          },
+          slag_color
+        ),
         --[[5]] angelsmods.functions.create_liquid_recipe_icon(
-            {
-              special_vanilla and "angels-copper-pebbles" or "zinc-ore",
-              (not special_vanilla) and "rutile-ore" or nil
-            },
-            slag_color
-          ),
+          {
+            special_vanilla and "angels-copper-pebbles" or "zinc-ore",
+            (not special_vanilla) and "rutile-ore" or nil
+          },
+          slag_color
+        ),
         --[[6]] angelsmods.functions.create_liquid_recipe_icon(
           {
             "bauxite-ore",
