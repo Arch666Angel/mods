@@ -35,6 +35,9 @@ require("prototypes.overrides.industries-override-functions")
 --CATEGORIES
 require("prototypes.angels-industries-category")
 
+-- ROBOTICS
+require("prototypes.angels-robotics-ghosting")
+
 --COMPONENTS OVERHAUL --------------------------------------------------
 --ITEMS
 require("prototypes.items.components-electronics")
