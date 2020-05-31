@@ -40,17 +40,19 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
           controlBehavior.type == defines.control_behavior.type.programmable_speaker
       then
         local oldCondition = controlBehavior.circuit_condition.condition
-        controlBehavior.circuit_condition.condition = oldCondition and {
-          comparator = oldCondition.comparator,
-          first_signal = oldCondition.first_signal and {
-            type = oldCondition.first_signal.type,
-            name = oldCondition.first_signal.type == signal_type and signals_to_replace[oldCondition.first_signal.name or "none"] or oldCondition.first_signal.name
-          } or nil,
-          second_signal = oldCondition.second_signal and {
-            type = oldCondition.second_signal.type,
-            name = oldCondition.second_signal.type == signal_type and signals_to_replace[oldCondition.second_signal.name or "none"] or oldCondition.second_signal.name
-          } or nil,
-          constant = oldCondition.constant,
+        controlBehavior.circuit_condition = oldCondition and {
+          condition = {
+            comparator = oldCondition.comparator,
+            first_signal = oldCondition.first_signal and {
+              type = oldCondition.first_signal.type,
+              name = oldCondition.first_signal.type == signal_type and signals_to_replace[oldCondition.first_signal.name or "none"] or oldCondition.first_signal.name
+            } or nil,
+            second_signal = oldCondition.second_signal and {
+              type = oldCondition.second_signal.type,
+              name = oldCondition.second_signal.type == signal_type and signals_to_replace[oldCondition.second_signal.name or "none"] or oldCondition.second_signal.name
+            } or nil,
+            constant = oldCondition.constant,
+          }
         } or nil
       end
 
@@ -63,17 +65,19 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
           controlBehavior.type == defines.control_behavior.type.mining_drill
       then
         local oldCondition = controlBehavior.logistic_condition.condition
-        controlBehavior.logistic_condition.condition = oldCondition and {
-          comparator = oldCondition.comparator,
-          first_signal = oldCondition.first_signal and {
-            type = oldCondition.first_signal.type,
-            name = oldCondition.first_signal.type == signal_type and signals_to_replace[oldCondition.first_signal.name or "none"] or oldCondition.first_signal.name
-          } or nil,
-          second_signal = oldCondition.second_signal and {
-            type = oldCondition.second_signal.type,
-            name = oldCondition.second_signal.type == signal_type and signals_to_replace[oldCondition.second_signal.name or "none"] or oldCondition.second_signal.name
-          } or nil,
-          constant = oldCondition.constant,
+        controlBehavior.logistic_condition = oldCondition and {
+          condition = {
+            comparator = oldCondition.comparator,
+            first_signal = oldCondition.first_signal and {
+              type = oldCondition.first_signal.type,
+              name = oldCondition.first_signal.type == signal_type and signals_to_replace[oldCondition.first_signal.name or "none"] or oldCondition.first_signal.name
+            } or nil,
+            second_signal = oldCondition.second_signal and {
+              type = oldCondition.second_signal.type,
+              name = oldCondition.second_signal.type == signal_type and signals_to_replace[oldCondition.second_signal.name or "none"] or oldCondition.second_signal.name
+            } or nil,
+            constant = oldCondition.constant,
+          }
         } or nil
       end
 

@@ -6,6 +6,9 @@ Date: ???
     - Added ghost unlocks for angels construction robots
     - Angels robots unlocks the shortcuts as well
   Bugfixes:
+    - Overhaul mode:
+      - Fixed error in migration not migrating all cases, rerunning same migration script
+        to get the other cases (271)
     - Science mode:
       - Fixed that you could not get liquid resin before green science (268)
 ---------------------------------------------------------------------------------------------------
