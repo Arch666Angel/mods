@@ -35,9 +35,6 @@ require("prototypes.overrides.industries-override-functions")
 --CATEGORIES
 require("prototypes.angels-industries-category")
 
--- ROBOTICS
-require("prototypes.angels-robotics-ghosting")
-
 --COMPONENTS OVERHAUL --------------------------------------------------
 --ITEMS
 require("prototypes.items.components-electronics")
@@ -84,6 +81,7 @@ require("prototypes.technology.tech-lab-technology")
 require("prototypes.technology.tech-pack-technology")
 
 -- LOGISTICS -----------------------------------------------------------
+
 --ENTITIES
 require("prototypes.buildings.angels-logistics-lamp")
 require("prototypes.buildings.angels-logistics-roboport")
@@ -98,7 +96,6 @@ require("prototypes.buildings.angels-logistics-robot-cargo")
 require("prototypes.entities.crawler")
 require("prototypes.entities.equipment")
 require("prototypes.entities.bio-tile")
-
 --RECIPES
 require("prototypes.recipes.equipment-recipes")
 require("prototypes.recipes.logistics-entity")
@@ -106,6 +103,8 @@ require("prototypes.recipes.vehicles-recipe")
 --TECHS
 require("prototypes.technology.vequip-technology")
 require("prototypes.technology.logistics-technology")
+-- TOOLS
+require("prototypes.angels-robotics-ghosting")
 
 -- NUCLEAR -----------------------------------------------------------
 --ENTITIES
