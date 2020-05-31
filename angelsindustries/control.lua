@@ -33,11 +33,21 @@ end
 script.on_event(
   {defines.events.on_player_created, defines.events.on_player_respawned},
   function(event)
+    local player = game.players[event.player_index]
+
     if not global.is_lab_given and game.entity_prototypes[main_lab[1]] then
-      local player = game.players[event.player_index]
       if player and player.valid then
         global.is_lab_given = player.insert {name = main_lab[1], count = 1} > 0
       end
+    end
+
+    local force = player and player.force
+    if force then
+      player.set_shortcut_available(
+        "toggle-ghosting",
+        force.technologies["angels-hidden-ghosting"] and force.technologies["angels-hidden-ghosting"].researched or
+          false
+      )
     end
   end
 )
@@ -63,6 +73,78 @@ script.on_event(
   function(event)
     if game.entity_prototypes[main_lab[1]] then
       remove_lab_from_inv(game.players[event.player_index].get_main_inventory())
+    end
+  end
+)
+
+----------------
+--- GHOSTING ---
+----------------
+local function unlock(force, shortcut)
+  for _, p in pairs(force.players) do
+    p.set_shortcut_available(shortcut, true)
+  end
+end
+
+script.on_event(
+  defines.events.on_research_finished,
+  function(event)
+    local research = event.research
+    if research.name == "angels-construction-robots" then
+      local unlocks = {
+        "undo",
+        "copy",
+        "cut",
+        "paste",
+        "import-string",
+        "give-blueprint",
+        "give-blueprint-book",
+        "give-deconstruction-planner",
+        "give-upgrade-planner"
+      }
+      for _, shortcut in pairs(unlocks) do
+        unlock(event.research.force, shortcut)
+      end
+    end
+
+    local ghosting = {
+      ["angels-ghosting-construction-robots"] = true,
+      ["angels-ghosting-angels-construction-robots"] = true
+    }
+    if ghosting[research.name] then
+      research.force.technologies["angels-hidden-ghosting"].researched = true
+      for _, fplayer in pairs(research.force.players) do
+        fplayer.set_shortcut_available("toggle-ghosting", true)
+        fplayer.set_shortcut_toggled("toggle-ghosting", true)
+      end
+      for tech in pairs(ghosting) do
+        if research.force.technologies[tech] then
+          research.force.technologies[tech].researched = true
+        end
+      end
+    end
+  end
+)
+
+script.on_event(
+  {
+    defines.events.on_lua_shortcut,
+    "toggle-ghosting"
+  },
+  function(event)
+    if event.prototype_name and event.prototype_name ~= "toggle-ghosting" then
+      return
+    end
+    local input = event.prototype_name or event.input_name
+    local player = game.players[event.player_index]
+    if player and player.valid then
+      local force = player.force
+      local toggled = force.ghost_time_to_live == 0
+      force.ghost_time_to_live = toggled and 60 * 60 * 60 * 24 * 7 or 0
+
+      for _, fplayer in pairs(force.players) do
+        fplayer.set_shortcut_toggled(input, toggled)
+      end
     end
   end
 )

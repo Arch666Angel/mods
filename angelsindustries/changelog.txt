@@ -3,6 +3,8 @@ Version: 0.4.2
 Date: ???
   Changes:
     - Reduced the construction range (5 -> 3) of angels vehicle repair equipment
+    - Added ghost unlocks for angels construction robots
+    - Angels robots unlocks the shortcuts as well
   Bugfixes:
     - Fixed petri dishes requiring glass
 ---------------------------------------------------------------------------------------------------
