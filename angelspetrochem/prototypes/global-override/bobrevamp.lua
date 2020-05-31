@@ -24,7 +24,6 @@ if bobmods then
       OV.add_unlock("flammables", "liquid-fuel")
       OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
       OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
-      OV.add_unlock("angels-nitrogen-processing-3", "enriched-fuel-from-hydrazine")
 
       OV.add_prereq("chemical-processing-3", "flammables")
       data.raw.recipe["solid-fuel-from-hydrogen"].icons =
