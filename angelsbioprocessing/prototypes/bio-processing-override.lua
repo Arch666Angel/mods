@@ -51,7 +51,7 @@ for i, labs in pairs(data.raw["lab"]) do
 end
 
 --CONDITIONAL
-if angelsmods.industries then
+if angelsmods.trigger.smelting_products["glass"].plate then
   OV.patch_recipes(
     {
       {
@@ -61,6 +61,13 @@ if angelsmods.industries then
           {type = "item", name = data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 1} -- bob glass
         }
       },
+    }
+  )
+end
+
+if angelsmods.industries then
+  OV.patch_recipes(
+    {
       {
         name = "crystal-enhancer",
         ingredients = {
@@ -221,7 +228,7 @@ if bobmods then
         }
       }
     )
-    -- manualy patch the result as the recipe builder is failing
+    -- manually patch the result as the recipe builder is failing
     data.raw.recipe["bob-basic-greenhouse-cycle"].normal.result = nil
     data.raw.recipe["bob-basic-greenhouse-cycle"].normal.results = {
       {type = "item", name = "solid-tree", amount_min = 2, amount_max = 4}
@@ -326,7 +333,7 @@ if bobmods then
       )
     end
 
-    -- allow manualy creating wood without a sawblade (because nerfed bob greenhouse)
+    -- allow manually creating wood without a sawblade (because nerfed bob greenhouse)
     data:extend(
       {
         {

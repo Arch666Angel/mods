@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.10
+Date: 01.06.2020
+  Changes:
+    - Crystal powder liquifying now required purified water similar how to dust requires acid (270)
+  Bugfixes:
+    - Fixed petri dishes requiring glass when there was no glass available
+    - Fixed missing localisation on waste puffing (259)
+    - Added the missing atmosphere puffing recipe (259)
+    - Fixed hatchery not having enough result inventory slots to hold all hatching results
+---------------------------------------------------------------------------------------------------
 Version: 0.7.9
 Date: 29.05.2020
   Changes:
@@ -9,7 +19,7 @@ Date: 29.05.2020
       - Blue algae is now blue science, as an alternative source for ammonia gas from nitrogen processing
     - Changed biter breeding recipe icons, it now shows the queens so they are more distinguishable (245)
     - Changed compost and void recipe icons for easier finding the correct void recipe (245)
-    - Crystal powder liquifaction now requres liquifier instead of assembler (228)
+    - Crystal powder liquifaction now requires liquifier instead of assembler (228)
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
     - Added alternative way of producing soil from sand instead of mud
     - Changed to color of fish water to be a less vibrant color with the new UI colors
@@ -20,7 +30,7 @@ Date: 29.05.2020
   Bugfixes:
     - Fixed Alien Bacteria was using Perchloric Acid instead of Hydrochloric acid
     - Added Chlorine Processing 1 as a prerequisite for Alien Bacteria
-    - Crystal powder liquifaction now requres liquifier instead of assembler (228)
+    - Crystal powder liquifaction now requires liquifier instead of assembler (228)
     - Crystal crushing to powder now requires powderizer instead of liquifier (228)
     - MP safer method of requiring files (check inside the file instead of around)
     - Altered definition of biter queen localisation for translation purposes
@@ -176,7 +186,7 @@ Date: 09.02.2020
     - raw crystal cutting had wrong recipe icon and was missing localisation
     - fixed algae farms didn't have numbers indicating there mk
     - petri dish require iron when there is no glass available
-    - fixed wood production can not be crafted manualy (for safety reasons...)
+    - fixed wood production can not be crafted manually (for safety reasons...)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 26.04.2019
@@ -249,7 +259,7 @@ Version: 0.5.4
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
   Changes:
-    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformating them)
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformatting them)
     - added fertilizer
     - changed techs for arboretums around
     - added additional arboretum tech and raw wood recipe

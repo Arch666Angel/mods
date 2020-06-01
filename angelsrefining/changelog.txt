@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.12
+Date: 01.06.2020
+  Bugfixes:
+    - Fixed crash when loading refining with bob mods without angelssmelting (265)
+---------------------------------------------------------------------------------------------------
 Version: 0.11.11
 Date: 29.05.2020
   Changes:
@@ -8,7 +13,7 @@ Date: 29.05.2020
   Balancing:
     - Making thermal water extraction available at green science
       - Added a (slower) mk1 thermal water bore to extract thermal water at a slow rate
-      - Split thermal water processing into a seperate blue tech (so that part remains blue)
+      - Split thermal water processing into a separate blue tech (so that part remains blue)
       - Made the termal water extractor an upgrade of the thermal water bore
     - Improve refining in special vanilla mode (242)
       - Improve ratio of copper versus iron yield to reflect the 50/50 use of base game
@@ -270,7 +275,7 @@ Date: N/A
 Version: 0.9.9
 Date: N/A
   Changes:
-    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformating them)
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformatting them)
     - adjusted geodes to be in the same order in the item as well as in the crafting menu
   Bugfixes:
     - fixed missing output for leaching plant
@@ -426,7 +431,7 @@ Date: N/A
 Version: 0.7.14
 Date: N/A
   Changes:
-    - added localization back in for resouce patches and ores
+    - added localization back in for resource patches and ores
     - doubled acid consumption by leaching plants (5 -> 10)
     - increased acid consupmtion for dissolution recipes (10 -> 15)
     - increased amount of fluid processed by ceramic filtering (25 -> 35)
@@ -483,7 +488,7 @@ Date: N/A
   Bugfixes:
     - added a fix for migration
     - added a fix for mod options
-    - fixed errors that happend because of the heavy pump move
+    - fixed errors that happened because of the heavy pump move
     - fixed that the acid override had old 0.14 fluid values
   Changes:
     - changed name of the heavy pump to barreling pump
@@ -572,7 +577,7 @@ Date: N/A
   Changes:
     - decreased crafting time for all salination plant recipes
     - added new vanilla mode
-    - changed order of the geode processing recipe, to match their occurence in floatation
+    - changed order of the geode processing recipe, to match their occurrence in floatation
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: N/A
@@ -724,7 +729,7 @@ Date: N/A
   Bugfixes:
     - fixed a typo
   Changes:
-    - renamed floatation waste water to yellow waste water, to reflect that it isnt exclusively give by the floatation process
+    - renamed floatation waste water to yellow waste water, to reflect that it isn't exclusively give by the floatation process
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: N/A
@@ -743,7 +748,7 @@ Date: N/A
   Bugfixes:
     - fixed the base game recipes for MK3 leaching plant and floatation cell
   Changes:
-    - changed recipes for the liquifier to be more avaiable early game
+    - changed recipes for the liquifier to be more available early game
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: N/A

@@ -40,7 +40,7 @@ Date: 09.02.2020
     - fixed icon_size errors
     - added recipes and technology for bio-gun and bio-ammo
     - updated spawners to spawn all variants (colossal biters/spitters)
-    - applied a compatablity with some biter mods
+    - applied a compatibility with some biter mods
     - localisation fixes
     - minor code clean-ups
 ---------------------------------------------------------------------------------------------------

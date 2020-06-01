@@ -2,7 +2,7 @@ if bobmods then
   local OV = angelsmods.functions.OV
 
   if mods["bobrevamp"] then
-    -- Move solid fuels arround
+    -- Move solid fuels around
     OV.disable_technology({"solid-fuel"})
 
     OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")
@@ -23,6 +23,7 @@ if bobmods then
 
       OV.add_unlock("flammables", "liquid-fuel")
       OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
+      OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
 
       OV.add_prereq("chemical-processing-3", "flammables")
       data.raw.recipe["solid-fuel-from-hydrogen"].icons =

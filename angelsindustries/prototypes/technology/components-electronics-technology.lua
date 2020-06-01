@@ -58,7 +58,8 @@ if angelsmods.industries.components then
           "tech-red-circuit",
           "angels-components-construction-2",
           "angels-components-cabling-2",
-          "automation-2"
+          "automation-2",
+          "resins"
         },
         effects = {
           {
@@ -104,7 +105,8 @@ if angelsmods.industries.components then
         prerequisites = {
           "tech-green-circuit",
           "angels-components-construction-3",
-          "angels-components-cabling-3"
+          "angels-components-cabling-3",
+          "plastics"
         },
         effects = {
           {

@@ -956,7 +956,7 @@ function angelsmods.functions.make_resource()
         input.minimum = 300
         input.output_probability = 1
       end
-      --Set defaults for infinite resouces normal and maximum
+      --Set defaults for infinite resources normal and maximum
       if input.infinite then
         input.normal = 1500
         input.maximum = 6000

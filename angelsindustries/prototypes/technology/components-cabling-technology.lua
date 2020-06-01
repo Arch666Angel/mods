@@ -48,7 +48,8 @@ if angelsmods.industries.components then
         icon_size = 128,
         prerequisites = {
           "angels-components-cabling-2",
-          "angels-silver-smelting-1"
+          "angels-silver-smelting-1",
+          "rubbers"
         },
         effects = {
           {
@@ -86,7 +87,8 @@ if angelsmods.industries.components then
         prerequisites = {
           "angels-components-cabling-3",
           "angels-gold-smelting-1",
-          "chemical-science-pack"
+          "chemical-science-pack",
+          "plastics"
         },
         effects = {
           {

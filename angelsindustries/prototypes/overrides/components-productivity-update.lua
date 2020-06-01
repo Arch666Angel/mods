@@ -40,7 +40,7 @@ angelsmods.functions.allow_productivity("circuit-yellow-loaded")
 -- MECHANICAL COMPONENTS ------------------------------------------------------
 -------------------------------------------------------------------------------
 -- motor casting
--- no productivity, productivity is obtained through metalurgy smelting
+-- no productivity, productivity is obtained through metallurgy smelting
 -- motor blocks
 angelsmods.functions.allow_productivity("motor-block-1")
 angelsmods.functions.allow_productivity("motor-block-2")

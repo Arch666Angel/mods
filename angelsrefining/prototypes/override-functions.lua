@@ -623,7 +623,7 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
         ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
         ov_functions.remove_unlock("fluid-handling", "empty-" .. fluid_s.name .. "-barrel")
         ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
-      else -- Liquid Cannisters
+      else -- Liquid Canisters
         F_Fill.localised_name = {"recipe-name.fill-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
         fluid_i.localised_name = {
           "item-name.filled-canister",

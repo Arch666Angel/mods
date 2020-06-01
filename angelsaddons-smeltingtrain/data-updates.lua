@@ -4,7 +4,51 @@ require("prototypes.recipes.smelting-recipe-updates")
 require("prototypes.technology.smelting-technology-component-updates")
 require("prototypes.technology.smelting-technology-tech-updates")
 
-if angelsmods.industries then
+-- base game
+funcs.update_equipment("energy-shield-equipment", "energy-shield-equipment", "angels-basegame-defense")
+funcs.update_equipment("energy-shield-equipment", "energy-shield-mk2-equipment", "angels-basegame-defense")
+funcs.update_equipment("battery-equipment", "battery-equipment", "angels-basegame-energy")
+funcs.update_equipment("battery-equipment", "battery-mk2-equipment", "angels-basegame-energy")
+funcs.update_equipment("solar-panel-equipment", "solar-panel-equipment", "angels-basegame-energy")
+funcs.update_equipment("generator-equipment", "fusion-reactor-equipment", "angels-basegame-energy")
+funcs.update_equipment("active-defense-equipment", "personal-laser-defense-equipment", "angels-basegame-attack")
+funcs.update_equipment("active-defense-equipment", "discharge-defense-equipment", "angels-basegame-attack")
+--funcs.update_equipment("belt-immunity-equipment", "belt-immunity-equipment", "angels-basegame-movement")
+funcs.update_equipment("roboport-equipment", "personal-roboport-equipment", "angels-basegame-construction")
+funcs.update_equipment("roboport-equipment", "personal-roboport-mk2-equipment", "angels-basegame-construction")
+funcs.update_equipment("movement-bonus-equipment", "exoskeleton-equipment", "angels-basegame-movement")
+
+funcs.update_equipment_grid(
+  "angels-smelting-locomotive",
+  {
+    "angels-basegame-energy",
+    "angels-basegame-defense",
+    "angels-basegame-attack",
+    "angels-basegame-movement"
+  },
+  "angels-void"
+)
+funcs.update_equipment_grid(
+  "angels-smelting-locomotive-tender",
+  {
+    "angels-basegame-energy",
+    "angels-basegame-defense",
+    "angels-basegame-attack",
+    "angels-basegame-movement"
+  },
+  "angels-void"
+)
+funcs.update_equipment_grid(
+  "angels-smelting-wagon",
+  {
+    "angels-basegame-energy",
+    "angels-basegame-defense",
+    "angels-basegame-attack"
+  },
+  "angels-void"
+)
+
+if mods["angelsindustries"] then
   data.raw["item-subgroup"]["angels-smeltingtrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-smeltingtrain"].order = "bc[smelting-train]"
 
@@ -14,8 +58,7 @@ if angelsmods.industries then
       "angels-energy",
       "angels-heavy-defense",
       "angels-movement"
-    },
-    "angels-void"
+    }
   )
   funcs.update_equipment_grid(
     "angels-smelting-locomotive-tender",
@@ -23,8 +66,7 @@ if angelsmods.industries then
       "angels-energy",
       "angels-heavy-defense",
       "angels-movement"
-    },
-    "angels-void"
+    }
   )
   funcs.update_equipment_grid(
     "angels-smelting-wagon",
@@ -33,8 +75,7 @@ if angelsmods.industries then
       "angels-heavy-defense",
       "angels-movement",
       "angels-repair"
-    },
-    "angels-void"
+    }
   )
 end
 
@@ -46,7 +87,12 @@ if mods["bobvehicleequipment"] then
       "vehicle",
       "locomotive"
     },
-    "angels-void"
+    {
+      "angels-basegame-energy",
+      "angels-basegame-defense",
+      "angels-basegame-attack",
+      "angels-basegame-movement"
+    }
   )
   funcs.update_equipment_grid(
     "angels-smelting-locomotive-tender",
@@ -55,7 +101,12 @@ if mods["bobvehicleequipment"] then
       "vehicle",
       "locomotive"
     },
-    "angels-void"
+    {
+      "angels-basegame-energy",
+      "angels-basegame-defense",
+      "angels-basegame-attack",
+      "angels-basegame-movement"
+    }
   )
   funcs.update_equipment_grid(
     "angels-smelting-wagon",
@@ -63,6 +114,10 @@ if mods["bobvehicleequipment"] then
       "train",
       "vehicle"
     },
-    "angels-void"
+    {
+      "angels-basegame-energy",
+      "angels-basegame-defense",
+      "angels-basegame-attack"
+    }
   )
 end

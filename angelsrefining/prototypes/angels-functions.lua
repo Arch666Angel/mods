@@ -67,7 +67,7 @@ end
 
 local function unify_tint(tint)
   -- allows tints to be defined as {255, 255, 255, 255}
-  -- meaing doesn't need keys rgba (but assumes that order)
+  -- meaning doesn't need keys rgba (but assumes that order)
   -- doesn't need to be in range 0..1, but up to 255 as well
   if tint then
     local unified_tint = {}
@@ -1042,7 +1042,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.order = recipe.order .. data.raw["item-subgroup"][void_input_subgroup].order
     --recipe.order = recipe.order .. "[" .. void_input_subgroup .. "]"
     recipe.order = recipe.order .. "-"
-    recipe.order = recipe.order .. (data.raw.fluid[fluid_name] or data.raw.item[fluid_name]).order
+    recipe.order = recipe.order .. (data.raw.fluid[fluid_name] or data.raw.item[fluid_name]).order or "z"
     --recipe.order = recipe.order .. "[" .. fluid_name .. "]"
     recipe.order = string.len(recipe.order) <= 200 and recipe.order or recipe.order:sub(1, 200) -- order limited to 200 characters
 
@@ -1188,7 +1188,7 @@ end
 -- Barreling
 function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
   local auto_barreling = angelsmods.trigger.enable_auto_barreling
-  -- no need to modify since it will happen automaticly
+  -- no need to modify since it will happen automatically
   if auto_barreling then
     return
   end
