@@ -50,7 +50,7 @@ if angelsmods.industries.overhaul then
           {"!!"},
           {type = "item", name = "uranium-235", amount = 1},
           {type = "item", name = "uranium-238", amount = 29},
-          {type = "item", name = "angels-plate-iron",amount = 15}
+          {type = "item", name = "iron-plate", amount = 15}
         },
         results = {
           {type = "item", name = "uranium-fuel-cell", amount = 15}
