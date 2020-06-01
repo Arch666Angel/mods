@@ -47,9 +47,10 @@ if angelsmods.industries.overhaul then
         localised_name = {"recipe-name.uranium-fuel-cell"},
         category = "centrifuging",
         ingredients = {
+          {"!!"},
           {type = "item", name = "uranium-235", amount = 1},
-          {type = "item", name = "uranium-238", amount = 29}
-          --[[{type="item",name="angels-plate-lead",amount=30}]]
+          {type = "item", name = "uranium-238", amount = 29},
+          {type = "item", name = "angels-plate-iron",amount = 15}
         },
         results = {
           {type = "item", name = "uranium-fuel-cell", amount = 15}
@@ -209,4 +210,41 @@ if angelsmods.industries.overhaul then
       OV.remove_unlock("thorium-processing", "thorium-fuel-cell")
     end
   end
+
+else
+
+  -- disable all nuclear stuff
+  -- uranium fuel cell
+  angelsmods.functions.add_flag("uranium-234", "hidden")
+  angelsmods.functions.add_flag("angels-uranium-fuel-cell", "hidden")
+  OV.disable_recipe({"angels-uranium-fuel-cell", "angels-advanced-uranium-reprocessing"})
+  -- plutonium fuel cell
+  angelsmods.functions.add_flag("neptunium-240", "hidden")
+  angelsmods.functions.add_flag("plutonium-240", "hidden")
+  angelsmods.functions.add_flag("americium-241", "hidden")
+  angelsmods.functions.add_flag("curium-245", "hidden")
+  angelsmods.functions.add_flag("AMOX-cell", "hidden")
+  angelsmods.functions.add_flag("used-up-AMOX-cell", "hidden")
+  OV.disable_recipe({"angels-plutonium-synthesis", "angels-americium-regeneration"})
+  OV.disable_recipe({"angels-mixed-oxide-cell", "angels-mixed-oxide-reprocessing", "angels-advanced-mixed-oxide-reprocessing"})
+  OV.disable_technology({"angels-plutonium-power"})
+  -- thorium fuel cell
+  angelsmods.functions.add_flag("thorium-232", "hidden")
+  angelsmods.functions.add_flag("angels-thorium-fuel-cell", "hidden")
+  angelsmods.functions.add_flag("used-up-angels-thorium-fuel-cell", "hidden")
+  OV.disable_recipe({"angels-thorium-processing"})
+  OV.disable_recipe({"angels-thorium-fuel-cell", "angels-thorium-fuel-cell-reprocessing", "angels-advanced-thorium-fuel-cell-reprocessing"})
+  OV.disable_technology({"angels-thorium-power"})
+  -- deuterium fuel cell
+  angelsmods.functions.add_flag("angels-muon-fusion-catalyst", "hidden")
+  angelsmods.functions.add_flag("angels-deuterium-fuel-cell", "hidden")
+  angelsmods.functions.add_flag("used-up-angels-deuterium-fuel-cell", "hidden")
+  OV.disable_recipe({"angels-deuterium-fuel-cell", "angels-deuterium-fuel-cell-reprocessing"})
+  OV.disable_technology({"angels-fusion-power"})
+  -- nuclear fuel products (nuclear fuel + atomic bombs)
+  angelsmods.functions.add_flag("angels-nuclear-fuel", "hidden")
+  angelsmods.functions.add_flag("angels-nuclear-fuel-2", "hidden")
+  OV.disable_recipe({"angels-nuclear-fuel", "angels-nuclear-fuel-2"})
+  OV.disable_recipe({"angels-atomic-bomb", "angels-atomic-bomb-2"})
+
 end

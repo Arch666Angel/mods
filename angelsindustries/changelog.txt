@@ -6,9 +6,12 @@ Date: ???
     - Added ghost unlocks for angels construction robots
     - Angels robots unlocks the shortcuts as well
   Bugfixes:
+    - Special vanilla mode:
+      - Fixed nuclear overhaul recipes and items were visible (267)
     - Overhaul mode:
       - Fixed error in migration not migrating all cases, rerunning same migration script
         to get the other cases (271)
+      - Fixed Uranium-235 Fuel cell required 10 iron plates/lead plates instead of 15 iron plates (267)
     - Science mode:
       - Fixed that you could not get liquid resin before green science (268)
 ---------------------------------------------------------------------------------------------------
