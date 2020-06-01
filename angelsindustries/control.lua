@@ -43,11 +43,13 @@ script.on_event(
 
     local force = player and player.force
     if force then
-      player.set_shortcut_available(
-        "toggle-ghosting",
+      local available =
         force.technologies["angels-hidden-ghosting"] and force.technologies["angels-hidden-ghosting"].researched or
-          false
-      )
+        false
+      player.set_shortcut_available("toggle-ghosting", available)
+      if available then
+        player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
+      end
     end
   end
 )
