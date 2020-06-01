@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
-Date: ???
+Date: 01.06.2020
   Changes:
     - Reduced the construction range (5 -> 3) of angels vehicle repair equipment
     - Added ghost unlocks for angels construction robots
     - Angels robots unlocks the shortcuts as well
+    - Removed crawler train from dependencies (since we moved it to a seperate mod a while ago)
   Bugfixes:
     - Special vanilla mode:
       - Fixed nuclear overhaul recipes and items were visible (267)
@@ -14,6 +15,7 @@ Date: ???
       - Fixed Uranium-235 Fuel cell required 10 iron plates/lead plates instead of 15 iron plates (267)
     - Science mode:
       - Fixed that you could not get liquid resin before green science (268)
+      - Fixed that the special tree generation was locked behind orange science
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 29.05.2020
