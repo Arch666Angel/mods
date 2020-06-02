@@ -163,7 +163,7 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
           } or nil,
           first_constant = oldParams.first_constant,
           second_constant = oldParams.second_constant,
-          operator = oldParams.operator,
+          operation = oldParams.operation,
           output_signal = oldParams.output_signal and {
             type = oldParams.output_signal.type,
             name = oldParams.output_signal.type == signal_type and signals_to_replace[oldParams.output_signal.name or "none"] or oldParams.output_signal.name
