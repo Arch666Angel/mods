@@ -107,7 +107,7 @@ data:extend(
       charging_energy = "1000kW",
       energy_consumption = "200kW",
       robot_limit = 5,
-      construction_radius = 5,
+      construction_radius = 3,
       spawn_and_station_height = 0.4,
       charge_approach_distance = 2.6,
       recharging_animation = {

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 01.06.2020
+  Bugfixes:
+    - Fixed crawler train could not be loaded as standalone mod (260)
+    - Fixed crawler train did not accept vehicle equipments (258)
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 29.05.2020
   Changes:

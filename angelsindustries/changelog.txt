@@ -1,8 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.2
-Date: 29.05.2020
+Version: 0.4.3
+Date: ##.##.2020
   Bugfixes:
     - Fixed petri dishes requiring glass
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 01.06.2020
+  Changes:
+    - Reduced the construction range (5 -> 3) of angels vehicle repair equipment
+    - Added ghost unlocks for angels construction robots
+    - Angels robots unlocks the shortcuts as well
+    - Removed crawler train from dependencies (since we moved it to a seperate mod a while ago)
+  Bugfixes:
+    - Special vanilla mode:
+      - Fixed nuclear overhaul recipes and items were visible (267)
+    - Overhaul mode:
+      - Fixed error in migration not migrating all cases, rerunning same migration script
+        to get the other cases (271)
+      - Fixed Uranium-235 Fuel cell required 10 iron plates/lead plates instead of 15 iron plates (267)
+    - Science mode:
+      - Fixed that you could not get liquid resin before green science (268)
+      - Fixed that the special tree generation was locked behind orange science
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 29.05.2020
@@ -25,6 +43,8 @@ Date: 29.05.2020
       - Increased recharge rate on the charging basestation
     - Fixed charging issues on the relay stations
     - Added a crawler themed lamp
+    - Overhaul mode:
+      - Added angels nuclear fuel processes
     - Component mode:
       - Blocks have a configurable stack size (default 1000) (222)
       - Block tiers 0 and 1 have lower crafting times for faster progression (222)
@@ -33,8 +53,6 @@ Date: 29.05.2020
       - Added better recipes for inserters to use components better
   Bugfixes:
     - MP safer method of requiring files (check inside the file instead of around)
-    - Overhaul mode:
-      - Added angels nuclear fuel processes
     - Component mode:
       - Fixed that the manual craftable blocks would be decomposed for total raw calculation (222)
     - Science mode:
