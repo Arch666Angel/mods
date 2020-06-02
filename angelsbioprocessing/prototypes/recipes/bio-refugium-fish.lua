@@ -468,7 +468,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-raw-fish-oil-filtering-1",
-      category = "bio-pressing",
+      category = "filtering",
       subgroup = "bio-processor-press-fish",
       enabled = false,
       energy_required = 8,
@@ -493,7 +493,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-raw-fish-oil-filtering-2",
-      category = "bio-pressing",
+      category = "filtering",
       subgroup = "bio-processor-press-fish",
       enabled = false,
       energy_required = 8,

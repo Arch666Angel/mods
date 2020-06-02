@@ -3,6 +3,7 @@ Version: 0.7.11
 Date: ???
   Bugfixes:
     - Tweaked localised description on the Biter Refugium
+    - Fixed that the fish oil filtering recipes did not have any machine to be crafted in
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.10
 Date: 01.06.2020
