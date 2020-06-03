@@ -1,4 +1,4 @@
-if angelsmods.refining and is_special_vanilla(angelsmods.triggers.ores) then
+if angelsmods.refining and is_special_vanilla(angelsmods.trigger.ores) then
   local OV = angelsmods.functions.OV
 
   -- Require powderizer for milling drum
