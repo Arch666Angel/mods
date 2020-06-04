@@ -6,6 +6,7 @@ Date: ???
     - Fixed that the fish oil filtering recipes did not have any machine to be crafted in
     - Fixed migration for swamp farming 2 technology
     - Fixed electro whinning cells missing from technology
+    - Fixed raw bio rubber should be made from the special desert trees (instead of the swamp ones)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.10
 Date: 01.06.2020
