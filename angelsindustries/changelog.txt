@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
-Date: ???
+Date: 05.06.2020
   Bugfixes:
     - Fixed petri dishes requiring glass
     - Added fuel glow color to nuclear fuel (273)

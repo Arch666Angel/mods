@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: 05.06.2020
+  Bugfixes:
+    - Fixed bobs carbon dioxide got replaced with the wrong angels fluid (was hydrogen sulfide)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.10
 Date: 01.06.2020
   Bugfixes:
