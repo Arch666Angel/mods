@@ -1131,7 +1131,7 @@ data:extend(
       enabled = false,
       energy_required = 4,
       ingredients = {
-        {type = "item", name = "swamp-tree", amount = 1},
+        {type = "item", name = "desert-tree", amount = 1},
       },
       results = {
         {type = "item", name = "bio-rubber", amount = 10}

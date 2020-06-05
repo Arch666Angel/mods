@@ -29,7 +29,7 @@ for index, force in pairs(game.forces) do
     for techToResearch, techToCheck in pairs{
       ["bio-temperate-farming-2"] = "bio-temperate-farming-1",
       ["bio-desert-farming-2"] = "bio-desert-farming-1",
-      ["bio-desert-farming-2"] = "bio-desert-farming-1",
+      ["bio-swamp-farming-2"] = "bio-swamp-farming-1",
     } do
       if force.technologies[techToResearch] and force.technologies[techToCheck] then
         force.technologies[techToResearch].researched = force.technologies[techToCheck].researched or force.technologies[techToResearch].researched

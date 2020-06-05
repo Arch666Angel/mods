@@ -115,6 +115,9 @@ data:extend(
 -------------------------------------------------------------------------------
 -- NUCLEAR FUEL CELLS ---------------------------------------------------------
 -------------------------------------------------------------------------------
+if data.raw["item"]["uranium-fuel-cell"] then
+  data.raw["item"]["uranium-fuel-cell"].fuel_glow_color = {r = 0.15, g = 1, b = 0.15, a = 0.6}
+end
 data:extend(
 {
   --uranium-cell
@@ -128,7 +131,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-uranium-fuel-cell",
     fuel_value = "1.5GJ",
-    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    fuel_glow_color = {r = 0.2, g = 0.8, b = 0.2, a = 0.6},
     stack_size = 50,
   },
   --order "a[uranium]-b" reserved for uranium-fuel-cell
@@ -144,7 +147,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-AMOX-cell",
     fuel_value = "8GJ",
-    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    fuel_glow_color = {r = 0.8, g = 0.5, b = 0.2, a = 0.6},
     stack_size = 50,
   },
   {
@@ -167,7 +170,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-thorium-fuel-cell",
     fuel_value = "50GJ",
-    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    fuel_glow_color = {r = 0.8, g = 0.2, b = 0.2, a = 0.6},
     stack_size = 50,
   },
   {
@@ -190,7 +193,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-deuterium-fuel-cell",
     fuel_value = "80GJ",
-    fuel_glow_color = {r = 0.7, g = 1, b = 0},
+    fuel_glow_color = {r = 0.2, g = 0.35, b = 0.8, a = 0.6},
     stack_size = 50,
   },
   {
