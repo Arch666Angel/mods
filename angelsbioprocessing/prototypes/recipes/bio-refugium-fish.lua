@@ -505,7 +505,7 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-fish-oil", amount = 125},
         {type = "fluid", name = "liquid-mineral-oil", amount = 75},
-        {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
+        {type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
       icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
