@@ -742,10 +742,7 @@ ov_functions.execute = function()
   end
   RB.patch(patch_table)
 
-  for k, tech in pairs(data.raw.technology) do -- run through all technologies to perform substitutions/overrides
-    if disable_table.technologies[k] or substitution_table.technologies[k] then
-      data.raw.technology[k].enabled = false
-    end
+  local function apply_modification(k, tech)
     local dup_table = {}
     local modifications = modify_table.technologies[k] and modify_table.technologies[k].unlocks or nil
     local to_remove = {}
@@ -872,6 +869,20 @@ ov_functions.execute = function()
           table.insert(tech.unit.ingredients, {type = "item", name = name, amount = add})
         end
       end
+    end
+  end
+
+  for k, tech in pairs(data.raw.technology) do -- run through all technologies to perform substitutions/overrides
+    if disable_table.technologies[k] or substitution_table.technologies[k] then
+      data.raw.technology[k].enabled = false
+    end
+    local normal = tech.normal
+    local expensive = tech.expensive
+    if normal or expensive then
+      if normal then apply_modification(k, normal) end
+      if expensive then apply_modification(k,expensive) end
+    else
+      apply_modification(k, tech)
     end
   end
 
