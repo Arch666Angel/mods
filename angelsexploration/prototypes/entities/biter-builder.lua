@@ -16,9 +16,9 @@ end
 
 -- Copy from base.. since local...
 local function enemy_autoplace(params)
-  distance_factor = params.distance_factor or 1
-  order = params.order or "b[enemy]-misc"
-  is_turret = params.is_turret or false
+  local distance_factor = params.distance_factor or 1
+  local order = params.order or "b[enemy]-misc"
+  local is_turret = params.is_turret or false
 
   local distance_unit = 312
   local distance_outside_starting_area = noise.var("distance") - noise.var("starting_area_radius")
@@ -830,11 +830,6 @@ function angelsmods.functions.make_alien(def_data)
   --log(serpent.block(def_data))
   if def_data ~= nil then
     local c_name = def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
-    if def_data.appearance.type == "psyker" or def_data.appearance.type == "psyker" then
-      c_type = "big-spitter-corpse"
-    else
-      c_type = "big-biter-corpse"
-    end
     --utilise the vanilla script to add the death animation and corpses in one go
     local corpse_base = {
       type = "corpse",
@@ -898,7 +893,6 @@ function angelsmods.functions.make_alien(def_data)
           min_pursue_time = 10 * 60,
           max_pursue_distance = 50,
           corpse = c_name,
-          --c_type,
           dying_explosion = "blood-explosion-big",
           dying_sound = make_die_sound(def_data.appearance.type, 0.4),
           working_sound = make_call_sounds(0.3),
@@ -995,9 +989,9 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
 end
 
 function angelsmods.functions.update_alien(ua_data)
-  u_name = ua_data.appearance.name .. "-" .. ua_data.appearance.type
+  local u_name = ua_data.appearance.name .. "-" .. ua_data.appearance.type
   if data.raw.unit[u_name] then
-    unit = data.raw.unit[u_name]
+    local unit = data.raw.unit[u_name]
     unit.resistances = ua_data.resistance
     unit.max_health = ua_data.appearance.health
     unit.movement_speed = ua_data.appearance.speed
@@ -1006,10 +1000,11 @@ function angelsmods.functions.update_alien(ua_data)
 end
 
 function angelsmods.functions.update_spawner(us_data)
-  s_name = us_data.appearance.type .. "-spawner"
+  local s_name = us_data.appearance.type .. "-spawner"
   if data.raw["unit-spawner"][s_name] then
-    spawner = data.raw["unit-spawner"][s_name]
+    local spawner = data.raw["unit-spawner"][s_name]
     --log(serpent.block(spawner))
+    spawner.resistances = spawner.resistances or {}
     table.insert(spawner.resistances, us_data.resistance)
     spawner.max_health = us_data.appearance.health
     spawner.spawning_cooldown = us_data.appearance.spawn_cooldown
