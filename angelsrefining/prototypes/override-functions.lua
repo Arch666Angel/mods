@@ -675,13 +675,13 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
         end
         if replace[item.name] then
           if item.probability then
-             if replace[item.name].probability and replace[item.name].probability ~= item.probability then
-              replace[item.name].probability = item.probability
+            if replace[item.name].probability and replace[item.name].probability ~= item.probability then
               --update probability if it exists in both cases
-             else
-              replace[item.name .."-p"]=item
+              replace[item.name].probability = item.probability
+            else
               --skip, don't touch recipes that add a probability to a static
-             end
+              replace[item.name .. "-p"] = item
+            end
           elseif item.amount ~= replace[item.name].amount then --check both have amount and update old to new
             replace[item.name].amount = item.amount
           end
@@ -699,7 +699,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
     adjust_subtable(path, "ingredients", "recipe_items")
     adjust_member(path, "result", "recipe_items")
     adjust_subtable(path, "results", "recipe_items")
-    adjust_member(recipe, "main_product", "recipe_items")
+    adjust_member(path, "main_product", "recipe_items")
   end
   if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
     if recipe.normal or recipe.expensive then
