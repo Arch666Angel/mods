@@ -1036,7 +1036,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.allow_as_intermediate = false
     recipe.hide_from_stats = false
     recipe.subgroup = "angels-" .. void_category .. "-void"
-    recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order
+    recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order or "z"
     --recipe.order = recipe.order .. "[" .. data.raw["item-subgroup"][void_input_subgroup].group .. "]"
     recipe.order = recipe.order .. "-"
     recipe.order = recipe.order .. data.raw["item-subgroup"][void_input_subgroup].order
