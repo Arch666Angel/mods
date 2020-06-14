@@ -3,6 +3,8 @@ Version: 0.11.14
 Date: ???
   Changes:
     - Make sure some defaults are set in case of invalid prototypes (292)
+  Bugfixes:
+    - Fixed marathon mode text (289)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.13
 Date: 05.06.2020
