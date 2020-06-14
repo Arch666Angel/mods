@@ -830,10 +830,6 @@ function angelsmods.functions.make_alien(def_data)
   --log(serpent.block(def_data))
   if def_data ~= nil then
     local c_name = def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
-    local c_type = "big-biter-corpse"
-    if def_data.appearance.type == "psyker" or def_data.appearance.type == "psyker" then
-      c_type = "big-spitter-corpse"
-    end
     --utilise the vanilla script to add the death animation and corpses in one go
     local corpse_base = {
       type = "corpse",
@@ -897,7 +893,6 @@ function angelsmods.functions.make_alien(def_data)
           min_pursue_time = 10 * 60,
           max_pursue_distance = 50,
           corpse = c_name,
-          --c_type,
           dying_explosion = "blood-explosion-big",
           dying_sound = make_die_sound(def_data.appearance.type, 0.4),
           working_sound = make_call_sounds(0.3),
