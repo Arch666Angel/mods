@@ -675,13 +675,13 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
         end
         if replace[item.name] then
           if item.probability then
-             if replace[item.name].probability and replace[item.name].probability ~= item.probability then
-              replace[item.name].probability = item.probability
+            if replace[item.name].probability and replace[item.name].probability ~= item.probability then
               --update probability if it exists in both cases
-             else
-              replace[item.name .."-p"]=item
+              replace[item.name].probability = item.probability
+            else
               --skip, don't touch recipes that add a probability to a static
-             end
+              replace[item.name .. "-p"] = item
+            end
           elseif item.amount ~= replace[item.name].amount then --check both have amount and update old to new
             replace[item.name].amount = item.amount
           end
@@ -829,13 +829,11 @@ ov_functions.execute = function()
     modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
     to_remove = {}
 
+    tech.unit = tech.unit or {}
+    tech.unit.ingredients = tech.unit.ingredients or {}
+
     for pk, pack in pairs(tech.unit.ingredients) do
-      local nk
-      if pack.name then
-        nk = "name"
-      else
-        nk = 1
-      end
+      local nk = pack.name and "name" or 1
       if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
         for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
           to_remove[rem] = true
@@ -844,14 +842,9 @@ ov_functions.execute = function()
     end
     for i = #tech.unit.ingredients, 1, -1 do
       local pack = tech.unit.ingredients[i]
-      local nk, ak
-      if pack.name then
-        nk = "name"
-        ak = "amount"
-      else
-        nk = 1
-        ak = 2
-      end
+      local nk = pack.name and "name" or 1
+      local ak = pack.name and "amount" or 2
+
       if to_remove[pack[nk]] then
         table.remove(tech.unit.ingredients, i)
       else
