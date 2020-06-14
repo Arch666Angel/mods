@@ -643,7 +643,7 @@ data:extend(
       },
       results = {
         {type = "fluid", name = "angels-ore9-slime", amount = 60},
-        {type = "fluid", name = "water-yellow-waste", amount = 20},
+        {type = "fluid", name = "water-yellow-waste", amount = 10},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
       main_product = "angels-ore9-slime",

@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: ???
+  Changes:
+    - Make use of full IngredientPrototype instead of shorthand
   Bugfixes:
     - Added translation for hidden ghosting tech (288)
+    - Check for item existence with bobinserters (299)
+    - Added token-bio to exploration lab (277)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 05.06.2020

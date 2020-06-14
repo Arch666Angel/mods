@@ -40,7 +40,11 @@ require("prototypes.overrides.overhaul-nuclear-power")
 --data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
 
 if angelsmods.industries.tech then
-  data.raw["item"]["satellite"].rocket_launch_product = {"science-gravitational-analyzer", 1000}
+  data.raw["item"]["satellite"].rocket_launch_product = {
+    type = "item",
+    name = "science-gravitational-analyzer",
+    amount = 1000
+  }
   data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"
   data.raw.technology["space-science-pack"].icon_size = 128
   OV.add_unlock("space-science-pack", "angels-science-pack-white")
