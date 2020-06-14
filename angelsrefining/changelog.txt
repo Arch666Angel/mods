@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.14
 Date: ???
+  Changes:
+    - Halved water-yellow-waste (sulfuric waster water) for cupric filtering (296)
   Bugfixes:
     - Fixed marathon mode text (289)
 ---------------------------------------------------------------------------------------------------
