@@ -3,6 +3,7 @@ Version: 0.4.4
 Date: ???
   Bugfixes:
     - Added translation for hidden ghosting tech (288)
+    - Added token-bio to exploration lab (277)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 05.06.2020
