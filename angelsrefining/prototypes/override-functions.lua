@@ -699,7 +699,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
     adjust_subtable(path, "ingredients", "recipe_items")
     adjust_member(path, "result", "recipe_items")
     adjust_subtable(path, "results", "recipe_items")
-    adjust_member(recipe, "main_product", "recipe_items")
+    adjust_member(path, "main_product", "recipe_items")
   end
   if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
     if recipe.normal or recipe.expensive then

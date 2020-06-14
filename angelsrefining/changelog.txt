@@ -6,6 +6,7 @@ Date: ???
     - Make sure some defaults are set in case of invalid prototypes (292, 293)
   Bugfixes:
     - Fixed marathon mode text (289)
+    - Replacing main_product didn't work well (286)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.13
 Date: 05.06.2020
