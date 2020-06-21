@@ -4,6 +4,7 @@ Date: ??
   Bugfixes:
     - Fixed drawing box of the cooling tower being too small (282)
     - Fixed smelting showed a lot of useless ores in special vanilla (294)
+    - Fixed the Fouled Reusable Mold was visible when it was not used
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.8
 Date: 01.06.2020
