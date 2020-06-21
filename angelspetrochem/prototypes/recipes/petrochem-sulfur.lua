@@ -178,6 +178,30 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "gas-hydrogen-fluoride",
+      category = "chemistry",
+      subgroup = "petrochem-sulfur",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 50},
+      },
+      results = {
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 55},
+        {type = "fluid", name = "water-greenyellow-waste", amount = 50}
+      },
+      main_product = "gas-hydrogen-fluoride",
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
+        },
+        "fhh"
+      ),
+      order = "e[liquid-hydrofluoric-acid]-c"
+    },
+    {
+      type = "recipe",
       name = "filter-lime",
       category = "crafting",
       subgroup = "petrochem-catalysts",
