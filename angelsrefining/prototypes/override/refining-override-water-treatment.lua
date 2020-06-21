@@ -149,8 +149,17 @@ if mods["bobplates"] then
           {type = "fluid", name = "lithia-water", amount = 40},
           {type = "fluid", name = "water-purified", amount = 60}
         },
-        icon = "__angelsrefining__/graphics/icons/water-thermal-lithia.png",
-        icon_size = 32,
+        --icon = "__angelsrefining__/graphics/icons/water-thermal-lithia.png",
+        --icon_size = 32,
+        icons = angelsmods.functions.create_liquid_recipe_icon(
+          {
+            "lithia-water",
+            "water-purified"
+          },
+          {
+            {243,135,000}, {247,140,003}, {247,140,003}
+          }
+        ),
         order = "g[water-thermal-lithia]"
       }
     }

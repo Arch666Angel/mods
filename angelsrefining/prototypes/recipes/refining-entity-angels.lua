@@ -709,7 +709,7 @@ angelsmods.functions.RB.build(
 				energy_required = 5,
 				enabled = false,
 				ingredients = {
-					{type = "item", name = "thermal-1", amount = 1},
+					{type = "item", name = "thermal-2", amount = 1},
 					{type = "item", name = "t4-plate", amount = 6},
 					{type = "item", name = "t4-circuit", amount = 4},
 					{type = "item", name = "t4-pipe", amount = 4},
@@ -722,7 +722,7 @@ angelsmods.functions.RB.build(
 				energy_required = 5 * buildingtime,
 				enabled = false,
 				ingredients = {
-					{type = "item", name = "thermal-1", amount = 1},
+					{type = "item", name = "thermal-2", amount = 1},
 					{type = "item", name = "t4-plate", amount = 6 * buildingmulti},
 					{type = "item", name = "t4-circuit", amount = 4 * buildingmulti},
 					{type = "item", name = "t4-pipe", amount = 4 * buildingmulti},

@@ -7,6 +7,8 @@ Date: ???
     - Overhaul mode:
       - Added translation for hidden ghosting tech (288)
       - Check for item existence with bobinserters (299)
+    - Component mode:
+      - Changed Thermal Water bore did require too high tech blocks (281)
     - Science mode:
       - Added token-bio to exploration lab (277)
       - Moved rocket booster 1 technology (from orange) to green science (309)
