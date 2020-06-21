@@ -126,7 +126,7 @@ if angelsmods.industries.tech then
   pack_replace("resin-3", "blue", "yellow")
   --pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
   pack_replace("rubber", "green", "orange")
-  pack_replace("rocket-booster-1", "green", "orange")
+  --pack_replace("rocket-booster-1", "green", "orange")
   pack_replace("rocket-explosives-1", "green", "orange")
   pack_replace("angels-advanced-chemistry-2", "green", "orange")
   pack_replace("angels-advanced-chemistry-2", "green", "orange")
