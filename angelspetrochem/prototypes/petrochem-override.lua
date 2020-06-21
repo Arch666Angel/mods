@@ -10,6 +10,25 @@ data.raw["resource"]["crude-oil"]["minable"].results = {
 }
 table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories, "liquifying")
 
+--ROCKET BOOSTER
+OV.patch_recipes(
+  {
+    {
+      name = "rocket",
+      ingredients = {
+        {type = "item", name = "iron-plate", amount = 0},
+        {type = "item", name = "rocket-booster", amount = 1},
+      }
+    },
+    {
+      name = "atomic-bomb",
+      ingredients = {
+        {type = "item", name = "rocket-booster", amount = 1},
+      }
+    }
+  }
+)
+
 --ROCKET FUEL
 OV.patch_recipes(
   {

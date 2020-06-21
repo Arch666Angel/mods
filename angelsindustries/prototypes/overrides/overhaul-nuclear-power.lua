@@ -28,7 +28,9 @@ if angelsmods.industries.overhaul then
       },
       {
         name = "atomic-bomb",
-        ingredients = {{type = "item", name = "uranium-235", amount = 15}}, --halve
+        ingredients = {
+          {type = "item", name = "uranium-235", amount = 15} --halve
+        },
         icons = {
           {icon = "__base__/graphics/icons/atomic-bomb.png", icon_size = 64, icon_mipmaps = 4},
           {
@@ -121,8 +123,8 @@ if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- New recipe unlocks
   -------------------------------------------------------------------------------
-  OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
   OV.add_unlock("atomic-bomb", "angels-atomic-bomb")
+  OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
   OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel")
   OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel-2")
 

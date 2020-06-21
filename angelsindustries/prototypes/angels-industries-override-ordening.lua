@@ -33,7 +33,7 @@ if angelsmods.industries.overhaul then
     move_item("rocket-launcher", "angels-warfare-rocket-guns", "a[gun]-a[rocket-launcher]", "gun")
     move_item("rocket", "angels-warfare-rocket-guns", "c[basic-ammo]-a[basic-rounds]", "ammo")
     move_item("explosive-rocket", "angels-warfare-rocket-guns", "c[basic-ammo]-b[explosive-rounds]", "ammo")
-    move_item("atomic-bomb", "angels-warfare-rocket-guns", "c[basic-ammo]-c[uranium-rounds]", "ammo")
+    move_item("atomic-bomb", "angels-warfare-rocket-guns", "c[basic-ammo]-c[uranium-rounds]-a", "ammo")
     -- Flamethrower
     move_item("flamethrower", "angels-warfare-flamethrower-guns", "a[gun]-a[flamethrower]", "gun")
     move_item("flamethrower-turret", "angels-warfare-flamethrower-guns", "b[turret]-a[flame]")
