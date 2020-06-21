@@ -2,7 +2,8 @@
 Version: 0.4.4
 Date: ???
   Changes:
-    - Make use of full IngredientPrototype instead of shorthand
+    - Science mode:
+      - Added an early tech to use in the tech archive to unlock datacores (314)
   Bugfixes:
     - Overhaul mode:
       - Added translation for hidden ghosting tech (288)
@@ -12,6 +13,8 @@ Date: ???
     - Science mode:
       - Added token-bio to exploration lab (277)
       - Moved rocket booster 1 technology (from orange) to green science (309)
+  Modding:
+    - Make use of full IngredientPrototype instead of shorthand
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 05.06.2020

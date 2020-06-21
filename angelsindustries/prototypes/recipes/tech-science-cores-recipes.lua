@@ -6,7 +6,7 @@ if angelsmods.industries.tech then
       type = "recipe",
       name = "datacore-basic",
       energy_required = 3,
-      enabled = true,
+      enabled = false,
       ingredients = {
         {type = "item", name = "iron-plate", amount = 3},
         {type = "item", name = "circuit-grey", amount = 2}

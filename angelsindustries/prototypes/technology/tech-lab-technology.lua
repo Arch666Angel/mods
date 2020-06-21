@@ -955,6 +955,31 @@ data:extend(
     -----------------------------------------------------------------------------
     {
       type = "technology",
+      name = "tech-specialised-labs",
+      icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
+      icon_size = 128,
+      prerequisites = {},
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-basic-lab"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "datacore-basic"
+        }
+      },
+      unit = {
+        count = pack_amount_base,
+        ingredients = {
+          {type = "item", name = "angels-science-pack-grey", amount = 1},
+        },
+        time = pack_time_base
+      },
+      order = "b-5"
+    },
+    {
+      type = "technology",
       name = "tech-specialised-labs-basic",
       icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
       icon_size = 128,
