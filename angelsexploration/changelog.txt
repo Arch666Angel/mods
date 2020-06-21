@@ -3,6 +3,7 @@ Version: 0.3.6
 Date: ???
   Bugfixes:
     - Check if resistances is defined for spawner (290)
+    - Tweaked collision and selection boxes for scarabs and psykers (280)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 29.05.2020

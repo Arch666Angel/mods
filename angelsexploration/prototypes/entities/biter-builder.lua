@@ -78,7 +78,7 @@ local function make_die_animation(data_die)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_die.scale,
           stripes = {
@@ -110,7 +110,7 @@ local function make_die_animation(data_die)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_die.scale,
           tint = data_die.tint1,
@@ -136,7 +136,7 @@ local function make_die_animation(data_die)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_die.scale,
           tint = data_die.tint2,
@@ -177,7 +177,7 @@ local function make_run_animation(data_run)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_run.scale,
           stripes = {
@@ -209,7 +209,7 @@ local function make_run_animation(data_run)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_run.scale,
           tint = data_run.tint1,
@@ -235,7 +235,7 @@ local function make_run_animation(data_run)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_run.scale,
           tint = data_run.tint2,
@@ -277,7 +277,7 @@ local function make_attack_animation(data_attack)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_attack.scale,
           stripes = {
@@ -309,7 +309,7 @@ local function make_attack_animation(data_attack)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_attack.scale,
           tint = data_attack.tint1,
@@ -335,7 +335,7 @@ local function make_attack_animation(data_attack)
           height = 160,
           frame_count = 16,
           direction_count = 16,
-          shift = {0, 0},
+          shift = {0, -2/3},
           animation_speed = 0.75,
           scale = data_attack.scale,
           tint = data_attack.tint2,
@@ -863,6 +863,7 @@ function angelsmods.functions.make_alien(def_data)
         corpse_base
       )
     end
+    local box_scale = def_data.appearance.box_scale or 1
     data:extend(
       {
         {
@@ -882,8 +883,8 @@ function angelsmods.functions.make_alien(def_data)
           order = def_data.appearance.order or "b-z-a",
           subgroup = "enemies",
           healing_per_tick = 0.01,
-          collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
-          selection_box = {{-0.4, -0.7}, {0.7, 0.4}},
+          collision_box = {{-0.4*box_scale, -0.4*box_scale}, {0.4*box_scale, 0.4*box_scale}},
+          selection_box = {{-0.7*box_scale, -1.5*box_scale}, {0.7*box_scale, 0.3*box_scale}},
           attack_parameters = make_attack_parameter(def_data.appearance, def_data.attack),
           vision_distance = 30,
           movement_speed = def_data.appearance.speed,
