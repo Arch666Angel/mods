@@ -239,7 +239,7 @@ data:extend(
       always_show_products = true,
       icons = angelsmods.functions.create_gas_recipe_icon(
         {
-          {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32}
+          "filter-lime"
         },
         "sss"
       ),
@@ -248,6 +248,7 @@ data:extend(
     {
       type = "recipe",
       name = "filter-lime-used",
+      localised_name = {"recipe-name.angels-sulfur-air-scrubbing"},
       category = "liquifying",
       subgroup = "petrochem-sulfur",
       energy_required = 2,
@@ -261,7 +262,12 @@ data:extend(
       },
       main_product = "gas-acid",
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(nil, "sss"),
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          "gas-acid"
+        },
+        "sss"
+      ),
       order = "h"
     },
     {
