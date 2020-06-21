@@ -152,6 +152,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-hydrogen-fluoride",
+      localised_name = {"recipe-name.liquid-hydrogen-fluoride"},
       category = "chemistry",
       subgroup = "petrochem-sulfur",
       energy_required = 2,
@@ -165,6 +166,7 @@ data:extend(
       },
       main_product = "liquid-hydrofluoric-acid",
       always_show_products = true,
+      show_amount_in_title = false,
       icons = angelsmods.functions.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
@@ -179,6 +181,7 @@ data:extend(
     {
       type = "recipe",
       name = "gas-hydrogen-fluoride",
+      localised_name = {"recipe-name.gas-hydrogen-fluoride"},
       category = "chemistry",
       subgroup = "petrochem-sulfur",
       energy_required = 2,
