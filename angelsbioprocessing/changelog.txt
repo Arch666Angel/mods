@@ -3,6 +3,8 @@ Version: 0.7.12
 Date: ????
   Changes:
     - Fixed Fish water filtering Filter return being incorrect 
+  Bugfixes:
+    - Fixed crystal splinter recipes were a bit scrambled around when playing with bobs mods
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.11
 Date: 05.06.2020

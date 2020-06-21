@@ -35,19 +35,6 @@ if bobmods then
         data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].group = "bob-gems"
         data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order
 
-        data.raw["recipe"]["crystal-splinter-cutting"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-splinter-cutting"].order = "a[raw]-a[splinter]"
-        data.raw["recipe"]["crystal-shard-cutting"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-shard-cutting"].order = "a[raw]-b[shard]"
-        data.raw["recipe"]["crystal-full-cutting"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-full-cutting"].order = "a[raw]-c[full]"
-        data.raw["recipe"]["crystal-splinter-harmonic"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-splinter-harmonic"].order = "b[harmonic]-a[splinter]"
-        data.raw["recipe"]["crystal-shard-harmonic"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-shard-harmonic"].order = "b[harmonic]-b[shard]"
-        data.raw["recipe"]["crystal-full-harmonic"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-full-harmonic"].order = "b[harmonic]-c[full]"
-
         data.raw["item"]["grinding-wheel"].subgroup = "bob-gems-cut"
         data.raw["item"]["grinding-wheel"].order = "g-4"
         data.raw["item"]["polishing-wheel"].subgroup = "bob-gems-polished"
@@ -59,8 +46,8 @@ if bobmods then
 
         data.raw["item"]["crystal-grindstone"].subgroup = "bio-biter-processing-crystal-splinter"
         data.raw["item"]["crystal-grindstone"].order = "d"
-        data.raw["recipe"]["crystal-grindstone"].subgroup = "bio-biter-processing-crystal-splinter"
-        data.raw["recipe"]["crystal-grindstone"].order = "c[tool]-a[grindstone]"
+        data.raw["recipe"]["crystal-grindstone"].subgroup = "bob-gems-cut"
+        data.raw["recipe"]["crystal-grindstone"].order = "h-4"
       end
     end
 
