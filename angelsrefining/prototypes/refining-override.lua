@@ -6,7 +6,8 @@ local OV = angelsmods.functions.OV
 require("prototypes.recipes.refining-entity-angels")
 require("prototypes.override.refining-override-buildings")
 
---OVERRIDE FOR SORTING
+--OVERRIDE FOR REFINING/SORTING
+require("prototypes.override.refining-override-refining")
 require("prototypes.override.refining-override-sorting")
 require("prototypes.override.refining-override-smelting")
 

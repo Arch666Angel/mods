@@ -9,6 +9,7 @@ Date: ???
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)
     - Fixed wrong default_value on bobs crafting machine ingredient limit (278)
+    - Fixed refining showed a lot of useless refined ores in special vanilla (295)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.13
 Date: 05.06.2020

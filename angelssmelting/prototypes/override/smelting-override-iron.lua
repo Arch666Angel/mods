@@ -22,7 +22,7 @@ if angelsmods.trigger.ores["iron"] then
   )
   angelsmods.functions.move_item("iron-ore", "angels-iron", "a")
 else
-  angelsmods.functions.add_flag("gold-ore", "hidden")
+  angelsmods.functions.add_flag("iron-ore", "hidden")
 end
 
 -------------------------------------------------------------------------------
