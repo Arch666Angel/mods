@@ -6,6 +6,7 @@ Date: ??
     - Added recipe to revert Hydrofluoric Acid to Hydrogen Fluoride Gas (319)
   Bugfixes:
     - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
+    - Fixed the Oil Well was still called Crude Oil
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020
