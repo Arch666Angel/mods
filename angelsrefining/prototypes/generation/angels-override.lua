@@ -1,19 +1,15 @@
 if not angelsmods.refining.disable_ore_override then
   --BASE GAME
+  angelsmods.functions.remove_resource("stone")
   angelsmods.functions.remove_resource("iron-ore")
   angelsmods.functions.remove_resource("copper-ore")
-  angelsmods.functions.remove_resource("stone")
+  angelsmods.functions.remove_resource("uranium-ore")
 
   --ANGELS
-  if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
+  if angelsmods.functions.is_special_vanilla() then
+  --if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
     angelsmods.functions.remove_resource("angels-ore5")
     angelsmods.functions.remove_resource("angels-ore6")
-  end
-
-  if
-    data.raw.resource["uranium-ore"] and angelsmods.refining and ((bobmods and bobmods.plates) or angelsmods.industries)
-   then
-    angelsmods.functions.remove_resource("uranium-ore")
   end
 
   --BOBMODS
