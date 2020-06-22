@@ -4,6 +4,10 @@ Date: ????
   Changes:
     - Fixed Fish water filtering Filter return being incorrect
     - Crystal enhancer now requires crystal slurry instead of the catalyst in special vanilla mode
+    - Updated map colors of special bio spawns:
+      - Gardens stay green as they were
+      - Trees are a lighter blue (for visibility in muddy biomes)
+      - Puffers are now a dark yellow-ish color (was green before)
   Bugfixes:
     - Fixed crystal splinter recipes were a bit scrambled around when playing with bobs mods
 ---------------------------------------------------------------------------------------------------
