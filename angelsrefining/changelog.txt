@@ -6,6 +6,7 @@ Date: ???
     - Make sure some defaults are set in case of invalid prototypes (292, 293)
     - Changed the recipe icon of thermal to lithia water refining (bobs only)
     - Added refining for uranium in special vanilla mode (276)
+    - Removed crystal seedling from special vanilla mode (276)
   Bugfixes:
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)
