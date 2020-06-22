@@ -1,50 +1,8 @@
 local OV = angelsmods.functions.OV
 
--- function to know if this is special vanilla or not
-is_special_vanilla = function(ores)
-  for ore_name, ore_enabled in pairs(ores or {}) do
-    if ore_enabled and ore_name ~= "iron" and ore_name ~= "copper" then
-      return false
-    end
-  end
-  return true
-end
-local special_vanilla = is_special_vanilla(angelsmods.trigger.ores)
-
 -- lookup table to convert ore name to trigger name
-local get_trigger_name = {
-  -- TIER 1 ORES
-  ["iron-ore"] = "iron",
-  ["angels-iron-nugget"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["angels-iron-pebbles"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["angels-iron-slag"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["copper-ore"] = "copper",
-  ["angels-copper-nugget"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  -- TIER 1.5 ORES
-  ["tin-ore"] = "tin",
-  ["lead-ore"] = "lead",
-  ["quartz"] = "silicon",
-  ["nickel-ore"] = "nickel",
-  ["manganese-ore"] = "manganese",
-  -- TIER 2 ORES
-  ["zinc-ore"] = "zinc",
-  ["bauxite-ore"] = "aluminium",
-  ["cobalt-ore"] = "cobalt",
-  ["silver-ore"] = "silver",
-  ["fluorite-ore"] = "fluorite", -- byproduct
-  -- TIER 2.5 ORES
-  ["gold-ore"] = "gold",
-  -- TIER 3 ORES
-  ["rutile-ore"] = "titanium",
-  ["uranium-ore"] = "uranium",
-  -- TIER 4 ORES
-  ["tungsten-ore"] = "tungsten",
-  ["thorium-ore"] = "thorium",
-  ["chrome-ore"] = "chrome",
-  ["platinum-ore"] = "platinum"
-}
+local special_vanilla = angelsmods.functions.is_special_vanilla()
+local get_trigger_name = angelsmods.functions.get_trigger_names()
 
 local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
 local icon_lookup_table = {
@@ -142,16 +100,7 @@ local tweaked_icon_lookup = function(icon_name, scale, shift)
   }
 end
 
-local ore_exists = function(ore_name)
-  if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] then
-    return true
-  end
-  if angelsmods.trigger.refinery_products[ore_name] then
-    return true
-  end
-  return false
-end
-angelsmods.functions.ore_exists = ore_exists
+local ore_enabled = angelsmods.functions.ore_enabled
 
 -- function to create the (regular) sorted results for an ore, disables it if it is unused
 local create_sorting_recipes = function(refinery_product, recipe_base_name, sorted_ore_results, advanced_sorting)
@@ -430,7 +379,7 @@ OV.patch_recipes(
       }
     ),
     -- FERROUS
-    ore_exists("ferrous") and
+    ore_enabled("ferrous") and
       create_sorting_recipes(
         "ferrous",
         "angelsore8%s",
@@ -446,7 +395,7 @@ OV.patch_recipes(
       ) or
       nil,
     -- CUPRIC
-    ore_exists("cupric") and
+    ore_enabled("cupric") and
       create_sorting_recipes(
         "cupric",
         "angelsore9%s",
@@ -484,7 +433,7 @@ if not special_vanilla then
   angelsmods.functions.add_flag("angels-copper-slag", "hidden")
 end
 
-if ore_exists("ferrous") or ore_exists("cupric") then
+if ore_enabled("ferrous") or ore_enabled("cupric") then
 else
   OV.disable_technology(
     {
@@ -496,7 +445,7 @@ else
   )
 end
 
-if ore_exists("ferrous") and ore_exists("cupric") then
+if ore_enabled("ferrous") and ore_enabled("cupric") then
 else
   OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
@@ -662,7 +611,7 @@ OV.patch_recipes(
         },
         --[[2]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          ore_exists("platinum") and tweaked_icon_lookup("platinum-ore", 0.5, {10, 10}) or nil
+          ore_enabled("platinum") and tweaked_icon_lookup("platinum-ore", 0.5, {10, 10}) or nil
         },
         --[[3]] nil
       }
@@ -692,8 +641,8 @@ OV.patch_recipes(
         ["zinc-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["rutile-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["bauxite-ore"] = {0, 0, 0, 0, 0, 0.4, 0, 0, 0},
-        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
-        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
+        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_enabled("platinum-ore") and ore_enabled("chrome-ore") and 0.4 or ore_enabled("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
+        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_enabled("platinum-ore") and 0 or 0.2, ore_enabled("platinum-ore") and 0.4 or 0, 0, 0},
         ["platinum-ore"] = {0, 0, 0, 0, 0, 0, 0.4, 0, 0},
         ["cobalt-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
         ["tungsten-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
@@ -740,12 +689,12 @@ OV.patch_recipes(
         --[[6]] angelsmods.functions.create_liquid_recipe_icon(
           {
             "bauxite-ore",
-            ore_exists("manganese-ore") and "manganese-ore" or nil,
-            (not ore_exists("platinum-ore")) and ore_exists("chrome-ore") and "chrome-ore" or nil
+            ore_enabled("manganese-ore") and "manganese-ore" or nil,
+            (not ore_enabled("platinum-ore")) and ore_enabled("chrome-ore") and "chrome-ore" or nil
           },
           slag_color
         ),
-        --[[7]] ore_exists("platinum-ore") and
+        --[[7]] ore_enabled("platinum-ore") and
           angelsmods.functions.create_liquid_recipe_icon(
             {
               "platinum-ore",
@@ -764,8 +713,8 @@ OV.patch_recipes(
         --[[9]] angelsmods.functions.create_liquid_recipe_icon(
           {
             "uranium-ore",
-            ore_exists("fluorite-ore") and "fluorite-ore" or nil,
-            ore_exists("thorium-ore") and "thorium-ore" or nil
+            ore_enabled("fluorite-ore") and "fluorite-ore" or nil,
+            ore_enabled("thorium-ore") and "thorium-ore" or nil
           },
           slag_color
         )
