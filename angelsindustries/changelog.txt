@@ -5,6 +5,8 @@ Date: ???
     - Science mode:
       - Added an early tech to use in the tech archive to unlock datacores (314)
   Bugfixes:
+    - Regular mode:
+      - Changed energy source on the expanders to void when they don't use power (317)
     - Overhaul mode:
       - Added translation for hidden ghosting tech (288)
       - Check for item existence with bobinserters (299)
