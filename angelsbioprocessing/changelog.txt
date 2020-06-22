@@ -2,7 +2,8 @@
 Version: 0.7.12
 Date: ????
   Changes:
-    - Fixed Fish water filtering Filter return being incorrect 
+    - Fixed Fish water filtering Filter return being incorrect
+    - Crystal enhancer now requires crystal slurry instead of the catalyst in special vanilla mode
   Bugfixes:
     - Fixed crystal splinter recipes were a bit scrambled around when playing with bobs mods
 ---------------------------------------------------------------------------------------------------

@@ -1,11 +1,6 @@
 local OV = angelsmods.functions.OV
 
-local ore_exists = function(ore_name)
-  if angelsmods.trigger.ores[ore_name] then
-    return true
-  end
-  return false
-end
+local ore_exists = angelsmods.functions.ore_enabled
 
 -------------------------------------------------------------------------------
 --BASE GAME -------------------------------------------------------------------

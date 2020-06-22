@@ -65,11 +65,13 @@ if angelsmods.trigger.smelting_products["glass"].plate then
   )
 end
 
-if angelsmods.industries then
+if angelsmods.functions.is_special_vanilla() then
+else
   OV.patch_recipes(
     {
       {
         name = "crystal-enhancer",
+        category = "advanced-crafting",
         ingredients = {
           {name = "catalysator-green", amount = 1},
           {name = "crystal-slurry", amount = 0, type = "fluid"}
@@ -77,6 +79,9 @@ if angelsmods.industries then
       }
     }
   )
+end
+
+if angelsmods.industries then
 else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")
 

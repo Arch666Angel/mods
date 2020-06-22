@@ -1418,7 +1418,7 @@ data:extend(
       },
       --icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
       icon_size = 32,
-      order = "g[angels-iron-pebbles]"
+      order = "a[iron]-c[pebbles]"
     },
     --COPPER
     {
@@ -1490,7 +1490,7 @@ data:extend(
       },
       --icon = "__angelsrefining__/graphics/icons/iron-plate-crushed.png",
       icon_size = 32,
-      order = "h[angels-copper-pebbles]"
+      order = "b[copper]-c[pebbles]"
     }
   }
 )

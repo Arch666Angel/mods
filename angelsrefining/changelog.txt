@@ -5,11 +5,17 @@ Date: ???
     - Halved water-yellow-waste (sulfuric waster water) for cupric filtering (296)
     - Make sure some defaults are set in case of invalid prototypes (292, 293)
     - Changed the recipe icon of thermal to lithia water refining (bobs only)
+    - Added refining for uranium in special vanilla mode (276)
+    - Removed crystal seedling from special vanilla mode (276)
   Bugfixes:
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)
     - Fixed wrong default_value on bobs crafting machine ingredient limit (278)
     - Fixed refining showed a lot of useless refined ores in special vanilla (295)
+  Modding:
+    - Moved is_special_vanilla(ore_triggers) to angelsmods.functions.is_special_vanilla() (276)
+    - Moved ore_exist(ore_name) to angelsmods.functions.ore_exists(ore_name) (276)
+    - Moved ore_exists(ore_name) to angelsmods.functions.ore_enabled(ore_name) (276)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.13
 Date: 05.06.2020

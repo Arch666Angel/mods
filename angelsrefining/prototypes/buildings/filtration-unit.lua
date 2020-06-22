@@ -131,7 +131,7 @@ data:extend(
       },
       icon_size = 32,
       subgroup = "refining-buildings",
-      order = "c[filtration-unit]-b[mk2]",
+      order = "b[filtration-unit]-b[mk2]",
       place_result = "filtration-unit-2",
       stack_size = 10
     },
