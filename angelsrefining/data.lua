@@ -33,11 +33,10 @@ angelsmods.trigger.ores = angelsmods.trigger.ores or {}
 angelsmods.trigger.ores["iron"] = true
 angelsmods.trigger.ores["copper"] = true
 angelsmods.trigger.ores["uranium"] = true
-angelsmods.trigger.ores["thorium"] = mods["angelsindustries"] and settings.startup["angels-enable-industries"].value and true or false
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods["bobplates"] then
   local ore_exists = angelsmods.functions.ore_exists
-  angelsmods.trigger.ores["uranium"] = true
+  --angelsmods.trigger.ores["uranium"] = true
   angelsmods.trigger.ores["tin"] = ore_exists("tin-ore")
   angelsmods.trigger.ores["lead"] = ore_exists("lead-ore")
   angelsmods.trigger.ores["nickel"] = ore_exists("nickel-ore")
@@ -58,10 +57,11 @@ if mods["bobplates"] then
   --angelsmods.trigger.ores["gem-topaz"] = ore_exists("topaz-ore")
   --angelsmods.trigger.ores["gem-diamond"] = ore_exists("diamond-ore")
 end
-angelsmods.trigger.ores["fluorite"] = false -- angels petrochem enables this
-angelsmods.trigger.ores["platinum"] = false -- angels petrochem enables this
-angelsmods.trigger.ores["manganese"] = false -- angels smelting enables this
-angelsmods.trigger.ores["chrome"] = false -- angels smelting enables this
+angelsmods.trigger.ores["fluorite"] = angelsmods.trigger.ores["fluorite"] or false -- angels petrochem enables this
+angelsmods.trigger.ores["platinum"] = angelsmods.trigger.ores["platinum"] or false -- angels petrochem enables this
+angelsmods.trigger.ores["manganese"] = angelsmods.trigger.ores["manganese"] or false -- angels smelting enables this
+angelsmods.trigger.ores["chrome"] = angelsmods.trigger.ores["chrome"] or false -- angels smelting enables this
+angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or false --angels industries enables this
 
 -- MARATHON MODE
 angelsmods.marathon = angelsmods.marathon or {}
@@ -110,5 +110,6 @@ require("prototypes.recipes.water-treatment-recipes")
 require("prototypes.technology.refining-technology")
 
 require("prototypes.technology.water-treatment-technology")
+
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()
