@@ -5,6 +5,7 @@ Date: ???
     - Halved water-yellow-waste (sulfuric waster water) for cupric filtering (296)
     - Make sure some defaults are set in case of invalid prototypes (292, 293)
     - Changed the recipe icon of thermal to lithia water refining (bobs only)
+    - Added refining for uranium in special vanilla mode (276)
   Bugfixes:
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)
