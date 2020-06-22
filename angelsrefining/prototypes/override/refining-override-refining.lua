@@ -161,3 +161,18 @@ else
   --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal")
   --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal-processing")
 end
+
+-------------------------------------------------------------------------------
+-- CRYSTAL SEEDLING -----------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.functions.is_special_vanilla() then
+  OV.disable_recipe(
+    {
+      "crystal-slurry-filtering-1",
+      "crystal-slurry-filtering-2",
+      "catalysator-brown",
+      "catalysator-green",
+      "catalysator-orange",
+    }
+  )
+end

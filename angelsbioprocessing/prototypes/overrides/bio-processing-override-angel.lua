@@ -1,5 +1,5 @@
+local OV = angelsmods.functions.OV
 if angelsmods.industries and angelsmods.industries.overhaul then
-  local OV = angelsmods.functions.OV
 
   OV.modify_output("algae-brown-burning", {"solid-lithium", 1})
   -- OV.remove_unlock("bio-paper-1", "circuit-paper-board")
@@ -27,4 +27,6 @@ if angelsmods.industries and angelsmods.industries.overhaul then
   -- BEACON
   OV.modify_input("beacon", {"crystal-full-harmonic"})
   OV.add_prereq("effect-transmission", "bio-processing-crystal-full")
+else
+  OV.disable_recipe("algae-brown-burning")
 end

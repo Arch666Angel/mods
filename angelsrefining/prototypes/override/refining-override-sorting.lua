@@ -791,8 +791,8 @@ OV.patch_recipes(
         {
           {
             type = "item",
-            name = (mods["angelssmelting"] or special_vanilla) and "stone" or "solid-aluminium-oxide",
-            amount = (mods["angelssmelting"] or special_vanilla) and 3 or 1
+            name = (mods["angelssmelting"] or special_vanilla) and "plastic-bar" or "solid-aluminium-oxide",
+            amount = (mods["angelssmelting"] or special_vanilla) and 2 or 1
           }
         }
       }
