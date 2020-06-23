@@ -7,6 +7,7 @@ Date: ???
   Bugfixes:
     - Regular mode:
       - Changed energy source on the expanders to void when they don't use power (317)
+      - Fixed selection box on te cargo roboport
     - Overhaul mode:
       - Added translation for hidden ghosting tech (288)
       - Check for item existence with bobinserters (299)
