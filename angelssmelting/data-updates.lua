@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["steel"].rod then
 end
 if angelsmods.trigger.smelting_products["steel"].plate then
   angelsmods.trigger.smelting_products["steel"].ingot = true
-  if not is_special_vanilla(angelsmods.trigger.ores) then
+  if not angelsmods.functions.is_special_vanilla() then
     angelsmods.trigger.smelting_products["silicon"].ingot = true
     angelsmods.trigger.smelting_products["manganese"].ingot = true
     angelsmods.trigger.smelting_products["cobalt"].ingot = true
@@ -139,7 +139,7 @@ if angelsmods.trigger.smelting_products["iron"].rod then
 end
 if angelsmods.trigger.smelting_products["iron"].plate then
   angelsmods.trigger.smelting_products["iron"].ingot = true
-  if not is_special_vanilla(angelsmods.trigger.ores) then
+  if not angelsmods.functions.is_special_vanilla() then
     angelsmods.trigger.smelting_products["manganese"].ingot = true
     angelsmods.trigger.smelting_products["silicon"].ingot = true
     angelsmods.trigger.smelting_products["cobalt"].ingot = true

@@ -30,7 +30,7 @@ data:extend(
     collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
     selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
     drawing_box = {{-2, -4}, {4, 1}},
-    map_color = {r = 0.2, g = 0.8, b = 0.2},
+    map_color = {r = 1.0, g = 0.8, b = 0.2}, --{r = 0.2, g = 0.8, b = 0.2},
     subgroup = "trees",
     order = "a[tree]-b[dead-tree]",
     vehicle_impact_sound =  { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },

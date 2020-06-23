@@ -1,4 +1,4 @@
-if angelsmods.refining and is_special_vanilla(angelsmods.trigger.ores) then
+if angelsmods.refining and angelsmods.functions.is_special_vanilla() then
   local OV = angelsmods.functions.OV
 
   -- Require powderizer for milling drum
@@ -13,5 +13,6 @@ if angelsmods.refining and is_special_vanilla(angelsmods.trigger.ores) then
       "electro-whinning-cell-3"
     }
   )
+
   OV.execute()
 end

@@ -1233,3 +1233,69 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
     end
   end
 end
+
+-- ORE HANDLING
+function angelsmods.functions.ore_exists(ore_name)
+  return data.raw.item[ore_name] and true or false
+end
+
+local is_vanilla_ore = {
+  ["iron"] = true,
+  ["copper"] = true,
+  ["uranium"] = true
+}
+function angelsmods.functions.is_special_vanilla()
+  for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
+    if ore_enabled and (not is_vanilla_ore[ore_name]) then
+      return false
+    end
+  end
+  return true
+end
+
+function angelsmods.functions.get_trigger_names()
+  local special_vanilla = angelsmods.functions.is_special_vanilla()
+  return {
+    -- TIER 1 ORES
+    ["iron-ore"] = "iron",
+    ["angels-iron-nugget"] = special_vanilla and "iron" or "unused", -- special vanilla only
+    ["angels-iron-pebbles"] = special_vanilla and "iron" or "unused", -- special vanilla only
+    ["angels-iron-slag"] = special_vanilla and "iron" or "unused", -- special vanilla only
+    ["copper-ore"] = "copper",
+    ["angels-copper-nugget"] = special_vanilla and "copper" or "unused", -- special vanilla only
+    ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
+    ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
+    -- TIER 1.5 ORES
+    ["tin-ore"] = "tin",
+    ["lead-ore"] = "lead",
+    ["quartz"] = "silicon",
+    ["nickel-ore"] = "nickel",
+    ["manganese-ore"] = "manganese",
+    -- TIER 2 ORES
+    ["zinc-ore"] = "zinc",
+    ["bauxite-ore"] = "aluminium",
+    ["cobalt-ore"] = "cobalt",
+    ["silver-ore"] = "silver",
+    ["fluorite-ore"] = "fluorite", -- byproduct
+    -- TIER 2.5 ORES
+    ["gold-ore"] = "gold",
+    -- TIER 3 ORES
+    ["rutile-ore"] = "titanium",
+    ["uranium-ore"] = "uranium",
+    -- TIER 4 ORES
+    ["tungsten-ore"] = "tungsten",
+    ["thorium-ore"] = "thorium",
+    ["chrome-ore"] = "chrome",
+    ["platinum-ore"] = "platinum"
+  }
+end
+
+function angelsmods.functions.ore_enabled(ore_name)
+  if angelsmods.trigger.ores[angelsmods.functions.get_trigger_names()[ore_name] or ore_name] then
+    return true
+  end
+  if angelsmods.trigger.refinery_products[ore_name] then
+    return true
+  end
+  return false
+end
