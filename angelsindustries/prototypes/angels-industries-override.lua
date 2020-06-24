@@ -8,6 +8,7 @@ if mods["bobvehicleequipment"] then
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "car")
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "vehicle")
 end
+
 --UPDATE RECIPES FOR ENTITIES
 --OV.execute()
 require("prototypes.overrides.components-entity-update")
@@ -51,7 +52,6 @@ if angelsmods.industries.tech then
   OV.add_unlock("space-science-pack", "angels-main-lab-7")
   OV.global_replace_item("lab", "angels-basic-lab-2")
 end
+
 require("prototypes.overrides.tech-mod-update")
 require("prototypes.overrides.tech-productivity-update")
--- ordening
-require("prototypes.angels-industries-override-ordening")
