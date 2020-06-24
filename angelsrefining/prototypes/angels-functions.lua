@@ -908,22 +908,7 @@ function angelsmods.functions.disable_barreling_recipes(fluid_to_disable)
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-liquid-bot")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-liquid-bot")
-  for nx, item in pairs(data.raw.item) do
-    if item.name == fluid_to_disable .. "-barrel" then
-      if item.flags then
-        table.insert(item.flags, "hidden")
-      else
-        item.flags = {"hidden"}
-      end
-    end
-    if item.name == fluid_to_disable .. "-liquid-bot" then
-      if item.flags then
-        table.insert(item.flags, "hidden")
-      else
-        item.flags = {"hidden"}
-      end
-    end
-  end
+  angelsmods.functions.add_flag(fluid_to_disable .. "-barrel", "hidden")
 end
 
 function angelsmods.functions.modify_barreling_icon()

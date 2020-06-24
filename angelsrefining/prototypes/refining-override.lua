@@ -26,6 +26,8 @@ data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 --OVERRIDE FOR BOBs
 --if bobmods and bobmods.plates then
 require("prototypes.override.refining-override-bobgems")
+require("prototypes.override.refining-override-bobrevamp")
+
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then

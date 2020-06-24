@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - Rockets now require rocket boosters as ingredients (309)
     - Added recipe to revert Hydrofluoric Acid to Hydrogen Fluoride Gas (319)
+    - Added support for the new bob salt recipes (313)
   Bugfixes:
     - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
     - Fixed the Oil Well was still called Crude Oil
