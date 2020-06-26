@@ -2,17 +2,12 @@ if not (angelsmods.industries and angelsmods.industries.overhaul) then
   data.raw["item-with-entity-data"]["car"].subgroup = "angels-exploration-vehicles"
   data.raw["item-with-entity-data"]["car"].order = "a[car]"
 end
-data.raw["item-with-entity-data"]["tank"].subgroup = "angels-exploration-vehicles"
-data.raw["item-with-entity-data"]["tank"].order = "b[tank]-a[vanilla]"
 
 table.insert(data.raw.technology["military-3"].prerequisites, "angels-cannon-turret")
 table.insert(data.raw.technology["military-3"].effects, {type = "unlock-recipe", recipe = "cannon-turret-shell-2"})
 
 if angelsmods.industries then
   local OV = angelsmods.functions.OV
-
-  data.raw["item-group"]["angels-warfare"].order = "la[angels]-f[exploration]-b"
-  data.raw["item-group"]["angels-warfare"].inventory_order = "la[angels]-f[exploration]-b"
 
   if angelsmods.industries.overhaul then
     -- turrets require guns as ingredients, compensate recipe for it as well
@@ -257,6 +252,3 @@ end
 for _, spawner in pairs(data.raw["unit-spawner"]) do
   spawner.hide_resistances = false
 end
-
---ORDER ITEMS
-require("prototypes/exploration-override-ordening")

@@ -9,7 +9,8 @@
   "description": "",
   "dependencies": [
     "base >= 0.18.27",
-    "? angelsindustries >= 0.4.1",
-    "? bobenemies >= 0.18.5"
+    "angelsindustries >= 0.4.4",
+    "? bobenemies >= 0.18.5",
+    "? bobwarfare >= 0.18.6"
   ]
 }

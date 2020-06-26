@@ -718,7 +718,7 @@ data:extend(
       {
         {type = "item", name = "atomic-bomb", amount = 1}
       },
-      order="c[basic-ammo]-c[uranium-rounds]-b"
+      order="d[rocket-launcher]-d[atomic-bomb]-a"
     },
     {
       type = "recipe",
@@ -749,7 +749,7 @@ data:extend(
       {
         {type = "item", name = "atomic-bomb", amount = 2}
       },
-      order="c[basic-ammo]-c[uranium-rounds]-c"
+      order="d[rocket-launcher]-d[atomic-bomb]-b"
     },
   }
 )

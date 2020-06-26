@@ -1,5 +1,8 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
+local reorder = function(type, item, subgroup, order)
+  move_item(item, subgroup, order, type)
+end
 
 -------------------------------------------------------------------------------
 -- BOB LOGISTIC TAB -----------------------------------------------------------
@@ -217,5 +220,30 @@ if mods["boblogistics"] then
     move_item("bob-laser-robot", "angels-robot-d", "d[combat]-c[robot]")
   end
 else
+  if mods["bobwarfare"] and settings.startup["bobmods-warfare-robotupdate"].value then
+    data:extend(
+      {
+        {
+          type = "item-subgroup",
+          name = "angels-robot-brains",
+          group = "angels-logistics",
+          order = "cc[robot-parts]"
+        },
+      }
+    )
 
+    move_item("robot-brain-combat", "angels-robot-brains", "a[brain]-a")
+    move_item("robot-brain-combat-2", "angels-robot-brains", "[brain]-b")
+    move_item("robot-brain-combat-3", "angels-robot-brains", "a[brain]-c")
+    move_item("robot-brain-combat-4", "angels-robot-brains", "a[brain]-d")
+    move_item("robot-tool-combat", "angels-robot-brains", "b[tool]-a")
+    move_item("robot-tool-combat-2", "angels-robot-brains", "b[tool]-b")
+    move_item("robot-tool-combat-3", "angels-robot-brains", "b[tool]-c")
+    move_item("robot-tool-combat-4", "angels-robot-brains", "b[tool]-d")
+
+    move_item("defender-robot", "angels-cargo-bots", "c[drone]-a[gun]")
+    move_item("distractor-robot", "angels-cargo-bots", "c[drone]-b[laser]")
+    move_item("destroyer-robot", "angels-cargo-bots", "c[drone]-c[flamethrower]")
+    move_item("bob-laser-robot", "angels-cargo-bots", "c[drone]-d[plasma]")
+  end
 end

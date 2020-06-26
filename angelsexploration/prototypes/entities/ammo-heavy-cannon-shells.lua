@@ -92,8 +92,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-explosion-b",
-    order = "c[basic-ammo]-b[heavy]-a[basic-rounds]",
+    subgroup = "angels-exploration-tank-b",
+    order = "c[ammo]-a[basic-shell]",
     stack_size = 200
   },
   --HEAVY EXPLOSIVE CANNON SHELL
@@ -202,8 +202,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-explosion-b",
-    order = "c[basic-ammo]-b[heavy]-b[explosive-rounds]",
+    subgroup = "angels-exploration-tank-b",
+    order = "c[ammo]-b[explosive-shell]",
     stack_size = 200
   },
   --HEAVY URANIUM CANNON SHELL
@@ -297,8 +297,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-explosion-b",
-    order = "c[basic-ammo]-b[heavy]-c[uranium-rounds]",
+    subgroup = "angels-exploration-tank-b",
+    order = "c[ammo]-c[uranium-shell]",
     stack_size = 200
   },
   --HEAVY EXPLOSIVE URANIUM CANNON SHELL
@@ -407,8 +407,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-explosion-b",
-    order = "c[basic-ammo]-b[heavy]-d[explosive-uranium-rounds]",
+    subgroup = "angels-exploration-tank-b",
+    order = "c[ammo]-d[explosive-uranium-shell]",
     stack_size = 200
   },
 }

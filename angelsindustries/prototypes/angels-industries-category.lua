@@ -39,7 +39,9 @@ data:extend(
       name = "angels-movement"
     },
     --SUBGROUPS
-    -- COMPONENTS
+    ---------------------------------------------------------------------------
+    -- ANGELS COMPONENTS ------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "item-group",
       name = "angels-components",
@@ -172,6 +174,9 @@ data:extend(
       group = "angels-components",
       order = "h[tools]"
     },
+    ---------------------------------------------------------------------------
+    -- ANGELS BLOCKS ----------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "item-group",
       name = "angels-blocks",
@@ -258,7 +263,9 @@ data:extend(
       group = "production",
       order = "z[assemblers]-c[big]"
     },
-    -- SCIENCE
+    ---------------------------------------------------------------------------
+    -- ANGELS TECHNOLOGY ------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "item-group",
       name = "angels-tech",
@@ -315,7 +322,9 @@ data:extend(
       group = "angels-tech",
       order = "z[labs]-b[archive]"
     },
-    -- EQUIPMENT
+    ---------------------------------------------------------------------------
+    -- ANGELS EQUIPMENT -------------------------------------------------------
+    ---------------------------------------------------------------------------
     --{
     --  type = "item-group",
     --  name = "angels-enhancement",
@@ -366,7 +375,9 @@ data:extend(
     --  group = "angels-enhancement",
     --  order = "g",
     --},
-    -- POWER
+    ---------------------------------------------------------------------------
+    -- ANGELS POWER -----------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "item-group",
       name = "angels-power",
@@ -422,7 +433,9 @@ data:extend(
       group = "angels-power",
       order = "e[power-poles]-a"
     },
-    -- LOGISTICS
+    ---------------------------------------------------------------------------
+    -- ANGELS LOGISTICS -------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "item-group",
       name = "angels-logistics",
@@ -470,11 +483,45 @@ data:extend(
     },
     {
       type = "item-subgroup",
+      name = "angels-personal-equipment-armor",
+      group = "angels-logistics",
+      order = "d-a[armor]"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-personal-equipment-power-a",
+      group = "angels-logistics",
+      order = "d-b[equipment]-a"
+    },
+    -- order "d-b[equipment]-b" reserved for bobs power equipment
+    -- order "d-b[equipment]-c" reserved for bobs power equipment
+    -- order "d-b[equipment]-d" reserved for bobs power equipment
+    {
+      type = "item-subgroup",
+      name = "angels-personal-equipment-robot-a",
+      group = "angels-logistics",
+      order = "d-c[equipment]-a"
+    },
+    -- order "d-c[equipment]-b" reserved for bobs robot equipment
+    -- order "d-c[equipment]-c" reserved for bobs robot equipment
+    -- order "d-c[equipment]-d" reserved for bobs robot equipment
+    {
+      type = "item-subgroup",
+      name = "angels-personal-equipment-combat-a",
+      group = "angels-logistics",
+      order = "d-d[equipment]-a"
+    },
+    -- order "d-d[equipment]-b" reserved for bobs combat equipment
+    -- order "d-d[equipment]-c" reserved for bobs combat equipment
+    {
+      type = "item-subgroup",
       name = "angels-vehicles",
       group = "angels-logistics",
       order = "e"
     },
-    -- VEHICLES
+    ---------------------------------------------------------------------------
+    -- ANGELS VEHICLES --------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "item-group",
       name = "angels-vehicles",
@@ -516,81 +563,85 @@ data:extend(
       type = "item-subgroup",
       name = "angels-vehicle-equipment",
       group = "angels-vehicles",
-      order = "db" -- order da reserved for CAB (see addon cab-category)
-    }, -- order dc reserved for bobvehicleequipment (see override)
-    -- WARFARE
-    {
-      type = "item-group",
-      name = "angels-warfare",
-      order = "la[angels]-f[warfare]-a",
-      inventory_order = "la[angels]-f[warfare]-a",
-      icons = {
-        {
-          icon = "__base__/graphics/item-group/military.png",
-          icon_size = 64
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/void.png",
-          icon_size = 32,
-          scale = 64 / 32 * 0.35,
-          shift = {20, -20}
-        }
-      }
+      order = "db"
     },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-bullet-guns",
-      group = "angels-warfare",
-      order = "b[bullets]-a[guns]" -- "b[bullets]-b[projectile]" reserved for "angels-warfare-bullet-projectiles" (see exploration override)
-    }, -- "b[bullets]-c[bullet]" reserved for "angels-warfare-bullet" (see exploration override)
-    {
-      -- "b[bullets]-d[magazine]" reserved for "angels-warfare-bullet-magazine" (see exploration override)
-      type = "item-subgroup",
-      name = "angels-warfare-shotgun-guns",
-      group = "angels-warfare",
-      order = "c[shotgun]-a[guns]" -- "c[shotgun]-b[shells]" reserved for "angels-warfare-shotgun-shells" (see exploration override)
-    },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-rocket-guns",
-      group = "angels-warfare",
-      order = "d[rocket]-a[guns]" -- "d[rocket]-b[warhead]" reserved for "angels-warfare-rocket-warhead"
-    }, -- "d[rocket]-c[bob-rocket]" reserved for "angels-warfare-bob-rocket"
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-flamethrower-guns",
-      group = "angels-warfare",
-      order = "e[flamethrower]-a[guns]"
-    },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-laser-guns",
-      group = "angels-warfare",
-      order = "f[laser]-a[guns]" -- "f[laser-rifle]-b[battery]" reserved for "angels-warfare-laser-battery"
-    },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-tank-guns",
-      group = "angels-warfare",
-      order = "g[tank]-a[guns]"
-    },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-artillery-guns",
-      group = "angels-warfare",
-      order = "h[artillery]-a[guns]"
-    },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-capsules-manual",
-      group = "angels-warfare",
-      order = "i[capsules]-a[manual]"
-    },
-    {
-      type = "item-subgroup",
-      name = "angels-warfare-wall",
-      group = "angels-warfare",
-      order = "j[wall]"
-    }
+    -- order da reserved for CAB (see addon cab-category)
+    -- order dc reserved for bobvehicleequipment (see override)
+    ---------------------------------------------------------------------------
+    -- ANGELS WARFARE ---------------------------------------------------------
+    ---------------------------------------------------------------------------
+    --{
+    --  type = "item-group",
+    --  name = "angels-warfare",
+    --  order = "la[angels]-f[warfare]-a",
+    --  inventory_order = "la[angels]-f[warfare]-a",
+    --  icons = {
+    --    {
+    --      icon = "__base__/graphics/item-group/military.png",
+    --      icon_size = 64
+    --    },
+    --    {
+    --      icon = "__angelsrefining__/graphics/icons/void.png",
+    --      icon_size = 32,
+    --      scale = 64 / 32 * 0.35,
+    --      shift = {20, -20}
+    --    }
+    --  }
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-bullet-guns",
+    --  group = "angels-warfare",
+    --  order = "b[bullets]-a[guns]" -- "b[bullets]-b[projectile]" reserved for "angels-warfare-bullet-projectiles" (see exploration override)
+    --}, -- "b[bullets]-c[bullet]" reserved for "angels-warfare-bullet" (see exploration override)
+    --{
+    --  -- "b[bullets]-d[magazine]" reserved for "angels-warfare-bullet-magazine" (see exploration override)
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-shotgun-guns",
+    --  group = "angels-warfare",
+    --  order = "c[shotgun]-a[guns]" -- "c[shotgun]-b[shells]" reserved for "angels-warfare-shotgun-shells" (see exploration override)
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-rocket-guns",
+    --  group = "angels-warfare",
+    --  order = "d[rocket]-a[guns]" -- "d[rocket]-b[warhead]" reserved for "angels-warfare-rocket-warhead"
+    --}, -- "d[rocket]-c[bob-rocket]" reserved for "angels-warfare-bob-rocket"
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-flamethrower-guns",
+    --  group = "angels-warfare",
+    --  order = "e[flamethrower]-a[guns]"
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-laser-guns",
+    --  group = "angels-warfare",
+    --  order = "f[laser]-a[guns]" -- "f[laser-rifle]-b[battery]" reserved for "angels-warfare-laser-battery"
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-tank-guns",
+    --  group = "angels-warfare",
+    --  order = "g[tank]-a[guns]"
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-artillery-guns",
+    --  group = "angels-warfare",
+    --  order = "h[artillery]-a[guns]"
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-capsules-manual",
+    --  group = "angels-warfare",
+    --  order = "i[capsules]-a[manual]"
+    --},
+    --{
+    --  type = "item-subgroup",
+    --  name = "angels-warfare-wall",
+    --  group = "angels-warfare",
+    --  order = "j[wall]"
+    --}
   }
 )

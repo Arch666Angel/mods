@@ -7,7 +7,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "item", name = "firearm-magazine", amount = 1},
+        {type = "item", name = "shotgun-shell", amount = 1},
         {type = "item", name = "coal", amount = 2}
       },
       results = {
@@ -20,7 +20,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "item", name = "piercing-rounds-magazine", amount = 1},
+        {type = "item", name = "piercing-shotgun-shell", amount = 1},
         {type = "item", name = "coal", amount = 4}
       },
       results = {
@@ -33,8 +33,9 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "item", name = "uranium-rounds-magazine", amount = 1},
-        {type = "item", name = "coal", amount = 8}
+        {type = "item", name = "cannon-turret-shell-2", amount = 1},
+        {type = "item", name = "coal", amount = 4},
+        {type = "item", name = "uranium-238", amount = 2},
       },
       results = {
         {type = "item", name = "cannon-turret-shell-3", amount = 1}

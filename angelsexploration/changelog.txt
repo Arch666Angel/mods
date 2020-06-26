@@ -3,6 +3,7 @@ Version: 0.3.6
 Date: ???
   Changes:
     - Updated graphics of the Peztilence Ammo, Gun and Spreader Turret (311)
+    - Cannon turrets now use shotgun shells (310)
   Bugfixes:
     - Check if resistances is defined for spawner (290)
     - Tweaked collision and selection boxes for scarabs and psykers (280)
