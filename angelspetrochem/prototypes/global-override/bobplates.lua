@@ -77,21 +77,6 @@ if bobmods then
       move_item("bob-pump-4", "angels-fluid-control", "b[pump]-d[mk4]")
     end
 
-    -- move chemical plants
-    if bobmods.assembly then
-      move_item("chemical-plant-2", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-a")
-      move_item("chemical-plant-3", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-b")
-      move_item("chemical-plant-4", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-c")
-    end
-
-    -- move electrolysers
-    move_item("electrolyser", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-a")
-    if bobmods.assembly and data.raw["item"]["electrolyser-2"] then
-      move_item("electrolyser-2", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-b")
-      move_item("electrolyser-3", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-c")
-      move_item("electrolyser-4", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-d")
-    end
-
     -- generic replace
     OV.global_replace_item("carbon", "solid-carbon")
     angelsmods.functions.add_flag("carbon", "hidden")
@@ -241,45 +226,6 @@ if bobmods then
     table.insert(data.raw["assembling-machine"]["angels-electrolyser-2"].crafting_categories, "electrolysis")
     table.insert(data.raw["assembling-machine"]["angels-electrolyser-3"].crafting_categories, "electrolysis")
     table.insert(data.raw["assembling-machine"]["angels-electrolyser-4"].crafting_categories, "electrolysis")
-
-    -- add angels electrolysis to bobs
-    if angelsmods.trigger.disable_bobs_electrolysers then
-      OV.disable_recipe("electrolyser")
-      OV.disable_recipe("electrolyser-2")
-      OV.disable_recipe("electrolyser-3")
-      OV.disable_recipe("electrolyser-4")
-      OV.disable_recipe("electrolyser-5")
-      OV.disable_technology("electrolyser-2")
-      OV.disable_technology("electrolyser-3")
-      OV.disable_technology("electrolyser-4")
-      OV.disable_technology("electrolyser-5")
-    else
-      table.insert(data.raw["assembling-machine"]["electrolyser"].crafting_categories, "petrochem-electrolyser")
-      if bobmods.assembly and data.raw["assembling-machine"]["electrolyser-2"] then
-        table.insert(data.raw["assembling-machine"]["electrolyser-2"].crafting_categories, "petrochem-electrolyser")
-        table.insert(data.raw["assembling-machine"]["electrolyser-3"].crafting_categories, "petrochem-electrolyser")
-        table.insert(data.raw["assembling-machine"]["electrolyser-4"].crafting_categories, "petrochem-electrolyser")
-        table.insert(data.raw["assembling-machine"]["electrolyser-5"].crafting_categories, "petrochem-electrolyser")
-      end
-    end
-
-    if angelsmods.trigger.disable_bobs_chemical_plants then
-      --angelsmods.functions.add_flag("chemical-plant", "hidden")
-      OV.global_replace_item("chemical-plant", "angels-chemical-plant")
-      OV.disable_recipe("chemical-plant")
-      --angelsmods.functions.add_flag("chemical-plant-2", "hidden")
-      OV.global_replace_item("chemical-plant-2", "angels-chemical-plant-2")
-      OV.disable_recipe("chemical-plant-2")
-      OV.disable_technology("chemical-plant-2")
-      --angelsmods.functions.add_flag("chemical-plant-3", "hidden")
-      OV.global_replace_item("chemical-plant-3", "angels-chemical-plant-3")
-      OV.disable_recipe("chemical-plant-3")
-      OV.disable_technology("chemical-plant-3")
-      --angelsmods.functions.add_flag("chemical-plant-4", "hidden")
-      OV.global_replace_item("chemical-plant-4", "angels-chemical-plant-4")
-      OV.disable_recipe("chemical-plant-4")
-      OV.disable_technology("chemical-plant-4")
-    end
 
     move_item("heavy-water", "water-treatment-fluid", "eb")
     move_item("deuterium", "petrochem-basic-fluids", "i")

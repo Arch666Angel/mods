@@ -62,7 +62,7 @@ data:extend(
     {
       type = "recipe",
       name = "alien-goo",
-      category = "chemistry",
+      category = "liquifying",
       subgroup = "bio-processing-alien-intermediate",
       enabled = false,
       energy_required = 3,

@@ -218,8 +218,9 @@ local function generate_empty_barrel_icons(fluid, style)
   return e_icon
 end
 
--- OVERRIDE ASSIGNMENT FUNCTIONS
-
+-------------------------------------------------------------------------------
+-- OVERRIDE TECHNOLOGY FUNCTIONS ----------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.add_unlock = function(technology, recipe)
   guarantee_subtable(modify_table.technologies, technology)
   guarantee_subtable(modify_table.technologies[technology], "unlocks")
@@ -262,6 +263,9 @@ ov_functions.set_special_technology_override = function(technology, t)
   override_table.technologies[technology] = t
 end
 
+-------------------------------------------------------------------------------
+-- OVERRIDE RECIPE FUNCTIONS --------------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.patch_recipes = function(patch_list)
   for _, patch in pairs(patch_list) do
     local name = patch.name
@@ -403,6 +407,9 @@ ov_functions.remove_output = function(recipe, item)
   end
 end
 
+-------------------------------------------------------------------------------
+-- OVERRIDE ITEM FUNCTIONS ----------------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.global_replace_item = function(old, new) -- replace all occurrences of old in recipes with new (old may be a table containing a list of items)
   if type(old) == "table" then
     for ik, item in pairs(old) do
@@ -501,63 +508,63 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
   end
 end
 
--- INCOMPLETE FUNCTION: have to duplicate barrel as well
--- ov_functions.duplicate_barreling_at_temperature = function(fluid, temp, min_temp, max_temp)
---   temp = temp or nil
---   min_temp = min_temp or nil
---   max_temp = max_temp or nil
-
---   if data.raw.fluid[fluid] then
---     local fluid = data.raw.fluid[fluid]
---     local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
---     local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
---     local duplicate
---     if fill_barrel then
---       duplicate = table.deepcopy(fill_barrel)
---       duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
---       for _, ingredient in pairs(duplicate.ingredients) do
---         if ingredient.type == "fluid" and ingredient.name == fluid.name then
---           if temp then
---             ingredient.temperature = temp
---           else
---             ingredient.minimum_temperature = min_temp
---             ingredient.maximum_temperature = max_temp
---           end
---         end
---       end
---       data:extend(
---         {
---           duplicate
---         }
---       )
---     end
---     if empty_barrel then
---       duplicate = table.deepcopy(empty_barrel)
---       duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
---       for _, ingredient in pairs(empty_barrel.results) do
---         if ingredient.type == "fluid" and ingredient.name == fluid.name then
---           if temp then
---             ingredient.temperature = temp
---           else
---             ingredient.minimum_temperature = min_temp
---             ingredient.maximum_temperature = max_temp
---           end
---         end
---       end
---       if temp then
---         fill_barrel.temperature = temp
---       else
---         fill_barrel.minimum_temperature = min_temp
---         fill_barrel.maximum_temperature = max_temp
---       end
---       data:extend(
---         {
---           duplicate
---         }
---       )
---     end
---   end
--- end
+--[[-- INCOMPLETE FUNCTION: have to duplicate barrel as well
+ov_functions.duplicate_barreling_at_temperature = function(fluid, temp, min_temp, max_temp)
+  temp = temp or nil
+  min_temp = min_temp or nil
+  max_temp = max_temp or nil
+  if data.raw.fluid[fluid] then
+    local fluid = data.raw.fluid[fluid]
+    local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
+    local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
+    local duplicate
+    if fill_barrel then
+      duplicate = table.deepcopy(fill_barrel)
+      duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
+      for _, ingredient in pairs(duplicate.ingredients) do
+        if ingredient.type == "fluid" and ingredient.name == fluid.name then
+          if temp then
+            ingredient.temperature = temp
+          else
+            ingredient.minimum_temperature = min_temp
+            ingredient.maximum_temperature = max_temp
+          end
+        end
+      end
+      data:extend(
+        {
+          duplicate
+        }
+      )
+    end
+    if empty_barrel then
+      duplicate = table.deepcopy(empty_barrel)
+      duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
+      for _, ingredient in pairs(empty_barrel.results) do
+        if ingredient.type == "fluid" and ingredient.name == fluid.name then
+          if temp then
+            ingredient.temperature = temp
+          else
+            ingredient.minimum_temperature = min_temp
+            ingredient.maximum_temperature = max_temp
+          end
+        end
+      end
+      if temp then
+        fill_barrel.temperature = temp
+      else
+        fill_barrel.minimum_temperature = min_temp
+        fill_barrel.maximum_temperature = max_temp
+      end
+      data:extend(
+        {
+          duplicate
+        }
+      )
+    end
+  end
+end
+--]]--
 
 ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_temp)
   temp = temp or nil
@@ -707,7 +714,9 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
   end
 end
 
--- OVERRIDE EXECUTION
+-------------------------------------------------------------------------------
+-- OVERRIDE EXECUTION FUNCTIONS -----------------------------------------------
+-------------------------------------------------------------------------------
 local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments based on tables and make any necessary changes
   local function adjust_member(parent, member, substitution_type)
     local old = parent[member]
@@ -931,5 +940,7 @@ ov_functions.execute = function()
 
   initialize_tables() -- reset the data tables after execution to allow for multiple points of execution (eg, one set of adjustments in data-updates and another in data-final-fixes)
 end
+
 initialize_tables()
+
 return ov_functions

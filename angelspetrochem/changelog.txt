@@ -7,6 +7,7 @@ Date: ??
     - Added support for the new bob salt recipes (313)
     - Moved chlorine processing 2 to green science (required for bobwarfare)
     - Nitroglycering now takes nitric and sulfuric acid directly instead of a mixture of both
+    - Added setting to disable bobs distilleries (322)
   Bugfixes:
     - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
     - Fixed the Oil Well was still called Crude Oil

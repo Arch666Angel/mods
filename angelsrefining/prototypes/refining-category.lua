@@ -10,6 +10,10 @@ data:extend(
       name = "angels-natural-gas"
     },
     --RECIPE CATEGORIES
+    {
+      type = "recipe-category",
+      name = "angels-unused-machine" -- used for machines that don't have a purpose
+    },
     --REFINING
     {
       type = "recipe-category",

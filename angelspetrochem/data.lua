@@ -9,8 +9,9 @@ angelsmods.trigger = angelsmods.trigger or {}
 --CONVERTER RECIPES
 angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"].value
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
-angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
-angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
+angelsmods.trigger.disable_bobs_electrolysers = mods["bobplates"] and settings.startup["angels-disable-bobs-electrolysers"].value or false
+angelsmods.trigger.disable_bobs_chemical_plants = mods["bobplates"] and settings.startup["angels-disable-bobs-chemical-plants"].value or false
+angelsmods.trigger.disable_bobs_distilleries = mods["bobplates"] and settings.startup["angels-disable-bobs-distilleries"].value or false
 
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value

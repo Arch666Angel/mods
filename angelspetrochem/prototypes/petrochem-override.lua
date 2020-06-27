@@ -8,7 +8,7 @@ OV.remove_output("gas-sulfur-dioxide-calcium-sulfate", "angels-void")
 data.raw["resource"]["crude-oil"]["minable"].results = {
   {type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1}
 }
-table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories, "liquifying")
+angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 
 --ROCKET BOOSTER
 OV.patch_recipes(

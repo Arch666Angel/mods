@@ -21,26 +21,33 @@ data:extend(
       default_value = true,
       order = "c"
     },
-    {
+    mods["bobplates"] and {
       type = "bool-setting",
       name = "angels-disable-bobs-electrolysers",
       setting_type = "startup",
       default_value = true,
-      order = "d"
-    },
-    {
+      order = "da"
+    } or nil,
+    mods["bobplates"] and {
       type = "bool-setting",
       name = "angels-disable-bobs-chemical-plants",
       setting_type = "startup",
       default_value = true,
-      order = "e"
-    },
+      order = "db"
+    } or nil,
+    mods["bobplates"] and {
+      type = "bool-setting",
+      name = "angels-disable-bobs-distilleries",
+      setting_type = "startup",
+      default_value = true,
+      order = "dc"
+    } or nil,
     {
       type = "bool-setting",
       name = "angels-show-chemical-formula",
       setting_type = "startup",
       default_value = true,
-      order = "f",
+      order = "e",
     },
   }
 )
