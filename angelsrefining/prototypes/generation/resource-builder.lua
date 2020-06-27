@@ -485,6 +485,9 @@ local function make_resgfx(input)
           }
         }
       end
+      if type(input.sheet) == "table" then
+        return { sheet = input.sheet} --allow custom input ores
+      end
     end
   end
   if input.type == "fluid" then
@@ -527,6 +530,9 @@ local function make_resgfx(input)
         }
       }
     end
+    if type(input.sheet) == "table" then
+      return { sheet = input.sheet} --allow custom input ores
+    end
   end
 end
 
@@ -539,7 +545,9 @@ local function make_resglow(input)
         input.frame_count = stages_input.sheet.frame_count
         input.variation_count = stages_input.sheet.variation_count
       else
-        if input.infinite == true then
+        if input.frame_count and input.variation_count then
+          --skip
+        elseif input.infinite == true then
           input.frame_count = 16
           input.variation_count = 4
         else
