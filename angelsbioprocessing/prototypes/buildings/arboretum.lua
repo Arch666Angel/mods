@@ -455,7 +455,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-base.png",
@@ -463,7 +463,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-pipes.png",
@@ -471,7 +471,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-off.png",
@@ -479,7 +479,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
       }
     },
@@ -494,7 +494,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         -- {
         -- effect = "uranium-glow", -- changes alpha based on energy source light intensity
