@@ -22,6 +22,7 @@ data:extend(
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
     fast_replaceable_group= "bio-processor",
     module_specification =
     {

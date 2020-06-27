@@ -10,6 +10,7 @@ Date: ????
       - Puffers are now a dark yellow-ish color (was green before)
   Bugfixes:
     - Fixed crystal splinter recipes were a bit scrambled around when playing with bobs mods
+    - Fixed some drawing boxes on bio buildings
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.11
 Date: 05.06.2020
