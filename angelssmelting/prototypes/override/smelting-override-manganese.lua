@@ -22,7 +22,7 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
   if angelsmods.trigger.smelting_products["manganese"].plate then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-manganese"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
     OV.disable_recipe({"molten-manganese-smelting"})
   end
 else
@@ -31,7 +31,7 @@ else
   angelsmods.functions.add_flag("solid-manganese-oxide", "hidden")
   angelsmods.functions.add_flag("cathode-manganese", "hidden")
   angelsmods.functions.add_flag("ingot-manganese", "hidden")
-  data.raw.fluid["liquid-molten-manganese"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
   OV.disable_recipe({"manganese-ore-processing", "manganese-processed-processing"})
   OV.disable_recipe({"pellet-manganese-smelting", "processed-manganese-smelting", "solid-manganese-oxide-smelting"})
   OV.disable_recipe({"manganese-ore-smelting", "cathode-manganese-smelting"})

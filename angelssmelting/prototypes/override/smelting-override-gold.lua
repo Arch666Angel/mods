@@ -24,17 +24,17 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
      angelsmods.trigger.smelting_products["gold"].wire then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-gold"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-gold", "hidden")
     OV.disable_recipe({"molten-gold-smelting"})
   end
 else
   angelsmods.functions.add_flag("processed-gold", "hidden")
   angelsmods.functions.add_flag("pellet-gold", "hidden")
   angelsmods.functions.add_flag("solid-sodium-gold-cyanide", "hidden")
-  data.raw.fluid["liquid-chlorauric-acid"].hidden = true
+  angelsmods.functions.add_flag("liquid-chlorauric-acid", "hidden")
   angelsmods.functions.add_flag("cathode-gold", "hidden")
   angelsmods.functions.add_flag("ingot-gold", "hidden")
-  data.raw.fluid["liquid-molten-gold"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-gold", "hidden")
   OV.disable_recipe({"gold-ore-processing", "gold-processed-processing"})
   OV.disable_recipe({"pellet-gold-smelting", "liquid-chlorauric-acid", "processed-gold-smelting", "solid-sodium-gold-cyanide-smelting"})
   OV.disable_recipe({"gold-ore-smelting", "cathode-gold-smelting"})

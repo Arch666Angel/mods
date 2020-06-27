@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   if angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["zinc"].ingot then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-lead"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-lead", "hidden")
     OV.disable_recipe({"molten-lead-smelting"})
   end
 else
@@ -38,9 +38,9 @@ else
   angelsmods.functions.add_flag("pellet-lead", "hidden")
   angelsmods.functions.add_flag("solid-lead-oxide", "hidden")
   angelsmods.functions.add_flag("anode-lead", "hidden")
-  data.raw.fluid["liquid-hexafluorosilicic-acid"].hidden = true
+  angelsmods.functions.add_flag("liquid-hexafluorosilicic-acid", "hidden")
   angelsmods.functions.add_flag("ingot-lead", "hidden")
-  data.raw.fluid["liquid-molten-lead"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-lead", "hidden")
   OV.disable_recipe({"lead-ore-processing", "lead-processed-processing"})
   OV.disable_recipe({"processed-lead-smelting", "pellet-lead-smelting", "liquid-hexafluorosilicic-acid"})
   OV.disable_recipe({"lead-ore-smelting", "solid-lead-oxide-smelting", "anode-lead-smelting"})

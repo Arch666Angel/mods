@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   end
 else
   angelsmods.functions.add_flag("ingot-steel", "hidden")
-  data.raw.fluid["liquid-molten-steel"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-steel", "hidden")
   OV.disable_recipe({"ingot-iron-smelting"})
   OV.disable_recipe(
     {

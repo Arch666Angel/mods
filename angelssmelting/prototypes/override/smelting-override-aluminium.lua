@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
   if angelsmods.trigger.smelting_products["aluminium"].plate then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-aluminium"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-aluminium", "hidden")
     OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
   end
 else
@@ -40,7 +40,7 @@ else
   angelsmods.functions.add_flag("solid-aluminium-hydroxide", "hidden")
   angelsmods.functions.add_flag("solid-aluminium-oxide", "hidden")
   angelsmods.functions.add_flag("ingot-aluminium", "hidden")
-  data.raw.fluid["liquid-molten-aluminium"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-aluminium", "hidden")
   OV.disable_recipe({ "aluminium-processed-processing", "pellet-aluminium-smelting", "bauxite-ore-smelting" })
   OV.disable_recipe({ "processed-aluminium-smelting", "solid-aluminium-hydroxide-smelting", "solid-sodium-aluminate-smelting" })
   OV.disable_recipe({ "solid-aluminium-oxide-smelting" })

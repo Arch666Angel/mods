@@ -5,9 +5,13 @@ Date: ??
     - Rockets now require rocket boosters as ingredients (309)
     - Added recipe to revert Hydrofluoric Acid to Hydrogen Fluoride Gas (319)
     - Added support for the new bob salt recipes (313)
+    - Moved chlorine processing 2 to green science (required for bobwarfare)
+    - Nitroglycering now takes nitric and sulfuric acid directly instead of a mixture of both
   Bugfixes:
     - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
     - Fixed the Oil Well was still called Crude Oil
+    - Fixed bobs version of liquid fuel barreling recipe was still available
+    - Fixed missing dependency of nitroglycerin processing on sulfur processing
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020

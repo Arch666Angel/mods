@@ -26,7 +26,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   end
 else
   angelsmods.functions.add_flag("angels-solder-mixture", "hidden")
-  data.raw.fluid["liquid-molten-solder"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-solder", "hidden")
   angelsmods.functions.add_flag("angels-roll-solder", "hidden")
   angelsmods.functions.add_flag("angels-solder", "hidden")
   OV.disable_recipe({ "angels-solder-mixture" })

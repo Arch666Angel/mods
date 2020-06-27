@@ -317,8 +317,6 @@ if bobmods then
     OV.add_prereq("effect-transmission-3", "modules-3")
   end
 
-
-
   if mods["bobwarfare"] then
     OV.add_prereq("nitroglycerin-processing", "bio-nutrient-paste")
   end

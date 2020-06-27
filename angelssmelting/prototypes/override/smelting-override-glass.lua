@@ -14,12 +14,12 @@ if angelsmods.trigger.smelting_products["glass"].mixture then
   if angelsmods.trigger.smelting_products["glass"].plate or angelsmods.trigger.smelting_products["glass"].board then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-glass"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
     OV.disable_recipe({"molten-glass-smelting"})
   end
 else
   angelsmods.functions.add_flag("solid-glass-mixture", "hidden")
-  data.raw.fluid["liquid-molten-glass"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
   OV.disable_recipe({"glass-mixture-1", "glass-mixture-2", "glass-mixture-3", "glass-mixture-4"})
   OV.disable_recipe({"molten-glass-smelting"})
   OV.disable_technology({"angels-glass-smelting-1", "angels-glass-smelting-2", "angels-glass-smelting-3"})

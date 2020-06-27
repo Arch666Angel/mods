@@ -137,6 +137,7 @@ if mods["bobplates"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({"pure-water", "pure-water-from-lithia"})
     data.raw.fluid["pure-water"].hidden = true
+    angelsmods.functions.disable_barreling_recipes("pure-water")
   end
 
   --Insert water resources to bob recipes

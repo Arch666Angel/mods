@@ -26,7 +26,7 @@ if angelsmods.trigger.smelting_products["nickel"].ingot then
   if angelsmods.trigger.smelting_products["nickel"].plate then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-nickel"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-nickel", "hidden")
     OV.disable_recipe({"molten-nickel-smelting"})
   end
 else
@@ -35,7 +35,7 @@ else
   angelsmods.functions.add_flag("cathode-nickel", "hidden")
   angelsmods.functions.add_flag("solid-nickel-carbonyl", "hidden")
   angelsmods.functions.add_flag("ingot-nickel", "hidden")
-  data.raw.fluid["liquid-molten-nickel"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-nickel", "hidden")
   OV.disable_recipe({"nickel-ore-processing", "nickel-processed-processing"})
   OV.disable_recipe({"processed-nickel-smelting", "pellet-nickel-smelting"})
   OV.disable_recipe({"nickel-ore-smelting", "cathode-nickel-smelting", "solid-nickel-carbonyl-smelting"})

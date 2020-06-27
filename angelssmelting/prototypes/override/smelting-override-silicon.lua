@@ -23,16 +23,16 @@ if angelsmods.trigger.smelting_products["silicon"].ingot then
   if angelsmods.trigger.smelting_products["silicon"].mono or angelsmods.trigger.smelting_products["silicon"].wafer then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-silicon"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-silicon", "hidden")
     OV.disable_recipe({"molten-silicon-smelting"})
   end
 else
   angelsmods.functions.add_flag("processed-silica", "hidden")
   angelsmods.functions.add_flag("pellet-silica", "hidden")
-  data.raw.fluid["liquid-trichlorosilane"].hidden = true
-  data.raw.fluid["gas-silane"].hidden = true
+  angelsmods.functions.add_flag("liquid-trichlorosilane", "hidden")
+  angelsmods.functions.add_flag("gas-silane", "hidden")
   angelsmods.functions.add_flag("ingot-silicon", "hidden")
-  data.raw.fluid["liquid-molten-silicon"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-silicon", "hidden")
   OV.disable_recipe({"silica-ore-processing", "silica-processed-processing"})
   OV.disable_recipe({"processed-silicon-smelting", "pellet-silicon-smelting"})
   OV.disable_recipe({"silicon-ore-smelting", "liquid-trichlorosilane-smelting", "gas-silane-smelting"})

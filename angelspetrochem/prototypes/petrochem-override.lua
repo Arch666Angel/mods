@@ -159,9 +159,9 @@ end
 --PETROCHEM
 if mods["bobplates"] and data.raw["fluid"]["deuterium"] then -- deuterium processing
   OV.global_replace_item("deuterium", "gas-deuterium")
-  data.raw.fluid["deuterium"].hidden = true
+  angelsmods.functions.add_flag("deuterium", "hidden")
   OV.global_replace_item("heavy-water", "liquid-water-heavy")
-  data.raw.fluid["heavy-water"].hidden = true
+  angelsmods.functions.add_flag("heavy-water", "hidden")
 
   OV.disable_recipe({"bob-heavy-water", "heavy-water-electrolysis"})
 
@@ -175,12 +175,12 @@ elseif angelsmods.industries and angelsmods.industries.overhaul then
 elseif data.raw["fluid"]["deuterium"] then
   -- does this ever happen? Leaving this here "just in case"
 else
-  data.raw.fluid["gas-enriched-hydrogen-sulfide"].hidden = true
-  data.raw.fluid["liquid-water-semiheavy-1"].hidden = true
-  data.raw.fluid["liquid-water-semiheavy-2"].hidden = true
-  data.raw.fluid["liquid-water-semiheavy-3"].hidden = true
-  data.raw.fluid["liquid-water-heavy"].hidden = true
-  data.raw.fluid["gas-deuterium"].hidden = true
+  angelsmods.functions.add_flag("gas-enriched-hydrogen-sulfide", "hidden")
+  angelsmods.functions.add_flag("liquid-water-semiheavy-1", "hidden")
+  angelsmods.functions.add_flag("liquid-water-semiheavy-2", "hidden")
+  angelsmods.functions.add_flag("liquid-water-semiheavy-3", "hidden")
+  angelsmods.functions.add_flag("liquid-water-heavy", "hidden")
+  angelsmods.functions.add_flag("gas-deuterium", "hidden")
 
   OV.disable_recipe(
     {

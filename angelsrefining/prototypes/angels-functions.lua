@@ -890,6 +890,19 @@ function angelsmods.functions.add_flag(entity, flag)
     else
       to_add.flags = {flag}
     end
+    return
+  end
+  to_add = data.raw.fluid[entity]
+  if to_add then
+    if flag == "hidden" then
+      to_add.hidden = true
+      angelsmods.functions.disable_barreling_recipes(entity)
+    elseif to_add.flags then
+      table.insert(to_add.flags, flag)
+    else
+      to_add.flags = {flag}
+    end
+    return
   end
 end
 
@@ -1178,6 +1191,7 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
     return
   end
 
+  local groups = data.raw["item-group"]
   local subgroups = data.raw["item-subgroup"]
   local recipes = data.raw.recipe
   local items = data.raw.item
@@ -1187,33 +1201,38 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
 
   for fn, fd in pairs(fluids_to_move) do
     local recipe = recipes[fn]
-    local subgroup = fd.subgroup or (recipe and recipe.subgroup) or "vanilla"
-    local order = fd.order or (recipe and recipe.order) or false
+
+    local subgroup_name = fd.subgroup or (recipe and recipe.subgroup) or "vanilla"
+    local subgroup = subgroups[subgroup_name]
+    local subgroup_order = subgroup and subgroup.order or "z"
+
+    local group = groups[subgroup and subgroup.group or "vanilla"]
+    local group_order = group and group.order or "z"
+
     local barrel = items[fn .. "-barrel"]
 
     if subgroup and barrel then
-      if not data.raw["item-subgroup"]["angels-fluid-control-" .. subgroup] then
+      barrel.subgroup = "angels-fluid-control-" .. subgroup_name
+      barrel.order = fd.order or (recipe and recipe.order) or "z"
+
+      if not data.raw["item-subgroup"][barrel.subgroup] then
         data:extend(
           {
             {
               type = "item-subgroup",
-              name = "angels-fluid-control-" .. subgroup,
+              name = barrel.subgroup,
               group = "angels-fluid-control",
-              order = "z-" .. (subgroups[subgroup] and subgroups[subgroup].order or subgroup)
+              order = "z-" .. group_order .. "-" .. subgroup_order
             }
           }
         )
       end
-      order = order or barrel.order
-
-      barrel.subgroup = "angels-fluid-control-" .. subgroup
-      barrel.order = order
 
       if recipes["fill-" .. fn .. "-barrel"] then
-        recipes["fill-" .. fn .. "-barrel"].subgroup = "angels-fluid-control-" .. subgroup
-        recipes["fill-" .. fn .. "-barrel"].order = order .. "-a"
-        recipes["empty-" .. fn .. "-barrel"].subgroup = "angels-fluid-control-" .. subgroup
-        recipes["empty-" .. fn .. "-barrel"].order = order .. "-b"
+        recipes["fill-" .. fn .. "-barrel"].subgroup = barrel.subgroup
+        recipes["fill-" .. fn .. "-barrel"].order = barrel.order .. "-a"
+        recipes["empty-" .. fn .. "-barrel"].subgroup = barrel.subgroup
+        recipes["empty-" .. fn .. "-barrel"].order = barrel.order .. "-b"
       end
     end
   end
