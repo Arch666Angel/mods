@@ -27,6 +27,21 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
     OV.global_replace_technology("aluminium-processing", "angels-aluminium-smelting-1")
   end
 
+  OV.patch_recipes(
+    {
+      {
+        name = "filter-ceramic",
+        ingredients =
+        {
+          {type="item", name="plastic-bar", amount=0},
+          {type="item", name=mods["bobplates"] and "alumina" or "solid-aluminium-oxide", amount=1},
+        }
+      }
+    }
+  )
+  OV.remove_prereq("slag-processing-2", "plastics")
+  OV.add_prereq("slag-processing-2", "angels-aluminium-smelting-1")
+
   if angelsmods.trigger.smelting_products["aluminium"].plate then
   else
     -- no need for molten recipe

@@ -840,7 +840,8 @@ data:extend(
       energy_required = 1,
       enabled = false,
       ingredients = {
-        {type = "item", name = "filter-frame", amount = 1}
+        {type = "item", name = "filter-frame", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 2}
       },
       results = {
         {type = "item", name = "filter-ceramic", amount = 1}

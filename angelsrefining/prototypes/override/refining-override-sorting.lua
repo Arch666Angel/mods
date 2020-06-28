@@ -783,19 +783,6 @@ OV.patch_recipes(
           slag_color
         )
       }
-    ),
-    {
-      {
-        name = "filter-ceramic",
-        ingredients =
-        {
-          {
-            type = "item",
-            name = (mods["angelssmelting"] or special_vanilla) and "plastic-bar" or "solid-aluminium-oxide",
-            amount = (mods["angelssmelting"] or special_vanilla) and 2 or 1
-          }
-        }
-      }
-    }
+    )
   }
 )

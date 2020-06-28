@@ -427,7 +427,7 @@ data:extend(
       icon_size = 64,
       prerequisites = {
         "slag-processing-1",
-        mods["angelssmelting"] and "angels-aluminium-smelting-1" or nil
+        "plastics"
       },
       effects = {
         {
