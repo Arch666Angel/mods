@@ -160,7 +160,7 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "b[AMOX]-b[recovery]",
+    order = "c[thorium]-a[processing]",
     crafting_machine_tint = 
     {
       primary = tint_colors.red,

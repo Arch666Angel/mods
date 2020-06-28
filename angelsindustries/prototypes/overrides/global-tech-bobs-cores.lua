@@ -13,6 +13,8 @@ if angelsmods.industries.tech then
     core_replace("gas-canisters", "basic", "processing")
     core_replace("ceramics", "basic", "processing")
 
+    core_replace("bobingabout-enrichment-process", "processing", "energy")
+
     if not mods["bobtech"] then
       core_replace("alien-blue-research", "processing", "war")
       core_replace("alien-orange-research", "processing", "war")
