@@ -6,7 +6,9 @@ data:extend(
       icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
       icon_size = 128,
       order = "c-a",
-      prerequisites = {},
+      prerequisites = {
+        "steel-processing"
+      },
       effects = {
         {
           type = "unlock-recipe",

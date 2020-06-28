@@ -5,7 +5,10 @@ data:extend(
       name = "water-treatment",
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
-      prerequisites = {},
+      prerequisites = {
+        "steel-processing",
+        "electronics"
+      },
       effects = {
         {
           type = "unlock-recipe",
@@ -40,7 +43,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-treatment",
-        "electronics"
+        "ore-floatation"
       },
       effects = {
         {
@@ -67,7 +70,8 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 15
       },

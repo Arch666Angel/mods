@@ -6,7 +6,9 @@ data:extend(
       name = "angels-metallurgy-1",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 128,
-      prerequisites = {},
+      prerequisites = {
+        "steel-processing"
+      },
       effects = {
         {
           type = "unlock-recipe",

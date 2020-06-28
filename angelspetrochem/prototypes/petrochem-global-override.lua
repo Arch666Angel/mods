@@ -160,6 +160,7 @@ require("prototypes.global-override.bobplates")
 require("prototypes.global-override.bobrevamp")
 require("prototypes.global-override.bobwarfare")
 require("prototypes.global-override.bobassembly")
+require("prototypes.global-override.bobtech")
 
 if bobmods then
   if bobmods.greenhouse then

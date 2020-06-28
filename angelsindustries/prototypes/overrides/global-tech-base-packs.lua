@@ -29,8 +29,12 @@ if angelsmods.industries.tech then
   ) do
     pack_replace(tech_name, "red", "grey")
   end
+  -- BASE GAME
   OV.remove_prereq("turrets", "military")
   OV.add_prereq("turrets", "angels-components-weapons-basic")
+  -- REFINING
+  OV.remove_prereq("water-treatment", "electronics")
+  OV.remove_prereq("water-treatment", "steel-processing")
 
   -------------------------------------------------------------------------------
   -- RED SCIENCE PACKS ----------------------------------------------------------

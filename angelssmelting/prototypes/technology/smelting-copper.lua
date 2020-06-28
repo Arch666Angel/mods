@@ -6,7 +6,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-copper.png",
       icon_size = 128,
       prerequisites = {
-        "angels-metallurgy-1"
+        "angels-metallurgy-1",
+        "ore-crushing"
       },
       effects = {
         {

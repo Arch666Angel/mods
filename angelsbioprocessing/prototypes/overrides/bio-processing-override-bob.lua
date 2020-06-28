@@ -1,5 +1,11 @@
+local OV = angelsmods.functions.OV
+
+if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
+  OV.add_prereq("bio-wood-processing", "automation-science-pack")
+end
+
+-- everything below this should be rewritten and organized as it's becomming a mess
 if bobmods then
-  local OV = angelsmods.functions.OV
 
   if mods["bobgreenhouse"] then
     OV.add_prereq("bob-fertiliser", "bio-farm-2")

@@ -44,7 +44,9 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/petrochem-tech.png",
       icon_size = 128,
       prerequisites = {
-        "basic-chemistry"
+        "basic-chemistry",
+        "electronics",
+        "steel-processing"
       },
       effects = {
         {

@@ -14,6 +14,7 @@ Date: ????
     - Fixed some drawing boxes on bio buildings
     - Fixed graphics of bob arboretum were offset
     - Fixed localisation of desert/temperate farming upgrade technology
+    - Added some missing key technology prerequisites
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.11
 Date: 05.06.2020
