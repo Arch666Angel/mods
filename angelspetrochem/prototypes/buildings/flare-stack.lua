@@ -31,6 +31,7 @@ data:extend(
     result_inventory_size = 1,
     crafting_speed = 2,
     source_inventory_size = 1,
+    show_recipe_icon = false,
     resistances =
     {
       {

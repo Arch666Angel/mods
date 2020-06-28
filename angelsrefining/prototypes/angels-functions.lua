@@ -895,7 +895,14 @@ end
 -------------------------------------------------------------------------------
 -- MODIFY FLAGS ---------------------------------------------------------------
 -------------------------------------------------------------------------------
-function angelsmods.functions.add_flag(entity, flag)
+function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
+  if type(entity) == "table" then
+    for _, ent in pairs(entity) do
+      angelsmods.functions.add_flag(ent, flag)
+    end
+    return
+  end
+
   local to_add = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
   if to_add then
     if to_add.flags then
@@ -920,7 +927,14 @@ function angelsmods.functions.add_flag(entity, flag)
   end
 end
 
-function angelsmods.functions.remove_flag(entity, flag_to_remove)
+function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
+  if type(entity) == "table" then
+    for _, ent in pairs(entity) do
+      angelsmods.functions.remove_flag(ent, flag)
+    end
+    return
+  end
+
   local to_remove = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
   if to_remove then
     for flag_index, flag in pairs(to_remove.flags or {}) do
@@ -987,28 +1001,32 @@ end
 
 function angelsmods.functions.modify_barreling_recipes()
   angelsmods.functions.modify_barreling_icon()
-  local auto_barreling = angelsmods.trigger.enable_auto_barreling
-  for _, recipe in pairs(data.raw.recipe) do
-    if recipe.subgroup == "empty-barrel" or recipe.subgroup == "fill-barrel" then
-      if auto_barreling then
-        recipe.hidden = true
+  if angelsmods.trigger.enable_auto_barreling then
+    local items = data.raw.item
+    local recipes = data.raw.recipe
+
+    for fn,_ in pairs(data.raw.fluid) do
+      if data.raw.item[fn .. "-barrel"] then
+        if recipes["fill-"..fn.."-barrel"] then
+          recipes["fill-"..fn.."-barrel"].hidden = true
+          recipes["fill-"..fn.."-barrel"].category = "barreling-pump"
+        end
+        if recipes["empty-"..fn.."-barrel"] then
+          recipes["empty-"..fn.."-barrel"].hidden = true
+          recipes["empty-"..fn.."-barrel"].category = "barreling-pump"
+        end
       end
-      recipe.category = "barreling-pump"
     end
   end
 end
 
 function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
-  local auto_barreling = angelsmods.trigger.enable_auto_barreling
-  -- no need to modify since it will happen automatically
-  if auto_barreling then
-    return
-  end
-
   local groups = data.raw["item-group"]
   local subgroups = data.raw["item-subgroup"]
-  local recipes = data.raw.recipe
+
   local items = data.raw.item
+  local recipes = data.raw.recipe
+  
   if not fluids_to_move or #fluids_to_move == 0 then
     fluids_to_move = data.raw.fluid
   end

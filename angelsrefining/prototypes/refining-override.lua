@@ -24,7 +24,8 @@ data.raw.item["refined-hazard-concrete"].stack_size = angelsmods.trigger.pavemen
 data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 
 --OVERRIDE FOR BOBs
---if bobmods and bobmods.plates then
+require("prototypes.override.refining-override-bobmining")
+require("prototypes.override.refining-override-bobplates")
 require("prototypes.override.refining-override-bobgems")
 require("prototypes.override.refining-override-bobrevamp")
 

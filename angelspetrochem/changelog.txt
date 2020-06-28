@@ -13,6 +13,7 @@ Date: ??
     - Fixed the Oil Well was still called Crude Oil
     - Fixed bobs version of liquid fuel barreling recipe was still available
     - Fixed missing dependency of nitroglycerin processing on sulfur processing
+    - Fixed bobs air compressors were hidden, but the items were still showing
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020

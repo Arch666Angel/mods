@@ -1,6 +1,43 @@
+local OV = angelsmods.functions.OV
+local move_item = angelsmods.functions.move_item
+
+-------------------------------------------------------------------------------
+-- AIR COMPRESSOR -------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  angelsmods.functions.add_flag({
+    "void-pump",
+    "air-pump",
+    "air-pump-2",
+    "air-pump-3",
+    "air-pump-4"
+  }, "hidden")
+  
+  angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump", nil)
+  angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-2", nil)
+  angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-3", nil)
+  angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-4", nil)
+  
+  --OV.remove_unlock("air-compressor-1", "bob-liquid-air")
+  OV.disable_technology(
+    {
+      "void-fluid",
+      "air-compressor-1",
+      "air-compressor-2",
+      "air-compressor-3",
+      "air-compressor-4"
+    }
+  )
+end
+
+
+
+
+
+
+
 if bobmods then
-  local OV = angelsmods.functions.OV
-  local move_item = angelsmods.functions.move_item
+
 
   if bobmods.plates then
     -- move fluid tanks
@@ -270,12 +307,6 @@ if bobmods then
     OV.disable_recipe({"water-electrolysis", "salt-water-electrolysis", "salt"})
     OV.remove_unlock("chemical-processing-2", "hydrogen-chloride")
     OV.remove_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
-
-    --air-compressor-1
-    --OV.remove_unlock("air-compressor-1", "bob-liquid-air")
-    OV.disable_technology(
-      {"void-fluid", "air-compressor-1", "air-compressor-2", "air-compressor-3", "air-compressor-4"}
-    )
 
     --nitrogen processing
     OV.global_replace_technology("nitrogen-processing", "angels-nitrogen-processing-2")

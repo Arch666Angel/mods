@@ -159,13 +159,3 @@ if mods["bobplates"] then
   )
 end
 
--------------------------------------------------------------------------------
--- DISABLE WATER-MINERS -------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobplates"] and data.raw.technology["water-miner-1"] then
-  data.raw.technology["water-miner-1"] = nil
-  data.raw.technology["water-miner-2"] = nil
-  data.raw.technology["water-miner-3"] = nil
-  data.raw.technology["water-miner-4"] = nil
-  data.raw.technology["water-miner-5"] = nil
-end

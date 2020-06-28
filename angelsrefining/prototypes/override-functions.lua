@@ -407,9 +407,6 @@ ov_functions.remove_output = function(recipe, item)
   end
 end
 
--------------------------------------------------------------------------------
--- OVERRIDE ITEM FUNCTIONS ----------------------------------------------------
--------------------------------------------------------------------------------
 ov_functions.global_replace_item = function(old, new) -- replace all occurrences of old in recipes with new (old may be a table containing a list of items)
   if type(old) == "table" then
     for ik, item in pairs(old) do
@@ -462,6 +459,9 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
   end
 end
 
+-------------------------------------------------------------------------------
+-- OVERRIDE ITEM FUNCTIONS ----------------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.global_replace_science_packs = function(primary_old, secondary_old, new, amount) -- if a technology uses primary_old science packs for research, replaces them with new science packs and also removes any science packs in secondary_old (may be a table containing a list of packs)
   substitution_table.science_packs[primary_old] = {add = new, amount = amount or 1}
   if secondary_old then
@@ -611,7 +611,6 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
   if data.raw.fluid[fluid] then
     --declare variables moving forward
     local fluid_s = data.raw.fluid[fluid]
-    log(serpent.block(fluid_s))
     local fluid_i
     local F_Fill
     local F_Empty
