@@ -10,7 +10,10 @@ if angelsmods.industries.tech then
     core_replace("grinding", "basic", "processing")
     core_replace("polishing", "basic", "processing")
     core_replace("mixing-furnace", "basic", "processing")
+    core_replace("steel-mixing-furnace", "basic", "processing")
     core_replace("electric-mixing-furnace", "basic", "processing")
+    core_replace("steel-chemical-furnace", "basic", "processing")
+    core_replace("electric-chemical-furnace", "basic", "processing")
     core_replace("gas-canisters", "basic", "processing")
     core_replace("ceramics", "basic", "processing")
 
