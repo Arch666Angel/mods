@@ -17,7 +17,8 @@ Date: ???
     - Fixed bobs version of pure water barreling recipe was still available
     - Fixed bobs water miners were hidden, but the items were still showing
     - Fixed ceramic filter used alumina in special vanilla
-    - Fixed some missing technology prerequisites
+    - Fixed some missing technology prerequisites (316)
+    - Fixed in some old saves washing tech was still disabled (316)
   Modding:
     - Moved is_special_vanilla(ore_triggers) to angelsmods.functions.is_special_vanilla() (276)
     - Moved ore_exist(ore_name) to angelsmods.functions.ore_exists(ore_name) (276)
