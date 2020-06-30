@@ -113,3 +113,6 @@ require("prototypes.technology.water-treatment-technology")
 
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()
+
+
+require('prototypes/map-gen-presets')
