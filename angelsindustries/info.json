@@ -15,6 +15,7 @@
     "angelssmelting >= 0.6.7",
     "(?)bobtech >= 0.18.3",
     "(?)aai-industry >= 0.4.12",
-    "(?)bobrevamp >= 0.18.5"
+    "(?)bobrevamp >= 0.18.5",
+    "(?)bobassembly >= 0.18.6"
   ]
 }

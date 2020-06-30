@@ -9,7 +9,11 @@ if angelsmods.industries.tech then
     core_replace("electrolysis-2", "basic", "processing")
     core_replace("grinding", "basic", "processing")
     core_replace("polishing", "basic", "processing")
-    core_replace("mixing-steel-furnace", "basic", "processing")
+    core_replace("mixing-furnace", "basic", "processing")
+    core_replace("steel-mixing-furnace", "basic", "processing")
+    core_replace("electric-mixing-furnace", "basic", "processing")
+    core_replace("steel-chemical-furnace", "basic", "processing")
+    core_replace("electric-chemical-furnace", "basic", "processing")
     core_replace("gas-canisters", "basic", "processing")
     core_replace("ceramics", "basic", "processing")
 
@@ -42,9 +46,9 @@ if angelsmods.industries.tech then
     end
     --oil-furnaces (and metal-mixing)
     if settings.startup["bobmods-assembly-oilfurnaces"].value then
-      core_replace("oil-steel-furnace", "basic", "processing")
-      core_replace("oil-mixing-steel-furnace", "basic", "processing")
-      core_replace("oil-chemical-steel-furnace", "basic", "processing")
+      core_replace("fluid-furnace", "logistic", "processing")
+      core_replace("fluid-mixing-furnace", "logistic", "processing")
+      core_replace("fluid-chemical-furnace", "logistic", "processing")
     end
     if settings.startup["bobmods-assembly-multipurposefurnaces"].value then
       core_replace("multi-purpose-furnace-1", "basic", "processing")
