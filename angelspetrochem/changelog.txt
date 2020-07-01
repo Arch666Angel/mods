@@ -15,6 +15,7 @@ Date: ??
     - Fixed missing dependency of nitroglycerin processing on sulfur processing
     - Fixed bobs air compressors were hidden, but the items were still showing
     - Added some missing dependencies on technologies
+    - Fixed accidently enabling platinum ore when angels industries is not present
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020

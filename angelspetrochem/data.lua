@@ -17,7 +17,7 @@ angelsmods.trigger.disable_bobs_distilleries = mods["bobplates"] and settings.st
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 if mods["bobplates"] or mods["angelsindustries"] and settings.startup["angels-enable-industries"].value then
   angelsmods.trigger.ores["fluorite"] = true
-  angelsmods.trigger.ores["platinum"] = mods["angelssmelting"] and true or false
+  angelsmods.trigger.ores["platinum"] = angelsmods.industries and angelsmods.industries.overhaul and true or false
 end
 
 --LOAD PROTOTYPES
