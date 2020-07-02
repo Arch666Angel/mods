@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.9
+Date: ??
+  Changes:
+    - Added compatibility for the RTG's from Space Exploration (283)
+    - Added compatibility for the Adaptive armours from Space Exploration (283)
+    - Added compatibility for the extra Energy shields from Space Exploration (283)
+---------------------------------------------------------------------------------------------------
 Version: 0.5.8
 Date: 01.06.2020
   Bugfixes:

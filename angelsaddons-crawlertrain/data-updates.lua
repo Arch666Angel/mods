@@ -7,16 +7,20 @@ require("prototypes.technology.crawler-technology-tech-updates")
 -- base game
 funcs.update_equipment("energy-shield-equipment", "energy-shield-equipment", "angels-basegame-defense")
 funcs.update_equipment("energy-shield-equipment", "energy-shield-mk2-equipment", "angels-basegame-defense")
+
 funcs.update_equipment("battery-equipment", "battery-equipment", "angels-basegame-energy")
 funcs.update_equipment("battery-equipment", "battery-mk2-equipment", "angels-basegame-energy")
 funcs.update_equipment("solar-panel-equipment", "solar-panel-equipment", "angels-basegame-energy")
 funcs.update_equipment("generator-equipment", "fusion-reactor-equipment", "angels-basegame-energy")
+
 funcs.update_equipment("active-defense-equipment", "personal-laser-defense-equipment", "angels-basegame-attack")
 funcs.update_equipment("active-defense-equipment", "discharge-defense-equipment", "angels-basegame-attack")
+
+funcs.update_equipment("movement-bonus-equipment", "exoskeleton-equipment", "angels-basegame-movement")
 --funcs.update_equipment("belt-immunity-equipment", "belt-immunity-equipment", "angels-basegame-movement")
+
 funcs.update_equipment("roboport-equipment", "personal-roboport-equipment", "angels-basegame-construction")
 funcs.update_equipment("roboport-equipment", "personal-roboport-mk2-equipment", "angels-basegame-construction")
-funcs.update_equipment("movement-bonus-equipment", "exoskeleton-equipment", "angels-basegame-movement")
 
 funcs.update_equipment_grid(
   "angels-crawler-locomotive",
@@ -154,4 +158,19 @@ if mods["bobvehicleequipment"] then
       "angels-basegame-construction"
     }
   )
+end
+
+if mods["space-exploration"] then
+  funcs.update_equipment("generator-equipment", "se-rtg-equipment", "angels-basegame-energy")
+  funcs.update_equipment("generator-equipment", "se-rtg-equipment-2", "angels-basegame-energy")
+
+  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-1", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-2", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-3", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-4", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-5", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk3-equipment", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk4-equipment", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk5-equipment", "angels-basegame-defense")
+  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk6-equipment", "angels-basegame-defense")
 end
