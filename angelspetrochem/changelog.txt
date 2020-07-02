@@ -8,6 +8,7 @@ Date: ??
     - Moved chlorine processing 2 to green science (required for bobwarfare)
     - Nitroglycering now takes nitric and sulfuric acid directly instead of a mixture of both
     - Added setting to disable bobs distilleries (322)
+    - Added setting to disable base game chemical plant (236)
   Bugfixes:
     - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
     - Fixed the Oil Well was still called Crude Oil
@@ -15,7 +16,7 @@ Date: ??
     - Fixed missing dependency of nitroglycerin processing on sulfur processing
     - Fixed bobs air compressors were hidden, but the items were still showing
     - Added some missing dependencies on technologies
-    - Fixed accidently enabling platinum ore when angels industries is not present
+    - Fixed accidently enabling platinum ore when angels industries is not present (287)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020
