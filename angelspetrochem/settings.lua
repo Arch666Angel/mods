@@ -5,56 +5,56 @@ data:extend(
       name = "angels-enable-converter",
       setting_type = "startup",
       default_value = true,
-      order = "a"
+      order = "aa"
     },
     {
       type = "bool-setting",
       name = "angels-hide-converter",
       setting_type = "startup",
       default_value = true,
-      order = "b"
+      order = "ab"
     },
     {
       type = "bool-setting",
       name = "angels-enable-acids",
       setting_type = "startup",
       default_value = true,
-      order = "c"
+      order = "b"
     },
     {
       type = "bool-setting",
       name = "angels-disable-bobs-electrolysers",
       setting_type = "startup",
       default_value = true,
-      order = "da"
+      order = "ca"
     },
     {
       type = "bool-setting",
       name = "angels-disable-vanilla-chemical-plants",
       setting_type = "startup",
       default_value = true,
-      order = "db"
+      order = "cb"
     },
     {
       type = "bool-setting",
       name = "angels-disable-bobs-chemical-plants",
       setting_type = "startup",
       default_value = true,
-      order = "db"
+      order = "cb"
     },
     {
       type = "bool-setting",
       name = "angels-disable-bobs-distilleries",
       setting_type = "startup",
       default_value = true,
-      order = "dc"
+      order = "cc"
     },
     {
       type = "bool-setting",
       name = "angels-show-chemical-formula",
       setting_type = "startup",
       default_value = true,
-      order = "e",
+      order = "d",
     }
   }
 )

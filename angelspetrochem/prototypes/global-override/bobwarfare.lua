@@ -85,8 +85,7 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   -- GLYCEROL -----------------------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.global_replace_item("glycerol", "gas-glycerol")
-  data.raw.fluid["glycerol"].hidden = true
+  OV.converter_fluid("glycerol", "gas-glycerol")
   OV.disable_recipe({"glycerol"})
   angelsmods.functions.disable_barreling_recipes("glycerol")
 

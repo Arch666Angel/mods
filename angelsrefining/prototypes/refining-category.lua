@@ -420,6 +420,28 @@ data:extend(
       group = "angels-fluid-control",
       order = "z"
     },
+    --CONVERTER
+    {
+      type = "item-group",
+      name = "angels-fluid-converter",
+      order = "la[angels]-c[petrochem]-d",
+      inventory_order = "la[angels]-c[petrochem]-c",
+      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
+      --icon_size = 64
+      icons = {
+        {
+          icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
+          icon_size = 128,
+          scale = 0.5
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 64 / 32 * 0.35,
+          shift = {20, -20}
+        }
+      }
+    },
     --VOID
     {
       type = "item-group",

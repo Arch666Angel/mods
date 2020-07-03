@@ -47,6 +47,14 @@ if mods["bobrevamp"] then
   end
 
   -----------------------------------------------------------------------------
+  -- REGULAR MODE -------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  OV.disable_recipe("petroleum-gas-sweetening")
+  
+  angelsmods.functions.add_flag("sour-gas", "hidden")
+  angelsmods.functions.disable_barreling_recipes("sour-gas")
+
+  -----------------------------------------------------------------------------
   -- HARDMODE -----------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobplates"] and settings.startup["bobmods-revamp-hardmode"].value then
@@ -58,64 +66,37 @@ if mods["bobrevamp"] then
     --make pre-reqs match new unlock point
     OV.add_prereq("battery-2", "chlorine-processing-3")
 
-    if data.raw.fluid["carbon-dioxide"] then
-      OV.global_replace_item("carbon-dioxide", "gas-carbon-dioxide")
-      data.raw.fluid["carbon-dioxide"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
-    end
+    OV.converter_fluid("carbon-dioxide", "gas-carbon-dioxide")
+    angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
 
-    if data.raw.item["sodium-carbonate"] then
-      OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
-      angelsmods.functions.add_flag("sodium-carbonate", "hidden")
-    end
+    OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
+    angelsmods.functions.add_flag("sodium-carbonate", "hidden")
 
-    if data.raw.item["sodium-perchlorate"] then
-      OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
-      angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
-    end
+    OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
+    angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
 
-    if data.raw.item["sodium-chlorate"] then
-      OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
-      angelsmods.functions.add_flag("sodium-chlorate", "hidden")
-    end
+    OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
+    angelsmods.functions.add_flag("sodium-chlorate", "hidden")
 
-    if data.raw.fluid["ammonia"] then
-      OV.global_replace_item("ammonia", "gas-ammonia")
-      data.raw.fluid["ammonia"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("ammonia")
-    end
+    OV.converter_fluid("ammonia", "gas-ammonia")
+    angelsmods.functions.disable_barreling_recipes("ammonia")
 
-    if data.raw.fluid["nitric-oxide"] then
-      OV.global_replace_item("nitric-oxide", "gas-nitrogen-monoxide")
-      data.raw.fluid["nitric-oxide"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("nitric-oxide")
-    end
+    OV.converter_fluid("nitric-oxide", "gas-nitrogen-monoxide")
+    angelsmods.functions.disable_barreling_recipes("nitric-oxide")
 
-    if data.raw.fluid["nitric-dioxide"] then
-      OV.global_replace_item("nitric-dioxide", "gas-nitrogen-dioxide")
-      data.raw.fluid["nitric-dioxide"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("nitric-dioxide")
-    end
+    OV.converter_fluid("nitric-dioxide", "gas-nitrogen-dioxide")
+    angelsmods.functions.disable_barreling_recipes("nitric-dioxide")
 
-    if data.raw.fluid["dinitrogen-tetroxide"] then
-      OV.global_replace_item("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
-      data.raw.fluid["dinitrogen-tetroxide"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("dinitrogen-tetroxide")
-    end
+    OV.converter_fluid("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
+    angelsmods.functions.disable_barreling_recipes("dinitrogen-tetroxide")
 
-    if data.raw.fluid["hydrogen-peroxide"] then
-      OV.global_replace_item("hydrogen-peroxide", "gas-hydrogen-peroxide")
-      data.raw.fluid["hydrogen-peroxide"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("hydrogen-peroxide")
-    end
+    OV.converter_fluid("hydrogen-peroxide", "gas-hydrogen-peroxide")
+    angelsmods.functions.disable_barreling_recipes("hydrogen-peroxide")
 
-    if data.raw.fluid["hydrazine"] then
-      OV.global_replace_item("hydrazine", "gas-hydrazine")
-      data.raw.fluid["hydrazine"].hidden = true
-      angelsmods.functions.disable_barreling_recipes("hydrazine")
-    end
-
+    OV.converter_fluid("hydrazine", "gas-hydrazine")
+    angelsmods.functions.disable_barreling_recipes("hydrazine")
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
+
     --OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
     OV.remove_unlock("rocket-fuel", "dinitrogen-tetroxide")
   end
@@ -129,8 +110,8 @@ if mods["bobrevamp"] then
 
     data.raw["item"]["sodium-cobaltate"].icon = "__angelspetrochem__/graphics/icons/solid-sodium-cobaltate.png"
     data.raw["item"]["sodium-cobaltate"].icon_size = 32
-    data.raw["item"]["sodium-cobaltate"].subgroup = "petrochem-sodium"
-    data.raw["item"]["sodium-cobaltate"].order = "b[sodium]-d[solid-sodium-cobaltate]"
+    move_item("sodium-cobaltate", "petrochem-sodium", "b[sodium]-d[solid-sodium-cobaltate]")
+    
     OV.patch_recipes(
       {
         {
@@ -151,10 +132,10 @@ if mods["bobrevamp"] then
         }
       )
 
-      data.raw.fluid["brine"].hidden = true
+      angelsmods.functions.add_flag("brine", "hidden")
       angelsmods.functions.disable_barreling_recipes("brine")
 
-      data.raw.fluid["ammoniated-brine"].hidden = true
+      angelsmods.functions.add_flag("ammoniated-brine", "hidden")
       angelsmods.functions.disable_barreling_recipes("ammoniated-brine")
 
       angelsmods.functions.add_flag("sodium-bicarbonate", "hidden")
@@ -190,7 +171,7 @@ if mods["bobrevamp"] then
           }
         }
       )
-      angelsmods.functions.add_flag("ammonium-chloride", "hidden")
+      OV.converter_fluid("ammonium-chloride", "gas-ammonium-chloride")
     end
   end
 

@@ -1,116 +1,16 @@
 local OV = angelsmods.functions.OV
+
 --OVERRIDE FOR BASE
-data.raw["item"]["sulfur"].icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png"
-data.raw["item"]["sulfur"].icon_size = 32
-data.raw["item"]["sulfur"].icon_mipmaps = 1
-
-OV.global_replace_item("heavy-oil", "liquid-naphtha")
-OV.global_replace_item("light-oil", "liquid-fuel-oil")
-OV.disable_recipe("lubricant")
-OV.add_unlock("lubricant", "mineral-oil-lubricant")
-OV.global_replace_item("petroleum-gas", "gas-methane")
-OV.global_replace_item("sulfuric-acid", "liquid-sulfuric-acid")
-OV.global_replace_icon(
-  {"__base__/graphics/icons/fluid/sulfuric-acid.png"},
-  {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
-)
-
--- Balance/fix rocket fuel
-OV.add_prereq("rocket-fuel", "angels-nitrogen-processing-4")
-OV.add_unlock("rocket-fuel", "rocket-oxidizer-capsule")
-OV.add_unlock("rocket-fuel", "rocket-fuel-capsule")
-OV.set_science_pack(
-  "rocket-fuel",
-  {
-    "automation-science-pack",
-    "logistic-science-pack",
-    "chemical-science-pack",
-    "utility-science-pack"
-  },
-  1
-)
-OV.set_research_difficulty("rocket-fuel", 15, 50)
-
--- Update kovarex for nuclear fuel separation
-OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
-OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
-
---hide vanilla fluids if converter recipes setting not active
-if not angelsmods.trigger.enableconverter then
-  data.raw["fluid"]["heavy-oil"].hidden = true
-  data.raw["fluid"]["light-oil"].hidden = true
-  data.raw["fluid"]["petroleum-gas"].hidden = true
-  data.raw["fluid"]["sulfuric-acid"].hidden = true
-end
-data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
-data.raw["recipe"]["explosives"].order = "a[explosives]-a"
-data.raw["recipe"]["explosives"].icon_size = 32
-data.raw["recipe"]["explosives"].icons = {
-  {
-    icon = "__base__/graphics/icons/explosives.png",
-    icon_size = 64
-  },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
-
-data.raw["item"]["chemical-plant"].subgroup = "petrochem-buildings-chemical-plant"
-data.raw["item"]["chemical-plant"].order = "a[regular]-aa[vanilla]"
-data.raw["item"]["chemical-plant"].icon = nil
-data.raw["item"]["chemical-plant"].icon_size = 32
-data.raw["item"]["chemical-plant"].icons = {
-  {
-    icon = "__base__/graphics/icons/chemical-plant.png",
-    icon_size = 64
-  },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
-
-data.raw["item"]["oil-refinery"].subgroup = "petrochem-buildings-oil-refinery"
-data.raw["item"]["oil-refinery"].order = "b[oil-refinery]-a"
-data.raw["item"]["oil-refinery"].icon = nil
-data.raw["item"]["oil-refinery"].icon_size = 32
-data.raw["item"]["oil-refinery"].icons = {
-  {
-    icon = "__base__/graphics/icons/oil-refinery.png",
-    icon_size = 64
-  },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
-
-OV.disable_recipe({"plastic-bar"})
-
---oil processing
-OV.global_replace_technology("oil-processing", "angels-oil-processing")
-OV.global_replace_technology("advanced-oil-processing", "angels-advanced-oil-processing")
-
--- Disable coal-liquefaction, enough other recipes that works for this
-OV.disable_technology({"coal-liquefaction"})
-OV.disable_recipe({"coal-liquefaction"})
-
---sulfur processing
-OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
+require("prototypes.global-override.base-game")
 
 --RECIPE TINTS
 for _, recipe in pairs(data.raw.recipe) do
-  if
-    recipe.category == "liquifying" or recipe.category == "chemistry" or
-      recipe.category == "advanced-chemistry" and (not recipe.crafting_machine_tint)
-   then
+  if (not recipe.crafting_machine_tint) and
+     (recipe.category == "liquifying" or
+      recipe.category == "chemistry" or
+      recipe.category == "advanced-chemistry")
+  then
+    log(string.format("Recipe '%s' does not have a crafting_machine_tint set!", recipe.name))
     recipe.crafting_machine_tint = {
       primary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255},
       secondary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255},
@@ -120,40 +20,7 @@ for _, recipe in pairs(data.raw.recipe) do
 end
 
 --CONFIG OPTIONS OVERRIDE FOR REFINING
---ACID OVERRIDE FOR REFINING AND ORES
-if data.raw.resource["uranium-ore"] then
-  data.raw.resource["uranium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
-  if data.raw.resource["infinite-uranium-ore"] then
-    data.raw.resource["infinite-uranium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
-  end
-end
-if data.raw.resource["thorium-ore"] then
-  data.raw.resource["thorium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
-end
-if angelsmods.trigger.enableacids then
-  OV.patch_recipes(
-    {
-      {
-        name = "angelsore2-crystal",
-        ingredients = {
-          {name = "liquid-hydrofluoric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-        }
-      },
-      {
-        name = "angelsore4-crystal",
-        ingredients = {
-          {name = "liquid-hydrochloric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-        }
-      },
-      {
-        name = "angelsore5-crystal",
-        ingredients = {
-          {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
-        }
-      }
-    }
-  )
-end
+require("prototypes.global-override.angelsrefining")
 
 --OVERRIDE FOR BOBs
 require("prototypes.global-override.bobplates")
@@ -161,36 +28,7 @@ require("prototypes.global-override.bobrevamp")
 require("prototypes.global-override.bobwarfare")
 require("prototypes.global-override.bobassembly")
 require("prototypes.global-override.bobtech")
-
-if bobmods then
-  if bobmods.greenhouse then
-    OV.patch_recipes(
-      {
-        {
-          name = "bob-fertiliser",
-          ingredients = {
-            {name = "gas-urea", type = "fluid", amount = 20},
-            {name = "gas-methane", type = "fluid", amount = 0},
-            {name = "gas-nitrogen", type = "fluid", amount = 0}
-          }
-        }
-      }
-    )
-    OV.remove_prereq("bob-fertiliser", "nitrogen-processing")
-    OV.add_prereq("bob-fertiliser", "angels-nitrogen-processing-2")
-  end
-
-  if data.raw.item["salt"] then
-    OV.global_replace_item("salt", "solid-salt")
-    angelsmods.functions.add_flag("salt", "hidden")
-  end
-
-  if data.raw["fluid"]["sour-gas"] then --BOBS REVAMP
-    OV.disable_recipe("petroleum-gas-sweetening")
-    data.raw.fluid["sour-gas"].hidden = true
-    angelsmods.functions.disable_barreling_recipes("sour-gas")
-  end
-end
+require("prototypes.global-override.bobgreenhouse")
 
 --URANIUM POWER OVERRIDE
 if data.raw["item"]["fluorite"] then
