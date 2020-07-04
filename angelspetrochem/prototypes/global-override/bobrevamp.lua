@@ -50,7 +50,7 @@ if mods["bobrevamp"] then
   -- REGULAR MODE -------------------------------------------------------------
   -----------------------------------------------------------------------------
   OV.disable_recipe("petroleum-gas-sweetening")
-  
+
   angelsmods.functions.add_flag("sour-gas", "hidden")
   angelsmods.functions.disable_barreling_recipes("sour-gas")
 
@@ -172,6 +172,7 @@ if mods["bobrevamp"] then
         }
       )
       OV.converter_fluid("ammonium-chloride", "gas-ammonium-chloride")
+      angelsmods.functions.add_flag("ammonium-chloride", "hidden")
     end
   end
 

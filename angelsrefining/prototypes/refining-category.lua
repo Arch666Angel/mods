@@ -430,9 +430,9 @@ data:extend(
       --icon_size = 64
       icons = {
         {
-          icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
-          icon_size = 128,
-          scale = 0.5
+          icon = "__angelsrefining__/graphics/item-group/converter-group.png",
+          icon_size = 64,
+          scale = 1
         },
         {
           icon = "__angelsrefining__/graphics/icons/void.png",

@@ -17,6 +17,7 @@ Date: ??
     - Fixed bobs air compressors were hidden, but the items were still showing
     - Added some missing dependencies on technologies
     - Fixed accidently enabling platinum ore when angels industries is not present (287)
+    - Fixed incorrect behaviour of the converter valve setting and improved implementation
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020

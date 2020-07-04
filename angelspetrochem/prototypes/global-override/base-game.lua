@@ -19,6 +19,8 @@ data.raw["item"]["chemical-plant"].icons = {
     shift = {-12, -12}
   }
 }
+data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 
 if angelsmods.trigger.disable_vanilla_chemical_plants then
   angelsmods.functions.add_flag("chemical-plant", "hidden")
@@ -50,6 +52,7 @@ data.raw["item"]["oil-refinery"].icons = {
     shift = {-12, -12}
   }
 }
+data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
 -- oil processing
 OV.converter_fluid("petroleum-gas", "gas-methane")
