@@ -13,6 +13,7 @@ Date: ???
       - Check for item existence with bobinserters (299)
     - Component mode:
       - Changed Thermal Water bore did require too high tech blocks (281)
+      - Fixed bobs ingredient limit was blocking progression into tier 2 blocks (336)
     - Science mode:
       - Added token-bio to exploration lab (277)
       - Moved rocket booster 1 technology (from orange) to green science (309)

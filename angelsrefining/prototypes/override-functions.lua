@@ -427,10 +427,8 @@ ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
 
   if angelsmods.trigger.enableconverter then
     local converter_subgroup_name = "angels-fluid-converter-"..(new_fluid.subgroup or "unknown")
-    log("enabling converter")
 
     if not data.raw["item-subgroup"][converter_subgroup_name] then
-      log("creating subgroup")
       local fluid_subgroup_data = data.raw["item-subgroup"][new_fluid.subgroup or "unknown"]
       local fluid_group_data = data.raw["item-group"][fluid_subgroup_data and fluid_subgroup_data.group or "angels-unused-stuffs"]  
       data:extend(
@@ -445,7 +443,6 @@ ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
       )
     end
     
-    log("moving item")
     angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
   else
     angelsmods.functions.add_flag(old_fluid_name, "hidden")

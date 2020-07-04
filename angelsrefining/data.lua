@@ -1,3 +1,5 @@
+require("prototypes.refining-settings-tweaks")
+
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
