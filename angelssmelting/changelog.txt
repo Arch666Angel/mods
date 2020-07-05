@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
 Date: ??
+  Changes:
+    - Tweaked limit temperatures on coolant cooling so any coolant temperature can be cooled,
+      it should still work the same, but in cases you accidently mix fluids, you can now
+      cool any temperature down.
   Bugfixes:
     - Fixed drawing box of the cooling tower being too small (282)
     - Fixed smelting showed a lot of useless ores in special vanilla (294)
