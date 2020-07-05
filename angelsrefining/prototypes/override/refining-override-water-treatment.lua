@@ -52,6 +52,8 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   OV.disable_technology({"water-washing-1", "water-washing-2"})
 end
 
+angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
+
 -------------------------------------------------------------------------------
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------

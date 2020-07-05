@@ -93,6 +93,7 @@ require("prototypes.buildings.liquifier")
 require("prototypes.buildings.thermal-extractor")
 
 require("prototypes.buildings.hydro-plant")
+require("prototypes.buildings.ground-water-pump")
 require("prototypes.buildings.salination-plant")
 require("prototypes.buildings.seafloor-pump")
 require("prototypes.buildings.washing-plant")

@@ -111,3 +111,6 @@ OV.patch_recipes(
   }
 )
 OV.add_prereq("rocketry", "rocket-booster-1")
+
+angelsmods.functions.move_item("cliff-explosives", "petrochem-solids", "b[petrochem-solids-2]-b[cliff-explosives]", "capsule")
+angelsmods.functions.move_item("cliff-explosives", "petrochem-solids-2", "a[explosives]-d", "recipe")

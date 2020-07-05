@@ -883,7 +883,7 @@ data:extend(
         }
       },
       subgroup = "slag-processing-1",
-      order = "ba",
+      order = "b",
       stack_size = 200
     },
     {
@@ -891,8 +891,8 @@ data:extend(
       name = "milling-drum",
       icon = "__angelsrefining__/graphics/icons/milling-drum.png",
       icon_size = 32,
-      subgroup = "processing-crafting",
-      order = "j",
+      subgroup = "ore-powderizer",
+      order = "z[milling-drum]-a[new]",
       stack_size = 200
     },
     {
@@ -900,8 +900,8 @@ data:extend(
       name = "milling-drum-used",
       icon = "__angelsrefining__/graphics/icons/milling-drum-used.png",
       icon_size = 32,
-      subgroup = "processing-crafting",
-      order = "k",
+      subgroup = "ore-powderizer",
+      order = "z[milling-drum]-b[used]",
       stack_size = 200
     },
     {
@@ -910,7 +910,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/slag.png",
       icon_size = 32,
       subgroup = "slag-processing-1",
-      order = "bb",
+      order = "a",
       stack_size = 200
     },
     {
@@ -947,6 +947,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/filter-frame.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "b[filter]-a[frame]",
       stack_size = 200
     },
     {
@@ -955,6 +956,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/filter-coal.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "b[filter]-b[coal]",
       stack_size = 200
     },
     {
@@ -963,6 +965,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/filter-ceramic.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "b[filter]-c[ceramic]-a[new]",
       stack_size = 200
     },
     {
@@ -971,6 +974,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/filter-ceramic-used.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "b[filter]-c[ceramic]-b[used]",
       stack_size = 200
     },
     {
@@ -1022,6 +1026,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/catalysator-brown.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "a[catalysator]-a[brown]",
       stack_size = 200
     },
     {
@@ -1030,6 +1035,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/catalysator-green.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "a[catalysator]-b[green]",
       stack_size = 200
     },
     {
@@ -1038,6 +1044,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/icons/catalysator-orange.png",
       icon_size = 32,
       subgroup = "processing-crafting",
+      order = "a[catalysator]-c[orange]",
       stack_size = 200
     },
     --VOID

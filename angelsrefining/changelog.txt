@@ -8,6 +8,7 @@ Date: ???
     - Added refining for uranium in special vanilla mode (276)
     - Removed crystal seedling from special vanilla mode (276)
     - Added support for the new bob salt recipes (313)
+    - Added a ground water bore
   Bugfixes:
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)

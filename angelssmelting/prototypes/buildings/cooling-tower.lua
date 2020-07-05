@@ -5,7 +5,7 @@ data:extend(
     name = "cooling-tower",
     icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
     icon_size = 32,
-    subgroup = "water-treatment-building",
+    subgroup = "boiler-building",
     order = "f[cooling-tower]",
     place_result = "cooling-tower",
     stack_size = 10,

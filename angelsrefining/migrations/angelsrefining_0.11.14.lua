@@ -11,3 +11,8 @@ for _, tech_name in pairs(
     end
   end
 end
+
+-- enable ground water bore
+for _, force in pairs(game.forces) do
+  force.reset_technology_effects()
+end
