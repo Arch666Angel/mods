@@ -4,9 +4,11 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- WATER ENRICHMENT -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if data.raw["fluid"]["deuterium"] then
+if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.converter_fluid("heavy-water", "liquid-water-heavy")
+  angelsmods.functions.disable_barreling_recipes("heavy-water")
   OV.converter_fluid("deuterium", "gas-deuterium")
+  angelsmods.functions.disable_barreling_recipes("deuterium")
 
   OV.disable_recipe({"bob-heavy-water", "heavy-water-electrolysis"})
 
@@ -16,15 +18,26 @@ if data.raw["fluid"]["deuterium"] then
   OV.disable_technology("deuterium-processing")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+
 elseif angelsmods.industries and angelsmods.industries.overhaul then
   -- everything is good, nothing to change
-else
+
+--elseif data.raw["fluid"]["deuterium"] then
+  -- not bobs mods, should we do something, usual thing is to do nothing...
+
+else -- no deuterium required, disabling it...
   angelsmods.functions.add_flag("gas-enriched-hydrogen-sulfide", "hidden")
+  angelsmods.functions.disable_barreling_recipes("gas-enriched-hydrogen-sulfide")
   angelsmods.functions.add_flag("liquid-water-semiheavy-1", "hidden")
+  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-1")
   angelsmods.functions.add_flag("liquid-water-semiheavy-2", "hidden")
+  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-2")
   angelsmods.functions.add_flag("liquid-water-semiheavy-3", "hidden")
+  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-3")
   angelsmods.functions.add_flag("liquid-water-heavy", "hidden")
+  angelsmods.functions.disable_barreling_recipes("liquid-water-heavy")
   angelsmods.functions.add_flag("gas-deuterium", "hidden")
+  angelsmods.functions.disable_barreling_recipes("gas-deuterium")
 
   OV.disable_recipe(
     {
