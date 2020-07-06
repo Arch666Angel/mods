@@ -29,6 +29,7 @@ require("prototypes.override.refining-override-bobplates")
 require("prototypes.override.refining-override-bobgems")
 require("prototypes.override.refining-override-bobtech")
 require("prototypes.override.refining-override-bobrevamp")
+require("prototypes.override.refining-override-bobwarfare")
 
 if mods["bobplates"] then
   --revamp override
