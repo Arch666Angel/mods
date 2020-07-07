@@ -174,3 +174,10 @@ if mods["space-exploration"] then
   funcs.update_equipment("energy-shield-equipment", "energy-shield-mk5-equipment", "angels-basegame-defense")
   funcs.update_equipment("energy-shield-equipment", "energy-shield-mk6-equipment", "angels-basegame-defense")
 end
+
+if mods["Krastorio2"] then
+  funcs.update_equipment("movement-bonus-equipment", "additional-engine", "angels-basegame-movement")
+  funcs.update_equipment("movement-bonus-equipment", "advanced-additional-engine", "angels-basegame-movement")
+
+  funcs.update_equipment("roboport-equipment", "vehicle-roboport", "angels-basegame-construction")
+end
