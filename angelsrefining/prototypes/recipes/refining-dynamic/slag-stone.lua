@@ -264,7 +264,7 @@ data:extend(
       main_product = "stone-crushed",
       icon = "__angelsrefining__/graphics/icons/stone-crushed.png",
       icon_size = 32,
-      order = "d[slag-processing-stone]"
+      order = "c[slag-processing-stone]"
     },
     {
       type = "recipe",
@@ -290,7 +290,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[stone-crushed]"
+      order = "d[stone-crushed]"
     }
   }
 )

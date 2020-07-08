@@ -1,4 +1,5 @@
 local RB = require "recipe-builder"
+require "angels-functions"
 
 local ov_functions = {}
 -- OVERRIDE DATA TABLES
@@ -414,6 +415,37 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
     end
   else
     substitution_table.recipe_items[old] = new
+  end
+end
+
+ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
+  local new_fluid = data.raw.fluid[new_fluid_name]
+  local old_fluid = data.raw.fluid[old_fluid_name]
+  if not (new_fluid and old_fluid) then return end
+
+  ov_functions.global_replace_item(old_fluid_name, new_fluid_name)
+
+  if angelsmods.trigger.enableconverter then
+    local converter_subgroup_name = "angels-fluid-converter-"..(new_fluid.subgroup or "unknown")
+
+    if not data.raw["item-subgroup"][converter_subgroup_name] then
+      local fluid_subgroup_data = data.raw["item-subgroup"][new_fluid.subgroup or "unknown"]
+      local fluid_group_data = data.raw["item-group"][fluid_subgroup_data and fluid_subgroup_data.group or "angels-unused-stuffs"]  
+      data:extend(
+        {
+          {
+            type = "item-subgroup",
+            name = converter_subgroup_name,
+            group = "angels-fluid-converter",
+            order = (fluid_group_data and fluid_group_data.order or "z").."-"..(fluid_subgroup_data and fluid_subgroup_data.order or "z")
+          },
+        }
+      )
+    end
+    
+    angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
+  else
+    angelsmods.functions.add_flag(old_fluid_name, "hidden")
   end
 end
 

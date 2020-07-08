@@ -20,6 +20,18 @@ if angelsmods.industries.components then
     )
   end
 
+  -- regular assemblers
+  if data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count and
+     data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count < 4
+  then -- required for tier 1 block automation
+    data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
+  end
+  if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count and
+     data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5
+  then -- required for tier 2 block automation
+    data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
+  end
+
   if mods["boblogistics"] then
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.patch_recipes(

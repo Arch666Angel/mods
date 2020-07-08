@@ -800,7 +800,7 @@ data:extend(
       type = "recipe",
       name = "filter-frame",
       category = "crafting",
-      subgroup = "processing-crafting",
+      subgroup = "geode-crystallization",
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -812,13 +812,13 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/filter-frame.png",
       icon_size = 32,
-      order = "e [filter-frame]"
+      order = "x[filter-frame]"
     },
     {
       type = "recipe",
       name = "filter-coal",
       category = "crafting",
-      subgroup = "processing-crafting",
+      subgroup = "geode-crystallization",
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -830,13 +830,13 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/filter-coal.png",
       icon_size = 32,
-      order = "f [filter-coal]"
+      order = "y[filter-coal]"
     },
     {
       type = "recipe",
       name = "filter-ceramic",
       category = "crafting",
-      subgroup = "processing-crafting",
+      subgroup = "geode-crystallization",
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -848,13 +848,13 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/filter-ceramic.png",
       icon_size = 32,
-      order = "g [filter-ceramic]"
+      order = "z[filter-ceramic]-a[new]"
     },
     {
       type = "recipe",
       name = "filter-ceramic-refurbish",
       category = "crafting-with-fluid",
-      subgroup = "processing-crafting",
+      subgroup = "geode-crystallization",
       energy_required = 0.5,
       enabled = false,
       ingredients = {
@@ -866,13 +866,13 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/filter-ceramic.png",
       icon_size = 32,
-      order = "h [filter-ceramic-refurbish]"
+      order = "z[filter-ceramic]-b[refurbish]"
     },
     {
       type = "recipe",
       name = "milling-drum",
       category = "crafting-with-fluid",
-      subgroup = "processing-crafting",
+      subgroup = "ore-powderizer",
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -884,13 +884,13 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/milling-drum.png",
       icon_size = 32,
-      order = "i"
+      order = "z[milling-drum]-a[new]"
     },
     {
       type = "recipe",
       name = "milling-drum-used",
       category = "crafting-with-fluid",
-      subgroup = "processing-crafting",
+      subgroup = "ore-powderizer",
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -902,7 +902,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/milling-drum-used.png",
       icon_size = 32,
-      order = "j"
+      order = "z[milling-drum]-b[recycle]"
     },
     {
       type = "recipe",

@@ -15,6 +15,9 @@ Date: ????
     - Fixed graphics of bob arboretum were offset
     - Fixed localisation of desert/temperate farming upgrade technology
     - Added some missing key technology prerequisites
+    - Fixed pwder refining couldn't be researched in special vanilla
+    - Fixed the unimplemented hoggers were visible in the signal selection menus
+    - Fixed the unimplemented hogger refugium was visible in the signal selection menus
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.11
 Date: 05.06.2020

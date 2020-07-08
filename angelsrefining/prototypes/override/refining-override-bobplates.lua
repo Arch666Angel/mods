@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+local move_item = angelsmods.functions.move_item
 
 -------------------------------------------------------------------------------
 -- BARRELING PUMPS ------------------------------------------------------------
@@ -32,4 +33,25 @@ if mods["bobplates"] then
       "water-bore-4"
     }
   )
+end
+
+-------------------------------------------------------------------------------
+-- GEMSTONES ------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  move_item("grinding-wheel", "bob-gems-cut", "g-4")
+  move_item("polishing-wheel", "bob-gems-polished", "g-5-a")
+  move_item("polishing-compound", "bob-gems-polished", "g-5-b")
+  move_item("polishing-compound", "bob-gems-polished", "g-5-b", "recipe")
+end
+
+-------------------------------------------------------------------------------
+-- NUCLEAR POWER --------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  if mods["angelsindustries"] then
+    -- angels industries takes care of this with angels nuclear overhaul
+  else
+    move_item("thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
+  end
 end

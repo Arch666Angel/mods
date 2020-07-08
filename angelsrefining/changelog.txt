@@ -8,6 +8,7 @@ Date: ???
     - Added refining for uranium in special vanilla mode (276)
     - Removed crystal seedling from special vanilla mode (276)
     - Added support for the new bob salt recipes (313)
+    - Added a ground water bore
   Bugfixes:
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)
@@ -17,7 +18,9 @@ Date: ???
     - Fixed bobs version of pure water barreling recipe was still available
     - Fixed bobs water miners were hidden, but the items were still showing
     - Fixed ceramic filter used alumina in special vanilla
-    - Fixed some missing technology prerequisites
+    - Fixed some missing technology prerequisites (316)
+    - Fixed in some old saves washing tech was still disabled (316)
+    - Fixed colors of ferrous and cupric sorting fluids
   Modding:
     - Moved is_special_vanilla(ore_triggers) to angelsmods.functions.is_special_vanilla() (276)
     - Moved ore_exist(ore_name) to angelsmods.functions.ore_exists(ore_name) (276)

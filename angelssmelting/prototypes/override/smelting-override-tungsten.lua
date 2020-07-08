@@ -20,7 +20,8 @@ end
 if angelsmods.trigger.smelting_products["tungsten"].powder then
   -- REPLACE ITEMS (use angel version)
   if mods['bobplates'] then
-    angelsmods.functions.add_flag("tungstic-acid", "hidden")
+    OV.converter_fluid("tungstic-acid", "liquid-tungstic-acid")
+    angelsmods.functions.disable_barreling_recipes("tungstic-acid")
     OV.disable_recipe({"tungstic-acid"})
   end
 
