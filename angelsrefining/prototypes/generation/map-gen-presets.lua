@@ -30,7 +30,9 @@ data.raw['map-gen-presets'].default.default.basic_settings =
   }
 ]]--
 
-if not mods["angelsexploration"] then
+if mods["angelsexploration"] then
+  -- angels exploration takes care of this
+else
   local map_settings = data.raw["map-settings"]["map-settings"]
   map_settings.pollution.enabled = false
   map_settings.enemy_evolution.enabled = false
@@ -71,8 +73,6 @@ if not mods["angelsexploration"] then
       turret.autoplace = nil
     end
   end
-
-  --data.raw["autoplace-control"]["enemy-base"] = nil
 end
 
 --[[

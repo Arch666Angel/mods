@@ -5,7 +5,7 @@ local map_settings = data.raw["map-settings"]["map-settings"]
 map_settings.enemy_evolution.time_factor = 0 -- no evolution increase due to time
 map_settings.enemy_evolution.pollution_factor = 0 -- no evolution increase due to pollution
 
-map_settings.enemy_expansion.min_expasion_cooldown = 15 * 60 * 60 -- 15 minutes
+map_settings.enemy_expansion.min_expansion_cooldown = 15 * 60 * 60 -- 15 minutes
 map_settings.enemy_expansion.max_expansion_cooldown = 2 * 60 * 60 * 60 -- 2 hours
 
 -------------------------------------------------------------------------------
