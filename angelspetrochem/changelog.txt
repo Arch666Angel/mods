@@ -18,6 +18,7 @@ Date: ??
     - Added some missing dependencies on technologies
     - Fixed accidently enabling platinum ore when angels industries is not present (287)
     - Fixed incorrect behaviour of the converter valve setting and improved implementation
+    - Shifted the flame on top of the flare stack so it's centered on the flare tower
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020
