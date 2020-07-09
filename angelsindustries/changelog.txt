@@ -4,10 +4,12 @@ Date: ???
   Changes:
     - Science mode:
       - Added an early tech to use in the tech archive to unlock datacores (314)
+      - Changed graphics for ghosting technology (274)
   Bugfixes:
     - Regular mode:
       - Changed energy source on the expanders to void when they don't use power (317)
       - Fixed selection box on te cargo roboport
+      - Make sure only one of the ghosting techs is available for research (274)
     - Overhaul mode:
       - Added translation for hidden ghosting tech (288)
       - Check for item existence with bobinserters (299)

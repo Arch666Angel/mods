@@ -115,16 +115,48 @@ script.on_event(
     }
     if ghosting[research.name] then
       research.force.technologies["angels-hidden-ghosting"].researched = true
+
       for _, fplayer in pairs(research.force.players) do
         fplayer.set_shortcut_available("toggle-ghosting", true)
         fplayer.set_shortcut_toggled("toggle-ghosting", true)
       end
+
+      ghosting[research.name] = nil
       for tech in pairs(ghosting) do
         if research.force.technologies[tech] then
-          research.force.technologies[tech].researched = true
+          if not research.force.technologies[tech].researched then
+            research.force.technologies[tech].researched = true
+            research.force.technologies[tech].enabled = false
+          end
+        end
+      end
+
+    else -- not a ghosting tech (but could be the final prerequisite in order to be researchable)
+      -- this makes sure only 1 will be available for research, the others will be disabled
+      local already_available = false
+      for tech,_ in pairs(ghosting) do
+        if research.force.technologies[tech] and (not research.force.technologies[tech].researched) then
+
+          local available = true
+          for _,prereq in pairs(research.force.technologies[tech].prerequisites or {}) do
+            if not prereq.researched then
+              available = false
+            end
+          end
+
+          if available then -- shows up as researchable
+            if already_available then
+              --research.force.technologies[tech].researched = true
+              research.force.technologies[tech].enabled = false
+            else
+              already_available = true
+            end
+          end
+
         end
       end
     end
+
   end
 )
 
