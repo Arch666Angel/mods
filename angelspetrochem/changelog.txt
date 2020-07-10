@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.12
-Date: ??
+Date: 10.07.2020
   Changes:
     - Rockets now require rocket boosters as ingredients (309)
     - Added recipe to revert Hydrofluoric Acid to Hydrogen Fluoride Gas (319)

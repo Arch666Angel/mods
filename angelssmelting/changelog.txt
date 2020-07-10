@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
-Date: ??
+Date: 10.07.2020
   Changes:
     - Tweaked limit temperatures on coolant cooling so any coolant temperature can be cooled,
       it should still work the same, but in cases you accidently mix fluids, you can now

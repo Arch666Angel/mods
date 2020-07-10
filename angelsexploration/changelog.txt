@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.6
-Date: ???
+Date: 10.07.2020
   Changes:
     - Updated graphics of the Peztilence Ammo, Gun and Spreader Turret (311)
     - Cannon turrets now use shotgun shells (310)

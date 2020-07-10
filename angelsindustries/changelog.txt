@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
-Date: ???
+Date: 10.07.2020
   Changes:
     - Science mode:
       - Added an early tech to use in the tech archive to unlock datacores (314)

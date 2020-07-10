@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.9
-Date: ??
+Date: 10.07.2020
   Changes:
     - Added compatibility for the RTG's from Space Exploration (283)
     - Added compatibility for the Adaptive armours from Space Exploration (283)
