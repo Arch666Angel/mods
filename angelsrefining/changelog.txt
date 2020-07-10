@@ -9,6 +9,11 @@ Date: ???
     - Removed crystal seedling from special vanilla mode (276)
     - Added support for the new bob salt recipes (313)
     - Added a ground water bore
+    - Biter balance: (291)
+      - Biters are by default disabled when playing without angels exploration. There is a setting
+        in case you want to re-enable biters anyway. For optimizations, pollution cloud and biter
+        evolution is turned off in this case.
+      - Increased starting area size
   Bugfixes:
     - Fixed marathon mode text (289)
     - Replacing main_product didn't work well (286)

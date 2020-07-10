@@ -4,6 +4,10 @@ Date: ???
   Changes:
     - Updated graphics of the Peztilence Ammo, Gun and Spreader Turret (311)
     - Cannon turrets now use shotgun shells (310)
+    - Biter balance: (291)
+      - Biter evolution is now not affected by time or pollution (just by killing bases now)
+      - Pollution absorbtion by trees and tiles is increased to make pollution cloud smaller
+      - Biters will expand slower and require more pollution absorbtion to create biters
   Bugfixes:
     - Check if resistances is defined for spawner (290)
     - Tweaked collision and selection boxes for scarabs and psykers (280)

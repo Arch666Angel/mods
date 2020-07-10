@@ -106,7 +106,14 @@ data:extend(
     default_value = 40000,
     minimum_value = 10000,
     maximum_value = 1000000,
-    order = "cb"
+    order = "cba"
+  },
+  {
+    type = "bool-setting",
+    name = "angels-enable-biters",
+    setting_type = "startup",
+    default_value = false,
+    order = "cbb"
   },
   {
     type = "int-setting",
