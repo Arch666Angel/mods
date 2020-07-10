@@ -33,45 +33,48 @@ data.raw['map-gen-presets'].default.default.basic_settings =
 if mods["angelsexploration"] then
   -- angels exploration takes care of this
 else
-  local map_settings = data.raw["map-settings"]["map-settings"]
-  map_settings.pollution.enabled = false
-  map_settings.enemy_evolution.enabled = false
-  map_settings.enemy_expansion.enabled = false
+  if settings.startup["angels-enable-biters"].value == false then
+    local map_settings = data.raw["map-settings"]["map-settings"]
+    map_settings.pollution.enabled = false
+    map_settings.enemy_evolution.enabled = false
+    map_settings.enemy_expansion.enabled = false
 
-  local map_gen_presets = data.raw["map-gen-presets"]["default"]
-  map_gen_presets["default"].default = false
-  map_gen_presets["default"].basic_settings =
-  {
-    autoplace_controls =
-      {
-        ["enemy-base"] = { frequency = "none", size = "none"}
-      },
-      starting_area = 'big',
-      order = 'a'
-  }
-  map_gen_presets["default"].advanced_settings =
-  {
-    pollution =
+    local map_gen_presets = data.raw["map-gen-presets"]["default"]
+    map_gen_presets["default"].default = false
+    map_gen_presets["default"].basic_settings =
     {
-      enabled = false
-    },
-    order = 'a'
-  }
+      autoplace_controls =
+        {
+          ["enemy-base"] = { frequency = "none", size = "none"}
+        },
+        starting_area = 'big',
+        order = 'a'
+    }
+    map_gen_presets["default"].advanced_settings =
+    {
+      pollution =
+      {
+        enabled = false
+      },
+      order = 'a'
+    }
 
-  map_gen_presets["death-world"].basic_settings.autoplace_controls["enemy-base"] = nil
-  map_gen_presets["death-world-marathon"].basic_settings.autoplace_controls["enemy-base"] = nil
-  map_gen_presets["rail-world"].basic_settings.autoplace_controls["enemy-base"] = nil
+    map_gen_presets["death-world"].basic_settings.autoplace_controls["enemy-base"] = nil
+    map_gen_presets["death-world-marathon"].basic_settings.autoplace_controls["enemy-base"] = nil
+    map_gen_presets["rail-world"].basic_settings.autoplace_controls["enemy-base"] = nil
 
-  for _, unit_spawner in pairs(data.raw["unit-spawner"]) do
-    if unit_spawner.autoplace and unit_spawner.autoplace.force == "enemy" then
-      unit_spawner.autoplace = nil
+    for _, unit_spawner in pairs(data.raw["unit-spawner"]) do
+      if unit_spawner.autoplace and unit_spawner.autoplace.force == "enemy" then
+        unit_spawner.autoplace = nil
+      end
     end
-  end
 
-  for _, turret in pairs(data.raw["turret"]) do
-    if turret.autoplace and turret.autoplace.force == "enemy" then
-      turret.autoplace = nil
+    for _, turret in pairs(data.raw["turret"]) do
+      if turret.autoplace and turret.autoplace.force == "enemy" then
+        turret.autoplace = nil
+      end
     end
+
   end
 end
 
