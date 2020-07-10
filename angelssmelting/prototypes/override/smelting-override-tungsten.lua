@@ -7,12 +7,21 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.ores["tungsten"] then
+else
+  angelsmods.functions.add_flag("tungsten-ore", "hidden")
+end
+
+-------------------------------------------------------------------------------
 -- POWDER ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tungsten"].powder then
   -- REPLACE ITEMS (use angel version)
   if mods['bobplates'] then
-    data.raw.fluid["tungstic-acid"].hidden = true
+    OV.converter_fluid("tungstic-acid", "liquid-tungstic-acid")
+    angelsmods.functions.disable_barreling_recipes("tungstic-acid")
     OV.disable_recipe({"tungstic-acid"})
   end
 
@@ -32,9 +41,9 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
 else
   angelsmods.functions.add_flag("processed-tungsten", "hidden")
   angelsmods.functions.add_flag("pellet-tungsten", "hidden")
-  data.raw.fluid["liquid-tungstic-acid"].hidden = true
+  angelsmods.functions.add_flag("liquid-tungstic-acid", "hidden")
   angelsmods.functions.add_flag("solid-tungsten-oxide", "hidden")
-  data.raw.fluid["gas-tungsten-hexafluoride"].hidden = true
+  angelsmods.functions.add_flag("gas-tungsten-hexafluoride", "hidden")
   angelsmods.functions.add_flag("solid-ammonium-paratungstate", "hidden")
   angelsmods.functions.add_flag("powder-tungsten", "hidden")
   OV.disable_technology({"angels-tungsten-smelting-1", "angels-tungsten-smelting-2", "angels-tungsten-smelting-3"})

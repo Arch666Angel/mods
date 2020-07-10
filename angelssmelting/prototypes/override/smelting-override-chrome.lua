@@ -8,13 +8,21 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.ores["chrome"] then
+else
+  angelsmods.functions.add_flag("chrome-ore", "hidden")
+end
+
+-------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["chrome"].ingot then
   if angelsmods.trigger.smelting_products["chrome"].plate then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-chrome"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-chrome", "hidden")
     OV.disable_recipe({ "molten-chrome-smelting" })
   end
 else
@@ -24,7 +32,7 @@ else
   angelsmods.functions.add_flag("solid-dichromate", "hidden")
   angelsmods.functions.add_flag("solid-chrome-oxide", "hidden")
   angelsmods.functions.add_flag("ingot-chrome", "hidden")
-  data.raw.fluid["liquid-molten-chrome"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-chrome", "hidden")
   OV.disable_recipe({ "chrome-ore-processing", "chrome-processed-processing", "pellet-chrome-smelting" })
   OV.disable_recipe({ "solid-chromate-smelting", "solid-dichromate-smelting" })
   OV.disable_recipe({ "chrome-ore-smelting", "processed-chrome-smelting", "solid-chrome-oxide-smelting" })

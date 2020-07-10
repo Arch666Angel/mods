@@ -8,7 +8,7 @@ if angelsmods.industries.tech then
       type = "recipe",
       name = "angels-basic-lab",
       energy_required = 5,
-      enabled = true,
+      enabled = false,
       ingredients = {
         {type = "item", name = "block-electronics-0", amount = 9}
       },

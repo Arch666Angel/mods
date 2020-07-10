@@ -94,8 +94,8 @@ data:extend(
           type = "fluid",
           name = "liquid-coolant-used",
           amount = 200,
-          minimum_temperature = 285,
-          maximum_temperature = 315
+          minimum_temperature = 250,
+          maximum_temperature = 350
         },
         {type = "fluid", name = "water", amount = 50}
       },
@@ -130,8 +130,8 @@ data:extend(
           type = "fluid",
           name = "liquid-coolant-used",
           amount = 200,
-          minimum_temperature = 185,
-          maximum_temperature = 215
+          minimum_temperature = 150,
+          maximum_temperature = 250
         },
         {type = "fluid", name = "water", amount = 50}
       },
@@ -166,8 +166,8 @@ data:extend(
           type = "fluid",
           name = "liquid-coolant-used",
           amount = 200,
-          minimum_temperature = 85,
-          maximum_temperature = 115
+          minimum_temperature = 50,
+          maximum_temperature = 150
         },
         {type = "fluid", name = "water", amount = 50}
       },

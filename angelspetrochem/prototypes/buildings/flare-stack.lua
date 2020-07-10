@@ -31,6 +31,7 @@ data:extend(
     result_inventory_size = 1,
     crafting_speed = 2,
     source_inventory_size = 1,
+    show_recipe_icon = false,
     resistances =
     {
       {
@@ -109,7 +110,7 @@ data:extend(
           frame_count = 60,
           animation_speed = 0.75,
           scale = 2,
-          shift = {0, -6},
+          shift = {-0.1, -5.75},
           hr_version = {
             filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
             line_length = 10,
@@ -118,7 +119,7 @@ data:extend(
             frame_count = 60,
             animation_speed = 0.75,
             scale = 1,
-            shift = {0, -6},
+            shift = {-0.1, -5.75},
           },
         },
         light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}

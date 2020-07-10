@@ -44,7 +44,9 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/petrochem-tech.png",
       icon_size = 128,
       prerequisites = {
-        "basic-chemistry"
+        "basic-chemistry",
+        "electronics",
+        "steel-processing"
       },
       effects = {
         {
@@ -361,11 +363,15 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "liquid-hydrofluoric-acid"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "liquid-hydrogen-fluoride"
         },
         {
           type = "unlock-recipe",
-          recipe = "liquid-hydrofluoric-acid"
+          recipe = "gas-hydrogen-fluoride"
         },
         {
           type = "unlock-recipe",
@@ -651,7 +657,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          --{type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },

@@ -1,50 +1,8 @@
 local OV = angelsmods.functions.OV
 
--- function to know if this is special vanilla or not
-is_special_vanilla = function(ores)
-  for ore_name, ore_enabled in pairs(ores or {}) do
-    if ore_enabled and ore_name ~= "iron" and ore_name ~= "copper" then
-      return false
-    end
-  end
-  return true
-end
-local special_vanilla = is_special_vanilla(angelsmods.trigger.ores)
-
 -- lookup table to convert ore name to trigger name
-local get_trigger_name = {
-  -- TIER 1 ORES
-  ["iron-ore"] = "iron",
-  ["angels-iron-nugget"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["angels-iron-pebbles"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["angels-iron-slag"] = special_vanilla and "iron" or "unused", -- special vanilla only
-  ["copper-ore"] = "copper",
-  ["angels-copper-nugget"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
-  -- TIER 1.5 ORES
-  ["tin-ore"] = "tin",
-  ["lead-ore"] = "lead",
-  ["quartz"] = "silicon",
-  ["nickel-ore"] = "nickel",
-  ["manganese-ore"] = "manganese",
-  -- TIER 2 ORES
-  ["zinc-ore"] = "zinc",
-  ["bauxite-ore"] = "aluminium",
-  ["cobalt-ore"] = "cobalt",
-  ["silver-ore"] = "silver",
-  ["fluorite-ore"] = "fluorite", -- byproduct
-  -- TIER 2.5 ORES
-  ["gold-ore"] = "gold",
-  -- TIER 3 ORES
-  ["rutile-ore"] = "titanium",
-  ["uranium-ore"] = "uranium",
-  -- TIER 4 ORES
-  ["tungsten-ore"] = "tungsten",
-  ["thorium-ore"] = "thorium",
-  ["chrome-ore"] = "chrome",
-  ["platinum-ore"] = "platinum"
-}
+local special_vanilla = angelsmods.functions.is_special_vanilla()
+local get_trigger_name = angelsmods.functions.get_trigger_names()
 
 local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
 local icon_lookup_table = {
@@ -142,16 +100,7 @@ local tweaked_icon_lookup = function(icon_name, scale, shift)
   }
 end
 
-local ore_exists = function(ore_name)
-  if angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] then
-    return true
-  end
-  if angelsmods.trigger.refinery_products[ore_name] then
-    return true
-  end
-  return false
-end
-angelsmods.functions.ore_exists = ore_exists
+local ore_enabled = angelsmods.functions.ore_enabled
 
 -- function to create the (regular) sorted results for an ore, disables it if it is unused
 local create_sorting_recipes = function(refinery_product, recipe_base_name, sorted_ore_results, advanced_sorting)
@@ -430,7 +379,7 @@ OV.patch_recipes(
       }
     ),
     -- FERROUS
-    ore_exists("ferrous") and
+    ore_enabled("ferrous") and
       create_sorting_recipes(
         "ferrous",
         "angelsore8%s",
@@ -446,7 +395,7 @@ OV.patch_recipes(
       ) or
       nil,
     -- CUPRIC
-    ore_exists("cupric") and
+    ore_enabled("cupric") and
       create_sorting_recipes(
         "cupric",
         "angelsore9%s",
@@ -484,80 +433,7 @@ if not special_vanilla then
   angelsmods.functions.add_flag("angels-copper-slag", "hidden")
 end
 
--- take care of the special sorting fluids
-if ore_exists("ferrous") then
-  angelsmods.functions.move_item("angels-ore8-sludge", "ore-processing-fluid", "a[ferrous]-a", "fluid")
-  angelsmods.functions.move_item("angels-ore8-solution", "ore-processing-fluid", "a[ferrous]-b", "fluid")
-  angelsmods.functions.move_item("angels-ore8-anode-sludge", "ore-processing-fluid", "a[ferrous]-c", "fluid")
-  angelsmods.functions.move_item("angels-ore8-slime", "ore-processing-fluid", "a[ferrous]-d", "fluid")
-else
-  data.raw.fluid["angels-ore8-sludge"].hidden = true
-  data.raw.fluid["angels-ore8-solution"].hidden = true
-  data.raw.fluid["angels-ore8-anode-sludge"].hidden = true
-  data.raw.fluid["angels-ore8-slime"].hidden = true
-  OV.remove_unlock("ore-powderizer", "angelsore8-powder")
-  OV.remove_unlock("ore-powderizer", "angelsore8-powder-processing")
-  OV.remove_unlock("ore-advanced-floatation", "angelsore8-sludge")
-  OV.remove_unlock("ore-advanced-floatation", "angelsore8-dust")
-  OV.remove_unlock("ore-advanced-floatation", "angelsore8-dust-processing")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-solution")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-anode-sludge")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-anode-sludge-filtering")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-crystal")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-crystal-processing")
-
-  OV.disable_recipe(
-    {
-      "angelsore8-powder",
-      "angelsore8-powder-processing",
-      "angelsore8-sludge",
-      "angelsore8-dust",
-      "angelsore8-dust-processing",
-      "angelsore8-solution",
-      "angelsore8-anode-sludge",
-      "angelsore8-anode-sludge-filtering",
-      "angelsore8-crystal",
-      "angelsore8-crystal-processing"
-    }
-  )
-end
-if ore_exists("cupric") then
-  angelsmods.functions.move_item("angels-ore9-sludge", "ore-processing-fluid", "b[cupric]-a", "fluid")
-  angelsmods.functions.move_item("angels-ore9-solution", "ore-processing-fluid", "b[cupric]-b", "fluid")
-  angelsmods.functions.move_item("angels-ore9-anode-sludge", "ore-processing-fluid", "b[cupric]-c", "fluid")
-  angelsmods.functions.move_item("angels-ore9-slime", "ore-processing-fluid", "b[cupric]-d", "fluid")
-else
-  data.raw.fluid["angels-ore9-sludge"].hidden = true
-  data.raw.fluid["angels-ore9-solution"].hidden = true
-  data.raw.fluid["angels-ore9-anode-sludge"].hidden = true
-  data.raw.fluid["angels-ore9-slime"].hidden = true
-  OV.remove_unlock("ore-powderizer", "angelsore9-powder")
-  OV.remove_unlock("ore-powderizer", "angelsore9-powder-processing")
-  OV.remove_unlock("ore-advanced-floatation", "angelsore9-sludge")
-  OV.remove_unlock("ore-advanced-floatation", "angelsore9-dust")
-  OV.remove_unlock("ore-advanced-floatation", "angelsore9-dust-processing")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-solution")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-anode-sludge")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-anode-sludge-filtering")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal")
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal-processing")
-  OV.disable_recipe(
-    {
-      "angelsore9-powder",
-      "angelsore9-powder-processing",
-      "angelsore9-sludge",
-      "angelsore9-dust",
-      "angelsore9-dust-processing",
-      "angelsore9-solution",
-      "angelsore9-anode-sludge",
-      "angelsore9-anode-sludge-filtering",
-      "angelsore9-crystal",
-      "angelsore9-crystal-processing"
-    }
-  )
-end
-
-if ore_exists("ferrous") or ore_exists("cupric") then
+if ore_enabled("ferrous") or ore_enabled("cupric") then
 else
   OV.disable_technology(
     {
@@ -569,7 +445,7 @@ else
   )
 end
 
-if ore_exists("ferrous") and ore_exists("cupric") then
+if ore_enabled("ferrous") and ore_enabled("cupric") then
 else
   OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
@@ -593,7 +469,8 @@ OV.patch_recipes(
       {
         --[[1]] special_vanilla and {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("iron-nugget", 0.5, {10, 10})
+          tweaked_icon_lookup("iron-nugget", 0.5, {-10, -10}),
+          tweaked_icon_lookup("iron-ore", 0.5, {10, 10})
         } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("iron-ore", 0.5, {10, 10})
@@ -604,7 +481,8 @@ OV.patch_recipes(
         },
         --[[3]] special_vanilla and {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("copper-nugget", 0.5, {10, 10})
+          tweaked_icon_lookup("copper-nugget", 0.5, {-10, -10}),
+          tweaked_icon_lookup("copper-ore", 0.5, {10, 10})
         } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("lead-ore", 0.5, {10, 10})
@@ -641,14 +519,16 @@ OV.patch_recipes(
       {
         --[[1]] special_vanilla and {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("iron-slag", 0.5, {10, 10})
+          tweaked_icon_lookup("iron-slag", 0.5, {-10, -10}),
+          tweaked_icon_lookup("iron-ore", 0.5, {10, 10})
         } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("silica-ore", 0.5, {10, 10})
         },
         --[[2]] special_vanilla and {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("copper-slag", 0.5, {10, 10})
+          tweaked_icon_lookup("copper-slag", 0.5, {-10, -10}),
+          tweaked_icon_lookup("copper-ore", 0.5, {10, 10})
         } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("nickel-ore", 0.5, {10, 10})
@@ -686,7 +566,7 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-crystal-mix%i-processing",
       {
-        {type = "item", name = "rutile-ore", amount = 6},
+        special_vanilla and {type = "item", name = "uranium-ore", amount = 3} or {type = "item", name = "rutile-ore", amount = 6},
         {type = "item", name = "gold-ore", amount = 6},
         {type = "item", name = "cobalt-ore", amount = 6},
         {type = "item", name = "silver-ore", amount = 6},
@@ -694,7 +574,16 @@ OV.patch_recipes(
         {type = "item", name = "thorium-ore", amount = 3}
       },
       {
-        --[[1]] {
+        --[[1]] special_vanilla and {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          {
+            icon = "__angelsrefining__/graphics/icons/num_1.png",
+            tint = angelsmods.refining.number_tint,
+            scale = 0.32,
+            shift = {-12, -12}
+          },
+          tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
+        } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("rutile-ore", 0.5, {10, 10})
         },
@@ -724,24 +613,75 @@ OV.patch_recipes(
     create_sorting_mix_recipe(
       "angelsore-pure-mix%i-processing",
       {
-        {type = "item", name = "tungsten-ore", amount = 6},
+        special_vanilla and {type = "item", name = "uranium-ore", amount = 6} or {type = "item", name = "tungsten-ore", amount = 6},
         {type = "item", name = "platinum-ore", amount = 3},
         "unused"
       },
       {
-        --[[1]] {
+        --[[1]] special_vanilla and {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          {
+            icon = "__angelsrefining__/graphics/icons/num_2.png",
+            tint = angelsmods.refining.number_tint,
+            scale = 0.32,
+            shift = {-12, -12}
+          },
+          tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
+        } or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("tungsten-ore", 0.5, {10, 10})
         },
         --[[2]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          ore_exists("platinum") and tweaked_icon_lookup("platinum-ore", 0.5, {10, 10}) or nil
+          ore_enabled("platinum") and tweaked_icon_lookup("platinum-ore", 0.5, {10, 10}) or nil
         },
         --[[3]] nil
       }
     )
   }
 )
+
+if special_vanilla then
+  OV.patch_recipes(
+    {
+      {
+        name = "angelsore-crushed-mix1-processing",
+        order = "a[iron]-a[nugget]"
+      },
+      {
+        name = "angelsore-crushed-mix3-processing",
+        order = "b[copper]-a[nugget]"
+      },
+      {
+        name = "angelsore-chunk-mix1-processing",
+        order = "a[iron]-b[slag]"
+      },
+      {
+        name = "angelsore-chunk-mix2-processing",
+        order = "b[copper]-b[slag]"
+      },
+      {
+        name = "angelsore-crystal-mix1-processing",
+        ingredients =
+        {
+          {type="item", name="catalysator-orange", amount=0},
+          {type="item", name="angels-ore5-crystal", amount=0}
+        },
+        order = "c[uranium]-a[ore]-a"
+      },
+      {
+        name = "angelsore-pure-mix1-processing",
+        ingredients =
+        {
+          {type="item", name="catalysator-orange", amount=0},
+          {type="item", name="angels-ore3-pure", amount=0},
+          {type="item", name="angels-ore4-pure", amount="angels-ore6-pure"}
+        },
+        order = "c[uranium]-a[ore]-b"
+      }
+    }
+  )
+end
 
 -------------------------------------------------------------------------------
 -- SLAG SORTING ---------------------------------------------------------------
@@ -765,8 +705,8 @@ OV.patch_recipes(
         ["zinc-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["rutile-ore"] = {0, 0, 0, 0, 0.4, 0, 0, 0, 0},
         ["bauxite-ore"] = {0, 0, 0, 0, 0, 0.4, 0, 0, 0},
-        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and ore_exists("chrome-ore") and 0.4 or ore_exists("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
-        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_exists("platinum-ore") and 0 or 0.2, ore_exists("platinum-ore") and 0.4 or 0, 0, 0},
+        ["manganese-ore"] = {0, 0, 0, 0, 0, ore_enabled("platinum-ore") and ore_enabled("chrome-ore") and 0.4 or ore_enabled("chrome-ore") and 0.2 or 0.4, 0, 0, 0},
+        ["chrome-ore"] = {0, 0, 0, 0, 0, ore_enabled("platinum-ore") and 0 or 0.2, ore_enabled("platinum-ore") and 0.4 or 0, 0, 0},
         ["platinum-ore"] = {0, 0, 0, 0, 0, 0, 0.4, 0, 0},
         ["cobalt-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
         ["tungsten-ore"] = {0, 0, 0, 0, 0, 0, 0, 0.4, 0},
@@ -813,12 +753,12 @@ OV.patch_recipes(
         --[[6]] angelsmods.functions.create_liquid_recipe_icon(
           {
             "bauxite-ore",
-            ore_exists("manganese-ore") and "manganese-ore" or nil,
-            (not ore_exists("platinum-ore")) and ore_exists("chrome-ore") and "chrome-ore" or nil
+            ore_enabled("manganese-ore") and "manganese-ore" or nil,
+            (not ore_enabled("platinum-ore")) and ore_enabled("chrome-ore") and "chrome-ore" or nil
           },
           slag_color
         ),
-        --[[7]] ore_exists("platinum-ore") and
+        --[[7]] ore_enabled("platinum-ore") and
           angelsmods.functions.create_liquid_recipe_icon(
             {
               "platinum-ore",
@@ -837,17 +777,12 @@ OV.patch_recipes(
         --[[9]] angelsmods.functions.create_liquid_recipe_icon(
           {
             "uranium-ore",
-            ore_exists("fluorite-ore") and "fluorite-ore" or nil,
-            ore_exists("thorium-ore") and "thorium-ore" or nil
+            ore_enabled("fluorite-ore") and "fluorite-ore" or nil,
+            ore_enabled("thorium-ore") and "thorium-ore" or nil
           },
           slag_color
         )
       }
-    ),
-    {
-      mods["angelssmelting"] and
-        {name = "filter-ceramic", ingredients = {{type = "item", name = "solid-aluminium-oxide", amount = 1}}} or
-        nil
-    }
+    )
   }
 )

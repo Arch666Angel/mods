@@ -39,7 +39,7 @@ data:extend(
       drawing_box = {{-0.5, -2.1}, {0.5, 0.5}},
       dying_explosion = "medium-explosion",
       energy_source = {
-        type = "electric",
+        type = "void",
         usage_priority = "secondary-input",
         input_flow_limit = "1kW",
         buffer_capacity = "1kJ",
@@ -145,7 +145,7 @@ data:extend(
       drawing_box = {{-1, -4.1}, {1, 1}},
       dying_explosion = "medium-explosion",
       energy_source = {
-        type = "electric",
+        type = "void",
         usage_priority = "secondary-input",
         input_flow_limit = "1kW",
         buffer_capacity = "1kJ",

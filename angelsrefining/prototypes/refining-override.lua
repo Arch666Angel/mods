@@ -6,7 +6,8 @@ local OV = angelsmods.functions.OV
 require("prototypes.recipes.refining-entity-angels")
 require("prototypes.override.refining-override-buildings")
 
---OVERRIDE FOR SORTING
+--OVERRIDE FOR REFINING/SORTING
+require("prototypes.override.refining-override-refining")
 require("prototypes.override.refining-override-sorting")
 require("prototypes.override.refining-override-smelting")
 
@@ -23,8 +24,13 @@ data.raw.item["refined-hazard-concrete"].stack_size = angelsmods.trigger.pavemen
 data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 
 --OVERRIDE FOR BOBs
---if bobmods and bobmods.plates then
+require("prototypes.override.refining-override-bobmining")
+require("prototypes.override.refining-override-bobplates")
 require("prototypes.override.refining-override-bobgems")
+require("prototypes.override.refining-override-bobtech")
+require("prototypes.override.refining-override-bobrevamp")
+require("prototypes.override.refining-override-bobwarfare")
+
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then

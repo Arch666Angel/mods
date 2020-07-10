@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
-local special_vanilla = is_special_vanilla(angelsmods.trigger.ores)
+local special_vanilla = angelsmods.functions.is_special_vanilla()
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["steel"].ingot = true
@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   end
 else
   angelsmods.functions.add_flag("ingot-steel", "hidden")
-  data.raw.fluid["liquid-molten-steel"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-steel", "hidden")
   OV.disable_recipe({"ingot-iron-smelting"})
   OV.disable_recipe(
     {

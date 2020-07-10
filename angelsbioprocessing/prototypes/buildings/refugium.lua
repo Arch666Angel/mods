@@ -23,7 +23,7 @@ data:extend(
     dying_explosion = "medium-explosion",
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    --drawing_box = {{-2.5, -3}, {2.5, 2.5}},
+    drawing_box = {{-3.5, -4.5}, {3.5, 3.5}},
     fast_replaceable_group= "bio-refugium",
     module_specification =
     {

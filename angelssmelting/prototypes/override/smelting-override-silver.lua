@@ -9,6 +9,14 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.ores["silver"] then
+else
+  angelsmods.functions.add_flag("silver-ore", "hidden")
+end
+
+-------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silver"].ingot then
@@ -30,7 +38,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
      angelsmods.trigger.smelting_products["silver"].wire then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-silver"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-silver", "hidden")
     OV.disable_recipe({"molten-silver-smelting"})
   end
 else
@@ -40,7 +48,7 @@ else
   angelsmods.functions.add_flag("solid-sodium-silver-cyanide", "hidden")
   angelsmods.functions.add_flag("cathode-silver", "hidden")
   angelsmods.functions.add_flag("ingot-silver", "hidden")
-  data.raw.fluid["liquid-molten-silver"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-silver", "hidden")
   OV.disable_recipe({"silver-ore-processing", "silver-processed-processing"})
   OV.disable_recipe({"processed-silver-smelting", "pellet-silver-smelting", "solid-sodium-silver-cyanide-smelting"})
   OV.disable_recipe({"silver-ore-smelting", "solid-silver-nitrate-smelting", "cathode-silver-smelting"})

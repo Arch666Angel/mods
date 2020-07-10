@@ -28,7 +28,8 @@ data:extend(
     max_health = 1000,
     corpse = "big-remnants",
     collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
-    selection_box = {{-3, -4}, {3, 3}},
+    selection_box = {{-3, -3}, {3, 3}},
+    drawing_box = {{-3, -4.33}, {3, 3}},
     dying_explosion = "medium-explosion",
     energy_source =
     {
@@ -290,7 +291,8 @@ data:extend(
     max_health = 1000,
     corpse = "big-remnants",
     collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
-    selection_box = {{-2, -3}, {2, 2}},
+    selection_box = {{-2, -2}, {2, 2}},
+    drawing_box = {{-2, -3.33}, {2, 2}},
     dying_explosion = "medium-explosion",
     energy_source =
     {

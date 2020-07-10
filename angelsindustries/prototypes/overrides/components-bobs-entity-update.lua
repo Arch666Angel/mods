@@ -20,6 +20,18 @@ if angelsmods.industries.components then
     )
   end
 
+  -- regular assemblers
+  if data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count and
+     data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count < 4
+  then -- required for tier 1 block automation
+    data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
+  end
+  if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count and
+     data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5
+  then -- required for tier 2 block automation
+    data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
+  end
+
   if mods["boblogistics"] then
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.patch_recipes(
@@ -28,177 +40,181 @@ if angelsmods.industries.components then
             name = "yellow-filter-inserter", -- filter inserter
             ingredients = {
               {"!!"},
-              {"inserter", 1},
-              {"circuit-grey", 2},
-              {"tin-plate", 2},
+              {type = "item", name = "inserter", amount = 1},
+              {type = "item", name = "circuit-grey", amount = 2},
+              angelsmods.trigger.smelting_products["tin"].plate and {type = "item", name = "tin-plate", amount = 2} or nil
             }
           },
           {
             name = "long-handed-inserter", -- fast inserter
             ingredients = {
               {"!!"},
-              {"inserter", 1},
-              {"circuit-red-loaded", 1},
-              {"angels-servo-motor-1", 2},
-              {"bronze-alloy", 2},
+              {type = "item", name = "inserter", amount = 1},
+              {type = "item", name = "circuit-red-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-1", amount = 2},
+              angelsmods.trigger.smelting_products["bronze"].plate and
+                {type = "item", name = "bronze-alloy", amount = 2} or nil
             }
           },
           {
             name = "red-filter-inserter", -- fast filter inserter
             ingredients = {
               {"!!"},
-              {"yellow-filter-inserter", 1},
-              {"circuit-red-loaded", 2},
-              {"angels-servo-motor-1", 1},
-              {"bronze-alloy", 4},
+              {type = "item", name = "yellow-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-red-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-1", amount = 1},
+              angelsmods.trigger.smelting_products["bronze"].plate and
+                {type = "item", name = "bronze-alloy", amount = 4} or nil
             }
           },
           {
             name = "red-stack-inserter", -- fast stack inserter
             ingredients = {
               {"!!"},
-              {"long-handed-inserter", 1},
-              {"circuit-green-loaded", 2},
-              {"angels-servo-motor-2", 3},
-              {"bronze-alloy", 8},
+              {type = "item", name = "long-handed-inserter", amount = 1},
+              {type = "item", name = "circuit-green-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-2", amount = 3},
+              angelsmods.trigger.smelting_products["bronze"].plate and
+                {type = "item", name = "bronze-alloy", amount = 8} or nil
             }
           },
           {
             name = "red-stack-filter-inserter", -- fast stack filter inserter
             ingredients = {
               {"!!"},
-              {"red-stack-inserter", 1},
-              {"circuit-green-loaded", 3},
-              {"angels-servo-motor-2", 2},
-              {"bronze-alloy", 10},
+              {type = "item", name = "red-stack-inserter", amount = 1},
+              {type = "item", name = "circuit-green-loaded", amount = 3},
+              {type = "item", name = "angels-servo-motor-2", amount = 2},
+              angelsmods.trigger.smelting_products["bronze"].plate and
+                {type = "item", name = "bronze-alloy", amount = 10} or nil
             }
           },
           {
             name = "fast-inserter", -- express inserter
             ingredients = {
               {"!!"},
-              {"long-handed-inserter", 1},
-              {"circuit-green-loaded", 1},
-              {"angels-servo-motor-2", 2},
-              {"angels-bracket", 2},
+              {type = "item", name = "long-handed-inserter", amount = 1},
+              {type = "item", name = "circuit-green-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-2", amount = 2},
+              {type = "item", name = "angels-bracket", amount = 2}
             }
           },
           {
             name = "filter-inserter", -- express filter inserter
             ingredients = {
               {"!!"},
-              {"red-filter-inserter", 1},
-              {"circuit-green-loaded", 2},
-              {"angels-servo-motor-2", 1},
-              {"angels-bracket", 4},
+              {type = "item", name = "red-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-green-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-2", amount = 1},
+              {type = "item", name = "angels-bracket", amount = 4}
             }
           },
           {
             name = "stack-inserter", -- express stack inserter
             ingredients = {
               {"!!"},
-              {"red-stack-inserter", 1},
-              {"circuit-orange-loaded", 2},
-              {"angels-servo-motor-3", 3},
-              {"angels-bracket", 8},
+              {type = "item", name = "red-stack-inserter", amount = 1},
+              {type = "item", name = "circuit-orange-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-3", amount = 3},
+              {type = "item", name = "angels-bracket", amount = 8}
             }
           },
           {
             name = "stack-filter-inserter", -- express stack filter inserter
             ingredients = {
               {"!!"},
-              {"red-stack-filter-inserter", 1},
-              {"circuit-orange-loaded", 3},
-              {"angels-servo-motor-3", 2},
-              {"angels-bracket", 10},
+              {type = "item", name = "red-stack-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-orange-loaded", amount = 3},
+              {type = "item", name = "angels-servo-motor-3", amount = 2},
+              {type = "item", name = "angels-bracket", amount = 10}
             }
           },
           {
             name = "turbo-inserter", -- turbo inserter
             ingredients = {
               {"!!"},
-              {"fast-inserter", 1},
-              {"circuit-orange-loaded", 1},
-              {"angels-servo-motor-3", 2},
-              {"titanium-bearing", 1},
-              {"angels-plating", 2},
+              {type = "item", name = "fast-inserter", amount = 1},
+              {type = "item", name = "circuit-orange-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-3", amount = 2},
+              {type = "item", name = "angels-plating", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
             name = "turbo-filter-inserter", -- turbo filter inserter
             ingredients = {
               {"!!"},
-              {"filter-inserter", 1},
-              {"circuit-orange-loaded", 2},
-              {"angels-servo-motor-3", 1},
-              {"titanium-bearing", 1},
-              {"angels-plating", 4},
+              {type = "item", name = "filter-inserter", amount = 1},
+              {type = "item", name = "circuit-orange-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-3", amount = 1},
+              {type = "item", name = "angels-plating", amount = 4},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
             name = "turbo-stack-inserter", -- turbo stack inserter
             ingredients = {
               {"!!"},
-              {"stack-inserter", 1},
-              {"circuit-blue-loaded", 2},
-              {"angels-servo-motor-4", 3},
-              {"titanium-bearing", 1},
-              {"angels-plating", 8},
+              {type = "item", name = "stack-inserter", amount = 1},
+              {type = "item", name = "circuit-blue-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-4", amount = 3},
+              {type = "item", name = "angels-plating", amount = 8},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
             name = "turbo-stack-filter-inserter", -- turbo stack filter inserter
             ingredients = {
               {"!!"},
-              {"stack-filter-inserter", 1},
-              {"circuit-blue-loaded", 3},
-              {"angels-servo-motor-4", 2},
-              {"titanium-bearing", 1},
-              {"angels-plating", 10},
+              {type = "item", name = "stack-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-blue-loaded", amount = 3},
+              {type = "item", name = "angels-servo-motor-4", amount = 2},
+              {type = "item", name = "angels-plating", amount = 10},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
             name = "express-inserter", -- ultimate inserter
             ingredients = {
               {"!!"},
-              {"turbo-inserter", 1},
-              {"circuit-blue-loaded", 1},
-              {"angels-servo-motor-4", 2},
-              {"nitinol-bearing", 1},
-              {"angels-strut", 2},
+              {type = "item", name = "turbo-inserter", amount = 1},
+              {type = "item", name = "circuit-blue-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-4", amount = 2},
+              {type = "item", name = "angels-strut", amount = 2},
+              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           },
           {
             name = "express-filter-inserter", -- ultimate inserter
             ingredients = {
               {"!!"},
-              {"turbo-filter-inserter", 1},
-              {"circuit-blue-loaded", 2},
-              {"angels-servo-motor-4", 1},
-              {"nitinol-bearing", 1},
-              {"angels-strut", 4},
+              {type = "item", name = "turbo-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-blue-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-4", amount = 1},
+              {type = "item", name = "angels-strut", amount = 4},
+              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           },
           {
             name = "express-stack-inserter", -- ultimate stack inserter
             ingredients = {
               {"!!"},
-              {"turbo-stack-inserter", 1},
-              {"circuit-yellow-loaded", 2},
-              {"angels-servo-motor-5", 3},
-              {"nitinol-bearing", 1},
-              {"angels-strut", 8},
+              {type = "item", name = "turbo-stack-inserter", amount = 1},
+              {type = "item", name = "circuit-yellow-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-5", amount = 3},
+              {type = "item", name = "angels-strut", amount = 8},
+              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           },
           {
             name = "express-stack-filter-inserter", -- ultimate stack filter inserter
             ingredients = {
               {"!!"},
-              {"turbo-stack-filter-inserter", 1},
-              {"circuit-yellow-loaded", 3},
-              {"angels-servo-motor-5", 2},
-              {"nitinol-bearing", 1},
-              {"angels-strut", 10},
+              {type = "item", name = "turbo-stack-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-yellow-loaded", amount = 3},
+              {type = "item", name = "angels-servo-motor-5", amount = 2},
+              {type = "item", name = "angels-strut", amount = 10},
+              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           }
         }
@@ -210,93 +226,93 @@ if angelsmods.industries.components then
             name = "inserter", -- inserter
             ingredients = {
               {"!!"},
-              {"burner-inserter", 1},
-              {"circuit-grey", 1},
-              {"angels-servo-motor-1", 2}
+              {type = "item", name = "burner-inserter", amount = 1},
+              {type = "item", name = "circuit-grey", amount = 1},
+              {type = "item", name = "angels-servo-motor-1", amount = 2}
             }
           },
           {
             name = "fast-inserter", -- fast inserter
             ingredients = {
               {"!!"},
-              {"inserter", 1},
-              {"circuit-red-loaded", 2},
-              {"angels-servo-motor-1", 2}
+              {type = "item", name = "inserter", amount = 1},
+              {type = "item", name = "circuit-red-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-1", amount = 2}
             }
           },
           {
             name = "filter-inserter", -- filter inserter
             ingredients = {
               {"!!"},
-              {"fast-inserter", 1},
-              {"circuit-green-loaded", 1},
-              {"angels-servo-motor-2", 2}
-            },
+              {type = "item", name = "fast-inserter", amount = 1},
+              {type = "item", name = "circuit-green-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-2", amount = 2}
+            }
           },
           {
             name = "stack-inserter", -- stack inserter
             ingredients = {
               {"!!"},
-              {"fast-inserter", 1},
-              {"circuit-orange-loaded", 2},
-              {"angels-servo-motor-3", 2},
-              data.raw.item["titanium-bearing"] and {"titanium-bearing", 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {"titanium-gear-wheel", 1} or nil,
+              {type = "item", name = "fast-inserter", amount = 1},
+              {type = "item", name = "circuit-orange-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-3", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
             }
           },
           {
             name = "stack-filter-inserter", -- stack filter inserter
             ingredients = {
               {"!!"},
-              {"stack-inserter", 1},
-              {"circuit-orange-loaded", 2},
-              {"angels-servo-motor-3", 2},
-              data.raw.item["titanium-bearing"] and {"titanium-bearing", 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {"titanium-gear-wheel", 1} or nil,
+              {type = "item", name = "stack-inserter", amount = 1},
+              {type = "item", name = "circuit-orange-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-3", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
             }
           },
           {
             name = "express-inserter", -- express inserter
             ingredients = {
               {"!!"},
-              {"fast-inserter", 1},
-              {"circuit-blue-loaded", 1},
-              {"angels-servo-motor-4", 2},
-              data.raw.item["titanium-bearing"] and {"titanium-bearing", 1} or nil,
-              data.raw.item["titanium-gear-wheel"] and {"titanium-gear-wheel", 1} or nil,
+              {type = "item", name = "fast-inserter", amount = 1},
+              {type = "item", name = "circuit-blue-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-4", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil,
+              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
             }
           },
           {
             name = "express-filter-inserter", -- express filter inserter
             ingredients = {
               {"!!"},
-              {"filter-inserter", 1},
-              {"circuit-blue-loaded", 1},
-              {"angels-servo-motor-4", 2},
-              data.raw.item["titanium-bearing"] and {"titanium-bearing", 1} or nil,
-              data.raw.item["titanium-gear-wheel"] and {"titanium-gear-wheel", 1} or nil,
+              {type = "item", name = "filter-inserter", amount = 1},
+              {type = "item", name = "circuit-blue-loaded", amount = 1},
+              {type = "item", name = "angels-servo-motor-4", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil,
+              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
             }
           },
           {
             name = "express-stack-inserter", -- express stack inserter
             ingredients = {
               {"!!"},
-              {"stack-inserter", 1},
-              {"circuit-yellow-loaded", 2},
-              {"angels-servo-motor-5", 2},
-              data.raw.item["titanium-bearing"] and {"titanium-bearing", 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {"titanium-gear-wheel", 1} or nil,
+              {type = "item", name = "stack-inserter", amount = 1},
+              {type = "item", name = "circuit-yellow-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-5", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
             }
           },
           {
             name = "express-stack-filter-inserter", -- express stack filter inserter
             ingredients = {
               {"!!"},
-              {"stack-filter-inserter", 1},
-              {"circuit-yellow-loaded", 2},
-              {"angels-servo-motor-5", 2},
-              data.raw.item["titanium-bearing"] and {"titanium-bearing", 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {"titanium-gear-wheel", 1} or nil,
+              {type = "item", name = "stack-filter-inserter", amount = 1},
+              {type = "item", name = "circuit-yellow-loaded", amount = 2},
+              {type = "item", name = "angels-servo-motor-5", amount = 2},
+              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
             }
           }
         }

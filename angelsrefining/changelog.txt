@@ -1,4 +1,38 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.14
+Date: 10.07.2020
+  Changes:
+    - Halved water-yellow-waste (sulfuric waster water) for cupric filtering (296)
+    - Make sure some defaults are set in case of invalid prototypes (292, 293)
+    - Changed the recipe icon of thermal to lithia water refining (bobs only)
+    - Added refining for uranium in special vanilla mode (276)
+    - Removed crystal seedling from special vanilla mode (276)
+    - Added support for the new bob salt recipes (313)
+    - Added a ground water bore
+    - Biter balance: (291)
+      - Biters are by default disabled when playing without angels exploration. There is a setting
+        in case you want to re-enable biters anyway. For optimizations, pollution cloud and biter
+        evolution is turned off in this case.
+      - Increased starting area size
+  Bugfixes:
+    - Fixed marathon mode text (289)
+    - Replacing main_product didn't work well (286)
+    - Fixed wrong default_value on bobs crafting machine ingredient limit (278)
+    - Fixed refining showed a lot of useless refined ores in special vanilla (295)
+    - Fixed the ordering of barreling recipes was mixed up
+    - Fixed bobs version of pure water barreling recipe was still available
+    - Fixed bobs water miners were hidden, but the items were still showing
+    - Fixed ceramic filter used alumina in special vanilla
+    - Fixed some missing technology prerequisites (316)
+    - Fixed in some old saves washing tech was still disabled (316)
+    - Fixed colors of ferrous and cupric sorting fluids
+    - Fixed typo in Trypophobia Friendly Stiratite Graphics setting localisation
+  Modding:
+    - Moved is_special_vanilla(ore_triggers) to angelsmods.functions.is_special_vanilla() (276)
+    - Moved ore_exist(ore_name) to angelsmods.functions.ore_exists(ore_name) (276)
+    - Moved ore_exists(ore_name) to angelsmods.functions.ore_enabled(ore_name) (276)
+    - Added support for fluids to angelsmods.functions.add_flag(entity, flag)
+---------------------------------------------------------------------------------------------------
 Version: 0.11.13
 Date: 05.06.2020
   Bugfixes:

@@ -11,15 +11,19 @@ end
 -------------------------------------------------------------------------------
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-angelsmods.functions.override_item_conditions(
-  {
-    value = 200,
-    list = {
-      "copper-ore"
+if angelsmods.trigger.ores["copper"] then
+  angelsmods.functions.override_item_conditions(
+    {
+      value = 200,
+      list = {
+        "copper-ore"
+      }
     }
-  }
-)
-angelsmods.functions.move_item("copper-ore", "angels-copper", "a")
+  )
+  angelsmods.functions.move_item("copper-ore", "angels-copper", "a")
+else
+  angelsmods.functions.add_flag("copper-ore", "hidden")
+end
 
 -------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------

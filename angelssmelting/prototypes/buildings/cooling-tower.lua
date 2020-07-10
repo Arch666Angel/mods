@@ -5,7 +5,7 @@ data:extend(
     name = "cooling-tower",
     icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
     icon_size = 32,
-    subgroup = "water-treatment-building",
+    subgroup = "boiler-building",
     order = "f[cooling-tower]",
     place_result = "cooling-tower",
     stack_size = 10,
@@ -22,6 +22,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    drawing_box = {{-1.5, -3.0}, {1.5, 1.5}},
     crafting_categories = {"cooling"},
     module_specification =
     {

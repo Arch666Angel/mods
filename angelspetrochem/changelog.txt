@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.12
+Date: 10.07.2020
+  Changes:
+    - Rockets now require rocket boosters as ingredients (309)
+    - Added recipe to revert Hydrofluoric Acid to Hydrogen Fluoride Gas (319)
+    - Added support for the new bob salt recipes (313)
+    - Moved chlorine processing 2 to green science (required for bobwarfare)
+    - Nitroglycering now takes nitric and sulfuric acid directly instead of a mixture of both
+    - Added setting to disable bobs distilleries (322)
+    - Added setting to disable base game chemical plant (236)
+  Bugfixes:
+    - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
+    - Fixed the Oil Well was still called Crude Oil
+    - Fixed bobs version of liquid fuel barreling recipe was still available
+    - Fixed missing dependency of nitroglycerin processing on sulfur processing
+    - Fixed bobs air compressors were hidden, but the items were still showing
+    - Added some missing dependencies on technologies
+    - Fixed accidently enabling platinum ore when angels industries is not present (287)
+    - Fixed incorrect behaviour of the converter valve setting and improved implementation
+    - Shifted the flame on top of the flare stack so it's centered on the flare tower
+---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 05.06.2020
   Bugfixes:

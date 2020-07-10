@@ -430,6 +430,7 @@ data:extend(
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    drawing_box = {{-2.5, -4.0}, {2.5, 2.5}},
     fast_replaceable_group= "bio-arboretum",
     module_specification =
     {
@@ -454,7 +455,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-base.png",
@@ -462,7 +463,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-pipes.png",
@@ -470,7 +471,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         {
           filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-off.png",
@@ -478,7 +479,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
       }
     },
@@ -493,7 +494,7 @@ data:extend(
           height = 256,
           line_length = 1,
           frame_count = 1,
-          shift = {0, -0.25},
+          shift = {0, -0.50},
         },
         -- {
         -- effect = "uranium-glow", -- changes alpha based on energy source light intensity

@@ -62,7 +62,7 @@ angelsmods.trigger.smelting_products["nitinol"].plate = mods["bobplates"] and tr
 angelsmods.trigger.smelting_products["solder"].wire = mods["bobplates"] and true or false
 --alloy-steel
 angelsmods.trigger.smelting_products["steel"].plate = true
-angelsmods.trigger.smelting_products["steel"].rod = false
+angelsmods.trigger.smelting_products["steel"].rod = angelsmods.trigger.smelting_products["steel"].rod or false
 --aluminium
 angelsmods.trigger.smelting_products["aluminium"].plate = mods["bobplates"] and true or false
 --cobalt
@@ -91,7 +91,7 @@ angelsmods.trigger.smelting_products["silicon"].powder = mods["bobplates"] and t
 angelsmods.trigger.smelting_products["silicon"].wafer = mods["bobplates"] and true or false
 --silver
 angelsmods.trigger.smelting_products["silver"].plate = mods["bobplates"] and true or false
-angelsmods.trigger.smelting_products["silver"].wire = false
+angelsmods.trigger.smelting_products["silver"].wire = angelsmods.trigger.smelting_products["silver"].wire or false
 --stone
 --tin
 angelsmods.trigger.smelting_products["tin"].plate = mods["bobplates"] and true or false

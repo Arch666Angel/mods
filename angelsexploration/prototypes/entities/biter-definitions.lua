@@ -34,6 +34,7 @@ small_biter =
     speed = 0.185,
     health = 100,
     order = "b-a-a",
+    box_scale = 1,
   },
   attack = {
     category = "melee",
@@ -66,6 +67,7 @@ medium_biter =
     speed = 0.185,
     health = 200,
     order = "b-a-b",
+    box_scale = 1,
   },
   attack = {
     category = "melee",
@@ -98,6 +100,7 @@ big_biter =
     speed = 0.185,
     health = 300,
     order = "b-a-c",
+    box_scale = 1,
   },
   attack = {
     category = "melee",
@@ -130,6 +133,7 @@ behemoth_biter =
     speed = 0.17,
     health = 400,
     order = "b-a-d",
+    box_scale = 1,
   },
   attack = {
     category = "melee",
@@ -164,6 +168,7 @@ colossal_biter =
     speed = 0.17,
     health = 500,
     order = "b-a-e",
+    box_scale = 1.8,
   },
   attack = {
     category = "melee",
@@ -199,6 +204,7 @@ small_spitter =
     speed = 0.185,
     health = 50,
     order = "b-b-a",
+    box_scale = 1,
   },
   attack = {
     range = 15,
@@ -229,6 +235,7 @@ medium_spitter =
     speed = 0.185,
     health = 100,
     order = "b-b-b",
+    box_scale = 1,
   },
   attack = {
     range = 15,
@@ -259,6 +266,7 @@ big_spitter =
     speed = 0.185,
     health = 150,
     order = "b-b-c",
+    box_scale = 1,
   },
   attack = {
     range = 15,
@@ -289,6 +297,7 @@ behemoth_spitter =
     speed = 0.185,
     health = 200,
     order = "b-b-d",
+    box_scale = 1,
   },
   attack = {
     range = 15,
@@ -321,6 +330,7 @@ colossal_spitter =
     speed = 0.185,
     health = 250,
     order = "b-b-e",
+    box_scale = 1.5,
   },
   attack = {
     range = 15,
@@ -354,6 +364,7 @@ small_scarab =
     speed = 0.185,
     health = 150,
     order = "b-a-f",
+    box_scale = 0.5,
   },
   attack = {
     range = 0.5,
@@ -384,6 +395,7 @@ medium_scarab =
     speed = 0.185,
     health = 300,
     order = "b-a-g",
+    box_scale = 1,
   },
   attack = {
     range = 0.5,
@@ -414,6 +426,7 @@ big_scarab =
     speed = 0.185,
     health = 450,
     order = "b-a-h",
+    box_scale = 1.25,
   },
   attack = {
     range = 0.5,
@@ -444,6 +457,7 @@ behemoth_scarab =
     speed = 0.185,
     health = 600,
     order = "b-a-i",
+    box_scale = 1.75,
   },
   attack = {
     range = 0.5,
@@ -474,6 +488,7 @@ colossal_scarab =
     speed = 0.185,
     health = 750,
     order = "b-a-j",
+    box_scale = 2,
   },
   attack = {
     range = 0.5,
@@ -507,6 +522,7 @@ small_psyker =
     speed = 0.185,
     health = 100,
     order = "b-b-f",
+    box_scale = 0.5,
   },
   attack = {
     range = 7,
@@ -537,6 +553,7 @@ medium_psyker =
     speed = 0.185,
     health = 200,
     order = "b-b-g",
+    box_scale = 1,
   },
   attack = {
     range = 7,
@@ -567,6 +584,7 @@ big_psyker =
     speed = 0.185,
     health = 300,
     order = "b-b-h",
+    box_scale = 1,
   },
   attack = {
     range = 7,
@@ -597,6 +615,7 @@ behemoth_psyker =
     speed = 0.185,
     health = 400,
     order = "b-b-i",
+    box_scale = 1,
   },
   attack = {
     range = 7,
@@ -627,6 +646,7 @@ colossal_psyker =
     speed = 0.185,
     health = 500,
     order = "b-b-j",
+    box_scale = 1.5,
   },
   attack = {
     range = 7,

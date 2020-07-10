@@ -70,8 +70,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-physical-a",
-    order = "d[cannon-ammo]-a[basic-shells]",
+    subgroup = "angels-physical-ba",
+    order = "c[ammo]-d[regular-cannon-shells]",
     magazine_size = 4,
     stack_size = 200
   },
@@ -145,8 +145,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-physical-a",
-    order = "d[cannon-ammo]-b[piercing-shells]",
+    subgroup = "angels-physical-ba",
+    order = "c[ammo]-e[piercing-cannon-shells]",
     magazine_size = 4,
     stack_size = 200
   },
@@ -220,8 +220,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-physical-a",
-    order = "d[cannon-ammo]-c[uranium-shells]",
+    subgroup = "angels-physical-ba",
+    order = "c[ammo]-f[uranium-cannon-shells]",
     magazine_size = 4,
     stack_size = 200
   },

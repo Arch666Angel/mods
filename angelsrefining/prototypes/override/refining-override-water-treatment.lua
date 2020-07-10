@@ -52,44 +52,8 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   OV.disable_technology({"water-washing-1", "water-washing-2"})
 end
 
--------------------------------------------------------------------------------
--- SALT -----------------------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
-  local limestone = data.raw.item["limestone"]
-  if limestone then
-    limestone.icon = nil
-    limestone.icons = {{icon = "__angelsrefining__/graphics/icons/solid-limestone.png", icon_size = 32}}
-    data.raw.recipe["limestone"].icon = nil
-    data.raw.recipe["limestone"].icons = {
-      {icon = "__angelsrefining__/graphics/icons/solid-limestone.png", icon_size = 32}
-    }
-    if angelsmods.trigger.washing_tech then --washing/limestone is active
-      OV.global_replace_item("limestone", "solid-limestone")
-      limestone.hidden = true
-      OV.disable_recipe({"limestone"})
-    end
-  end
-  local ammonium = data.raw.recipe["ammonium-chloride-recycling"]
-  if ammonium then
-    ammonium.icon = nil
-    if angelsmods.petrochem then
-      ammonium.icons =
-        angelsmods.functions.create_solid_recipe_icon(
-        {"solid-limestone", "gas-ammonium-chloride"},
-        "solid-calcium-chloride",
-        {"gas-ammonia"}
-      )
-    else
-      ammonium.icons =
-        angelsmods.functions.create_solid_recipe_icon(
-        {"limestone", "ammonium-chloride"},
-        "calcium-chloride",
-        {"ammonia"}
-      )
-    end
-  end
-end
+angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
+
 -------------------------------------------------------------------------------
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -149,8 +113,17 @@ if mods["bobplates"] then
           {type = "fluid", name = "lithia-water", amount = 40},
           {type = "fluid", name = "water-purified", amount = 60}
         },
-        icon = "__angelsrefining__/graphics/icons/water-thermal-lithia.png",
-        icon_size = 32,
+        --icon = "__angelsrefining__/graphics/icons/water-thermal-lithia.png",
+        --icon_size = 32,
+        icons = angelsmods.functions.create_liquid_recipe_icon(
+          {
+            "lithia-water",
+            "water-purified"
+          },
+          {
+            {243,135,000}, {247,140,003}, {247,140,003}
+          }
+        ),
         order = "g[water-thermal-lithia]"
       }
     }
@@ -166,6 +139,7 @@ if mods["bobplates"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({"pure-water", "pure-water-from-lithia"})
     data.raw.fluid["pure-water"].hidden = true
+    angelsmods.functions.disable_barreling_recipes("pure-water")
   end
 
   --Insert water resources to bob recipes
@@ -187,13 +161,3 @@ if mods["bobplates"] then
   )
 end
 
--------------------------------------------------------------------------------
--- DISABLE WATER-MINERS -------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobplates"] and data.raw.technology["water-miner-1"] then
-  data.raw.technology["water-miner-1"] = nil
-  data.raw.technology["water-miner-2"] = nil
-  data.raw.technology["water-miner-3"] = nil
-  data.raw.technology["water-miner-4"] = nil
-  data.raw.technology["water-miner-5"] = nil
-end

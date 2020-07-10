@@ -365,7 +365,8 @@ data:extend(
       prerequisites = {
         "ore-crushing",
         "geode-processing-1",
-        "slag-processing-1"
+        "slag-processing-1",
+        "water-washing-2"
       },
       effects = {
         {
@@ -426,7 +427,7 @@ data:extend(
       icon_size = 64,
       prerequisites = {
         "slag-processing-1",
-        mods["angelssmelting"] and "angels-aluminium-smelting-1" or nil
+        "plastics"
       },
       effects = {
         {

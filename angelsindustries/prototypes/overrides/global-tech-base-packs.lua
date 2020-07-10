@@ -29,8 +29,12 @@ if angelsmods.industries.tech then
   ) do
     pack_replace(tech_name, "red", "grey")
   end
+  -- BASE GAME
   OV.remove_prereq("turrets", "military")
   OV.add_prereq("turrets", "angels-components-weapons-basic")
+  -- REFINING
+  OV.remove_prereq("water-treatment", "electronics")
+  OV.remove_prereq("water-treatment", "steel-processing")
 
   -------------------------------------------------------------------------------
   -- RED SCIENCE PACKS ----------------------------------------------------------
@@ -126,7 +130,7 @@ if angelsmods.industries.tech then
   pack_replace("resin-3", "blue", "yellow")
   --pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
   pack_replace("rubber", "green", "orange")
-  pack_replace("rocket-booster-1", "green", "orange")
+  --pack_replace("rocket-booster-1", "green", "orange")
   pack_replace("rocket-explosives-1", "green", "orange")
   pack_replace("angels-advanced-chemistry-2", "green", "orange")
   pack_replace("angels-advanced-chemistry-2", "green", "orange")

@@ -9,6 +9,14 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.ores["platinum"] then
+else
+  angelsmods.functions.add_flag("platinum-ore", "hidden")
+end
+
+-------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["platinum"].ingot then
@@ -16,16 +24,16 @@ if angelsmods.trigger.smelting_products["platinum"].ingot then
      angelsmods.trigger.smelting_products["platinum"].wire then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-platinum"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-platinum", "hidden")
     OV.disable_recipe({"molten-platinum-smelting"})
   end
 else
   angelsmods.functions.add_flag("processed-platinum", "hidden")
   angelsmods.functions.add_flag("pellet-platinum", "hidden")
-  data.raw.fluid["liquid-hexachloroplatinic-acid"].hidden = true
+  angelsmods.functions.add_flag("liquid-hexachloroplatinic-acid", "hidden")
   angelsmods.functions.add_flag("solid-ammonium-chloroplatinate", "hidden")
   angelsmods.functions.add_flag("ingot-platinum", "hidden")
-  data.raw.fluid["liquid-molten-platinum"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-platinum", "hidden")
   OV.disable_recipe({"platinum-ore-processing", "platinum-processed-processing"})
   OV.disable_recipe({"pellet-platinum-smelting", "liquid-hexachloroplatinic-acid-smelting"})
   OV.disable_recipe({"platinum-ore-smelting", "processed-platinum-smelting", "solid-ammonium-chloroplatinate-smelting"})

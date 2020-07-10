@@ -8,6 +8,14 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.ores["titanium"] then
+else
+  angelsmods.functions.add_flag("rutile-ore", "hidden")
+end
+
+-------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["titanium"].ingot then
@@ -19,16 +27,17 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
   if angelsmods.trigger.smelting_products["titanium"].plate then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-titanium"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-titanium", "hidden")
+
     OV.disable_recipe({"molten-titanium-smelting-1", "molten-titanium-smelting-2", "molten-titanium-smelting-3", "molten-titanium-smelting-4", "molten-titanium-smelting-5"})
   end
 else
   angelsmods.functions.add_flag("processed-titanium", "hidden")
   angelsmods.functions.add_flag("pellet-titanium", "hidden")
-  data.raw.fluid["liquid-titanium-tetrachloride"].hidden = true
+  angelsmods.functions.add_flag("liquid-titanium-tetrachloride", "hidden")
   angelsmods.functions.add_flag("sponge-titanium", "hidden")
   angelsmods.functions.add_flag("ingot-titanium", "hidden")
-  data.raw.fluid["liquid-molten-titanium"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-titanium", "hidden")
   OV.disable_recipe({"titanium-ore-processing", "titanium-processed-processing"})
   OV.disable_recipe({"titanium-ore-smelting", "processed-titanium-smelting", "liquid-titanium-tetrachloride-smelting"})
   OV.disable_recipe({"sponge-titanium-smelting", "pellet-titanium-smelting"})

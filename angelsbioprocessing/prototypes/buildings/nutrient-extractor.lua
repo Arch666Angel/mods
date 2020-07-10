@@ -22,6 +22,7 @@ data:extend(
     dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    drawing_box = {{-1.5, -2.0}, {1.5, 1.5}},
     fast_replaceable_group= "nutrient-extractor",
     module_specification =
     {

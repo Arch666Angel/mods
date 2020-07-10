@@ -24,9 +24,13 @@ if angelsmods.trigger.smelting_products["solder"].wire then
 
     OV.patch_recipes({ { name = "angels-roll-solder-converting", category = "electronics-machine"} })
   end
+
+  if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
+    OV.add_prereq("angels-solder-smelting-basic", "automation-science-pack")
+  end
 else
   angelsmods.functions.add_flag("angels-solder-mixture", "hidden")
-  data.raw.fluid["liquid-molten-solder"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-solder", "hidden")
   angelsmods.functions.add_flag("angels-roll-solder", "hidden")
   angelsmods.functions.add_flag("angels-solder", "hidden")
   OV.disable_recipe({ "angels-solder-mixture" })

@@ -1,4 +1,5 @@
 local RB = require "recipe-builder"
+require "angels-functions"
 
 local ov_functions = {}
 -- OVERRIDE DATA TABLES
@@ -142,13 +143,20 @@ local function generate_liquid_canister_icons(fluid)
     }
   end
 end
+
 -- Generates the icons definition for a full-barrel recipe with the provided barrel name and fluid definition
 local function generate_fill_barrel_icons(fluid, style)
   local f_icon
   if style == "gas" then
     f_icon = generate_gas_canister_icons(fluid)
-  else
+  elseif style == "acid" then
     f_icon = generate_liquid_canister_icons(fluid)
+  else
+    f_icon = {
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64, icon_mipmaps = 4},
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-side-mask.png", icon_size = 64, icon_mipmaps = 4, tint = fluid.base_color},
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-top-mask.png", icon_size = 64, icon_mipmaps = 4, tint = fluid.flow_color},
+    }
   end
   if fluid.icon and fluid.icon_size then
     table.insert(
@@ -160,13 +168,28 @@ local function generate_fill_barrel_icons(fluid, style)
   end
   return f_icon
 end
+
 -- Generates the icons definition for a full-barrel item with the provided barrel name and fluid definition
 local function generate_barrel_icons(fluid, style)
   local f_icon
   if style == "gas" then
     f_icon = generate_gas_canister_icons(fluid)
-  else
+  elseif style == "acid" then
     f_icon = generate_liquid_canister_icons(fluid)
+  else
+    f_icon = {
+      {icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png", icon_size = 64, icon_mipmaps = 4},
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-side-mask.png", icon_size = 64, icon_mipmaps = 4, tint = fluid.base_color},
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-hoop-top-mask.png", icon_size = 64, icon_mipmaps = 4, tint = fluid.flow_color},
+    }
+  end
+  if fluid.icon and fluid.icon_size then
+    table.insert(
+      f_icon,
+      {icon = fluid.icon, icon_size = fluid.icon_size, scale = 16.0 / fluid.icon_size, shift = {0, 4}}
+    )
+  elseif fluid.icons and util.combine_icons then
+    f_icon = util.combine_icons(f_icon, util.table.deepcopy(fluid.icons), {scale = 0.5, shift = {0, 4}})
   end
   return f_icon
 end
@@ -176,8 +199,14 @@ local function generate_empty_barrel_icons(fluid, style)
   local e_icon
   if style == "gas" then
     e_icon = generate_gas_canister_icons(fluid)
-  else
+  elseif style == "acid" then
     e_icon = generate_liquid_canister_icons(fluid)
+  else
+    e_icon = {
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png", icon_size = 64, icon_mipmaps = 4},
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-side-mask.png", icon_size = 64, icon_mipmaps = 4, tint = fluid.base_color},
+      {icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-top-mask.png", icon_size = 64, icon_mipmaps = 4, tint = fluid.flow_color},
+    }
   end
   if fluid.icon and fluid.icon_size then
     table.insert(
@@ -190,8 +219,9 @@ local function generate_empty_barrel_icons(fluid, style)
   return e_icon
 end
 
--- OVERRIDE ASSIGNMENT FUNCTIONS
-
+-------------------------------------------------------------------------------
+-- OVERRIDE TECHNOLOGY FUNCTIONS ----------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.add_unlock = function(technology, recipe)
   guarantee_subtable(modify_table.technologies, technology)
   guarantee_subtable(modify_table.technologies[technology], "unlocks")
@@ -234,6 +264,9 @@ ov_functions.set_special_technology_override = function(technology, t)
   override_table.technologies[technology] = t
 end
 
+-------------------------------------------------------------------------------
+-- OVERRIDE RECIPE FUNCTIONS --------------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.patch_recipes = function(patch_list)
   for _, patch in pairs(patch_list) do
     local name = patch.name
@@ -385,6 +418,37 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
   end
 end
 
+ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
+  local new_fluid = data.raw.fluid[new_fluid_name]
+  local old_fluid = data.raw.fluid[old_fluid_name]
+  if not (new_fluid and old_fluid) then return end
+
+  ov_functions.global_replace_item(old_fluid_name, new_fluid_name)
+
+  if angelsmods.trigger.enableconverter then
+    local converter_subgroup_name = "angels-fluid-converter-"..(new_fluid.subgroup or "unknown")
+
+    if not data.raw["item-subgroup"][converter_subgroup_name] then
+      local fluid_subgroup_data = data.raw["item-subgroup"][new_fluid.subgroup or "unknown"]
+      local fluid_group_data = data.raw["item-group"][fluid_subgroup_data and fluid_subgroup_data.group or "angels-unused-stuffs"]  
+      data:extend(
+        {
+          {
+            type = "item-subgroup",
+            name = converter_subgroup_name,
+            group = "angels-fluid-converter",
+            order = (fluid_group_data and fluid_group_data.order or "z").."-"..(fluid_subgroup_data and fluid_subgroup_data.order or "z")
+          },
+        }
+      )
+    end
+    
+    angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
+  else
+    angelsmods.functions.add_flag(old_fluid_name, "hidden")
+  end
+end
+
 ov_functions.global_replace_icon = function(old, new)
   substitution_table.recipe_icons[old] = new
 end
@@ -427,6 +491,9 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
   end
 end
 
+-------------------------------------------------------------------------------
+-- OVERRIDE ITEM FUNCTIONS ----------------------------------------------------
+-------------------------------------------------------------------------------
 ov_functions.global_replace_science_packs = function(primary_old, secondary_old, new, amount) -- if a technology uses primary_old science packs for research, replaces them with new science packs and also removes any science packs in secondary_old (may be a table containing a list of packs)
   substitution_table.science_packs[primary_old] = {add = new, amount = amount or 1}
   if secondary_old then
@@ -473,63 +540,63 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
   end
 end
 
--- INCOMPLETE FUNCTION: have to duplicate barrel as well
--- ov_functions.duplicate_barreling_at_temperature = function(fluid, temp, min_temp, max_temp)
---   temp = temp or nil
---   min_temp = min_temp or nil
---   max_temp = max_temp or nil
-
---   if data.raw.fluid[fluid] then
---     local fluid = data.raw.fluid[fluid]
---     local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
---     local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
---     local duplicate
---     if fill_barrel then
---       duplicate = table.deepcopy(fill_barrel)
---       duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
---       for _, ingredient in pairs(duplicate.ingredients) do
---         if ingredient.type == "fluid" and ingredient.name == fluid.name then
---           if temp then
---             ingredient.temperature = temp
---           else
---             ingredient.minimum_temperature = min_temp
---             ingredient.maximum_temperature = max_temp
---           end
---         end
---       end
---       data:extend(
---         {
---           duplicate
---         }
---       )
---     end
---     if empty_barrel then
---       duplicate = table.deepcopy(empty_barrel)
---       duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
---       for _, ingredient in pairs(empty_barrel.results) do
---         if ingredient.type == "fluid" and ingredient.name == fluid.name then
---           if temp then
---             ingredient.temperature = temp
---           else
---             ingredient.minimum_temperature = min_temp
---             ingredient.maximum_temperature = max_temp
---           end
---         end
---       end
---       if temp then
---         fill_barrel.temperature = temp
---       else
---         fill_barrel.minimum_temperature = min_temp
---         fill_barrel.maximum_temperature = max_temp
---       end
---       data:extend(
---         {
---           duplicate
---         }
---       )
---     end
---   end
--- end
+--[[-- INCOMPLETE FUNCTION: have to duplicate barrel as well
+ov_functions.duplicate_barreling_at_temperature = function(fluid, temp, min_temp, max_temp)
+  temp = temp or nil
+  min_temp = min_temp or nil
+  max_temp = max_temp or nil
+  if data.raw.fluid[fluid] then
+    local fluid = data.raw.fluid[fluid]
+    local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
+    local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
+    local duplicate
+    if fill_barrel then
+      duplicate = table.deepcopy(fill_barrel)
+      duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
+      for _, ingredient in pairs(duplicate.ingredients) do
+        if ingredient.type == "fluid" and ingredient.name == fluid.name then
+          if temp then
+            ingredient.temperature = temp
+          else
+            ingredient.minimum_temperature = min_temp
+            ingredient.maximum_temperature = max_temp
+          end
+        end
+      end
+      data:extend(
+        {
+          duplicate
+        }
+      )
+    end
+    if empty_barrel then
+      duplicate = table.deepcopy(empty_barrel)
+      duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
+      for _, ingredient in pairs(empty_barrel.results) do
+        if ingredient.type == "fluid" and ingredient.name == fluid.name then
+          if temp then
+            ingredient.temperature = temp
+          else
+            ingredient.minimum_temperature = min_temp
+            ingredient.maximum_temperature = max_temp
+          end
+        end
+      end
+      if temp then
+        fill_barrel.temperature = temp
+      else
+        fill_barrel.minimum_temperature = min_temp
+        fill_barrel.maximum_temperature = max_temp
+      end
+      data:extend(
+        {
+          duplicate
+        }
+      )
+    end
+  end
+end
+--]]--
 
 ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_temp)
   temp = temp or nil
@@ -587,8 +654,16 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
       fluid_i = data.raw.item[fluid .. "-barrel"] --define barrel name
       --set common properties
       F_Fill.icons = generate_fill_barrel_icons(fluid_s, style)
-      fluid_i.icons = generate_barrel_icons(fluid_s, style)
       F_Empty.icons = generate_empty_barrel_icons(fluid_s, style)
+      fluid_i.icons = generate_barrel_icons(fluid_s, style)
+      if mods["angelspetrochem"] and fluid_s.subgroup then
+        fluid_i.subgroup = "angels-fluid-control-"..fluid_s.subgroup
+        fluid_i.order = fluid_s.order or fluid_i.order
+        F_Fill.subgroup = fluid_i.subgroup
+        F_Fill.order = fluid_i.order.."-a"
+        F_Empty.subgroup = fluid_i.subgroup
+        F_Empty.order = fluid_i.order.."-b"
+      end
       --results are generic for filled barrels
       F_Fill.results = {
         {type = "item", name = fluid_s.name .. "-barrel", amount = 1}
@@ -603,10 +678,6 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "recipe-name.fill-gas-canister",
           fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
         }
-        fluid_i.localised_name = {
-          "item-name.filled-gas-canister",
-          fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
-        }
         F_Fill.ingredients = {
           {type = "fluid", name = fluid_s.name, amount = 50},
           {type = "item", name = "gas-canister", amount = 1}
@@ -619,14 +690,17 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "recipe-name.empty-filled-gas-canister",
           fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
         }
+        fluid_i.localised_name = {
+          "item-name.filled-gas-canister",
+          fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
+        }
         ov_functions.remove_unlock("fluid-handling", "fill-" .. fluid_s.name .. "-barrel")
         ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
         ov_functions.remove_unlock("fluid-handling", "empty-" .. fluid_s.name .. "-barrel")
         ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
-      else -- Liquid Canisters
-        F_Fill.localised_name = {"recipe-name.fill-canister", fluid_s.localised_name or {"fluid-name." .. fluid_s.name}}
-        fluid_i.localised_name = {
-          "item-name.filled-canister",
+      elseif style == "acid" then -- Liquid Fuel Canisters
+        F_Fill.localised_name = {
+          "recipe-name.fill-canister",
           fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
         }
         F_Fill.ingredients = {
@@ -641,12 +715,39 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "recipe-name.empty-filled-canister",
           fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
         }
+        fluid_i.localised_name = {
+          "item-name.filled-canister",
+          fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
+        }
+      else -- Vanilla Barrel
+        F_Fill.localised_name = {
+          "recipe-name.fill-barrel",
+          fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
+        }
+        F_Fill.ingredients = {
+          {type = "fluid", name = fluid_s.name, amount = 50},
+          {type = "item", name = "empty-barrel", amount = 1}
+        }
+        F_Empty.results = {
+          {type = "fluid", name = fluid_s.name, amount = 50},
+          {type = "item", name = "empty-barrel", amount = 1}
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-barrel",
+          fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-barrel",
+          fluid_s.localised_name or {"fluid-name." .. fluid_s.name}
+        }
       end
     end
   end
 end
 
--- OVERRIDE EXECUTION
+-------------------------------------------------------------------------------
+-- OVERRIDE EXECUTION FUNCTIONS -----------------------------------------------
+-------------------------------------------------------------------------------
 local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments based on tables and make any necessary changes
   local function adjust_member(parent, member, substitution_type)
     local old = parent[member]
@@ -675,13 +776,13 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
         end
         if replace[item.name] then
           if item.probability then
-             if replace[item.name].probability and replace[item.name].probability ~= item.probability then
-              replace[item.name].probability = item.probability
+            if replace[item.name].probability and replace[item.name].probability ~= item.probability then
               --update probability if it exists in both cases
-             else
-              replace[item.name .."-p"]=item
+              replace[item.name].probability = item.probability
+            else
               --skip, don't touch recipes that add a probability to a static
-             end
+              replace[item.name .. "-p"] = item
+            end
           elseif item.amount ~= replace[item.name].amount then --check both have amount and update old to new
             replace[item.name].amount = item.amount
           end
@@ -699,7 +800,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
     adjust_subtable(path, "ingredients", "recipe_items")
     adjust_member(path, "result", "recipe_items")
     adjust_subtable(path, "results", "recipe_items")
-    adjust_member(recipe, "main_product", "recipe_items")
+    adjust_member(path, "main_product", "recipe_items")
   end
   if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
     if recipe.normal or recipe.expensive then
@@ -829,13 +930,11 @@ ov_functions.execute = function()
     modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
     to_remove = {}
 
+    tech.unit = tech.unit or {}
+    tech.unit.ingredients = tech.unit.ingredients or {}
+
     for pk, pack in pairs(tech.unit.ingredients) do
-      local nk
-      if pack.name then
-        nk = "name"
-      else
-        nk = 1
-      end
+      local nk = pack.name and "name" or 1
       if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
         for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
           to_remove[rem] = true
@@ -844,14 +943,9 @@ ov_functions.execute = function()
     end
     for i = #tech.unit.ingredients, 1, -1 do
       local pack = tech.unit.ingredients[i]
-      local nk, ak
-      if pack.name then
-        nk = "name"
-        ak = "amount"
-      else
-        nk = 1
-        ak = 2
-      end
+      local nk = pack.name and "name" or 1
+      local ak = pack.name and "amount" or 2
+
       if to_remove[pack[nk]] then
         table.remove(tech.unit.ingredients, i)
       else
@@ -877,5 +971,7 @@ ov_functions.execute = function()
 
   initialize_tables() -- reset the data tables after execution to allow for multiple points of execution (eg, one set of adjustments in data-updates and another in data-final-fixes)
 end
+
 initialize_tables()
+
 return ov_functions

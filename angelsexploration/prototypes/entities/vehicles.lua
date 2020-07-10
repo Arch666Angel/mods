@@ -16,8 +16,8 @@ data:extend(
       icon = "__angelsexploration__/graphics/icons/heavy-tank-icon.png",
       icon_size = 32,
       flags = {},
-      subgroup = "angels-exploration-vehicles",
-      order = "c[personal-transport]-e[angels-heavy-tank]",
+      subgroup = "angels-exploration-tank-b",
+      order = "a[tank]-a[vanilla]",
       place_result = "angels-heavy-tank",
       stack_size = 1
     },

@@ -8,6 +8,14 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.ores["cobalt"] then
+else
+  angelsmods.functions.add_flag("cobalt-ore", "hidden")
+end
+
+-------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["cobalt"].ingot then
@@ -21,7 +29,7 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
   if angelsmods.trigger.smelting_products["cobalt"].plate then
   else
     -- no need for molten recipe
-    data.raw.fluid["liquid-molten-cobalt"].hidden = true
+    angelsmods.functions.add_flag("liquid-molten-cobalt", "hidden")
     OV.disable_recipe({"molten-cobalt-smelting"})
   end
 else
@@ -30,7 +38,7 @@ else
   angelsmods.functions.add_flag("solid-cobalt-hydroxide", "hidden")
   angelsmods.functions.add_flag("solid-cobalt-oxide", "hidden")
   angelsmods.functions.add_flag("ingot-cobalt", "hidden")
-  data.raw.fluid["liquid-molten-cobalt"].hidden = true
+  angelsmods.functions.add_flag("liquid-molten-cobalt", "hidden")
   OV.disable_recipe({"cobalt-ore-processing", "cobalt-processed-processing"})
   OV.disable_recipe({"pellet-cobalt-smelting", "processed-cobalt-smelting", "solid-cobalt-hydroxide-smelting"})
   OV.disable_recipe({"cobalt-ore-smelting", "solid-cobalt-oxide-smelting"})

@@ -9,14 +9,17 @@ angelsmods.trigger = angelsmods.trigger or {}
 --CONVERTER RECIPES
 angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"].value
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
+--HIDE UNUSED BUILDINGS
+angelsmods.trigger.disable_vanilla_chemical_plants = settings.startup["angels-disable-vanilla-chemical-plants"].value
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
 angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
+angelsmods.trigger.disable_bobs_distilleries = settings.startup["angels-disable-bobs-distilleries"].value
 
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 if mods["bobplates"] or mods["angelsindustries"] and settings.startup["angels-enable-industries"].value then
   angelsmods.trigger.ores["fluorite"] = true
-  angelsmods.trigger.ores["platinum"] = mods["angelssmelting"] and true or false
+  angelsmods.trigger.ores["platinum"] = angelsmods.industries and angelsmods.industries.overhaul and true or false
 end
 
 --LOAD PROTOTYPES

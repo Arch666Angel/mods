@@ -8,6 +8,7 @@ if mods["bobvehicleequipment"] then
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "car")
   table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "vehicle")
 end
+
 --UPDATE RECIPES FOR ENTITIES
 --OV.execute()
 require("prototypes.overrides.components-entity-update")
@@ -40,14 +41,17 @@ require("prototypes.overrides.overhaul-nuclear-power")
 --data.raw["item"]["assembling-machine-3"].subgroup = "angels-assemblers-medium"
 
 if angelsmods.industries.tech then
-  data.raw["item"]["satellite"].rocket_launch_product = {"science-gravitational-analyzer", 1000}
+  data.raw["item"]["satellite"].rocket_launch_product = {
+    type = "item",
+    name = "science-gravitational-analyzer",
+    amount = 1000
+  }
   data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"
   data.raw.technology["space-science-pack"].icon_size = 128
   OV.add_unlock("space-science-pack", "angels-science-pack-white")
   OV.add_unlock("space-science-pack", "angels-main-lab-7")
   OV.global_replace_item("lab", "angels-basic-lab-2")
 end
+
 require("prototypes.overrides.tech-mod-update")
 require("prototypes.overrides.tech-productivity-update")
--- ordening
-require("prototypes.angels-industries-override-ordening")

@@ -201,7 +201,8 @@ function tech_unlock_reset()
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
       if technology.unit.ingredients and not technology.max_level and technology.unit.ingredients[1] then
         for i, ingredients in pairs(technology.unit.ingredients[1]) do
-          if ingredients == "angels-science-pack-grey" then
+          if ingredients == "angels-science-pack-grey" and techname ~= "tech-specialised-labs" then
+            OV.add_prereq(techname, "tech-specialised-labs")
             set_research_tiers(
               techname,
               angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi,
@@ -284,7 +285,7 @@ function core_tier_upgrade()
           local research_type = string.sub(core_type, 2, -2)
 
           local tech_prereq = {
-            ["grey"] = nil,
+            ["grey"] = "tech-specialised-labs",
             ["red"] = "tech-specialised-labs-basic-%s-1",
             ["green"] = "tech-specialised-labs-basic-%s-2",
             ["orange"] = "tech-specialised-labs-basic-%s-3",
@@ -299,8 +300,8 @@ function core_tier_upgrade()
               ["blue"] = true,
               ["orange"] = false,
               ["green"] = false,
-              ["red"] = false
-              --["grey"  ] = false,
+              ["red"] = false,
+              --["grey"] = false
             }
           ) do
             if pack_name == string.format("angels-science-pack-%s", pack_color) then
@@ -318,7 +319,9 @@ function core_tier_upgrade()
       elseif angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
         set_core(techname, "datacore-basic", 2)
 
-        if pack_name ~= "angels-science-pack-grey" and techname ~= "tech-specialised-labs-basic" then
+        if pack_name == "angels-science-pack-grey" then
+          OV.add_prereq(techname, "tech-specialised-labs")
+        elseif techname ~= "tech-specialised-labs-basic" then
           OV.add_prereq(techname, "tech-specialised-labs-basic")
         end
       end

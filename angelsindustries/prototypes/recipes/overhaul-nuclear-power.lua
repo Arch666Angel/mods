@@ -1,4 +1,4 @@
-local tint_colors =
+local tint_colors = 
 {
   green = {r=000/255, g=255/255, b=000/255, a=1},
   orange = {r=232/255, g=139/255, b=000/255, a=1},
@@ -23,16 +23,16 @@ data:extend(
     energy_required = 180,
     ingredients =
     {
-      {type="item", name = "neptunium-240", amount = 8},
+      {type = "item", name = "neptunium-240", amount = 8},
     },
-    results =
+    results = 
     {
-      {type="item", name="plutonium-240", amount=5},
+      {type = "item", name = "plutonium-240", amount = 5},
     },
     main_product = "plutonium-240",
     always_show_products = true,
     show_amount_in_title = false,
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -59,7 +59,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-a[processing]",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.orange,
     },
@@ -73,18 +73,18 @@ data:extend(
     energy_required = 540,
     ingredients =
     {
-      {type="item", name="americium-241", amount=5},
-      {type="item", name="uranium-238", amount=60},
-      {type="item", name="plutonium-240", amount=1}
+      {type = "item", name = "americium-241", amount = 5},
+      {type = "item", name = "uranium-238", amount = 60},
+      {type = "item", name = "plutonium-240", amount = 1}
     },
-    results =
+    results = 
     {
-      --{type="item", name="uranium-235", amount=1,probability=0.3},
-      {type="item", name="plutonium-240", amount=6,catalyst_amount=1},
-      {type="item", name="uranium-238", amount=15,catalyst_amount =15},
-      {type="item", name="solid-lead-oxide", amount=5}, -- equals 5 lead plates
+      --{type = "item", name = "uranium-235", amount = 1,probability=0.3},
+      {type = "item", name = "plutonium-240", amount = 6,catalyst_amount=1},
+      {type = "item", name = "uranium-238", amount = 15,catalyst_amount = 15},
+      {type = "item", name = "solid-lead-oxide", amount = 5}, -- equals 5 lead plates
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -111,7 +111,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-b[recovery]",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.orange,
     },
@@ -125,14 +125,14 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {type="item", name="thorium-ore", amount=5},
+      {type = "item", name = "thorium-ore", amount = 5},
     },
-    results =
+    results = 
     {
-      {type="item", name="thorium-232", amount=4},
-      {type="item", name="plutonium-240", amount=1, probability=0.15}, --must be low enough to not be self-sustainable
+      {type = "item", name = "thorium-232", amount = 4},
+      {type = "item", name = "plutonium-240", amount = 1, probability=0.15}, --must be low enough to not be self-sustainable
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__base__/graphics/icons/uranium-processing.png",
@@ -160,8 +160,8 @@ data:extend(
       },
     },
     icon_size = 32,
-    order = "b[AMOX]-b[recovery]",
-    crafting_machine_tint =
+    order = "c[thorium]-a[processing]",
+    crafting_machine_tint = 
     {
       primary = tint_colors.red,
     },
@@ -185,20 +185,20 @@ data:extend(
     energy_required = 7000,
     ingredients =
     {
-      {type="item", name = "uranium-234", amount = 1},
-      {type="item", name = "uranium-238", amount = 199},
-      {type="item", name = "iron-plate", amount = 100},
+      {type = "item", name = "uranium-234", amount = 1},
+      {type = "item", name = "uranium-238", amount = 199},
+      {type = "item", name = "iron-plate", amount = 100},
     },
-    results =
+    results = 
     {
-      {type="item", name="angels-uranium-fuel-cell", amount=100},
+      {type = "item", name = "angels-uranium-fuel-cell", amount = 100},
     },
     main_product = "angels-uranium-fuel-cell",
     always_show_products = true,
     show_amount_in_title = false,
     icon_size = 32,
     order = "a[uranium]-b",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.green,
     },
@@ -213,17 +213,17 @@ data:extend(
     energy_required = 120,
     ingredients =
     {
-      {type="item", name = "used-up-uranium-fuel-cell", amount = 10},
-      {type="fluid", name = "liquid-hydrofluoric-acid", amount = 60},
+      {type = "item", name = "used-up-uranium-fuel-cell", amount = 10},
+      {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60},
     },
-    results =
+    results = 
     {
-      {type="item", name="uranium-238", amount=5},
-      {type="item", name="slag", amount=10},
-      {type="item", name="neptunium-240", amount=1,probability=0.4},
-      {type="fluid", name="water-greenyellow-waste", amount=60},
+      {type = "item", name = "uranium-238", amount = 5},
+      {type = "item", name = "slag", amount = 10},
+      {type = "item", name = "neptunium-240", amount = 1,probability=0.4},
+      {type = "fluid", name = "water-greenyellow-waste", amount = 60},
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -250,7 +250,7 @@ data:extend(
     },
     icon_size = 32,
     order = "a[uranium]-d", -- "a[uranium]-c" reserved for vanilla reprocessing
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.green,
     },
@@ -266,20 +266,20 @@ data:extend(
     energy_required = 1200,
     ingredients =
     {
-      {type="item", name = "uranium-238", amount = 38},
-      {type="item", name = "plutonium-240", amount = 2},
-      {type="item", name = "angels-plate-lead", amount = 20},
+      {type = "item", name = "uranium-238", amount = 38},
+      {type = "item", name = "plutonium-240", amount = 2},
+      {type = "item", name = "angels-plate-lead", amount = 20},
     },
-    results =
+    results = 
     {
-      {type="item", name="AMOX-cell", amount=20},
+      {type = "item", name = "AMOX-cell", amount = 20},
     },
     main_product = "AMOX-cell",
     always_show_products = true,
     show_amount_in_title = false,
     icon_size = 32,
     order = "b[AMOX]-a",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.orange,
     },
@@ -294,17 +294,17 @@ data:extend(
     energy_required = 330,
     ingredients =
     {
-      {type="item", name="used-up-AMOX-cell", amount=5}
+      {type = "item", name = "used-up-AMOX-cell", amount = 5}
     },
-    results =
+    results = 
     {
-      {type="item", name="americium-241", amount=1},
-      {type="item", name="americium-241", amount=1,probability=0.95},
-      {type="item", name="curium-245",amount=1,probability=0.05},
-      {type="item", name="uranium-238", amount=1},
-      {type="item", name="slag", amount=5},
+      {type = "item", name = "americium-241", amount = 1},
+      {type = "item", name = "americium-241", amount = 1,probability=0.95},
+      {type = "item", name = "curium-245", amount = 1,probability=0.05},
+      {type = "item", name = "uranium-238", amount = 1},
+      {type = "item", name = "slag", amount = 5},
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -331,7 +331,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-b",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.orange,
     },
@@ -346,16 +346,16 @@ data:extend(
     energy_required = 660,
     ingredients =
     {
-      {type="item", name="used-up-AMOX-cell", amount=10},
-      {type="fluid", name = "liquid-hydrofluoric-acid", amount = 60},
+      {type = "item", name = "used-up-AMOX-cell", amount = 10},
+      {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60},
     },
-    results =
+    results = 
     {
-      {type="item", name="plutonium-240", amount=4},
-      {type="item", name="slag", amount=10},
-      {type="item", name="curium-245",amount=2,probability=0.45},
-      {type="item", name="uranium-235",amount=1,probability=0.2},
-      {type="fluid", name="water-greenyellow-waste", amount=60},
+      {type = "item", name = "plutonium-240", amount = 4},
+      {type = "item", name = "slag", amount = 10},
+      {type = "item", name = "curium-245", amount = 2,probability=0.45},
+      {type = "item", name = "uranium-235", amount = 1,probability=0.2},
+      {type = "fluid", name = "water-greenyellow-waste", amount = 60},
     },
     icons=
     {
@@ -390,7 +390,7 @@ data:extend(
     },
     icon_size = 32,
     order = "b[AMOX]-c",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.orange,
     },
@@ -406,21 +406,21 @@ data:extend(
     energy_required = 1000,
     ingredients =
     {
-      {type="item", name="thorium-232", amount=17},
-      {type="item", name="curium-245", amount=1},
-      {type="item", name="plutonium-240", amount=3},
-      {type="item", name = "angels-plate-zinc", amount = 10},
+      {type = "item", name = "thorium-232", amount = 17},
+      {type = "item", name = "curium-245", amount = 1},
+      {type = "item", name = "plutonium-240", amount = 3},
+      {type = "item", name = "angels-plate-zinc", amount = 10},
     },
-    results =
+    results = 
     {
-      {type="item", name="angels-thorium-fuel-cell", amount=10},
+      {type = "item", name = "angels-thorium-fuel-cell", amount = 10},
     },
     main_product = "angels-thorium-fuel-cell",
     always_show_products = true,
     show_amount_in_title = false,
     icon_size = 32,
     order = "c[thorium]-a",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.red,
     },
@@ -435,21 +435,21 @@ data:extend(
     energy_required = 900,
     ingredients =
     {
-      {type="item", name="thorium-232", amount=15},
-      {type="item", name="americium-241", amount=2},
-      {type="item", name="plutonium-240", amount=4},
-      {type="item", name = "angels-plate-zinc", amount = 10},
+      {type = "item", name = "thorium-232", amount = 15},
+      {type = "item", name = "americium-241", amount = 2},
+      {type = "item", name = "plutonium-240", amount = 4},
+      {type = "item", name = "angels-plate-zinc", amount = 10},
     },
-    results =
+    results = 
     {
-      {type="item", name="angels-thorium-fuel-cell", amount=10},
+      {type = "item", name = "angels-thorium-fuel-cell", amount = 10},
     },
     main_product = "angels-thorium-fuel-cell",
     always_show_products = true,
     show_amount_in_title = false,
     icon_size = 32,
     order = "c[thorium]-b",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.red,
     },
@@ -464,17 +464,17 @@ data:extend(
     energy_required = 450,
     ingredients =
     {
-      {type="item", name="used-up-angels-thorium-fuel-cell", amount=5},
+      {type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 5},
     },
     results=
     {
-      {type="item", name="slag", amount=5},
-      {type="item", name="neptunium-240", amount=1},
-      {type="item", name="thorium-232", amount=2},
-      {type="item", name="uranium-234", amount=1,probability=0.05},
-      {type="item", name="curium-245", amount=1,probability=0.1},
+      {type = "item", name = "slag", amount = 5},
+      {type = "item", name = "neptunium-240", amount = 1},
+      {type = "item", name = "thorium-232", amount = 2},
+      {type = "item", name = "uranium-234", amount = 1,probability=0.05},
+      {type = "item", name = "curium-245", amount = 1,probability=0.1},
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -507,7 +507,7 @@ data:extend(
     },
     icon_size = 32,
     order = "c[thorium]-c",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.red,
     },
@@ -522,18 +522,18 @@ data:extend(
     energy_required = 1000,
     ingredients =
     {
-      {type="item", name="used-up-angels-thorium-fuel-cell", amount=10},
-      {type="fluid", name = "liquid-hydrofluoric-acid", amount = 60},
+      {type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 10},
+      {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60},
     },
     results=
     {
-      {type="item", name="slag", amount=10},
-      {type="item", name="neptunium-240", amount=2},
-      {type="item", name="uranium-234", amount=2,probability=0.05},
-      {type="fluid", name="water-greenyellow-waste", amount=60},
-      {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=4/30},
+      {type = "item", name = "slag", amount = 10},
+      {type = "item", name = "neptunium-240", amount = 2},
+      {type = "item", name = "uranium-234", amount = 2,probability=0.05},
+      {type = "fluid", name = "water-greenyellow-waste", amount = 60},
+      {type = "item", name = "angels-muon-fusion-catalyst", amount = 1, catalyst_amount = 1, probability=4/30},
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -566,7 +566,7 @@ data:extend(
     },
     icon_size = 32,
     order = "c[thorium]-d",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.red,
     },
@@ -582,20 +582,20 @@ data:extend(
     energy_required = 1500,
     ingredients =
     {
-      {type="fluid", name="gas-deuterium", amount=600},
-      {type="item", name="angels-plate-zinc", amount=1},
-      {type="item", name="angels-muon-fusion-catalyst", amount=1},
+      {type = "fluid", name = "gas-deuterium", amount = 600},
+      {type = "item", name = "angels-plate-zinc", amount = 1},
+      {type = "item", name = "angels-muon-fusion-catalyst", amount = 1},
     },
-    results =
+    results = 
     {
-      {type="item", name="angels-deuterium-fuel-cell", amount=1},
+      {type = "item", name = "angels-deuterium-fuel-cell", amount = 1},
     },
     main_product = "angels-deuterium-fuel-cell",
     always_show_products = true,
     show_amount_in_title = false,
     icon_size = 32,
     order = "d[deuterium]-a",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.blue,
     },
@@ -610,15 +610,15 @@ data:extend(
     energy_required = 6000,
     ingredients =
     {
-      {type="item", name="used-up-angels-deuterium-fuel-cell", amount=5},
+      {type = "item", name = "used-up-angels-deuterium-fuel-cell", amount = 5},
     },
     results=
     {
-      {type="item", name="slag", amount = 5},
-      {type="item", name="angels-muon-fusion-catalyst", amount=4, catalyst_amount = 4}, -- make it lose 1%; 99% of 5 = 4.95 return
-      {type="item", name="angels-muon-fusion-catalyst", amount=1, catalyst_amount = 1, probability=0.95},
+      {type = "item", name = "slag", amount = 5},
+      {type = "item", name = "angels-muon-fusion-catalyst", amount = 4, catalyst_amount = 4}, -- make it lose 1%; 99% of 5 = 4.95 return
+      {type = "item", name = "angels-muon-fusion-catalyst", amount = 1, catalyst_amount = 1, probability=0.95},
     },
-    icons =
+    icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
@@ -645,7 +645,7 @@ data:extend(
     },
     icon_size = 32,
     order = "d[deuterium]-b",
-    crafting_machine_tint =
+    crafting_machine_tint = 
     {
       primary = tint_colors.blue,
     },
@@ -662,13 +662,16 @@ data:extend(
       energy_required = 90,
       enabled = false,
       category = "centrifuging",
-      ingredients = {
-        {type= "item",name="plutonium-240",amount=1},
-        {type= "item",name="rocket-fuel",amount=1}
+      ingredients ={
+        {type = "item", name = "plutonium-240", amount = 1},
+        {type = "item", name = "rocket-fuel", amount = 1}
       },
       --icon = "__base__/graphics/icons/nuclear-fuel.png",
       --icon_size = 64, icon_mipmaps = 4,
-      results = {{type= "item",name="angels-nuclear-fuel",amount=1}}
+      results =
+      {
+        {type = "item", name = "angels-nuclear-fuel", amount = 1}
+      }
     },
     { --do i want this?
       type = "recipe",
@@ -676,14 +679,17 @@ data:extend(
       energy_required = 90,
       enabled = false,
       category = "centrifuging",
-      ingredients = {
-        {type= "item",name="plutonium-240",amount=2},
-        {type= "item",name="rocket-fuel",amount=3},
-        {type= "item",name="thorium-232",amount=1}
+      ingredients ={
+        {type = "item", name = "plutonium-240", amount = 2},
+        {type = "item", name = "rocket-fuel", amount = 3},
+        {type = "item", name = "thorium-232", amount = 1}
       },
       --icon = "__base__/graphics/icons/nuclear-fuel.png",
       --icon_size = 64, icon_mipmaps = 4,
-      results = {{type= "item",name="angels-nuclear-fuel-2",amount=3}}
+      results =
+      {
+        {type = "item", name = "angels-nuclear-fuel-2", amount = 3}
+      }
     },
     {
       type = "recipe",
@@ -703,12 +709,16 @@ data:extend(
       icon_size=32,
       ingredients =
       {
-        {type= "item",name="rocket-control-unit",amount=10},
-        {type= "item",name="explosives",amount=10},
-        {type= "item",name="plutonium-240",amount=30}
+        {type = "item", name = "rocket-control-unit", amount = 10},
+        {type = "item", name = "explosives", amount = 10},
+        {type = "item", name = "rocket-booster", amount = 1},
+        {type = "item", name = "plutonium-240", amount = 30}
       },
-      results = {{type= "item",name="atomic-bomb",amount=1}},
-      order="c[basic-ammo]-c[uranium-ammo]-a"
+      results =
+      {
+        {type = "item", name = "atomic-bomb", amount = 1}
+      },
+      order="d[rocket-launcher]-d[atomic-bomb]-a"
     },
     {
       type = "recipe",
@@ -729,13 +739,17 @@ data:extend(
       icon_size=32,
       ingredients =
       {
-        {type= "item",name="rocket-control-unit",amount=20},
-        {type= "item",name="explosives",amount=20},
-        {type="fluid", name="gas-deuterium", amount=3600},
-        {type= "item",name="angels-muon-fusion-catalyst",amount=1}
+        {type = "item", name = "rocket-control-unit", amount = 20},
+        {type = "item", name = "explosives", amount = 20},
+        {type = "item", name = "rocket-booster", amount = 1},
+        {type = "fluid", name = "gas-deuterium", amount = 3600},
+        {type = "item", name = "angels-muon-fusion-catalyst", amount = 1}
       },
-      results = {{type= "item",name="atomic-bomb",amount=2}},
-      order="c[basic-ammo]-c[uranium-ammo]-b"
+      results =
+      {
+        {type = "item", name = "atomic-bomb", amount = 2}
+      },
+      order="d[rocket-launcher]-d[atomic-bomb]-b"
     },
   }
 )

@@ -1,4 +1,6 @@
---GET ICON/ICONS FROM FLUID/ITEM
+-------------------------------------------------------------------------------
+--GET ICON/ICONS FROM FLUID/ITEM ----------------------------------------------
+-------------------------------------------------------------------------------
 local function get_icons(object_name)
   for _, prototype in pairs({"item", "fluid", "capsule"}) do
     local object = data.raw[prototype][object_name]
@@ -105,6 +107,9 @@ local function clean_table(t)
   return t
 end
 
+-------------------------------------------------------------------------------
+-- ICON GENERATION ------------------------------------------------------------
+-------------------------------------------------------------------------------
 local icon_tint_table = {
   c = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon
   k = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, -- Coal/Oil
@@ -837,7 +842,9 @@ function angelsmods.functions.check_exception(arg, excep)
   return true
 end
 
---ADDS A TECH TO IGNORE FOR THE TECH MOD
+-------------------------------------------------------------------------------
+-- ADDS A TECH TO IGNORE FOR THE TECH MOD -------------------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.add_exception(to_add)
   if --type(to_add) == string and
     angelsmods.industries and angelsmods.industries.tech_exceptions then
@@ -845,7 +852,9 @@ function angelsmods.functions.add_exception(to_add)
   end
 end
 
---REMOVE PRODUCTIVITY RESTRICTION
+-------------------------------------------------------------------------------
+-- PRODUCTIVITY RESTRICTION ---------------------------------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.allow_productivity(recipe_name)
   if data.raw.recipe[recipe_name] then
     for i, module in pairs(data.raw.module) do
@@ -870,7 +879,9 @@ function angelsmods.functions.remove_productivity(recipe_name)
   end
 end
 
---OVERRIDES SET CONDITION FOR LIST OF ITEMS
+-------------------------------------------------------------------------------
+-- OVERRIDES STACK SET CONDITION FOR LIST OF ITEMS ----------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.override_item_conditions(override)
   for i, items in pairs(override.list) do
     if data.raw.item[items] then
@@ -881,8 +892,17 @@ function angelsmods.functions.override_item_conditions(override)
   end
 end
 
---MODIFY FLAGS
-function angelsmods.functions.add_flag(entity, flag)
+-------------------------------------------------------------------------------
+-- MODIFY FLAGS ---------------------------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
+  if type(entity) == "table" then
+    for _, ent in pairs(entity) do
+      angelsmods.functions.add_flag(ent, flag)
+    end
+    return
+  end
+
   local to_add = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
   if to_add then
     if to_add.flags then
@@ -890,10 +910,55 @@ function angelsmods.functions.add_flag(entity, flag)
     else
       to_add.flags = {flag}
     end
+    return
+  end
+
+  to_add = data.raw.fluid[entity]
+  if to_add then
+    if flag == "hidden" then
+      to_add.hidden = true
+      angelsmods.functions.disable_barreling_recipes(entity)
+    elseif to_add.flags then
+      table.insert(to_add.flags, flag)
+    else
+      to_add.flags = {flag}
+    end
+    return
   end
 end
 
---MODIFY LOCATION
+function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
+  if type(entity) == "table" then
+    for _, ent in pairs(entity) do
+      angelsmods.functions.remove_flag(ent, flag)
+    end
+    return
+  end
+
+  local to_remove = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
+  if to_remove then
+    for flag_index, flag in pairs(to_remove.flags or {}) do
+      if flag == flag_to_remove then
+        table.remove(to_remove.flags, flag_index)
+        return
+      end
+    end
+    return
+  end
+
+  to_remove = data.raw.fluid[entity]
+  if to_remove then
+    if flag == "hidden" then
+      to_remove.hidden = false
+      -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
+    end
+    return
+  end
+end
+
+-------------------------------------------------------------------------------
+-- MODIFY LOCATION ------------------------------------------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type)
   i_type = i_type or "item"
 
@@ -902,28 +967,15 @@ function angelsmods.functions.move_item(i_name, i_subgroup, i_order, i_type)
   i.order = i_order or i.order
 end
 
---MODIFY BARRELING RECIPES
+-------------------------------------------------------------------------------
+-- MODIFY BARRELING RECIPES ---------------------------------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.disable_barreling_recipes(fluid_to_disable)
   angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-liquid-bot")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-liquid-bot")
-  for nx, item in pairs(data.raw.item) do
-    if item.name == fluid_to_disable .. "-barrel" then
-      if item.flags then
-        table.insert(item.flags, "hidden")
-      else
-        item.flags = {"hidden"}
-      end
-    end
-    if item.name == fluid_to_disable .. "-liquid-bot" then
-      if item.flags then
-        table.insert(item.flags, "hidden")
-      else
-        item.flags = {"hidden"}
-      end
-    end
-  end
+  angelsmods.functions.add_flag(fluid_to_disable .. "-barrel", "hidden")
 end
 
 function angelsmods.functions.modify_barreling_icon()
@@ -949,18 +1001,78 @@ end
 
 function angelsmods.functions.modify_barreling_recipes()
   angelsmods.functions.modify_barreling_icon()
-  local auto_barreling = angelsmods.trigger.enable_auto_barreling
-  for _, recipe in pairs(data.raw.recipe) do
-    if recipe.subgroup == "empty-barrel" or recipe.subgroup == "fill-barrel" then
-      if auto_barreling then
-        recipe.hidden = true
+  if angelsmods.trigger.enable_auto_barreling then
+    local items = data.raw.item
+    local recipes = data.raw.recipe
+
+    for fn,_ in pairs(data.raw.fluid) do
+      if data.raw.item[fn .. "-barrel"] then
+        if recipes["fill-"..fn.."-barrel"] then
+          recipes["fill-"..fn.."-barrel"].hidden = true
+          recipes["fill-"..fn.."-barrel"].category = "barreling-pump"
+        end
+        if recipes["empty-"..fn.."-barrel"] then
+          recipes["empty-"..fn.."-barrel"].hidden = true
+          recipes["empty-"..fn.."-barrel"].category = "barreling-pump"
+        end
       end
-      recipe.category = "barreling-pump"
     end
   end
 end
 
---CREATE VOID RECIPES
+function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
+  local groups = data.raw["item-group"]
+  local subgroups = data.raw["item-subgroup"]
+
+  local items = data.raw.item
+  local recipes = data.raw.recipe
+  
+  if not fluids_to_move or #fluids_to_move == 0 then
+    fluids_to_move = data.raw.fluid
+  end
+
+  for fn, fd in pairs(fluids_to_move) do
+    local recipe = recipes[fn]
+
+    local subgroup_name = fd.subgroup or (recipe and recipe.subgroup) or "vanilla"
+    local subgroup = subgroups[subgroup_name]
+    local subgroup_order = subgroup and subgroup.order or "z"
+
+    local group = groups[subgroup and subgroup.group or "vanilla"]
+    local group_order = group and group.order or "z"
+
+    local barrel = items[fn .. "-barrel"]
+
+    if subgroup and barrel then
+      barrel.subgroup = "angels-fluid-control-" .. subgroup_name
+      barrel.order = fd.order or (recipe and recipe.order) or "z"
+
+      if not data.raw["item-subgroup"][barrel.subgroup] then
+        data:extend(
+          {
+            {
+              type = "item-subgroup",
+              name = barrel.subgroup,
+              group = "angels-fluid-control",
+              order = "z-" .. group_order .. "-" .. subgroup_order
+            }
+          }
+        )
+      end
+
+      if recipes["fill-" .. fn .. "-barrel"] then
+        recipes["fill-" .. fn .. "-barrel"].subgroup = barrel.subgroup
+        recipes["fill-" .. fn .. "-barrel"].order = barrel.order .. "-a"
+        recipes["empty-" .. fn .. "-barrel"].subgroup = barrel.subgroup
+        recipes["empty-" .. fn .. "-barrel"].order = barrel.order .. "-b"
+      end
+    end
+  end
+end
+
+-------------------------------------------------------------------------------
+-- CREATE VOID RECIPES --------------------------------------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.make_void(fluid_name, void_category, void_amount) -- categories: chemical (fluid, flare-stack)
   --LOCAL DEFINITIONS                                                           --             water (fluild, clarifier)
   local recipe = {}                                                             --             bio (item, compost)
@@ -1036,13 +1148,13 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.allow_as_intermediate = false
     recipe.hide_from_stats = false
     recipe.subgroup = "angels-" .. void_category .. "-void"
-    recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order
+    recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order or "z"
     --recipe.order = recipe.order .. "[" .. data.raw["item-subgroup"][void_input_subgroup].group .. "]"
     recipe.order = recipe.order .. "-"
     recipe.order = recipe.order .. data.raw["item-subgroup"][void_input_subgroup].order
     --recipe.order = recipe.order .. "[" .. void_input_subgroup .. "]"
     recipe.order = recipe.order .. "-"
-    recipe.order = recipe.order .. (data.raw.fluid[fluid_name] or data.raw.item[fluid_name]).order or "z"
+    recipe.order = recipe.order .. ((data.raw.fluid[fluid_name] or data.raw.item[fluid_name] or {}).order or "z")
     --recipe.order = recipe.order .. "[" .. fluid_name .. "]"
     recipe.order = string.len(recipe.order) <= 200 and recipe.order or recipe.order:sub(1, 200) -- order limited to 200 characters
 
@@ -1066,7 +1178,9 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
   end
 end
 
---CREATE CONVERTER RECIPES (PETROCHEM)
+-------------------------------------------------------------------------------
+-- CREATE CONVERTER RECIPES (PETROCHEM) ---------------------------------------
+-------------------------------------------------------------------------------
 function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels)
   if angelsmods.trigger.enableconverter then
     if data.raw.fluid[fluid_name_angels] and data.raw.fluid[fluid_name_other] then
@@ -1136,7 +1250,9 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
   end
 end
 
---MODIFY LOCALIZATION STRINGS
+-------------------------------------------------------------------------------
+-- MODIFY LOCALIZATION STRINGS ------------------------------------------------
+-------------------------------------------------------------------------------
 local function get_add_localization(args)
   local add = {""}
   local length = #args
@@ -1185,51 +1301,142 @@ function angelsmods.functions.add_recipe_localization(res_name, translate, ...)
   end
 end
 
--- Barreling
-function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
-  local auto_barreling = angelsmods.trigger.enable_auto_barreling
-  -- no need to modify since it will happen automatically
-  if auto_barreling then
-    return
-  end
+-------------------------------------------------------------------------------
+-- ORE HANDLING ---------------------------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.ore_exists(ore_name)
+  return data.raw.item[ore_name] and true or false
+end
 
-  local subgroups = data.raw["item-subgroup"]
-  local recipes = data.raw.recipe
-  local items = data.raw.item
-  if not fluids_to_move or #fluids_to_move == 0 then
-    fluids_to_move = data.raw.fluid
-  end
-
-  for fn, fd in pairs(fluids_to_move) do
-    local recipe = recipes[fn]
-    local subgroup = fd.subgroup or (recipe and recipe.subgroup) or "vanilla"
-    local order = fd.order or (recipe and recipe.order) or false
-    local barrel = items[fn .. "-barrel"]
-
-    if subgroup and barrel then
-      if not data.raw["item-subgroup"]["angels-fluid-control-" .. subgroup] then
-        data:extend(
-          {
-            {
-              type = "item-subgroup",
-              name = "angels-fluid-control-" .. subgroup,
-              group = "angels-fluid-control",
-              order = "z-" .. (subgroups[subgroup] and subgroups[subgroup].order or subgroup)
-            }
-          }
-        )
-      end
-      order = order or barrel.order
-
-      barrel.subgroup = "angels-fluid-control-" .. subgroup
-      barrel.order = order
-
-      if recipes["fill-" .. fn .. "-barrel"] then
-        recipes["fill-" .. fn .. "-barrel"].subgroup = "angels-fluid-control-" .. subgroup
-        recipes["fill-" .. fn .. "-barrel"].order = order .. "-a"
-        recipes["empty-" .. fn .. "-barrel"].subgroup = "angels-fluid-control-" .. subgroup
-        recipes["empty-" .. fn .. "-barrel"].order = order .. "-b"
-      end
+local is_vanilla_ore = {
+  ["iron"] = true,
+  ["copper"] = true,
+  ["uranium"] = true
+}
+function angelsmods.functions.is_special_vanilla()
+  for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
+    if ore_enabled and (not is_vanilla_ore[ore_name]) then
+      return false
     end
+  end
+  return true
+end
+
+function angelsmods.functions.get_trigger_names()
+  local special_vanilla = angelsmods.functions.is_special_vanilla()
+  return {
+    -- TIER 1 ORES
+    ["iron-ore"] = "iron",
+    ["angels-iron-nugget"] = special_vanilla and "iron" or "unused", -- special vanilla only
+    ["angels-iron-pebbles"] = special_vanilla and "iron" or "unused", -- special vanilla only
+    ["angels-iron-slag"] = special_vanilla and "iron" or "unused", -- special vanilla only
+    ["copper-ore"] = "copper",
+    ["angels-copper-nugget"] = special_vanilla and "copper" or "unused", -- special vanilla only
+    ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
+    ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
+    -- TIER 1.5 ORES
+    ["tin-ore"] = "tin",
+    ["lead-ore"] = "lead",
+    ["quartz"] = "silicon",
+    ["nickel-ore"] = "nickel",
+    ["manganese-ore"] = "manganese",
+    -- TIER 2 ORES
+    ["zinc-ore"] = "zinc",
+    ["bauxite-ore"] = "aluminium",
+    ["cobalt-ore"] = "cobalt",
+    ["silver-ore"] = "silver",
+    ["fluorite-ore"] = "fluorite", -- byproduct
+    -- TIER 2.5 ORES
+    ["gold-ore"] = "gold",
+    -- TIER 3 ORES
+    ["rutile-ore"] = "titanium",
+    ["uranium-ore"] = "uranium",
+    -- TIER 4 ORES
+    ["tungsten-ore"] = "tungsten",
+    ["thorium-ore"] = "thorium",
+    ["chrome-ore"] = "chrome",
+    ["platinum-ore"] = "platinum"
+  }
+end
+
+function angelsmods.functions.ore_enabled(ore_name)
+  if angelsmods.trigger.ores[angelsmods.functions.get_trigger_names()[ore_name] or ore_name] then
+    return true
+  end
+  if angelsmods.trigger.refinery_products[ore_name] then
+    return true
+  end
+  return false
+end
+
+-------------------------------------------------------------------------------
+-- MODIFY CRAFTING_CATEGORY ---------------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.add_crafting_category(crafting_machine_type, crafting_machine_name, crafting_category)
+  if not data.raw[crafting_machine_type] then return end
+  if not data.raw[crafting_machine_type][crafting_machine_name] then return end
+
+  if type(crafting_category) == "table" then
+    for _, category in pairs(crafting_category) do
+      angelsmods.functions.add_crafting_category(crafting_machine_type, crafting_machine_name, category)
+    end
+  end
+  if not data.raw["recipe-category"][crafting_category] then return end
+
+  local crafting_machine_prototype = data.raw[crafting_machine_type][crafting_machine_name]
+  crafting_machine_prototype.crafting_categories = crafting_machine_prototype.crafting_categories or {}
+  
+  for _, category_name in pairs(crafting_machine_prototype.crafting_categories) do
+    if category_name == crafting_category then
+      return -- already present
+    end
+  end
+
+  table.insert(crafting_machine_prototype.crafting_categories, crafting_category)
+  
+  if crafting_category ~= "angels-unused-machine" then
+    angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, "angels-unused-machine")
+  end
+end
+
+function angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, crafting_category)
+  if not data.raw[crafting_machine_type] then return end
+  if not data.raw[crafting_machine_type][crafting_machine_name] then return end
+
+  local crafting_machine_categories = data.raw[crafting_machine_type][crafting_machine_name].crafting_categories
+  if not crafting_machine_categories then return end
+
+  if type(crafting_category) == "table" then
+    for _, category in pairs(crafting_category) do
+      angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, category)
+    end
+  end
+
+  for category_index, category_name in pairs(crafting_machine_categories) do
+    if category_name == crafting_category then
+      table.remove(crafting_machine_categories, category_index)
+      
+      if next(crafting_machine_categories) then
+        return
+      else
+        angelsmods.functions.add_crafting_category(crafting_machine_type, crafting_machine_name, "angels-unused-machine")
+      end
+
+    end
+  end
+end
+
+-------------------------------------------------------------------------------
+-- MODIFY NEXT_UPGRADE --------------------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_machine_name, next_upgrade)
+  if not data.raw[crafting_machine_type] then return end
+
+  local crafting_machine = data.raw[crafting_machine_type][crafting_machine_name]
+  if not crafting_machine then return end
+
+  crafting_machine.next_upgrade = next_upgrade
+  if next_upgrade then
+    angelsmods.functions.remove_flag(crafting_machine.minable and crafting_machine.minable.result or crafting_machine_name, "not-upgradable")
   end
 end

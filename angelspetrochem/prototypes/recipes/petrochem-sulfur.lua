@@ -152,6 +152,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-hydrogen-fluoride",
+      localised_name = {"recipe-name.liquid-hydrogen-fluoride"},
       category = "chemistry",
       subgroup = "petrochem-sulfur",
       energy_required = 2,
@@ -165,6 +166,7 @@ data:extend(
       },
       main_product = "liquid-hydrofluoric-acid",
       always_show_products = true,
+      show_amount_in_title = false,
       icons = angelsmods.functions.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
@@ -175,6 +177,31 @@ data:extend(
         }
       ),
       order = "e[liquid-hydrofluoric-acid]-b"
+    },
+    {
+      type = "recipe",
+      name = "gas-hydrogen-fluoride",
+      localised_name = {"recipe-name.gas-hydrogen-fluoride"},
+      category = "chemistry",
+      subgroup = "petrochem-sulfur",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 50},
+      },
+      results = {
+        {type = "fluid", name = "gas-hydrogen-fluoride", amount = 55},
+        {type = "fluid", name = "water-greenyellow-waste", amount = 50}
+      },
+      main_product = "gas-hydrogen-fluoride",
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
+        },
+        "fhh"
+      ),
+      order = "e[liquid-hydrofluoric-acid]-c"
     },
     {
       type = "recipe",
@@ -212,7 +239,7 @@ data:extend(
       always_show_products = true,
       icons = angelsmods.functions.create_gas_recipe_icon(
         {
-          {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32}
+          "filter-lime"
         },
         "sss"
       ),
@@ -221,6 +248,7 @@ data:extend(
     {
       type = "recipe",
       name = "filter-lime-used",
+      localised_name = {"recipe-name.angels-sulfur-air-scrubbing"},
       category = "liquifying",
       subgroup = "petrochem-sulfur",
       energy_required = 2,
@@ -234,7 +262,12 @@ data:extend(
       },
       main_product = "gas-acid",
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(nil, "sss"),
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          "gas-acid"
+        },
+        "sss"
+      ),
       order = "h"
     },
     {

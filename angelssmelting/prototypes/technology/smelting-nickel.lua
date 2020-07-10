@@ -7,7 +7,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-metallurgy-1",
-        "angels-coal-processing"
+        "angels-coal-processing",
+        "ore-crushing"
       },
       effects = {
         {

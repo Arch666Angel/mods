@@ -353,6 +353,17 @@ data:extend(
       },
       result = "seafloor-pump"
     },
+    --LAND PUMP
+    {
+      type = "recipe",
+      name = "ground-water-pump",
+      energy_required = 5,
+      enabled = true,
+      ingredients = {
+        {type = "item", name = "angels-void", amount = 1}
+      },
+      result = "ground-water-pump"
+    },
     --CLARIFIER
     {
       type = "recipe",

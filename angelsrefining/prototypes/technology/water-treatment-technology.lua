@@ -1,11 +1,40 @@
 data:extend(
   {
+    --{
+    --  type = "technology",
+    --  name = "angels-fluid-handling",
+    --  localised_name = {"technology-name.fluid-handling"},
+    --  localised_description = {"technology-description.fluid-handling"},
+    --  icon = "__base__/graphics/technology/fluid-handling.png",
+    --  icon_size = 128,
+    --  prerequisites = {
+    --    "automation-2"
+    --  },
+    --  effects = {
+    --    {
+    --      type = "unlock-recipe",
+    --      recipe = "ground-water-pump"
+    --    }
+    --  },
+    --  unit = {
+    --    count = 50,
+    --    ingredients = {
+    --      {type = "item", name = "automation-science-pack", amount = 1},
+    --      {type = "item", name = "logistic-science-pack", amount = 1}
+    --    },
+    --    time = 15
+    --  },
+    --  order = "c-a"
+    --},
     {
       type = "technology",
       name = "water-treatment",
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
-      prerequisites = {},
+      prerequisites = {
+        "steel-processing",
+        "electronics"
+      },
       effects = {
         {
           type = "unlock-recipe",
@@ -14,6 +43,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "clarifier"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "ground-water-pump"
         },
         {
           type = "unlock-recipe",
@@ -40,7 +73,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-treatment",
-        "electronics"
+        "ore-floatation"
       },
       effects = {
         {
@@ -67,7 +100,8 @@ data:extend(
       unit = {
         count = 30,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 15
       },

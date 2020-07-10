@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.12
+Date: 10.07.2020
+  Changes:
+    - Fixed Fish water filtering Filter return being incorrect
+    - Crystal enhancer now requires crystal slurry instead of the catalyst in special vanilla mode
+    - Updated map colors of special bio spawns:
+      - Gardens stay green as they were
+      - Trees are a lighter blue (for visibility in muddy biomes)
+      - Puffers are now a dark yellow-ish color (was green before)
+    - Allow alien goo to be made in a liquifier
+  Bugfixes:
+    - Fixed crystal splinter recipes were a bit scrambled around when playing with bobs mods
+    - Fixed some drawing boxes on bio buildings
+    - Fixed graphics of bob arboretum were offset
+    - Fixed localisation of desert/temperate farming upgrade technology
+    - Added some missing key technology prerequisites
+    - Fixed pwder refining couldn't be researched in special vanilla
+    - Fixed the unimplemented hoggers were visible in the signal selection menus
+    - Fixed the unimplemented hogger refugium was visible in the signal selection menus
+---------------------------------------------------------------------------------------------------
 Version: 0.7.11
 Date: 05.06.2020
   Bugfixes:

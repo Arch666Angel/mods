@@ -1,6 +1,6 @@
 {
   "name": "angelsindustries",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "factorio_version": "0.18",
   "title": "Angel's Industries",
   "author": "Arch666Angel",
@@ -8,13 +8,14 @@
   "homepage": "",
   "description": "Adds components, equipment and a tech overhaul as well as the tool you need to expand and grow your base. [Beta]",
   "dependencies": [
-    "base >= 0.18.27",
-    "angelsrefining >= 0.11.13",
-    "angelspetrochem >= 0.9.9",
+    "base >= 0.18.33",
+    "angelsrefining >= 0.11.14",
+    "angelspetrochem >= 0.9.12",
     "angelsbioprocessing >= 0.7.9",
     "angelssmelting >= 0.6.7",
     "(?)bobtech >= 0.18.3",
     "(?)aai-industry >= 0.4.12",
-    "(?)bobrevamp >= 0.18.5"
+    "(?)bobrevamp >= 0.18.5",
+    "(?)bobassembly >= 0.18.6"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "angelssmelting",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "factorio_version": "0.18",
   "title": "Angel's Smelting",
   "author": "Arch666Angel",
@@ -10,7 +10,7 @@
   "dependencies": [
     "base >= 0.18.27",
     "angelspetrochem >= 0.9.9",
-    "angelsrefining >= 0.11.11",
+    "angelsrefining >= 0.11.14",
     "? bobplates >= 0.18.8"
   ]
 }

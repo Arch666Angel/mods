@@ -28,7 +28,9 @@ if angelsmods.industries.overhaul then
       },
       {
         name = "atomic-bomb",
-        ingredients = {{type = "item", name = "uranium-235", amount = 15}}, --halve
+        ingredients = {
+          {type = "item", name = "uranium-235", amount = 15} --halve
+        },
         icons = {
           {icon = "__base__/graphics/icons/atomic-bomb.png", icon_size = 64, icon_mipmaps = 4},
           {
@@ -121,15 +123,15 @@ if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- New recipe unlocks
   -------------------------------------------------------------------------------
-  OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
   OV.add_unlock("atomic-bomb", "angels-atomic-bomb")
+  OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
   OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel")
   OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel-2")
 
   -------------------------------------------------------------------------------
   -- Bob nuclear addaption
   -------------------------------------------------------------------------------
-  if bobmods and bobmods.plates then
+  if mods["bobplates"] then
     --basically remove all of bobs things (Sorry bob)
     OV.global_replace_item("plutonium-240", "plutonium-239") --use bobs plutonium
     if data.raw.item["plutonium-239"] then
@@ -145,11 +147,14 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.add_flag("plutonium-240", "hidden")
 
     -- plutonium enrichment process
-    if bobmods.revamp and settings.startup["bobmods-revamp-rtg"].value then
-      OV.add_prereq("bobingabout-process", "angels-plutonium-power")
+    if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
+      OV.add_prereq("bobingabout-enrichment-process", "angels-plutonium-power")
+      OV.patch_recipes({{name="bobingabout-enrichment-process", subgroup="angels-power-nuclear-processing", order="b[AMOX]-c[duplication]"}})
     else
       --if not rtg, remove bobingabout process
-      OV.remove_unlock("bobingabout-process", "bobingabout-process")
+      OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
+      OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
+      OV.disable_technology("bobingabout-enrichment-process")
     end
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")

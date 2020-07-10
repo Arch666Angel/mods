@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 10.07.2020
+  Changes:
+    - Added compatibility for the RTG's from Space Exploration (283)
+    - Added compatibility for the Adaptive armours from Space Exploration (283)
+    - Added compatibility for the extra Energy shields from Space Exploration (283)
+    - Added compatibility for the extra engines from Krastorio 2
+    - Added compatibility for the vehicle roboport from Krastorio 2
+---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 01.06.2020
   Bugfixes:

@@ -52,7 +52,7 @@ data:extend(
       type = "technology",
       name = "angels-hidden-ghosting",
       icon = "__angelsindustries__/graphics/technology/ghost.png",
-      icon_size = 64,
+      icon_size = 128,
       prerequisites = {},
       effects = {
         {
@@ -72,7 +72,7 @@ data:extend(
       type = "technology",
       name = "angels-ghosting-angels-construction-robots",
       icon = "__angelsindustries__/graphics/technology/ghost.png",
-      icon_size = 64,
+      icon_size = 128,
       prerequisites = {
         angelsmods.industries.tech and "tech-specialised-labs-basic-logistic-1" or "engine"
       },
@@ -91,7 +91,7 @@ data:extend(
       localised_name = {"technology-name.angels-ghosting-angels-construction-robots"},
       localised_description = {"technology-description.angels-ghosting-angels-construction-robots"},
       icon = "__angelsindustries__/graphics/technology/ghost.png",
-      icon_size = 64,
+      icon_size = 128,
       prerequisites = {
         "robotics"
       },

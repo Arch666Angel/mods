@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 10.07.2020
+  Changes:
+    - Science mode:
+      - Added an early tech to use in the tech archive to unlock datacores (314)
+      - Changed graphics for ghosting technology (274)
+  Bugfixes:
+    - Regular mode:
+      - Changed energy source on the expanders to void when they don't use power (317)
+      - Fixed selection box on te cargo roboport
+      - Make sure only one of the ghosting techs is available for research (274)
+    - Overhaul mode:
+      - Added translation for hidden ghosting tech (288)
+      - Check for item existence with bobinserters (299)
+    - Component mode:
+      - Changed Thermal Water bore did require too high tech blocks (281)
+      - Fixed bobs ingredient limit was blocking progression into tier 2 blocks (336)
+    - Science mode:
+      - Added token-bio to exploration lab (277)
+      - Moved rocket booster 1 technology (from orange) to green science (309)
+  Modding:
+    - Make use of full IngredientPrototype instead of shorthand
+---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 05.06.2020
   Bugfixes:
