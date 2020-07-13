@@ -4,6 +4,7 @@ Date: ??
   Bugfixes:
     - Overhaul mode:
       - Disable platinum as it is not usefull without component or science mode
+      - Tweaked crafting times on nuclear fuel creation and reprocessing recipes (339)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 10.07.2020
