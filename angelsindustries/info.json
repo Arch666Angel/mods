@@ -1,6 +1,6 @@
 {
   "name": "angelsindustries",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "factorio_version": "0.18",
   "title": "Angel's Industries",
   "author": "Arch666Angel",
@@ -9,8 +9,8 @@
   "description": "Adds components, equipment and a tech overhaul as well as the tool you need to expand and grow your base. [Beta]",
   "dependencies": [
     "base >= 0.18.33",
-    "angelsrefining >= 0.11.14",
-    "angelspetrochem >= 0.9.12",
+    "angelsrefining >= 0.11.15",
+    "angelspetrochem >= 0.9.13",
     "angelsbioprocessing >= 0.7.9",
     "angelssmelting >= 0.6.7",
     "(?)bobtech >= 0.18.3",

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: ??
+  Bugfixes:
+    - Overhaul mode:
+      - Disable platinum as it is not usefull without component or science mode
+---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 10.07.2020
   Changes:
