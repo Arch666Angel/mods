@@ -20,7 +20,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
-    energy_required = 180,
+    energy_required = 120,--180
     ingredients =
     {
       {type = "item", name = "neptunium-240", amount = 8},
@@ -70,7 +70,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-processing",
-    energy_required = 540,
+    energy_required = 210,--540
     ingredients =
     {
       {type = "item", name = "americium-241", amount = 5},
@@ -182,7 +182,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 7000,
+    energy_required = 700,--7000
     ingredients =
     {
       {type = "item", name = "uranium-234", amount = 1},
@@ -210,7 +210,7 @@ data:extend(
     enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 120,
+    energy_required = 80,--120
     ingredients =
     {
       {type = "item", name = "used-up-uranium-fuel-cell", amount = 10},
@@ -263,7 +263,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 1200,
+    energy_required = 80,--1200
     ingredients =
     {
       {type = "item", name = "uranium-238", amount = 38},
@@ -291,7 +291,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 330,
+    energy_required = 110,--330
     ingredients =
     {
       {type = "item", name = "used-up-AMOX-cell", amount = 5}
@@ -343,7 +343,7 @@ data:extend(
     enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 660,
+    energy_required = 260,
     ingredients =
     {
       {type = "item", name = "used-up-AMOX-cell", amount = 10},
@@ -403,7 +403,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 1000,
+    energy_required = 500,--1000
     ingredients =
     {
       {type = "item", name = "thorium-232", amount = 17},
@@ -579,7 +579,7 @@ data:extend(
     enabled = false,
     category = "chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 1500,
+    energy_required = 150,--1500
     ingredients =
     {
       {type = "fluid", name = "gas-deuterium", amount = 600},
@@ -607,7 +607,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 6000,
+    energy_required = 800, --6000
     ingredients =
     {
       {type = "item", name = "used-up-angels-deuterium-fuel-cell", amount = 5},
