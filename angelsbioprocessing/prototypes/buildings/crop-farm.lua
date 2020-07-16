@@ -121,7 +121,8 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"temperate-farming"},
-    crafting_speed = 2,
+    crafting_speed = 1,
+    base_productivity = 2,
     energy_source =
     {
       type = "electric",
@@ -213,7 +214,8 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"desert-farming"},
-    crafting_speed = 2,
+    crafting_speed = 1,
+    base_productivity = 2,
     energy_source =
     {
       type = "electric",
@@ -305,7 +307,8 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"swamp-farming"},
-    crafting_speed = 2,
+    crafting_speed = 1,
+    base_productivity = 2,
     energy_source =
     {
       type = "electric",
