@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1
-Date: ???
+Date: ??
   Changes:
     - Updated most of the entity/recipes names
     - Fixed startup sounds for robots
+    - Made localisation conform with base game (342)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: ???
