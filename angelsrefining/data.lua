@@ -60,9 +60,9 @@ if mods["bobplates"] then
   --angelsmods.trigger.ores["gem-diamond"] = ore_exists("diamond-ore")
 end
 angelsmods.trigger.ores["fluorite"] = angelsmods.trigger.ores["fluorite"] or false -- angels petrochem enables this
+angelsmods.trigger.ores["platinum"] = angelsmods.trigger.ores["platinum"] or false -- angels petrochem enables this
 angelsmods.trigger.ores["manganese"] = angelsmods.trigger.ores["manganese"] or false -- angels smelting enables this
 angelsmods.trigger.ores["chrome"] = angelsmods.trigger.ores["chrome"] or false -- angels smelting enables this
-angelsmods.trigger.ores["platinum"] = angelsmods.trigger.ores["platinum"] or false -- angels industries enables this
 angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or false --angels industries enables this
 
 -- MARATHON MODE

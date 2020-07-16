@@ -21,7 +21,7 @@ if angelsmods.trigger.refinery_products["ferrous"] then
 end
 
 angelsmods.trigger.refinery_products["cupric"] =
-  angelsmods.trigger.ores["platinum"] or angelsmods.trigger.ores["tungsten"] or angelsmods.trigger.ores["thorium"]
+  angelsmods.trigger.ores["platinum"] or angelsmods.trigger.ores["thorium"]
 if angelsmods.trigger.refinery_products["cupric"] then
   angelsmods.trigger.refinery_products["stiratite"] = true
   angelsmods.trigger.refinery_products["crotinnium"] = true

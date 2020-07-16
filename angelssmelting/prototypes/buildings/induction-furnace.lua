@@ -86,7 +86,6 @@ data:extend(
     {
       {
         apply_recipe_tint = "primary",
-        always_draw = true,
         animation =
         {
           filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
@@ -209,7 +208,6 @@ data:extend(
     {
       {
         apply_recipe_tint = "primary",
-        always_draw = true,
         animation =
         {
           filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
@@ -324,7 +322,6 @@ data:extend(
     {
       {
         apply_recipe_tint = "primary",
-        always_draw = true,
         animation =
         {
           filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",
@@ -438,7 +435,6 @@ data:extend(
     {
       {
         apply_recipe_tint = "primary",
-        always_draw = true,
         animation =
         {
           filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-visualisation.png",

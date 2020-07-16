@@ -27,8 +27,6 @@ if angelsmods.industries and angelsmods.industries.overhaul then
   -- BEACON
   OV.modify_input("beacon", {"crystal-full-harmonic"})
   OV.add_prereq("effect-transmission", "bio-processing-crystal-full")
-elseif mods["bobplates"] then
-  -- nothing to change
 else
   OV.disable_recipe("algae-brown-burning")
 end
