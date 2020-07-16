@@ -38,7 +38,7 @@ data:extend(
 -- pre-logistics chests (+ repair packs)
 move_item("wooden-chest", "angels-chests-small-a", "a[chest]-a[wood]")
 move_item("iron-chest", "angels-chests-small-a", "a[chest]-b[iron]")
-move_item("steel-chest", "angels-chests-small-a", "a[chest]-c[steel]")
+move_item("steel-chest", "angels-chests-small-b", "a")
 move_item("repair-pack", "angels-chests-small-a", "b[repair-pack]-a", "repair-tool")
 -- steel chests
 move_item("logistic-chest-active-provider", "angels-chests-small-b", "b")
