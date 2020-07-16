@@ -1,6 +1,6 @@
 {
   "name": "angelspetrochem",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "factorio_version": "0.18",
   "title": "Angel's Petro Chemical Processing",
   "author": "Arch666Angel",
@@ -9,7 +9,7 @@
   "description": "PetroChems changes and adds Oil and Gas processing to a bobmods game, as well as a more complex web of chemical producation. Includes overrides and tie ins to bobs technologies and recipes. Dependencies: Angels Refining",
   "dependencies": [
     "base >= 0.18.27",
-    "angelsrefining >= 0.11.14",
+    "angelsrefining >= 0.11.15",
     "? bobplates >= 0.18.8",
     "? bobassembly >= 0.18.5",
     "? bobrevamp >= 0.18.5"

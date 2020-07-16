@@ -10,7 +10,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.ores["lead"] = true
   angelsmods.trigger.ores["manganese"] = true
   angelsmods.trigger.ores["nickel"] = true
-  angelsmods.trigger.ores["platinum"] = true
+  --angelsmods.trigger.ores["platinum"] = true
   angelsmods.trigger.ores["silicon"] = true
   angelsmods.trigger.ores["silver"] = true
   angelsmods.trigger.ores["tin"] = true
@@ -31,7 +31,7 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.smelting_products["gold"].wire = true
   angelsmods.trigger.smelting_products["iron"].plate = true
   angelsmods.trigger.smelting_products["lead"].plate = true
-  angelsmods.trigger.smelting_products["platinum"].wire = true
+  --angelsmods.trigger.smelting_products["platinum"].wire = true
   angelsmods.trigger.smelting_products["silicon"].wafer = true
   angelsmods.trigger.smelting_products["silicon"].mono = true
   angelsmods.trigger.smelting_products["silver"].plate = true
@@ -44,7 +44,12 @@ if angelsmods.industries.overhaul then
 end
 
 if angelsmods.industries.components then
+  --REFINING TRIGGERS
+  angelsmods.trigger.ores["platinum"] = true
+
+  --SMELTING TRIGGERS
   angelsmods.trigger.smelting_molds = true
   angelsmods.trigger.smelting_products["iron"].rod = true
+  angelsmods.trigger.smelting_products["platinum"].wire = true
   angelsmods.trigger.smelting_products["steel"].rod = true
 end
