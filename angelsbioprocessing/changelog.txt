@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.13
 Date: ??
+  Changes:
+    - Made localisation conform with base game (342)
   Bugfixes:
     - Fixed Lithia Salt was disabled when playing without angels industries
 ---------------------------------------------------------------------------------------------------

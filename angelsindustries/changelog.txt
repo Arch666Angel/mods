@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.5
 Date: ??
+  Changes:
+    - Made localisation conform with base game (342)
   Bugfixes:
     - Overhaul mode:
       - Disable platinum as it is not usefull without component or science mode
