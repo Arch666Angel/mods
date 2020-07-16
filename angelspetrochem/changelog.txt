@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.13
+Date: ??
+  Changes:
+    - Made localisation conform with base game (342)
+  Bugfixes:
+    - Fixed platinum would be enabled without any use. This might have an influence on your
+      catalyst recipes requiring different ores!
+---------------------------------------------------------------------------------------------------
 Version: 0.9.12
 Date: 10.07.2020
   Changes:

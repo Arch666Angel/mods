@@ -71,7 +71,8 @@ OV.set_temperature_barreling("liquid-water-heavy", 25)
 -------------------------------------------------------------------------------
 -- CATALYSTS ------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.industries and angelsmods.industries.overhaul then
+if angelsmods.trigger.ores["platinum"] then
+  -- angels component and/or science overhaul
   OV.patch_recipes(
     {
       {
@@ -104,7 +105,8 @@ if angelsmods.industries and angelsmods.industries.overhaul then
       }
     }
   )
-elseif mods["bobplates"] then
+elseif mods["bobplates"] or angelsmods.industries and angelsmods.industries.overhaul then
+  -- regular overhaul/full angels mode
   OV.patch_recipes(
     {
       {
