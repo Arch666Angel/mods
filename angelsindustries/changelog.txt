@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+  Bugfixes:
+    - Overhaul mode:
+      - Disable platinum as it is not usefull without component or science mode
+      - Tweaked crafting times on nuclear fuel creation and reprocessing recipes (339)
+    - Component mode:
+      - Clarifier now requires Electronic Block 0's instead of Electronic Block 1's
+---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 10.07.2020
   Changes:

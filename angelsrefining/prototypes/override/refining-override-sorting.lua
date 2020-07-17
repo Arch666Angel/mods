@@ -405,7 +405,8 @@ OV.patch_recipes(
           ["tin-ore"] = (not special_vanilla) and {2, 2, 2, 2},
           ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
           ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-          ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+          ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1},
+          ["tungsten-ore"] = (not (special_vanilla or ore_enabled("platinum-ore"))) and {0, 0, 0, 1},
         },
         true
       ) or

@@ -987,10 +987,10 @@ angelsmods.functions.RB.build(
         energy_required = 5,
         enabled = false,
         ingredients = {
-          {type = "item", name = "t1-plate", amount = 4},
-          {type = "item", name = "t1-circuit", amount = 4},
-          {type = "item", name = "t1-pipe", amount = 11},
-          {type = "item", name = "t1-brick", amount = 6}
+          {type = "item", name = "t0-plate", amount = 4},
+          {type = "item", name = "t0-circuit", amount = 4},
+          {type = "item", name = "t0-pipe", amount = 11},
+          {type = "item", name = "t0-brick", amount = 6}
         },
         result = "clarifier"
       },
@@ -998,10 +998,10 @@ angelsmods.functions.RB.build(
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
-          {type = "item", name = "t1-plate", amount = 4 * buildingmulti},
-          {type = "item", name = "t1-circuit", amount = 4 * buildingmulti},
-          {type = "item", name = "t1-pipe", amount = 11 * buildingmulti},
-          {type = "item", name = "t1-brick", amount = 6 * buildingmulti}
+          {type = "item", name = "t0-plate", amount = 4 * buildingmulti},
+          {type = "item", name = "t0-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t0-pipe", amount = 11 * buildingmulti},
+          {type = "item", name = "t0-brick", amount = 6 * buildingmulti}
         },
         result = "clarifier"
       }

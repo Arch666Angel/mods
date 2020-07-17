@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.10
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+    - Some work on tiles:
+      - Renamed the clay (cardboard) tile to "Clay path" instead of "Clay brick"
+      - Lowered the walking boost on clay brick tile from 130% (equivalent to stone) to 125%
+      - Renamed the concrete brick tile (tutorial grid) to "Concrete slab (grid)"
+      - Added a walking boost of 155% (slightly more than concrete) on rhz concrete brick tiles
+      - Reinforced concrete bricks will guaranteed clear all decorations underneath, while the
+        regular version only has a chance of doing so, similar to the concrete flooring in the
+        base game.
+  Bugfixes:
+    - Induction furnace will now always show the tinting on the ingots, even when it is idling
+---------------------------------------------------------------------------------------------------
 Version: 0.6.9
 Date: 10.07.2020
   Changes:

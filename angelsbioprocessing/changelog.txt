@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.13
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+    - Changed localisation of farms and upgrades (344)
+  Bugfixes:
+    - Fixed Lithia Salt was disabled when playing without angels industries
+---------------------------------------------------------------------------------------------------
 Version: 0.7.12
 Date: 10.07.2020
   Changes:
