@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.13
-Date: ??
+Date: 17.07.2020
   Changes:
     - Made localisation conform with base game (342)
     - Changed localisation of farms and upgrades (344)

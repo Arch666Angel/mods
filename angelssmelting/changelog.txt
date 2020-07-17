@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.10
-Date: ??
+Date: 17.07.2020
   Changes:
     - Made localisation conform with base game (342)
     - Some work on tiles:
