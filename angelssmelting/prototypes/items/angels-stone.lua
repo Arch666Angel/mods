@@ -1,19 +1,3 @@
--- Duplicate tutorial-grid tile for refined brick
-local function copyGrid(name)
-  local grid = table.deepcopy(data.raw.tile["tutorial-grid"])
-  grid.name = "tile-" .. name
-  grid.localised_name = {
-    "",
-    {"item-name." .. name},
-    " - ",
-    {"tile-name.tutorial-grid"}
-  }
-  grid.needs_correction = false
-  grid.minable = {mining_time = 0.1, result = name}
-
-  return grid
-end
-
 data:extend(
   {
     -- ORE
@@ -95,7 +79,6 @@ data:extend(
         condition = {"water-tile"}
       }
     },
-    copyGrid("concrete-brick"),
     {
       type = "item",
       name = "reinforced-concrete-brick",
@@ -109,7 +92,6 @@ data:extend(
         condition_size = 1,
         condition = {"water-tile"}
       }
-    },
-    copyGrid("reinforced-concrete-brick")
+    }
   }
 )

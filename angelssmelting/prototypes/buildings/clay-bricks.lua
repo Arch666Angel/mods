@@ -7,7 +7,7 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "clay-brick"},
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"ground-tile"},
-    walking_speed_modifier = 1.3,
+    walking_speed_modifier = 1.25,
     layer = 60,
     decorative_removal_probability = 0.75,
     variants =

@@ -117,6 +117,7 @@ require("prototypes.buildings.strand-casting-machine")
 require("prototypes.buildings.cooling-tower")
 
 require("prototypes.buildings.clay-bricks")
+require("prototypes.buildings.concrete-bricks")
 
 require("prototypes.items.angels-alloys")
 require("prototypes.items.angels-aluminium")
