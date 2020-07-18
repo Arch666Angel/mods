@@ -3,6 +3,7 @@ Version: 0.11.16
 Date: ??
   Changes:
     - Consistent naming of ferrous and cupric refining items (348)
+    - Saphirite and stiratite manual crushing can only be done by hand
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.15
 Date: 17.07.2020

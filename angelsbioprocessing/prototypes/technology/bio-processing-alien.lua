@@ -133,7 +133,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          --{type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -246,7 +246,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          --{type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -261,7 +261,8 @@ data:extend(
         "bio-processing-alien-1",
         "bio-refugium-hatchery",
         "bio-processing-crystal-splinter-1",
-        "ore-powderizer"
+        "ore-powderizer",
+        "geode-crystallization"
       },
       effects = {
         {
