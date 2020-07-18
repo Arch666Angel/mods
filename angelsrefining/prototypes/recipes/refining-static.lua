@@ -804,6 +804,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore1-pure",
+      localised_name = {"recipe-name.angelsore1-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -814,13 +815,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore1-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore1-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png",
+      --icon_size = 32,
       order = "a[angelsore1-pure]"
     },
     {
       type = "recipe",
       name = "angelsore2-pure",
+      localised_name = {"recipe-name.angelsore2-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -831,13 +836,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore2-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore2-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png",
+      --icon_size = 32,
       order = "b[angelsore2-pure]"
     },
     {
       type = "recipe",
       name = "angelsore3-pure",
+      localised_name = {"recipe-name.angelsore3-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -848,13 +857,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore3-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore3-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png",
+      --icon_size = 32,
       order = "c[angelsore3-pure]"
     },
     {
       type = "recipe",
       name = "angelsore4-pure",
+      localised_name = {"recipe-name.angelsore4-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -865,13 +878,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore4-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore4-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png",
+      --icon_size = 32,
       order = "d[angelsore4-pure]"
     },
     {
       type = "recipe",
       name = "angelsore5-pure",
+      localised_name = {"recipe-name.angelsore5-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -882,13 +899,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore5-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore5-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png",
+      --icon_size = 32,
       order = "e[angelsore5-pure]"
     },
     {
       type = "recipe",
       name = "angelsore6-pure",
+      localised_name = {"recipe-name.angelsore6-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -899,8 +920,11 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore6-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore6-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png",
+      --icon_size = 32,
       order = "f[angelsore6-pure]"
     },
     --SLAG PROCESSING

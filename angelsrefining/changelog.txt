@@ -3,6 +3,7 @@ Version: 0.11.16
 Date: ??
   Changes:
     - Consistent naming of ferrous and cupric refining items (348)
+    - Consistent naming of all refining recipes (348)
     - Saphirite and stiratite manual crushing can only be done by hand
   Bugfixes:
     - Added missing prerequisite on electro whinning cell
