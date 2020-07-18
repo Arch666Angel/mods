@@ -246,6 +246,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore1-chunk",
+      localised_name = {"recipe-name.angelsore1-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -259,13 +260,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-blue", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore1-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-chunk.png",
+      --icon_size = 32,
       order = "a[angelsore1-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore2-chunk",
+      localised_name = {"recipe-name.angelsore2-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -279,13 +282,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-purple", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore2-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore2-chunk.png",
+      --icon_size = 32,
       order = "b[angelsore2-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore3-chunk",
+      localised_name = {"recipe-name.angelsore3-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -299,13 +304,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-yellow", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore3-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-chunk.png",
+      --icon_size = 32,
       order = "c[angelsore3-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore4-chunk",
+      localised_name = {"recipe-name.angelsore4-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -319,13 +326,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-lightgreen", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore4-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore4-chunk.png",
+      --icon_size = 32,
       order = "d[angelsore4-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore5-chunk",
+      localised_name = {"recipe-name.angelsore5-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -339,13 +348,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-cyan", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore5-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore5-chunk.png",
+      --icon_size = 32,
       order = "e[angelsore5-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore6-chunk",
+      localised_name = {"recipe-name.angelsore6-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -359,8 +370,9 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-red", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore6-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore6-chunk.png",
+      --icon_size = 32,
       order = "f[angelsore6-chunk]"
     },
     ---------------------------------------------------------------------------
@@ -369,6 +381,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore8-sludge",
+      localised_name = {"recipe-name.angelsore8-sludge"},
       category = "chemistry",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -384,13 +397,17 @@ data:extend(
       results = {
         {type = "fluid", name = "angels-ore8-sludge", amount = 6}
       },
+      main_product = "angels-ore8-sludge",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "g"
     },
     {
       type = "recipe",
       name = "angelsore8-dust",
+      localised_name = {"recipe-name.angelsore8-dust"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -404,13 +421,14 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
       main_product = "angels-ore8-dust",
-      icon = "__angelsrefining__/graphics/icons/angels-ore8-dust.png",
-      icon_size = 32,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore8-dust.png",
+      --icon_size = 32,
       order = "h"
     },
     {
       type = "recipe",
       name = "angelsore9-sludge",
+      localised_name = {"recipe-name.angelsore9-sludge"},
       category = "chemistry",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -426,13 +444,17 @@ data:extend(
       results = {
         {type = "fluid", name = "angels-ore9-sludge", amount = 6}
       },
+      main_product = "angels-ore9-sludge",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "i"
     },
     {
       type = "recipe",
       name = "angelsore9-dust",
+      localised_name = {"recipe-name.angelsore9-dust"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -446,11 +468,13 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
       main_product = "angels-ore9-dust",
-      icon = "__angelsrefining__/graphics/icons/angels-ore9-dust.png",
-      icon_size = 32,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore9-dust.png",
+      --icon_size = 32,
       order = "j"
     },
-    --TIER 3
+    ---------------------------------------------------------------------------
+    -- TIER 3 -----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore1-crystal",
