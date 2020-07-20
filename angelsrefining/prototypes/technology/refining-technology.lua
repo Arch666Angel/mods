@@ -1014,7 +1014,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/electro-whinning-cell-tech.png",
       icon_size = 128,
       prerequisites = {
-        "ore-advanced-floatation"
+        "ore-advanced-floatation",
+        "slag-processing-2"
       },
       effects = {
         {

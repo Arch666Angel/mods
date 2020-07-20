@@ -19,8 +19,6 @@ data.raw["capsule"]["raw-fish"].order = "aa"
 data.raw["item"]["wood"].subgroup = "bio-processing-wood"
 data.raw["item"]["wood"].order = "a[wood]"
 
-table.insert(data.raw["character"]["character"].crafting_categories, "angels-manual-crafting")
-
 --REFINING
 if angelsmods.refining then
   --MOVE UNLOCKS

@@ -2,10 +2,6 @@ data:extend(
 {
   {
     type = "recipe-category",
-    name = "angels-manual-crafting",
-  },
-  {
-    type = "recipe-category",
     name = "bio-processing",
   },
   {
