@@ -360,7 +360,6 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
   for recipe_index = 1, 9 do
     local recipe = {name = string.format(recipe_base_name, string.format("-%i", recipe_index)), results = {{"!!"}}}
     local recipe_used = false
-    --local localised_ores = {recipe.name, string.format(recipe_base_name, "")}
     for ore_name, ore_amounts in pairs(ore_result_products or {}) do
       local ore_amount = ore_amounts[recipe_index]
       local ore_probability = nil
@@ -373,12 +372,6 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
           {name = ore_name, type = "item", amount = ore_amount, probability = ore_probability}
         )
         recipe_used = true
-        --local string_index = string.find(ore_name, "-ore")
-        --if string_index then
-        --  table.insert(localised_ores, string.sub(ore_name, 1, string_index - 1))
-        --else
-        --  table.insert(localised_ores, ore_name)
-        --end
       end
     end
     if recipe_used then
@@ -387,9 +380,6 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
       else
         recipe.icon = recipe_icons[recipe_index]
       end
-      --if not special_vanilla then
-      --  angelsmods.functions.add_recipe_localization(unpack(localised_ores))
-      --end
       table.insert(recipes, recipe)
     else
       OV.disable_recipe(recipe.name)
