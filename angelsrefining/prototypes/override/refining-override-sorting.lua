@@ -103,7 +103,7 @@ end
 local ore_enabled = angelsmods.functions.ore_enabled
 
 -- function to create localised descriptions for the regular sorting ores
-local create_basic_sorting_localisation = function(localised_base_name, sorting_tier_names, sorting_results)
+local create_basic_sorting_localisation = function(localised_base_name, sorting_tier_names, sorting_results, has_ore)
   -- extract the higher tier sorting results
   local higher_tiers_additional_results = {}
   local any_tier_results = {}
@@ -132,8 +132,10 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
       end
     end
   end
-  sorting_results[0] = any_tier_results
-  higher_tiers_additional_results[0] = any_tier_results
+  if has_ore then
+    sorting_results[0] = any_tier_results
+    higher_tiers_additional_results[0] = any_tier_results
+  end
 
   -- create a list of localised sorting results for each tier
   local localised_sorting_results = {}
@@ -283,20 +285,18 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
     end
   end
 
-  if advanced_sorting then
-    if not angelsmods.trigger.refinery_products[refinery_product] then
-      angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "sludge"))
-      angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "solution"))
-      angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge-filtering"))
-      angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
-    end
-  else
-    create_basic_sorting_localisation(
-      string.format("angels-ore%s", string.sub(recipe_base_name, -3, -3) .. "%s"),
-      tiers,
-      sorting_results
-    )
+  if advanced_sorting and (not angelsmods.trigger.refinery_products[refinery_product]) then
+    angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "sludge"))
+    angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "solution"))
+    angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge-filtering"))
+    angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
   end
+
+  create_basic_sorting_localisation(
+    string.format("angels-ore%s", string.sub(recipe_base_name, -3, -3) .. "%s"),
+    tiers, sorting_results, not advanced_sorting
+  )
+
   return recipes
 end
 
