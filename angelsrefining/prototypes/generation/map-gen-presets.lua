@@ -28,18 +28,47 @@ data.raw['map-gen-presets'].default.default.basic_settings =
       starting_area = 'big',
       order = 'a'
   }
-]]--
-
+]] --
 if mods["angelsexploration"] then
-  -- angels exploration takes care of this
+    -- angels exploration takes care of this
 else
-  if settings.startup["angels-enable-biters"].value == false then
+    -- if settings.startup["angels-enable-biters"].value == false then
+
+    local noise = require("noise")
     local map_settings = data.raw["map-settings"]["map-settings"]
     map_settings.pollution.enabled = false
     map_settings.enemy_evolution.enabled = false
     map_settings.enemy_expansion.enabled = false
 
-    local map_gen_presets = data.raw["map-gen-presets"]["default"]
+    local old_probability =
+        data.raw["noise-expression"]["enemy_base_probability"].expression
+
+    local slider = (noise.log2(noise.var(
+                                   "control-setting:angels-biter-slider:size:multiplier")) /
+                       (noise.log2(6, 2)))
+
+    data.raw["noise-expression"]["enemy_base_probability"].expression =
+        noise.clamp(slider, 0, 1) * old_probability
+
+    data:extend{
+        {
+            type = "autoplace-control",
+            name = "angels-biter-slider",
+            richness = false,
+            order = "d-a",
+            category = "enemy",
+            localised_description = {
+                "autoplace-control-description.angels-biter-slider"
+            }
+        }, {
+            type = "noise-expression",
+            name = "control-setting:angels-biter-slider:size:multiplier",
+            expression = noise.to_noise_expression(0)
+        }
+    }
+end
+
+--[[local map_gen_presets = data.raw["map-gen-presets"]["default"]
     map_gen_presets["default"].default = false
     map_gen_presets["default"].basic_settings =
     {
@@ -76,7 +105,7 @@ else
     end
 
   end
-end
+end]]
 
 --[[
 data:extend(
@@ -306,4 +335,4 @@ data:extend(
     },
   }
 })
-]]--
+]] --
