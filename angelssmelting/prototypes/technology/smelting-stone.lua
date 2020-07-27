@@ -24,6 +24,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "angels-casing-resin-mold"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "mold-expendable"
         }
       },
