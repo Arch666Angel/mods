@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.16
+Date: ??
+  Changes:
+    - Biter balance:
+      - Biter received an additional map gen setting to choose the size of biters between none and
+        the 'normal' amount. The 'normal' amount is still defined (and controllable) with the
+        settings that are available in the base game.
+      - Removed the old setting solution as this is now replaced with a more tweakable and usable
+        solution
+---------------------------------------------------------------------------------------------------
 Version: 0.11.15
 Date: 17.07.2020
   Changes:
