@@ -84,7 +84,7 @@ data:extend(
       enabled = false,
       energy_required = 2,
       ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
+        {type = "item", name = "plastic-bar", amount = 1}
       },
       results = {
         {type = "item", name = "petri-dish", amount = 2}

@@ -2,12 +2,17 @@
 Version: 0.11.16
 Date: ??
   Changes:
-    - Biter balance:
+    - Consistent naming of ferrous and cupric refining items (348)
+    - Consistent naming of all refining recipes (348)
+    - Saphirite and stiratite manual crushing can only be done by hand
+    - Biter balance (354):
       - Biter received an additional map gen setting to choose the size of biters between none and
         the 'normal' amount. The 'normal' amount is still defined (and controllable) with the
         settings that are available in the base game.
       - Removed the old setting solution as this is now replaced with a more tweakable and usable
         solution
+  Bugfixes:
+    - Added missing prerequisite on electro whinning cell
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.15
 Date: 17.07.2020

@@ -14,6 +14,10 @@ data:extend(
       type = "recipe-category",
       name = "angels-unused-machine" -- used for machines that don't have a purpose
     },
+    {
+      type = "recipe-category",
+      name = "angels-manual-crafting", -- used for manual crafting in character only
+    },
     --REFINING
     {
       type = "recipe-category",
