@@ -52,4 +52,6 @@ if angelsmods.industries.components then
   angelsmods.trigger.smelting_products["iron"].rod = true
   angelsmods.trigger.smelting_products["platinum"].wire = true
   angelsmods.trigger.smelting_products["steel"].rod = true
+  angelsmods.trigger.smelting_products["nickel"].plate = true
+  angelsmods.trigger.smelting_products["lithium"].plate = true
 end
