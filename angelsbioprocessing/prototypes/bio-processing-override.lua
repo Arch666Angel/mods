@@ -29,6 +29,9 @@ end
 --SMELTING
 if not angelsmods.smelting then
   OV.disable_recipe("algae-brown-burning-wash")
+
+  OV.remove_prereq("angels-stone-smelting-2", "resins")
+  OV.add_prereq("angels-stone-smelting-2", "bio-arboretum-1")
 end
 
 --UPDATE LABS INPUT

@@ -217,7 +217,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "item", name = "wood", amount = 5}
+        {type = "item", name = "solid-resin", amount = 2}
       },
       results =
       {
@@ -257,6 +257,7 @@ data:extend(
       },
       main_product = "mold-expendable",
       icon_size = 32,
+      icons =
       {
         {
           icon = "__angelssmelting__/graphics/icons/expendable-mold.png"
