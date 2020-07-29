@@ -672,8 +672,7 @@ data:extend(
       prerequisites = {
         "tech-green-packs",
         "tech-specialised-labs-basic-processing-1",
-        "angels-components-mechanical-2",
-        "angels-stone-smelting-1"
+        "angels-components-mechanical-2"
       },
       effects = {
         {

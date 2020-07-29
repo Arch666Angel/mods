@@ -35,11 +35,20 @@ data:extend(
   --MOLDS
   {
     type = "item",
+    name = "motor-casing-0",
+    icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+    icon_size = 32,
+    subgroup = "angels-mold-casting",
+    order = "a[positive-mold]",
+    stack_size = 200,
+  },
+  {
+    type = "item",
     name = "mold-expendable",
     icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
-    order = "a[expendable]",
+    order = "b[expendable]",
     stack_size = 200
   },
   {
@@ -48,7 +57,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
-    order = "b[non-expendable]-a[new]",
+    order = "c[non-expendable]-a[new]",
     stack_size = 200
   },
   {
@@ -57,7 +66,7 @@ data:extend(
     icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
-    order = "b[non-expendable]-b[used]",
+    order = "c[non-expendable]-b[used]",
     stack_size = 200
   },
 }

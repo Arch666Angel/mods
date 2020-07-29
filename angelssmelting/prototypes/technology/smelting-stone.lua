@@ -21,10 +21,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-clay-brick"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "mold-expendable"
         }
       },
       unit = {
@@ -45,7 +41,8 @@ data:extend(
       prerequisites = {
         "angels-stone-smelting-1",
         "powder-metallurgy-1",
-        "concrete"
+        "concrete",
+        "resins"
       },
       effects = {
         {
@@ -66,11 +63,11 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "mold-non-expendable"
+          recipe = "angels-casing-resin-mold"
         },
         {
           type = "unlock-recipe",
-          recipe = "mold-non-expendable-wash"
+          recipe = "mold-expendable"
         }
       },
       unit = {
@@ -104,6 +101,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-reinforced-concrete-brick"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "mold-non-expendable"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "mold-non-expendable-wash"
         }
       },
       unit = {
