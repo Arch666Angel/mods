@@ -13,7 +13,7 @@
     "angelsrefining >= 0.11.15",
     "angelspetrochem >= 0.9.13",
     "angelssmelting >= 0.6.11",
-    "angelsbioprocessing >= 0.7.9",
+    "angelsbioprocessing >= 0.7.14",
 
     "(?) bobtech >= 0.18.3",
     "(?) bobrevamp >= 0.18.5",

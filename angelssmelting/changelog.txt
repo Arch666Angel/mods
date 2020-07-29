@@ -2,7 +2,7 @@
 Version: 0.6.11
 Date: ??
   Changes:
-    - Mold creation now use a resin dummy instead of the iron motor casing
+    - Mold creation now use a resin dummy instead of the iron motor casing (356)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.10
 Date: 17.07.2020

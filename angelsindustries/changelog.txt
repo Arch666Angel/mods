@@ -3,7 +3,7 @@ Version: 0.4.6
 Date: ??
   Changes:
     - Component mode:
-      - Mold creation now requires a resin casing instead of the iron casing
+      - Mold creation now requires a resin casing instead of the iron casing (356)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.5
 Date: 17.07.2020
