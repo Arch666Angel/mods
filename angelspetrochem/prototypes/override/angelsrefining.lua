@@ -54,7 +54,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.refining then
   OV.remove_prereq("lubricant", "advanced-oil-processing")
-  OV.add_prereq("lubricant", "angels-oil-processing")
+  --OV.add_prereq("lubricant", "angels-oil-processing")
   for _, tech_name in pairs({ "lubricant", "ore-powderizer" }) do
     local ingredients = ((data.raw.technology[tech_name] or {}).unit or {}).ingredients or {}
     for index, ingredient in pairs(ingredients) do
