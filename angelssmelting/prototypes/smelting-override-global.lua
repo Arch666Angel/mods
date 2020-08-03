@@ -170,6 +170,9 @@ if bobmods and bobmods.plates then
     data.raw["item"]["tinned-copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-tin.png"
     data.raw["item"]["gilded-copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-gold.png"
     data.raw["item"]["solder"].icon = "__angelssmelting__/graphics/icons/solder.png"
+    data.raw["item"]["tinned-copper-cable"].icon_size = 32
+    data.raw["item"]["gilded-copper-cable"].icon_size = 32
+    data.raw["item"]["solder"].icon_size = 32
 
     angelsmods.functions.OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
