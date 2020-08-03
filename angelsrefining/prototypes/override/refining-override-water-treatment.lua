@@ -95,6 +95,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   data.raw.fluid["lithia-water"].icon = "__angelsrefining__/graphics/icons/water-lithia.png"
+  data.raw.fluid["lithia-water"].icon_size = 32 --icon size of 64 overriding caused issues
   angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
 
   data:extend(
