@@ -140,7 +140,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type="item", name = "battery-frame-1", amount = 1},
+        {type="item", name = "battery-frame-1", amount = 2},
       },
       results=
       {
@@ -237,7 +237,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type="item", name = "battery-frame-2", amount = 1},
+        {type="item", name = "battery-frame-2", amount = 2},
       },
       results=
       {
@@ -376,7 +376,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type="item", name = "battery-frame-3", amount = 1},
+        {type="item", name = "battery-frame-3", amount = 2},
       },
       results=
       {
@@ -474,7 +474,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type="item", name = "battery-frame-4", amount = 1},
+        {type="item", name = "battery-frame-4", amount = 2},
         {type = "item", name = "plastic-bar", amount = 1}
       },
       results=
@@ -574,7 +574,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type="item", name = "battery-frame-5", amount = 1},
+        {type="item", name = "battery-frame-5", amount = 2},
       },
       results=
       {
@@ -674,7 +674,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type="item", name = "battery-frame-6", amount = 1},
+        {type="item", name = "battery-frame-6", amount = 2},
       },
       results=
       {

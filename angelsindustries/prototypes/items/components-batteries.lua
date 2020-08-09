@@ -64,7 +64,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "battery-frame-1", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=64,g=64,b=64}}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "a",
@@ -130,7 +130,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "battery-anode-1", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_A.png",
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=64,g=64,b=64}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -184,7 +184,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "battery-cathode-1", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_C.png",
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=64,g=64,b=64}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -241,7 +241,7 @@ if angelsmods.industries.components then
     {
       type = "fluid",
       name = "battery-electrolyte-1", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",tint={r=255,g=216,b=0}}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
       order = "a",
@@ -249,8 +249,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = {r=255,g=216,b=0,a=0.5},
+      flow_color = {r=255,g=216,b=0,a=0.5}
     },
     {
       type = "fluid",
