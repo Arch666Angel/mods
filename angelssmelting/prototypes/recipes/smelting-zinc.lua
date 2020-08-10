@@ -24,6 +24,24 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "zinc-ore-processing-alt",
+      category = "ore-processing",
+      subgroup = "angels-zinc",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "zinc-ore", amount = 8},
+        {type = "fluid", name = "gas-oxygen", amount = 60}
+      },
+      results = {
+        {type = "item", name = "solid-zinc-oxide", amount = 8},
+        {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
+      },
+      main_product = "solid-zinc-oxide",
+      order = "b[processed-zinc]"
+    },
+    {
+      type = "recipe",
       name = "zinc-processed-processing",
       category = "pellet-pressing",
       subgroup = "angels-zinc",

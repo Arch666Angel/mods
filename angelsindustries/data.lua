@@ -60,6 +60,7 @@ require("prototypes.technology.components-mechanical-technology")
 require("prototypes.technology.components-construction-technology")
 require("prototypes.technology.components-weapons-technology")
 require("prototypes.technology.components-cabling-technology")
+require("prototypes.technology.components-batteries-technology")
 
 --TECH OVERHAUL  -------------------------------------------------------
 --ITEMS

@@ -23,7 +23,7 @@ if angelsmods.industries.components then
         "circuit-green-board",
         "circuit-orange-board",
         "circuit-blue-board",
-        --"circuit-yellow-board"
+        --"circuit-yellow-board" --crafted with 2 fluids
         "circuit-grey-board",
         "circuit-grey-board-alternative",
         "circuit-red",
@@ -62,7 +62,8 @@ if angelsmods.industries.components then
           icon_size = 64,
           prerequisites = {
             "tech-red-circuit",
-            "angels-components-mechanical-1"
+            "angels-components-mechanical-1",
+            "angels-components-batteries-1"
           },
           effects = {
             {
@@ -115,7 +116,8 @@ if angelsmods.industries.components then
           prerequisites = {
             "angels-basic-blocks-1",
             "logistic-science-pack",
-            "angels-components-mechanical-2"
+            "angels-components-mechanical-2",
+            "angels-components-batteries-2"
           },
           effects = {
             {
@@ -170,7 +172,8 @@ if angelsmods.industries.components then
           prerequisites = {
             "angels-basic-blocks-2",
             "military-science-pack",
-            "angels-components-mechanical-3"
+            "angels-components-mechanical-3",
+            "angels-components-batteries-3"
           },
           effects = {
             {
@@ -227,7 +230,8 @@ if angelsmods.industries.components then
           prerequisites = {
             "angels-basic-blocks-3",
             "chemical-science-pack",
-            "angels-components-mechanical-4"
+            "angels-components-mechanical-4",
+            "angels-components-batteries-4"
           },
           effects = {
             {
@@ -283,7 +287,8 @@ if angelsmods.industries.components then
           prerequisites = {
             "angels-advanced-blocks-1",
             "utility-science-pack",
-            "angels-components-mechanical-5"
+            "angels-components-mechanical-5",
+            "angels-components-batteries-5"
           },
           effects = {
             {

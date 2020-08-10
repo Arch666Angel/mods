@@ -304,6 +304,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-1", amount = 1},
         {type="item", name = "electronic-parts", amount = 1},
         {type="item", name = "stone-brick", amount = 3},
+        {type="item", name = "battery-1", amount = 2}
       },
       results=
       {
@@ -325,6 +326,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-2", amount = 1},
         {type="item", name = "electronic-parts", amount = 1},
         {type="item", name = "clay-brick", amount = 3},
+        {type="item", name = "battery-2", amount = 2}
       },
       results=
       {
@@ -345,6 +347,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-3", amount = 1},
         {type="item", name = "electronic-parts", amount = 1},
         {type="item", name = "concrete-brick", amount = 3},
+        {type="item", name = "battery-3", amount = 2}
       },
       results=
       {
@@ -365,6 +368,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-4", amount = 1},
         {type="item", name = "electronic-parts", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-4", amount = 2}
       },
       results=
       {
@@ -385,6 +389,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-5", amount = 1},
         {type="item", name = "electronic-parts", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-5", amount = 2}
       },
       results=
       {
@@ -407,6 +412,7 @@ if angelsmods.industries.components then
         {type="item", name = "cable-harness-1", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "stone-brick", amount = 3},
+        {type="item", name = "battery-1", amount = 5}
       },
       results=
       {
@@ -428,6 +434,7 @@ if angelsmods.industries.components then
         {type="item", name = "cable-harness-2", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "clay-brick", amount = 3},
+        {type="item", name = "battery-2", amount = 5}
       },
       results=
       {
@@ -448,6 +455,7 @@ if angelsmods.industries.components then
         {type="item", name = "cable-harness-3", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "concrete-brick", amount = 3},
+        {type="item", name = "battery-3", amount = 5}
       },
       results=
       {
@@ -468,6 +476,7 @@ if angelsmods.industries.components then
         {type="item", name = "cable-harness-4", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-4", amount = 5}
       },
       results=
       {
@@ -488,6 +497,7 @@ if angelsmods.industries.components then
         {type="item", name = "cable-harness-5", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-5", amount = 5}
       },
       results=
       {
@@ -510,6 +520,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-1", amount = 1},
         {type="item", name = "weapon-parts", amount = 1},
         {type="item", name = "stone-brick", amount = 3},
+        {type="item", name = "battery-1", amount = 1}
       },
       results=
       {
@@ -531,6 +542,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-2", amount = 1},
         {type="item", name = "weapon-parts", amount = 1},
         {type="item", name = "clay-brick", amount = 3},
+        {type="item", name = "battery-2", amount = 1}
       },
       results=
       {
@@ -551,6 +563,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-3", amount = 1},
         {type="item", name = "weapon-parts", amount = 1},
         {type="item", name = "concrete-brick", amount = 3},
+        {type="item", name = "battery-3", amount = 1}
       },
       results=
       {
@@ -571,6 +584,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-4", amount = 1},
         {type="item", name = "weapon-parts", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-4", amount = 1}
       },
       results=
       {
@@ -591,6 +605,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-5", amount = 1},
         {type="item", name = "weapon-parts", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-5", amount = 1}
       },
       results=
       {
@@ -613,6 +628,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-1", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "stone-brick", amount = 3},
+        {type="item", name = "battery-1", amount = 2}
       },
       results=
       {
@@ -634,6 +650,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-2", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "clay-brick", amount = 3},
+        {type="item", name = "battery-2", amount = 2}
       },
       results=
       {
@@ -654,6 +671,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-3", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "concrete-brick", amount = 3},
+        {type="item", name = "battery-3", amount = 2}
       },
       results=
       {
@@ -674,6 +692,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-4", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-4", amount = 2}
       },
       results=
       {
@@ -694,6 +713,7 @@ if angelsmods.industries.components then
         {type="item", name = "angels-servo-motor-5", amount = 1},
         {type="item", name = "angels-cabling", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-5", amount = 2}
       },
       results=
       {
@@ -716,6 +736,7 @@ if angelsmods.industries.components then
         {type="item", name = "motor-1", amount = 1},
         {type="item", name = "mechanical-parts", amount = 1},
         {type="item", name = "stone-brick", amount = 3},
+        {type="item", name = "battery-1", amount = 1}
       },
       results=
       {
@@ -737,6 +758,7 @@ if angelsmods.industries.components then
         {type="item", name = "motor-2", amount = 1},
         {type="item", name = "mechanical-parts", amount = 1},
         {type="item", name = "clay-brick", amount = 3},
+        {type="item", name = "battery-2", amount = 1}
       },
       results=
       {
@@ -757,6 +779,7 @@ if angelsmods.industries.components then
         {type="item", name = "motor-3", amount = 1},
         {type="item", name = "mechanical-parts", amount = 1},
         {type="item", name = "concrete-brick", amount = 3},
+        {type="item", name = "battery-3", amount = 1}
       },
       results=
       {
@@ -777,6 +800,7 @@ if angelsmods.industries.components then
         {type="item", name = "motor-4", amount = 1},
         {type="item", name = "mechanical-parts", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-4", amount = 1}
       },
       results=
       {
@@ -797,6 +821,7 @@ if angelsmods.industries.components then
         {type="item", name = "motor-5", amount = 1},
         {type="item", name = "mechanical-parts", amount = 1},
         {type="item", name = "reinforced-concrete-brick", amount = 3},
+        {type="item", name = "battery-6", amount = 1}
       },
       results=
       {

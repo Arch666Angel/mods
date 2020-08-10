@@ -7,7 +7,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-1",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 0.5,
       ingredients =
@@ -27,7 +27,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-2",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 0.5,
       ingredients =
@@ -47,7 +47,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-3",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 0.5,
       ingredients =
@@ -67,7 +67,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-4",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 0.5,
       ingredients =
@@ -87,7 +87,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-5",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 0.5,
       ingredients =
@@ -107,7 +107,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-6",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 0.5,
       ingredients =
@@ -135,7 +135,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-1",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -158,7 +158,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-1",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -176,7 +176,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-anode-1",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -194,7 +194,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-cathode-1",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -212,7 +212,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-1",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
@@ -238,7 +238,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-2",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -261,7 +261,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-2",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 2.5,
       ingredients =
@@ -278,7 +278,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-anode-2",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -296,7 +296,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-cathode-2",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -314,7 +314,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-2",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
@@ -340,7 +340,7 @@ if angelsmods.industries.components then
     --[[{
       type = "recipe",
       name = "battery-cathode-2-alt",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -358,7 +358,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-2-alt",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
@@ -383,7 +383,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-3",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -405,7 +405,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-3",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 2.5,
       ingredients =
@@ -422,7 +422,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-anode-3",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -440,7 +440,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-cathode-3",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -459,7 +459,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-3",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
@@ -486,7 +486,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-4",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -510,7 +510,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-4",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -527,7 +527,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-anode-4",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -545,7 +545,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-cathode-4",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -564,7 +564,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-4",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
@@ -592,7 +592,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-5",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -615,7 +615,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-5",
-      enabled = true,
+      enabled = false,
       category = "crafting-with-fluid",
       energy_required = 2.5,
       ingredients =
@@ -632,7 +632,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-anode-5",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -652,7 +652,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-cathode-5",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -672,7 +672,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-5",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
@@ -698,7 +698,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-6",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -721,7 +721,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-6",
-      enabled = true,
+      enabled = false,
       category = "sintering",
       energy_required = 2.5,
       ingredients =
@@ -738,7 +738,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-anode-6",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -756,7 +756,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-cathode-6",
-      enabled = true,
+      enabled = false,
       category = "crafting",
       energy_required = 2.5,
       ingredients =
@@ -774,7 +774,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-electrolyte-6",
-      enabled = true,
+      enabled = false,
       category = "chemistry",
       energy_required = 2.5,
       ingredients =
