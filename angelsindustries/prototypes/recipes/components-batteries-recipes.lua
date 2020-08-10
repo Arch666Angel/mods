@@ -147,7 +147,13 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
+        { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          tint = {r=66,g=67,b=78},
+          scale = 0.5,
+          shift = {-5, -1}
+        }},
+      icon_size = 64
     },
     {
       type = "recipe",
@@ -165,7 +171,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-frame-1", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -183,7 +189,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-anode-1", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -201,7 +207,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-1", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -219,7 +225,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-1", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     -----------------------------------------------------------------------------
     -- BATTERY 2 PARTS [NICKEL-ZINC] --------------------------------------------
@@ -244,7 +250,13 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
+      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+        tint = {r=100,g=100,b=100},
+        scale = 0.5,
+        shift = {-5, -1}
+      }},
+      icon_size = 64
     },
     {
       type = "recipe",
@@ -261,7 +273,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-frame-2", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -279,7 +291,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-anode-2", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -297,7 +309,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-2", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -312,10 +324,10 @@ if angelsmods.industries.components then
       },
       results=
       {
-        {type = "fluid", name = "battery-electrolyte-6", amount = 10},
+        {type = "fluid", name = "battery-electrolyte-2", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     -----------------------------------------------------------------------------
     -- ALT BATTERY 2 PARTS [MANGANESE-ZINC(ALKALINE)] ---------------------------
@@ -341,7 +353,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-2", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -358,7 +370,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-2", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },]]
     -----------------------------------------------------------------------------
     -- BATTERY 3 PARTS [Lithium-ion] --------------------------------------------
@@ -383,7 +395,12 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
+      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+        scale = 0.5,
+        shift = {-5, -1}
+      }},
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -400,7 +417,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-frame-3", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -418,7 +435,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-anode-3", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -437,7 +454,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-3", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -455,7 +472,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-3", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     -----------------------------------------------------------------------------
     -- BATTERY 4 PARTS [Lithium-Polymer] ----------------------------------------
@@ -482,7 +499,13 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
+      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+        --tint = {r=1,g=1,b=1},
+        scale = 0.5,
+        shift = {-5, -1}
+      }},
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -499,7 +522,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-frame-4", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -517,7 +540,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-anode-4", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -536,7 +559,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-4", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -554,7 +577,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-4", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     -----------------------------------------------------------------------------
     -- BATTERY 5 PARTS [Glass Cell] ---------------------------------------------
@@ -581,7 +604,13 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
+      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+        tint = {r=117,g=138,b=134},
+        scale = 0.5,
+        shift = {-5, -1}
+      }},
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -598,7 +627,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-frame-5", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -618,7 +647,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-anode-5", amount = 3},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -638,7 +667,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-5", amount = 3},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -656,7 +685,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-5", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     -----------------------------------------------------------------------------
     -- BATTERY 6 PARTS ----------------------------------------------------------
@@ -681,7 +710,13 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
+      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+        tint = {r=72,g=68,b=45},
+        scale = 0.5,
+        shift = {-5, -1}
+      }},
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -698,7 +733,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-frame-6", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -716,7 +751,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-anode-6", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -734,7 +769,7 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-cathode-6", amount = 1},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     {
       type = "recipe",
@@ -751,7 +786,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-6", amount = 10},
       },
       allow_decomposition = false,
-      icon_size = 32,
+      icon_size = 64,
     },
     -----------------------------------------------------------------------------
     -- ALT BATTERY 6 PARTS [Tungsten-Lithium] -----------------------------------

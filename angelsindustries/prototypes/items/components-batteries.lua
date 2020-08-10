@@ -63,8 +63,8 @@ if angelsmods.industries.components then
     -----------------------------------------------------------------------------
     {
       type = "item",
-      name = "battery-frame-1", 
-      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=64,g=64,b=64}}},
+      name = "battery-frame-1", --lead
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=66,g=67,b=78}}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "a",
@@ -72,8 +72,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-frame-2", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+      name = "battery-frame-2", --plastic
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=100,g=100,b=100}}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "b",
@@ -81,8 +81,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-frame-3", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+      name = "battery-frame-3", --glass
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=159,g=148,b=78}}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "c",
@@ -90,8 +90,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-frame-4", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+      name = "battery-frame-4", --plastic, no tinting
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png"}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "d",
@@ -99,8 +99,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-frame-5", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+      name = "battery-frame-5", --nickel
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=117,g=138,b=134}}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "e",
@@ -108,8 +108,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-frame-6", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+      name = "battery-frame-6", --tungsten
+      icons ={{icon ="__angelsindustries__/graphics/icons/battery_component_frame.png", tint={r=72,g=68,b=45}}},
       icon_size = 64,
       subgroup = "angels-battery-casings",
       order = "f",
@@ -129,8 +129,8 @@ if angelsmods.industries.components then
     -----------------------------------------------------------------------------
     {
       type = "item",
-      name = "battery-anode-1", 
-      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=64,g=64,b=64}}},
+      name = "battery-anode-1",  --lead
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=66,g=67,b=78}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -138,8 +138,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-anode-2", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_A.png",
+      name = "battery-anode-2", --zinc
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=93,g=174,b=168}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -147,8 +147,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-anode-3", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_A.png",
+      name = "battery-anode-3", --carbon
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=0,g=0,b=0}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -156,8 +156,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-anode-4", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_A.png",
+      name = "battery-anode-4", --carbon, but used with gold wire... so will use gold tinting
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=222,g=177,b=52}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -165,8 +165,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-anode-5", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_A.png",
+      name = "battery-anode-5", --sodium
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=93,g=131,b=203}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -174,8 +174,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-anode-6", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_A.png",
+      name = "battery-anode-6", --zinc
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_A.png", tint = {r=93,g=174,b=168}}},
       icon_size = 64,
       subgroup = "angels-anodes",
       order = "a",
@@ -183,8 +183,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-cathode-1", 
-      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=64,g=64,b=64}}},
+      name = "battery-cathode-1", --lead
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=66,g=67,b=78}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -192,8 +192,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-cathode-2", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_C.png",
+      name = "battery-cathode-2", --nickel
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=117,g=138,b=134}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -201,8 +201,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-cathode-3", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_C.png",
+      name = "battery-cathode-3", --lithium-cobaltite
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=68,g=71,b=98}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -210,8 +210,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-cathode-4", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_C.png",
+      name = "battery-cathode-4", --manganese/lithium
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=200,g=78,b=78}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -219,8 +219,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-cathode-5", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_C.png",
+      name = "battery-cathode-5", --copper
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=137,g=90,b=78}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -228,8 +228,8 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "battery-cathode-6", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_C.png",
+      name = "battery-cathode-6", --silver
+      icons={{icon = "__angelsindustries__/graphics/icons/battery_component_C.png", tint = {r=201,g=210,b=216}}},
       icon_size = 64,
       subgroup = "angels-cathodes",
       order = "a",
@@ -240,7 +240,7 @@ if angelsmods.industries.components then
     -----------------------------------------------------------------------------
     {
       type = "fluid",
-      name = "battery-electrolyte-1", 
+      name = "battery-electrolyte-1", --sulfuric/saline
       icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",tint={r=255,g=216,b=0}}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
@@ -254,8 +254,8 @@ if angelsmods.industries.components then
     },
     {
       type = "fluid",
-      name = "battery-electrolyte-2", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",
+      name = "battery-electrolyte-2", --saline/water
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",tint={r=127,g=201,b=255}}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
       order = "a",
@@ -268,8 +268,8 @@ if angelsmods.industries.components then
     },
     {
       type = "fluid",
-      name = "battery-electrolyte-3", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",
+      name = "battery-electrolyte-3", --lithia-water-carbon
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",tint={r=16,g=86,b=73}}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
       order = "a",
@@ -282,8 +282,8 @@ if angelsmods.industries.components then
     },
     {
       type = "fluid",
-      name = "battery-electrolyte-4", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",
+      name = "battery-electrolyte-4", --liquid-plastic (no-tint)
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png"}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
       order = "a",
@@ -296,8 +296,8 @@ if angelsmods.industries.components then
     },
     {
       type = "fluid",
-      name = "battery-electrolyte-5", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",
+      name = "battery-electrolyte-5", --lithia glass
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",tint={r=27,g=142,b=119}}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
       order = "a",
@@ -310,8 +310,8 @@ if angelsmods.industries.components then
     },
     {
       type = "fluid",
-      name = "battery-electrolyte-6", 
-      icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",
+      name = "battery-electrolyte-6", --sodium
+      icons = {{icon = "__angelsindustries__/graphics/icons/battery_component_electrolyte.png",tint={r = 0.9, g = 0.9, b = 0.9}}},
       icon_size = 64,
       subgroup = "angels-electrolytes",
       order = "a",
