@@ -236,8 +236,11 @@ end
 
 ov_functions.add_prereq = function(technology, prereq)
   local skip = false --check if pre-req already exists?
-  if data.raw.technology[technology] and type(data.raw.technology[technology].prerequisites) == table then --also check that it has a pre-req table before checking
+  if data.raw.technology[technology] and data.raw.technology[technology].prerequisites then --also check that it has a pre-req table before checking
+    log(serpent.block(data.raw.technology[technology]))
     for _,req in pairs(data.raw.technology[technology].prerequisites) do
+      log(req)
+      log(prereq)
       if prereq == req then
         skip = true
       end
