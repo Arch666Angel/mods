@@ -3,6 +3,7 @@ Version: 0.9.14
 Date: ??
   Changes:
     - Lubricant is now green science when needed
+    - Several fluids have had their state changed to be more appropriate (323)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.13
 Date: 17.07.2020

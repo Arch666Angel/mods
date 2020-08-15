@@ -233,7 +233,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "gas-glycerol",
+      name = "liquid-glycerol",
       category = "chemistry",
       subgroup = "petrochem-chlorine-2",
       energy_required = 2,
@@ -243,16 +243,16 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 50}
       },
       results = {
-        {type = "fluid", name = "gas-glycerol", amount = 50}
+        {type = "fluid", name = "liquid-glycerol", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = angelsmods.functions.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72}
         },
         "coh"
       ),
-      order = "j[gas-glycerol]"
+      order = "j[liquid-glycerol]"
     },
     {
       type = "recipe",

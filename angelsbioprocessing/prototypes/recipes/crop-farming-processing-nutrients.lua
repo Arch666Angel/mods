@@ -177,7 +177,7 @@ data:extend(
       },
       results = {
         {type = "fluid", name = "liquid-fuel-oil", amount = 60},
-        {type = "fluid", name = "gas-glycerol", amount = 40}
+        {type = "fluid", name = "liquid-glycerol", amount = 40}
         --{type="fluid", name="gas-synthesis", amount=10},
       },
       always_show_products = true,

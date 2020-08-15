@@ -184,7 +184,7 @@ if angelsmods.functions.is_special_vanilla() then
       "gas-chlor-methane",
       "gas-allylchlorid",
       "gas-epichlorhydrin",
-      "gas-glycerol",
+      "liquid-glycerol",
       "solid-sodium-chlorate",
       "solid-sodium-perchlorate",
       "liquid-perchloric-acid"
@@ -200,10 +200,10 @@ if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe(
     {
       "catalyst-steam-cracking-butane",
-      "gas-styrene-catalyst",
-      "gas-ethylbenzene-catalyst",
+      "liquid-styrene-catalyst",
+      "liquid-ethylbenzene-catalyst",
       "cumene-process",
-      "gas-bisphenol-a",
+      "liquid-bisphenol-a",
       "gas-phosgene",
       "solid-resin",
       "liquid-resin-1",

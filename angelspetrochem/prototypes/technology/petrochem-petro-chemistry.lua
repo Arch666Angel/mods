@@ -287,7 +287,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-styrene-catalyst"
+          recipe = "liquid-styrene-catalyst"
         },
         {
           type = "unlock-recipe",
@@ -295,7 +295,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-ethylbenzene-catalyst"
+          recipe = "liquid-ethylbenzene-catalyst"
         }
       },
       unit = {
@@ -362,7 +362,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-polyehtylene-catalyst"
+          recipe = "liquid-polyethylene-catalyst"
         },
         {
           type = "unlock-recipe",
@@ -415,7 +415,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-phenol-catalyst"
+          recipe = "liquid-phenol-catalyst"
         },
         {
           type = "unlock-recipe",
@@ -423,7 +423,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-bisphenol-a"
+          recipe = "liquid-bisphenol-a"
         },
         {
           type = "unlock-recipe",
