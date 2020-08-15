@@ -30,8 +30,17 @@ local function table_contains(table, value)
   end
   return false
 end
+
+script.on_init(function(event)
+	if remote.interfaces["freeplay"] then
+		local items_to_insert = remote.call("freeplay", "get_created_items")
+		items_to_insert[main_lab[1]] = (items_to_insert[main_lab[1]] or 0) + 1
+		remote.call("freeplay", "set_created_items", items_to_insert)
+	end
+end)
+
 script.on_event(
-  {defines.events.on_player_created, defines.events.on_player_respawned},
+  {--[[defines.events.on_player_created,]] defines.events.on_player_respawned},
   function(event)
     local player = game.players[event.player_index]
 

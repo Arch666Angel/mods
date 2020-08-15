@@ -1,10 +1,18 @@
-script.on_event(
+script.on_init(function(event)
+	if remote.interfaces["freeplay"] then
+		local items_to_insert = remote.call("freeplay", "get_created_items")
+		items_to_insert["burner-ore-crusher"] = (items_to_insert["burner-ore-crusher"] or 0) + 1
+		remote.call("freeplay", "set_created_items", items_to_insert)
+	end
+end)
+
+--[[script.on_event(
   defines.events.on_player_created,
   function(event)
     local iteminsert = game.players[event.player_index].insert
     iteminsert {name = "burner-ore-crusher", count = 1}
   end
-)
+)]]
 
 script.on_event(
   defines.events.on_player_rotated_entity,
