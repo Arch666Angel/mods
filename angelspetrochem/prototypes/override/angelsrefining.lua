@@ -53,7 +53,11 @@ end
 -- FERROUS/CUPRIC REFINING-----------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.refining then
-  OV.remove_prereq("lubricant", "oil-processing")
+  if mods["bobplates"] then
+    OV.remove_prereq("lubricant", "oil-processing")
+  else
+    OV.remove_prereq("lubricant", "advanced-oil-processing")
+  end
   OV.add_prereq("lubricant", "angels-oil-processing")
   for _, tech_name in pairs({ "lubricant", "ore-powderizer" }) do
     local ingredients = ((data.raw.technology[tech_name] or {}).unit or {}).ingredients or {}

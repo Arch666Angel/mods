@@ -235,24 +235,9 @@ ov_functions.remove_unlock = function(technology, recipe)
 end
 
 ov_functions.add_prereq = function(technology, prereq)
-  local skip = false --check if pre-req already exists?
-  if data.raw.technology[technology] and data.raw.technology[technology].prerequisites then --also check that it has a pre-req table before checking
-    log(serpent.block(data.raw.technology[technology]))
-    for _,req in pairs(data.raw.technology[technology].prerequisites) do
-      log(req)
-      log(prereq)
-      if prereq == req then
-        skip = true
-      end
-    end
-  end
-  if skip == false then
-    guarantee_subtable(modify_table.technologies, technology)
-    guarantee_subtable(modify_table.technologies[technology], "prereqs")
-    modify_table.technologies[technology].prereqs[prereq] = true
-  else
-    log(technology.." already has prerequisite ".. prereq)
-  end
+  guarantee_subtable(modify_table.technologies, technology)
+  guarantee_subtable(modify_table.technologies[technology], "prereqs")
+  modify_table.technologies[technology].prereqs[prereq] = true
 end
 
 ov_functions.remove_prereq = function(technology, prereq)
