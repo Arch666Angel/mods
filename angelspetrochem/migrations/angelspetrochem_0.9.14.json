@@ -1,0 +1,29 @@
+{
+  "item":
+  [
+    ["angels-barrel-gas-phenol", "liquid-phenol-barrel"],
+    ["angels-barrel-gas-ethylbenzene", "liquid-ethylbenzene-barrel"],
+    ["angels-barrel-gas-styrene", "liquid-styrene-barrel"],
+    ["angels-barrel-gas-polyethylene", "liquid-polyethylene-barrel"],
+    ["angels-barrel-gas-glycerol", "liquid-glycerol-barrel"],
+    ["angels-barrel-gas-bisphenol-a","liquid-bisphenol-a-barrel"]
+  ],
+  "fluid":
+  [
+    ["gas-phenol", "liquid-phenol"],
+    ["gas-ethylbenzene", "liquid-ethylbenzene"],
+    ["gas-styrene", "liquid-styrene"],
+    ["gas-polyethylene", "liquid-polyethylene"],
+    ["gas-glycerol", "liquid-glycerol"],
+    ["gas-liquid-bisphenol-a","liquid-bisphenol-a"]
+  ],
+  "recipe":
+  [
+    ["gas-phenol-catalyst", "liquid-phenol-catalyst"],
+    ["gas-ethylbenzene-catalyst", "liquid-ethylbenzene-catalyst"],
+    ["gas-styrene-catalyst", "liquid-styrene-catalyst"],
+    ["gas-polyethylene-catalyst", "liquid-polyethylene-catalyst"],
+    ["gas-glycerol", "glycerol-barrel"],
+    ["gas-bisphenol-a","liquid-bisphenol-a"]
+  ]
+}
