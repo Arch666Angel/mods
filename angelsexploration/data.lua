@@ -19,6 +19,7 @@ require("prototypes.entities.ammo-bio")
 require("prototypes.entities.defensive-structures")
 
 require("prototypes.entities.vehicles")
+--require("prototypes.entities.crawlertron")
 
 require("prototypes.entities.bio-gun")
 require("prototypes.entities.cannon-turret")
