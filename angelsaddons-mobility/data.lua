@@ -3,8 +3,6 @@ angelsmods.addons = angelsmods.addons or {}
 angelsmods.addons.mobility = angelsmods.addons.mobility or {}
 angelsmods.addons.mobility.number_tint = {r = 0.95, g = 0.65, b = 0.25, a = 1}
 
-angelsmods.addons.mobility.cab = settings.startup["angels-enable-cab"].value
-
 angelsmods.addons.mobility.crawlertrain = angelsmods.addons.mobility.crawlertrain or {}
 angelsmods.addons.mobility.crawlertrain.enabled = settings.startup["angels-crawlertrain-tier-amount"].value >= 1 and true or false
 angelsmods.addons.mobility.crawlertrain.tier_amount = settings.startup["angels-crawlertrain-tier-amount"].value
@@ -25,9 +23,6 @@ angelsmods.addons.mobility.smeltingtrain.number_tint = {r = 1, g = 0.38, b = 0, 
 tech_unlocks = {}
 
 require("prototypes.categories")
---CAB
-require("prototypes.entities.cab")
-require("prototypes.entities.cab-equipment")
 --CRAWLER
 require("prototypes.entities.crawler-locomotive")
 require("prototypes.entities.crawler-locomotive-wagon")
@@ -44,8 +39,6 @@ require("prototypes.entities.smelting-wagon")
 
 require("prototypes.recipes.recipes")
 
---CAB
-require("prototypes.technology.cab-technology")
 --CRAWLER
 require("prototypes.technology.crawler-technology")
 --PETRO
