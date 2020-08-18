@@ -4,6 +4,9 @@ Date: ??
   Changes:
     - Component mode:
       - Mold creation now requires a resin casing instead of the iron casing (356)
+  Bugfixes:
+    - Science mode:
+      - Fixed that new games in base game v1.0.0 did not receive a tech archive at the start
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.5
 Date: 17.07.2020

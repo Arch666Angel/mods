@@ -13,6 +13,7 @@ Date: ??
         solution
   Bugfixes:
     - Added missing prerequisite on electro whinning cell
+    - Fixed that new games in base game v1.0.0 did not receive an ore crusher at the start
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.15
 Date: 17.07.2020
