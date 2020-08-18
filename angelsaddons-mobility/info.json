@@ -6,7 +6,7 @@
   "author": "Arch666Angel, lovely_santa",
   "contact": "",
   "homepage": "",
-  "description": "A combination mod of the various themed trains, and CAB",
+  "description": "A combination mod of the various themed trains",
   "dependencies": [
     "base >= 1.0.0",
     "? angelsindustries >= 0.4.5"
