@@ -91,7 +91,8 @@ Add small decorations as tributes to the lovely community
 - ShredNation Decorations
 
 ### X. [Development and Discussion](https://forums.factorio.com/viewtopic.php?f=185&t=19652)
-For discussions and information about the mods.
+For discussions and information about the mods. You can also hang out with us on discord:
+[![Discord join icon](https://discordapp.com/api/guilds/164794742893182976/widget.png?style=banner2)](https://discord.gg/ff5p6KE)
 
 ### XI. [Bugs & FAQ](https://forums.factorio.com/viewtopic.php?f=185&t=25468)
 For bug reports.
