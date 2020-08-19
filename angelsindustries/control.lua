@@ -59,8 +59,44 @@ local function initialize_crash_site()
           create_build_effect_smoke = false
         }
         if created_entity and created_entity.valid then
-          global.is_lab_given = true
           created_entity.energy = game.item_prototypes["coal"].fuel_value
+          global.is_lab_given = true
+
+          -- create explosions
+          for k = 1, 3 do
+            local bbox = created_entity.bounding_box
+            local explosions = surface.create_entity{
+              name = "crash-site-explosion-smoke",
+              position = {
+                x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
+                y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
+              }
+            }
+            explosions.time_to_live = math.random(60 * 20, 60 * 30) - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
+            explosions.time_to_next_effect = math.random(30)
+          end
+
+          -- create fires
+          for k = 1, 2 do
+            local bbox = created_entity.bounding_box
+            surface.create_entity{
+              name = "crash-site-fire-flame",
+              position = {
+                x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
+                y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
+              }
+            }
+            local smoke = surface.create_entity{
+              name = "crash-site-fire-smoke",
+              position = {
+                x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
+                y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
+              }
+            }
+            smoke.time_to_live = math.random(60 * 20, 60 * 30) - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
+            smoke.time_to_next_effect = math.random(30)
+          end
+
         end
       end
     end

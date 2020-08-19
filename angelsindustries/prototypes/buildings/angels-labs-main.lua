@@ -218,16 +218,16 @@ if angelsmods.industries.tech then
         subgroup = lab_item.subgroup,
         order = lab_item.order .. string.format("-%i", 0),
 
-        place_result = lab_item.name .. string.format("-%i", 0),
+        --place_result = lab_item.name .. string.format("-%i", 0),
         stack_size = lab_item.stack_size
       },
       {
         type = "lab",
         name = lab_item.name .. string.format("-%i", 0),
-        localised_name = {"entity-name.angels-main-lab", 0}, --TODO
+        localised_name = {"entity-name.angels-main-lab-crash-site"},
         localised_description = {
           "",
-          {"entity-description.angels-main-lab"},
+          {"entity-description.angels-main-lab-crash-site"},
           "\n",
           {"entity-description.angels-main-lab-warning"},
           "\n",
