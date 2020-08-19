@@ -1,0 +1,14 @@
+{
+  "name": "angelsaddons-storage",
+  "version": "0.5.2",
+  "factorio_version": "1.0",
+  "title": "Angel's Addons - Storage Options",
+  "author": "Arch666Angel",
+  "contact": "",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=185&t=30962",
+  "description": "Adds pressure tanks (extremely large tanks), warehouses and silos.",
+  "dependencies": [
+    "base >= 1.0.0",
+    "? angelspetrochem >= 0.9.13"
+  ]
+}
