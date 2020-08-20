@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2020-08-20
+  Features:
+    - Merges angels storage mods:
+      - Angels pressure-tanks v0.5.2
+      - Angels warehouses v0.5.2
+      - Angels oresilos v0.6.2
