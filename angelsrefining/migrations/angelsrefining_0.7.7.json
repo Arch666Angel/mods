@@ -72,12 +72,12 @@
 	
     ["angels-barrel-gas-synthesis", "gas-synthesis-barrel"],
     ["angels-barrel-gas-butadiene", "gas-butadiene-barrel"],
-    ["angels-barrel-gas-phenol", "gas-phenol-barrel"],
-    ["angels-barrel-gas-ethylbenzene", "gas-ethylbenzene-barrel"],
-    ["angels-barrel-gas-styrene", "gas-styrene-barrel"],
+    ["angels-barrel-gas-phenol", "liquid-phenol-barrel"],
+    ["angels-barrel-gas-ethylbenzene", "liquid-ethylbenzene-barrel"],
+    ["angels-barrel-gas-styrene", "liquid-styrene-barrel"],
     ["angels-barrel-gas-formaldehyde", "gas-formaldehyde-barrel"],
-    ["angels-barrel-gas-polyethylene", "gas-polyethylene-barrel"],
-    ["angels-barrel-gas-glycerol", "gas-glycerol-barrel"],
+    ["angels-barrel-gas-polyethylene", "liquid-polyethylene-barrel"],
+    ["angels-barrel-gas-glycerol", "liquid-glycerol-barrel"],
 	
     ["angels-barrel-gas-acid", "gas-acid-barrel"],
     ["angels-barrel-gas-hydrogen-sulfide", "gas-hydrogen-sulfide-barrel"],

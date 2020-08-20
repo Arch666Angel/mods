@@ -102,20 +102,159 @@ end
 
 local ore_enabled = angelsmods.functions.ore_enabled
 
+-- function to create localised descriptions for the regular sorting ores
+local create_basic_sorting_localisation = function(localised_base_name, sorting_tier_names, sorting_results, has_ore)
+  -- extract the higher tier sorting results
+  local higher_tiers_additional_results = {}
+  local any_tier_results = {}
+  local any_tier_results_present = {}
+  for tier, tier_results in pairs(sorting_results or {}) do
+    local results = {}
+    for _, result in pairs(tier_results) do
+      -- register all results in this tier
+      results[result] = true
+      if not any_tier_results_present[result] then
+        table.insert(any_tier_results, result)
+        any_tier_results_present[result] = true
+      end
+    end
+    local higher_results = {}
+    for result_tier, result_tier_results in pairs(sorting_results or {}) do
+      -- register results only from higher tiers
+      if result_tier > tier then
+        for _, result in pairs(result_tier_results) do
+          if (not results[result]) and (not higher_results[result]) then
+            if not higher_tiers_additional_results[tier] then higher_tiers_additional_results[tier] = {} end
+            table.insert(higher_tiers_additional_results[tier], result)
+            higher_results[result] = true
+          end
+        end
+      end
+    end
+  end
+  if has_ore then
+    sorting_results[0] = any_tier_results
+    higher_tiers_additional_results[0] = any_tier_results
+  end
+
+  -- create a list of localised sorting results for each tier
+  local localised_sorting_results = {}
+  for tier, tier_results in pairs(sorting_results or {}) do
+    local higher_tier_results = higher_tiers_additional_results[tier]
+    localised_sorting_results[tier] = {
+      sorting  = {},
+      refining = higher_tier_results and {} or nil
+    }
+    if tier > 0 and localised_sorting_results[tier].sorting then
+      for _, tier_result in pairs(tier_results) do
+        table.insert(localised_sorting_results[tier].sorting, {"",
+          string.format("[img=item/%s]", tier_result),
+          {"item-description.loc-space"},
+          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+        })
+      end
+    end
+    if localised_sorting_results[tier].refining then
+      for _, tier_result in pairs(higher_tier_results) do
+        table.insert(localised_sorting_results[tier].refining, {"",
+          string.format("[img=item/%s]", tier_result),
+          {"item-description.loc-space"},
+          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+        })
+      end
+    end
+  end
+
+  -- construct the localised description
+  local tiered_localised_description = {}
+  local localised_indentation = {""}
+  for _=1,7 do
+    table.insert(localised_indentation, {"item-description.loc-space"})
+  end
+  for tier, tier_localisation in pairs(localised_sorting_results) do
+    tiered_localised_description[tier] = {""}
+
+    if tier_localisation.sorting and next(tier_localisation.sorting) then
+      local sorting = {""}
+      if #tiered_localised_description[tier] > 1 then
+        table.insert(sorting, {"item-description.loc-nl"})
+      end
+      table.insert(sorting, {"item-description.angels-ore-sorting"})
+      for _, sorting_localised_result in pairs(tier_localisation.sorting) do
+        table.insert(sorting, {"", {"item-description.loc-nl"}, localised_indentation})
+        table.insert(sorting, sorting_localised_result)
+      end
+      table.insert(tiered_localised_description[tier], sorting)
+    end
+    if tier_localisation.refining and next(tier_localisation.refining) then
+      local refining = {""}
+      if #tiered_localised_description[tier] > 1 then
+        table.insert(refining, {"item-description.loc-nl"})
+      end
+      if tier_localisation.sorting and next(tier_localisation.sorting) then
+        table.insert(refining, {"item-description.angels-ore-refining-again"})
+      else
+        table.insert(refining, {"item-description.angels-ore-refining"})
+      end
+      for _, refining_localised_result in pairs(tier_localisation.refining) do
+        table.insert(refining, {"", {"item-description.loc-nl"}, localised_indentation})
+        table.insert(refining, refining_localised_result)
+      end
+      table.insert(tiered_localised_description[tier], refining)
+    end
+  end
+
+  -- add the localisation to the the item
+  for tier, tier_localised_description in pairs(tiered_localised_description) do
+    if tier == 0 then
+      local item_name = string.format(localised_base_name, "")
+      local item = data.raw.item[item_name]
+      if item then
+        if item.localised_description then
+          item.localised_description = {"", item.localised_description, tier_localised_description}
+        else
+          item.localised_description = tier_localised_description
+        end
+      end
+      local resource = data.raw.resource[item_name]
+      if resource then
+        if resource.localised_description then
+          resource.localised_description = {"", resource.localised_description, tier_localised_description}
+        else
+          resource.localised_description = tier_localised_description
+        end
+      end
+      resource = data.raw.resource["infinite-" .. item_name]
+      if resource then
+        if resource.localised_description then
+          resource.localised_description = {"", resource.localised_description, tier_localised_description}
+        else
+          resource.localised_description = tier_localised_description
+        end
+      end
+    else
+      local item_name = string.format(localised_base_name, "-"..(sorting_tier_names[tier] or ""))
+      local item = data.raw.item[item_name]
+      if item then
+        if item.localised_description then
+          item.localised_description = {"", item.localised_description, tier_localised_description}
+        else
+          item.localised_description = tier_localised_description
+        end
+      end
+    end
+  end
+end
+
 -- function to create the (regular) sorted results for an ore, disables it if it is unused
 local create_sorting_recipes = function(refinery_product, recipe_base_name, sorted_ore_results, advanced_sorting)
-  local localisation_base_name = "angels-ore%s"
   local recipes = {}
-  for tier, tier_name in pairs(
-    advanced_sorting and {"crushed", "powder", "dust", "crystal"} or {"crushed", "chunk", "crystal", "pure"}
-  ) do
+  local sorting_results = {}
+  local tiers = advanced_sorting and {"crushed", "powder", "dust", "crystal"} or {"crushed", "chunk", "crystal", "pure"}
+  for tier, tier_name in pairs(tiers) do
     local recipe_used = false
     local recipe = {name = string.format(recipe_base_name, "-" .. tier_name .. "-processing"), results = {}}
     if angelsmods.trigger.refinery_products[refinery_product] then
-      local localised_ores = {
-        string.format(localisation_base_name, string.sub(recipe_base_name, -3, -3) .. "-" .. tier_name),
-        string.format(localisation_base_name, "-" .. tier_name)
-      }
       for ore_name, ore_amounts in pairs(sorted_ore_results or {}) do
         local ore_amount = (ore_amounts or {})[tier]
         if ore_name == "!!" then
@@ -128,43 +267,36 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
           end
           if ore_amount and ore_amount > 0 then
             table.insert(recipe.results, {type = "item", name = ore_name, amount = ore_amount})
-            local string_index = string.find(ore_name, "-ore")
-            if string_index then
-              table.insert(localised_ores, string.sub(ore_name, 1, string_index - 1))
-            else
-              table.insert(localised_ores, ore_name)
-            end
             recipe_used = true
+
+            if not sorting_results[tier] then sorting_results[tier] = {} end
+            table.insert(sorting_results[tier], ore_name)
           end
-        end
-      end
-      if not advanced_sorting then
-        -- add localisation
-        if tier_name ~= "pure" then
-          table.insert(localised_ores, "slag")
-          angelsmods.functions.add_localization(unpack(localised_ores))
-        else
-          angelsmods.functions.add_localization(unpack(localised_ores))
-          localised_ores[1] = string.format(localisation_base_name, string.sub(recipe_base_name, -3, -3))
-          localised_ores[2] = string.format(localisation_base_name, "")
-          angelsmods.functions.add_localization(unpack(localised_ores))
         end
       end
     else
       angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "-" .. tier_name))
     end
+
     if recipe_used then
       table.insert(recipes, recipe)
     else
       angelsmods.functions.OV.disable_recipe(recipe.name)
     end
   end
-  if advanced_sorting and not angelsmods.trigger.refinery_products[refinery_product] then
+
+  if advanced_sorting and (not angelsmods.trigger.refinery_products[refinery_product]) then
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "sludge"))
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "solution"))
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge-filtering"))
     angelsmods.functions.OV.disable_recipe(string.format(recipe_base_name, "anode-sludge"))
   end
+
+  create_basic_sorting_localisation(
+    string.format("angels-ore%s", string.sub(recipe_base_name, -3, -3) .. "%s"),
+    tiers, sorting_results, not advanced_sorting
+  )
+
   return recipes
 end
 
@@ -228,7 +360,6 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
   for recipe_index = 1, 9 do
     local recipe = {name = string.format(recipe_base_name, string.format("-%i", recipe_index)), results = {{"!!"}}}
     local recipe_used = false
-    local localised_ores = {recipe.name, string.format(recipe_base_name, "")}
     for ore_name, ore_amounts in pairs(ore_result_products or {}) do
       local ore_amount = ore_amounts[recipe_index]
       local ore_probability = nil
@@ -241,12 +372,6 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
           {name = ore_name, type = "item", amount = ore_amount, probability = ore_probability}
         )
         recipe_used = true
-        local string_index = string.find(ore_name, "-ore")
-        if string_index then
-          table.insert(localised_ores, string.sub(ore_name, 1, string_index - 1))
-        else
-          table.insert(localised_ores, ore_name)
-        end
       end
     end
     if recipe_used then
@@ -254,9 +379,6 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
         recipe.icons = recipe_icons[recipe_index] -- maybe improve this?
       else
         recipe.icon = recipe_icons[recipe_index]
-      end
-      if not special_vanilla then
-        angelsmods.functions.add_recipe_localization(unpack(localised_ores))
       end
       table.insert(recipes, recipe)
     else

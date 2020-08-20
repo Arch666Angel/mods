@@ -67,7 +67,7 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "fluid", name = "liquid-naphtha", amount = 20},
-        {type = "fluid", name = "gas-polyethylene", amount = 20}
+        {type = "fluid", name = "liquid-polyethylene", amount = 20}
       },
       results = {
         {type = "fluid", name = "liquid-plastic", amount = 20}
@@ -95,7 +95,7 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "fluid", name = "gas-formaldehyde", amount = 20},
-        {type = "fluid", name = "gas-phenol", amount = 20}
+        {type = "fluid", name = "liquid-phenol", amount = 20}
       },
       results = {
         {type = "fluid", name = "liquid-plastic", amount = 30}
@@ -209,7 +209,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-bisphenol-a", amount = 20},
+        {type = "fluid", name = "liquid-bisphenol-a", amount = 20},
         {type = "fluid", name = "gas-epichlorhydrin", amount = 20}
       },
       results = {
@@ -268,7 +268,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-styrene", amount = 20},
+        {type = "fluid", name = "liquid-styrene", amount = 20},
         {type = "fluid", name = "gas-butadiene", amount = 20}
       },
       results = {
@@ -300,7 +300,7 @@ data:extend(
     -- energy_required = 2,
     -- ingredients =
     -- {
-    -- {type="fluid", name="gas-bisphenol-a", amount=20},
+    -- {type="fluid", name="liquid-bisphenol-a", amount=20},
     -- {type="fluid", name="gas-phosgene", amount=20},
     -- {type="item", name="solid-sodium-hydroxide", amount=1},
     -- },
@@ -315,7 +315,7 @@ data:extend(
     -- energy_required = 2,
     -- ingredients =
     -- {
-    -- {type="fluid", name="gas-bisphenol-a", amount=25 * intermediatemulti},
+    -- {type="fluid", name="liquid-bisphenol-a", amount=25 * intermediatemulti},
     -- {type="fluid", name="gas-phosgene", amount=25 * intermediatemulti},
     -- {type="item", name="solid-sodium-hydroxide", amount=1 * intermediatemulti},
     -- },
@@ -579,7 +579,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-glycerol", amount = 50},
+        {type = "fluid", name = "liquid-glycerol", amount = 50},
         {type = "fluid", name = "liquid-sulfuric-acid", amount = 25},
         {type = "fluid", name = "liquid-nitric-acid", amount = 25},
         {type = "item", name = "coal", amount = 1}

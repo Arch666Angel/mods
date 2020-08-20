@@ -53,6 +53,23 @@ end
 -- FERROUS/CUPRIC REFINING-----------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.refining then
+  if mods["bobplates"] then
+    OV.remove_prereq("lubricant", "oil-processing")
+  else
+    OV.remove_prereq("lubricant", "advanced-oil-processing")
+  end
+  OV.add_prereq("lubricant", "angels-oil-processing")
+  for _, tech_name in pairs({ "lubricant", "ore-powderizer" }) do
+    local ingredients = ((data.raw.technology[tech_name] or {}).unit or {}).ingredients or {}
+    for index, ingredient in pairs(ingredients) do
+      if ingredient[1] == "chemical-science-pack" or ingredient.name == "chemical-science-pack" then
+        table.remove(ingredients, index)
+        break
+      end
+    end
+  end
+  OV.add_prereq("electric-engine", "advanced-oil-processing")
+
   move_item("liquid-ferric-chloride-solution", "ore-processing-fluid", "a[ferrous]-e", "fluid")
   OV.add_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")
 

@@ -1,9 +1,12 @@
 data:extend(
   {
-    --TIER 1
+    ---------------------------------------------------------------------------
+    -- TIER 1 -----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore1-crushed",
+      localised_name = {"recipe-name.angelsore1-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -13,14 +16,16 @@ data:extend(
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore1-crushed",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
+      --icon_size = 32,
       order = "a[angelsore1-crushed]"
     },
     {
       type = "recipe",
       name = "angelsore1-crushed-hand",
-      category = "crafting",
+      localised_name = {"recipe-name.angelsore1-crushed-hand"},
+      category = "angels-manual-crafting",
       subgroup = "processing-crafting",
       energy_required = 4,
       enabled = true,
@@ -29,13 +34,17 @@ data:extend(
         {type = "item", name = "angels-ore1-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore1-crushed",
+      allow_decomposition = false,
+      always_show_made_in = true,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
+      --icon_size = 32,
       order = "a[angelsore1-crushed-hand]"
     },
     {
       type = "recipe",
       name = "angelsore2-crushed",
+      localised_name = {"recipe-name.angelsore2-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -45,13 +54,15 @@ data:extend(
         {type = "item", name = "angels-ore2-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore2-crushed",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore2-crushed.png",
+      --icon_size = 32,
       order = "b[angelsore2-crushed]"
     },
     {
       type = "recipe",
       name = "angelsore3-crushed",
+      localised_name = {"recipe-name.angelsore3-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -61,14 +72,16 @@ data:extend(
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore3-crushed",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
+      --icon_size = 32,
       order = "c[angelsore3-crushed]"
     },
     {
       type = "recipe",
       name = "angelsore3-crushed-hand",
-      category = "crafting",
+      localised_name = {"recipe-name.angelsore3-crushed-hand"},
+      category = "angels-manual-crafting",
       subgroup = "processing-crafting",
       energy_required = 4,
       enabled = true,
@@ -77,13 +90,17 @@ data:extend(
         {type = "item", name = "angels-ore3-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore3-crushed",
+      allow_decomposition = false,
+      always_show_made_in = true,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
+      --icon_size = 32,
       order = "b[angelsore3-crushed-hand]"
     },
     {
       type = "recipe",
       name = "angelsore4-crushed",
+      localised_name = {"recipe-name.angelsore4-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -93,13 +110,15 @@ data:extend(
         {type = "item", name = "angels-ore4-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore4-crushed",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore4-crushed.png",
+      --icon_size = 32,
       order = "d[angelsore4-crushed]"
     },
     {
       type = "recipe",
       name = "angelsore5-crushed",
+      localised_name = {"recipe-name.angelsore5-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -109,13 +128,15 @@ data:extend(
         {type = "item", name = "angels-ore5-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore5-crushed",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore5-crushed.png",
+      --icon_size = 32,
       order = "e[angelsore5-crushed]"
     },
     {
       type = "recipe",
       name = "angelsore6-crushed",
+      localised_name = {"recipe-name.angelsore6-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -125,14 +146,18 @@ data:extend(
         {type = "item", name = "angels-ore6-crushed", amount = 2},
         {type = "item", name = "stone-crushed", amount = 1}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      main_product = "angels-ore6-crushed",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
+      --icon_size = 32,
       order = "f[angelsore6-crushed]"
     },
-    --TIER 1.5
+    ---------------------------------------------------------------------------
+    -- TIER 1.5 ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore8-crushed",
+      localised_name = {"recipe-name.angelsore8-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -145,13 +170,16 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore8-crushed", amount = 6}
       },
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "g"
     },
     {
       type = "recipe",
       name = "angelsore8-powder",
+      localised_name = {"recipe-name.angelsore8-powder"},
       category = "ore-sorting-t1-5",
       subgroup = "ore-processing-a",
       energy_required = 2,
@@ -166,12 +194,13 @@ data:extend(
       },
       main_product = "angels-ore8-powder",
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "h"
     },
     {
       type = "recipe",
       name = "angelsore9-crushed",
+      localised_name = {"recipe-name.angelsore9-crushed"},
       category = "ore-sorting-t1",
       subgroup = "ore-processing-a",
       energy_required = 1,
@@ -184,13 +213,16 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore9-crushed", amount = 6}
       },
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "i"
     },
     {
       type = "recipe",
       name = "angelsore9-powder",
+      localised_name = {"recipe-name.angelsore9-powder"},
       category = "ore-sorting-t1-5",
       subgroup = "ore-processing-a",
       energy_required = 2,
@@ -205,13 +237,16 @@ data:extend(
       },
       main_product = "angels-ore9-powder",
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "j"
     },
-    --TIER 2
+    ---------------------------------------------------------------------------
+    -- TIER 2 -----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore1-chunk",
+      localised_name = {"recipe-name.angelsore1-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -225,13 +260,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-blue", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore1-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-chunk.png",
+      --icon_size = 32,
       order = "a[angelsore1-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore2-chunk",
+      localised_name = {"recipe-name.angelsore2-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -245,13 +282,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-purple", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore2-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore2-chunk.png",
+      --icon_size = 32,
       order = "b[angelsore2-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore3-chunk",
+      localised_name = {"recipe-name.angelsore3-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -265,13 +304,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-yellow", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore3-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-chunk.png",
+      --icon_size = 32,
       order = "c[angelsore3-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore4-chunk",
+      localised_name = {"recipe-name.angelsore4-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -285,13 +326,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-lightgreen", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore4-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore4-chunk.png",
+      --icon_size = 32,
       order = "d[angelsore4-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore5-chunk",
+      localised_name = {"recipe-name.angelsore5-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -305,13 +348,15 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-cyan", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore5-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore5-chunk.png",
+      --icon_size = 32,
       order = "e[angelsore5-chunk]"
     },
     {
       type = "recipe",
       name = "angelsore6-chunk",
+      localised_name = {"recipe-name.angelsore6-chunk"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 2,
@@ -325,14 +370,18 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 50},
         {type = "item", name = "geode-red", amount = 1, probability = 0.5}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-chunk.png",
-      icon_size = 32,
+      main_product = "angels-ore6-chunk",
+      --icon = "__angelsrefining__/graphics/icons/angels-ore6-chunk.png",
+      --icon_size = 32,
       order = "f[angelsore6-chunk]"
     },
-    --TIER 2.5
+    ---------------------------------------------------------------------------
+    -- TIER 2.5 ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore8-sludge",
+      localised_name = {"recipe-name.angelsore8-sludge"},
       category = "chemistry",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -348,13 +397,17 @@ data:extend(
       results = {
         {type = "fluid", name = "angels-ore8-sludge", amount = 6}
       },
+      main_product = "angels-ore8-sludge",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "g"
     },
     {
       type = "recipe",
       name = "angelsore8-dust",
+      localised_name = {"recipe-name.angelsore8-dust"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -368,13 +421,14 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
       main_product = "angels-ore8-dust",
-      icon = "__angelsrefining__/graphics/icons/angels-ore8-dust.png",
-      icon_size = 32,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore8-dust.png",
+      --icon_size = 32,
       order = "h"
     },
     {
       type = "recipe",
       name = "angelsore9-sludge",
+      localised_name = {"recipe-name.angelsore9-sludge"},
       category = "chemistry",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -390,13 +444,17 @@ data:extend(
       results = {
         {type = "fluid", name = "angels-ore9-sludge", amount = 6}
       },
+      main_product = "angels-ore9-sludge",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "i"
     },
     {
       type = "recipe",
       name = "angelsore9-dust",
+      localised_name = {"recipe-name.angelsore9-dust"},
       category = "ore-sorting-t2",
       subgroup = "ore-processing-b",
       energy_required = 4,
@@ -410,14 +468,17 @@ data:extend(
         {type = "fluid", name = "water-yellow-waste", amount = 20}
       },
       main_product = "angels-ore9-dust",
-      icon = "__angelsrefining__/graphics/icons/angels-ore9-dust.png",
-      icon_size = 32,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore9-dust.png",
+      --icon_size = 32,
       order = "j"
     },
-    --TIER 3
+    ---------------------------------------------------------------------------
+    -- TIER 3 -----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore1-crystal",
+      localised_name = {"recipe-name.angelsore1-crystal"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -429,13 +490,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore1-crystal", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-crystal.png",
-      icon_size = 32,
+      main_product = "angels-ore1-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-crystal.png",
+      --icon_size = 32,
       order = "a[angelsore1-crystal]"
     },
     {
       type = "recipe",
       name = "angelsore2-crystal",
+      localised_name = {"recipe-name.angelsore2-crystal"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -447,13 +512,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore2-crystal", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-crystal.png",
-      icon_size = 32,
+      main_product = "angels-ore2-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore2-crystal.png",
+      --icon_size = 32,
       order = "b[angelsore2-crystal]"
     },
     {
       type = "recipe",
       name = "angelsore3-crystal",
+      localised_name = {"recipe-name.angelsore3-crystal"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -465,13 +534,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore3-crystal", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-crystal.png",
-      icon_size = 32,
+      main_product = "angels-ore3-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-crystal.png",
+      --icon_size = 32,
       order = "c[angelsore3-crystal]"
     },
     {
       type = "recipe",
       name = "angelsore4-crystal",
+      localised_name = {"recipe-name.angelsore4-crystal"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -483,13 +556,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore4-crystal", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-crystal.png",
-      icon_size = 32,
+      main_product = "angels-ore4-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore4-crystal.png",
+      --icon_size = 32,
       order = "d[angelsore4-crystal]"
     },
     {
       type = "recipe",
       name = "angelsore5-crystal",
+      localised_name = {"recipe-name.angelsore5-crystal"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -501,13 +578,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore5-crystal", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-crystal.png",
-      icon_size = 32,
+      main_product = "angels-ore5-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore5-crystal.png",
+      --icon_size = 32,
       order = "e[angelsore5-crystal]"
     },
     {
       type = "recipe",
       name = "angelsore6-crystal",
+      localised_name = {"recipe-name.angelsore6-crystal"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -519,14 +600,20 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore6-crystal", amount = 2}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      main_product = "angels-ore6-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
+      --icon_size = 32,
       order = "f[angelsore6-crystal]"
     },
-    --TIER 3.5
+    ---------------------------------------------------------------------------
+    -- TIER 3.5 ---------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore8-solution",
+      localised_name = {"recipe-name.angelsore8-solution"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -541,13 +628,17 @@ data:extend(
       results = {
         {type = "fluid", name = "angels-ore8-solution", amount = 60}
       },
+      main_product = "angels-ore8-solution",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "g"
     },
     {
       type = "recipe",
       name = "angelsore8-anode-sludge-filtering",
+      localised_name = {"recipe-name.angelsore8-solution-filtering"},
       category = "filtering",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -573,6 +664,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore8-anode-sludge",
+      localised_name = {"recipe-name.angelsore8-anode-sludge"},
       category = "ore-sorting-t3-5",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -588,12 +680,13 @@ data:extend(
       },
       main_product = "angels-ore8-anode-sludge",
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "g"
     },
     {
       type = "recipe",
       name = "angelsore8-crystal",
+      localised_name = {"recipe-name.angelsore8-crystal"},
       category = "crystallizing",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -604,13 +697,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore8-crystal", amount = 6}
       },
+      main_product = "angels-ore8-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "h"
     },
     {
       type = "recipe",
       name = "angelsore9-solution",
+      localised_name = {"recipe-name.angelsore9-solution"},
       category = "ore-sorting-t3",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -625,13 +722,17 @@ data:extend(
       results = {
         {type = "fluid", name = "angels-ore9-solution", amount = 60}
       },
+      main_product = "angels-ore9-solution",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "i"
     },
     {
       type = "recipe",
       name = "angelsore9-anode-sludge-filtering",
+      localised_name = {"recipe-name.angelsore9-solution-filtering"},
       category = "filtering",
       subgroup = "ore-processing-c",
       energy_required = 2,
@@ -657,6 +758,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore9-anode-sludge",
+      localised_name = {"recipe-name.angelsore9-anode-sludge"},
       category = "ore-sorting-t3-5",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -672,12 +774,13 @@ data:extend(
       },
       main_product = "angels-ore9-anode-sludge",
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "i"
     },
     {
       type = "recipe",
       name = "angelsore9-crystal",
+      localised_name = {"recipe-name.angelsore9-crystal"},
       category = "crystallizing",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -688,14 +791,20 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore9-crystal", amount = 6}
       },
+      main_product = "angels-ore9-crystal",
+      always_show_products = true,
+      show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
-      icon_size = 32,
+      --icon_size = 32,
       order = "j"
     },
-    --TIER 4
+    ---------------------------------------------------------------------------
+    -- TIER 4 -----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "recipe",
       name = "angelsore1-pure",
+      localised_name = {"recipe-name.angelsore1-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -706,13 +815,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore1-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore1-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png",
+      --icon_size = 32,
       order = "a[angelsore1-pure]"
     },
     {
       type = "recipe",
       name = "angelsore2-pure",
+      localised_name = {"recipe-name.angelsore2-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -723,13 +836,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore2-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore2-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png",
+      --icon_size = 32,
       order = "b[angelsore2-pure]"
     },
     {
       type = "recipe",
       name = "angelsore3-pure",
+      localised_name = {"recipe-name.angelsore3-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -740,13 +857,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore3-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore3-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png",
+      --icon_size = 32,
       order = "c[angelsore3-pure]"
     },
     {
       type = "recipe",
       name = "angelsore4-pure",
+      localised_name = {"recipe-name.angelsore4-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -757,13 +878,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore4-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore4-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png",
+      --icon_size = 32,
       order = "d[angelsore4-pure]"
     },
     {
       type = "recipe",
       name = "angelsore5-pure",
+      localised_name = {"recipe-name.angelsore5-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -774,13 +899,17 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore5-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore5-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png",
+      --icon_size = 32,
       order = "e[angelsore5-pure]"
     },
     {
       type = "recipe",
       name = "angelsore6-pure",
+      localised_name = {"recipe-name.angelsore6-pure"},
       category = "ore-sorting-t4",
       subgroup = "ore-processing-d",
       energy_required = 2,
@@ -791,8 +920,11 @@ data:extend(
       results = {
         {type = "item", name = "angels-ore6-pure", amount = 4}
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png",
-      icon_size = 32,
+      main_product = "angels-ore6-pure",
+      always_show_products = true,
+      show_amount_in_title = false,
+      --icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png",
+      --icon_size = 32,
       order = "f[angelsore6-pure]"
     },
     --SLAG PROCESSING

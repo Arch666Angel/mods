@@ -20,11 +20,13 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
     )
   end
 
-  if not angelsmods.trigger.smelting_products["silicon"] then
+  if (not angelsmods.trigger.smelting_products["silicon"]      ) or
+     (not angelsmods.trigger.smelting_products["silicon"].ingot) then
     OV.remove_prereq("angels-steel-smelting-2", "angels-silicon-smelting-1")
   end
 
-  if not angelsmods.trigger.smelting_products["manganese"] then
+  if (not angelsmods.trigger.smelting_products["manganese"]      ) or
+     (not angelsmods.trigger.smelting_products["manganese"].ingot) then
     OV.remove_prereq("angels-steel-smelting-2", "angels-manganese-smelting-1")
   end
 

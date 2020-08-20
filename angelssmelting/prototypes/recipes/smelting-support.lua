@@ -8,10 +8,12 @@ data:extend(
       subgroup = "coolant",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "steam", amount = 100}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "water-purified", amount = 100}
       },
       always_show_products = true,
@@ -33,11 +35,13 @@ data:extend(
       subgroup = "coolant",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "water", amount = 80},
         {type = "fluid", name = "liquid-mineral-oil", amount = 20}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "liquid-coolant", amount = 100}
       },
       icon_size = 32,
@@ -50,11 +54,13 @@ data:extend(
       subgroup = "coolant",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "liquid-coolant-used", amount = 200, maximum_temperature = 50},
         {type = "item", name = "filter-coal", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "liquid-coolant", amount = 160, temperature = 25},
         {type = "item", name = "filter-frame", amount = 1}
       },
@@ -69,11 +75,13 @@ data:extend(
       subgroup = "coolant",
       energy_required = 4,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "fluid", name = "liquid-coolant-used", amount = 200, maximum_temperature = 50},
         {type = "item", name = "filter-ceramic", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "liquid-coolant", amount = 160, temperature = 25},
         {type = "item", name = "filter-ceramic-used", amount = 1}
       },
@@ -89,7 +97,8 @@ data:extend(
       subgroup = "coolant",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {
           type = "fluid",
           name = "liquid-coolant-used",
@@ -99,12 +108,14 @@ data:extend(
         },
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "liquid-coolant-used", amount = 200, temperature = 200},
         {type = "fluid", name = "steam", amount = 50, temperature = 175}
       },
       --main_product= "liquid-coolant-clean",
-      icons = {
+      icons =
+      {
         {
           icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png"
         },
@@ -125,7 +136,8 @@ data:extend(
       subgroup = "coolant",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {
           type = "fluid",
           name = "liquid-coolant-used",
@@ -135,12 +147,14 @@ data:extend(
         },
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "liquid-coolant-used", amount = 200, temperature = 100},
         {type = "fluid", name = "steam", amount = 50, temperature = 150}
       },
       --main_product= "liquid-coolant-clean",
-      icons = {
+      icons =
+      {
         {
           icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png"
         },
@@ -161,7 +175,8 @@ data:extend(
       subgroup = "coolant",
       energy_required = 2,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {
           type = "fluid",
           name = "liquid-coolant-used",
@@ -171,12 +186,14 @@ data:extend(
         },
         {type = "fluid", name = "water", amount = 50}
       },
-      results = {
+      results =
+      {
         {type = "fluid", name = "liquid-coolant-used", amount = 200, temperature = 25},
         {type = "fluid", name = "steam", amount = 50, temperature = 125}
       },
       --main_product= "liquid-coolant-clean",
-      icons = {
+      icons =
+      {
         {
           icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png"
         },
@@ -193,21 +210,65 @@ data:extend(
     --MOLDS
     {
       type = "recipe",
+      name = "angels-casing-resin-mold",
+      category = "crafting",
+      subgroup = "angels-mold-casting",
+      energy_required = 4,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "solid-resin", amount = 2}
+      },
+      results =
+      {
+        {type = "item", name = "motor-casing-0", amount = 1}
+      },
+      main_product = "motor-casing-0",
+      --allow_decomposition = false,
+      --icons = {
+      --  {
+      --    icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
+      --  },
+      --  {
+      --    icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+      --    scale = 0.4375,
+      --    shift = {-10, -10}
+      --  }
+      --},
+      icon_size = 32,
+      order = "a[positive-mold]"
+    },
+    {
+      type = "recipe",
       name = "mold-expendable",
       category = "sintering",
       subgroup = "angels-mold-casting",
       energy_required = 4,
       enabled = false,
-      ingredients = {
-        {type = "item", name = "solid-sand", amount = 40}
+      ingredients =
+      {
+        {type = "item", name = "solid-sand", amount = 40},
+        {type = "item", name = "motor-casing-0", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "mold-expendable", amount = 1},
-        {type = "item", name = "slag", amount = 2}
+        {type = "item", name = "slag", amount = 1}
       },
       main_product = "mold-expendable",
       icon_size = 32,
-      order = "a[mold-expendable]"
+      icons =
+      {
+        {
+          icon = "__angelssmelting__/graphics/icons/expendable-mold.png"
+        },
+        {
+          icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+          scale = 0.4375,
+          shift = {10, -10}
+        }
+      },
+      order = "b[mold-expendable]"
     },
     {
       type = "recipe",
@@ -216,27 +277,36 @@ data:extend(
       subgroup = "angels-mold-casting",
       energy_required = 4,
       enabled = false,
-      ingredients = {
-        {type = "item", name = "solid-clay", amount = 50}
+      ingredients =
+      {
+        {type = "item", name = "solid-clay", amount = 50},
+        {type = "item", name = "motor-casing-0", amount = 1}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "mold-non-expendable", amount = 1},
-        {type = "item", name = "solid-iron-hydroxide", amount = 4}
+        {type = "item", name = "slag", amount = 1}
       },
       main_product = "mold-non-expendable",
-      icons = {
+      icons =
+      {
         {
           icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png"
         },
         {
+          icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+          scale = 0.4375,
+          shift = {10, -10}
+        },
+        {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+          tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
       icon_size = 32,
-      order = "b[mold-non-expendable]-a[creation]",
+      order = "c[mold-non-expendable]-a[creation]",
       stack_size = 200
     },
     {
@@ -246,27 +316,36 @@ data:extend(
       subgroup = "angels-mold-casting",
       energy_required = 3,
       enabled = false,
-      ingredients = {
+      ingredients =
+      {
         {type = "item", name = "spent-mold-non-expendable", amount = 1},
         {type = "fluid", name = "liquid-nitric-acid", amount = 20}
       },
-      results = {
+      results =
+      {
         {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.90, catalyst_amount = 1},
         {type = "fluid", name = "water-red-waste", amount = 20}
       },
-      icons = {
+      icons =
+      {
         {
           icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png"
         },
         {
+          icon = "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png",
+          icon_size = 72,
+          scale = 32/72 * 0.4375,
+          shift = {10, -10}
+        },
+        {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
+          tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
       icon_size = 32,
-      order = "b[mold-non-expendable]-b[cleaning]"
+      order = "c[mold-non-expendable]-b[cleaning]"
     }
   }
 )

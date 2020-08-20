@@ -1,0 +1,101 @@
+if angelsmods.industries and angelsmods.industries.components then
+  local OV = angelsmods.functions.OV
+  
+  --== CRAWLER ==--
+  OV.remove_prereq("angels-crawler-train-2", "speed-module")
+  OV.remove_prereq("angels-crawler-train-2", "effectivity-module")
+  OV.add_prereq("angels-crawler-train-2", "tech-green-circuit")
+  OV.add_prereq("angels-crawler-train-2", "angels-components-mechanical-2")
+  OV.add_prereq("angels-crawler-train-2", "angels-components-cabling-2")
+  OV.add_prereq("angels-crawler-train-2", "angels-components-construction-2")
+
+  OV.remove_prereq("angels-crawler-train-3", "speed-module-2")
+  OV.remove_prereq("angels-crawler-train-3", "effectivity-module-2")
+  OV.remove_prereq("angels-crawler-train-3", "low-density-structure")
+  OV.remove_prereq("angels-crawler-train-3", "electric-engine")
+  OV.add_prereq("angels-crawler-train-3", "tech-orange-circuit")
+  OV.add_prereq("angels-crawler-train-3", "angels-components-mechanical-3")
+  OV.add_prereq("angels-crawler-train-3", "angels-components-cabling-3")
+  OV.add_prereq("angels-crawler-train-3", "angels-components-construction-3")
+
+  OV.remove_prereq("angels-crawler-train-4", "speed-module-3")
+  OV.remove_prereq("angels-crawler-train-4", "effectivity-module-3")
+  OV.remove_prereq("angels-crawler-train-4", "construction-robotics")
+  OV.add_prereq("angels-crawler-train-4", "tech-blue-circuit")
+  OV.add_prereq("angels-crawler-train-4", "angels-components-mechanical-4")
+  OV.add_prereq("angels-crawler-train-4", "angels-components-cabling-4")
+  OV.add_prereq("angels-crawler-train-4", "angels-components-construction-4")
+
+  OV.remove_prereq("angels-crawler-train-5", "rocket-control-unit")
+  OV.remove_prereq("angels-crawler-train-5", "logistic-system")
+  OV.add_prereq("angels-crawler-train-5", "tech-yellow-circuit")
+  OV.add_prereq("angels-crawler-train-5", "angels-components-mechanical-5")
+  OV.add_prereq("angels-crawler-train-5", "angels-components-cabling-5")
+  OV.add_prereq("angels-crawler-train-5", "angels-components-construction-5")
+  
+  --== PETRO ==--
+  OV.remove_prereq("angels-petro-train-2", "speed-module")
+  OV.remove_prereq("angels-petro-train-2", "effectivity-module")
+  OV.add_prereq("angels-petro-train-2", "tech-green-circuit")
+  OV.add_prereq("angels-petro-train-2", "angels-components-mechanical-2")
+  OV.add_prereq("angels-petro-train-2", "angels-components-cabling-2")
+  OV.add_prereq("angels-petro-train-2", "angels-components-construction-2")
+
+  OV.remove_prereq("angels-petro-train-3", "speed-module-2")
+  OV.remove_prereq("angels-petro-train-3", "effectivity-module-2")
+  OV.remove_prereq("angels-petro-train-3", "low-density-structure")
+  OV.remove_prereq("angels-petro-train-3", "electric-engine")
+  OV.add_prereq("angels-petro-train-3", "tech-orange-circuit")
+  OV.add_prereq("angels-petro-train-3", "angels-components-mechanical-3")
+  OV.add_prereq("angels-petro-train-3", "angels-components-cabling-3")
+  OV.add_prereq("angels-petro-train-3", "angels-components-construction-3")
+
+  OV.remove_prereq("angels-petro-train-4", "speed-module-3")
+  OV.remove_prereq("angels-petro-train-4", "effectivity-module-3")
+  OV.remove_prereq("angels-petro-train-4", "construction-robotics")
+  OV.add_prereq("angels-petro-train-4", "tech-blue-circuit")
+  OV.add_prereq("angels-petro-train-4", "angels-components-mechanical-4")
+  OV.add_prereq("angels-petro-train-4", "angels-components-cabling-4")
+  OV.add_prereq("angels-petro-train-4", "angels-components-construction-4")
+
+  OV.remove_prereq("angels-petro-train-5", "rocket-control-unit")
+  OV.remove_prereq("angels-petro-train-5", "logistic-system")
+  OV.add_prereq("angels-petro-train-5", "tech-yellow-circuit")
+  OV.add_prereq("angels-petro-train-5", "angels-components-mechanical-5")
+  OV.add_prereq("angels-petro-train-5", "angels-components-cabling-5")
+  OV.add_prereq("angels-petro-train-5", "angels-components-construction-5")
+
+  --== SMELTING ==--
+  OV.remove_prereq("angels-smelting-train-2", "speed-module")
+  OV.remove_prereq("angels-smelting-train-2", "effectivity-module")
+  OV.add_prereq("angels-smelting-train-2", "tech-green-circuit")
+  OV.add_prereq("angels-smelting-train-2", "angels-components-mechanical-2")
+  OV.add_prereq("angels-smelting-train-2", "angels-components-cabling-2")
+  OV.add_prereq("angels-smelting-train-2", "angels-components-construction-2")
+
+  OV.remove_prereq("angels-smelting-train-3", "speed-module-2")
+  OV.remove_prereq("angels-smelting-train-3", "effectivity-module-2")
+  OV.remove_prereq("angels-smelting-train-3", "low-density-structure")
+  OV.remove_prereq("angels-smelting-train-3", "electric-engine")
+  OV.add_prereq("angels-smelting-train-3", "tech-orange-circuit")
+  OV.add_prereq("angels-smelting-train-3", "angels-components-mechanical-3")
+  OV.add_prereq("angels-smelting-train-3", "angels-components-cabling-3")
+  OV.add_prereq("angels-smelting-train-3", "angels-components-construction-3")
+
+  OV.remove_prereq("angels-smelting-train-4", "speed-module-3")
+  OV.remove_prereq("angels-smelting-train-4", "effectivity-module-3")
+  OV.remove_prereq("angels-smelting-train-4", "construction-robotics")
+  OV.add_prereq("angels-smelting-train-4", "tech-blue-circuit")
+  OV.add_prereq("angels-smelting-train-4", "angels-components-mechanical-4")
+  OV.add_prereq("angels-smelting-train-4", "angels-components-cabling-4")
+  OV.add_prereq("angels-smelting-train-4", "angels-components-construction-4")
+
+  OV.remove_prereq("angels-smelting-train-5", "rocket-control-unit")
+  OV.remove_prereq("angels-smelting-train-5", "logistic-system")
+  OV.add_prereq("angels-smelting-train-5", "tech-yellow-circuit")
+  OV.add_prereq("angels-smelting-train-5", "angels-components-mechanical-5")
+  OV.add_prereq("angels-smelting-train-5", "angels-components-cabling-5")
+  OV.add_prereq("angels-smelting-train-5", "angels-components-construction-5")
+
+  OV.execute()
+end

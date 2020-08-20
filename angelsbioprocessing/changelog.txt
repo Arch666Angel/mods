@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.14
+Date: 20.08.2020
+  Changes:
+    - Updated to base game 1.0
+    - Update to internal changes in angels refining
+    - Petri dish now requires plastic bar instead of iron plate (when not requiring glass)
+  Bugfixes:
+    - Fixed crash related to labs having invalid input definitions (355)
+---------------------------------------------------------------------------------------------------
 Version: 0.7.13
 Date: 17.07.2020
   Changes:

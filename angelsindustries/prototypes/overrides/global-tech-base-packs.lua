@@ -46,6 +46,12 @@ if angelsmods.industries.tech then
   pack_replace("automation-2", "green", "red")
   OV.remove_prereq("automation-2", "logistic-science-pack")
   -- SMELTING
+  OV.remove_unlock("angels-stone-smelting-2", "angels-casing-resin-mold")
+  OV.add_unlock("angels-stone-smelting-1", "angels-casing-resin-mold")
+  OV.remove_unlock("angels-stone-smelting-2", "mold-expendable")
+  OV.add_unlock("angels-stone-smelting-1", "mold-expendable")
+  OV.remove_prereq("angels-stone-smelting-2", "bio-arboretum-1")
+  OV.add_prereq("angels-stone-smelting-1", "bio-arboretum-1")
   pack_replace("angels-steel-smelting-1", "green", "red")
   -- BIO PROCESSING
   pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)
@@ -60,6 +66,8 @@ if angelsmods.industries.tech then
   pack_replace("angels-components-construction-2", "green", "red")
   pack_replace("angels-components-cabling-2", "green", "red")
   pack_replace("angels-components-mechanical-2", "green", "red")
+  OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")
+  OV.add_prereq("angels-components-mechanical-2", "angels-stone-smelting-1")
 
   -------------------------------------------------------------------------------
   -- GREEN SCIENCE PACKS --------------------------------------------------------

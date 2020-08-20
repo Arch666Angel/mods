@@ -8,7 +8,7 @@ data:extend(
       subgroup = "circuit-network",
       order = "a[light]-a[small-lamp]-a[angels]",
       place_result = "angels-lamp",
-      stack_size = 10
+      stack_size = 50
     },
     {
       type = "lamp",
