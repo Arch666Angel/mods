@@ -211,6 +211,18 @@ if angelsmods.industries.tech then
       {
         type = "item",
         name = lab_item.name .. string.format("-%i", 0),
+        localised_name = {"entity-name.angels-main-lab-crash-site"},
+        localised_description = {
+          "",
+          {"entity-description.angels-main-lab-crash-site"},
+          "\n",
+          {"entity-description.angels-main-lab-warning"},
+          --[[
+		  "\n",
+          {"entity-description.angels-lab-inputs",
+            create_rich_text_icons(data.raw["lab"][lab_item.name .. string.format("-%i", 1)].inputs)}
+		  --]]--
+        },
 
         icon = "__base__/graphics/icons/crash-site-lab-repaired.png",
         icon_size = 64, icon_mipmaps = 4,
