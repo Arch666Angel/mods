@@ -1,8 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+Date: 20.08.2020
+  Changes:
+    - Updated to base game 1.0
+    - Component mode:
+      - Mold creation now requires a resin casing instead of the iron casing (356)
+  Bugfixes:
+    - Science mode:
+      - Fixed that new games in base game v1.0.0 did not receive a tech archive at the start
+---------------------------------------------------------------------------------------------------
 Version: 0.4.5
 Date: 17.07.2020
   Changes:
     - Made localisation conform with base game (342)
+    - Increased stack size of the angel lamp from 10 to 50 (353)
   Bugfixes:
     - Overhaul mode:
       - Disable platinum as it is not usefull without component or science mode

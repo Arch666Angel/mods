@@ -85,7 +85,7 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   -- GLYCEROL -----------------------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.converter_fluid("glycerol", "gas-glycerol")
+  OV.converter_fluid("glycerol", "liquid-glycerol")
   OV.disable_recipe({"glycerol"})
   angelsmods.functions.disable_barreling_recipes("glycerol")
 

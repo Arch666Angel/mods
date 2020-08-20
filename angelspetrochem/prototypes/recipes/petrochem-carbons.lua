@@ -819,7 +819,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "gas-polyehtylene-catalyst",
+      name = "liquid-polyethylene-catalyst",
       category = "chemistry",
       subgroup = "petrochem-feedstock",
       energy_required = 2,
@@ -829,7 +829,7 @@ data:extend(
         {type = "item", name = "catalyst-metal-blue", amount = 1} --Ti OR Cr
       },
       results = {
-        {type = "fluid", name = "gas-polyethylene", amount = 50},
+        {type = "fluid", name = "liquid-polyethylene", amount = 50},
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
@@ -839,7 +839,7 @@ data:extend(
         },
         "chh"
       ),
-      order = "b[gas-polyehtylene-catalyst]"
+      order = "b[liquid-polyethylene-catalyst]"
     },
     {
       type = "recipe",
@@ -943,31 +943,31 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "gas-styrene-catalyst",
+      name = "liquid-styrene-catalyst",
       category = "chemistry",
       subgroup = "petrochem-chemistry",
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-ethylbenzene", amount = 100},
+        {type = "fluid", name = "liquid-ethylbenzene", amount = 100},
         {type = "item", name = "catalyst-metal-green", amount = 1} --Fe
       },
       results = {
-        {type = "fluid", name = "gas-styrene", amount = 50},
+        {type = "fluid", name = "liquid-styrene", amount = 50},
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = angelsmods.functions.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/styrene.png", 72}
         },
         "chh"
       ),
-      order = "a[gas-styrene-catalyst]"
+      order = "a[liquid-styrene-catalyst]"
     },
     {
       type = "recipe",
-      name = "gas-phenol-catalyst",
+      name = "liquid-phenol-catalyst",
       category = "chemistry",
       subgroup = "petrochem-chemistry",
       energy_required = 2,
@@ -978,7 +978,7 @@ data:extend(
         {type = "item", name = "catalyst-metal-yellow", amount = 1} --Fe
       },
       results = {
-        {type = "fluid", name = "gas-phenol", amount = 100},
+        {type = "fluid", name = "liquid-phenol", amount = 100},
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
@@ -988,7 +988,7 @@ data:extend(
         },
         "coh"
       ),
-      order = "c[gas-phenol-catalyst]"
+      order = "c[liquid-phenol-catalyst]"
     },
     {
       type = "recipe",
@@ -1017,7 +1017,7 @@ data:extend(
     --ADVANCED CHEMISTRY
     {
       type = "recipe",
-      name = "gas-ethylbenzene-catalyst",
+      name = "liquid-ethylbenzene-catalyst",
       category = "advanced-chemistry",
       subgroup = "petrochem-chemistry",
       energy_required = 4,
@@ -1028,7 +1028,7 @@ data:extend(
         {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 20}
       },
       results = {
-        {type = "fluid", name = "gas-ethylbenzene", amount = 80},
+        {type = "fluid", name = "liquid-ethylbenzene", amount = 80},
         --{type = "fluid", name = "gas-hydrogen", amount = 20},
         {type = "fluid", name = "gas-hydrogen-fluoride", amount = 20, catalyst_amount = 20}
       },
@@ -1039,7 +1039,7 @@ data:extend(
         },
         "chh"
       ),
-      order = "b[gas-ethylbenzene-catalyst]"
+      order = "b[liquid-ethylbenzene-catalyst]"
     },
     {
       type = "recipe",
@@ -1055,7 +1055,7 @@ data:extend(
         {type = "item", name = "catalyst-metal-blue", amount = 1}
       },
       results = {
-        {type = "fluid", name = "gas-phenol", amount = 60},
+        {type = "fluid", name = "liquid-phenol", amount = 60},
         {type = "fluid", name = "gas-acetone", amount = 60},
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
@@ -1071,21 +1071,21 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "gas-bisphenol-a",
+      name = "liquid-bisphenol-a",
       category = "advanced-chemistry",
       subgroup = "petrochem-chemistry",
       energy_required = 4,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-phenol", amount = 60},
+        {type = "fluid", name = "liquid-phenol", amount = 60},
         {type = "fluid", name = "gas-acetone", amount = 40},
         {type = "fluid", name = "liquid-hydrochloric-acid", amount = 20}
       },
       results = {
-        {type = "fluid", name = "gas-bisphenol-a", amount = 100}
+        {type = "fluid", name = "liquid-bisphenol-a", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = angelsmods.functions.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/bisphenol_a.png", 72}
         },

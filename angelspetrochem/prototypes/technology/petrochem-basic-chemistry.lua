@@ -649,7 +649,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "gas-glycerol"
+          recipe = "liquid-glycerol"
         }
       },
       unit = {

@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
-Date: ??
+Date: 20.08.2020
   Changes:
+    - Updated to base game 1.0
     - Lubricant is now green science when needed
+    - Several fluids have had their state changed to be more appropriate (323)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.13
 Date: 17.07.2020

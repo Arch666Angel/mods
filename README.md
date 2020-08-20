@@ -8,13 +8,16 @@
 - VI. [Angel's Industries](https://forums.factorio.com/viewtopic.php?f=185&t=58585)
 - VII. Angel's Exploration (Beta)
 - VIII. [Angel's Add-ons](https://forums.factorio.com/viewtopic.php?f=185&t=30962)
-    - VIII.I. [Warehouses](https://forums.factorio.com/viewtopic.php?p=396867#p396867)
-    - VIII.II. [Ore Silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868)
-    - VIII.III. [Ore Silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868)
-    - VIII.IV. [Petrochem Train](https://forums.factorio.com/viewtopic.php?p=396870#p396870)
-    - VIII.V. [Smelting Train](https://forums.factorio.com/viewtopic.php?p=396871#p396871)
-    - VIII.VI. [C.A.B.](https://forums.factorio.com/viewtopic.php?p=396874#p396874)
-    - VIII.VII. Decorations
+    - VIII.I. Storage Options
+        - [Warehouses](https://forums.factorio.com/viewtopic.php?p=396867#p396867)
+        - [Ore silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868)
+        - [Pressure tanks](https://forums.factorio.com/viewtopic.php?p=396869#p396869)
+    - VIII.II. Mass Transit
+        - [Petrochem Train](https://forums.factorio.com/viewtopic.php?p=396870#p396870)
+        - [Smelting Train](https://forums.factorio.com/viewtopic.php?p=396871#p396871)
+        - Crawler Train
+    - VIII.III. [C.A.B.](https://forums.factorio.com/viewtopic.php?p=396874#p396874)
+    - VIII.IV. Decorations
 - X. [Development and Discussion](https://forums.factorio.com/viewtopic.php?f=185&t=19652)
 - XI. [Bugs & FAQ](https://forums.factorio.com/viewtopic.php?f=185&t=25468)
 - XII. [Donations and Chocolate Fund](https://forums.factorio.com/viewtopic.php?f=185&t=38649)
@@ -66,32 +69,29 @@ This mod has some new overhaul settings:
 The alien life forms do not like you as much as you may like them. Add different tiers of biters and new weapons to counter these creatures.
 
 ### VIII. [Angel's Add-ons](https://forums.factorio.com/viewtopic.php?f=185&t=30962)
-#### VIII.I. [Warehouses](https://forums.factorio.com/viewtopic.php?p=396867#p396867)
-Add big buildings to store bulk amounts (768 slots) of products. Also includes (smaller, 512 slots) logistic versions!
+#### VIII.I. Storage Options
+- [Warehouses](https://forums.factorio.com/viewtopic.php?p=396867#p396867): Add big buildings to store bulk amounts (768 slots) of products. Also includes (smaller, 512 slots) logistic versions!
+- [Ore Silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868): Add 6 silos themed to fit with the compound ores introduced in Angel's Refining, able to store bulk amount of ores (256s lots). Also includes logistic versions!
+- [Pressure tanks](https://forums.factorio.com/viewtopic.php?p=396869#p396869): Add a high volume pressure tank to store a lot of fluid, useful when playing with Angel's Petrochem.
 
-#### VIII.II. [Ore Silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868)
-Add 6 silos themed to fit with the compound ores introduced in Angel's Refining, able to store bulk amount of ores (256s lots). Also includes logistic versions!
+#### VIII.II. Mass Transit
+- [Petrochem Train](https://forums.factorio.com/viewtopic.php?p=396870#p396870): Add a Petrochem themed train with 1 type of locomotive and 2 types of fluid wagons, themed after the oil and gas tanks added in Angel's Petrochem. There are settings to enable multiple tiers of this train.
+- [Smelting Train](https://forums.factorio.com/viewtopic.php?p=396871#p396871): Add a Metallurgy Smelting themed train with 2 types of locomotives (regular for the first locomotive and a tender for in between) and a high capacity cargo wagon (64 slots) for long distance traveling between your base and mining outposts! There are settings to enable multiple tiers of this train.
+- Crawler Train: Add an an industry themed train with 2 types of locomotive and 2 types of cargo wagons, one capable of carrying construction bots! There are settings to enable multiple tiers of this train.
 
-#### VIII.III. [Ore Silos](https://forums.factorio.com/viewtopic.php?p=396868#p396868)
-Add a high volume pressure tank to store a lot of fluid, useful when playing with Angel's Petrochem.
-
-#### VIII.IV. [Petrochem Train](https://forums.factorio.com/viewtopic.php?p=396870#p396870)
-Add a petrochem themed train with 1 type of locomotive and 2 types of fluid wagons, themed after the oil and gas tanks added in Angel's Petrochem. There are settings to enable multiple tiers of this train.
-
-#### VIII.V. [Smelting Train](https://forums.factorio.com/viewtopic.php?p=396871#p396871)
-Add a Metallurgy Smelting themed train with 2 types of locomotives (regular for the first locomotive and a tender for in between) and a high capacity cargo wagon (64 slots) for long distance traveling between your base and mining outposts! There are settings to enable multiple tiers of this train.
-
-#### VIII.VI. [C.A.B.](https://forums.factorio.com/viewtopic.php?p=396874#p396874)
+#### VIII.III. [C.A.B.](https://forums.factorio.com/viewtopic.php?p=396874#p396874)
 Another type of crawler, the Crawler Autonomous Base. Deploy the C.A.B. and have a small mobile power unit so you can deploy buildings on the fly to temporary help you craft by hand!
 
-#### VIII.VII. Decorations
+#### VIII.IV. Decorations
 Add small decorations as tributes to the lovely community
 
 - Nilaus Decorations
 - ShredNation Decorations
 
 ### X. [Development and Discussion](https://forums.factorio.com/viewtopic.php?f=185&t=19652)
-For discussions and information about the mods.
+For discussions and information about the mods. You can also hang out with us on discord:
+
+[![Discord join icon](https://discordapp.com/api/guilds/164794742893182976/widget.png?style=banner2)](https://discord.gg/ff5p6KE)
 
 ### XI. [Bugs & FAQ](https://forums.factorio.com/viewtopic.php?f=185&t=25468)
 For bug reports.

@@ -29,20 +29,23 @@ end
 --SMELTING
 if not angelsmods.smelting then
   OV.disable_recipe("algae-brown-burning-wash")
+
+  OV.remove_prereq("angels-stone-smelting-2", "resins")
+  OV.add_prereq("angels-stone-smelting-2", "bio-arboretum-1")
 end
 
 --UPDATE LABS INPUT
-for i, labs in pairs(data.raw["lab"]) do
-  --first check it does not exist
-  local found = false
-  for i, chk in ipairs(labs.inputs) do
-    if chk == "token-bio" then
-      found = true
+for labs_n, labs in pairs(data.raw["lab"]) do
+  if not lab_ignore[labs_n] and labs.inputs then
+    --first check it does not exist
+    local found = false
+    for i, chk in ipairs(labs.inputs) do
+      if chk == "token-bio" then
+        found = true
+      end
     end
-  end
-  --add it to all the labs
-  if not lab_ignore[labs.name] and not found then
-    if not labs.inputs["token-bio"] then 
+    --add it to all the labs
+    if (not found) and (not labs.inputs["token-bio"]) then
       table.insert(labs.inputs, "token-bio")
     end
   end

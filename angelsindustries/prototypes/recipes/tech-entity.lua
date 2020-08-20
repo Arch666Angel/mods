@@ -340,6 +340,18 @@ if angelsmods.industries.tech then
     -----------------------------------------------------------------------------
     {
       type = "recipe",
+      name = "angels-main-lab-1",
+      energy_required = 5,
+      enabled = true, -- crash site recycling
+      ingredients = {
+        {type = "item", name = "angels-main-lab-0", amount = 1},
+        {type = "item", name = "construction-frame-1", amount = 1},
+      },
+      result = "angels-main-lab-1",
+      icon_size = 32
+    },
+    {
+      type = "recipe",
       name = "angels-main-lab-2",
       energy_required = 5,
       enabled = false,

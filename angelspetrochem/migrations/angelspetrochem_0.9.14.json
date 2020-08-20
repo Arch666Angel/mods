@@ -1,0 +1,42 @@
+{
+  "item":
+  [
+    ["gas-phenol-barrel", "liquid-phenol-barrel"],
+    ["gas-ethylbenzene-barrel", "liquid-ethylbenzene-barrel"],
+    ["gas-styrene-barrel", "liquid-styrene-barrel"],
+    ["gas-polyethylene-barrel", "liquid-polyethylene-barrel"],
+    ["gas-glycerol-barrel", "liquid-glycerol-barrel"],
+    ["gas-bisphenol-a-barrel","liquid-bisphenol-a-barrel"]
+  ],
+  "fluid":
+  [
+    ["gas-phenol", "liquid-phenol"],
+    ["gas-ethylbenzene", "liquid-ethylbenzene"],
+    ["gas-styrene", "liquid-styrene"],
+    ["gas-polyethylene", "liquid-polyethylene"],
+    ["gas-glycerol", "liquid-glycerol"],
+    ["gas-bisphenol-a","liquid-bisphenol-a"]
+  ],
+  "recipe":
+  [
+    ["gas-phenol-catalyst", "liquid-phenol-catalyst"],
+    ["gas-ethylbenzene-catalyst", "liquid-ethylbenzene-catalyst"],
+    ["gas-styrene-catalyst", "liquid-styrene-catalyst"],
+    ["gas-polyethylene-catalyst", "liquid-polyethylene-catalyst"],
+    ["gas-glycerol", "liquid-glycerol"],
+    ["gas-bisphenol-a","liquid-bisphenol-a"],
+    ["gas-polyehtylene-catalyst","liquid-polyethylene-catalyst"],
+    ["fill-gas-phenol-barrel", "fill-liquid-phenol-barrel"],
+    ["fill-gas-ethylbenzene-barrel", "fill-liquid-ethylbenzene-barrel"],
+    ["fill-gas-styrene-barrel", "fill-liquid-styrene-barrel"],
+    ["fill-gas-polyethylene-barrel", "fill-liquid-polyethylene-barrel"],
+    ["fill-gas-glycerol-barrel", "fill-liquid-glycerol-barrel"],
+    ["fill-gas-bisphenol-a-barrel","fill-liquid-bisphenol-a-barrel"],
+    ["empty-gas-phenol-barrel", "empty-liquid-phenol-barrel"],
+    ["empty-gas-ethylbenzene-barrel", "empty-liquid-ethylbenzene-barrel"],
+    ["empty-gas-styrene-barrel", "empty-liquid-styrene-barrel"],
+    ["empty-gas-polyethylene-barrel", "empty-liquid-polyethylene-barrel"],
+    ["empty-gas-glycerol-barrel", "empty-liquid-glycerol-barrel"],
+    ["empty-gas-bisphenol-a-barrel","empty-liquid-bisphenol-a-barrel"]
+  ]
+}
