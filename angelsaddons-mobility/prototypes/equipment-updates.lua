@@ -1,5 +1,4 @@
 local funcs = require("prototypes/train-functions")
-local OV = angelsmods.functions.OV
 
 -- base game
 funcs.update_equipment("energy-shield-equipment", "energy-shield-equipment", "angels-basegame-defense")
