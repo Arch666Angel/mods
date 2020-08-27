@@ -6,7 +6,7 @@
   "author": "Arch666Angel",
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
-  "description": "PetroChems changes Oil processing and adds Gas processing, as well as a more complex web of chemical producation. Includes overrides and tie ins to bobs technologies and recipes. Dependencies: Angels Refining",
+  "description": "PetroChem changes Oil processing and adds Gas processing, as well as a more complex web of chemical production. Includes overrides and tie-ins to Bob's technologies and recipes. Dependencies: Angel's Refining",
   "dependencies": [
     "base >= 1.0.0",
 

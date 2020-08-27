@@ -6,7 +6,7 @@
   "author": "Arch666Angel",
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
-  "description": "Adds industrial equipment as well as the tool you need to expand and grow your base. Adds extra components [BETA] and a tech [ALPHA] overhaul.",
+  "description": "Adds industrial equipment as well as the tools you need to expand and grow your base. Adds extra components [BETA] and a tech [ALPHA] overhaul.",
   "dependencies": [
     "base >= 1.0.0",
 

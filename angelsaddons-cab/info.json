@@ -6,7 +6,7 @@
   "author": "Arch666Angel, lovely_santa",
   "contact": "",
   "homepage": "",
-  "description": "Adds another type of Crawler",
+  "description": "Adds another type of Crawler.",
   "dependencies": [
     "base >= 0.18.27",
     "? angelsindustries >= 0.4.1"

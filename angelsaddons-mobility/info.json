@@ -6,7 +6,7 @@
   "author": "Arch666Angel, lovely_santa",
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
-  "description": "A combination mod of the various themed trains",
+  "description": "A combination mod of the various themed trains.",
   "dependencies": [
     "base >= 1.0.0",
 
