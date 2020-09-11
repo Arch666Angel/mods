@@ -22,9 +22,43 @@ local welcome = player.gui.screen.add(
   {
     type = 'frame',
     name = 'welcome_screen',
-    direction = 'vertical'
+    direction = 'vertical',
   }
 )
+
+welcome.add(
+  {
+    type = 'flow',
+    name = 'header',
+  }
+)
+
+welcome.header.add(
+  {
+    type = 'label',
+    name = 'header_label',
+    caption = 'Enemy settings'
+  }
+)
+
+welcome.header.add(
+  {
+    type = 'empty-widget',
+    name = 'space',
+  }
+)
+
+welcome.header.space.style.horizontally_stretchable = true
+
+welcome.header.add(
+  {
+    type = "sprite-button",
+    name = 'welcome_close_button',
+    sprite = "utility/close_fat"
+  }
+)
+
+welcome.header.style.horizontal_align = 'right'
 
 welcome.force_auto_center()
 
@@ -35,15 +69,15 @@ else
   pollution = 'disabled'
 end
 
+--local string = ({'mod-setting-description.pollution-check', pollution})
+
 welcome.add(
   {
     type = 'label',
     name = 'pollution_message',
-    caption = 'Pollution is currently ' .. pollution
+    caption = {'mod-setting-description.pollution-check', pollution}
   }
 )
-log(serpent.block(player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].frequency))
-log(serpent.block(player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size))
 
 local enemy = ''
 if player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size > 1 then
@@ -56,37 +90,37 @@ welcome.add(
   {
     type = 'label',
     name = 'enemy_message',
-    caption = 'Enemies are currently ' .. enemy
+    caption = {'mod-setting-description.enemy-check', enemy}
   }
 )
 
-local evolution = ''
+local evo = ''
 if game.map_settings.enemy_evolution.enabled == true then
-  evolution = 'enabled'
+  evo = 'enabled'
 else
-  evolution = 'disabled'
+  evo = 'disabled'
 end
 
 welcome.add(
   {
     type = 'label',
     name = 'evolution_message',
-    caption = 'Enemy evolution is currently ' .. evolution
+    caption = {'mod-setting-description.evo-check', evo}
   }
 )
 
-local expansion = ''
+local exp = ''
 if game.map_settings.enemy_expansion.enabled == true then
-  expansion = 'enabled'
+  exp = 'enabled'
 else
-  expansion = 'disabled'
+  exp = 'disabled'
 end
 
 welcome.add(
   {
     type = 'label',
     name = 'expansion_message',
-    caption = 'Enemy expansion is currently ' .. expansion
+    caption = {'mod-setting-description.exp-check', exp}
   }
 )
 
@@ -94,17 +128,36 @@ welcome.add(
   {
     type = 'label',
     name = 'faq',
-    caption = 'To change these settings return to the new game menu and adjust the angels enemy multiplier under the enemies tab to get biters enabled'
+    caption = {'mod-setting-description.faq'}
   }
 )
 
 welcome.add(
   {
+    type = 'flow',
+    name = 'bottom',
+  }
+)
+
+welcome.bottom.style.horizontal_align = 'right'
+welcome.bottom.add(
+  {
+    type = 'empty-widget',
+    name = 'bottom_space',
+  }
+)
+
+welcome.bottom.bottom_space.style.horizontally_stretchable = true
+
+welcome.bottom.add(
+  {
     type = 'button',
-    name = 'welcome_close_button',
+    name = 'welcome_accept_button',
     caption = 'OK'
   }
 )
+
+welcome.bottom.welcome_accept_button.style = 'confirm_button'
 
 end)
 
@@ -113,6 +166,8 @@ script.on_event(defines.events.on_gui_click, function(event)
   local player = game.players[event.player_index]
 
   if event.element.name == 'welcome_close_button' and player.gui.screen.welcome_screen ~= nil then
+    player.gui.screen.welcome_screen.destroy()
+  elseif event.element.name == 'welcome_accept_button' and player.gui.screen.welcome_screen ~= nil then
     player.gui.screen.welcome_screen.destroy()
   end
 
