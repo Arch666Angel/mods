@@ -1,5 +1,4 @@
 local funcs = require("prototypes/train-functions")
-local OV = angelsmods.functions.OV
 
 -- base game
 funcs.update_equipment("energy-shield-equipment", "energy-shield-equipment", "angels-basegame-defense")
@@ -66,16 +65,16 @@ end
 --equipment grid groupings
 local default = "angels-void" --remove with vanilla adds
 local vanilla = {--vanilla adds/gets removed with bobs
-  loco = { 
-  "angels-basegame-energy",
-  "angels-basegame-defense",
-  "angels-basegame-attack",
-  "angels-basegame-movement"
+  loco = {
+    "angels-basegame-energy",
+    "angels-basegame-defense",
+    "angels-basegame-attack",
+    "angels-basegame-movement"
   },
   wagon = { --vanilla adds/gets removed with bobs
-  "angels-basegame-energy",
-  "angels-basegame-defense",
-  "angels-basegame-attack"
+    "angels-basegame-energy",
+    "angels-basegame-defense",
+    "angels-basegame-attack"
   }
 }
 local industries = {
@@ -102,10 +101,24 @@ local bobs = {
     "vehicle"
   }
 }
+
 local trains = {
-  locos = {"angels-petro-locomotive","angels-smelting-locomotive","angels-smelting-locomotive-tender","angels-crawler-locomotive","angels-crawler-loco-wagon"},
-  wagon = {"angels-petro-tank1","angels-petro-tank2","angels-smelting-wagon","angels-crawler-wagon","angels-crawler-bot-wagon"}}
-  --NOTE "angels-crawler-bot-wagon" also needs the construction categories added (can be done at the end i guess...)
+  locos = {
+    "angels-petro-locomotive",
+    "angels-smelting-locomotive",
+    "angels-smelting-locomotive-tender",
+    "angels-crawler-locomotive",
+    "angels-crawler-loco-wagon"
+  },
+  wagon = {
+    "angels-petro-tank1",
+    "angels-petro-tank2",
+    "angels-smelting-wagon",
+    "angels-crawler-wagon",
+    "angels-crawler-bot-wagon"
+  }
+}
+--NOTE "angels-crawler-bot-wagon" also needs the construction categories added (can be done at the end i guess...)
 
 --update loco grids
 for _, train in pairs(trains.locos) do
@@ -135,4 +148,4 @@ else
 end
 if mods["angelsindustries"] then
   funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-construction")
-end 
+end
