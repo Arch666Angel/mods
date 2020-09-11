@@ -14,6 +14,110 @@ end)
   end
 )]]
 
+script.on_event(defines.events.on_cutscene_cancelled, function(event)
+
+local player = game.players[event.player_index]
+
+local welcome = player.gui.screen.add(
+  {
+    type = 'frame',
+    name = 'welcome_screen',
+    direction = 'vertical'
+  }
+)
+
+welcome.force_auto_center()
+
+local pollution = ''
+if game.map_settings.pollution.enabled == true then
+  pollution = 'enabled'
+else
+  pollution = 'disabled'
+end
+
+welcome.add(
+  {
+    type = 'label',
+    name = 'pollution_message',
+    caption = 'Pollution is currently ' .. pollution
+  }
+)
+log(serpent.block(player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].frequency))
+log(serpent.block(player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size))
+
+local enemy = ''
+if player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size > 1 then
+  enemy = 'enabled'
+else
+  enemy = 'disabled'
+end
+
+welcome.add(
+  {
+    type = 'label',
+    name = 'enemy_message',
+    caption = 'Enemies are currently ' .. enemy
+  }
+)
+
+local evolution = ''
+if game.map_settings.enemy_evolution.enabled == true then
+  evolution = 'enabled'
+else
+  evolution = 'disabled'
+end
+
+welcome.add(
+  {
+    type = 'label',
+    name = 'evolution_message',
+    caption = 'Enemy evolution is currently ' .. evolution
+  }
+)
+
+local expansion = ''
+if game.map_settings.enemy_expansion.enabled == true then
+  expansion = 'enabled'
+else
+  expansion = 'disabled'
+end
+
+welcome.add(
+  {
+    type = 'label',
+    name = 'expansion_message',
+    caption = 'Enemy expansion is currently ' .. expansion
+  }
+)
+
+welcome.add(
+  {
+    type = 'label',
+    name = 'faq',
+    caption = 'To change these settings return to the new game menu and adjust the angels enemy multiplier under the enemies tab to get biters enabled'
+  }
+)
+
+welcome.add(
+  {
+    type = 'button',
+    name = 'welcome_close_button',
+    caption = 'OK'
+  }
+)
+
+end)
+
+script.on_event(defines.events.on_gui_click, function(event)
+
+  local player = game.players[event.player_index]
+
+  if event.element.name == 'welcome_close_button' and player.gui.screen.welcome_screen ~= nil then
+    player.gui.screen.welcome_screen.destroy()
+  end
+
+end)
+
 script.on_event(defines.events.on_player_rotated_entity, function(event)
   local entity = event.entity
   if entity and entity.valid and entity.name == "ground-water-pump" then
