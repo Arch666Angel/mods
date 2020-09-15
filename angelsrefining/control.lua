@@ -16,6 +16,8 @@ end)
 
 script.on_event(defines.events.on_cutscene_cancelled, function(event)
 
+if not game.active_mods['angelsexploration'] then
+
 local player = game.players[event.player_index]
 
 local welcome = player.gui.screen.add(
@@ -26,12 +28,16 @@ local welcome = player.gui.screen.add(
   }
 )
 
+welcome.style.maximal_width = 400
+
 welcome.add(
   {
     type = 'flow',
     name = 'header',
   }
 )
+
+welcome.header.drag_target = welcome
 
 welcome.header.add(
   {
@@ -41,12 +47,16 @@ welcome.header.add(
   }
 )
 
+welcome.header.header_label.drag_target = welcome
+
 welcome.header.add(
   {
     type = 'empty-widget',
     name = 'space',
   }
 )
+
+welcome.header.space.drag_target = welcome
 
 welcome.header.space.style.horizontally_stretchable = true
 
@@ -64,63 +74,63 @@ welcome.force_auto_center()
 
 local pollution = ''
 if game.map_settings.pollution.enabled == true then
-  pollution = 'enabled'
+  pollution = {'angels_welcome_accept_button.enabled'}
 else
-  pollution = 'disabled'
+  pollution = {'angels_welcome_accept_button.disabled'}
 end
 
---local string = ({'mod-setting-description.pollution-check', pollution})
+--local string = ({'angels_welcome_accept_button.pollution-check', pollution})
 
 welcome.add(
   {
     type = 'label',
     name = 'pollution_message',
-    caption = {'mod-setting-description.pollution-check', pollution}
+    caption = {'angels_welcome_accept_button.pollution-check', pollution}
   }
 )
 
 local enemy = ''
 if player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size > 1 then
-  enemy = 'enabled'
+  enemy = {'angels_welcome_accept_button.enabled'}
 else
-  enemy = 'disabled'
+  enemy = {'angels_welcome_accept_button.disabled'}
 end
 
 welcome.add(
   {
     type = 'label',
     name = 'enemy_message',
-    caption = {'mod-setting-description.enemy-check', enemy}
+    caption = {'angels_welcome_accept_button.enemy-check', enemy}
   }
 )
 
 local evo = ''
 if game.map_settings.enemy_evolution.enabled == true then
-  evo = 'enabled'
+  evo = {'angels_welcome_accept_button.enabled'}
 else
-  evo = 'disabled'
+  evo = {'angels_welcome_accept_button.disabled'}
 end
 
 welcome.add(
   {
     type = 'label',
     name = 'evolution_message',
-    caption = {'mod-setting-description.evo-check', evo}
+    caption = {'angels_welcome_accept_button.evo-check', evo}
   }
 )
 
 local exp = ''
 if game.map_settings.enemy_expansion.enabled == true then
-  exp = 'enabled'
+  exp = {'angels_welcome_accept_button.enabled'}
 else
-  exp = 'disabled'
+  exp = {'angels_welcome_accept_button.disabled'}
 end
 
 welcome.add(
   {
     type = 'label',
     name = 'expansion_message',
-    caption = {'mod-setting-description.exp-check', exp}
+    caption = {'angels_welcome_accept_button.exp-check', exp}
   }
 )
 
@@ -128,9 +138,11 @@ welcome.add(
   {
     type = 'label',
     name = 'faq',
-    caption = {'mod-setting-description.faq'}
+    caption = {'angels_welcome_accept_button.faq'}
   }
 )
+
+welcome.faq.style.single_line = false
 
 welcome.add(
   {
@@ -158,6 +170,8 @@ welcome.bottom.add(
 )
 
 welcome.bottom.welcome_accept_button.style = 'confirm_button'
+
+end
 
 end)
 
