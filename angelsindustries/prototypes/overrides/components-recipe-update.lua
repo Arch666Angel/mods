@@ -19,7 +19,7 @@ OV.disable_recipe({"processing-unit"})
 -- INTERMEDIATES --------------------------------------------------------------
 -------------------------------------------------------------------------------
 
-OV.global_replace_item("battery", "battery-1")
+--OV.global_replace_item("battery", "battery-1")
 angelsmods.functions.add_flag("battery", "hidden")
 OV.disable_recipe({"battery"})
 
