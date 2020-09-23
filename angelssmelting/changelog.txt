@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.12
+Date: ??
+  Bugfixes:
+    - Increased base_area on the fluid output of the casting machines (362)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.11
 Date: 20.08.2020
   Changes:
     - Updated to base game 1.0
     - Mold creation now use a resin dummy instead of the iron motor casing (356)
+  Bugfixes:
+    - Fixed steel smelting 2 could not be researched in some cases
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.10
 Date: 17.07.2020

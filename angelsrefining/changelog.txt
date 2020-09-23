@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.17
+Date: ??
+  Bugfixes:
+    - Fixed technology "Geode processing 2" could not be researched when playing without the angels
+      metallurgy smelting mod
+---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020
   Changes:
