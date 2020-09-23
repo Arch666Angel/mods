@@ -68,6 +68,7 @@ if angelsmods.industries.tech then
   pack_replace("angels-components-mechanical-2", "green", "red")
   OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")
   OV.add_prereq("angels-components-mechanical-2", "angels-stone-smelting-1")
+  pack_replace("angels-components-batteries-3", "green", "orange")
 
   -------------------------------------------------------------------------------
   -- GREEN SCIENCE PACKS --------------------------------------------------------

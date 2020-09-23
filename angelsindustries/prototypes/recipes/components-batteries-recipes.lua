@@ -465,7 +465,7 @@ if angelsmods.industries.components then
       ingredients =
       { --lithia-water/ethylene carbonate
         {type = "fluid", name = "thermal-water", amount = 10},--prefer lithia water if active
-        {type = "fluid", name = "gas-polyethylene", amount =10} --need to change this to Ethylene carbonate(aka ethylene glycol carbonate) [https://en.wikipedia.org/wiki/Ethylene_carbonate]
+        {type = "fluid", name = "liquid-polyethylene", amount =10} --need to change this to Ethylene carbonate(aka ethylene glycol carbonate) [https://en.wikipedia.org/wiki/Ethylene_carbonate]
       },
       results=
       {

@@ -18,6 +18,14 @@ OV.disable_recipe({"processing-unit"})
 -------------------------------------------------------------------------------
 -- INTERMEDIATES --------------------------------------------------------------
 -------------------------------------------------------------------------------
+
+OV.global_replace_item("battery", "battery-1")
+angelsmods.functions.add_flag("battery", "hidden")
+OV.disable_recipe({"battery"})
+
+-------------------------------------------------------------------------------
+-- INTERMEDIATES --------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- OV.global_replace_item("iron-stick", "angels-rod-iron")
 -- angelsmods.functions.add_flag("iron-stick", "hidden")
 -- OV.disable_recipe({"iron-stick"})

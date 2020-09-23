@@ -48,8 +48,10 @@ end
 --tech updates part 1
 require("prototypes.overrides.global-tech")
 
---set ingredient return on building pickup
 if angelsmods.industries.components then
+  --replace pre-req
+  OV.global_replace_technology("battery", "angels-components-batteries-1")
+  --set ingredient return on building pickup
   if angelsmods.industries.return_ingredients then
     add_minable_results()
     OV.execute()
