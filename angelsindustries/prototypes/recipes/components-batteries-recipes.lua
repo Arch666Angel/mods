@@ -147,12 +147,18 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
-        { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
-          tint = {r=66,g=67,b=78},
-          scale = 0.5,
-          shift = {-5, -1}
-        }},
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/battery-casing.png"
+        },
+        {
+          icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          tint = { r = 66, g = 67, b = 78},
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 64
     },
     {
@@ -250,12 +256,18 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
-      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
-        tint = {r=100,g=100,b=100},
-        scale = 0.5,
-        shift = {-5, -1}
-      }},
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/battery-casing.png"
+        },
+        {
+          icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          tint = {r = 100, g = 100, b = 100},
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 64
     },
     {
@@ -395,11 +407,17 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
-      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
-        scale = 0.5,
-        shift = {-5, -1}
-      }},
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/battery-casing.png"
+        },
+        {
+          icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 64,
     },
     {
@@ -492,19 +510,25 @@ if angelsmods.industries.components then
       ingredients =
       {
         {type="item", name = "battery-frame-4", amount = 2},
-        {type = "item", name = "plastic-bar", amount = 1}
+        --{type = "item", name = "plastic-bar", amount = 1}
       },
       results=
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
-      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
-        --tint = {r=1,g=1,b=1},
-        scale = 0.5,
-        shift = {-5, -1}
-      }},
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/battery-casing.png"
+        },
+        {
+          icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          --tint = {r=1,g=1,b=1},
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 64,
     },
     {
@@ -604,12 +628,18 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
-      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
-        tint = {r=117,g=138,b=134},
-        scale = 0.5,
-        shift = {-5, -1}
-      }},
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/battery-casing.png"
+        },
+        {
+          icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          tint = {r=117,g=138,b=134},
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 64,
     },
     {
@@ -710,12 +740,18 @@ if angelsmods.industries.components then
         {type = "item", name = "battery-casing", amount = 1},
       },
       allow_decomposition = false,
-      icons = {{icon = "__angelsindustries__/graphics/icons/battery-casing.png"},
-      { icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
-        tint = {r=72,g=68,b=45},
-        scale = 0.5,
-        shift = {-5, -1}
-      }},
+      icons =
+      {
+        {
+          icon = "__angelsindustries__/graphics/icons/battery-casing.png"
+        },
+        {
+          icon ="__angelsindustries__/graphics/icons/battery_component_frame.png",
+          tint = {r=72,g=68,b=45},
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
       icon_size = 64,
     },
     {
