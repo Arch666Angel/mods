@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
 if angelsmods.industries.components then
   -------------------------------------------------------------------------------
-  -- CABLING COMPONENTS 1 -------------------------------------------------------
+  -- BATTERY COMPONENTS 1 -------------------------------------------------------
   -------------------------------------------------------------------------------
   data:extend(
     {
@@ -39,7 +39,7 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-1"
-          },
+          }
         },
         unit = {
           count = 64,
@@ -56,16 +56,14 @@ if angelsmods.industries.components then
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 128,
         prerequisites = {
+          "angels-tin-smelting-1",
           "angels-glass-smelting-1",
-          "angels-zinc-smelting-1",
+          --"angels-zinc-smelting-1",
           "angels-nickel-smelting-1",
-          "angels-components-batteries-1"
+          "angels-components-batteries-1",
+          "ore-floatation"
         },
         effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "zinc-ore-processing-alt"
-          },
           {
             type = "unlock-recipe",
             recipe = "battery-2"
@@ -90,6 +88,10 @@ if angelsmods.industries.components then
             type = "unlock-recipe",
             recipe = "battery-electrolyte-2"
           },
+          {
+            type = "unlock-recipe",
+            recipe = "zinc-ore-processing-alt"
+          }
         },
         unit = {
           count = 64,
@@ -109,14 +111,12 @@ if angelsmods.industries.components then
         prerequisites = {
           "angels-aluminium-smelting-1",
           "angels-cobalt-smelting-1",
-          "angels-nickel-smelting-1",
+          "angels-silver-smelting-1",
+          "thermal-water-extraction",
+          "bio-processing-green",
           "angels-components-batteries-2"
         },
         effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "cobalt-ore-processing-alt"
-          },
           {
             type = "unlock-recipe",
             recipe = "battery-3"
@@ -141,6 +141,10 @@ if angelsmods.industries.components then
             type = "unlock-recipe",
             recipe = "battery-electrolyte-3"
           },
+          {
+            type = "unlock-recipe",
+            recipe = "cobalt-ore-processing-alt"
+          }
         },
         unit = {
           count = 64,
@@ -158,15 +162,12 @@ if angelsmods.industries.components then
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 128,
         prerequisites = {
+          "angels-gold-smelting-1",
           "plastic-1",
           "angels-manganese-smelting-2",
           "angels-components-batteries-3"
         },
         effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "manganese-processed-processing-alt"
-          },
           {
             type = "unlock-recipe",
             recipe = "battery-4"
@@ -191,6 +192,10 @@ if angelsmods.industries.components then
             type = "unlock-recipe",
             recipe = "battery-electrolyte-4"
           },
+          {
+            type = "unlock-recipe",
+            recipe = "manganese-processed-processing-alt"
+          }
         },
         unit = {
           count = 64,
@@ -209,13 +214,10 @@ if angelsmods.industries.components then
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 128,
         prerequisites = {
+          "angels-platinum-smelting-1",
           "angels-components-batteries-4"
         },
         effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "manganese-processed-processing-alt"
-          },
           {
             type = "unlock-recipe",
             recipe = "battery-5"
@@ -240,6 +242,10 @@ if angelsmods.industries.components then
             type = "unlock-recipe",
             recipe = "battery-electrolyte-5"
           },
+          {
+            type = "unlock-recipe",
+            recipe = "manganese-processed-processing-alt"
+          }
         },
         unit = {
           count = 64,
@@ -247,7 +253,7 @@ if angelsmods.industries.components then
             {type = "item", name = "automation-science-pack", amount = 1},
             {type = "item", name = "logistic-science-pack", amount = 1},
             {type = "item", name = "chemical-science-pack", amount = 1},
-            {type = "item", name = "production-science-pack", amount = 1}
+            {type = "item", name = "utility-science-pack", amount = 1}
           },
           time = 60
         },
@@ -259,6 +265,9 @@ if angelsmods.industries.components then
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 128,
         prerequisites = {
+          "sodium-processing",
+          "angels-tungsten-smelting-1",
+          "angels-silver-smelting-2",
           "angels-components-batteries-5"
         },
         effects = {
