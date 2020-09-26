@@ -22,6 +22,22 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "manganese-processed-processing",
+      category = "pellet-pressing",
+      subgroup = "angels-manganese",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "processed-manganese", amount = 3}
+      },
+      results = {
+        {type = "item", name = "pellet-manganese", amount = 4}
+      },
+      icon_size = 32,
+      order = "c[pellet-manganese]"
+    },
+    {
+      type = "recipe",
       name = "manganese-processed-processing-alt",
       category = "ore-processing",
       subgroup = "angels-manganese",
@@ -39,30 +55,14 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png"
         },
         {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
       icon_size = 32,
-      order = "b[processed-manganese]"
-    },
-    {
-      type = "recipe",
-      name = "manganese-processed-processing",
-      category = "pellet-pressing",
-      subgroup = "angels-manganese",
-      energy_required = 2,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "processed-manganese", amount = 3}
-      },
-      results = {
-        {type = "item", name = "pellet-manganese", amount = 4}
-      },
-      icon_size = 32,
-      order = "c[pellet-manganese]"
+      order = "d[solid-manganese-oxide]-a"
     },
     {
       type = "recipe",
@@ -83,14 +83,14 @@ data:extend(
           icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png"
         },
         {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
       icon_size = 32,
-      order = "d[solid-manganese-oxide]"
+      order = "d[solid-manganese-oxide]-b"
     },
     {
       type = "recipe",

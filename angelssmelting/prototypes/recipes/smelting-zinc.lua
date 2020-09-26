@@ -24,24 +24,6 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "zinc-ore-processing-alt",
-      category = "ore-processing",
-      subgroup = "angels-zinc",
-      energy_required = 2,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "zinc-ore", amount = 8},
-        {type = "fluid", name = "gas-oxygen", amount = 60}
-      },
-      results = {
-        {type = "item", name = "solid-zinc-oxide", amount = 8},
-        {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
-      },
-      main_product = "solid-zinc-oxide",
-      order = "b[processed-zinc]"
-    },
-    {
-      type = "recipe",
       name = "zinc-processed-processing",
       category = "pellet-pressing",
       subgroup = "angels-zinc",
@@ -60,6 +42,36 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "zinc-ore-processing-alt",
+      category = "ore-processing",
+      subgroup = "angels-zinc",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "zinc-ore", amount = 8},
+        {type = "fluid", name = "gas-oxygen", amount = 60}
+      },
+      results = {
+        {type = "item", name = "solid-zinc-oxide", amount = 8},
+        {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
+      },
+      main_product = "solid-zinc-oxide",
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.smelting.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "d[solid-zinc-oxide]-a"
+    },
+    {
+      type = "recipe",
       name = "pellet-zinc-smelting",
       category = "chemical-smelting",
       subgroup = "angels-zinc",
@@ -74,8 +86,19 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
       },
       main_product = "solid-zinc-oxide",
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.smelting.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
-      order = "d[solid-zinc-oxide]"
+      order = "d[solid-zinc-oxide]-b"
     },
     {
       type = "recipe",

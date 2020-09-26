@@ -25,6 +25,11 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
     angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
     OV.disable_recipe({"molten-manganese-smelting"})
   end
+  
+  if mods["angelsindustries"] and angelsmods.industries.components then
+  else
+    OV.disable_recipe({"manganese-processed-processing-alt"})
+  end
 else
   angelsmods.functions.add_flag("processed-manganese", "hidden")
   angelsmods.functions.add_flag("pellet-manganese", "hidden")
@@ -33,7 +38,7 @@ else
   angelsmods.functions.add_flag("ingot-manganese", "hidden")
   angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
   OV.disable_recipe({"manganese-ore-processing", "manganese-processed-processing"})
-  OV.disable_recipe({"pellet-manganese-smelting", "processed-manganese-smelting", "solid-manganese-oxide-smelting"})
+  OV.disable_recipe({"pellet-manganese-smelting", "processed-manganese-smelting", "manganese-processed-processing-alt", "solid-manganese-oxide-smelting"})
   OV.disable_recipe({"manganese-ore-smelting", "cathode-manganese-smelting"})
   OV.disable_recipe({"molten-manganese-smelting"})
   OV.disable_technology({"angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3"})

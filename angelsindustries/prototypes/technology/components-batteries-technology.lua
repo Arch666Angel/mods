@@ -58,10 +58,10 @@ if angelsmods.industries.components then
         prerequisites = {
           "angels-tin-smelting-1",
           "angels-glass-smelting-1",
-          --"angels-zinc-smelting-1",
+          "angels-zinc-smelting-1",
           "angels-nickel-smelting-1",
           "angels-components-batteries-1",
-          "ore-floatation"
+          --"ore-floatation"
         },
         effects = {
           {
@@ -87,10 +87,6 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-2"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "zinc-ore-processing-alt"
           }
         },
         unit = {
@@ -140,10 +136,6 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-3"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "cobalt-ore-processing-alt"
           }
         },
         unit = {
@@ -191,10 +183,6 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-4"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "manganese-processed-processing-alt"
           }
         },
         unit = {
@@ -241,10 +229,6 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-5"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "manganese-processed-processing-alt"
           }
         },
         unit = {
@@ -271,10 +255,6 @@ if angelsmods.industries.components then
           "angels-components-batteries-5"
         },
         effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "manganese-processed-processing-alt"
-          },
           {
             type = "unlock-recipe",
             recipe = "battery-6"
