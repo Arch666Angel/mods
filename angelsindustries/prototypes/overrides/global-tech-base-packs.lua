@@ -24,7 +24,7 @@ if angelsmods.industries.tech then
       -- INDUSTRIES
       "tech-red-circuit",
       "angels-components-mechanical-1",
-      "angels-components-weapons-basic"
+      "angels-components-weapons-basic",
     }
   ) do
     pack_replace(tech_name, "red", "grey")
@@ -35,6 +35,9 @@ if angelsmods.industries.tech then
   -- REFINING
   OV.remove_prereq("water-treatment", "electronics")
   OV.remove_prereq("water-treatment", "steel-processing")
+  -- INDUSTRIES
+  OV.remove_prereq("tech-red-circuit", "angels-components-batteries-1")
+  OV.remove_input("block-electronics-1", "battery-1")
 
   -------------------------------------------------------------------------------
   -- RED SCIENCE PACKS ----------------------------------------------------------
@@ -53,6 +56,11 @@ if angelsmods.industries.tech then
   OV.remove_prereq("angels-stone-smelting-2", "bio-arboretum-1")
   OV.add_prereq("angels-stone-smelting-1", "bio-arboretum-1")
   pack_replace("angels-steel-smelting-1", "green", "red")
+  pack_replace("powder-metallurgy-1", "green", "red")
+  OV.add_prereq("powder-metallurgy-1", "angels-metallurgy-1")
+  pack_replace("angels-glass-smelting-1", "green", "red")
+  pack_replace("angels-zinc-smelting-1", "green", "red")
+  pack_replace("angels-nickel-smelting-1", "green", "red")
   -- BIO PROCESSING
   pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)
   pack_replace("bio-fermentation", "green", "red")
@@ -68,7 +76,7 @@ if angelsmods.industries.tech then
   pack_replace("angels-components-mechanical-2", "green", "red")
   OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")
   OV.add_prereq("angels-components-mechanical-2", "angels-stone-smelting-1")
-  pack_replace("angels-components-batteries-3", "green", "orange")
+  pack_replace("angels-components-batteries-2", "green", "red")
 
   -------------------------------------------------------------------------------
   -- GREEN SCIENCE PACKS --------------------------------------------------------
@@ -131,6 +139,7 @@ if angelsmods.industries.tech then
   pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
   pack_replace("angels-stone-smelting-3", "blue", "orange")
+  pack_replace("angels-manganese-smelting-2", "blue", "orange")
   --BIOPROCESSING
   pack_replace("bio-wood-processing-3", "green", "orange")
   --PETROCHEM
@@ -155,6 +164,7 @@ if angelsmods.industries.tech then
   OV.remove_prereq("angels-components-cabling-4", "chemical-science-pack")
   pack_replace("cargo-robots-2", "green", "orange")
   pack_replace("angels-construction-robots-2", "green", "orange")
+  pack_replace("angels-components-batteries-4", "blue", "orange")
 
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -172,6 +182,7 @@ if angelsmods.industries.tech then
   pack_replace("angels-components-cabling-5", "yellow", "blue")
   OV.remove_prereq("angels-components-cabling-5", "utility-science-pack")
   pack_replace("tech-yellow-circuit", "yellow", "blue")
+  pack_replace("angels-components-batteries-5", "yellow", "blue")
 
   -------------------------------------------------------------------------------
   -- YELOW SCIENCE PACKS --------------------------------------------------------

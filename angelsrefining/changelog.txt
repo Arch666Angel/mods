@@ -4,6 +4,7 @@ Date: ??
   Bugfixes:
     - Fixed technology "Geode processing 2" could not be researched when playing without the angels
       metallurgy smelting mod
+    - Small tweak to component mode recipe of Floatation cell 1
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020

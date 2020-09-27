@@ -11,7 +11,7 @@ if angelsmods.industries.components then
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 128,
         prerequisites = {
-          "angels-lead-smelting-1",
+          --"angels-lead-smelting-1",
           "angels-sulfur-processing-1",
           "bio-paper-1"
         },
