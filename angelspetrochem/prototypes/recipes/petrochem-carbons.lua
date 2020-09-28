@@ -1092,6 +1092,58 @@ data:extend(
         "coh"
       ),
       order = "d"
+    },
+    {
+      type = "recipe",
+      name = "gas-ethylene-oxide",
+      category = "chemistry",
+      subgroup = "petrochem-chemistry",
+      energy_required = 4,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-ethylene", amount = 100},
+        {type = "fluid", name = "gas-oxygen", amount = 50},
+        {type = "item", name = "catalyst-metal-green", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
+        {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
+
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/ethylene-oxide.png", 72}
+        },
+        "coh"
+      ),
+      order = "d"
+    },
+    {
+      type = "recipe",
+      name = "liquid-ethylene-carbonate",
+      category = "chemistry",
+      subgroup = "petrochem-chemistry",
+      energy_required = 4,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
+        {type = "fluid", name = "gas-carbon-dioxide", amount = 100},
+        --{type = "item", name = "catalyst-metal-green", amount = 1}--ideally a zinc catalyst
+      },
+      results = {
+        {type = "fluid", name = "liquid-ethylene-carbonate", amount = 90},
+        --{type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
+
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/ethylene-carbonate.png", 72}
+        },
+        "coh"
+      ),
+      order = "d"
     }
   }
 )

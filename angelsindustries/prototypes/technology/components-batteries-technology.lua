@@ -136,6 +136,14 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-3"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "gas-ethylene-oxide"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "liquid-ethylene-carbonate"
           }
         },
         unit = {
@@ -155,7 +163,8 @@ if angelsmods.industries.components then
         icon_size = 128,
         prerequisites = {
           "angels-gold-smelting-1",
-          "plastic-1",
+          --"plastic-1",
+          "rubber",
           "angels-manganese-smelting-2",
           "angels-components-batteries-3"
         },
