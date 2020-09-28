@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Moved explosive cannon turret shells research from Military 3 to Military 4 research due to
       recipe prerequisites (395)
+  Bugfixes:
+    - Mammoth heavy tank was not immune to trees and rocks (374)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 17.07.2020
