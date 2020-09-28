@@ -4,7 +4,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 -------------------------------------------------------------------------------
 -- BOB OVERRIDES --------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods['bobplates'] and angelsmods.trigger.smelting_products["lithium"].plate then
+if --[[mods['bobplates'] and]] angelsmods.trigger.smelting_products["lithium"].plate then
   angelsmods.functions.move_item("lithium-chloride", "angels-alloys", "b[lithium]-a")
   angelsmods.functions.move_item("lithium", "angels-alloys", "b[lithium]-b")
   angelsmods.functions.move_item("lithium-cobalt-oxide", "angels-alloys", "b[lithium]-c")

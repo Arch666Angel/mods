@@ -454,3 +454,42 @@ function replace_minable_results(buildings)
     end
   end
 end
+
+function rec_tab_replace(table,old,new,count)
+  --iterate through table
+  for _,entry in pairs(table) do
+    if entry.name == old then
+      entry.name = new
+      if count then
+        entry.amount = count
+      end
+    elseif entry[1] == old then
+      entry[1] = new
+      if count then
+        entry[2] = count
+      end
+    end
+  end
+end
+
+function replace_recipe_ing(recipe,old_ing,new_ing,new_count)
+  if type(recipe) ~= table then
+    recipe = data.raw.recipe[recipe]
+  end
+  if recipe.name then --ensure the recipe exists
+    if recipe.ingredient then
+      if recipe.ingredient == old_ing then
+        recipe.ingredient = new_ing
+      end
+    end
+    if recipe.ingredients then
+      rec_tab_replace(recipe.ingredients,old_ing,new_ing,new_count)
+    end
+    if recipe.normal and recipe.normal.ingredients then
+      rec_tab_replace(recipe.normal.ingredients,old_ing,new_ing,new_count)
+    end
+    if recipe.expensive and recipe.expensive.ingredients then
+      rec_tab_replace(recipe.expensive.ingredients,old_ing,new_ing,new_count)
+    end
+  end
+end

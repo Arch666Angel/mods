@@ -174,6 +174,36 @@ data:extend(
       group = "angels-components",
       order = "h[tools]"
     },
+    {
+      type = "item-subgroup",
+      name = "angels-batteries",
+      group = "angels-components",
+      order = "i[battery]-a"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-anodes",
+      group = "angels-components",
+      order = "i[battery]-b"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-cathodes",
+      group = "angels-components",
+      order = "i[battery]-c"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-electrolytes",
+      group = "angels-components",
+      order = "i[battery]-d"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-battery-casings",
+      group = "angels-components",
+      order = "i[battery]-e"
+    },
     ---------------------------------------------------------------------------
     -- ANGELS BLOCKS ----------------------------------------------------------
     ---------------------------------------------------------------------------
@@ -185,6 +215,7 @@ data:extend(
       icon_size = 64,
       icon = "__angelsindustries__/graphics/item-group/components-tech.png"
     },
+
     {
       type = "item-subgroup",
       name = "blocks-frames",
@@ -263,6 +294,7 @@ data:extend(
       group = "production",
       order = "z[assemblers]-c[big]"
     },
+
     ---------------------------------------------------------------------------
     -- ANGELS TECHNOLOGY ------------------------------------------------------
     ---------------------------------------------------------------------------

@@ -19,7 +19,7 @@ if angelsmods.refining then
 
   angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant", "liquifying")
   angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant-2", "liquifying")
-  
+
   OV.patch_recipes(
     {
       {name = "carbon-separation-1", category = "liquifying"},

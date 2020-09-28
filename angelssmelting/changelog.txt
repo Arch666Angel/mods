@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.12
 Date: ??
+  Changes:
+    - Added Cobalt oxide from Cobalt ore (397)
+    - Added Zinc oxide from Zinc ore (397)
+    - Added Manganese oxide from Processed manganese (397)
   Bugfixes:
     - Increased base_area on the fluid output of the casting machines (362)
 ---------------------------------------------------------------------------------------------------
