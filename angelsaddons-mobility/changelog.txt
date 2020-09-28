@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: ??
+  Bugfixes:
+    - Fixed issues where you could not paste from any locomotive onto smelting cargo wagons (390)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 08.09.2020
   Bugfixes:
