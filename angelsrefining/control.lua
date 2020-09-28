@@ -41,7 +41,7 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
     {
       type = 'label',
       name = 'header_label',
-      caption = 'Enemy settings',
+      caption = {"angels-welcome-message-gui.title"},
       style = 'frame_title',
       ignored_by_interaction = true
     }
@@ -78,17 +78,25 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
       name = 'angels_welcome_screen_content',
       direction = 'vertical',
       style = 'inside_shallow_frame_with_padding',
-      ignored_by_interaction = true
     }
   )
+
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'intro_message',
+      caption = {'', {'angels-welcome-message.intro'}, '\n'},
+      ignored_by_interaction = true
+    }
+  ).style.single_line = false
 
   local pollutionSetting = game.map_settings.pollution.enabled and "enabled" or "disabled"
   welcomeFrameContent.add(
     {
       type = 'label',
       name = 'pollution_message',
-      caption = {'angels_welcome_accept_button.pollution-check', {'angels_welcome_accept_button.' .. pollutionSetting}},
-      ignored_by_interaction = true
+      caption = {'', '     ', {'angels-welcome-message-settings.pollution-setting', {'angels-welcome-message-settings.' .. pollutionSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.pollution-setting'},
     }
   )
 
@@ -97,8 +105,8 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
     {
       type = 'label',
       name = 'enemy_size_message',
-      caption = {'angels_welcome_accept_button.enemy-check', {'angels_welcome_accept_button.' .. enemySizeSetting}},
-      ignored_by_interaction = true
+      caption = {'', '     ', {'angels-welcome-message-settings.enemy-setting', {'angels-welcome-message-settings.' .. enemySizeSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.enemy-setting'},
     }
   )
 
@@ -107,8 +115,8 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
     {
       type = 'label',
       name = 'enemy_evolution_message',
-      caption = {'angels_welcome_accept_button.evo-check',  {'angels_welcome_accept_button.' .. enemyEvolutionSetting}},
-      ignored_by_interaction = true
+      caption = {'', '     ', {'angels-welcome-message-settings.evolution-setting', {'angels-welcome-message-settings.' .. enemyEvolutionSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.evolution-setting'},
     }
   )
 
@@ -117,8 +125,8 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
     {
       type = 'label',
       name = 'expansion_message',
-      caption = {'angels_welcome_accept_button.exp-check',  {'angels_welcome_accept_button.' .. enemyExpansionSetting}},
-      ignored_by_interaction = true
+      caption = {'', '     ', {'angels-welcome-message-settings.expansion-setting', {'angels-welcome-message-settings.' .. enemyExpansionSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.expansion-setting'},
     }
   )
 
@@ -126,7 +134,7 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
     {
       type = 'label',
       name = 'faq',
-      caption = {'angels_welcome_accept_button.faq'},
+      caption = {'', '\n', {'angels-welcome-message.outro'}},
       ignored_by_interaction = true
     }
   ).style.single_line = false
@@ -156,7 +164,7 @@ script.on_event(defines.events.on_cutscene_cancelled, function(event)
     {
       type = 'button',
       name = 'welcome_accept_button',
-      caption = 'OK',
+      caption = {"angels-welcome-message-gui.confirm-button"},
       style = 'confirm_button'
     }
   )
