@@ -815,7 +815,7 @@ data:extend(
         },
         "chh"
       ),
-      order = "c[gas-benzene-catalyst]"
+      order = "d[gas-benzene-catalyst]"
     },
     {
       type = "recipe",
@@ -839,7 +839,7 @@ data:extend(
         },
         "chh"
       ),
-      order = "b[liquid-polyethylene-catalyst]"
+      order = "c[liquid-polyethylene-catalyst]"
     },
     {
       type = "recipe",
@@ -868,6 +868,32 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "gas-ethylene-oxide",
+      category = "chemistry",
+      subgroup = "petrochem-feedstock",
+      energy_required = 4,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-ethylene", amount = 100},
+        {type = "fluid", name = "gas-oxygen", amount = 50},
+        {type = "item", name = "catalyst-metal-green", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
+        {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
+
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_gas_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/ethylene-oxide.png", 72}
+        },
+        "coh"
+      ),
+      order = "b[gas-ethylene-oxide-catalyst]"
+    },
+    {
+      type = "recipe",
       name = "liquid-toluene-from-naphtha",
       category = "chemistry",
       subgroup = "petrochem-feedstock",
@@ -889,7 +915,7 @@ data:extend(
         },
         {{196, 075, 085}, {170, 071, 081}, {148, 066, 075}}
       ),
-      order = "d"
+      order = "e[toluene]-a"
     },
     {
       type = "recipe",
@@ -915,7 +941,7 @@ data:extend(
         },
         "chh"
       ),
-      order = "e"
+      order = "e[toluene]-b"
     },
     {
       type = "recipe",
@@ -988,7 +1014,7 @@ data:extend(
         },
         "coh"
       ),
-      order = "c[liquid-phenol-catalyst]"
+      order = "d[liquid-phenol-catalyst]-a"
     },
     {
       type = "recipe",
@@ -1010,9 +1036,9 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/propene.png", 72}
         },
-        "chh"
+        "chw"
       ),
-      order = "d[gas-propene-synthesis]"
+      order = "e[gas-propene-synthesis]"
     },
     --ADVANCED CHEMISTRY
     {
@@ -1043,6 +1069,32 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "liquid-ethylene-carbonate",
+      category = "chemistry",
+      subgroup = "petrochem-chemistry",
+      energy_required = 4,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
+        {type = "fluid", name = "gas-carbon-dioxide", amount = 100},
+        --{type = "item", name = "catalyst-metal-green", amount = 1}--ideally a zinc catalyst
+      },
+      results = {
+        {type = "fluid", name = "liquid-ethylene-carbonate", amount = 90},
+        --{type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
+
+      },
+      always_show_products = true,
+      icons = angelsmods.functions.create_liquid_recipe_icon(
+        {
+          {"__angelspetrochem__/graphics/icons/molecules/ethylene-carbonate.png", 72}
+        },
+        "coh"
+      ),
+      order = "c[ethylene-carbonate]"
+    },
+    {
+      type = "recipe",
       name = "cumene-process",
       category = "advanced-chemistry",
       subgroup = "petrochem-chemistry",
@@ -1067,7 +1119,7 @@ data:extend(
         },
         "coh"
       ),
-      order = "c"
+      order = "d[liquid-phenol-catalyst]-b"
     },
     {
       type = "recipe",
@@ -1091,59 +1143,7 @@ data:extend(
         },
         "coh"
       ),
-      order = "d"
-    },
-    {
-      type = "recipe",
-      name = "gas-ethylene-oxide",
-      category = "chemistry",
-      subgroup = "petrochem-chemistry",
-      energy_required = 4,
-      enabled = false,
-      ingredients = {
-        {type = "fluid", name = "gas-ethylene", amount = 100},
-        {type = "fluid", name = "gas-oxygen", amount = 50},
-        {type = "item", name = "catalyst-metal-green", amount = 1}
-      },
-      results = {
-        {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
-        {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
-
-      },
-      always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
-        {
-          {"__angelspetrochem__/graphics/icons/molecules/ethylene-oxide.png", 72}
-        },
-        "coh"
-      ),
-      order = "d"
-    },
-    {
-      type = "recipe",
-      name = "liquid-ethylene-carbonate",
-      category = "chemistry",
-      subgroup = "petrochem-chemistry",
-      energy_required = 4,
-      enabled = false,
-      ingredients = {
-        {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
-        {type = "fluid", name = "gas-carbon-dioxide", amount = 100},
-        --{type = "item", name = "catalyst-metal-green", amount = 1}--ideally a zinc catalyst
-      },
-      results = {
-        {type = "fluid", name = "liquid-ethylene-carbonate", amount = 90},
-        --{type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
-
-      },
-      always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
-        {
-          {"__angelspetrochem__/graphics/icons/molecules/ethylene-carbonate.png", 72}
-        },
-        "coh"
-      ),
-      order = "d"
+      order = "e"
     }
   }
 )

@@ -110,7 +110,8 @@ if angelsmods.industries.components then
           "angels-silver-smelting-1",
           "thermal-water-extraction",
           "bio-processing-green",
-          "angels-components-batteries-2"
+          "angels-components-batteries-2",
+          "gas-steam-cracking-1"
         },
         effects = {
           {
@@ -136,14 +137,6 @@ if angelsmods.industries.components then
           {
             type = "unlock-recipe",
             recipe = "battery-electrolyte-3"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "gas-ethylene-oxide"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "liquid-ethylene-carbonate"
           }
         },
         unit = {
