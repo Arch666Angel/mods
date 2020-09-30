@@ -42,11 +42,11 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- RED SCIENCE PACKS ----------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- BASE GAME
   OV.global_replace_item("automation-science-pack", "angels-science-pack-red")
-  pack_replace("armor-making-2", "green", "red") --move armour making down a tier
   angelsmods.functions.add_flag("automation-science-pack", "hidden")
   OV.disable_recipe({"automation-science-pack"})
+  -- BASE GAME
+  pack_replace("armor-making-2", "green", "red") --move armour making down a tier
   pack_replace("automation-2", "green", "red")
   OV.remove_prereq("automation-2", "logistic-science-pack")
   -- SMELTING
@@ -82,12 +82,20 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- GREEN SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- BASE GAME
-  OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
   OV.global_replace_item("logistic-science-pack", "angels-science-pack-green")
-  pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   angelsmods.functions.add_flag("logistic-science-pack", "hidden")
   OV.disable_recipe({"logistic-science-pack"})
+  OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
+
+  --OV.global_replace_item("military-science-pack", "angels-science-pack-green") -- datacore replacement script needs to run first
+  angelsmods.functions.add_flag("military-science-pack", "hidden")
+  OV.disable_recipe({"military-science-pack"})
+  OV.global_replace_technology("military-science-pack", "tech-green-packs")
+  -- BASE GAME
+  pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
+  pack_replace("lubricant", "blue", "green")
+  OV.remove_prereq("lubricant", "angels-advanced-oil-processing")
+  OV.add_prereq("lubricant", "angels-oil-processing")
   -- INDUSTRIES
   OV.add_prereq("angels-components-construction-3", "tech-green-packs")
   pack_replace("plastics", "orange", "green")
@@ -125,9 +133,6 @@ if angelsmods.industries.tech then
   pack_replace("bullet-damage-3", "green", "orange")
   pack_replace("flying", "green", "orange")
   pack_replace("robotics", "green", "orange")
-  pack_replace("lubricant", "blue", "orange")
-  OV.remove_prereq("lubricant", "angels-advanced-oil-processing")
-  OV.add_prereq("lubricant", "angels-oil-processing")
   OV.remove_science_pack("robotics", "angels-science-pack-blue")
   pack_replace("automated-construction", "green", "orange")
   OV.remove_science_pack("automated-construction", "angels-science-pack-blue")
@@ -171,14 +176,15 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- BASE GAME
-  OV.global_replace_technology("chemical-science-pack", "tech-blue-packs")
   OV.global_replace_item("chemical-science-pack", "angels-science-pack-blue")
+  angelsmods.functions.add_flag("chemical-science-pack", "hidden")
+  OV.disable_recipe({"chemical-science-pack"})
+  OV.global_replace_technology("chemical-science-pack", "tech-blue-packs")
+  -- BASE GAME
   OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
   angelsmods.functions.add_flag("chemical-science-pack", "hidden")
-  OV.disable_recipe({"chemical-science-pack"})
   -- INDUSTRIES
   pack_replace("angels-components-construction-5", "yellow", "blue")
   OV.remove_prereq("angels-components-construction-5", "utility-science-pack")
@@ -190,14 +196,19 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- YELOW SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- BASE GAME
-  OV.global_replace_technology("utility-science-pack", "tech-yellow-packs")
   OV.global_replace_item("utility-science-pack", "angels-science-pack-yellow")
   angelsmods.functions.add_flag("utility-science-pack", "hidden")
   OV.disable_recipe({"utility-science-pack"})
-  --REFINING
+  OV.global_replace_technology("utility-science-pack", "tech-yellow-packs")
+
+  --OV.global_replace_item("production-science-pack", "angels-science-pack-yellow")  -- datacore replacement script needs to run first
+  angelsmods.functions.add_flag("production-science-pack", "hidden")
+  OV.disable_recipe({"production-science-pack"})
+  OV.global_replace_technology("production-science-pack", "tech-yellow-packs")
+  -- BASE GAME
+  -- REFINING
   pack_replace("advanced-ore-refining-4", "blue", "yellow")
-  --ADDONS
+  -- ADDONS
   if mods["angelsaddons-warehouses"] then
     pack_replace("angels-logistic-warehouses", "blue", "yellow")
   end
@@ -208,8 +219,9 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- WHITE SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- BASE GAME
   OV.global_replace_item("space-science-pack", "angels-science-pack-white")
+  angelsmods.functions.add_flag("space-science-pack", "hidden")
+  -- BASE GAME
   OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
   OV.set_science_pack("rocket-silo", "angels-science-pack-red")
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")

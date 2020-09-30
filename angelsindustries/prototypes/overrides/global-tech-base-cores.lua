@@ -2,10 +2,6 @@ if angelsmods.industries.tech then
   local OV = angelsmods.functions.OV
   --require("prototypes.overrides.industries-override-functions")
 
-  -- now the custom fixes
-  OV.global_replace_technology("military-science-pack", "tech-green-packs")
-  OV.global_replace_technology("production-science-pack", "tech-blue-packs")
-
   -------------------------------------------------------------------------------
   -- NO CORES -------------------------------------------------------------------
   -------------------------------------------------------------------------------
@@ -123,6 +119,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- WARFARE CORES --------------------------------------------------------------
   -------------------------------------------------------------------------------
+  OV.global_replace_item("military-science-pack", "angels-science-pack-green") -- do this as it was not possible before
   -- BASE GAME
   for rec_4tech, _ in pairs(data.raw.technology) do --fix follower robot count techs
     if string.find(rec_4tech, "follower") ~= nil and string.find(rec_4tech, "robot") ~= nil then
@@ -131,9 +128,6 @@ if angelsmods.industries.tech then
   end
   --undo the change for the infinite tech (would normally be in with enhancement)
   core_replace("follower-robot-count-7", "war", "enhance")
-  OV.global_replace_item("military-science-pack", "angels-science-pack-green")
-  angelsmods.functions.add_flag("military-science-pack", "hidden")
-  OV.disable_recipe({"military-science-pack"})
   if mods["angelsexploration"] then
     core_replace("angels-bio-gun", "processing", "war")
     core_replace("angels-refined-biological-1", "processing", "war")
@@ -148,6 +142,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- PRODUCTION CORES -----------------------------------------------------------
   -------------------------------------------------------------------------------
+  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow") -- do this as it was not possible before
   -- BASE GAME
   OV.set_science_pack("concrete", "datacore-processing-1", 2)
   OV.set_science_pack("circuit-network", "datacore-processing-1", 2)
@@ -169,9 +164,6 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rubber", "datacore-processing-1", 2)
   core_replace("rocket-booster-1", "war", "processing")
   core_replace("rocket-booster-2", "war", "processing")
-  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow")
-  angelsmods.functions.add_flag("production-science-pack", "hidden")
-  OV.disable_recipe({"production-science-pack"})
   OV.execute() ------------------------------------------------------------------
 
   -- now upgrade the cores to tier 2 and let them depend on the correct technology
