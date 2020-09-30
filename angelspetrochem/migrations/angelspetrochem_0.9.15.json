@@ -1,0 +1,11 @@
+{
+  "item": [
+    [ "valve-check", "valve-inspector" ]
+  ],
+  "recipe": [
+    [ "valve-check", "valve-inspector" ]
+  ],
+  "building": [
+    [ "valve-check", "valve-inspector" ]
+  ]
+}

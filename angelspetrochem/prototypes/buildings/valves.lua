@@ -3,21 +3,21 @@ data:extend(
   --CHECK VALVE
   {
     type = "item",
-    name = "valve-check",
-    icon = "__angelspetrochem__/graphics/icons/valve-check.png",
+    name = "valve-inspector",
+    icon = "__angelspetrochem__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
-    order = "a[valve]-a[valve-check]",
-    place_result = "valve-check",
+    order = "a[valve]-a[valve-inspector]",
+    place_result = "valve-inspector",
     stack_size = 10,
   },
   {
     type = "storage-tank",
-    name = "valve-check",
-    icon = "__angelspetrochem__/graphics/icons/valve-check.png",
+    name = "valve-inspector",
+    icon = "__angelspetrochem__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "valve-check"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "valve-inspector"},
     max_health = 80,
     corpse = "small-remnants",
     resistances =
@@ -48,7 +48,7 @@ data:extend(
     {
       north =
       {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-check.png",
+        filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
         priority = "extra-high",
         frames = 1,
         width = 64,
@@ -57,7 +57,7 @@ data:extend(
       },
       east =
       {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-check.png",
+        filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
         priority = "extra-high",
         x = 64,
         frames = 1,
@@ -67,7 +67,7 @@ data:extend(
       },
       south =
       {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-check.png",
+        filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
         priority = "extra-high",
         x = 128,
         frames = 1,
@@ -77,7 +77,7 @@ data:extend(
       },
       west =
       {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-check.png",
+        filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
         priority = "extra-high",
         x = 192,
         frames = 1,
