@@ -5,7 +5,7 @@
   "recipe": [
     [ "valve-check", "valve-inspector" ]
   ],
-  "building": [
+  "entity": [
     [ "valve-check", "valve-inspector" ]
   ]
 }
