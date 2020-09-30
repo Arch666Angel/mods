@@ -6,7 +6,7 @@ Date: ??
       - Added a new battery component with intermediate parts (397)
   Bugfixes:
     - Science mode:
-      - Fixed that other mods' recipes which used science packs as ingredients were uncraftable (398)
+      - Fixed that other mods' recipes which used science packs as ingredients were uncraftable (400)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 20.08.2020
