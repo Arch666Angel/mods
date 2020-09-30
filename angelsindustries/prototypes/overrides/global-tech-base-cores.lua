@@ -131,6 +131,7 @@ if angelsmods.industries.tech then
   end
   --undo the change for the infinite tech (would normally be in with enhancement)
   core_replace("follower-robot-count-7", "war", "enhance")
+  OV.global_replace_item("military-science-pack", "angels-science-pack-green")
   angelsmods.functions.add_flag("military-science-pack", "hidden")
   OV.disable_recipe({"military-science-pack"})
   if mods["angelsexploration"] then
@@ -168,6 +169,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rubber", "datacore-processing-1", 2)
   core_replace("rocket-booster-1", "war", "processing")
   core_replace("rocket-booster-2", "war", "processing")
+  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow")
   angelsmods.functions.add_flag("production-science-pack", "hidden")
   OV.disable_recipe({"production-science-pack"})
   OV.execute() ------------------------------------------------------------------

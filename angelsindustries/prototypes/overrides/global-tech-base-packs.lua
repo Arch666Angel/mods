@@ -43,6 +43,7 @@ if angelsmods.industries.tech then
   -- RED SCIENCE PACKS ----------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
+  OV.global_replace_item("automation-science-pack", "angels-science-pack-red")
   pack_replace("armor-making-2", "green", "red") --move armour making down a tier
   angelsmods.functions.add_flag("automation-science-pack", "hidden")
   OV.disable_recipe({"automation-science-pack"})
@@ -83,6 +84,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
+  OV.global_replace_item("logistic-science-pack", "angels-science-pack-green")
   pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   angelsmods.functions.add_flag("logistic-science-pack", "hidden")
   OV.disable_recipe({"logistic-science-pack"})
@@ -171,6 +173,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   OV.global_replace_technology("chemical-science-pack", "tech-blue-packs")
+  OV.global_replace_item("chemical-science-pack", "angels-science-pack-blue")
   OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
@@ -189,6 +192,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   OV.global_replace_technology("utility-science-pack", "tech-yellow-packs")
+  OV.global_replace_item("utility-science-pack", "angels-science-pack-yellow")
   angelsmods.functions.add_flag("utility-science-pack", "hidden")
   OV.disable_recipe({"utility-science-pack"})
   --REFINING
@@ -205,6 +209,7 @@ if angelsmods.industries.tech then
   -- WHITE SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
+  OV.global_replace_item("space-science-pack", "angels-science-pack-white")
   OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
   OV.set_science_pack("rocket-silo", "angels-science-pack-red")
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")
