@@ -38,6 +38,34 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "manganese-processed-processing-alt",
+      category = "ore-processing",
+      subgroup = "angels-manganese",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "processed-manganese", amount = 4},
+        {type = "fluid", name = "gas-synthesis", amount = 60}
+      },
+      results = {
+        {type = "item", name = "solid-manganese-oxide", amount = 6}
+      },
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.smelting.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "d[solid-manganese-oxide]-a"
+    },
+    {
+      type = "recipe",
       name = "pellet-manganese-smelting",
       category = "chemical-smelting",
       subgroup = "angels-manganese",
@@ -50,8 +78,19 @@ data:extend(
       results = {
         {type = "item", name = "solid-manganese-oxide", amount = 24}
       },
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.smelting.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
-      order = "d[solid-manganese-oxide]"
+      order = "d[solid-manganese-oxide]-b"
     },
     {
       type = "recipe",

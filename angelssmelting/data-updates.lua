@@ -240,5 +240,7 @@ require("prototypes.smelting-override")
 --Generic recipe generation
 require("prototypes.smelting-generate")
 
+require("prototypes.smelting-override-global")
+
 -- EXECUTE OVERRIDES
 angelsmods.functions.OV.execute()

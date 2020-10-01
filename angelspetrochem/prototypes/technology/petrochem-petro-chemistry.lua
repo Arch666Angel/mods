@@ -515,6 +515,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "gas-propene-synthesis"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-ethylene-oxide"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-ethylene-carbonate"
         }
       },
       unit = {

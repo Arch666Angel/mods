@@ -3,7 +3,6 @@ data:extend(
     {
       type = "recipe",
       name = "alien-processed-meat",
-      localised_name = {"recipe-name.biter-small-eggsperiment"},
       category = "crafting-with-fluid",
       subgroup = "bio-biter-butchery",
       enabled = false,
@@ -16,6 +15,7 @@ data:extend(
         {type = "item", name = "bio-alien-processed-meat", amount = 1}
       },
       always_show_products = true,
+      main_product = "bio-alien-processed-meat",
       order = "d[meat]"
     },
     ---------------------------------------------------------------------------

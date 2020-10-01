@@ -185,9 +185,9 @@ if angelsmods.functions.is_special_vanilla() then
       "gas-allylchlorid",
       "gas-epichlorhydrin",
       "liquid-glycerol",
-      "solid-sodium-chlorate",
-      "solid-sodium-perchlorate",
-      "liquid-perchloric-acid"
+      --"solid-sodium-chlorate",
+      --"solid-sodium-perchlorate",
+      --"liquid-perchloric-acid"
     }
   )
   OV.disable_recipe(

@@ -55,6 +55,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "manganese-processed-processing-alt"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "cathode-manganese-smelting"
         },
         {

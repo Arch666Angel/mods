@@ -21,6 +21,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-cobalt"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "cobalt-ore-processing-alt"
         }
       },
       unit = {

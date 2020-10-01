@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.17
 Date: ??
+  Changes:
+    - Added message at the start of the game to notify the player about the changes to the map
+      generation settings (388)
   Bugfixes:
     - Fixed technology "Geode processing 2" could not be researched when playing without the angels
       metallurgy smelting mod
+    - Small tweak to component mode recipe of Floatation cell 1
+    - Fixed localisation of ore refining descriptions (376)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020

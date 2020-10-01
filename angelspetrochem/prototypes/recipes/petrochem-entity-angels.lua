@@ -546,7 +546,7 @@ angelsmods.functions.RB.build(
     --VALVES
     {
       type = "recipe",
-      name = "valve-check",
+      name = "valve-inspector",
       normal = {
         energy_required = 2,
         enabled = false,
@@ -554,7 +554,7 @@ angelsmods.functions.RB.build(
           {type = "item", name = "t0-circuit", amount = 1},
           {type = "item", name = "t0-pipe", amount = 1}
         },
-        result = "valve-check"
+        result = "valve-inspector"
       },
       expensive = {
         energy_required = 2 * buildingtime,
@@ -563,7 +563,7 @@ angelsmods.functions.RB.build(
           {type = "item", name = "t0-circuit", amount = 1 * buildingmulti},
           {type = "item", name = "t0-pipe", amount = 1 * buildingmulti}
         },
-        result = "valve-check"
+        result = "valve-inspector"
       }
     },
     {

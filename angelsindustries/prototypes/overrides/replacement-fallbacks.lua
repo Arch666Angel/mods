@@ -63,7 +63,7 @@ angelsmods.industries.block_replace={
   ["insulated-cable"]={new="cable-harness-3",amt_multi=1},
   ["gilded-copper-cable"]={new="cable-harness-4",amt_multi=1},
   --intermediates (vanilla)
-  ["iron-stick"]={new="construction-components",amt_multi=1},
+  ["iron-stick"]={new="construction-components",amt_multi=1}
 }
 angelsmods.industries.general_replace={
   --electronics
@@ -95,6 +95,7 @@ angelsmods.industries.general_replace={
   --["iron-stick"]={new="angels-rod-iron",amt_multi=1} --not sure if the right spot for this
   ["engine-unit"]={new="motor-2",amt_multi=1,unlocked_by="engine"},
   ["electric-engine-unit"]={new="motor-4",amt_multi=1,unlocked_by="electric-engine"},
+  ["battery"]={new="battery-1",amt_multi=1}
 }
 --update replacement tables depending on mods
 if mods["aai-industry"] then
@@ -105,4 +106,8 @@ if mods["bobelectronics"] then
   angelsmods.industries.block_replace["advanced-circuit"]={new="block-electronics-3",amt_multi=1}
   angelsmods.industries.general_replace["electronic-circuit"]={new="circuit-red-loaded",amt_multi=1,unlock_by="electronics"}
   angelsmods.industries.general_replace["advanced-circuit"]={new="circuit-orange-loaded",amt_multi=1,unlock_by="advanced-electronics"}
+end
+if mods["bobplates"] then
+  angelsmods.industries.general_replace["lithium-ion-battery"]={new="battery-3",amt_multi=1}
+  angelsmods.industries.general_replace["silver-zinc-battery"]={new="battery-6",amt_multi=1}
 end

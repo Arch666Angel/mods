@@ -14,6 +14,172 @@ end)
   end
 )]]
 
+script.on_event(defines.events.on_cutscene_cancelled, function(event)
+  if game.active_mods['angelsexploration'] then return end
+
+  local player = game.players[event.player_index]
+
+  local welcomeFrame = player.gui.screen.add(
+    {
+      type = 'frame',
+      name = 'angels_welcome_screen',
+      direction = 'vertical'
+    }
+  )
+  welcomeFrame.style.maximal_width = 400
+
+  local welcomeFrameHeader = welcomeFrame.add(
+    {
+      type = 'flow',
+      name = 'header',
+    }
+  )
+  welcomeFrameHeader.drag_target = welcomeFrame
+  welcomeFrameHeader.style.horizontally_stretchable = true
+
+  welcomeFrameHeader.add(
+    {
+      type = 'label',
+      name = 'header_label',
+      caption = {"angels-welcome-message-gui.title"},
+      style = 'frame_title',
+      ignored_by_interaction = true
+    }
+  ).drag_target = welcomeFrame
+
+  local headerSpace = welcomeFrameHeader.add(
+    {
+      type = 'empty-widget',
+      name = 'space',
+      style = 'draggable_space_header',
+      ignored_by_interaction = true
+    }
+  )
+  headerSpace.style.horizontally_stretchable = true
+  headerSpace.style.height = 24
+  headerSpace.style.right_margin = 4
+
+  welcomeFrameHeader.add(
+    {
+      type = "sprite-button",
+      name = 'welcome_close_button',
+      sprite = "utility/close_white",
+      hovered_sprite = "utility/close_black",
+      clicked_sprite = "utility/close_black",
+      style = 'frame_action_button'
+    }
+  )
+
+  welcomeFrame.force_auto_center()
+
+  local welcomeFrameContent = welcomeFrame.add(
+    {
+      type = 'frame',
+      name = 'angels_welcome_screen_content',
+      direction = 'vertical',
+      style = 'inside_shallow_frame_with_padding',
+    }
+  )
+
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'intro_message',
+      caption = {'', {'angels-welcome-message.intro'}, '\n'},
+      ignored_by_interaction = true
+    }
+  ).style.single_line = false
+
+  local pollutionSetting = game.map_settings.pollution.enabled and "enabled" or "disabled"
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'pollution_message',
+      caption = {'', '     ', {'angels-welcome-message-settings.pollution-setting', {'angels-welcome-message-settings.' .. pollutionSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.pollution-setting'},
+    }
+  )
+
+  local enemySizeSetting = player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size > 1 and "enabled" or "disabled"
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'enemy_size_message',
+      caption = {'', '     ', {'angels-welcome-message-settings.enemy-setting', {'angels-welcome-message-settings.' .. enemySizeSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.enemy-setting'},
+    }
+  )
+
+  local enemyEvolutionSetting = game.map_settings.enemy_evolution.enabled and "enabled" or "disabled"
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'enemy_evolution_message',
+      caption = {'', '     ', {'angels-welcome-message-settings.evolution-setting', {'angels-welcome-message-settings.' .. enemyEvolutionSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.evolution-setting'},
+    }
+  )
+
+  local enemyExpansionSetting = game.map_settings.enemy_expansion.enabled and "enabled" or "disabled"
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'expansion_message',
+      caption = {'', '     ', {'angels-welcome-message-settings.expansion-setting', {'angels-welcome-message-settings.' .. enemyExpansionSetting}}, ' [img=info]'},
+      tooltip = {'angels-welcome-message-settings-tooltip.expansion-setting'},
+    }
+  )
+
+  welcomeFrameContent.add(
+    {
+      type = 'label',
+      name = 'faq',
+      caption = {'', '\n', {'angels-welcome-message.outro'}},
+      ignored_by_interaction = true
+    }
+  ).style.single_line = false
+
+  local welcomeFrameFooter = welcomeFrame.add(
+    {
+      type = 'flow',
+      name = 'footer',
+      style = 'dialog_buttons_horizontal_flow'
+    }
+  )
+  welcomeFrameFooter.style.horizontally_stretchable = true
+
+  local footerSpace = welcomeFrameFooter.add(
+    {
+      type = 'empty-widget',
+      name = 'bottom_space',
+      --style = 'draggable_space'
+      style = 'draggable_space_with_no_left_margin',
+      ignored_by_interaction = true
+    }
+  )
+  footerSpace.style.horizontally_stretchable = true
+  footerSpace.style.height = 32
+
+  welcomeFrameFooter.add(
+    {
+      type = 'button',
+      name = 'welcome_accept_button',
+      caption = {"angels-welcome-message-gui.confirm-button"},
+      style = 'confirm_button'
+    }
+  )
+
+end)
+
+script.on_event(defines.events.on_gui_click, function(event)
+  if event.element.name == 'welcome_close_button' or event.element.name == 'welcome_accept_button' then
+    local player = game.players[event.player_index]
+    if player.gui.screen.angels_welcome_screen then
+      player.gui.screen.angels_welcome_screen.destroy()
+    end
+  end
+end)
+
 script.on_event(defines.events.on_player_rotated_entity, function(event)
   local entity = event.entity
   if entity and entity.valid and entity.name == "ground-water-pump" then

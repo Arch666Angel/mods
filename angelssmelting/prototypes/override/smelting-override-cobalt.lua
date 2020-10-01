@@ -32,6 +32,11 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     angelsmods.functions.add_flag("liquid-molten-cobalt", "hidden")
     OV.disable_recipe({"molten-cobalt-smelting"})
   end
+  
+  if mods["angelsindustries"] and angelsmods.industries.components then
+  else
+    OV.disable_recipe({"cobalt-ore-processing-alt"})
+  end
 else
   angelsmods.functions.add_flag("processed-cobalt", "hidden")
   angelsmods.functions.add_flag("pellet-cobalt", "hidden")
@@ -39,7 +44,7 @@ else
   angelsmods.functions.add_flag("solid-cobalt-oxide", "hidden")
   angelsmods.functions.add_flag("ingot-cobalt", "hidden")
   angelsmods.functions.add_flag("liquid-molten-cobalt", "hidden")
-  OV.disable_recipe({"cobalt-ore-processing", "cobalt-processed-processing"})
+  OV.disable_recipe({"cobalt-ore-processing", "cobalt-processed-processing", "cobalt-ore-processing-alt"})
   OV.disable_recipe({"pellet-cobalt-smelting", "processed-cobalt-smelting", "solid-cobalt-hydroxide-smelting"})
   OV.disable_recipe({"cobalt-ore-smelting", "solid-cobalt-oxide-smelting"})
   OV.disable_recipe({"molten-cobalt-smelting"})

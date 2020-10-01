@@ -25,6 +25,11 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
     angelsmods.functions.add_flag("liquid-molten-zinc", "hidden")
     OV.disable_recipe({"molten-zinc-smelting"})
   end
+
+  if mods["angelsindustries"] and angelsmods.industries.components then
+  else
+    OV.disable_recipe({"zinc-ore-processing-alt"})
+  end
 else
   angelsmods.functions.add_flag("processed-zinc", "hidden")
   angelsmods.functions.add_flag("pellet-zinc", "hidden")
@@ -32,7 +37,7 @@ else
   angelsmods.functions.add_flag("cathode-zinc", "hidden")
   angelsmods.functions.add_flag("ingot-zinc", "hidden")
   angelsmods.functions.add_flag("liquid-molten-zinc", "hidden")
-  OV.disable_recipe({"zinc-ore-processing", "zinc-processed-processing"})
+  OV.disable_recipe({"zinc-ore-processing", "zinc-processed-processing", "zinc-ore-processing-alt"})
   OV.disable_recipe({"pellet-zinc-smelting", "solid-zinc-oxide-smelting"})
   OV.disable_recipe({"zinc-ore-smelting", "processed-zinc-smelting", "cathode-zinc-smelting"})
   OV.disable_recipe({"molten-zinc-smelting"})

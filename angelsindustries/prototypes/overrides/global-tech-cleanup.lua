@@ -40,6 +40,25 @@ if angelsmods.industries.tech then
       return LSlib_TechCleanup.prereqcache[technologyName]
     end
   end
+    
+  function LSlib_TechCleanup.makePrerequisitesContiguous(technologyName)
+    if not data.raw["technology"][technologyName]               then return end
+    if not data.raw["technology"][technologyName].prerequisites then return end
+
+    -- STEP 1: obtain all the prerequisites
+    local prerequisites = {}
+    for _,prerequisiteName in pairs(data.raw["technology"][technologyName].prerequisites) do
+      prerequisites[prerequisiteName] = true
+    end
+
+    -- STEP 2: remove all prerequisites
+    data.raw["technology"][technologyName].prerequisites = {}
+
+    -- STEP 3: add all prerequisites contiguously
+    for prerequisiteName,_ in pairs(prerequisites) do
+      table.insert(data.raw["technology"][technologyName].prerequisites, prerequisiteName)
+    end
+  end
 
   function LSlib_TechCleanup.removeDuplicatePrerequisites(technologyName)
     if not data.raw["technology"][technologyName]               then return end
@@ -135,6 +154,11 @@ if angelsmods.industries.tech then
     -- STEP 3: remove the redundant entries
     for technologyName, technology in pairs(data.raw["technology"]) do
       LSlib_TechCleanup.removeRedundantPrerequisites(technologyName)
+    end
+
+    -- STEP 4: make the prerequisites contiguous again
+    for technologyName, technology in pairs(data.raw["technology"]) do
+      LSlib_TechCleanup.makePrerequisitesContiguous(technologyName)
     end
 
     LSlib_TechCleanup.prereqcache = nil

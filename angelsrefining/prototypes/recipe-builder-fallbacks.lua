@@ -53,7 +53,7 @@
 	angelsmods.functions.RB.set_fallback("item", "crusher-2", { { "block-production-2" }, { "ore-crusher" } } )
 	angelsmods.functions.RB.set_fallback("item", "crusher-3", { { "block-mprocessing-3" }, { "ore-crusher-2" } } )
 
-	angelsmods.functions.RB.set_fallback("item", "cell-1", { { "block-production-2", 3 } } )
+	angelsmods.functions.RB.set_fallback("item", "cell-1", { { "block-production-1", 3 } } )
 	angelsmods.functions.RB.set_fallback("item", "cell-2", { { "block-mprocessing-3", 3 }, { "ore-floatation-cell" } } )
 	angelsmods.functions.RB.set_fallback("item", "cell-3", { { "block-mprocessing-4", 3 }, { "ore-floatation-cell-2" } } )
 

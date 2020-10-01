@@ -11,7 +11,7 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "valve-check"
+          recipe = "valve-inspector"
         },
         {
           type = "unlock-recipe",

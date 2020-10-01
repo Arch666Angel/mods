@@ -21,6 +21,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-zinc"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "zinc-ore-processing-alt"
         }
       },
       unit = {
