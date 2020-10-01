@@ -150,7 +150,7 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
         table.insert(localised_sorting_results[tier].sorting, {"",
           string.format("[img=item/%s]", tier_result),
           {"item-description.loc-space"},
-          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+          {string.format("item-description.loc-%s", (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result)}
         })
       end
     end
@@ -159,7 +159,7 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
         table.insert(localised_sorting_results[tier].refining, {"",
           string.format("[img=item/%s]", tier_result),
           {"item-description.loc-space"},
-          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+          {string.format("item-description.loc-%s", (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result)}
         })
       end
     end
