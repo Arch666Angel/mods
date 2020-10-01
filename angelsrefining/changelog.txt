@@ -4,12 +4,12 @@ Date: ??
   Changes:
     - Added message at the start of the game to notify the player about the changes to the map
       generation settings (388)
-    - Some minor localisation changes to unify angels localisation across mods (372)
   Bugfixes:
     - Fixed technology "Geode processing 2" could not be researched when playing without the angels
       metallurgy smelting mod
     - Small tweak to component mode recipe of Floatation cell 1
     - Fixed localisation of ore refining descriptions (376)
+    - Fixed crash with angels migration script library (383)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020
