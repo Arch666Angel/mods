@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - Changed air resistance of tender locomotives to be the same as a cargo wagon to promote the
       use of a regular locomotive in front over all tender locomotives (384)
+    - Some minor localisation changes to unify angels localisation across mods (372)
   Bugfixes:
     - Fixed issues where you could not paste from any locomotive onto smelting cargo wagons (390)
 ---------------------------------------------------------------------------------------------------
