@@ -408,7 +408,8 @@ data:extend(
       type = "technology",
       name = "ore-processing-2",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "ore-processing-1"
@@ -438,7 +439,8 @@ data:extend(
       type = "technology",
       name = "ore-processing-3",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "ore-processing-2"
@@ -469,7 +471,8 @@ data:extend(
       type = "technology",
       name = "ore-processing-4",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "ore-processing-3"
@@ -501,7 +504,8 @@ data:extend(
       type = "technology",
       name = "ore-processing-5",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "ore-processing-4"

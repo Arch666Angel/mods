@@ -7,6 +7,7 @@ Date: ??
     - Added Manganese oxide from Processed manganese (397)
     - Added HQ graphics to the following machines, and tweaked their sounds: (???)
       - Ore processor
+      - Pellet press
   Bugfixes:
     - Increased base_area on the fluid output of the casting machines (362)
 ---------------------------------------------------------------------------------------------------
