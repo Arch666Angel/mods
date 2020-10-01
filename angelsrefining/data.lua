@@ -23,6 +23,7 @@ require("prototypes.generation.resource-builder")
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
+angelsmods.trigger.enable_hq_graphics = mods["reskins-angels"] and true or settings.startup["angels-hq-graphics"].value
 angelsmods.trigger.enable_auto_barreling = settings.startup["angels-enable-auto-barreling"].value
 angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"].value
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
