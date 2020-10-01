@@ -19,7 +19,8 @@ data:extend(
         {type = "item", name = "processed-copper", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-copper]"
+      order = "b[processed-copper]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
     {
       type = "recipe",

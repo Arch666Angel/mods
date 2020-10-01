@@ -383,7 +383,8 @@ data:extend(
       type = "technology",
       name = "ore-processing-1",
       icon = "__angelssmelting__/graphics/technology/processing-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       prerequisites = {
         "angels-metallurgy-1"
       },

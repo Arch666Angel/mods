@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-aluminium",
       icon = "__angelssmelting__/graphics/icons/processed-aluminium.png",
       icon_size = 32,
-      order = "b[processed-aluminium]"
+      order = "b[processed-aluminium]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
     {
       type = "recipe",

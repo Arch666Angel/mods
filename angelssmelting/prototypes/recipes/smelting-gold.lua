@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-gold",
       --icon = "__angelssmelting__/graphics/icons/processed-gold.png",
       icon_size = 32,
-      order = "b[processed-gold]"
+      order = "b[processed-gold]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
     {
       type = "recipe",

@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-titanium", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-titanium]"
+      order = "b[processed-titanium]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
     },
     {
       type = "recipe",

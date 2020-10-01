@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-manganese", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-manganese]"
+      order = "b[processed-manganese]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
     {
       type = "recipe",

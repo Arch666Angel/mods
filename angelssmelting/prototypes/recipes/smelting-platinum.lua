@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-platinum", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-platinum]"
+      order = "b[processed-platinum]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",

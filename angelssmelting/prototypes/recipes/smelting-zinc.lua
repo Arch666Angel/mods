@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-zinc",
       icon = "__angelssmelting__/graphics/icons/processed-zinc.png",
       icon_size = 32,
-      order = "b[processed-zinc]"
+      order = "b[processed-zinc]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
     {
       type = "recipe",

@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-iron", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-iron]"
+      order = "b[processed-iron]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",

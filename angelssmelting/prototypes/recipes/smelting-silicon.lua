@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-silica",
       --icon = "__angelssmelting__/graphics/icons/processed-silica.png",
       icon_size = 32,
-      order = "b[processed-silica]"
+      order = "b[processed-silica]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silicon")
     },
     {
       type = "recipe",
