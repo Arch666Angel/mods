@@ -3,6 +3,7 @@ Version: 0.7.15
 Date: ??
   Bugfixes:
     - Fixed wrong localisation on the alienated fertilizer recipe
+    - Some minor localisation changes to unify angels localisation across mods (372)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.14
 Date: 20.08.2020

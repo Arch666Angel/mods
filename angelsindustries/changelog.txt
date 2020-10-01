@@ -2,6 +2,8 @@
 Version: 0.4.7
 Date: ??
   Changes:
+    - Regular mode:
+      - Some minor localisation changes to unify angels localisation across mods (372)
     - Component mode:
       - Added a new battery component with intermediate parts (397)
   Bugfixes:
