@@ -268,7 +268,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-cobalt]-a"
+      order = "i[angels-roll-cobalt]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
     {
       type = "recipe",
@@ -313,7 +314,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-cobalt]-b"
+      order = "i[angels-roll-cobalt]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
     -- CASTING RESULT
     {

@@ -379,7 +379,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-titanium]-a"
+      order = "i[angels-roll-titanium]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
     },
     {
       type = "recipe",
@@ -424,7 +425,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-titanium]-b"
+      order = "i[angels-roll-titanium]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
     },
     {
       type = "recipe",

@@ -282,7 +282,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-zinc]-a"
+      order = "i[angels-roll-zinc]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
     {
       type = "recipe",
@@ -327,7 +328,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-zinc]-b"
+      order = "i[angels-roll-zinc]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
     {
       type = "recipe",

@@ -281,7 +281,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-manganese]-a"
+      order = "i[angels-roll-manganese]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
     {
       type = "recipe",
@@ -326,7 +327,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-manganese]-b"
+      order = "i[angels-roll-manganese]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
     -- CASTING RESULT
     {

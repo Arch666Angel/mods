@@ -246,7 +246,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-roll-silver]-a"
+      order = "k[angels-roll-silver]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -291,7 +292,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-roll-silver]-b"
+      order = "k[angels-roll-silver]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -334,7 +336,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "l[angels-wire-coil-silver]-a"
+      order = "l[angels-wire-coil-silver]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -381,7 +384,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "l[angels-wire-coil-silver]-b"
+      order = "l[angels-wire-coil-silver]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
     },
     -- CASTING RESULT
     {

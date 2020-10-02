@@ -281,7 +281,8 @@ data:extend(
       type = "technology",
       name = "strand-casting-1",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       prerequisites = {
         "angels-metallurgy-1"
       },
@@ -305,7 +306,8 @@ data:extend(
       type = "technology",
       name = "strand-casting-2",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "strand-casting-1"
@@ -331,7 +333,8 @@ data:extend(
       type = "technology",
       name = "strand-casting-3",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "strand-casting-2"
@@ -358,7 +361,8 @@ data:extend(
       type = "technology",
       name = "strand-casting-4",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "strand-casting-3"
