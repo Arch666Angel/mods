@@ -37,7 +37,6 @@ data:extend(
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-processing-machine"},
       fast_replaceable_group = "ore-processing-machine",
@@ -590,7 +589,6 @@ data:extend(
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-processing-machine-4"},
       fast_replaceable_group = "ore-processing-machine",
