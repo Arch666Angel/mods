@@ -9,6 +9,7 @@ Date: ??
       - Ore processor
       - Pellet press
       - Powder mixer
+      - Blast furnace
   Bugfixes:
     - Increased base_area on the fluid output of the casting machines (362)
 ---------------------------------------------------------------------------------------------------

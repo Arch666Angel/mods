@@ -58,8 +58,8 @@ data:extend(
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-        icon_size = 128,
-        scale = 0.5
+        icon_size = 256,
+        scale = 0.25
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",

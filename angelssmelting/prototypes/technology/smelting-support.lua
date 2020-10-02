@@ -5,7 +5,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-1",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       prerequisites = {
         "steel-processing"
       },
@@ -40,7 +41,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-2",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-1"
@@ -77,7 +79,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-3",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-2"
@@ -115,7 +118,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-4",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-3"

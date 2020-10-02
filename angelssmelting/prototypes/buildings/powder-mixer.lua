@@ -6,7 +6,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -27,7 +27,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
@@ -119,7 +119,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
@@ -140,7 +140,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
@@ -232,7 +232,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
@@ -253,7 +253,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
@@ -345,7 +345,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
@@ -366,7 +366,7 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
