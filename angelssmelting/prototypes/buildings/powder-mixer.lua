@@ -46,6 +46,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
       selection_box = {{-1, -1}, {1, 1}},
+      drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
         module_slots = 2
       },
@@ -159,6 +160,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
       selection_box = {{-1, -1}, {1, 1}},
+      drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
         module_slots = 2
       },
@@ -272,6 +274,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
       selection_box = {{-1, -1}, {1, 1}},
+      drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
         module_slots = 2
       },
@@ -384,6 +387,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
       selection_box = {{-1, -1}, {1, 1}},
+      drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
         module_slots = 2
       },

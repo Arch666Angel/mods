@@ -10,6 +10,7 @@ Date: ??
       - Pellet press
       - Powder mixer
       - Blast furnace
+      - Chemical furnace
   Bugfixes:
     - Increased base_area on the fluid output of the casting machines (362)
 ---------------------------------------------------------------------------------------------------
