@@ -45,9 +45,10 @@ OV.disable_recipe({"electric-engine-unit"})
 OV.execute()
 -- custom fixes
 
+end
+
 require("prototypes.overrides.components-base-recipe-update")
 OV.execute()
 
 require("prototypes.overrides.components-bobs-recipe-update")
 OV.execute()
-end
