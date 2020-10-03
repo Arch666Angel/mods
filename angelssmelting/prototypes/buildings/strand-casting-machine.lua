@@ -6,12 +6,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -27,12 +29,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -209,12 +213,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -230,12 +236,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -412,12 +420,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -433,12 +443,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -615,12 +627,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }
@@ -636,12 +650,14 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/strand-casting-machine.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
           tint = angelsmods.smelting.number_tint,
           icon_size = 32,
+          icon_mipmaps = 1,
           scale = 0.32,
           shift = {-12, -12}
         }

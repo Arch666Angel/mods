@@ -6,11 +6,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -27,11 +29,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -120,11 +124,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -141,11 +147,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -234,11 +242,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -255,11 +265,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -348,11 +360,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
@@ -369,11 +383,13 @@ data:extend(
       icons = {
         {
           icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
           icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
