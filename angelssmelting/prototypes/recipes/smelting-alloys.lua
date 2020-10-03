@@ -223,7 +223,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-steel]-a"
+      order = "j[angels-roll-steel]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
     },
     {
       type = "recipe",
@@ -268,7 +269,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-steel]-b"
+      order = "j[angels-roll-steel]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
     },
     {
       type = "recipe",
@@ -309,7 +311,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-rod-stack-steel]-a"
+      order = "k[angels-rod-stack-steel]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
     },
     {
       type = "recipe",
@@ -354,7 +357,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-rod-stack-steel]-b"
+      order = "k[angels-rod-stack-steel]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-steel")
     },
     -- STEEL CASTING RESULT
     {
@@ -652,7 +656,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[angels-roll-solder]-a"
+      order = "c[angels-roll-solder]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
     },
     {
       type = "recipe",
@@ -697,7 +702,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[angels-roll-solder]-b"
+      order = "c[angels-roll-solder]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
     },
     -- SOLDER CASTING RESULT
     {

@@ -5,16 +5,17 @@ data:extend(
       name = "angels-chemical-furnace",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-chemical-furnace",
       order = "a[angels-chemical-furnace]",
       place_result = "angels-chemical-furnace",
@@ -25,16 +26,17 @@ data:extend(
       name = "angels-chemical-furnace",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -44,6 +46,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -58,18 +61,116 @@ data:extend(
       energy_usage = "150kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 141,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(28, 13),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 448,
+              height = 280,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_01.png",
+                  width_in_frames = 4,
+                  height_in_frames = 7,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_02.png",
+                  width_in_frames = 4,
+                  height_in_frames = 2,
+                },
+              },
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(28, 12.5),
+              scale = 0.5
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          draw_as_sprite = false,
+          draw_as_light = true,
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -107,16 +208,17 @@ data:extend(
       name = "angels-chemical-furnace-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-chemical-furnace",
       order = "b[angels-chemical-furnace-2]",
       place_result = "angels-chemical-furnace-2",
@@ -127,16 +229,17 @@ data:extend(
       name = "angels-chemical-furnace-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace-2"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -146,6 +249,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -160,18 +264,116 @@ data:extend(
       energy_usage = "200kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 141,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(28, 13),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 448,
+              height = 280,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_01.png",
+                  width_in_frames = 4,
+                  height_in_frames = 7,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_02.png",
+                  width_in_frames = 4,
+                  height_in_frames = 2,
+                },
+              },
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(28, 12.5),
+              scale = 0.5
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          draw_as_sprite = false,
+          draw_as_light = true,
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -209,16 +411,17 @@ data:extend(
       name = "angels-chemical-furnace-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-chemical-furnace",
       order = "c[angels-chemical-furnace-3]",
       place_result = "angels-chemical-furnace-3",
@@ -229,16 +432,17 @@ data:extend(
       name = "angels-chemical-furnace-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace-3"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -248,6 +452,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -262,18 +467,116 @@ data:extend(
       energy_usage = "250kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 141,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(28, 13),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 448,
+              height = 280,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_01.png",
+                  width_in_frames = 4,
+                  height_in_frames = 7,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_02.png",
+                  width_in_frames = 4,
+                  height_in_frames = 2,
+                },
+              },
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(28, 12.5),
+              scale = 0.5
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          draw_as_sprite = false,
+          draw_as_light = true,
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -311,16 +614,17 @@ data:extend(
       name = "angels-chemical-furnace-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-chemical-furnace",
       order = "d[angels-chemical-furnace-4]",
       place_result = "angels-chemical-furnace-4",
@@ -331,16 +635,17 @@ data:extend(
       name = "angels-chemical-furnace-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace-4"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -349,6 +654,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -363,18 +669,116 @@ data:extend(
       energy_usage = "300kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 6,
-        frame_count = 36,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 141,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(28, 13),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 448,
+              height = 280,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_01.png",
+                  width_in_frames = 4,
+                  height_in_frames = 7,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_02.png",
+                  width_in_frames = 4,
+                  height_in_frames = 2,
+                },
+              },
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(28, 12.5),
+              scale = 0.5
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          draw_as_sprite = false,
+          draw_as_light = true,
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
+            priority = "high",
+            width = 168,
+            height = 189,
+            line_length = 6,
+            frame_count = 36,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1, -12),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              priority = "high",
+              width = 332,
+              height = 374,
+              frame_count = 36,
+              stripes = {
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_01.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+                {
+                  filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_02.png",
+                  width_in_frames = 6,
+                  height_in_frames = 3,
+                },
+              },
+              animation_speed = 0.5,
+              shift = util.by_pixel(-1, -11.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {

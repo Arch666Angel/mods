@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-cobalt", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-cobalt]"
+      order = "b[processed-cobalt]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
     {
       type = "recipe",
@@ -267,7 +268,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-cobalt]-a"
+      order = "i[angels-roll-cobalt]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
     {
       type = "recipe",
@@ -312,7 +314,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-cobalt]-b"
+      order = "i[angels-roll-cobalt]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
     -- CASTING RESULT
     {

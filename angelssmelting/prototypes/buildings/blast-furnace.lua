@@ -5,16 +5,17 @@ data:extend(
       name = "blast-furnace",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-blast-furnace",
       order = "a[blast-furnace]",
       place_result = "blast-furnace",
@@ -25,16 +26,17 @@ data:extend(
       name = "blast-furnace",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "blast-furnace"},
       fast_replaceable_group = "blast-furnace",
@@ -44,6 +46,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -64,23 +67,124 @@ data:extend(
             starting_vertical_speed = 0.08,
             starting_frame_deviation = 60
           }
+        },
+        light_flicker = {
+          color = {0, 0, 0}
         }
       },
       energy_usage = "150kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 5,
-        frame_count = 25,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+            priority = "high",
+            width = 164,
+            height = 189,
+            shift = util.by_pixel(0, -14),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+              priority = "high",
+              width = 328,
+              height = 376,
+              shift = util.by_pixel(0, -13.5),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 124,
+            shift = util.by_pixel(30, 20),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+              priority = "high",
+              width = 445,
+              height = 245,
+              shift = util.by_pixel(29, 19.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          light = {intensity = 1, size = 2, color = {r = 1.0, g = 1.0, b = 1.0}, shift = util.by_pixel(7, 38)},
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+            priority = "high",
+            width = 12,
+            height = 25,
+            line_length = 8,
+            frame_count = 48,
+            animation_speed = 0.5,
+            shift = util.by_pixel(4, 29),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+              priority = "high",
+              width = 23,
+              height = 50,
+              line_length = 8,
+              frame_count = 48,
+              animation_speed = 0.5,
+              shift = util.by_pixel(3, 29),
+              scale = 0.5,
+            }
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
+            priority = "high",
+            width = 60,
+            height = 43,
+            blend_mode = "additive",
+            shift = util.by_pixel(4, 37.5),
+            scale = 0.75,
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+            priority = "high",
+            width = 17,
+            height = 20,
+            blend_mode = "additive",
+            shift = util.by_pixel(4.5, 40),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+              priority = "high",
+              width = 34,
+              height = 40,
+              blend_mode = "additive",
+              shift = util.by_pixel(4.5, 40),
+              scale = 0.5,
+            }
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -105,16 +209,17 @@ data:extend(
       name = "blast-furnace-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-blast-furnace",
       order = "b[blast-furnace-2]",
       place_result = "blast-furnace-2",
@@ -125,16 +230,17 @@ data:extend(
       name = "blast-furnace-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "blast-furnace-2"},
       fast_replaceable_group = "blast-furnace",
@@ -144,6 +250,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -164,23 +271,124 @@ data:extend(
             starting_vertical_speed = 0.08,
             starting_frame_deviation = 60
           }
+        },
+        light_flicker = {
+          color = {0, 0, 0}
         }
       },
       energy_usage = "200kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 5,
-        frame_count = 25,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+            priority = "high",
+            width = 164,
+            height = 189,
+            shift = util.by_pixel(0, -14),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+              priority = "high",
+              width = 328,
+              height = 376,
+              shift = util.by_pixel(0, -13.5),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 124,
+            shift = util.by_pixel(30, 20),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+              priority = "high",
+              width = 445,
+              height = 245,
+              shift = util.by_pixel(29, 19.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          light = {intensity = 1, size = 2, color = {r = 1.0, g = 1.0, b = 1.0}, shift = util.by_pixel(7, 38)},
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+            priority = "high",
+            width = 12,
+            height = 25,
+            line_length = 8,
+            frame_count = 48,
+            animation_speed = 0.5,
+            shift = util.by_pixel(4, 29),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+              priority = "high",
+              width = 23,
+              height = 50,
+              line_length = 8,
+              frame_count = 48,
+              animation_speed = 0.5,
+              shift = util.by_pixel(3, 29),
+              scale = 0.5,
+            }
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
+            priority = "high",
+            width = 60,
+            height = 43,
+            blend_mode = "additive",
+            shift = util.by_pixel(4, 37.5),
+            scale = 0.75,
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+            priority = "high",
+            width = 17,
+            height = 20,
+            blend_mode = "additive",
+            shift = util.by_pixel(4.5, 40),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+              priority = "high",
+              width = 34,
+              height = 40,
+              blend_mode = "additive",
+              shift = util.by_pixel(4.5, 40),
+              scale = 0.5,
+            }
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -205,16 +413,17 @@ data:extend(
       name = "blast-furnace-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-blast-furnace",
       order = "c[blast-furnace-3]",
       place_result = "blast-furnace-3",
@@ -225,16 +434,17 @@ data:extend(
       name = "blast-furnace-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "blast-furnace-3"},
       fast_replaceable_group = "blast-furnace",
@@ -244,6 +454,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -264,23 +475,124 @@ data:extend(
             starting_vertical_speed = 0.08,
             starting_frame_deviation = 60
           }
+        },
+        light_flicker = {
+          color = {0, 0, 0}
         }
       },
       energy_usage = "250kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 5,
-        frame_count = 25,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+            priority = "high",
+            width = 164,
+            height = 189,
+            shift = util.by_pixel(0, -14),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+              priority = "high",
+              width = 328,
+              height = 376,
+              shift = util.by_pixel(0, -13.5),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 124,
+            shift = util.by_pixel(30, 20),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+              priority = "high",
+              width = 445,
+              height = 245,
+              shift = util.by_pixel(29, 19.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          light = {intensity = 1, size = 2, color = {r = 1.0, g = 1.0, b = 1.0}, shift = util.by_pixel(7, 38)},
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+            priority = "high",
+            width = 12,
+            height = 25,
+            line_length = 8,
+            frame_count = 48,
+            animation_speed = 0.5,
+            shift = util.by_pixel(4, 29),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+              priority = "high",
+              width = 23,
+              height = 50,
+              line_length = 8,
+              frame_count = 48,
+              animation_speed = 0.5,
+              shift = util.by_pixel(3, 29),
+              scale = 0.5,
+            }
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
+            priority = "high",
+            width = 60,
+            height = 43,
+            blend_mode = "additive",
+            shift = util.by_pixel(4, 37.5),
+            scale = 0.75,
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+            priority = "high",
+            width = 17,
+            height = 20,
+            blend_mode = "additive",
+            shift = util.by_pixel(4.5, 40),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+              priority = "high",
+              width = 34,
+              height = 40,
+              blend_mode = "additive",
+              shift = util.by_pixel(4.5, 40),
+              scale = 0.5,
+            }
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -305,16 +617,17 @@ data:extend(
       name = "blast-furnace-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-blast-furnace",
       order = "d[blast-furnace-4]",
       place_result = "blast-furnace-4",
@@ -325,16 +638,17 @@ data:extend(
       name = "blast-furnace-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/blast-furnace.png"
+          icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+          icon_size = 64
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "blast-furnace-4"},
       fast_replaceable_group = "blast-furnace",
@@ -343,6 +657,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -363,23 +678,124 @@ data:extend(
             starting_vertical_speed = 0.08,
             starting_frame_deviation = 60
           }
+        },
+        light_flicker = {
+          color = {0, 0, 0}
         }
       },
       energy_usage = "300kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace.png",
-        width = 224,
-        height = 224,
-        line_length = 5,
-        frame_count = 25,
-        shift = {0, 0},
-        animation_speed = 0.75
+        layers = {
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+            priority = "high",
+            width = 164,
+            height = 189,
+            shift = util.by_pixel(0, -14),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+              priority = "high",
+              width = 328,
+              height = 376,
+              shift = util.by_pixel(0, -13.5),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+            priority = "high",
+            width = 224,
+            height = 124,
+            shift = util.by_pixel(30, 20),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+              priority = "high",
+              width = 445,
+              height = 245,
+              shift = util.by_pixel(29, 19.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            } or nil
+          }
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          light = {intensity = 1, size = 2, color = {r = 1.0, g = 1.0, b = 1.0}, shift = util.by_pixel(7, 38)},
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+            priority = "high",
+            width = 12,
+            height = 25,
+            line_length = 8,
+            frame_count = 48,
+            animation_speed = 0.5,
+            shift = util.by_pixel(4, 29),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+              priority = "high",
+              width = 23,
+              height = 50,
+              line_length = 8,
+              frame_count = 48,
+              animation_speed = 0.5,
+              shift = util.by_pixel(3, 29),
+              scale = 0.5,
+            }
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
+            priority = "high",
+            width = 60,
+            height = 43,
+            blend_mode = "additive",
+            shift = util.by_pixel(4, 37.5),
+            scale = 0.75,
+          }
+        },
+        {
+          north_position = {0, 0},
+          east_position = {0, 0},
+          south_position = {0, 0},
+          west_position = {0, 0},
+          effect = "flicker",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+            priority = "high",
+            width = 17,
+            height = 20,
+            blend_mode = "additive",
+            shift = util.by_pixel(4.5, 40),
+            hr_version = {
+              filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+              priority = "high",
+              width = 34,
+              height = 40,
+              blend_mode = "additive",
+              shift = util.by_pixel(4.5, 40),
+              scale = 0.5,
+            }
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {

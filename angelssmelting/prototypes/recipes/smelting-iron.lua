@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-iron", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-iron]"
+      order = "b[processed-iron]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
@@ -356,7 +357,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-iron]-a"
+      order = "j[angels-roll-iron]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
@@ -401,7 +403,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-iron]-b"
+      order = "j[angels-roll-iron]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
@@ -442,7 +445,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-rod-stack-iron]-a"
+      order = "k[angels-rod-stack-iron]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
@@ -487,7 +491,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-rod-stack-iron]-b"
+      order = "k[angels-rod-stack-iron]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     -- CASTING RESULT
     {

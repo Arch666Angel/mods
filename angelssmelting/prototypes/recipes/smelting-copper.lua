@@ -19,7 +19,8 @@ data:extend(
         {type = "item", name = "processed-copper", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-copper]"
+      order = "b[processed-copper]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
     {
       type = "recipe",
@@ -212,7 +213,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "h[angels-roll-copper]-a"
+      order = "h[angels-roll-copper]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
     {
       type = "recipe",
@@ -258,7 +260,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "h[angels-roll-copper]-b"
+      order = "h[angels-roll-copper]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
     {
       type = "recipe",
@@ -299,7 +302,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-wire-coil-copper]-a"
+      order = "i[angels-wire-coil-copper]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
     {
       type = "recipe",
@@ -344,7 +348,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-wire-coil-copper]-b"
+      order = "i[angels-wire-coil-copper]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
     -- CASTING RESULT
     {

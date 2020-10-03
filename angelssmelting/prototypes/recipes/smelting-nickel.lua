@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-nickel", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-nickel]"
+      order = "b[processed-nickel]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
     {
       type = "recipe",
@@ -228,7 +229,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-nickel]-a"
+      order = "i[angels-roll-nickel]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
     {
       type = "recipe",
@@ -273,7 +275,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-nickel]-b"
+      order = "i[angels-roll-nickel]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
     -- CASTING RESULT
     {
