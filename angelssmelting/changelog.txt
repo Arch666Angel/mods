@@ -8,6 +8,7 @@ Date: ??
     - Added HQ graphics to the following machines, and tweaked their sounds: (???)
       - Ore processor, Pellet press, Powder mixer, Blast furnace, Chemical furnace
       - Induction furnace, Casting machine, Strand casting machine, Sintering oven
+      - Cooling tower
   Bugfixes:
     - Increased base_area on the fluid output of the casting machines (362)
 ---------------------------------------------------------------------------------------------------
