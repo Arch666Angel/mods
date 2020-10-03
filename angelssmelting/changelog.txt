@@ -5,7 +5,7 @@ Date: ??
     - Added Cobalt oxide from Cobalt ore (397)
     - Added Zinc oxide from Zinc ore (397)
     - Added Manganese oxide from Processed manganese (397)
-    - Added HQ graphics to the following machines, and tweaked their sounds: (???)
+    - Added HQ graphics to the following machines, and tweaked their sounds: (404)
       - Ore processor, Pellet press, Powder mixer, Blast furnace, Chemical furnace
       - Induction furnace, Casting machine, Strand casting machine, Sintering oven
       - Cooling tower
