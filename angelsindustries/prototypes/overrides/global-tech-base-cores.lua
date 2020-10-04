@@ -119,7 +119,6 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- WARFARE CORES --------------------------------------------------------------
   -------------------------------------------------------------------------------
-  OV.global_replace_item("military-science-pack", "angels-science-pack-green") -- do this as it was not possible before
   -- BASE GAME
   for rec_4tech, _ in pairs(data.raw.technology) do --fix follower robot count techs
     if string.find(rec_4tech, "follower") ~= nil and string.find(rec_4tech, "robot") ~= nil then
@@ -142,7 +141,6 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- PRODUCTION CORES -----------------------------------------------------------
   -------------------------------------------------------------------------------
-  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow") -- do this as it was not possible before
   -- BASE GAME
   OV.set_science_pack("concrete", "datacore-processing-1", 2)
   OV.set_science_pack("circuit-network", "datacore-processing-1", 2)
@@ -169,6 +167,7 @@ if angelsmods.industries.tech then
   -- now upgrade the cores to tier 2 and let them depend on the correct technology
   core_tier_upgrade()
   OV.execute()
+  
   -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
   tech_unlock_reset()
   OV.execute()

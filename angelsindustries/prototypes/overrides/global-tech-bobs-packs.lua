@@ -267,4 +267,6 @@ if angelsmods.industries.tech then
     end
     OV.disable_technology({"advanced-logistic-science-pack"})
   end
+
+  OV.execute()
 end

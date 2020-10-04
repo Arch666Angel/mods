@@ -1,6 +1,6 @@
-local OV = angelsmods.functions.OV
 --require("prototypes.overrides.industries-override-functions")
 if angelsmods.industries.tech then
+  local OV = angelsmods.functions.OV
   -------------------------------------------------------------------------------
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
@@ -271,4 +271,6 @@ if angelsmods.industries.tech then
       core_replace("steam-automation", "processing", "basic")
     end
   end
+
+  OV.execute()
 end
