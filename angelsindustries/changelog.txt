@@ -9,6 +9,8 @@ Date: ??
   Bugfixes:
     - Component mode:
       - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)
+      - Fixed that there would be two grey board recipes from paper when playing with bob
+        electronics mod (403)
     - Science mode:
       - Fixed that science pack were not replaced in recipe ingredients (400)
 ---------------------------------------------------------------------------------------------------

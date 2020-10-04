@@ -45,5 +45,10 @@ if angelsmods.industries.components then
       }
     )
   end
+
+  if mods["bobelectronics"] then
+    OV.disable_recipe("wooden-board-paper")
+  end
+  
   OV.execute()
 end
