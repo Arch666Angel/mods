@@ -5,6 +5,25 @@ local ov_functions = {}
 -- OVERRIDE DATA TABLES
 local substitution_table, disable_table, modify_table, override_table, patch_table
 -- HELPER FUNCTIONS
+local building_types = {
+  "assembling-machine",
+  "mining-drill",
+  "lab",
+  "furnace",
+  "offshore-pump",
+  "pump",
+  "rocket-silo",
+  "radar",
+  "beacon",
+  "boiler",
+  "generator",
+  "solar-panel",
+  "accumulator",
+  "reactor",
+  "electric-pole",
+  "wall",
+  "gate"
+}
 
 local function initialize_tables()
   substitution_table = {
@@ -415,6 +434,12 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
     end
   else
     substitution_table.recipe_items[old] = new
+    for _,type in pairs(building_types) do
+      --find type
+      if data.raw[type] and data.raw[type][old] and data.raw[type][new] then
+        angelsmods.functions.set_next_upgrade(type, old, new)
+      end
+    end
   end
 end
 

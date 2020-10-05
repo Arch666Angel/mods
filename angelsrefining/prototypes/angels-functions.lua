@@ -1380,12 +1380,17 @@ end
 -------------------------------------------------------------------------------
 function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_machine_name, next_upgrade)
   if not data.raw[crafting_machine_type] then return end
-
   local crafting_machine = data.raw[crafting_machine_type][crafting_machine_name]
+
   if not crafting_machine then return end
 
   crafting_machine.next_upgrade = next_upgrade
   if next_upgrade then
     angelsmods.functions.remove_flag(crafting_machine.minable and crafting_machine.minable.result or crafting_machine_name, "not-upgradable")
+    --i need to fetch the fast replace group from the new, and add it to the old...
+    --log(serpent.block(crafting_machine))
+    upgrade_group = crafting_machine.fast_replaceable_group
+    log(upgrade_group)
+    --log(serpent.block(data.raw))
   end
 end
