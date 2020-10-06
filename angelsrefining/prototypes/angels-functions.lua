@@ -1375,6 +1375,25 @@ function angelsmods.functions.remove_crafting_category(crafting_machine_type, cr
   end
 end
 
+local function box_equal(b1, b2)
+  if not (b1 and b2) then return false end
+
+  local function pos_equal(p1, p2)
+    if not (p1 and p2) then return false end
+
+    local p1x = p1.x or p1[1] or nil
+    local p2x = p2.x or p2[1] or nil
+    if not (p1x and p1x == p2x) then return false end
+
+    local p1y = p1.y or p1[2] or nil
+    local p2y = p2.y or p2[2] or nil
+
+    return (p1y and p1y == p2y)
+  end
+
+  if not pos_equal(b1.left_top or b1[1], b2.left_top or b2[1]) then return false end
+  return pos_equal(b1.right_bottom or b1[2], b2.right_bottom or b2[2])
+end
 -------------------------------------------------------------------------------
 -- MODIFY FAST_REPLACE_CATEGORY -----------------------------------------------
 -------------------------------------------------------------------------------
@@ -1392,13 +1411,11 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
 
   if FRC2 ~= nil then --change it
     crafting_machine1.fast_replaceable_group = FRC2
-    if crafting_machine1.collision_box[1][1] ~= crafting_machine2.collision_box[1][1] then
-      if crafting_machine1.collision_box[2][2] ~= crafting_machine2.collision_box[2][2] then
-        --boxes don't match... nil out the properties
-        crafting_machine1.fast_replaceable_group = nil
-        --clobber next_upgrade too
-        crafting_machine1.next_upgrade = nil
-      end
+    if not box_equal(crafting_machine1.collision_box, crafting_machine2.collision_box) then
+      --boxes don't match... nil out the properties
+      crafting_machine1.fast_replaceable_group = nil
+      --clobber next_upgrade too
+      crafting_machine1.next_upgrade = nil
     end
   else -- FRC2==nil
     crafting_machine2.fast_replaceable_group = FRC1 --transition 2 to 1?
