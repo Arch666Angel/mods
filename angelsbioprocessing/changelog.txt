@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.15
 Date: ??
+  Changes:
+    - Added recipe colors to the Bio processor (375)
   Bugfixes:
     - Fixed wrong localisation on the alienated fertilizer recipe
     - Some minor localisation changes to unify angels localisation across mods (372)
