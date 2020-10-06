@@ -1382,8 +1382,8 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
   --search for new category (if needed), skip if identical
   if not data.raw[crafting_machine_type] then return end
   local crafting_machine1 = data.raw[crafting_machine_type][crafting_machine_name]
-  local crafting_machine2 = data.raw[crafting_machine_type][next_upgrade]
   if not crafting_machine1 then return end
+  local crafting_machine2 = data.raw[crafting_machine_type][next_upgrade]
   if not crafting_machine2 then return end
   --get current FRC
   local FRC1 = crafting_machine1.fast_replaceable_group
