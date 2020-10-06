@@ -1388,10 +1388,9 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
   --get current FRC
   local FRC1 = crafting_machine1.fast_replaceable_group
   local FRC2 = crafting_machine2.fast_replaceable_group
+  if FRC1 == FRC2 then return end
 
-  if FRC1 == FRC2 then
-    --no need to change
-  elseif FRC2 ~= nil then --change it
+  if FRC2 ~= nil then --change it
     crafting_machine1.fast_replaceable_group = FRC2
     if crafting_machine1.collision_box[1][1] ~= crafting_machine2.collision_box[1][1] then
       if crafting_machine1.collision_box[2][2] ~= crafting_machine2.collision_box[2][2] then
