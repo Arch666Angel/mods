@@ -434,10 +434,13 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
     end
   else
     substitution_table.recipe_items[old] = new
-    for _,type in pairs(building_types) do
-      --find type
-      if data.raw[type] and data.raw[type][old] and data.raw[type][new] then
-        angelsmods.functions.set_next_upgrade(type, old, new)
+    for _, type in pairs(building_types) do
+      for name, entity in pairs(data.raw[type]) do
+        if entity and entity.next_upgrade then
+          if entity.next_upgrade==old then
+            angelsmods.functions.set_next_upgrade(type, name, new)
+          end
+        end
       end
     end
   end

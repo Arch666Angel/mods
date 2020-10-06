@@ -44,7 +44,6 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   pack_replace("armor-making-2", "green", "red") --move armour making down a tier
-  log(serpent.block(data.raw.technology["automation-2"]))
   pack_replace("automation-2", "green", "red")
   OV.remove_prereq("automation-2", "tech-green-packs")
   -- SMELTING

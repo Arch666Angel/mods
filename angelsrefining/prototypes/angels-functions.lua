@@ -1376,6 +1376,41 @@ function angelsmods.functions.remove_crafting_category(crafting_machine_type, cr
 end
 
 -------------------------------------------------------------------------------
+-- MODIFY FAST_REPLACE_CATEGORY -----------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine_name, next_upgrade)
+  --search for new category (if needed), skip if identical
+  if not data.raw[crafting_machine_type] then return end
+  local crafting_machine1 = data.raw[crafting_machine_type][crafting_machine_name]
+  local crafting_machine2 = data.raw[crafting_machine_type][next_upgrade]
+  if not crafting_machine1 then return end
+  if not crafting_machine2 then return end
+  --get current FRC
+  local FRC1 = crafting_machine1.fast_replaceable_group
+  local FRC2 = crafting_machine2.fast_replaceable_group
+
+  if FRC1 == FRC2 then
+    --no need to change
+  elseif FRC2 ~= nil then --change it
+    crafting_machine1.fast_replaceable_group = FRC2
+    if crafting_machine1.collision_box[1][1] ~= crafting_machine2.collision_box[1][1] then
+      if crafting_machine1.collision_box[2][2] ~= crafting_machine2.collision_box[2][2] then
+        --boxes don't match... nil out the properties
+        crafting_machine1.fast_replaceable_group = nil
+        --clobber next_upgrade too
+        crafting_machine1.next_upgrade = nil
+      else --set fast_replace group
+        if FRC ~= nil then
+          crafting_machine1.fast_replaceable_group = FRC2
+        end
+      end
+    end
+  else -- FRC2==nil
+    crafting_machine2.fast_replaceable_group = FRC1 --transition 2 to 1?
+  end
+end
+
+-------------------------------------------------------------------------------
 -- MODIFY NEXT_UPGRADE --------------------------------------------------------
 -------------------------------------------------------------------------------
 function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_machine_name, next_upgrade)
@@ -1387,10 +1422,7 @@ function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_m
   crafting_machine.next_upgrade = next_upgrade
   if next_upgrade then
     angelsmods.functions.remove_flag(crafting_machine.minable and crafting_machine.minable.result or crafting_machine_name, "not-upgradable")
-    --i need to fetch the fast replace group from the new, and add it to the old...
-    --log(serpent.block(crafting_machine))
-    upgrade_group = crafting_machine.fast_replaceable_group
-    log(upgrade_group)
-    --log(serpent.block(data.raw))
   end
+  --check upgrade_category
+  angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine_name, next_upgrade)
 end
