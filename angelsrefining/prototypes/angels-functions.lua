@@ -1398,10 +1398,6 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
         crafting_machine1.fast_replaceable_group = nil
         --clobber next_upgrade too
         crafting_machine1.next_upgrade = nil
-      else --set fast_replace group
-        if FRC ~= nil then
-          crafting_machine1.fast_replaceable_group = FRC2
-        end
       end
     end
   else -- FRC2==nil
