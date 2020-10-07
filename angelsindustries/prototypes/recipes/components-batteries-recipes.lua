@@ -21,7 +21,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name= "battery-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -41,7 +41,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name= "battery-2", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -61,7 +61,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name= "battery-3", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -81,7 +81,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name= "battery-4", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -101,7 +101,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name= "battery-5", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -121,7 +121,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name= "battery-6", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -146,7 +146,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icons =
       {
         {
@@ -176,7 +176,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-frame-1", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -194,7 +194,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-anode-1", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -212,7 +212,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-1", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -230,7 +230,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-1", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -255,7 +255,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icons =
       {
         {
@@ -284,7 +284,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-frame-2", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -302,7 +302,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-anode-2", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -320,7 +320,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-2", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -338,7 +338,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-2", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -364,7 +364,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-2", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -381,7 +381,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-2", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },]]
     -----------------------------------------------------------------------------
@@ -406,7 +406,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icons =
       {
         {
@@ -435,7 +435,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-frame-3", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -453,7 +453,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-anode-3", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -472,7 +472,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-3", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -490,7 +490,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-3", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -517,7 +517,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icons =
       {
         {
@@ -546,7 +546,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-frame-4", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -564,7 +564,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-anode-4", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -583,7 +583,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-4", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -601,7 +601,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-4", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -628,7 +628,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icons =
       {
         {
@@ -657,7 +657,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-frame-5", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -677,7 +677,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-anode-5", amount = 3},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -697,7 +697,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-5", amount = 3},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -715,7 +715,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-5", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -740,7 +740,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-casing", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icons =
       {
         {
@@ -769,7 +769,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-frame-6", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -787,7 +787,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-anode-6", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -805,7 +805,7 @@ if angelsmods.industries.components then
       {
         {type = "item", name = "battery-cathode-6", amount = 1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     {
@@ -822,7 +822,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-6", amount = 10},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 64,
     },
     -----------------------------------------------------------------------------

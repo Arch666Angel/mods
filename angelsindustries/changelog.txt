@@ -8,6 +8,7 @@ Date: ??
       - Added a new battery component with intermediate parts (397)
       - Added new rocket recipe with new intermediate components
       - Integrated deuterium fuel cell 2 to have a stable infinite nuclear fuel cell (386)
+      - Components will now show their total raw (352)
   Bugfixes:
     - Component mode:
       - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)
