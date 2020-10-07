@@ -1409,9 +1409,11 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
   local FRC2 = crafting_machine2.fast_replaceable_group
   if FRC1 == FRC2 then return end
 
-  if FRC2 ~= nil then --change it
-    crafting_machine1.fast_replaceable_group = FRC2
-    if not box_equal(crafting_machine1.collision_box, crafting_machine2.collision_box) then
+  if FRC2 then --change it
+    if box_equal(crafting_machine1.collision_box, crafting_machine2.collision_box) then
+      crafting_machine1.fast_replaceable_group = FRC2
+      angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine1.next_upgrade, crafting_machine1.name)
+    else
       --boxes don't match... nil out the properties
       crafting_machine1.fast_replaceable_group = nil
       --clobber next_upgrade too
@@ -1419,6 +1421,7 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
     end
   else -- FRC2==nil
     crafting_machine2.fast_replaceable_group = FRC1 --transition 2 to 1?
+    angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine2.next_upgrade, crafting_machine2.name)
   end
 end
 
