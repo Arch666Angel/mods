@@ -50,5 +50,33 @@ if angelsmods.industries.components then
     OV.disable_recipe("wooden-board-paper")
   end
   
+  if mods["bobrevamp"] then
+    -- add 1000 heat shields to rocket
+    OV.patch_recipes(
+      {
+        {
+          name = "angels-rocket-ion-thruster",
+          ingredients = {
+            { type = "item", name = "heat-shield-tile", amount = 20}
+          }
+        },
+        {
+          name = "angels-rocket-ion-booster",
+          ingredients = {
+            { type = "item", name = "heat-shield-tile", amount = 50}
+          }
+        },
+        {
+          name = "angels-rocket-hull",
+          ingredients = {
+            { type = "item", name = "heat-shield-tile", amount = 25}
+          }
+        },
+      }
+    )
+    OV.add_prereq("angels-rocket-ion-thruster", "ion-thruster")
+    OV.add_prereq("angels-rocket-hull", "heat-shield")
+  end
+
   OV.execute()
 end

@@ -44,6 +44,7 @@ require("prototypes.items.components-blocks")
 require("prototypes.items.components-weapons")
 require("prototypes.items.components-cabling")
 require("prototypes.items.components-batteries")
+require("prototypes.items.components-rocket")
 --RECIPES
 require("prototypes.recipes.components-electronics-recipes")
 require("prototypes.recipes.components-mechanical-recipes")
@@ -52,6 +53,7 @@ require("prototypes.recipes.components-cabling-recipes")
 require("prototypes.recipes.components-blocks-recipes")
 require("prototypes.recipes.components-weapons-recipes")
 require("prototypes.recipes.components-batteries-recipes")
+require("prototypes.recipes.components-rocket-recipes")
 --ENTITIES
 --require("prototypes.buildings.angels-assemblers")
 --TECHS
@@ -61,6 +63,7 @@ require("prototypes.technology.components-construction-technology")
 require("prototypes.technology.components-weapons-technology")
 require("prototypes.technology.components-cabling-technology")
 require("prototypes.technology.components-batteries-technology")
+require("prototypes.technology.components-rocket-technology")
 
 --TECH OVERHAUL  -------------------------------------------------------
 --ITEMS

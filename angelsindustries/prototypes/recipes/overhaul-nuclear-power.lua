@@ -37,23 +37,27 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 2/3,
         shift = {5,7}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
@@ -89,23 +93,27 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/americium-241.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 2/3,
         shift = {5,7}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
@@ -137,24 +145,28 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__base__/graphics/icons/uranium-processing.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64,
         tint = {a=0.01},
       },
       {
         icon = "__angelssmelting__/graphics/icons/ore-thorium.png",
         icon_size = 64,
+        icon_mipmaps = 1, --unsure
         scale = 32/64 * 40/64,
         shift = {0,-6}
       },
       {
         icon = "__angelsindustries__/graphics/icons/thorium-232.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 32/64,
         shift = {-8,8}
       },
       {
         icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 32/64,
         shift = {8,8}
       },
@@ -228,27 +240,31 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/used-up-uranium-fuel-cell.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 2/3,
         shift = {5,7}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
-    icon_size = 32,
+    --icon_size = 32,
     order = "a[uranium]-d", -- "a[uranium]-c" reserved for vanilla reprocessing
     crafting_machine_tint = 
     {
@@ -309,27 +325,31 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/americium-241.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 2/3,
         shift = {5,7}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
-    icon_size = 32,
+    --icon_size = 32,
     order = "b[AMOX]-b",
     crafting_machine_tint = 
     {
@@ -362,33 +382,38 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/used-up-plutonium-fuel-cell.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/plutonium-239.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 0.58,
         shift = {7.5,3}
       },
       {
         icon = "__angelsindustries__/graphics/icons/curium-245.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 0.58,
         shift = {2,9}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
-    icon_size = 32,
+    --icon_size = 32,
     order = "b[AMOX]-c",
     crafting_machine_tint = 
     {
@@ -479,33 +504,38 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/used-up-thorium-fuel-cell.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 0.58,
         shift = {7.5,3}
       },
       {
         icon = "__angelsindustries__/graphics/icons/thorium-232.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 0.58,
         shift = {2,9}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
-    icon_size = 32,
+    --icon_size = 32,
     order = "c[thorium]-c",
     crafting_machine_tint = 
     {
@@ -538,33 +568,38 @@ data:extend(
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/used-up-thorium-fuel-cell.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/neptunium-240.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 0.58,
         shift = {7.5,3}
       },
       {
         icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64 * 0.48,
         shift = {2,9}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
-    icon_size = 32,
+    --icon_size = 32,
     order = "c[thorium]-d",
     crafting_machine_tint = 
     {
@@ -572,7 +607,7 @@ data:extend(
     },
   },
   --DEUTERIUM FUEL
-  --fuel cell
+  -- fuel cell
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
@@ -600,7 +635,7 @@ data:extend(
       primary = tint_colors.blue,
     },
   },
-  --reprocessing
+  -- reprocessing
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell-reprocessing",
@@ -616,35 +651,101 @@ data:extend(
     {
       {type = "item", name = "slag", amount = 5},
       {type = "item", name = "angels-muon-fusion-catalyst", amount = 4, catalyst_amount = 4}, -- make it lose 1%; 99% of 5 = 4.95 return
-      {type = "item", name = "angels-muon-fusion-catalyst", amount = 1, catalyst_amount = 1, probability=0.95},
+      {type = "item", name = "angels-muon-fusion-catalyst", amount = 1, catalyst_amount = 1, probability=0.95, show_details_in_recipe_tooltip=false},
     },
     icons = 
     {
       { -- need to have something as bottom layer
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
       {
         icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
         icon_size = 64,
+        icon_mipmaps = 4,
         scale = 32/64 * 45/64,
         shift = {-7,-5}
       },
       {
         icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64 * 0.5,
         shift = {5,7}
       },
       {
         icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
         icon_size = 64,
+        icon_mipmaps = 1,
         scale = 32/64
       },
     },
-    icon_size = 32,
+    --icon_size = 32,
     order = "d[deuterium]-b",
+    crafting_machine_tint = 
+    {
+      primary = tint_colors.blue,
+    },
+  },
+  -- advanced reprocessing
+  {
+    type = "recipe",
+    name = "angels-advanced-deuterium-fuel-cell-reprocessing",
+    enabled = false,
+    category = "centrifuging",
+    subgroup = "angels-power-nuclear-fuel-cell",
+    energy_required = 800, --6000
+    ingredients =
+    {
+      {type = "item", name = "used-up-angels-deuterium-fuel-cell", amount = 10},
+      {type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60},
+    },
+    results=
+    {
+      {type = "item", name = "slag", amount = 5},
+      {type = "fluid", name = "water-greenyellow-waste", amount = 60},
+      {type = "item", name = "angels-muon-fusion-catalyst", amount = 10, catalyst_amount = 10},
+    },
+    icons = 
+    {
+      { -- need to have something as bottom layer
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        icon_mipmaps = 1,
+        scale = 32/64
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/used-up-deuterium-fuel-cell.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 32/64 * 45/64,
+        shift = {-7,-5}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
+        icon_size = 64,
+        icon_mipmaps = 1,
+        scale = 32/64 * 0.58,
+        shift = {7.5,3}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/fusion-catalyst.png",
+        icon_size = 64,
+        icon_mipmaps = 1,
+        scale = 32/64 * 0.48,
+        shift = {2,9}
+      },
+      {
+        icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+        icon_size = 64,
+        icon_mipmaps = 1,
+        scale = 32/64
+      },
+    },
+    --icon_size = 32,
+    order = "d[deuterium]-c",
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,

@@ -5,7 +5,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- NO CORES -------------------------------------------------------------------
   -------------------------------------------------------------------------------
-  OV.remove_science_pack("rocket-silo", "datacore-processing-1")
+  OV.remove_science_pack("rocket-silo", "datacore-war-1")
   OV.execute()
 
   -- catch most of the cores with the core builder
@@ -61,6 +61,8 @@ if angelsmods.industries.tech then
   core_replace("bio-refugium-biter-1", "processing", "exploration")
   core_replace("bio-refugium-biter-2", "processing", "exploration")
   core_replace("bio-refugium-biter-3", "processing", "exploration")
+  -- INDUSTRIES
+  core_replace("angels-rocket", "war", "exploration")
   -- EXPLORATION
   OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
   -- CAB ADDONS
@@ -84,6 +86,8 @@ if angelsmods.industries.tech then
   core_replace("follower-robot-count-7", "war", "enhance")
   -- PETROCHEM
   core_replace("angels-rocket-fuel", "war", "enhance")
+  -- INDUSTRIES
+  core_replace("angels-rocket-hull", "war", "enhance")
 
   -------------------------------------------------------------------------------
   -- ENERGY CORES ---------------------------------------------------------------
@@ -95,6 +99,8 @@ if angelsmods.industries.tech then
   core_replace("nuclear-fuel-reprocessing", "processing", "energy")
   -- PETROCHEM
   core_replace("nuclear-fuel", "processing", "energy")
+  -- INDUSTRIES
+  core_replace("angels-rocket-fusion-reactor", "war", "energy")
 
   -------------------------------------------------------------------------------
   -- LOGISTIC CORES -------------------------------------------------------------
@@ -106,6 +112,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
+  core_replace("angels-rocket-ion-thruster", "war", "logistic")
   -- PRESSURE TANKS ADDONS
   if mods["angelsaddons-pressuretanks"] --[[angelsmods.addons.pressuretanks]] then
     OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)

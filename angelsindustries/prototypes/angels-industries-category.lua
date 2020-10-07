@@ -204,6 +204,12 @@ data:extend(
       group = "angels-components",
       order = "i[battery]-e"
     },
+    {
+      type = "item-subgroup",
+      name = "angels-rocket",
+      group = "angels-components",
+      order = "j[rocket]-b"
+    },
     ---------------------------------------------------------------------------
     -- ANGELS BLOCKS ----------------------------------------------------------
     ---------------------------------------------------------------------------

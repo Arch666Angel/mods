@@ -6,6 +6,8 @@ Date: ??
       - Some minor localisation changes to unify angels localisation across mods (372)
     - Component mode:
       - Added a new battery component with intermediate parts (397)
+      - Added new rocket recipe with new intermediate components
+      - Integrated deuterium fuel cell 2 to have a stable infinite nuclear fuel cell (386)
   Bugfixes:
     - Component mode:
       - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)

@@ -6,9 +6,9 @@ local OV = angelsmods.functions.OV
 if angelsmods.industries.tech then
   if mods["bobplates"] then
     pack_replace("battery-2", "blue", "orange")
-    OV.remove_prereq("battery-2", "chemical-science-pack")
+    OV.remove_prereq("battery-2", "tech-blue-packs")
     pack_replace("gem-processing-2", "blue", "orange")
-    OV.remove_prereq("gem-processing-2", "chemical-science-pack")
+    OV.remove_prereq("gem-processing-2", "tech-blue-packs")
     OV.remove_science_pack("lubricant", "angels-science-pack-green")
 
     if not mods["bobtech"] then --alien resources
@@ -34,7 +34,7 @@ if angelsmods.industries.tech then
     -- assemblers tier 2+
     OV.add_prereq("automation-3", "tech-orange-circuit")
     pack_replace("automation-4", "blue", "orange")
-    OV.remove_prereq("automation-4", "chemical-science-pack")
+    OV.remove_prereq("automation-4", "tech-blue-packs")
     OV.add_prereq("automation-4", "tech-orange-packs")
     OV.add_prereq("automation-4", "tech-blue-circuit")
     --chemplants
@@ -51,7 +51,7 @@ if angelsmods.industries.tech then
     --distillery
     if settings.startup["bobmods-assembly-distilleries"].value then
       pack_replace("bob-distillery-3", "blue", "orange")
-      OV.remove_prereq("bob-distillery-3", "chemical-science-pack")
+      OV.remove_prereq("bob-distillery-3", "tech-blue-packs")
       OV.add_prereq("tech-blue-circuit", "bob-distillery-3")
     end
   end
@@ -83,7 +83,7 @@ if angelsmods.industries.tech then
     --axe(s)
     if settings.startup["bobmods-mining-miningaxes"].value == true then
       pack_replace("steel-axe-4", "blue", "orange")
-      OV.remove_prereq("steel-axe-4", "chemical-science-pack")
+      OV.remove_prereq("steel-axe-4", "tech-blue-packs")
     end
   end
 
@@ -107,11 +107,11 @@ if angelsmods.industries.tech then
     pack_replace("bob-repair-pack-5", "green", "yellow")
     -- toolbelts
     pack_replace("toolbelt-2", "blue", "orange")
-    OV.remove_prereq("toolbelt-2", "chemical-science-pack")
+    OV.remove_prereq("toolbelt-2", "tech-blue-packs")
     -- modular roboports
     pack_replace("bob-robo-modular-1", "green", "orange")
     pack_replace("bob-robo-modular-2", "blue", "orange")
-    OV.remove_prereq("bob-robo-modular-2", "chemical-science-pack")
+    OV.remove_prereq("bob-robo-modular-2", "tech-blue-packs")
     -- inserter techs
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.remove_prereq("stack-inserter", "tech-orange-circuit")
@@ -152,7 +152,7 @@ if angelsmods.industries.tech then
     pack_replace("bob-laser-turrets-2", "green", "orange")
     pack_replace("bob-plasma-turrets-2", "green", "orange")
     pack_replace("bob-sniper-turrets-2", "blue", "orange")
-    OV.remove_prereq("bob-sniper-turrets-2", "chemical-science-pack")
+    OV.remove_prereq("bob-sniper-turrets-2", "tech-blue-packs")
     if mods["angelsexploration"] then
       pack_replace("angels-rocket-turret", "green", "orange")
     end
