@@ -1,7 +1,13 @@
 script.on_init(function()
-  if remote.interfaces["freeplay"] then
+  if remote.interfaces["freeplay"] then -- give ore crushers
     local items_to_insert = remote.call("freeplay", "get_created_items")
     items_to_insert["burner-ore-crusher"] = (items_to_insert["burner-ore-crusher"] or 0) + 1
+    remote.call("freeplay", "set_created_items", items_to_insert)
+  end
+
+  if game.active_mods["bobclasses"] then -- give an extra miner
+    local items_to_insert = remote.call("freeplay", "get_created_items")
+    items_to_insert["burner-mining-drill"] = (items_to_insert["burner-mining-drill"] or 0) + 1 -- 2 additional plates
     remote.call("freeplay", "set_created_items", items_to_insert)
   end
 end)
