@@ -15,7 +15,7 @@ if angelsmods.industries.components then
           {type = "item", name = "copper-cable", amount = 1}
         },
         result = "circuit-resistor",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       --{
@@ -235,7 +235,7 @@ if angelsmods.industries.components then
           {type = "item", name = "wood", amount = 1}
         },
         result = "circuit-grey-board",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -252,7 +252,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "circuit-grey-board", amount = 2}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32,
         order = "g"
       },
@@ -266,7 +266,7 @@ if angelsmods.industries.components then
           {type = "item", name = "solid-paper", amount = 1}
         },
         result = "circuit-red-board",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -336,7 +336,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-wire-copper", amount = 3}
         },
         result = "circuit-grey",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -350,7 +350,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-wire-copper", amount = 3}
         },
         result = "circuit-red",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -423,7 +423,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-solder", amount = 1}
         },
         result = "circuit-red-loaded",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {

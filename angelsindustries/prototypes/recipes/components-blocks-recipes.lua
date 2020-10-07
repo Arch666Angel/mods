@@ -19,7 +19,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-construction-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -112,7 +112,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-electronics-0", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -133,7 +133,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-electronics-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -234,7 +234,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-fluidbox-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -273,7 +273,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-mechanical-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -314,7 +314,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-enhancement-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -417,7 +417,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-energy-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -520,7 +520,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-exploration-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -623,7 +623,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-logistic-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -726,7 +726,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-production-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
@@ -1078,7 +1078,7 @@ if angelsmods.industries.components then
       {
         {type="item", name="block-warfare-1", amount=1},
       },
-      allow_decomposition = false,
+      allow_decomposition = true,
       icon_size = 32,
     },
     {
