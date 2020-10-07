@@ -11,6 +11,7 @@ Date: ??
     - Small tweak to component mode recipe of Floatation cell 1
     - Fixed localisation of ore refining descriptions (376)
     - Fixed crash with angels migration script library (383)
+    - Fixed not being able to manually crush and processing trees with bob classes (366)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020
