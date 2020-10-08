@@ -1,0 +1,4069 @@
+[33mcommit 82cd655fa468352ccd5881781267941d9b582648[m[33m ([m[1;36mHEAD -> [m[1;32mtotal_raw[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Thu Oct 8 11:10:54 2020 +0200
+
+    Added Inline storage tank as an option when playing without Angels petrochem (#387)
+
+[33mcommit f2b76f67e10edcd4600ebf75b0a4ec849f4af777[m[33m ([m[1;31morigin/total_raw[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Oct 7 19:24:35 2020 +0200
+
+    Components will now show their total raw (#352)
+
+[33mcommit 070469697e8bb4e5475b40c65429341817de13aa[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Oct 7 17:27:03 2020 +0200
+
+    Fixed not being able to manually crush and processing trees with bob classes (#366)
+
+[33mcommit daee2239b93f649238ee881d23b2235d81f03010[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Oct 7 16:28:42 2020 +0200
+
+    integrated deuterium 2 recipe with rocket components as a sink for muon catalysts
+
+[33mcommit 9f4e4283c48533a2e37657f2f4bba4ee37d11476[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Tue Oct 6 13:53:01 2020 +0200
+
+    Added recipe colors to the Bio processor (#375)
+
+[33mcommit 6db240c4480c772b7b1f09e45dd81ce9907a16ba[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 4 17:46:28 2020 +0200
+
+    Fixed angels smelting train recipes
+
+[33mcommit a4424d36a9da8b42713ae6f7be36164e94e1652f[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 4 15:48:28 2020 +0200
+
+    Fixed duplicate grey board recipe when playing with bob electronics
+
+[33mcommit 5c8555fd585b89fde43b3e4faec74a3475c97681[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 4 15:33:32 2020 +0200
+
+    Fixed conditional includes and cleaned up science mode (#402)
+
+[33mcommit 696bab5cf5bfb9eaa0a9e4b46fb52b109fc7596a[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sat Oct 3 23:05:25 2020 +0200
+
+    icon tweaks
+
+[33mcommit 225210c325cb1eaf3b3f0b04d5cba5980d49787f[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sat Oct 3 22:36:58 2020 +0200
+
+    Added HQ graphics to angelssmelting buildings (#404)
+
+[33mcommit 9bf279a59f05b7d485a82881928a72775d1b961d[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Sat Oct 3 05:51:35 2020 -0400
+
+    possible fix mp bug
+
+[33mcommit 2548330e8c0d4b43895bf57cb0ea97cacc2ff7a3[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Thu Oct 1 14:49:07 2020 +0200
+
+    Fixed crash with angels migration script library (#383)
+
+[33mcommit 9b8ba55cdaba8c87e55cbd5a4cd387676c21b135[m
+Author: Adoa Coturnix <adoa@users.noreply.github.com>
+Date:   Thu Oct 1 08:06:11 2020 -0400
+
+    Fixed typos and inconsistencies in many locale strings (#372)
+
+[33mcommit 07c876c7bb483fe8f402f465ebcb2c555297123d[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Thu Oct 1 13:10:30 2020 +0200
+
+    Fixed localisation of ore refining descriptions (#376)
+
+[33mcommit 797737e84bb2c98d521e2f79eb3951c0df5c59eb[m
+Author: Donald Andrew Bronson <donald.andrew.bronson@gmail.com>
+Date:   Wed Sep 30 15:47:22 2020 -0500
+
+    Fix base game science packs not being replaced in recipes (#400)
+
+[33mcommit 07b05545452e924dcef36aaa544d773e28b7d957[m
+Author: Donald Andrew Bronson <donald.andrew.bronson@gmail.com>
+Date:   Wed Sep 30 14:57:41 2020 -0500
+
+    Rename Check valve to Inspector valve (#399)
+
+[33mcommit 7a1b75de75833b47282d1276ac3a017441609b95[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Sep 28 23:41:31 2020 +0200
+
+    some edge cases (#367)
+
+[33mcommit 3dd790d7cec8193abca6504419fb7427c403db75[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Sep 28 23:35:58 2020 +0200
+
+    Added changelog entry for heavy tank tree immunity (#374)
+
+[33mcommit 17eca39912357ae5ec4c748468bfe72513394848[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Sep 28 23:29:35 2020 +0200
+
+    Changed air resistance of tender locomotives (#384)
+
+[33mcommit ca03205da3806ee938f98a9f1c4d88f72ae2076d[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Sep 28 23:26:13 2020 +0200
+
+    Fixed issues where you could not paste color onto smelting cargo wagons (#390)
+
+[33mcommit 29f0df9823a04c454aea377cf0d787046a1241e2[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Sep 28 22:25:36 2020 +0200
+
+    Moved explosive cannon turret shells research to Military 4 (#395)
+
+[33mcommit ff2790620969524c8796ff112e07586d1474afd6[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Sep 28 22:15:34 2020 +0200
+
+    New game message to inform player of map gen settings (#388)
+
+[33mcommit 30bd833bc076a39e8cc752006cc9528cbc528662[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Tue Sep 29 05:31:40 2020 +1000
+
+    Added a new battery component with intermediate parts (#397)
+
+[33mcommit 9282b08ffebf8d7f579759e29363c700514440b3[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Mon Sep 21 00:07:37 2020 -0400
+
+    moved global override to the end of data updates
+
+[33mcommit 93b5518053529513f2c9e2796938965d0dfa1546[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Wed Sep 16 12:58:33 2020 +1000
+
+    #374 tank collision immunity
+
+[33mcommit 4d88e61dc37ecffcef33498f1a36fff7d3316f36[m
+Merge: 5a5540e d55a23f
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Tue Sep 15 04:07:55 2020 -0400
+
+    Merge pull request #392 from Arch666Angel/Make-tech-prereq-contiguous-again
+    
+    Make tech prereq contiguous
+
+[33mcommit d55a23f803c6b31289d7a7cf5ff6ad1535ca3811[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Tue Sep 15 09:58:50 2020 +0200
+
+    Update global-tech-cleanup.lua
+
+[33mcommit 5a5540e856555a72959393354e240294fc9d4fe9[m
+Merge: ab07c87 9d7d817
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Sat Sep 12 20:41:51 2020 -0400
+
+    Merge pull request #391 from adoa/jax_rotation
+    
+    Deactivate rotation for Jax tank
+
+[33mcommit 9d7d817963bc691dcae9a4d8b8c0802311207f62[m
+Author: Adoa Coturnix <adoa@ctrnx.de>
+Date:   Sat Sep 12 13:50:46 2020 -0400
+
+    Adjusted version number and changelog
+
+[33mcommit c369ca7a585c962444f2ea76f9e0f41621105d3c[m
+Author: Adoa Coturnix <adoa@ctrnx.de>
+Date:   Fri Sep 11 18:31:17 2020 -0400
+
+    Make Jax tank not rotatable
+
+[33mcommit 3e2198147eb75fec8db136a93a0eb2739de1ee64[m
+Merge: 70136a9 ab07c87
+Author: Adoa Coturnix <adoa@users.noreply.github.com>
+Date:   Fri Sep 11 18:19:31 2020 -0400
+
+    Merge pull request #2 from Arch666Angel/dev
+    
+    Dev
+
+[33mcommit ab07c872ef6c43fa4f8807defb73eb95d6f665ec[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Tue Sep 8 09:55:44 2020 +0200
+
+    Releasing angels mobility fix
+
+[33mcommit 4b70b3b8e9ecff8bf107c0258601095319b176c8[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Mon Sep 7 05:01:29 2020 -0400
+
+    readd recipes to make rocket boosters with ammonium perchlorate
+
+[33mcommit ae723ee947c0947a950a92840aaed38efa108ad1[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Aug 30 11:48:52 2020 +1000
+
+    update stiratite icon_size
+
+[33mcommit 8b0ad96b92854b17a4d889bb0d048e9ead8dd20a[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Fri Aug 28 00:35:24 2020 +0200
+
+    Fixed missing localisation on alienated fertilizer recipe
+
+[33mcommit 32e07a56aafd5b25b1d9de4ea942323e310fc5d0[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Tue Aug 25 19:27:17 2020 +0200
+
+    fixed geode processing 2 could not be researched without smelting mod present
+
+[33mcommit f601a234d294f81567016e627cc32753af5c0eec[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Tue Aug 25 16:26:51 2020 +0200
+
+    Fixed crashes when playing stand alone (without the angels mods)
+
+[33mcommit cc908ff43c68fcbb35442c1fcba58bd596f84598[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Tue Aug 25 16:18:23 2020 +0200
+
+    the 6 addons are officially deprecated and replaced by the 2 new addons
+
+[33mcommit b0c1ecad3cb397e0591209f289a96a8e6440f86d[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Sat Aug 22 15:48:37 2020 +0200
+
+    Fixed solid-resin item localisation (#364)
+
+[33mcommit 3276a2d3686f2cc951f2b932542af303a65a1651[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Sat Aug 22 15:09:58 2020 +0200
+
+    Increased base_area on the fluid output of the casting machines (#362)
+
+[33mcommit 4441c0521e4e51f26edf073dc78b00442e84fc11[m
+Merge: 70136a9 e9e39a2
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Thu Aug 20 16:18:27 2020 +0200
+
+    Merge branch 'master', remote-tracking branch 'origin' into dev
+
+[33mcommit 70136a9abb6ff2d6ff3c5c9b9faf5650df2e20ad[m[33m ([m[1;33mtag: v0.18.8b[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 1a629fb 3583a8b
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Fri Aug 21 00:13:47 2020 +1000
+
+    Merge pull request #360 from Arch666Angel/dev
+    
+    Release bugfix patch 2 (1.0 release)
+
+[33mcommit 3583a8bca7cf1cd581f37b7ce97cb5c8f13d2f49[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Thu Aug 20 16:07:56 2020 +0200
+
+    fixed steel smelting 2 could not be researched without manganese present
+
+[33mcommit bbc2ef95d092bfaccbcf1c1c928898d4d727a341[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Thu Aug 20 15:47:57 2020 +0200
+
+    added localisation to the crash site lab item
+
+[33mcommit d125965474f4c505453ad384e38abc732bf8e1b5[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Thu Aug 20 10:30:10 2020 +0200
+
+    updated changelogs
+
+[33mcommit 82672cdfcdc32df01b9a8c74171cd32b952bed13[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Thu Aug 20 09:34:29 2020 +0200
+
+    Added combined mods to readme
+
+[33mcommit 2a53c119e6a8b4eec36f4adf4321d7134689c67f[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Thu Aug 20 12:14:49 2020 +1000
+
+    Train consolidation (#361)
+    
+    * Initial Combination
+    
+    Cab
+    Smelting Train
+    Petro Train
+    Crawler Train
+    All functional including "off settings"
+    
+    * Removed CAB from draft
+    
+    * missed one
+    
+    * Added AngelsStorage
+    
+    * added thumbnails
+    
+    * added initial changelog and set version number
+    
+    Co-authored-by: LaurensScheldeman <laurens.scheldeman@gmail.com>
+
+[33mcommit 99bef4206ea0e45fd2253d0f55ba54931297fa32[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Aug 19 11:05:09 2020 +0200
+
+    Update README.md
+
+[33mcommit 16cbe95283893e8fbfb10e2faffcf5e7aed36240[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Aug 19 11:04:52 2020 +0200
+
+    Added discord link
+
+[33mcommit 3230e52c58e23075bc3029e76455efff256931fa[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Wed Aug 19 10:41:44 2020 +0200
+
+    renamed the crash site lab and added fires/explosions to it
+
+[33mcommit f875ca2422e586187c5b6ecd76e50fc1141ff2f7[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Tue Aug 18 23:10:06 2020 +0200
+
+    Added lab to the crash site
+    
+    instead of just giving it in your inventory
+
+[33mcommit 40701916b6983c76eacde398224a1ebd2ab72ebb[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Mon Aug 17 23:42:43 2020 +0200
+
+    start some work on crawlertron
+
+[33mcommit e9e39a2d793862af0df35d1f16a9e7d4a4507f7d[m
+Author: LaurensScheldeman <laurens.scheldeman@gmail.com>
+Date:   Mon Aug 17 23:42:01 2020 +0200
+
+    start some work on crawlertron
+
+[33mcommit 9560cc116a11613e8d54a86b00b2ea108c655035[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Aug 16 11:16:00 2020 +1000
+
+    typos
+
+[33mcommit 005514a24b8d143458e4805ab64079b9096211d5[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Aug 16 10:58:48 2020 +1000
+
+    Migration for fluid changes
+
+[33mcommit adadf1f016fd8c285e317e71b947cf7b96568e8f[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Aug 16 01:13:31 2020 +1000
+
+    Condensed several gasses #323
+
+[33mcommit 22c9fc572964960b7a9eff7bd29dc7b16a5f3b78[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Aug 16 00:34:44 2020 +1000
+
+    Fixed properly, and revert superfluous changes
+
+[33mcommit c84b586637bddea25f09484caf88e2cdc25d5545[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Aug 16 00:18:40 2020 +1000
+
+    fixed lubricant pre-req issue
+
+[33mcommit 3b903c09f4d9a1c97539b7ec5a3e2f03d966dd2b[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Aug 15 23:18:26 2020 +1000
+
+    pre_req check and start-up scripts
+
+[33mcommit 2074ef04dacc25c6e34726caa72e7fbb13347f59[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Aug 3 20:50:05 2020 +1000
+
+    some more icon size definition changes
+
+[33mcommit 4cb02ab26b0729b18ab6cb592d8562916175f093[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Aug 3 18:57:48 2020 +1000
+
+    Fixed Lithia Water icon size error
+
+[33mcommit ff2ae609e601cc16d5a86f3fc5aded3e982eaf59[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Jul 29 16:20:05 2020 +0200
+
+    added resin mold casing (#356)
+    
+    used instead of the iron motor casing
+
+[33mcommit 98728ee32fa3cd64de513c6fc21b1786371ebf6b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Jul 29 15:36:53 2020 +0200
+
+    Increased stack size of the angel lamp from 10 to 50 (#353)
+
+[33mcommit 0b6c3c72fbecf66fe126a718b3b3b99f231256e9[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Jul 29 15:32:31 2020 +0200
+
+    Fixed crash related to labs having invalid input definitions (#355)
+
+[33mcommit 3920c846a45c743d37c8b787d9242c94f6ca095d[m
+Author: maxreader <60635199+maxreader@users.noreply.github.com>
+Date:   Mon Jul 27 15:00:49 2020 -0500
+
+    Added map gen setting to choose biter size between none and 'normal' (#354)
+
+[33mcommit 8b77199e519978a79def527be86a599ef55535bf[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Jul 20 21:40:34 2020 +0200
+
+    Refining name consistency (#348, #349)
+
+[33mcommit 44b99e37f041c34696c385b2f0cd0df9265ed77f[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Jul 17 12:35:25 2020 +0200
+
+    update readme
+
+[33mcommit 1a629fbbd112fb95b82fb86d3adfa996ebd1ca27[m[33m ([m[1;33mtag: v0.18.8a[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Fri Jul 17 12:21:08 2020 +0200
+
+    Release bugfixes patch 1 for v0.18.8 (#347)
+
+[33mcommit 82698821780c38aaca3e9b39dc3e6fb2b764d7ff[m[33m ([m[1;33mtag: v0.18.8[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Fri Jul 10 11:31:35 2020 +0200
+
+    Release 0.18.8 (#338)
+
+[33mcommit 5ec5bf9c336cf39f14fc00e314f9eb11d58aa778[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Fri Jun 5 11:30:52 2020 +0200
+
+    Release bugfixes patch 2 for v0.18.7 (#275)
+
+[33mcommit 41df8b664fcbe409aa59ce90f21438055b62cd07[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Jun 1 12:33:11 2020 +0200
+
+    Release bugfixes patch 1 for v0.18.7 (#272)
+
+[33mcommit d0ab8a49dd509331eb1095b425608f04e944df35[m[33m ([m[1;33mtag: v0.18.7[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Fri May 29 12:25:39 2020 +0200
+
+    Release 0.18.7 (#253)
+
+[33mcommit 7a75665e70b936ed2f15a0747a4ff31ca076a217[m
+Merge: 553784f 0b95fd4
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Apr 20 21:14:52 2020 +0200
+
+    Merge branch 'dev'
+
+[33mcommit 0b95fd4bb553aadd4895b3deff2cbcd50d676ae6[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Apr 20 21:13:09 2020 +0200
+
+    Updated version properly...
+
+[33mcommit 553784f6774dac2c81ef7d0ca2102ab277b325c5[m[33m ([m[1;33mtag: v0.18.6[m[33m)[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Apr 20 21:08:27 2020 +0200
+
+    Release 0.18.6 (#207)
+    
+    * Fixed electronic blocks in assemblers (#110)
+    
+    * Fixed crash when barrreling recipe did not exist
+    
+    * Component Return setting update
+    
+    * Added migration for tech tree fixes for who that does not play with industries
+    
+    * Fixed crash related to recipe ingredient list having empty fields due to other filthy mods
+    
+    * Fixed crash related to technologies using count_formula instead of count for none-infinite tech
+    
+    * Allow productivity on (all) analyzers and datacores
+    
+    * Tweakes some technologies, recipes and items after the previous update
+    
+    * small tweaks to nilaus
+    
+    * Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+    
+    * Fixed production science pack required bobs chemical plant instead of angels version
+    
+    #114
+    
+    * Fixed the TP bot
+    
+    * Added Nilaus' Floor Lamp and updated localisations
+    
+    * change trigger for bobs alien tech to move for tech, not components
+    
+    just a small change
+    
+    * Added new Trigger icon
+    
+    Beautiful work Santa
+    
+    * Multiple fixes on gun turrets when playing with overhauls
+    
+    Related to #124 and #125
+    
+    * Fixed that the vanilla lab was not hidden when playing pure angels
+    
+    #122
+    
+    * Added missing prerequisite of Paper Making 1 to Red Circuits
+    
+    #121
+    
+    * Fixed bobmonium setting to spawn in starting area by default
+    
+    * Issue #126 resolved: Added migration so rocket fuel gets enabled again (#127)
+    
+    for research
+    
+    * Resolves #121: Make all buildings upgradeable (#128)
+    
+    - Fixed boilers with wrong number tint
+    - Fixed changelog refining (corrected date)
+    
+    * Fixed wire recipes from plates could not be made in bobs electronics assembler
+    
+    * Minor fix for 119: missed algae farm
+    
+    * Fixed temperatures on molten liquids
+    
+    * updated dates in changelogs for release
+    
+    * Added migration to nilaus addon
+    
+    * New readme for mod portal pages
+    
+    * small crash fixes
+    
+        - Fixed oil refinery didn't have fast_replaceable_group set
+        - Fixed crash when bob pure water was disabled
+    
+    * Fixed date on changelog...
+    
+    * Minor improvement for checking the upgradeability of the oil refinery
+    
+    * Stone wall now require only 1 Construction Block 2 instead of 5
+    
+    * Fixed missing localised description on Alien Plant Life Sample
+    
+    * Fertilizer now takes twice the amount of Compost
+    
+    #136
+    
+    * Fermentation Base processing now produces half the amount of compost
+    
+    #136
+    
+    * Decrease production of Compost
+    
+    #136
+    
+    * Changed graphics on tree recipes to represent the trees instead of their product
+    
+    * Fixed recipe icon tint on water recipes to use refining tint color
+    
+    #134
+    
+    * Fixed missing localisation for heavy water seperation recipes
+    
+    #134
+    
+    * extended make_void function
+    
+    #136
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Revert "Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting"
+    
+    This reverts commit 96775d33475bc83546e7b639dc23572c67e7c24b.
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed unnatural crash... maybe resetting it will help
+    
+    * Fixed failed attempt on re-enabling rocket-fuel on existing saves
+    
+    #126
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    
+    #138
+    
+    * Changed mining time of burner ore crusher so it's easier to pick up in early game
+    
+    #130
+    
+    * Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+    
+    * deleted old files that can't be used anymore
+    
+    * Fixed recipes would use the unobtainable advanced processing blocks
+    
+    * Changed the name from Non Expendable mold to Reusable Mold
+    
+    #135
+    
+    * Added basic recipe tints to the induction furnace + recipes
+    
+    * Fixed submachine gun was unlocking with Turrets instead of Basic Military technology
+    
+    * Moved angels crawler to separate mod (#145)
+    
+    #124
+    
+    * Implemented function for viscous liquid recipe icons
+    
+    Also removed the petrochem number icons as they should use the ones from refining
+    
+    * Nilaus car tweaks (#146)
+    
+    Issue #143
+    
+    * Changed stack size of pavement items (#105)
+    
+    Also contains a setting to change it in range 200-1000 (200 by default)
+    
+    * Disable bob's tech when chem plant/electroliser is disabled (#147)
+    
+    * Fixed Assembling Machine 1 was locked in red science when playing with bobs Burner Assemblers disabled
+    
+    * Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
+    
+    * Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
+    
+    * New Mold Casting recipes
+    
+    I kept tungsten as is, for something different
+    NOTE: a potential iron duplication may occur with the otherwise useless expendable mold iron motor recipe (at the cost of tonnes of sand and cutting ingot of choice)
+    
+    * - Fixed missing num_1 file
+    
+    - Removed data-updates for not used crawlertrain components
+    
+    * Fixes #150: Wooden pole recipe products/gives 1
+    
+    * #153 adjustment
+    
+    Replace global ingredient of lab with angels-basic-lab-2
+    
+    * Fixed ore pastes would enable when you don't need them
+    
+    * Fixed Automation 2 did not depend on Construction Components 2
+    
+    I#151, PR#156
+    
+    * Fixed some labs would require the base game Lab as ingredient instead of angels variant
+    
+    #153
+    
+    * rods/sticks did show incorrectly (#155)
+    
+    * Fixes startup error
+    
+    * updated changelogs
+    
+    * Hotfixed nilaus lamps
+    
+    * Changed build to use dotted date again
+    
+    * Proper version increase in changelog nilaus
+    
+    * Fixed liquid-fuel-oil fuel value typo
+    
+    Also "rebalanced" the enriched fuel block and liquid-fuel values
+    
+    * issue #163: Reduced expander collisionboxes (#173)
+    
+    * Make a 10x10 grid for nilaus instead of 9x9
+    
+    * Sintering Oven could not be crafted without sintering
+    
+    - Sintering oven fix (in refining recipe-builder-fallback
+    - Slag in place of hydroxide for expendable mold recipe
+    
+    * #167 closure
+    
+    Added changelog and bumped version
+    
+    * Fixed crushed bob/rub smelting showing up in spec-vanilla case
+    
+    added localisation for solid-salt (was in petrochem)
+    pushed version
+    updated changelog
+    used recipe update check to remove recipe if not needed
+     - Tested with all 3 variants
+    
+    * Added in a new cheaper wall
+    
+    Added in a new cheaper wall for early defensive needs
+    updated changelog
+    updated version
+    
+    * Updates to BobRevamp
+    
+    Clobbers the advanced lithium process in favour of the more advance angels process
+    Only removes nitric system if it is active
+    Patched new sodium carbonate recipes to match angels style (mostly)
+    
+    * Updating to the standards for refining (new version and default ??? for changelog)
+    
+    * Electronics should be craftable in bobs electronics assembler (#177)
+    
+    * Alternative for early game liquid resin (#184)
+    
+    * Implements #164 trains (#186)
+    
+    * Issue #164 - Renamed most trains
+    
+    - Slight rebalance for petrotrain
+    - Reorder of smeltingtrain
+    
+    * Feedback for previous commit
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * ordening of trains done
+    
+    * When bob trains are present, update the tier defaults to 3
+    
+    * Implemented new recipes for crawler
+    
+    * finishing vanilla recipes for smelt and petro train
+    
+    * added recipes for crawler with industries
+    
+    * finishing up industry recipe and tech overhaul
+    
+    * Updated changelog
+    
+    * Issue #164: Updating Pull Request Feedback
+    
+    * Issue #164: Many fixes, also a generic fix for prereq removal
+    
+    - fixed cab for not executing its updates
+    
+    Co-authored-by: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+    
+    * Removal of unused file/consistend naming use
+    
+    * More silent build script
+    
+    * Fixes #176: Previous tier lab required for non mineable setting (#185)
+    
+    * Fixes #176: Previous tier lab required for non mineable setting
+    
+    * Previous lab is now required all modes where tech is enabled #176
+    
+    * Added build script to create mod folder updates
+    
+    * deduce appdata location
+    
+    * Integration of crawler bots into component and science overhaul
+    
+    * Fixed molding updates were in industries instead of smelting
+    
+    * Concrete Brick and Reinforced Concrete Brick now lay tutorial grid tiles #162
+    
+    * Reduced the amount of Advanced Chemical Plants required to make fish water #168
+    
+    * Fixes #169: Fixing bobs burner phase with techrework (#187)
+    
+    * Moved migration to proper version for angelssmelting
+    
+    * Updated changelogs with release dates
+    
+    * Fixing alignment (no single line if)
+    
+    * Fixing migration for cargo-bot rework (auto unlock when researched)
+    
+    * made early game wall upgradable
+    
+    * Minor alignment fixes..
+    
+    * Hotfix/bugfix for #189
+    
+    * Fixing steam science for bobs burner phase
+    
+    * Fixes for bobsrevamp without plates (and using general check if its enabled)
+    
+    * Fixes #198: Copied lab tiles to new tile and made mineable. (#199)
+    
+    Migration added so it replaces all the currently placed tiles
+    
+    * Minor fixes ...
+    
+    * Fixes issues with 18.19: next_upgrade is removed and causes crashes (#205)
+    
+    * Fixes issues with 18.19: next_upgrade is removed and causes crashes
+    
+    * Properly update the version number
+    
+    * Updated date for released fixes
+    
+    Co-authored-by: LovelySanta <laurens.scheldeman@gmail.com>
+    Co-authored-by: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+    Co-authored-by: Thomas Ziegler <toydarian1@gmail.com>
+    Co-authored-by: Kine7ics <49065448+Kine7ics@users.noreply.github.com>
+
+[33mcommit 0601123df44abc76608e9fb75aa5a0beed81d790[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Apr 20 21:07:42 2020 +0200
+
+    Updated date for released fixes
+
+[33mcommit 9fb92c044f34d4afb3e9a5623735dd0f2698842a[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Apr 20 20:51:52 2020 +0200
+
+    Fixes issues with 18.19: next_upgrade is removed and causes crashes (#205)
+    
+    * Fixes issues with 18.19: next_upgrade is removed and causes crashes
+    
+    * Properly update the version number
+
+[33mcommit 9877d86ed72efdc066164fc51c26486865337cc5[m
+Merge: 837d126 290b90b
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 17 18:24:23 2020 +0200
+
+    Merge branch 'dev' of github.com:Arch666Angel/mods into dev
+
+[33mcommit 837d1263aa7efcd02a2f91d19488e4e7aa14df44[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 17 18:24:09 2020 +0200
+
+    Minor fixes ...
+
+[33mcommit 290b90b859d9acec154f895c5f29a7887173c9a2[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 17 17:33:36 2020 +0200
+
+    Fixes #198: Copied lab tiles to new tile and made mineable. (#199)
+    
+    Migration added so it replaces all the currently placed tiles
+
+[33mcommit b55007d4fa77999baa97904bd182188639070bca[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 17 17:33:03 2020 +0200
+
+    Fixes for bobsrevamp without plates (and using general check if its enabled)
+
+[33mcommit 986fe0f096483c1c4f9b197ca1c968b0001ea0b4[m
+Merge: 8b2e768 f0bfa8c
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 13:53:23 2020 +0200
+
+    Merge branch 'master' into dev
+
+[33mcommit f0bfa8cdc8113181827040a0c0b09891517d22a4[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 13:51:56 2020 +0200
+
+    Proper fix...
+
+[33mcommit 9597a35ddd4714177831f2f953b022450359d30e[m[33m ([m[1;33mtag: v0.18.5c[m[33m)[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 13:21:45 2020 +0200
+
+    v0.18.5.1 (#191)
+    
+    * Fixed electronic blocks in assemblers (#110)
+    
+    * Fixed crash when barrreling recipe did not exist
+    
+    * Component Return setting update
+    
+    * Added migration for tech tree fixes for who that does not play with industries
+    
+    * Fixed crash related to recipe ingredient list having empty fields due to other filthy mods
+    
+    * Fixed crash related to technologies using count_formula instead of count for none-infinite tech
+    
+    * Allow productivity on (all) analyzers and datacores
+    
+    * Tweakes some technologies, recipes and items after the previous update
+    
+    * small tweaks to nilaus
+    
+    * Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+    
+    * Fixed production science pack required bobs chemical plant instead of angels version
+    
+    #114
+    
+    * Fixed the TP bot
+    
+    * Added Nilaus' Floor Lamp and updated localisations
+    
+    * change trigger for bobs alien tech to move for tech, not components
+    
+    just a small change
+    
+    * Added new Trigger icon
+    
+    Beautiful work Santa
+    
+    * Multiple fixes on gun turrets when playing with overhauls
+    
+    Related to #124 and #125
+    
+    * Fixed that the vanilla lab was not hidden when playing pure angels
+    
+    #122
+    
+    * Added missing prerequisite of Paper Making 1 to Red Circuits
+    
+    #121
+    
+    * Fixed bobmonium setting to spawn in starting area by default
+    
+    * Issue #126 resolved: Added migration so rocket fuel gets enabled again (#127)
+    
+    for research
+    
+    * Resolves #121: Make all buildings upgradeable (#128)
+    
+    - Fixed boilers with wrong number tint
+    - Fixed changelog refining (corrected date)
+    
+    * Fixed wire recipes from plates could not be made in bobs electronics assembler
+    
+    * Minor fix for 119: missed algae farm
+    
+    * Fixed temperatures on molten liquids
+    
+    * updated dates in changelogs for release
+    
+    * Added migration to nilaus addon
+    
+    * New readme for mod portal pages
+    
+    * small crash fixes
+    
+        - Fixed oil refinery didn't have fast_replaceable_group set
+        - Fixed crash when bob pure water was disabled
+    
+    * Fixed date on changelog...
+    
+    * Minor improvement for checking the upgradeability of the oil refinery
+    
+    * Stone wall now require only 1 Construction Block 2 instead of 5
+    
+    * Fixed missing localised description on Alien Plant Life Sample
+    
+    * Fertilizer now takes twice the amount of Compost
+    
+    #136
+    
+    * Fermentation Base processing now produces half the amount of compost
+    
+    #136
+    
+    * Decrease production of Compost
+    
+    #136
+    
+    * Changed graphics on tree recipes to represent the trees instead of their product
+    
+    * Fixed recipe icon tint on water recipes to use refining tint color
+    
+    #134
+    
+    * Fixed missing localisation for heavy water seperation recipes
+    
+    #134
+    
+    * extended make_void function
+    
+    #136
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Revert "Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting"
+    
+    This reverts commit 96775d33475bc83546e7b639dc23572c67e7c24b.
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed unnatural crash... maybe resetting it will help
+    
+    * Fixed failed attempt on re-enabling rocket-fuel on existing saves
+    
+    #126
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    
+    #138
+    
+    * Changed mining time of burner ore crusher so it's easier to pick up in early game
+    
+    #130
+    
+    * Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+    
+    * deleted old files that can't be used anymore
+    
+    * Fixed recipes would use the unobtainable advanced processing blocks
+    
+    * Changed the name from Non Expendable mold to Reusable Mold
+    
+    #135
+    
+    * Added basic recipe tints to the induction furnace + recipes
+    
+    * Fixed submachine gun was unlocking with Turrets instead of Basic Military technology
+    
+    * Moved angels crawler to separate mod (#145)
+    
+    #124
+    
+    * Implemented function for viscous liquid recipe icons
+    
+    Also removed the petrochem number icons as they should use the ones from refining
+    
+    * Nilaus car tweaks (#146)
+    
+    Issue #143
+    
+    * Changed stack size of pavement items (#105)
+    
+    Also contains a setting to change it in range 200-1000 (200 by default)
+    
+    * Disable bob's tech when chem plant/electroliser is disabled (#147)
+    
+    * Fixed Assembling Machine 1 was locked in red science when playing with bobs Burner Assemblers disabled
+    
+    * Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
+    
+    * Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
+    
+    * New Mold Casting recipes
+    
+    I kept tungsten as is, for something different
+    NOTE: a potential iron duplication may occur with the otherwise useless expendable mold iron motor recipe (at the cost of tonnes of sand and cutting ingot of choice)
+    
+    * - Fixed missing num_1 file
+    
+    - Removed data-updates for not used crawlertrain components
+    
+    * Fixes #150: Wooden pole recipe products/gives 1
+    
+    * #153 adjustment
+    
+    Replace global ingredient of lab with angels-basic-lab-2
+    
+    * Fixed ore pastes would enable when you don't need them
+    
+    * Fixed Automation 2 did not depend on Construction Components 2
+    
+    I#151, PR#156
+    
+    * Fixed some labs would require the base game Lab as ingredient instead of angels variant
+    
+    #153
+    
+    * rods/sticks did show incorrectly (#155)
+    
+    * Fixes startup error
+    
+    * updated changelogs
+    
+    * Hotfixed nilaus lamps
+    
+    * Changed build to use dotted date again
+    
+    * Proper version increase in changelog nilaus
+    
+    * Fixed liquid-fuel-oil fuel value typo
+    
+    Also "rebalanced" the enriched fuel block and liquid-fuel values
+    
+    * issue #163: Reduced expander collisionboxes (#173)
+    
+    * Make a 10x10 grid for nilaus instead of 9x9
+    
+    * Sintering Oven could not be crafted without sintering
+    
+    - Sintering oven fix (in refining recipe-builder-fallback
+    - Slag in place of hydroxide for expendable mold recipe
+    
+    * #167 closure
+    
+    Added changelog and bumped version
+    
+    * Fixed crushed bob/rub smelting showing up in spec-vanilla case
+    
+    added localisation for solid-salt (was in petrochem)
+    pushed version
+    updated changelog
+    used recipe update check to remove recipe if not needed
+     - Tested with all 3 variants
+    
+    * Added in a new cheaper wall
+    
+    Added in a new cheaper wall for early defensive needs
+    updated changelog
+    updated version
+    
+    * Updates to BobRevamp
+    
+    Clobbers the advanced lithium process in favour of the more advance angels process
+    Only removes nitric system if it is active
+    Patched new sodium carbonate recipes to match angels style (mostly)
+    
+    * Updating to the standards for refining (new version and default ??? for changelog)
+    
+    * Electronics should be craftable in bobs electronics assembler (#177)
+    
+    * Alternative for early game liquid resin (#184)
+    
+    * Implements #164 trains (#186)
+    
+    * Issue #164 - Renamed most trains
+    
+    - Slight rebalance for petrotrain
+    - Reorder of smeltingtrain
+    
+    * Feedback for previous commit
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * ordening of trains done
+    
+    * When bob trains are present, update the tier defaults to 3
+    
+    * Implemented new recipes for crawler
+    
+    * finishing vanilla recipes for smelt and petro train
+    
+    * added recipes for crawler with industries
+    
+    * finishing up industry recipe and tech overhaul
+    
+    * Updated changelog
+    
+    * Issue #164: Updating Pull Request Feedback
+    
+    * Issue #164: Many fixes, also a generic fix for prereq removal
+    
+    - fixed cab for not executing its updates
+    
+    Co-authored-by: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+    
+    * Removal of unused file/consistend naming use
+    
+    * More silent build script
+    
+    * Fixes #176: Previous tier lab required for non mineable setting (#185)
+    
+    * Fixes #176: Previous tier lab required for non mineable setting
+    
+    * Previous lab is now required all modes where tech is enabled #176
+    
+    * Added build script to create mod folder updates
+    
+    * deduce appdata location
+    
+    * Integration of crawler bots into component and science overhaul
+    
+    * Fixed molding updates were in industries instead of smelting
+    
+    * Concrete Brick and Reinforced Concrete Brick now lay tutorial grid tiles #162
+    
+    * Reduced the amount of Advanced Chemical Plants required to make fish water #168
+    
+    * Fixes #169: Fixing bobs burner phase with techrework (#187)
+    
+    * Moved migration to proper version for angelssmelting
+    
+    * Updated changelogs with release dates
+    
+    * Fixing alignment (no single line if)
+    
+    * Fixing migration for cargo-bot rework (auto unlock when researched)
+    
+    * made early game wall upgradable
+    
+    * Minor alignment fixes..
+    
+    * Hotfix/bugfix for #189
+    
+    * Fixing steam science for bobs burner phase
+    
+    Co-authored-by: LovelySanta <laurens.scheldeman@gmail.com>
+    Co-authored-by: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+    Co-authored-by: Thomas Ziegler <toydarian1@gmail.com>
+    Co-authored-by: Kine7ics <49065448+Kine7ics@users.noreply.github.com>
+
+[33mcommit 8b2e768b492a4b6d7864a63a8150e592b6d396e8[m
+Merge: f7981fa 6dc5108
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 13:21:07 2020 +0200
+
+    Merge branch 'master' into dev
+
+[33mcommit f7981fa5b3430780a8676ce1a1754cfb3a70c532[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 13:18:14 2020 +0200
+
+    Fixing steam science for bobs burner phase
+
+[33mcommit 6dc5108b2173a7ed86906218f875fc5b1f3dcb3e[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 13:00:47 2020 +0200
+
+    V0.18.6 (#190)
+    
+    * Fixed electronic blocks in assemblers (#110)
+    
+    * Fixed crash when barrreling recipe did not exist
+    
+    * Component Return setting update
+    
+    * Added migration for tech tree fixes for who that does not play with industries
+    
+    * Fixed crash related to recipe ingredient list having empty fields due to other filthy mods
+    
+    * Fixed crash related to technologies using count_formula instead of count for none-infinite tech
+    
+    * Allow productivity on (all) analyzers and datacores
+    
+    * Tweakes some technologies, recipes and items after the previous update
+    
+    * small tweaks to nilaus
+    
+    * Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+    
+    * Fixed production science pack required bobs chemical plant instead of angels version
+    
+    #114
+    
+    * Fixed the TP bot
+    
+    * Added Nilaus' Floor Lamp and updated localisations
+    
+    * change trigger for bobs alien tech to move for tech, not components
+    
+    just a small change
+    
+    * Added new Trigger icon
+    
+    Beautiful work Santa
+    
+    * Multiple fixes on gun turrets when playing with overhauls
+    
+    Related to #124 and #125
+    
+    * Fixed that the vanilla lab was not hidden when playing pure angels
+    
+    #122
+    
+    * Added missing prerequisite of Paper Making 1 to Red Circuits
+    
+    #121
+    
+    * Fixed bobmonium setting to spawn in starting area by default
+    
+    * Issue #126 resolved: Added migration so rocket fuel gets enabled again (#127)
+    
+    for research
+    
+    * Resolves #121: Make all buildings upgradeable (#128)
+    
+    - Fixed boilers with wrong number tint
+    - Fixed changelog refining (corrected date)
+    
+    * Fixed wire recipes from plates could not be made in bobs electronics assembler
+    
+    * Minor fix for 119: missed algae farm
+    
+    * Fixed temperatures on molten liquids
+    
+    * updated dates in changelogs for release
+    
+    * Added migration to nilaus addon
+    
+    * New readme for mod portal pages
+    
+    * small crash fixes
+    
+        - Fixed oil refinery didn't have fast_replaceable_group set
+        - Fixed crash when bob pure water was disabled
+    
+    * Fixed date on changelog...
+    
+    * Minor improvement for checking the upgradeability of the oil refinery
+    
+    * Stone wall now require only 1 Construction Block 2 instead of 5
+    
+    * Fixed missing localised description on Alien Plant Life Sample
+    
+    * Fertilizer now takes twice the amount of Compost
+    
+    #136
+    
+    * Fermentation Base processing now produces half the amount of compost
+    
+    #136
+    
+    * Decrease production of Compost
+    
+    #136
+    
+    * Changed graphics on tree recipes to represent the trees instead of their product
+    
+    * Fixed recipe icon tint on water recipes to use refining tint color
+    
+    #134
+    
+    * Fixed missing localisation for heavy water seperation recipes
+    
+    #134
+    
+    * extended make_void function
+    
+    #136
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Revert "Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting"
+    
+    This reverts commit 96775d33475bc83546e7b639dc23572c67e7c24b.
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed unnatural crash... maybe resetting it will help
+    
+    * Fixed failed attempt on re-enabling rocket-fuel on existing saves
+    
+    #126
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    
+    #138
+    
+    * Changed mining time of burner ore crusher so it's easier to pick up in early game
+    
+    #130
+    
+    * Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+    
+    * deleted old files that can't be used anymore
+    
+    * Fixed recipes would use the unobtainable advanced processing blocks
+    
+    * Changed the name from Non Expendable mold to Reusable Mold
+    
+    #135
+    
+    * Added basic recipe tints to the induction furnace + recipes
+    
+    * Fixed submachine gun was unlocking with Turrets instead of Basic Military technology
+    
+    * Moved angels crawler to separate mod (#145)
+    
+    #124
+    
+    * Implemented function for viscous liquid recipe icons
+    
+    Also removed the petrochem number icons as they should use the ones from refining
+    
+    * Nilaus car tweaks (#146)
+    
+    Issue #143
+    
+    * Changed stack size of pavement items (#105)
+    
+    Also contains a setting to change it in range 200-1000 (200 by default)
+    
+    * Disable bob's tech when chem plant/electroliser is disabled (#147)
+    
+    * Fixed Assembling Machine 1 was locked in red science when playing with bobs Burner Assemblers disabled
+    
+    * Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
+    
+    * Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
+    
+    * New Mold Casting recipes
+    
+    I kept tungsten as is, for something different
+    NOTE: a potential iron duplication may occur with the otherwise useless expendable mold iron motor recipe (at the cost of tonnes of sand and cutting ingot of choice)
+    
+    * - Fixed missing num_1 file
+    
+    - Removed data-updates for not used crawlertrain components
+    
+    * Fixes #150: Wooden pole recipe products/gives 1
+    
+    * #153 adjustment
+    
+    Replace global ingredient of lab with angels-basic-lab-2
+    
+    * Fixed ore pastes would enable when you don't need them
+    
+    * Fixed Automation 2 did not depend on Construction Components 2
+    
+    I#151, PR#156
+    
+    * Fixed some labs would require the base game Lab as ingredient instead of angels variant
+    
+    #153
+    
+    * rods/sticks did show incorrectly (#155)
+    
+    * Fixes startup error
+    
+    * updated changelogs
+    
+    * Hotfixed nilaus lamps
+    
+    * Changed build to use dotted date again
+    
+    * Proper version increase in changelog nilaus
+    
+    * Fixed liquid-fuel-oil fuel value typo
+    
+    Also "rebalanced" the enriched fuel block and liquid-fuel values
+    
+    * issue #163: Reduced expander collisionboxes (#173)
+    
+    * Make a 10x10 grid for nilaus instead of 9x9
+    
+    * Sintering Oven could not be crafted without sintering
+    
+    - Sintering oven fix (in refining recipe-builder-fallback
+    - Slag in place of hydroxide for expendable mold recipe
+    
+    * #167 closure
+    
+    Added changelog and bumped version
+    
+    * Fixed crushed bob/rub smelting showing up in spec-vanilla case
+    
+    added localisation for solid-salt (was in petrochem)
+    pushed version
+    updated changelog
+    used recipe update check to remove recipe if not needed
+     - Tested with all 3 variants
+    
+    * Added in a new cheaper wall
+    
+    Added in a new cheaper wall for early defensive needs
+    updated changelog
+    updated version
+    
+    * Updates to BobRevamp
+    
+    Clobbers the advanced lithium process in favour of the more advance angels process
+    Only removes nitric system if it is active
+    Patched new sodium carbonate recipes to match angels style (mostly)
+    
+    * Updating to the standards for refining (new version and default ??? for changelog)
+    
+    * Electronics should be craftable in bobs electronics assembler (#177)
+    
+    * Alternative for early game liquid resin (#184)
+    
+    * Implements #164 trains (#186)
+    
+    * Issue #164 - Renamed most trains
+    
+    - Slight rebalance for petrotrain
+    - Reorder of smeltingtrain
+    
+    * Feedback for previous commit
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * ordening of trains done
+    
+    * When bob trains are present, update the tier defaults to 3
+    
+    * Implemented new recipes for crawler
+    
+    * finishing vanilla recipes for smelt and petro train
+    
+    * added recipes for crawler with industries
+    
+    * finishing up industry recipe and tech overhaul
+    
+    * Updated changelog
+    
+    * Issue #164: Updating Pull Request Feedback
+    
+    * Issue #164: Many fixes, also a generic fix for prereq removal
+    
+    - fixed cab for not executing its updates
+    
+    Co-authored-by: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+    
+    * Removal of unused file/consistend naming use
+    
+    * More silent build script
+    
+    * Fixes #176: Previous tier lab required for non mineable setting (#185)
+    
+    * Fixes #176: Previous tier lab required for non mineable setting
+    
+    * Previous lab is now required all modes where tech is enabled #176
+    
+    * Added build script to create mod folder updates
+    
+    * deduce appdata location
+    
+    * Integration of crawler bots into component and science overhaul
+    
+    * Fixed molding updates were in industries instead of smelting
+    
+    * Concrete Brick and Reinforced Concrete Brick now lay tutorial grid tiles #162
+    
+    * Reduced the amount of Advanced Chemical Plants required to make fish water #168
+    
+    * Fixes #169: Fixing bobs burner phase with techrework (#187)
+    
+    * Moved migration to proper version for angelssmelting
+    
+    * Updated changelogs with release dates
+    
+    * Fixing alignment (no single line if)
+    
+    * Fixing migration for cargo-bot rework (auto unlock when researched)
+    
+    * made early game wall upgradable
+    
+    * Minor alignment fixes..
+    
+    * Hotfix/bugfix for #189
+    
+    Co-authored-by: LovelySanta <laurens.scheldeman@gmail.com>
+    Co-authored-by: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+    Co-authored-by: Thomas Ziegler <toydarian1@gmail.com>
+    Co-authored-by: Kine7ics <49065448+Kine7ics@users.noreply.github.com>
+
+[33mcommit 038a9dda1a68a318a30f67f7a4c48661cb64734a[m
+Merge: c4eb69e d42b0d4
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 12:59:33 2020 +0200
+
+    Merge branch 'dev' of github.com:Arch666Angel/mods into dev
+
+[33mcommit c4eb69ed4f312dfc8e40ec8eec361431813438bb[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 12:52:09 2020 +0200
+
+    Hotfix/bugfix for #189
+
+[33mcommit d42b0d4a8c08fdebf08b2a50aee1555deeec0b46[m[33m ([m[1;33mtag: v0.18.5b[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 12:09:16 2020 +0200
+
+    v0.18.5 (#188)
+
+[33mcommit 4972267a56859a6abd2363b9cfd538dd5c272bbb[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 12:06:58 2020 +0200
+
+    Minor alignment fixes..
+
+[33mcommit a4c680e6e31f190108aaeca1e78ee394510af87e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 12:04:30 2020 +0200
+
+    made early game wall upgradable
+
+[33mcommit 3cff9296dd8e88351d73d89ce9b744ce03afec7d[m
+Merge: bf8f162 2e67813
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 11:46:30 2020 +0200
+
+    Merge branch 'dev' of github.com:Arch666Angel/mods into dev
+
+[33mcommit bf8f162dc07eaa631819b3563050b7ea84028fe2[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 11:46:03 2020 +0200
+
+    Fixing migration for cargo-bot rework (auto unlock when researched)
+
+[33mcommit 2e678133911e21b65f38394daaafc26129e681b6[m
+Merge: bb5d648 ab4d88b
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 11:15:16 2020 +0200
+
+    Merge branch 'dev' of https://github.com/Arch666Angel/ModsCurrentGit into dev
+
+[33mcommit ab4d88b5d1f18c32b52b534cdd177b96dee2c980[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 11:14:55 2020 +0200
+
+    Fixing alignment (no single line if)
+
+[33mcommit bb5d648049dbcf1f4f5634953c414ecb0a588da6[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 11:14:48 2020 +0200
+
+    Updated changelogs with release dates
+
+[33mcommit 80eafed1e3007aa4747bb13b0cc6e1d1af84f2a0[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 11:04:42 2020 +0200
+
+    Moved migration to proper version for angelssmelting
+
+[33mcommit 6225d54b75f3d3faad1346817a86b6fb85a3237d[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 12 10:52:53 2020 +0200
+
+    Fixes #169: Fixing bobs burner phase with techrework (#187)
+
+[33mcommit 93e4226d3934695992bd9de7a03883712666d9e3[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 10:49:58 2020 +0200
+
+    Reduced the amount of Advanced Chemical Plants required to make fish water #168
+
+[33mcommit ead5818d61df9b419aa0047489e513370f827d5d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 10:24:23 2020 +0200
+
+    Concrete Brick and Reinforced Concrete Brick now lay tutorial grid tiles #162
+
+[33mcommit f83954e211f24dc581905bd6fe961ff139669a83[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 10:16:46 2020 +0200
+
+    Fixed molding updates were in industries instead of smelting
+
+[33mcommit 4cdc47e39234d404fb62f3289a09794f3bc9e855[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Apr 12 01:45:28 2020 +0200
+
+    Integration of crawler bots into component and science overhaul
+
+[33mcommit 1d7dd0e9bf8c5d62aadf1f95fee9abc66f2246b0[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Apr 11 14:58:25 2020 +0200
+
+    deduce appdata location
+
+[33mcommit ffcd2e5b39f399d211c84d485f8776946c581351[m
+Merge: e37f267 9e4218e
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Apr 11 14:52:21 2020 +0200
+
+    Merge branch 'dev' of https://github.com/Arch666Angel/ModsCurrentGit into dev
+
+[33mcommit e37f2673f234e0c9271f56ecc6d4934b0d83cd50[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Apr 11 14:52:01 2020 +0200
+
+    Added build script to create mod folder updates
+
+[33mcommit 9e4218e664f3d5908deadd8d55e1456b84038682[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Apr 11 14:27:57 2020 +0200
+
+    Fixes #176: Previous tier lab required for non mineable setting (#185)
+    
+    * Fixes #176: Previous tier lab required for non mineable setting
+    
+    * Previous lab is now required all modes where tech is enabled #176
+
+[33mcommit 34668ea9ef9008e525d049c516224709a5b4c3b9[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Apr 11 13:34:25 2020 +0200
+
+    More silent build script
+
+[33mcommit 7949c30d06ac7caa22cf5a8bd928b13d8280f072[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Apr 11 13:24:27 2020 +0200
+
+    Removal of unused file/consistend naming use
+
+[33mcommit eb20e02c637ffda6d2af1adb3bff6c7661af2930[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sat Apr 11 13:21:26 2020 +0200
+
+    Implements #164 trains (#186)
+    
+    * Issue #164 - Renamed most trains
+    
+    - Slight rebalance for petrotrain
+    - Reorder of smeltingtrain
+    
+    * Feedback for previous commit
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * Added ability to copy paste color from locomotives/train stops to the smelter cargo wagons and virsa versa
+    
+    * ordening of trains done
+    
+    * When bob trains are present, update the tier defaults to 3
+    
+    * Implemented new recipes for crawler
+    
+    * finishing vanilla recipes for smelt and petro train
+    
+    * added recipes for crawler with industries
+    
+    * finishing up industry recipe and tech overhaul
+    
+    * Updated changelog
+    
+    * Issue #164: Updating Pull Request Feedback
+    
+    * Issue #164: Many fixes, also a generic fix for prereq removal
+    
+    - fixed cab for not executing its updates
+    
+    Co-authored-by: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+
+[33mcommit 76ec45d4259e638fd41a191a1cbcb0f306ab5d57[m
+Author: Kine7ics <49065448+Kine7ics@users.noreply.github.com>
+Date:   Sat Apr 11 12:51:37 2020 +0200
+
+    Alternative for early game liquid resin (#184)
+
+[33mcommit 2023a4449808b663690c8123407f2232e88ebf3f[m
+Author: Thomas Ziegler <toydarian1@gmail.com>
+Date:   Sat Apr 11 10:42:58 2020 +0200
+
+    Electronics should be craftable in bobs electronics assembler (#177)
+
+[33mcommit bc21bda39292accd51476cce29fc63f5fc550154[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 10 11:10:19 2020 +0200
+
+    Updating to the standards for refining (new version and default ??? for changelog)
+
+[33mcommit 1889b821e72a4566c6156339303e1fa828717a7e[m
+Merge: 039295c 49d8175
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 10 10:46:19 2020 +0200
+
+    Merge branch 'master' into dev
+
+[33mcommit 49d81757fd6377065029815bc7d5c41f2b08f343[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 10 10:41:25 2020 +0200
+
+    Merged/released nilaus addon from dev branch
+
+[33mcommit 039295c4173d6abb6662b60ac37cfd6cec116f80[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Thu Apr 9 15:16:40 2020 +1000
+
+    Updates to BobRevamp
+    
+    Clobbers the advanced lithium process in favour of the more advance angels process
+    Only removes nitric system if it is active
+    Patched new sodium carbonate recipes to match angels style (mostly)
+
+[33mcommit aee2930058afcaee1a62f7836eb9085e557cc154[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Apr 6 18:53:24 2020 +1000
+
+    Added in a new cheaper wall
+    
+    Added in a new cheaper wall for early defensive needs
+    updated changelog
+    updated version
+
+[33mcommit 114a4b3340b1aa027294ac3662d297bd561a26fa[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Apr 6 16:23:55 2020 +1000
+
+    Fixed crushed bob/rub smelting showing up in spec-vanilla case
+    
+    added localisation for solid-salt (was in petrochem)
+    pushed version
+    updated changelog
+    used recipe update check to remove recipe if not needed
+     - Tested with all 3 variants
+
+[33mcommit a88db6b504fb6f4ed63c179e12dc3f99b6be5014[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Apr 6 13:47:28 2020 +1000
+
+    #167 closure
+    
+    Added changelog and bumped version
+
+[33mcommit 284090cdaadc45f62f92fbef44e8024331d48017[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Apr 6 13:38:17 2020 +1000
+
+    Sintering Oven could not be crafted without sintering
+    
+    - Sintering oven fix (in refining recipe-builder-fallback
+    - Slag in place of hydroxide for expendable mold recipe
+
+[33mcommit 0ca1f7bcc76371a5dfd41cb116f7aa7f708f6896[m
+Merge: b9d2c87 80fa1e0
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 5 21:01:24 2020 +0200
+
+    Merge branch 'dev' of github.com:Arch666Angel/mods into dev
+
+[33mcommit b9d2c878c8f76baa9ce918f35ea0c5a57d060397[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 5 21:01:03 2020 +0200
+
+    Make a 10x10 grid for nilaus instead of 9x9
+
+[33mcommit 80fa1e0b5bfa9f700ad37333141cfc8be979775b[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Apr 5 19:47:06 2020 +0200
+
+    issue #163: Reduced expander collisionboxes (#173)
+
+[33mcommit 44a922796d80e17f560776629cfe1b4f8dbc8942[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Apr 4 15:14:24 2020 +1100
+
+    Fixed liquid-fuel-oil fuel value typo
+    
+    Also "rebalanced" the enriched fuel block and liquid-fuel values
+
+[33mcommit 438cb236360bc21cf95cc55cda4375fcf0175021[m[33m ([m[1;33mtag: v0.18.5[m[33m)[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 3 09:59:24 2020 +0200
+
+    Dev (#161)
+    
+    * Fixed electronic blocks in assemblers (#110)
+    
+    * Fixed crash when barrreling recipe did not exist
+    
+    * Component Return setting update
+    
+    * Added migration for tech tree fixes for who that does not play with industries
+    
+    * Fixed crash related to recipe ingredient list having empty fields due to other filthy mods
+    
+    * Fixed crash related to technologies using count_formula instead of count for none-infinite tech
+    
+    * Allow productivity on (all) analyzers and datacores
+    
+    * Tweakes some technologies, recipes and items after the previous update
+    
+    * small tweaks to nilaus
+    
+    * Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+    
+    * Fixed production science pack required bobs chemical plant instead of angels version
+    
+    #114
+    
+    * Fixed the TP bot
+    
+    * Added Nilaus' Floor Lamp and updated localisations
+    
+    * change trigger for bobs alien tech to move for tech, not components
+    
+    just a small change
+    
+    * Added new Trigger icon
+    
+    Beautiful work Santa
+    
+    * Multiple fixes on gun turrets when playing with overhauls
+    
+    Related to #124 and #125
+    
+    * Fixed that the vanilla lab was not hidden when playing pure angels
+    
+    #122
+    
+    * Added missing prerequisite of Paper Making 1 to Red Circuits
+    
+    #121
+    
+    * Fixed bobmonium setting to spawn in starting area by default
+    
+    * Issue #126 resolved: Added migration so rocket fuel gets enabled again (#127)
+    
+    for research
+    
+    * Resolves #121: Make all buildings upgradeable (#128)
+    
+    - Fixed boilers with wrong number tint
+    - Fixed changelog refining (corrected date)
+    
+    * Fixed wire recipes from plates could not be made in bobs electronics assembler
+    
+    * Minor fix for 119: missed algae farm
+    
+    * Fixed temperatures on molten liquids
+    
+    * updated dates in changelogs for release
+    
+    * Added migration to nilaus addon
+    
+    * New readme for mod portal pages
+    
+    * small crash fixes
+    
+        - Fixed oil refinery didn't have fast_replaceable_group set
+        - Fixed crash when bob pure water was disabled
+    
+    * Fixed date on changelog...
+    
+    * Minor improvement for checking the upgradeability of the oil refinery
+    
+    * Stone wall now require only 1 Construction Block 2 instead of 5
+    
+    * Fixed missing localised description on Alien Plant Life Sample
+    
+    * Fertilizer now takes twice the amount of Compost
+    
+    #136
+    
+    * Fermentation Base processing now produces half the amount of compost
+    
+    #136
+    
+    * Decrease production of Compost
+    
+    #136
+    
+    * Changed graphics on tree recipes to represent the trees instead of their product
+    
+    * Fixed recipe icon tint on water recipes to use refining tint color
+    
+    #134
+    
+    * Fixed missing localisation for heavy water seperation recipes
+    
+    #134
+    
+    * extended make_void function
+    
+    #136
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Revert "Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting"
+    
+    This reverts commit 96775d33475bc83546e7b639dc23572c67e7c24b.
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed unnatural crash... maybe resetting it will help
+    
+    * Fixed failed attempt on re-enabling rocket-fuel on existing saves
+    
+    #126
+    
+    * Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+    
+    * Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    
+    #138
+    
+    * Changed mining time of burner ore crusher so it's easier to pick up in early game
+    
+    #130
+    
+    * Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+    
+    * deleted old files that can't be used anymore
+    
+    * Fixed recipes would use the unobtainable advanced processing blocks
+    
+    * Changed the name from Non Expendable mold to Reusable Mold
+    
+    #135
+    
+    * Added basic recipe tints to the induction furnace + recipes
+    
+    * Fixed submachine gun was unlocking with Turrets instead of Basic Military technology
+    
+    * Moved angels crawler to separate mod (#145)
+    
+    #124
+    
+    * Implemented function for viscous liquid recipe icons
+    
+    Also removed the petrochem number icons as they should use the ones from refining
+    
+    * Nilaus car tweaks (#146)
+    
+    Issue #143
+    
+    * Changed stack size of pavement items (#105)
+    
+    Also contains a setting to change it in range 200-1000 (200 by default)
+    
+    * Disable bob's tech when chem plant/electroliser is disabled (#147)
+    
+    * Fixed Assembling Machine 1 was locked in red science when playing with bobs Burner Assemblers disabled
+    
+    * Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
+    
+    * Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
+    
+    * New Mold Casting recipes
+    
+    I kept tungsten as is, for something different
+    NOTE: a potential iron duplication may occur with the otherwise useless expendable mold iron motor recipe (at the cost of tonnes of sand and cutting ingot of choice)
+    
+    * - Fixed missing num_1 file
+    
+    - Removed data-updates for not used crawlertrain components
+    
+    * Fixes #150: Wooden pole recipe products/gives 1
+    
+    * #153 adjustment
+    
+    Replace global ingredient of lab with angels-basic-lab-2
+    
+    * Fixed ore pastes would enable when you don't need them
+    
+    * Fixed Automation 2 did not depend on Construction Components 2
+    
+    I#151, PR#156
+    
+    * Fixed some labs would require the base game Lab as ingredient instead of angels variant
+    
+    #153
+    
+    * rods/sticks did show incorrectly (#155)
+    
+    * Fixes startup error
+    
+    * updated changelogs
+    
+    * Hotfixed nilaus lamps
+    
+    * Changed build to use dotted date again
+    
+    * Proper version increase in changelog nilaus
+    
+    Co-authored-by: LovelySanta <laurens.scheldeman@gmail.com>
+    Co-authored-by: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+
+[33mcommit eb046fd4a656a44059208c802b32d13bf7e42d2b[m
+Merge: 07ed00d 0ddff95
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 3 09:58:24 2020 +0200
+
+    Merge branch 'master' into dev
+
+[33mcommit 07ed00def082c5f7bc24f11b0b186dd8302f5af7[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 3 09:55:30 2020 +0200
+
+    Proper version increase in changelog nilaus
+
+[33mcommit 47aa100c98160fe601da09589b4b8079d25284b4[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 3 09:55:04 2020 +0200
+
+    Changed build to use dotted date again
+
+[33mcommit da0c415dcd8d7c9b119f1b9dfb5c4b917bf2884d[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Fri Apr 3 09:54:34 2020 +0200
+
+    Hotfixed nilaus lamps
+
+[33mcommit 0ddff95f5dfa5d73490601385567e07ddbcf30f3[m[33m ([m[1;33mtag: v0.18.4[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Thu Apr 2 23:47:21 2020 +0200
+
+    v0.18.4 (#159)
+
+[33mcommit 363ff3760662fa135f616c630f2fa872d43f7aa6[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Apr 2 23:40:35 2020 +0200
+
+    updated changelogs
+
+[33mcommit 6b68cd94b023df71a59b976eeb7382edf250b6ff[m
+Merge: bbf66ee 726336e
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Wed Apr 1 15:20:29 2020 +0200
+
+    Merge branch 'dev' of github.com:Arch666Angel/mods into dev
+
+[33mcommit bbf66ee59ffbff2491d498964bcb3e5840a2e832[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Wed Apr 1 15:20:02 2020 +0200
+
+    Fixes startup error
+
+[33mcommit 726336e2988b0aee049a6b0c6022d553c7b40e2d[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Wed Apr 1 12:38:20 2020 +0200
+
+    rods/sticks did show incorrectly (#155)
+
+[33mcommit d3156244991ad1652c51f43f2e50aec9bba4bbe9[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Apr 1 12:25:29 2020 +0200
+
+    Fixed some labs would require the base game Lab as ingredient instead of angels variant
+    
+    #153
+
+[33mcommit 8f8c89ac516669686e78d53e57c73d6dcff1c74e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Apr 1 12:15:32 2020 +0200
+
+    Fixed Automation 2 did not depend on Construction Components 2
+    
+    I#151, PR#156
+
+[33mcommit a30c21320e3754ce95fabb6419637f8ee52ced3f[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Apr 1 11:31:37 2020 +0200
+
+    Fixed ore pastes would enable when you don't need them
+
+[33mcommit 31ae4ce01747356fea1668455dd0c9913baf6d8a[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Wed Apr 1 13:06:19 2020 +1100
+
+    #153 adjustment
+    
+    Replace global ingredient of lab with angels-basic-lab-2
+
+[33mcommit 4989e08ba17abafa06485f5d55072c2fbdc757db[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Tue Mar 31 22:38:33 2020 +0200
+
+    Fixes #150: Wooden pole recipe products/gives 1
+
+[33mcommit 21f3f608a6ff7e69945e60cc756c70401baa7ea9[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Tue Mar 31 20:57:46 2020 +0200
+
+    - Fixed missing num_1 file
+    
+    - Removed data-updates for not used crawlertrain components
+
+[33mcommit ec6a140f61fd4d53ec3a12c51d6115616a7f71a3[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Tue Mar 31 01:09:56 2020 +1100
+
+    New Mold Casting recipes
+    
+    I kept tungsten as is, for something different
+    NOTE: a potential iron duplication may occur with the otherwise useless expendable mold iron motor recipe (at the cost of tonnes of sand and cutting ingot of choice)
+
+[33mcommit c1771f350fd9722a232d4a804205abfcef94d233[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 29 12:55:44 2020 +0200
+
+    Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
+
+[33mcommit 81def9b5b5aec1c766ab7bd6ba24161f74c52adc[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 29 12:30:56 2020 +0200
+
+    Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
+
+[33mcommit 63e72ee7118948e48f8a526914741f603701aacf[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 29 12:07:30 2020 +0200
+
+    Fixed Assembling Machine 1 was locked in red science when playing with bobs Burner Assemblers disabled
+
+[33mcommit c9b5d835b4d75827545b4bcedb3d9dff0664f2a0[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Mar 28 20:31:10 2020 +0100
+
+    Disable bob's tech when chem plant/electroliser is disabled (#147)
+
+[33mcommit 5219a761d3a66fa11e346cb4ac0cb6032da255a2[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 28 15:20:12 2020 +0100
+
+    Changed stack size of pavement items (#105)
+    
+    Also contains a setting to change it in range 200-1000 (200 by default)
+
+[33mcommit 31ba1a3380601b27ba9b41e26c329e6192fc30cc[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Mar 28 14:45:41 2020 +0100
+
+    Nilaus car tweaks (#146)
+    
+    Issue #143
+
+[33mcommit a4fe89150cc20a5e04bf8f9b8073d3734736166b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 28 14:40:26 2020 +0100
+
+    Implemented function for viscous liquid recipe icons
+    
+    Also removed the petrochem number icons as they should use the ones from refining
+
+[33mcommit 174c2e9dd57572fbd45cead2611b6c6be2e32ca0[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Mar 28 10:36:53 2020 +0100
+
+    Moved angels crawler to separate mod (#145)
+    
+    #124
+
+[33mcommit cb8b756e416d3120a05f07a61ae8bc0e831aca40[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Mar 27 15:53:27 2020 +0100
+
+    Fixed submachine gun was unlocking with Turrets instead of Basic Military technology
+
+[33mcommit 71ce92795a7f3efa25139f234fc3bb50606c8dae[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Mar 27 14:37:57 2020 +0100
+
+    Added basic recipe tints to the induction furnace + recipes
+
+[33mcommit 95297f279fafc9eb5090111b232b219898392312[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Mar 27 09:52:10 2020 +0100
+
+    Changed the name from Non Expendable mold to Reusable Mold
+    
+    #135
+
+[33mcommit 0c694d0570b552b7e24fc5c0533353ac6974cf33[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 20:24:45 2020 +0100
+
+    Fixed recipes would use the unobtainable advanced processing blocks
+
+[33mcommit 1edd0ce90e2f7bb63384a4ab08cd8803df5dc79d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 12:44:11 2020 +0100
+
+    deleted old files that can't be used anymore
+
+[33mcommit 2b2589d4c7721b1d9f13a1f9129daa4400231d73[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 11:45:44 2020 +0100
+
+    Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+
+[33mcommit 51038de5d7fe6d20a17989e6f031fd84b1283426[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 10:08:48 2020 +0100
+
+    Changed mining time of burner ore crusher so it's easier to pick up in early game
+    
+    #130
+
+[33mcommit c3170bf9571b25fd2997c4d8670e001fbd5de609[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 10:00:55 2020 +0100
+
+    Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    
+    #138
+
+[33mcommit 901f551937b26a16a1032b615bb3f49246f13a72[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 09:57:33 2020 +0100
+
+    Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+
+[33mcommit 6c49ead819c03b8771ec974adf851165e18fe6be[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Mar 26 09:05:37 2020 +0100
+
+    Fixed failed attempt on re-enabling rocket-fuel on existing saves
+    
+    #126
+
+[33mcommit f449b92004594ae49dfffcf476230582390721d4[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 22:13:18 2020 +0100
+
+    Fixed unnatural crash... maybe resetting it will help
+
+[33mcommit 630925252179d339622da87befc5722b248b2beb[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 21:24:00 2020 +0100
+
+    Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+
+[33mcommit 3d108a029243ee91e72c1e48a1f498994ea3b3e5[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 21:10:01 2020 +0100
+
+    Revert "Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting"
+    
+    This reverts commit 96775d33475bc83546e7b639dc23572c67e7c24b.
+
+[33mcommit 96775d33475bc83546e7b639dc23572c67e7c24b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 21:00:28 2020 +0100
+
+    Fixed missing tin related to attempted bugfix in 0.11.4 when playing without angelssmelting
+
+[33mcommit 4f6fb4e192f0d939910073185689e1d8f297a035[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 21:00:16 2020 +0100
+
+    extended make_void function
+    
+    #136
+
+[33mcommit 319760acb43363df419e37a56201deb90076237d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 20:25:54 2020 +0100
+
+    Fixed missing localisation for heavy water seperation recipes
+    
+    #134
+
+[33mcommit 62b222767be8ac6425059d6e630bec9e002fa79f[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 20:25:46 2020 +0100
+
+    Fixed recipe icon tint on water recipes to use refining tint color
+    
+    #134
+
+[33mcommit 17e5a9e3813f8fc16a0e597f2a613ff739fc0d9a[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 19:05:54 2020 +0100
+
+    Changed graphics on tree recipes to represent the trees instead of their product
+
+[33mcommit d90398827be873e67671216002c880d7bd5f09e2[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 18:42:48 2020 +0100
+
+    Decrease production of Compost
+    
+    #136
+
+[33mcommit 7d59a635b8177cb3323aa0e6c044229e20fb07ac[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 16:05:11 2020 +0100
+
+    Fermentation Base processing now produces half the amount of compost
+    
+    #136
+
+[33mcommit 48e345e397104cd49b709889c3bf73c7127b7850[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 16:04:50 2020 +0100
+
+    Fertilizer now takes twice the amount of Compost
+    
+    #136
+
+[33mcommit f622f86d658ee3eeb5ca2e34a25745c3889c4ff5[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 10:36:19 2020 +0100
+
+    Fixed missing localised description on Alien Plant Life Sample
+
+[33mcommit 6de35d44c00a5eef2964040d2e9946b9bd5ca660[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Mar 25 10:11:11 2020 +0100
+
+    Stone wall now require only 1 Construction Block 2 instead of 5
+
+[33mcommit 9f66eceb515e839c3dc45d5bb25cc4b2b465dc31[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Tue Mar 24 18:49:38 2020 +0100
+
+    Minor improvement for checking the upgradeability of the oil refinery
+
+[33mcommit a36305345a587d964fb3ddf59ba3ba93a47fe6fa[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 13:08:45 2020 +0100
+
+    Fixed date on changelog...
+
+[33mcommit f9b7e11c98f0d22ccc69473f6c63d9728712d730[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 13:04:09 2020 +0100
+
+    small crash fixes
+    
+        - Fixed oil refinery didn't have fast_replaceable_group set
+        - Fixed crash when bob pure water was disabled
+
+[33mcommit 32b687d82a2807c09e21a6f76c4182d47cb11324[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 11:43:33 2020 +0100
+
+    New readme for mod portal pages
+
+[33mcommit e3e9932e57e67c1d39d8869369a035fcd96b1923[m
+Merge: 0df3191 670fbce
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 09:51:31 2020 +0100
+
+    Merge branch 'master' into dev
+
+[33mcommit 670fbce9ebd80e6ea15fd10c6e163d493dde0a20[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 09:50:40 2020 +0100
+
+    More fixes (#129)
+
+[33mcommit 0df3191a6d223cca497df8fc1f3e1e88e472a3f1[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 09:08:10 2020 +0100
+
+    Added migration to nilaus addon
+
+[33mcommit c2f23e3667813e398d6aba2bf36651de83b9a707[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 09:04:33 2020 +0100
+
+    updated dates in changelogs for release
+
+[33mcommit 6b77e492f1f76ded24bd203f2eef63274e5f6f21[m
+Merge: 38c13d4 1e18a30
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 00:48:37 2020 +0100
+
+    Merge branch 'dev' of https://github.com/Arch666Angel/ModsCurrentGit into dev
+
+[33mcommit 38c13d4424dbf8f17183f8e7b8986d4018a453a2[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Mar 24 00:48:30 2020 +0100
+
+    Fixed temperatures on molten liquids
+
+[33mcommit 1e18a3091d313b08c815ae53f7dd1aedeb222d55[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Mar 23 23:50:12 2020 +0100
+
+    Minor fix for 119: missed algae farm
+
+[33mcommit 9f85831c8cf52cafe5d521d27263bc2d3c1fd548[m
+Merge: ef2ed49 dd22b83
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 23:40:54 2020 +0100
+
+    Merge branch 'dev' of https://github.com/Arch666Angel/ModsCurrentGit into dev
+
+[33mcommit ef2ed49ba5e750cfb9480b41918c66758136f0b7[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 23:40:25 2020 +0100
+
+    Fixed wire recipes from plates could not be made in bobs electronics assembler
+
+[33mcommit dd22b83bf8d98060f27e32e36fc21abb2462a3ea[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Mar 23 23:33:37 2020 +0100
+
+    Resolves #121: Make all buildings upgradeable (#128)
+    
+    - Fixed boilers with wrong number tint
+    - Fixed changelog refining (corrected date)
+
+[33mcommit 0ab480bdbd87ba9d62cf294f560887ad3bb29f68[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Mon Mar 23 22:42:34 2020 +0100
+
+    Issue #126 resolved: Added migration so rocket fuel gets enabled again (#127)
+    
+    for research
+
+[33mcommit 4e276841178ee5ce803defcb9c2958ccebf15b5c[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 22:40:39 2020 +0100
+
+    Fixed bobmonium setting to spawn in starting area by default
+
+[33mcommit 97a14bfa176c7eedafefc60d7182680de0d19172[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 22:22:18 2020 +0100
+
+    Added missing prerequisite of Paper Making 1 to Red Circuits
+    
+    #121
+
+[33mcommit 079c0714dea854980396882a0395b77a319cd7af[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 21:26:58 2020 +0100
+
+    Fixed that the vanilla lab was not hidden when playing pure angels
+    
+    #122
+
+[33mcommit a07193ad0aabb129d29fd71c0ad6b93517255b08[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 20:58:59 2020 +0100
+
+    Multiple fixes on gun turrets when playing with overhauls
+    
+    Related to #124 and #125
+
+[33mcommit 1cde9cf2c0f52280966a2a8dec3bd8dffc1c1010[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Mar 23 22:22:18 2020 +1100
+
+    Added new Trigger icon
+    
+    Beautiful work Santa
+
+[33mcommit 0171bf655c2e1ccfdce397bb92fc934579155c8f[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Mar 23 12:09:36 2020 +1100
+
+    change trigger for bobs alien tech to move for tech, not components
+    
+    just a small change
+
+[33mcommit 20fafca8c25a847000c6c4323c5f3ac4fc712faa[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 23 00:23:11 2020 +0100
+
+    Added Nilaus' Floor Lamp and updated localisations
+
+[33mcommit e82a15752d581ea61ecb4b39c4fa1f852811b15b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 22 23:07:18 2020 +0100
+
+    Fixed the TP bot
+
+[33mcommit 03dbf3b2bede9236b14f22c4f00b1e66e8b2068f[m
+Merge: f7e12e8 1202267
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Mar 22 17:46:57 2020 +0100
+
+    Merge branch 'hotfix-nilauss' into dev
+
+[33mcommit f97599d6dbaf21c55845609ad86e943871483b34[m
+Merge: c3ce1ac 1202267
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Mar 22 17:41:34 2020 +0100
+
+    Merge branch 'hotfix-nilauss'
+
+[33mcommit 1202267f86d0d4b855956a9a212d195d2e3091ad[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sun Mar 22 17:41:05 2020 +0100
+
+    Prevent desnyc in MP
+
+[33mcommit f7e12e8ddaf6520e11157904368d545e9f01acef[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 22 09:03:38 2020 +0100
+
+    Fixed production science pack required bobs chemical plant instead of angels version
+    
+    #114
+
+[33mcommit 57fcfa024d8dfa0509cd7fb252b1b8e829ad6311[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 22 08:31:39 2020 +0100
+
+    Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+
+[33mcommit c3ce1ac811f1d530d128d303582b4374abfd3786[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Mar 22 00:44:14 2020 +0100
+
+    Hot fixes after 0.18.3 (#112)
+
+[33mcommit ebb3bfc208c4d711c1446904e096272b70be5f77[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 23:33:15 2020 +0100
+
+    small tweaks to nilaus
+
+[33mcommit 8af52fe4be4e58b3651487245a5448a88c3a80d7[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 23:18:17 2020 +0100
+
+    Tweakes some technologies, recipes and items after the previous update
+
+[33mcommit 118c40bb517bd5e52ea0cc26f0319155d3b041c0[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 17:41:38 2020 +0100
+
+    Allow productivity on (all) analyzers and datacores
+
+[33mcommit 790c1a7745399593fa9ef8df857c623a7fc0d831[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 16:28:42 2020 +0100
+
+    Fixed crash related to technologies using count_formula instead of count for none-infinite tech
+
+[33mcommit 6106ae14c8b885d7235ceba909718e01292b29a4[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 15:09:04 2020 +0100
+
+    Fixed crash related to recipe ingredient list having empty fields due to other filthy mods
+
+[33mcommit 23769eea87136025282644266e1909b500c692a4[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 13:19:01 2020 +0100
+
+    Added migration for tech tree fixes for who that does not play with industries
+
+[33mcommit 115b0bee59c70903ea2f70362ce9a004a8074098[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Mar 21 22:38:10 2020 +1100
+
+    Component Return setting update
+
+[33mcommit 76e8871e73aa88f981fbda8b1b4110e159280587[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Mar 21 10:44:52 2020 +0100
+
+    Fixed crash when barrreling recipe did not exist
+
+[33mcommit a55f6ef4ff86b34a856b355c7d50749d4ceebe74[m
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Mar 21 10:22:22 2020 +0100
+
+    Fixed electronic blocks in assemblers (#110)
+
+[33mcommit 941beb06f073095adb2fa3d659570fed31674345[m
+Merge: c4e7b29 73588db
+Author: Tim Vroom <800147+TimVroom@users.noreply.github.com>
+Date:   Sat Mar 21 09:56:43 2020 +0100
+
+    Merge branch 'master' into dev
+
+[33mcommit 73588db20a6481ae0d804dd25da003776f62d2dc[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Mar 21 12:17:12 2020 +1100
+
+    updated changelog and version number
+
+[33mcommit cb24cb4da8d516b7ae960f60202ee0753b6954e8[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Mar 21 12:09:32 2020 +1100
+
+    Fixed Error with return result from composite entities
+    
+    Composite entities where part didn't have a minable result were causing errors, added a check to ensure these are ignored for that part of the script
+
+[33mcommit c4e7b29aa91d3e6eb00b993cabbfb68e8ce733f0[m[33m ([m[1;33mtag: v0.18.3[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Fri Mar 20 23:04:20 2020 +0100
+
+    Release 0.18.3 (#108)
+
+[33mcommit 151db3487f21ea69de4f535bdca6d11f100f001c[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Feb 23 01:15:59 2020 +0100
+
+    Fixed crashes related to playing without angelssmelting (#44)
+
+[33mcommit 6c1358c8aabda5bdd6270aef456e30e35d368791[m[33m ([m[1;33mtag: v0.18.2[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sat Feb 22 22:08:40 2020 +0100
+
+    Release 0.18.2 (#43)
+
+[33mcommit ff1aded1dcd8af4c43a368ce85dae872c252bfd0[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 12 23:36:52 2020 +0100
+
+    fixed bio token yet again (#32)
+
+[33mcommit 75456d61a6d9961f9038b20b6b3cbfa0c70abf87[m[33m ([m[1;33mtag: v0.18.1[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 12 18:54:21 2020 +0100
+
+    Release 0.18.1 (#31)
+    
+    See PR#31 for the changelog.
+
+[33mcommit 88d1a001c7ef1c71586a14e7ca84b4d0018d5cac[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 10 23:00:19 2020 +1100
+
+    removed log script
+    
+    Whoops, should not have left that in
+
+[33mcommit aeae95b830d8eabba0bd79c87dff8116e4c4af6a[m
+Merge: 6b4d91f 4feae61
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 10 22:57:40 2020 +1100
+
+    Merge branch 'dev'
+
+[33mcommit 4feae61704c532ccee559a145e4b84aae9616486[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 10 22:53:19 2020 +1100
+
+    Fixed that bio-token was not being added to labs correctly
+    
+    added an overhaul script for adding the bio-token to labs, with lab_ignore table implementation (needs some more functional tweaks, most likely in bio-processing functions
+
+[33mcommit 5ebd401ed134249b858ba5f64811774797cb8eba[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 10 18:17:14 2020 +1100
+
+    updates to allow bobs to function
+    
+    Finalises bob-overrides
+    hides some recipes which have tech unlocks
+    have not fully tested gameplay
+
+[33mcommit 6b4d91f45548a80b5b310c5d1e183c4de61a6a1d[m
+Merge: 8b7ff10 f47e1bb
+Author: Tim Vroom <tim@timvroom.nl>
+Date:   Sun Feb 9 19:51:44 2020 +0100
+
+    Merge pull request #22 from Arch666Angel/dev
+    
+    Dev
+
+[33mcommit f47e1bb36b54146bc696082909df34443f8cb934[m
+Merge: 8b7ff10 a0960f8
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Feb 9 19:45:51 2020 +0100
+
+    Merge branch '0.18-updates' into dev
+
+[33mcommit a0960f8b195f398d8c9ca485b147726c0eb08502[m
+Merge: f5c8c04 721130f
+Author: Tim Vroom <tim@timvroom.nl>
+Date:   Sun Feb 9 19:43:47 2020 +0100
+
+    Merge pull request #18 from joshricker/0.18-updates
+    
+    Removed dependency on petrochem
+
+[33mcommit 8b7ff10ba82d3071f374e08452b5ca22d42e4780[m[33m ([m[1;33mtag: v0.18.0[m[33m)[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Feb 9 17:42:00 2020 +0100
+
+    Initial 0.18 release (#19)
+
+[33mcommit f5c8c046707832d0356f921a60e03cc0323a1a97[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Feb 9 17:19:48 2020 +0100
+
+    added thumbnail for exploration
+    
+    took the original one from the mod portal
+
+[33mcommit fe856e62445a4248391fea4913ac99bc58e481f9[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Feb 9 17:16:20 2020 +0100
+
+    fixed nilaus changelog again
+
+[33mcommit 4aa8b356dda96b32979754736c7ce558ba48fe8b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Feb 9 17:11:26 2020 +0100
+
+    Disable tech and components when bobmods are in play
+    
+    for the initial release
+
+[33mcommit 721130f682eb5b4736ce07d07ce2390eda7bb47d[m
+Author: Dev_Codec <joshricker410@gmail.com>
+Date:   Sat Feb 8 19:52:25 2020 -0600
+
+    Removed dependency on petrochem
+    
+    Removed dependency on petrochem for refining.
+
+[33mcommit e80fafcc0b6568a7e1bae69ea60d7c618a24556a[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 8 23:48:29 2020 +0100
+
+    Removed debugadapter references
+
+[33mcommit 9b49093d912a09d234b4cf7d2dab71f30419f58a[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 8 23:40:37 2020 +0100
+
+    Updated changelogs to reflect (expected) release date
+
+[33mcommit c98f6404c6ba78d26f026abd652016f9df8783af[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Feb 8 22:20:46 2020 +0100
+
+    added warning sign next to settings
+
+[33mcommit a67a85102dba0da1a27e79963871f58664842397[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Feb 8 17:56:02 2020 +0100
+
+    small bugfixes from bugreports
+    
+    Fixed that the logistics storage silo did not have a filter slot
+    Changed the weight of the crawler train wagon and robot wagon
+    Changed the weight of the smelting train wagon
+
+[33mcommit e813c84298a56716e0598659b68df38f7040ce1d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Feb 8 17:11:41 2020 +0100
+
+    Fixed bio turret projectile
+    
+    bio slime on the ground now slows you down
+    also deleted backup copy of bio turret animations
+
+[33mcommit 2d7db296e869ee080d281a2d3d1aae46f4115af1[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Feb 9 02:41:26 2020 +1100
+
+    Integration of Bobs mods into Industries/Tech setting
+    
+    Partial update, just missing revamp and tech (tech will be a big change)
+    Simple tech integration, no actual testing yet.
+
+[33mcommit b1ac95e0b4543120d34125766994d1a9ac2fb07f[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 8 14:57:29 2020 +0100
+
+    Items are not enabled by default now
+
+[33mcommit aa1cef560a9ce18aa661b3b2aff623a13f24034b[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 8 14:49:52 2020 +0100
+
+    Added translation for item description for aluminium and titanium
+
+[33mcommit 8cf13d605dbf4c476784f8b24c19b44e54e0e403[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 8 14:43:45 2020 +0100
+
+    Updated ore groupings for refining.
+    
+    No more __1__ or missing values
+
+[33mcommit 5aeafb9a25f6ffb9675ec72b86ecd17cce7bedf9[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Feb 8 13:27:47 2020 +0100
+
+    fixed some recipes
+    
+    Fixed Ferrous/Cupric Anode Sludge required the wrong Chloride solution
+    also hide platinum items/fluids when they are not used
+
+[33mcommit 3b49e0f6b4eaf71a616e6f8087d21e9b6d2a15ad[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sat Feb 8 13:03:13 2020 +0100
+
+    last bob organisation and some small fixes
+    
+    bobs alien resource products are now sorted
+    fixed heavy tank gun was visible in item menu
+    fixed some personal equipment was showing in vehicle equipment
+    organised all intermediates in the intermediate tab
+    fixed fiberglass board icon was showing too big
+    fixed tin and gold wire recipes from bobs (+item)
+
+[33mcommit b4e4db765199fc9ef3d5c10c5fb3cdbe174ef5ff[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Feb 8 12:25:00 2020 +1100
+
+    Industries Clean-up
+    
+    Moved functions to a new file
+    called scripts earlier
+    Finally tested to space-science for tech to work (works well)
+    Some code optimisations relating to tech replacements
+    Moved tech only components to the tech category.
+    STILL DOES NOT HANDLE INF. tech correctly, but that will be over 300 hours (if not more) before anyone gets that deep.
+    STILL needs components to unlock sequentially (not all unlocked at the start as is the current case)
+
+[33mcommit 9395a089a3217efaf45c013889d3bef861d62198[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Feb 7 22:25:33 2020 +0100
+
+    fixed missing alien artifact recipes
+
+[33mcommit 5b13411c84ae90fd24b7d8afc415771e9e796f1d[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Feb 7 21:38:17 2020 +0100
+
+    Missed typo
+
+[33mcommit abe25ea40b7f60e8cde491997660919dd9ab6b82[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Feb 7 21:12:47 2020 +0100
+
+    Proper indenting and consistent naming for raw["x"] vs raw.x
+
+[33mcommit 1f04fdcedb69f21c724c8a4ae82173b59607bcdd[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Feb 7 20:58:18 2020 +0100
+
+    Bugfixes and optimisations
+    
+    - Fixed a few erroring images
+    - Lua's style re-alligned
+    - Seperated dynamic recipes into seperate files
+    - Some optimisations in functions
+
+[33mcommit b81b7c0a123c678184b6d85c6063faae52362a7e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Feb 7 19:09:26 2020 +0100
+
+    final bio tweaks + fixed ore silo bug
+    
+    updated garden icons
+    integrated bobgreenhouse
+    added nuclear fertilizer for mutations
+    renamed bio token
+    fixed some localisation errors
+    small balancing details
+
+[33mcommit 53113daab3aaab769d4e86c6cf54ad09d915c7f1[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Feb 7 13:26:35 2020 +0100
+
+    some bob intermediates and edge cases
+
+[33mcommit bdbde994f5fabdbadc1b1480e37f102130ba2457[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Feb 7 11:48:08 2020 +0100
+
+    More various bits and pieces
+    
+    - added and applied petrochem number_tint
+    - tweaked refining number_tint
+    - fixed all bobfluids
+    - ordered thorium ore (item)
+
+[33mcommit a9db44bc0a64541d8a49c8f6efebd8dcc363d381[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Thu Feb 6 23:26:39 2020 +0100
+
+    0.18-updates Fixed changelog.
+    
+    Moved electroliser to a new group (from bobs)
+    Moved recipes to water-treatment and petrochem
+
+[33mcommit 548b53aa47a6b9a8b83fbe06c76abe1a8c600af3[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Feb 6 21:40:23 2020 +0100
+
+    cleaning up small bits and pieces of bobs
+
+[33mcommit 20d4ce076b934bbd35a020c498559d13124ea63e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Feb 6 17:18:59 2020 +0100
+
+    organised bob power
+
+[33mcommit 400a06478da0e66e18a98547201097db1eb3af00[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Feb 6 13:03:55 2020 +0100
+
+    more work done
+    
+    more work on the bio-turret
+    organisation of steam power from bob
+
+[33mcommit afea39edf87b1f5604f40bf8f87ce4602e3176d2[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Thu Feb 6 20:53:43 2020 +1100
+
+    Tech tree updates
+    
+    Industries tech system is functional with just angels
+    Cleaned up code blocks
+    made a mess, need to move functions out
+    ensured tech could be made at each stage
+    TODO: ensure space-packs are integrated correctly
+    add tech for component tiers
+    add unlocks for electronics/components
+    test with bobs
+
+[33mcommit e5d6e726d821b879b50ab37ca9ef360a51b792b9[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 22:55:27 2020 +0100
+
+    added bio-turret
+
+[33mcommit 437523481335fb9d9c3afa3e07707cce3402c1f2[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 19:34:38 2020 +0100
+
+    bugfix
+
+[33mcommit 46fabeb9b6a856110ebfd05ac76b1a4be9c6ee26[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 19:18:57 2020 +0100
+
+    finished bob warfare ordening
+
+[33mcommit 7b029b8c7e630d7502b1e635678196536546d63e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 18:16:46 2020 +0100
+
+    bob personal equipment
+
+[33mcommit 1aa9163568fbd49f380ef4653fbe81d01e2e1107[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 17:34:13 2020 +0100
+
+    small tweaks
+
+[33mcommit 01406e1e1cbad29051994b890caaad6644aa0c3b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 17:01:56 2020 +0100
+
+    added vehicle grid to heavy tank and nilaus truck
+
+[33mcommit 0563255b2a190ec91c89a8bd31d1dac3c56c52d0[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 16:28:04 2020 +0100
+
+    fixing bob equipment grids
+
+[33mcommit f3ddbcf58e096f6c1701a96c94f2b861dc378bcf[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Thu Feb 6 01:52:31 2020 +1100
+
+    General Fixes
+    
+    Returned Scarab Death animation script
+    Fixed corpse problems
+    added a slight dot to the bio-ammo
+
+[33mcommit 7d5a637038140a4685a781f2d8dc5af170e56260[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 14:39:14 2020 +0100
+
+    ordening of bobvehicleequipment
+
+[33mcommit 12fafb254dd624f188d33c6171ede7c4089a87e9[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Wed Feb 5 23:21:02 2020 +1100
+
+    Refining updates
+    
+    Fixed Thorium or spawning issue
+    Number tint integration
+    Recipe subgroup/order now based in item equivalent
+
+[33mcommit 19e95d18e24f6f450b108421d05d1256485a2376[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 13:04:28 2020 +0100
+
+    finished warfare integration
+
+[33mcommit 20edf7b3f3bded476a4064de23cb3e11756f9fbe[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Feb 5 11:38:32 2020 +0100
+
+    new graphic for bio gun and more gun work
+
+[33mcommit 0c3d5dfaff9b74bfa95273a4a873b5858fc902eb[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 22:22:52 2020 +0100
+
+    finished exploration weapons when playing with angels
+
+[33mcommit 7716aef3f5bd3658b359ade86c6c6649ce6fe454[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 21:05:05 2020 +0100
+
+    Finished angels exploration weapons and stand-alone version
+
+[33mcommit be4e1ed54cb94df6eb5affe3cd08e1006e2ace5a[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 20:18:35 2020 +0100
+
+    finishing cannon turret + ammo
+
+[33mcommit 44e9ec88de2927357e9ea6bc6d17c658f1f7cec3[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 19:29:57 2020 +0100
+
+    start working on cannon turret
+
+[33mcommit dba580ae3226a7b477a3d6d0540014d07f18e28e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 18:45:56 2020 +0100
+
+    implemented all heavy cannon shell variations
+
+[33mcommit b94427c2b2a688d1c6f52c4543ef6814c356ab14[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 17:26:58 2020 +0100
+
+    split ammo in different files
+
+[33mcommit bfe500d4afe7c0c645eef803ee815e8efef150f7[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 16:56:07 2020 +0100
+
+    start on weapon organisation when no industries is present
+
+[33mcommit aa1733da156a222e90bd5631881dfd6dd84392b1[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 15:31:44 2020 +0100
+
+    more work on weapons
+
+[33mcommit 4ac2cbeca347bc0ec2e593b8171432bd2e4f7675[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 12:40:12 2020 +0100
+
+    start on weapons
+
+[33mcommit 13d38881f16f0a6343771b5e866b59bebbb14d71[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 10:23:03 2020 +0100
+
+    fixed crashes when bobmods aren't present
+
+[33mcommit 3c5d9cfaa5accbd018e76fb44512c225f20f0c2a[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 10:17:32 2020 +0100
+
+    moved bob chemical plants and electrolisers over to petrochem
+
+[33mcommit 6210fb74db5c865c45ad7fb84c98210a1024a414[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Feb 4 09:45:15 2020 +0100
+
+    more work on tab icons
+
+[33mcommit 05a43a932b06800ff5f74fb750e5d1e81aa8eddf[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Tue Feb 4 14:12:01 2020 +1100
+
+    biter and spawner updates
+    
+    replaced static spawn override with a slightly more flexible one (grabs already defined and adds the new stuff)
+    Still needs balance for scarabs/psykers spawning waaaay earlier than the vanilla variants
+
+[33mcommit 9d86331e080eeaf4fd34640e3749c216da30a0ab[m
+Merge: 281d495 b3e9f46
+Author: Tim Vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 22:29:11 2020 +0100
+
+    Merge pull request #17 from Arch666Angel/0.18-exploration-reorder
+    
+    Updated exploration item order and added bob's tanks
+
+[33mcommit b3e9f4638c5e3ec84c99ad86873330fa73e9003b[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 22:27:40 2020 +0100
+
+    Updated exploration item order and added bob's tanks
+
+[33mcommit 281d495eb65012f22cfea74aa77727639861844e[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 21:56:58 2020 +0100
+
+    added HQ tab icons
+
+[33mcommit 43ebb393fb4504572a699ac75fc5726d922f3b94[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 21:26:46 2020 +0100
+
+    Industries vehicle tab finished (#16)
+
+[33mcommit 906ff24ce10d7cca67bcb20d52a79ce0cbcd9efb[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 21:25:49 2020 +0100
+
+    Updated name
+
+[33mcommit d614038fc6018410ad35c3abe7f6495da0f466ed[m
+Merge: 8f700f6 eb502b4
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 20:48:15 2020 +0100
+
+    Merge branch 'industries-vehicle-tab' into 0.18-updates
+
+[33mcommit eb502b4e56dacc0d8a121b27ba2f3342eef4767e[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 20:47:44 2020 +0100
+
+    Fixes fixed fix merge... (missing santa's)
+
+[33mcommit 8f700f62270395d02066a5d741f720e9232a7457[m
+Merge: 5a64aea 4138204
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 20:29:37 2020 +0100
+
+    Merge branch 'industries-vehicle-tab' into 0.18-updates
+
+[33mcommit 41382043fdfe3b848534fe55151c2c6a34a7c414[m
+Merge: 364d3ad 6737a79
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 20:29:06 2020 +0100
+
+    Merge remote-tracking branch 'origin/industries-vehicle-tab' into industries-vehicle-tab
+
+[33mcommit 364d3ad52ffd6186be09503770fb27a6ab193154[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 20:23:03 2020 +0100
+
+    Set vehicle tab to crawler
+    
+    - Minor fixes because of merge conflicts
+    - Removed unused code
+
+[33mcommit 78cffae86abfd7976445b278999d132ab766a06a[m
+Merge: 0bc3688 5a64aea
+Author: tim vroom <tim@timvroom.nl>
+Date:   Mon Feb 3 19:49:05 2020 +0100
+
+    Merge branch '0.18-updates' into industries-vehicle-tab
+
+[33mcommit 6737a79a6eead2c79718c3f3991b31dc47286a0b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 19:20:23 2020 +0100
+
+    fixes after merging
+
+[33mcommit c3e0a108b5e4f5c44c94a75b1c4815fd8543d222[m
+Merge: 0bc3688 5a64aea
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 19:07:48 2020 +0100
+
+    Merge branch '0.18-updates' into industries-vehicle-tab
+
+[33mcommit 5a64aea5dd43e93d6cc67630fa1f04a6c4a934db[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 18:50:40 2020 +0100
+
+    organised robots
+
+[33mcommit 34d0dbcabd91c6c205a63f13fa8ca5308034f214[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 17:45:06 2020 +0100
+
+    organised chests
+
+[33mcommit f3253cd765e5405ea366d88545a9f9c535c112b7[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 17:16:36 2020 +0100
+
+    organised roboports
+
+[33mcommit c7d129ee98ed4790aeca8d3afea5cc54bb22f846[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 16:18:45 2020 +0100
+
+    more work on the barreling tab
+
+[33mcommit 2e5c3e0a4802d46b55ee94e5149001e8621d6a50[m
+Merge: 1cdd61f 6af364e
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Tue Feb 4 00:08:05 2020 +1100
+
+    Merge branch '0.18-updates' of https://github.com/Arch666Angel/mods into 0.18-updates
+
+[33mcommit 1cdd61f00c6e2a71070b5a13492a4d6488cd2905[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Tue Feb 4 00:07:58 2020 +1100
+
+    Tweaks to icon issues on barrels
+    
+    fixed derp and cleaned up function
+
+[33mcommit 6af364e78cac45724ade0747a198c9e2e3a17f3d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 14:06:38 2020 +0100
+
+    fixes on storage tanks (2)
+
+[33mcommit 70f83ddc4a9c04322df7e5b08a710513f8c6a8d2[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 13:50:15 2020 +0100
+
+    fixes on storage tanks
+
+[33mcommit 667da5a284b0943a29b25275ce13bf72ae3dc851[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 3 22:53:40 2020 +1100
+
+    Garden Mutation Recipes
+    
+    added new garden mutations and the tech for it
+    --still needs icon updates to differentiate gardens
+    spacing updates
+
+[33mcommit 8c6ed7c39fcb5ee919a492c93dfba2ff37635a8c[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Feb 3 12:36:16 2020 +0100
+
+    put barreling override functions in OV
+    
+    also some small tweaks
+
+[33mcommit fd41eb89b01ad1f336317b99008da9b57ac838ec[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 3 20:51:43 2020 +1100
+
+    enforce auto-barrel rules for all fluids
+    
+    forced check of auto-barrelling before modifying barrels to cylinder/canister and fluid bots
+
+[33mcommit 1b3b9d21bc01f61743506e59e63eac073bc755d7[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 3 14:05:59 2020 +1100
+
+    barrelling tweaks
+    
+    updates for barrels, specifically with bobs active
+    changelog updates
+    liquid bot graphics tweaks including auto-icon resize script
+
+[33mcommit f95579602bd827ab8f27d9c44148560276506abc[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Sun Feb 2 21:54:54 2020 +0100
+
+    0.18 organise smelting (#15)
+
+[33mcommit 732f9df94291e503861fb1201080ec0e38e15033[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Feb 3 00:02:12 2020 +1100
+
+    fluid icon fixes and fuel values
+    
+    hides the fluid icons if conversion recipes are disabled (both vanilla and bobs)
+    if bobs is active, adds fuel values to key fluids (may need balancing)
+
+[33mcommit 6aa5f6afe630a21de32e87273e23d8e4746ca1b8[m
+Merge: cd1ca4f 565d163
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Feb 2 21:52:19 2020 +1100
+
+    Merge pull request #14 from SqFKYo/0.18-tryptophobia
+    
+    0.18 tryptophobia
+
+[33mcommit 565d163051576b9e5118bbd0e8f2abf53ddd84d5[m
+Author: SqFKYo <sqfkyo@iki.fi>
+Date:   Sun Feb 2 12:44:37 2020 +0200
+
+    Added tryptophobia friendly option for stiratite
+
+[33mcommit cd1ca4f7a772a725c33701ec1aebfe37665bfdb3[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sun Feb 2 21:41:38 2020 +1100
+
+    Partial update of industries Tech/Components
+    
+    Force disable tech and components (for now)
+    updated localisation of some more tech
+    added a generic lab for "incomplete tech"
+    allowed some basic blocks to be hand crafted to assist with progression
+    added the bio-token to the production labs
+    various other changes
+    Still very much a work in progress
+
+[33mcommit 83e9da3a23a3a400f4964b5c011218e4d65bd178[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 23:12:55 2020 +0100
+
+    Re-alignment, constant number color for bioprocessing
+
+[33mcommit b4d4a00aa5b6f0bc5a9dfa46499925ead8a6b108[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 22:42:03 2020 +0100
+
+    Alignment... again
+
+[33mcommit f4fa8da3891b2ab582dff2823b3a83eb03536464[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 22:39:03 2020 +0100
+
+    Minor alignment improvements and missing translations
+
+[33mcommit f7bd4149ce62259ed6210075978c20b645d523c8[m
+Merge: 75dfd5c 5c07347
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 13:10:59 2020 +0100
+
+    Merge branch '0.18-petroBobsIntegrationOrganise' into 0.18-updates
+
+[33mcommit 5c0734709273fdee572cf7f6cdfff665536a26c9[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 12:58:00 2020 +0100
+
+    Fixes so it works better in vanilla as well
+
+[33mcommit 1738ab77a18f7e56729dcb934b7f12436e638d9f[m
+Merge: b2a35ac 75dfd5c
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 12:47:18 2020 +0100
+
+    Merge branch '0.18-updates' into 0.18-petroBobsIntegrationOrganise
+
+[33mcommit 75dfd5cfbb810ff524be214884df972ef94fc128[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 12:36:54 2020 +0100
+
+    liquid robots fix for when playing vanilla
+    
+    tech was not working without industries
+
+[33mcommit b2a35ac7854709606c54800f58334eaf33aeac0e[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 12:36:19 2020 +0100
+
+    Only update the list when industries is available
+
+[33mcommit 9f06d7822cec1aa9cf70103df282ddfc2bc91a7b[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 12:16:03 2020 +0100
+
+    Minor fixes (wrong naming/order)
+
+[33mcommit 822410e4e883090d41c41d528c0a0c8866bfa753[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 12:11:41 2020 +0100
+
+    Added reorganisation of barrels/fill/empty. in data-final-fixes
+    
+    Also some re-alignments
+
+[33mcommit 6b5417fea17d5ea10d802ba57f9977e0d4ec30b5[m
+Merge: 0818522 b725f43
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sat Feb 1 09:57:25 2020 +0100
+
+    Merge branch '0.18-updates' into 0.18-petroBobsIntegrationOrganise
+
+[33mcommit b725f4350d2f756a91cbaa6bbdbd8489e623c439[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Sat Feb 1 15:08:00 2020 +1100
+
+    Updates to AngelsIndustries
+    
+    updated recipe interaction
+    added settings and activation clauses
+    fixed icons
+    fixed localisations (still missing tech)
+    tested that first 2 tiers of science function, will continue later
+    TO DO:
+    -update recipes to unlock with tech
+    -move components to a more convenient format (mainly electronics ect)
+    -localise tech
+    -check higher tier recipes are achievable
+    -add recipe to have more than one tech archive (relatively early, 1 is too slow at 64 minutes minimum to unlock a new tier)
+
+[33mcommit 0bc36886bb4f6a08187de0e724915095e1343de6[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 23:59:03 2020 +0100
+
+    Added tab name
+    
+    updated nilaus truck to go into the vehicle tab
+
+[33mcommit 0818522c0f946cb55a336b89c98ed686f1e1deba[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 23:21:25 2020 +0100
+
+    Moved barrels to proper tab
+
+[33mcommit 1da01fe238924403a847528fc38a30a07cf08de2[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 17:49:17 2020 +0100
+
+    Moved tanks and car to exploration when enabled
+
+[33mcommit a6146cd7f706519c06ddd289f1bebd796032c55f[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 17:45:09 2020 +0100
+
+    Added (unfinished) vehicle tab
+
+[33mcommit 663a083e4e8eee118f87ec4fb00b98ac424e030a[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 12:46:29 2020 +0100
+
+    Updated mipmaps for items.
+    
+    - Fixed startup errors/mismatches
+
+[33mcommit 4ec0c75c1be7d09674aa7970997ee4e8249e16d3[m
+Merge: 087924b 4dfc5f2
+Author: Tim Vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 12:20:26 2020 +0100
+
+    Merge pull request #12 from Arch666Angel/flying-robots
+    
+    Updated to 0.2.1
+
+[33mcommit 4dfc5f26216ce8fe070cc191d307ebbdbe401943[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Jan 31 12:18:25 2020 +0100
+
+    Updated to 0.2.1
+    
+    - Fixed startup sounds
+    - Added most of the translations (might have missed a few)
+
+[33mcommit 087924bf8346fe5e84a6e7f20b57736b90421799[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Thu Jan 30 23:39:43 2020 +0100
+
+    Thorium ore implemented in refinery (#11)
+
+[33mcommit 5e58615e2043e25272cbb70a9666a52cbabe6049[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Jan 30 19:37:13 2020 +0100
+
+    small tweak to bio + bio compatibility with bob
+    
+    also start on organizing bobs mods when overhaul = true
+
+[33mcommit d8e2d046c8c201b981abec95fc154dc3e51687ec[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Jan 30 12:28:24 2020 +0100
+
+    updates to base game 0.18.2
+
+[33mcommit 379af1ecd9b133cd4b2367847a5ad8f99a7fcd20[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Jan 30 02:20:57 2020 +0100
+
+    small fixes
+    
+    ```
+    - fixed localised messages
+    - removed some debug messages
+    - move stuff from addons around when angel industries is present
+    - changed petro fluid wagons tank ingredient to use petro tanks when petrochem is present
+    ```
+
+[33mcommit 806d6a884915df40a0e395e9d0ad053fd4fa9077[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Jan 29 23:47:44 2020 +0100
+
+    Petro fluid organisation (#10)
+
+[33mcommit efef3e391ece965ca17a4722076687b4852f67fa[m
+Merge: 39c4a08 fceb1b0
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Wed Jan 29 22:55:28 2020 +1100
+
+    Merge branch '0.18-updates' of https://github.com/Arch666Angel/mods into 0.18-updates
+
+[33mcommit 39c4a08d743e5831b84a11b5f1e1261ce5a01514[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Wed Jan 29 22:55:17 2020 +1100
+
+    Exploration Updates Pez
+    
+    Updated biter graphics
+    Updated icon_size errors
+    Added recipe for bio-gun/ammo
+    Added tech for said rifle
+    Updated spawners to spawn colossus scale
+    Localisation fixes
+    Small code clean-ups
+
+[33mcommit fceb1b09d26da36e427431410425e14c0964eb46[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Jan 29 11:25:01 2020 +0100
+
+    fixed uranium ore icon did not fit the recipe box
+
+[33mcommit a473bfed4ca207f2dbf7c0dd062bfabe878f40d5[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Jan 29 11:01:57 2020 +0100
+
+    Changed tab orders
+    
+    they are chronological now
+
+[33mcommit b41a7a70ca04c2a503016aac5131607bbf78e1d1[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Tue Jan 28 23:51:41 2020 -0500
+
+    fixed biter animations
+
+[33mcommit fc3232b0265d69065784262b64aa1d7f7ca088df[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Wed Jan 29 14:11:51 2020 +1100
+
+    Partial Updates to angelsExploration
+    
+    Updates to particles, biter generation and partial fixes to sprite-sheet definitions
+
+[33mcommit eb933de79bc5250a17e20e30fc1f0926e60d38fe[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Wed Jan 29 02:41:13 2020 +0100
+
+    Fixed refining and smelting generating too many types of plates
+    
+    When angelindustry is present, but overhaul = false, the refining and smelting where generating all the ore types instead of just iron and copper
+    
+    Also fixed alot of indentations, but I quited halfway through XD
+
+[33mcommit 5d411b3ea2d0d16212d601ea6642be4b62127f25[m
+Author: lovely_santa <laurens.scheldeman@gmail.com>
+Date:   Wed Jan 29 01:27:19 2020 +0100
+
+    Angelsbioprocessing refugium rework (#9)
+
+[33mcommit 0bec1598daf98c912c5b7316d02e3ae1be14ce2d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Jan 27 12:35:05 2020 +0100
+
+    Added changelogs for every mod for 0.18 release
+
+[33mcommit c8ab42b23ed48f5c33b8b64ce873523875e8278b[m
+Merge: ed2e4e7 94f9f16
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Jan 27 12:05:37 2020 +0100
+
+    Merge branch 'master' into 0.18-updates
+
+[33mcommit ed2e4e7f847c37278dde7c25fe8d594d904fa4d7[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Jan 27 12:02:37 2020 +0100
+
+    Made pretrochem dependency optional #8
+    
+    Also converted some tabs to spaces and fixed indentations
+
+[33mcommit 3dc99eaebcde058c1d1ee0dc293ffb3e2f19d6ac[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Jan 27 11:45:37 2020 +1100
+
+    added electrode localisation
+    
+    fixed missing item localisation
+
+[33mcommit f8ed47392be1c34c02603e14cd5d4e493b8461cb[m
+Author: Pezzawinkle <54166225+Pezzawinkle@users.noreply.github.com>
+Date:   Mon Jan 27 11:22:19 2020 +1100
+
+    icon_size updates
+    
+    updated some icon size references to be 64 not 32, internally, not externally
+
+[33mcommit 94f9f169480767b166c375e7ee3f7dfdb2d6d777[m
+Merge: 7ae1879 4dd19c5
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Mon Jan 27 01:12:05 2020 +0100
+
+    Merge pull request #7 from enxfe85/patch-1
+    
+    Update petrochem.cfg
+
+[33mcommit 52cc16b1a45db74ca7c3b8843c9a5444036ec3f4[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 18:05:55 2020 +0100
+
+    Many fixes...
+    
+    Exploration still needs work, the others are done
+
+[33mcommit cc643759d24d1e3d7e6a92fd52c9b9508372c30f[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 17:46:51 2020 +0100
+
+    Minor fix for particle building
+
+[33mcommit 8720a24af88a9e85b9f803bc332e4ecccd95c60c[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 17:38:38 2020 +0100
+
+    Set proper icon size for loaders
+
+[33mcommit 0266b2055fd00e9865f16c7aced9a2be3b65820e[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 17:29:22 2020 +0100
+
+    Fixes for refining recipes, minor changes to industries
+    
+    Still not working, but progress
+
+[33mcommit d860a1799d5a655ae1d4612b84e63821777d1be5[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 16:54:56 2020 +0100
+
+    Some re-alignment and added a simple buildscript
+
+[33mcommit 1326541a0b5e7a9b95cad94adc70bcbd639cdc04[m
+Merge: 51fd7e3 7ae1879
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 16:20:15 2020 +0100
+
+    Merge branch 'master' into 0.18-updates
+    Updated all the version numbers as well
+
+[33mcommit 51fd7e390776fde5346615bbc2be862768de0b57[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Jan 26 16:03:00 2020 +0100
+
+    Moved all the files to a single dir (so no complete update every update)
+
+[33mcommit 7ae187985c82ff20f2e52c8ee0121103a67e7c65[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Wed Jan 22 08:49:59 2020 -0500
+
+    updated infinite ores and angels cab to v.18
+
+[33mcommit 62dbaa9cf2a1d4d53dae983a5baccdb4fac7e286[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Wed Jan 22 08:30:01 2020 -0500
+
+    update infinite ores to v.18
+
+[33mcommit a56144f1fee9f0f9c376144d54e3cc259c26be74[m
+Author: kingarthur91 <arthurkoy_durbin@yahoo.com>
+Date:   Wed Jan 22 08:23:05 2020 -0500
+
+    updated most of angels mods to v.18
+
+[33mcommit 4dd19c50eefd87f8818c50d24d83da3909b2c8a9[m
+Author: enxfe85 <59208314+enxfe85@users.noreply.github.com>
+Date:   Tue Dec 24 10:19:39 2019 -0800
+
+    Update petrochem.cfg
+
+[33mcommit af8f99de178d356ffe991d0403fcfb6690c8429e[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Tue Nov 12 21:09:22 2019 +0100
+
+    Update .gitignore
+
+[33mcommit 5ef20dfd7bd057338e1008fd0f6c3d4f49a5ef5e[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Tue Nov 12 21:08:41 2019 +0100
+
+    Smol Update
+
+[33mcommit 630bc51e8243d61a45b5d6423448dd3c7ef04833[m
+Merge: 74688a7 a7da0ba
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Oct 27 22:27:10 2019 +0100
+
+    Merge pull request #6 from Arch666Angel/5-angelsaddons-smeltingtrains_WagonColors
+    
+    [fixes #5] Wagon colors
+
+[33mcommit a7da0bad2b38c94adbcd6089e007f172feba1081[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Fri Oct 25 11:51:16 2019 +0200
+
+    [5-angelsaddons-smeltingtrains_WagonColors] Fixes
+    
+    The wagons did not had the right sprites somehow. Fixed
+
+[33mcommit 50a22758249b92cb750673c216ea5c6f103915fa[m
+Author: tim vroom <tim@timvroom.nl>
+Date:   Sun Oct 20 19:58:24 2019 +0200
+
+    {fixes #5} Wagon colors
+    
+    - Moved smeltingtrains to version 0.2.1
+    - Added optional dependency for WagonColors
+    - Added base & tint variants for smelting trains
+    - Updated map representation for wagon and locomotive
+
+[33mcommit 74688a793e5f8c76c03b869d519ee99bda06dd08[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue Aug 13 16:07:39 2019 +0200
+
+    1308 cab
+
+[33mcommit e0d31ae075f7d95216b6efeed1fe3f5407d9bd8e[m
+Merge: 87719a3 b587283
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Mon Aug 5 17:09:16 2019 +0200
+
+    Merge branch 'master' of https://github.com/Arch666Angel/mods
+
+[33mcommit 87719a32afdb1414714cd898b428d8818ed8e319[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Mon Aug 5 17:08:57 2019 +0200
+
+    0508
+    
+    0.8.12 infiniteores
+
+[33mcommit b587283dec9cae59a42f30dde01d925bdb701dfa[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 21:29:25 2019 +0200
+
+    Update README.md
+
+[33mcommit 0f1f593d463a3e4daa5ca8c814efa49b468b548c[m
+Merge: f7623a6 7efd75b
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 21:28:19 2019 +0200
+
+    Merge branch 'master' of https://github.com/Arch666Angel/mods
+
+[33mcommit f7623a66765133cc15180067fb03735bf44ad86d[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 21:28:00 2019 +0200
+
+    0408 refining 10.14; infiniteores 8.11
+    
+    refining 10.14
+    infiniteores 8.11
+
+[33mcommit 7efd75b6ceaeeb652b3957c33d53d4410494b1fb[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 21:14:55 2019 +0200
+
+    Update issue templates
+
+[33mcommit cb570bf544ec1dcb847f287e7900816a3cabf0b4[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 21:02:12 2019 +0200
+
+    Update README.md
+
+[33mcommit 27b7d7487caa963c671285888df4b6a129c86da6[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 21:00:59 2019 +0200
+
+    Update README.md
+
+[33mcommit d10465dc3f98ffbc4bdf7c24afa309e58d11f4fe[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 20:51:17 2019 +0200
+
+    Create README.md
+
+[33mcommit 994cf9373223d29590e5fae38880a027d009a260[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 16:19:29 2019 +0200
+
+    Update .gitignore
+
+[33mcommit 9e7c5d417106870308e40f839e41f6e62e1186d9[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Aug 4 15:46:25 2019 +0200
+
+    Update 0408
+    
+    Update to current
+
+[33mcommit 369214f8bea9facaa87c6468611fe66073309319[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Jul 28 09:38:30 2019 +0200
+
+    2807 cab
+
+[33mcommit b851958cc31e3d5e8bf0329ae6543096e0fe41d4[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Tue May 28 10:14:11 2019 +0200
+
+    2805 updated angelscab
+
+[33mcommit 7cb88c32813239b8c5c93b9b7b9067cfc221acda[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Mar 11 23:59:09 2019 +0100
+
+    1103
+    
+    Updated shrednation deco addon to 0.17
+    Fixed crash in C.A.B when destroyed
+
+[33mcommit aa64337ba0ff0aef762db66e606f7d906fa411d9[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Nov 5 23:09:20 2018 +0100
+
+    0511
+    
+    Commented out debug part
+
+[33mcommit 8cea2ed70fe10bdac7ddc76cae3dfc5add6df0c1[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Mon Nov 5 20:43:13 2018 +0100
+
+    181105 compatibility w/o angelsindustries
+
+[33mcommit ae2c38f23a9703e2decc8dfa18036c3e1ea1d037[m
+Merge: 02b9376 c5cf057
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sat Nov 3 22:38:10 2018 +0100
+
+    Merge pull request #2 from Arch666Angel/angelsaddons-cab_deploy-behaviour
+    
+    Angelsaddons cab deploy behaviour
+
+[33mcommit 02b9376c03d36f4f3e614eb7837692a1f9477093[m
+Merge: 672c8de 645f5f5
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sat Nov 3 22:37:32 2018 +0100
+
+    Merge pull request #3 from Arch666Angel/angelsaddons-shred_0.1.2
+    
+    Angelsaddons shred 0.1.2
+
+[33mcommit 645f5f58337a64e838f879dd65305f5d14438def[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 28 22:01:36 2018 +0100
+
+    2810 Current (v0.1.2)
+
+[33mcommit 55666939a1f2dc8ef454242346bc164c28bd2099[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 28 22:00:08 2018 +0100
+
+    2810 Renamed mod folder to version 0.1.2
+
+[33mcommit c5cf0573a8c5cdd02b203454100d3836cd6a5b1f[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 28 19:53:22 2018 +0100
+
+    2810 Implemented onTickBehaviour
+
+[33mcommit 672c8de7ed24af558140f6685d0bdaad5c64dfed[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Mon Oct 15 21:42:10 2018 +0200
+
+    current 1510
+
+[33mcommit ada43812a976b1f937d16d45566020157887957b[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 14 17:25:42 2018 +0200
+
+    1410 added cab vequip interface prototype
+
+[33mcommit 715cee5b2446e078943c3526aa2800a64decba1d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Sun Oct 14 15:46:09 2018 +0200
+
+    0310 New graphics (and prototype updates)
+
+[33mcommit f142db557dce7fba0a1dbcfa44dba443bffb36d0[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Fri Sep 14 12:56:07 2018 +0200
+
+    Added undeploy gun behaviour
+
+[33mcommit d500be6d84093f0bfa79cb6cfcedd9e5015b302f[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Sep 13 17:49:01 2018 +0200
+
+    Added deploy gun behaviour
+
+[33mcommit adae62a8dc59c9bf930b6403d2fe8f65cc4ccb7d[m
+Author: LovelySanta <laurens.scheldeman@gmail.com>
+Date:   Thu Sep 13 12:26:01 2018 +0200
+
+    Added deploy interface prototypes
+
+[33mcommit 38f42f530fab0d4072a098e2f8dc6af07d6b07a5[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Wed Sep 12 18:16:39 2018 +0200
+
+    1209 Current
+
+[33mcommit 1c86ad3df2868e1d4ec3e73bea052d7fcc89705c[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Wed May 2 21:55:53 2018 +0200
+
+    020518
+    
+    Current
+
+[33mcommit ac4c8ea57bc883945336bf28ef319853654c9a72[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Thu Mar 15 21:28:57 2018 +0100
+
+    1503
+    
+    current
+
+[33mcommit 13da6355c0383d3a5cb2d18c47a41a73a1ad3691[m[33m ([m[1;33mtag: 150318[m[33m)[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Wed Sep 27 00:58:39 2017 +0200
+
+    27.09
+
+[33mcommit 0a9dbc4b4691929340a7dad8831e6826540833c4[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Sep 24 12:08:51 2017 +0200
+
+    24.09
+
+[33mcommit bccd2e02921701261e4c49de34db1dfca61d7900[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Tue Sep 12 23:13:40 2017 +0200
+
+    12.09
+
+[33mcommit e4d249e54f0c8dce2d4cc67ff7087e7149bd3599[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Wed Aug 2 00:21:25 2017 +0200
+
+    02.08
+
+[33mcommit ccc8ed903384d94ef997c5fdf1f4d053dcde31da[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sun Jul 16 12:47:03 2017 +0200
+
+    16.07.17
+
+[33mcommit 140866ebb09ce63c61892bf33ae61761eb12b34c[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sat Jul 15 15:52:29 2017 +0200
+
+    15.07.17
+
+[33mcommit b1cacd4936c24b75e727753acc0ac90529b8a25c[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Thu May 11 16:01:15 2017 +0200
+
+    11.05 infinite ores
+
+[33mcommit 48a52e66f3ccfbb9549ed4fab02f2980a5f9b17b[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Thu May 11 15:57:53 2017 +0200
+
+    Versions as of 11.05
+
+[33mcommit 38e640760a819f33bfbb017ffa9b658444a52e18[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sat Apr 29 10:13:45 2017 +0200
+
+    0.15 updates 1
+
+[33mcommit 2a7fdd49a3f4f68c33d8e65326272a72bb52fb24[m
+Author: Arch666Angel <chl666@gmx.de>
+Date:   Sat Apr 29 10:12:15 2017 +0200
+
+    :neckbeard: Added .gitattributes
