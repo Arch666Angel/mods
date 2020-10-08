@@ -8,9 +8,9 @@ local function hide_setting(setting_type, setting_name, setting_default)
 end
 
 if mods["bobplates"] then
-  hide_setting("bool-setting", "angels-disable-vanilla-chemical-plants", false)
+  hide_setting("bool-setting", "angels-disable-vanilla-chemical-plants", true)
 else
-  hide_setting("bool-setting", "angels-disable-bobs-electrolysers", false)
-  hide_setting("bool-setting", "angels-disable-bobs-chemical-plants", false)
-  hide_setting("bool-setting", "angels-disable-bobs-distilleries", false)
+  hide_setting("bool-setting", "angels-disable-bobs-electrolysers", true)
+  hide_setting("bool-setting", "angels-disable-bobs-chemical-plants", true)
+  hide_setting("bool-setting", "angels-disable-bobs-distilleries", true)
 end

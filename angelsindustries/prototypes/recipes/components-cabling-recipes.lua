@@ -14,7 +14,7 @@ if angelsmods.industries.components then
           {type = "item", name = "copper-cable", amount = 1}
         },
         result = "cable-shielding-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -80,7 +80,7 @@ if angelsmods.industries.components then
           {type = "item", name = "cellulose-fiber", amount = 1}
         },
         result = "cable-harness-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -156,7 +156,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "angels-cabling", amount = 2}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icons = {
           {
             icon = "__angelsindustries__/graphics/icons/cabling.png"
@@ -288,7 +288,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-cabling", amount = 1}
         },
         result = "angels-servo-motor-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
