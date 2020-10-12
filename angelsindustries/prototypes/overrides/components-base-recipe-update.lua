@@ -35,17 +35,30 @@ if angelsmods.industries.components then
     }
   )
   OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
-
-  OV.patch_recipes(
-    {
+  if mods["bobplates"] then
+    OV.patch_recipes(
       {
-        name = "rocket-control-unit",
-        ingredients = {
-          {type = "item", name = "battery-6", amount = 5}
+        {
+          name = "rocket-control-unit",
+          ingredients = {
+            {type = "item", name = "battery-6", amount = 5}
+          }
         }
       }
-    }
-  )
-  OV.add_prereq("rocket-control-unit", "angels-components-batteries-6")
+    )
+    OV.add_prereq("rocket-control-unit", "angels-components-batteries-6")
+  else
+    OV.patch_recipes(
+      {
+        {
+          name = "rocket-control-unit",
+          ingredients = {
+            {type = "item", name = "battery-5", amount = 6}
+          }
+        }
+      }
+    )
+    OV.add_prereq("rocket-control-unit", "angels-components-batteries-5")
+  end
   OV.execute()
 end

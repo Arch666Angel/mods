@@ -244,56 +244,62 @@ if angelsmods.industries.components then
           time = 60
         },
         order = "a-5"
-      },
-      {
-        type = "technology",
-        name = "angels-components-batteries-6",
-        icon = "__base__/graphics/technology/battery.png",
-        icon_size = 128,
-        prerequisites = {
-          "sodium-processing",
-          "angels-tungsten-smelting-1",
-          "angels-silver-smelting-2",
-          "angels-components-batteries-5"
-        },
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "battery-6"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "battery-casing-6"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "battery-frame-6"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "battery-anode-6"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "battery-cathode-6"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "battery-electrolyte-6"
-          },
-        },
-        unit = {
-          count = 64,
-          ingredients = {
-            {type = "item", name = "automation-science-pack", amount = 1},
-            {type = "item", name = "logistic-science-pack", amount = 1},
-            {type = "item", name = "chemical-science-pack", amount = 1},
-            {type = "item", name = "utility-science-pack", amount = 1}
-          },
-          time = 60
-        },
-        order = "a-5"
-      },
+      }
     }
   )
+  if mods["bobplates"] then
+    data:extend(
+      {
+        {
+          type = "technology",
+          name = "angels-components-batteries-6",
+          icon = "__base__/graphics/technology/battery.png",
+          icon_size = 128,
+          prerequisites = {
+            "sodium-processing",
+            "angels-tungsten-smelting-1",
+            "angels-silver-smelting-2",
+            "angels-components-batteries-5"
+          },
+          effects = {
+            {
+              type = "unlock-recipe",
+              recipe = "battery-6"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "battery-casing-6"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "battery-frame-6"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "battery-anode-6"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "battery-cathode-6"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "battery-electrolyte-6"
+            },
+          },
+          unit = {
+            count = 64,
+            ingredients = {
+              {type = "item", name = "automation-science-pack", amount = 1},
+              {type = "item", name = "logistic-science-pack", amount = 1},
+              {type = "item", name = "chemical-science-pack", amount = 1},
+              {type = "item", name = "utility-science-pack", amount = 1}
+            },
+            time = 60
+          },
+          order = "a-5"
+        },
+      }
+    )
+  end
 end
