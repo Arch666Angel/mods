@@ -5,9 +5,12 @@ data:extend(
       name = "angels-aluminium-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-aluminium.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "powder-metallurgy-1",
-        "chlorine-processing-1"
+        "ore-floatation",
+        "chlorine-processing-1",
+        "angels-coal-processing"
       },
       effects = {
         {
@@ -49,6 +52,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-aluminium-smelting-1",
+        "angels-manganese-smelting-1",
         "ore-processing-1",
         "strand-casting-1"
       },
@@ -97,6 +101,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-aluminium-smelting-2",
+        "angels-copper-smelting-1",
+        "angels-silicon-smelting-1",
         "ore-processing-2",
         "sodium-processing",
         "angels-coolant-1"

@@ -5,9 +5,11 @@ data:extend(
       name = "angels-steel-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-steel.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-iron-smelting-1",
-        "steel-processing"
+        "steel-processing",
+        "basic-chemistry"
       },
       effects = {
         {
@@ -21,14 +23,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-steel"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-roll-steel-casting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-roll-steel-converting"
         },
         {
           type = "unlock-recipe",
@@ -54,7 +48,8 @@ data:extend(
       prerequisites = {
         "angels-steel-smelting-1",
         "angels-silicon-smelting-1",
-        "angels-manganese-smelting-1"
+        "angels-manganese-smelting-1",
+        "strand-casting-1"
       },
       effects = {
         {
@@ -68,6 +63,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "powder-steel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-roll-steel-casting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-roll-steel-converting"
         },
         {
           type = "unlock-recipe",
@@ -97,10 +100,10 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-steel-smelting-2",
-        "angels-cobalt-smelting-1",
         "angels-nickel-smelting-1",
         "angels-chrome-smelting-1",
         "angels-tungsten-smelting-1",
+        --"angels-cobalt-smelting-1", -- prerequisite of tungsten
         "angels-coolant-1"
       },
       effects = {

@@ -5,9 +5,11 @@ data:extend(
       name = "angels-manganese-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-manganese.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
-        "angels-coal-processing"
+        "angels-coal-processing",
+        "ore-advanced-crushing"
       },
       effects = {
         {
@@ -42,7 +44,8 @@ data:extend(
       prerequisites = {
         "angels-manganese-smelting-1",
         "ore-processing-1",
-        "angels-sulfur-processing-1"
+        "angels-sulfur-processing-1",
+        "gas-synthesis"
       },
       effects = {
         {

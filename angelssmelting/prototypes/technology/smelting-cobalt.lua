@@ -5,8 +5,10 @@ data:extend(
       name = "angels-cobalt-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-cobalt.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
+        "ore-floatation",
         "angels-coal-processing"
       },
       effects = {

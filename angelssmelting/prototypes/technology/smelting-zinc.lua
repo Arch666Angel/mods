@@ -5,8 +5,11 @@ data:extend(
       name = "angels-zinc-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-zinc.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
+        "angels-lead-smelting-1",
+        "ore-floatation",
         "basic-chemistry"
       },
       effects = {

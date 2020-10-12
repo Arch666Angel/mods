@@ -5,8 +5,10 @@ data:extend(
       name = "angels-glass-smelting-1",
       icon = "__angelssmelting__/graphics/technology/glass-tech.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
-        "powder-metallurgy-1"
+        "powder-metallurgy-1",
+        "ore-crushing"
       },
       effects = {
         {
@@ -60,7 +62,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -74,6 +77,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-glass-smelting-2",
+        "angels-aluminium-smelting-1",
+        "sodium-processing",
         "strand-casting-1"
       },
       effects = {
@@ -99,7 +104,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },

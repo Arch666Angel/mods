@@ -30,6 +30,7 @@ data:extend(
       name = "angels-solder-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-solder.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-solder-smelting-basic",
         "angels-tin-smelting-1",
@@ -66,7 +67,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-solder-smelting-1",
-        "angels-zinc-smelting-1"
+        "angels-zinc-smelting-1",
+        "strand-casting-1"
       },
       effects = {
         {

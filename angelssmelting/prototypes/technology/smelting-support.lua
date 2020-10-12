@@ -7,6 +7,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         "steel-processing"
       },

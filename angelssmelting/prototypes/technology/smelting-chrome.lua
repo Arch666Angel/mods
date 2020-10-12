@@ -5,8 +5,10 @@ data:extend(
       name = "angels-chrome-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-chrome.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
+        "ore-electro-whinning-cell",
         "angels-coal-processing"
       },
       effects = {
@@ -27,7 +29,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -70,7 +73,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },
@@ -85,7 +89,8 @@ data:extend(
       prerequisites = {
         "angels-chrome-smelting-2",
         "ore-processing-2",
-        "sodium-processing"
+        "sodium-processing",
+        "angels-sulfur-processing-1"
       },
       effects = {
         {
@@ -119,7 +124,8 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 30
       },

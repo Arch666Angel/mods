@@ -5,6 +5,7 @@ data:extend(
       name = "angels-tin-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-tin.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "ore-crushing"
@@ -44,6 +45,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-tin-smelting-1",
+        "angels-copper-smelting-2",
         "ore-processing-1",
         "angels-coal-processing",
         "strand-casting-1"

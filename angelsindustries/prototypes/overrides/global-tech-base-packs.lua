@@ -37,7 +37,6 @@ if angelsmods.industries.tech then
   OV.remove_prereq("water-treatment", "steel-processing")
   -- INDUSTRIES
   OV.remove_prereq("tech-red-circuit", "angels-components-batteries-1")
-  OV.remove_input("block-electronics-1", "battery-1")
 
   -------------------------------------------------------------------------------
   -- RED SCIENCE PACKS ----------------------------------------------------------
@@ -58,7 +57,6 @@ if angelsmods.industries.tech then
   pack_replace("powder-metallurgy-1", "green", "red")
   OV.add_prereq("powder-metallurgy-1", "angels-metallurgy-1")
   pack_replace("angels-glass-smelting-1", "green", "red")
-  pack_replace("angels-zinc-smelting-1", "green", "red")
   pack_replace("angels-nickel-smelting-1", "green", "red")
   -- BIO PROCESSING
   pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)
@@ -70,12 +68,13 @@ if angelsmods.industries.tech then
   pack_replace("tech-green-circuit", "green", "red")
   OV.remove_prereq("tech-green-circuit", "resins")
   OV.add_prereq("tech-green-circuit", "bio-arboretum-temperate-1")
+  OV.remove_prereq("tech-green-circuit", "angels-components-batteries-2")
+  OV.add_prereq("tech-green-circuit", "angels-components-batteries-1")
   pack_replace("angels-components-construction-2", "green", "red")
   pack_replace("angels-components-cabling-2", "green", "red")
   pack_replace("angels-components-mechanical-2", "green", "red")
   OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")
   OV.add_prereq("angels-components-mechanical-2", "angels-stone-smelting-1")
-  pack_replace("angels-components-batteries-2", "green", "red")
 
   -------------------------------------------------------------------------------
   -- GREEN SCIENCE PACKS --------------------------------------------------------
@@ -86,6 +85,8 @@ if angelsmods.industries.tech then
   OV.remove_prereq("lubricant", "angels-advanced-oil-processing")
   OV.add_prereq("lubricant", "angels-oil-processing")
   -- INDUSTRIES
+  OV.remove_prereq("tech-orange-circuit", "angels-components-batteries-3")
+  OV.add_prereq("tech-orange-circuit", "angels-components-batteries-2")
   OV.add_prereq("angels-components-construction-3", "tech-green-packs")
   pack_replace("plastics", "orange", "green")
   pack_replace("battery", "orange", "green")
@@ -134,6 +135,7 @@ if angelsmods.industries.tech then
   --pack_replace("geode-processing-2", "green", "orange")
   pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
+  pack_replace("angels-titanium-smelting-1", "blue", "orange")
   pack_replace("angels-stone-smelting-3", "blue", "orange")
   pack_replace("angels-manganese-smelting-2", "blue", "orange")
   --BIOPROCESSING
@@ -151,6 +153,8 @@ if angelsmods.industries.tech then
   --INDUSTRIES
   pack_replace("tech-blue-circuit", "blue", "orange")
   OV.remove_science_pack("tech-blue-circuit", "tech-blue-packs")
+  OV.remove_prereq("tech-blue-circuit", "angels-components-batteries-4")
+  OV.add_prereq("tech-blue-circuit", "angels-components-batteries-3")
   pack_replace("angels-components-mechanical-4", "green", "orange")
   OV.add_prereq("angels-components-construction-4", "tech-orange-packs")
   pack_replace("angels-components-construction-4", "blue", "orange")
@@ -160,7 +164,7 @@ if angelsmods.industries.tech then
   OV.remove_prereq("angels-components-cabling-4", "tech-blue-packs")
   pack_replace("cargo-robots-2", "green", "orange")
   pack_replace("angels-construction-robots-2", "green", "orange")
-  pack_replace("angels-components-batteries-4", "blue", "orange")
+  pack_replace("angels-components-batteries-3", "green", "orange")
 
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -170,17 +174,23 @@ if angelsmods.industries.tech then
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
   -- INDUSTRIES
+  pack_replace("tech-yellow-circuit", "yellow", "blue")
+  OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")
+  OV.add_prereq("tech-yellow-circuit", "angels-components-batteries-4")
   pack_replace("angels-components-construction-5", "yellow", "blue")
   OV.remove_prereq("angels-components-construction-5", "tech-yellow-packs")
   pack_replace("angels-components-cabling-5", "yellow", "blue")
   OV.remove_prereq("angels-components-cabling-5", "tech-yellow-packs")
-  pack_replace("tech-yellow-circuit", "yellow", "blue")
-  pack_replace("angels-components-batteries-5", "yellow", "blue")
 
   -------------------------------------------------------------------------------
   -- YELOW SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
+  OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
+  OV.set_science_pack("rocket-silo", "angels-science-pack-red")
+  OV.set_science_pack("rocket-silo", "angels-science-pack-green")
+  OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
+  OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
   -- REFINING
   pack_replace("advanced-ore-refining-4", "blue", "yellow")
   -- ADDONS
@@ -194,12 +204,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- WHITE SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- BASE GAME
-  OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
-  OV.set_science_pack("rocket-silo", "angels-science-pack-red")
-  OV.set_science_pack("rocket-silo", "angels-science-pack-green")
-  OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
-  OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
+  -- none
 
   OV.execute()
 end

@@ -5,9 +5,10 @@ data:extend(
       name = "angels-nickel-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-nickel.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
-        "angels-coal-processing",
+        "basic-chemistry-2",
         "ore-crushing"
       },
       effects = {
@@ -27,8 +28,7 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       },

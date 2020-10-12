@@ -5,6 +5,7 @@ data:extend(
       name = "angels-lead-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-lead.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "basic-chemistry",
@@ -89,6 +90,7 @@ data:extend(
       prerequisites = {
         "angels-lead-smelting-2",
         "ore-processing-2",
+        "angels-sulfur-processing-2",
         "water-washing-1"
       },
       effects = {

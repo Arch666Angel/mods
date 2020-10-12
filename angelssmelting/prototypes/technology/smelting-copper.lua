@@ -5,6 +5,7 @@ data:extend(
       name = "angels-copper-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-copper.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "ore-crushing"

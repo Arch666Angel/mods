@@ -87,6 +87,11 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   core_replace("angels-rocket-fuel", "war", "enhance")
   -- INDUSTRIES
+  --OV.set_science_pack("angels-components-construction-1", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-2", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-3", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-4", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-5", "datacore-enhance-1", 2)
   core_replace("angels-rocket-hull", "war", "enhance")
 
   -------------------------------------------------------------------------------
@@ -100,6 +105,11 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   core_replace("nuclear-fuel", "processing", "energy")
   -- INDUSTRIES
+  OV.set_science_pack("angels-components-batteries-1", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-2", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-3", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-4", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-5", "datacore-energy-1", 2)
   core_replace("angels-rocket-fusion-reactor", "war", "energy")
 
   -------------------------------------------------------------------------------
@@ -108,6 +118,11 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   OV.set_science_pack("angels-fluid-control", "datacore-logistic-1", 2)
   -- INDUSTRIES
+  --core_replace("angels-components-cabling-1", "energy", "logistic")
+  core_replace("angels-components-cabling-2", "energy", "logistic")
+  core_replace("angels-components-cabling-3", "energy", "logistic")
+  core_replace("angels-components-cabling-4", "energy", "logistic")
+  core_replace("angels-components-cabling-5", "energy", "logistic")
   OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)

@@ -5,9 +5,11 @@ data:extend(
       name = "angels-silicon-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-silicon.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "angels-coal-processing",
+        "angels-nitrogen-processing-1",
         "ore-crushing"
       },
       effects = {
@@ -35,8 +37,7 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       },
@@ -90,6 +91,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-silicon-smelting-2",
+        "angels-aluminium-smelting-1",
         "ore-processing-2"
       },
       effects = {

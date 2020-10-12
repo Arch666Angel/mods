@@ -5,6 +5,7 @@ data:extend(
       name = "angels-iron-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-iron.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "ore-crushing"
@@ -40,6 +41,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-iron-smelting-1",
+        "angels-manganese-smelting-1",
+        "angels-silicon-smelting-1",
         "ore-processing-1",
         "angels-coal-processing",
         "strand-casting-1"
@@ -100,6 +103,9 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-iron-smelting-2",
+        "angels-nickel-smelting-1",
+        "angels-cobalt-smelting-1",
+        "angels-chrome-smelting-1",
         "ore-processing-2",
         "water-washing-1",
         "angels-coolant-1"

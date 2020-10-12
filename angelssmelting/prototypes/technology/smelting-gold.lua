@@ -5,8 +5,10 @@ data:extend(
       name = "angels-gold-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-gold.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
+        "ore-floatation",
         "chlorine-processing-1"
       },
       effects = {
@@ -45,6 +47,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-gold-smelting-1",
+        "angels-copper-smelting-2",
         "ore-processing-1",
         "angels-nitrogen-processing-2",
         "strand-casting-1"
