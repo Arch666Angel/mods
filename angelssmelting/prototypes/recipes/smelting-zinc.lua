@@ -44,7 +44,7 @@ data:extend(
     {
       type = "recipe",
       name = "zinc-ore-processing-alt",
-      category = "ore-processing",
+      category = "chemical-smelting",
       subgroup = "angels-zinc",
       energy_required = 2,
       enabled = false,
