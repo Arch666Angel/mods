@@ -45,7 +45,7 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "cable-shielding-4",
         energy_required = 2,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
           {type = "item", name = "angels-plate-gold", amount = 1}
@@ -57,7 +57,7 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "cable-shielding-5",
         energy_required = 3,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
           {type = "item", name = "angels-plate-platinum", amount = 1}
@@ -323,7 +323,7 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "angels-servo-motor-4",
         energy_required = 4,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
           {type = "item", name = "cable-harness-4", amount = 1},
@@ -337,7 +337,7 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "angels-servo-motor-5",
         energy_required = 6,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
           {type = "item", name = "cable-harness-5", amount = 1},

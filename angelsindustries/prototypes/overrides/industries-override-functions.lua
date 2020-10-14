@@ -175,13 +175,13 @@ end
 
 --MODIFY ALL TECHS ACCORDING TO TIERS
 angelsmods.industries.techtiers = {
-  grey = {amount = 16, time = 10}, --BURNER
-  red = {amount = 64, time = 20}, --AUTOMATION
-  green = {amount = 128, time = 30}, --TRAINS
-  orange = {amount = 256, time = 40}, --OIL
-  blue = {amount = 512, time = 50}, --ROBOTS
-  yellow = {amount = 1024, time = 60}, --ENDGAME
-  white = {amount = 2024, time = 75} --MEGABASE
+  grey = {amount = 16, time = 15}, --BURNER
+  red = {amount = 64, time = 30}, --AUTOMATION
+  green = {amount = 128, time = 45}, --TRAINS
+  orange = {amount = 256, time = 60}, --OIL
+  blue = {amount = 512, time = 75}, --ROBOTS
+  yellow = {amount = 1024, time = 90}, --ENDGAME
+  white = {amount = 2024, time = 120} --MEGABASE
 }
 
 angelsmods.marathon.tech_amount_multi = 1
