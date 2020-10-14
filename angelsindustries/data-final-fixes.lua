@@ -4,18 +4,6 @@ require("prototypes.overrides.global-components-recipe")
 
 if angelsmods.industries.components then
   --hide the unused advanced tech blocks
-  data.raw.recipe["block-extraction-3"].hidden = true
-  data.raw.recipe["block-extraction-4"].hidden = true
-  data.raw.recipe["block-extraction-5"].hidden = true
-  data.raw.recipe["block-mprocessing-3"].hidden = true
-  data.raw.recipe["block-mprocessing-4"].hidden = true
-  data.raw.recipe["block-mprocessing-5"].hidden = true
-  data.raw.recipe["block-cprocessing-3"].hidden = true
-  data.raw.recipe["block-cprocessing-4"].hidden = true
-  data.raw.recipe["block-cprocessing-5"].hidden = true
-  data.raw.recipe["block-bprocessing-3"].hidden = true
-  data.raw.recipe["block-bprocessing-4"].hidden = true
-  data.raw.recipe["block-bprocessing-5"].hidden = true
   OV.global_replace_item(
     {
       "block-extraction-3",
@@ -25,6 +13,15 @@ if angelsmods.industries.components then
     },
     "block-production-3"
   )
+  angelsmods.functions.add_flag("block-extraction-3", "hidden")
+  angelsmods.functions.add_flag("block-mprocessing-3", "hidden")
+  angelsmods.functions.add_flag("block-cprocessing-3", "hidden")
+  angelsmods.functions.add_flag("block-bprocessing-3", "hidden")
+  data.raw.recipe["block-extraction-3"].hidden = true
+  data.raw.recipe["block-mprocessing-3"].hidden = true
+  data.raw.recipe["block-cprocessing-3"].hidden = true
+  data.raw.recipe["block-bprocessing-3"].hidden = true
+
   OV.global_replace_item(
     {
       "block-extraction-4",
@@ -34,6 +31,15 @@ if angelsmods.industries.components then
     },
     "block-production-4"
   )
+  angelsmods.functions.add_flag("block-extraction-4", "hidden")
+  angelsmods.functions.add_flag("block-mprocessing-4", "hidden")
+  angelsmods.functions.add_flag("block-cprocessing-4", "hidden")
+  angelsmods.functions.add_flag("block-bprocessing-4", "hidden")
+  data.raw.recipe["block-extraction-4"].hidden = true
+  data.raw.recipe["block-mprocessing-4"].hidden = true
+  data.raw.recipe["block-cprocessing-4"].hidden = true
+  data.raw.recipe["block-bprocessing-4"].hidden = true
+
   OV.global_replace_item(
     {
       "block-extraction-5",
@@ -43,6 +49,14 @@ if angelsmods.industries.components then
     },
     "block-production-5"
   )
+  angelsmods.functions.add_flag("block-extraction-5", "hidden")
+  angelsmods.functions.add_flag("block-mprocessing-5", "hidden")
+  angelsmods.functions.add_flag("block-cprocessing-5", "hidden")
+  angelsmods.functions.add_flag("block-bprocessing-5", "hidden")
+  data.raw.recipe["block-extraction-5"].hidden = true
+  data.raw.recipe["block-mprocessing-5"].hidden = true
+  data.raw.recipe["block-cprocessing-5"].hidden = true
+  data.raw.recipe["block-bprocessing-5"].hidden = true
   OV.execute()
 end
 --tech updates part 1

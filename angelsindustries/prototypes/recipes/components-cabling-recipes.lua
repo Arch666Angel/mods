@@ -11,7 +11,7 @@ if angelsmods.industries.components then
         category = "crafting",
         enabled = true,
         ingredients = {
-          {type = "item", name = "copper-cable", amount = 1}
+          {type = "item", name = "copper-plate", amount = 1}
         },
         result = "cable-shielding-1",
         allow_decomposition = true,
@@ -24,7 +24,7 @@ if angelsmods.industries.components then
         category = "advanced-crafting",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-tin", amount = 1}
+          {type = "item", name = "angels-plate-tin", amount = 1}
         },
         result = "cable-shielding-2",
         icon_size = 32
@@ -36,7 +36,7 @@ if angelsmods.industries.components then
         category = "advanced-crafting",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-silver", amount = 1}
+          {type = "item", name = "angels-plate-silver", amount = 1}
         },
         result = "cable-shielding-3",
         icon_size = 32
@@ -48,7 +48,7 @@ if angelsmods.industries.components then
         category = "crafting-with-fluid",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-gold", amount = 1}
+          {type = "item", name = "angels-plate-gold", amount = 1}
         },
         result = "cable-shielding-4",
         icon_size = 32
@@ -60,7 +60,7 @@ if angelsmods.industries.components then
         category = "crafting-with-fluid",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-platinum", amount = 1}
+          {type = "item", name = "angels-plate-platinum", amount = 1}
         },
         result = "cable-shielding-5",
         icon_size = 32

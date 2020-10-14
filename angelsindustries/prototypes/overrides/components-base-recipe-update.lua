@@ -61,35 +61,13 @@ if angelsmods.industries.components then
       }
     )
     OV.add_prereq("rocket-control-unit", "angels-components-batteries-5")
+    -- disable battery 6
+    OV.global_replace_item("battery-6", "battery-5")
+    angelsmods.functions.add_flag("battery-6", "hidden")
+    angelsmods.functions.add_flag("battery-anode-6", "hidden")
+    angelsmods.functions.add_flag("battery-cathode-6", "hidden")
+    angelsmods.functions.add_flag("battery-frame-6", "hidden")
   end
-end
-
-if angelsmods.industries.tech then
-  -- rework battery tiers in electronics blocks
-  OV.patch_recipes(
-    {
-      {
-        name = "block-electronics-1",
-        ingredients = {{type = "item", name = "battery-1", amount = 0}}
-      },
-      {
-        name = "block-electronics-2",
-        ingredients = {{type = "item", name = "battery-1", amount = "battery-2"}}
-      },
-      {
-        name = "block-electronics-3",
-        ingredients = {{type = "item", name = "battery-2", amount = "battery-3"}}
-      },
-      {
-        name = "block-electronics-4",
-        ingredients = {{type = "item", name = "battery-3", amount = "battery-4"}}
-      },
-      {
-        name = "block-electronics-5",
-        ingredients = {{type = "item", name = "battery-4", amount = "battery-5"}}
-      }
-    }
-  )
 end
 
 if angelsmods.industries.components then

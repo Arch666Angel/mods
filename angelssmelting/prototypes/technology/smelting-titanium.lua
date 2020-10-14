@@ -7,9 +7,9 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1",
         "ore-leaching",
-        "angels-coal-processing",
+        "angels-metallurgy-3",
+        "angels-coal-processing-2",
         "chlorine-processing-1"
       },
       effects = {
@@ -35,7 +35,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -52,11 +52,12 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-titanium-smelting-1",
-        "angels-nickel-smelting-1",
-        "angels-manganese-smelting-1",
-        "ore-processing-1",
-        "strand-casting-1"
+        "angels-manganese-smelting-2",
+        "angels-nickel-smelting-3"
       },
       effects = {
         {
@@ -89,7 +90,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -107,14 +108,15 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-5",
+        "ore-processing-4",
+        "strand-casting-4",
         "angels-titanium-smelting-2",
-        "angels-tin-smelting-1",
-        "angels-aluminium-smelting-1",
-        "angels-chrome-smelting-1",
-        "angels-cobalt-smelting-1",
-        "ore-processing-2",
-        "basic-chemistry-2",
-        "angels-coolant-1"
+        "angels-tin-smelting-3",
+        "angels-aluminium-smelting-3",
+        "angels-chrome-smelting-2",
+        "angels-cobalt-smelting-3",
+        "basic-chemistry-2" -- it seems rediculous adding this prerequisite to yellow...
       },
       effects = {
         {
@@ -139,7 +141,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 300,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

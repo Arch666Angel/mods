@@ -7,9 +7,9 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1",
         "ore-electro-whinning-cell",
-        "angels-coal-processing"
+        "angels-metallurgy-3",
+        "angels-coal-processing-2"
       },
       effects = {
         {
@@ -26,7 +26,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -43,8 +43,10 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-chrome-smelting-1",
-        "ore-processing-1"
       },
       effects = {
         {
@@ -69,7 +71,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -87,10 +89,12 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-5",
+        "ore-processing-4",
+        "strand-casting-4",
         "angels-chrome-smelting-2",
-        "ore-processing-2",
-        "sodium-processing",
-        "angels-sulfur-processing-1"
+        "angels-sulfur-processing-1", -- it seems rediculous adding this prerequisite to yellow...
+        "sodium-processing"
       },
       effects = {
         {
@@ -119,7 +123,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 300,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

@@ -7,6 +7,7 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-2",
         "angels-iron-smelting-1",
         "steel-processing",
         "basic-chemistry"
@@ -30,7 +31,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -46,10 +47,12 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "ore-processing-2",
+        "strand-casting-2",
         "angels-steel-smelting-1",
-        "angels-silicon-smelting-1",
+        "angels-silicon-smelting-2",
         "angels-manganese-smelting-1",
-        "strand-casting-1"
       },
       effects = {
         {
@@ -82,7 +85,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -99,12 +102,14 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-steel-smelting-2",
-        "angels-nickel-smelting-1",
+        "angels-nickel-smelting-3",
+        --"angels-cobalt-smelting-2", -- prerequisite of tungsten
         "angels-chrome-smelting-1",
-        "angels-tungsten-smelting-1",
-        --"angels-cobalt-smelting-1", -- prerequisite of tungsten
-        "angels-coolant-1"
+        "angels-tungsten-smelting-1"
       },
       effects = {
         {
@@ -125,7 +130,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

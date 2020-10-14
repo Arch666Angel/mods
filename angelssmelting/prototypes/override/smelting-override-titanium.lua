@@ -28,8 +28,10 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-titanium", "hidden")
-
     OV.disable_recipe({"molten-titanium-smelting-1", "molten-titanium-smelting-2", "molten-titanium-smelting-3", "molten-titanium-smelting-4", "molten-titanium-smelting-5"})
+    -- no need for the strand casting
+    OV.remove_prereq("angels-titanium-smelting-2", "strand-casting-3")
+    OV.remove_prereq("angels-titanium-smelting-3", "strand-casting-4")
   end
 else
   angelsmods.functions.add_flag("processed-titanium", "hidden")

@@ -126,7 +126,6 @@ if angelsmods.industries.components then
         {type="item", name = "block-electronics-0", amount = 1},
         {type="item", name = "construction-frame-1", amount = 1},
         {type="item", name = "circuit-red-loaded", amount = 3},
-        {type="item", name = "battery-1", amount = 1},
         {type="item", name = "cable-harness-1", amount = 1},
       },
       results=
@@ -147,7 +146,7 @@ if angelsmods.industries.components then
         {type="item", name = "block-electronics-1", amount = 1},
         {type="item", name = "construction-frame-2", amount = 1},
         {type="item", name = "circuit-green-loaded", amount = 3},
-        {type="item", name = "battery-2", amount = 1},
+        {type="item", name = "battery-1", amount = 1},
         {type="item", name = "cable-harness-2", amount = 1},
       },
       results=
@@ -167,7 +166,7 @@ if angelsmods.industries.components then
         {type="item", name = "block-electronics-2", amount = 1},
         {type="item", name = "construction-frame-3", amount = 1},
         {type="item", name = "circuit-orange-loaded", amount = 3},
-        {type="item", name = "battery-3", amount = 1},
+        {type="item", name = "battery-2", amount = 1},
         {type="item", name = "cable-harness-3", amount = 1},
       },
       results=
@@ -187,7 +186,7 @@ if angelsmods.industries.components then
         {type="item", name = "block-electronics-3", amount = 1},
         {type="item", name = "construction-frame-4", amount = 1},
         {type="item", name = "circuit-blue-loaded", amount = 3},
-        {type="item", name = "battery-4", amount = 1},
+        {type="item", name = "battery-3", amount = 1},
         {type="item", name = "cable-harness-4", amount = 1},
       },
       results=
@@ -207,7 +206,7 @@ if angelsmods.industries.components then
         {type="item", name = "block-electronics-4", amount = 1},
         {type="item", name = "construction-frame-5", amount = 1},
         {type="item", name = "circuit-yellow-loaded", amount = 3},
-        {type="item", name = "battery-5", amount = 1},
+        {type="item", name = "battery-4", amount = 1},
         {type="item", name = "cable-harness-5", amount = 1},
       },
       results=

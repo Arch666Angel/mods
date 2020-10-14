@@ -24,6 +24,9 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
     OV.disable_recipe({"molten-manganese-smelting"})
+    -- no need for the strand casting
+    OV.remove_prereq("angels-manganese-smelting-2", "strand-casting-2")
+    OV.remove_prereq("angels-manganese-smelting-3", "strand-casting-3")
   end
   
   if mods["angelsindustries"] and angelsmods.industries.components then

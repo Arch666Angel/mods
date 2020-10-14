@@ -32,6 +32,7 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-1"
         "angels-solder-smelting-basic",
         "angels-tin-smelting-1",
         "angels-lead-smelting-1"
@@ -51,7 +52,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1}
         },
@@ -66,9 +67,10 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-2",
+        "strand-casting-1",
         "angels-solder-smelting-1",
         "angels-zinc-smelting-1",
-        "strand-casting-1"
       },
       effects = {
         {
@@ -85,7 +87,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -101,8 +103,10 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "strand-casting-2",
         "angels-solder-smelting-2",
-        "angels-copper-smelting-1",
+        "angels-copper-smelting-2",
         "angels-silver-smelting-1"
       },
       effects = {
@@ -116,7 +120,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

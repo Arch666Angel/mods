@@ -40,8 +40,9 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
-        "angels-stone-smelting-1",
+        --"angels-metallurgy-2",
         "powder-metallurgy-1",
+        "angels-stone-smelting-1",
         "concrete",
         "resins"
       },
@@ -72,7 +73,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -88,7 +89,11 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
-        "angels-stone-smelting-2"
+        --"angels-metallurgy-3",
+        "powder-metallurgy-2",
+        "angels-stone-smelting-2",
+        "angels-aluminium-smelting-1",
+        "angels-steel-smelting-1"
       },
       effects = {
         {

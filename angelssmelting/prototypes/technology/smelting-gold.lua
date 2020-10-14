@@ -7,8 +7,8 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1",
         "ore-floatation",
+        "angels-metallurgy-2",
         "chlorine-processing-1"
       },
       effects = {
@@ -30,7 +30,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -46,11 +46,12 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "ore-processing-2",
+        "strand-casting-2",
         "angels-gold-smelting-1",
         "angels-copper-smelting-2",
-        "ore-processing-1",
-        "angels-nitrogen-processing-2",
-        "strand-casting-1"
+        "angels-nitrogen-processing-2"
       },
       effects = {
         {
@@ -91,7 +92,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -108,10 +109,11 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-gold-smelting-2",
-        "ore-processing-2",
-        "sodium-processing",
-        "angels-coolant-1"
+        "sodium-processing"
       },
       effects = {
         {
@@ -136,7 +138,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

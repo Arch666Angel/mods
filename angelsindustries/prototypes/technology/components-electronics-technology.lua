@@ -11,7 +11,6 @@ if angelsmods.industries.components then
         icon = "__angelsindustries__/graphics/technology/red-circuit-tech.png",
         icon_size = 128,
         prerequisites = {
-          "angels-components-batteries-1",
           "angels-solder-smelting-basic",
           "bio-paper-1"
         },
@@ -57,7 +56,7 @@ if angelsmods.industries.components then
         icon_size = 128,
         prerequisites = {
           "tech-red-circuit",
-          "angels-components-batteries-2",
+          "angels-components-batteries-1",
           "angels-components-construction-2",
           "angels-components-cabling-2",
           "automation-2",
@@ -106,7 +105,7 @@ if angelsmods.industries.components then
         icon_size = 128,
         prerequisites = {
           "tech-green-circuit",
-          "angels-components-batteries-3",
+          "angels-components-batteries-2",
           "angels-components-construction-3",
           "angels-components-cabling-3",
           "plastics"
@@ -154,7 +153,7 @@ if angelsmods.industries.components then
         icon_size = 128,
         prerequisites = {
           "tech-orange-circuit",
-          "angels-components-batteries-4",
+          "angels-components-batteries-3",
           "angels-components-construction-4",
           "angels-components-cabling-4"
         },
@@ -202,7 +201,7 @@ if angelsmods.industries.components then
         icon_size = 128,
         prerequisites = {
           "tech-blue-circuit",
-          "angels-components-batteries-5",
+          "angels-components-batteries-4",
           "angels-components-construction-5",
           "angels-components-cabling-5"
         },
