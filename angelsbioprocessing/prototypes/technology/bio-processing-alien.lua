@@ -259,7 +259,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-processing-alien-1",
-        "bio-refugium-hatchery",
+        --"bio-refugium-hatchery",
+        "bio-refugium-puffer-2",
         "bio-processing-crystal-splinter-1",
         "ore-powderizer",
         "geode-crystallization"

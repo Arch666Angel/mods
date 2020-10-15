@@ -9,6 +9,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-nutrient-paste",
+        "water-treatment-3",
         "angels-advanced-chemistry-1"
       },
       effects = {
@@ -53,7 +54,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-refugium-fish-1"
+        "bio-refugium-fish-1",
+        "bio-refugium-butchery-1"
       },
       effects = {
         {
@@ -139,7 +141,8 @@ data:extend(
         --"bio-refugium-fish-1"
         "bio-nutrient-paste",
         "angels-sulfur-processing-2",
-        "angels-nitrogen-processing-1"
+        "angels-nitrogen-processing-1",
+        "angels-advanced-chemistry-1"
       },
       effects = {
         {
@@ -175,7 +178,8 @@ data:extend(
         count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          --{type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -187,7 +191,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-refugium-puffer-1"
+        "bio-refugium-puffer-1",
+        "angels-advanced-chemistry-3"
       },
       effects = {
         {
@@ -215,7 +220,8 @@ data:extend(
         count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -228,7 +234,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-refugium-puffer-2",
-        "water-treatment-2"
+        --"water-treatment-2"
       },
       effects = {
         {
@@ -256,7 +262,8 @@ data:extend(
         count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -268,7 +275,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-refugium-puffer-3"
+        "bio-refugium-puffer-3",
+        "production-science-pack"
       },
       effects = {
         {
@@ -296,7 +304,9 @@ data:extend(
         count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       }
@@ -310,7 +320,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-alien",
-        "bio-refugium-butchery-2",
+        --"bio-refugium-butchery-2",
+        "bio-refugium-puffer-2",
         "bio-processing-crystal-splinter-2",
       },
       effects = {
@@ -351,8 +362,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-          --{"chemical-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       }
@@ -410,7 +421,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-refugium-biter-2"
+        "bio-refugium-biter-2",
+        "bio-refugium-puffer-4"
       },
       effects = {
         {
@@ -585,7 +597,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-refugium-butchery-1",
-        "bio-refugium-puffer-1"
+        "bio-refugium-hatchery"
       },
       effects = {
         {

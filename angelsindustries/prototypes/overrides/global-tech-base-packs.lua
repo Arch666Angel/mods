@@ -69,6 +69,9 @@ if angelsmods.industries.tech then
   pack_replace("lubricant", "blue", "green")
   OV.remove_prereq("lubricant", "angels-advanced-oil-processing")
   OV.add_prereq("lubricant", "angels-oil-processing")
+  -- BIO PROCESSING
+  OV.remove_prereq("bio-refugium-fish-1", "water-treatment-3")
+  OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")
   -- INDUSTRIES
   OV.remove_prereq("tech-orange-circuit", "angels-components-batteries-3")
   OV.add_prereq("tech-orange-circuit", "angels-components-batteries-2")
@@ -114,7 +117,7 @@ if angelsmods.industries.tech then
   --REFINING
   pack_replace("water-treatment-3", "green", "orange")
   pack_replace("ore-leaching", "blue", "orange")
-  --pack_replace("geode-processing-2", "green", "orange")
+  pack_replace("geode-processing-2", "green", "orange")
   pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
   pack_replace("angels-metallurgy-3", "blue", "orange")
@@ -141,6 +144,10 @@ if angelsmods.industries.tech then
   OV.remove_prereq("angels-iron-smelting-3", "angels-chrome-smelting-1")
   --BIOPROCESSING
   pack_replace("bio-wood-processing-3", "green", "orange")
+  pack_replace("bio-processing-alien-2", "green", "orange")
+  pack_replace("bio-processing-crystal-splinter-1", "green", "orange")
+  pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
+  pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
   --PETROCHEM
   pack_replace("angels-advanced-chemistry-2", "green", "orange")
   pack_replace("plastic-1", "green", "orange")
@@ -187,6 +194,13 @@ if angelsmods.industries.tech then
   -- YELOW SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
+  pack_replace("bio-refugium-puffer-4", "blue", "yellow")
+  pack_replace("bio-refugium-biter-3", "blue", "yellow")
+  pack_replace("bio-processing-crystal-full", "blue", "yellow")
+  pack_replace("speed-module-3", "blue", "yellow")
+  pack_replace("productivity-module-3", "blue", "yellow")
+  pack_replace("effectivity-module-3", "blue", "yellow")
+  pack_replace("effect-transmission", "blue", "yellow")
   OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
   OV.set_science_pack("rocket-silo", "angels-science-pack-red")
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")

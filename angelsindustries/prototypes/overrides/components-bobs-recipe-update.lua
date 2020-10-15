@@ -48,6 +48,7 @@ if angelsmods.industries.components then
 
   if mods["bobelectronics"] then
     OV.disable_recipe("wooden-board-paper")
+    OV.remove_prereq("water-treatment", "electronics")
   end
   
   if mods["bobrevamp"] then
@@ -74,7 +75,7 @@ if angelsmods.industries.components then
         },
       }
     )
-    OV.add_prereq("angels-rocket-ion-thruster", "ion-thruster")
+    OV.add_prereq("angels-rocket-ion-thruster", "heat-shield")
     OV.add_prereq("angels-rocket-hull", "heat-shield")
   end
 

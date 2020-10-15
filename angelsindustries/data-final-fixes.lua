@@ -59,6 +59,28 @@ if angelsmods.industries.components then
   data.raw.recipe["block-bprocessing-5"].hidden = true
   OV.execute()
 end
+
+if angelsmods.industries.tech then
+  --hide the unused advanced science datacores
+  OV.global_replace_item(
+    {
+      "datacore-processing-3",
+      "datacore-processing-4",
+      "datacore-processing-5",
+      "datacore-processing-6"
+    },
+    "datacore-processing-2"
+  )
+  angelsmods.functions.add_flag("datacore-processing-3", "hidden")
+  angelsmods.functions.add_flag("datacore-processing-4", "hidden")
+  angelsmods.functions.add_flag("datacore-processing-5", "hidden")
+  angelsmods.functions.add_flag("datacore-processing-6", "hidden")
+  data.raw.recipe["datacore-processing-3"].hidden = true
+  data.raw.recipe["datacore-processing-4"].hidden = true
+  data.raw.recipe["datacore-processing-5"].hidden = true
+  data.raw.recipe["datacore-processing-6"].hidden = true
+end
+
 --tech updates part 1
 require("prototypes.overrides.global-tech")
 

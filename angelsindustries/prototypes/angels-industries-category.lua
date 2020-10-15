@@ -314,27 +314,27 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-science-pack",
+      name = "angels-datacore-1",
       group = "angels-tech",
       order = "aa"
     },
     {
       type = "item-subgroup",
-      name = "angels-pack-components",
+      name = "angels-datacore-2",
       group = "angels-tech",
       order = "ab"
     },
     {
       type = "item-subgroup",
-      name = "angels-datacore-1",
+      name = "angels-science-pack",
       group = "angels-tech",
-      order = "b"
+      order = "ba"
     },
     {
       type = "item-subgroup",
-      name = "angels-datacore-2",
+      name = "angels-pack-components",
       group = "angels-tech",
-      order = "c"
+      order = "bb"
     },
     {
       type = "item-subgroup",

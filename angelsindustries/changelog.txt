@@ -12,6 +12,7 @@ Date: ??
       - Streamlined smelting building ingredients with the tiers they represent
     - Science mode:
       - Increased research times to cope with the slower progression rate
+      - Changed ordening of datacores and analysers because of how the tech tree ordening works
   Bugfixes:
     - Component mode:
       - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)
@@ -19,8 +20,10 @@ Date: ??
         electronics mod (403)
       - Fixed some inconsistencies with tier 2 components and their prerequisites
       - Fixed that some components could not be made in assembling machine 1
+      - Fixed that the unused advanced blocks were still visible in the item select menu
     - Science mode:
       - Fixed that science pack were not replaced in recipe ingredients (400)
+      - Fixed that the unused science datacores were visible in the item select menu
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 20.08.2020
