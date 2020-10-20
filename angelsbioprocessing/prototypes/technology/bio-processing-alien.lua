@@ -138,6 +138,27 @@ data:extend(
         time = 30
       }
     },
+    {
+      type = "technology",
+      name = "bio-processing-alien-3",
+      icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-processing-alien-2",
+      },
+      effects = {
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+          --{type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
     -- CRYSTAL
     {
       type = "technology",
@@ -263,7 +284,7 @@ data:extend(
         "bio-refugium-puffer-2",
         "bio-processing-crystal-splinter-1",
         "ore-powderizer",
-        "geode-crystallization"
+        "geode-crystallization-2"
       },
       effects = {
         {

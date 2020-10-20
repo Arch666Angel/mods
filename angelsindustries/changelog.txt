@@ -24,6 +24,7 @@ Date: ??
     - Science mode:
       - Fixed that science pack were not replaced in recipe ingredients (400)
       - Fixed that the unused science datacores were visible in the item select menu
+      - Fixed automation 1 was locked too far when playing with bobs assemblers
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 20.08.2020

@@ -6,6 +6,8 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
     core_replace("electrolysis-1", "basic", "processing")
+    OV.remove_prereq("electrolysis-1","tech-specialised-labs-basic")
+    OV.add_prereq("electrolysis-1", "tech-specialised-labs-basic-processing-1")
     core_replace("electrolysis-2", "basic", "processing")
     core_replace("grinding", "basic", "processing")
     core_replace("polishing", "basic", "processing")
@@ -36,6 +38,7 @@ if angelsmods.industries.tech then
     --assemblers
     if settings.startup["bobmods-assembly-burner"].value == true then
       core_replace("basic-automation", "processing", "basic")
+      core_replace("automation", "basic", "processing")
     else
       core_replace("automation", "processing", "basic")
     end
