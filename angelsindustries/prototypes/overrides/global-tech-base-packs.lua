@@ -145,6 +145,8 @@ if angelsmods.industries.tech then
   --BIOPROCESSING
   pack_replace("bio-wood-processing-3", "green", "orange")
   pack_replace("bio-processing-alien-2", "green", "orange")
+  pack_replace("bio-processing-alien-3", "green", "orange")
+  pack_replace("geode-crystallization-1", "green", "orange")
   pack_replace("bio-processing-crystal-splinter-1", "green", "orange")
   pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
   pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
