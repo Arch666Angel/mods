@@ -21,6 +21,7 @@ Date: ??
       - Fixed some inconsistencies with tier 2 components and their prerequisites
       - Fixed that some components could not be made in assembling machine 1
       - Fixed that the unused advanced blocks were still visible in the item select menu
+      - Fixed the regular lab would require electronics block 1 instead of 0 (416)
     - Science mode:
       - Fixed that science pack were not replaced in recipe ingredients (400)
       - Fixed that the unused science datacores were visible in the item select menu
