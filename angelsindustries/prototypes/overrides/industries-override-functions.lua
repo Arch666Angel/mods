@@ -175,13 +175,13 @@ end
 
 --MODIFY ALL TECHS ACCORDING TO TIERS
 angelsmods.industries.techtiers = {
-  grey = {amount = 16, time = 10}, --BURNER
-  red = {amount = 64, time = 20}, --AUTOMATION
-  green = {amount = 128, time = 30}, --TRAINS
-  orange = {amount = 256, time = 40}, --OIL
-  blue = {amount = 512, time = 50}, --ROBOTS
-  yellow = {amount = 1024, time = 60}, --ENDGAME
-  white = {amount = 2024, time = 75} --MEGABASE
+  grey = {amount = 16, time = 15}, --BURNER
+  red = {amount = 64, time = 30}, --AUTOMATION
+  green = {amount = 128, time = 45}, --TRAINS
+  orange = {amount = 256, time = 60}, --OIL
+  blue = {amount = 512, time = 75}, --ROBOTS
+  yellow = {amount = 1024, time = 90}, --ENDGAME
+  white = {amount = 2024, time = 120} --MEGABASE
 }
 
 angelsmods.marathon.tech_amount_multi = 1
@@ -451,6 +451,45 @@ function replace_minable_results(buildings)
       if data.raw[build.type][assembly_check].minable then
         data.raw[build.type][assembly_check].minable.results = ing_list
       end
+    end
+  end
+end
+
+function rec_tab_replace(table,old,new,count)
+  --iterate through table
+  for _,entry in pairs(table) do
+    if entry.name == old then
+      entry.name = new
+      if count then
+        entry.amount = count
+      end
+    elseif entry[1] == old then
+      entry[1] = new
+      if count then
+        entry[2] = count
+      end
+    end
+  end
+end
+
+function replace_recipe_ing(recipe,old_ing,new_ing,new_count)
+  if type(recipe) ~= table then
+    recipe = data.raw.recipe[recipe]
+  end
+  if recipe.name then --ensure the recipe exists
+    if recipe.ingredient then
+      if recipe.ingredient == old_ing then
+        recipe.ingredient = new_ing
+      end
+    end
+    if recipe.ingredients then
+      rec_tab_replace(recipe.ingredients,old_ing,new_ing,new_count)
+    end
+    if recipe.normal and recipe.normal.ingredients then
+      rec_tab_replace(recipe.normal.ingredients,old_ing,new_ing,new_count)
+    end
+    if recipe.expensive and recipe.expensive.ingredients then
+      rec_tab_replace(recipe.expensive.ingredients,old_ing,new_ing,new_count)
     end
   end
 end

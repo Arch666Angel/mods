@@ -174,6 +174,42 @@ data:extend(
       group = "angels-components",
       order = "h[tools]"
     },
+    {
+      type = "item-subgroup",
+      name = "angels-batteries",
+      group = "angels-components",
+      order = "i[battery]-a"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-anodes",
+      group = "angels-components",
+      order = "i[battery]-b"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-cathodes",
+      group = "angels-components",
+      order = "i[battery]-c"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-electrolytes",
+      group = "angels-components",
+      order = "i[battery]-d"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-battery-casings",
+      group = "angels-components",
+      order = "i[battery]-e"
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-rocket",
+      group = "angels-components",
+      order = "j[rocket]-b"
+    },
     ---------------------------------------------------------------------------
     -- ANGELS BLOCKS ----------------------------------------------------------
     ---------------------------------------------------------------------------
@@ -185,6 +221,7 @@ data:extend(
       icon_size = 64,
       icon = "__angelsindustries__/graphics/item-group/components-tech.png"
     },
+
     {
       type = "item-subgroup",
       name = "blocks-frames",
@@ -263,6 +300,7 @@ data:extend(
       group = "production",
       order = "z[assemblers]-c[big]"
     },
+
     ---------------------------------------------------------------------------
     -- ANGELS TECHNOLOGY ------------------------------------------------------
     ---------------------------------------------------------------------------
@@ -276,27 +314,27 @@ data:extend(
     },
     {
       type = "item-subgroup",
-      name = "angels-science-pack",
+      name = "angels-datacore-1",
       group = "angels-tech",
       order = "aa"
     },
     {
       type = "item-subgroup",
-      name = "angels-pack-components",
+      name = "angels-datacore-2",
       group = "angels-tech",
       order = "ab"
     },
     {
       type = "item-subgroup",
-      name = "angels-datacore-1",
+      name = "angels-science-pack",
       group = "angels-tech",
-      order = "b"
+      order = "ba"
     },
     {
       type = "item-subgroup",
-      name = "angels-datacore-2",
+      name = "angels-pack-components",
       group = "angels-tech",
-      order = "c"
+      order = "bb"
     },
     {
       type = "item-subgroup",

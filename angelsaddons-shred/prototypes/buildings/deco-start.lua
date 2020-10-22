@@ -1,4 +1,4 @@
-orderstring = require "orderstring"
+local orderstring = require "orderstring"
 
 for _, decoName in pairs(
   {

@@ -163,7 +163,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "c[angels-coil-glass-fiber]"
+      order = "c[angels-coil-glass-fiber]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-glass")
     },
     -- CASTING RESULT
     {

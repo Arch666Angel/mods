@@ -150,7 +150,7 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
         table.insert(localised_sorting_results[tier].sorting, {"",
           string.format("[img=item/%s]", tier_result),
           {"item-description.loc-space"},
-          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+          {string.format("item-description.loc-%s", (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result)}
         })
       end
     end
@@ -159,7 +159,7 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
         table.insert(localised_sorting_results[tier].refining, {"",
           string.format("[img=item/%s]", tier_result),
           {"item-description.loc-space"},
-          {string.format("item-description.loc-%s", get_trigger_name[tier_result] or tier_result)}
+          {string.format("item-description.loc-%s", (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result)}
         })
       end
     end
@@ -360,6 +360,7 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
   for recipe_index = 1, 9 do
     local recipe = {name = string.format(recipe_base_name, string.format("-%i", recipe_index)), results = {{"!!"}}}
     local recipe_used = false
+    local locale_index={}
     for ore_name, ore_amounts in pairs(ore_result_products or {}) do
       local ore_amount = ore_amounts[recipe_index]
       local ore_probability = nil
@@ -371,6 +372,7 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
           recipe.results,
           {name = ore_name, type = "item", amount = ore_amount, probability = ore_probability}
         )
+        locale_index[#locale_index+1]={"item-name."..ore_name}
         recipe_used = true
       end
     end
@@ -384,6 +386,15 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
     else
       OV.disable_recipe(recipe.name)
     end
+    --localisation set-up
+    if #locale_index==2 then
+      recipe.localised_name={"recipe-name.slag_processing_2",locale_index[1],locale_index[2]}
+    elseif #locale_index==3 then
+      recipe.localised_name={"recipe-name.slag_processing_3",locale_index[1],locale_index[2],locale_index[3]}
+    else
+      recipe.localised_name={"recipe-name.slag_processing_1",recipe_index}
+    end
+
   end
   return recipes
 end

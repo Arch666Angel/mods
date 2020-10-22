@@ -2,14 +2,10 @@ if angelsmods.industries.tech then
   local OV = angelsmods.functions.OV
   --require("prototypes.overrides.industries-override-functions")
 
-  -- now the custom fixes
-  OV.global_replace_technology("military-science-pack", "tech-green-packs")
-  OV.global_replace_technology("production-science-pack", "tech-blue-packs")
-
   -------------------------------------------------------------------------------
   -- NO CORES -------------------------------------------------------------------
   -------------------------------------------------------------------------------
-  OV.remove_science_pack("rocket-silo", "datacore-processing-1")
+  OV.remove_science_pack("rocket-silo", "datacore-war-1")
   OV.execute()
 
   -- catch most of the cores with the core builder
@@ -65,6 +61,8 @@ if angelsmods.industries.tech then
   core_replace("bio-refugium-biter-1", "processing", "exploration")
   core_replace("bio-refugium-biter-2", "processing", "exploration")
   core_replace("bio-refugium-biter-3", "processing", "exploration")
+  -- INDUSTRIES
+  core_replace("angels-rocket", "war", "exploration")
   -- EXPLORATION
   OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
   -- CAB ADDONS
@@ -88,6 +86,13 @@ if angelsmods.industries.tech then
   core_replace("follower-robot-count-7", "war", "enhance")
   -- PETROCHEM
   core_replace("angels-rocket-fuel", "war", "enhance")
+  -- INDUSTRIES
+  --OV.set_science_pack("angels-components-construction-1", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-2", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-3", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-4", "datacore-enhance-1", 2)
+  --OV.set_science_pack("angels-components-construction-5", "datacore-enhance-1", 2)
+  core_replace("angels-rocket-hull", "war", "enhance")
 
   -------------------------------------------------------------------------------
   -- ENERGY CORES ---------------------------------------------------------------
@@ -99,6 +104,13 @@ if angelsmods.industries.tech then
   core_replace("nuclear-fuel-reprocessing", "processing", "energy")
   -- PETROCHEM
   core_replace("nuclear-fuel", "processing", "energy")
+  -- INDUSTRIES
+  OV.set_science_pack("angels-components-batteries-1", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-2", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-3", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-4", "datacore-energy-1", 2)
+  OV.set_science_pack("angels-components-batteries-5", "datacore-energy-1", 2)
+  core_replace("angels-rocket-fusion-reactor", "war", "energy")
 
   -------------------------------------------------------------------------------
   -- LOGISTIC CORES -------------------------------------------------------------
@@ -106,10 +118,16 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   OV.set_science_pack("angels-fluid-control", "datacore-logistic-1", 2)
   -- INDUSTRIES
+  --core_replace("angels-components-cabling-1", "energy", "logistic")
+  core_replace("angels-components-cabling-2", "energy", "logistic")
+  core_replace("angels-components-cabling-3", "energy", "logistic")
+  core_replace("angels-components-cabling-4", "energy", "logistic")
+  core_replace("angels-components-cabling-5", "energy", "logistic")
   OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
+  core_replace("angels-rocket-ion-thruster", "war", "logistic")
   -- PRESSURE TANKS ADDONS
   if mods["angelsaddons-pressuretanks"] --[[angelsmods.addons.pressuretanks]] then
     OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
@@ -131,8 +149,6 @@ if angelsmods.industries.tech then
   end
   --undo the change for the infinite tech (would normally be in with enhancement)
   core_replace("follower-robot-count-7", "war", "enhance")
-  angelsmods.functions.add_flag("military-science-pack", "hidden")
-  OV.disable_recipe({"military-science-pack"})
   if mods["angelsexploration"] then
     core_replace("angels-bio-gun", "processing", "war")
     core_replace("angels-refined-biological-1", "processing", "war")
@@ -155,7 +171,8 @@ if angelsmods.industries.tech then
   OV.set_science_pack("lubricant", "datacore-processing-1", 2)
   OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
   -- REFINING
-  OV.set_science_pack("geode-crystallization", "datacore-processing-1", 2)
+  OV.set_science_pack("geode-crystallization-1", "datacore-processing-1", 2)
+  OV.set_science_pack("geode-crystallization-2", "datacore-processing-1", 2)
   OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
@@ -168,13 +185,12 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rubber", "datacore-processing-1", 2)
   core_replace("rocket-booster-1", "war", "processing")
   core_replace("rocket-booster-2", "war", "processing")
-  angelsmods.functions.add_flag("production-science-pack", "hidden")
-  OV.disable_recipe({"production-science-pack"})
   OV.execute() ------------------------------------------------------------------
 
   -- now upgrade the cores to tier 2 and let them depend on the correct technology
   core_tier_upgrade()
   OV.execute()
+  
   -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
   tech_unlock_reset()
   OV.execute()

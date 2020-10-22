@@ -328,4 +328,51 @@ if angelsmods.industries.components then
   --OV.remove_science_pack("cargo-robots-3", "chemical-science-pack")
 
   OV.add_prereq("angels-construction-robots-3", "tech-blue-circuit")
+
+  -------------------------------------------------------------------------------
+  -- ANGELS ROCKET --------------------------------------------------------------
+  -------------------------------------------------------------------------------
+  local rocket = data.raw.item["rocket-part"]
+  if rocket then
+    rocket.icon = "__angelsindustries__/graphics/icons/rocket.png"
+    rocket.icon_size = 64
+    rocket.icon_mipmaps = 1
+    rocket.icons = nil
+    rocket.subgroup = "angels-rocket"
+    rocket.order = "b[rocket]"
+  end
+  angelsmods.functions.remove_flag(rocket.name, "hidden")
+  OV.patch_recipes(
+    {
+      {
+        name = "rocket-part",
+        ingredients = {
+          {"!!"},
+          {"angels-rocket-hull", 30},
+          {"angels-rocket-ion-thruster", 05},
+          {"angels-rocket-ion-booster", 01},
+          {"angels-rocket-fusion-reactor", 02},
+          {"angels-rocket-shield-array", 03},
+          {"angels-rocket-laser-array", 03}
+        },
+        energy_required = 3 * 100,
+        enabled = false,
+        hidden = false
+      }
+    }
+  )
+  rocket = data.raw["rocket-silo"]["rocket-silo"]
+  if rocket then
+    rocket.rocket_parts_required = 1
+    rocket.fixed_recipe = nil
+  end
+  OV.remove_prereq("rocket-silo", "speed-module-3")
+  OV.remove_prereq("rocket-silo", "productivity-module-3")
+  OV.remove_prereq("rocket-silo", "rocket-control-unit")
+  OV.remove_prereq("rocket-silo", "rocket-fuel")
+  OV.add_prereq("rocket-silo", "angels-rocket-hull")
+  OV.add_prereq("rocket-silo", "angels-rocket-ion-thruster")
+  OV.add_prereq("rocket-silo", "angels-rocket-fusion-reactor")
+  OV.add_prereq("rocket-silo", "angels-rocket-shield-array")
+  OV.set_science_pack("rocket-silo", "military-science-pack")
 end

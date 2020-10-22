@@ -5,16 +5,19 @@ data:extend(
       name = "ore-processing-machine",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-processing-machine",
       order = "a[ore-processing-machine]",
       place_result = "ore-processing-machine",
@@ -25,16 +28,19 @@ data:extend(
       name = "ore-processing-machine",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-processing-machine"},
       fast_replaceable_group = "ore-processing-machine",
@@ -44,6 +50,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      drawing_box = {{-1.5, -1.833}, {1.5, 1.5}},
       module_specification = {
         module_slots = 2
       },
@@ -60,28 +67,125 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine.png",
-            width = 160,
-            height = 160,
-            frame_count = 25,
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-base.png",
+            priority = "high",
+            width = 100,
+            height = 105,
             line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
+            frame_count = 25,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -3),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-base.png",
+              priority = "high",
+              width = 196,
+              height = 206,
+              line_length = 5,
+              frame_count = 25,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-0.5, -2 ),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-shadow.png",
+            priority = "high",
+            width = 122,
+            height = 70,
+            repeat_count = 25,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(13, 16),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-shadow.png",
+              priority = "high",
+              width = 243,
+              height = 137,
+              repeat_count = 25,
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(12.5, 16),
+              scale = 0.5,
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          apply_recipe_tint = "primary",
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-top.png",
+            priority = "high",
+            width = 97,
+            height = 71,
+            shift = util.by_pixel(0, -23),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-top.png",
+              priority = "high",
+              width = 192,
+              height = 139,
+              shift = util.by_pixel(0, -22.5),
+              scale = 0.5,
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg"},
+        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -90,16 +194,19 @@ data:extend(
       name = "ore-processing-machine-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-processing-machine",
       order = "b[ore-processing-machine-2]",
       place_result = "ore-processing-machine-2",
@@ -110,16 +217,19 @@ data:extend(
       name = "ore-processing-machine-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-processing-machine-2"},
       fast_replaceable_group = "ore-processing-machine",
@@ -129,6 +239,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      drawing_box = {{-1.5, -1.833}, {1.5, 1.5}},
       module_specification = {
         module_slots = 2
       },
@@ -145,28 +256,125 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine.png",
-            width = 160,
-            height = 160,
-            frame_count = 25,
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-base.png",
+            priority = "high",
+            width = 100,
+            height = 105,
             line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
+            frame_count = 25,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -3),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-base.png",
+              priority = "high",
+              width = 196,
+              height = 206,
+              line_length = 5,
+              frame_count = 25,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-0.5, -2 ),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-shadow.png",
+            priority = "high",
+            width = 122,
+            height = 70,
+            repeat_count = 25,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(13, 16),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-shadow.png",
+              priority = "high",
+              width = 243,
+              height = 137,
+              repeat_count = 25,
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(12.5, 16),
+              scale = 0.5,
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          apply_recipe_tint = "primary",
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-top.png",
+            priority = "high",
+            width = 97,
+            height = 71,
+            shift = util.by_pixel(0, -23),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-top.png",
+              priority = "high",
+              width = 192,
+              height = 139,
+              shift = util.by_pixel(0, -22.5),
+              scale = 0.5,
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg"},
+        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -175,16 +383,19 @@ data:extend(
       name = "ore-processing-machine-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-processing-machine",
       order = "c[ore-processing-machine-3]",
       place_result = "ore-processing-machine-3",
@@ -195,16 +406,19 @@ data:extend(
       name = "ore-processing-machine-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-processing-machine-3"},
       fast_replaceable_group = "ore-processing-machine",
@@ -214,6 +428,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      drawing_box = {{-1.5, -1.833}, {1.5, 1.5}},
       module_specification = {
         module_slots = 2
       },
@@ -230,28 +445,125 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine.png",
-            width = 160,
-            height = 160,
-            frame_count = 25,
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-base.png",
+            priority = "high",
+            width = 100,
+            height = 105,
             line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
+            frame_count = 25,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -3),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-base.png",
+              priority = "high",
+              width = 196,
+              height = 206,
+              line_length = 5,
+              frame_count = 25,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-0.5, -2 ),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-shadow.png",
+            priority = "high",
+            width = 122,
+            height = 70,
+            repeat_count = 25,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(13, 16),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-shadow.png",
+              priority = "high",
+              width = 243,
+              height = 137,
+              repeat_count = 25,
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(12.5, 16),
+              scale = 0.5,
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          apply_recipe_tint = "primary",
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-top.png",
+            priority = "high",
+            width = 97,
+            height = 71,
+            shift = util.by_pixel(0, -23),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-top.png",
+              priority = "high",
+              width = 192,
+              height = 139,
+              shift = util.by_pixel(0, -22.5),
+              scale = 0.5,
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg"},
+        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -260,16 +572,19 @@ data:extend(
       name = "ore-processing-machine-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-processing-machine",
       order = "d[ore-processing-machine-4]",
       place_result = "ore-processing-machine-4",
@@ -280,16 +595,19 @@ data:extend(
       name = "ore-processing-machine-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png"
+          icon = "__angelssmelting__/graphics/icons/ore-processing-machine.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-processing-machine-4"},
       fast_replaceable_group = "ore-processing-machine",
@@ -298,6 +616,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      drawing_box = {{-1.5, -1.833}, {1.5, 1.5}},
       module_specification = {
         module_slots = 2
       },
@@ -314,28 +633,125 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine.png",
-            width = 160,
-            height = 160,
-            frame_count = 25,
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-base.png",
+            priority = "high",
+            width = 100,
+            height = 105,
             line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
+            frame_count = 25,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -3),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-base.png",
+              priority = "high",
+              width = 196,
+              height = 206,
+              line_length = 5,
+              frame_count = 25,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-0.5, -2 ),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-shadow.png",
+            priority = "high",
+            width = 122,
+            height = 70,
+            repeat_count = 25,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(13, 16),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-shadow.png",
+              priority = "high",
+              width = 243,
+              height = 137,
+              repeat_count = 25,
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              shift = util.by_pixel(12.5, 16),
+              scale = 0.5,
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          apply_recipe_tint = "primary",
+          fade_out = true,
+          constant_speed = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
+            priority = "high",
+            width = 36,
+            height = 57,
+            line_length = 5,
+            frame_count = 20,
+            animation_speed = 0.40,
+            shift = util.by_pixel(0, -15),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
+              priority = "high",
+              width = 107,
+              height = 170,
+              line_length = 5,
+              frame_count = 20,
+              animation_speed = 0.40,
+              shift = util.by_pixel(0, -21.5),
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          always_draw = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-top.png",
+            priority = "high",
+            width = 97,
+            height = 71,
+            shift = util.by_pixel(0, -23),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-top.png",
+              priority = "high",
+              width = 192,
+              height = 139,
+              shift = util.by_pixel(0, -22.5),
+              scale = 0.5,
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg"},
+        sound = {filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     }

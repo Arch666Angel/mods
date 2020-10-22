@@ -1,11 +1,15 @@
 data:extend(
   {
-    --METALLURGY
+    ---------------------------------------------------------------------------
+    -- METALLURGY -------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "technology",
       name = "angels-metallurgy-1",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         "steel-processing"
       },
@@ -13,10 +17,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "blast-furnace"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-furnace"
         },
         {
           type = "unlock-recipe",
@@ -40,7 +40,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-2",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-1"
@@ -52,7 +53,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-furnace-2"
+          recipe = "angels-chemical-furnace"
         },
         {
           type = "unlock-recipe",
@@ -64,7 +65,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -77,7 +78,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-3",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-2"
@@ -89,7 +91,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-furnace-3"
+          recipe = "angels-chemical-furnace-2"
         },
         {
           type = "unlock-recipe",
@@ -101,7 +103,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -115,7 +117,8 @@ data:extend(
       type = "technology",
       name = "angels-metallurgy-4",
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-3"
@@ -127,7 +130,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-furnace-4"
+          recipe = "angels-chemical-furnace-3"
         },
         {
           type = "unlock-recipe",
@@ -139,7 +142,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -150,14 +153,46 @@ data:extend(
       },
       order = "c-a"
     },
-    --POWDER METALLURGY
+    {
+      type = "technology",
+      name = "angels-metallurgy-5",
+      icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+      icon_size = 256,
+      icon_mipmaps = 2,
+      upgrade = true,
+      prerequisites = {
+        "angels-metallurgy-4"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-chemical-furnace-4"
+        },
+      },
+      unit = {
+        count = 250,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    ---------------------------------------------------------------------------
+    -- POWDER METALLURGY ------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "technology",
       name = "powder-metallurgy-1",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       prerequisites = {
-        "angels-metallurgy-1"
+        "angels-metallurgy-2"
       },
       effects = {
         {
@@ -170,7 +205,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -183,9 +218,11 @@ data:extend(
       type = "technology",
       name = "powder-metallurgy-2",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-3",
         "powder-metallurgy-1"
       },
       effects = {
@@ -199,7 +236,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -213,9 +250,11 @@ data:extend(
       type = "technology",
       name = "powder-metallurgy-3",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-4",
         "powder-metallurgy-2"
       },
       effects = {
@@ -229,7 +268,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -244,9 +283,11 @@ data:extend(
       type = "technology",
       name = "powder-metallurgy-4",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-5",
         "powder-metallurgy-3"
       },
       effects = {
@@ -260,7 +301,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -272,14 +313,18 @@ data:extend(
       },
       order = "c-a"
     },
-    --STRAND CASTING
+    ---------------------------------------------------------------------------
+    -- STRAND CASTING ---------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "technology",
       name = "strand-casting-1",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       prerequisites = {
-        "angels-metallurgy-1"
+        "angels-metallurgy-2",
+        "angels-cooling"
       },
       effects = {
         {
@@ -288,7 +333,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -301,10 +346,13 @@ data:extend(
       type = "technology",
       name = "strand-casting-2",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
-        "strand-casting-1"
+        "angels-metallurgy-3",
+        "strand-casting-1",
+        "angels-coolant-1"
       },
       effects = {
         {
@@ -313,7 +361,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -327,9 +375,11 @@ data:extend(
       type = "technology",
       name = "strand-casting-3",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-4",
         "strand-casting-2"
       },
       effects = {
@@ -339,7 +389,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -354,9 +404,11 @@ data:extend(
       type = "technology",
       name = "strand-casting-4",
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-5",
         "strand-casting-3"
       },
       effects = {
@@ -366,7 +418,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -378,14 +430,17 @@ data:extend(
       },
       order = "c-a"
     },
-    --ORE PROCESSING
+    ---------------------------------------------------------------------------
+    -- ORE PROCESSING ---------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "technology",
       name = "ore-processing-1",
       icon = "__angelssmelting__/graphics/technology/processing-machine-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       prerequisites = {
-        "angels-metallurgy-1"
+        "angels-metallurgy-2"
       },
       effects = {
         {
@@ -407,9 +462,11 @@ data:extend(
       type = "technology",
       name = "ore-processing-2",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-3",
         "ore-processing-1"
       },
       effects = {
@@ -423,7 +480,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -437,9 +494,11 @@ data:extend(
       type = "technology",
       name = "ore-processing-3",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-4",
         "ore-processing-2"
       },
       effects = {
@@ -453,7 +512,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -468,9 +527,11 @@ data:extend(
       type = "technology",
       name = "ore-processing-4",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
+        "angels-metallurgy-5",
         "ore-processing-3"
       },
       effects = {
@@ -484,7 +545,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -500,7 +561,8 @@ data:extend(
       type = "technology",
       name = "ore-processing-5",
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
         "ore-processing-4"
@@ -512,7 +574,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -524,22 +586,49 @@ data:extend(
       },
       order = "c-a"
     },
-    --SUPPORT
+    ---------------------------------------------------------------------------
+    -- SUPPORT ----------------------------------------------------------------
+    ---------------------------------------------------------------------------
     {
       type = "technology",
-      name = "angels-coolant-1",
+      name = "angels-cooling",
       icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-metallurgy-1",
-        "water-treatment",
-        "angels-oil-processing"
+        "angels-metallurgy-2",
+        "water-treatment"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "cooling-tower"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "coolant-cool-steam"
+        }
+      },
+      unit = {
+        count = 250,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-coolant-1",
+      icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
+      icon_size = 128,
+      prerequisites = {
+        "angels-metallurgy-3",
+        "angels-cooling",
+        "angels-oil-processing"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "coolant"
@@ -559,17 +648,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "coolant-cool-300"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "coolant-cool-steam"
         }
       },
       unit = {
-        count = 50,
+        count = 500,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -581,6 +667,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
       icon_size = 128,
       prerequisites = {
+        "angels-metallurgy-4",
         "angels-coolant-1"
       },
       effects = {
@@ -590,11 +677,12 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 1000,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },

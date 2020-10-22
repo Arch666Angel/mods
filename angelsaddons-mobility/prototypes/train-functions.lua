@@ -14,6 +14,49 @@ local function set_type(name)
   return train_type
 end
 
+local function generate_additional_pastable_entities(name)
+  all_entity_names = {}
+  for _, entity_type_name in pairs{
+    "crawler-locomotive",
+    "crawler-locomotive-wagon",
+    "crawler-wagon",
+    "crawler-bot-wagon",
+
+    "petro-locomotive-1",
+    "petro-tank1",
+    "petro-tank2",
+
+    "smelting-locomotive-1",
+    "smelting-locomotive-tender",
+    "smelting-wagon-1"
+  } do
+    local entity_type_tiers = angelsmods.addons.mobility[set_type(entity_type_name)].tier_amount
+    if entity_type_tiers > 1 then
+      for entity_tier = 1, entity_type_tiers, 1 do
+        local entity_name = entity_type_name
+        if entity_tier > 1 then
+          entity_name = entity_name .. "-" .. entity_tier
+        end
+        if name ~= entity_name then
+          table.insert(all_entity_names, entity_name)
+        end
+      end
+    end
+  end
+
+  local valid_name = false
+  local pastable_entities = {}
+  for _, entity_name in pairs(all_entity_names) do
+    if entity_name == name then
+      valid_name = true
+    else
+      table.insert(pastable_entities, entity_name)
+    end
+  end
+
+  return valid_name and pastable or nil
+end
+
 local function generate_tiered_ingredients(tier, ingredients)
   if tier < 1 then
     return {}
@@ -203,9 +246,11 @@ local function generate_train_entities(item)
       elseif item.type == "fluid-wagon" then
         copy.capacity = math.floor(item.capacity * i)
       end
+      copy.additional_pasteable_entities = generate_additional_pastable_entities(copy.name)
       table.insert(entries, copy)
     end
   else
+    item.additional_pasteable_entities = generate_additional_pastable_entities(item.name)
     table.insert(entries, item)
   end
 

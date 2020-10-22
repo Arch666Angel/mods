@@ -47,6 +47,10 @@ if bobmods then
       move_item("crystal-grindstone", "bob-gems-cut", "h-4", "recipe")
     end
 
+    -- GEMS
+    OV.add_prereq("gem-processing-1", "geode-crystallization-1")
+    OV.add_prereq("bio-processing-alien-3", "gem-processing-1")
+
     -- CRYSTALS
     OV.modify_input("crystal-grindstone", {"grinding-wheel", "iron-plate"})
     OV.add_prereq("bio-processing-crystal-splinter-1", "grinding")
@@ -264,7 +268,8 @@ if bobmods then
           {
             {type="item", name="automation-science-pack", amount = 1},
             {type="item", name="logistic-science-pack", amount = 1},
-            {type="item", name="chemical-science-pack", amount = 1}
+            {type="item", name="chemical-science-pack", amount = 1},
+            {type="item", name="production-science-pack", amount = 1}
           },
           time = 30
         },

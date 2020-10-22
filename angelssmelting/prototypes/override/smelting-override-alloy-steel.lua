@@ -35,6 +35,13 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
     OV.add_prereq("angels-steel-smelting-2", "angels-coolant-1")
     OV.disable_technology("angels-steel-smelting-3")
   end
+
+  if angelsmods.trigger.smelting_products["steel"].plate or
+     angelsmods.trigger.smelting_products["steel"].rod   then
+  else
+    OV.remove_prereq("angels-steel-smelting-2", "strand-casting-2")
+    OV.remove_prereq("angels-steel-smelting-3", "strand-casting-3")
+  end
 else
   angelsmods.functions.add_flag("ingot-steel", "hidden")
   angelsmods.functions.add_flag("liquid-molten-steel", "hidden")

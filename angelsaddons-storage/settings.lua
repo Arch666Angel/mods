@@ -16,10 +16,17 @@ data:extend(
    },
    {
     type = "bool-setting",
+    name = "angels-enable-inline-tank",
+    setting_type = "startup",
+    default_value = true,
+    order = "c-a",
+   },
+   {
+    type = "bool-setting",
     name = "angels-enable-pressure-tank",
     setting_type = "startup",
     default_value = true,
-    order = "c",
+    order = "c-b",
    },
    {
     type = "bool-setting",

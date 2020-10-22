@@ -17,7 +17,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "motor-casing-1", amount = 1}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icons = {
           {
             icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
@@ -227,7 +227,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "motor-block-1", amount = 1}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -307,7 +307,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-gear", amount = 1}
         },
         result = "motor-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -387,7 +387,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "angels-gear", amount = 2}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -457,7 +457,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "mechanical-parts", amount = 2}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icons = {
           {
             icon = "__angelsindustries__/graphics/icons/mechanical-parts.png"

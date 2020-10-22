@@ -5,9 +5,12 @@ data:extend(
       name = "angels-zinc-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-zinc.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1",
-        "basic-chemistry"
+        "ore-floatation",
+        "angels-metallurgy-2",
+        "angels-lead-smelting-1",
+        --"basic-chemistry"
       },
       effects = {
         {
@@ -21,10 +24,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-zinc"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "zinc-ore-processing-alt"
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -40,9 +47,11 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "ore-processing-2",
+        "strand-casting-2",
         "angels-zinc-smelting-1",
-        "ore-processing-1",
-        "angels-coal-processing"
+        "angels-coal-processing-2"
       },
       effects = {
         {
@@ -67,7 +76,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -84,9 +93,11 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-zinc-smelting-2",
-        "ore-processing-2",
-        "angels-sulfur-processing-1"
+        "angels-sulfur-processing-2"
       },
       effects = {
         {
@@ -111,7 +122,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

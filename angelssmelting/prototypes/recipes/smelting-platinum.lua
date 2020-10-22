@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-platinum", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-platinum]"
+      order = "b[processed-platinum]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -229,7 +230,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-platinum]-a"
+      order = "i[angels-roll-platinum]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -274,7 +276,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-platinum]-b"
+      order = "i[angels-roll-platinum]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -317,7 +320,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-wire-coil-platinum]-a"
+      order = "j[angels-wire-coil-platinum]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -364,7 +368,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-wire-coil-platinum]-b"
+      order = "j[angels-wire-coil-platinum]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     -- CASTING RESULT
     {

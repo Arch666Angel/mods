@@ -33,6 +33,13 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
     angelsmods.functions.add_flag("liquid-molten-lead", "hidden")
     OV.disable_recipe({"molten-lead-smelting"})
   end
+  
+  if angelsmods.trigger.smelting_products["lead"].plate then
+  else
+    -- no need for the strand casting
+    OV.remove_prereq("angels-lead-smelting-2", "strand-casting-1")
+    OV.remove_prereq("angels-lead-smelting-3", "strand-casting-2")
+  end
 else
   angelsmods.functions.add_flag("processed-lead", "hidden")
   angelsmods.functions.add_flag("pellet-lead", "hidden")

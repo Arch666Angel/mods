@@ -334,6 +334,38 @@ data:extend(
     max_temperature = 100,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59
+  },
+  {
+    type = "fluid",
+    name = "gas-ethylene-oxide", --C2H4O
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]O"} or nil,
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/ethylene-oxide.png", 72 }, "coh"),
+    --icon_size = 32,
+    subgroup = "petrochem-carbon-fluids",
+    order = "ek",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    base_color = {r = 1, g = 0.3, b = 0.3},
+    flow_color = {r = 1, g = 0.3, b = 0.3},
+    max_temperature = 100,
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59
+  },
+  {
+    type = "fluid",
+    name = "liquid-ethylene-carbonate", --(CH2O)2CO
+    localised_description = show_formula and {"tooltip-description.chemical-formula", "(CH[font=default-tiny-bold]2[/font]O)[font=default-tiny-bold]2[/font]CO"} or nil,
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/ethylene-carbonate.png", 72 }, "coh"),
+    --icon_size = 32,
+    subgroup = "petrochem-carbon-fluids",
+    order = "el",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    base_color = {r = 1, g = 0.3, b = 0.3},
+    flow_color = {r = 1, g = 0.3, b = 0.3},
+    max_temperature = 240,
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59
   }
 }
 )

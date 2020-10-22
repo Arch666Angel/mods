@@ -1,7 +1,8 @@
+local noise = require("noise")
+
 if mods["angelsexploration"] then
   -- angels exploration takes care of this
 else
-  local noise = require("noise")
   local map_settings = data.raw["map-settings"]["map-settings"]
   map_settings.pollution.enabled = false
   map_settings.enemy_evolution.enabled = false

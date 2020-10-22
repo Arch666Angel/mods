@@ -174,9 +174,9 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
 
       -- constant combinator parameters
       if controlBehavior.type == defines.control_behavior.type.constant_combinator then
-        local oldParams = controlBehavior.parameters.parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
+        local oldParams = (controlBehavior.parameters or {}).parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
         local newParams = {}
-        for signalIndex, oldSignal in pairs(oldParams) do
+        for signalIndex, oldSignal in pairs(oldParams or {}) do
           newParams[signalIndex] = {
             signal = oldSignal.signal and {
               type = oldSignal.signal.type,
@@ -186,7 +186,7 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
             index = oldSignal.index,
           }
         end
-        controlBehavior.parameters = controlBehavior.parameters.parameters and { parameters = newParams } or newParams
+        controlBehavior.parameters = controlBehavior.parameters and controlBehavior.parameters.parameters and { parameters = newParams } or newParams
       end
 
       -- output signal

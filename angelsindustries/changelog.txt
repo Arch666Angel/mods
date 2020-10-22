@@ -1,4 +1,33 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.7
+Date: ??
+  Changes:
+    - Regular mode:
+      - Some minor localisation changes to unify angels localisation across mods (372)
+    - Component mode:
+      - Added a new battery component with intermediate parts (397)
+      - Added new rocket recipe with new intermediate components
+      - Integrated deuterium fuel cell 2 to have a stable infinite nuclear fuel cell (386)
+      - Components will now show their total raw (352)
+      - Streamlined smelting building ingredients with the tiers they represent
+    - Science mode:
+      - Increased research times to cope with the slower progression rate
+      - Changed ordening of datacores and analysers because of how the tech tree ordening works
+  Bugfixes:
+    - Component mode:
+      - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)
+      - Fixed that there would be two grey board recipes from paper when playing with bob
+        electronics mod (403)
+      - Fixed some inconsistencies with tier 2 components and their prerequisites
+      - Fixed that some components could not be made in assembling machine 1
+      - Fixed that the unused advanced blocks were still visible in the item select menu
+      - Fixed the regular lab would require electronics block 1 instead of 0 (416)
+    - Science mode:
+      - Fixed that science pack were not replaced in recipe ingredients (400)
+      - Fixed that the unused science datacores were visible in the item select menu
+      - Fixed automation 1 was locked too far when playing with bobs assemblers
+      - Fixed Geode processing 2 having a green and orange analyzer (414)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 20.08.2020
   Changes:
