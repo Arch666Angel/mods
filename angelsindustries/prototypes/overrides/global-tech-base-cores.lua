@@ -61,6 +61,9 @@ if angelsmods.industries.tech then
   core_replace("bio-refugium-biter-1", "processing", "exploration")
   core_replace("bio-refugium-biter-2", "processing", "exploration")
   core_replace("bio-refugium-biter-3", "processing", "exploration")
+  OV.set_science_pack("bio-temperate-farm", "datacore-processing-1", 2)
+  OV.set_science_pack("bio-desert-farm", "datacore-processing-1", 2)
+  OV.set_science_pack("bio-swamp-farm", "datacore-processing-1", 2)
   -- INDUSTRIES
   core_replace("angels-rocket", "war", "exploration")
   -- EXPLORATION

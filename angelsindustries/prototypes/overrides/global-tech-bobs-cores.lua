@@ -135,10 +135,10 @@ if angelsmods.industries.tech then
     core_replace("toolbelt-4", "basic", "enhance")
     core_replace("toolbelt-5", "basic", "enhance")
     -- modular roboports
-    OV.set_science_pack("bob-robo-modular-1", "datacore-logistic-1", 2)
-    OV.set_science_pack("bob-robo-modular-2", "datacore-logistic-1", 2)
-    OV.set_science_pack("bob-robo-modular-3", "datacore-logistic-1", 2)
-    OV.set_science_pack("bob-robo-modular-4", "datacore-logistic-1", 2)
+    core_replace("bob-robo-modular-1", "basic", "logistic")
+    core_replace("bob-robo-modular-2", "basic", "logistic")
+    core_replace("bob-robo-modular-3", "processing", "logistic")
+    core_replace("bob-robo-modular-4", "processing", "logistic")
     -- repair packs
     core_replace("bob-repair-pack-2", "basic", "enhance")
     core_replace("bob-repair-pack-3", "basic", "enhance")

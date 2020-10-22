@@ -11,7 +11,7 @@ if angelsmods.industries.tech then
     pack_replace("gem-processing-1", "green", "orange")
     pack_replace("polishing", "green", "blue")
     pack_replace("gem-processing-2", "green", "blue")
-    OV.remove_science_pack("lubricant", "angels-science-pack-green")
+    --OV.remove_science_pack("lubricant", "angels-science-pack-green")
 
     if not mods["bobtech"] then --alien resources
       pack_replace("alien-blue-research", "yellow", "blue")
@@ -111,9 +111,18 @@ if angelsmods.industries.tech then
     pack_replace("toolbelt-2", "blue", "orange")
     OV.remove_prereq("toolbelt-2", "tech-blue-packs")
     -- modular roboports
-    pack_replace("bob-robo-modular-1", "green", "orange")
+    --pack_replace("bob-robo-modular-1", "green", "orange")
     pack_replace("bob-robo-modular-2", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-2", "tech-blue-packs")
+    -- robots
+    OV.remove_science_pack("construction-robotics", "angels-science-pack-orange")
+    pack_replace("bob-robots-1", "blue", "orange")
+    OV.remove_prereq("bob-robo-modular-3", "production-science-pack")
+    if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
+      OV.remove_science_pack("robotics", "angels-science-pack-orange")
+      pack_replace("bob-robotics-2", "blue", "orange")
+      OV.remove_prereq("bob-robotics-3", "production-science-pack")
+    end
     -- inserter techs
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.remove_prereq("stack-inserter", "tech-orange-circuit")
