@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - Added recipe colors to the Bio processor (375)
     - Spreading out bio animalis such that it is not all green science
+    - Balancing bobs coal from wood (379)
   Bugfixes:
     - Fixed wrong localisation on the alienated fertilizer recipe
     - Some minor localisation changes to unify angels localisation across mods (372)
