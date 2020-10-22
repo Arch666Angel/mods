@@ -4,6 +4,7 @@ Date: ??
   Bugfixes:
     - Fixed technology "Geode processing 2" could not be researched when playing without the angels
       metallurgy smelting mod
+    - Consistent naming of the advanced refining recipes (378)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020
