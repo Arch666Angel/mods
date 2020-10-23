@@ -187,9 +187,4 @@ if bobmods and bobmods.plates then
       "__angelssmelting__/graphics/icons/solder.png"
     )
   end
-  OV.patch_recipes(
-    {
-      {name = "steel-plate", ingredients = {{type = "item", name = "iron-plate", amount = 8}}}
-    }
-  )
 end

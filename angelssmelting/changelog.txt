@@ -9,6 +9,7 @@ Date: ??
       - Ore processor, Pellet press, Powder mixer, Blast furnace, Chemical furnace
       - Induction furnace, Casting machine, Strand casting machine, Sintering oven
       - Cooling tower
+    - Added early game steel recipe that does not require oxygen (321)
   Bugfixes:
     - Increased base_area on the fluid output of the casting machines (362)
     - Added some missing tech prerequisites and science tier upgrades (410)

@@ -68,7 +68,8 @@ if angelsmods.trigger.smelting_products["steel"].plate then
         name = "steel-plate",
         icons = {
           {
-            icon = "__angelssmelting__/graphics/icons/plate-steel.png"
+            icon = "__angelssmelting__/graphics/icons/plate-iron-hot.png",
+            icon_size = 64,
           },
           {
             icon = "__angelssmelting__/graphics/icons/plate-iron.png",
@@ -77,11 +78,20 @@ if angelsmods.trigger.smelting_products["steel"].plate then
           }
         },
         icon_size = 32,
+        energy_required = 3,
+        category = "smelting",
+        ingredients = {
+          {"!!"},
+          {type = "item", name = "iron-plate", amount = 1}
+        },
+        result = "angels-plate-hot-iron",
         subgroup = "angels-steel-casting",
-        order = "l[angels-plate-steel]-a"
+        order = "l[angels-plate-steel]-aa"
       }
     }
   )
+  OV.add_unlock("steel-processing", "angels-plate-steel-pre-heating")
+  OV.add_prereq("steel-processing", "automation")
   OV.global_replace_item("angels-plate-steel", "steel-plate")
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")
 else

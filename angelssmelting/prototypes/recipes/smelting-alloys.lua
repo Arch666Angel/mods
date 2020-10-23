@@ -363,6 +363,45 @@ data:extend(
     -- STEEL CASTING RESULT
     {
       type = "recipe",
+      name = "angels-plate-steel-pre-heating",
+      category = "advanced-crafting",
+      subgroup = "angels-steel-casting",
+      normal = {
+        enabled = false,
+        energy_required = 4,
+        ingredients = {
+          {type = "item", name = "angels-plate-hot-iron", amount = 8}
+        },
+        results = {
+          {type = "item", name = "angels-plate-steel", amount = 1}
+        }
+      },
+      expensive = {
+        enabled = false,
+        energy_required = 4,
+        ingredients = {
+          {type = "item", name = "angels-plate-hot-iron", amount = 8 * intermediatemulti}
+        },
+        results = {
+          {type = "item", name = "angels-plate-steel", amount = 1}
+        }
+      },
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/plate-steel.png"
+        },
+        {
+          icon = "__angelssmelting__/graphics/icons/plate-iron-hot.png",
+          icon_size = 64,
+          scale = 0.4375 * 0.5,
+          shift = {-10, -10}
+        }
+      },
+      icon_size = 32,
+      order = "l[angels-plate-steel]-ab"
+    },
+    {
+      type = "recipe",
       name = "angels-plate-steel",
       category = "casting",
       subgroup = "angels-steel-casting",
