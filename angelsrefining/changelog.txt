@@ -5,6 +5,7 @@ Date: ??
     - Added message at the start of the game to notify the player about the changes to the map
       generation settings (388)
     - Added setting to enable HQ graphics, this is a work in progress by Kirazy
+    - Consistent naming of the advanced refining recipes (378)
   Bugfixes:
     - Fixed technology "Geode processing 2" could not be researched when playing without the angels
       metallurgy smelting mod
