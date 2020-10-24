@@ -143,6 +143,7 @@ if angelsmods.industries.tech then
   pack_replace("angels-iron-smelting-3", "blue", "orange")
   OV.remove_prereq("angels-iron-smelting-3", "angels-chrome-smelting-1")
   --BIOPROCESSING
+  pack_replace("angels-bio-yield-module", "green", "orange")
   pack_replace("bio-wood-processing-3", "green", "orange")
   pack_replace("bio-processing-alien-2", "green", "orange")
   pack_replace("bio-processing-alien-3", "green", "orange")
@@ -210,6 +211,8 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
   -- REFINING
   pack_replace("advanced-ore-refining-4", "blue", "yellow")
+  -- BIO PROCESSING
+  pack_replace("angels-bio-yield-module-3", "blue", "yellow")
   -- ADDONS
   if mods["angelsaddons-warehouses"] then
     pack_replace("angels-logistic-warehouses", "blue", "yellow")
