@@ -68,7 +68,14 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BOBS ADJUSTABLE INSERTERS --------------------------------------------------
   -------------------------------------------------------------------------------
-  --bob adjustable inserters automatically gets grabbed :D
+  if mods["bobinserters"] then
+    if mods["boblogistics"] then
+      OV.remove_prereq("more-inserters-2", "logistics-3")
+      OV.add_prereq("more-inserters-2", "logistics-4")
+      OV.remove_prereq("long-inserters-2", "logistics-3")
+      OV.add_prereq("long-inserters-2", "logistics-4")
+    end
+  end
 
   -------------------------------------------------------------------------------
   -- BOBS CLASSES ---------------------------------------------------------------
@@ -127,13 +134,15 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.remove_prereq("stack-inserter", "tech-orange-circuit")
       pack_replace("stack-inserter", "orange", "green")
-      pack_replace("logistics-3", "blue", "orange")
       pack_replace("express-inserters", "blue", "orange")
       pack_replace("stack-inserter-2", "blue", "orange")
     else
       pack_replace("express-inserters", "green", "blue")
       pack_replace("stack-inserter-2", "blue", "yellow")
     end
+    -- belt techs
+    pack_replace("logistics-3", "blue", "orange")
+    OV.remove_prereq("logistics-3", "tech-blue-packs")
   end
 
   -------------------------------------------------------------------------------

@@ -132,6 +132,7 @@ if angelsmods.industries.tech then
     core_replace("logistics", "basic", "logistic")
     -- toolbelts
     core_replace("toolbelt-2", "basic", "enhance")
+    core_replace("toolbelt-3", "basic", "enhance")
     core_replace("toolbelt-4", "basic", "enhance")
     core_replace("toolbelt-5", "basic", "enhance")
     -- modular roboports

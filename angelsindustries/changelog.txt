@@ -27,6 +27,8 @@ Date: ??
       - Fixed that the unused science datacores were visible in the item select menu
       - Fixed automation 1 was locked too far when playing with bobs assemblers
       - Fixed Geode processing 2 having a green and orange analyzer (414)
+      - Fixed Bobs logistics 3 research depended on blue analyzers instead of orange (417)
+      - Fixed inconsistency of Bobs toolbelt 3 research not using the enhancement datacores (417)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 20.08.2020
