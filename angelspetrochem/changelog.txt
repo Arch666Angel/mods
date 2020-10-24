@@ -6,6 +6,7 @@ Date: ??
       and component mode is enabled (397)
     - Migrated valve-check to valve-inspector and updated localisations (399)
     - Some minor localisation changes to unify angels localisation across mods (372)
+    - Removed obsolete Chemical plant research from bobrevamp when disabling bobs chem plants (335)
   Bugfixes:
     - Fixed Solid resin item localisation (364)
     - Fixed Liquid rubber fluid color (409)

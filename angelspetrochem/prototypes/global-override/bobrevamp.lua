@@ -54,6 +54,10 @@ if mods["bobrevamp"] then
   angelsmods.functions.add_flag("sour-gas", "hidden")
   angelsmods.functions.disable_barreling_recipes("sour-gas")
 
+  if angelsmods.trigger.disable_bobs_chemical_plants then
+    OV.global_replace_technology("chemical-plant", "basic-chemistry-2")
+  end
+
   -----------------------------------------------------------------------------
   -- HARDMODE -----------------------------------------------------------------
   -----------------------------------------------------------------------------
