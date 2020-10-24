@@ -59,7 +59,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "temperate-3", amount_min = 40, amount_max = 60},
-        {type = "item", name = "temperate-3-seed-dormant", amount = 5}
+        {type = "item", name = "temperate-3-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "temperate-3",
       icon_size = 32,
@@ -83,7 +83,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "temperate-4", amount_min = 40, amount_max = 60},
-        {type = "item", name = "temperate-4-seed-dormant", amount = 5}
+        {type = "item", name = "temperate-4-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "temperate-4",
       icon_size = 32,
@@ -107,7 +107,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "temperate-5", amount_min = 40, amount_max = 60},
-        {type = "item", name = "temperate-5-seed-dormant", amount = 5}
+        {type = "item", name = "temperate-5-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "temperate-5",
       icon_size = 32,
@@ -262,7 +262,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "desert-3", amount_min = 30, amount_max = 40},
-        {type = "item", name = "desert-3-seed-dormant", amount = 5}
+        {type = "item", name = "desert-3-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "desert-3",
       icon_size = 32,
@@ -286,7 +286,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "desert-4", amount_min = 30, amount_max = 40},
-        {type = "item", name = "desert-4-seed-dormant", amount = 5}
+        {type = "item", name = "desert-4-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "desert-4",
       icon_size = 32,
@@ -310,7 +310,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "desert-5", amount_min = 30, amount_max = 40},
-        {type = "item", name = "desert-5-seed-dormant", amount = 5}
+        {type = "item", name = "desert-5-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "desert-5",
       icon_size = 32,
@@ -465,7 +465,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "swamp-3", amount_min = 40, amount_max = 50},
-        {type = "item", name = "swamp-3-seed-dormant", amount = 5}
+        {type = "item", name = "swamp-3-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "swamp-3",
       icon_size = 32,
@@ -489,7 +489,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "swamp-4", amount_min = 40, amount_max = 50},
-        {type = "item", name = "swamp-4-seed-dormant", amount = 5}
+        {type = "item", name = "swamp-4-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "swamp-4",
       icon_size = 32,
@@ -513,7 +513,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "swamp-5", amount_min = 40, amount_max = 50},
-        {type = "item", name = "swamp-5-seed-dormant", amount = 5}
+        {type = "item", name = "swamp-5-seed-dormant", amount = 5, catalyst_amount = 5}
       },
       main_product = "swamp-5",
       icon_size = 32,

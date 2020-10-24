@@ -4,6 +4,7 @@ require("prototypes.refining-settings-tweaks")
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
+angelsmods.refining.productivity_exception = {}
 angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0}
 
 --LOAD FUNCTIONS
