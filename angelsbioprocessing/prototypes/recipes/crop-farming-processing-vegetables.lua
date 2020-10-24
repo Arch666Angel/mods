@@ -4,6 +4,8 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-temperate-1",
+      localised_name = {"recipe-name.sorting-temperate-1"},
+      show_amount_in_title = false,
       category = "bio-processor",
       subgroup = "farming-temperate",
       enabled = false,
@@ -14,6 +16,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-corn", amount = 10}
       },
+      always_show_products = true,
       main_product = "solid-corn",
       order = "ba",
       crafting_machine_tint = {
@@ -36,6 +39,8 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-temperate-2",
+      localised_name = {"recipe-name.sorting-temperate-2"},
+      show_amount_in_title = false,
       category = "bio-processor",
       subgroup = "farming-temperate",
       enabled = false,
@@ -46,6 +51,7 @@ data:extend(
       results = {
         {type = "item", name = "cellulose-fiber", amount = 22}
       },
+      always_show_products = true,
       order = "bb",
       crafting_machine_tint = {
         --primary = {r = 190 / 255, g = 190 / 255, b = 190 / 255, a = 1},  -- Tianaton
@@ -68,6 +74,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-temperate-3",
+      localised_name = {"recipe-name.sorting-temperate-3"},
       category = "bio-processor",
       subgroup = "farming-temperate",
       enabled = false,
@@ -100,6 +107,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-temperate-4",
+      localised_name = {"recipe-name.sorting-temperate-4"},
       category = "bio-processor",
       subgroup = "farming-temperate",
       enabled = false,
@@ -132,6 +140,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-temperate-5",
+      localised_name = {"recipe-name.sorting-temperate-5"},
       category = "bio-processor",
       subgroup = "farming-temperate",
       enabled = false,
@@ -166,6 +175,8 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-desert-1",
+      localised_name = {"recipe-name.sorting-desert-1"},
+      show_amount_in_title = false,
       category = "bio-processor",
       subgroup = "farming-desert",
       enabled = false,
@@ -176,6 +187,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-beans", amount = 12}
       },
+      always_show_products = true,
       order = "ba",
       crafting_machine_tint = {
         --primary = {r = 240 / 255, g = 157 / 255, b = 14 / 255, a = 1}, -- Binafran
@@ -198,6 +210,8 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-desert-2",
+      localised_name = {"recipe-name.sorting-desert-2"},
+      show_amount_in_title = false,
       category = "bio-processor",
       subgroup = "farming-desert",
       enabled = false,
@@ -208,6 +222,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-corn", amount = 12}
       },
+      always_show_products = true,
       order = "bb",
       crafting_machine_tint = {
         --primary = {r = 79 / 255, g = 39 / 255, b = 34 / 255, a = 1}, --Primedeadelion
@@ -230,6 +245,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-desert-3",
+      localised_name = {"recipe-name.sorting-desert-3"},
       category = "bio-processor",
       subgroup = "farming-desert",
       enabled = false,
@@ -263,6 +279,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-desert-4",
+      localised_name = {"recipe-name.sorting-desert-4"},
       category = "bio-processor",
       subgroup = "farming-desert",
       enabled = false,
@@ -296,6 +313,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-desert-5",
+      localised_name = {"recipe-name.sorting-desert-5"},
       category = "bio-processor",
       subgroup = "farming-desert",
       enabled = false,
@@ -330,6 +348,8 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-swamp-1",
+      localised_name = {"recipe-name.sorting-swamp-1"},
+      show_amount_in_title = false,
       category = "bio-processor",
       subgroup = "farming-swamp",
       enabled = false,
@@ -340,6 +360,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-nuts", amount = 16}
       },
+      always_show_products = true,
       order = "ba",
       crafting_machine_tint = {
         primary = {r = 106 / 255, g = 45 / 255, b = 36 / 255, a = 1}, -- Elendilomone
@@ -361,6 +382,8 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-swamp-2",
+      localised_name = {"recipe-name.sorting-swamp-2"},
+      show_amount_in_title = false,
       category = "bio-processor",
       subgroup = "farming-swamp",
       enabled = false,
@@ -371,6 +394,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-beans", amount = 14}
       },
+      always_show_products = true,
       order = "bb",
       crafting_machine_tint = {
         --primary = {r = 53 / 255, g = 71 / 255, b = 19 / 255, a = 1}, -- Zombieecalyptus
@@ -393,6 +417,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-swamp-3",
+      localised_name = {"recipe-name.sorting-swamp-3"},
       category = "bio-processor",
       subgroup = "farming-swamp",
       enabled = false,
@@ -425,6 +450,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-swamp-4",
+      localised_name = {"recipe-name.sorting-swamp-4"},
       category = "bio-processor",
       subgroup = "farming-swamp",
       enabled = false,
@@ -458,6 +484,7 @@ data:extend(
     {
       type = "recipe",
       name = "sorting-swamp-5",
+      localised_name = {"recipe-name.sorting-swamp-5"},
       category = "bio-processor",
       subgroup = "farming-swamp",
       enabled = false,

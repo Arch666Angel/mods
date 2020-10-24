@@ -16,6 +16,7 @@ data:extend(
       results = {
         {type = "item", name = "temperate-1", amount_min = 40, amount_max = 60}
       },
+      always_show_products = true,
       main_product = "temperate-1",
       icon_size = 32,
       order = "aa",
@@ -38,6 +39,7 @@ data:extend(
       results = {
         {type = "item", name = "temperate-2", amount_min = 40, amount_max = 60}
       },
+      always_show_products = true,
       main_product = "temperate-2",
       icon_size = 32,
       order = "ab",
@@ -219,6 +221,7 @@ data:extend(
       results = {
         {type = "item", name = "desert-1", amount_min = 30, amount_max = 40}
       },
+      always_show_products = true,
       main_product = "desert-1",
       icon_size = 32,
       order = "aa",
@@ -241,6 +244,7 @@ data:extend(
       results = {
         {type = "item", name = "desert-2", amount_min = 30, amount_max = 40}
       },
+      always_show_products = true,
       main_product = "desert-2",
       icon_size = 32,
       order = "ab",
@@ -422,6 +426,7 @@ data:extend(
       results = {
         {type = "item", name = "swamp-1", amount_min = 40, amount_max = 50}
       },
+      always_show_products = true,
       main_product = "swamp-1",
       icon_size = 32,
       order = "aa",
@@ -444,6 +449,7 @@ data:extend(
       results = {
         {type = "item", name = "swamp-2", amount_min = 40, amount_max = 50}
       },
+      always_show_products = true,
       main_product = "swamp-2",
       icon_size = 32,
       order = "ab",
