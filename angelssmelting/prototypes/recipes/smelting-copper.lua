@@ -219,7 +219,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-copper-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-copper-casting",
       energy_required = 2,
       normal = {
@@ -308,7 +308,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-copper-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-copper-casting",
       normal = {
         enabled = false,

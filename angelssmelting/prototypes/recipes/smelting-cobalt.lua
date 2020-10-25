@@ -274,7 +274,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-cobalt-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-cobalt-casting",
       normal = {
         enabled = false,

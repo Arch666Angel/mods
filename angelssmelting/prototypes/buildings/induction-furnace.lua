@@ -53,7 +53,7 @@ data:extend(
       drawing_box = {{-2.5, -3.0}, {2.5, 2.5}},
       module_specification =
       {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"induction-smelting"},
@@ -309,10 +309,10 @@ data:extend(
       drawing_box = {{-2.5, -3.0}, {2.5, 2.5}},
       module_specification =
       {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"induction-smelting"},
+      crafting_categories = {"induction-smelting", "induction-smelting-2"},
       crafting_speed = 1.5,
       energy_source =
       {
@@ -560,7 +560,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"induction-smelting"},
+      crafting_categories = {"induction-smelting", "induction-smelting-2", "induction-smelting-3"},
       crafting_speed = 2,
       energy_source =
       {
@@ -804,10 +804,10 @@ data:extend(
       drawing_box = {{-2.5, -3.0}, {2.5, 2.5}},
       module_specification =
       {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"induction-smelting"},
+      crafting_categories = {"induction-smelting", "induction-smelting-2", "induction-smelting-3", "induction-smelting-4"},
       crafting_speed = 3,
       energy_source =
       {

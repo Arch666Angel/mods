@@ -252,7 +252,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-silver-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,
@@ -342,7 +342,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-silver-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,

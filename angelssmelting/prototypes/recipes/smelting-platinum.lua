@@ -236,7 +236,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-platinum-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-platinum-casting",
       normal = {
         enabled = false,
@@ -326,7 +326,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-platinum-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-platinum-casting",
       normal = {
         enabled = false,

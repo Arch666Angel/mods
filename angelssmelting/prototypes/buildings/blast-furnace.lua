@@ -52,7 +52,7 @@ data:extend(
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"blast-smelting"},
@@ -258,10 +258,10 @@ data:extend(
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"blast-smelting"},
+      crafting_categories = {"blast-smelting", "blast-smelting-2"},
       crafting_speed = 1.5,
       energy_source = {
         type = "burner",
@@ -467,7 +467,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"blast-smelting"},
+      crafting_categories = {"blast-smelting", "blast-smelting-2", "blast-smelting-3"},
       crafting_speed = 2,
       energy_source = {
         type = "burner",
@@ -669,10 +669,10 @@ data:extend(
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       drawing_box = {{-2.5, -3.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"blast-smelting"},
+      crafting_categories = {"blast-smelting", "blast-smelting-2", "blast-smelting-3", "blast-smelting-4"},
       crafting_speed = 3,
       energy_source = {
         type = "burner",

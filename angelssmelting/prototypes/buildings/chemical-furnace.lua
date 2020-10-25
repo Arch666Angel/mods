@@ -52,7 +52,7 @@ data:extend(
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"chemical-smelting"},
@@ -259,10 +259,10 @@ data:extend(
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"chemical-smelting"},
+      crafting_categories = {"chemical-smelting", "chemical-smelting-2"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -469,7 +469,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"chemical-smelting"},
+      crafting_categories = {"chemical-smelting", "chemical-smelting-2", "chemical-smelting-3"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -672,10 +672,10 @@ data:extend(
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       drawing_box = {{-2.5, -3.25}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"chemical-smelting"},
+      crafting_categories = {"chemical-smelting", "chemical-smelting-2", "chemical-smelting-3", "chemical-smelting-4"},
       crafting_speed = 3,
       energy_source = {
         type = "electric",

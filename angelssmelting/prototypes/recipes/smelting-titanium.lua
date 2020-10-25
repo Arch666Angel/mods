@@ -225,7 +225,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-2",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -254,7 +254,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -283,7 +283,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-4",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -313,7 +313,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-5",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -385,7 +385,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-titanium-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-titanium-casting",
       normal = {
         enabled = false,

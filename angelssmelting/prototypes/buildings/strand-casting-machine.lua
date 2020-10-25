@@ -51,7 +51,7 @@ data:extend(
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"strand-casting"},
@@ -258,10 +258,10 @@ data:extend(
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"strand-casting"},
+      crafting_categories = {"strand-casting", "strand-casting-2"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -468,7 +468,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"strand-casting"},
+      crafting_categories = {"strand-casting", "strand-casting-2", "strand-casting-3"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -671,10 +671,10 @@ data:extend(
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"strand-casting"},
+      crafting_categories = {"strand-casting", "strand-casting-2", "strand-casting-3", "strand-casting-4"},
       crafting_speed = 3,
       energy_source = {
         type = "electric",

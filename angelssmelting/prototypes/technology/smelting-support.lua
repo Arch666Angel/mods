@@ -191,6 +191,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2"
       },
@@ -322,6 +323,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2",
         "angels-cooling"
@@ -439,6 +441,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/processing-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2"
       },
@@ -668,7 +671,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-metallurgy-4",
-        "angels-coolant-1"
+        "angels-coolant-1",
+        "slag-processing-2"
       },
       effects = {
         {

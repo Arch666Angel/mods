@@ -235,7 +235,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-nickel-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-nickel-casting",
       normal = {
         enabled = false,

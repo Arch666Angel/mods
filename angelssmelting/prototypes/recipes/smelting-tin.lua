@@ -201,7 +201,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-tin-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-tin-casting",
       normal = {
         enabled = false,
@@ -291,7 +291,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-tin-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-tin-casting",
       normal = {
         enabled = false,

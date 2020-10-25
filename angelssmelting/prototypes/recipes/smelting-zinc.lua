@@ -288,7 +288,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-zinc-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-zinc-casting",
       normal = {
         enabled = false,

@@ -91,7 +91,7 @@ if angelsmods.industries.components then
         {
           type = "recipe",
           name = "angels-casing-" .. metal .. "-2",
-          category = "casting",
+          category = "casting-2",
           subgroup = "angels-" .. metal .. "-casting",
           localised_name = {"recipe-name.casing", metal, num, "reusable"},
           enabled = false,

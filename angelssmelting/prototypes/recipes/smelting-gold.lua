@@ -274,7 +274,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-gold-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -364,7 +364,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-gold-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,

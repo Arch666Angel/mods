@@ -203,7 +203,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-2",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -232,7 +232,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -261,7 +261,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-4",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -291,7 +291,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-5",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -363,7 +363,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-iron-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-iron-casting",
       normal = {
         enabled = false,
@@ -451,7 +451,7 @@ data:extend(
     {
       type = "recipe",
       name = "rod-stack-iron-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-iron-casting",
       normal = {
         enabled = false,

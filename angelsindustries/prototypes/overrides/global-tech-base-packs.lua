@@ -123,6 +123,7 @@ if angelsmods.industries.tech then
   pack_replace("angels-metallurgy-3", "blue", "orange")
   pack_replace("powder-metallurgy-2", "blue", "orange")
   pack_replace("ore-processing-2", "blue", "orange")
+  pack_replace("angels-coolant-1", "blue", "orange")
   pack_replace("strand-casting-2", "blue", "orange")
   pack_replace("angels-titanium-smelting-1", "blue", "orange")
   pack_replace("angels-tungsten-smelting-1", "blue", "orange")

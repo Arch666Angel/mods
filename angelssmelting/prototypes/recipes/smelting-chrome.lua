@@ -265,7 +265,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-chrome-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-chrome-casting",
       normal = {
         enabled = false,

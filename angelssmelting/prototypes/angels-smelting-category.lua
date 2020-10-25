@@ -1,46 +1,52 @@
 data:extend(
 {
 --RESOURCE CATEGORIES
-  {
-    type = "recipe-category",
-    name = "ore-processing",
-  },
-  {
-    type = "recipe-category",
-    name = "pellet-pressing",
-  },
-  {
-    type = "recipe-category",
-    name = "powder-mixing",
-  },
-  {
-    type = "recipe-category",
-    name = "blast-smelting",
-  },
-  {
-    type = "recipe-category",
-    name = "chemical-smelting",
-  },
-  {
-    type = "recipe-category",
-    name = "induction-smelting",
-  },
-  {
-    type = "recipe-category",
-    name = "casting",
-  },
-  {
-    type = "recipe-category",
-    name = "strand-casting",
-  },
-  {
-    type = "recipe-category",
-    name = "sintering",
-  },
-  {
-    type = "recipe-category",
-    name = "cooling",
-  },
+  { type = "recipe-category", name = "ore-processing" },
+  { type = "recipe-category", name = "ore-processing-2" },
+  { type = "recipe-category", name = "ore-processing-3" },
+  { type = "recipe-category", name = "ore-processing-4" },
+
+  { type = "recipe-category", name = "pellet-pressing" },
+  { type = "recipe-category", name = "pellet-pressing-2" },
+  { type = "recipe-category", name = "pellet-pressing-3" },
+  { type = "recipe-category", name = "pellet-pressing-4" },
+
+  { type = "recipe-category", name = "powder-mixing" },
+  { type = "recipe-category", name = "powder-mixing-2" },
+  { type = "recipe-category", name = "powder-mixing-3" },
+  { type = "recipe-category", name = "powder-mixing-4" },
+
+  { type = "recipe-category", name = "blast-smelting" },
+  { type = "recipe-category", name = "blast-smelting-2" },
+  { type = "recipe-category", name = "blast-smelting-3" },
+  { type = "recipe-category", name = "blast-smelting-4" },
+
+  { type = "recipe-category", name = "chemical-smelting" },
+  { type = "recipe-category", name = "chemical-smelting-2" },
+  { type = "recipe-category", name = "chemical-smelting-3" },
+  { type = "recipe-category", name = "chemical-smelting-4" },
+
+  { type = "recipe-category", name = "induction-smelting" },
+  { type = "recipe-category", name = "induction-smelting-2" },
+  { type = "recipe-category", name = "induction-smelting-3" },
+  { type = "recipe-category", name = "induction-smelting-4" },
+
+  { type = "recipe-category", name = "casting" },
+  { type = "recipe-category", name = "casting-2" },
+  { type = "recipe-category", name = "casting-3" },
+  { type = "recipe-category", name = "casting-4" },
+
+  { type = "recipe-category", name = "strand-casting" },
+  { type = "recipe-category", name = "strand-casting-2" },
+  { type = "recipe-category", name = "strand-casting-3" },
+  { type = "recipe-category", name = "strand-casting-4" },
+
+  { type = "recipe-category", name = "sintering" },
+  { type = "recipe-category", name = "sintering-2" },
+  { type = "recipe-category", name = "sintering-3" },
+  { type = "recipe-category", name = "sintering-4" },
+
+  { type = "recipe-category", name = "cooling" },
 --SUBGROUPS
   {
     type = "item-subgroup",

@@ -287,7 +287,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-manganese-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-manganese-casting",
       normal = {
         enabled = false,

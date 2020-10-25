@@ -52,7 +52,7 @@ data:extend(
       selection_box = {{-1, -1}, {1, 1}},
       drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"powder-mixing"},
@@ -170,10 +170,10 @@ data:extend(
       selection_box = {{-1, -1}, {1, 1}},
       drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"powder-mixing"},
+      crafting_categories = {"powder-mixing", "powder-mixing-2"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -291,7 +291,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"powder-mixing"},
+      crafting_categories = {"powder-mixing", "powder-mixing-2", "powder-mixing-3"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -405,10 +405,10 @@ data:extend(
       selection_box = {{-1, -1}, {1, 1}},
       drawing_box = {{-1, -1.55}, {1, 1}},
       module_specification = {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"powder-mixing"},
+      crafting_categories = {"powder-mixing", "powder-mixing-2", "powder-mixing-3", "powder-mixing-4"},
       crafting_speed = 3,
       energy_source = {
         type = "electric",

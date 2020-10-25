@@ -270,7 +270,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-lead-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-lead-casting",
       normal = {
         enabled = false,

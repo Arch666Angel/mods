@@ -51,7 +51,7 @@ data:extend(
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"pellet-pressing"},
@@ -170,10 +170,10 @@ data:extend(
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"pellet-pressing"},
+      crafting_categories = {"pellet-pressing", "pellet-pressing-2"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -292,7 +292,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"pellet-pressing"},
+      crafting_categories = {"pellet-pressing", "pellet-pressing-2", "pellet-pressing-3"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -407,10 +407,10 @@ data:extend(
       collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"pellet-pressing"},
+      crafting_categories = {"pellet-pressing", "pellet-pressing-2", "pellet-pressing-3", "pellet-pressing-4"},
       crafting_speed = 3,
       energy_source = {
         type = "electric",

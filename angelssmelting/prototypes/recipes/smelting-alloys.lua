@@ -69,7 +69,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-steel-smelting-2",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-steel-casting",
       energy_required = 4,
       enabled = false,
@@ -98,7 +98,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-steel-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-steel-casting",
       energy_required = 4,
       enabled = false,
@@ -127,7 +127,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-steel-smelting-4",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-steel-casting",
       energy_required = 4,
       enabled = false,
@@ -157,7 +157,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-steel-smelting-5",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-steel-casting",
       energy_required = 4,
       enabled = false,
@@ -229,7 +229,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-roll-steel-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-steel-casting",
       normal = {
         enabled = false,
@@ -317,7 +317,7 @@ data:extend(
     {
       type = "recipe",
       name = "rod-stack-steel-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-steel-casting",
       normal = {
         enabled = false,
@@ -600,7 +600,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-solder-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-solder-casting",
       energy_required = 4,
       enabled = false,
@@ -629,7 +629,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-solder-smelting-4",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-solder-casting",
       energy_required = 4,
       enabled = false,
@@ -701,7 +701,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-solder-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-solder-casting",
       normal = {
         enabled = false,
