@@ -14,6 +14,8 @@ Date: ??
       - Increased research times to cope with the slower progression rate
       - Changed ordening of datacores and analysers because of how the tech tree ordening works
   Bugfixes:
+    - Regular mode:
+      - Fixed silver wire recipe would unlock while it has no use in this mode (not even with bobs)
     - Component mode:
       - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)
       - Fixed that there would be two grey board recipes from paper when playing with bob
