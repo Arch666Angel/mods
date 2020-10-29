@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-iron", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-iron]"
+      order = "b[processed-iron]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
@@ -202,7 +203,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-2",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -231,7 +232,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -260,7 +261,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-4",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -290,7 +291,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-5",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -356,12 +357,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-iron]-a"
+      order = "j[angels-roll-iron]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
       name = "roll-iron-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-iron-casting",
       normal = {
         enabled = false,
@@ -401,7 +403,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-iron]-b"
+      order = "j[angels-roll-iron]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
@@ -442,12 +445,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-rod-stack-iron]-a"
+      order = "k[angels-rod-stack-iron]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     {
       type = "recipe",
       name = "rod-stack-iron-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-iron-casting",
       normal = {
         enabled = false,
@@ -487,7 +491,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-rod-stack-iron]-b"
+      order = "k[angels-rod-stack-iron]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
     -- CASTING RESULT
     {

@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 29.10.2020
+  Changes:
+    - Added Inline storage tank as an option when playing without Angels petrochem (387)
+  Bugfixes:
+    - Fixed blueprinting issues with Jax 35 tank (389)
+    - Some minor localisation changes to unify angels localisation across mods (372)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 20.08.2020
   Features:

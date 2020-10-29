@@ -47,12 +47,14 @@ if bobmods then
       move_item("crystal-grindstone", "bob-gems-cut", "h-4", "recipe")
     end
 
+    -- GEMS
+    OV.add_prereq("gem-processing-1", "geode-crystallization-1")
+    OV.add_prereq("bio-processing-alien-3", "gem-processing-1")
+
     -- CRYSTALS
     OV.modify_input("crystal-grindstone", {"grinding-wheel", "iron-plate"})
     OV.add_prereq("bio-processing-crystal-splinter-1", "grinding")
   end
-
-
 
   if mods["bobmodules"] then
     -- CATEGORY
@@ -153,59 +155,59 @@ if bobmods then
 
     OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
     data:extend(
-    {
       {
-        type = "technology",
-        name = "modules-2",
-        icon_size = 128,
-        icon = "__base__/graphics/technology/module.png",
-        prerequisites =
         {
-          "modules",
-          "advanced-electronics-2",
-          "bio-processing-crystal-shard-1",
+          type = "technology",
+          name = "modules-2",
+          icon_size = 128,
+          icon = "__base__/graphics/technology/module.png",
+          prerequisites =
+          {
+            "modules",
+            "advanced-electronics-2",
+            "bio-processing-crystal-shard-1",
+          },
+          effects =
+          {
+            {
+              type = "unlock-recipe",
+              recipe = "module-processor-board-2",
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "speed-processor-2"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "effectivity-processor-2"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "productivity-processor-2"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "pollution-clean-processor-2"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "pollution-create-processor-2"
+            }
+          },
+          unit =
+          {
+            count = 100,
+            ingredients =
+            {
+              {type="item", name="automation-science-pack", amount = 1},
+              {type="item", name="logistic-science-pack", amount = 1},
+              {type="item", name="chemical-science-pack", amount = 1}
+            },
+            time = 30
+          },
+          order = "i-a"
         },
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "module-processor-board-2",
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "speed-processor-2"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "effectivity-processor-2"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "productivity-processor-2"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "pollution-clean-processor-2"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "pollution-create-processor-2"
-          }
-        },
-        unit =
-        {
-          count = 100,
-          ingredients =
-          {
-            {type="item", name="automation-science-pack", amount = 1},
-            {type="item", name="logistic-science-pack", amount = 1},
-            {type="item", name="chemical-science-pack", amount = 1}
-          },
-          time = 30
-        },
-        order = "i-a"
-      },
-    }
+      }
     )
     OV.remove_unlock("speed-module-3", "speed-processor-2")
     OV.remove_unlock("productivity-module-3", "productivity-processor-2")
@@ -264,7 +266,8 @@ if bobmods then
           {
             {type="item", name="automation-science-pack", amount = 1},
             {type="item", name="logistic-science-pack", amount = 1},
-            {type="item", name="chemical-science-pack", amount = 1}
+            {type="item", name="chemical-science-pack", amount = 1},
+            {type="item", name="production-science-pack", amount = 1}
           },
           time = 30
         },
@@ -313,4 +316,7 @@ if bobmods then
     OV.add_prereq("effect-transmission-3", "modules-3")
   end
 
+  OV.patch_recipes({
+    { name = "bob-coal-from-wood", ingredients = { {type="item", name="wood", amount = 5} } },
+  })
 end

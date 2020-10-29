@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-gold",
       --icon = "__angelssmelting__/graphics/icons/processed-gold.png",
       icon_size = 32,
-      order = "b[processed-gold]"
+      order = "b[processed-gold]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
     {
       type = "recipe",
@@ -267,12 +268,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-gold]-a"
+      order = "j[angels-roll-gold]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
     {
       type = "recipe",
       name = "roll-gold-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -312,7 +314,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-gold]-b"
+      order = "j[angels-roll-gold]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
     {
       type = "recipe",
@@ -355,12 +358,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-wire-coil-gold]-a"
+      order = "k[angels-wire-coil-gold]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
     {
       type = "recipe",
       name = "angels-wire-coil-gold-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -402,7 +406,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "k[angels-wire-coil-gold]-b"
+      order = "k[angels-wire-coil-gold]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
     -- CASTING RESULT
     {

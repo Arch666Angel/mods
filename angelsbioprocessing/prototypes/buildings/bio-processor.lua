@@ -51,7 +51,35 @@ data:extend(
     working_visualisations =
     {
       {
-        --apply_recipe_tint = "primary",
+        fadeout = true,
+        apply_recipe_tint = "primary",
+        animation =
+        {
+          filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor-bg.png",
+          line_length = 5,
+          frame_count = 25,
+          width = 224,
+          height = 224,
+          shift = {0, 0},
+          animation_speed = 0.5,
+        }
+      },
+      {
+        always_draw = true,
+        animation =
+        {
+          filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor-trans.png",
+          line_length = 5,
+          frame_count = 25,
+          width = 224,
+          height = 224,
+          shift = {0, 0},
+          animation_speed = 0.5,
+        }
+      },
+      {
+        fadeout = true,
+        apply_recipe_tint = "secondary",
         animation =
         {
           filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor-ani.png",
@@ -61,9 +89,9 @@ data:extend(
           height = 224,
           shift = {0, 0},
           animation_speed = 0.5,
-        },
-      },
-     },
+        }
+      }
+    },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {

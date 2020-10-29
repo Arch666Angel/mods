@@ -24,6 +24,9 @@ if angelsmods.trigger.smelting_products["chrome"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-chrome", "hidden")
     OV.disable_recipe({ "molten-chrome-smelting" })
+    -- no need for the strand casting
+    OV.remove_prereq("angels-chrome-smelting-2", "strand-casting-3")
+    OV.remove_prereq("angels-chrome-smelting-3", "strand-casting-4")
   end
 else
   angelsmods.functions.add_flag("processed-chrome", "hidden")

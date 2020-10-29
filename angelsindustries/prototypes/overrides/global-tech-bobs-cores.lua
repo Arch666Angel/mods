@@ -1,11 +1,13 @@
-local OV = angelsmods.functions.OV
 --require("prototypes.overrides.industries-override-functions")
 if angelsmods.industries.tech then
+  local OV = angelsmods.functions.OV
   -------------------------------------------------------------------------------
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
     core_replace("electrolysis-1", "basic", "processing")
+    OV.remove_prereq("electrolysis-1","tech-specialised-labs-basic")
+    OV.add_prereq("electrolysis-1", "tech-specialised-labs-basic-processing-1")
     core_replace("electrolysis-2", "basic", "processing")
     core_replace("grinding", "basic", "processing")
     core_replace("polishing", "basic", "processing")
@@ -36,6 +38,7 @@ if angelsmods.industries.tech then
     --assemblers
     if settings.startup["bobmods-assembly-burner"].value == true then
       core_replace("basic-automation", "processing", "basic")
+      core_replace("automation", "basic", "processing")
     else
       core_replace("automation", "processing", "basic")
     end
@@ -129,13 +132,14 @@ if angelsmods.industries.tech then
     core_replace("logistics", "basic", "logistic")
     -- toolbelts
     core_replace("toolbelt-2", "basic", "enhance")
+    core_replace("toolbelt-3", "basic", "enhance")
     core_replace("toolbelt-4", "basic", "enhance")
     core_replace("toolbelt-5", "basic", "enhance")
     -- modular roboports
-    OV.set_science_pack("bob-robo-modular-1", "datacore-logistic-1", 2)
-    OV.set_science_pack("bob-robo-modular-2", "datacore-logistic-1", 2)
-    OV.set_science_pack("bob-robo-modular-3", "datacore-logistic-1", 2)
-    OV.set_science_pack("bob-robo-modular-4", "datacore-logistic-1", 2)
+    core_replace("bob-robo-modular-1", "basic", "logistic")
+    core_replace("bob-robo-modular-2", "basic", "logistic")
+    core_replace("bob-robo-modular-3", "processing", "logistic")
+    core_replace("bob-robo-modular-4", "processing", "logistic")
     -- repair packs
     core_replace("bob-repair-pack-2", "basic", "enhance")
     core_replace("bob-repair-pack-3", "basic", "enhance")
@@ -271,4 +275,6 @@ if angelsmods.industries.tech then
       core_replace("steam-automation", "processing", "basic")
     end
   end
+
+  OV.execute()
 end

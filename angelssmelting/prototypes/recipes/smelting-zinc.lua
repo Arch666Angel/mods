@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-zinc",
       icon = "__angelssmelting__/graphics/icons/processed-zinc.png",
       icon_size = 32,
-      order = "b[processed-zinc]"
+      order = "b[processed-zinc]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
     {
       type = "recipe",
@@ -42,6 +43,36 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "zinc-ore-processing-alt",
+      category = "chemical-smelting",
+      subgroup = "angels-zinc",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "zinc-ore", amount = 8},
+        {type = "fluid", name = "gas-oxygen", amount = 60}
+      },
+      results = {
+        {type = "item", name = "solid-zinc-oxide", amount = 8},
+        {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
+      },
+      main_product = "solid-zinc-oxide",
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_1.png",
+          tint = angelsmods.smelting.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
+      icon_size = 32,
+      order = "d[solid-zinc-oxide]-a"
+    },
+    {
+      type = "recipe",
       name = "pellet-zinc-smelting",
       category = "chemical-smelting",
       subgroup = "angels-zinc",
@@ -56,8 +87,19 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
       },
       main_product = "solid-zinc-oxide",
+      icons = {
+        {
+          icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png"
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/num_2.png",
+          tint = angelsmods.smelting.number_tint,
+          scale = 0.32,
+          shift = {-12, -12}
+        }
+      },
       icon_size = 32,
-      order = "d[solid-zinc-oxide]"
+      order = "d[solid-zinc-oxide]-b"
     },
     {
       type = "recipe",
@@ -240,12 +282,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-zinc]-a"
+      order = "i[angels-roll-zinc]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
     {
       type = "recipe",
       name = "roll-zinc-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-zinc-casting",
       normal = {
         enabled = false,
@@ -285,7 +328,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-zinc]-b"
+      order = "i[angels-roll-zinc]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
     {
       type = "recipe",

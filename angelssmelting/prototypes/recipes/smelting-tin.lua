@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-tin", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-tin]"
+      order = "b[processed-tin]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
     {
       type = "recipe",
@@ -194,12 +195,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "g[angels-roll-tin]-a"
+      order = "g[angels-roll-tin]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
     {
       type = "recipe",
       name = "roll-tin-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-tin-casting",
       normal = {
         enabled = false,
@@ -239,7 +241,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "g[angels-roll-tin]-b"
+      order = "g[angels-roll-tin]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
     {
       type = "recipe",
@@ -282,12 +285,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "h[angels-wire-coil-tin]-a"
+      order = "h[angels-wire-coil-tin]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
     {
       type = "recipe",
       name = "angels-wire-coil-tin-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-tin-casting",
       normal = {
         enabled = false,
@@ -329,7 +333,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "h[angels-wire-coil-tin]-b"
+      order = "h[angels-wire-coil-tin]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
     -- CASTING RESULT
     {

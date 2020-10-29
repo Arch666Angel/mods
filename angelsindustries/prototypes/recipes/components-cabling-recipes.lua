@@ -11,10 +11,10 @@ if angelsmods.industries.components then
         category = "crafting",
         enabled = true,
         ingredients = {
-          {type = "item", name = "copper-cable", amount = 1}
+          {type = "item", name = "copper-plate", amount = 1}
         },
         result = "cable-shielding-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -24,7 +24,7 @@ if angelsmods.industries.components then
         category = "advanced-crafting",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-tin", amount = 1}
+          {type = "item", name = "angels-plate-tin", amount = 1}
         },
         result = "cable-shielding-2",
         icon_size = 32
@@ -36,7 +36,7 @@ if angelsmods.industries.components then
         category = "advanced-crafting",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-silver", amount = 1}
+          {type = "item", name = "angels-plate-silver", amount = 1}
         },
         result = "cable-shielding-3",
         icon_size = 32
@@ -45,10 +45,10 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "cable-shielding-4",
         energy_required = 2,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-gold", amount = 1}
+          {type = "item", name = "angels-plate-gold", amount = 1}
         },
         result = "cable-shielding-4",
         icon_size = 32
@@ -57,10 +57,10 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "cable-shielding-5",
         energy_required = 3,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-wire-platinum", amount = 1}
+          {type = "item", name = "angels-plate-platinum", amount = 1}
         },
         result = "cable-shielding-5",
         icon_size = 32
@@ -80,7 +80,7 @@ if angelsmods.industries.components then
           {type = "item", name = "cellulose-fiber", amount = 1}
         },
         result = "cable-harness-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -156,7 +156,7 @@ if angelsmods.industries.components then
         results = {
           {type = "item", name = "angels-cabling", amount = 2}
         },
-        allow_decomposition = false,
+        allow_decomposition = true,
         icons = {
           {
             icon = "__angelsindustries__/graphics/icons/cabling.png"
@@ -288,7 +288,7 @@ if angelsmods.industries.components then
           {type = "item", name = "angels-cabling", amount = 1}
         },
         result = "angels-servo-motor-1",
-        allow_decomposition = false,
+        allow_decomposition = true,
         icon_size = 32
       },
       {
@@ -323,7 +323,7 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "angels-servo-motor-4",
         energy_required = 4,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
           {type = "item", name = "cable-harness-4", amount = 1},
@@ -337,7 +337,7 @@ if angelsmods.industries.components then
         type = "recipe",
         name = "angels-servo-motor-5",
         energy_required = 6,
-        category = "crafting-with-fluid",
+        category = "advanced-crafting",
         enabled = false,
         ingredients = {
           {type = "item", name = "cable-harness-5", amount = 1},

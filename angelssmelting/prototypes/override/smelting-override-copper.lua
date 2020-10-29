@@ -29,7 +29,12 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].ingot then
-  --todo
+  if angelsmods.trigger.smelting_products["copper"].plate or
+     angelsmods.trigger.smelting_products["copper"].wire  then
+  else
+    OV.remove_prereq("angels-copper-smelting-2", "strand-casting-1")
+    OV.remove_prereq("angels-copper-smelting-3", "strand-casting-2")
+  end
 else
   --todo
 end

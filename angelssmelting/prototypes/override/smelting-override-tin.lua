@@ -25,6 +25,9 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
     -- no need for molten recipe
   angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
   OV.disable_recipe({"molten-tin-smelting"})
+  -- no need for the strand casting
+  OV.remove_prereq("angels-tin-smelting-2", "strand-casting-1")
+  OV.remove_prereq("angels-tin-smelting-3", "strand-casting-2")
   end
 else
   angelsmods.functions.add_flag("processed-tin", "hidden")

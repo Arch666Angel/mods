@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-lead", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-lead]"
+      order = "b[processed-lead]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
     {
       type = "recipe",
@@ -263,12 +264,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-lead]-a"
+      order = "j[angels-roll-lead]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
     {
       type = "recipe",
       name = "roll-lead-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-lead-casting",
       normal = {
         enabled = false,
@@ -308,7 +310,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-lead]-b"
+      order = "j[angels-roll-lead]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
     -- CASTING RESULT
     {

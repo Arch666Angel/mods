@@ -28,6 +28,9 @@ if angelsmods.trigger.smelting_products["nickel"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-nickel", "hidden")
     OV.disable_recipe({"molten-nickel-smelting"})
+    -- no need for the strand casting
+    OV.remove_prereq("angels-nickel-smelting-2", "strand-casting-1")
+    OV.remove_prereq("angels-nickel-smelting-3", "strand-casting-2")
   end
 else
   angelsmods.functions.add_flag("processed-nickel", "hidden")

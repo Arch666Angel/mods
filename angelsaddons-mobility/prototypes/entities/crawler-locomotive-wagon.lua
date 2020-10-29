@@ -52,7 +52,7 @@ funcs.generate_train_entities(
     braking_force = 20,
     friction_force = 0.60,
     vertical_selection_shift = -0.5,
-    air_resistance = 0.0075, -- this is a percentage of current speed that will be subtracted
+    air_resistance = 0.01, -- this is a percentage of current speed that will be subtracted
     connection_distance = 3,
     joint_distance = 4,
     energy_per_hit_point = 5,

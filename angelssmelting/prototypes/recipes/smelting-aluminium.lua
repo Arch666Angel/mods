@@ -20,7 +20,8 @@ data:extend(
       main_product = "processed-aluminium",
       icon = "__angelssmelting__/graphics/icons/processed-aluminium.png",
       icon_size = 32,
-      order = "b[processed-aluminium]"
+      order = "b[processed-aluminium]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
     {
       type = "recipe",
@@ -238,7 +239,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-aluminium-smelting-2",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-aluminium-casting",
       energy_required = 4,
       enabled = false,
@@ -267,7 +268,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-aluminium-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-aluminium-casting",
       energy_required = 4,
       enabled = false,
@@ -333,12 +334,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-aluminium]-a"
+      order = "j[angels-roll-aluminium]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
     {
       type = "recipe",
       name = "roll-aluminium-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-aluminium-casting",
       normal = {
         enabled = false,
@@ -378,7 +380,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-aluminium]-b"
+      order = "j[angels-roll-aluminium]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
     -- CASTING RESULT
     {

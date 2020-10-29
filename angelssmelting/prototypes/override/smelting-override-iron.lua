@@ -36,6 +36,13 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
       {"molten-iron-smelting-2", "molten-iron-smelting-3", "molten-iron-smelting-4", "molten-iron-smelting-5"}
     )
   end
+
+  if angelsmods.trigger.smelting_products["iron"].plate or
+     angelsmods.trigger.smelting_products["iron"].rod   then
+  else
+    OV.remove_prereq("angels-iron-smelting-2", "strand-casting-1")
+    OV.remove_prereq("angels-iron-smelting-3", "strand-casting-2")
+  end
 else
   --todo
 end

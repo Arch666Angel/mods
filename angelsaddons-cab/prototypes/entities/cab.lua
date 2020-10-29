@@ -1,4 +1,5 @@
 require ("util")
+local settings = require("prototypes/settings")
 
 data:extend(
 {
@@ -671,7 +672,7 @@ data:extend(
     --selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     drawing_box = {{-0.5, -2.8}, {0.5, 0.5}},
     maximum_wire_distance = .25,
-    supply_area_distance = require("prototypes/settings").equipment["energy-interface"].supplyArea / 2,
+    supply_area_distance = settings.equipment["energy-interface"].supplyArea / 2,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     pictures =
     {

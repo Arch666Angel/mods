@@ -35,8 +35,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 60
       },
@@ -74,8 +74,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 70
@@ -84,7 +84,7 @@ data:extend(
     },
     {
       type = "technology",
-      name = "angels-fusion-power",
+      name = "angels-fusion-power-1",
       icons = angelsmods.functions.add_icon_layer(
         { -- bottom placeholder layer
           {
@@ -127,13 +127,61 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 120
       },
-      order = "e-p-b-ca"
+      order = "e-p-b-ca",
+      upgrade = "true"
     },
+    {
+      type = "technology",
+      name = "angels-fusion-power-2",
+      icons = angelsmods.functions.add_icon_layer(
+        { -- bottom placeholder layer
+          {
+            icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png"
+          },
+        },
+        angelsmods.functions.add_icon_layer(
+          angelsmods.functions.modify_icon_layers(angelsmods.functions.create_gas_recipe_icon(nil, "ddd", nil), {-25, -20}, 85/32),
+          {
+            {
+              icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-cell.png"
+            },
+            {
+              icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png"
+            },
+          }
+        )
+      ),
+      icon_size = 128,
+      prerequisites = {
+        "angels-fusion-power-1",
+        "space-science-pack"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-advanced-deuterium-fuel-cell-reprocessing"
+        },
+      },
+      unit = {
+        count = 3000,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1},
+          {type = "item", name = "space-science-pack", amount = 1}
+        },
+        time = 120
+      },
+      order = "e-p-b-ca",
+      upgrade = "true"
+    }
   }
 )

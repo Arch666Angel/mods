@@ -5,9 +5,11 @@ data:extend(
       name = "angels-cobalt-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-cobalt.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1",
-        "angels-coal-processing"
+        "ore-floatation",
+        "angels-metallurgy-2",
+        "angels-coal-processing-2"
       },
       effects = {
         {
@@ -21,10 +23,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-cobalt"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "cobalt-ore-processing-alt"
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -40,8 +46,10 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "ore-processing-2",
+        "strand-casting-2",
         "angels-cobalt-smelting-1",
-        "ore-processing-1",
         "water-washing-1"
       },
       effects = {
@@ -71,7 +79,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -88,8 +96,10 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-cobalt-smelting-2",
-        "ore-processing-2",
         "angels-sulfur-processing-1"
       },
       effects = {
@@ -111,7 +121,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

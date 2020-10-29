@@ -4,6 +4,7 @@ require("prototypes.refining-settings-tweaks")
 angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
+angelsmods.refining.productivity_exception = {}
 angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 0}
 
 --LOAD FUNCTIONS
@@ -23,6 +24,7 @@ require("prototypes.generation.resource-builder")
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
+angelsmods.trigger.enable_hq_graphics = mods["reskins-angels"] and true or settings.startup["angels-hq-graphics"].value
 angelsmods.trigger.enable_auto_barreling = settings.startup["angels-enable-auto-barreling"].value
 angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"].value
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far

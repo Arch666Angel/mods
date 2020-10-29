@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-chrome", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-chrome]"
+      order = "b[processed-chrome]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     {
       type = "recipe",
@@ -258,12 +259,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-chrome]-a"
+      order = "j[angels-roll-chrome]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     {
       type = "recipe",
       name = "roll-chrome-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-chrome-casting",
       normal = {
         enabled = false,
@@ -303,7 +305,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "j[angels-roll-chrome]-b"
+      order = "j[angels-roll-chrome]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     -- CASTING RESULT
     {

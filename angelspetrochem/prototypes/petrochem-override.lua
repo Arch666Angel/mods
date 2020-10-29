@@ -11,6 +11,7 @@ require("prototypes.override.base-game")
 require("prototypes.override.angelsrefining")
 require("prototypes.override.angelspetrochem")
 require("prototypes.override.angelssmelting")
+require("prototypes.override.angelsindustries")
 
 --OVERRIDE FOR BOBS
 require("prototypes.override.bobplates")

@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.12
+Date: 29.10.2020
+  Changes:
+    - Added Cobalt oxide from Cobalt ore (397)
+    - Added Zinc oxide from Zinc ore (397)
+    - Added Manganese oxide from Processed manganese (397)
+    - Added HQ graphics to the following machines, and tweaked their sounds: (404)
+      - Ore processor, Pellet press, Powder mixer, Blast furnace, Chemical furnace
+      - Induction furnace, Casting machine, Strand casting machine, Sintering oven
+      - Cooling tower
+    - Added early game steel recipe that does not require oxygen (321)
+  Bugfixes:
+    - Increased base_area on the fluid output of the casting machines (362)
+    - Added some missing tech prerequisites and science tier upgrades (410)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.11
 Date: 20.08.2020
   Changes:

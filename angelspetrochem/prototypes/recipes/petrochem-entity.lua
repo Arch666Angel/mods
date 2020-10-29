@@ -230,13 +230,13 @@ data:extend(
     --VALVES
     {
       type = "recipe",
-      name = "valve-check",
+      name = "valve-inspector",
       energy_required = 2,
       enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 1}
       },
-      result = "valve-check"
+      result = "valve-inspector"
     },
     {
       type = "recipe",

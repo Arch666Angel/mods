@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 29.10.2020
+  Changes:
+    - Changed air resistance of tender locomotives to be the same as a cargo wagon to promote the
+      use of a regular locomotive in front over all tender locomotives (384)
+    - Some minor localisation changes to unify angels localisation across mods (372)
+  Bugfixes:
+    - Fixed issues where you could not paste from any locomotive onto smelting cargo wagons (390)
+    - Fixed higher tier smelting trains did not require previous tier as ingredient
+    - Fixed bug where disabling the petro train did also disable smelting train
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 08.09.2020
+  Bugfixes:
+    - Fixed crashes when playing stand alone (without the angels mods)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 20.08.2020
   Features:

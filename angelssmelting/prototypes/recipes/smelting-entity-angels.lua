@@ -225,9 +225,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-1", amount = 1},
-          {type = "item", name = "t2-plate", amount = 1},
-          {type = "item", name = "t2-gears", amount = 1},
-          {type = "item", name = "t2-brick", amount = 1}
+          {type = "item", name = "t1-plate", amount = 1},
+          {type = "item", name = "t1-gears", amount = 1},
+          {type = "item", name = "t1-brick", amount = 1}
         },
         result = "powder-mixer"
       },
@@ -236,9 +236,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-1", amount = 1},
-          {type = "item", name = "t2-plate", amount = 1 * buildingmulti},
-          {type = "item", name = "t2-gears", amount = 1 * buildingmulti},
-          {type = "item", name = "t2-brick", amount = 1 * buildingmulti}
+          {type = "item", name = "t1-plate", amount = 1 * buildingmulti},
+          {type = "item", name = "t1-gears", amount = 1 * buildingmulti},
+          {type = "item", name = "t1-brick", amount = 1 * buildingmulti}
         },
         result = "powder-mixer"
       }
@@ -251,9 +251,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-2", amount = 1},
-          {type = "item", name = "t3-plate", amount = 1},
-          {type = "item", name = "t3-gears", amount = 1},
-          {type = "item", name = "t3-brick", amount = 1}
+          {type = "item", name = "t2-plate", amount = 1},
+          {type = "item", name = "t2-gears", amount = 1},
+          {type = "item", name = "t2-brick", amount = 1}
         },
         result = "powder-mixer-2"
       },
@@ -262,9 +262,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-2", amount = 1},
-          {type = "item", name = "t3-plate", amount = 1 * buildingmulti},
-          {type = "item", name = "t3-gears", amount = 1 * buildingmulti},
-          {type = "item", name = "t3-brick", amount = 1 * buildingmulti}
+          {type = "item", name = "t2-plate", amount = 1 * buildingmulti},
+          {type = "item", name = "t2-gears", amount = 1 * buildingmulti},
+          {type = "item", name = "t2-brick", amount = 1 * buildingmulti}
         },
         result = "powder-mixer-2"
       }
@@ -277,9 +277,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-3", amount = 1},
-          {type = "item", name = "t4-plate", amount = 1},
-          {type = "item", name = "t4-gears", amount = 1},
-          {type = "item", name = "t4-brick", amount = 1}
+          {type = "item", name = "t3-plate", amount = 1},
+          {type = "item", name = "t3-gears", amount = 1},
+          {type = "item", name = "t3-brick", amount = 1}
         },
         result = "powder-mixer-3"
       },
@@ -288,9 +288,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-3", amount = 1},
-          {type = "item", name = "t4-plate", amount = 1 * buildingmulti},
-          {type = "item", name = "t4-gears", amount = 1 * buildingmulti},
-          {type = "item", name = "t4-brick", amount = 1 * buildingmulti}
+          {type = "item", name = "t3-plate", amount = 1 * buildingmulti},
+          {type = "item", name = "t3-gears", amount = 1 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 1 * buildingmulti}
         },
         result = "powder-mixer-3"
       }
@@ -303,9 +303,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-4", amount = 1},
-          {type = "item", name = "t5-plate", amount = 1},
-          {type = "item", name = "t5-gears", amount = 1},
-          {type = "item", name = "t5-brick", amount = 1}
+          {type = "item", name = "t4-plate", amount = 1},
+          {type = "item", name = "t4-gears", amount = 1},
+          {type = "item", name = "t4-brick", amount = 1}
         },
         result = "powder-mixer-4"
       },
@@ -314,9 +314,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "powdermix-4", amount = 1},
-          {type = "item", name = "t5-plate", amount = 1 * buildingmulti},
-          {type = "item", name = "t5-gears", amount = 1 * buildingmulti},
-          {type = "item", name = "t5-brick", amount = 1 * buildingmulti}
+          {type = "item", name = "t4-plate", amount = 1 * buildingmulti},
+          {type = "item", name = "t4-gears", amount = 1 * buildingmulti},
+          {type = "item", name = "t4-brick", amount = 1 * buildingmulti}
         },
         result = "powder-mixer-4"
       }
@@ -443,10 +443,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-1", amount = 1},
-          {type = "item", name = "t1-plate", amount = 2},
-          {type = "item", name = "t0-circuit", amount = 5},
-          {type = "item", name = "t1-brick", amount = 5},
-          {type = "item", name = "t1-pipe", amount = 10}
+          {type = "item", name = "t2-plate", amount = 2},
+          {type = "item", name = "t2-circuit", amount = 5},
+          {type = "item", name = "t2-brick", amount = 5},
+          {type = "item", name = "t2-pipe", amount = 10}
         },
         result = "angels-chemical-furnace"
       },
@@ -455,10 +455,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-1", amount = 1},
-          {type = "item", name = "t1-plate", amount = 2 * buildingmulti},
-          {type = "item", name = "t0-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t1-brick", amount = 5 * buildingmulti},
-          {type = "item", name = "t1-pipe", amount = 10 * buildingmulti}
+          {type = "item", name = "t2-plate", amount = 2 * buildingmulti},
+          {type = "item", name = "t2-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t2-brick", amount = 5 * buildingmulti},
+          {type = "item", name = "t2-pipe", amount = 10 * buildingmulti}
         },
         result = "angels-chemical-furnace"
       }
@@ -471,10 +471,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-2", amount = 1},
-          {type = "item", name = "t2-plate", amount = 2},
-          {type = "item", name = "t2-circuit", amount = 5},
-          {type = "item", name = "t2-brick", amount = 5},
-          {type = "item", name = "t2-pipe", amount = 10}
+          {type = "item", name = "t3-plate", amount = 2},
+          {type = "item", name = "t3-circuit", amount = 5},
+          {type = "item", name = "t3-brick", amount = 5},
+          {type = "item", name = "t3-pipe", amount = 10}
         },
         result = "angels-chemical-furnace-2"
       },
@@ -483,10 +483,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-2", amount = 1},
-          {type = "item", name = "t2-plate", amount = 2 * buildingmulti},
-          {type = "item", name = "t2-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t2-brick", amount = 5 * buildingmulti},
-          {type = "item", name = "t2-pipe", amount = 10 * buildingmulti}
+          {type = "item", name = "t3-plate", amount = 2 * buildingmulti},
+          {type = "item", name = "t3-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 5 * buildingmulti},
+          {type = "item", name = "t3-pipe", amount = 10 * buildingmulti}
         },
         result = "angels-chemical-furnace-2"
       }
@@ -499,10 +499,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-3", amount = 1},
-          {type = "item", name = "t3-plate", amount = 2},
-          {type = "item", name = "t3-circuit", amount = 5},
-          {type = "item", name = "t3-brick", amount = 5},
-          {type = "item", name = "t3-pipe", amount = 10}
+          {type = "item", name = "t4-plate", amount = 2},
+          {type = "item", name = "t4-circuit", amount = 5},
+          {type = "item", name = "t4-brick", amount = 5},
+          {type = "item", name = "t4-pipe", amount = 10}
         },
         result = "angels-chemical-furnace-3"
       },
@@ -511,10 +511,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-3", amount = 1},
-          {type = "item", name = "t3-plate", amount = 2 * buildingmulti},
-          {type = "item", name = "t3-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t3-brick", amount = 5 * buildingmulti},
-          {type = "item", name = "t3-pipe", amount = 10 * buildingmulti}
+          {type = "item", name = "t4-plate", amount = 2 * buildingmulti},
+          {type = "item", name = "t4-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t4-brick", amount = 5 * buildingmulti},
+          {type = "item", name = "t4-pipe", amount = 10 * buildingmulti}
         },
         result = "angels-chemical-furnace-3"
       }
@@ -527,10 +527,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-4", amount = 1},
-          {type = "item", name = "t4-plate", amount = 2},
-          {type = "item", name = "t4-circuit", amount = 5},
-          {type = "item", name = "t4-brick", amount = 5},
-          {type = "item", name = "t4-pipe", amount = 10}
+          {type = "item", name = "t5-plate", amount = 2},
+          {type = "item", name = "t5-circuit", amount = 5},
+          {type = "item", name = "t5-brick", amount = 5},
+          {type = "item", name = "t5-pipe", amount = 10}
         },
         result = "angels-chemical-furnace-4"
       },
@@ -539,10 +539,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "chemfur-4", amount = 1},
-          {type = "item", name = "t4-plate", amount = 2 * buildingmulti},
-          {type = "item", name = "t4-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t4-brick", amount = 5 * buildingmulti},
-          {type = "item", name = "t4-pipe", amount = 10 * buildingmulti}
+          {type = "item", name = "t5-plate", amount = 2 * buildingmulti},
+          {type = "item", name = "t5-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t5-brick", amount = 5 * buildingmulti},
+          {type = "item", name = "t5-pipe", amount = 10 * buildingmulti}
         },
         result = "angels-chemical-furnace-4"
       }

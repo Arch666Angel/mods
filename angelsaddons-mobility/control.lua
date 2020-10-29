@@ -6,7 +6,7 @@ local sourceEntityTypes = {
 }
 
 local destinationEntityTypes = {
-  ["cargo-wagon"] = false,
+  ["cargo-wagon"] = true,
   ["fluid-wagon"] = true
 }
 
@@ -34,11 +34,11 @@ local on_entity_settings_pasted = function(event)
   local source = event.source
   local destination = event.destination
 
-  if
-    (wagonsToCopy[source.name] or wagonsToCopy[destination.name]) and -- correct train to do behaviour for
-      (sourceEntityTypes[source.type] and destinationEntityTypes[destination.type] or -- paste to a cargo or fluid wagon
-        sourceEntityTypes[destination.type] and destinationEntityTypes[source.type])
+  if (wagonsToCopy[source.name] or wagonsToCopy[destination.name]) and -- correct train to do behaviour for
+     ( (sourceEntityTypes[source.type] and destinationEntityTypes[destination.type]) or -- paste to a cargo or fluid wagon
+       (sourceEntityTypes[destination.type] and destinationEntityTypes[source.type])  )
    then -- copy from a cargo or fluid wagon
+    
     local source_color = source.color or source.prototype.color
     if source_color then
       local destination_color = destination.color or destination.prototype.color

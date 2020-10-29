@@ -5,10 +5,12 @@ data:extend(
       name = "angels-silicon-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-silicon.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
+        "ore-crushing",
         "angels-metallurgy-1",
         "angels-coal-processing",
-        "ore-crushing"
+        "angels-nitrogen-processing-1"
       },
       effects = {
         {
@@ -33,10 +35,9 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       },
@@ -49,8 +50,9 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
-        "angels-silicon-smelting-1",
+        --"angels-metallurgy-2",
         "ore-processing-1",
+        "angels-silicon-smelting-1",
         "chlorine-processing-1"
       },
       effects = {
@@ -72,11 +74,10 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -89,8 +90,10 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "ore-processing-2",
         "angels-silicon-smelting-2",
-        "ore-processing-2"
+        "angels-aluminium-smelting-1"
       },
       effects = {
         {
@@ -115,12 +118,11 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },

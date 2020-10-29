@@ -5,16 +5,19 @@ data:extend(
       name = "sintering-oven",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-sintering-oven",
       order = "a[sintering-oven]",
       place_result = "sintering-oven",
@@ -25,16 +28,19 @@ data:extend(
       name = "sintering-oven",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_1.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "sintering-oven"},
       fast_replaceable_group = "sintering-oven",
@@ -45,7 +51,7 @@ data:extend(
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 0
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
       crafting_categories = {"sintering"},
@@ -60,28 +66,86 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven.png",
-            width = 256,
-            height = 256,
-            line_length = 5,
-            frame_count = 25,
-            shift = {0.5, -0.5},
-            animation_speed = 0.5
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+            priority = "high",
+            width = 213,
+            height = 115,
+            shift = util.by_pixel(24, 29),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+              priority = "high",
+              width = 424,
+              height = 227,
+              shift = util.by_pixel(23, 28),
+              draw_as_shadow = true,
+              scale = 0.5
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          effect = "uranium-glow",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            blend_mode = "additive",
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              blend_mode = "additive",
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        },
+        {
+          effect = "uranium-glow",
+          draw_as_sprite = false,
+          draw_as_light = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg"},
+        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -90,16 +154,19 @@ data:extend(
       name = "sintering-oven-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-sintering-oven",
       order = "b[sintering-oven-2]",
       place_result = "sintering-oven-2",
@@ -110,16 +177,19 @@ data:extend(
       name = "sintering-oven-2",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_2.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "sintering-oven-2"},
       fast_replaceable_group = "sintering-oven",
@@ -130,10 +200,10 @@ data:extend(
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"sintering"},
+      crafting_categories = {"sintering", "sintering-2"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -145,28 +215,86 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven.png",
-            width = 256,
-            height = 256,
-            line_length = 5,
-            frame_count = 25,
-            shift = {0.5, -0.5},
-            animation_speed = 0.5
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+            priority = "high",
+            width = 213,
+            height = 115,
+            shift = util.by_pixel(24, 29),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+              priority = "high",
+              width = 424,
+              height = 227,
+              shift = util.by_pixel(23, 28),
+              draw_as_shadow = true,
+              scale = 0.5
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          effect = "uranium-glow",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            blend_mode = "additive",
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              blend_mode = "additive",
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        },
+        {
+          effect = "uranium-glow",
+          draw_as_sprite = false,
+          draw_as_light = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg"},
+        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -175,16 +303,19 @@ data:extend(
       name = "sintering-oven-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-sintering-oven",
       order = "c[sintering-oven-3]",
       place_result = "sintering-oven-3",
@@ -195,16 +326,19 @@ data:extend(
       name = "sintering-oven-3",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_3.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "sintering-oven-3"},
       fast_replaceable_group = "sintering-oven",
@@ -218,7 +352,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"sintering"},
+      crafting_categories = {"sintering", "sintering-2", "sintering-3"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -230,28 +364,86 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven.png",
-            width = 256,
-            height = 256,
-            line_length = 5,
-            frame_count = 25,
-            shift = {0.5, -0.5},
-            animation_speed = 0.5
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+            priority = "high",
+            width = 213,
+            height = 115,
+            shift = util.by_pixel(24, 29),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+              priority = "high",
+              width = 424,
+              height = 227,
+              shift = util.by_pixel(23, 28),
+              draw_as_shadow = true,
+              scale = 0.5
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          effect = "uranium-glow",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            blend_mode = "additive",
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              blend_mode = "additive",
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        },
+        {
+          effect = "uranium-glow",
+          draw_as_sprite = false,
+          draw_as_light = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg"},
+        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -260,16 +452,19 @@ data:extend(
       name = "sintering-oven-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       subgroup = "angels-sintering-oven",
       order = "d[sintering-oven-4]",
       place_result = "sintering-oven-4",
@@ -280,16 +475,19 @@ data:extend(
       name = "sintering-oven-4",
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/sintering-oven.png"
+          icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
           icon = "__angelsrefining__/graphics/icons/num_4.png",
+          icon_size = 32,
+          icon_mipmaps = 1,
           tint = angelsmods.smelting.number_tint,
           scale = 0.32,
           shift = {-12, -12}
         }
       },
-      icon_size = 32,
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "sintering-oven-4"},
       fast_replaceable_group = "sintering-oven",
@@ -299,10 +497,10 @@ data:extend(
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
       module_specification = {
-        module_slots = 2
+        module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"sintering"},
+      crafting_categories = {"sintering", "sintering-2", "sintering-3", "sintering-4"},
       crafting_speed = 3,
       energy_source = {
         type = "electric",
@@ -314,28 +512,86 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven.png",
-            width = 256,
-            height = 256,
-            line_length = 5,
-            frame_count = 25,
-            shift = {0.5, -0.5},
-            animation_speed = 0.5
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          },
+          {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+            priority = "high",
+            width = 213,
+            height = 115,
+            shift = util.by_pixel(24, 29),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+              priority = "high",
+              width = 424,
+              height = 227,
+              shift = util.by_pixel(23, 28),
+              draw_as_shadow = true,
+              scale = 0.5
+            } or nil
           }
-          -- {
-          -- filename = "__angelssmelting__/graphics/entity/3x3-overlay.png",
-          -- tint = {r=1, g=0, b=0},
-          -- width = 224,
-          -- height = 224,
-          -- frame_count = 1,
-          -- shift = {0, 0},
-          -- },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+      working_visualisations = {
+        {
+          effect = "uranium-glow",
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            blend_mode = "additive",
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              blend_mode = "additive",
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        },
+        {
+          effect = "uranium-glow",
+          draw_as_sprite = false,
+          draw_as_light = true,
+          animation = {
+            filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+            priority = "high",
+            width = 165,
+            height = 177,
+            shift = util.by_pixel(-1, -7),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+              priority = "high",
+              width = 326,
+              height = 350,
+              shift = util.by_pixel(-1, -6.5),
+              scale = 0.5
+            } or nil
+          }
+        }
+      },
       working_sound = {
-        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg"},
+        sound = {filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     }

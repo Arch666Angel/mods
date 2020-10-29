@@ -26,6 +26,9 @@ if angelsmods.trigger.smelting_products["platinum"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-platinum", "hidden")
     OV.disable_recipe({"molten-platinum-smelting"})
+    -- no need for the strand casting
+    OV.remove_prereq("angels-platinum-smelting-2", "strand-casting-3")
+    OV.remove_prereq("angels-platinum-smelting-3", "strand-casting-4")
   end
 else
   angelsmods.functions.add_flag("processed-platinum", "hidden")

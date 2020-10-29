@@ -5,9 +5,13 @@ data:extend(
       name = "angels-aluminium-smelting-1",
       icon = "__angelssmelting__/graphics/technology/smelting-aluminium.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
+        "ore-floatation",
+        --"angels-metallurgy-2",
         "powder-metallurgy-1",
-        "chlorine-processing-1"
+        "chlorine-processing-1",
+        "angels-coal-processing-2"
       },
       effects = {
         {
@@ -32,7 +36,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -48,9 +52,11 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "ore-processing-2",
+        "strand-casting-2",
         "angels-aluminium-smelting-1",
-        "ore-processing-1",
-        "strand-casting-1"
+        "angels-manganese-smelting-1",
       },
       effects = {
         {
@@ -79,7 +85,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -96,10 +102,13 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "ore-processing-3",
+        "strand-casting-3",
         "angels-aluminium-smelting-2",
-        "ore-processing-2",
+        "angels-copper-smelting-3",
+        "angels-silicon-smelting-3",
         "sodium-processing",
-        "angels-coolant-1"
       },
       effects = {
         {
@@ -124,7 +133,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

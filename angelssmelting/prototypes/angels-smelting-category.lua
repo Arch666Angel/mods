@@ -1,46 +1,52 @@
 data:extend(
 {
 --RESOURCE CATEGORIES
-  {
-    type = "recipe-category",
-    name = "ore-processing",
-  },
-  {
-    type = "recipe-category",
-    name = "pellet-pressing",
-  },
-  {
-    type = "recipe-category",
-    name = "powder-mixing",
-  },
-  {
-    type = "recipe-category",
-    name = "blast-smelting",
-  },
-  {
-    type = "recipe-category",
-    name = "chemical-smelting",
-  },
-  {
-    type = "recipe-category",
-    name = "induction-smelting",
-  },
-  {
-    type = "recipe-category",
-    name = "casting",
-  },
-  {
-    type = "recipe-category",
-    name = "strand-casting",
-  },
-  {
-    type = "recipe-category",
-    name = "sintering",
-  },
-  {
-    type = "recipe-category",
-    name = "cooling",
-  },
+  { type = "recipe-category", name = "ore-processing" },
+  { type = "recipe-category", name = "ore-processing-2" },
+  { type = "recipe-category", name = "ore-processing-3" },
+  { type = "recipe-category", name = "ore-processing-4" },
+
+  { type = "recipe-category", name = "pellet-pressing" },
+  { type = "recipe-category", name = "pellet-pressing-2" },
+  { type = "recipe-category", name = "pellet-pressing-3" },
+  { type = "recipe-category", name = "pellet-pressing-4" },
+
+  { type = "recipe-category", name = "powder-mixing" },
+  { type = "recipe-category", name = "powder-mixing-2" },
+  { type = "recipe-category", name = "powder-mixing-3" },
+  { type = "recipe-category", name = "powder-mixing-4" },
+
+  { type = "recipe-category", name = "blast-smelting" },
+  { type = "recipe-category", name = "blast-smelting-2" },
+  { type = "recipe-category", name = "blast-smelting-3" },
+  { type = "recipe-category", name = "blast-smelting-4" },
+
+  { type = "recipe-category", name = "chemical-smelting" },
+  { type = "recipe-category", name = "chemical-smelting-2" },
+  { type = "recipe-category", name = "chemical-smelting-3" },
+  { type = "recipe-category", name = "chemical-smelting-4" },
+
+  { type = "recipe-category", name = "induction-smelting" },
+  { type = "recipe-category", name = "induction-smelting-2" },
+  { type = "recipe-category", name = "induction-smelting-3" },
+  { type = "recipe-category", name = "induction-smelting-4" },
+
+  { type = "recipe-category", name = "casting" },
+  { type = "recipe-category", name = "casting-2" },
+  { type = "recipe-category", name = "casting-3" },
+  { type = "recipe-category", name = "casting-4" },
+
+  { type = "recipe-category", name = "strand-casting" },
+  { type = "recipe-category", name = "strand-casting-2" },
+  { type = "recipe-category", name = "strand-casting-3" },
+  { type = "recipe-category", name = "strand-casting-4" },
+
+  { type = "recipe-category", name = "sintering" },
+  { type = "recipe-category", name = "sintering-2" },
+  { type = "recipe-category", name = "sintering-3" },
+  { type = "recipe-category", name = "sintering-4" },
+
+  { type = "recipe-category", name = "cooling" },
 --SUBGROUPS
   {
     type = "item-subgroup",
@@ -53,13 +59,11 @@ data:extend(
     name = "angels-smelting",
     order = "la[angels]-b[smelting]-a",
     inventory_order = "la[angels]-b[smelting]-a",
-    --icon = "__angelssmelting__/graphics/technology/blast-furnace-group.png",
-    --icon_size = 64,
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
-        icon_size = 128,
-        scale = 0.5
+        icon_size = 256,
+        scale = 0.25
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
@@ -236,13 +240,11 @@ data:extend(
     name = "angels-casting",
     order = "la[angels]-b[smelting]-b",
     inventory_order = "la[angels]-b[smelting]-b",
-    --icon = "__angelssmelting__/graphics/technology/induction-furnace-group.png",
-    --icon_size = 64,
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
-        icon_size = 128,
-        scale = 0.5
+        icon_size = 256,
+        scale = 0.25
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",

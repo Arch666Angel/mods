@@ -129,6 +129,15 @@ if angelsmods.industries.overhaul then
   OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel-2")
 
   -------------------------------------------------------------------------------
+  -- Angels nuclear addaption
+  -------------------------------------------------------------------------------
+  if not angelsmods.industries.components then
+    -- Disable infinite power from muon catalysts as there is no sink for the catalysts
+    OV.disable_recipe({"angels-advanced-deuterium-fuel-cell-reprocessing"})
+    OV.disable_technology({"angels-fusion-power-2"})
+  end
+
+  -------------------------------------------------------------------------------
   -- Bob nuclear addaption
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
@@ -184,8 +193,9 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.add_flag("fusion-catalyst", "hidden")
 
     OV.remove_unlock("deuterium-fuel-reprocessing", "deuterium-fuel-reprocessing")
-    OV.global_replace_technology("deuterium-fuel-reprocessing", "angels-fusion-power")
-    OV.disable_technology("deuterium-fuel-reprocessing")
+    OV.global_replace_technology("deuterium-fuel-reprocessing", "angels-fusion-power-1")
+    OV.global_replace_technology("deuterium-fuel-cell-2", "angels-fusion-power-2")
+    OV.disable_technology("deuterium-fuel-reprocessing", "deuterium-fuel-cell-2")
     angelsmods.functions.add_flag("used-up-deuterium-fuel-cell", "hidden")
 
     -- plutonium processing
@@ -205,7 +215,7 @@ if angelsmods.industries.overhaul then
       if data.raw.item["deuterium-fuel-cell"] and data.raw.reactor["nuclear-reactor-3"] then
         OV.remove_unlock("bob-nuclear-power-3", "deuterium-fuel-cell")
         data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "deuterium"
-        OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power")
+        OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power-1")
       end
     else --remove them from their individual techs
       OV.remove_unlock("plutonium-fuel-cell", "plutonium-fuel-cell")
@@ -244,8 +254,8 @@ else
   angelsmods.functions.add_flag("angels-muon-fusion-catalyst", "hidden")
   angelsmods.functions.add_flag("angels-deuterium-fuel-cell", "hidden")
   angelsmods.functions.add_flag("used-up-angels-deuterium-fuel-cell", "hidden")
-  OV.disable_recipe({"angels-deuterium-fuel-cell", "angels-deuterium-fuel-cell-reprocessing"})
-  OV.disable_technology({"angels-fusion-power"})
+  OV.disable_recipe({"angels-deuterium-fuel-cell", "angels-deuterium-fuel-cell-reprocessing", "angels-advanced-deuterium-fuel-cell-reprocessing"})
+  OV.disable_technology({"angels-fusion-power-1", "angels-fusion-power-2"})
   -- nuclear fuel products (nuclear fuel + atomic bombs)
   angelsmods.functions.add_flag("angels-nuclear-fuel", "hidden")
   angelsmods.functions.add_flag("angels-nuclear-fuel-2", "hidden")

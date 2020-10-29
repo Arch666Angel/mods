@@ -5,8 +5,12 @@ data:extend(
       name = "angels-glass-smelting-1",
       icon = "__angelssmelting__/graphics/technology/glass-tech.png",
       icon_size = 128,
+      upgrade = true,
       prerequisites = {
-        "powder-metallurgy-1"
+        "ore-crushing",
+        --"angels-metallurgy-2",
+        "powder-metallurgy-1",
+        "strand-casting-1"
       },
       effects = {
         {
@@ -27,7 +31,7 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1}
@@ -43,8 +47,11 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-3",
+        "powder-metallurgy-2",
         "angels-glass-smelting-1",
-        "angels-stone-smelting-1"
+        "angels-stone-smelting-2",
+        "angels-lead-smelting-2"
       },
       effects = {
         {
@@ -57,10 +64,11 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -73,8 +81,14 @@ data:extend(
       icon_size = 128,
       upgrade = true,
       prerequisites = {
+        --"angels-metallurgy-4",
+        "powder-metallurgy-3",
+        --[["strand-casting-1",]]
         "angels-glass-smelting-2",
-        "strand-casting-1"
+        "angels-aluminium-smelting-2",
+        "angels-tin-smelting-3",
+        "sodium-processing",
+        "angels-nitrogen-processing-1"
       },
       effects = {
         {
@@ -95,11 +109,12 @@ data:extend(
       },]]
       },
       unit = {
-        count = 50,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },

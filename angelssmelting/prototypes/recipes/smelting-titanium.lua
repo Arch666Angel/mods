@@ -18,7 +18,8 @@ data:extend(
         {type = "item", name = "processed-titanium", amount = 2}
       },
       icon_size = 32,
-      order = "b[processed-titanium]"
+      order = "b[processed-titanium]",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
     },
     {
       type = "recipe",
@@ -224,7 +225,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-2",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -253,7 +254,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-3",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -282,7 +283,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-4",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -312,7 +313,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-5",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -378,12 +379,13 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-titanium]-a"
+      order = "i[angels-roll-titanium]-a",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
     },
     {
       type = "recipe",
       name = "roll-titanium-casting-fast",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-titanium-casting",
       normal = {
         enabled = false,
@@ -423,7 +425,8 @@ data:extend(
         }
       },
       icon_size = 32,
-      order = "i[angels-roll-titanium]-b"
+      order = "i[angels-roll-titanium]-b",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium")
     },
     {
       type = "recipe",

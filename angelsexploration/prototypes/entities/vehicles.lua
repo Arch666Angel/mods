@@ -117,6 +117,8 @@ data:extend(
       corpse = "medium-remnants",
       dying_explosion = "medium-explosion",
       energy_per_hit_point = 0.5,
+      immune_to_tree_impacts = true,
+      immune_to_rock_impacts = true,
       resistances = {
         {
           type = "fire",

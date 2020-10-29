@@ -22,6 +22,13 @@ data:extend(
     order = "ac"
   },
   {
+    type = "bool-setting",
+    name = "angels-hq-graphics",
+    setting_type = "startup",
+    default_value = true,
+    order = "ad"
+  },
+  {
     type = "double-setting",
     name = "angels-marathon-buildingmulti",
     setting_type = "startup",
