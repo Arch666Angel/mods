@@ -94,7 +94,8 @@ if angelsmods.industries.tech then
   pack_replace("armor-making-3", "green", "orange")
   pack_replace("belt-immunity-equipment", "green", "orange")
   pack_replace("solar-energy", "green", "orange")
-  pack_replace("electric-engine", "green", "orange")
+  OV.remove_prereq("electric-engine", "angels-advanced-oil-processing")
+  pack_replace("electric-engine", "blue", "orange")
   pack_replace("electric-energy-accumulators", "green", "orange")
   pack_replace("energy-shield-equipment", "green", "orange")
   pack_replace("night-vision-equipment", "green", "orange")
@@ -182,7 +183,6 @@ if angelsmods.industries.tech then
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
-  OV.remove_science_pack("electric-engine", "angels-science-pack-blue")
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
   -- INDUSTRIES
