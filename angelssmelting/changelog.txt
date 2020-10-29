@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.12
-Date: ??
+Date: 29.10.2020
   Changes:
     - Added Cobalt oxide from Cobalt ore (397)
     - Added Zinc oxide from Zinc ore (397)

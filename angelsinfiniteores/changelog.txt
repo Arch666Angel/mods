@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
-Date: ??
+Date: 29.10.2020
   Changes:
     - More localisation changes to unify angels localisation across mods (372)
     - Removed bob's coal from wood when playing with angels infinite ores and angels bio processing

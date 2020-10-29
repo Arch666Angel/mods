@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
-Date: ??
+Date: 29.10.2020
   Changes:
     - Added Inline storage tank as an option when playing without Angels petrochem (387)
   Bugfixes:

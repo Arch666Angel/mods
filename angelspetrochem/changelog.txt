@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
-Date: ??
+Date: 29.10.2020
   Changes:
     - Added Ethylene oxide gas and Ethylene carbonate liquid when playing with angels industries
       and component mode is enabled (397)

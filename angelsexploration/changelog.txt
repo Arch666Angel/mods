@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.8
-Date: ???
+Date: 29.10.2020
   Changes:
     - Moved explosive cannon turret shells research from Military 3 to Military 4 research due to
       recipe prerequisites (395)

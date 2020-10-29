@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.7
-Date: ??
+Date: 29.10.2020
   Changes:
     - Regular mode:
       - Some minor localisation changes to unify angels localisation across mods (372)

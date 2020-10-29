@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.17
-Date: ??
+Date: 29.10.2020
   Changes:
     - Added message at the start of the game to notify the player about the changes to the map
       generation settings (388)
