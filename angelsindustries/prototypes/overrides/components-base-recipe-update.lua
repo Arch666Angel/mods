@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+
 if angelsmods.industries.components then
   -- submachine gun
   OV.remove_unlock("military", "submachine-gun")
@@ -67,6 +68,76 @@ if angelsmods.industries.components then
     angelsmods.functions.add_flag("battery-anode-6", "hidden")
     angelsmods.functions.add_flag("battery-cathode-6", "hidden")
     angelsmods.functions.add_flag("battery-frame-6", "hidden")
+  end
+
+  if mods["bobmodules"] then
+  else
+    log(serpent.block(data.raw.recipe["speed-module"]))
+    OV.patch_recipes(
+      {
+        {
+          name = "speed-module",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+          }
+        },
+        {
+          name = "speed-module-3",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+            {type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded"},
+          }
+        },
+        {
+          name = "effectivity-module",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+          }
+        },
+        {
+          name = "effectivity-module-3",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+            {type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded"},
+          }
+        },
+        {
+          name = "productivity-module",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+          }
+        },
+        {
+          name = "productivity-module-3",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+            {type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded"},
+          }
+        },
+        {
+          name = "angels-bio-yield-module",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+          }
+        },
+        {
+          name = "angels-bio-yield-module-3",
+          ingredients = {
+            {type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"},
+            {type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded"},
+          }
+        }
+      }
+    )
+    OV.add_prereq("speed-module", "tech-orange-circuit")
+    OV.add_prereq("speed-module-2", "tech-blue-circuit")
+    OV.add_prereq("speed-module-3", "tech-yellow-circuit")
+    OV.add_prereq("effectivity-module", "tech-orange-circuit")
+    OV.add_prereq("effectivity-module-2", "tech-blue-circuit")
+    OV.add_prereq("effectivity-module-3", "tech-yellow-circuit")
+    OV.add_prereq("productivity-module", "tech-orange-circuit")
+    OV.add_prereq("productivity-module-2", "tech-blue-circuit")
+    OV.add_prereq("productivity-module-3", "tech-yellow-circuit")
   end
 end
 

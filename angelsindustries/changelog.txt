@@ -10,6 +10,7 @@ Date: ??
       - Integrated deuterium fuel cell 2 to have a stable infinite nuclear fuel cell (386)
       - Components will now show their total raw (352)
       - Streamlined smelting building ingredients with the tiers they represent
+      - Updated the module recipes to utilize the different tiers of circuits better
     - Science mode:
       - Increased research times to cope with the slower progression rate
       - Changed ordening of datacores and analysers because of how the tech tree ordening works
