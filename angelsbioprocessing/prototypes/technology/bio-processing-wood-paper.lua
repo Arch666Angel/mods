@@ -34,6 +34,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing",
+      "angels-coal-processing"
     },
     effects =
     {

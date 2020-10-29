@@ -11,6 +11,7 @@ Date: ??
     - Some minor localisation changes to unify angels localisation across mods (372)
     - Fixed the plant growing 1 & 2 did not show their result amounts correctly
     - Fixed plant processing recipes 1 & 2 did not show there recipe name correctly
+    - Fixed missing prerequisite on the Wood processing 2 technology
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.14
 Date: 20.08.2020

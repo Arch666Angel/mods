@@ -15,6 +15,8 @@ Date: ??
     - Fixed not being able to manually crush and processing trees with bob classes (366)
     - Fixed some bobclasses are not startable in some configurations (394)
     - Fixed bobs gem procesing were unlocked before gem crystallization (415)
+    - Fixed Advanced ore refining technology was missing a prerequisite on Slag processing 1
+    - Fixed Advanced ore refining 2 technology was missing a prerequisite on Geode processing 2
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.16
 Date: 20.08.2020
