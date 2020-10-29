@@ -122,7 +122,8 @@ data:extend(
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
-        "ore-crushing"
+        --"ore-crushing",
+        "ore-floatation"
       },
       effects = {
         {
@@ -308,7 +309,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
       icon_size = 128,
       prerequisites = {
-        "ore-floatation",
+        --"ore-floatation",
         "advanced-ore-refining-1",
         "geode-processing-2"
       },
