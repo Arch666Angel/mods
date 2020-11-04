@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.16
 Date: ??
+  Changes:
+    - Balanced pollution factor of bio buildings (426)
   Bugfixes:
     - Fixed multiple localisation errors on agriculture module (427)
 ---------------------------------------------------------------------------------------------------
