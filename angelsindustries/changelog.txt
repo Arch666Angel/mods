@@ -2,6 +2,8 @@
 Version: 0.4.8
 Date: ??
   Bugfixes:
+    - Regular mode:
+      - Tweaked localisation of welcome message info (427)
     - Component mode:
       - Fixed localisation error on the rocket reactor (425)
 ---------------------------------------------------------------------------------------------------
