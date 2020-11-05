@@ -3,8 +3,8 @@
 function process() {
   dirname="$(cd "$(dirname "$1")"; pwd -P)/$(basename "$1")"
   ignores="build.sh modportal/ .DS_Store README.md .git/ .gitignore"
-  version=$(grep '"version"' "${dirname}/info.json"| cut -d ":" -f2 | sed 's/[", ]//g')
-  modname=$(grep '"name"' "${dirname}/info.json"| cut -d ":" -f2 | sed 's/[", ]//g')
+  version=$(grep '"version"' "${dirname}/info.json"| cut -d ":" -f2 | sed 's/[", \r$]//g')
+  modname=$(grep '"name"' "${dirname}/info.json"| cut -d ":" -f2 | sed 's/[", \r$]//g')
   release="${modname}_${version}"
   cmd="rsync -a \"${dirname}/\" \"${dirname}/../${release}/\""
 
