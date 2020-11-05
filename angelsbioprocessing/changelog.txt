@@ -5,6 +5,7 @@ Date: ??
     - Balanced pollution factor of bio buildings (426)
   Bugfixes:
     - Fixed multiple localisation errors on agriculture module (427)
+    - Fixed fluid colors on liquors and nutrient pulp
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.15
 Date: 29.10.2020
