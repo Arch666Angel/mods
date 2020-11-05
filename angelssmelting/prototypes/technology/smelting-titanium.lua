@@ -116,7 +116,7 @@ data:extend(
         "angels-aluminium-smelting-3",
         "angels-chrome-smelting-2",
         "angels-cobalt-smelting-3",
-        "basic-chemistry-2" -- it seems rediculous adding this prerequisite to yellow...
+        "chlorine-processing-2"
       },
       effects = {
         {

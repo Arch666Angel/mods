@@ -354,6 +354,55 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
   return recipe_icons
 end
 
+-- CREATE GAS TECH ICONS
+function angelsmods.functions.create_gas_tech_icon(tints)
+  -- tints is a table of 3 tints, for the top, mid and bot section,
+  -- allows a string of max 3 characters for default tints
+  if tints then
+    if type(tints) ~= "table" then
+      tints = {
+        top = unify_tint((icon_tint_table[string.sub(tints, 1, 1)] or {})[1]),
+        mid = unify_tint((icon_tint_table[string.sub(tints, 2, 2)] or {})[2]),
+        bot = unify_tint((icon_tint_table[string.sub(tints, 3, 3)] or {})[3])
+      }
+    else
+      tints.top = unify_tint(tints.top or tints[1] or nil)
+      tints.mid = unify_tint(tints.mid or tints[2] or nil)
+      tints.bot = unify_tint(tints.bot or tints[3] or nil)
+    end
+  else
+    tints = {}
+  end
+
+  return {
+    {
+      -- base layer required for background shadow
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-base.png",
+      icon_size = 604,
+      scale = 32 / 604,
+      tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7}
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-top.png",
+      icon_size = 604,
+      scale = 32 / 604,
+      tint = tints.top
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-mid.png",
+      icon_size = 604,
+      scale = 32 / 604,
+      tint = tints.mid
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-bot.png",
+      icon_size = 604,
+      scale = 32 / 604,
+      tint = tints.bot
+    }
+  }
+end
+
 -- CREATE LIQUID FLUID ICONS (NOT FOR RECIPES)
 function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
   -- molecule_icon can be a string (assumes icon_size 32)
