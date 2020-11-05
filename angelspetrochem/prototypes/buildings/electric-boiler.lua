@@ -1,3 +1,10 @@
+local steam_per_second = 40 -- steam/s
+local power_per_steam = 30 -- kW
+local drain_power = 40 -- kW
+local extra_loss = 0.04 -- % of total power
+
+local dissipation_factor = 1/(1-extra_loss)
+
 data:extend(
   {
     {
@@ -53,9 +60,11 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.01 * 60,
-        drain = "40kW"
+        drain = string.format("%.0fkW", drain_power * 1)
       },
-      energy_usage = "1160kW", -- with drain power this comes exactly to 1.2 MW, produces 40/s steam (at speed 1)
+      -- with drain power this comes exactly to 1.2 MW, produces 40/s steam (at speed 1)
+      -- extra losses introduced when accounting for dissipation_factor
+      energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 1),
       animation = {
         north = {
           filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
@@ -209,9 +218,11 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.015 * 60,
-        drain = "60kW"
+        drain = string.format("%.0fkW", drain_power * 1.5)
       },
-      energy_usage = "1740kW", -- with drain power this comes exactly to 1.8 MW, produces 60/s steam (at speed 1.5)
+      -- with drain power this comes exactly to 1.8 MW, produces 60/s steam (at speed 1.5)
+      -- extra losses introduced when accounting for dissipation_factor
+      energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 1.5),
       animation = {
         north = {
           filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
@@ -364,9 +375,11 @@ data:extend(
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = 0.02 * 60,
-        drain = "80kW"
+        drain = string.format("%.0fkW", drain_power * 2)
       },
-      energy_usage = "2320kW", -- with drain power this comes exactly to 2.4 MW, produces 80/s steam (at speed 1)
+      -- with drain power this comes exactly to 2.4 MW, produces 80/s steam (at speed 2)
+      -- extra losses introduced when accounting for dissipation_factor
+      energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 2),
       animation = {
         north = {
           filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
