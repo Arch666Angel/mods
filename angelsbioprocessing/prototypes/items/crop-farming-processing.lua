@@ -135,6 +135,7 @@ data:extend(
     subgroup = "bio-processor-fermentation",
     order = "b[processing]-d[ethanol]",
     default_temperature = 25,
+    gas_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},

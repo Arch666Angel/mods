@@ -3,6 +3,8 @@ Version: 0.9.16
 Date: ??
   Bugfixes:
     - Slightly increased power of electric boiler to prevent perpetual energy generation (423)
+    - Fixed fluid color of enriched water fluids
+    - Fixed pipe and animation of gasses were showing liquids
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 29.10.2020
