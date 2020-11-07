@@ -5,7 +5,7 @@ script.on_init(function()
     remote.call("freeplay", "set_created_items", items_to_insert)
   end
 
-  if game.active_mods["bobclasses"] then -- give an extra miner
+  if game.active_mods["bobclasses"] and remote.interfaces['freeplay'] then -- give an extra miner
     local items_to_insert = remote.call("freeplay", "get_created_items")
     items_to_insert["burner-mining-drill"] = (items_to_insert["burner-mining-drill"] or 0) + 1 -- 2 additional plates
     remote.call("freeplay", "set_created_items", items_to_insert)
