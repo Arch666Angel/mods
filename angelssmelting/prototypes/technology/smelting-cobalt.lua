@@ -100,7 +100,8 @@ data:extend(
         "ore-processing-3",
         "strand-casting-3",
         "angels-cobalt-smelting-2",
-        "angels-sulfur-processing-1"
+        "angels-sulfur-processing-1",
+        "chlorine-processing-2"
       },
       effects = {
         {

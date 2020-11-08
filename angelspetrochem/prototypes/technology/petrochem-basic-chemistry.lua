@@ -4,9 +4,11 @@ data:extend(
     {
       type = "technology",
       name = "basic-chemistry",
-      icon = "__angelspetrochem__/graphics/technology/petrochem-tech.png",
-      icon_size = 128,
-      prerequisites = {},
+      icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
+      upgrade = true,
+      prerequisites = {
+        "automation"
+      },
       effects = {
         {
           type = "unlock-recipe",
@@ -41,11 +43,11 @@ data:extend(
     {
       type = "technology",
       name = "basic-chemistry-2",
-      icon = "__angelspetrochem__/graphics/technology/petrochem-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
+      upgrade = true,
       prerequisites = {
         "basic-chemistry",
-        "electronics",
+        "water-treatment",
         "steel-processing"
       },
       effects = {
@@ -56,10 +58,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "water-synthesis"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-calcium-chloride"
         },
         {
           type = "unlock-recipe",
@@ -86,8 +84,8 @@ data:extend(
     {
       type = "technology",
       name = "basic-chemistry-3",
-      icon = "__angelspetrochem__/graphics/technology/petrochem-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
+      upgrade = true,
       prerequisites = {
         "basic-chemistry-2"
       },
@@ -122,8 +120,8 @@ data:extend(
     {
       type = "technology",
       name = "water-chemistry-1",
-      icon = "__angelspetrochem__/graphics/technology/water-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("ohh"),
+      upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-2",
         "water-treatment-4",
@@ -176,8 +174,8 @@ data:extend(
     {
       type = "technology",
       name = "water-chemistry-2",
-      icon = "__angelspetrochem__/graphics/technology/water-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("ohh"),
+      upgrade = true,
       prerequisites = {
         "water-chemistry-1",
         "angels-electric-boiler-2",
@@ -218,8 +216,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-coal-processing",
-      icon = "__angelspetrochem__/graphics/technology/coal-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon({{067, 067, 067}, {056, 056, 056}, {045, 045, 045}}),
+      upgrade = true,
       prerequisites = {
         "basic-chemistry"
       },
@@ -249,8 +247,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-coal-processing-2",
-      icon = "__angelspetrochem__/graphics/technology/coal-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon({{067, 067, 067}, {056, 056, 056}, {045, 045, 045}}),
+      upgrade = true,
       prerequisites = {
         "angels-coal-processing",
         "angels-advanced-chemistry-1"
@@ -282,8 +280,7 @@ data:extend(
     {
       type = "technology",
       name = "angels-coal-cracking",
-      icon = "__angelspetrochem__/graphics/technology/coal-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon({{067, 067, 067}, {056, 056, 056}, {045, 045, 045}}),
       prerequisites = {
         "angels-coal-processing-2",
         "angels-advanced-chemistry-3"
@@ -320,20 +317,12 @@ data:extend(
     {
       type = "technology",
       name = "angels-sulfur-processing-1",
-      icon = "__angelspetrochem__/graphics/technology/sulfur-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("sss"),
+      upgrade = true,
       prerequisites = {
         "basic-chemistry-2"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-sulfur"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-sulfur-dioxide"
-        },
         {
           type = "unlock-recipe",
           recipe = "liquid-sulfuric-acid"
@@ -351,15 +340,20 @@ data:extend(
     {
       type = "technology",
       name = "angels-sulfur-processing-2",
-      icon = "__angelspetrochem__/graphics/technology/sulfur-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("sss"),
+      upgrade = true,
       prerequisites = {
-        "angels-sulfur-processing-1"
+        "angels-sulfur-processing-1",
+        "water-treatment-2"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "gas-acid-catalyst"
+          recipe = "gas-sulfur-dioxide"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-sulfur-dioxide-calcium-sulfate"
         },
         {
           type = "unlock-recipe",
@@ -367,15 +361,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "liquid-hydrogen-fluoride"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "gas-hydrogen-fluoride"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-sulfur-dioxide-calcium-sulfate"
         }
       },
       unit = {
@@ -391,10 +377,43 @@ data:extend(
     {
       type = "technology",
       name = "angels-sulfur-processing-3",
-      icon = "__angelspetrochem__/graphics/technology/sulfur-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("sss"),
+      upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-2",
+        "angels-advanced-chemistry-1"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "gas-acid-catalyst"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-sulfur"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-hydrogen-fluoride"
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-sulfur-processing-4",
+      icons = angelsmods.functions.create_gas_tech_icon("sss"),
+      upgrade = true,
+      prerequisites = {
+        "angels-sulfur-processing-3",
         "angels-nitrogen-processing-2"
       },
       effects = {
@@ -425,8 +444,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-nitrogen-processing-1",
-      icon = "__angelspetrochem__/graphics/technology/nitrogen-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("nnn"),
+      upgrade = true,
       prerequisites = {
         "basic-chemistry-2"
       },
@@ -460,8 +479,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-nitrogen-processing-2",
-      icon = "__angelspetrochem__/graphics/technology/nitrogen-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("nnn"),
+      upgrade = true,
       prerequisites = {
         "angels-nitrogen-processing-1",
         "angels-advanced-chemistry-1",
@@ -514,8 +533,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-nitrogen-processing-3",
-      icon = "__angelspetrochem__/graphics/technology/nitrogen-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("nnn"),
+      upgrade = true,
       prerequisites = {
         "angels-nitrogen-processing-2",
         "angels-advanced-chemistry-3"
@@ -556,8 +575,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-nitrogen-processing-4",
-      icon = "__angelspetrochem__/graphics/technology/nitrogen-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("nnn"),
+      upgrade = true,
       prerequisites = {
         "angels-nitrogen-processing-3",
         "angels-advanced-chemistry-4"
@@ -595,8 +614,8 @@ data:extend(
     {
       type = "technology",
       name = "chlorine-processing-1",
-      icon = "__angelspetrochem__/graphics/technology/chlorine-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("lll"),
+      upgrade = true,
       prerequisites = {
         "basic-chemistry-2",
         "water-treatment",
@@ -633,8 +652,8 @@ data:extend(
     {
       type = "technology",
       name = "chlorine-processing-2",
-      icon = "__angelspetrochem__/graphics/technology/chlorine-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("lll"),
+      upgrade = true,
       prerequisites = {
         "chlorine-processing-1"
       },
@@ -650,6 +669,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquid-glycerol"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-calcium-chloride"
         }
       },
       unit = {
@@ -666,8 +689,8 @@ data:extend(
     {
       type = "technology",
       name = "chlorine-processing-3",
-      icon = "__angelspetrochem__/graphics/technology/chlorine-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon("lll"),
+      upgrade = true,
       prerequisites = {
         "chlorine-processing-2",
         "water-treatment-3"

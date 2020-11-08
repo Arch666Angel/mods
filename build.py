@@ -1,11 +1,20 @@
-import os, shutil
+import os, shutil, sys, getopt
 import json
 
 class ModBuilder:
 
   def __init__(self):
     self.modNames = [modName for modName in next(os.walk('.'))[1] if self.__isReleased(modName)]
-    self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+    self.modFolderDir = None
+
+    opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
+    for opt, arg in opts:
+        if opt in ('-m', '--moddir'):
+            self.modFolderDir = os.path.realpath(arg.strip())
+
+    if self.modFolderDir == None:
+        self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+
 
   def __isReleased(self, modName):
     if modName.find("angels") >= 0:

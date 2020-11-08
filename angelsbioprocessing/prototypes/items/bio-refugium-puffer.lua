@@ -7,6 +7,7 @@ data:extend(
     subgroup = "bio-puffer-1",
     order = "b",
     default_temperature = 25,
+    gas_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
     base_color = {r=156/255, g=206/255, b=0/255},
