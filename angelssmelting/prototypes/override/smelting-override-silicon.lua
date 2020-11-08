@@ -38,6 +38,7 @@ else
   OV.disable_recipe({"silicon-ore-smelting", "liquid-trichlorosilane-smelting", "gas-silane-smelting"})
   OV.disable_recipe({"molten-silicon-smelting"})
   OV.disable_technology({"angels-silicon-smelting-1", "angels-silicon-smelting-2", "angels-silicon-smelting-3"})
+  OV.remove_prereq('angels-iron-smelting-2','angels-silicon-smelting-1')
 end
 
 -------------------------------------------------------------------------------

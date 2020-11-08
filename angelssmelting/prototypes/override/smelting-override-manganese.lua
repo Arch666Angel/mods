@@ -28,7 +28,7 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
     OV.remove_prereq("angels-manganese-smelting-2", "strand-casting-2")
     OV.remove_prereq("angels-manganese-smelting-3", "strand-casting-3")
   end
-  
+
   if mods["angelsindustries"] and angelsmods.industries.components then
   else
     OV.disable_recipe({"manganese-processed-processing-alt"})
@@ -45,6 +45,7 @@ else
   OV.disable_recipe({"manganese-ore-smelting", "cathode-manganese-smelting"})
   OV.disable_recipe({"molten-manganese-smelting"})
   OV.disable_technology({"angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3"})
+  OV.remove_prereq('angels-iron-smelting-2','angels-manganese-smelting-1')
 end
 
 -------------------------------------------------------------------------------
