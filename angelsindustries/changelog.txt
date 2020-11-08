@@ -2,6 +2,7 @@
 Version: 0.4.8
 Date: ??
   Bugfixes:
+    - Changed locales for settings and their description to make them more explicit
     - Regular mode:
       - Tweaked localisation of welcome message info (427)
     - Component mode:
