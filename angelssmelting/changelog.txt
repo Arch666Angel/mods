@@ -4,6 +4,7 @@ Date: ??
   Bugfixes:
     - Fixed blue circuits depended on purple science (424)
     - Revised many inconsistencies in technology dependencies (428)
+    - Fixed some technologies had hidden prerequisites in special vanilla mode (442)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.12
 Date: 29.10.2020
