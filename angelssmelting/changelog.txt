@@ -5,6 +5,7 @@ Date: ??
     - Fixed blue circuits depended on purple science (424)
     - Revised many inconsistencies in technology dependencies (428)
     - Fixed some technologies had hidden prerequisites in special vanilla mode (442)
+    - Fixed thorium ore on belts did have the wrong color when playing with bobs mods (436)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.12
 Date: 29.10.2020
