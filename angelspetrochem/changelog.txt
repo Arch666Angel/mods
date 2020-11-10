@@ -10,7 +10,8 @@ Date: ??
     - Fixed fluid color of enriched water fluids
     - Fixed pipe and animation of gasses were showing liquids
     - Revised many inconsistencies in technology dependencies (428)
-    - Moved Calcium Chloride tech unlock from Basic chemistry 2 to Chlorine Processing 2 (428)
+    - Moved Calcium chloride tech unlock from Basic chemistry 2 to Chlorine Processing 2 (428)
+    - Fixed Cupric chlorid solution did not have a voiding recipe (439)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 29.10.2020
