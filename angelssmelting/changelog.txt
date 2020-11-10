@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.13
 Date: ??
+  Changes:
+    - Heat shielding tiles from bob revamp are now made in sintering oven
   Bugfixes:
     - Fixed blue circuits depended on purple science (424)
     - Revised many inconsistencies in technology dependencies (428)
