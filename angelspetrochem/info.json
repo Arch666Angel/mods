@@ -1,6 +1,6 @@
 {
   "name": "angelspetrochem",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "factorio_version": "1.0",
   "title": "Angel's Petro Chemical Processing",
   "author": "Arch666Angel",
@@ -10,7 +10,7 @@
   "dependencies": [
     "base >= 1.0.0",
 
-    "angelsrefining >= 0.11.16",
+    "angelsrefining >= 0.11.18",
 
     "? bobplates >= 0.18.8",
     "? bobassembly >= 0.18.5",

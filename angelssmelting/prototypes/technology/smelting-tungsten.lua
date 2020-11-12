@@ -11,7 +11,7 @@ data:extend(
         --"angels-metallurgy-3",
         "powder-metallurgy-2",
         "angels-cobalt-smelting-2",
-        "chlorine-processing-1",
+        "chlorine-processing-2",
         "angels-sulfur-processing-2"
       },
       effects = {

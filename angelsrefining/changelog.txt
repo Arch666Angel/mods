@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.18
+Date: ??
+  Changes:
+    - Fixed some missing prerequisites
+  Bugfixes:
+    - Fixed crash when loading outside of freeplay with bob character classes present (437)
+---------------------------------------------------------------------------------------------------
 Version: 0.11.17
 Date: 29.10.2020
   Changes:

@@ -6,7 +6,9 @@ data:extend(
       name = "ore-crushing",
       icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
       icon_size = 128,
-      prerequisites = {},
+      prerequisites = {
+        "automation"
+      },
       effects = {
         {
           type = "unlock-recipe",

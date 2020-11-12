@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.16
+Date: ??
+  Changes:
+    - Swapped the gas technology icons over to use the angels lib common icons
+    - Removed obsolete icons from mod folder
+    - Seperated fluor processing from sulfur processing 2 technology (428)
+  Bugfixes:
+    - Slightly increased power of electric boiler to prevent perpetual energy generation (423)
+    - Fixed fluid color of enriched water fluids
+    - Fixed pipe and animation of gasses were showing liquids
+    - Revised many inconsistencies in technology dependencies (428)
+    - Moved Calcium chloride tech unlock from Basic chemistry 2 to Chlorine Processing 2 (428)
+    - Fixed Cupric chlorid solution did not have a voiding recipe (439)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 29.10.2020
   Changes:

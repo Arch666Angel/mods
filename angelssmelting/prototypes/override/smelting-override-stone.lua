@@ -93,3 +93,8 @@ if angelsmods.trigger.smelting_products["steel"].rod then
     }
   })
 end
+
+if angelsmods.trigger.smelting_products["aluminium"].ingot then
+else
+  OV.remove_prereq("angels-stone-smelting-3","angels-aluminium-smelting-1")
+end

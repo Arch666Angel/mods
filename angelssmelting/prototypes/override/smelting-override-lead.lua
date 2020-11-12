@@ -19,6 +19,8 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["lead"].ingot then
+  OV.add_prereq("angels-sulfur-processing-1", "angels-lead-smelting-1")
+
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("solid-lead-oxide", "lead-oxide")

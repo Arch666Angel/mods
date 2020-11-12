@@ -445,8 +445,7 @@ data:extend(
     {
       type = "technology",
       name = "gas-synthesis",
-      icon = "__angelspetrochem__/graphics/technology/synthesis-tech.png",
-      icon_size = 128,
+      icons = angelsmods.functions.create_gas_tech_icon({{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}),
       prerequisites = {
         "angels-advanced-chemistry-3"
       },
