@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.13
-Date: ??
+Date: 16.11.2020
   Changes:
     - Heat shielding tiles from bob revamp are now made in sintering oven
   Bugfixes:

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.8
-Date: ??
+Date: 16.11.2020
   Bugfixes:
     - Changed locales for settings and their description to make them more explicit
     - Regular mode:

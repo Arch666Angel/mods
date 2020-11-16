@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.16
-Date: ??
+Date: 16.11.2020
   Changes:
     - Swapped the gas technology icons over to use the angels lib common icons
     - Removed obsolete icons from mod folder
