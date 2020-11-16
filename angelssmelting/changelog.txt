@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.13
+Date: 16.11.2020
+  Changes:
+    - Heat shielding tiles from bob revamp are now made in sintering oven
+  Bugfixes:
+    - Fixed blue circuits depended on purple science (424)
+    - Revised many inconsistencies in technology dependencies (428)
+    - Fixed some technologies had hidden prerequisites in special vanilla mode (442)
+    - Fixed thorium ore on belts did have the wrong color when playing with bobs mods (436)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.12
 Date: 29.10.2020
   Changes:

@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.16
+Date: 16.11.2020
+  Changes:
+    - Balanced pollution factor of bio buildings (426)
+  Bugfixes:
+    - Fixed multiple localisation errors on agriculture module (427)
+    - Fixed fluid colors on liquors and nutrient pulp
+    - Fixed pipe and animation of gasses were showing liquids
+---------------------------------------------------------------------------------------------------
 Version: 0.7.15
 Date: 29.10.2020
   Changes:

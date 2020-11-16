@@ -1,6 +1,6 @@
 {
   "name": "angelsindustries",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "factorio_version": "1.0",
   "title": "Angel's Industries",
   "author": "Arch666Angel",
@@ -10,10 +10,10 @@
   "dependencies": [
     "base >= 1.0.0",
 
-    "angelsrefining >= 0.11.17",
-    "angelspetrochem >= 0.9.15",
-    "angelssmelting >= 0.6.12",
-    "angelsbioprocessing >= 0.7.15",
+    "angelsrefining >= 0.11.18",
+    "angelspetrochem >= 0.9.16",
+    "angelssmelting >= 0.6.13",
+    "angelsbioprocessing >= 0.7.16",
 
     "(?) bobassembly >= 0.18.6",
     "(?) boblogistics >= 1.0.0",

@@ -1,6 +1,6 @@
 {
   "name": "angelsbioprocessing",
-  "version": "0.7.15",
+  "version": "0.7.16",
   "factorio_version": "1.0",
   "title": "Angel's Bio Processing",
   "author": "Arch666Angel",
@@ -10,9 +10,9 @@
   "dependencies": [
     "base >= 1.0.0",
 
-    "angelsrefining >= 0.11.17",
-    "angelspetrochem >= 0.9.14",
-    "angelssmelting >= 0.6.11",
+    "angelsrefining >= 0.11.18",
+    "angelspetrochem >= 0.9.16",
+    "angelssmelting >= 0.6.13",
 
     "? bobenemies >= 0.18.5"
   ]

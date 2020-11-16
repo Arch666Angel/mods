@@ -15,3 +15,18 @@ else
   OV.remove_prereq("angels-metallurgy-2", "angels-stone-smelting-1")
   OV.remove_prereq("angels-metallurgy-3", "angels-stone-smelting-2")
 end
+
+-------------------------------------------------------------------------------
+-- BOBS HEAT SHIELD -----------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobrevamp"] then
+  OV.patch_recipes(
+    {
+      {
+        name = "heat-shield-tile",
+        category = "sintering-3"
+      }
+    }
+  )
+  OV.add_prereq("heat-shield", "powder-metallurgy-3")
+end

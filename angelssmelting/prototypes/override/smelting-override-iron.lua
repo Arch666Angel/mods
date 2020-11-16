@@ -9,6 +9,19 @@ if angelsmods.trigger.smelting_products["enable-all"] then
 end
 
 -------------------------------------------------------------------------------
+-- TECHNOLOGY -----------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["manganese"].ingot then
+else
+  OV.remove_prereq("angels-iron-smelting-2", "angels-manganese-smelting-1")
+end
+
+if angelsmods.trigger.smelting_products["silicon"].ingot then
+else
+  OV.remove_prereq("angels-iron-smelting-2","angels-silicon-smelting-1")
+end
+
+-------------------------------------------------------------------------------
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["iron"] then
