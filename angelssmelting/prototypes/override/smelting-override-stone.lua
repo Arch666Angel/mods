@@ -43,6 +43,7 @@ OV.patch_recipes({
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
   { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
+OV.add_prereq("concrete", "ore-crushing")
 
 -------------------------------------------------------------------------------
 -- ANGEL OVERRIDES ------------------------------------------------------------
@@ -92,4 +93,9 @@ if angelsmods.trigger.smelting_products["steel"].rod then
       }
     }
   })
+end
+
+if angelsmods.trigger.smelting_products["aluminium"].ingot then
+else
+  OV.remove_prereq("angels-stone-smelting-3","angels-aluminium-smelting-1")
 end

@@ -4,10 +4,13 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
-data.raw["resource"]["crude-oil"]["minable"].results = {
-  {type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1}
-}
+-- fluid handling
+OV.add_prereq("fluid-handling", "angels-fluid-control")
 
+-- oil
+  data.raw["resource"]["crude-oil"]["minable"].results = {
+    {type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1}
+  }
 move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
 move_item("petroleum-gas", "petrochem-carbon-fluids", "a", "fluid")
 move_item("light-oil", "petrochem-carbon-fluids", "dab", "fluid")
@@ -21,7 +24,12 @@ move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
 -- sulfur
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
 move_item("sulfuric-acid", "petrochem-sulfer-fluids", "cb", "fluid")
+OV.remove_prereq("battery", "sulfur-processing")
+OV.add_prereq("battery", "angels-sulfur-processing-2")
+
 move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
+OV.remove_prereq("explosives", "sulfur-processing")
+OV.add_prereq("explosives", "angels-sulfur-processing-2")
 
 -- solid fuel
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")
