@@ -60,7 +60,7 @@ if angelsmods.industries.components then
               {"!!"},
               {type = "item", name = "inserter", amount = 1},
               {type = "item", name = "circuit-grey", amount = 2},
-              angelsmods.trigger.smelting_products["tin"].plate and {type = "item", name = "tin-plate", amount = 2} or nil
+              angelsmods.trigger.smelting_products["tin"].plate and {type = "item", name = "angels-plate-tin", amount = 2} or nil
             }
           },
           {

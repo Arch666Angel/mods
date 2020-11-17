@@ -247,7 +247,7 @@ if angelsmods.industries.components then
       }
     }
   )
-  if mods["bobplates"] then
+  if (mods["bobplates"] or mods["boblogistics"]) then
     data:extend(
       {
         {
