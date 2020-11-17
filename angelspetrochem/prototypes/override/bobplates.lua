@@ -94,6 +94,9 @@ if mods["bobplates"] then
   --gas benzene (), - (benzene 133.8 MJ/L)(40.5 MJ/kg)
   data.raw.fluid["gas-benzene"].fuel_value = "857.2kJ"
 
+  --liquid crude (crude oil)
+  --data.raw.fluid["crude-oil"].fuel_value = "1000kJ"
+
   --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
   -->>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.
   data.raw.fluid["gas-hydrogen"].fuel_value = "33kJ"
