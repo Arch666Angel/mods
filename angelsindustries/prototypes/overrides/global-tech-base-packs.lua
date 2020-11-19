@@ -60,6 +60,8 @@ if angelsmods.industries.tech then
   pack_replace("angels-components-construction-2", "green", "red")
   pack_replace("angels-components-cabling-2", "green", "red")
   pack_replace("angels-components-mechanical-2", "green", "red")
+  OV.remove_prereq("circuit-network", "tech-green-packs")
+  pack_replace("circuit-network", "green", "red")
 
   -------------------------------------------------------------------------------
   -- GREEN SCIENCE PACKS --------------------------------------------------------
@@ -78,7 +80,6 @@ if angelsmods.industries.tech then
   OV.add_prereq("angels-components-construction-3", "tech-green-packs")
   pack_replace("plastics", "orange", "green")
   pack_replace("battery", "orange", "green")
-  pack_replace("circuit-network", "orange", "green")
 
   -------------------------------------------------------------------------------
   -- ORANGE SCIENCE PACKS -------------------------------------------------------
