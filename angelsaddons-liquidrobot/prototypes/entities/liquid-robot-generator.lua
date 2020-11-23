@@ -1,4 +1,4 @@
-local sounds = require("__base__/prototypes/entity/demo-sounds")
+local sounds = require("__base__/prototypes/entity/sounds")
 
 function make_fluid_robot()
   local result = {}

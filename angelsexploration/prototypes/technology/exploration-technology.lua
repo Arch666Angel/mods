@@ -7,7 +7,7 @@ data:extend(
       icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
       icon_size = 128,
       prerequisites = {
-        "tanks"
+        "tank"
         --"angels-vequipment-1",
       },
       effects = {

@@ -49,7 +49,7 @@ data:extend(
         range = 20,
         sound = heavy_gunshot --[[{
           {
-            filename="__base__/prototypes/entity/demo-sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
+            filename="__base__/prototypes/entity/sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
             volume=1.0,
           }
         },]]

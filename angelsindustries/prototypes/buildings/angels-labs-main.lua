@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
-local sounds = require("__base__/prototypes/entity/demo-sounds")
+local sounds = require("__base__/prototypes/entity/sounds")
 
 if angelsmods.industries.tech then
   local lab_item = {
