@@ -268,11 +268,10 @@ script.on_nth_tick(60, function()
                 local burner = vehicle.burner.burner
                 if burner.currently_burning ~= nil then
                     if car_content[burner.currently_burning.name] ~= nil then
-                        local amount = car_content[burner.currently_burning.name]
-                        local add_items = burner.inventory.insert(
-                            {name = burner.currently_burning.name, amount = amount})
                         local car = vehicle.vehicle.get_inventory(defines.inventory.car_trunk)
-                        car.remove({name = burner.currently_burning.name, amount = add_items})
+                        local amount = burner.inventory.get_insertable_count(burner.currently_burning.name)
+                        local removed = car.remove({name = burner.currently_burning.name, count = amount})
+                        burner.inventory.insert({name = burner.currently_burning.name, count = removed})
                     else
                         local highest_fuel
                         for i, item in pairs(car_content) do
@@ -288,9 +287,10 @@ script.on_nth_tick(60, function()
                             end
                         end
                         if highest_fuel ~= nil then
-                            local add_items = burner.inventory.insert(highest_fuel)
                             local car = vehicle.vehicle.get_inventory(defines.inventory.car_trunk)
-                            car.remove({name = highest_fuel, amount = add_items})
+                            local amount = burner.inventory.get_insertable_count(highest_fuel)
+                            local removed = car.remove({name = highest_fuel, count = amount})
+                            burner.inventory.insert({name = highest_fuel, count = removed})
                         end
                     end
                 else
@@ -308,9 +308,10 @@ script.on_nth_tick(60, function()
                         end
                     end
                     if highest_fuel ~= nil then
-                        local add_items = burner.inventory.insert(highest_fuel)
                         local car = vehicle.vehicle.get_inventory(defines.inventory.car_trunk)
-                        car.remove({name = highest_fuel, amount = add_items})
+                        local amount = burner.inventory.get_insertable_count(highest_fuel)
+                        local removed = car.remove({name = highest_fuel, count = amount})
+                        burner.inventory.insert({name = highest_fuel, count = removed})
                     end
                 end
             end
