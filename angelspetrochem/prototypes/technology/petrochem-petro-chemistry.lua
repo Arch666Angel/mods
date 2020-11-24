@@ -42,7 +42,8 @@ data:extend(
       type = "technology",
       name = "angels-oil-processing",
       icon = "__base__/graphics/technology/oil-processing.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 4,
       prerequisites = {
         "oil-gas-extraction"
       },
@@ -86,7 +87,8 @@ data:extend(
       type = "technology",
       name = "angels-advanced-oil-processing",
       icon = "__base__/graphics/technology/oil-processing.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 4,
       prerequisites = {
         "oil-processing"
       },
