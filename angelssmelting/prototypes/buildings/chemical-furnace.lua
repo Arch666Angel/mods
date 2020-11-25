@@ -135,8 +135,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -147,6 +145,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -166,7 +165,8 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
-              scale = 0.5
+              draw_as_light = true,
+              scale = 0.5,
             } or nil
           }
         }
@@ -342,8 +342,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -354,6 +352,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -373,6 +372,7 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -549,8 +549,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -561,6 +559,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -580,6 +579,7 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -755,8 +755,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -767,6 +765,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -786,6 +785,7 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
