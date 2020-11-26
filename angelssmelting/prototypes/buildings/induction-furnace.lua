@@ -193,8 +193,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -205,10 +203,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -223,7 +222,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -449,8 +449,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -461,10 +459,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -479,7 +478,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -697,8 +697,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -709,10 +707,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -727,7 +726,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -944,8 +944,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -956,10 +954,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -974,7 +973,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
