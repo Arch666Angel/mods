@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.14
+Date: 26.11.2020
+  Changes:
+    - Updated to factorio version 1.1
+    - Kirazy's rework of lighting for smelting structures (465)
+  Bugfixes:
+    - Technology icon size updates
+---------------------------------------------------------------------------------------------------
 Version: 0.6.13
 Date: 16.11.2020
   Changes:
