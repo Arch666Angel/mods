@@ -102,6 +102,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
+          fadeout = true,
           effect = "uranium-glow",
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
@@ -110,6 +111,7 @@ data:extend(
             height = 177,
             blend_mode = "additive",
             shift = util.by_pixel(-1, -7),
+            draw_as_glow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
               priority = "high",
@@ -117,26 +119,28 @@ data:extend(
               height = 350,
               blend_mode = "additive",
               shift = util.by_pixel(-1, -6.5),
+              draw_as_glow = true,
               scale = 0.5
             } or nil
           }
         },
         {
+          fadeout = true,
           effect = "uranium-glow",
-          draw_as_sprite = false,
-          draw_as_light = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
             priority = "high",
             width = 165,
             height = 177,
             shift = util.by_pixel(-1, -7),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
               priority = "high",
               width = 326,
               height = 350,
               shift = util.by_pixel(-1, -6.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -251,6 +255,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
+          fadeout = true,
           effect = "uranium-glow",
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
@@ -259,6 +264,7 @@ data:extend(
             height = 177,
             blend_mode = "additive",
             shift = util.by_pixel(-1, -7),
+            draw_as_glow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
               priority = "high",
@@ -266,26 +272,28 @@ data:extend(
               height = 350,
               blend_mode = "additive",
               shift = util.by_pixel(-1, -6.5),
+              draw_as_glow = true,
               scale = 0.5
             } or nil
           }
         },
         {
+          fadeout = true,
           effect = "uranium-glow",
-          draw_as_sprite = false,
-          draw_as_light = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
             priority = "high",
             width = 165,
             height = 177,
             shift = util.by_pixel(-1, -7),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
               priority = "high",
               width = 326,
               height = 350,
               shift = util.by_pixel(-1, -6.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -400,6 +408,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
+          fadeout = true,
           effect = "uranium-glow",
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
@@ -408,6 +417,7 @@ data:extend(
             height = 177,
             blend_mode = "additive",
             shift = util.by_pixel(-1, -7),
+            draw_as_glow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
               priority = "high",
@@ -415,26 +425,28 @@ data:extend(
               height = 350,
               blend_mode = "additive",
               shift = util.by_pixel(-1, -6.5),
+              draw_as_glow = true,
               scale = 0.5
             } or nil
           }
         },
         {
+          fadeout = true,
           effect = "uranium-glow",
-          draw_as_sprite = false,
-          draw_as_light = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
             priority = "high",
             width = 165,
             height = 177,
             shift = util.by_pixel(-1, -7),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
               priority = "high",
               width = 326,
               height = 350,
               shift = util.by_pixel(-1, -6.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -548,6 +560,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
+          fadeout = true,
           effect = "uranium-glow",
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
@@ -556,6 +569,7 @@ data:extend(
             height = 177,
             blend_mode = "additive",
             shift = util.by_pixel(-1, -7),
+            draw_as_glow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
               priority = "high",
@@ -563,26 +577,28 @@ data:extend(
               height = 350,
               blend_mode = "additive",
               shift = util.by_pixel(-1, -6.5),
+              draw_as_glow = true,
               scale = 0.5
             } or nil
           }
         },
         {
+          fadeout = true,
           effect = "uranium-glow",
-          draw_as_sprite = false,
-          draw_as_light = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
             priority = "high",
             width = 165,
             height = 177,
             shift = util.by_pixel(-1, -7),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
               priority = "high",
               width = 326,
               height = 350,
               shift = util.by_pixel(-1, -6.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }

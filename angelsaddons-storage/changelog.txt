@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
+Date: 26.11.2020
+  Changes:
+    - Updated to Factorio version 1.1
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
 Date: 29.10.2020
   Changes:
     - Added Inline storage tank as an option when playing without Angels petrochem (387)

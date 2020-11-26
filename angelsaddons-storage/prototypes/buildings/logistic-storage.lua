@@ -13,12 +13,12 @@ if angelsmods.addons.storage.warehouses then
     cont_add.name = "angels-warehouse-"..stat.mode
     cont_add.type = "logistic-container"
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/warehouse-log-"..name..".png"
-    cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/warehouse-log-"..name..".png" 
+    cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/warehouse-log-"..name..".png"
     cont_add.minable.result = "angels-warehouse-"..stat.mode
     cont_add.logistic_mode = stat.mode
     cont_add.inventory_size = stat.stacks
     if stat.slots then
-      cont_add.logistic_slots_count = stat.slots
+      cont_add.max_logistic_slots = stat.slots
     end
 
     item_add = table.deepcopy(data.raw.item["angels-warehouse"])
@@ -43,7 +43,7 @@ if angelsmods.addons.storage.oresilos then
     cont_add = table.deepcopy(data.raw.container.silo)
     cont_add.name = "silo-"..name
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/silo-"..name..".png"
-    cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-"..name..".png" 
+    cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-"..name..".png"
     cont_add.minable.result = "silo-"..name
 
     item_add = table.deepcopy(data.raw.item.silo)
@@ -71,12 +71,12 @@ if angelsmods.addons.storage.oresilos then
     cont_add.name = "silo-"..stat.mode
     cont_add.type = "logistic-container"
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/silo-log-"..name..".png"
-    cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-log-"..name..".png" 
+    cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-log-"..name..".png"
     cont_add.minable.result = "silo-"..stat.mode
     cont_add.logistic_mode = stat.mode
     cont_add.inventory_size = stat.stacks
     if stat.slots then
-      cont_add.logistic_slots_count = stat.slots
+      cont_add.max_logistic_slots = stat.slots
     end
 
     item_add = table.deepcopy(data.raw.item.silo)
@@ -90,4 +90,3 @@ if angelsmods.addons.storage.oresilos then
   end
   data:extend(silo_add)
 end
-
