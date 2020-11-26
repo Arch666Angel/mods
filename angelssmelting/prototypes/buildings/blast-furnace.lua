@@ -73,7 +73,9 @@ data:extend(
           }
         },
         light_flicker = {
-          color = {0, 0, 0}
+          color = {0, 0, 0},
+          minimum_light_size = 0,
+          light_intensity_to_size_coefficient = 0,
         }
       },
       energy_usage = "150kW",
@@ -286,7 +288,9 @@ data:extend(
           }
         },
         light_flicker = {
-          color = {0, 0, 0}
+          color = {0, 0, 0},
+          minimum_light_size = 0,
+          light_intensity_to_size_coefficient = 0,
         }
       },
       energy_usage = "200kW",
@@ -499,7 +503,9 @@ data:extend(
           }
         },
         light_flicker = {
-          color = {0, 0, 0}
+          color = {0, 0, 0},
+          minimum_light_size = 0,
+          light_intensity_to_size_coefficient = 0,
         }
       },
       energy_usage = "250kW",
@@ -711,7 +717,9 @@ data:extend(
           }
         },
         light_flicker = {
-          color = {0, 0, 0}
+          color = {0, 0, 0},
+          minimum_light_size = 0,
+          light_intensity_to_size_coefficient = 0,
         }
       },
       energy_usage = "300kW",
