@@ -224,7 +224,7 @@ if angelsmods.industries.tech then
 		  --]]--
         },
 
-        icon = "__base__/graphics/icons/crash-site-lab-repaired.png",
+        icon = "__angelsindustries__/graphics/icons/crash-site-lab-repaired.png",
         icon_size = 64, icon_mipmaps = 4,
 
         subgroup = lab_item.subgroup,
@@ -247,7 +247,7 @@ if angelsmods.industries.tech then
             create_rich_text_icons(data.raw["lab"][lab_item.name .. string.format("-%i", 1)].inputs)}
         },
 
-        icon = "__base__/graphics/icons/crash-site-lab-repaired.png",
+        icon = "__angelsindustries__/graphics/icons/crash-site-lab-repaired.png",
         icon_size = 64, icon_mipmaps = 4,
 
         flags = {"not-deconstructable", "placeable-player", "player-creation", "hidden"},
@@ -270,7 +270,7 @@ if angelsmods.industries.tech then
         integration_patch_render_layer = "decals",
         integration_patch =
         {
-          filename = "__base__/graphics/entity/crash-site-lab/crash-site-lab-ground.png",
+          filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-ground.png",
           priority = "very-low",
           width = 352,
           height = 170,
@@ -279,7 +279,7 @@ if angelsmods.industries.tech then
           line_length = 1,
           hr_version =
           {
-            filename = "__base__/graphics/entity/crash-site-lab/hr-crash-site-lab-ground.png",
+            filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-ground.png",
             priority = "very-low",
             width = 700,
             height = 344,
@@ -302,7 +302,7 @@ if angelsmods.industries.tech then
           layers =
           {
             {
-              filename = "__base__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
+              filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
               priority = "very-low",
               width = 244,
               height = 126,
@@ -313,7 +313,7 @@ if angelsmods.industries.tech then
               shift = util.by_pixel(-18 - 16, 14 - 8),
               hr_version =
               {
-                filename = "__base__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired.png",
+                filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired.png",
                 priority = "very-low",
                 width = 488,
                 height = 252,
@@ -326,7 +326,7 @@ if angelsmods.industries.tech then
               }
             },
             {
-              filename = "__base__/graphics/entity/crash-site-lab/crash-site-lab-repaired-beams.png",
+              filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired-beams.png",
               priority = "very-low",
               width = 68,
               height = 50,
@@ -337,7 +337,7 @@ if angelsmods.industries.tech then
               blend_mode = "additive",
               hr_version =
               {
-                filename = "__base__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-beams.png",
+                filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-beams.png",
                 priority = "very-low",
                 width = 130,
                 height = 100,
@@ -350,7 +350,7 @@ if angelsmods.industries.tech then
               }
             },
             {
-              filename = "__base__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
+              filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
               priority = "very-low",
               width = 350,
               height = 148,
@@ -362,7 +362,7 @@ if angelsmods.industries.tech then
               draw_as_shadow = true,
               hr_version =
               {
-                filename = "__base__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-shadow.png",
+                filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-shadow.png",
                 priority = "very-low",
                 width = 696,
                 height = 302,
@@ -382,7 +382,7 @@ if angelsmods.industries.tech then
           layers =
           {
             {
-              filename = "__base__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
+              filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
               priority = "very-low",
               width = 244,
               height = 126,
@@ -393,7 +393,7 @@ if angelsmods.industries.tech then
               shift = util.by_pixel(-18 - 16, 14 - 8),
               hr_version =
               {
-                filename = "__base__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired.png",
+                filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired.png",
                 priority = "very-low",
                 width = 488,
                 height = 252,
@@ -406,7 +406,7 @@ if angelsmods.industries.tech then
               }
             },
             {
-              filename = "__base__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
+              filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
               priority = "very-low",
               width = 350,
               height = 148,
@@ -418,7 +418,7 @@ if angelsmods.industries.tech then
               draw_as_shadow = true,
               hr_version =
               {
-                filename = "__base__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-shadow.png",
+                filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-shadow.png",
                 priority = "very-low",
                 width = 696,
                 height = 302,

@@ -1,6 +1,6 @@
 {
   "name": "angelsinfiniteores",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "factorio_version": "1.1",
   "title": "Angel's Infinite Ores",
   "author": "Arch666Angel",
@@ -8,6 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds infinite ores for the base game, Bob's mods, Yuoki Industries, Uranium Power, Nucular, Dark Matter Replicators and the base ores for Angel's Refining. Works well with RSO mod. Has config options to change the yield for all infinite resources including oil and gas.",
   "dependencies": [
+    "base >= 1.1.0",
     "? angelsrefining >= 0.11.19",
     "? rso-mod >= 2.3.3",
     "? bobores >= 0.18.3",

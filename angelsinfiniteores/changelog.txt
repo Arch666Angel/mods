@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.4
+Version: 0.9.7
+Date: 27.11.2020
+  Changes:
+    - Fixed issue when loading without angels caused by last update
+---------------------------------------------------------------------------------------------------
+Version: 0.9.6
 Date: 26.11.2020
   Changes:
     - Updated localisation to include bobs infinite thorium (458)
