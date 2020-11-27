@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.2
+Version: 0.0.4
+Date: 27.11.2020
+  Changes:
+    - Patched to work without angels (after oversight in last patch)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
 Date: 26.11.2020
   Changes:
     - Updated to Factorio version 1.1
