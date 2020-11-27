@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.5
 Date: 27.11.2020
+  Bugfixes:
+    - Fixed startup error related to the removeal of rocket silo launch stats window.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 27.11.2020
   Changes:
     - Patched to work without angels (after oversight in last patch)
 ---------------------------------------------------------------------------------------------------

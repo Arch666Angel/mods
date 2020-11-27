@@ -48,7 +48,7 @@ script.on_init(function()
       entity.minable = false
     end
   end
-
+--[[
   if remote.interfaces["silo_script"] and settings.startup["deco-shred-create-shrine-offer"].value then
     for _,decoName in pairs({
       "shred",
@@ -65,4 +65,5 @@ script.on_init(function()
       end
     end
   end
+  ]]--
 end)
