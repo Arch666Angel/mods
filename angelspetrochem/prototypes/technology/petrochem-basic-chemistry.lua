@@ -87,7 +87,9 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
       upgrade = true,
       prerequisites = {
-        "basic-chemistry-2"
+        "basic-chemistry-2",
+        "angels-coal-processing",
+        "automation-2"
       },
       effects = {
         {

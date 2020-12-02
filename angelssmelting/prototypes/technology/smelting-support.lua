@@ -44,7 +44,8 @@ data:extend(
       icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1"
+        "angels-metallurgy-1",
+        "advanced-material-processing"
       },
       effects = {
         {

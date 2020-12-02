@@ -18,8 +18,10 @@ move_item("heavy-oil", "petrochem-carbon-fluids", "ddd", "fluid")
 move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
 
 -- plastics
-OV.add_unlock("plastics", "solid-plastic")
+--OV.add_unlock("plastics", "solid-plastic")
 move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
+OV.add_prereq("plastics", "angels-advanced-chemistry-1")
+OV.remove_prereq("plastics", "oil-processing")
 
 -- sulfur
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
@@ -34,6 +36,14 @@ OV.add_prereq("explosives", "angels-sulfur-processing-2")
 -- solid fuel
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")
 move_item("solid-fuel", "petrochem-fuel", "a[solid-fuel]-a")
+
+OV.remove_unlock("angels-oil-processing", "solid-fuel-naphtha")
+OV.add_unlock("flammables", "solid-fuel-naphtha")
+OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")
+OV.add_unlock("flammables", "solid-fuel-fuel-oil")
+OV.remove_unlock("gas-processing", "solid-fuel-methane")
+OV.add_unlock("flammables", "solid-fuel-methane")
+OV.add_prereq("flammables", "gas-processing")
 
 if angelsmods.smelting then
   -- angelssmelting takes all the ores onto the smelting tab, so coal has to move as well

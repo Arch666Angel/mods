@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: ??
+  Changes:
+    - Warehouses now prerequisite on Ore silos if both are enabled (428)
+    - Pressure tank now always prerequisite on fluid handling
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 27.11.2020
   Changes:

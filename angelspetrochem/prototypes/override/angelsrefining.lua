@@ -42,15 +42,26 @@ if angelsmods.refining then
   )
 
   OV.remove_unlock("slag-processing-1", "liquifier")
+  OV.add_prereq("slag-processing-1", "angels-sulfur-processing-2")
   OV.add_unlock("basic-chemistry", "liquifier")
   OV.remove_unlock("slag-processing-2", "liquifier-2")
+  OV.add_prereq("slag-processing-2", "ore-leaching")
   OV.add_unlock("angels-advanced-chemistry-1", "liquifier-2")
   OV.add_unlock("angels-advanced-chemistry-2", "liquifier-3")
   OV.add_unlock("angels-advanced-chemistry-3", "liquifier-4")
 end
 
 -------------------------------------------------------------------------------
--- FERROUS/CUPRIC REFINING-----------------------------------------------------
+-- REGULAR REFINING -----------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.refining then
+  OV.remove_prereq("ore-floatation", "automation-2")
+  OV.remove_prereq("ore-floatation", "water-treatment")
+  OV.add_prereq("ore-floatation", "basic-chemistry-3")
+end
+
+-------------------------------------------------------------------------------
+-- FERROUS/CUPRIC REFINING ----------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.refining then
   if mods["bobplates"] then

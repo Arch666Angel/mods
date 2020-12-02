@@ -7,7 +7,7 @@ if angelsmods.addons.storage.warehouses then
       icon = "__angelsaddons-storage__/graphics/technology/warehouses.png",
       icon_size = 128,
       prerequisites = {
-        "steel-processing"
+        angelsmods.addons.storage.oresilos and "ore-silos" or "steel-processing"
       },
       effects = {
         {
@@ -84,7 +84,7 @@ if angelsmods.addons.storage.pressuretank then
       icon = "__angelsaddons-storage__/graphics/technology/pressure-tank-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-fluid-control"
+        "fluid-handling"
       },
       effects = {
         {

@@ -70,6 +70,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing-2",
+      "angels-coal-processing-2"
     },
     effects =
     {
@@ -280,6 +281,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-resin-resin-liquification"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-resin"
       }
     },
     unit =
@@ -401,6 +406,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "bio-plastic"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-plastic"
+      }
     },
     unit =
     {
@@ -441,7 +450,7 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-plastic-tree"
-      },
+      }
     },
     unit =
     {
@@ -521,6 +530,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "bio-rubber"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-rubber"
+      }
     },
     unit =
     {

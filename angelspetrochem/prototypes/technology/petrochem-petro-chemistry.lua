@@ -7,8 +7,9 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
       icon_size = 128,
       prerequisites = {
-        "basic-chemistry",
-        "electronics"
+        "basic-chemistry-3",
+        "electronics",
+        "fluid-handling"
       },
       effects = {
         {
@@ -220,9 +221,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
       icon_size = 128,
       prerequisites = {
-        "oil-gas-extraction",
-        "oil-processing",
-        "gas-processing"
+        --"basic-chemistry-3",
+        "ore-floatation"
       },
       effects = {
         {
@@ -576,7 +576,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
       icon_size = 128,
       prerequisites = {
-        "oil-processing"
+        "oil-processing",
+        "angels-advanced-chemistry-1"
       },
       effects = {
         {
