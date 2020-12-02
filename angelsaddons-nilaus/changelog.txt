@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.13
+Version: 0.3.12
 Date: 27.11.2020
   Changes:
     - Patched to work without angels (after oversight in last patch)
