@@ -1,4 +1,4 @@
-local enemy_autoplace = require ("__base__/prototypes/entity/demo-enemy-autoplace-utils")
+local enemy_autoplace = require ("__base__/prototypes/entity/enemy-autoplace-utils")
 
 data:extend(
 {

@@ -181,20 +181,27 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
+          fadeout = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
             priority = "high",
             width = 167,
             height = 197,
+            line_length = 6,
+            frame_count = 24,
+            animation_speed = 0.5,
             shift = util.by_pixel(0, -16.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
               priority = "high",
               width = 329,
               height = 392,
+              line_length = 6,
+              frame_count = 24,
+              animation_speed = 0.5,
               shift = util.by_pixel(0, -16.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -388,20 +395,27 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
+          fadeout = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
             priority = "high",
             width = 167,
             height = 197,
+            line_length = 6,
+            frame_count = 24,
+            animation_speed = 0.5,
             shift = util.by_pixel(0, -16.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
               priority = "high",
               width = 329,
               height = 392,
+              line_length = 6,
+              frame_count = 24,
+              animation_speed = 0.5,
               shift = util.by_pixel(0, -16.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -595,20 +609,27 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
+          fadeout = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
             priority = "high",
             width = 167,
             height = 197,
+            line_length = 6,
+            frame_count = 24,
+            animation_speed = 0.5,
             shift = util.by_pixel(0, -16.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
               priority = "high",
               width = 329,
               height = 392,
+              line_length = 6,
+              frame_count = 24,
+              animation_speed = 0.5,
               shift = util.by_pixel(0, -16.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -801,20 +822,27 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
+          fadeout = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
             priority = "high",
             width = 167,
             height = 197,
+            line_length = 6,
+            frame_count = 24,
+            animation_speed = 0.5,
             shift = util.by_pixel(0, -16.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
               priority = "high",
               width = 329,
               height = 392,
+              line_length = 6,
+              frame_count = 24,
+              animation_speed = 0.5,
               shift = util.by_pixel(0, -16.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }

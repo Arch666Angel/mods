@@ -1,6 +1,6 @@
 require "util"
 local math3d = require "math3d"
-local sounds = require("__base__.prototypes.entity.demo-sounds")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 local bio_turret_make_color = function(r_, g_, b_, a_)
   return {r = r_ * a_, g = g_ * a_, b = b_ * a_, a = a_}
