@@ -3,6 +3,7 @@ Version: 0.11.20
 Date: ??
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
+    - Hidden the crystallizers fluid box when no fluid is required (475)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020
