@@ -146,8 +146,9 @@ data:extend(
           percent = 30
         }
       },
-      collision_box = {{-1.5, -2.25}, {1.5, 2.25}},
-      selection_box = {{-1.5, -2.25}, {1.5, 2.25}},
+      collision_box = {{-1.55, -1.5}, {1.55, 3}},
+      selection_box = {{-1.55, -1.5}, {1.55, 3}},
+      drawing_box = {{-1.55, -3}, {1.55, 3}},
       effectivity = 0.7,
       braking_power = "1000kW",
       burner = {
