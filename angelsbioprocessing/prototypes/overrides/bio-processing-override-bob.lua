@@ -65,13 +65,14 @@ if bobmods then
       data.raw["item-group"]["bobmodules"].icons = {
         {
           icon = "__base__/graphics/technology/module.png",
-          icon_size = 128
+          icon_size = 256,
+          scale = 0.25
         },
         {
           icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
           icon_size = 1080,
-          scale = 128/1080 * 0.35,
-          shift = {40, -40}
+          scale = 64/1080 * 0.35,
+          shift = {20, -20}
         },
       }
       data.raw["item-group"]["bobmodules"].order = "lb[bobs]-d[modules]"

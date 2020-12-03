@@ -92,6 +92,7 @@ if mods["bobvehicleequipment"] then
   )
   reorder("item", "vehicle-motor", "angels-vehicle-equipment-bobpower-e", "a")
   reorder("item", "vehicle-engine", "angels-vehicle-equipment-bobpower-e", "b")
+  reorder("item", "vehicle-belt-immunity-equipment", "angels-vehicle-equipment-bobpower-e", "z")
 
   -----------------------------------------------------------------------------
   -- ROBOT EQUIPMENT ----------------------------------------------------------

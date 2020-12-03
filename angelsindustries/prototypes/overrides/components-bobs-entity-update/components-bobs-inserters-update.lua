@@ -1,55 +1,9 @@
-local OV = angelsmods.functions.OV
--- CUSTOM FIXES FOR BOBS
-if angelsmods.industries.components then
-  if mods["bobassembly"] then
-    -- burner assemblers
-    OV.patch_recipes(
-      {
-        {
-          name = "assembling-machine-2",
-          ingredients = {
-            {"block-electronics-1", "block-electronics-2"}
-          },
-          minable = {
-            results = {
-              {"block-electronics-1", "block-electronics-2"}
-            }
-          }
-        }
-      }
-    )
-  end
 
-  -- regular assemblers
-  if data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count and
-     data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count < 4
-  then -- required for tier 1 block automation
-    data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
-  end
-  if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count and
-     data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5
-  then -- required for tier 2 block automation
-    data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
-  end
+if angelsmods.industries.components then
+  local OV = angelsmods.functions.OV
+  -- CUSTOM FIXES FOR BOBS INSERTERS
 
   if mods["boblogistics"] then
-    if not mods["bobelectronics"] then
-      OV.patch_recipes(
-        {
-          {
-            name = "lab",
-            ingredients = {
-              {"block-electronics-0", "block-electronics-1"}
-            },
-            minable = {
-              results = {
-                {"block-electronics-0", "block-electronics-1"}
-              }
-            }
-          },
-        }
-      )
-    end
 
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.patch_recipes(
@@ -337,4 +291,5 @@ if angelsmods.industries.components then
       )
     end
   end
+  
 end

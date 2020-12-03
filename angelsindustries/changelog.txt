@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.11
+Date: ??
+  Changes:
+    - Regular mode:
+      - Ordered vehicle belt immunity equipment (477)
+    - Component mode:
+      - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.10
 Date: 26.11.2020
   Bugfixes:
