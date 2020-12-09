@@ -66,11 +66,13 @@ if bobmods then
         {
           icon = "__base__/graphics/technology/module.png",
           icon_size = 256,
+          icon_mipmaps = 4,
           scale = 0.25
         },
         {
           icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
           icon_size = 1080,
+          icon_mipmaps = 1,
           scale = 64/1080 * 0.35,
           shift = {20, -20}
         },
@@ -160,8 +162,9 @@ if bobmods then
         {
           type = "technology",
           name = "modules-2",
-          icon_size = 128,
           icon = "__base__/graphics/technology/module.png",
+          icon_size = 256,
+          icon_mipmaps = 4,
           prerequisites =
           {
             "modules",
@@ -226,8 +229,9 @@ if bobmods then
       {
         type = "technology",
         name = "modules-3",
-        icon_size = 128,
         icon = "__base__/graphics/technology/module.png",
+        icon_size = 256,
+        icon_mipmaps = 4,
         prerequisites =
         {
           "modules-2",
