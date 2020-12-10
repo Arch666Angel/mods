@@ -23,14 +23,14 @@ script.on_event(defines.events.on_built_entity, function(event)
   on_ghost_build(event.created_entity)
 end, {
   {filter = "ghost_type", type = "lab"},
-  --{filter = "ghost_type", type = "mining-drill"}
+  {filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.on_robot_built_entity, function(event)
   on_ghost_build(event.created_entity)
 end, {
   {filter = "ghost_type", type = "lab"},
-  --{filter = "ghost_type", type = "mining-drill"}
+  {filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.on_entity_cloned, function(event)
@@ -38,21 +38,21 @@ script.on_event(defines.events.on_entity_cloned, function(event)
   on_ghost_build(event.destination)
 end, {
   {filter = "ghost_type", type = "lab"},
-  --{filter = "ghost_type", type = "mining-drill"}
+  {filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.script_raised_revive, function(event)
   on_ghost_build(event.entity)
 end, {
   {filter = "ghost_type", type = "lab"},
-  --{filter = "ghost_type", type = "mining-drill"}
+  {filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.script_raised_built, function(event)
   on_ghost_build(event.entity)
 end, {
   {filter = "ghost_type", type = "lab"},
-  --{filter = "ghost_type", type = "mining-drill"}
+  {filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.on_player_fast_transferred, function(event)
@@ -109,7 +109,7 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
   if not (opened_entity and opened_entity.valid and
-    (opened_entity.type == "lab" --[[or opened_entity.type == "mining-drill"]])) then return end
+        (opened_entity.type == "lab" or opened_entity.type == "mining-drill")) then return end
   
   local player_cursor_stack = player.cursor_stack
   if not player_cursor_stack then return end
@@ -128,7 +128,7 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
         if player_cursor_stack.name == module_name then
           local player_cursor_stack_count = player_cursor_stack.count
           player_cursor_stack.set_stack{name=module_name, count=player_cursor_stack_count + remaining}
-          remaining = player_cursor_stack.count - player_cursor_stack_count
+          remaining = remaining - (player_cursor_stack.count - player_cursor_stack_count)
         end
       else
         if player_cursor_stack.can_set_stack{name=module_name, count=1} then
@@ -158,7 +158,7 @@ script.on_event(defines.events.on_player_main_inventory_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
   if not (opened_entity and opened_entity.valid and
-    (opened_entity.type == "lab" --[[or opened_entity.type == "mining-drill"]])) then return end
+         (opened_entity.type == "lab" or opened_entity.type == "mining-drill")) then return end
   
   local module_inventory = opened_entity.get_module_inventory()
   if not module_inventory then return end

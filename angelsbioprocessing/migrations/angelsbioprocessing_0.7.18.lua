@@ -6,7 +6,7 @@ local angels_bio_modules = {
 }
 
 for _, surface in pairs(game.surfaces) do
-  local entities = surface.find_entities_filtered{type = "lab"}
+  local entities = surface.find_entities_filtered{type = {"lab", "mining-drill"}}
   for _, entity in pairs(entities) do
     local module_inventory = entity.get_module_inventory()
     if module_inventory then
@@ -24,7 +24,7 @@ for _, surface in pairs(game.surfaces) do
       end
     end
   end
-  local ghost_entities = surface.find_entities_filtered{ghost_type = "lab"}
+  local ghost_entities = surface.find_entities_filtered{ghost_type = {"lab", "mining-drill"}}
   for _, ghost_entity in pairs(ghost_entities) do
     if not (ghost_entity and ghost_entity.valid) then return end
     local item_request_proxy = ghost_entity.item_requests
