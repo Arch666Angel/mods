@@ -54,8 +54,8 @@ data:extend{{
   icon = "__angelsaddons-cab__/graphics/icons/cab-energy-interface-mk1.png",
   icon_size = 32,
   placed_as_equipment_result = string.format(energyInterface.name, "-mk1"),
-  subgroup = "angels-cab",
-  order = "e[angels-cab-energy-interface]-a",
+  subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
+  order = mods["angelsindustries"] and "b[crawlers]-e" or "e[angels-cab-energy-interface]-a",
   stack_size = 50,
   default_request_amount = 10
 }}

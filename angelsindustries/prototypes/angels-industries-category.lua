@@ -520,11 +520,13 @@ data:extend(
       group = "angels-logistics",
       order = "cb[bots]"
     },
+    -- order "d-a[armor]-aa" reserved for bobs characters
+    -- order "d-a[armor]-ab" reserved for bobs characters
     {
       type = "item-subgroup",
       name = "angels-personal-equipment-armor",
       group = "angels-logistics",
-      order = "d-a[armor]"
+      order = "d-a[armor]-b"
     },
     {
       type = "item-subgroup",
@@ -596,15 +598,22 @@ data:extend(
       type = "item-subgroup",
       name = "angels-vehicle-train-other",
       group = "angels-vehicles",
-      order = "c"
+      order = "ca"
     },
+    {
+      type = "item-subgroup",
+      name = "angels-vehicle-spidertron",
+      group = "angels-vehicles",
+      order = "cba"
+    },
+    -- order cbb reserved for bobwarfare (see override)
+    -- order da reserved for CAB (see addon cab-category)
     {
       type = "item-subgroup",
       name = "angels-vehicle-equipment",
       group = "angels-vehicles",
       order = "db"
     },
-    -- order da reserved for CAB (see addon cab-category)
     -- order dc reserved for bobvehicleequipment (see override)
     ---------------------------------------------------------------------------
     -- ANGELS WARFARE ---------------------------------------------------------

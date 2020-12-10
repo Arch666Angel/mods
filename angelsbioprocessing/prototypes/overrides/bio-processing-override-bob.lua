@@ -83,20 +83,20 @@ if bobmods then
       -- modules subgroups
       data.raw["item-subgroup"]["module-intermediates"].order = "f-0-a"
       data:extend(
-      {
         {
-          type = "item-subgroup",
-          name = "module-intermediates-2",
-          group = "bobmodules",
-          order = "f-0-b"
-        },
-        {
-          type = "item-subgroup",
-          name = "module-intermediates-3",
-          group = "bobmodules",
-          order = "f-0-c"
-        },
-      }
+          {
+            type = "item-subgroup",
+            name = "module-intermediates-2",
+            group = "bobmodules",
+            order = "f-0-b"
+          },
+          {
+            type = "item-subgroup",
+            name = "module-intermediates-3",
+            group = "bobmodules",
+            order = "f-0-c"
+          },
+        }
       )
       data.raw["item"]["module-contact"].subgroup = "module-intermediates-2"
       data.raw["tool"]["module-circuit-board"].subgroup = "module-intermediates-3"
@@ -301,6 +301,182 @@ if bobmods then
     else
       OV.remove_unlock("advanced-electronics-2", "module-processor-board-3")
     end
+
+    data:extend(
+      {
+        {
+          type = "item-subgroup",
+          name = "bio-yield-module",
+          group = "bobmodules",
+          order = "f-9"
+        },
+      }
+    )
+    data.raw.module["angels-bio-yield-module"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-1.png"
+    data.raw.module["angels-bio-yield-module"].icon_size = 32
+    data.raw.module["angels-bio-yield-module"].icon_mipmaps = 1
+    move_item("angels-bio-yield-module", "bio-yield-module", "b-y-1", "module")
+    data.raw.module["angels-bio-yield-module-2"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-2.png"
+    data.raw.module["angels-bio-yield-module-2"].icon_size = 32
+    data.raw.module["angels-bio-yield-module-2"].icon_mipmaps = 1
+    move_item("angels-bio-yield-module-2", "bio-yield-module", "b-y-2", "module")
+    data.raw.module["angels-bio-yield-module-3"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-3.png"
+    data.raw.module["angels-bio-yield-module-3"].icon_size = 32
+    data.raw.module["angels-bio-yield-module-3"].icon_mipmaps = 1
+    move_item("angels-bio-yield-module-3", "bio-yield-module", "b-y-3", "module")
+    OV.patch_recipes({
+      {
+        name = "angels-bio-yield-module",
+        ingredients = {
+          {"!!"},
+          {type = "item", name = "solder", amount = 1},
+          {type="item", name="productivity-module", amount = 1},
+          {type="item", name="effectivity-module", amount = 1},
+          {type = "item", name = "token-bio", amount = 1}
+        }
+      },
+      {
+        name = "angels-bio-yield-module-2",
+        ingredients = {
+          {"!!"},
+          {type = "item", name = "solder", amount = 2},
+          {type="item", name="productivity-module-2", amount = 1},
+          {type="item", name="effectivity-module-2", amount = 1},
+          {type = "item", name = "token-bio", amount = 1}
+        }
+      },
+      {
+        name = "angels-bio-yield-module-3",
+        ingredients = {
+          {"!!"},
+          {type = "item", name = "solder", amount = 3},
+          {type="item", name="productivity-module-3", amount = 1},
+          {type="item", name="effectivity-module-3", amount = 1},
+          {type = "item", name = "token-bio", amount = 1}
+        }
+      }
+    })
+    data.raw.technology["angels-bio-yield-module"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-1.png"
+    data.raw.technology["angels-bio-yield-module"].icon_size = 32
+    data.raw.technology["angels-bio-yield-module"].icon_mipmaps = 1
+    data.raw.technology["angels-bio-yield-module-2"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-2.png"
+    data.raw.technology["angels-bio-yield-module-2"].icon_size = 32
+    data.raw.technology["angels-bio-yield-module-2"].icon_mipmaps = 1
+    data.raw.technology["angels-bio-yield-module-3"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-3.png"
+    data.raw.technology["angels-bio-yield-module-3"].icon_size = 32
+    data.raw.technology["angels-bio-yield-module-3"].icon_mipmaps = 1
+    for i = 1,3 do
+      local ingredients = {{"token-bio", 1}}
+      local ingredients_added = {["token-bio"] = true}
+      for _, tech_name in pairs{
+        i > 1 and "productivity-module-"..i or "productivity-module",
+        i > 1 and "effectivity-module-"..i or "effectivity-module",
+      } do
+        for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
+          if not ingredients_added[ingredient.name or ingredient[1]] then
+            ingredients_added[ingredient.name or ingredient[1]] = true
+            table.insert(ingredients, util.table.deepcopy(ingredient))
+          end
+        end
+      end
+      data.raw.technology[i > 1 and "angels-bio-yield-module-"..i or "angels-bio-yield-module"].unit = {
+        count = data.raw.technology[i > 1 and "productivity-module-"..i or "productivity-module"].unit.count,
+        ingredients = ingredients,
+        time = data.raw.technology[i > 1 and "productivity-module-"..i or "productivity-module"].unit.time
+      }
+    end
+    for i = 4,8 do
+      local ingredients = {{"token-bio", 1}}
+      local ingredients_added = {["token-bio"] = true}
+      for _, tech_name in pairs{
+        "productivity-module-"..i,
+        "effectivity-module-"..i,
+      } do
+        for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
+          if not ingredients_added[ingredient.name or ingredient[1]] then
+            ingredients_added[ingredient.name or ingredient[1]] = true
+            table.insert(ingredients, util.table.deepcopy(ingredient))
+          end
+        end
+      end
+      local solder_amount = i
+      if i > 4 then
+        solder_amount = solder_amount + 1
+        if i == 8 then
+          solder_amount = solder_amount + 1
+        end
+      end
+      data:extend(
+        {
+          {
+            type = "module",
+            name = "angels-bio-yield-module-"..i,
+            localised_description = {"item-description.angels-bio-yield-module-"..i},
+            icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-"..i..".png",
+            icon_size = 32, icon_mipmaps = 1,
+            subgroup = "bio-yield-module",
+            category = "productivity",
+            tier = i,
+            order = "b-y-"..i,
+            stack_size = 50,
+            effect =
+            {
+              productivity = {bonus = 0.15},
+              pollution = {bonus = 0.15} -- extra pollution absorption
+            },
+            limitation = {},
+            limitation_message_key = "angels-yield-module-usable-only-on-agriculture"
+          },
+          {
+            type = "recipe",
+            name = "angels-bio-yield-module-"..i,
+            enabled = false,
+            ingredients =
+            {
+              {type = "item", name = "solder", amount = solder_amount},
+              {type = "item", name = "productivity-module-"..i, amount = 1},
+              {type = "item", name = "effectivity-module-"..i, amount = 1},
+              {type = "item", name = "token-bio", amount = 1}
+            },
+            energy_required = 15,
+            result = "angels-bio-yield-module-"..i
+          },
+          {
+            type = "technology",
+            name = "angels-bio-yield-module-"..i,
+            icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-"..i..".png",
+            icon_size = 32, icon_mipmaps = 1,
+            order = "c-a",
+            prerequisites = {
+              "productivity-module-"..i,
+              "effectivity-module-"..i,
+            },
+            effects = {
+              {
+                type = "unlock-recipe",
+                recipe = "angels-bio-yield-module-"..i
+              }
+            },
+            unit = {
+              count = data.raw.technology["productivity-module-"..i].unit.count,
+              ingredients = ingredients,
+              time = data.raw.technology["productivity-module-"..i].unit.time
+            }
+          }
+        }
+      )
+      angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-"..i)
+    end
+    for i = 1,8 do
+      local name = "angels-bio-yield-module"
+      if i > 1 then name = name .. "-" .. i end
+      data.raw.module[name].effect = {
+        productivity = {bonus = 0.075 * i},
+        pollution = {bonus = 0.075 * i} -- extra pollution absorption
+      }
+    end
+
+    table.insert(data.raw.lab["lab-module"].inputs, "token-bio")
 
     -- BEACONS
     if angelsmods.industries and angelsmods.industries.overhaul then

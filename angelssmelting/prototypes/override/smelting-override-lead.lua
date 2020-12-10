@@ -83,6 +83,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
           name = "lead-plate",
           energy_required = 10.5,
           normal = {
+            enabled = false,
             ingredients = {
               {name = "lead-ore", type = "item", amount = "+3"}
             },
@@ -91,6 +92,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
             }
           },
           expensive = {
+            enabled = false,
             ingredients = {
               {"!!"},
               {name = "lead-ore", type = "item", amount = 5 * intermediatemulti}

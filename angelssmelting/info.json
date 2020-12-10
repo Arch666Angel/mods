@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Angel's Smelting provides alternative ways to produce plate and increase ore yield at the expense of space and energy.",
   "dependencies": [
-    "angelsrefining >= 0.11.19",
-    "angelspetrochem >= 0.9.17",
+    "angelsrefining >= 0.11.20",
+    "angelspetrochem >= 0.9.18",
     "? bobplates >= 0.18.8"
   ]
 }

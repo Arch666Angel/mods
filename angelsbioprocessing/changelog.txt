@@ -3,10 +3,12 @@ Version: 0.7.18
 Date: ??
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
+    - Added agricultural module support with bobs modules
   Bugfixes:
     - Fixed bob modules category icon did not fit the category box size (483)
     - Fixed bob modules tech icons did not fit the tech box (483)
     - Fixed that agrecultural modules could be inserted in labs, now actively preventing this (479)
+    - Fixed agricultural modules would not upgrade correctly
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.17
 Date: 26.11.2020

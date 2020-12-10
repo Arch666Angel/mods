@@ -3,6 +3,7 @@ Version: 0.6.15
 Date: ??
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
+    - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.14
 Date: 26.11.2020

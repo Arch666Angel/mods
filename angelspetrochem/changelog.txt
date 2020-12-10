@@ -3,6 +3,7 @@ Version: 0.9.18
 Date: ??
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
+    - Disabled bobs valve as angels valves have an identical purpose with more features
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.17
 Date: 26.11.2020

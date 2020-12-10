@@ -34,52 +34,9 @@ end
 -- STORAGE TANKS --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  move_item("bob-small-inline-storage-tank", "angels-fluid-tanks", "a[small-tank]-a")
-  move_item("bob-small-storage-tank", "angels-fluid-tanks", "a[small-tank]-b")
-  move_item("storage-tank", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-a[regular]")
-  move_item("angels-storage-tank-1", "angels-fluid-tanks", "c[large-tank]-c[gas]")
-  move_item("angels-storage-tank-2", "angels-fluid-tanks", "c[large-tank]-b[oil]")
-  move_item("angels-storage-tank-3", "angels-fluid-tanks", "c[large-tank]-a[inline]")
-
-  OV.patch_recipes(
-    {
-      {
-        name = "bob-small-storage-tank",
-        ingredients = {
-          {"!!"},
-          {name = "bob-small-inline-storage-tank", amount = 1},
-          {name = "pipe", amount = 1}
-        }
-      },
-      {
-        name = "storage-tank",
-        ingredients = {
-          {name = "bob-small-inline-storage-tank", amount = 1}
-        }
-      }
-    }
-  )
-
   if mods["boblogistics"] then
-    move_item("bob-storage-tank-all-corners", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-b[all-corners]")
-    move_item("storage-tank-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-a[regular]")
-    move_item("bob-storage-tank-all-corners-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-b[all-corners]")
-    move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-a[regular]")
-    move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-b[all-corners]")
-    move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-a[regular]")
-    move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-b[all-corners]")
-    move_item("storage-tank-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-a[regular]")
-    move_item("bob-storage-tank-all-corners-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-b[all-corners]")
-
     OV.patch_recipes(
       {
-        {
-          name = "bob-storage-tank-all-corners",
-          ingredients = {
-            {name = "bob-small-storage-tank", amount = 1},
-            {name = "pipe", amount = 2}
-          }
-        },
         {
           name = "angels-storage-tank-3",
           ingredients = {
@@ -98,22 +55,6 @@ end
 -- FLUID CONTROL --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if mods["boblogistics"] then
-    -- hide fluid control from bob (as we use the extended angel equivalents)
-    angelsmods.functions.add_flag("bob-valve", "hidden")
-    angelsmods.functions.add_flag("bob-overflow-valve", "hidden")
-    angelsmods.functions.add_flag("bob-topup-valve", "hidden")
-    OV.disable_recipe("bob-valve")
-    OV.remove_unlock("fluid-handling", "bob-overflow-valve")
-    OV.remove_unlock("fluid-handling", "bob-topup-valve")
-
-    -- move pumps over
-    move_item("pump", "angels-fluid-control", "b[pump]-a[mk1]")
-    move_item("bob-pump-2", "angels-fluid-control", "b[pump]-b[mk2]")
-    move_item("bob-pump-3", "angels-fluid-control", "b[pump]-c[mk3]")
-    move_item("bob-pump-4", "angels-fluid-control", "b[pump]-d[mk4]")
-  end
-
   -- generic replace items ----------------------------------------------------
   OV.global_replace_item("carbon", "solid-carbon")
   angelsmods.functions.add_flag("carbon", "hidden")

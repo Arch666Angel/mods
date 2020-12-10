@@ -2,7 +2,12 @@
 local angels_bio_modules = {
   ["angels-bio-yield-module"] = true,
   ["angels-bio-yield-module-2"] = true,
-  ["angels-bio-yield-module-3"] = true
+  ["angels-bio-yield-module-3"] = true,
+  ["angels-bio-yield-module-4"] = true,
+  ["angels-bio-yield-module-5"] = true,
+  ["angels-bio-yield-module-6"] = true,
+  ["angels-bio-yield-module-7"] = true,
+  ["angels-bio-yield-module-8"] = true
 }
 
 function on_ghost_build(ghost_entity)
@@ -17,39 +22,44 @@ end
 script.on_event(defines.events.on_built_entity, function(event)
   on_ghost_build(event.created_entity)
 end, {
-  {filter = "ghost_type", type = "lab"}
+  {filter = "ghost_type", type = "lab"},
+  --{filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.on_robot_built_entity, function(event)
   on_ghost_build(event.created_entity)
 end, {
-  {filter = "ghost_type", type = "lab"}
+  {filter = "ghost_type", type = "lab"},
+  --{filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.on_entity_cloned, function(event)
   on_ghost_build(event.source) -- you never know where the source came from...
   on_ghost_build(event.destination)
 end, {
-  {filter = "ghost_type", type = "lab"}
+  {filter = "ghost_type", type = "lab"},
+  --{filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.script_raised_revive, function(event)
   on_ghost_build(event.entity)
 end, {
-  {filter = "ghost_type", type = "lab"}
+  {filter = "ghost_type", type = "lab"},
+  --{filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.script_raised_built, function(event)
   on_ghost_build(event.entity)
 end, {
-  {filter = "ghost_type", type = "lab"}
+  {filter = "ghost_type", type = "lab"},
+  --{filter = "ghost_type", type = "mining-drill"}
 })
 
 script.on_event(defines.events.on_player_fast_transferred, function(event)
   if not event.from_player then return end
 
   local entity = event.entity
-  if entity.type ~= "lab" then return end
+  if not (entity.type == "lab" or entity.type == "mining-drill") then return end
 
   local player = game.get_player(event.player_index)
   local player_cursor_stack = player.cursor_stack
@@ -98,7 +108,8 @@ end)
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
-  if not (opened_entity and opened_entity.valid and opened_entity.type == "lab") then return end
+  if not (opened_entity and opened_entity.valid and
+    (opened_entity.type == "lab" --[[or opened_entity.type == "mining-drill"]])) then return end
   
   local player_cursor_stack = player.cursor_stack
   if not player_cursor_stack then return end
@@ -146,7 +157,8 @@ end)
 script.on_event(defines.events.on_player_main_inventory_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
-  if not (opened_entity and opened_entity.valid and opened_entity.type == "lab") then return end
+  if not (opened_entity and opened_entity.valid and
+    (opened_entity.type == "lab" --[[or opened_entity.type == "mining-drill"]])) then return end
   
   local module_inventory = opened_entity.get_module_inventory()
   if not module_inventory then return end
