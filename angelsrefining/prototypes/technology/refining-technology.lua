@@ -123,6 +123,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/geode-processing-red.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         --"ore-crushing",
         "ore-floatation"
@@ -370,6 +371,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/geode-processing-green.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         --"ore-crushing",
         "geode-processing-1",
@@ -716,6 +718,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/geode-processing-yellow.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         "geode-processing-2",
         "slag-processing-2"
