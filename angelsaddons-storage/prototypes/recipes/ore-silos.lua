@@ -93,7 +93,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
-        {type = "item", name = "advanced-circuit", amount = 10}
+        {type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 10}
       },
       result = "silo-passive-provider"
     },
@@ -117,7 +117,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
-        {type = "item", name = "advanced-circuit", amount = 10}
+        {type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 10}
       },
       result = "silo-requester"
     },
@@ -129,7 +129,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "silo", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
-        {type = "item", name = "advanced-circuit", amount = 10}
+        {type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 10}
       },
       result = "silo-storage"
     },

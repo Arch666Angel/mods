@@ -25,7 +25,7 @@ if angelsmods.addons.storage.warehouses then
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
-        {type = "item", name = "advanced-circuit", amount = 20}
+        {type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 20}
       },
       result = "angels-warehouse-passive-provider",
       icon_size = 32,
@@ -55,7 +55,7 @@ if angelsmods.addons.storage.warehouses then
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
-        {type = "item", name = "advanced-circuit", amount = 20}
+        {type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 20}
       },
       result = "angels-warehouse-storage",
       icon_size = 32,
@@ -70,7 +70,7 @@ if angelsmods.addons.storage.warehouses then
       ingredients = {
         {type = "item", name = "steel-plate", amount = 20},
         {type = "item", name = "angels-warehouse", amount = 1},
-        {type = "item", name = "advanced-circuit", amount = 20}
+        {type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 20}
       },
       result = "angels-warehouse-requester",
       icon_size = 32,

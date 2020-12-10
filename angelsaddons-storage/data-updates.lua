@@ -26,16 +26,50 @@ if angelsmods.addons.storage.icon_scaling then
     data.raw["logistic-container"]["angels-warehouse-buffer"].scale_info_icons = true
   end
 end
+
 --ore-silo tech update
 if angelsmods and angelsmods.refining then
   angelsmods.functions.OV.add_prereq("ore-silos", "ore-crushing")
+  for refinery_product_name, ore_name in pairs{
+    ["saphirite"] = "ore1",
+    ["jivolite"] = "ore2",
+    ["stiratite"] = "ore3",
+    ["crotinnium"] = "ore4",
+    ["rubyte"] = "ore5",
+    ["bobmonium"] = "ore6"
+  } do
+    if angelsmods.trigger.refinery_products[refinery_product_name] then
+      angelsmods.functions.OV.patch_recipes{
+        {
+          name = "silo-"..ore_name,
+          ingredients = {
+            {type = "item", name = "angels-"..ore_name.."-crushed", amount = 10}
+          }
+        }
+      }
+    else
+      angelsmods.functions.OV.disable_recipe("silo-"..ore_name)
+    end
+  end
+  angelsmods.functions.OV.patch_recipes{
+    {
+      name = "silo-coal",
+      ingredients = {
+        {type = "item", name = angelsmods.petrochem and "coal-crushed" or "coal", amount = 10}
+      }
+    }
+  }
+  if angelsmods.petrochem then
+    angelsmods.functions.OV.add_prereq("ore-silos", "angels-coal-processing")
+  end
 end
+
 --update subgroup locations
 if angelsmods.industries then
   data.raw["item-subgroup"]["angels-silo"].group = "angels-logistics"
   data.raw["item-subgroup"]["angels-silo"].order = "ac[chests-silo]"
-  data.raw["item-subgroup"]["angels-warehouse"].group = "angels-logistics"
-  data.raw["item-subgroup"]["angels-warehouse"].order = "ad[chests-warehouse]"
   data.raw["item-subgroup"]["angels-ore-silo"].group = "angels-logistics"
   data.raw["item-subgroup"]["angels-ore-silo"].order = "ac[chests-silo]"
+  data.raw["item-subgroup"]["angels-warehouse"].group = "angels-logistics"
+  data.raw["item-subgroup"]["angels-warehouse"].order = "ad[chests-warehouse]"
 end

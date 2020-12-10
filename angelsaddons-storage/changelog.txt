@@ -4,6 +4,9 @@ Date: ??
   Changes:
     - Warehouses now prerequisite on Ore silos if both are enabled (428)
     - Pressure tank now always prerequisite on fluid handling
+    - Changed recipes of ore silos when playing with angels refining (340)
+    - Changed some recipes of logistics silos when playing with angels industries (340)
+    - Changed some recipes of logistics warehouses when playing with angels industries (340)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 27.11.2020
