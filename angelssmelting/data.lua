@@ -16,7 +16,7 @@ angelsmods.trigger.washing_tech = true -- angels refining trigger
 --create all the tables for smelting triggers ---------------------------------
 angelsmods.trigger.smelting_molds = false
 angelsmods.trigger.smelting_products = angelsmods.trigger.smelting_products or {}
-angelsmods.trigger.smelting_products["enable-all"] = false -- setting to override and enable everything (debug mode)
+angelsmods.trigger.smelting_products["enable-all"] = true -- setting to override and enable everything (debug mode)
 angelsmods.trigger.smelting_products["brass"] = angelsmods.trigger.smelting_products["brass"] or {}
 angelsmods.trigger.smelting_products["bronze"] = angelsmods.trigger.smelting_products["bronze"] or {}
 angelsmods.trigger.smelting_products["cobalt-steel"] = angelsmods.trigger.smelting_products["cobalt-steel"] or {}
