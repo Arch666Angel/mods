@@ -122,7 +122,6 @@ data:extend(
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
-        "strand-casting-3",
         "angels-manganese-smelting-2",
         "angels-iron-smelting-3",
         "oil-gas-extraction"

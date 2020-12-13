@@ -3,7 +3,7 @@ data:extend(
     {
       type = "technology",
       name = "angels-steel-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-steel.png",
+      icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 128,
       upgrade = true,
       prerequisites = {
@@ -43,12 +43,11 @@ data:extend(
     {
       type = "technology",
       name = "angels-steel-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-steel.png",
+      icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 128,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
-        "ore-processing-2",
         "strand-casting-2",
         "angels-steel-smelting-1",
         "angels-silicon-smelting-2",
@@ -98,12 +97,12 @@ data:extend(
     {
       type = "technology",
       name = "angels-steel-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-steel.png",
+      localised_name = {"technology-name.angels-steel-casting"},
+      icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 128,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
-        "ore-processing-3",
         "strand-casting-3",
         "angels-steel-smelting-2",
         "angels-nickel-smelting-3",

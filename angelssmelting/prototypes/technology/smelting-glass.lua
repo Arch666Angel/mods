@@ -51,7 +51,7 @@ data:extend(
         "powder-metallurgy-2",
         "angels-glass-smelting-1",
         "angels-stone-smelting-2",
-        "angels-lead-smelting-2"
+        "angels-lead-smelting-2" -- need this for the lead oxide processing
       },
       effects = {
         {
@@ -86,7 +86,7 @@ data:extend(
         --[["strand-casting-1",]]
         "angels-glass-smelting-2",
         "angels-aluminium-smelting-2",
-        "angels-tin-smelting-3",
+        "angels-tin-casting-3",
         "sodium-processing",
         "angels-nitrogen-processing-1"
       },
