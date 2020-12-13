@@ -10,7 +10,7 @@ data:extend(
       prerequisites = {
         "ore-floatation",
         "angels-metallurgy-2",
-        "angels-coal-processing-2"
+        "angels-coal-processing"
       },
       effects = {
         {

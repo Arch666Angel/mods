@@ -179,14 +179,6 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "titanium-processed-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "pellet-titanium-smelting"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "molten-titanium-smelting-4"
         },
         {

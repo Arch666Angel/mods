@@ -86,7 +86,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         {
           type = "technology",
           name = "angels-invar-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-invar.png",
+          icon = "__angelssmelting__/graphics/technology/casting-invar-tech.png",
           icon_size = 128,
           prerequisites = {
             "angels-steel-smelting-1",

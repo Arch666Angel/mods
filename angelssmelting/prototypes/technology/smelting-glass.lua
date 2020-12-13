@@ -88,7 +88,7 @@ data:extend(
         "angels-aluminium-smelting-2",
         "angels-tin-casting-3",
         "sodium-processing",
-        "angels-nitrogen-processing-1"
+        --"angels-nitrogen-processing-1"
       },
       effects = {
         {

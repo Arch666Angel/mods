@@ -26,9 +26,11 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-gold", "hidden")
     OV.disable_recipe({"molten-gold-smelting"})
-    -- no need for the strand casting
-    OV.remove_prereq("angels-gold-smelting-2", "strand-casting-2")
-    OV.remove_prereq("angels-gold-smelting-3", "strand-casting-3")
+    OV.disable_technology({"angels-gold-casting-2", "angels-gold-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-gold-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-gold-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-gold", "hidden")
@@ -43,6 +45,7 @@ else
   OV.disable_recipe({"gold-ore-smelting", "cathode-gold-smelting"})
   OV.disable_recipe({"molten-gold-smelting"})
   OV.disable_technology({"angels-gold-smelting-1", "angels-gold-smelting-2", "angels-gold-smelting-3"})
+  OV.disable_technology({"angels-gold-casting-2", "angels-gold-casting-3"})
 end
 
 -------------------------------------------------------------------------------

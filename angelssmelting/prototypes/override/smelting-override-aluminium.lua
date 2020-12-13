@@ -47,9 +47,11 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-aluminium", "hidden")
     OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
-    -- no need for the strand casting
-    OV.remove_prereq("angels-aluminium-smelting-2", "strand-casting-2")
-    OV.remove_prereq("angels-aluminium-smelting-3", "strand-casting-3")
+    OV.disable_technology({"angels-aluminium-casting-2", "angels-aluminium-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-aluminium-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-aluminium-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-aluminium", "hidden")
@@ -64,6 +66,7 @@ else
   OV.disable_recipe({ "solid-aluminium-oxide-smelting" })
   OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
   OV.disable_technology({"angels-aluminium-smelting-1", "angels-aluminium-smelting-2", "angels-aluminium-smelting-3"})
+  OV.disable_technology({"angels-aluminium-casting-2", "angels-aluminium-casting-3"})
 end
 
 -------------------------------------------------------------------------------
