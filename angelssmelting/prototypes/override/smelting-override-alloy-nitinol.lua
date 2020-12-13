@@ -84,7 +84,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         {
           type = "technology",
           name = "angels-nitinol-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-nitinol.png",
+          icon = "__angelssmelting__/graphics/technology/casting-nitinol-tech.png",
           icon_size = 128,
           prerequisites = {
             "angels-titanium-smelting-1",

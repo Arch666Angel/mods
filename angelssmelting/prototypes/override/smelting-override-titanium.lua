@@ -29,9 +29,11 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-titanium", "hidden")
     OV.disable_recipe({"molten-titanium-smelting-1", "molten-titanium-smelting-2", "molten-titanium-smelting-3", "molten-titanium-smelting-4", "molten-titanium-smelting-5"})
-    -- no need for the strand casting
-    OV.remove_prereq("angels-titanium-smelting-2", "strand-casting-3")
-    OV.remove_prereq("angels-titanium-smelting-3", "strand-casting-4")
+    OV.disable_technology({"angels-titanium-casting-2", "angels-titanium-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-titanium-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-titanium-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-titanium", "hidden")
@@ -45,6 +47,7 @@ else
   OV.disable_recipe({"sponge-titanium-smelting", "pellet-titanium-smelting"})
   OV.disable_recipe({"molten-titanium-smelting-1", "molten-titanium-smelting-2", "molten-titanium-smelting-3", "molten-titanium-smelting-4", "molten-titanium-smelting-5"})
   OV.disable_technology({"angels-titanium-smelting-1", "angels-titanium-smelting-2", "angels-titanium-smelting-3"})
+  OV.disable_technology({"angels-titanium-casting-2", "angels-titanium-casting-3"})
 end
 
 -------------------------------------------------------------------------------

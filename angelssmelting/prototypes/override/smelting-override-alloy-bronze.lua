@@ -144,7 +144,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         {
           type = "technology",
           name = "angels-bronze-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-bronze.png",
+          icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
           icon_size = 128,
           prerequisites = {
             "angels-tin-smelting-1",
@@ -172,7 +172,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         {
           type = "technology",
           name = "angels-bronze-smelting-2",
-          icon = "__angelssmelting__/graphics/technology/smelting-bronze.png",
+          icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
           icon_size = 128,
           upgrade = true,
           prerequisites = {
@@ -198,7 +198,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         {
           type = "technology",
           name = "angels-bronze-smelting-3",
-          icon = "__angelssmelting__/graphics/technology/smelting-bronze.png",
+          icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
           icon_size = 128,
           upgrade = true,
           prerequisites = {

@@ -3,7 +3,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-silicon-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-silicon.png",
+      localised_name = {"technology-name.angels-silicon-metallurgy"},
+      icon = "__angelssmelting__/graphics/technology/casting-silicon-tech.png",
       icon_size = 128,
       upgrade = true,
       prerequisites = {
@@ -46,8 +47,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-silicon-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-silicon.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-2",
@@ -86,8 +87,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-silicon-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-silicon.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
@@ -107,7 +108,30 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "gas-silane-smelting"
+        }
+      },
+      unit = {
+        count = 200,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-silicon-casting-2",
+      icon = "__angelssmelting__/graphics/technology/casting-silicon-tech.png",
+      icon_size = 128,
+      upgrade = true,
+      prerequisites = {
+        "angels-metallurgy-3",
+        "angels-silicon-smelting-1",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-mono-silicon-2"

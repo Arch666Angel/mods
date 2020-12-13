@@ -23,11 +23,13 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
   if angelsmods.trigger.smelting_products["tin"].plate or angelsmods.trigger.smelting_products["tin"].wire then
   else
     -- no need for molten recipe
-  angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
-  OV.disable_recipe({"molten-tin-smelting"})
-  -- no need for the strand casting
-  OV.remove_prereq("angels-tin-smelting-2", "strand-casting-1")
-  OV.remove_prereq("angels-tin-smelting-3", "strand-casting-2")
+    angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
+    OV.disable_recipe({"molten-tin-smelting"})
+    OV.disable_technology({"angels-tin-casting-2", "angels-tin-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-tin-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-tin-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-tin", "hidden")
@@ -38,6 +40,7 @@ else
   OV.disable_recipe({"tin-ore-smelting", "processed-tin-smelting", "pellet-tin-smelting"})
   OV.disable_recipe({"molten-tin-smelting"})
   OV.disable_technology({"angels-tin-smelting-1", "angels-tin-smelting-2", "angels-tin-smelting-3"})
+  OV.disable_technology({"angels-tin-casting-2", "angels-tin-casting-3"})
 end
 
 -------------------------------------------------------------------------------

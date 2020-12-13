@@ -85,7 +85,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         {
           type = "technology",
           name = "angels-gunmetal-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-gunmetal.png",
+          icon = "__angelssmelting__/graphics/technology/casting-gunmetal-tech.png",
           icon_size = 128,
           prerequisites = {
             "angels-tin-smelting-1",

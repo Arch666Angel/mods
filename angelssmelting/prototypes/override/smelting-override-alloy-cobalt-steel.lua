@@ -84,7 +84,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         {
           type = "technology",
           name = "angels-cobalt-steel-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-cobalt-steel.png",
+          icon = "__angelssmelting__/graphics/technology/casting-cobalt-steel-tech.png",
           icon_size = 128,
           prerequisites = {
             "angels-steel-smelting-1",
