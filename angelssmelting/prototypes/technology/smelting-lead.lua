@@ -3,7 +3,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-lead-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-lead.png",
+      localised_name = {"technology-name.angels-lead-metallurgy"},
+      icon = "__angelssmelting__/graphics/technology/casting-lead-tech.png",
       icon_size = 128,
       upgrade = true,
       prerequisites = {
@@ -37,15 +38,14 @@ data:extend(
     {
       type = "technology",
       name = "angels-lead-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-lead.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-lead-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-2",
         "ore-processing-1",
-        "strand-casting-1",
         "angels-lead-smelting-1",
-        "angels-coal-processing-2"
+        "angels-coal-processing"
       },
       effects = {
         {
@@ -63,7 +63,30 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "powder-lead"
+        }
+      },
+      unit = {
+        count = 150,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-lead-casting-2",
+      icon = "__angelssmelting__/graphics/technology/casting-lead-tech.png",
+      icon_size = 128,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-2",
+        "strand-casting-1",
+        "angels-lead-smelting-1",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "roll-lead-casting"
@@ -86,13 +109,12 @@ data:extend(
     {
       type = "technology",
       name = "angels-lead-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-lead.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-lead-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "ore-processing-2",
-        "strand-casting-2",
         "angels-lead-smelting-2",
         "angels-sulfur-processing-2",
         "water-washing-1"
@@ -114,6 +136,34 @@ data:extend(
           type = "unlock-recipe",
           recipe = "anode-lead-smelting"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "roll-lead-casting-fast"
+        }
+      },
+      unit = {
+        count = 200,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-lead-casting-3",
+      icon = "__angelssmelting__/graphics/technology/casting-lead-tech.png",
+      icon_size = 128,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-3",
+        "strand-casting-2",
+        "angels-lead-casting-2",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "roll-lead-casting-fast"

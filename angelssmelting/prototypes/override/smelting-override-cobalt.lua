@@ -31,9 +31,11 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-cobalt", "hidden")
     OV.disable_recipe({"molten-cobalt-smelting"})
-    -- no need for the strand casting
-    OV.remove_prereq("angels-cobalt-smelting-2", "strand-casting-2")
-    OV.remove_prereq("angels-cobalt-smelting-3", "strand-casting-3")
+    OV.disable_technology({"angels-cobalt-casting-2", "angels-cobalt-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-cobalt-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-cobalt-smelting-2"][property])
+    end
   end
   
   if mods["angelsindustries"] and angelsmods.industries.components then
@@ -52,6 +54,7 @@ else
   OV.disable_recipe({"cobalt-ore-smelting", "solid-cobalt-oxide-smelting"})
   OV.disable_recipe({"molten-cobalt-smelting"})
   OV.disable_technology({"angels-cobalt-smelting-1", "angels-cobalt-smelting-2", "angels-cobalt-smelting-3"})
+  OV.disable_technology({"angels-cobalt-casting-2", "angels-cobalt-casting-3"})
 end
 
 -------------------------------------------------------------------------------

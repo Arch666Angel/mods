@@ -144,7 +144,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "technology",
           name = "angels-brass-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-brass.png",
+          icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
           icon_size = 128,
           prerequisites = {
             "angels-zinc-smelting-1",
@@ -173,7 +173,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "technology",
           name = "angels-brass-smelting-2",
-          icon = "__angelssmelting__/graphics/technology/smelting-brass.png",
+          icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
           icon_size = 128,
           upgrade = true,
           prerequisites = {
@@ -200,7 +200,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "technology",
           name = "angels-brass-smelting-3",
-          icon = "__angelssmelting__/graphics/technology/smelting-brass.png",
+          icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
           icon_size = 128,
           upgrade = true,
           prerequisites = {
