@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-iron", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-iron]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -34,7 +33,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-iron", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-iron]"
     },
     -- order d reserved for solid-iron-hydroxide
@@ -52,18 +50,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-iron", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-iron"),
+        1, angelsmods.smelting.number_tint),
       order = "e[ingot-iron]-a"
     },
     {
@@ -80,18 +69,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-iron", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-iron"),
+        2, angelsmods.smelting.number_tint),
       order = "e[ingot-iron]-b"
     },
     {
@@ -109,18 +89,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-iron", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-iron"),
+        3, angelsmods.smelting.number_tint),
       order = "e[ingot-iron]-c"
     },
     {
@@ -139,18 +110,9 @@ data:extend(
         {type = "fluid", name = "gas-carbon-dioxide", amount = 20}
       },
       main_product = "ingot-iron",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-iron"),
+        4, angelsmods.smelting.number_tint),
       order = "e[ingot-iron]-d"
     },
     -- order f reserved for ingot-steel (see alloys)
@@ -167,7 +129,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-iron", amount = 1}
       },
-      icon_size = 32,
       order = "g[powder-iron]"
     },
     -- order h reserved for powder-steel (see alloys)
@@ -185,18 +146,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-iron", amount = 120}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-iron"),
+        1, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-iron]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -214,18 +166,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-iron", amount = 240}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-iron"),
+        2, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-iron]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -243,18 +186,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-iron", amount = 240}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-iron"),
+        3, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-iron]-c",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -273,18 +207,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-iron", amount = 360}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-iron"),
+        4, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-iron]-d",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -303,18 +228,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-iron", amount = 360}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_5.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-iron"),
+        5, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-iron]-e",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -345,18 +261,9 @@ data:extend(
           {type = "item", name = "angels-roll-iron", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-iron"),
+        1, angelsmods.smelting.number_tint),
       order = "j[angels-roll-iron]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -391,18 +298,9 @@ data:extend(
         },
         main_product = "angels-roll-iron"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-iron"),
+        2, angelsmods.smelting.number_tint),
       order = "j[angels-roll-iron]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -433,18 +331,9 @@ data:extend(
           {type = "item", name = "angels-rod-stack-iron", amount = 1}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/rod-stack-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
+        1, angelsmods.smelting.number_tint),
       order = "k[angels-rod-stack-iron]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -479,18 +368,9 @@ data:extend(
         },
         main_product = "angels-rod-stack-iron"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/rod-stack-iron.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
+        2, angelsmods.smelting.number_tint),
       order = "k[angels-rod-stack-iron]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron")
     },
@@ -520,17 +400,10 @@ data:extend(
           {type = "item", name = "angels-plate-iron", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-iron.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-iron.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-iron"),
+        angelsmods.functions.get_object_icons("liquid-molten-iron"),
+        {-10, -10}, 0.4375),
       order = "l[angels-plate-iron]-c" -- l[angels-plate-iron]-a reserved for crushed saphirite smelting (see global overrides)
     }, -- l[angels-plate-iron]-b reserved for base game smelting recipe (see global overrides)
     {
@@ -547,17 +420,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-iron", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-iron.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-iron.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-iron"),
+        angelsmods.functions.get_object_icons("angels-roll-iron"),
+        {-10, -10}, 0.4375),
       order = "l[angels-plate-iron]-d"
     },
     {
@@ -575,17 +441,10 @@ data:extend(
         {type = "item", name = "angels-rod-iron", amount = 1}
       },
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/rod-iron.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-rod-iron"),
+        angelsmods.functions.get_object_icons("angels-plate-iron"),
+        {-10, -10}, 0.4375),
       order = "m[angels-rod-iron]-a"
     },
     {
@@ -602,17 +461,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-rod-iron", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/rod-iron.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/rod-stack-iron.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-rod-iron"),
+        angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
+        {-10, -10}, 0.4375),
       order = "m[angels-rod-iron]-b"
     }
   }

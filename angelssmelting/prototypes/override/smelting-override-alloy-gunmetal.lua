@@ -17,7 +17,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           type = "fluid",
           name = "liquid-molten-gunmetal",
           icon = "__angelssmelting__/graphics/icons/molten-gunmetal.png",
-          icon_size = 32,
+          icon_size = 64, icon_mipmaps = 4,
           subgroup = "angels-alloys-casting",
           order = "c[gunmetal]-a[liquid-molten-gunmetal]",
           default_temperature = 100,
@@ -49,18 +49,6 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-gunmetal", amount = 360}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-gunmetal.png"
-            }
-            -- {
-            -- icon = "__angelsrefining__/graphics/icons/num_1.png",
-            -- tint = angelsmods.smelting.number_tint,
-            -- scale = 0.32,
-            -- shift = {-12, -12},
-            -- }
-          },
-          icon_size = 32,
           order = "c[gunmetal]-a[liquid-molten-gunmetal]",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gunmetal")
         },
@@ -78,7 +66,6 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           results = {
             {type = "item", name = "gunmetal-alloy", amount = 4}
           },
-          icon_size = 32,
           order = "c[gunmetal]-b[gunmetal-alloy]"
         },
         --TECHS
@@ -86,7 +73,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           type = "technology",
           name = "angels-gunmetal-smelting-1",
           icon = "__angelssmelting__/graphics/technology/casting-gunmetal-tech.png",
-          icon_size = 128,
+          icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
             "angels-tin-smelting-1",
             "angels-zinc-smelting-1",

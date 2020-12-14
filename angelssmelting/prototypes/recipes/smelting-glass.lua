@@ -18,18 +18,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-glass-mixture", amount = 1}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/glass-mixture.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-glass-mixture"),
+        1, angelsmods.smelting.number_tint),
       order = "a[solid-glass-mixture]-a"
     },
     {
@@ -46,18 +37,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-glass-mixture", amount = 2}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/glass-mixture.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-glass-mixture"),
+        2, angelsmods.smelting.number_tint),
       order = "a[solid-glass-mixture]-b"
     },
     {
@@ -75,18 +57,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-glass-mixture", amount = 3}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/glass-mixture.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-glass-mixture"),
+        3, angelsmods.smelting.number_tint),
       order = "a[solid-glass-mixture]-c"
     },
     {
@@ -105,18 +78,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-glass-mixture", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/glass-mixture.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-glass-mixture"),
+        4, angelsmods.smelting.number_tint),
       order = "a[solid-glass-mixture]-d"
     },
     -- CASTING INTERMEDIATE
@@ -133,7 +97,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-glass", amount = 120}
       },
-      icon_size = 32,
       order = "b[liquid-molten-glass]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-glass")
     },
@@ -162,7 +125,6 @@ data:extend(
           {type = "item", name = "angels-coil-glass-fiber", amount = 4}
         }
       },
-      icon_size = 32,
       order = "c[angels-coil-glass-fiber]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-glass")
     },
@@ -192,18 +154,9 @@ data:extend(
           {type = "item", name = "angels-plate-glass", amount = 3}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-glass.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-glass"),
+        1, angelsmods.smelting.number_tint),
       order = "d[angels-plate-glass]-b" -- d[angels-plate-glass]-a reserved for quartz (ore) smelting (see bob overrides)
     },
     {
@@ -237,18 +190,9 @@ data:extend(
         },
         main_product = "angels-plate-glass"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-glass.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-glass"),
+        2, angelsmods.smelting.number_tint),
       order = "d[angels-plate-glass]-c"
     },
     {
@@ -284,18 +228,9 @@ data:extend(
         },
         main_product = "angels-plate-glass"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-glass.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-glass"),
+        3, angelsmods.smelting.number_tint),
       order = "d[angels-plate-glass]-d"
     },
     {
@@ -312,17 +247,13 @@ data:extend(
       results = {
         {type = "item", name = "angels-void", amount = 1} -- see glass overrides
       },
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/void.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+          {
+            icon = "__angelsrefining__/graphics/icons/void.png",
+            icon_size = 32,
+          }
+        }, 1, angelsmods.smelting.number_tint),
       order = "e[angels-glass-fiber-board]"
     }
   }

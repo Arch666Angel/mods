@@ -4,8 +4,9 @@ data:extend(
       type = "technology",
       name = "angels-titanium-smelting-1",
       localised_name = {"technology-name.angels-titanium-metallurgy"},
+      localised_description = {"technology-description.angels-titanium-metallurgy"},
       icon = "__angelssmelting__/graphics/technology/casting-titanium-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-leaching",
@@ -87,7 +88,7 @@ data:extend(
       type = "technology",
       name = "angels-titanium-casting-2",
       icon = "__angelssmelting__/graphics/technology/casting-titanium-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
@@ -165,7 +166,7 @@ data:extend(
       type = "technology",
       name = "angels-titanium-casting-3",
       icon = "__angelssmelting__/graphics/technology/casting-titanium-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-5",

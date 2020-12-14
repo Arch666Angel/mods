@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-lead", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-lead]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
@@ -34,7 +33,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-lead", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-lead]"
     },
     {
@@ -53,7 +51,6 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 120}
       },
       main_product = "solid-lead-oxide",
-      icon_size = 32,
       order = "d[solid-lead-oxide]"
     },
     {
@@ -74,7 +71,6 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 60}
       },
       main_product = "anode-lead",
-      icon_size = 32,
       order = "e[anode-lead]"
     },
     {
@@ -118,18 +114,9 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 60}
       },
       main_product = "ingot-lead",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-lead.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-lead"),
+        1, angelsmods.smelting.number_tint),
       order = "g[ingot-lead]-a"
     },
     {
@@ -147,18 +134,9 @@ data:extend(
         {type = "item", name = "ingot-lead", amount = 24}
       },
       main_product = "ingot-lead",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-lead.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-lead"),
+        2, angelsmods.smelting.number_tint),
       order = "g[ingot-lead]-b"
     },
     {
@@ -177,18 +155,9 @@ data:extend(
         {type = "item", name = "slag", amount = 1}
       },
       main_product = "ingot-lead",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-lead.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-lead"),
+        3, angelsmods.smelting.number_tint),
       order = "g[ingot-lead]-c"
     },
     {
@@ -204,7 +173,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-lead", amount = 1}
       },
-      icon_size = 32,
       order = "h[powder-lead]"
     },
     -- CASTING INTERMEDIATE
@@ -221,7 +189,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-lead", amount = 120}
       },
-      icon_size = 32,
       order = "i[liquid-molten-lead]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
@@ -252,18 +219,9 @@ data:extend(
           {type = "item", name = "angels-roll-lead", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-lead.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-lead"),
+        1, angelsmods.smelting.number_tint),
       order = "j[angels-roll-lead]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
@@ -298,18 +256,9 @@ data:extend(
         },
         main_product = "angels-roll-lead"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-lead.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-lead"),
+        2, angelsmods.smelting.number_tint),
       order = "j[angels-roll-lead]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead")
     },
@@ -339,17 +288,10 @@ data:extend(
           {type = "item", name = "angels-plate-lead", amount = 4}
         }
       },
-      icon_size = 32,
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-lead.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-lead.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-lead"),
+        angelsmods.functions.get_object_icons("liquid-molten-lead"),
+        {-10, -10}, 0.4375),
       order = "k[angels-plate-lead]-c" -- k[angels-plate-lead]-a reserved for crushed rubyte smelting (see lead overrides)
     }, -- k[angels-plate-lead]-b reserved for crushed rubyte smelting (see lead overrides)
     {
@@ -366,17 +308,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-lead", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-lead.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-lead.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-lead"),
+        angelsmods.functions.get_object_icons("angels-roll-lead"),
+        {-10, -10}, 0.4375),
       order = "k[angels-plate-lead]-d"
     }
   }

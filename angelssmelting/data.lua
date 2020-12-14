@@ -16,7 +16,7 @@ angelsmods.trigger.washing_tech = true -- angels refining trigger
 --create all the tables for smelting triggers ---------------------------------
 angelsmods.trigger.smelting_molds = false
 angelsmods.trigger.smelting_products = angelsmods.trigger.smelting_products or {}
-angelsmods.trigger.smelting_products["enable-all"] = false -- setting to override and enable everything (debug mode)
+angelsmods.trigger.smelting_products["enable-all"] = true -- setting to override and enable everything (debug mode)
 angelsmods.trigger.smelting_products["brass"] = angelsmods.trigger.smelting_products["brass"] or {}
 angelsmods.trigger.smelting_products["bronze"] = angelsmods.trigger.smelting_products["bronze"] or {}
 angelsmods.trigger.smelting_products["cobalt-steel"] = angelsmods.trigger.smelting_products["cobalt-steel"] or {}
@@ -119,7 +119,8 @@ require("prototypes.buildings.cooling-tower")
 require("prototypes.buildings.clay-bricks")
 require("prototypes.buildings.concrete-bricks")
 
-require("prototypes.items.angels-alloys")
+require("prototypes.items.angels-alloy-solder")
+require("prototypes.items.angels-alloy-steel")
 require("prototypes.items.angels-aluminium")
 require("prototypes.items.angels-chrome")
 require("prototypes.items.angels-cobalt")
@@ -141,7 +142,8 @@ require("prototypes.items.angels-titanium")
 require("prototypes.items.angels-tungsten")
 require("prototypes.items.angels-zinc")
 
-require("prototypes.recipes.smelting-alloys")
+require("prototypes.recipes.smelting-alloy-solder")
+require("prototypes.recipes.smelting-alloy-steel")
 require("prototypes.recipes.smelting-aluminium")
 require("prototypes.recipes.smelting-chrome")
 require("prototypes.recipes.smelting-cobalt")

@@ -50,7 +50,7 @@ data:extend(
       type = "fluid",
       name = "liquid-concrete",
       icon = "__angelssmelting__/graphics/icons/molten-concrete.png",
-      icon_size = 32,
+      icon_size = 64, icon_mipmaps = 4,
       subgroup = "angels-stone-casting",
       order = "g",
       default_temperature = 100,
