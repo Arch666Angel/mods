@@ -3,9 +3,9 @@ data:extend(
     {
       type = "technology",
       name = "angels-manganese-smelting-1",
-      localised_name = {"technology-name.angels-manganese-metallurgy"},
+      localised_description = {"technology-description.angels-manganese-metallurgy"},
       icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-advanced-crushing",
@@ -85,7 +85,7 @@ data:extend(
       type = "technology",
       name = "angels-manganese-casting-2",
       icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
@@ -160,7 +160,7 @@ data:extend(
       type = "technology",
       name = "angels-manganese-casting-3",
       icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",

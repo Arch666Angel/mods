@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-chrome", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-chrome]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
@@ -34,7 +33,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-chrome", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-chrome]"
     },
     {
@@ -52,7 +50,6 @@ data:extend(
       results = {
         {type = "item", name = "solid-chromate", amount = 24}
       },
-      icon_size = 32,
       order = "d[solid-chromate]"
     },
     {
@@ -72,7 +69,6 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 30}
       },
       main_product = "solid-dichromate",
-      icon_size = 32,
       order = "e[solid-dichromate]"
     },
     {
@@ -92,7 +88,6 @@ data:extend(
         {type = "fluid", name = "gas-carbon-monoxide", amount = 30}
       },
       main_product = "solid-chrome-oxide",
-      icon_size = 32,
       order = "f[solid-chrome-oxide]"
     },
     -- SMELTING RESULTS
@@ -112,18 +107,9 @@ data:extend(
         {type = "fluid", name = "gas-carbon-monoxide", amount = 60}
       },
       main_product = "ingot-chrome",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-chrome.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-chrome"),
+        1, angelsmods.smelting.number_tint),
       order = "g[ingot-chrome]-a"
     },
     {
@@ -142,18 +128,9 @@ data:extend(
         {type = "fluid", name = "gas-carbon-monoxide", amount = 60}
       },
       main_product = "ingot-chrome",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-chrome.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-chrome"),
+        2, angelsmods.smelting.number_tint),
       order = "g[ingot-chrome]-b"
     },
     {
@@ -172,18 +149,9 @@ data:extend(
         {type = "item", name = "solid-chrome-oxide", amount = 6}
       },
       main_product = "ingot-chrome",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-chrome.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-chrome"),
+        3, angelsmods.smelting.number_tint),
       order = "g[ingot-chrome]-c"
     },
     {
@@ -199,7 +167,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-chrome", amount = 1}
       },
-      icon_size = 32,
       order = "h[powder-chrome]"
     },
     -- CASTING INTERMEDIATE
@@ -216,7 +183,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-chrome", amount = 120}
       },
-      icon_size = 32,
       order = "i[liquid-molten-chrome]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
@@ -247,18 +213,9 @@ data:extend(
           {type = "item", name = "angels-roll-chrome", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-chrome.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-chrome"),
+        1, angelsmods.smelting.number_tint),
       order = "j[angels-roll-chrome]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
@@ -293,18 +250,9 @@ data:extend(
         },
         main_product = "angels-roll-chrome"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-chrome.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-chrome"),
+        2, angelsmods.smelting.number_tint),
       order = "j[angels-roll-chrome]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
     },
@@ -334,17 +282,10 @@ data:extend(
           {type = "item", name = "angels-plate-chrome", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-chrome.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-chrome"),
+        angelsmods.functions.get_object_icons("liquid-molten-chrome"),
+        {-10, -10}, 0.4375),
       order = "k[angels-plate-chrome]-a"
     },
     {
@@ -361,17 +302,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-chrome", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-chrome.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-chrome"),
+        angelsmods.functions.get_object_icons("angels-roll-chrome"),
+        {-10, -10}, 0.4375),
       order = "k[angels-plate-chrome]-b"
     }
   }

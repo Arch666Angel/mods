@@ -18,7 +18,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           type = "fluid",
           name = "liquid-molten-invar",
           icon = "__angelssmelting__/graphics/icons/molten-invar.png",
-          icon_size = 32,
+          icon_size = 64, icon_mipmaps = 4,
           subgroup = "angels-alloys-casting",
           order = "d[invar]-a[liquid-molten-invar]",
           default_temperature = 100,
@@ -50,18 +50,6 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-invar", amount = 360}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-invar.png"
-            }
-            -- {
-            -- icon = "__angelsrefining__/graphics/icons/num_1.png",
-            -- tint = angelsmods.smelting.number_tint,
-            -- scale = 0.32,
-            -- shift = {-12, -12},
-            -- }
-          },
-          icon_size = 32,
           order = "d[invar]-a[liquid-molten-invar]",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-invar")
         },
@@ -79,7 +67,6 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           results = {
             {type = "item", name = "invar-alloy", amount = 4}
           },
-          icon_size = 32,
           order = "d[invar]-b[invar-alloy]"
         },
         --TECH
@@ -87,7 +74,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           type = "technology",
           name = "angels-invar-smelting-1",
           icon = "__angelssmelting__/graphics/technology/casting-invar-tech.png",
-          icon_size = 128,
+          icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
             "angels-steel-smelting-1",
             "angels-nickel-smelting-1"

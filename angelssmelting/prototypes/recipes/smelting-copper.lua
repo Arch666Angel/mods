@@ -18,7 +18,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-copper", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-copper]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
@@ -35,7 +34,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-copper", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-copper]"
     },
     {
@@ -53,7 +51,6 @@ data:extend(
       results = {
         {type = "item", name = "anode-copper", amount = 24}
       },
-      icon_size = 32,
       order = "d[anode-copper]"
     },
     -- SMELTING RESULTS
@@ -70,18 +67,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-copper", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-copper"),
+        1, angelsmods.smelting.number_tint),
       order = "e[ingot-copper]-a"
     },
     {
@@ -98,18 +86,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-copper", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-copper"),
+        2, angelsmods.smelting.number_tint),
       order = "e[ingot-copper]-b"
     },
     {
@@ -126,18 +105,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-copper", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-copper"),
+        3, angelsmods.smelting.number_tint),
       order = "e[ingot-copper]-c"
     },
     {
@@ -153,7 +123,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-copper", amount = 1}
       },
-      icon_size = 32,
       order = "f[powder-copper]"
     },
     -- CASTING INTERMEDIATE
@@ -170,7 +139,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-copper", amount = 120}
       },
-      icon_size = 32,
       order = "g[liquid-molten-copper]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
@@ -201,18 +169,9 @@ data:extend(
           {type = "item", name = "angels-roll-copper", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-copper"),
+        1, angelsmods.smelting.number_tint),
       order = "h[angels-roll-copper]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
@@ -248,18 +207,9 @@ data:extend(
         },
         main_product = "angels-roll-copper"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-copper"),
+        2, angelsmods.smelting.number_tint),
       order = "h[angels-roll-copper]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
@@ -290,18 +240,9 @@ data:extend(
           {type = "item", name = "angels-wire-coil-copper", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-coil-copper"),
+        1, angelsmods.smelting.number_tint),
       order = "i[angels-wire-coil-copper]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
@@ -336,18 +277,9 @@ data:extend(
         },
         main_product = "angels-wire-coil-copper"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-coil-copper"),
+        2, angelsmods.smelting.number_tint),
       order = "i[angels-wire-coil-copper]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper")
     },
@@ -378,17 +310,10 @@ data:extend(
           {type = "item", name = "angels-plate-copper", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-copper.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-copper.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-copper"),
+        angelsmods.functions.get_object_icons("liquid-molten-copper"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-copper]-c" -- j[angels-plate-copper]-a reserved for crushed stiratite smelting (see global overrides)
     }, -- j[angels-plate-copper]-b reserved for base game smelting recipe (see global overrides)
     {
@@ -405,17 +330,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-copper", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-copper.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-copper.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-copper"),
+        angelsmods.functions.get_object_icons("angels-roll-copper"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-copper]-d"
     },
     {
@@ -432,17 +350,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-copper", amount = 16}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-copper.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-copper"),
+        angelsmods.functions.get_object_icons("angels-wire-coil-copper"),
+        {-10, -10}, 0.4375),
       order = "k[angels-wire-copper]-e" -- k[angels-wire-copper]-a reserved for base game recipe (see global overrides)
     }
   }

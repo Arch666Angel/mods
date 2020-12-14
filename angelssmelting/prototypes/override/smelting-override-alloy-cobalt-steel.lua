@@ -17,7 +17,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           type = "fluid",
           name = "liquid-molten-cobalt-steel",
           icon = "__angelssmelting__/graphics/icons/molten-cobalt-steel.png",
-          icon_size = 32,
+          icon_size = 64, icon_mipmaps = 4,
           subgroup = "angels-alloys-casting",
           order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
           default_temperature = 100,
@@ -48,18 +48,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-cobalt-steel", amount = 360}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-cobalt-steel.png"
-            }
-            -- {
-            -- icon = "__angelsrefining__/graphics/icons/num_1.png",
-            -- tint = angelsmods.smelting.number_tint,
-            -- scale = 0.32,
-            -- shift = {-12, -12},
-            -- }
-          },
-          icon_size = 32,
           order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt-steel")
         },
@@ -77,7 +65,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           results = {
             {type = "item", name = "cobalt-steel-alloy", amount = 4}
           },
-          icon_size = 32,
           order = "e[cobalt-steel]-b[cobalt-steel-alloy]"
         },
         --TECHS
@@ -85,7 +72,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           type = "technology",
           name = "angels-cobalt-steel-smelting-1",
           icon = "__angelssmelting__/graphics/technology/casting-cobalt-steel-tech.png",
-          icon_size = 128,
+          icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
             "angels-steel-smelting-1",
             "angels-cobalt-smelting-1"

@@ -4,7 +4,7 @@ data:extend(
       type = "technology",
       name = "angels-steel-smelting-1",
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "angels-metallurgy-2",
@@ -44,7 +44,7 @@ data:extend(
       type = "technology",
       name = "angels-steel-smelting-2",
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
@@ -99,7 +99,7 @@ data:extend(
       name = "angels-steel-smelting-3",
       localised_name = {"technology-name.angels-steel-casting"},
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",

@@ -26,7 +26,7 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
     OV.disable_recipe({"molten-manganese-smelting"})
     OV.disable_technology({"angels-manganese-casting-2", "angels-manganese-casting-3"})
     -- swap tech tier 1 to ingots
-    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name", "localised_description"}) do
       data.raw.technology["angels-manganese-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-manganese-smelting-2"][property])
     end
   end

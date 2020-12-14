@@ -34,7 +34,7 @@ data:extend(
     type = "item",
     name = "ingot-tin",
     icon = "__angelssmelting__/graphics/icons/ingot-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin",
     order = "d",
     stack_size = 200
@@ -53,7 +53,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-tin",
     icon = "__angelssmelting__/graphics/icons/molten-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin-casting",
     order = "f",
     default_temperature = 231.9,
@@ -69,7 +69,7 @@ data:extend(
     type = "item",
     name = "angels-roll-tin",
     icon = "__angelssmelting__/graphics/icons/roll-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin-casting",
     order = "g",
     stack_size = 200
@@ -78,7 +78,7 @@ data:extend(
     type = "item",
     name = "angels-wire-coil-tin",
     icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin-casting",
     order = "h",
     stack_size = 200

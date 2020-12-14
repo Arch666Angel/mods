@@ -4,8 +4,9 @@ data:extend(
       type = "technology",
       name = "angels-cobalt-smelting-1",
       localised_name = {"technology-name.angels-cobalt-metallurgy"},
+      localised_description = {"technology-description.angels-cobalt-metallurgy"},
       icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-floatation",
@@ -85,7 +86,7 @@ data:extend(
       type = "technology",
       name = "angels-cobalt-casting-2",
       icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
@@ -156,7 +157,7 @@ data:extend(
       type = "technology",
       name = "angels-cobalt-casting-3",
       icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",

@@ -18,8 +18,6 @@ data:extend(
         {type = "item", name = "processed-aluminium", amount = 2}
       },
       main_product = "processed-aluminium",
-      icon = "__angelssmelting__/graphics/icons/processed-aluminium.png",
-      icon_size = 32,
       order = "b[processed-aluminium]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
@@ -37,8 +35,6 @@ data:extend(
         {type = "item", name = "pellet-aluminium", amount = 4}
       },
       main_product = "pellet-aluminium",
-      icon = "__angelssmelting__/graphics/icons/pellet-aluminium.png",
-      icon_size = 32,
       order = "c[pellet-aluminium]"
     },
     {
@@ -56,7 +52,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-sodium-aluminate", amount = 18}
       },
-      icon_size = 32,
+      main_product = "solid-sodium-aluminate",
       order = "d[solid-sodium-aluminate]"
     },
     {
@@ -73,18 +69,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-aluminium-hydroxide", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-aluminium-hydroxide"),
+        1, angelsmods.smelting.number_tint),
       order = "e[solid-aluminium-hydroxide]-a"
     },
     {
@@ -101,18 +88,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-aluminium-hydroxide", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-aluminium-hydroxide"),
+        2, angelsmods.smelting.number_tint),
       order = "e[solid-aluminium-hydroxide]-b"
     },
     {
@@ -128,18 +106,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-aluminium-oxide", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-aluminium-oxide"),
+        1, angelsmods.smelting.number_tint),
       order = "f[solid-aluminium-oxide]-a"
     },
     {
@@ -159,18 +128,9 @@ data:extend(
         {type = "item", name = "solid-sodium-carbonate", amount = 2}
       },
       main_product = "solid-aluminium-oxide",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-aluminium-oxide"),
+        2, angelsmods.smelting.number_tint),
       order = "f[solid-aluminium-oxide]-b"
     },
     -- SMELTING RESULT
@@ -188,7 +148,6 @@ data:extend(
       results = {
         {type = "item", name = "ingot-aluminium", amount = 24}
       },
-      icon_size = 32,
       order = "g[ingot-aluminium]"
     },
     {
@@ -204,7 +163,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-aluminium", amount = 1}
       },
-      icon_size = 32,
       order = "h[powder-aluminium]"
     },
     -- CASTING INTERMEDIATE
@@ -221,18 +179,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-aluminium", amount = 120}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-aluminium.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+        1, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-aluminium]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
@@ -250,18 +199,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-aluminium", amount = 240}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-aluminium.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+        2, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-aluminium]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
@@ -280,18 +220,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-aluminium", amount = 360}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-aluminium.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+        3, angelsmods.smelting.number_tint),
       order = "i[liquid-molten-aluminium]-c",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
@@ -322,18 +253,9 @@ data:extend(
           {type = "item", name = "angels-roll-aluminium", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-aluminium.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-aluminium"),
+        1, angelsmods.smelting.number_tint),
       order = "j[angels-roll-aluminium]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
@@ -368,18 +290,9 @@ data:extend(
         },
         main_product = "angels-roll-aluminium"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-aluminium.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-aluminium"),
+        2, angelsmods.smelting.number_tint),
       order = "j[angels-roll-aluminium]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium")
     },
@@ -409,17 +322,10 @@ data:extend(
           {type = "item", name = "angels-plate-aluminium", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-aluminium.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-aluminium"),
+        angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+        {-10, -10}, 0.4375),
       order = "k[angels-plate-aluminium]-a"
     },
     {
@@ -436,17 +342,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-aluminium", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-aluminium.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-aluminium.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-aluminium"),
+        angelsmods.functions.get_object_icons("angels-roll-aluminium"),
+        {-10, -10}, 0.4375),
       order = "k[angels-plate-aluminium]-b"
     }
     -- order l reserved for motor casting (see industries)

@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-cobalt", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-cobalt]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
@@ -34,7 +33,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-cobalt", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-cobalt]"
     },
     {
@@ -51,7 +49,6 @@ data:extend(
       results = {
         {type = "item", name = "solid-cobalt-hydroxide", amount = 6}
       },
-      icon_size = 32,
       order = "d[solid-cobalt-hydroxide]"
     },
     {
@@ -68,18 +65,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-cobalt-oxide", amount = 8}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+        1, angelsmods.smelting.number_tint),
       order = "e[solid-cobalt-oxide]-a"
     },
     {
@@ -96,18 +84,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-cobalt-oxide", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+        2, angelsmods.smelting.number_tint),
       order = "e[solid-cobalt-oxide]-b"
     },
     {
@@ -124,18 +103,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-cobalt-oxide", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+        3, angelsmods.smelting.number_tint),
       order = "e[solid-cobalt-oxide]-c"
     },
     -- SMELTING RESULTS
@@ -153,18 +123,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-cobalt", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-cobalt.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-cobalt"),
+        1, angelsmods.smelting.number_tint),
       order = "f[ingot-cobalt]-a"
     },
     {
@@ -181,18 +142,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-cobalt", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-cobalt.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-cobalt"),
+        2, angelsmods.smelting.number_tint),
       order = "f[ingot-cobalt]-b"
     },
     {
@@ -208,7 +160,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-cobalt", amount = 1}
       },
-      icon_size = 32,
       order = "g[powder-cobalt]"
     },
     -- CASTING INTERMEDIATE
@@ -225,7 +176,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-cobalt", amount = 120}
       },
-      icon_size = 32,
       order = "h[liquid-molten-cobalt]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
@@ -256,18 +206,9 @@ data:extend(
           {type = "item", name = "angels-roll-cobalt", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-cobalt.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-cobalt"),
+        1, angelsmods.smelting.number_tint),
       order = "i[angels-roll-cobalt]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
@@ -302,18 +243,9 @@ data:extend(
         },
         main_product = "angels-roll-cobalt"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-cobalt.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-cobalt"),
+        2, angelsmods.smelting.number_tint),
       order = "i[angels-roll-cobalt]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt")
     },
@@ -343,17 +275,10 @@ data:extend(
           {type = "item", name = "angels-plate-cobalt", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-cobalt.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-cobalt.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-cobalt"),
+        angelsmods.functions.get_object_icons("liquid-molten-cobalt"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-cobalt]-a"
     },
     {
@@ -370,17 +295,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-cobalt", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-cobalt.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-cobalt"),
+        angelsmods.functions.get_object_icons("angels-roll-cobalt"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-cobalt]-b"
     }
   }
