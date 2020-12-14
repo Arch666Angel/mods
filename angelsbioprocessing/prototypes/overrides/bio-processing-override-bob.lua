@@ -165,6 +165,7 @@ if bobmods then
           icon = "__base__/graphics/technology/module.png",
           icon_size = 256,
           icon_mipmaps = 4,
+          upgrade = true,
           prerequisites =
           {
             "modules",
@@ -225,60 +226,61 @@ if bobmods then
     OV.add_prereq("pollution-create-module-3", "modules-2")
     OV.remove_unlock("advanced-electronics-2", "module-processor-board-2")
     data:extend(
-    {
       {
-        type = "technology",
-        name = "modules-3",
-        icon = "__base__/graphics/technology/module.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-        prerequisites =
         {
-          "modules-2",
-          "bio-processing-crystal-full",
+          type = "technology",
+          name = "modules-3",
+          icon = "__base__/graphics/technology/module.png",
+          icon_size = 256,
+          icon_mipmaps = 4,
+          upgrade = true,
+          prerequisites =
+          {
+            "modules-2",
+            "bio-processing-crystal-full",
+          },
+          effects =
+          {
+            {
+              type = "unlock-recipe",
+              recipe = "module-processor-board-3",
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "speed-processor-3"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "effectivity-processor-3"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "productivity-processor-3"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "pollution-clean-processor-3"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "pollution-create-processor-3"
+            }
+          },
+          unit =
+          {
+            count = 100,
+            ingredients =
+            {
+              {type="item", name="automation-science-pack", amount = 1},
+              {type="item", name="logistic-science-pack", amount = 1},
+              {type="item", name="chemical-science-pack", amount = 1},
+              {type="item", name="production-science-pack", amount = 1}
+            },
+            time = 30
+          },
+          order = "i-a"
         },
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "module-processor-board-3",
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "speed-processor-3"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "effectivity-processor-3"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "productivity-processor-3"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "pollution-clean-processor-3"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "pollution-create-processor-3"
-          }
-        },
-        unit =
-        {
-          count = 100,
-          ingredients =
-          {
-            {type="item", name="automation-science-pack", amount = 1},
-            {type="item", name="logistic-science-pack", amount = 1},
-            {type="item", name="chemical-science-pack", amount = 1},
-            {type="item", name="production-science-pack", amount = 1}
-          },
-          time = 30
-        },
-        order = "i-a"
-      },
-    }
+      }
     )
     OV.remove_unlock("speed-module-6", "speed-processor-3")
     OV.remove_unlock("productivity-module-6", "productivity-processor-3")
@@ -365,6 +367,7 @@ if bobmods then
     data.raw.technology["angels-bio-yield-module-3"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-3.png"
     data.raw.technology["angels-bio-yield-module-3"].icon_size = 32
     data.raw.technology["angels-bio-yield-module-3"].icon_mipmaps = 1
+    OV.add_prereq("angels-bio-yield-module", "module-merging")
     for i = 1,3 do
       local ingredients = {{"token-bio", 1}}
       local ingredients_added = {["token-bio"] = true}
@@ -447,7 +450,9 @@ if bobmods then
             icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-"..i..".png",
             icon_size = 32, icon_mipmaps = 1,
             order = "c-a",
+            upgrade = true,
             prerequisites = {
+              "angels-bio-yield-module-"..i-1,
               "productivity-module-"..i,
               "effectivity-module-"..i,
             },
