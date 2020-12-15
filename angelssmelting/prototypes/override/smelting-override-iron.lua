@@ -55,7 +55,7 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
   else
     OV.disable_technology({"angels-iron-casting-2", "angels-iron-casting-3"})
     -- swap tech tier 1 to ingots
-    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name", "localised_description"}) do
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
       data.raw.technology["angels-iron-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-iron-smelting-2"][property])
     end
   end
