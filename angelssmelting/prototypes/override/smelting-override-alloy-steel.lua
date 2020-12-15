@@ -42,6 +42,13 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
     OV.remove_prereq("angels-steel-smelting-2", "strand-casting-2")
     OV.remove_prereq("angels-steel-smelting-3", "strand-casting-3")
   end
+
+  if angelsmods.trigger.smelting_products["steel"].powder then
+  else
+    for _, property in pairs({"localised_name"}) do
+      data.raw.technology["angels-steel-smelting-2"][property] = util.table.deepcopy(data.raw.technology["angels-steel-smelting-3"][property])
+    end
+  end
 else
   angelsmods.functions.add_flag("ingot-steel", "hidden")
   angelsmods.functions.add_flag("liquid-molten-steel", "hidden")

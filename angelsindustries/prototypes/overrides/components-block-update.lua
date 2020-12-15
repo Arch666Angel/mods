@@ -35,7 +35,7 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-glass-melting",
         icon = "__angelssmelting__/graphics/technology/glass-tech.png",
-        icon_size = 128,
+        icon_size = 256, icon_mipmaps = 4,
         prerequisites = {
           "ore-crushing",
           "powder-metallurgy-1"
