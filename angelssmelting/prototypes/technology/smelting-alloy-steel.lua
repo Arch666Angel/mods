@@ -97,7 +97,7 @@ data:extend(
     {
       type = "technology",
       name = "angels-steel-smelting-3",
-      localised_name = {"technology-name.angels-steel-casting"},
+      localised_name = {"", {"technology-name.angels-steel-casting"}, " 3"},
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
