@@ -45,9 +45,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
 
   if angelsmods.trigger.smelting_products["steel"].powder then
   else
-    for _, property in pairs({"localised_name"}) do
-      data.raw.technology["angels-steel-smelting-2"][property] = util.table.deepcopy(data.raw.technology["angels-steel-smelting-3"][property])
-    end
+    data.raw.technology["angels-steel-smelting-2"].localised_name = {"", {"technology-name.angels-steel-casting"}, " 2"}
   end
 else
   angelsmods.functions.add_flag("ingot-steel", "hidden")
