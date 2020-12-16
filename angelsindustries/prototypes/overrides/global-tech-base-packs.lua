@@ -215,11 +215,13 @@ if angelsmods.industries.tech then
   -- BIO PROCESSING
   pack_replace("angels-bio-yield-module-3", "blue", "yellow")
   -- ADDONS
-  if mods["angelsaddons-warehouses"] then
-    pack_replace("angels-logistic-warehouses", "blue", "yellow")
-  end
-  if mods["angelsaddons-oresilos"] then
-    pack_replace("logistic-silos", "blue", "yellow")
+  if mods["angelsadons-storage"] then
+    if angelsmods.addons.storage.warehouses then
+      pack_replace("angels-logistic-warehouses", "blue", "yellow")
+    end
+    if angelsmods.addons.storage.silos then
+      pack_replace("logistic-silos", "blue", "yellow")
+    end
   end
 
   -------------------------------------------------------------------------------
