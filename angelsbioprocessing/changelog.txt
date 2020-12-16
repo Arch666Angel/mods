@@ -11,6 +11,7 @@ Date: ??
     - Fixed that agrecultural modules could be inserted in labs and mining drills (479)
     - Fixed agricultural modules would not upgrade correctly
     - Fixed agricultural modules all used the same tech icon (493)
+    - Fixed angels fishes were not set as consumable items (490)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.17
 Date: 26.11.2020
