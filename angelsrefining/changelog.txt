@@ -7,8 +7,10 @@ Date: ??
     - Sorted bobs fluid tanks into the fluid handling tab (486)
     - Locked bobs gem refining behind technology rather than unlocking from the start (455)
     - Renamed gode crystallization 2 to geode processing 3
+    - Make voiding recipes hidden_from_player_crafting instead of plain hidden (492)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
+    - Fixed incorrect localisation on hidding voiding recipes
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020
