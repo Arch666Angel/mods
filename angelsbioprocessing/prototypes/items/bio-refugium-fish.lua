@@ -42,6 +42,7 @@ data:extend(
       attack_parameters =
       {
         type = "projectile",
+        activation_type = "consume",
         ammo_category = "capsule",
         cooldown = 30,
         range = 0,
@@ -80,6 +81,7 @@ data:extend(
       attack_parameters =
       {
         type = "projectile",
+        activation_type = "consume",
         ammo_category = "capsule",
         cooldown = 30,
         range = 0,
@@ -118,6 +120,7 @@ data:extend(
       attack_parameters =
       {
         type = "projectile",
+        activation_type = "consume",
         ammo_category = "capsule",
         cooldown = 30,
         range = 0,
