@@ -52,7 +52,7 @@ data:extend(
     type = "item",
     name = "ingot-zinc",
     icon = "__angelssmelting__/graphics/icons/ingot-zinc.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-zinc",
     order = "f",
     stack_size = 200
@@ -71,7 +71,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-zinc",
     icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-zinc-casting",
     order = "h",
     default_temperature = 419.5,
@@ -87,7 +87,7 @@ data:extend(
     type = "item",
     name = "angels-roll-zinc",
     icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-zinc-casting",
     order = "i",
     stack_size = 200

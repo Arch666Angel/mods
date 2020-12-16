@@ -66,7 +66,7 @@ data:extend(
     type = "item",
     name = "ingot-silicon",
     icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silicon",
     order = "f",
     stack_size = 200
@@ -85,7 +85,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-silicon",
     icon = "__angelssmelting__/graphics/icons/molten-silicon.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silicon-casting",
     order = "h",
     default_temperature = 1414,

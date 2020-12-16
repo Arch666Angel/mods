@@ -3,8 +3,10 @@ data:extend(
     {
       type = "technology",
       name = "angels-gold-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-gold.png",
-      icon_size = 128,
+      localised_name = {"technology-name.angels-gold-metallurgy"},
+      localised_description = {"technology-description.angels-gold-metallurgy"},
+      icon = "__angelssmelting__/graphics/technology/casting-gold-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-floatation",
@@ -42,15 +44,13 @@ data:extend(
     {
       type = "technology",
       name = "angels-gold-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-gold.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-gold-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "ore-processing-2",
-        "strand-casting-2",
         "angels-gold-smelting-1",
-        "angels-copper-smelting-2",
         "angels-nitrogen-processing-2"
       },
       effects = {
@@ -73,7 +73,32 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "powder-gold"
+        }
+      },
+      unit = {
+        count = 200,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-gold-casting-2",
+      icon = "__angelssmelting__/graphics/technology/casting-gold-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-3",
+        "strand-casting-2",
+        "angels-gold-smelting-1",
+        "angels-copper-casting-2",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-wire-coil-gold-casting"
@@ -105,13 +130,12 @@ data:extend(
     {
       type = "technology",
       name = "angels-gold-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-gold.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-gold-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
-        "strand-casting-3",
         "angels-gold-smelting-2",
         "sodium-processing"
       },
@@ -127,7 +151,32 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-sodium-gold-cyanide-smelting"
+        }
+      },
+      unit = {
+        count = 250,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-gold-casting-3",
+      icon = "__angelssmelting__/graphics/technology/casting-gold-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-4",
+        "strand-casting-3",
+        "angels-gold-casting-2"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-wire-coil-gold-casting-fast"

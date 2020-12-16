@@ -52,7 +52,7 @@ data:extend(
     type = "item",
     name = "ingot-nickel",
     icon = "__angelssmelting__/graphics/icons/ingot-nickel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-nickel",
     order = "f",
     stack_size = 200
@@ -71,7 +71,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-nickel",
     icon = "__angelssmelting__/graphics/icons/molten-nickel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-nickel-casting",
     order = "h",
     default_temperature = 1455,
@@ -87,7 +87,7 @@ data:extend(
     type = "item",
     name = "angels-roll-nickel",
     icon = "__angelssmelting__/graphics/icons/roll-nickel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-nickel-casting",
     order = "i",
     stack_size = 200

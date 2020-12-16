@@ -69,7 +69,7 @@ data:extend(
     type = "item",
     name = "ingot-lead",
     icon = "__angelssmelting__/graphics/icons/ingot-lead.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-lead",
     order = "g",
     stack_size = 200
@@ -88,7 +88,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-lead",
     icon = "__angelssmelting__/graphics/icons/molten-lead.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-lead-casting",
     order = "i",
     default_temperature = 327.5,
@@ -104,7 +104,7 @@ data:extend(
     type = "item",
     name = "angels-roll-lead",
     icon = "__angelssmelting__/graphics/icons/roll-lead.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-lead-casting",
     order = "j",
     stack_size = 200

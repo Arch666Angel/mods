@@ -10,6 +10,8 @@ Date: ??
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
+    - Science mode:
+      - Fixed the technologies from the storage addon had the wrong data core
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.10
 Date: 26.11.2020

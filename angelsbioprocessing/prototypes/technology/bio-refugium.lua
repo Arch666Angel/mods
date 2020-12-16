@@ -6,6 +6,7 @@ data:extend(
       name = "bio-refugium-fish-1",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-fish-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-nutrient-paste",
@@ -52,6 +53,7 @@ data:extend(
       name = "bio-refugium-fish-2",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-fish-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-fish-1",
@@ -135,6 +137,7 @@ data:extend(
       name = "bio-refugium-puffer-1",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-hatchery",
@@ -189,6 +192,7 @@ data:extend(
       name = "bio-refugium-puffer-2",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-puffer-1",
@@ -231,6 +235,7 @@ data:extend(
       name = "bio-refugium-puffer-3",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-puffer-2",
@@ -273,6 +278,7 @@ data:extend(
       name = "bio-refugium-puffer-4",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-puffer-3",
@@ -317,6 +323,7 @@ data:extend(
       name = "bio-refugium-biter-1",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-farm-alien",
@@ -373,6 +380,7 @@ data:extend(
       name = "bio-refugium-biter-2",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-biter-1",
@@ -419,6 +427,7 @@ data:extend(
       name = "bio-refugium-biter-3",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
       icon_size = 128,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-biter-2",
@@ -554,6 +563,7 @@ data:extend(
       name = "bio-refugium-butchery-1",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-butchery-tech.png",
       icon_size = 160,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-fish-1"
@@ -594,6 +604,7 @@ data:extend(
       name = "bio-refugium-butchery-2",
       icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-butchery-tech.png",
       icon_size = 160,
+      upgrade = true,
       order = "c-a",
       prerequisites = {
         "bio-refugium-butchery-1",

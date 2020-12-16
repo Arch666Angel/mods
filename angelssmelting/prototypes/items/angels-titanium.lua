@@ -60,7 +60,7 @@ data:extend(
     type = "item",
     name = "ingot-titanium",
     icon = "__angelssmelting__/graphics/icons/ingot-titanium.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-titanium",
     order = "f",
     stack_size = 200
@@ -79,7 +79,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-titanium",
     icon = "__angelssmelting__/graphics/icons/molten-titanium.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-titanium-casting",
     order = "h",
     default_temperature = 100,
@@ -95,7 +95,7 @@ data:extend(
     type = "item",
     name = "angels-roll-titanium",
     icon = "__angelssmelting__/graphics/icons/roll-titanium.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-titanium-casting",
     order = "i",
     stack_size = 200

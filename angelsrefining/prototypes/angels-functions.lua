@@ -11,6 +11,7 @@ local function get_icons(object_name)
           {
             icon = object.icon,
             icon_size = object.icon_size or 32,
+            icon_mipmaps = object.icon_mipmaps ~= 1 and object.icon_mipmaps or nil,
             scale = scale ~= 1 and scale or nil
           }
         }
@@ -34,6 +35,7 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
         {
           icon = layer_to_add.icon,
           icon_size = layer_to_add.icon_size,
+          icon_mipmaps = layer_to_add.icon_mipmaps,
           tint = layer_to_add.tint,
           scale = (layer_to_add.scale or 1) * (layer_scale or 1),
           shift =
@@ -49,6 +51,7 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
       {
         icon = layers_to_add.icon,
         icon_size = layers_to_add.icon_size,
+        icon_mipmaps = layers_to_add.icon_mipmaps,
         tint = layers_to_add.tint,
         scale = (layers_to_add.scale or 1) * (layer_scale or 1),
         shift =
@@ -105,6 +108,18 @@ local function clean_table(t)
     t[i] = v
   end
   return t
+end
+
+function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, number_tint)
+  -- adds a new layer to icon_layers to show the tier number (with a color)
+  local icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale or 1) / 32
+  return angelsmods.functions.add_icon_layer(icon_layers, {
+    icon = "__angelsrefining__/graphics/icons/num_"..number_tier..".png",
+    icon_size = 32, icon_mipmaps = 1,
+    tint = unify_tint(number_tint),
+    scale = 0.32 * icon_size_scale,
+    shift = {-12 * icon_size_scale, -12 * icon_size_scale},
+  })
 end
 
 -------------------------------------------------------------------------------
@@ -1219,7 +1234,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
     recipe.category = "angels-" .. void_category .. "-void"
     recipe.enabled = true
-    recipe.hidden = angelsmods.trigger.enable_hide_void
+    recipe.hidden_from_player_crafting = angelsmods.trigger.enable_hide_void
     recipe.energy_required = void_process_time
     recipe.ingredients = {
       {

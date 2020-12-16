@@ -131,14 +131,14 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
   OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
   core_replace("angels-rocket-ion-thruster", "war", "logistic")
-  -- PRESSURE TANKS ADDONS
-  if mods["angelsaddons-pressuretanks"] --[[angelsmods.addons.pressuretanks]] then
-    OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
-    OV.add_prereq("pressure-tanks", "tech-specialised-labs-basic-logistic-2")
-  end
-  --ORE SILO ADDONS
-  if mods["angelsaddons-oresilos"] --[[angelsmods.addons.oresilos]] then
-    core_replace("ore-silos", "processing", "logistic")
+  -- MOBILITY ADDONS
+  if mods["angelsaddons-storage"] then
+    if angelsmods.addons.storage.pressuretank then
+      OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
+    end
+    if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
+      core_replace("ore-silos", "processing", "logistic")
+    end
   end
 
   -------------------------------------------------------------------------------

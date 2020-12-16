@@ -32,8 +32,11 @@ if angelsmods.trigger.smelting_products["copper"].ingot then
   if angelsmods.trigger.smelting_products["copper"].plate or
      angelsmods.trigger.smelting_products["copper"].wire  then
   else
-    OV.remove_prereq("angels-copper-smelting-2", "strand-casting-1")
-    OV.remove_prereq("angels-copper-smelting-3", "strand-casting-2")
+    OV.disable_technology({"angels-copper-casting-2", "angels-copper-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-copper-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-copper-smelting-2"][property])
+    end
   end
 else
   --todo
