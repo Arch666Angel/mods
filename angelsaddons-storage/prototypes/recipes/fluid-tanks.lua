@@ -1,7 +1,7 @@
 if angelsmods.addons.storage.pressuretank then
+  --PRESSURE TANKS
   data:extend(
     {
-      --PRESSURE TANKS
       {
         type = "recipe",
         name = "angels-pressure-tank-1",
@@ -18,10 +18,11 @@ if angelsmods.addons.storage.pressuretank then
     }
   )
 end
+
 if angelsmods.addons.storage.inlinetank and (not mods["angelspetrochem"]) then
+  --INLINE TANKS
   data:extend(
     {
-      --INLINE TANKS
       {
         type = "recipe",
         name = "angels-storage-tank-3",

@@ -116,7 +116,7 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
   return angelsmods.functions.add_icon_layer(icon_layers, {
     icon = "__angelsrefining__/graphics/icons/num_"..number_tier..".png",
     icon_size = 32, icon_mipmaps = 1,
-    tint = unify_tint(angelsmods.smelting.number_tint),
+    tint = unify_tint(number_tint),
     scale = 0.32 * icon_size_scale,
     shift = {-12 * icon_size_scale, -12 * icon_size_scale},
   })
@@ -1234,7 +1234,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
     recipe.category = "angels-" .. void_category .. "-void"
     recipe.enabled = true
-    recipe.hidden = angelsmods.trigger.enable_hide_void
+    recipe.hide_from_player_crafting = angelsmods.trigger.enable_hide_void
     recipe.energy_required = void_process_time
     recipe.ingredients = {
       {
