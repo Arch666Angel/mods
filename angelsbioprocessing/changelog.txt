@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Added agricultural module support with bobs modules
+    - Moved mineralised water unlock from brown to green algae technology (496)
   Bugfixes:
     - Fixed bob modules category icon did not fit the category box size (483)
     - Fixed bob modules tech icons did not fit the tech box (483)
