@@ -5,6 +5,7 @@ Date: ??
     - Regular mode:
       - Ordered vehicle belt immunity equipment (477)
       - Integrated bobs plutonium nucleosynthesis (486)
+      - Unlock red and green wires with the (previously empty) electronics technology
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
   Bugfixes:

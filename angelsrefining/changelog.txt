@@ -11,6 +11,7 @@ Date: ??
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
+    - Removed obsolete inventory slots in the clarifier
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020
