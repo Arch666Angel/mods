@@ -16,6 +16,9 @@ move_item("petroleum-gas", "petrochem-carbon-fluids", "a", "fluid")
 move_item("light-oil", "petrochem-carbon-fluids", "dab", "fluid")
 move_item("heavy-oil", "petrochem-carbon-fluids", "ddd", "fluid")
 move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
+OV.remove_prereq("lubricant", "oil-processing")
+OV.remove_prereq("lubricant", "chemical-plant")
+OV.add_prereq("lubricant", "oil-steam-cracking-1")
 
 -- plastics
 --OV.add_unlock("plastics", "solid-plastic")

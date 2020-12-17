@@ -253,7 +253,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-coal-processing",
-        "angels-advanced-chemistry-1"
+        "chlorine-processing-1",
+        "angels-nitrogen-processing-1"
       },
       effects = {
         {
@@ -383,7 +384,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-2",
-        "angels-advanced-chemistry-1"
+        "angels-advanced-chemistry-1",
+        "gas-processing"
       },
       effects = {
         {
@@ -486,6 +488,7 @@ data:extend(
       prerequisites = {
         "angels-nitrogen-processing-1",
         "angels-advanced-chemistry-1",
+        "chlorine-processing-1",
         "water-treatment-2"
       },
       effects = {
@@ -619,8 +622,9 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("lll"),
       upgrade = true,
       prerequisites = {
-        "basic-chemistry-2",
-        "water-treatment",
+        --"basic-chemistry-2",
+        --"water-treatment",
+        "ore-crushing",
         "gas-processing"
       },
       effects = {
@@ -657,7 +661,8 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("lll"),
       upgrade = true,
       prerequisites = {
-        "chlorine-processing-1"
+        "chlorine-processing-1",
+        "gas-steam-cracking-1"
       },
       effects = {
         {

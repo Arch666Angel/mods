@@ -43,6 +43,7 @@ if angelsmods.refining then
 
   OV.remove_unlock("slag-processing-1", "liquifier")
   OV.add_prereq("slag-processing-1", "angels-sulfur-processing-2")
+  OV.remove_prereq("slag-processing-1", "ore-crushing")
   OV.add_unlock("basic-chemistry", "liquifier")
   OV.remove_unlock("slag-processing-2", "liquifier-2")
   OV.add_prereq("slag-processing-2", "ore-leaching")
@@ -69,7 +70,6 @@ if angelsmods.refining then
   else
     OV.remove_prereq("lubricant", "advanced-oil-processing")
   end
-  OV.add_prereq("lubricant", "angels-oil-processing")
   for _, tech_name in pairs({ "lubricant", "ore-powderizer" }) do
     local ingredients = ((data.raw.technology[tech_name] or {}).unit or {}).ingredients or {}
     for index, ingredient in pairs(ingredients) do
