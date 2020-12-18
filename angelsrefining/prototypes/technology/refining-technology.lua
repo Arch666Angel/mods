@@ -240,7 +240,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-crushing",
-        "water-treatment",
+        "water-treatment-2",
         "automation-2"
       },
       effects = {

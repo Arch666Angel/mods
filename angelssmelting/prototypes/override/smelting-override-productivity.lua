@@ -1,5 +1,7 @@
 angelsmods.functions.allow_productivity("angels-plate-steel")
 angelsmods.functions.allow_productivity("angels-roll-steel-converting")
+angelsmods.functions.allow_productivity("angels-rod-stack-steel-converting")
+
 angelsmods.functions.allow_productivity("angels-solder")
 angelsmods.functions.allow_productivity("angels-roll-solder-converting")
 
@@ -22,6 +24,7 @@ angelsmods.functions.allow_productivity("angels-roll-gold-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-iron")
 angelsmods.functions.allow_productivity("angels-roll-iron-converting")
+angelsmods.functions.allow_productivity("angels-rod-stack-iron-converting")
 
 angelsmods.functions.allow_productivity("angels-plate-lead")
 angelsmods.functions.allow_productivity("angels-roll-lead-converting")

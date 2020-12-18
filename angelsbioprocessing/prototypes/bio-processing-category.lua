@@ -14,11 +14,23 @@ data:extend(
   },
   {
     type = "recipe-category",
+    name = "advanced-temperate-farming",
+  },
+  {
+    type = "recipe-category",
     name = "desert-farming",
   },
   {
     type = "recipe-category",
+    name = "advanced-desert-farming",
+  },
+  {
+    type = "recipe-category",
     name = "swamp-farming",
+  },
+  {
+    type = "recipe-category",
+    name = "advanced-swamp-farming",
   },
   {
     type = "recipe-category",

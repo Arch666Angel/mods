@@ -8,6 +8,8 @@ Date: ??
     - Added new graphics to technology, ingots, molted metals, metal rolls and metal wire coils
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
+  Bugfixes:
+    - Fixed rod stack converting recipes could not use producitivity modules
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.14
 Date: 26.11.2020
