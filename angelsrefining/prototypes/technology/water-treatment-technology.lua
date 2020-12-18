@@ -73,7 +73,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-treatment",
-        "ore-floatation"
+        "ore-crushing"
       },
       effects = {
         {

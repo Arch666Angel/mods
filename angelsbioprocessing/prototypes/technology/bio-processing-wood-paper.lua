@@ -71,7 +71,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing-2",
-      "angels-coal-processing-2"
+      "angels-coal-processing-3"
     },
     effects =
     {
