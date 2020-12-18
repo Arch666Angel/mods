@@ -4,6 +4,12 @@ Date: ??
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Added agricultural module support with bobs modules
+    - Allow agricultural modules on advanced garden cultivation recipes
+    - Allow agricultural modules on advanced tree cultivation recipes
+    - Allow agricultural modules on all regular tree growing recipes
+      - Regular tree growing increases yield of trees
+      - Biome specific tree recipes increase bio yield (resin, rubber, plastic), but not trees!
+    - Advanced garden cultivation recipes can now only be made in biome specific gardens
     - Moved mineralised water unlock from brown to green algae technology (496)
     - Moved algae farms 2 and 3 deeper into the tech tree (503)
     - In component mode, decreased the cost of algae farm 2 from tier 3 to tier 2 blocks (503)

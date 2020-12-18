@@ -163,6 +163,7 @@ angelsmods.functions.allow_productivity("bio-plastic-1")
 angelsmods.functions.allow_productivity("bio-plastic-2")
 angelsmods.functions.allow_productivity("bio-rubber")
 
+-- plant growing
 angelsmods.functions.allow_bio_productivity("temperate-1")
 angelsmods.functions.allow_bio_productivity("temperate-2")
 angelsmods.functions.allow_bio_productivity("temperate-3")
@@ -178,3 +179,24 @@ angelsmods.functions.allow_bio_productivity("swamp-2")
 angelsmods.functions.allow_bio_productivity("swamp-3")
 angelsmods.functions.allow_bio_productivity("swamp-4")
 angelsmods.functions.allow_bio_productivity("swamp-5")
+
+-- garden growing
+angelsmods.functions.allow_bio_productivity("temperate-garden-cultivating-b")
+angelsmods.functions.allow_bio_productivity("desert-garden-cultivating-b")
+angelsmods.functions.allow_bio_productivity("swamp-garden-cultivating-b")
+
+-- tree growing
+angelsmods.functions.allow_bio_productivity("tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("tree-arboretum-2")
+angelsmods.functions.allow_bio_productivity("tree-arboretum-3")
+angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-2")
+angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-2")
+angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-2")
+
+-- special tree growing
+angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-0")
+angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-0")
+angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-0")
