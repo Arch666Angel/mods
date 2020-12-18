@@ -11,7 +11,7 @@ data:extend(
       prerequisites = {
         "bio-nutrient-paste",
         "water-treatment-3",
-        "angels-advanced-chemistry-1"
+        --"angels-advanced-chemistry-1"
       },
       effects = {
         {
@@ -57,7 +57,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-refugium-fish-1",
-        "bio-refugium-butchery-1"
+        "bio-refugium-butchery-1",
+        "bio-processing-green"
       },
       effects = {
         {

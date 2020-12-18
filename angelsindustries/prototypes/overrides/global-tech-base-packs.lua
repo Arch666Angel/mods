@@ -67,8 +67,6 @@ if angelsmods.industries.tech then
   -- BASE GAME
   pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   pack_replace("lubricant", "blue", "green")
-  OV.remove_prereq("lubricant", "angels-advanced-oil-processing")
-  OV.add_prereq("lubricant", "angels-oil-processing")
   -- BIO PROCESSING
   OV.remove_prereq("bio-refugium-fish-1", "water-treatment-3")
   OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")

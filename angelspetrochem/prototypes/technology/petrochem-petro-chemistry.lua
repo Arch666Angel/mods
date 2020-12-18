@@ -8,7 +8,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "basic-chemistry-3",
-        "electronics",
+        --"electronics",
         "fluid-handling"
       },
       effects = {
@@ -197,7 +197,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/flare-stack.png",
       icon_size = 128,
       prerequisites = {
-        "angels-fluid-control"
+        "angels-fluid-control",
+        "basic-chemistry-3"
       },
       effects = {
         {

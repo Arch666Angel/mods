@@ -11,6 +11,8 @@ Date: ??
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
+    - Component mode:
+      - Fixed that some science technologies would unlock block components
     - Science mode:
       - Fixed the technologies from the storage addon had the wrong data core
 ---------------------------------------------------------------------------------------------------
