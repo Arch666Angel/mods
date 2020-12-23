@@ -12,6 +12,7 @@ Date: ??
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
     - Removed obsolete inventory slots in the clarifier
+    - Fixed that recipes were not being hidden correctly and showing in lookup mods (491)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020

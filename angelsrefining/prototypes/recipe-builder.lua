@@ -135,6 +135,7 @@ local p_blocked = {
 local p_splittable = {
    ingredients = true,
    enabled = true,
+   hidden = true,
    energy_required = true,
    main_product = true
 }
