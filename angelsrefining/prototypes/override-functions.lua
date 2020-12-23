@@ -505,6 +505,7 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
         patch.enabled = false
       end
       disable_table.recipes[rec] = true
+      ov_functions.hide_recipe(rec)
     end
   else
     guarantee_subtable(patch_table, recipe)
@@ -516,6 +517,7 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
       patch.enabled = false
     end
     disable_table.recipes[recipe] = true
+    ov_functions.hide_recipe(recipe)
   end
 end
 
