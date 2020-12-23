@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.petrochem = angelsmods.petrochem or {}
-angelsmods.petrochem.number_tint = {r = 1, g = 1, b = 1, a = 0.1}
+angelsmods.petrochem.number_tint = {r = 1, g = 1, b = 1, a = 1}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
