@@ -85,6 +85,7 @@ end
 -------------------------------------------------------------------------------
 -- BOARD ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
+log(angelsmods.trigger.smelting_products["glass"].board)
 if angelsmods.trigger.smelting_products["glass"].board then
   if mods["bobelectronics"] then
     OV.patch_recipes(
@@ -117,9 +118,22 @@ if angelsmods.trigger.smelting_products["glass"].board then
     -- disable bob variant
     OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
     OV.disable_recipe({"fibreglass-board"})
+  else
+    angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
+    OV.disable_recipe({"angels-coil-glass-fiber","angels-glass-fiber-board"})
+    --[[OV.patch_recipes(
+      {
+        {
+          name = "angels-glass-fiber-board",
+          results = {
+            {"!!"},
+            {name = "angels-glass-fiber-board", type = "item", amount = 4}
+          },
+        }
+      }
+    )]]
   end
 else
   angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
-  OV.disable_recipe({"angels-coil-glass-fiber"})
-  OV.disable_recipe({"angels-glass-fiber-board"})
+  OV.disable_recipe({"angels-coil-glass-fiber","angels-glass-fiber-board"})
 end

@@ -130,14 +130,22 @@ local p_blocked = {
    results = true,
    amount = true,
    amount_min = true,
-   amount_max = true
+   amount_max = true,
+   crafting_machine_tints = true
 }
+-- list of properties which activate in the normal/expensive blocks
 local p_splittable = {
    ingredients = true,
    enabled = true,
    hidden = true,
    energy_required = true,
-   main_product = true
+   main_product = true,
+   --products = true,
+   emissions_multiplier = true,
+   hide_from_flow_stats = true,
+   hide_from_player_crafting = true,
+   allow_decomposition = true,
+   allow_as_intermediate = true,
 }
 
 local function prioritize(a, b)
