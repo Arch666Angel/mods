@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.smelting = angelsmods.smelting or {}
-angelsmods.smelting.number_tint = {r = 1, g = 0.8, b = 0.0, a = 0.5}
+angelsmods.smelting.number_tint = {r = 1, g = 0.8, b = 0.0, a = 1}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
