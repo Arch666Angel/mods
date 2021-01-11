@@ -151,15 +151,16 @@ end)
 ----------------
 --- GHOSTING ---
 ----------------
-local function unlock(force, shortcut)
+--[[local function unlock(force, shortcut)
   for _, p in pairs(force.players) do
     p.set_shortcut_available(shortcut, true)
   end
-end
+end]]
 
 script.on_event(defines.events.on_research_finished, function(event)
   local research = event.research
-  if research.name == "angels-construction-robots" then
+  --moved this first module to data stage by changing unlock tech to angels-hidden-ghosting
+  --[[if research.name == "angels-construction-robots" then
     local unlocks = {
       "undo",
       "copy",
@@ -174,7 +175,7 @@ script.on_event(defines.events.on_research_finished, function(event)
     for _, shortcut in pairs(unlocks) do
       unlock(event.research.force, shortcut)
     end
-  end
+  end]]
 
   local ghosting = {
     ["angels-ghosting-construction-robots"] = true,
@@ -183,10 +184,10 @@ script.on_event(defines.events.on_research_finished, function(event)
   if ghosting[research.name] then
     research.force.technologies["angels-hidden-ghosting"].researched = true
 
-    for _, fplayer in pairs(research.force.players) do
-      fplayer.set_shortcut_available("toggle-ghosting", true)
+    --[[for _, fplayer in pairs(research.force.players) do
+      --fplayer.shortcut.unlockset_shortcut_available("toggle-ghosting", true)
       fplayer.set_shortcut_toggled("toggle-ghosting", true)
-    end
+    end]]
 
     ghosting[research.name] = nil
     for tech in pairs(ghosting) do
