@@ -17,7 +17,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-glass",
     icon = "__angelssmelting__/graphics/icons/molten-glass.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-glass-casting",
     order = "b",
     default_temperature = 1500,
@@ -33,7 +33,7 @@ data:extend(
     type = "item",
     name = "angels-coil-glass-fiber",
     icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-glass-casting",
     order = "c",
     stack_size = 200

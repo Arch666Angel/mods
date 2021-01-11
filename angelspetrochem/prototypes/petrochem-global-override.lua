@@ -29,6 +29,7 @@ require("prototypes.global-override.bobwarfare")
 require("prototypes.global-override.bobassembly")
 require("prototypes.global-override.bobtech")
 require("prototypes.global-override.bobgreenhouse")
+require("prototypes.global-override.boblogistics")
 
 --URANIUM POWER OVERRIDE
 if data.raw["item"]["fluorite"] then

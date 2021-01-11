@@ -19,7 +19,6 @@ data:extend(
       },
       main_product = "processed-gold",
       --icon = "__angelssmelting__/graphics/icons/processed-gold.png",
-      icon_size = 32,
       order = "b[processed-gold]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
@@ -38,7 +37,6 @@ data:extend(
       },
       main_product = "pellet-gold",
       --icon = "__angelssmelting__/graphics/icons/pellet-gold.png",
-      icon_size = 32,
       order = "c[pellet-gold]"
     },
     {
@@ -59,7 +57,6 @@ data:extend(
         {type = "item", name = "solid-sodium-hydroxide", amount = 4}
       },
       main_product = "solid-sodium-gold-cyanide",
-      icon_size = 32,
       order = "d[solid-sodium-gold-cyanide]"
     },
     {
@@ -96,18 +93,9 @@ data:extend(
       results = {
         {type = "item", name = "cathode-gold", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/cathode-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("cathode-gold"),
+        1, angelsmods.smelting.number_tint),
       order = "f[cathode-gold]-a"
     },
     {
@@ -123,18 +111,9 @@ data:extend(
       results = {
         {type = "item", name = "cathode-gold", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/cathode-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("cathode-gold"),
+        2, angelsmods.smelting.number_tint),
       order = "f[cathode-gold]-b"
     },
     -- SMELTING RESULTS
@@ -152,18 +131,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-gold", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-gold"),
+        1, angelsmods.smelting.number_tint),
       order = "g[ingot-gold]-a"
     },
     {
@@ -179,18 +149,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-gold", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-gold"),
+        2, angelsmods.smelting.number_tint),
       order = "g[ingot-gold]-b"
     },
     {
@@ -206,7 +167,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-gold", amount = 1}
       },
-      icon_size = 32,
       order = "h[powder-gold]"
     },
     -- CASTING INTERMEDIATE
@@ -225,7 +185,6 @@ data:extend(
       },
       main_product = "liquid-molten-gold",
       --icon = "__angelssmelting__/graphics/icons/molten-gold.png",
-      icon_size = 32,
       order = "i[liquid-molten-gold]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
@@ -256,18 +215,9 @@ data:extend(
           {type = "item", name = "angels-roll-gold", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-gold"),
+        1, angelsmods.smelting.number_tint),
       order = "j[angels-roll-gold]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
@@ -302,18 +252,9 @@ data:extend(
         },
         main_product = "angels-roll-gold"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-gold"),
+        2, angelsmods.smelting.number_tint),
       order = "j[angels-roll-gold]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
@@ -346,18 +287,9 @@ data:extend(
           {type = "item", name = "angels-wire-coil-gold", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-coil-gold"),
+        1, angelsmods.smelting.number_tint),
       order = "k[angels-wire-coil-gold]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
@@ -394,18 +326,9 @@ data:extend(
         },
         main_product = "angels-wire-coil-gold"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-coil-gold"),
+        2, angelsmods.smelting.number_tint),
       order = "k[angels-wire-coil-gold]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold")
     },
@@ -435,17 +358,10 @@ data:extend(
           {type = "item", name = "angels-plate-gold", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-gold.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-gold.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-gold"),
+        angelsmods.functions.get_object_icons("liquid-molten-gold"),
+        {-10, -10}, 0.4375),
       order = "l[angels-plate-gold]-a"
     },
     {
@@ -462,17 +378,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-gold", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-gold.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-gold.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-gold"),
+        angelsmods.functions.get_object_icons("angels-roll-gold"),
+        {-10, -10}, 0.4375),
       order = "l[angels-plate-gold]-b"
     },
     {
@@ -490,17 +399,10 @@ data:extend(
         {type = "item", name = "angels-wire-gold", amount = 5}
       },
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-gold.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-gold.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-gold"),
+        angelsmods.functions.get_object_icons("angels-plate-gold"),
+        {-10, -10}, 0.4375),
       order = "m[angels-wire-gold]-a"
     },
     {
@@ -517,17 +419,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-gold", amount = 16}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-gold.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-gold"),
+        angelsmods.functions.get_object_icons("angels-wire-coil-gold"),
+        {-10, -10}, 0.4375),
       order = "m[angels-wire-gold]-b"
     }
   }

@@ -27,7 +27,7 @@ data:extend(
       icon_size = 64, icon_mipmaps = 4,
       subgroup = "module",
       category = "productivity",
-      tier = 1,
+      tier = 2,
       order = "d[yield]-a[angels-bio-yield-module-2]",
       stack_size = 50,
       effect =
@@ -46,7 +46,7 @@ data:extend(
       icon_size = 64, icon_mipmaps = 4,
       subgroup = "module",
       category = "productivity",
-      tier = 1,
+      tier = 3,
       order = "d[yield]-a[angels-bio-yield-module-3]",
       stack_size = 50,
       effect =
@@ -63,3 +63,11 @@ data:extend(
 angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module")
 angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-2")
 angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-3")
+if mods["bobmodules"] then
+  -- adding in data stage already to be safe...
+  angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-4")
+  angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-5")
+  angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-6")
+  angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-7")
+  angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-8")
+end

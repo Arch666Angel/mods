@@ -323,3 +323,11 @@ data:extend(
     -- },
   }
 )
+
+-- move circuit wires to electronics
+local OV = angelsmods.functions.OV
+for _, recipe_name in pairs({"green-wire", "red-wire"}) do
+  OV.remove_unlock("circuit-network", recipe_name)
+  OV.add_unlock("electronics", recipe_name)
+end
+OV.execute()

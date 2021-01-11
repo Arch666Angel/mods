@@ -542,9 +542,9 @@ data:extend(
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     crafting_categories = {"angels-converter"},
-    result_inventory_size = 1,
+    result_inventory_size = 0,
     crafting_speed = 2,
-    source_inventory_size = 1,
+    source_inventory_size = 0,
     resistances =
     {
       {

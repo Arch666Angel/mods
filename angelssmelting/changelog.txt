@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.15
+Date: ??
+  Changes:
+    - Split smelting technologies in two parts: (498)
+      - Smelting to ingots, faster tech progress to allow additional mid-tier improvements
+      - Casting to usable products (plates, wires, rods), similar tech progress as before
+    - Added new graphics to technology, ingots, molted metals, metal rolls and metal wire coils
+    - Tweaked some technology tree prerequisites as cleanup (428)
+    - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
+  Bugfixes:
+    - Fixed rod stack converting recipes could not use producitivity modules
+---------------------------------------------------------------------------------------------------
 Version: 0.6.14
 Date: 26.11.2020
   Changes:

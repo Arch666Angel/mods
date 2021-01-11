@@ -22,7 +22,7 @@ data.raw["item"]["wood"].order = "a[wood]"
 --REFINING
 if angelsmods.refining then
   --MOVE UNLOCKS
-  OV.add_unlock("bio-processing-brown", "water-mineralized")
+  OV.add_unlock("bio-processing-green", "water-mineralized")
   OV.remove_unlock("water-treatment", "water-mineralized")
 end
 
@@ -144,259 +144,6 @@ if bobmods then
     OV.add_unlock("bio-paper-1", "wooden-board-paper")
   end
 
-  if bobmods.greenhouse then
-    -- move the subgroup
-    data.raw["item-subgroup"]["bob-greenhouse-items"].group = "bio-processing-nauvis"
-    data.raw["item-subgroup"]["bob-greenhouse-items"].order = "i"
-
-    -- update fertilizer
-    OV.global_replace_item("fertiliser", "solid-fertilizer")
-    angelsmods.functions.add_flag("fertiliser", "hidden")
-    data.raw.recipe["bob-fertiliser"].subgroup = "bio-wood"
-    data.raw.recipe["bob-fertiliser"].order = "a[support]-cb"
-
-    -- update the seedling
-    data.raw.item["seedling"].subgroup = "bio-arboretum-swamp"
-    data.raw.item["seedling"].order = "a"
-
-    -- update greenhouse
-    data.raw.item["bob-greenhouse"].subgroup = "bio-processing-buildings-nauvis-a"
-    data.raw.item["bob-greenhouse"].order = "c[arboretum]-b"
-
-    -- patch bobs wood production
-    OV.patch_recipes(
-      {
-        {
-          name = "bob-seedling",
-          subgroup = "bob-greenhouse-items",
-          order = "a[seedling]",
-          category = "seed-extractor"
-        },
-        {
-          name = "bob-basic-greenhouse-cycle",
-          subgroup = "bob-greenhouse-items",
-          order = "b[greenhouse-cycle]-a[basic]",
-          energy_required = 60,
-          --results =
-          --{ {"!!"},
-          --  { type = "item", name = "solid-tree", amount = 2 },
-          --  { type = "item", name = "solid-tree", amount = 1, probability = 1/3 }
-          --},
-          icons = {
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/tree.png",
-              icon_size = 64,
-              scale = 0.5
-            },
-            {
-              icon = "__bobgreenhouse__/graphics/icons/seedling.png",
-              shift = {-12, 12},
-              scale = 0.35
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_1.png",
-              tint = angelsmods.bioprocessing.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32
-        },
-        {
-          name = "bob-advanced-greenhouse-cycle",
-          subgroup = "bob-greenhouse-items",
-          order = "b[greenhouse-cycle]-b[advanced]",
-          energy_required = 45,
-          --results =
-          --{ {"!!"},
-          --  { type = "item", name = "solid-tree", amount = 4 },
-          --  { type = "item", name = "solid-tree", amount = 1, probability = 2/3 }
-          --},
-          icons = {
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/tree.png",
-              icon_size = 64,
-              scale = 0.5
-            },
-            {
-              icon = "__bobgreenhouse__/graphics/icons/seedling.png",
-              shift = {-12, 12},
-              scale = 0.35
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              tint = angelsmods.bioprocessing.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32
-        }
-      }
-    )
-    -- manually patch the result as the recipe builder is failing
-    data.raw.recipe["bob-basic-greenhouse-cycle"].normal.result = nil
-    data.raw.recipe["bob-basic-greenhouse-cycle"].normal.results = {
-      {type = "item", name = "solid-tree", amount_min = 2, amount_max = 4}
-    }
-    data.raw.recipe["bob-basic-greenhouse-cycle"].expensive.result = nil
-    data.raw.recipe["bob-basic-greenhouse-cycle"].expensive.results = {
-      {type = "item", name = "solid-tree", amount = 2}
-    }
-    data.raw.recipe["bob-advanced-greenhouse-cycle"].normal.result = nil
-    data.raw.recipe["bob-advanced-greenhouse-cycle"].normal.results = {
-      {type = "item", name = "solid-tree", amount_min = 4, amount_max = 8}
-    }
-    data.raw.recipe["bob-advanced-greenhouse-cycle"].expensive.result = nil
-    data.raw.recipe["bob-advanced-greenhouse-cycle"].expensive.results = {
-      {type = "item", name = "solid-tree", amount = 4}
-    }
-
-    -- also update the other tree icons
-    OV.patch_recipes(
-      {
-        {
-          name = "tree-arboretum-1",
-          icons = {
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
-              icon_size = 64,
-              scale = 0.5
-            },
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
-              shift = {-12, 12},
-              scale = 0.35
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_1.png",
-              tint = angelsmods.bioprocessing.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32
-        },
-        {
-          name = "tree-arboretum-2",
-          icons = {
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
-              icon_size = 64,
-              scale = 0.5
-            },
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
-              shift = {-12, 12},
-              scale = 0.35
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              tint = angelsmods.bioprocessing.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32
-        },
-        {
-          name = "tree-arboretum-3",
-          icons = {
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
-              icon_size = 64,
-              scale = 0.5
-            },
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
-              shift = {-12, 12},
-              scale = 0.35
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_3.png",
-              tint = angelsmods.bioprocessing.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32
-        }
-      }
-    )
-
-    -- make sure the seed extractor can be unlocked early on
-    if bobmods and bobmods.electronics then
-      OV.patch_recipes(
-        {
-          {
-            name = "seed-extractor",
-            ingredients = {
-              {name = "electronic-circuit", amount = 0},
-              {name = "basic-circuit-board", amount = 4}
-            }
-          }
-        }
-      )
-    end
-
-    -- allow manually creating wood without a sawblade (because nerfed bob greenhouse)
-    data:extend(
-      {
-        {
-          type = "recipe",
-          name = "wood-sawing-manual",
-          category = "angels-manual-crafting",
-          always_show_made_in = true,
-          enabled = false,
-          energy_required = 1 / 3,
-          ingredients = {
-            {type = "item", name = "solid-tree", amount = 1}
-          },
-          results = {
-            {type = "item", name = "wood", amount = 5}
-          },
-          icons = {
-            {
-              icon = "__base__/graphics/icons/wood.png",
-              icon_size = 64,
-              scale = 0.5
-            },
-            {
-              icon = "__angelsbioprocessing__/graphics/icons/hand.png",
-              scale = 0.35,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32,
-          subgroup = "bio-processing-wood",
-          order = "a[wood]-a[manual]"
-        }
-      }
-    )
-
-    -- alter angels wood production to require seedlings
-    OV.patch_recipes(
-      {
-        {name = "tree-generator-1", ingredients = {{type = "item", name = "seedling", amount = 4}}},
-        {name = "tree-generator-2", ingredients = {{type = "item", name = "seedling", amount = 6}}},
-        {name = "tree-generator-3", ingredients = {{type = "item", name = "seedling", amount = 8}}},
-        {name = "temperate-tree-generator-1", ingredients = {{type = "item", name = "seedling", amount = 4}}},
-        {name = "temperate-tree-generator-2", ingredients = {{type = "item", name = "seedling", amount = 6}}},
-        {name = "temperate-tree-generator-3", ingredients = {{type = "item", name = "seedling", amount = 8}}},
-        {name = "swamp-tree-generator-1", ingredients = {{type = "item", name = "seedling", amount = 4}}},
-        {name = "swamp-tree-generator-2", ingredients = {{type = "item", name = "seedling", amount = 6}}},
-        {name = "swamp-tree-generator-3", ingredients = {{type = "item", name = "seedling", amount = 8}}},
-        {name = "desert-tree-generator-1", ingredients = {{type = "item", name = "seedling", amount = 4}}},
-        {name = "desert-tree-generator-2", ingredients = {{type = "item", name = "seedling", amount = 6}}},
-        {name = "desert-tree-generator-3", ingredients = {{type = "item", name = "seedling", amount = 8}}}
-      }
-    )
-
-    -- update tech
-    OV.add_prereq("bob-greenhouse", "gardens")
-    OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
-    OV.add_prereq("bio-arboretum-1", "bob-greenhouse")
-  end
 end
 
 --ADDED RECIPES FOR BOBS ARTIFACTS
@@ -404,6 +151,8 @@ require("prototypes.overrides.bio-processing-override-bob-artifacts")
 
 --OTHER BOB OVERRIDES
 require("prototypes.overrides.bio-processing-override-bob")
+require("prototypes.overrides.bio-processing-override-bobmodules")
+require("prototypes.overrides.bio-processing-override-bobgreenhouse")
 
 --ENABLE PRODUCTIVITY
 --angelsmods.functions.allow_productivity("slag-processing-1")
@@ -414,6 +163,7 @@ angelsmods.functions.allow_productivity("bio-plastic-1")
 angelsmods.functions.allow_productivity("bio-plastic-2")
 angelsmods.functions.allow_productivity("bio-rubber")
 
+-- plant growing
 angelsmods.functions.allow_bio_productivity("temperate-1")
 angelsmods.functions.allow_bio_productivity("temperate-2")
 angelsmods.functions.allow_bio_productivity("temperate-3")
@@ -429,3 +179,24 @@ angelsmods.functions.allow_bio_productivity("swamp-2")
 angelsmods.functions.allow_bio_productivity("swamp-3")
 angelsmods.functions.allow_bio_productivity("swamp-4")
 angelsmods.functions.allow_bio_productivity("swamp-5")
+
+-- garden growing
+angelsmods.functions.allow_bio_productivity("temperate-garden-cultivating-b")
+angelsmods.functions.allow_bio_productivity("desert-garden-cultivating-b")
+angelsmods.functions.allow_bio_productivity("swamp-garden-cultivating-b")
+
+-- tree growing
+angelsmods.functions.allow_bio_productivity("tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("tree-arboretum-2")
+angelsmods.functions.allow_bio_productivity("tree-arboretum-3")
+angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-2")
+angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-2")
+angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-1")
+angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-2")
+
+-- special tree growing
+angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-0")
+angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-0")
+angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-0")

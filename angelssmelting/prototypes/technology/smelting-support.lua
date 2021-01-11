@@ -44,7 +44,8 @@ data:extend(
       icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-1"
+        "angels-metallurgy-1",
+        "advanced-material-processing"
       },
       effects = {
         {
@@ -598,7 +599,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-metallurgy-2",
+        "advanced-material-processing",
         "water-treatment"
       },
       effects = {

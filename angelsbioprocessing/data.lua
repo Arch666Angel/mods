@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.bioprocessing = angelsmods.bioprocessing or {}
-angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 0}
+angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 1}
 
 --TRIGGER CHECKS
 angelsmods.triggers = angelsmods.triggers or {}

@@ -35,7 +35,7 @@ data:extend(
     type = "item",
     name = "ingot-iron",
     icon = "__angelssmelting__/graphics/icons/ingot-iron.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "e",
     stack_size = 200
@@ -56,7 +56,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-iron",
     icon = "__angelssmelting__/graphics/icons/molten-iron.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron-casting",
     order = "i",
     default_temperature = 1538,
@@ -72,7 +72,7 @@ data:extend(
     type = "item",
     name = "angels-roll-iron",
     icon = "__angelssmelting__/graphics/icons/roll-iron.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron-casting",
     order = "j",
     stack_size = 200

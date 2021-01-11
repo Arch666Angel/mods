@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.18
+Date: ??
+  Changes:
+    - Tweaked some technology tree prerequisites as cleanup (428)
+    - Disabled bobs valve as angels valves have an identical purpose with more features
+    - Added fuel values for vanilla fuels (for compatibility) (494)
+    - Removed obsolete inventory slots in the flare stack and converter valve
+---------------------------------------------------------------------------------------------------
 Version: 0.9.17
 Date: 26.11.2020
   Changes:

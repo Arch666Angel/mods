@@ -123,6 +123,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/geode-processing-red.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         --"ore-crushing",
         "ore-floatation"
@@ -239,7 +240,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-crushing",
-        "oil-processing"
+        "water-treatment-2",
+        "automation-2"
       },
       effects = {
         {
@@ -369,6 +371,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/geode-processing-green.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
         --"ore-crushing",
         "geode-processing-1",
@@ -503,7 +506,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
       icon_size = 128,
       prerequisites = {
-        "slag-processing-1",
+        --"slag-processing-1",
         "advanced-ore-refining-1"
       },
       effects = {
@@ -711,58 +714,14 @@ data:extend(
     },
     {
       type = "technology",
-      name = "geode-crystallization-1",
-      icon = "__angelsrefining__/graphics/technology/geode-processing-cyan.png",
+      name = "geode-processing-3",
+      icon = "__angelsrefining__/graphics/technology/geode-processing-yellow.png",
       icon_size = 256,
       icon_mipmaps = 2,
+      upgrade = true,
       prerequisites = {
-        "geode-processing-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-5"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-6"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      },
-      order = "a-a-a1"
-    },
-    {
-      type = "technology",
-      name = "geode-crystallization-2",
-      icon = "__angelsrefining__/graphics/technology/geode-processing-blue.png",
-      icon_size = 256,
-      icon_mipmaps = 2,
-      prerequisites = {
-        "slag-processing-2",
-        "geode-crystallization-1"
+        "geode-processing-2",
+        "slag-processing-2"
       },
       effects = {
         {
@@ -775,15 +734,15 @@ data:extend(
         }
       },
       unit = {
-        count = 50,
+        count = 75,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1}
         },
-        time = 30
+        time = 15
       },
-      order = "a-a-a1"
+      order = "c-a"
     },
     --TIER 4
     {

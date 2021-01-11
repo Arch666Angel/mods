@@ -35,7 +35,7 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-glass-melting",
         icon = "__angelssmelting__/graphics/technology/glass-tech.png",
-        icon_size = 128,
+        icon_size = 256, icon_mipmaps = 4,
         prerequisites = {
           "ore-crushing",
           "powder-metallurgy-1"
@@ -229,7 +229,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("logistic-science-pack", "block-construction-2")
     OV.add_prereq("advanced-ore-refining-1", "angels-basic-blocks-2")
     OV.add_prereq("ore-floatation", "angels-basic-blocks-2")
     OV.add_prereq("angels-metallurgy-2", "angels-basic-blocks-2")
@@ -289,7 +288,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("military-science-pack", "block-construction-3")
     OV.add_unlock("military-science-pack", "block-fluidbox-2")
     OV.add_unlock("military-science-pack", "block-mechanical-2")
     OV.add_prereq("ore-leaching", "angels-basic-blocks-3")
@@ -353,7 +351,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("logistic-science-pack", "block-construction-4")
     OV.add_prereq("ore-refining", "angels-advanced-blocks-1")
     OV.add_prereq("advanced-ore-refining-3", "angels-advanced-blocks-1")
     OV.add_prereq("angels-metallurgy-4", "angels-advanced-blocks-1")
@@ -415,7 +412,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("utility-science-pack", "block-construction-5")
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
   end

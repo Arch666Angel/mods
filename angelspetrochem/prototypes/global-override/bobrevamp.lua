@@ -72,6 +72,7 @@ if mods["bobrevamp"] then
 
     OV.converter_fluid("carbon-dioxide", "gas-carbon-dioxide")
     angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
+    OV.remove_unlock("chemical-processing-2", "carbon-dioxide")
 
     OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
     angelsmods.functions.add_flag("sodium-carbonate", "hidden")

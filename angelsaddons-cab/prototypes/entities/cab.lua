@@ -464,8 +464,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-cab",
-    order = "d[cannon-shell]-a[basic]",
+    subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
+    order = mods["angelsindustries"] and "b[crawlers]-c" or "d[cannon-shell]-a[basic]",
     stack_size = 200
   },
   {
@@ -499,8 +499,8 @@ data:extend(
         }
       }
     },
-    subgroup = "angels-cab",
-    order = "d[cannon-shell]-a[basic]",
+    subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
+    order = mods["angelsindustries"] and "b[crawlers]-d" or "d[cannon-shell]-a[basic]",
     stack_size = 200
   },
   {

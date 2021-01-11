@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.smelting = angelsmods.smelting or {}
-angelsmods.smelting.number_tint = {r = 1, g = 0.8, b = 0.0, a = 0.5}
+angelsmods.smelting.number_tint = {r = 1, g = 0.8, b = 0.0, a = 1}
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
@@ -119,7 +119,8 @@ require("prototypes.buildings.cooling-tower")
 require("prototypes.buildings.clay-bricks")
 require("prototypes.buildings.concrete-bricks")
 
-require("prototypes.items.angels-alloys")
+require("prototypes.items.angels-alloy-solder")
+require("prototypes.items.angels-alloy-steel")
 require("prototypes.items.angels-aluminium")
 require("prototypes.items.angels-chrome")
 require("prototypes.items.angels-cobalt")
@@ -141,7 +142,8 @@ require("prototypes.items.angels-titanium")
 require("prototypes.items.angels-tungsten")
 require("prototypes.items.angels-zinc")
 
-require("prototypes.recipes.smelting-alloys")
+require("prototypes.recipes.smelting-alloy-solder")
+require("prototypes.recipes.smelting-alloy-steel")
 require("prototypes.recipes.smelting-aluminium")
 require("prototypes.recipes.smelting-chrome")
 require("prototypes.recipes.smelting-cobalt")

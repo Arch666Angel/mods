@@ -27,9 +27,9 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution"},
-      result_inventory_size = 1,
+      result_inventory_size = 0,
       crafting_speed = 2,
-      source_inventory_size = 1,
+      source_inventory_size = 0,
       show_recipe_icon = false,
       resistances = {
         {

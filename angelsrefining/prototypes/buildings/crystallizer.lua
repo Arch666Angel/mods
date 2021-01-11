@@ -90,16 +90,15 @@ data:extend(
           base_area = 10,
           base_level = -1,
           pipe_connections = {{type = "input", position = {0, 3}}}
-        }
+        },
         -- {
         -- production_type = "output",
         -- pipe_covers = pipecoverspictures(),
         -- base_level = 1,
         -- pipe_connections = {{ position = {0, -3} }}
-        -- }
+        -- },
+        off_when_no_fluid_recipe = true
       },
-      pipe_covers = pipecoverspictures(),
-      off_when_no_fluid_recipe = true
     },
     {
       type = "item",
@@ -190,16 +189,15 @@ data:extend(
           base_area = 10,
           base_level = -1,
           pipe_connections = {{type = "input", position = {0, 3}}}
-        }
+        },
         -- {
         -- production_type = "output",
         -- pipe_covers = pipecoverspictures(),
         -- base_level = 1,
         -- pipe_connections = {{ position = {0, -3} }}
-        -- }
+        -- },
+        off_when_no_fluid_recipe = true
       },
-      pipe_covers = pipecoverspictures(),
-      off_when_no_fluid_recipe = true
     }
   }
 )

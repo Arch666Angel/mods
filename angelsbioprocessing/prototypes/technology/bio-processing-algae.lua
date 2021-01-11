@@ -56,10 +56,6 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "algae-farm-2"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "gas-methanol-from-wood"
         },
         {
@@ -94,7 +90,7 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "algae-farm-3"
+          recipe = "algae-farm-2"
         },
         {
           type = "unlock-recipe",
@@ -128,6 +124,10 @@ data:extend(
         "bio-processing-red"
       },
       effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "algae-farm-3"
+        },
         {
           type = "unlock-recipe",
           recipe = "algae-blue"

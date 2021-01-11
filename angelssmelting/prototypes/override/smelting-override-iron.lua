@@ -53,8 +53,11 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
   if angelsmods.trigger.smelting_products["iron"].plate or
      angelsmods.trigger.smelting_products["iron"].rod   then
   else
-    OV.remove_prereq("angels-iron-smelting-2", "strand-casting-1")
-    OV.remove_prereq("angels-iron-smelting-3", "strand-casting-2")
+    OV.disable_technology({"angels-iron-casting-2", "angels-iron-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-iron-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-iron-smelting-2"][property])
+    end
   end
 else
   --todo
@@ -70,6 +73,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
         name = "iron-plate",
         energy_required = 10.5,
         normal = {
+          enabled = false,
           ingredients = {
             {name = "iron-ore", type = "item", amount = "+3"}
           },
@@ -78,6 +82,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
           }
         },
         expensive = {
+          enabled = false,
           ingredients = {
             {"!!"},
             {name = "iron-ore", type = "item", amount = 5 * intermediatemulti}

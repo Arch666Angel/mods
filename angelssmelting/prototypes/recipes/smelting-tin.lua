@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-tin", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-tin]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
@@ -34,7 +33,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-tin", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-tin]"
     },
     -- SMELTING RESULTS
@@ -51,18 +49,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-tin", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-tin"),
+        1, angelsmods.smelting.number_tint),
       order = "d[ingot-tin]-a"
     },
     {
@@ -79,18 +68,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-tin", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-tin"),
+        2, angelsmods.smelting.number_tint),
       order = "d[ingot-tin]-b"
     },
     {
@@ -107,18 +87,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-tin", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-tin"),
+        3, angelsmods.smelting.number_tint),
       order = "d[ingot-tin]-c"
     },
     {
@@ -134,7 +105,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-tin", amount = 1}
       },
-      icon_size = 32,
       order = "e[powder-tin]"
     },
     -- CASTING INTERMEDIATE
@@ -152,7 +122,6 @@ data:extend(
         {type = "fluid", name = "liquid-molten-tin", amount = 120}
       },
       main_product = "liquid-molten-tin",
-      icon_size = 32,
       order = "f[liquid-molten-tin]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
@@ -183,18 +152,9 @@ data:extend(
           {type = "item", name = "angels-roll-tin", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-tin"),
+        1, angelsmods.smelting.number_tint),
       order = "g[angels-roll-tin]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
@@ -229,18 +189,9 @@ data:extend(
         },
         main_product = "angels-roll-tin"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-tin"),
+        2, angelsmods.smelting.number_tint),
       order = "g[angels-roll-tin]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
@@ -273,18 +224,9 @@ data:extend(
           {type = "item", name = "angels-wire-coil-tin", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-coil-tin"),
+        1, angelsmods.smelting.number_tint),
       order = "h[angels-wire-coil-tin]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
@@ -321,18 +263,9 @@ data:extend(
         },
         main_product = "angels-wire-coil-tin"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-coil-tin"),
+        2, angelsmods.smelting.number_tint),
       order = "h[angels-wire-coil-tin]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin")
     },
@@ -362,17 +295,10 @@ data:extend(
           {type = "item", name = "angels-plate-tin", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-tin.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-tin.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-tin"),
+        angelsmods.functions.get_object_icons("liquid-molten-tin"),
+        {-10, -10}, 0.4375),
       order = "i[angels-plate-tin]-c" -- i[angels-plate-tin]-a reserved for crushed bobmonium smelting (see tin overrides)
     }, -- i[angels-plate-tin]-b reserved for tin ore smelting (see tin overrides)
     {
@@ -389,17 +315,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-tin", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-tin.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-tin.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-tin"),
+        angelsmods.functions.get_object_icons("angels-roll-tin"),
+        {-10, -10}, 0.4375),
       order = "i[angels-plate-tin]-d"
     },
     {
@@ -418,17 +337,10 @@ data:extend(
         {type = "item", name = "angels-wire-tin", amount = 5}
       },
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-tin.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-tin.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-tin"),
+        angelsmods.functions.get_object_icons("angels-plate-tin"),
+        {-10, -10}, 0.4375),
       order = "j[angels-wire-tin]-a"
     },
     {
@@ -445,17 +357,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-tin", amount = 16}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-tin.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-wire-tin"),
+        angelsmods.functions.get_object_icons("angels-wire-coil-tin"),
+        {-10, -10}, 0.4375),
       order = "j[angels-wire-tin]-b"
     }
   }

@@ -95,7 +95,7 @@ if mods["bobplates"] then
   data.raw.fluid["gas-benzene"].fuel_value = "857.2kJ"
 
   --liquid crude (crude oil)
-  --data.raw.fluid["crude-oil"].fuel_value = "1000kJ"
+  data.raw.fluid["crude-oil"].fuel_value = "1000kJ"
 
   --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
   -->>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.
@@ -113,5 +113,12 @@ if mods["bobplates"] then
   if mods["angelsbioprocessing"] then
     --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
     data.raw.fluid["gas-ethanol"].fuel_value = "135.2kJ"
+  end
+  --updates for conversion valve settings
+  if angelsmods.trigger.enableconverter then
+    data.raw.fluid["heavy-oil"].fuel_value = "244.7kJ"
+    data.raw.fluid["light-oil"].fuel_value = "249.9kJ"
+    data.raw.fluid["petroleum-gas"].fuel_value = "230.0kJ"
+    --data.raw.fluid["crude-oil"].fuel_value = "1000kJ"
   end
 end

@@ -19,7 +19,6 @@ data:extend(
         {type = "fluid", name = "gas-carbon-dioxide", amount = 50}
       },
       main_product = "solid-lime",
-      icon_size = 32,
       order = "b[solid-lime]"
     },
     -- SMELTING RESULTS
@@ -37,18 +36,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-cement", amount = 1}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-cement.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-cement"),
+        1, angelsmods.smelting.number_tint),
       order = "c[solid-cement]-a"
     },
     {
@@ -67,18 +57,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-cement", amount = 2}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-cement.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-cement"),
+        2, angelsmods.smelting.number_tint),
       order = "c[solid-cement]-b"
     },
     {
@@ -96,7 +77,6 @@ data:extend(
       results = {
         {type = "item", name = "clay-brick-raw", amount = 4}
       },
-      icon_size = 32,
       order = "d[clay-brick-raw]"
     },
     {
@@ -112,7 +92,6 @@ data:extend(
       results = {
         {type = "item", name = "clay-brick", amount = 4}
       },
-      icon_size = 32,
       order = "e[clay-brick]"
     },
     -- CASTING INTERMEDIATE
@@ -132,18 +111,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-concrete", amount = 100}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-concrete.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-concrete"),
+        1, angelsmods.smelting.number_tint),
       order = "g[liquid-concrete]-a"
     },
     {
@@ -162,18 +132,9 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-concrete", amount = 120}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-concrete.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-concrete"),
+        2, angelsmods.smelting.number_tint),
       order = "g[liquid-concrete]-b"
     },
     -- CASTING RESULT
@@ -190,19 +151,9 @@ data:extend(
       results = {
         {type = "item", name = "concrete", amount = 4}
       },
-      icons = {
-        {
-          icon = "__base__/graphics/icons/concrete.png",
-          icon_size = 64
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("concrete"),
+        2, angelsmods.smelting.number_tint),
       order = "h[concrete]-b" -- h[concrete]-a is reserved for base game recipe (see override)
     },
     {
@@ -219,7 +170,6 @@ data:extend(
       results = {
         {type = "item", name = "concrete-brick", amount = 4}
       },
-      icon_size = 32,
       order = "i[concrete-brick]"
     },
     {
@@ -237,7 +187,6 @@ data:extend(
       results = {
         {type = "item", name = "reinforced-concrete-brick", amount = 4}
       },
-      icon_size = 32,
       order = "j[reinforced-concrete-brick]"
     }
   }

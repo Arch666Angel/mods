@@ -59,7 +59,7 @@ data:extend(
     {
       type = "recipe",
       name = "temperate-garden-cultivating-b",
-      category = "temperate-farming",
+      category = "advanced-temperate-farming",
       subgroup = "farming-temperate-seed",
       enabled = false,
       energy_required = 60,
@@ -252,7 +252,7 @@ data:extend(
     {
       type = "recipe",
       name = "desert-garden-cultivating-b",
-      category = "desert-farming",
+      category = "advanced-desert-farming",
       subgroup = "farming-desert-seed",
       enabled = false,
       energy_required = 60,
@@ -445,7 +445,7 @@ data:extend(
     {
       type = "recipe",
       name = "swamp-garden-cultivating-b",
-      category = "swamp-farming",
+      category = "advanced-swamp-farming",
       subgroup = "farming-swamp-seed",
       enabled = false,
       energy_required = 60,

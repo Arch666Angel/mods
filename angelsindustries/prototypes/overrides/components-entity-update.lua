@@ -12,8 +12,16 @@ if angelsmods.industries.components then
   OV.execute()
 end
 
--- custom fixes
-require("prototypes.overrides.components-base-entity-update")
+-- custom fixes base game
+require "prototypes.overrides.components-base-entity-update.components-base-other-entities-update"
+
+require "prototypes.overrides.components-base-entity-update.components-base-inserters-update"
+require "prototypes.overrides.components-base-entity-update.components-base-robots-update"
 OV.execute()
-require("prototypes.overrides.components-bobs-entity-update")
+
+-- custom fixes bobs mods
+require "prototypes.overrides.components-bobs-entity-update.components-bobs-assemblers-update"
+require "prototypes.overrides.components-bobs-entity-update.components-bobs-inserters-update"
+require "prototypes.overrides.components-bobs-entity-update.components-bobs-labs-update"
+require "prototypes.overrides.components-bobs-entity-update.components-bobs-trains-update"
 OV.execute()

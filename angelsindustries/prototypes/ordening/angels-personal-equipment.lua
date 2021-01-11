@@ -3,6 +3,16 @@ local reorder = function(type, item, subgroup, order)
 end
 
 -------------------------------------------------------------------------------
+-- CHARACTERS -----------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobclasses"] then
+  data.raw["item-subgroup"]["bodies"].group = "angels-logistics"
+  data.raw["item-subgroup"]["bodies"].order = "d-a[armor]-aa"
+  data.raw["item-subgroup"]["body-parts"].group = "angels-logistics"
+  data.raw["item-subgroup"]["body-parts"].order = "d-a[armor]-ab"
+end
+
+-------------------------------------------------------------------------------
 -- ARMOR ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 reorder("armor", "light-armor", "angels-personal-equipment-armor", "a-a")

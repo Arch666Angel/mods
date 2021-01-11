@@ -524,7 +524,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-resin", amount = 4},
-        {type = "item", name = "solid-tree", amount = 2}
+        {type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2}
       },
       icons = {
         {
@@ -560,7 +560,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-resin", amount = 7},
-        {type = "item", name = "solid-tree", amount = 3}
+        {type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3}
       },
       icons = {
         {
@@ -820,7 +820,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-plastic", amount = 4},
-        {type = "item", name = "solid-tree", amount = 2}
+        {type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2}
       },
       icons = {
         {
@@ -856,7 +856,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-plastic", amount = 7},
-        {type = "item", name = "solid-tree", amount = 3}
+        {type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3}
       },
       icons = {
         {
@@ -1069,7 +1069,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-rubber", amount = 4},
-        {type = "item", name = "solid-tree", amount = 2}
+        {type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2}
       },
       icons = {
         {
@@ -1105,7 +1105,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "bio-rubber", amount = 7},
-        {type = "item", name = "solid-tree", amount = 3}
+        {type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3}
       },
       icons = {
         {

@@ -62,7 +62,7 @@ data:extend(
     type = "item",
     name = "ingot-silver",
     icon = "__angelssmelting__/graphics/icons/ingot-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "h",
     stack_size = 200
@@ -81,7 +81,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-silver",
     icon = "__angelssmelting__/graphics/icons/molten-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver-casting",
     order = "j",
     default_temperature = 961.8,
@@ -97,7 +97,7 @@ data:extend(
     type = "item",
     name = "angels-roll-silver",
     icon = "__angelssmelting__/graphics/icons/roll-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver-casting",
     order = "k",
     stack_size = 200
@@ -106,7 +106,7 @@ data:extend(
     type = "item",
     name = "angels-wire-coil-silver",
     icon = "__angelssmelting__/graphics/icons/wire-coil-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver-casting",
     order = "l",
     stack_size = 200

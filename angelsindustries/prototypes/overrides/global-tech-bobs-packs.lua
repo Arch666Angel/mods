@@ -143,6 +143,12 @@ if angelsmods.industries.tech then
     -- belt techs
     pack_replace("logistics-3", "blue", "orange")
     OV.remove_prereq("logistics-3", "tech-blue-packs")
+    -- railway
+    pack_replace("bob-railway-2", "green", "orange")
+    pack_replace("bob-armoured-railway-2", "blue", "yellow")
+    pack_replace("bob-fluid-wagon-2", "green", "orange")
+    pack_replace("bob-armoured-fluid-wagon-2", "blue", "yellow")
+
   end
 
   -------------------------------------------------------------------------------

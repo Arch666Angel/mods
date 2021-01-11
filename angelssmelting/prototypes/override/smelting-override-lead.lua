@@ -38,9 +38,11 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   
   if angelsmods.trigger.smelting_products["lead"].plate then
   else
-    -- no need for the strand casting
-    OV.remove_prereq("angels-lead-smelting-2", "strand-casting-1")
-    OV.remove_prereq("angels-lead-smelting-3", "strand-casting-2")
+    OV.disable_technology({"angels-lead-casting-2", "angels-lead-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-lead-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-lead-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-lead", "hidden")
@@ -55,6 +57,7 @@ else
   OV.disable_recipe({"lead-ore-smelting", "solid-lead-oxide-smelting", "anode-lead-smelting"})
   OV.disable_recipe({"molten-lead-smelting"})
   OV.disable_technology({"angels-lead-smelting-1", "angels-lead-smelting-2", "angels-lead-smelting-3"})
+  OV.disable_technology({"angels-lead-casting-2", "angels-lead-casting-3"})
 end
 
 -------------------------------------------------------------------------------
@@ -83,6 +86,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
           name = "lead-plate",
           energy_required = 10.5,
           normal = {
+            enabled = false,
             ingredients = {
               {name = "lead-ore", type = "item", amount = "+3"}
             },
@@ -91,6 +95,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
             }
           },
           expensive = {
+            enabled = false,
             ingredients = {
               {"!!"},
               {name = "lead-ore", type = "item", amount = 5 * intermediatemulti}

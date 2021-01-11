@@ -14,5 +14,15 @@ if angelsmods.industries.tech then
       end
     end
   end
-  OV.execute()
+  
+  data.raw["item"]["satellite"].rocket_launch_product = {
+    type = "item",
+    name = "science-gravitational-analyzer",
+    amount = 1000
+  }
+  data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"
+  data.raw.technology["space-science-pack"].icon_size = 128
+  OV.add_unlock("space-science-pack", "angels-science-pack-white")
+  OV.add_unlock("space-science-pack", "angels-main-lab-7")
+  OV.global_replace_item("lab", "angels-basic-lab-2")
 end
