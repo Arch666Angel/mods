@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.11
+Version: 0.4.12
 Date: ??
   Changes:
     - Regular mode:
@@ -15,6 +15,11 @@ Date: ??
       - Fixed that some science technologies would unlock block components
     - Science mode:
       - Fixed the technologies from the storage addon had the wrong data core
+---------------------------------------------------------------------------------------------------
+Version: 0.4.11
+Date: 11.01.2021
+  Bugfixes:
+    - Fixed crash related to ghosting tech unlocks not conforming to standards (516)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.10
 Date: 26.11.2020
