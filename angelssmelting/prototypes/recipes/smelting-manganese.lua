@@ -38,7 +38,7 @@ data:extend(
     {
       type = "recipe",
       name = "manganese-processed-processing-alt",
-      category = "ore-processing",
+      category = "chemical-smelting",
       subgroup = "angels-manganese",
       energy_required = 2,
       enabled = false,
