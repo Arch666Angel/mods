@@ -28,6 +28,16 @@ if mods["bobplates"] then
       "air-compressor-4"
     }
   )
+  
+  OV.hide_recipe(
+    {
+      "air-pump",
+      "air-pump-2",
+      "air-pump-3",
+      "air-pump-4",
+      "void-pump",
+    }
+  )
 end
 
 -------------------------------------------------------------------------------
