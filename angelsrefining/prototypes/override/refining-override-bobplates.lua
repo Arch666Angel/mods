@@ -11,6 +11,15 @@ if mods["bobplates"] then
     "water-pump-3",
     "water-pump-4"
   }, "hidden")
+  
+  OV.hide_recipe(
+    {
+      "water-pump",
+      "water-pump-2",
+      "water-pump-3",
+      "water-pump-4"
+    }
+  )
 
   angelsmods.functions.set_next_upgrade("assembling-machine", "water-pump", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "water-pump-2", nil)

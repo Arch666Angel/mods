@@ -74,6 +74,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
         energy_required = 10.5,
         normal = {
           enabled = false,
+          hidden = true, --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {name = "iron-ore", type = "item", amount = "+3"}
           },
@@ -83,6 +84,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
         },
         expensive = {
           enabled = false,
+          hidden = true, --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {"!!"},
             {name = "iron-ore", type = "item", amount = 5 * intermediatemulti}

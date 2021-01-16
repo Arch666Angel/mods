@@ -71,6 +71,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
           energy_required = 10.5,
           normal = {
             enabled = false,
+            hidden = true,
             ingredients = {
               {name = "tin-ore", type = "item", amount = "+3"}
             },
@@ -80,6 +81,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
           },
           expensive = {
             enabled = false,
+            hidden = true,
             ingredients = {
               {"!!"},
               {name = "tin-ore", type = "item", amount = 5 * intermediatemulti}

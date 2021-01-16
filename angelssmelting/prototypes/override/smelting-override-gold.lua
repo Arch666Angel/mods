@@ -54,6 +54,7 @@ end
 if angelsmods.trigger.smelting_products["gold"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods['bobplates'] then
+    OV.hide_recipe("bob-gold-plate")
     OV.global_replace_item("angels-plate-gold", "gold-plate")
     angelsmods.functions.add_flag("angels-plate-gold", "hidden")
 

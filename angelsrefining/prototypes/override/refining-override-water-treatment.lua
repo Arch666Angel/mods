@@ -51,6 +51,25 @@ end
 if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   OV.disable_technology({"water-washing-1", "water-washing-2"})
   OV.remove_prereq("geode-processing-2", "water-washing-2")
+  OV.hide_recipe(
+    {
+      "water-viscous-mud",
+      "washing-1",
+      "washing-2",
+      "washing-3",
+      "washing-4",
+      "washing-5",
+      "solid-mud-landfill",
+      "solid-geodes",
+      "solid-clay",
+      "solid-limestone",
+      "solid-sand",
+      --hide buildings too
+      "seafloor-pump",
+      "washing-plant",
+      "washing-plant-2"
+    }
+  )
 end
 
 angelsmods.functions.move_item("offshore-pump", "washing-building", "d")

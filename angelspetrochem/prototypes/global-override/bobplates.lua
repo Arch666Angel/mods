@@ -28,6 +28,16 @@ if mods["bobplates"] then
       "air-compressor-4"
     }
   )
+  
+  OV.hide_recipe(
+    {
+      "air-pump",
+      "air-pump-2",
+      "air-pump-3",
+      "air-pump-4",
+      "void-pump",
+    }
+  )
 end
 
 -------------------------------------------------------------------------------
@@ -156,7 +166,28 @@ if mods["bobplates"] then
   move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
   OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
-
+  --hide disabled
+  OV.hide_recipe(
+    {
+      "bob-oil-processing",
+      "hydrogen-sulfide",
+      "sulfur-dioxide",
+      "coal-cracking",
+      "hydrogen-chloride",
+      "petroleum-gas-cracking",
+      "nitric-acid",
+      "nitrogen-dioxide",
+      "nitrogen",
+      "sulfuric-acid-2",
+      "sulfuric-acid-3",
+      "bob-liquid-air",
+      "solid-fuel-from-hydrogen",
+      "sulfur",
+      "sulfur-2",
+      "sulfur-3",
+      "carbon",
+    }
+  )
   -- plastics -----------------------------------------------------------------
   OV.remove_unlock("plastics", "plastic-bar")
 

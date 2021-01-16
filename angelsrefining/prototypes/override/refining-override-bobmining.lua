@@ -21,5 +21,15 @@ if mods["bobmining"] then
         "water-miner-5"
       }
     )
+
+    OV.hide_recipe(
+      {
+        "water-miner-1",
+        "water-miner-2",
+        "water-miner-3",
+        "water-miner-4",
+        "water-miner-5"
+      }
+    )
   end
   
