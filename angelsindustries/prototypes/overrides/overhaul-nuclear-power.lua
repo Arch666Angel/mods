@@ -186,9 +186,11 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
     -- deuterium processing
-    OV.disable_recipe("deuterium-fuel-cell")
+    OV.disable_recipe({"deuterium-fuel-cell","deuterium-fuel-cell-2"})
     angelsmods.functions.add_flag("deuterium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("deuterium-fuel-cell", "hide-from-fuel-tooltip")
+    angelsmods.functions.add_flag("deuterium-fuel-cell-2", "hidden")
+    angelsmods.functions.add_flag("deuterium-fuel-cell-2", "hide-from-fuel-tooltip")
 
     OV.global_replace_item("fusion-catalyst", "angels-muon-fusion-catalyst")
     angelsmods.functions.add_flag("fusion-catalyst", "hidden")
