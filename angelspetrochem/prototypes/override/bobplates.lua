@@ -61,64 +61,41 @@ end
 --Do this regardless of settings
 --base fluid is methane, all others are based on relative real values
 --==BASED ON VOULMETRIC NUMBERS divided by 10, using methane as the base
-if mods["bobplates"] then
+local Energy_table = {
   --liquid Naphtha (heavy oil), bobs value is 1MJ (Heavy fuel oil 38.2 MJ/L)(39 MJ/kg)
-  data.raw.fluid["liquid-naphtha"].fuel_value = "244.7kJ"
-  data.raw.fluid["liquid-naphtha"].emissions_multiplier = 3
-
+  ["liquid-naphtha"]  = { fv = 244.7, em = 3, turr = false}, 
+  ["heavy-oil"]       = { fv = angelsmods.trigger.enableconverter and 244.7 or nil, turr = angelsmods.trigger.enableconverter and true or false},
   --liquid Fuel oil (light oil), bobs value 1.5MJ (light fuel oil 39 MJ/L)(40.6 MJ/kg)
-  data.raw.fluid["liquid-fuel-oil"].fuel_value = "249.9kJ" -- was 24.99kJ
-  data.raw.fluid["liquid-fuel-oil"].emissions_multiplier = 2
-
-  --gas methane (petrogas), bobs value 2.3MJ (methane 35.9 MJ/L)(49.85 MJ/kg)
-  data.raw.fluid["gas-methane"].fuel_value = "230.0kJ"
-
-  --gas ethane (), - (ethane 60.7 MJ/L)(47.2 MJ/kg)
-  data.raw.fluid["gas-ethane"].fuel_value = "388.9kJ"
-  data.raw.fluid["gas-ethane"].emissions_multiplier = 1.5
-
-  --gas butane (), - (butane 110.9 MJ/L)(46.46 MJ/kg)
-  data.raw.fluid["gas-butane"].fuel_value = "710.5kJ"
-  data.raw.fluid["gas-butane"].emissions_multiplier = 1.8
-
-  --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
-  data.raw.fluid["gas-propene"].fuel_value = "521.5kJ"
-  data.raw.fluid["gas-propene"].emissions_multiplier = 5
-
-  --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
-  data.raw.fluid["gas-methanol"].fuel_value = "101.2kJ"
-
-  --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
-  data.raw.fluid["gas-ethylene"].fuel_value = "365.2kJ"
-
-  --gas benzene (), - (benzene 133.8 MJ/L)(40.5 MJ/kg)
-  data.raw.fluid["gas-benzene"].fuel_value = "857.2kJ"
-
-  --liquid crude (crude oil)
-  data.raw.fluid["crude-oil"].fuel_value = "1000kJ"
-
-  --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
-  -->>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.
-  data.raw.fluid["gas-hydrogen"].fuel_value = "33kJ"
-  data.raw.fluid["gas-hydrogen"].emissions_multiplier = 0.2
-
-  --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
-  data.raw.fluid["gas-hydrazine"].fuel_value = "126.9kJ"
-  data.raw.fluid["gas-hydrazine"].emissions_multiplier = 0.1
-
+  ["liquid-fuel-oil"] = { fv = 249.9, em = 2, turr = false}, --was 24.99kJ
+  ["light-oil"]       = { fv = angelsmods.trigger.enableconverter and 249.9 or nil, turr = angelsmods.trigger.enableconverter and true or false},
+  --gas methane (petrogas), bobs value 2.3MJ (methane 35.9 MJ/L)(49.85 MJ/kg) 
+  ["gas-methane"]     = { fv = 230},
+  ["petroleum-gas"]   = { fv = angelsmods.trigger.enableconverter and 230 or nil, turr = angelsmods.trigger.enableconverter and true or false}, 
+  ["gas-ethane"]      = { fv = 388.9, em = 1.5}, --gas ethane (), - (ethane 60.7 MJ/L)(47.2 MJ/kg)
+  ["gas-butane"]      = { fv = 710.5, em = 1.8}, --gas butane (), - (butane 110.9 MJ/L)(46.46 MJ/kg)
+  ["gas-propene"]     = { fv = 521.5, em = 5}, --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
+  ["gas-methanol"]    = { fv = 101.2}, --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
+  ["gas-ethylene"]    = { fv = 365.2}, --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
+  ["crude-oil"]       = { fv = 1000, turr = false}, --liquid crude (crude oil)
+  ["gas-hydrogen"]    = { fv = 33, em = 0.2--[[>>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.]]}, --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
+  ["gas-hydrazine"]   = { fv = 126.9, em = 0.1}, --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
+  ["liquid-fuel"]     = { fv = 300, em = 1.5, turr = false}, --down from 2.3MJ
+  ["gas-ethanol"]     = { fv = mods["angelsbioprocessing"] and 135.2 or nil}, --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
+}
+local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
+  
+if mods["bobplates"] then
+  for fluid, vals in pairs(Energy_table) do
+    log(fluid)
+    log(serpent.block(vals))
+    if vals.fv then
+      data.raw.fluid[fluid].fuel_value = vals.fv .."kJ"
+      data.raw.fluid[fluid].emmissions_multiplier = vals.em or 1
+      if vals.turr ~= false then
+        table.insert(turret_params, {type = fluid, damage_modifier = vals.fv/Energy_table["gas-methane"].fv})
+      end
+    end
+  end
   --fuel oil balancing
-  data.raw.fluid["liquid-fuel"].fuel_value = "300kJ" --down from 2.3MJ
   data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients = {{type = "fluid", name = "liquid-fuel", amount = 100}} --up from 20
-
-  if mods["angelsbioprocessing"] then
-    --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
-    data.raw.fluid["gas-ethanol"].fuel_value = "135.2kJ"
-  end
-  --updates for conversion valve settings
-  if angelsmods.trigger.enableconverter then
-    data.raw.fluid["heavy-oil"].fuel_value = "244.7kJ"
-    data.raw.fluid["light-oil"].fuel_value = "249.9kJ"
-    data.raw.fluid["petroleum-gas"].fuel_value = "230.0kJ"
-    --data.raw.fluid["crude-oil"].fuel_value = "1000kJ"
-  end
 end
