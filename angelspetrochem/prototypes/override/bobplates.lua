@@ -86,8 +86,6 @@ local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_par
   
 if mods["bobplates"] then
   for fluid, vals in pairs(Energy_table) do
-    log(fluid)
-    log(serpent.block(vals))
     if vals.fv then
       data.raw.fluid[fluid].fuel_value = vals.fv .."kJ"
       data.raw.fluid[fluid].emmissions_multiplier = vals.em or 1
