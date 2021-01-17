@@ -11,6 +11,7 @@ Date: ??
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
+      - Fixed the vehicle repair roboport would unlock after the vehicle construction port (500)
     - Component mode:
       - Fixed that some science technologies would unlock block components
     - Science mode:
