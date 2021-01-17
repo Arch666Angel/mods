@@ -108,9 +108,9 @@ end)
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
-  if not (opened_entity and opened_entity.valid and
+  if not (opened_entity and opened_entity.valid and opened_entity.object_name ~= 'LuaEquipmentGrid' and
         (opened_entity.type == "lab" or opened_entity.type == "mining-drill")) then return end
-  
+
   local player_cursor_stack = player.cursor_stack
   if not player_cursor_stack then return end
 
@@ -157,9 +157,9 @@ end)
 script.on_event(defines.events.on_player_main_inventory_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
-  if not (opened_entity and opened_entity.valid and
+  if not (opened_entity and opened_entity.valid and opened_entity.object_name ~= 'LuaEquipmentGrid' and
          (opened_entity.type == "lab" or opened_entity.type == "mining-drill")) then return end
-  
+
   local module_inventory = opened_entity.get_module_inventory()
   if not module_inventory then return end
 

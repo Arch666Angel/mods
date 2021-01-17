@@ -11,10 +11,14 @@ Date: ??
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
+      - Fixed the vehicle repair roboport would unlock after the vehicle construction port (500)
     - Component mode:
       - Fixed that some science technologies would unlock block components
     - Science mode:
       - Fixed the technologies from the storage addon had the wrong data core
+      - Fixed the base game lab was visible in the bonus UI (505)
+      - Fixed science tiers on steam engines and boilers of bobs power (519)
+      - Fixed science tiers on heat pipes and heat sources of bobs power (519)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.11
 Date: 11.01.2021

@@ -12,6 +12,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-burner-generator-vequip"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-repair-roboport-vequip"
         }
       },
       unit = {
@@ -36,10 +40,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-fusion-reactor-vequip"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-repair-roboport-vequip"
         },
         {
           type = "unlock-recipe",
