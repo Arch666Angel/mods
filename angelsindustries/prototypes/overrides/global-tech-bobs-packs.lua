@@ -244,7 +244,7 @@ if angelsmods.industries.tech then
       pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
     end
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      pack_replace("fluid-generator-1", "red", "orange")
+      pack_replace("fluid-generator-3", "blue", "orange")
     end
     if settings.startup["bobmods-power-steam"].value == true then
       pack_replace("bob-steam-engine-4", "blue", "orange")
