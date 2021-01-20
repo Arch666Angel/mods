@@ -238,7 +238,7 @@ local function generate_train_entities(item)
       copy.friction_force = item.friction_force / multiplier
       copy.air_resistance = item.air_resistance / multiplier
       copy.weight = item.weight * multiplier
-      copy.braking_force = item.braking_force * (multiplier*2)
+      copy.braking_force = item.braking_force * (multiplier * 2 - 1)
       if item.type == "locomotive" then
         copy.max_power = (tonumber(item.max_power:match("%d[%d.]*")) * multiplier) .. "kW"
         copy.reversing_power_modifier = item.reversing_power_modifier * multiplier
