@@ -20,6 +20,7 @@ Date: ??
       - Fixed science tiers on steam engines and boilers of bobs power (519)
       - Fixed science tiers on heat pipes and heat sources of bobs power (519)
       - Fixed science tiers on fluid burning generators of bobs power (502)
+      - Fixed boblogistics (inserter overhaul off) recipes to use angels components, not bobs
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.11
 Date: 11.01.2021
