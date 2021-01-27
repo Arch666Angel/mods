@@ -321,7 +321,7 @@ data:extend(
         emissions_per_minute = 0.06 * 60
       },
       energy_usage = "300kW",
-      ingredient_count = 6,
+      --ingredient_count = 6,
       animation = {
         layers = {
           {
