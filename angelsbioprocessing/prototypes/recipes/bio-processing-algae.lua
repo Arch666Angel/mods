@@ -66,26 +66,26 @@ data:extend(
       icon_size = 32,
       order = "c[solid-alginic-acid]"
     },
-    -- {
-    -- type = "recipe",
-    -- name = "circuit-wood-fiber-board",
-    -- icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
-    -- category = "advanced-crafting",
-    -- subgroup = "bio-processing-brown",
-    -- enabled = false,
-    -- energy_required = 4,
-    -- ingredients =
-    -- {
-    -- {type="item", name="cellulose-fiber", amount=4},
-    -- {type="item", name="solid-alginic-acid", amount=1},
-    -- },
-    -- results=
-    -- {
-    -- {type="item", name="circuit-wood-fiber-board", amount=3},
-    -- },
-    -- icon_size = 32,
-    -- order = "c[circuit-wood-fiber-board]",
-    -- },
+    --[[{
+      type = "recipe",
+      name = "circuit-wood-fiber-board",
+      icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
+      category = "advanced-crafting",
+      subgroup = "bio-processing-brown",
+      enabled = false,
+      energy_required = 4,
+      ingredients =
+      {
+        {type="item", name="cellulose-fiber", amount=4},
+        {type="item", name="solid-alginic-acid", amount=1},
+      },
+      results=
+      {
+        {type="item", name="circuit-wood-fiber-board", amount=3},
+      },
+      icon_size = 32,
+      order = "c[circuit-wood-fiber-board]",
+    },]]
 
     --GREEN
     {
