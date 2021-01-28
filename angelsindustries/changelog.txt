@@ -8,6 +8,7 @@ Date: ??
       - Unlock red and green wires with the (previously empty) electronics technology
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
+    - Moved Bio-tile data to angelsbioprocessing
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
