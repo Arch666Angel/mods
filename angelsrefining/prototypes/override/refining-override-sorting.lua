@@ -261,7 +261,11 @@ local create_sorting_recipes = function(refinery_product, recipe_base_name, sort
           if ore_amount then
             table.insert(recipe.results, {"!!"})
           end
-        else
+        end
+      end
+      for ore_name, ore_amounts in pairs(sorted_ore_results or {}) do
+        local ore_amount = (ore_amounts or {})[tier]
+        if ore_name ~= "!!" then
           if not angelsmods.trigger.ores[get_trigger_name[ore_name] or ore_name] then
             ore_amount = 0
           end

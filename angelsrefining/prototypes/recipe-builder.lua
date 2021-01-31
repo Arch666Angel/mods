@@ -419,7 +419,7 @@ local function p_merge_item_lists(base, patch)
          add(n, t, a)
          adjust_secondary_atts(n, t, item)
       end
-      for _, item in pairs(patch) do
+      for _, item in ipairs(patch) do
          local n, t, a, o = item.name or item[1], item.type or "item", item.amount or item[2]
          if n == "!!" then
             clear()

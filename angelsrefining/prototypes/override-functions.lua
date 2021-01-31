@@ -805,8 +805,8 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
           item.name = new
         end
         if replace[item.name] then
-          if item.probability then
-            if replace[item.name].probability and replace[item.name].probability ~= item.probability then
+          if item.probability or replace[item.name].probability then
+            if item.probability and replace[item.name].probability and replace[item.name].probability ~= item.probability then
               --update probability if it exists in both cases
               replace[item.name].probability = item.probability
             else
