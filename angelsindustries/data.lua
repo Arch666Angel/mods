@@ -101,7 +101,6 @@ require("prototypes.buildings.angels-logistics-robot-cargo")
 --ENTITIES
 require("prototypes.entities.crawler")
 require("prototypes.entities.equipment")
-require("prototypes.entities.bio-tile")
 --RECIPES
 require("prototypes.recipes.equipment-recipes")
 require("prototypes.recipes.logistics-entity")

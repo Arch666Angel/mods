@@ -25,7 +25,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   if mods["bobplates"] then
     OV.global_replace_item("solid-lead-oxide", "lead-oxide")
     angelsmods.functions.add_flag("solid-lead-oxide", "hidden")
-
+    OV.hide_recipe({"bob-lead-plate","lead-oxide","lead-oxide-2"})
     OV.global_replace_technology("lead-processing", "angels-lead-smelting-1")
   end
 
@@ -87,6 +87,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
           energy_required = 10.5,
           normal = {
             enabled = false,
+            hidden = true,
             ingredients = {
               {name = "lead-ore", type = "item", amount = "+3"}
             },
@@ -96,6 +97,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
           },
           expensive = {
             enabled = false,
+            hidden = true,
             ingredients = {
               {"!!"},
               {name = "lead-ore", type = "item", amount = 5 * intermediatemulti}

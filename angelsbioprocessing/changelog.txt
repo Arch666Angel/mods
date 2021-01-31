@@ -21,6 +21,9 @@ Date: ??
     - Fixed agricultural modules would not upgrade correctly
     - Fixed agricultural modules all used the same tech icon (493)
     - Fixed angels fishes were not set as consumable items (490)
+    - Fixed with bobs modules that the module 2 and 3 technologies would have wrong icon_size (508)
+    - Added bio-tile to this mod from industries
+      - Still needs recipe and tech-unlock
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.17
 Date: 26.11.2020

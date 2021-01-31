@@ -112,3 +112,19 @@ else
   OV.disable_recipe({"casting-powder-tungsten-1", "casting-powder-tungsten-2"})
   OV.disable_recipe({"angels-plate-tungsten"})
 end
+--hide all if not used
+if (not angelsmods.trigger.smelting_products["tungsten"].plate) and (not angelsmods.trigger.smelting_products["tungsten"].powder) then
+  OV.hide_recipe(
+    {
+      "tungsten-ore-processing",
+      "tungsten-processed-processing",
+      "tungsten-ore-smelting",
+      "liquid-tungstic-acid-smelting",
+      "pellet-tungsten-smelting",
+      "solid-tungsten-oxide-smelting",
+      "processed-tungsten-smelting",
+      "gas-tungsten-hexafluoride-smelting",
+      "solid-ammonium-paratungstate-smelting"
+    }
+  )
+end

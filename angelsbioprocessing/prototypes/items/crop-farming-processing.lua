@@ -104,7 +104,7 @@ data:extend(
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
   },
-  {
+  --[[{
     type = "item",
     name = "solid-flour",
     icon = "__angelsbioprocessing__/graphics/icons/solid-flour.png",
@@ -126,7 +126,7 @@ data:extend(
     flow_color = {r = 245/255, g = 245/255, b = 245/255},
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-  },
+  },]]
   {
     type = "fluid",
     name = "gas-ethanol",

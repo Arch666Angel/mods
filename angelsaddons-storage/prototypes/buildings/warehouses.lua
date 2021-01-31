@@ -56,7 +56,7 @@ if angelsmods.addons.storage.warehouses then
   -- LOGISTIC WAREHOUSES ------------------------------------------------------
   -----------------------------------------------------------------------------
   local log_names = {
-    ["aprovider"] = {order = "i", stacks = 418, mode = "active-provider"},
+    ["aprovider"] = {order = "i", stacks = 768, mode = "active-provider"},
     ["pprovider"] = {order = "j", stacks = 512, mode = "passive-provider"},
     ["storage"]   = {order = "k", stacks = 768, mode = "storage", slots = 1},
     ["buffer"]    = {order = "l", stacks = 512, mode = "buffer", slots = 20},

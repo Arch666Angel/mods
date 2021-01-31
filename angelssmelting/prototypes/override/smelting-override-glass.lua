@@ -104,7 +104,9 @@ if angelsmods.trigger.smelting_products["glass"].board then
             },
             {
               icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
-              scale = 0.4375,
+              icon_size = 64,
+              icon_mipmaps = 4,
+              scale = 0.4375*0.5,
               shift = {-10, -10}
             }
           },

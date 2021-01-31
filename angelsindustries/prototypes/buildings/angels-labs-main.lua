@@ -484,5 +484,4 @@ if angelsmods.industries.tech then
   )
 
   angelsmods.triggers.lab_ignore_token[lab_item.name .. string.format("-%i", 0)] = true
-
 end

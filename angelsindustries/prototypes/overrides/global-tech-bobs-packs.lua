@@ -21,6 +21,9 @@ if angelsmods.industries.tech then
       pack_replace("alien-green-research", "yellow", "blue")
       pack_replace("alien-red-research", "yellow", "blue")
     end
+
+    pack_replace("tungsten-processing", "blue", "orange")
+    pack_replace("ceramics", "blue", "orange")
   end
 
   -------------------------------------------------------------------------------
@@ -241,11 +244,23 @@ if angelsmods.industries.tech then
       pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
     end
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      pack_replace("fluid-generator-1", "red", "orange")
+      pack_replace("fluid-generator-3", "blue", "orange")
     end
     if settings.startup["bobmods-power-steam"].value == true then
-      pack_replace("bob-steam-engine-3", "green", "orange")
+      pack_replace("bob-steam-engine-4", "blue", "orange")
+      pack_replace("bob-boiler-4", "blue", "orange")
+      pack_replace("bob-oil-boiler-3", "blue", "orange")
       pack_replace("bob-steam-turbine-1", "green", "orange")
+      pack_replace("bob-heat-exchanger-2", "blue", "orange")
+    end
+    if settings.startup["bobmods-power-steam"].value == true or
+       settings.startup["bobmods-power-nuclear"].value == true or
+       settings.startup["bobmods-power-heatsources"].value == true then
+      pack_replace("bob-heat-pipe-2", "blue", "orange")
+    end
+    if settings.startup["bobmods-power-heatsources"].value == true then
+      pack_replace("burner-reactor-2", "blue", "orange")
+      pack_replace("fluid-reactor-2", "blue", "orange")
     end
   end
 
