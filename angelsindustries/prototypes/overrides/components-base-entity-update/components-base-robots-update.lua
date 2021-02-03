@@ -35,34 +35,47 @@ if angelsmods.industries.components then
           {type = "item", name = "cable-harness-3", amount = 2},
           {type = "item", name = "electronic-parts", amount = 4}
         }
-      },
+      }
+    }
+  )
+
+  -- if bob's logistics mod is installed, we want to keep to his recipe
+  if not mods["boblogistics"] then
+    OV.patch_recipes(
       -- base game late robots
       {
-        name = "flying-robot-frame",
-        ingredients = {
-          {"!!"},
-          {type = "item", name = "motor-4", amount = 1},
-          {type = "item", name = "circuit-blue-loaded", amount = 1},
-          {type = "item", name = "battery", amount = 2},
-          {type = "item", name = "construction-frame-4", amount = 1}
+        {
+          name = "flying-robot-frame",
+          ingredients = {
+            {"!!"},
+            {type = "item", name = "motor-4", amount = 1},
+            {type = "item", name = "circuit-blue-loaded", amount = 1},
+            {type = "item", name = "battery", amount = 2},
+            {type = "item", name = "construction-frame-4", amount = 1}
+          }
+        },
+        {
+          name = "construction-robot",
+          ingredients = {
+            {"!!"},
+            {type = "item", name = "flying-robot-frame", amount = 1},
+            {type = "item", name = "angels-construction-robot", amount = 1}
+          }
+        },
+        {
+          name = "logistic-robot",
+          ingredients = {
+            {"!!"},
+            {type = "item", name = "flying-robot-frame", amount = 1},
+            {type = "item", name = "cargo-robot-2", amount = 1}
+          }
         }
-      },
-      {
-        name = "construction-robot",
-        ingredients = {
-          {"!!"},
-          {type = "item", name = "flying-robot-frame", amount = 1},
-          {type = "item", name = "angels-construction-robot", amount = 1}
-        }
-      },
-      {
-        name = "logistic-robot",
-        ingredients = {
-          {"!!"},
-          {type = "item", name = "flying-robot-frame", amount = 1},
-          {type = "item", name = "cargo-robot-2", amount = 1}
-        }
-      },
+      }
+    )
+  end
+
+  OV.patch_recipes(
+    {
       -- roboports
       {
         name = "cargo-box",
