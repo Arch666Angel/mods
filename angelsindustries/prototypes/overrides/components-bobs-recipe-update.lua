@@ -106,12 +106,13 @@ if angelsmods.industries.components then
               { type = "item", name = "circuit-yellow-loaded", amount = 3 },
               { type = "item", name = "motor-5", amount = 1 },
               { type = "item", name = "construction-frame-5", amount = 1 },
-              { type = "item", name = "battery-6", amount = 2 }
+              mods["bobplates"] and
+                { type = "item", name = "battery-6", amount = 2 } or
+                { type = "item", name = "battery-5", amount = 3 }
             }
           }
         }
       )
-
       OV.remove_prereq("robotics", "angels-components-batteries-4")
       OV.remove_prereq("robotics", "electric-engine")
       OV.add_prereq("robotics", "angels-components-mechanical-3")
@@ -129,7 +130,9 @@ if angelsmods.industries.components then
       
       OV.remove_prereq("bob-robotics-4", "ceramics")
       OV.remove_prereq("bob-robotics-4", "battery-3")
-      OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
+      if data.raw.technology["angels-components-batteries-6"] then
+        OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
+      end
       OV.add_prereq("bob-robotics-4", "angels-components-mechanical-5")
       OV.add_prereq("bob-robotics-4", "tech-yellow-circuit")
     end
