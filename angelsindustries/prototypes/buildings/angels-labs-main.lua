@@ -33,7 +33,8 @@ if angelsmods.industries.tech then
     dying_explosion = "medium-explosion",
 
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-    selection_box = {{-3.5, -4.5}, {3.5, 3.5}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    drawing_box   = {{-3.5, -4.5}, {3.5, 3.5}},
 
     light = {intensity = 0.75, size = 8},
 
