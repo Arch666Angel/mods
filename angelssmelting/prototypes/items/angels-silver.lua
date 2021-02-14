@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-silver",
     icon = "__angelssmelting__/graphics/icons/processed-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-silver",
     icon = "__angelssmelting__/graphics/icons/pellet-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "c",
     stack_size = 200
@@ -71,7 +71,7 @@ data:extend(
     type = "item",
     name = "powder-silver",
     icon = "__angelssmelting__/graphics/icons/powder-silver.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "i",
     stack_size = 200

@@ -7,7 +7,7 @@ data:extend(
     type = "item",
     name = "processed-iron",
     icon = "__angelssmelting__/graphics/icons/processed-iron.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "b",
     stack_size = 200
@@ -16,7 +16,7 @@ data:extend(
     type = "item",
     name = "pellet-iron",
     icon = "__angelssmelting__/graphics/icons/pellet-iron.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "c",
     stack_size = 200
@@ -45,7 +45,7 @@ data:extend(
     type = "item",
     name = "powder-iron",
     icon = "__angelssmelting__/graphics/icons/powder-iron.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "g",
     stack_size = 200

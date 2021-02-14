@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-zinc",
     icon = "__angelssmelting__/graphics/icons/processed-zinc.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-zinc",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-zinc",
     icon = "__angelssmelting__/graphics/icons/pellet-zinc.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-zinc",
     order = "c",
     stack_size = 200
@@ -61,7 +61,7 @@ data:extend(
     type = "item",
     name = "powder-zinc",
     icon = "__angelssmelting__/graphics/icons/powder-zinc.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-zinc",
     order = "g",
     stack_size = 200
