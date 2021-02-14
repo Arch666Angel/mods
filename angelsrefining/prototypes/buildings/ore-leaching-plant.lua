@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "ore-leaching-plant",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "ore-leaching",
       order = "a[ore-leaching-plant]",
       place_result = "ore-leaching-plant",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-leaching-plant",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-leaching-plant"},
       fast_replaceable_group = "ore-leaching-plant",
@@ -92,17 +84,14 @@ data:extend(
     {
       type = "item",
       name = "ore-leaching-plant-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.refining.number_tint),
       icon_size = 32,
       subgroup = "ore-leaching",
       order = "b[ore-leaching-plant-2]",
@@ -112,18 +101,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-leaching-plant-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-leaching-plant-2"},
       fast_replaceable_group = "ore-leaching-plant",
@@ -194,18 +179,14 @@ data:extend(
     {
       type = "item",
       name = "ore-leaching-plant-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "ore-leaching",
       order = "c[ore-leaching-plant-3]",
       place_result = "ore-leaching-plant-3",
@@ -214,18 +195,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-leaching-plant-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-leaching-plant-3"},
       fast_replaceable_group = "ore-leaching-plant",

@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "a[ore-sorting-facility]",
       place_result = "ore-sorting-facility",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -91,18 +83,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "b[ore-sorting-facility-2]",
       place_result = "ore-sorting-facility-2",
@@ -111,18 +99,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility-2"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -180,18 +164,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "c[ore-sorting-facility-3]",
       place_result = "ore-sorting-facility-3",
@@ -200,18 +180,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility-3"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -269,18 +245,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "d[ore-sorting-facility-4]",
       place_result = "ore-sorting-facility-4",
@@ -289,18 +261,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility-4"},
       fast_replaceable_group = "ore-sorting-facility",

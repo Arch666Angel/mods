@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "steam-cracker",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-steam",
       order = "a[steam-cracker]-a",
       place_result = "steam-cracker",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "steam-cracker",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "steam-cracker"},
       fast_replaceable_group = "steam-cracker",
@@ -164,18 +156,14 @@ data:extend(
     {
       type = "item",
       name = "steam-cracker-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-steam",
       order = "a[steam-cracker]-b",
       place_result = "steam-cracker-2",
@@ -184,18 +172,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "steam-cracker-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "steam-cracker-2"},
       fast_replaceable_group = "steam-cracker",
@@ -309,18 +293,14 @@ data:extend(
     {
       type = "item",
       name = "steam-cracker-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-steam",
       order = "a[steam-cracker]-c",
       place_result = "steam-cracker-3",
@@ -329,18 +309,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "steam-cracker-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "steam-cracker-3"},
       fast_replaceable_group = "steam-cracker",
@@ -454,18 +430,14 @@ data:extend(
     {
       type = "item",
       name = "steam-cracker-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-steam",
       order = "a[steam-cracker]-d",
       place_result = "steam-cracker-4",
@@ -474,18 +446,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "steam-cracker-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/steam-cracker.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "steam-cracker-4"},
       fast_replaceable_group = "steam-cracker",

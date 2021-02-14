@@ -1,26 +1,26 @@
-angel_ore_3 = {
-		type = "item",
-		name = "angels-ore3",
-		subgroup = "angels-ores",
-		order = "c[angels-ore3]",
-		stack_size = 200
+local angel_ore_3 = {
+  type = "item",
+  name = "angels-ore3",
+  subgroup = "angels-ores",
+  order = "c[angels-ore3]",
+  stack_size = 200
 }
 if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
-	angel_ore_3["icon"] = "__angelsrefining__/graphics/icons/angels-ore3.png"
-	angel_ore_3["icon_size"] = 32
+  angel_ore_3["icon"] = "__angelsrefining__/graphics/icons/angels-ore3.png"
+  angel_ore_3["icon_size"] = 32
 else
-	angel_ore_3["icon"] = "__angelsrefining__/graphics/icons/angels-ore3-HR.png"
-	angel_ore_3["icon_size"] = 64
-	angel_ore_3["pictures"] = {
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-1.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-2.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-3.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-4.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-5.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-6.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-7.png",   scale = 0.25, mipmap_count = 1 },
-      { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-8.png",   scale = 0.25, mipmap_count = 1 },
-    }
+  angel_ore_3["icon"] = "__angelsrefining__/graphics/icons/angels-ore3-HR.png"
+  angel_ore_3["icon_size"] = 64
+  angel_ore_3["pictures"] = {
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-1.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-2.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-3.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-4.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-5.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-6.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-7.png",   scale = 0.25, mipmap_count = 1 },
+    { size = 64, filename = "__angelsrefining__/graphics/icons/angels-ore3/angels-ore3-8.png",   scale = 0.25, mipmap_count = 1 },
+  }
 end
 
 data:extend(

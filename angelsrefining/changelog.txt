@@ -12,6 +12,7 @@ Date: ??
       - NOT just the first thing found.
       - Also updated the remove flag script to do the same thing
     - Sorting Facility 4 no longer has an ingredient limit (defaults to 255)
+    - Added HQ tier numbering icons
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes

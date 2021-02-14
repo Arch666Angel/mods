@@ -727,16 +727,17 @@ OV.patch_recipes(
         {type = "item", name = "thorium-ore", amount = 3}
       },
       {
-        --[[1]] special_vanilla and {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.refining.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          },
+        --[[1]] special_vanilla and angelsmods.functions.add_icon_layer(
+          angelsmods.functions.add_number_icon_layer(
+            {
+              {
+                icon = "__angelsrefining__/graphics/icons/sort-icon.png",
+                icon_size = 32, icon_mipmaps = 1
+              }
+            },
+            1, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
-        } or {
+        ) or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("rutile-ore", 0.5, {10, 10})
         },
@@ -771,16 +772,17 @@ OV.patch_recipes(
         "unused"
       },
       {
-        --[[1]] special_vanilla and {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.refining.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          },
+        --[[1]] special_vanilla and angelsmods.functions.add_icon_layer(
+          angelsmods.functions.add_number_icon_layer(
+            {
+              {
+                icon = "__angelsrefining__/graphics/icons/sort-icon.png",
+                icon_size = 32, icon_mipmaps = 1
+              }
+            },
+            2, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
-        } or {
+        ) or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("tungsten-ore", 0.5, {10, 10})
         },

@@ -4,18 +4,14 @@ data:extend(
     {
       type = "item",
       name = "burner-ore-crusher",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher-burner.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher-burner.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "ore-crusher",
       order = "a[burner-ore-crusher]",
       place_result = "burner-ore-crusher",
@@ -24,18 +20,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "burner-ore-crusher",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher-burner.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher-burner.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.5, result = "burner-ore-crusher"},
       fast_replaceable_group = "ore-crusher",
@@ -101,18 +93,14 @@ data:extend(
     {
       type = "item",
       name = "ore-crusher",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "ore-crusher",
       order = "b[ore-crusher]",
       place_result = "ore-crusher",
@@ -121,18 +109,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-crusher",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-crusher"},
       fast_replaceable_group = "ore-crusher",
@@ -175,18 +159,14 @@ data:extend(
     {
       type = "item",
       name = "ore-crusher-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "ore-crusher",
       order = "c[ore-crusher-2]",
       place_result = "ore-crusher-2",
@@ -195,18 +175,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-crusher-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-crusher-2"},
       fast_replaceable_group = "ore-crusher",
@@ -263,18 +239,14 @@ data:extend(
     {
       type = "item",
       name = "ore-crusher-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       subgroup = "ore-crusher",
       order = "d[ore-crusher-3]",
       place_result = "ore-crusher-3",
@@ -283,18 +255,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-crusher-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-crusher-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-crusher-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-crusher-3"},
       fast_replaceable_group = "ore-crusher",

@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "thermal-bore",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+          {
+            icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "a[thermal-extractor]-a[bore]",
       place_result = "thermal-bore",
@@ -23,8 +19,14 @@ data:extend(
     {
       type = "mining-drill",
       name = "thermal-bore",
-      icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        {
+          {
+            icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
+        },
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "thermal-bore"},
       resource_categories = {"angels-fissure"},
@@ -171,18 +173,14 @@ data:extend(
     {
       type = "item",
       name = "thermal-extractor",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+          {
+            icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "a[thermal-extractor]-b[extractor]",
       place_result = "thermal-extractor",
@@ -191,8 +189,14 @@ data:extend(
     {
       type = "mining-drill",
       name = "thermal-extractor",
-      icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        {
+          {
+            icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
+        },
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "thermal-extractor"},
       resource_categories = {"angels-fissure"},
