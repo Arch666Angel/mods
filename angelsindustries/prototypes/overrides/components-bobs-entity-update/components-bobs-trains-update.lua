@@ -39,7 +39,7 @@ if angelsmods.industries.components then
           {"angels-servo-motor-2", 15},
           {"circuit-green-loaded", 5},
           {"mechanical-parts", 5},
-          {"brass-chest", 1},
+          data.raw.item["brass-chest"] and {"brass-chest", 1} or {"steel-chest",2},
         }),
         swap_ingredients("bob-cargo-wagon-3", {
           {"!!"},
@@ -47,7 +47,7 @@ if angelsmods.industries.components then
           {"angels-servo-motor-4", 15},
           {"circuit-blue-loaded", 5},
           {"mechanical-parts", 5},
-          {"titanium-chest", 1},
+          data.raw.item["titanium-chest"] and {"titanium-chest", 1} or {"steel-chest",4},
         }),
         swap_ingredients("bob-armoured-cargo-wagon", {
           {"!!"},
@@ -55,7 +55,7 @@ if angelsmods.industries.components then
           {"angels-servo-motor-3", 15},
           {"circuit-orange-loaded", 5},
           {"mechanical-parts", 5},
-          {"brass-chest", 1},
+          data.raw.item["brass-chest"] and {"brass-chest", 1} or {"steel-chest",2},
         }),
         swap_ingredients("bob-armoured-cargo-wagon-2", {
           {"!!"},
@@ -63,7 +63,7 @@ if angelsmods.industries.components then
           {"angels-servo-motor-5", 15},
           {"circuit-yellow-loaded", 5},
           {"mechanical-parts", 5},
-          {"titanium-chest", 1},
+          data.raw.item["titanium-chest"] and {"titanium-chest", 1} or {"steel-chest",4},
         }),
         swap_ingredients("bob-fluid-wagon-2", {
           {"!!"},

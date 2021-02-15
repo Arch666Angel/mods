@@ -110,15 +110,42 @@ local function clean_table(t)
   return t
 end
 
-function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, number_tint)
+function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, number_tint, outline_tint)
   -- adds a new layer to icon_layers to show the tier number (with a color)
-  local icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale or 1) / 32
+  -- outline_tint is optional
+  local icon_size_scale = 1
+  local icon_size_shift = {-13, 0}
+
+  icon_layers = icon_layers or {}
+  if #icon_layers == 0 then
+    -- if the icon_layer is empty, we make sure it will be a full sized number after usage in the recipe functions
+    icon_size_scale = 32 / 10.24
+    icon_size_shift = {0, 12 * icon_size_scale}
+  else
+    icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale or 1) / 32
+  end 
+  
   return angelsmods.functions.add_icon_layer(icon_layers, {
-    icon = "__angelsrefining__/graphics/icons/num_"..number_tier..".png",
-    icon_size = 32, icon_mipmaps = 1,
-    tint = unify_tint(number_tint),
-    scale = 0.32 * icon_size_scale,
-    shift = {-12 * icon_size_scale, -12 * icon_size_scale},
+    {
+      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier.."-background.png",
+      icon_size = 64, icon_mipmaps = 2,
+      scale = 0.5 * icon_size_scale,
+      shift = icon_size_shift
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier.."-outline.png",
+      icon_size = 64, icon_mipmaps = 2,
+      tint = unify_tint(outline_tint or {0, 0, 0}),
+      scale = 0.5 * icon_size_scale,
+      shift = icon_size_shift
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier..".png",
+      icon_size = 64, icon_mipmaps = 2,
+      tint = unify_tint(number_tint),
+      scale = 0.5 * icon_size_scale,
+      shift = icon_size_shift
+    }
   })
 end
 
@@ -1006,6 +1033,25 @@ end
 -------------------------------------------------------------------------------
 -- MODIFY FLAGS ---------------------------------------------------------------
 -------------------------------------------------------------------------------
+local building_types = {
+  "assembling-machine",
+  "mining-drill",
+  "lab",
+  "furnace",
+  "offshore-pump",
+  "pump",
+  "rocket-silo",
+  "radar",
+  "beacon",
+  "boiler",
+  "generator",
+  "solar-panel",
+  "accumulator",
+  "reactor",
+  "electric-pole",
+  "wall",
+  "gate"
+}
 function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
     for _, ent in pairs(entity) do
@@ -1013,28 +1059,30 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
     end
     return
   end
-
-  local to_add = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
-  if to_add then
-    if to_add.flags then
-      table.insert(to_add.flags, flag)
-    else
-      to_add.flags = {flag}
+  
+  for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
+    local to_add = data.raw[type][entity] or nil
+    if to_add then
+      if to_add.flags then
+        table.insert(to_add.flags, flag)
+      else
+        to_add.flags = {flag}
+      end
+      if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
+        angelsmods.functions.disable_barreling_recipes(entity)
+      end
     end
-    return
   end
-
-  to_add = data.raw.fluid[entity]
-  if to_add then
-    if flag == "hidden" then
-      to_add.hidden = true
-      angelsmods.functions.disable_barreling_recipes(entity)
-    elseif to_add.flags then
-      table.insert(to_add.flags, flag)
-    else
-      to_add.flags = {flag}
+  --actual entity if not not just an item
+  for _,type in pairs(building_types) do
+    to_add = data.raw[type][entity] --entity-types...
+    if to_add then
+      if to_add.flags then
+        table.insert(to_add.flags, flag)
+      else
+        to_add.flags = {flag}
+      end
     end
-    return
   end
 end
 
@@ -1046,24 +1094,27 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     return
   end
 
-  local to_remove = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
-  if to_remove then
-    for flag_index, flag in pairs(to_remove.flags or {}) do
-      if flag == flag_to_remove then
-        table.remove(to_remove.flags, flag_index)
-        return
+  for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
+     -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
+    local to_remove = data.raw[type][entity] or nil
+    if to_remove then
+      if to_remove.flags then
+        table.insert(to_remove.flags, flag)
+      else
+        to_remove.flags = {flag}
       end
     end
-    return
   end
-
-  to_remove = data.raw.fluid[entity]
-  if to_remove then
-    if flag == "hidden" then
-      to_remove.hidden = false
-      -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
+  --actual entity if not not just an item
+  for _,type in pairs(building_types) do
+    to_remove = data.raw[type][entity] --entity-types...
+    if to_remove then
+      for flag_index, flag in pairs(to_remove.flags or {}) do
+        if flag == flag_to_remove then
+          table.remove(to_remove.flags, flag_index)
+        end
+      end
     end
-    return
   end
 end
 

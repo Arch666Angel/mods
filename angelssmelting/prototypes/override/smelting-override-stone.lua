@@ -24,19 +24,15 @@ OV.patch_recipes({
   { name = "stone-brick", subgroup = "angels-stone", order = "f[stone-brick]" },
   {
     name = "concrete",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__base__/graphics/icons/concrete.png",
-        icon_size = 64
+        {
+          icon = "__base__/graphics/icons/concrete.png",
+          icon_size = 64, icon_mipmaps = 4,
+          scale = 0.5
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.smelting.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      1, angelsmods.smelting.number_tint),
     subgroup = "angels-stone-casting",
     order = "h[concrete]-a" },
   { name = "hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-c" },

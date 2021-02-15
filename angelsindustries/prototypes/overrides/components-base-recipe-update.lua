@@ -73,7 +73,6 @@ if angelsmods.industries.components then
   if mods["bobmodules"] then
     -- bob modules have their own overhaul
   else
-    log(serpent.block(data.raw.recipe["speed-module"]))
     OV.patch_recipes(
       {
         {

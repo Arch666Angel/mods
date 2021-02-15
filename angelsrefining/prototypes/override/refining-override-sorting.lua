@@ -577,12 +577,31 @@ else
       "ore-electro-whinning-cell"
     }
   )
+  --also hide buildings
+  OV.hide_recipe({
+    "ore-powderizer",
+    "ore-powderizer-2",
+    "ore-powderizer-3",
+    "milling-drum",
+    "milling-drum-used",
+    "electro-whinning-cell",
+    "electro-whinning-cell-2",
+    "electro-whinning-cell-3",
+  })
 end
 
 if ore_enabled("ferrous") and ore_enabled("cupric") then
 else
   OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
+end
+if not ore_enabled("ferrous") then
+--I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!
+  OV.disable_recipe({"angelsore8-crushed","angelsore8-crushed-processing"})
+end
+if not ore_enabled("cupric") then
+--I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!
+  OV.disable_recipe({"angelsore9-crushed","angelsore9-crushed-processing"})
 end
 
 -------------------------------------------------------------------------------
@@ -708,16 +727,17 @@ OV.patch_recipes(
         {type = "item", name = "thorium-ore", amount = 3}
       },
       {
-        --[[1]] special_vanilla and {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.refining.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          },
+        --[[1]] special_vanilla and angelsmods.functions.add_icon_layer(
+          angelsmods.functions.add_number_icon_layer(
+            {
+              {
+                icon = "__angelsrefining__/graphics/icons/sort-icon.png",
+                icon_size = 32, icon_mipmaps = 1
+              }
+            },
+            1, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
-        } or {
+        ) or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("rutile-ore", 0.5, {10, 10})
         },
@@ -752,16 +772,17 @@ OV.patch_recipes(
         "unused"
       },
       {
-        --[[1]] special_vanilla and {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.refining.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          },
+        --[[1]] special_vanilla and angelsmods.functions.add_icon_layer(
+          angelsmods.functions.add_number_icon_layer(
+            {
+              {
+                icon = "__angelsrefining__/graphics/icons/sort-icon.png",
+                icon_size = 32, icon_mipmaps = 1
+              }
+            },
+            2, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})
-        } or {
+        ) or {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("tungsten-ore", 0.5, {10, 10})
         },

@@ -49,11 +49,7 @@ data:extend(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
         }
       ),
       order = "a[plastic]-a[liquid]-a"
@@ -77,11 +73,7 @@ data:extend(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
         }
       ),
       order = "a[plastic]-a[liquid]-b"
@@ -105,11 +97,7 @@ data:extend(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_3.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
         }
       ),
       order = "a[plastic]-a[liquid]-c"
@@ -164,11 +152,7 @@ data:extend(
         nil,
         {{255, 225, 155}, {255, 225, 155}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
         }
       ),
       order = "b[resin]-a[liquid]-a"
@@ -192,11 +176,7 @@ data:extend(
         nil,
         {{255, 225, 155}, {255, 225, 155}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
         }
       ),
       order = "b[resin]-a[liquid]-b"
@@ -220,11 +200,7 @@ data:extend(
         nil,
         {{255, 225, 155}, {255, 225, 155}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_3.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
         }
       ),
       order = "b[resin]-a[liquid]-c"
@@ -279,11 +255,7 @@ data:extend(
         nil,
         {{193, 197, 255}, {193, 197, 255}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            icon_size = 32,
-            tint = angelsmods.petrochem.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
         }
       ),
       order = "b[rubber]-a[liquid]"
@@ -587,19 +559,9 @@ data:extend(
       results = {
         {type = "item", name = "explosives", amount = 2}
       },
-      icons = {
-        {
-          icon = "__base__/graphics/icons/explosives.png",
-          icon_size = 64
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("explosives"),
+        2, angelsmods.petrochem.number_tint),
       main_product = "explosives",
       order = "a[explosives]-b"
     },
@@ -620,19 +582,9 @@ data:extend(
         {type = "item", name = "explosives", amount = 3},
         {type = "fluid", name = "water-yellow-waste", amount = 25}
       },
-      icons = {
-        {
-          icon = "__base__/graphics/icons/explosives.png",
-          icon_size = 64
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("explosives"),
+        3, angelsmods.petrochem.number_tint),
       main_product = "explosives",
       order = "a[explosives]-c"
     }

@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "liquifier",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "f[liquifier]",
       place_result = "liquifier",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "liquifier",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "liquifier"},
       fast_replaceable_group = "liquifier",
@@ -106,18 +98,14 @@ data:extend(
     {
       type = "item",
       name = "liquifier-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "g[liquifier-2]",
       place_result = "liquifier-2",
@@ -126,18 +114,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "liquifier-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "liquifier-2"},
       fast_replaceable_group = "liquifier",
@@ -209,18 +193,14 @@ data:extend(
     {
       type = "item",
       name = "liquifier-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "h[liquifier-3]",
       place_result = "liquifier-3",
@@ -229,18 +209,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "liquifier-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "liquifier-3"},
       fast_replaceable_group = "liquifier",
@@ -312,18 +288,14 @@ data:extend(
     {
       type = "item",
       name = "liquifier-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "i[liquifier-4]",
       place_result = "liquifier-4",
@@ -332,18 +304,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "liquifier-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/liquifier.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/liquifier.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "liquifier-4"},
       fast_replaceable_group = "liquifier",

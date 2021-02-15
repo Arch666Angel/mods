@@ -24,7 +24,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   if mods['bobplates'] then
     OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
     angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
-    OV.disable_recipe({"silver-nitrate"})
+    OV.disable_recipe({"silver-nitrate","silver-from-lead"})
   end
 
   if mods['bobplates'] then

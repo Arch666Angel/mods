@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.11
+Version: 0.4.12
 Date: ??
   Changes:
     - Regular mode:
@@ -8,13 +8,29 @@ Date: ??
       - Unlock red and green wires with the (previously empty) electronics technology
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
+    - Moved Bio-tile data to angelsbioprocessing
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
+      - Fixed the vehicle repair roboport would unlock after the vehicle construction port (500)
     - Component mode:
       - Fixed that some science technologies would unlock block components
+      - Fixed boblogistics (inserter overhaul off) recipes to use angels components, not bobs
+      - Fixed boblogistics (w/out bobplates) calling the wrong tin plate (453)
+        - Thanks to @lavafl0w on git for the partial fix which i built off
+      - Fixed battery 6 use and tech when not active under some conditions (453)
     - Science mode:
       - Fixed the technologies from the storage addon had the wrong data core
+      - Fixed the base game lab was visible in the bonus UI (505)
+      - Fixed science tiers on steam engines and boilers of bobs power (519)
+      - Fixed science tiers on heat pipes and heat sources of bobs power (519)
+      - Fixed science tiers on fluid burning generators of bobs power (502)
+      - Fixed the selection and collision box of the main lab did not align (539)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.11
+Date: 11.01.2021
+  Bugfixes:
+    - Fixed crash related to ghosting tech unlocks not conforming to standards (516)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.10
 Date: 26.11.2020

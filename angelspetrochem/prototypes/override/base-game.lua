@@ -81,7 +81,7 @@ local function remove_item(tab, liquid)
     end
   end
 end
-
+--do we want to add all "thermal fluids" to this list... in particular, in exploration?
 local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
 remove_item(turret_params, {"heavy-oil", "light-oil"})
 table.insert(turret_params, {type = "liquid-naphtha", damage_modifier = 1.05})
@@ -135,3 +135,14 @@ OV.add_prereq("rocketry", "rocket-booster-1")
 
 angelsmods.functions.move_item("cliff-explosives", "petrochem-solids", "b[petrochem-solids-2]-b[cliff-explosives]", "capsule")
 angelsmods.functions.move_item("cliff-explosives", "petrochem-solids-2", "a[explosives]-d", "recipe")
+--hide disabled vanilla recipes
+OV.hide_recipe({
+  "basic-oil-processing",
+  "advanced-oil-processing",
+  "solid-fuel-from-light-oil",
+  "solid-fuel-from-petroleum-gas",
+  "solid-fuel-from-heavy-oil",
+  "light-oil-cracking",
+  "heavy-oil-cracking",
+  "sulfuric-acid"
+})

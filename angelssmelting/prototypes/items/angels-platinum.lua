@@ -17,7 +17,7 @@ data:extend(
     type = "item",
     name = "processed-platinum",
     icon = "__angelssmelting__/graphics/icons/processed-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "b",
     stack_size = 200
@@ -26,7 +26,7 @@ data:extend(
     type = "item",
     name = "pellet-platinum",
     icon = "__angelssmelting__/graphics/icons/pellet-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "c",
     stack_size = 200
@@ -69,7 +69,7 @@ data:extend(
     type = "item",
     name = "powder-platinum",
     icon = "__angelssmelting__/graphics/icons/powder-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "g",
     stack_size = 200

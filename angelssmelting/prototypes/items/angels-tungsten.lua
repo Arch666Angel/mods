@@ -17,7 +17,7 @@ data:extend(
     type = "item",
     name = "processed-tungsten",
     icon = "__angelssmelting__/graphics/icons/processed-tungsten.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tungsten",
     order = "b",
     stack_size = 200
@@ -26,7 +26,7 @@ data:extend(
     type = "item",
     name = "pellet-tungsten",
     icon = "__angelssmelting__/graphics/icons/pellet-tungsten.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tungsten",
     order = "c",
     stack_size = 200
@@ -84,7 +84,7 @@ data:extend(
     type = "item",
     name = "powder-tungsten",
     icon = "__angelssmelting__/graphics/icons/powder-tungsten.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tungsten",
     order = "h",
     stack_size = 200
@@ -94,7 +94,7 @@ data:extend(
     type = "item",
     name = "casting-powder-tungsten",
     icon = "__angelssmelting__/graphics/icons/powder-tungsten-mixture.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tungsten-casting",
     order = "i",
     stack_size = 200

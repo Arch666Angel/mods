@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-nickel",
     icon = "__angelssmelting__/graphics/icons/processed-nickel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-nickel",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-nickel",
     icon = "__angelssmelting__/graphics/icons/pellet-nickel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-nickel",
     order = "c",
     stack_size = 200
@@ -61,7 +61,7 @@ data:extend(
     type = "item",
     name = "powder-nickel",
     icon = "__angelssmelting__/graphics/icons/powder-nickel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-nickel",
     order = "g",
     stack_size = 200

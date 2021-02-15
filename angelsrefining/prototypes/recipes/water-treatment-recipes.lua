@@ -49,6 +49,7 @@ data:extend(
       subgroup = "water-treatment",
       energy_required = 1,
       enabled = false,
+      hidden = true,
       ingredients = {
         {type = "fluid", name = "thermal-water", amount = 50}
       },

@@ -6,6 +6,10 @@ Date: ??
     - Disabled bobs valve as angels valves have an identical purpose with more features
     - Added fuel values for vanilla fuels (for compatibility) (494)
     - Removed obsolete inventory slots in the flare stack and converter valve
+    - Added fuel value containing fluids to the flamethrower turret accepted fluids
+      - Damage multiplier is a function of fuel value ratio with methane for "new" fuels
+  Bugfixes:
+    - Fixed that the converter valve could not be disabled (507)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.17
 Date: 26.11.2020

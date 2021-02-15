@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-tin",
     icon = "__angelssmelting__/graphics/icons/processed-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-tin",
     icon = "__angelssmelting__/graphics/icons/pellet-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin",
     order = "c",
     stack_size = 200
@@ -43,7 +43,7 @@ data:extend(
     type = "item",
     name = "powder-tin",
     icon = "__angelssmelting__/graphics/icons/powder-tin.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-tin",
     order = "e",
     stack_size = 200

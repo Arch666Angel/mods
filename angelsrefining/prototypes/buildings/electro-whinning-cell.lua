@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "electro-whinning-cell",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "ore-whinning",
       order = "d",
       place_result = "electro-whinning-cell",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "electro-whinning-cell",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "electro-whinning-cell"},
       fast_replaceable_group = "electro-whinning-cell",
@@ -122,18 +114,14 @@ data:extend(
     {
       type = "item",
       name = "electro-whinning-cell-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "ore-whinning",
       order = "e",
       place_result = "electro-whinning-cell-2",
@@ -142,18 +130,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "electro-whinning-cell-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "electro-whinning-cell-2"},
       fast_replaceable_group = "electro-whinning-cell",
@@ -241,18 +225,14 @@ data:extend(
     {
       type = "item",
       name = "electro-whinning-cell-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "ore-whinning",
       order = "f",
       place_result = "electro-whinning-cell-3",
@@ -261,18 +241,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "electro-whinning-cell-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "electro-whinning-cell-3"},
       fast_replaceable_group = "electro-whinning-cell",

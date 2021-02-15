@@ -28,6 +28,16 @@ if mods["bobplates"] then
       "air-compressor-4"
     }
   )
+  
+  OV.hide_recipe(
+    {
+      "air-pump",
+      "air-pump-2",
+      "air-pump-3",
+      "air-pump-4",
+      "void-pump",
+    }
+  )
 end
 
 -------------------------------------------------------------------------------
@@ -156,7 +166,28 @@ if mods["bobplates"] then
   move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
   OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
-
+  --hide disabled
+  OV.hide_recipe(
+    {
+      "bob-oil-processing",
+      "hydrogen-sulfide",
+      "sulfur-dioxide",
+      "coal-cracking",
+      "hydrogen-chloride",
+      "petroleum-gas-cracking",
+      "nitric-acid",
+      "nitrogen-dioxide",
+      "nitrogen",
+      "sulfuric-acid-2",
+      "sulfuric-acid-3",
+      "bob-liquid-air",
+      "solid-fuel-from-hydrogen",
+      "sulfur",
+      "sulfur-2",
+      "sulfur-3",
+      "carbon",
+    }
+  )
   -- plastics -----------------------------------------------------------------
   OV.remove_unlock("plastics", "plastic-bar")
 
@@ -196,36 +227,30 @@ if mods["bobplates"] then
         },
         subgroup = "petrochem-solids",
         order = "b[resin]-b[solid]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/resin.png"
+            {
+              icon = "__bobplates__/graphics/icons/resin.png",
+              icon_size = 32, icon_mipmaps = 1,
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.petrochem.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32
+          1, angelsmods.petrochem.number_tint),
       },
       {
         name = "solid-resin",
         order = "b[resin]-b[solid]-b",
-        icons = {
+        icons = mods["angelsbioprocessing"] and {
           {
-            icon = "__bobplates__/graphics/icons/resin.png"
+            icon = "__bobplates__/graphics/icons/resin.png",
+            icon_size = 32, icon_mipmaps = 1,
           },
-          not mods["angelsbioprocessing"] and
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              tint = angelsmods.petrochem.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            } or
-            nil
+        } or angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__bobplates__/graphics/icons/resin.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        icon_size = 32
+        2, angelsmods.petrochem.number_tint),
       }
     }
   )
@@ -256,35 +281,27 @@ if mods["bobplates"] then
         },
         subgroup = "petrochem-solids-2",
         order = "b[rubber]-b[solid]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/rubber.png"
+            {
+              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon_size = 32, icon_mipmaps = 1,
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.petrochem.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32
+          1, angelsmods.petrochem.number_tint),
       },
       {
         name = "solid-rubber",
         subgroup = "petrochem-solids-2",
         order = "b[rubber]-b[solid]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/rubber.png"
+            {
+              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon_size = 32, icon_mipmaps = 1,
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.petrochem.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32
+          2, angelsmods.petrochem.number_tint),
       }
     }
   )

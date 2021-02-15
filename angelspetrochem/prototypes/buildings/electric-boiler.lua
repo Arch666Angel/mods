@@ -10,18 +10,14 @@ data:extend(
     {
       type = "item",
       name = "angels-electric-boiler",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.petrochem.number_tint),
       subgroup = "boiler-building",
       order = "c[electric-boiler]-a",
       place_result = "angels-electric-boiler",
@@ -30,18 +26,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-electric-boiler",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-electric-boiler"},
       fast_replaceable_group = "angels-electric-boiler",
@@ -168,18 +160,14 @@ data:extend(
     {
       type = "item",
       name = "angels-electric-boiler-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       subgroup = "boiler-building",
       order = "c[electric-boiler]-b",
       place_result = "angels-electric-boiler-2",
@@ -188,18 +176,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-electric-boiler-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-electric-boiler-2"},
       fast_replaceable_group = "angels-electric-boiler",
@@ -326,18 +310,14 @@ data:extend(
     {
       type = "item",
       name = "angels-electric-boiler-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       subgroup = "boiler-building",
       order = "c[electric-boiler]-c",
       place_result = "angels-electric-boiler-3",
@@ -346,18 +326,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-electric-boiler-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/electric-boiler.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-electric-boiler-3"},
       fast_replaceable_group = "angels-electric-boiler",

@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "powder-steel",
     icon = "__angelssmelting__/graphics/icons/powder-steel.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "h",
     stack_size = 200

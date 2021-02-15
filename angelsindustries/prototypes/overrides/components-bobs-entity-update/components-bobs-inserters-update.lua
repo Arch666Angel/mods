@@ -14,7 +14,8 @@ if angelsmods.industries.components then
               {"!!"},
               {type = "item", name = "inserter", amount = 1},
               {type = "item", name = "circuit-grey", amount = 2},
-              angelsmods.trigger.smelting_products["tin"].plate and {type = "item", name = "tin-plate", amount = 2} or nil
+              angelsmods.trigger.smelting_products["tin"].plate and
+                {type = "item", name = "angels-plate-tin", amount = 2} or nil
             }
           },
           {
@@ -109,7 +110,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-orange-loaded", amount = 1},
               {type = "item", name = "angels-servo-motor-3", amount = 2},
               {type = "item", name = "angels-plating", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
@@ -120,7 +122,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-orange-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-3", amount = 1},
               {type = "item", name = "angels-plating", amount = 4},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
@@ -131,7 +134,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-blue-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-4", amount = 3},
               {type = "item", name = "angels-plating", amount = 8},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
@@ -142,7 +146,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-blue-loaded", amount = 3},
               {type = "item", name = "angels-servo-motor-4", amount = 2},
               {type = "item", name = "angels-plating", amount = 10},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 1} or nil
             }
           },
           {
@@ -153,7 +158,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-blue-loaded", amount = 1},
               {type = "item", name = "angels-servo-motor-4", amount = 2},
               {type = "item", name = "angels-strut", amount = 2},
-              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
+              data.raw.item["nitinol-bearing"] and
+                {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           },
           {
@@ -164,7 +170,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-blue-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-4", amount = 1},
               {type = "item", name = "angels-strut", amount = 4},
-              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
+              data.raw.item["nitinol-bearing"] and
+                {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           },
           {
@@ -175,7 +182,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-yellow-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-5", amount = 3},
               {type = "item", name = "angels-strut", amount = 8},
-              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
+              data.raw.item["nitinol-bearing"] and
+                {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           },
           {
@@ -186,7 +194,8 @@ if angelsmods.industries.components then
               {type = "item", name = "circuit-yellow-loaded", amount = 3},
               {type = "item", name = "angels-servo-motor-5", amount = 2},
               {type = "item", name = "angels-strut", amount = 10},
-              data.raw.item["nitinol-bearing"] and {type = "item", name = "nitinol-bearing", amount = 1} or nil
+              data.raw.item["nitinol-bearing"] and
+                {type = "item", name = "nitinol-bearing", amount = 1} or nil
             }
           }
         }
@@ -228,8 +237,10 @@ if angelsmods.industries.components then
               {type = "item", name = "fast-inserter", amount = 1},
               {type = "item", name = "circuit-orange-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-3", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and
+                {type = "item", name = "angels-spring", amount = 1} or nil
             }
           },
           {
@@ -239,8 +250,10 @@ if angelsmods.industries.components then
               {type = "item", name = "stack-inserter", amount = 1},
               {type = "item", name = "circuit-orange-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-3", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and
+                {type = "item", name = "angels-spring", amount = 1} or nil
             }
           },
           {
@@ -250,8 +263,10 @@ if angelsmods.industries.components then
               {type = "item", name = "fast-inserter", amount = 1},
               {type = "item", name = "circuit-blue-loaded", amount = 1},
               {type = "item", name = "angels-servo-motor-4", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil,
-              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 1} or nil,
+              data.raw.item["titanium-gear-wheel"] and
+                {type = "item", name = "angels-spring", amount = 1} or nil
             }
           },
           {
@@ -261,8 +276,10 @@ if angelsmods.industries.components then
               {type = "item", name = "filter-inserter", amount = 1},
               {type = "item", name = "circuit-blue-loaded", amount = 1},
               {type = "item", name = "angels-servo-motor-4", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 1} or nil,
-              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 1} or nil,
+              data.raw.item["titanium-gear-wheel"] and
+                {type = "item", name = "angels-spring", amount = 1} or nil
             }
           },
           {
@@ -272,8 +289,10 @@ if angelsmods.industries.components then
               {type = "item", name = "stack-inserter", amount = 1},
               {type = "item", name = "circuit-yellow-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-5", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and
+                {type = "item", name = "angels-spring", amount = 1} or nil
             }
           },
           {
@@ -283,8 +302,10 @@ if angelsmods.industries.components then
               {type = "item", name = "stack-filter-inserter", amount = 1},
               {type = "item", name = "circuit-yellow-loaded", amount = 2},
               {type = "item", name = "angels-servo-motor-5", amount = 2},
-              data.raw.item["titanium-bearing"] and {type = "item", name = "titanium-bearing", amount = 6} or nil,
-              data.raw.item["titanium-gear-wheel"] and {type = "item", name = "titanium-gear-wheel", amount = 1} or nil
+              data.raw.item["titanium-bearing"] and
+                {type = "item", name = "titanium-bearing", amount = 6} or nil,
+              data.raw.item["titanium-gear-wheel"] and
+                {type = "item", name = "angels-spring", amount = 1} or nil
             }
           }
         }

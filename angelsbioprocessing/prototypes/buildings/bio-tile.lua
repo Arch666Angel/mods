@@ -5,11 +5,22 @@ data:extend(
     {
       type = "item",
       name = "bio-tile",
-      icon = "__angelssmelting__/graphics/icons/brick-clay.png",
-      icon_size = 32,
+      icons = { --temp use base version of landfill as the icon
+        {
+          icon= "__base__/graphics/technology/landfill.png",
+          icon_size = 256,
+          icon_mipmaps = 4
+        },
+        {
+          icon = "__angelssmelting__/graphics/icons/brick-clay.png",
+          icon_size = 32,
+          scale = 0.4375 * 1.6,
+          shift = {9, 9}
+        }
+      },
       subgroup = "angels-stone",
       order = "f",
-      stack_size = 1000,
+      stack_size = angelsmods.trigger.pavement_stack_size,
       place_as_tile = {
         result = "bio-tile",
         condition_size = 4,
@@ -26,42 +37,42 @@ data:extend(
       walking_speed_modifier = 1.5,
       layer = 80,
       decorative_removal_probability = 1,
-      pollution_absorption_per_second = 0,
+      pollution_absorption_per_second = 0.000008,
       variants = {
         main = {
           {
-            picture = "__angelsindustries__/graphics/entity/tile-bio/bio-tile-small.png",
+            picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-small.png",
             count = 16,
             scale = 0.5,
             size = 1
           }
         },
         inner_corner = {
-          picture = "__angelsindustries__/graphics/entity/tile-bio/bio-tile-corner-inner.png",
+          picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-inner.png",
           width = 128,
           height = 128,
           scale = 0.5,
           count = 1
         },
         outer_corner = {
-          picture = "__angelsindustries__/graphics/entity/tile-bio/bio-tile-corner-outer.png",
+          picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-outer.png",
           width = 128,
           height = 128,
           scale = 0.5,
           count = 1
         },
         side = {
-          picture = "__angelsindustries__/graphics/entity/tile-bio/bio-tile-side.png",
+          picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-side.png",
           scale = 0.5,
           count = 4
         },
         u_transition = {
-          picture = "__angelsindustries__/graphics/entity/tile-bio/bio-tile-corner-u.png",
+          picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-u.png",
           scale = 0.5,
           count = 1
         },
         o_transition = {
-          picture = "__angelsindustries__/graphics/entity/tile-bio/bio-tile-corner-o.png",
+          picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-o.png",
           scale = 0.5,
           count = 1
         }

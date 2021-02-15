@@ -7,18 +7,14 @@ local move_item = angelsmods.functions.move_item
 move_item("chemical-plant", "petrochem-buildings-chemical-plant", "a[regular]-aa[vanilla]")
 data.raw["item"]["chemical-plant"].icon = nil
 data.raw["item"]["chemical-plant"].icon_size = 32
-data.raw["item"]["chemical-plant"].icons = {
+data.raw["item"]["chemical-plant"].icons = angelsmods.functions.add_number_icon_layer(
   {
-    icon = "__base__/graphics/icons/chemical-plant.png",
-    icon_size = 64
+    {
+      icon = "__base__/graphics/icons/chemical-plant.png",
+      icon_size = 64, icon_mipmaps = 4,
+    }
   },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
+  1, angelsmods.petrochem.number_tint)
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
 angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 
