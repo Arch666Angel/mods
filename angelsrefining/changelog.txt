@@ -11,6 +11,7 @@ Date: ??
     - Tweaked the lib to hide all objects (entities, items, fluids, tools etc) when a flag is set
       - NOT just the first thing found.
       - Also updated the remove flag script to do the same thing
+    - Tweaked the lib to show icons next to the autoplace controls
     - Sorting Facility 4 no longer has an ingredient limit (defaults to 255)
     - Added HQ tier numbering icons
   Bugfixes:
