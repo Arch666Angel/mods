@@ -15,18 +15,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-seed", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-seed"),
+        1, angelsmods.bioprocessing.number_tint),
       order = "a[generator]-a"
     },
     {
@@ -44,18 +35,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-seed", amount = 6}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-seed"),
+        2, angelsmods.bioprocessing.number_tint),
       order = "a[generator]-b"
     },
     {
@@ -74,18 +56,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-seed", amount = 8}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-seed"),
+        3, angelsmods.bioprocessing.number_tint),
       order = "a[generator]-c"
     },
     -- SPECIAL TREE GENERATION
@@ -141,20 +114,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-tree", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-tree"),
+        1, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
@@ -176,20 +138,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-tree", amount = 6}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-tree"),
+        2, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
@@ -212,20 +163,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-tree", amount = 8}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-tree"),
+        3, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 100 / 255, a = 1}
       },
@@ -302,20 +242,9 @@ data:extend(
       },
       main_product = "wood",
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__base__/graphics/icons/wood.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("wood"),
+        1, angelsmods.bioprocessing.number_tint),
       order = "a[wood]-b[iron-saw]" -- order a[wood]-a[manual] reserved for manual wood crafting (bob greenhouse)
     },
     {
@@ -335,20 +264,9 @@ data:extend(
       },
       main_product = "wood",
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__base__/graphics/icons/wood.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("wood"),
+        2, angelsmods.bioprocessing.number_tint),
       order = "a[wood]-c[crystal-tipped-saw]"
     },
     {
@@ -368,20 +286,9 @@ data:extend(
       },
       main_product = "wood",
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__base__/graphics/icons/wood.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("wood"),
+        3, angelsmods.bioprocessing.number_tint),
       order = "a[wood]-d[crystal-full-saw]"
     },
     -- TEMPERATE WOOD GENERATOR
@@ -399,18 +306,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-temperate-seed", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-temperate-seed"),
+        1, angelsmods.bioprocessing.number_tint),
       order = "a[generator]-a"
     },
     {
@@ -428,18 +326,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-temperate-seed", amount = 6}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-temperate-seed"),
+        2, angelsmods.bioprocessing.number_tint),
       order = "a[generator]-b"
     },
     {
@@ -458,18 +347,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-temperate-seed", amount = 8}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-temperate-seed"),
+        3, angelsmods.bioprocessing.number_tint),
       order = "a[generator]-c"
     },
     -- TEMPERATE WOOD ARBORETUM
@@ -526,20 +406,9 @@ data:extend(
         {type = "item", name = "bio-resin", amount = 4},
         {type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("temperate-tree"),
+        1, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
@@ -562,20 +431,9 @@ data:extend(
         {type = "item", name = "bio-resin", amount = 7},
         {type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("temperate-tree"),
+        2, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
@@ -686,18 +544,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-swamp-seed", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-swamp-seed"),
+        1, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
@@ -718,18 +567,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-swamp-seed", amount = 6}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-swamp-seed"),
+        2, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
@@ -751,18 +591,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-swamp-seed", amount = 8}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-swamp-seed"),
+        3, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
@@ -822,20 +653,9 @@ data:extend(
         {type = "item", name = "bio-plastic", amount = 4},
         {type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("swamp-tree"),
+        1, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
@@ -858,20 +678,9 @@ data:extend(
         {type = "item", name = "bio-plastic", amount = 7},
         {type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("swamp-tree"),
+        2, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 0 / 255, g = 0 / 255, b = 100 / 255, a = 1}
       },
@@ -935,18 +744,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-desert-seed", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-desert-seed"),
+        1, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
@@ -967,18 +767,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-desert-seed", amount = 6}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-desert-seed"),
+        2, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
@@ -1000,18 +791,9 @@ data:extend(
       results = {
         {type = "item", name = "tree-desert-seed", amount = 8}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-desert-seed.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("tree-desert-seed"),
+        3, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
@@ -1071,20 +853,9 @@ data:extend(
         {type = "item", name = "bio-rubber", amount = 4},
         {type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("desert-tree"),
+        1, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
@@ -1107,20 +878,9 @@ data:extend(
         {type = "item", name = "bio-rubber", amount = 7},
         {type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
-          icon_size = 64,
-          scale = 0.5
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("desert-tree"),
+        2, angelsmods.bioprocessing.number_tint),
       crafting_machine_tint = {
         primary = {r = 100 / 255, g = 100 / 255, b = 0 / 255, a = 1}
       },
