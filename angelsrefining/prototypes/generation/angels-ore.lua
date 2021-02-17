@@ -175,9 +175,9 @@ angelsmods.functions.add_resource(
     output_name = "thermal-water",
     output_min = 20,
     output_max = 20,
-    icon = "__base__/graphics/icons/crude-oil-resource.png",
+    icon = "__angelsrefining__/graphics/icons/fissure.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    icon_mipmaps = 1,
     autoplace = {
       starting_area = false,
       --resource_index = 27,
