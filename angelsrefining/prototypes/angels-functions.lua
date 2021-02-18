@@ -2,7 +2,7 @@
 --GET ICON/ICONS FROM FLUID/ITEM ----------------------------------------------
 -------------------------------------------------------------------------------
 local function get_icons(object_name)
-  for _, prototype in pairs({"item", "fluid", "capsule"}) do
+  for _, prototype in pairs({"item", "fluid", "ammo", "capsule"}) do
     local object = data.raw[prototype][object_name]
     if object then
       if object.icon then
@@ -114,28 +114,22 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
   -- adds a new layer to icon_layers to show the tier number (with a color)
   -- outline_tint is optional
   local icon_size_scale = 1
-  local icon_size_shift = {-13, 0}
+  local icon_size_shift = {0, 0}
 
   icon_layers = icon_layers or {}
   if #icon_layers == 0 then
     -- if the icon_layer is empty, we make sure it will be a full sized number after usage in the recipe functions
     icon_size_scale = 32 / 10.24
-    icon_size_shift = {0, 12 * icon_size_scale}
+    icon_size_shift = {11.5 * icon_size_scale, 12 * icon_size_scale}
   else
     icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale or 1) / 32
   end 
   
   return angelsmods.functions.add_icon_layer(icon_layers, {
     {
-      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier.."-background.png",
-      icon_size = 64, icon_mipmaps = 2,
-      scale = 0.5 * icon_size_scale,
-      shift = icon_size_shift
-    },
-    {
       icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier.."-outline.png",
       icon_size = 64, icon_mipmaps = 2,
-      tint = unify_tint(outline_tint or {0, 0, 0}),
+      tint = unify_tint(outline_tint or {0, 0, 0, 1}),
       scale = 0.5 * icon_size_scale,
       shift = icon_size_shift
     },

@@ -32,13 +32,7 @@ if angelsmods.industries.overhaul then
           {type = "item", name = "uranium-235", amount = 15} --halve
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          {
-            {
-              icon = "__base__/graphics/icons/atomic-bomb.png",
-              icon_size = 64, icon_mipmaps = 4,
-              scale = 0.5
-            },
-          },
+          angelsmods.functions.get_object_icons("atomic-bomb"),
           1, angelsmods.industries.number_tint)
       },
       {

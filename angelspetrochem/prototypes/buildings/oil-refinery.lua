@@ -12,19 +12,15 @@ data:extend(
     {
       type = "item",
       name = "oil-refinery-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__base__/graphics/icons/oil-refinery.png",
-          icon_size = 64
+          {
+            icon = "__base__/graphics/icons/oil-refinery.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-oil-refinery",
       order = "b[oil-refinery]-b",
       place_result = "oil-refinery-2",
@@ -33,19 +29,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "oil-refinery-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__base__/graphics/icons/oil-refinery.png",
-          icon_size = 64
+          {
+            icon = "__base__/graphics/icons/oil-refinery.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "oil-refinery-2"},
       fast_replaceable_group = "oil-refinery",
@@ -179,19 +171,15 @@ data:extend(
     {
       type = "item",
       name = "oil-refinery-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__base__/graphics/icons/oil-refinery.png",
-          icon_size = 64
+          {
+            icon = "__base__/graphics/icons/oil-refinery.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-oil-refinery",
       order = "b[oil-refinery]-c",
       place_result = "oil-refinery-3",
@@ -200,19 +188,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "oil-refinery-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__base__/graphics/icons/oil-refinery.png",
-          icon_size = 64
+          {
+            icon = "__base__/graphics/icons/oil-refinery.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "oil-refinery-3"},
       fast_replaceable_group = "oil-refinery",
@@ -346,19 +330,15 @@ data:extend(
     {
       type = "item",
       name = "oil-refinery-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__base__/graphics/icons/oil-refinery.png",
-          icon_size = 64
+          {
+            icon = "__base__/graphics/icons/oil-refinery.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-oil-refinery",
       order = "b[oil-refinery]-d",
       place_result = "oil-refinery-4",
@@ -367,19 +347,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "oil-refinery-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__base__/graphics/icons/oil-refinery.png",
-          icon_size = 64
+          {
+            icon = "__base__/graphics/icons/oil-refinery.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "oil-refinery-4"},
       fast_replaceable_group = "oil-refinery",

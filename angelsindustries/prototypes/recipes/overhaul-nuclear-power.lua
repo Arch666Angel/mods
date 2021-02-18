@@ -797,17 +797,9 @@ data:extend(
       name = "angels-atomic-bomb",
       enabled = false,
       energy_required = 50,
-      icons={
-        {icon = "__base__/graphics/icons/atomic-bomb.png",icon_size = 64, icon_mipmaps = 4},
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.industries.number_tint,
-          icon_size=32,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size=32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("atomic-bomb"),
+        2, angelsmods.industries.number_tint),
       ingredients =
       {
         {type = "item", name = "rocket-control-unit", amount = 10},
@@ -827,17 +819,9 @@ data:extend(
       category = "advanced-chemistry",
       enabled = false,
       energy_required = 50,
-      icons={
-        {icon = "__base__/graphics/icons/atomic-bomb.png",icon_size = 64, icon_mipmaps = 4},
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.industries.number_tint,
-          scale = 0.32,
-          icon_size=32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size=32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("atomic-bomb"),
+        3, angelsmods.industries.number_tint),
       ingredients =
       {
         {type = "item", name = "rocket-control-unit", amount = 20},
