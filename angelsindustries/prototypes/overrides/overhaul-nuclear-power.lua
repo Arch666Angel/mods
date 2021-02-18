@@ -31,18 +31,15 @@ if angelsmods.industries.overhaul then
         ingredients = {
           {type = "item", name = "uranium-235", amount = 15} --halve
         },
-        icons = {
-          {icon = "__base__/graphics/icons/atomic-bomb.png", icon_size = 64, icon_mipmaps = 4},
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            icon_size = 32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
-        icon = nil
+            {
+              icon = "__base__/graphics/icons/atomic-bomb.png",
+              icon_size = 64, icon_mipmaps = 4,
+              scale = 0.5
+            },
+          },
+          1, angelsmods.industries.number_tint)
       },
       {
         name = "uranium-fuel-cell",

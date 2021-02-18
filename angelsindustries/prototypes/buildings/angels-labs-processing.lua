@@ -13,18 +13,14 @@ if angelsmods.industries.tech then
       {
         type = "item",
         name = "angels-processing-lab-1",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+            {
+              icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+              icon_size = 32, icon_mipmaps = 1
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
+          1, angelsmods.industries.number_tint),
         subgroup = "angels-labs-1",
         order = "f",
         place_result = "angels-processing-lab-1",
@@ -43,18 +39,14 @@ if angelsmods.industries.tech then
             "token-bio",
           }}
         },
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+            {
+              icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+              icon_size = 32, icon_mipmaps = 1
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
+          1, angelsmods.industries.number_tint),
         flags = {"placeable-player", "player-creation"},
         minable = {mining_time = 1, result = "angels-processing-lab-1"},
         max_health = 150,
@@ -108,18 +100,14 @@ if angelsmods.industries.tech then
       {
         type = "item",
         name = "angels-processing-lab-2",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+            {
+              icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+              icon_size = 32, icon_mipmaps = 1
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
+          2, angelsmods.industries.number_tint),
         subgroup = "angels-labs-2",
         order = "f",
         place_result = "angels-processing-lab-2",
@@ -137,18 +125,14 @@ if angelsmods.industries.tech then
             "token-bio",
           }}
         },
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+            {
+              icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+              icon_size = 32, icon_mipmaps = 1
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
+          2, angelsmods.industries.number_tint),
         flags = {"placeable-player", "player-creation"},
         minable = {mining_time = 1, result = "angels-processing-lab-2"},
         max_health = 150,
@@ -197,18 +181,14 @@ if angelsmods.industries.tech then
       {
         type = "item",
         name = "angels-processing-lab-3",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+            {
+              icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+              icon_size = 32, icon_mipmaps = 1
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_3.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
+          3, angelsmods.industries.number_tint),
         subgroup = "angels-labs-3",
         order = "f",
         place_result = "angels-processing-lab-3",
@@ -225,18 +205,14 @@ if angelsmods.industries.tech then
             "token-bio",
           }}
         },
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png"
+            {
+              icon = "__angelsindustries__/graphics/icons/processing-lab-ico.png",
+              icon_size = 32, icon_mipmaps = 1
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_3.png",
-            tint = angelsmods.industries.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32,
+          3, angelsmods.industries.number_tint),
         flags = {"placeable-player", "player-creation"},
         minable = {mining_time = 1, result = "angels-processing-lab-3"},
         max_health = 150,
