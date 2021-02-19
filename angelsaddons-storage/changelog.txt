@@ -9,6 +9,7 @@ Date: ??
     - Changed some recipes of logistics silos when playing with angels industries (340)
     - Changed some recipes of logistics warehouses when playing with angels industries (340)
     - Changed slot count for active providers to match the storage variant
+    - Changed ore silo pick-up result to be just the regular silo
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 27.11.2020
