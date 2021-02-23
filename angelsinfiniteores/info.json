@@ -17,6 +17,7 @@
     "? UraniumPower >= 0.6.3",
     "? Nucular >= 0.2.0",
     "? dark-matter-replicators >= 0.6.1",
+    "(?) dark-matter-replicators-18 >= 1.1.0",
     "? pycoalprocessing >= 1.3.4",
     "? pyrawores >= 1.5.2",
     "? pypetroleumhandling >= 1.2.4"
