@@ -82,7 +82,7 @@ data:extend(
           {
             {"__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72}
           }, "ill"
-        ), 1, angelsmods.smelting.number_tint),
+        ), 2, angelsmods.smelting.number_tint),
       order = "d[liquid-titanium-tetrachloride]-b"
     },
     {
