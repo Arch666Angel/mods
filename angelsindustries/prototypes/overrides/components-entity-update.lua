@@ -11,10 +11,11 @@ if angelsmods.industries.components then
   replace_gen_mats()
   OV.execute()
 end
+-- enforce angels entity fixes
+require "prototypes.overrides.components-angels-entity-update.components-angels-building-updates"
 
 -- custom fixes base game
 require "prototypes.overrides.components-base-entity-update.components-base-other-entities-update"
-
 require "prototypes.overrides.components-base-entity-update.components-base-inserters-update"
 require "prototypes.overrides.components-base-entity-update.components-base-robots-update"
 OV.execute()
