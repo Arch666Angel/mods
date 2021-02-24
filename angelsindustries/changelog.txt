@@ -15,7 +15,7 @@ Date: ??
       - Fixed the vehicle repair roboport would unlock after the vehicle construction port (500)
     - Component mode:
       - Fixed that some science technologies would unlock block components
-      - Fixed boblogistics (inserter overhaul off) recipes to use angels components, not bobs
+      - Fixed boblogistics (inserter overhaul off) recipes to use angels components, not bobs  (526)
       - Fixed boblogistics (w/out bobplates) calling the wrong tin plate (453)
         - Thanks to @lavafl0w on git for the partial fix which i built off
       - Fixed battery 6 use and tech when not active under some conditions (453)
