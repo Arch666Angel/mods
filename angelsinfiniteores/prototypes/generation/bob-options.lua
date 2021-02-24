@@ -8,6 +8,8 @@ if mods["bobores"] then
     bobmods.lib.resource.add_result("infinite-gem-ore", {name="ruby-ore", probability = bobmods.gems.RubyRatio})
     bobmods.lib.resource.add_result("infinite-gem-ore", {name="sapphire-ore", probability = bobmods.gems.SapphireRatio})
     bobmods.lib.resource.add_result("infinite-gem-ore", {name="topaz-ore", probability = bobmods.gems.TopazRatio})
+    --remove regular gems
+    bobmods.lib.resource.remove_result("infinite-gem-ore", "gem-ore")
   end
 
   if bobmods.ores.settings.GemsFromOtherOres == true then
