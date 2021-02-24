@@ -83,10 +83,10 @@ end
 
 --tech updates part 1
 require("prototypes.overrides.global-tech")
+--double check all items are updated if they had been tweaked wrong
+require("prototypes.overrides.components-angels-entity-update.components-angels-building-updates")
 
 if angelsmods.industries.components then
-  --double check all items are updated if they had been tweaked wrong
-  require("prototypes.overrides.components-entity-update")
   --replace pre-req
   OV.global_replace_technology("battery", "angels-components-batteries-1")
   --set ingredient return on building pickup

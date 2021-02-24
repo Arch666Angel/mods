@@ -1,7 +1,6 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
   -- CUSTOM FIXES FOR ANGELS BUILDINGS which get overridden by AAI etc.
-  log("beep")
   OV.patch_recipes(
     {
       {
