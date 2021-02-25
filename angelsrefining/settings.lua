@@ -1,3 +1,5 @@
+require "prototypes.angels-settings"
+
 data:extend(
 {
   {

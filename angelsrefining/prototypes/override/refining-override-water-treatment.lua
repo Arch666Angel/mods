@@ -114,8 +114,10 @@ end
 -- LITHIA WATER ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  data.raw.fluid["lithia-water"].icon = "__angelsrefining__/graphics/icons/water-lithia.png"
-  data.raw.fluid["lithia-water"].icon_size = 32 --icon size of 64 overriding caused issues
+  data.raw.fluid["lithia-water"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {032,118,206}, {248,083,099}, {038,137,237,0.8}, {255,073,072,0.8} })
+  data.raw.fluid["lithia-water"].icon = nil
+  data.raw.fluid["lithia-water"].icon_size = nil
+  data.raw.fluid["lithia-water"].icon_mipmaps = nil
   angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
 
   data:extend(
