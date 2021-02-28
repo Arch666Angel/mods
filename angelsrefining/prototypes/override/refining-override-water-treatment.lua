@@ -99,8 +99,18 @@ if mods["bobplates"] then
             {type = "fluid", name = "chlorine", amount = 20},
             {type = "fluid", name = "hydrogen", amount = 20}
           },
-          icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
-          icon_size = 32,
+          --icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
+          --icon_size = 32,
+          icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+            {
+              "chlorine",
+              "hydrogen",
+              "sodium-hydroxide"
+            },
+            {
+              {039, 112, 194}, {168, 173, 173}, {070, 133, 232}, {185, 185, 185, 0.8}
+            }
+          ),
           subgroup = "bob-fluid-electrolysis",
           order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
         }
