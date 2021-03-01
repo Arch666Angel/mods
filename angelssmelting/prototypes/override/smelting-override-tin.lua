@@ -31,6 +31,9 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
       data.raw.technology["angels-tin-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-tin-smelting-2"][property])
     end
   end
+  if mods["bobelectronics"] and mods["bobplates"] then --this is the minimum combo to make insulated wire to use tinned wire
+    OV.add_prereq("electronics","angels-tin-smelting-1")
+  end
 else
   angelsmods.functions.add_flag("processed-tin", "hidden")
   angelsmods.functions.add_flag("pellet-tin", "hidden")

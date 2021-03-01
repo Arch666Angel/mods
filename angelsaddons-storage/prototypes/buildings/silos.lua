@@ -65,7 +65,7 @@ if angelsmods.addons.storage.oresilos then
     cont_add.name = "silo-"..name
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/silo-"..name..".png"
     cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-"..name..".png"
-    cont_add.minable.result = "silo-"..name
+    --cont_add.minable.result = "silo-"..name --want to actually return the silo
 
     item_add = table.deepcopy(data.raw.item.silo)
     item_add.name = "silo-"..name

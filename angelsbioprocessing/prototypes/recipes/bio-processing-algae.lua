@@ -103,18 +103,13 @@ data:extend(
         {type = "item", name = "algae-green", amount = 25},
         {type = "item", name = "algae-brown", amount = 5}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-green.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.bioprocessing.number_tint),
       order = "aa[algae-farming]"
     },
     {
@@ -131,18 +126,13 @@ data:extend(
       results = {
         {type = "item", name = "algae-green", amount = 50}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-green.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.bioprocessing.number_tint),
       order = "ab[algae-farming]"
     },
     {

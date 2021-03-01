@@ -248,11 +248,7 @@ data:extend(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            icon_size = 32,
-            tint = angelsmods.bioprocessing.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.bioprocessing.number_tint)
         }
       ),
       order = "e"
@@ -305,11 +301,7 @@ data:extend(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            icon_size = 32,
-            tint = angelsmods.bioprocessing.number_tint
-          }
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.bioprocessing.number_tint)
         }
       ),
       order = "g"

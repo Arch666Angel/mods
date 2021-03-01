@@ -11,13 +11,17 @@ Date: ??
     - Tweaked the lib to hide all objects (entities, items, fluids, tools etc) when a flag is set
       - NOT just the first thing found.
       - Also updated the remove flag script to do the same thing
-    - Sorting Facility 4 no longer has an ingredient limit (defaults to 255)
+    - Tweaked the lib to show icons next to the autoplace controls (542)
+    - Sorting Facility 4 no longer has an ingredient limit (defaults to 255) (514)
     - Added HQ tier numbering icons
+    - Burner crusher is now not counted as tier 1 (but as tier 0, currently without icon) (513)
+    - Hides the unused settings now properly for consistency (538)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
     - Removed obsolete inventory slots in the clarifier
     - Fixed that recipes were not being hidden correctly and showing in lookup mods (491)
+    - Improved the limited flow capacity in the Thermal bore/extractor (509)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020

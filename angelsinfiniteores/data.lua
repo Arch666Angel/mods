@@ -26,5 +26,7 @@ require("prototypes.generation.py-ore-inf")
 
 require("prototypes.generation.yuoki-ore-inf")
 
+require("prototypes.generation.dm-tenemut")
+
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()

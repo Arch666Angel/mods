@@ -122,18 +122,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-wood-pulp", amount = 20}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-wood-pulp"),
+        1, angelsmods.bioprocessing.number_tint),
       order = "aa"
     },
     --T2 SULFITE PROCESS
@@ -201,18 +192,9 @@ data:extend(
         {type = "item", name = "solid-wood-pulp", amount = 25},
         {type = "fluid", name = "liquid-brown-liquor", amount = 75}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-wood-pulp"),
+        2, angelsmods.bioprocessing.number_tint),
       order = "ab"
     },
     --T3 KRAFT PROCESS (SULFATE PROCESS)
@@ -288,18 +270,9 @@ data:extend(
         {type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40}
       },
       always_show_products = true,
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-wood-pulp.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-wood-pulp"),
+        3, angelsmods.bioprocessing.number_tint),
       order = "ac"
     },
     --PAPER BLEACHING
@@ -318,18 +291,9 @@ data:extend(
       },
       --main_product = "solid-paper",
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-paper"),
+        1, angelsmods.bioprocessing.number_tint),
       order = "ba"
     },
     {
@@ -350,18 +314,9 @@ data:extend(
       },
       --main_product = "solid-paper",
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-paper"),
+        2, angelsmods.bioprocessing.number_tint),
       order = "bb"
     },
     {
@@ -385,18 +340,9 @@ data:extend(
       },
       --main_product = "solid-paper",
       allow_decomposition = false,
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-paper.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-paper"),
+        3, angelsmods.bioprocessing.number_tint),
       order = "bc"
     }
   }

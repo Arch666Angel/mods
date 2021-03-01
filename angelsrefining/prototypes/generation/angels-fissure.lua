@@ -7,6 +7,7 @@ data:extend(
     {
       type = "autoplace-control",
       name = "angels-fissure",
+      localised_name = {"", "[entity=angels-fissure] ", {"entity-name.angels-fissure"}},
       richness = true,
       order = "b-e",
       category = "resource"
@@ -14,7 +15,7 @@ data:extend(
     {
       type = "resource",
       name = "angels-fissure",
-      icon = "__base__/graphics/icons/crude-oil-resource.png",
+      icon = "__angelsrefining__/graphics/icons/fissure.png",
       icon_size = 64,
       icon_mipmaps = 4,
       flags = {"placeable-neutral"},
