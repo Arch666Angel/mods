@@ -22,6 +22,8 @@ Date: ??
     - Removed obsolete inventory slots in the clarifier
     - Fixed that recipes were not being hidden correctly and showing in lookup mods (491)
     - Improved the limited flow capacity in the Thermal bore/extractor (509)
+    - Fixed an issue with Yuoki's icons not being updated (with the old ones already removed)
+    - Fixed that the method for removing autoplace controls was not universally used (373)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020
