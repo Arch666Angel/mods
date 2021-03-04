@@ -10,6 +10,7 @@ Date: ??
       - Damage multiplier is a function of fuel value ratio with methane for "new" fuels
   Bugfixes:
     - Fixed that the converter valve could not be disabled (507)
+    - Fixed a crash in a very old migration script (535)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.17
 Date: 26.11.2020
