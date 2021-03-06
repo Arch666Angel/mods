@@ -59,6 +59,16 @@ if mods["bobplates"] then
     data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.base_area = 2000
     data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.base_area = 1500
   end
+  -- electrolysis -------------------------------------------------------------
+  --move small tanks to fluid-control
+  OV.add_unlock("angels-fluid-control","bob-small-storage-tank")
+  OV.add_unlock("angels-fluid-control","bob-small-inline-storage-tank")
+  OV.disable_technology({"electrolysis-1","electrolysis-2"})
+  --clean-up pre-requisites
+  OV.remove_prereq("steel-processing","electrolysis-1")
+  OV.remove_prereq("lithium-processing","electrolysis-1")
+  OV.remove_prereq("chemical-processing-2","electrolysis-2")
+  OV.remove_prereq("plastics","electrolysis-2")
 end
 
 -------------------------------------------------------------------------------
@@ -328,4 +338,14 @@ if mods["bobplates"] then
   move_item("deuterium", "petrochem-basic-fluids", "i")
   move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
   move_item("heavy-water-electrolysis", "petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
+end
+-------------------------------------------------------------------------------
+-- TECH TREE CLEANUP ----------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then 
+  -- electronics tech patch ---------------------------------------------------
+  OV.remove_prereq("electronics","alloy-processing")
+  if mods["bobelectronics"] then
+    OV.add_prereq("electronics","angels-coal-processing")
+  end
 end
