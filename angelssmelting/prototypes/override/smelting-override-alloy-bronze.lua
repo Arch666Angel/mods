@@ -202,7 +202,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     -- alloys shenanigans -------------------------------------------------------
     if mods["bobplates"] then
       OV.add_prereq("alloy-processing","angels-bronze-smelting-1")
-      OV.add_prereq("fluid-generator-1","angels-bronze-smelting-1")
     end
   end
 end

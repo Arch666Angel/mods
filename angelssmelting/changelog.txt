@@ -12,6 +12,7 @@ Date: ??
       - metal rolls and metal wire coils.
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
+    - Updated electronics to not rely on steel processing if bobs is installed (550)
   Bugfixes:
     - Fixed rod stack converting recipes could not use producitivity modules
 ---------------------------------------------------------------------------------------------------
