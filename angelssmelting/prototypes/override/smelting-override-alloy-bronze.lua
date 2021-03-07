@@ -148,6 +148,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           icon_size = 256, icon_mipmaps = 4,
           upgrade = true,
           prerequisites = {
+            "angels-metallurgy-2",
             "angels-bronze-smelting-1",
             "angels-nickel-smelting-1"
           },
@@ -174,6 +175,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           icon_size = 256, icon_mipmaps = 4,
           upgrade = true,
           prerequisites = {
+            "angels-metallurgy-3",
             "angels-bronze-smelting-2",
             "angels-zinc-smelting-1"
           },
