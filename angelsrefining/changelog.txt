@@ -16,6 +16,7 @@ Date: ??
     - Added HQ tier numbering icons
     - Burner crusher is now not counted as tier 1 (but as tier 0, currently without icon) (513)
     - Hides the unused settings now properly for consistency (538)
+    - Allowed the hydro-plant to be unlocked slightly earlier (550)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
