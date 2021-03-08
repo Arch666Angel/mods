@@ -16,12 +16,15 @@ Date: ??
     - Added HQ tier numbering icons
     - Burner crusher is now not counted as tier 1 (but as tier 0, currently without icon) (513)
     - Hides the unused settings now properly for consistency (538)
+    - Allowed the hydro-plant to be unlocked slightly earlier (550)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
     - Removed obsolete inventory slots in the clarifier
     - Fixed that recipes were not being hidden correctly and showing in lookup mods (491)
     - Improved the limited flow capacity in the Thermal bore/extractor (509)
+    - Fixed an issue with Yuoki's icons not being updated (with the old ones already removed)
+    - Fixed that the method for removing autoplace controls was not universally used (373)
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020

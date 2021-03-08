@@ -33,7 +33,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
       prerequisites = {
-        "electronics"
+        mods["angelspetrochem"] and "angels-fluid-control" or "electronics"
       },
       effects = {
         {

@@ -6,7 +6,6 @@ if mods["bobplates"] then
 
   OV.set_science_pack("electric-engine", "chemical-science-pack")
 end
-
 -------------------------------------------------------------------------------
 -- CONVERT FLUIDS TO ANGELS VERSION -------------------------------------------
 -------------------------------------------------------------------------------
@@ -96,4 +95,14 @@ if mods["bobplates"] then
   end
   --fuel oil balancing
   data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients = {{type = "fluid", name = "liquid-fuel", amount = 100}} --up from 20
+end
+-------------------------------------------------------------------------------
+-- TECH TREE CLEANUP ----------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then 
+  -- electronics tech patch ---------------------------------------------------
+  OV.remove_prereq("electronics","alloy-processing")
+  if mods["bobelectronics"] then
+    OV.add_prereq("electronics","angels-coal-processing")
+  end
 end

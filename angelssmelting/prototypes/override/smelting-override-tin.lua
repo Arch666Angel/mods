@@ -140,6 +140,10 @@ if angelsmods.trigger.smelting_products["tin"].wire then
         }
       )
     end
+    if mods["bobelectronics"] then
+      OV.add_unlock("electronics","basic-tinned-copper-wire")
+      OV.remove_prereq("electronics","angels-tin-smelting-1")
+    end
   end
 else
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")
