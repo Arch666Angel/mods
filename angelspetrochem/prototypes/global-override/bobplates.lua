@@ -339,13 +339,3 @@ if mods["bobplates"] then
   move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
   move_item("heavy-water-electrolysis", "petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
 end
--------------------------------------------------------------------------------
--- TECH TREE CLEANUP ----------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobplates"] then 
-  -- electronics tech patch ---------------------------------------------------
-  OV.remove_prereq("electronics","alloy-processing")
-  if mods["bobelectronics"] then
-    OV.add_prereq("electronics","angels-coal-processing")
-  end
-end
