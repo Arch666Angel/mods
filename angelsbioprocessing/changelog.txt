@@ -15,6 +15,7 @@ Date: ??
     - In component mode, decreased the cost of algae farm 2 from tier 3 to tier 2 blocks (503)
     - Split plant and fish pressing in two techs to account for the ceramic filter (428)
     - Hide unused items (plant milk and bio wooden board) (523)
+    - Changed and expanded locale strings and text descriptions (489)
   Bugfixes:
     - Fixed bob modules category icon did not fit the category box size (483)
     - Fixed bob modules tech icons did not fit the tech box (483)

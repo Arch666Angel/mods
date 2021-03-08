@@ -3,6 +3,7 @@ Version: 0.2.6
 Date: 27.11.2020
   Changes:
     - Patched load-order issue when playing without angels
+    - Changed and expanded locale strings and text descriptions (489)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.5
 Date: 26.11.2020

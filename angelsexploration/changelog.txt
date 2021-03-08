@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.10
 Date: ??
+  Changes:
+    - Changed and expanded locale strings and text descriptions (489)
   Bugfixes:
     - Fixed collision box and drawing box of the mammoth heavy tank (476)
     - Fixed that turret technology did not depend on military (549)
