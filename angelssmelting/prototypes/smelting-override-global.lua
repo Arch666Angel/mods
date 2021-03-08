@@ -191,7 +191,7 @@ if bobmods and bobmods.plates then
 end
 if mods["bobelectronics"] then
   --add steel pre-reqs to things that formerly used electronics to req steel
-  for _,tech in pairs(
+  --[[for _,tech in pairs(
     {
       "radars",
       "bob-drills-1",
@@ -205,10 +205,7 @@ if mods["bobelectronics"] then
     }
   ) do
     OV.add_prereq(tech,"steel-processing")
-  end
-  if mods["boblogistics"] then
-    OV.add_prereq("logistics-2","steel-processing")
-  end
+  end]]
   if mods["bobpower"] then
     OV.add_prereq("fluid-generator-1","angels-bronze-smelting-1")
   end
