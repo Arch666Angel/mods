@@ -1,7 +1,7 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
 
-  if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
+  if mods["boblogistics"] and settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
     -- flying robot frames
     OV.patch_recipes(
       {
@@ -53,29 +53,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.remove_prereq("robotics", "angels-components-batteries-4")
-    OV.remove_prereq("robotics", "electric-engine")
-    OV.add_prereq("robotics", "angels-components-mechanical-3")
-    OV.add_prereq("robotics", "tech-orange-circuit")
-
-    OV.add_prereq("bob-robotics-2", "angels-components-mechanical-4")
-    OV.add_prereq("bob-robotics-2", "tech-blue-circuit")
-
-    OV.remove_prereq("bob-robotics-3", "titanium-processing")
-    OV.remove_prereq("bob-robotics-3", "advanced-electronics-2")
-    OV.remove_prereq("bob-robotics-3", "battery-2")
-    OV.add_prereq("bob-robotics-3", "angels-components-batteries-4")
-    OV.add_prereq("bob-robotics-3", "angels-components-mechanical-4")
-    OV.add_prereq("bob-robotics-3", "tech-blue-circuit")
-    
-    OV.remove_prereq("bob-robotics-4", "ceramics")
-    OV.remove_prereq("bob-robotics-4", "battery-3")
-    if data.raw.technology["angels-components-batteries-6"] then
-      OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
-    end
-    OV.add_prereq("bob-robotics-4", "angels-components-mechanical-5")
-    OV.add_prereq("bob-robotics-4", "tech-yellow-circuit")
-
     -- base game late robots
     OV.patch_recipes(
       {
@@ -96,6 +73,29 @@ if angelsmods.industries.components then
       }
     )
   end
+  
+  OV.remove_prereq("robotics", "angels-components-batteries-4")
+  OV.remove_prereq("robotics", "electric-engine")
+  OV.add_prereq("robotics", "angels-components-mechanical-3")
+  OV.add_prereq("robotics", "tech-orange-circuit")
+
+  OV.add_prereq("bob-robotics-2", "angels-components-mechanical-4")
+  OV.add_prereq("bob-robotics-2", "tech-blue-circuit")
+
+  OV.remove_prereq("bob-robotics-3", "titanium-processing")
+  OV.remove_prereq("bob-robotics-3", "advanced-electronics-2")
+  OV.remove_prereq("bob-robotics-3", "battery-2")
+  OV.add_prereq("bob-robotics-3", "angels-components-batteries-4")
+  OV.add_prereq("bob-robotics-3", "angels-components-mechanical-4")
+  OV.add_prereq("bob-robotics-3", "tech-blue-circuit")
+  
+  OV.remove_prereq("bob-robotics-4", "ceramics")
+  OV.remove_prereq("bob-robotics-4", "battery-3")
+  if data.raw.technology["angels-components-batteries-6"] then
+    OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
+  end
+  OV.add_prereq("bob-robotics-4", "angels-components-mechanical-5")
+  OV.add_prereq("bob-robotics-4", "tech-yellow-circuit")
 
   -- charging pads
   OV.patch_recipes(

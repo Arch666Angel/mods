@@ -54,9 +54,7 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobelectronics"] then
     OV.disable_recipe("wooden-board-paper")
-    OV.remove_prereq("water-treatment", "angels-fluid-control")
   end
-
   -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------
   -----------------------------------------------------------------------------

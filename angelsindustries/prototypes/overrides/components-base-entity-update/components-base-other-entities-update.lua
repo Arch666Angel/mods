@@ -1,7 +1,8 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
   -- CUSTOM FIXES FOR BASE GAME ENTITIES THAT DO NOT FIT IN OTHER CATEGORIES (+ ANGELS)
-
+  OV.remove_prereq("water-treatment", "angels-fluid-control")
+  
   OV.patch_recipes(
     {
       {
