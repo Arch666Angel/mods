@@ -13,6 +13,7 @@ Date: ??
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
     - Updated electronics to not rely on steel processing if bobs is installed (550)
+    - Changed and expanded locale strings and text descriptions (489)
   Bugfixes:
     - Fixed rod stack converting recipes could not use producitivity modules
     - Fixed bronze and brass smelting missed some prerequisites (551)

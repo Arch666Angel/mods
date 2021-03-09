@@ -3,6 +3,7 @@ Version: 0.0.7
 Date: ??
   Changes:
     - Added HQ tier numbering icons
+    - Changed and expanded locale strings and text descriptions (489)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 20.01.2021
