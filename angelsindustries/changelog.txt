@@ -2,6 +2,7 @@
 Version: 0.4.12
 Date: ??
   Changes:
+    - Changed and expanded locale strings and text descriptions (489)
     - Regular mode:
       - Ordered vehicle belt immunity equipment (477)
       - Integrated bobs plutonium nucleosynthesis (486)
