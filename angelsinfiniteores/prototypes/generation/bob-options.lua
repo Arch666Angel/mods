@@ -21,15 +21,18 @@ if mods["bobores"] then
     bobmods.lib.resource.add_result("infinite-bauxite-ore", {name="ruby-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.RubyRatio})
     bobmods.lib.resource.add_result("infinite-bauxite-ore", {name="sapphire-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.SapphireRatio})
     bobmods.lib.resource.add_result("infinite-bauxite-ore", {name="topaz-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.TopazRatio})
+    angelsmods.functions.remove_resource("infinite-gem-ore")
   end
 
 
   if bobmods.ores.settings.LeadGivesNickel == true then
     bobmods.lib.resource.add_result("infinite-lead-ore", {name = "nickel-ore", probability = bobmods.ores.settings.LeadNickelRatio})
+    angelsmods.functions.remove_resource("infinite-nickel-ore")
   end
 
 
   if bobmods.ores.settings.NickelGivesCobalt == true then
+    angelsmods.functions.remove_resource("infinite-cobalt-ore")
     if bobmods.ores.nickel.enabled then
       bobmods.lib.resource.add_result("infinite-nickel-ore", {name = "cobalt-ore", probability = bobmods.ores.settings.NickelCobaltRatio})
     else
