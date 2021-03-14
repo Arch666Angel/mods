@@ -106,7 +106,7 @@ if angelsmods.industries.tech then
       energy_required = 3,
       enabled = true,
       ingredients = {
-        {type = "item", name = "angels-rod-iron", amount = 1},
+        {type = "item", name = "iron-stick", amount = 1},
         {type = "item", name = "angels-wire-copper", amount = 4}
       },
       results = {

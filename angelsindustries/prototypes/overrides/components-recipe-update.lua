@@ -23,10 +23,6 @@ if angelsmods.industries.components then
   angelsmods.functions.add_flag("battery", "hidden")
   OV.disable_recipe({"battery"})
 
-  -- OV.global_replace_item("iron-stick", "angels-rod-iron")
-  -- angelsmods.functions.add_flag("iron-stick", "hidden")
-  -- OV.disable_recipe({"iron-stick"})
-
   OV.global_replace_item("iron-gear-wheel", "angels-gear")
   angelsmods.functions.add_flag("iron-gear-wheel", "hidden")
   OV.disable_recipe({"iron-gear-wheel"})
