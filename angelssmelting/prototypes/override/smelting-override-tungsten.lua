@@ -120,3 +120,19 @@ if (not angelsmods.trigger.smelting_products["tungsten"].plate) and (not angelsm
     }
   )
 end
+-------------------------------------------------------------------------------
+-- ALLOY HANDLING -------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods['bobplates'] then
+  local alloy_recipes = {
+    'tungsten-carbide',
+    'tungsten-carbide-2',
+    'copper-tungsten-alloy'}
+    
+  for _ , name in pairs(alloy_recipes) do
+    if data.raw.recipe[name] then
+      data.raw.recipe[name].category = "sintering"
+    end
+  end
+end
+  

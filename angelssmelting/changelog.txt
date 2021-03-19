@@ -15,6 +15,7 @@ Date: ??
     - Updated electronics to not rely on steel processing if bobs is installed (550)
     - Changed and expanded locale strings and text descriptions (489)
     - Removed angels iron rod (in favour of the vanilla iron stick) (484,485)
+    - Moved Bobs advanced alloys into angels smelting buildings and removed bobs chemical furnaces (328)
   Bugfixes:
     - Fixed rod stack converting recipes could not use producitivity modules
     - Fixed bronze and brass smelting missed some prerequisites (551)
