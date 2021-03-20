@@ -59,8 +59,8 @@ if angelsmods.addons.storage.warehouses then
     ["aprovider"] = {order = "i", stacks = 768, mode = "active-provider"},
     ["pprovider"] = {order = "j", stacks = 512, mode = "passive-provider"},
     ["storage"]   = {order = "k", stacks = 768, mode = "storage", slots = 1},
-    ["buffer"]    = {order = "l", stacks = 512, mode = "buffer", slots = 20},
-    ["requester"] = {order = "m", stacks = 418, mode = "requester", slots = 20}
+    ["buffer"]    = {order = "l", stacks = 512, mode = "buffer"},
+    ["requester"] = {order = "m", stacks = 418, mode = "requester"}
   }
   local warehouse_add = {}
   for name,stat in pairs(log_names) do

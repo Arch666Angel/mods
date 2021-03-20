@@ -88,8 +88,8 @@ if angelsmods.addons.storage.silos then
     ["aprovider"] = {order = "i", stacks = 384, mode = "active-provider"},
     ["pprovider"] = {order = "j", stacks = 256, mode = "passive-provider"},
     ["storage"]   = {order = "k", stacks = 384, mode = "storage", slots = 1},
-    ["buffer"]    = {order = "l", stacks = 256, mode = "buffer", slots = 12},
-    ["requester"] = {order = "m", stacks = 209, mode = "requester", slots = 12}
+    ["buffer"]    = {order = "l", stacks = 256, mode = "buffer"},
+    ["requester"] = {order = "m", stacks = 209, mode = "requester"}
   }
   local silo_add = {}
   for name,stat in pairs(log_names) do
