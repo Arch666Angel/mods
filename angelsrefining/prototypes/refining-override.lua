@@ -67,27 +67,36 @@ if mods["bobplates"] then
         }
       }
     )
-
-    --local fluid_n=data.raw["fluid"]
-    for _, fluid_n in pairs(data.raw.fluid) do
-      if not (fluid_n.auto_barrel == false or fluid_n.auto_barrel == false) then
-        if string.sub(fluid_n.name, 1, 3) == "gas" then
-          OV.barrel_overrides(fluid_n.name, "gas")
-        elseif not string.find(fluid_n.name, "acid") == nil or string.sub(fluid_n.name, -4) == "acid" then
-          local acid = string.find(fluid_n.name, "acid")
-          OV.barrel_overrides(fluid_n.name, "acid")
-        end
-        if data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"] then
-          data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
-        end
-        if data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"] then
-          data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
-        end
+  end
+end
+--General barrelling fix
+for _, fluid_n in pairs(data.raw.fluid) do
+  if not (fluid_n.auto_barrel == false) then
+    OV.patch_recipes(
+      {
+        {
+          name = "fill-" .. fluid_n.name .. "-barrel",
+          category = "barreling-pump",
+          hide_from_player_crafting = true
+        },
+        {
+          name = "empty-" .. fluid_n.name .. "-barrel",
+          category = "barreling-pump",
+          hide_from_player_crafting = true
+        },
+      }
+    )
+    if mods["bobplates"] then
+      if string.sub(fluid_n.name, 1, 3) == "gas" then
+        OV.barrel_overrides(fluid_n.name, "gas")
+      elseif not string.find(fluid_n.name, "acid") == nil or string.sub(fluid_n.name, -4) == "acid" then
+        local acid = string.find(fluid_n.name, "acid")
+        OV.barrel_overrides(fluid_n.name, "acid")
       end
+      --insert custom barrel replacements
+      OV.barrel_overrides("liquid-ferric-chloride-solution", "acid")
+      OV.barrel_overrides("liquid-cupric-chloride-solution", "acid")
     end
-    --insert custom barrel replacements
-    OV.barrel_overrides("liquid-ferric-chloride-solution", "acid")
-    OV.barrel_overrides("liquid-cupric-chloride-solution", "acid")
   end
 end
 

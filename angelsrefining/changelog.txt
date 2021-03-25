@@ -18,6 +18,7 @@ Date: ??
     - Hides the unused settings now properly for consistency (538)
     - Allowed the hydro-plant to be unlocked slightly earlier (550)
     - Changed and expanded locale strings and text descriptions (489)
+    - Reduced the size of the scroll bar on the crafting menu caused by barrelling recipes (in particular, with petrochem)(566)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
