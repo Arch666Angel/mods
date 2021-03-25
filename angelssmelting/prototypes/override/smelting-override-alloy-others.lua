@@ -18,7 +18,7 @@ if mods['bobplates'] then
   OV.remove_unlock('alloy-processing', 'stone-furnace-from-stone-mixing-furnace')
 
   -- Remove Chemical Furnaces
-  OV.global_replace_item('electric-chemical-mixing-furnace', 'electric-furnace')
+  OV.global_replace_item('steel-chemical-mixing-furnace', 'steel-furnace')
   OV.global_replace_item('electric-chemical-furnace','electric-furnace')
 
   OV.remove_unlock('chemical-processing-1', 'stone-chemical-furnace')
