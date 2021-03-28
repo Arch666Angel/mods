@@ -104,14 +104,6 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobmodules"] then
   --adds bob modules stuffs
-  data.raw["technology"]["speed-module-3"].unit = {count = 50, ingredients = {{"speed-processor", 2},{"module-circuit-board", 1}}, time = 60}
-
-  data.raw["technology"]["productivity-module-3"].unit = {count = 50, ingredients = {{"productivity-processor", 2},{"module-circuit-board", 1}}, time = 60}
-
-  data.raw["technology"]["effectivity-module-3"].unit = {count = 50, ingredients = {{"effectivity-processor", 2},{"module-circuit-board", 1}}, time = 60}
-
-  data.raw["technology"]["angels-bio-yield-module-3"].unit = {count = 50, ingredients = {{"token-bio", 1},{"effectivity-processor", 2},{"productivity-processor", 2},{"module-circuit-board", 1}}, time = 60}
-
   end
 
   -------------------------------------------------------------------------------
