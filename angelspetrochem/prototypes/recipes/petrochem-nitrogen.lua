@@ -394,12 +394,12 @@ data:extend(
     {
       type = "recipe",
       name = "gas-dinitrogen-tetroxide",
-      category = "chemistry",
+      category = "liquifying",
       subgroup = "petrochem-rocket",
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-nitrogen-monoxide", amount = 100}
+        {type = "fluid", name = "gas-nitrogen-dioxide", amount = 100}
       },
       results = {
         {type = "fluid", name = "gas-dinitrogen-tetroxide", amount = 50}
