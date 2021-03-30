@@ -100,8 +100,8 @@ if bobmods and bobmods.plates then
   data.raw["item"]["powdered-tungsten"].icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
   data.raw["item"]["powdered-tungsten"].subgroup = "angels-tungsten"
   data.raw["item"]["powdered-tungsten"].order = "h"
-  data.raw["item"]["powdered-tungsten"].icon_size = 32
-  data.raw["item"]["powdered-tungsten"].icon_mipmaps = 1
+  data.raw["item"]["powdered-tungsten"].icon_size = 64
+  data.raw["item"]["powdered-tungsten"].icon_mipmaps = 4
   data.raw["item"]["cobalt-oxide"].icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
   data.raw["item"]["cobalt-oxide"].subgroup = "angels-cobalt"
   data.raw["item"]["cobalt-oxide"].order = "e"
