@@ -1,13 +1,18 @@
 script.on_init(function()
-  if remote.interfaces["freeplay"] then -- give ore crushers
+  if remote.interfaces["freeplay"] then
     local items_to_insert = remote.call("freeplay", "get_created_items")
+    local technology_overhaul = settings.startup["angels-enable-tech"].value
+    local components_overhaul = technology_overhaul or settings.startup["angels-enable-components"].value
+    
+    -- give ore crushers
     items_to_insert["burner-ore-crusher"] = (items_to_insert["burner-ore-crusher"] or 0) + 1
-    remote.call("freeplay", "set_created_items", items_to_insert)
-  end
-
-  if game.active_mods["bobclasses"] and remote.interfaces['freeplay'] then -- give an extra miner
-    local items_to_insert = remote.call("freeplay", "get_created_items")
-    items_to_insert["burner-mining-drill"] = (items_to_insert["burner-mining-drill"] or 0) + 1 -- 2 additional plates
+    if game.active_mods["bobclasses"] then
+      -- fix character classes starting point
+      if components_overhaul then
+	-- give two additional iron plates
+        items_to_insert["iron-plate"] = (items_to_insert["iron-plate"] or 0) + 2
+      end
+    end
     remote.call("freeplay", "set_created_items", items_to_insert)
   end
 end)
