@@ -2,36 +2,32 @@ global.crash_site_created = false
 global.is_lab_given = false
 
 local main_lab = {
-  [0] = "angels-main-lab-0", -- crash site, equivalent to next tier
-  [1] = "angels-main-lab-1",
-  [2] = "angels-main-lab-2",
-  [3] = "angels-main-lab-3",
-  [4] = "angels-main-lab-4",
-  [5] = "angels-main-lab-5",
-  [6] = "angels-main-lab-6",
-  [7] = "angels-main-lab-7"
+    [0] = 'angels-main-lab-0', -- crash site, equivalent to next tier
+    [1] = 'angels-main-lab-1',
+    [2] = 'angels-main-lab-2',
+    [3] = 'angels-main-lab-3',
+    [4] = 'angels-main-lab-4',
+    [5] = 'angels-main-lab-5',
+    [6] = 'angels-main-lab-6',
+    [7] = 'angels-main-lab-7'
 }
 
 local function remove_lab_from_inv(inventory)
-  if inventory then
-    local items = game.item_prototypes
-    for key, lab in pairs(main_lab) do
-      if items[lab] and inventory.get_item_count(lab) > 0 then
-        inventory.remove {name = lab}
-        global.is_lab_given = false
-        return true
-      end
+    if inventory then
+        local items = game.item_prototypes
+        for key, lab in pairs(main_lab) do
+            if items[lab] and inventory.get_item_count(lab) > 0 then
+                inventory.remove{name = lab}
+                global.is_lab_given = false
+                return true
+            end
+        end
     end
-  end
 end
 
 local function table_contains(table, value)
-  for key, val in pairs(table) do
-    if val == value then
-      return true
-    end
-  end
-  return false
+    for key, val in pairs(table) do if val == value then return true end end
+    return false
 end
 
 local function initialize_crash_site()
@@ -112,10 +108,8 @@ local function initialize_crash_site()
             smoke.time_to_next_effect = math.random(30)
           end
         end
-      end
     end
-  end
-  global.crash_site_created = true
+    global.crash_site_created = true
 end
 
 script.on_event(
