@@ -25,6 +25,11 @@ if angelsmods.trigger.smelting_products["silicon"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-silicon", "hidden")
     OV.disable_recipe({"molten-silicon-smelting"})
+    OV.disable_technology({"angels-silicon-casting-2"--[[, "angels-silicon-casting-3"]]})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-silicon-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-silicon-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-silica", "hidden")
@@ -38,6 +43,7 @@ else
   OV.disable_recipe({"silicon-ore-smelting", "liquid-trichlorosilane-smelting", "gas-silane-smelting"})
   OV.disable_recipe({"molten-silicon-smelting"})
   OV.disable_technology({"angels-silicon-smelting-1", "angels-silicon-smelting-2", "angels-silicon-smelting-3"})
+  OV.disable_technology({"angels-silicon-casting-2"--[[, "angels-silicon-casting-3"]]})
 end
 
 -------------------------------------------------------------------------------
@@ -99,7 +105,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
 
     angelsmods.functions.move_item("silicon-powder", "angels-silicon", "g")
     data.raw.item["silicon-powder"].icon = "__angelssmelting__/graphics/icons/powder-silica.png"
-    data.raw.item["silicon-powder"].icon_size = 32
+    data.raw.item["silicon-powder"].icon_size = 64
     data.raw.item["silicon-powder"].localised_name = {"item-name.powder-silicon"}
     OV.patch_recipes(
       {

@@ -7,7 +7,7 @@ data:extend(
     type = "item",
     name = "processed-copper",
     icon = "__angelssmelting__/graphics/icons/processed-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "b",
     stack_size = 200
@@ -16,7 +16,7 @@ data:extend(
     type = "item",
     name = "pellet-copper",
     icon = "__angelssmelting__/graphics/icons/pellet-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "c",
     stack_size = 200
@@ -35,7 +35,7 @@ data:extend(
     type = "item",
     name = "ingot-copper",
     icon = "__angelssmelting__/graphics/icons/ingot-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "e",
     stack_size = 200
@@ -44,7 +44,7 @@ data:extend(
     type = "item",
     name = "powder-copper",
     icon = "__angelssmelting__/graphics/icons/powder-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "f",
     stack_size = 200
@@ -54,7 +54,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-copper",
     icon = "__angelssmelting__/graphics/icons/molten-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
     order = "g",
     default_temperature = 1085,
@@ -70,7 +70,7 @@ data:extend(
     type = "item",
     name = "angels-roll-copper",
     icon = "__angelssmelting__/graphics/icons/roll-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
     order = "h",
     stack_size = 200
@@ -79,7 +79,7 @@ data:extend(
     type = "item",
     name = "angels-wire-coil-copper",
     icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
     order = "i",
     stack_size = 200

@@ -50,13 +50,14 @@ data:extend(
       icons = {
         {
           icon = "__base__/graphics/item-group/intermediate-products.png",
-          icon_size = 64
+          icon_size = 128,
+          icon_mipmaps = 2
         },
         {
           icon = "__angelsrefining__/graphics/icons/void.png",
           icon_size = 32,
-          scale = 64 / 32 * 0.35,
-          shift = {20, -20}
+          scale = 128 / 32 * 0.35,
+          shift = {40, -40}
         }
       }
     },
@@ -519,11 +520,13 @@ data:extend(
       group = "angels-logistics",
       order = "cb[bots]"
     },
+    -- order "d-a[armor]-aa" reserved for bobs characters
+    -- order "d-a[armor]-ab" reserved for bobs characters
     {
       type = "item-subgroup",
       name = "angels-personal-equipment-armor",
       group = "angels-logistics",
-      order = "d-a[armor]"
+      order = "d-a[armor]-b"
     },
     {
       type = "item-subgroup",
@@ -595,15 +598,22 @@ data:extend(
       type = "item-subgroup",
       name = "angels-vehicle-train-other",
       group = "angels-vehicles",
-      order = "c"
+      order = "ca"
     },
+    {
+      type = "item-subgroup",
+      name = "angels-vehicle-spidertron",
+      group = "angels-vehicles",
+      order = "cba"
+    },
+    -- order cbb reserved for bobwarfare (see override)
+    -- order da reserved for CAB (see addon cab-category)
     {
       type = "item-subgroup",
       name = "angels-vehicle-equipment",
       group = "angels-vehicles",
       order = "db"
     },
-    -- order da reserved for CAB (see addon cab-category)
     -- order dc reserved for bobvehicleequipment (see override)
     ---------------------------------------------------------------------------
     -- ANGELS WARFARE ---------------------------------------------------------

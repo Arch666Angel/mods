@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "ore-floatation-cell",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "ore-floatation",
       order = "a[ore-floatation-cell]",
       place_result = "ore-floatation-cell",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-floatation-cell",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-floatation-cell"},
       fast_replaceable_group = "ore-floatation-cell",
@@ -95,18 +87,14 @@ data:extend(
     {
       type = "item",
       name = "ore-floatation-cell-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "ore-floatation",
       order = "b[ore-floatation-cell-2]",
       place_result = "ore-floatation-cell-2",
@@ -115,18 +103,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-floatation-cell-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-floatation-cell-2"},
       fast_replaceable_group = "ore-floatation-cell",
@@ -201,18 +185,14 @@ data:extend(
     {
       type = "item",
       name = "ore-floatation-cell-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "ore-floatation",
       order = "c[ore-floatation-cell-3]",
       place_result = "ore-floatation-cell-3",
@@ -221,18 +201,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-floatation-cell-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-floatation-cell-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-floatation-cell-3"},
       fast_replaceable_group = "ore-floatation-cell",

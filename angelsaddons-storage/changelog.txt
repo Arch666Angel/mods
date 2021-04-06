@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: ??
+  Changes:
+    - Added setting to disable logitics silos and ore silos independently (499)
+    - Warehouses now prerequisite on ore silos if both are enabled (428)
+    - Pressure tank now always prerequisite on fluid handling
+    - Changed recipes of ore silos when playing with angels refining (340)
+    - Changed some recipes of logistics silos when playing with angels industries (340)
+    - Changed some recipes of logistics warehouses when playing with angels industries (340)
+    - Changed slot count for active providers to match the storage variant
+    - Changed ore silo pick-up result to be just the regular silo (541)
+    - Changed and expanded locale strings and text descriptions (489)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 27.11.2020
+  Changes:
+    - Patched to work without angels (after oversight in last patch)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 26.11.2020
+  Changes:
+    - Updated to Factorio version 1.1
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 29.10.2020
   Changes:

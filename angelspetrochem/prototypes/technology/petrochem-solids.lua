@@ -7,17 +7,17 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/plastic-1-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-advanced-chemistry-1",
-        "plastics"
+        "plastics",
+        "angels-advanced-chemistry-2"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solid-plastic"
+          recipe = "liquid-plastic-1"
         },
         {
           type = "unlock-recipe",
-          recipe = "liquid-plastic-1"
+          recipe = "solid-plastic"
         }
       },
       unit = {
@@ -89,13 +89,13 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/resins-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-oil-processing"
+        "basic-chemistry-3"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-resin"
-        },
+        --{
+        --  type = "unlock-recipe",
+        --  recipe = "solid-resin"
+        --},
       },
       unit = {
         count = 50,
@@ -120,12 +120,12 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "solid-resin"
+          recipe = "liquid-resin-1"
         },
         {
           type = "unlock-recipe",
-          recipe = "liquid-resin-1"
-        }
+          recipe = "solid-resin"
+        },
       },
       unit = {
         count = 50,
@@ -199,10 +199,10 @@ data:extend(
         "angels-oil-processing"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-rubber"
-        },
+        --{
+        --  type = "unlock-recipe",
+        --  recipe = "solid-rubber"
+        --},
       },
       unit = {
         count = 50,
@@ -221,7 +221,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "rubbers",
-        "gas-steam-cracking-1",
+        --"oil-steam-cracking-1",
         "angels-advanced-chemistry-2"
       },
       effects = {

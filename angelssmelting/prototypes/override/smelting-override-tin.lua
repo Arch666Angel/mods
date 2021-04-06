@@ -23,11 +23,16 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
   if angelsmods.trigger.smelting_products["tin"].plate or angelsmods.trigger.smelting_products["tin"].wire then
   else
     -- no need for molten recipe
-  angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
-  OV.disable_recipe({"molten-tin-smelting"})
-  -- no need for the strand casting
-  OV.remove_prereq("angels-tin-smelting-2", "strand-casting-1")
-  OV.remove_prereq("angels-tin-smelting-3", "strand-casting-2")
+    angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
+    OV.disable_recipe({"molten-tin-smelting"})
+    OV.disable_technology({"angels-tin-casting-2", "angels-tin-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-tin-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-tin-smelting-2"][property])
+    end
+  end
+  if mods["bobelectronics"] and mods["bobplates"] then --this is the minimum combo to make insulated wire to use tinned wire
+    OV.add_prereq("electronics","angels-tin-smelting-1")
   end
 else
   angelsmods.functions.add_flag("processed-tin", "hidden")
@@ -38,6 +43,7 @@ else
   OV.disable_recipe({"tin-ore-smelting", "processed-tin-smelting", "pellet-tin-smelting"})
   OV.disable_recipe({"molten-tin-smelting"})
   OV.disable_technology({"angels-tin-smelting-1", "angels-tin-smelting-2", "angels-tin-smelting-3"})
+  OV.disable_technology({"angels-tin-casting-2", "angels-tin-casting-3"})
 end
 
 -------------------------------------------------------------------------------
@@ -67,6 +73,8 @@ if angelsmods.trigger.smelting_products["tin"].plate then
           name = "tin-plate",
           energy_required = 10.5,
           normal = {
+            enabled = false,
+            hidden = true,
             ingredients = {
               {name = "tin-ore", type = "item", amount = "+3"}
             },
@@ -75,6 +83,8 @@ if angelsmods.trigger.smelting_products["tin"].plate then
             }
           },
           expensive = {
+            enabled = false,
+            hidden = true,
             ingredients = {
               {"!!"},
               {name = "tin-ore", type = "item", amount = 5 * intermediatemulti}
@@ -129,6 +139,10 @@ if angelsmods.trigger.smelting_products["tin"].wire then
           }
         }
       )
+    end
+    if mods["bobelectronics"] then
+      OV.add_unlock("electronics","basic-tinned-copper-wire")
+      OV.remove_prereq("electronics","angels-tin-smelting-1")
     end
   end
 else

@@ -10,7 +10,8 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-components-mechanical-1",
         icon = "__base__/graphics/technology/engine.png",
-        icon_size = 128,
+        icon_size = 256,
+        icon_mipmaps = 4,
         prerequisites = {},
         effects = {
           {
@@ -62,7 +63,8 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-components-mechanical-2",
         icon = "__base__/graphics/technology/engine.png",
-        icon_size = 128,
+        icon_size = 256,
+        icon_mipmaps = 4,
         prerequisites = {
           "angels-components-mechanical-1",
           "angels-stone-smelting-2",
@@ -116,7 +118,8 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-components-mechanical-3",
         icon = "__base__/graphics/technology/engine.png",
-        icon_size = 128,
+        icon_size = 256,
+        icon_mipmaps = 4,
         prerequisites = {
           "angels-components-mechanical-2",
           --"angels-stone-smelting-2",
@@ -170,7 +173,8 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-components-mechanical-4",
         icon = "__base__/graphics/technology/electric-engine.png",
-        icon_size = 128,
+        icon_size = 256,
+        icon_mipmaps = 4,
         prerequisites = {
           "angels-components-mechanical-3",
           --"angels-stone-smelting-2",
@@ -225,7 +229,8 @@ if angelsmods.industries.components then
         type = "technology",
         name = "angels-components-mechanical-5",
         icon = "__base__/graphics/technology/electric-engine.png",
-        icon_size = 128,
+        icon_size = 256,
+        icon_mipmaps = 4,
         prerequisites = {
           "angels-components-mechanical-4",
           --"angels-stone-smelting-2",

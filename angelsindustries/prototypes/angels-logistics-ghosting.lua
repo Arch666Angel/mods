@@ -4,7 +4,7 @@ data:extend(
       type = "custom-input",
       name = "toggle-ghosting",
       key_sequence = "ALT + G",
-      consuming = "none",
+      consuming = "game-only",
       action = "lua"
     },
     {
@@ -106,3 +106,19 @@ data:extend(
     }
   }
 )
+--update unlock techs for shortcuts
+local unlocks = {
+  "undo",
+  "copy",
+  "cut",
+  "paste",
+  "import-string",
+  "give-blueprint",
+  "give-blueprint-book",
+  "give-deconstruction-planner",
+  "give-upgrade-planner"
+}
+for _,i in pairs(unlocks) do
+  local scut = data.raw.shortcut[i]
+  scut.technology_to_unlock = "angels-hidden-ghosting"
+end

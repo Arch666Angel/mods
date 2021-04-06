@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-manganese", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-manganese]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
@@ -34,13 +33,12 @@ data:extend(
       results = {
         {type = "item", name = "pellet-manganese", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-manganese]"
     },
     {
       type = "recipe",
       name = "manganese-processed-processing-alt",
-      category = "ore-processing",
+      category = "chemical-smelting",
       subgroup = "angels-manganese",
       energy_required = 2,
       enabled = false,
@@ -51,18 +49,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-manganese-oxide", amount = 6}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-manganese-oxide"),
+        1, angelsmods.smelting.number_tint),
       order = "d[solid-manganese-oxide]-a"
     },
     {
@@ -79,18 +68,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-manganese-oxide", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-manganese-oxide"),
+        2, angelsmods.smelting.number_tint),
       order = "d[solid-manganese-oxide]-b"
     },
     {
@@ -107,18 +87,9 @@ data:extend(
       results = {
         {type = "item", name = "cathode-manganese", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/cathode-manganese.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("cathode-manganese"),
+        1, angelsmods.smelting.number_tint),
       order = "e[cathode-manganese]-a"
     },
     {
@@ -138,18 +109,9 @@ data:extend(
         {type = "item", name = "solid-iron-hydroxide", amount = 4}
       },
       main_product = "cathode-manganese",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/cathode-manganese.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("cathode-manganese"),
+        2, angelsmods.smelting.number_tint),
       order = "e[cathode-manganese]-b"
     },
     -- SMELTING RESULTS
@@ -167,18 +129,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-manganese", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-manganese.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-manganese"),
+        1, angelsmods.smelting.number_tint),
       order = "f[ingot-manganese]-a"
     },
     {
@@ -194,18 +147,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-manganese", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-manganese.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-manganese"),
+        2, angelsmods.smelting.number_tint),
       order = "f[ingot-manganese]-b"
     },
     {
@@ -221,7 +165,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-manganese", amount = 1}
       },
-      icon_size = 32,
       order = "g[powder-manganese]"
     },
     -- CASTING INTERMEDIATE
@@ -238,7 +181,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-manganese", amount = 120}
       },
-      icon_size = 32,
       order = "h[liquid-molten-manganese]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
@@ -269,18 +211,9 @@ data:extend(
           {type = "item", name = "angels-roll-manganese", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-manganese.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-manganese"),
+        1, angelsmods.smelting.number_tint),
       order = "i[angels-roll-manganese]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
@@ -315,18 +248,9 @@ data:extend(
         },
         main_product = "angels-roll-manganese"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-manganese.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-manganese"),
+        2, angelsmods.smelting.number_tint),
       order = "i[angels-roll-manganese]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese")
     },
@@ -356,17 +280,10 @@ data:extend(
           {type = "item", name = "angels-plate-manganese", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-manganese.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-manganese.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-manganese"),
+        angelsmods.functions.get_object_icons("liquid-molten-manganese"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-manganese]-a"
     },
     {
@@ -383,17 +300,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-manganese", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-manganese.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-manganese"),
+        angelsmods.functions.get_object_icons("angels-roll-manganese"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-manganese]-b"
     }
   }

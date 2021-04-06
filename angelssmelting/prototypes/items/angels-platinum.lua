@@ -17,7 +17,7 @@ data:extend(
     type = "item",
     name = "processed-platinum",
     icon = "__angelssmelting__/graphics/icons/processed-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "b",
     stack_size = 200
@@ -26,7 +26,7 @@ data:extend(
     type = "item",
     name = "pellet-platinum",
     icon = "__angelssmelting__/graphics/icons/pellet-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "c",
     stack_size = 200
@@ -60,7 +60,7 @@ data:extend(
     type = "item",
     name = "ingot-platinum",
     icon = "__angelssmelting__/graphics/icons/ingot-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "f",
     stack_size = 200
@@ -69,7 +69,7 @@ data:extend(
     type = "item",
     name = "powder-platinum",
     icon = "__angelssmelting__/graphics/icons/powder-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum",
     order = "g",
     stack_size = 200
@@ -79,7 +79,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-platinum",
     icon = "__angelssmelting__/graphics/icons/molten-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum-casting",
     order = "h",
     default_temperature = 1768,
@@ -95,7 +95,7 @@ data:extend(
     type = "item",
     name = "angels-roll-platinum",
     icon = "__angelssmelting__/graphics/icons/roll-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum-casting",
     order = "i",
     stack_size = 200
@@ -104,7 +104,7 @@ data:extend(
     type = "item",
     name = "angels-wire-coil-platinum",
     icon = "__angelssmelting__/graphics/icons/wire-coil-platinum.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-platinum-casting",
     order = "j",
     stack_size = 200

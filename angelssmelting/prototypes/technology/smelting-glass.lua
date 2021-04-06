@@ -4,7 +4,7 @@ data:extend(
       type = "technology",
       name = "angels-glass-smelting-1",
       icon = "__angelssmelting__/graphics/technology/glass-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-crushing",
@@ -44,14 +44,14 @@ data:extend(
       type = "technology",
       name = "angels-glass-smelting-2",
       icon = "__angelssmelting__/graphics/technology/glass-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "powder-metallurgy-2",
         "angels-glass-smelting-1",
         "angels-stone-smelting-2",
-        "angels-lead-smelting-2"
+        "angels-lead-smelting-2" -- need this for the lead oxide processing
       },
       effects = {
         {
@@ -78,7 +78,7 @@ data:extend(
       type = "technology",
       name = "angels-glass-smelting-3",
       icon = "__angelssmelting__/graphics/technology/glass-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
@@ -86,9 +86,9 @@ data:extend(
         --[["strand-casting-1",]]
         "angels-glass-smelting-2",
         "angels-aluminium-smelting-2",
-        "angels-tin-smelting-3",
+        "angels-tin-casting-3",
         "sodium-processing",
-        "angels-nitrogen-processing-1"
+        --"angels-nitrogen-processing-1"
       },
       effects = {
         {

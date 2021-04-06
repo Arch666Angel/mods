@@ -599,7 +599,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm-1"
+        "bio-farm-1",
+        "gas-processing"
       },
       effects = {
         {
@@ -654,7 +655,7 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-pressing",
+      name = "bio-pressing-1",
       icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
       icon_size = 128,
       order = "c-a",
@@ -686,10 +687,6 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "liquid-raw-vegetable-oil-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "liquid-vegetable-oil-refining"
         }
       },
@@ -704,14 +701,41 @@ data:extend(
     },
     {
       type = "technology",
-      name = "bio-pressing-fish",
+      name = "bio-pressing-2",
       icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-pressing",
+        "bio-pressing-1",
+        "slag-processing-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-raw-vegetable-oil-filtering-2"
+        }
+      },
+      unit = {
+        count = 75,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "bio-pressing-fish-1",
+      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-pressing-1",
         "bio-refugium-fish-1",
         "bio-fermentation",
+        "thermal-water-extraction"
       },
       effects = {
         {
@@ -740,16 +764,8 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "liquid-raw-fish-oil-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "liquid-fish-oil-refining"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "advanced-liquid-fish-oil-refining"
-        }
       },
       unit = {
         count = 40,
@@ -762,12 +778,43 @@ data:extend(
     },
     {
       type = "technology",
+      name = "bio-pressing-fish-2",
+      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-pressing-fish-1",
+        "bio-pressing-2"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-raw-fish-oil-filtering-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "advanced-liquid-fish-oil-refining"
+        }
+      },
+      unit = {
+        count = 75,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
       name = "bio-fermentation",
       icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm-1"
+        "bio-farm-1",
+        "angels-sulfur-processing-1"
       },
       effects = {
         -- {
@@ -812,6 +859,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-fermentation",
+        "bio-nutrient-paste",
         "plastics"
       },
       effects = {
@@ -834,6 +882,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "bio-plastic-1"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-plastic"
         }
       },
       unit = {

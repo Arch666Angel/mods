@@ -3,21 +3,15 @@ data:extend(
     {
       type = "item",
       name = "casting-machine",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       subgroup = "angels-casting-machine",
       order = "a[casting-machine]",
       place_result = "casting-machine",
@@ -26,21 +20,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "casting-machine",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "casting-machine"},
       fast_replaceable_group = "casting-machine",
@@ -145,8 +133,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
@@ -154,12 +140,14 @@ data:extend(
             width = 111,
             height = 104,
             shift = util.by_pixel(1, -2),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
               priority = "high",
               width = 205,
               height = 244,
               shift = util.by_pixel(0, -2),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -175,21 +163,15 @@ data:extend(
     {
       type = "item",
       name = "casting-machine-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       subgroup = "angels-casting-machine",
       order = "b[casting-machine-2]",
       place_result = "casting-machine-2",
@@ -198,21 +180,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "casting-machine-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "casting-machine-2"},
       fast_replaceable_group = "casting-machine",
@@ -317,8 +293,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
@@ -326,12 +300,14 @@ data:extend(
             width = 111,
             height = 104,
             shift = util.by_pixel(1, -2),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
               priority = "high",
               width = 205,
               height = 244,
               shift = util.by_pixel(0, -2),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -347,21 +323,15 @@ data:extend(
     {
       type = "item",
       name = "casting-machine-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       subgroup = "angels-casting-machine",
       order = "c[casting-machine-3]",
       place_result = "casting-machine-3",
@@ -370,21 +340,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "casting-machine-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "casting-machine-3"},
       fast_replaceable_group = "casting-machine",
@@ -489,8 +453,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
@@ -498,12 +460,14 @@ data:extend(
             width = 111,
             height = 104,
             shift = util.by_pixel(1, -2),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
               priority = "high",
               width = 205,
               height = 244,
               shift = util.by_pixel(0, -2),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -519,21 +483,15 @@ data:extend(
     {
       type = "item",
       name = "casting-machine-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       subgroup = "angels-casting-machine",
       order = "d[casting-machine-4]",
       place_result = "casting-machine-4",
@@ -542,21 +500,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "casting-machine-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/casting-machine.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "casting-machine-4"},
       fast_replaceable_group = "casting-machine",
@@ -660,8 +612,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
@@ -669,12 +619,14 @@ data:extend(
             width = 111,
             height = 104,
             shift = util.by_pixel(1, -2),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
               priority = "high",
               width = 205,
               height = 244,
               shift = util.by_pixel(0, -2),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }

@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.bioprocessing = angelsmods.bioprocessing or {}
-angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 0}
+angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 1}
 
 --TRIGGER CHECKS
 angelsmods.triggers = angelsmods.triggers or {}
@@ -67,6 +67,7 @@ require("prototypes.buildings.hatchery")
 require("prototypes.buildings.butchery")
 require("prototypes.buildings.gardens")
 require("prototypes.buildings.trees")
+require("prototypes.buildings.bio-tile")
 --require("prototypes.buildings.puffer-spawner")
 require("prototypes.buildings.puffer-nest")
 require("prototypes.buildings.alien-fish")

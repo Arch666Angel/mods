@@ -18,8 +18,6 @@ data:extend(
         {type = "item", name = "processed-silica", amount = 2}
       },
       main_product = "processed-silica",
-      --icon = "__angelssmelting__/graphics/icons/processed-silica.png",
-      icon_size = 32,
       order = "b[processed-silica]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silicon")
     },
@@ -37,8 +35,6 @@ data:extend(
         {type = "item", name = "pellet-silica", amount = 4}
       },
       main_product = "pellet-silica",
-      --icon = "__angelssmelting__/graphics/icons/pellet-silica.png",
-      icon_size = 32,
       order = "c[pellet-silica]"
     },
     {
@@ -107,18 +103,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-silicon", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-silicon.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-silicon"),
+        1, angelsmods.smelting.number_tint),
       order = "f[ingot-silicon]-a"
     },
     {
@@ -135,18 +122,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-silicon", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-silicon.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-silicon"),
+        2, angelsmods.smelting.number_tint),
       order = "f[ingot-silicon]-b"
     },
     {
@@ -163,18 +141,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-silicon", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-silicon.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-silicon"),
+        3, angelsmods.smelting.number_tint),
       order = "f[ingot-silicon]-c"
     },
     {
@@ -190,7 +159,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-silicon", amount = 1}
       },
-      icon_size = 32,
       order = "g[powder-silicon]"
     },
     -- CASTING INTERMEDIATE
@@ -208,8 +176,6 @@ data:extend(
         {type = "fluid", name = "liquid-molten-silicon", amount = 120}
       },
       main_product = "liquid-molten-silicon",
-      --icon = "__angelssmelting__/graphics/icons/molten-silicon.png",
-      icon_size = 32,
       order = "h[liquid-molten-silicon]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silicon")
     },
@@ -240,7 +206,6 @@ data:extend(
           {type = "item", name = "angels-mono-silicon-seed", amount = 5}
         }
       },
-      icon_size = 32,
       order = "i[angels-mono-silicon-seed]"
     },
     {
@@ -268,7 +233,6 @@ data:extend(
           {type = "item", name = "angels-quartz-crucible", amount = 1}
         }
       },
-      icon_size = 32,
       order = "j[angels-quartz-crucible]"
     },
     -- CASTING RESULT
@@ -299,18 +263,9 @@ data:extend(
           {type = "item", name = "angels-mono-silicon", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/silicon-mono.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-mono-silicon"),
+        1, angelsmods.smelting.number_tint),
       order = "k[angels-mono-silicon]-a"
     },
     {
@@ -346,18 +301,9 @@ data:extend(
         },
         main_product = "angels-mono-silicon"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/silicon-mono.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-mono-silicon"),
+        2, angelsmods.smelting.number_tint),
       order = "k[angels-mono-silicon]-b"
     },
     {
@@ -373,7 +319,6 @@ data:extend(
       results = {
         {type = "item", name = "angels-silicon-wafer", amount_min = 1, amount_max = 5}
       },
-      icon_size = 32,
       order = "l[angels-silicon-wafer]"
     }
     -- order m reserved for bob silicon processing

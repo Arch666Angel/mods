@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-chrome",
     icon = "__angelssmelting__/graphics/icons/processed-chrome.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-chrome",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-chrome",
     icon = "__angelssmelting__/graphics/icons/pellet-chrome.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-chrome",
     order = "c",
     stack_size = 200
@@ -61,7 +61,7 @@ data:extend(
     type = "item",
     name = "ingot-chrome",
     icon = "__angelssmelting__/graphics/icons/ingot-chrome.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-chrome",
     order = "g",
     stack_size = 200
@@ -70,7 +70,7 @@ data:extend(
     type = "item",
     name = "powder-chrome",
     icon = "__angelssmelting__/graphics/icons/powder-chrome.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-chrome",
     order = "h",
     stack_size = 200
@@ -80,7 +80,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-chrome",
     icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-chrome-casting",
     order = "i",
     default_temperature = 1907,
@@ -96,7 +96,7 @@ data:extend(
     type = "item",
     name = "angels-roll-chrome",
     icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-chrome-casting",
     order = "j",
     stack_size = 200

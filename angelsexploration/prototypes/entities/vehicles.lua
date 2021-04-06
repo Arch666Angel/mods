@@ -49,7 +49,7 @@ data:extend(
         range = 20,
         sound = heavy_gunshot --[[{
           {
-            filename="__base__/prototypes/entity/demo-sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
+            filename="__base__/prototypes/entity/sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
             volume=1.0,
           }
         },]]
@@ -146,8 +146,9 @@ data:extend(
           percent = 30
         }
       },
-      collision_box = {{-1.5, -2.25}, {1.5, 2.25}},
-      selection_box = {{-1.5, -2.25}, {1.5, 2.25}},
+      collision_box = {{-1.55, -1.5}, {1.55, 3}},
+      selection_box = {{-1.55, -1.5}, {1.55, 3}},
+      drawing_box = {{-1.55, -3}, {1.55, 3}},
       effectivity = 0.7,
       braking_power = "1000kW",
       burner = {

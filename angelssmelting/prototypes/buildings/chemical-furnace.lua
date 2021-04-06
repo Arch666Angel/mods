@@ -3,21 +3,15 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-furnace",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       subgroup = "angels-chemical-furnace",
       order = "a[angels-chemical-furnace]",
       place_result = "angels-chemical-furnace",
@@ -26,21 +20,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-furnace",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -135,8 +123,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -147,6 +133,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -166,7 +153,8 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
-              scale = 0.5
+              draw_as_light = true,
+              scale = 0.5,
             } or nil
           }
         }
@@ -210,21 +198,15 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-furnace-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       subgroup = "angels-chemical-furnace",
       order = "b[angels-chemical-furnace-2]",
       place_result = "angels-chemical-furnace-2",
@@ -233,21 +215,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-furnace-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace-2"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -342,8 +318,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -354,6 +328,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -373,6 +348,7 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -417,21 +393,15 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-furnace-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       subgroup = "angels-chemical-furnace",
       order = "c[angels-chemical-furnace-3]",
       place_result = "angels-chemical-furnace-3",
@@ -440,21 +410,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-furnace-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace-3"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -549,8 +513,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -561,6 +523,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -580,6 +543,7 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -624,21 +588,15 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-furnace-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       subgroup = "angels-chemical-furnace",
       order = "d[angels-chemical-furnace-4]",
       place_result = "angels-chemical-furnace-4",
@@ -647,21 +605,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-furnace-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "angels-chemical-furnace-4"},
       fast_replaceable_group = "angels-chemical-furnace",
@@ -755,8 +707,6 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
@@ -767,6 +717,7 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(-1, -12),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 332,
@@ -786,6 +737,7 @@ data:extend(
               },
               animation_speed = 0.5,
               shift = util.by_pixel(-1, -11.5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }

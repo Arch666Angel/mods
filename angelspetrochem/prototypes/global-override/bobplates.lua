@@ -28,58 +28,25 @@ if mods["bobplates"] then
       "air-compressor-4"
     }
   )
+  
+  OV.hide_recipe(
+    {
+      "air-pump",
+      "air-pump-2",
+      "air-pump-3",
+      "air-pump-4",
+      "void-pump",
+    }
+  )
 end
 
 -------------------------------------------------------------------------------
 -- STORAGE TANKS --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  move_item("bob-small-inline-storage-tank", "angels-fluid-tanks", "a[small-tank]-a")
-  move_item("bob-small-storage-tank", "angels-fluid-tanks", "a[small-tank]-b")
-  move_item("storage-tank", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-a[regular]")
-  move_item("angels-storage-tank-1", "angels-fluid-tanks", "c[large-tank]-c[gas]")
-  move_item("angels-storage-tank-2", "angels-fluid-tanks", "c[large-tank]-b[oil]")
-  move_item("angels-storage-tank-3", "angels-fluid-tanks", "c[large-tank]-a[inline]")
-
-  OV.patch_recipes(
-    {
-      {
-        name = "bob-small-storage-tank",
-        ingredients = {
-          {"!!"},
-          {name = "bob-small-inline-storage-tank", amount = 1},
-          {name = "pipe", amount = 1}
-        }
-      },
-      {
-        name = "storage-tank",
-        ingredients = {
-          {name = "bob-small-inline-storage-tank", amount = 1}
-        }
-      }
-    }
-  )
-
   if mods["boblogistics"] then
-    move_item("bob-storage-tank-all-corners", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-b[all-corners]")
-    move_item("storage-tank-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-a[regular]")
-    move_item("bob-storage-tank-all-corners-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-b[all-corners]")
-    move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-a[regular]")
-    move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-b[all-corners]")
-    move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-a[regular]")
-    move_item("bob-storage-tank-all-corners-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-b[all-corners]")
-    move_item("storage-tank-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-a[regular]")
-    move_item("bob-storage-tank-all-corners-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-b[all-corners]")
-
     OV.patch_recipes(
       {
-        {
-          name = "bob-storage-tank-all-corners",
-          ingredients = {
-            {name = "bob-small-storage-tank", amount = 1},
-            {name = "pipe", amount = 2}
-          }
-        },
         {
           name = "angels-storage-tank-3",
           ingredients = {
@@ -92,28 +59,22 @@ if mods["bobplates"] then
     data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.base_area = 2000
     data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.base_area = 1500
   end
+  -- electrolysis -------------------------------------------------------------
+  --move small tanks to fluid-control
+  OV.add_unlock("angels-fluid-control","bob-small-storage-tank")
+  OV.add_unlock("angels-fluid-control","bob-small-inline-storage-tank")
+  OV.disable_technology({"electrolysis-1","electrolysis-2"})
+  --clean-up pre-requisites
+  OV.remove_prereq("steel-processing","electrolysis-1")
+  OV.remove_prereq("lithium-processing","electrolysis-1")
+  OV.remove_prereq("chemical-processing-2","electrolysis-2")
+  OV.remove_prereq("plastics","electrolysis-2")
 end
 
 -------------------------------------------------------------------------------
 -- FLUID CONTROL --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if mods["boblogistics"] then
-    -- hide fluid control from bob (as we use the extended angel equivalents)
-    angelsmods.functions.add_flag("bob-valve", "hidden")
-    angelsmods.functions.add_flag("bob-overflow-valve", "hidden")
-    angelsmods.functions.add_flag("bob-topup-valve", "hidden")
-    OV.disable_recipe("bob-valve")
-    OV.remove_unlock("fluid-handling", "bob-overflow-valve")
-    OV.remove_unlock("fluid-handling", "bob-topup-valve")
-
-    -- move pumps over
-    move_item("pump", "angels-fluid-control", "b[pump]-a[mk1]")
-    move_item("bob-pump-2", "angels-fluid-control", "b[pump]-b[mk2]")
-    move_item("bob-pump-3", "angels-fluid-control", "b[pump]-c[mk3]")
-    move_item("bob-pump-4", "angels-fluid-control", "b[pump]-d[mk4]")
-  end
-
   -- generic replace items ----------------------------------------------------
   OV.global_replace_item("carbon", "solid-carbon")
   angelsmods.functions.add_flag("carbon", "hidden")
@@ -215,7 +176,28 @@ if mods["bobplates"] then
   move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
   OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
-
+  --hide disabled
+  OV.hide_recipe(
+    {
+      "bob-oil-processing",
+      "hydrogen-sulfide",
+      "sulfur-dioxide",
+      "coal-cracking",
+      "hydrogen-chloride",
+      "petroleum-gas-cracking",
+      "nitric-acid",
+      "nitrogen-dioxide",
+      "nitrogen",
+      "sulfuric-acid-2",
+      "sulfuric-acid-3",
+      "bob-liquid-air",
+      "solid-fuel-from-hydrogen",
+      "sulfur",
+      "sulfur-2",
+      "sulfur-3",
+      "carbon",
+    }
+  )
   -- plastics -----------------------------------------------------------------
   OV.remove_unlock("plastics", "plastic-bar")
 
@@ -255,36 +237,30 @@ if mods["bobplates"] then
         },
         subgroup = "petrochem-solids",
         order = "b[resin]-b[solid]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/resin.png"
+            {
+              icon = "__bobplates__/graphics/icons/resin.png",
+              icon_size = 32, icon_mipmaps = 1,
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.petrochem.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32
+          1, angelsmods.petrochem.number_tint),
       },
       {
         name = "solid-resin",
         order = "b[resin]-b[solid]-b",
-        icons = {
+        icons = mods["angelsbioprocessing"] and {
           {
-            icon = "__bobplates__/graphics/icons/resin.png"
+            icon = "__bobplates__/graphics/icons/resin.png",
+            icon_size = 32, icon_mipmaps = 1,
           },
-          not mods["angelsbioprocessing"] and
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              tint = angelsmods.petrochem.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            } or
-            nil
+        } or angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__bobplates__/graphics/icons/resin.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        icon_size = 32
+        2, angelsmods.petrochem.number_tint),
       }
     }
   )
@@ -315,35 +291,27 @@ if mods["bobplates"] then
         },
         subgroup = "petrochem-solids-2",
         order = "b[rubber]-b[solid]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/rubber.png"
+            {
+              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon_size = 32, icon_mipmaps = 1,
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.petrochem.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32
+          1, angelsmods.petrochem.number_tint),
       },
       {
         name = "solid-rubber",
         subgroup = "petrochem-solids-2",
         order = "b[rubber]-b[solid]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/rubber.png"
+            {
+              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon_size = 32, icon_mipmaps = 1,
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.petrochem.number_tint,
-            scale = 0.32,
-            shift = {-12, -12}
-          }
-        },
-        icon_size = 32
+          2, angelsmods.petrochem.number_tint),
       }
     }
   )

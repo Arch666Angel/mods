@@ -24,9 +24,11 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
     OV.disable_recipe({"molten-manganese-smelting"})
-    -- no need for the strand casting
-    OV.remove_prereq("angels-manganese-smelting-2", "strand-casting-2")
-    OV.remove_prereq("angels-manganese-smelting-3", "strand-casting-3")
+    OV.disable_technology({"angels-manganese-casting-2", "angels-manganese-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-manganese-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-manganese-smelting-2"][property])
+    end
   end
   
   if mods["angelsindustries"] and angelsmods.industries.components then
@@ -43,8 +45,9 @@ else
   OV.disable_recipe({"manganese-ore-processing", "manganese-processed-processing"})
   OV.disable_recipe({"pellet-manganese-smelting", "processed-manganese-smelting", "manganese-processed-processing-alt", "solid-manganese-oxide-smelting"})
   OV.disable_recipe({"manganese-ore-smelting", "cathode-manganese-smelting"})
-  OV.disable_recipe({"molten-manganese-smelting"})
+  OV.disable_recipe({"molten-manganese-smelting", "solid-iron-hydroxide-smelting"})
   OV.disable_technology({"angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3"})
+  OV.disable_technology({"angels-manganese-casting-2", "angels-manganese-casting-3"})
 end
 
 -------------------------------------------------------------------------------

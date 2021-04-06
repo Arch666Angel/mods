@@ -60,3 +60,22 @@ if mods["bobwarfare"] then
     move_item("bob-artillery-wagon-3", "angels-vehicle-train-vanilla", data.raw["artillery-wagon"]["artillery-wagon"].order, "item-with-entity-data")
   end
 end
+
+-------------------------------------------------------------------------------
+-- SPIDERTRON -----------------------------------------------------------------
+-------------------------------------------------------------------------------
+move_item("spidertron-remote", "angels-vehicle-spidertron", "a[remote]", "spidertron-remote")
+move_item("spidertron", "angels-vehicle-spidertron", "b[spidertron]", "item-with-entity-data")
+
+if mods["bobwarfare"] then
+  data.raw["item-subgroup"]["mech-parts"].group = "angels-vehicles"
+  data.raw["item-subgroup"]["mech-parts"].order = "cbb"
+
+  move_item("antron", "angels-vehicle-spidertron", "b[spidertron]-a", "item-with-entity-data")
+  move_item("tankotron", "angels-vehicle-spidertron", "b[spidertron]-b", "item-with-entity-data")
+  move_item("spidertron", "angels-vehicle-spidertron", "b[spidertron]-c", "item-with-entity-data")
+  move_item("heavy-spidertron", "angels-vehicle-spidertron", "b[spidertron]-d", "item-with-entity-data")
+  move_item("logistic-spidertron", "angels-vehicle-spidertron", "b[spidertron]-e", "item-with-entity-data")
+
+  move_item("spidertron-cannon", "mech-parts", "s[mech]-c")
+end

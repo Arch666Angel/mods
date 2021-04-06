@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-nickel", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-nickel]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
@@ -34,7 +33,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-nickel", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-nickel]"
     },
     {
@@ -51,7 +49,6 @@ data:extend(
       results = {
         {type = "item", name = "cathode-nickel", amount = 12}
       },
-      icon_size = 32,
       order = "d[cathode-nickel]"
     },
     {
@@ -69,7 +66,6 @@ data:extend(
       results = {
         {type = "item", name = "solid-nickel-carbonyl", amount = 24}
       },
-      icon_size = 32,
       order = "e[solid-nickel-carbonyl]"
     },
     -- SMELTING RESULTS
@@ -87,18 +83,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-nickel", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-nickel.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-nickel"),
+        1, angelsmods.smelting.number_tint),
       order = "f[ingot-nickel]-a"
     },
     {
@@ -114,18 +101,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-nickel", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-nickel.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-nickel"),
+        2, angelsmods.smelting.number_tint),
       order = "f[ingot-nickel]-b"
     },
     {
@@ -142,18 +120,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-nickel", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-nickel.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-nickel"),
+        3, angelsmods.smelting.number_tint),
       order = "f[ingot-nickel]-c"
     },
     {
@@ -169,7 +138,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-nickel", amount = 1}
       },
-      icon_size = 32,
       order = "g[powder-nickel]"
     },
     -- CASTING INTERMEDIATE
@@ -186,7 +154,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-nickel", amount = 120}
       },
-      icon_size = 32,
       order = "h[liquid-molten-nickel]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
@@ -217,18 +184,9 @@ data:extend(
           {type = "item", name = "angels-roll-nickel", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-nickel.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-nickel"),
+        1, angelsmods.smelting.number_tint),
       order = "i[angels-roll-nickel]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
@@ -263,18 +221,9 @@ data:extend(
         },
         main_product = "angels-roll-nickel"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-nickel.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-nickel"),
+        2, angelsmods.smelting.number_tint),
       order = "i[angels-roll-nickel]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel")
     },
@@ -304,17 +253,10 @@ data:extend(
           {type = "item", name = "angels-plate-nickel", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-nickel.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-nickel.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-nickel"),
+        angelsmods.functions.get_object_icons("liquid-molten-nickel"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-nickel]-a"
     },
     {
@@ -331,17 +273,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-nickel", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-nickel.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-nickel.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-nickel"),
+        angelsmods.functions.get_object_icons("angels-roll-nickel"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-nickel]-b"
     }
   }

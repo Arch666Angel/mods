@@ -3,21 +3,15 @@ data:extend(
     {
       type = "item",
       name = "induction-furnace",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       subgroup = "angels-induction-furnace",
       order = "a[induction-furnace]",
       place_result = "induction-furnace",
@@ -26,21 +20,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "induction-furnace",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral","player-creation"},
       minable = {mining_time = 1, result = "induction-furnace"},
       fast_replaceable_group = "induction-furnace",
@@ -193,8 +181,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -205,10 +191,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -223,7 +210,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -244,9 +232,9 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{ position = {2, -3} }}
-        }
+        },
+        --off_when_no_fluid_recipe = true,
       },
-      off_when_no_fluid_recipe = true,
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {
@@ -259,21 +247,15 @@ data:extend(
     {
       type = "item",
       name = "induction-furnace-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       subgroup = "angels-induction-furnace",
       order = "b[induction-furnace-2]",
       place_result = "induction-furnace-2",
@@ -282,21 +264,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "induction-furnace-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral","player-creation"},
       minable = {mining_time = 1, result = "induction-furnace-2"},
       fast_replaceable_group = "induction-furnace",
@@ -449,8 +425,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -461,10 +435,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -479,7 +454,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -492,9 +468,9 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{ position = {2, -3} }}
-        }
+        },
+        --off_when_no_fluid_recipe = true,
       },
-      off_when_no_fluid_recipe = true,
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {
@@ -507,21 +483,15 @@ data:extend(
     {
       type = "item",
       name = "induction-furnace-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       subgroup = "angels-induction-furnace",
       order = "c[induction-furnace-3]",
       place_result = "induction-furnace-3",
@@ -530,21 +500,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "induction-furnace-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral","player-creation"},
       minable = {mining_time = 1, result = "induction-furnace-3"},
       fast_replaceable_group = "induction-furnace",
@@ -697,8 +661,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -709,10 +671,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -727,7 +690,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -740,9 +704,9 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{ position = {2, -3} }}
-        }
+        },
+        --off_when_no_fluid_recipe = true,
       },
-      off_when_no_fluid_recipe = true,
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {
@@ -755,21 +719,15 @@ data:extend(
     {
       type = "item",
       name = "induction-furnace-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       subgroup = "angels-induction-furnace",
       order = "d[induction-furnace-4]",
       place_result = "induction-furnace-4",
@@ -778,21 +736,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "induction-furnace-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
-          icon_size = 64,
-            icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/induction-furnace.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.smelting.number_tint,
-          icon_size = 32,
-          icon_mipmaps = 1,
-          scale = 0.32,
-          shift = {-12, -12},
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral","player-creation"},
       minable = {mining_time = 1, result = "induction-furnace-4"},
       fast_replaceable_group = "induction-furnace",
@@ -944,8 +896,6 @@ data:extend(
           }
         },
         {
-          draw_as_sprite = false,
-          draw_as_light = true,
           always_draw = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
@@ -956,10 +906,11 @@ data:extend(
             frame_count = 36,
             animation_speed = 0.5,
             shift = util.by_pixel(0.5, -5.5),
+            draw_as_light = true,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               priority = "high",
               width = 336,
-              height = 379,
+              height = 381,
               frame_count = 36,
               stripes = {
                 {
@@ -974,7 +925,8 @@ data:extend(
                 },
               },
               animation_speed = 0.5,
-              shift = util.by_pixel(0, -6),
+              shift = util.by_pixel(0, -5),
+              draw_as_light = true,
               scale = 0.5
             } or nil
           }
@@ -987,9 +939,9 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{ position = {2, -3} }}
-        }
+        },
+        --off_when_no_fluid_recipe = true,
       },
-      off_when_no_fluid_recipe = true,
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {

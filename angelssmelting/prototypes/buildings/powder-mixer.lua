@@ -3,21 +3,15 @@ data:extend(
     {
       type = "item",
       name = "powder-mixer",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       subgroup = "angels-powder-mixer",
       order = "a[powder-mixer]",
       place_result = "powder-mixer",
@@ -26,21 +20,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "powder-mixer",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        1, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "powder-mixer"},
       fast_replaceable_group = "powder-mixer",
@@ -121,21 +109,15 @@ data:extend(
     {
       type = "item",
       name = "powder-mixer-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       subgroup = "angels-powder-mixer",
       order = "b[powder-mixer-2]",
       place_result = "powder-mixer-2",
@@ -144,21 +126,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "powder-mixer-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        2, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "powder-mixer-2"},
       fast_replaceable_group = "powder-mixer",
@@ -239,21 +215,15 @@ data:extend(
     {
       type = "item",
       name = "powder-mixer-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       subgroup = "angels-powder-mixer",
       order = "c[powder-mixer-3]",
       place_result = "powder-mixer-3",
@@ -262,21 +232,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "powder-mixer-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        3, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "powder-mixer-3"},
       fast_replaceable_group = "powder-mixer",
@@ -357,21 +321,15 @@ data:extend(
     {
       type = "item",
       name = "powder-mixer-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       subgroup = "angels-powder-mixer",
       order = "d[powder-mixer-4]",
       place_result = "powder-mixer-4",
@@ -380,21 +338,15 @@ data:extend(
     {
       type = "assembling-machine",
       name = "powder-mixer-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-          icon_size = 64,
-          icon_mipmaps = 4
+          {
+            icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+            icon_size = 64, icon_mipmaps = 4,
+            scale = 0.5
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          icon_size = 32,
-          icon_mipmaps = 1,
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
+        4, angelsmods.smelting.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "powder-mixer-4"},
       fast_replaceable_group = "powder-mixer",

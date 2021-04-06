@@ -17,7 +17,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           type = "fluid",
           name = "liquid-molten-nitinol",
           icon = "__angelssmelting__/graphics/icons/molten-nitinol.png",
-          icon_size = 32,
+          icon_size = 64, icon_mipmaps = 4,
           subgroup = "angels-alloys-casting",
           order = "f[nitinol]-a[liquid-molten-nitinol]",
           default_temperature = 100,
@@ -48,18 +48,6 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-nitinol", amount = 360}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-nitinol.png"
-            }
-            -- {
-            -- icon = "__angelsrefining__/graphics/icons/num_1.png",
-            -- tint = angelsmods.smelting.number_tint,
-            -- scale = 0.32,
-            -- shift = {-12, -12},
-            -- }
-          },
-          icon_size = 32,
           order = "f[nitinol]-a[liquid-molten-nitinol]",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nitinol")
         },
@@ -77,15 +65,14 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           results = {
             {type = "item", name = "nitinol-alloy", amount = 4}
           },
-          icon_size = 32,
           order = "f[nitinol]-b[nitinol-alloy]"
         },
         --TECHS
         {
           type = "technology",
           name = "angels-nitinol-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-nitinol.png",
-          icon_size = 128,
+          icon = "__angelssmelting__/graphics/technology/casting-nitinol-tech.png",
+          icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
             "angels-titanium-smelting-1",
             "angels-nickel-smelting-1"

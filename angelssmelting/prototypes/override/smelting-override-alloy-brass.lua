@@ -17,7 +17,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           type = "fluid",
           name = "liquid-molten-brass",
           icon = "__angelssmelting__/graphics/icons/molten-brass.png",
-          icon_size = 32,
+          icon_size = 64, icon_mipmaps = 4,
           subgroup = "angels-alloys-casting",
           order = "b[brass]-a[liquid-molten-brass]",
           default_temperature = 100,
@@ -48,18 +48,9 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-brass", amount = 240}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-brass.png"
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_1.png",
-              tint = angelsmods.smelting.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32,
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("liquid-molten-brass"),
+            1, angelsmods.smelting.number_tint),
           order = "b[brass]-a[liquid-molten-brass]-a",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
         },
@@ -78,18 +69,9 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-brass", amount = 360}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-brass.png"
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              tint = angelsmods.smelting.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32,
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("liquid-molten-brass"),
+            2, angelsmods.smelting.number_tint),
           order = "b[brass]-a[liquid-molten-brass]-b",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
         },
@@ -108,18 +90,9 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           results = {
             {type = "fluid", name = "liquid-molten-brass", amount = 360}
           },
-          icons = {
-            {
-              icon = "__angelssmelting__/graphics/icons/molten-brass.png"
-            },
-            {
-              icon = "__angelsrefining__/graphics/icons/num_3.png",
-              tint = angelsmods.smelting.number_tint,
-              scale = 0.32,
-              shift = {-12, -12}
-            }
-          },
-          icon_size = 32,
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("liquid-molten-brass"),
+            3, angelsmods.smelting.number_tint),
           order = "b[brass]-a[liquid-molten-brass]-c",
           crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass")
         },
@@ -137,15 +110,14 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           results = {
             {type = "item", name = "brass-alloy", amount = 4}
           },
-          icon_size = 32,
           order = "b[brass]-b[brass-alloy]"
         },
         --TECHS
         {
           type = "technology",
           name = "angels-brass-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/smelting-brass.png",
-          icon_size = 128,
+          icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
+          icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
             "angels-zinc-smelting-1",
             "angels-copper-smelting-1"
@@ -173,10 +145,11 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "technology",
           name = "angels-brass-smelting-2",
-          icon = "__angelssmelting__/graphics/technology/smelting-brass.png",
-          icon_size = 128,
+          icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
+          icon_size = 256, icon_mipmaps = 4,
           upgrade = true,
           prerequisites = {
+            "angels-metallurgy-3",
             "angels-brass-smelting-1",
             "angels-tin-smelting-1"
           },
@@ -200,10 +173,11 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "technology",
           name = "angels-brass-smelting-3",
-          icon = "__angelssmelting__/graphics/technology/smelting-brass.png",
-          icon_size = 128,
+          icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
+          icon_size = 256, icon_mipmaps = 4,
           upgrade = true,
           prerequisites = {
+            "angels-metallurgy-4",
             "angels-brass-smelting-2",
             "angels-lead-smelting-1"
           },

@@ -18,8 +18,6 @@ data:extend(
         {type = "item", name = "processed-zinc", amount = 2}
       },
       main_product = "processed-zinc",
-      icon = "__angelssmelting__/graphics/icons/processed-zinc.png",
-      icon_size = 32,
       order = "b[processed-zinc]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
@@ -37,8 +35,6 @@ data:extend(
         {type = "item", name = "pellet-zinc", amount = 4}
       },
       main_product = "pellet-zinc",
-      icon = "__angelssmelting__/graphics/icons/pellet-zinc.png",
-      icon_size = 32,
       order = "c[pellet-zinc]"
     },
     {
@@ -57,18 +53,9 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
       },
       main_product = "solid-zinc-oxide",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-zinc-oxide"),
+        1, angelsmods.smelting.number_tint),
       order = "d[solid-zinc-oxide]-a"
     },
     {
@@ -87,18 +74,9 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
       },
       main_product = "solid-zinc-oxide",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-zinc-oxide"),
+        2, angelsmods.smelting.number_tint),
       order = "d[solid-zinc-oxide]-b"
     },
     {
@@ -115,7 +93,6 @@ data:extend(
       results = {
         {type = "item", name = "cathode-zinc", amount = 12}
       },
-      icon_size = 32,
       order = "e[cathode-zinc]"
     },
     -- SMELTING RESULTS
@@ -137,18 +114,9 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
       },
       main_product = "ingot-zinc",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-zinc.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-zinc"),
+        1, angelsmods.smelting.number_tint),
       order = "f[ingot-zinc]-a"
     },
     {
@@ -168,18 +136,9 @@ data:extend(
         {type = "fluid", name = "gas-sulfur-dioxide", amount = 30}
       },
       main_product = "ingot-zinc",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-zinc.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-zinc"),
+        2, angelsmods.smelting.number_tint),
       order = "f[ingot-zinc]-b"
     },
     {
@@ -195,18 +154,9 @@ data:extend(
       results = {
         {type = "item", name = "ingot-zinc", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/ingot-zinc.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("ingot-zinc"),
+        3, angelsmods.smelting.number_tint),
       order = "f[ingot-zinc]-c"
     },
     {
@@ -222,7 +172,6 @@ data:extend(
       results = {
         {type = "item", name = "powder-zinc", amount = 1}
       },
-      icon_size = 32,
       order = "g[powder-zinc]"
     },
     -- CASTING INTERMEDIATE
@@ -239,7 +188,6 @@ data:extend(
       results = {
         {type = "fluid", name = "liquid-molten-zinc", amount = 120}
       },
-      icon_size = 32,
       order = "h[liquid-molten-zinc]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
@@ -270,18 +218,9 @@ data:extend(
           {type = "item", name = "angels-roll-zinc", amount = 2}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-zinc.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-zinc"),
+        1, angelsmods.smelting.number_tint),
       order = "i[angels-roll-zinc]-a",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
@@ -316,18 +255,9 @@ data:extend(
         },
         main_product = "angels-roll-zinc"
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-zinc.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = {r = 1.0, g = 0.8, b = 0.0, a = 0.5},
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("angels-roll-zinc"),
+        2, angelsmods.smelting.number_tint),
       order = "i[angels-roll-zinc]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-zinc")
     },
@@ -356,17 +286,10 @@ data:extend(
           {type = "item", name = "angels-plate-zinc", amount = 4}
         }
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-zinc.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-zinc"),
+        angelsmods.functions.get_object_icons("liquid-molten-zinc"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-zinc]-a"
     },
     {
@@ -383,17 +306,10 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-zinc", amount = 4}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/plate-zinc.png"
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
-          scale = 0.4375,
-          shift = {-10, -10}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("angels-plate-zinc"),
+        angelsmods.functions.get_object_icons("angels-roll-zinc"),
+        {-10, -10}, 0.4375),
       order = "j[angels-plate-zinc]-b"
     }
   }

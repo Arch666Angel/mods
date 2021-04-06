@@ -1,5 +1,5 @@
 require "util"
-require "silo-script"
+--require "silo-script"
 
 if settings.startup["deco-shred-create-shrine-offer"].value then
   for _, decoName in pairs(

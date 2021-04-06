@@ -230,6 +230,19 @@ data:extend(
         {type = "item", name = "iron-plate", amount = 1}
       },
       result = "bio-butchery"
+    },
+    {
+      type = "recipe",
+      name = "bio-tile",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "reinforced-concrete-brick", amount = 1},
+        {type = "item", name = "token-bio", amount = 2},
+        {type = "item", name = "solid-soil", amount = 1},
+        --{type = "item", name = "steel-plate", amount = 1}
+      },
+      result = "bio-tile"
     }
   }
 )

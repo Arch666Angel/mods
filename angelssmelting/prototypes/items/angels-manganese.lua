@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-manganese",
     icon = "__angelssmelting__/graphics/icons/processed-manganese.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-manganese",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-manganese",
     icon = "__angelssmelting__/graphics/icons/pellet-manganese.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-manganese",
     order = "c",
     stack_size = 200
@@ -52,7 +52,7 @@ data:extend(
     type = "item",
     name = "ingot-manganese",
     icon = "__angelssmelting__/graphics/icons/ingot-manganese.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-manganese",
     order = "f",
     stack_size = 200
@@ -61,7 +61,7 @@ data:extend(
     type = "item",
     name = "powder-manganese",
     icon = "__angelssmelting__/graphics/icons/powder-manganese.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-manganese",
     order = "g",
     stack_size = 200
@@ -71,7 +71,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-manganese",
     icon = "__angelssmelting__/graphics/icons/molten-manganese.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-manganese-casting",
     order = "h",
     default_temperature = 1246,
@@ -87,7 +87,7 @@ data:extend(
     type = "item",
     name = "angels-roll-manganese",
     icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-manganese-casting",
     order = "i",
     stack_size = 200

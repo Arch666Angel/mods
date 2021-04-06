@@ -42,6 +42,11 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
     OV.remove_prereq("angels-steel-smelting-2", "strand-casting-2")
     OV.remove_prereq("angels-steel-smelting-3", "strand-casting-3")
   end
+
+  if angelsmods.trigger.smelting_products["steel"].powder then
+  else
+    data.raw.technology["angels-steel-smelting-2"].localised_name = {"", {"technology-name.angels-steel-casting"}, " 2"}
+  end
 else
   angelsmods.functions.add_flag("ingot-steel", "hidden")
   angelsmods.functions.add_flag("liquid-molten-steel", "hidden")

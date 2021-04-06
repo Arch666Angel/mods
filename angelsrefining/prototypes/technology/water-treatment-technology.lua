@@ -6,7 +6,8 @@ data:extend(
     --  localised_name = {"technology-name.fluid-handling"},
     --  localised_description = {"technology-description.fluid-handling"},
     --  icon = "__base__/graphics/technology/fluid-handling.png",
-    --  icon_size = 128,
+    --  icon_size = 256,
+    --  icon_mipmaps = 4,
     --  prerequisites = {
     --    "automation-2"
     --  },
@@ -32,7 +33,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
       icon_size = 128,
       prerequisites = {
-        "electronics"
+        mods["angelspetrochem"] and "angels-fluid-control" or "electronics"
       },
       effects = {
         {
@@ -72,7 +73,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "water-treatment",
-        "ore-floatation"
+        --"ore-crushing"
       },
       effects = {
         {

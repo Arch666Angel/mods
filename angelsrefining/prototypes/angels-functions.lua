@@ -1,22 +1,23 @@
 -------------------------------------------------------------------------------
---GET ICON/ICONS FROM FLUID/ITEM ----------------------------------------------
+-- GET ICON/ICONS FROM FLUID/ITEM ---------------------------------------------
 -------------------------------------------------------------------------------
 local function get_icons(object_name)
-  for _, prototype in pairs({"item", "fluid", "capsule"}) do
+  for _, prototype in pairs({"item", "fluid", "ammo", "capsule"}) do
     local object = data.raw[prototype][object_name]
     if object then
+      if object.icons then -- icons has precedence over icon
+        return object.icons
+      end
       if object.icon then
-        local scale = 32 / (object.icon_size or 32)
+        -- local scale = 32 / (object.icon_size or 32)
         return {
           {
             icon = object.icon,
             icon_size = object.icon_size or 32,
-            scale = scale ~= 1 and scale or nil
+            icon_mipmaps = object.icon_mipmaps ~= 1 and object.icon_mipmaps or nil,
+            scale = 32 / (object.icon_size or 32)
           }
         }
-      end
-      if object.icons then
-        return object.icons
       end
     end
   end
@@ -34,6 +35,7 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
         {
           icon = layer_to_add.icon,
           icon_size = layer_to_add.icon_size,
+          icon_mipmaps = layer_to_add.icon_mipmaps,
           tint = layer_to_add.tint,
           scale = (layer_to_add.scale or 1) * (layer_scale or 1),
           shift =
@@ -49,6 +51,7 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
       {
         icon = layers_to_add.icon,
         icon_size = layers_to_add.icon_size,
+        icon_mipmaps = layers_to_add.icon_mipmaps,
         tint = layers_to_add.tint,
         scale = (layers_to_add.scale or 1) * (layer_scale or 1),
         shift =
@@ -107,6 +110,39 @@ local function clean_table(t)
   return t
 end
 
+function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, number_tint, outline_tint)
+  -- adds a new layer to icon_layers to show the tier number (with a color)
+  -- outline_tint is optional
+  local icon_size_scale = 0.5
+  local icon_size_shift = {0, 0}
+
+  icon_layers = icon_layers or {}
+  if #icon_layers == 0 then
+    -- if the icon_layer is empty, we make sure it will be a full sized number after usage in the recipe functions
+    icon_size_scale = 0.5 * 32 / 10.24
+    icon_size_shift = {11.5 * icon_size_scale * 2, 12 * icon_size_scale * 2}
+  elseif icon_layers[1].scale then
+    icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale) / 64
+  end
+
+  return angelsmods.functions.add_icon_layer(icon_layers, {
+    {
+      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier.."-outline.png",
+      icon_size = 64, icon_mipmaps = 2,
+      tint = unify_tint(outline_tint or {0, 0, 0, 1}),
+      scale = icon_size_scale,
+      shift = icon_size_shift
+    },
+    {
+      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier..".png",
+      icon_size = 64, icon_mipmaps = 2,
+      tint = unify_tint(number_tint),
+      scale = icon_size_scale,
+      shift = icon_size_shift
+    }
+  })
+end
+
 -------------------------------------------------------------------------------
 -- ICON GENERATION ------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -133,7 +169,7 @@ local icon_tint_table = {
 local function create_recipe_molecule_icons(molecules_icon, molecules_shift, molecules_scale)
   molecules_icon = clean_table(molecules_icon) or {}
   molecules_shift = molecules_shift or {{-11.5, 12}, {11.5, 12}, {0, 12}}
-  molecules_scale = molecules_scale or 10.24 / 32 -- assume base 32 size
+  molecules_scale = molecules_scale or (10.24 / 32) -- assume base 32 size
 
   for molecule_index, molecule_icon in pairs(molecules_icon) do
     if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefining__/graphics/icons/void.png" then
@@ -991,6 +1027,25 @@ end
 -------------------------------------------------------------------------------
 -- MODIFY FLAGS ---------------------------------------------------------------
 -------------------------------------------------------------------------------
+local building_types = {
+  "assembling-machine",
+  "mining-drill",
+  "lab",
+  "furnace",
+  "offshore-pump",
+  "pump",
+  "rocket-silo",
+  "radar",
+  "beacon",
+  "boiler",
+  "generator",
+  "solar-panel",
+  "accumulator",
+  "reactor",
+  "electric-pole",
+  "wall",
+  "gate"
+}
 function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
     for _, ent in pairs(entity) do
@@ -999,27 +1054,29 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
     return
   end
 
-  local to_add = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
-  if to_add then
-    if to_add.flags then
-      table.insert(to_add.flags, flag)
-    else
-      to_add.flags = {flag}
+  for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
+    local to_add = data.raw[type][entity] or nil
+    if to_add then
+      if to_add.flags then
+        table.insert(to_add.flags, flag)
+      else
+        to_add.flags = {flag}
+      end
+      if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
+        angelsmods.functions.disable_barreling_recipes(entity)
+      end
     end
-    return
   end
-
-  to_add = data.raw.fluid[entity]
-  if to_add then
-    if flag == "hidden" then
-      to_add.hidden = true
-      angelsmods.functions.disable_barreling_recipes(entity)
-    elseif to_add.flags then
-      table.insert(to_add.flags, flag)
-    else
-      to_add.flags = {flag}
+  --actual entity if not not just an item
+  for _,type in pairs(building_types) do
+    to_add = data.raw[type][entity] --entity-types...
+    if to_add then
+      if to_add.flags then
+        table.insert(to_add.flags, flag)
+      else
+        to_add.flags = {flag}
+      end
     end
-    return
   end
 end
 
@@ -1031,24 +1088,27 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     return
   end
 
-  local to_remove = data.raw.item[entity] or data.raw.tool[entity] or data.raw["item-with-entity-data"][entity] or nil
-  if to_remove then
-    for flag_index, flag in pairs(to_remove.flags or {}) do
-      if flag == flag_to_remove then
-        table.remove(to_remove.flags, flag_index)
-        return
+  for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
+     -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
+    local to_remove = data.raw[type][entity] or nil
+    if to_remove then
+      if to_remove.flags then
+        table.insert(to_remove.flags, flag)
+      else
+        to_remove.flags = {flag}
       end
     end
-    return
   end
-
-  to_remove = data.raw.fluid[entity]
-  if to_remove then
-    if flag == "hidden" then
-      to_remove.hidden = false
-      -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
+  --actual entity if not not just an item
+  for _,type in pairs(building_types) do
+    to_remove = data.raw[type][entity] --entity-types...
+    if to_remove then
+      for flag_index, flag in pairs(to_remove.flags or {}) do
+        if flag == flag_to_remove then
+          table.remove(to_remove.flags, flag_index)
+        end
+      end
     end
-    return
   end
 end
 
@@ -1122,7 +1182,7 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
 
   local items = data.raw.item
   local recipes = data.raw.recipe
-  
+
   if not fluids_to_move or #fluids_to_move == 0 then
     fluids_to_move = data.raw.fluid
   end
@@ -1219,7 +1279,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
     recipe.category = "angels-" .. void_category .. "-void"
     recipe.enabled = true
-    recipe.hidden = angelsmods.trigger.enable_hide_void
+    recipe.hide_from_player_crafting = angelsmods.trigger.enable_hide_void
     recipe.energy_required = void_process_time
     recipe.ingredients = {
       {
@@ -1430,7 +1490,7 @@ function angelsmods.functions.add_crafting_category(crafting_machine_type, craft
 
   local crafting_machine_prototype = data.raw[crafting_machine_type][crafting_machine_name]
   crafting_machine_prototype.crafting_categories = crafting_machine_prototype.crafting_categories or {}
-  
+
   for _, category_name in pairs(crafting_machine_prototype.crafting_categories) do
     if category_name == crafting_category then
       return -- already present
@@ -1438,7 +1498,7 @@ function angelsmods.functions.add_crafting_category(crafting_machine_type, craft
   end
 
   table.insert(crafting_machine_prototype.crafting_categories, crafting_category)
-  
+
   if crafting_category ~= "angels-unused-machine" then
     angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, "angels-unused-machine")
   end
@@ -1460,7 +1520,7 @@ function angelsmods.functions.remove_crafting_category(crafting_machine_type, cr
   for category_index, category_name in pairs(crafting_machine_categories) do
     if category_name == crafting_category then
       table.remove(crafting_machine_categories, category_index)
-      
+
       if next(crafting_machine_categories) then
         return
       else

@@ -3,18 +3,14 @@ data:extend(
   {
     type = "item",
     name = "separator",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      1, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-oil-refinery",
     order = "a[separator]-a",
     place_result = "separator",
@@ -23,18 +19,14 @@ data:extend(
   {
     type = "assembling-machine",
     name = "separator",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_1.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      1, angelsmods.petrochem.number_tint),
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator"},
     fast_replaceable_group = "separator",
@@ -123,17 +115,14 @@ data:extend(
   {
     type = "item",
     name = "separator-2",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
+      2, angelsmods.petrochem.number_tint),
     icon_size = 32,
     subgroup = "petrochem-buildings-oil-refinery",
     order = "a[separator]-b",
@@ -143,18 +132,14 @@ data:extend(
   {
     type = "assembling-machine",
     name = "separator-2",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_2.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      2, angelsmods.petrochem.number_tint),
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator-2"},
     fast_replaceable_group = "separator",
@@ -243,18 +228,14 @@ data:extend(
   {
     type = "item",
     name = "separator-3",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      3, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-oil-refinery",
     order = "a[separator]-c",
     place_result = "separator-3",
@@ -263,18 +244,14 @@ data:extend(
   {
     type = "assembling-machine",
     name = "separator-3",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_3.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      3, angelsmods.petrochem.number_tint),
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator-3"},
     fast_replaceable_group = "separator",
@@ -363,18 +340,14 @@ data:extend(
   {
     type = "item",
     name = "separator-4",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_4.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      4, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-oil-refinery",
     order = "a[separator]-d",
     place_result = "separator-4",
@@ -383,18 +356,14 @@ data:extend(
   {
     type = "assembling-machine",
     name = "separator-4",
-    icons = {
+    icons = angelsmods.functions.add_number_icon_layer(
       {
-        icon = "__angelspetrochem__/graphics/icons/separator.png",
+        {
+          icon = "__angelspetrochem__/graphics/icons/separator.png",
+          icon_size = 32, icon_mipmaps = 1,
+        }
       },
-      {
-        icon = "__angelsrefining__/graphics/icons/num_4.png",
-        tint = angelsmods.petrochem.number_tint,
-        scale = 0.32,
-        shift = {-12, -12},
-      }
-    },
-    icon_size = 32,
+      4, angelsmods.petrochem.number_tint),
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator-4"},
     fast_replaceable_group = "separator",

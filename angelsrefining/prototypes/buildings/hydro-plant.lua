@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "hydro-plant",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/hydro-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "water-treatment-building",
       order = "a[hydro-plant]",
       place_result = "hydro-plant",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "hydro-plant",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/hydro-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "hydro-plant"},
       fast_replaceable_group = "hydro-plant",
@@ -116,18 +108,14 @@ data:extend(
     {
       type = "item",
       name = "hydro-plant-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/hydro-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "water-treatment-building",
       order = "b[hydro-plant2-]",
       place_result = "hydro-plant-2",
@@ -136,18 +124,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "hydro-plant-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/hydro-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "hydro-plant-2"},
       fast_replaceable_group = "hydro-plant",
@@ -229,18 +213,14 @@ data:extend(
     {
       type = "item",
       name = "hydro-plant-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/hydro-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "water-treatment-building",
       order = "b[hydro-plant2-]",
       place_result = "hydro-plant-3",
@@ -249,18 +229,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "hydro-plant-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/hydro-plant.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "hydro-plant-3"},
       fast_replaceable_group = "hydro-plant",

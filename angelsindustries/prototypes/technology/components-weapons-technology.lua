@@ -9,7 +9,8 @@ data:extend(
       type = "technology",
       name = "angels-components-weapons-basic",
       icon = "__base__/graphics/technology/military.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 4,
       prerequisites = {},
       effects = {
         {
@@ -68,7 +69,8 @@ data:extend(
       type = "technology",
       name = "angels-components-weapons-advanced",
       icon = "__base__/graphics/technology/military.png",
-      icon_size = 128,
+      icon_size = 256,
+      icon_mipmaps = 4,
       prerequisites = {
         "military-science-pack",
         "angels-titanium-smelting-1"

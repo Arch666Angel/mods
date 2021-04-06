@@ -34,7 +34,8 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing",
-      "angels-coal-processing"
+      "angels-coal-processing",
+      "advanced-material-processing"
     },
     effects =
     {
@@ -70,6 +71,7 @@ data:extend(
     prerequisites =
     {
       "bio-wood-processing-2",
+      "angels-coal-processing-3"
     },
     effects =
     {
@@ -97,6 +99,7 @@ data:extend(
       },
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -160,6 +163,7 @@ data:extend(
       },
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -210,6 +214,7 @@ data:extend(
       },
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -256,6 +261,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -280,6 +286,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-resin-resin-liquification"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-resin"
       }
     },
     unit =
@@ -302,6 +312,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -343,6 +354,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -380,6 +392,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -401,6 +414,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "bio-plastic"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-plastic"
+      }
     },
     unit =
     {
@@ -422,6 +439,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -441,7 +459,7 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-plastic-tree"
-      },
+      }
     },
     unit =
     {
@@ -463,6 +481,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -500,6 +519,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -521,6 +541,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "bio-rubber"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-rubber"
+      }
     },
     unit =
     {
@@ -542,6 +566,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -583,6 +608,7 @@ data:extend(
       }
     },
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -616,6 +642,7 @@ data:extend(
     name = "bio-paper-1",
     icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -646,11 +673,14 @@ data:extend(
     name = "bio-paper-2",
     icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {
       "bio-paper-1",
+      "chlorine-processing-1",
       "angels-nitrogen-processing-1",
+      "angels-sulfur-processing-2",
     },
     effects =
     {
@@ -686,6 +716,7 @@ data:extend(
     name = "bio-paper-3",
     icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
     icon_size = 128,
+    upgrade = true,
     order = "c-a",
     prerequisites =
     {

@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.industries = angelsmods.industries or {}
-angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 0}
+angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 1}
 angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or {}
 
 --TRIGGER CHECKS
@@ -101,7 +101,6 @@ require("prototypes.buildings.angels-logistics-robot-cargo")
 --ENTITIES
 require("prototypes.entities.crawler")
 require("prototypes.entities.equipment")
-require("prototypes.entities.bio-tile")
 --RECIPES
 require("prototypes.recipes.equipment-recipes")
 require("prototypes.recipes.logistics-entity")

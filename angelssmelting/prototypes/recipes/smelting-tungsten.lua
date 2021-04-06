@@ -17,7 +17,6 @@ data:extend(
       results = {
         {type = "item", name = "processed-tungsten", amount = 2}
       },
-      icon_size = 32,
       order = "b[processed-tungsten]",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tungsten")
     },
@@ -32,7 +31,6 @@ data:extend(
       results = {
         {type = "item", name = "pellet-tungsten", amount = 4}
       },
-      icon_size = 32,
       order = "c[pellet-tungsten]"
     },
     {
@@ -70,18 +68,9 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 60}
       },
       main_product = "solid-tungsten-oxide",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-tungsten-oxide"),
+        1, angelsmods.smelting.number_tint),
       order = "e[solid-tungsten-oxide]-a"
     },
     {
@@ -98,18 +87,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-tungsten-oxide", amount = 12}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-tungsten-oxide"),
+        2, angelsmods.smelting.number_tint),
       order = "e[solid-tungsten-oxide]-b"
     },
     {
@@ -148,7 +128,6 @@ data:extend(
       results = {
         {type = "item", name = "solid-ammonium-paratungstate", amount = 24}
       },
-      icon_size = 32,
       order = "g[solid-ammonium-paratungstate]"
     },
     -- SMELTING RESULTS
@@ -167,18 +146,9 @@ data:extend(
         {type = "item", name = "fluorite-ore", amount = 3}
       },
       main_product = "powder-tungsten",
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("powder-tungsten"),
+        1, angelsmods.smelting.number_tint),
       order = "h[powder-tungsten]-a"
     },
     {
@@ -195,18 +165,9 @@ data:extend(
       results = {
         {type = "item", name = "powder-tungsten", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("powder-tungsten"),
+        2, angelsmods.smelting.number_tint),
       order = "h[powder-tungsten]-b"
     },
     -- CASTING INTERMEDIATE
@@ -224,18 +185,9 @@ data:extend(
       results = {
         {type = "item", name = "casting-powder-tungsten", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/powder-tungsten-mixture.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("casting-powder-tungsten"),
+        1, angelsmods.smelting.number_tint),
       order = "i[casting-powder-tungsten]-a"
     },
     {
@@ -252,18 +204,9 @@ data:extend(
       results = {
         {type = "item", name = "casting-powder-tungsten", amount = 24}
       },
-      icons = {
-        {
-          icon = "__angelssmelting__/graphics/icons/powder-tungsten-mixture.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("casting-powder-tungsten"),
+        2, angelsmods.smelting.number_tint),
       order = "i[casting-powder-tungsten]-b"
     },
     -- CASTING RESULT
@@ -292,7 +235,6 @@ data:extend(
           {type = "item", name = "angels-plate-tungsten", amount = 12}
         }
       },
-      icon_size = 32,
       order = "j[angels-plate-tungsten]"
     }
   }

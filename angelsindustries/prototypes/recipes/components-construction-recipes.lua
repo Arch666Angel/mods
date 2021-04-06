@@ -11,7 +11,7 @@ if angelsmods.industries.components then
         category = "crafting",
         energy_required = 0.5,
         ingredients = {
-          {type = "item", name = "angels-rod-iron", amount = 2}
+          {type = "item", name = "iron-stick", amount = 2}
         },
         results = {
           {type = "item", name = "grate-iron", amount = 1}

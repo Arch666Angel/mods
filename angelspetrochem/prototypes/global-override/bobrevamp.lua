@@ -20,8 +20,8 @@ if mods["bobrevamp"] then
   OV.remove_unlock("angels-oil-processing", "solid-fuel-naphtha")
   OV.remove_unlock("gas-processing", "solid-fuel-methane")
 
-  OV.add_unlock("flammables", "solid-fuel-naphtha")
   OV.add_unlock("flammables", "solid-fuel-fuel-oil")
+  OV.add_unlock("flammables", "solid-fuel-naphtha")
   OV.add_unlock("angels-advanced-gas-processing", "solid-fuel-methane")
 
   OV.add_prereq("angels-advanced-gas-processing", "flammables")
@@ -54,6 +54,28 @@ if mods["bobrevamp"] then
   angelsmods.functions.add_flag("sour-gas", "hidden")
   angelsmods.functions.disable_barreling_recipes("sour-gas")
 
+  OV.hide_recipe("ammonia")
+  OV.converter_fluid("ammonia", "gas-ammonia")
+  angelsmods.functions.disable_barreling_recipes("ammonia")
+
+  if mods["bobplates"] and settings.startup["bobmods-revamp-old-oil"] then
+    OV.hide_recipe(
+      {
+        "oil-processing-with-sulfur",
+        "oil-processing-with-sulfur-dioxide",
+        "oil-processing-with-sulfur-dioxide-2",
+        "oil-processing-with-sulfur-dioxide-3",
+      }
+    )
+  end
+  if mods["bobplates"] and settings.startup["bobmods-revamp-oil"] then
+    OV.hide_recipe(
+      {
+        "solid-fuel-from-sour-gas",
+      }
+    )
+  end
+
   if angelsmods.trigger.disable_bobs_chemical_plants then
     OV.global_replace_technology("chemical-plant", "basic-chemistry-2")
   end
@@ -62,16 +84,19 @@ if mods["bobrevamp"] then
   -- HARDMODE -----------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobplates"] and settings.startup["bobmods-revamp-hardmode"].value then
+    OV.hide_recipe("carbon-dioxide-oil-processing")
     --disable all the recipes
     --NaClO3+H2O-->NaClO4+H2
-    OV.remove_unlock("lithium-processing", "sodium-perchlorate")
+    --OV.remove_unlock("lithium-processing", "sodium-perchlorate")
     --NaCl+H2O-->NaClO3+H2O
-    OV.remove_unlock("lithium-processing", "sodium-chlorate")
+    --OV.remove_unlock("lithium-processing", "sodium-chlorate")
+    OV.disable_recipe({"sodium-chlorate","sodium-perchlorate"})
     --make pre-reqs match new unlock point
     OV.add_prereq("battery-2", "chlorine-processing-3")
 
     OV.converter_fluid("carbon-dioxide", "gas-carbon-dioxide")
     angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
+    --OV.remove_unlock("chemical-processing-2", "carbon-dioxide")
 
     OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
     angelsmods.functions.add_flag("sodium-carbonate", "hidden")
@@ -82,12 +107,9 @@ if mods["bobrevamp"] then
     OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
     angelsmods.functions.add_flag("sodium-chlorate", "hidden")
 
-    OV.converter_fluid("ammonia", "gas-ammonia")
-    angelsmods.functions.disable_barreling_recipes("ammonia")
-
     OV.converter_fluid("nitric-oxide", "gas-nitrogen-monoxide")
     angelsmods.functions.disable_barreling_recipes("nitric-oxide")
-
+    
     OV.converter_fluid("nitric-dioxide", "gas-nitrogen-dioxide")
     angelsmods.functions.disable_barreling_recipes("nitric-dioxide")
 
@@ -102,7 +124,17 @@ if mods["bobrevamp"] then
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
 
     --OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
-    OV.remove_unlock("rocket-fuel", "dinitrogen-tetroxide")
+    --OV.remove_unlock("rocket-fuel", "dinitrogen-tetroxide")
+    OV.disable_recipe(
+      {
+        "dinitrogen-tetroxide",
+        "nitric-oxide",
+        "hydrazine",
+        "hydrogen-peroxide",
+        "carbon-dioxide",
+        "enriched-fuel-from-hydrazine",
+      }
+    )
   end
 
   -----------------------------------------------------------------------------

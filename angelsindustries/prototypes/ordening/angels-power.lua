@@ -256,6 +256,9 @@ if mods["bobpower"] then
     move_item("fluid-reactor-3", "angels-power-nuclear-reactor-a", "b[fluid-burner]-c")
   end
 
+  -- nuclear fuel
+  move_item("plutonium-nucleosynthesis", "angels-power-nuclear-processing", "a[uranium]-z[plutonium-harvest]", "recipe")
+
   -- nuclear reactor
   if settings.startup["bobmods-power-nuclear"].value then
     data:extend(

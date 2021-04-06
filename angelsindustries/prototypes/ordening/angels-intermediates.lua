@@ -126,7 +126,7 @@ end
 if angelsmods.industries.tech then
   data.raw["item-subgroup"]["science-pack"].group = "angels-tech"
   data.raw["item-subgroup"]["science-pack"].order = "ba[science-packs]-b[bobs-alien]"
-else
+elseif angelsmods.industries.overhaul then
   data.raw["item-subgroup"]["science-pack"].group = "angels-components"
   data.raw["item-subgroup"]["science-pack"].order = "z[science]-a"
 end

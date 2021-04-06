@@ -10,6 +10,7 @@ if not angelsmods.functions.make_resource then
         {
           type = "autoplace-control",
           name = input.name,
+          localised_name = {"", "[entity="..input.name.."] ", {"entity-name."..input.name}},
           richness = true,
           order = "b-" .. input.order,
           category = "resource"

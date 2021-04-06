@@ -114,10 +114,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "algaefarm-2", amount = 1},
-          {type = "item", name = "t1-plate", amount = 11},
-          {type = "item", name = "t1-circuit", amount = 4},
-          {type = "item", name = "t1-brick", amount = 11},
-          {type = "item", name = "t1-pipe", amount = 18}
+          {type = "item", name = "t2-plate", amount = 11},
+          {type = "item", name = "t2-circuit", amount = 4},
+          {type = "item", name = "t2-brick", amount = 11},
+          {type = "item", name = "t2-pipe", amount = 18}
         },
         result = "algae-farm-2"
       },
@@ -126,10 +126,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "algaefarm-2", amount = 1},
-          {type = "item", name = "t1-plate", amount = 11 * buildingmulti},
-          {type = "item", name = "t1-circuit", amount = 4 * buildingmulti},
-          {type = "item", name = "t1-brick", amount = 11 * buildingmulti},
-          {type = "item", name = "t1-pipe", amount = 18 * buildingmulti}
+          {type = "item", name = "t2-plate", amount = 11 * buildingmulti},
+          {type = "item", name = "t2-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t2-brick", amount = 11 * buildingmulti},
+          {type = "item", name = "t2-pipe", amount = 18 * buildingmulti}
         },
         result = "algae-farm-2"
       }
@@ -142,10 +142,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "algaefarm-3", amount = 1},
-          {type = "item", name = "t2-plate", amount = 11},
-          {type = "item", name = "t2-circuit", amount = 4},
-          {type = "item", name = "t2-brick", amount = 11},
-          {type = "item", name = "t2-pipe", amount = 18}
+          {type = "item", name = "t4-plate", amount = 11},
+          {type = "item", name = "t4-circuit", amount = 4},
+          {type = "item", name = "t4-brick", amount = 11},
+          {type = "item", name = "t4-pipe", amount = 18}
         },
         result = "algae-farm-3"
       },
@@ -154,10 +154,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "algaefarm-3", amount = 1},
-          {type = "item", name = "t2-plate", amount = 11 * buildingmulti},
-          {type = "item", name = "t2-circuit", amount = 4 * buildingmulti},
-          {type = "item", name = "t2-brick", amount = 11 * buildingmulti},
-          {type = "item", name = "t2-pipe", amount = 18 * buildingmulti}
+          {type = "item", name = "t4-plate", amount = 11 * buildingmulti},
+          {type = "item", name = "t4-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t4-brick", amount = 11 * buildingmulti},
+          {type = "item", name = "t4-pipe", amount = 18 * buildingmulti}
         },
         result = "algae-farm-3"
       }

@@ -31,6 +31,7 @@ require("prototypes.override.refining-override-bobtech")
 require("prototypes.override.refining-override-bobrevamp")
 require("prototypes.override.refining-override-bobwarfare")
 require("prototypes.override.refining-override-bobclasses")
+require("prototypes.override.refining-override-boblogistics")
 
 if mods["bobplates"] then
   --revamp override
@@ -131,6 +132,7 @@ if data.raw.item["y-res1"] then
   )
 
   --RECIPES
+  local slag_color = {{202, 099, 017}, {097, 052, 020}, {097, 052, 020}}
   data:extend(
     {
       {
@@ -147,8 +149,13 @@ if data.raw.item["y-res1"] then
           {type = "item", name = "y-res1", amount = 1, probability = 0.5},
           {type = "item", name = "y-res2", amount = 1, probability = 0.5}
         },
-        icon = "__angelsrefining__/graphics/icons/slag-processing-yi.png",
-        icon_size = 32,
+        icons = angelsmods.functions.create_liquid_recipe_icon(
+          {
+            "y-res1",
+            "y-res2"
+          },
+          slag_color
+        ),
         order = "a-a [slag-processing-yi]"
       },
       {
@@ -166,8 +173,10 @@ if data.raw.item["y-res1"] then
         results = {
           {type = "item", name = "y-res1", amount = 6}
         },
-        icon = "__angelsrefining__/graphics/icons/angels-ore-mix-yi1-sorting.png",
-        icon_size = 32,
+        icons = {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Yuoki__/graphics/icons/uni-com-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
+        },
         order = "c-i-g[angelsore-chunk-mix-yi1-processing]"
       },
       {
@@ -185,8 +194,10 @@ if data.raw.item["y-res1"] then
         results = {
           {type = "item", name = "y-res2", amount = 6}
         },
-        icon = "__angelsrefining__/graphics/icons/angels-ore-mix-yi2-sorting.png",
-        icon_size = 32,
+        icons = {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
+        },
         order = "c-i-g[angelsore-chunk-mix-yi2-processing]"
       },
       {
@@ -204,8 +215,14 @@ if data.raw.item["y-res1"] then
           {type = "fluid", name = "water-purified", amount = 70},
           {type = "item", name = "sulfur", amount = 1}
         },
-        icon = "__angelsrefining__/graphics/icons/water-yellow-waste-purification-yi.png",
-        icon_size = 32,
+        icons = angelsmods.functions.create_liquid_recipe_icon(
+          {
+            "y-con_water",
+            "water-purified",
+            mods["angelspetrochem"] and {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32} or "sulfur"
+          },
+          "wss"
+        ),--
         order = "a[yellow-waste-water-purification-yi]"
       }
     }

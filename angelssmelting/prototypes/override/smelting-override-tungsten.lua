@@ -68,37 +68,29 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
         name = "tungsten-carbide",
         subgroup = "angels-tungsten-casting",
         order = "k[tungsten-carbide]-a",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
-            icon_size = 64,
+            {
+              icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
+              icon_size = 64, icon_mipmaps = 1,
+              scale = 0.5
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            tint = angelsmods.smelting.number_tint,
-            scale = 0.32,
-            shift = {-12, -12},
-            icon_size = 32
-          }
-        }
+          1, angelsmods.smelting.number_tint),
       },
       {
         name = "tungsten-carbide-2",
         subgroup = "angels-tungsten-casting",
         order = "k[tungsten-carbide]-b",
-        icons = {
+        icons = angelsmods.functions.add_number_icon_layer(
           {
-            icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
-            icon_size = 64,
+            {
+              icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
+              icon_size = 64, icon_mipmaps = 1,
+              scale = 0.5
+            }
           },
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            tint = angelsmods.smelting.number_tint,
-            scale = 0.32,
-            shift = {-12, -12},
-            icon_size = 32
-          }
-        }
+          2, angelsmods.smelting.number_tint),
       },
     })
   end
@@ -111,4 +103,20 @@ else
   angelsmods.functions.add_flag("angels-plate-tungsten", "hidden")
   OV.disable_recipe({"casting-powder-tungsten-1", "casting-powder-tungsten-2"})
   OV.disable_recipe({"angels-plate-tungsten"})
+end
+--hide all if not used
+if (not angelsmods.trigger.smelting_products["tungsten"].plate) and (not angelsmods.trigger.smelting_products["tungsten"].powder) then
+  OV.hide_recipe(
+    {
+      "tungsten-ore-processing",
+      "tungsten-processed-processing",
+      "tungsten-ore-smelting",
+      "liquid-tungstic-acid-smelting",
+      "pellet-tungsten-smelting",
+      "solid-tungsten-oxide-smelting",
+      "processed-tungsten-smelting",
+      "gas-tungsten-hexafluoride-smelting",
+      "solid-ammonium-paratungstate-smelting"
+    }
+  )
 end

@@ -3,8 +3,10 @@ data:extend(
     {
       type = "technology",
       name = "angels-chrome-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-chrome.png",
-      icon_size = 128,
+      localised_name = {"technology-name.angels-chrome-metallurgy"},
+      localised_description = {"technology-description.angels-chrome-metallurgy"},
+      icon = "__angelssmelting__/graphics/technology/casting-chrome-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-electro-whinning-cell",
@@ -39,13 +41,12 @@ data:extend(
     {
       type = "technology",
       name = "angels-chrome-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-chrome.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-chrome-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
-        "strand-casting-3",
         "angels-chrome-smelting-1",
       },
       effects = {
@@ -60,7 +61,32 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "powder-chrome"
+        }
+      },
+      unit = {
+        count = 250,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-chrome-casting-2",
+      icon = "__angelssmelting__/graphics/technology/casting-chrome-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-4",
+        "strand-casting-3",
+        "angels-chrome-smelting-1",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "roll-chrome-casting"
@@ -85,15 +111,14 @@ data:extend(
     {
       type = "technology",
       name = "angels-chrome-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-chrome.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-chrome-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-5",
         "ore-processing-4",
-        "strand-casting-4",
         "angels-chrome-smelting-2",
-        "angels-sulfur-processing-1", -- it seems rediculous adding this prerequisite to yellow...
+        --"angels-sulfur-processing-1", -- it seems rediculous adding this prerequisite to yellow...
         "sodium-processing"
       },
       effects = {
@@ -116,7 +141,33 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-chrome-oxide-smelting"
+        }
+      },
+      unit = {
+        count = 300,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-chrome-casting-3",
+      icon = "__angelssmelting__/graphics/technology/casting-chrome-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-5",
+        "strand-casting-4",
+        "angels-chrome-casting-2",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "roll-chrome-casting-fast"

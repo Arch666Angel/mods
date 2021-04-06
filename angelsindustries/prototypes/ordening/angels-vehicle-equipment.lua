@@ -92,6 +92,7 @@ if mods["bobvehicleequipment"] then
   )
   reorder("item", "vehicle-motor", "angels-vehicle-equipment-bobpower-e", "a")
   reorder("item", "vehicle-engine", "angels-vehicle-equipment-bobpower-e", "b")
+  reorder("item", "vehicle-belt-immunity-equipment", "angels-vehicle-equipment-bobpower-e", "z")
 
   -----------------------------------------------------------------------------
   -- ROBOT EQUIPMENT ----------------------------------------------------------
@@ -141,7 +142,7 @@ if mods["bobvehicleequipment"] then
   )
   reorder("item", "vehicle-roboport-antenna-equipment", "angels-vehicle-equipment-bobrobot-c", "a")
   reorder("item", "vehicle-roboport-antenna-equipment-2", "angels-vehicle-equipment-bobrobot-c", "b")
-  reorder("item", "vehicle-roboport-antenna-equipment-3", "angels-vehicle-equipment-bobrobot-c", "e")
+  reorder("item", "vehicle-roboport-antenna-equipment-3", "angels-vehicle-equipment-bobrobot-c", "c")
   reorder("item", "vehicle-roboport-antenna-equipment-4", "angels-vehicle-equipment-bobrobot-c", "d")
 
   -- combined roboports

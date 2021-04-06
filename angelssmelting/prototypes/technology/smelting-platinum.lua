@@ -3,8 +3,10 @@ data:extend(
     {
       type = "technology",
       name = "angels-platinum-smelting-1",
-      icon = "__angelssmelting__/graphics/technology/smelting-platinum.png",
-      icon_size = 128,
+      localised_name = {"technology-name.angels-platinum-metallurgy"},
+      localised_description = {"technology-description.angels-platinum-metallurgy"},
+      icon = "__angelssmelting__/graphics/technology/casting-platinum-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         "ore-electro-whinning-cell",
@@ -42,15 +44,13 @@ data:extend(
     {
       type = "technology",
       name = "angels-platinum-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-platinum.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-platinum-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
-        "strand-casting-3",
         "angels-platinum-smelting-1",
-        "angels-copper-smelting-3",
         "angels-sulfur-processing-1",
       },
       effects = {
@@ -65,7 +65,33 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "powder-platinum"
+        }
+      },
+      unit = {
+        count = 250,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-platinum-casting-2",
+      icon = "__angelssmelting__/graphics/technology/casting-platinum-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-4",
+        "strand-casting-3",
+        "angels-platinum-smelting-1",
+        "angels-copper-casting-3",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-wire-coil-platinum-casting"
@@ -98,13 +124,12 @@ data:extend(
     {
       type = "technology",
       name = "angels-platinum-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-platinum.png",
-      icon_size = 128,
+      icon = "__angelssmelting__/graphics/technology/smelting-platinum-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
         --"angels-metallurgy-5",
         "ore-processing-4",
-        "strand-casting-4",
         "angels-platinum-smelting-2",
         "chlorine-processing-1", -- it seems rediculous adding this prerequisite to yellow...
         "angels-nitrogen-processing-2" -- it seems rediculous adding this prerequisite to yellow...
@@ -125,7 +150,33 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-ammonium-chloroplatinate-smelting"
+        }
+      },
+      unit = {
+        count = 300,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-platinum-casting-3",
+      icon = "__angelssmelting__/graphics/technology/casting-platinum-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      upgrade = true,
+      prerequisites = {
+        --"angels-metallurgy-5",
+        "strand-casting-4",
+        "angels-platinum-casting-2",
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-wire-coil-platinum-casting-fast"

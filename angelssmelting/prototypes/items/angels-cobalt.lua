@@ -15,7 +15,7 @@ data:extend(
     type = "item",
     name = "processed-cobalt",
     icon = "__angelssmelting__/graphics/icons/processed-cobalt.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-cobalt",
     order = "b",
     stack_size = 200
@@ -24,7 +24,7 @@ data:extend(
     type = "item",
     name = "pellet-cobalt",
     icon = "__angelssmelting__/graphics/icons/pellet-cobalt.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-cobalt",
     order = "c",
     stack_size = 200
@@ -52,7 +52,7 @@ data:extend(
     type = "item",
     name = "ingot-cobalt",
     icon = "__angelssmelting__/graphics/icons/ingot-cobalt.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-cobalt",
     order = "f",
     stack_size = 200
@@ -61,7 +61,7 @@ data:extend(
     type = "item",
     name = "powder-cobalt",
     icon = "__angelssmelting__/graphics/icons/powder-cobalt.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-cobalt",
     order = "g",
     stack_size = 200
@@ -71,7 +71,7 @@ data:extend(
     type = "fluid",
     name = "liquid-molten-cobalt",
     icon = "__angelssmelting__/graphics/icons/molten-cobalt.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-cobalt-casting",
     order = "h",
     default_temperature = 1495,
@@ -87,7 +87,7 @@ data:extend(
     type = "item",
     name = "angels-roll-cobalt",
     icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-cobalt-casting",
     order = "i",
     stack_size = 200

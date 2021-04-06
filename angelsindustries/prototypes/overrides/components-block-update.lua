@@ -28,48 +28,6 @@ if angelsmods.industries.components then
   OV.remove_prereq("angels-steel-smelting-1", "angels-metallurgy-2")
   OV.add_prereq("angels-steel-smelting-1", "angels-metallurgy-1")
 
-  -- split advanced glass smelting 1 in two seperate techs for battery 2
-  data:extend(
-    {
-      {
-        type = "technology",
-        name = "angels-glass-melting",
-        icon = "__angelssmelting__/graphics/technology/glass-tech.png",
-        icon_size = 128,
-        prerequisites = {
-          "ore-crushing",
-          "powder-metallurgy-1"
-        },
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "glass-mixture-1"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "molten-glass-smelting"
-          }
-        },
-        unit = {
-          count = 100,
-          ingredients = {
-            {type = "item", name = "automation-science-pack", amount = 1}
-          },
-          time = 30
-        },
-        order = "c-a"
-      }
-    }
-  )
-  OV.add_prereq("angels-glass-smelting-1", "angels-glass-melting")
-  OV.remove_prereq("angels-glass-smelting-1", "ore-crushing")
-  OV.remove_prereq("angels-glass-smelting-1", "powder-metallurgy-1")
-  OV.remove_unlock("angels-glass-smelting-1", "glass-mixture-1")
-  OV.remove_unlock("angels-glass-smelting-1", "molten-glass-smelting")
-  -- update depending technologies accordingly
-  OV.remove_prereq("angels-components-batteries-2", "angels-glass-smelting-1")
-  OV.add_prereq("angels-components-batteries-2", "angels-glass-melting")
-
   -----------------------------------------------------------------------------
   -- ADD ELECTRONIC RECIPES TO ELECTRONIC ASSMBLY -----------------------------
   -----------------------------------------------------------------------------
@@ -229,7 +187,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("logistic-science-pack", "block-construction-2")
     OV.add_prereq("advanced-ore-refining-1", "angels-basic-blocks-2")
     OV.add_prereq("ore-floatation", "angels-basic-blocks-2")
     OV.add_prereq("angels-metallurgy-2", "angels-basic-blocks-2")
@@ -289,7 +246,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("military-science-pack", "block-construction-3")
     OV.add_unlock("military-science-pack", "block-fluidbox-2")
     OV.add_unlock("military-science-pack", "block-mechanical-2")
     OV.add_prereq("ore-leaching", "angels-basic-blocks-3")
@@ -353,7 +309,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("logistic-science-pack", "block-construction-4")
     OV.add_prereq("ore-refining", "angels-advanced-blocks-1")
     OV.add_prereq("advanced-ore-refining-3", "angels-advanced-blocks-1")
     OV.add_prereq("angels-metallurgy-4", "angels-advanced-blocks-1")
@@ -415,7 +370,6 @@ if angelsmods.industries.components then
         }
       }
     )
-    OV.add_unlock("utility-science-pack", "block-construction-5")
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
   end

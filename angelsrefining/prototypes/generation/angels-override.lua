@@ -34,21 +34,16 @@ if not angelsmods.refining.disable_ore_override then
 
   --YUOKI
   if data.raw.resource["y-res1"] then
-    data.raw.resource["y-res1"] = nil
-    data.raw["autoplace-control"]["y-res1"] = nil
-
-    data.raw.resource["y-res2"] = nil
-    data.raw["autoplace-control"]["y-res2"] = nil
+    angelsmods.functions.remove_resource("y-res1")
+    angelsmods.functions.remove_resource("y-res2")
   end
 
   --URANIUM POWER
   if data.raw.resource["uraninite"] then
-    data.raw.resource["fluorite"] = nil
-    data.raw["autoplace-control"]["fluorite"] = nil
-    data.raw["item"]["fluorite"].icon = "__angelsinfiniteores__/graphics/icons/up-fluorite.png"
+    angelsmods.functions.remove_resource("uraninite")
+    angelsmods.functions.remove_resource("fluorite")
 
-    data.raw.resource["uraninite"] = nil
-    data.raw["autoplace-control"]["uraninite"] = nil
+    data.raw["item"]["fluorite"].icon = "__angelsinfiniteores__/graphics/icons/up-fluorite.png"
     data.raw["item"]["uraninite"].icon = "__angelsinfiniteores__/graphics/icons/up-uraninite.png"
   end
 end

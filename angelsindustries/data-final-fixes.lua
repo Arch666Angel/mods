@@ -90,8 +90,8 @@ if angelsmods.industries.components then
   --set ingredient return on building pickup
   if angelsmods.industries.return_ingredients then
     add_minable_results()
-    OV.execute()
   end
+  OV.execute()
 end
 
 --OTHER OVERRIDES

@@ -120,7 +120,7 @@ data:extend(
       module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"temperate-farming"},
+    crafting_categories = {"temperate-farming", "advanced-temperate-farming"},
     crafting_speed = 2,
     energy_source =
     {
@@ -212,7 +212,7 @@ data:extend(
       module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"desert-farming"},
+    crafting_categories = {"desert-farming", "advanced-desert-farming"},
     crafting_speed = 2,
     energy_source =
     {
@@ -304,7 +304,7 @@ data:extend(
       module_slots = 2
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"swamp-farming"},
+    crafting_categories = {"swamp-farming", "advanced-swamp-farming"},
     crafting_speed = 2,
     energy_source =
     {

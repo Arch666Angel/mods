@@ -24,7 +24,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   if mods['bobplates'] then
     OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
     angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
-    OV.disable_recipe({"silver-nitrate"})
+    OV.disable_recipe({"silver-nitrate","silver-from-lead"})
   end
 
   if mods['bobplates'] then
@@ -40,9 +40,11 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-silver", "hidden")
     OV.disable_recipe({"molten-silver-smelting"})
-    -- no need for the strand casting
-    OV.remove_prereq("angels-silver-smelting-2", "strand-casting-2")
-    OV.remove_prereq("angels-silver-smelting-3", "strand-casting-3")
+    OV.disable_technology({"angels-silver-casting-2", "angels-silver-casting-3"})
+    -- swap tech tier 1 to ingots
+    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
+      data.raw.technology["angels-silver-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-silver-smelting-2"][property])
+    end
   end
 else
   angelsmods.functions.add_flag("processed-silver", "hidden")
@@ -57,6 +59,7 @@ else
   OV.disable_recipe({"silver-ore-smelting", "solid-silver-nitrate-smelting", "cathode-silver-smelting"})
   OV.disable_recipe({"molten-silver-smelting"})
   OV.disable_technology({"angels-silver-smelting-1", "angels-silver-smelting-2", "angels-silver-smelting-3"})
+  OV.disable_technology({"angels-silver-casting-2", "angels-silver-casting-3"})
 end
 
 -------------------------------------------------------------------------------
