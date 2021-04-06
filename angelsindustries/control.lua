@@ -2,14 +2,14 @@ global.crash_site_created = false
 global.is_lab_given = false
 
 local main_lab = {
-  [0] = 'angels-main-lab-0', -- crash site, equivalent to next tier
-  [1] = 'angels-main-lab-1',
-  [2] = 'angels-main-lab-2',
-  [3] = 'angels-main-lab-3',
-  [4] = 'angels-main-lab-4',
-  [5] = 'angels-main-lab-5',
-  [6] = 'angels-main-lab-6',
-  [7] = 'angels-main-lab-7'
+  [0] = "angels-main-lab-0", -- crash site, equivalent to next tier
+  [1] = "angels-main-lab-1",
+  [2] = "angels-main-lab-2",
+  [3] = "angels-main-lab-3",
+  [4] = "angels-main-lab-4",
+  [5] = "angels-main-lab-5",
+  [6] = "angels-main-lab-6",
+  [7] = "angels-main-lab-7"
 }
 
 local function remove_lab_from_inv(inventory)
@@ -35,11 +35,11 @@ end
 local function initialize_crash_site()
   if game.entity_prototypes[main_lab[1]] and (not global.is_lab_given) then
     -- angels science mode
-    local surface = game.surfaces['nauvis']
+    local surface = game.surfaces["nauvis"]
     if surface and surface.valid then
       local crash_site_entity = surface.find_entities_filtered{
-        type = 'container',
-        name = 'crash-site-spaceship',
+        type = "container",
+        name = "crash-site-spaceship",
         limit = 1
       }[1]
       if crash_site_entity and crash_site_entity.valid then
@@ -52,19 +52,19 @@ local function initialize_crash_site()
             --[[precision]] 0.5,
             --[[force_to_tile_center]] true
           ),
-          force = 'player',
+          force = "player",
           raise_build = false, -- I don't see why we should raise this?
           create_build_effect_smoke = false
         }
         if created_entity and created_entity.valid then
-          created_entity.energy = game.item_prototypes['coal'].fuel_value
+          created_entity.energy = game.item_prototypes["coal"].fuel_value
           global.is_lab_given = true
 
           -- create explosions
           for k = 1, 3 do
             local bbox = created_entity.bounding_box
             local explosions = surface.create_entity{
-              name = 'crash-site-explosion-smoke',
+              name = "crash-site-explosion-smoke",
               position = {
                 x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
                 y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
@@ -78,14 +78,14 @@ local function initialize_crash_site()
           for k = 1, 2 do
             local bbox = created_entity.bounding_box
             surface.create_entity{
-              name = 'crash-site-fire-flame',
+              name = "crash-site-fire-flame",
               position = {
                 x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
                 y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
               }
             }
             local smoke = surface.create_entity{
-              name = 'crash-site-fire-smoke',
+              name = "crash-site-fire-smoke",
               position = {
                 x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
                 y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
@@ -117,10 +117,10 @@ script.on_event(defines.events.on_player_respawned, function(event)
 
   local force = player and player.force
   if force then
-    local available = force.technologies['angels-hidden-ghosting'] and force.technologies['angels-hidden-ghosting'].researched or false
-    player.set_shortcut_available('toggle-ghosting', available)
+    local available = force.technologies["angels-hidden-ghosting"] and force.technologies["angels-hidden-ghosting"].researched or false
+    player.set_shortcut_available("toggle-ghosting", available)
     if available then
-      player.set_shortcut_toggled('toggle-ghosting', force.ghost_time_to_live == 0)
+      player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
     end
   end
 end)
@@ -130,9 +130,9 @@ script.on_event(defines.events.on_entity_died, function(event)
     local etype = event.entity.type
     if table_contains(main_lab, event.entity.name) then
       global.is_lab_given = false
-    elseif etype == 'container' or etype == 'logistic-container' then
+    elseif etype == "container" or etype == "logistic-container" then
       remove_lab_from_inv(event.entity.get_inventory(defines.inventory.chest))
-    elseif etype == 'construction-robot' or etype == 'logistic-robot' then
+    elseif etype == "construction-robot" or etype == "logistic-robot" then
       remove_lab_from_inv(event.entity.get_inventory(defines.inventory.robot_cargo))
     end
   end
@@ -223,8 +223,8 @@ script.on_event(defines.events.on_research_finished, function(event)
 
 end)
 
-script.on_event({defines.events.on_lua_shortcut, 'toggle-ghosting'}, function(event)
-  if event.prototype_name and event.prototype_name ~= 'toggle-ghosting' then return end
+script.on_event({defines.events.on_lua_shortcut, "toggle-ghosting"}, function(event)
+  if event.prototype_name and event.prototype_name ~= "toggle-ghosting" then return end
   local input = event.prototype_name or event.input_name
   local player = game.players[event.player_index]
   if player and player.valid then
@@ -250,19 +250,19 @@ script.on_configuration_changed(function(event)
 end)
 
 script.on_event(defines.events.on_gui_opened, function(event)
-  if event.gui_type == defines.gui_type.entity and event.entity ~= nil and event.entity.type == 'car' then
+  if event.gui_type == defines.gui_type.entity and event.entity ~= nil and event.entity.type == "car" then
     global.current_car = event.entity
   end
 end)
 
 script.on_event(defines.events.on_gui_closed, function(event)
-  if event.gui_type == defines.gui_type.entity and event.entity.type == 'car' and global.current_car == event.entity then
+  if event.gui_type == defines.gui_type.entity and event.entity.type == "car" and global.current_car == event.entity then
     global.current_car = {}
   end
 end)
 
 script.on_event(defines.events.on_player_placed_equipment, function(event)
-  if event.equipment.name == 'angels-burner-generator-vequip' and next(global.current_car) ~= nil then
+  if event.equipment.name == "angels-burner-generator-vequip" and next(global.current_car) ~= nil then
     global.vehicle_burners[global.current_car.unit_number] = {
       vehicle = global.current_car,
       burner = event.equipment,
@@ -272,7 +272,7 @@ script.on_event(defines.events.on_player_placed_equipment, function(event)
 end)
 
 script.on_event(defines.events.on_player_removed_equipment, function(event)
-  if event.equipment == 'angels-burner-generator-vequip' and next(global.current_car) ~= nil then
+  if event.equipment == "angels-burner-generator-vequip" and next(global.current_car) ~= nil then
     global.vehicle_burners[global.current_car.unit_number] = nil
   end
 end)
@@ -281,7 +281,7 @@ script.on_nth_tick(60, function()
   if next(global.vehicle_burners) ~= nil then
     for v, vehicle in pairs(global.vehicle_burners) do
       local inv = vehicle.burner.burner.inventory.get_item_count()
-      if inv < 10 then
+      if inv < 3 then
         local car_inv = vehicle.vehicle.get_inventory(defines.inventory.car_trunk)
         local car_content = car_inv.get_contents()
         local burner = vehicle.burner.burner
@@ -339,7 +339,7 @@ script.on_nth_tick(60, function()
 end)
 
 script.on_event(defines.events.on_entity_died, function(event)
-  if event.entity.type == 'car' then
+  if event.entity.type == "car" then
     if global.vehicle_burners[event.entity.unit_number] ~= nil then
       global.vehicle_burners[event.entity.unit_number] = nil
     end
