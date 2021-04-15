@@ -14,16 +14,16 @@ if mods['bobplates'] then
 
   -- Remove prereq alloy-processing
   OV.remove_unlock('alloy-processing', 'stone-mixing-furnace')
-  OV.remove_unlock('alloy-processing', 'stone-mixing-furnace-from-stone-furnace')
-  OV.remove_unlock('alloy-processing', 'stone-furnace-from-stone-mixing-furnace')
+  --OV.remove_unlock('alloy-processing', 'stone-mixing-furnace-from-stone-furnace')
+  --OV.remove_unlock('alloy-processing', 'stone-furnace-from-stone-mixing-furnace')
 
   -- Remove Chemical Furnaces
   OV.global_replace_item('steel-chemical-mixing-furnace', 'steel-furnace')
   OV.global_replace_item('electric-chemical-furnace','electric-furnace')
 
   OV.remove_unlock('chemical-processing-1', 'stone-chemical-furnace')
-  OV.remove_unlock('chemical-processing-1', 'stone-chemical-furnace-from-stone-furnace')
-  OV.remove_unlock('chemical-processing-1', 'stone-furnace-from-stone-chemical-furnace')
+  --OV.remove_unlock('chemical-processing-1', 'stone-chemical-furnace-from-stone-furnace')
+  --OV.remove_unlock('chemical-processing-1', 'stone-furnace-from-stone-chemical-furnace')
 
   data.raw['assembling-machine']['stone-chemical-furnace'].next_upgrade = nil
   data.raw['assembling-machine']['electric-chemical-furnace'].next_upgrade = nil
@@ -35,4 +35,15 @@ if mods['bobplates'] then
   if data.raw.technology['multi-purpose-furnace-1'] then
     OV.remove_prereq('multi-purpose-furnace-1', 'electric-chemical-furnace')
   end
+end
+--remove metal mixing furnaces if multi-purpose are also removed
+if mods['bobassembly'] and settings.startup['bobmods-assembly-multipurposefurnaces'].value then
+  --if still around, give a localisation update to the furnaces
+  --put th stone furnace back
+  table.insert(data.raw.technology["automation"].effects, {type = "unlock-recipe", recipe = 'stone-mixing-furnace'})
+
+else
+  --clobber all metal mixing furnaces
+  OV.disable_technology({'steel-mixing-furnace','electric-mixing-furnace'})
+  OV.disable_recipe({'stone-mixing-furnace','steel-mixing-furnace','electric-mixing-furnace'})
 end
