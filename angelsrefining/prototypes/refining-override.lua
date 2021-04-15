@@ -77,12 +77,12 @@ for _, fluid_n in pairs(data.raw.fluid) do
         {
           name = "fill-" .. fluid_n.name .. "-barrel",
           category = "barreling-pump",
-          hide_from_player_crafting = true
+          hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling
         },
         {
           name = "empty-" .. fluid_n.name .. "-barrel",
           category = "barreling-pump",
-          hide_from_player_crafting = true
+          hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling
         },
       }
     )
