@@ -91,6 +91,14 @@ if angelsmods.trigger.smelting_products["copper"].plate then
   )
   OV.global_replace_item("angels-plate-copper", "copper-plate")
   angelsmods.functions.add_flag("angels-plate-copper", "hidden")
+  angelsmods.functions.override_item_conditions(
+    {
+      value = 200,
+      list = {
+        "copper-plate"
+      }
+    }
+  )
 
   if angelsmods.refining then
     OV.patch_recipes(
