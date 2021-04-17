@@ -38,9 +38,8 @@ if mods['bobplates'] then
 end
 --remove metal mixing furnaces if multi-purpose are also removed
 if mods['bobassembly'] and settings.startup['bobmods-assembly-multipurposefurnaces'].value then
-  --if still around, give a localisation update to the furnaces
-  --put th stone furnace back
-  table.insert(data.raw.technology["automation"].effects, {type = "unlock-recipe", recipe = 'stone-mixing-furnace'})
+  -- If still around, put the stone furnace back
+  OV.add_unlock("automation", 'stone-mixing-furnace')
 
 else
   --clobber all metal mixing furnaces
