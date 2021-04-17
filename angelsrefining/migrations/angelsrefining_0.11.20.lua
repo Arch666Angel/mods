@@ -1,3 +1,17 @@
+--[[ re-enable washing technology
+for _, tech_name in pairs(
+  {
+    "water-washing-1", "water-washing-2"
+  }
+) do
+  local tech_prototype = game.technology_prototypes[tech_name]
+  if tech_prototype and tech_prototype.enabled then
+    for index, force in pairs(game.forces) do
+      force.technologies[tech_name].enabled = true
+    end
+  end
+end]]
+
 for _, force in pairs(game.forces) do
   if force.technologies["geode-crystallization-2"] and force.technologies["geode-processing-3"] then
     force.technologies["geode-processing-3"].researched = force.technologies["geode-crystallization-2"].researched
@@ -6,6 +20,13 @@ for _, force in pairs(game.forces) do
     else
       force.technologies["geode-crystallization-2"].researched = false
     end
+  end
+  --left-overs from misfiring past migrations
+  if force.technologies["water-washing-1"] then
+    force.technologies["water-washing-1"].enabled = true
+  end
+  if force.technologies["water-washing-2"] then
+    force.technologies["water-washing-2"].enabled = true
   end
 
   force.reset_recipes()
