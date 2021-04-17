@@ -84,7 +84,7 @@ end
 --tech updates part 1
 require("prototypes.overrides.global-tech")
 --double check all items are updated if they had been tweaked wrong
-require("prototypes.overrides.components-angels-entity-update.components-angels-building-updates")
+require("prototypes.overrides.components-angels-entity-update.components-angels-building-final-fixes")
 
 if angelsmods.industries.components then
   --replace pre-req
