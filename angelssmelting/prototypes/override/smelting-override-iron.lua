@@ -112,6 +112,14 @@ if angelsmods.trigger.smelting_products["iron"].plate then
   )
   OV.global_replace_item("angels-plate-iron", "iron-plate")
   angelsmods.functions.add_flag("angels-plate-iron", "hidden")
+  angelsmods.functions.override_item_conditions(
+    {
+      value = 200,
+      list = {
+        "iron-plate"
+      }
+    }
+  )
 
   if angelsmods.refining then
     OV.patch_recipes(

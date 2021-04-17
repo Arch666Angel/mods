@@ -99,6 +99,14 @@ if angelsmods.trigger.smelting_products["steel"].plate then
   OV.add_prereq("steel-processing", "automation")
   OV.global_replace_item("angels-plate-steel", "steel-plate")
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")
+  angelsmods.functions.override_item_conditions(
+    {
+      value = 200,
+      list = {
+        "steel-plate"
+      }
+    }
+  )
 else
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")
   angelsmods.functions.add_flag("angels-roll-steel", "hidden")
