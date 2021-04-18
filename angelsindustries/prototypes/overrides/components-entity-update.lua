@@ -14,7 +14,6 @@ end
 
 -- custom fixes base game
 require "prototypes.overrides.components-base-entity-update.components-base-other-entities-update"
-
 require "prototypes.overrides.components-base-entity-update.components-base-inserters-update"
 require "prototypes.overrides.components-base-entity-update.components-base-robots-update"
 OV.execute()
