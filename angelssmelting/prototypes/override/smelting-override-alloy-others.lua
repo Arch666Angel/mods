@@ -31,6 +31,8 @@ if mods['bobplates'] then
   data.raw['assembling-machine']['electric-chemical-furnace'].crafting_categories = {'chemical-furnace'}
 
   OV.disable_technology({'fluid-chemical-furnace','steel-chemical-furnace','electric-chemical-furnace'})
+  -- hide all of the unobtainable items
+  --angelsmods.functions.add_flag({'stone-chemical-furnace','steel-chemical-mixing-furnace','electric-chemical-furnace','fluid-chemical-furnace'},'hidden')
 
   if data.raw.technology['multi-purpose-furnace-1'] then
     OV.remove_prereq('multi-purpose-furnace-1', 'electric-chemical-furnace')
@@ -45,4 +47,5 @@ else
   --clobber all metal mixing furnaces
   OV.disable_technology({'steel-mixing-furnace','electric-mixing-furnace'})
   OV.disable_recipe({'stone-mixing-furnace','steel-mixing-furnace','electric-mixing-furnace'})
+  --angelsmods.functions.add_flag({'stone-mixing-furnace','steel-mixing-furnace','electric-mixing-furnace'},'hidden')
 end
