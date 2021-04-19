@@ -239,6 +239,7 @@ if angelsmods.industries.tech then
     --adds bob power stuffs
     if settings.startup["bobmods-power-solar"].value == true then
       pack_replace("bob-solar-energy-2", "green", "orange")
+      pack_replace("bob-solar-energy-4", "blue", "yellow")
     end
     if settings.startup["bobmods-power-accumulators"].value == true then
       pack_replace("bob-electric-energy-accumulators-2", "green", "orange")

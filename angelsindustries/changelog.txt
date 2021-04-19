@@ -9,6 +9,7 @@ Date: ??
       - Unlock red and green wires with the (previously empty) electronics technology
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
+      - Added custom recipes for solar panel recipes (base game and bobs mods)
     - Moved Bio-tile data to angelsbioprocessing
   Bugfixes:
     - Regular mode:
