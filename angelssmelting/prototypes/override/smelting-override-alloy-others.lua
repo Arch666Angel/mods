@@ -32,7 +32,7 @@ if mods['bobplates'] then
 
   OV.disable_technology({'fluid-chemical-furnace','steel-chemical-furnace','electric-chemical-furnace'})
   -- hide all of the unobtainable items
-  --angelsmods.functions.add_flag({'stone-chemical-furnace','steel-chemical-mixing-furnace','electric-chemical-furnace','fluid-chemical-furnace'},'hidden')
+  angelsmods.functions.add_flag({'stone-chemical-furnace','steel-chemical-mixing-furnace','electric-chemical-furnace','fluid-chemical-furnace'},'hidden')
 
   if data.raw.technology['multi-purpose-furnace-1'] then
     OV.remove_prereq('multi-purpose-furnace-1', 'electric-chemical-furnace')
@@ -42,10 +42,25 @@ end
 if mods['bobassembly'] and settings.startup['bobmods-assembly-multipurposefurnaces'].value then
   -- If still around, put the stone furnace back
   OV.add_unlock("automation", 'stone-mixing-furnace')
-
+  --update localisation strings
+  local replace = {
+    {old = "stone-mixing-furnace", new = "Stone multi-ingredient furnace"},
+    {old = "steel-mixing-furnace", new = "Steel multi-ingredient furnace"},
+    {old = "electric-mixing-furnace", new = "Electric multi-ingredient furnace"},
+    {old = "electric-chemical-mixing-furnace", new = "Electric multi-ingredient furnace 2"},
+    {old = "electric-chemical-mixing-furnace-2", new = "Electric multi-ingredient furnace 3"},
+  }
+  --add oil furnace to table if setting active
+  if settings.startup['bobmods-assembly-oilfurnaces'] then
+    table.insert(replace,{old = "fluid-mixing-furnace", new = "Fluid burning multi-ingredient furnace"})
+  end
+  --run localisation replacements
+  for index,rep in pairs(replace) do
+    data.raw["assembling-machine"][rep.old].localised_name = {"entity-name.override",rep.new}
+  end
 else
   --clobber all metal mixing furnaces
   OV.disable_technology({'steel-mixing-furnace','electric-mixing-furnace'})
   OV.disable_recipe({'stone-mixing-furnace','steel-mixing-furnace','electric-mixing-furnace'})
-  --angelsmods.functions.add_flag({'stone-mixing-furnace','steel-mixing-furnace','electric-mixing-furnace'},'hidden')
+  angelsmods.functions.add_flag({'stone-mixing-furnace','steel-mixing-furnace','electric-mixing-furnace'},'hidden')
 end
