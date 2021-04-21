@@ -39,6 +39,7 @@ end
 --DYNAMIC OVERRIDES
 require("prototypes.recipes.smelting-entity-angels")
 require("prototypes.override.smelting-override-support")
+require("prototypes.override.smelting-override-alloy-support")
 
 require("prototypes.override.smelting-override-alloy-brass")
 require("prototypes.override.smelting-override-alloy-bronze")
@@ -68,7 +69,6 @@ require("prototypes.override.smelting-override-tin")
 require("prototypes.override.smelting-override-titanium")
 require("prototypes.override.smelting-override-tungsten")
 require("prototypes.override.smelting-override-zinc")
-require("prototypes.override.smelting-override-alloy-others")
 
 --ENABLE PRODUCTIVITY
 require("prototypes.override.smelting-override-productivity")
