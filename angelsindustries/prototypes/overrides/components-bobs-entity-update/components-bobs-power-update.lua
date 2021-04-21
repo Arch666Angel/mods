@@ -12,10 +12,10 @@ if angelsmods.industries.components then
             ingredients =
             {
               {"!!"},
-              {type = "item", name = "glass", amount = 2},
               {type = "item", name = "block-construction-3", amount = 1},
-              {type = "item", name = "block-electronic-3", amount = 1},
+              {type = "item", name = "block-electronics-3", amount = 1},
               {type = "item", name = "block-energy-3", amount = 2},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 2} or nil,
             }
           },
           --{
@@ -23,10 +23,10 @@ if angelsmods.industries.components then
           --  ingredients =
           --  {
           --    {"!!"},
-          --    {type = "item", name = "glass", amount = 5},
           --    {type = "item", name = "block-construction-3", amount = 2},
-          --    {type = "item", name = "block-electronic-3", amount = 2},
+          --    {type = "item", name = "block-electronics-3", amount = 2},
           --    {type = "item", name = "block-energy-3", amount = 3},
+          --    angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 5} or nil,
           --  }
           --},
           {
@@ -34,10 +34,10 @@ if angelsmods.industries.components then
             ingredients =
             {
               {"!!"},
-              {type = "item", name = "glass", amount = 7},
               {type = "item", name = "block-construction-3", amount = 3},
-              {type = "item", name = "block-electronic-3", amount = 3},
+              {type = "item", name = "block-electronics-3", amount = 3},
               {type = "item", name = "block-energy-3", amount = 4},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 7} or nil,
             }
           },
 
@@ -47,10 +47,10 @@ if angelsmods.industries.components then
             {
               {"!!"},
               {type = "item", name = "solar-panel-small", amount = 1},
-              {type = "item", name = "glass", amount = 2},
               {type = "item", name = "block-construction-4", amount = 1},
-              {type = "item", name = "block-electronic-4", amount = 1},
+              {type = "item", name = "block-electronics-4", amount = 1},
               {type = "item", name = "block-energy-4", amount = 2},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 2} or nil,
             }
           },
           {
@@ -59,10 +59,10 @@ if angelsmods.industries.components then
             {
               {"!!"},
               {type = "item", name = "solar-panel", amount = 1},
-              {type = "item", name = "glass", amount = 5},
               {type = "item", name = "block-construction-4", amount = 2},
-              {type = "item", name = "block-electronic-4", amount = 2},
+              {type = "item", name = "block-electronics-4", amount = 2},
               {type = "item", name = "block-energy-4", amount = 3},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 5} or nil,
             }
           },
           {
@@ -71,10 +71,10 @@ if angelsmods.industries.components then
             {
               {"!!"},
               {type = "item", name = "solar-panel-large", amount = 1},
-              {type = "item", name = "glass", amount = 7},
               {type = "item", name = "block-construction-4", amount = 3},
-              {type = "item", name = "block-electronic-4", amount = 3},
+              {type = "item", name = "block-electronics-4", amount = 3},
               {type = "item", name = "block-energy-4", amount = 4},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 7} or nil,
             }
           },
 
@@ -84,10 +84,10 @@ if angelsmods.industries.components then
             {
               {"!!"},
               {type = "item", name = "solar-panel-small-2", amount = 1},
-              {type = "item", name = "glass", amount = 2},
               {type = "item", name = "block-construction-5", amount = 1},
-              {type = "item", name = "block-electronic-5", amount = 1},
+              {type = "item", name = "block-electronics-5", amount = 1},
               {type = "item", name = "block-energy-5", amount = 2},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 2} or nil,
             }
           },
           {
@@ -96,10 +96,10 @@ if angelsmods.industries.components then
             {
               {"!!"},
               {type = "item", name = "solar-panel-2", amount = 1},
-              {type = "item", name = "glass", amount = 5},
               {type = "item", name = "block-construction-5", amount = 2},
-              {type = "item", name = "block-electronic-5", amount = 2},
+              {type = "item", name = "block-electronics-5", amount = 2},
               {type = "item", name = "block-energy-5", amount = 3},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 5} or nil,
             }
           },
           {
@@ -108,10 +108,10 @@ if angelsmods.industries.components then
             {
               {"!!"},
               {type = "item", name = "solar-panel-large-2", amount = 1},
-              {type = "item", name = "glass", amount = 7},
               {type = "item", name = "block-construction-5", amount = 3},
-              {type = "item", name = "block-electronic-5", amount = 3},
+              {type = "item", name = "block-electronics-5", amount = 3},
               {type = "item", name = "block-energy-5", amount = 4},
+              angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 7} or nil,
             }
           }
         }

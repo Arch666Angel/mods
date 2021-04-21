@@ -9,10 +9,10 @@ if angelsmods.industries.components then
         ingredients =
         {
           {"!!"},
-          {type = "item", name = "glass", amount = 5},
           {type = "item", name = "block-construction-3", amount = 2},
-          {type = "item", name = "block-electronic-3", amount = 2},
+          {type = "item", name = "block-electronics-3", amount = 2},
           {type = "item", name = "block-energy-3", amount = 3},
+          angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 5} or nil,
         }
       },
     }
