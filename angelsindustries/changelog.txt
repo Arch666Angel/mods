@@ -32,6 +32,7 @@ Date: ??
       - Fixed science tiers on fluid burning generators of bobs power (502)
       - Fixed the selection and collision box of the main lab did not align (539)
       - Fixed that speed, productivity, effectivity, and agriculture module 3 couldnt be researched due to no lab taking all required science packs. removed Yellow science analyzer from required packs.
+      - Fixed locale on the space science research
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.11
 Date: 11.01.2021
