@@ -20,7 +20,7 @@ if mods["bobplates"] then
   -- Remove Stone chemical furnaces
   OV.global_replace_item("stone-chemical-furnace", "stone-furnace")
   angelsmods.functions.add_flag("stone-chemical-furnace", "hidden")
-  data.raw["assembling-machine"]["stone-chemical-furnace"].next_upgrade = nil
+  angelsmods.functions.set_next_upgrade("assembling-machine", "stone-chemical-furnace", nil)
   OV.disable_recipe("stone-chemical-furnace")
   OV.remove_unlock("chemical-processing-1", "stone-chemical-furnace")
   --OV.remove_unlock("chemical-processing-1", "stone-chemical-furnace-from-stone-furnace")
@@ -35,7 +35,7 @@ if mods["bobplates"] then
   -- Remove Electric chemical furnaces
   OV.global_replace_item("electric-chemical-furnace","electric-furnace")
   angelsmods.functions.add_flag("electric-chemical-furnace", "hidden")
-  data.raw["assembling-machine"]["electric-chemical-furnace"].next_upgrade = nil
+  angelsmods.functions.set_next_upgrade("assembling-machine", "electric-chemical-furnace", nil)
   data.raw["assembling-machine"]["electric-chemical-furnace"].crafting_categories = {"chemical-furnace"}
   OV.disable_recipe("electric-chemical-furnace")
   OV.disable_technology("electric-chemical-furnace")
@@ -46,30 +46,32 @@ end
 if mods["bobassembly"] and settings.startup["bobmods-assembly-multipurposefurnaces"].value then
   -- keep metal mixing furnaces around
   OV.add_unlock("automation", "stone-mixing-furnace")
+  OV.patch_recipes({
+    {
+      name = "electric-chemical-mixing-furnace",
+      ingredients = {
+        {"electric-mixing-furnace", "electric-furnace"}
+      }
+    }
+  })
 
-  --update localisation strings
-  local replace = {
-    {old = "stone-mixing-furnace", new = "Stone multi-ingredient furnace"},
-    {old = "steel-mixing-furnace", new = "Steel multi-ingredient furnace"},
-    {old = "electric-mixing-furnace", new = "Electric multi-ingredient furnace"},
-    {old = "electric-chemical-mixing-furnace", new = "Electric multi-ingredient furnace 2"},
-    {old = "electric-chemical-mixing-furnace-2", new = "Electric multi-ingredient furnace 3"},
-  }
-  --add oil furnace to table if setting active
-  if settings.startup["bobmods-assembly-oilfurnaces"] then
-    table.insert(replace,{old = "fluid-mixing-furnace", new = "Fluid burning multi-ingredient furnace"})
+  --update metal mixing furnace localisation
+  for _,rep in pairs({
+    {name = "stone-mixing-furnace", locale = "angels-stone-ingredient-furnace"},
+    {name = "steel-mixing-furnace", locale = "angels-steel-ingredient-furnace"},
+    {name = "electric-mixing-furnace", locale = "angels-electric-ingredient-furnace-1"},
+    {name = "electric-chemical-mixing-furnace", locale = "angels-electric-ingredient-furnace-2"},
+    {name = "electric-chemical-mixing-furnace-2", locale = "angels-electric-ingredient-furnace-3"},
+    settings.startup["bobmods-assembly-oilfurnaces"] and {name = "fluid-mixing-furnace", locale = "angels-fluid-ingredient-furnace"} or nil,
+  }) do
+    data.raw["assembling-machine"][rep.name].localised_name = {"entity-name." .. rep.locale}
   end
-  --run localisation replacements
-  for index,rep in pairs(replace) do
-    data.raw["assembling-machine"][rep.old].localised_name = {"entity-name.override",rep.new}
-  end
-
 
 else --remove metal mixing furnaces if multi-purpose are also removed
   -- remove stone mixing furnace 
   OV.global_replace_item("stone-mixing-furnace", "stone-furnace")
   angelsmods.functions.add_flag("stone-mixing-furnace","hidden")
-  data.raw["assembling-machine"]["stone-mixing-furnace"].next_upgrade = nil
+  angelsmods.functions.set_next_upgrade("assembling-machine", "stone-mixing-furnace", nil)
   OV.disable_recipe("stone-mixing-furnace")
 
   -- remove steel mixing furnace
