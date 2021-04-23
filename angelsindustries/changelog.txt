@@ -2,15 +2,16 @@
 Version: 0.4.12
 Date: ??
   Changes:
-    - Changed and expanded locale strings and text descriptions (489)
     - Regular mode:
       - Ordered vehicle belt immunity equipment (477)
       - Integrated bobs plutonium nucleosynthesis (486)
       - Unlock red and green wires with the (previously empty) electronics technology
+      - Moved Bio-tile data to angelsbioprocessing
+      - Changed and expanded locale strings and text descriptions (489)
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
       - Added custom recipes for solar panel recipes (base game and bobs mods)
-    - Moved Bio-tile data to angelsbioprocessing
+      - Added custom recipes for assemblers (base game and bobs mods, incl. electronic assemblers)
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
@@ -53,8 +54,8 @@ Date: 26.11.2020
 Version: 0.4.8
 Date: 16.11.2020
   Bugfixes:
-    - Changed locales for settings and their description to make them more explicit
     - Regular mode:
+      - Changed locales for settings and their description to make them more explicit
       - Tweaked localisation of welcome message info (427)
     - Component mode:
       - Fixed localisation error on the rocket reactor (425)

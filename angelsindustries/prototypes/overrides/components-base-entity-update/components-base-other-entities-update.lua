@@ -1,8 +1,9 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
   -- CUSTOM FIXES FOR BASE GAME ENTITIES THAT DO NOT FIT IN OTHER CATEGORIES (+ ANGELS)
+
   OV.remove_prereq("water-treatment", "angels-fluid-control")
-  
+
   OV.patch_recipes(
     {
       {
@@ -10,11 +11,6 @@ if angelsmods.industries.components then
         ingredients = {
           {"block-electronics-0", "block-electronics-1"}
         }
-        --minable = {
-        --  results = {
-        --    {"block-electronics-0", "block-electronics-1"}
-        --  }
-        --}
       },
       {
         name = "stone-wall",
@@ -32,12 +28,6 @@ if angelsmods.industries.components then
           {"!!"},
           {type = "item", name = "small-electric-pole", amount = 1}
         },
-        minable = {
-          results = {
-            {type = "item", name = "wood", amount = 1},
-            {type = "item", name = "cable-harness-1", amount = 1}
-          }
-        }
       },
     }
   )
@@ -50,22 +40,12 @@ if angelsmods.industries.components then
           ingredients = {
             {"block-electronics-0", "block-electronics-1"}
           },
-          minable = {
-            results = {
-              {"block-electronics-0", "block-electronics-1"}
-            }
-          }
         },
         {
           name = "lab",
           ingredients = {
             {"block-electronics-0", "block-electronics-1"}
           },
-          minable = {
-            results = {
-              {"block-electronics-0", "block-electronics-1"}
-            }
-          }
         },
       }
     )
@@ -82,12 +62,6 @@ if angelsmods.industries.components then
         ingredients = {
           {"motor-1", "motor-2"},
           {"mechanical-parts", "steel-plate"},
-        },
-        minable = {
-          results = {
-            {"motor-1", "motor-2"},
-            {"mechanical-parts", "steel-plate"},
-          }
         }
       },
       {
@@ -99,16 +73,6 @@ if angelsmods.industries.components then
           {"circuit-red-loaded", 5},
           {"mechanical-parts", 5},
           {"steel-chest", 1},
-        },
-        minable = {
-          results = {
-            {"!!"},
-            {"construction-frame-1", 10},
-            {"angels-servo-motor-1", 15},
-            {"circuit-red-loaded", 5},
-            {"mechanical-parts", 5},
-            {"steel-chest", 1},
-          }
         }
       },
       {
@@ -120,16 +84,6 @@ if angelsmods.industries.components then
           {"circuit-red-loaded", 5},
           {"mechanical-parts", 5},
           {"storage-tank", 1},
-        },
-        minable = {
-          results = {
-            {"!!"},
-            {"construction-frame-1", 10},
-            {"angels-servo-motor-1", 15},
-            {"circuit-red-loaded", 5},
-            {"mechanical-parts", 5},
-            {"storage-tank", 1},
-          }
         }
       }
     }

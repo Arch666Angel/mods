@@ -1,7 +1,7 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
-  -- CUSTOM FIXES FOR BASE POWER
-  
+  -- CUSTOM FIXES FOR BASE POWER (+ ANGELS)
+
   OV.patch_recipes(
     {
       {

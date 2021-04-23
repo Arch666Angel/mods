@@ -9,11 +9,6 @@ if angelsmods.industries.components then
             name = "lab",
             ingredients = {
               {"block-electronics-0", "block-electronics-1"}
-            },
-            minable = {
-              results = {
-                {"block-electronics-0", "block-electronics-1"}
-              }
             }
           },
         }

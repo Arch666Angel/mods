@@ -1,6 +1,6 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
-  -- CUSTOM FIXES FOR BASE GAME INSERTERS (+ ANGELS)
+  -- CUSTOM FIXES FOR BASE GAME ROBOTS (+ ANGELS)
 
   OV.patch_recipes(
     {

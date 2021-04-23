@@ -37,11 +37,8 @@ if angelsmods.industries.tech then
       pack_replace("automation", "grey", "red")
     end
     -- assemblers tier 2+
-    OV.add_prereq("automation-3", "tech-orange-circuit")
     pack_replace("automation-4", "blue", "orange")
     OV.remove_prereq("automation-4", "tech-blue-packs")
-    OV.add_prereq("automation-4", "tech-orange-packs")
-    OV.add_prereq("automation-4", "tech-blue-circuit")
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     end

@@ -183,6 +183,7 @@ if angelsmods.industries.tech then
   -- BASE GAME
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
+  OV.remove_prereq("automation-3", "production-science-pack")
   -- INDUSTRIES
   pack_replace("tech-yellow-circuit", "yellow", "blue")
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")

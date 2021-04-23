@@ -1,8 +1,10 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
   -- CUSTOM FIXES FOR ANGELS BUILDINGS which get overridden by AAI etc.
+
   OV.patch_recipes(
     {
+      -- Ore crushers
       {
         name = "burner-ore-crusher",
         ingredients = {
@@ -22,6 +24,7 @@ if angelsmods.industries.components then
           mods["aai-industry"] and {type = "item", name = "electric-motor", amount = 2} or nil
         },
       },
+      -- Ore sorting facilities
       {
         name = "ore-sorting-facility",
         ingredients = {
@@ -33,6 +36,7 @@ if angelsmods.industries.components then
           mods["aai-industry"] and {type = "item", name = "electric-motor", amount = 5} or nil
         },
       },
+      -- Ore floatation cells
       {
         name = "ore-floatation-cell",
         ingredients = {
