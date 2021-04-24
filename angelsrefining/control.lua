@@ -1,8 +1,8 @@
 script.on_init(function()
   if remote.interfaces["freeplay"] then
     local items_to_insert = remote.call("freeplay", "get_created_items")
-    local technology_overhaul = settings.startup["angels-enable-tech"].value
-    local components_overhaul = technology_overhaul or settings.startup["angels-enable-components"].value
+    local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value or false
+    local components_overhaul = technology_overhaul or (game.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value) or false
     
     -- give ore crushers
     items_to_insert["burner-ore-crusher"] = (items_to_insert["burner-ore-crusher"] or 0) + 1
