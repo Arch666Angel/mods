@@ -15,8 +15,9 @@ if angelsmods.industries.components then
       },
       {
         name = "assembling-machine-2",
-        ingredients = {
+        ingredients = angelsmods.functions.clean_ingredient_list{
           {"!!"},
+          (not angelsmods.industries.return_ingredients) and {type = "item", name = "assembling-machine-1", amount = 1} or nil,
           {type = "item", name = "block-construction-2", amount = 2},
           {type = "item", name = "block-enhancement-1", amount = 3},
           {type = "item", name = "block-mechanical-1", amount = 3},
@@ -25,8 +26,9 @@ if angelsmods.industries.components then
       },
       {
         name = "assembling-machine-3",
-        ingredients = {
+        ingredients = angelsmods.functions.clean_ingredient_list{
           {"!!"},
+          (not angelsmods.industries.return_ingredients) and {type = "item", name = "assembling-machine-2", amount = 1} or nil,
           {type = "item", name = "block-construction-4", amount = 2},
           {type = "item", name = "block-enhancement-4", amount = 3},
           {type = "item", name = "block-mechanical-2", amount = 5},

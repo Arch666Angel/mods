@@ -109,6 +109,7 @@ local function clean_table(t)
   end
   return t
 end
+angelsmods.functions.clean_ingredient_list = clean_table
 
 function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, number_tint, outline_tint)
   -- adds a new layer to icon_layers to show the tier number (with a color)

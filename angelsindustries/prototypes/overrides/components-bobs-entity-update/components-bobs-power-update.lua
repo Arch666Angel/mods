@@ -3,14 +3,16 @@ if angelsmods.industries.components then
   -- CUSTOM FIXES FOR BOBS POWER
   
   if mods["bobpower"] then
-
+    
+    ---------------------------------------------------------------------------
+    -- SOLAR PANEL ------------------------------------------------------------
+    ---------------------------------------------------------------------------
     if settings.startup["bobmods-power-solar"].value == true then
       OV.patch_recipes(
         {
           {
             name = "solar-panel-small",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
               {type = "item", name = "block-construction-3", amount = 1},
               {type = "item", name = "block-electronics-3", amount = 1},
@@ -31,8 +33,7 @@ if angelsmods.industries.components then
           --},
           {
             name = "solar-panel-large",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
               {type = "item", name = "block-construction-3", amount = 3},
               {type = "item", name = "block-electronics-3", amount = 3},
@@ -43,10 +44,9 @@ if angelsmods.industries.components then
 
           {
             name = "solar-panel-small-2",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
-              {type = "item", name = "solar-panel-small", amount = 1},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "solar-panel-small", amount = 1} or nil,
               {type = "item", name = "block-construction-4", amount = 1},
               {type = "item", name = "block-electronics-4", amount = 1},
               {type = "item", name = "block-energy-4", amount = 2},
@@ -55,10 +55,9 @@ if angelsmods.industries.components then
           },
           {
             name = "solar-panel-2",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
-              {type = "item", name = "solar-panel", amount = 1},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "solar-panel", amount = 1} or nil,
               {type = "item", name = "block-construction-4", amount = 2},
               {type = "item", name = "block-electronics-4", amount = 2},
               {type = "item", name = "block-energy-4", amount = 3},
@@ -67,10 +66,9 @@ if angelsmods.industries.components then
           },
           {
             name = "solar-panel-large-2",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
-              {type = "item", name = "solar-panel-large", amount = 1},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "solar-panel-large", amount = 1} or nil,
               {type = "item", name = "block-construction-4", amount = 3},
               {type = "item", name = "block-electronics-4", amount = 3},
               {type = "item", name = "block-energy-4", amount = 4},
@@ -80,10 +78,9 @@ if angelsmods.industries.components then
 
           {
             name = "solar-panel-small-3",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
-              {type = "item", name = "solar-panel-small-2", amount = 1},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "solar-panel-small-2", amount = 1} or nil,
               {type = "item", name = "block-construction-5", amount = 1},
               {type = "item", name = "block-electronics-5", amount = 1},
               {type = "item", name = "block-energy-5", amount = 2},
@@ -92,10 +89,9 @@ if angelsmods.industries.components then
           },
           {
             name = "solar-panel-3",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
-              {type = "item", name = "solar-panel-2", amount = 1},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "solar-panel-2", amount = 1} or nil,
               {type = "item", name = "block-construction-5", amount = 2},
               {type = "item", name = "block-electronics-5", amount = 2},
               {type = "item", name = "block-energy-5", amount = 3},
@@ -104,10 +100,9 @@ if angelsmods.industries.components then
           },
           {
             name = "solar-panel-large-3",
-            ingredients =
-            {
+            ingredients = angelsmods.functions.clean_ingredient_list{
               {"!!"},
-              {type = "item", name = "solar-panel-large-2", amount = 1},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "solar-panel-large-2", amount = 1} or nil,
               {type = "item", name = "block-construction-5", amount = 3},
               {type = "item", name = "block-electronics-5", amount = 3},
               {type = "item", name = "block-energy-5", amount = 4},
@@ -116,7 +111,128 @@ if angelsmods.industries.components then
           }
         }
       )
-    end
-  end
 
+      if angelsmods.industries.tech then
+        OV.add_prereq("bob-solar-energy-2", "tech-specialised-labs-basic-energy-3")
+        OV.add_prereq("bob-solar-energy-3", "tech-specialised-labs-advanced-energy-1")
+        OV.add_prereq("bob-solar-energy-4", "tech-specialised-labs-advanced-energy-2")
+      else
+        OV.add_prereq("bob-solar-energy-2", "angels-basic-blocks-3")
+        OV.add_prereq("bob-solar-energy-3", "angels-advanced-blocks-1")
+        OV.add_prereq("bob-solar-energy-4", "angels-advanced-blocks-2")
+      end
+    end
+
+    ---------------------------------------------------------------------------
+    -- ACCUMULATOR ------------------------------------------------------------
+    ---------------------------------------------------------------------------
+    if settings.startup["bobmods-power-accumulators"].value == true then
+      OV.patch_recipes(
+        {
+          {
+            name = "large-accumulator",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "accumulator", amount = 1} or nil,
+              {type = "item", name = "block-construction-3", amount = 1},
+              {type = "item", name = "block-energy-3", amount = 4},
+            }
+          },
+          {
+            name = "fast-accumulator",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "accumulator", amount = 1} or nil,
+              {type = "item", name = "block-construction-3", amount = 1},
+              {type = "item", name = "block-energy-3", amount = 2},
+              {type = "item", name = "block-enhancement-3", amount = 2},
+            }
+          },
+          {
+            name = "slow-accumulator",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "accumulator", amount = 1} or nil,
+              {type = "item", name = "block-construction-3", amount = 1},
+              {type = "item", name = "block-energy-3", amount = 2},
+              {type = "item", name = "block-electronics-3", amount = 2},
+            }
+          },
+
+          {
+            name = "large-accumulator-2",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "large-accumulator", amount = 1} or nil,
+              {type = "item", name = "block-construction-4", amount = 1},
+              {type = "item", name = "block-energy-4", amount = 4},
+            }
+          },
+          {
+            name = "fast-accumulator-2",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "fast-accumulator", amount = 1} or nil,
+              {type = "item", name = "block-construction-4", amount = 1},
+              {type = "item", name = "block-energy-4", amount = 2},
+              {type = "item", name = "block-enhancement-4", amount = 2},
+            }
+          },
+          {
+            name = "slow-accumulator-2",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "slow-accumulator", amount = 1} or nil,
+              {type = "item", name = "block-construction-4", amount = 1},
+              {type = "item", name = "block-energy-4", amount = 2},
+              {type = "item", name = "block-electronics-4", amount = 2},
+            }
+          },
+
+          {
+            name = "large-accumulator-3",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "large-accumulator-2", amount = 1} or nil,
+              {type = "item", name = "block-construction-5", amount = 1},
+              {type = "item", name = "block-energy-5", amount = 4},
+            }
+          },
+          {
+            name = "fast-accumulator-3",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "fast-accumulator-2", amount = 1} or nil,
+              {type = "item", name = "block-construction-5", amount = 1},
+              {type = "item", name = "block-energy-5", amount = 2},
+              {type = "item", name = "block-enhancement-5", amount = 2},
+            }
+          },
+          {
+            name = "slow-accumulator-3",
+            ingredients = angelsmods.functions.clean_ingredient_list{
+              {"!!"},
+              (not angelsmods.industries.return_ingredients) and {type = "item", name = "slow-accumulator-2", amount = 1} or nil,
+              {type = "item", name = "block-construction-5", amount = 1},
+              {type = "item", name = "block-energy-5", amount = 2},
+              {type = "item", name = "block-electronics-5", amount = 2},
+            }
+          }
+        }
+      )
+
+      OV.remove_prereq("bob-electric-energy-accumulators-3", "advanced-electronics")
+      OV.remove_prereq("bob-electric-energy-accumulators-4", "advanced-electronics-2")
+      if angelsmods.industries.tech then
+        OV.add_prereq("bob-electric-energy-accumulators-2", "tech-specialised-labs-basic-enhance-3")
+        OV.add_prereq("bob-electric-energy-accumulators-3", "tech-specialised-labs-advanced-enhance-1")
+        OV.add_prereq("bob-electric-energy-accumulators-4", "tech-specialised-labs-advanced-enhance-2")
+      else
+        --OV.add_prereq("bob-electric-energy-accumulators-2", "angels-basic-blocks-3")
+        OV.add_prereq("bob-electric-energy-accumulators-3", "angels-advanced-blocks-1")
+        OV.add_prereq("bob-electric-energy-accumulators-4", "angels-advanced-blocks-2")
+      end
+    end
+
+  end
 end

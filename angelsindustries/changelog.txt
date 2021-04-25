@@ -10,8 +10,10 @@ Date: ??
       - Changed and expanded locale strings and text descriptions (489)
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
-      - Added custom recipes for solar panel recipes (base game and bobs mods)
+      - Added custom recipes for solar panel and accumulator recipes (base game and bobs mods)
       - Added custom recipes for assemblers (base game and bobs mods, incl. electronic assemblers)
+    - Science mode:
+      - Moved solar panels from orange to green science tier
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
@@ -31,6 +33,8 @@ Date: ??
       - Fixed science tiers on steam engines and boilers of bobs power (519)
       - Fixed science tiers on heat pipes and heat sources of bobs power (519)
       - Fixed science tiers on fluid burning generators of bobs power (502)
+      - Fixed science tiers on bobs solar panel and accumulator researches
+      - Fixed science tiers on power pole and substation researches
       - Fixed the selection and collision box of the main lab did not align (539)
       - Fixed that speed, productivity, effectivity, and agriculture module 3 couldnt be researched due to no lab taking all required science packs. removed Yellow science analyzer from required packs.
       - Fixed locale on the space science research

@@ -1,9 +1,10 @@
 local OV = angelsmods.functions.OV
 --require("prototypes.overrides.industries-override-functions")
--------------------------------------------------------------------------------
--- BASE BOBS (MCI) ------------------------------------------------------------
--------------------------------------------------------------------------------
+
 if angelsmods.industries.tech then
+  -------------------------------------------------------------------------------
+  -- BASE BOBS (MCI) ------------------------------------------------------------
+  -------------------------------------------------------------------------------
   if mods["bobplates"] then
     pack_replace("battery-2", "blue", "orange")
     OV.remove_prereq("battery-2", "tech-blue-packs")
@@ -234,16 +235,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
     --adds bob power stuffs
-    if settings.startup["bobmods-power-solar"].value == true then
-      pack_replace("bob-solar-energy-2", "green", "orange")
-      pack_replace("bob-solar-energy-4", "blue", "yellow")
-    end
-    if settings.startup["bobmods-power-accumulators"].value == true then
-      pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
-    end
-    if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      pack_replace("fluid-generator-3", "blue", "orange")
-    end
+    -- steam power
     if settings.startup["bobmods-power-steam"].value == true then
       pack_replace("bob-steam-engine-4", "blue", "orange")
       pack_replace("bob-boiler-4", "blue", "orange")
@@ -251,6 +243,19 @@ if angelsmods.industries.tech then
       pack_replace("bob-steam-turbine-1", "green", "orange")
       pack_replace("bob-heat-exchanger-2", "blue", "orange")
     end
+    if settings.startup["bobmods-power-fluidgenerator"].value == true then
+      pack_replace("fluid-generator-3", "blue", "orange")
+    end
+    -- solar power
+    if settings.startup["bobmods-power-solar"].value == true then
+      pack_replace("bob-solar-energy-2", "green", "orange")
+      pack_replace("bob-solar-energy-4", "blue", "yellow")
+    end
+    if settings.startup["bobmods-power-accumulators"].value == true then
+      pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
+      pack_replace("bob-electric-energy-accumulators-4", "blue", "yellow")
+    end
+    -- nuclar power
     if settings.startup["bobmods-power-steam"].value == true or
        settings.startup["bobmods-power-nuclear"].value == true or
        settings.startup["bobmods-power-heatsources"].value == true then
@@ -259,6 +264,14 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-power-heatsources"].value == true then
       pack_replace("burner-reactor-2", "blue", "orange")
       pack_replace("fluid-reactor-2", "blue", "orange")
+    end
+    -- power distribution
+    if settings.startup["bobmods-power-poles"].value == true then
+      pack_replace("electric-pole-2", "green", "orange")
+      pack_replace("electric-pole-4", "blue", "yellow")
+      pack_replace("electric-energy-distribution-2", "blue", "orange")
+      pack_replace("electric-substation-3", "blue", "yellow")
+      pack_replace("electric-substation-4", "blue", "white")
     end
   end
 

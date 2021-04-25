@@ -91,7 +91,6 @@ if angelsmods.industries.tech then
   pack_replace("modular-armor", "green", "orange")
   pack_replace("armor-making-3", "green", "orange")
   pack_replace("belt-immunity-equipment", "green", "orange")
-  pack_replace("solar-energy", "green", "orange")
   OV.remove_prereq("electric-engine", "angels-advanced-oil-processing")
   pack_replace("electric-engine", "blue", "orange")
   pack_replace("electric-energy-accumulators", "green", "orange")
