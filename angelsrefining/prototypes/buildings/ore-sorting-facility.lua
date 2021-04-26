@@ -48,7 +48,7 @@ data:extend(
         emissions_per_minute = 0.03 * 60
       },
       energy_usage = "150kW",
-      ingredient_count = 2,
+      --ingredient_count = 2,
       animation = {
         layers = {
           {
@@ -120,7 +120,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting"},
+      crafting_categories = {"ore-sorting", "ore-sorting-t2"},
       crafting_speed = 1,
       energy_source = {
         type = "electric",
@@ -128,7 +128,7 @@ data:extend(
         emissions_per_minute = 0.04 * 60
       },
       energy_usage = "200kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
@@ -201,7 +201,7 @@ data:extend(
         module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting"},
+      crafting_categories = {"ore-sorting", "ore-sorting-t2", "ore-sorting-t3"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -209,7 +209,7 @@ data:extend(
         emissions_per_minute = 0.05 * 60
       },
       energy_usage = "250kW",
-      ingredient_count = 6,
+      --ingredient_count = 6,
       animation = {
         layers = {
           {
@@ -281,7 +281,7 @@ data:extend(
         module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting"},
+      crafting_categories = {"ore-sorting", "ore-sorting-t2", "ore-sorting-t3", "ore-sorting-t4"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",

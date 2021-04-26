@@ -25,7 +25,7 @@ data:extend(
     {
       type = "recipe",
       name = "bio-puffer-egg-shell-powder",
-      category = "ore-sorting-t1-5",
+      category = "ore-refining-t1-5",
       subgroup = "bio-puffer-egg",
       enabled = false,
       energy_required = 1,

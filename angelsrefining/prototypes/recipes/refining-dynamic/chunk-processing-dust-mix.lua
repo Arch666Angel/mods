@@ -6,7 +6,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-chunk-mix1-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -37,7 +37,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-chunk-mix2-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -68,7 +68,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-chunk-mix3-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -99,7 +99,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-chunk-mix4-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -130,7 +130,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-chunk-mix5-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -161,7 +161,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-chunk-mix6-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -193,7 +193,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore8-dust-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-t3",
       energy_required = 1.5,
       allow_decomposition = false,
@@ -225,7 +225,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore9-dust-processing",
-      category = "ore-sorting",
+      category = "ore-sorting-t3",
       subgroup = "ore-sorting-t3",
       energy_required = 1.5,
       allow_decomposition = false,

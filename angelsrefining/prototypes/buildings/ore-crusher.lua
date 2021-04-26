@@ -37,7 +37,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
       selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-      crafting_categories = {"ore-sorting-t1"},
+      crafting_categories = {"ore-refining-t1"},
       crafting_speed = 1,
       source_inventory_size = 1,
       energy_source = {
@@ -130,7 +130,7 @@ data:extend(
         module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting-t1"},
+      crafting_categories = {"ore-refining-t1"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -196,7 +196,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting-t1"},
+      crafting_categories = {"ore-refining-t1"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -275,7 +275,7 @@ data:extend(
         module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting-t1"},
+      crafting_categories = {"ore-refining-t1"},
       crafting_speed = 3,
       energy_source = {
         type = "electric",

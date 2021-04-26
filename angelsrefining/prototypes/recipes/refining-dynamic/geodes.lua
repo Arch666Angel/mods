@@ -4,7 +4,7 @@ data:extend(
     {
       type = "recipe",
       name = "geode-blue-processing",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
       enabled = false,
@@ -24,7 +24,7 @@ data:extend(
     {
       type = "recipe",
       name = "geode-red-processing",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
       enabled = false,
@@ -44,7 +44,7 @@ data:extend(
     {
       type = "recipe",
       name = "geode-yellow-processing",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
       enabled = false,
@@ -64,7 +64,7 @@ data:extend(
     {
       type = "recipe",
       name = "geode-purple-processing",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
       enabled = false,
@@ -84,7 +84,7 @@ data:extend(
     {
       type = "recipe",
       name = "geode-cyan-processing",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
       enabled = false,
@@ -104,7 +104,7 @@ data:extend(
     {
       type = "recipe",
       name = "geode-lightgreen-processing",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "geode-processing-1",
       energy_required = 1,
       enabled = false,

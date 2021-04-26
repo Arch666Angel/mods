@@ -252,7 +252,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-stone",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "processing-crafting",
       energy_required = 1,
       enabled = false,

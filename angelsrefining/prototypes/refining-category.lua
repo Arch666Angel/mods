@@ -1,93 +1,34 @@
 data:extend(
   {
     --RESOURCE CATEGORIES
-    {
-      type = "resource-category",
-      name = "angels-fissure"
-    },
-    {
-      type = "resource-category",
-      name = "angels-natural-gas"
-    },
+    { type = "resource-category", name = "angels-fissure" },
+    { type = "resource-category", name = "angels-natural-gas" },
     --RECIPE CATEGORIES
-    {
-      type = "recipe-category",
-      name = "angels-unused-machine" -- used for machines that don't have a purpose
-    },
-    {
-      type = "recipe-category",
-      name = "angels-manual-crafting", -- used for manual crafting in character only
-    },
-    --REFINING
-    {
-      type = "recipe-category",
-      name = "ore-processing"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting-t1"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting-t1-5"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting-t2"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting-t3"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting-t3-5"
-    },
-    {
-      type = "recipe-category",
-      name = "ore-sorting-t4"
-    },
-    {
-      type = "recipe-category",
-      name = "liquifying"
-    },
-    {
-      type = "recipe-category",
-      name = "filtering"
-    },
-    {
-      type = "recipe-category",
-      name = "crystallizing"
-    },
-    --WATER TREATMENT
-    {
-      type = "recipe-category",
-      name = "angels-barreling"
-    },
-    {
-      type = "recipe-category",
-      name = "water-treatment"
-    },
-    {
-      type = "recipe-category",
-      name = "salination-plant"
-    },
-    {
-      type = "recipe-category",
-      name = "washing-plant"
-    },
-    {
-      type = "recipe-category",
-      name = "angels-water-void"
-    },
-    {
-      type = "recipe-category",
-      name = "barreling-pump"
-    },
+    { type = "recipe-category", name = "angels-unused-machine" -- used for machines that don't have a purpose },
+    { type = "recipe-category", name = "angels-manual-crafting", -- used for manual crafting in character only },
+
+    { type = "recipe-category", name = "ore-refining-t1" }, -- crusher
+    { type = "recipe-category", name = "ore-refining-t1-5" }, -- powderizer
+    { type = "recipe-category", name = "ore-refining-t2" }, -- flotation
+    { type = "recipe-category", name = "ore-refining-t3" }, -- leaching
+    { type = "recipe-category", name = "ore-refining-t3-5" }, -- electrowinning
+    { type = "recipe-category", name = "ore-refining-t4" }, -- refinery
+
+    { type = "recipe-category", name = "ore-sorting" },
+    { type = "recipe-category", name = "ore-sorting-t2" },
+    { type = "recipe-category", name = "ore-sorting-t3" },
+    { type = "recipe-category", name = "ore-sorting-t4" },
+
+    { type = "recipe-category", name = "liquifying" },
+    { type = "recipe-category", name = "filtering" },
+    { type = "recipe-category", name = "crystallizing" },
+    -- water treatment
+    { type = "recipe-category", name = "angels-barreling" },
+    { type = "recipe-category", name = "water-treatment" },
+    { type = "recipe-category", name = "salination-plant" },
+    { type = "recipe-category", name = "washing-plant" },
+    { type = "recipe-category", name = "angels-water-void" },
+    { type = "recipe-category", name = "barreling-pump" },
     --SUBGROUPS
     {
       type = "item-subgroup",
