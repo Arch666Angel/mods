@@ -62,11 +62,17 @@ if mods["bobassembly"] and settings.startup["bobmods-assembly-multipurposefurnac
     {name = "electric-mixing-furnace", locale = "angels-electric-ingredient-furnace-1"},
     {name = "electric-chemical-mixing-furnace", locale = "angels-electric-ingredient-furnace-2"},
     {name = "electric-chemical-mixing-furnace-2", locale = "angels-electric-ingredient-furnace-3"},
-    settings.startup["bobmods-assembly-oilfurnaces"] and {name = "fluid-mixing-furnace", locale = "angels-fluid-ingredient-furnace"} or nil,
+    settings.startup["bobmods-assembly-oilfurnaces"].value and {name = "fluid-mixing-furnace", locale = "angels-fluid-ingredient-furnace"} or nil,
   }) do
     data.raw["assembling-machine"][rep.name].localised_name = {"entity-name." .. rep.locale}
   end
-
+  -- tech tree updates
+  OV.add_prereq("steel-mixing-furnace","angels-steel-smelting-1") --regular steel processing is already a pre-req for a prereq so puh
+  OV.add_prereq("electric-mixing-furnace","steel-mixing-furnace")
+  OV.remove_prereq("steel-mixing-furnace","alloy-processing")
+  OV.remove_prereq("electric-mixing-furnace","alloy-processing")
+  data.raw.technology["multi-purpose-furnace-1"].localised_name={"technology-name.angels-multi-purpose-furnace-1"}
+  data.raw.technology["multi-purpose-furnace-2"].localised_name={"technology-name.angels-multi-purpose-furnace-2"}
 else --remove metal mixing furnaces if multi-purpose are also removed
   -- remove stone mixing furnace 
   OV.global_replace_item("stone-mixing-furnace", "stone-furnace")
