@@ -4,8 +4,8 @@ data:extend(
     { type = "resource-category", name = "angels-fissure" },
     { type = "resource-category", name = "angels-natural-gas" },
     --RECIPE CATEGORIES
-    { type = "recipe-category", name = "angels-unused-machine" -- used for machines that don't have a purpose },
-    { type = "recipe-category", name = "angels-manual-crafting", -- used for manual crafting in character only },
+    { type = "recipe-category", name = "angels-unused-machine" }, -- used for machines that don't have a purpose },
+    { type = "recipe-category", name = "angels-manual-crafting" }, -- used for manual crafting in character only },
 
     { type = "recipe-category", name = "ore-refining-t1" }, -- crusher
     { type = "recipe-category", name = "ore-refining-t1-5" }, -- powderizer

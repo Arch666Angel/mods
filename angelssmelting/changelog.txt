@@ -16,6 +16,7 @@ Date: ??
     - Changed and expanded locale strings and text descriptions (489)
     - Removed angels iron rod (in favour of the vanilla iron stick) (484,485)
     - Moved Bobs advanced alloys into angels smelting buildings and removed bobs chemical furnaces (328)(334)
+    - Red/green wires now use Tin wire instead of Copper wire when possible (115)
   Bugfixes:
     - Fixed rod stack converting recipes could not use producitivity modules
     - Fixed bronze and brass smelting missed some prerequisites (551)

@@ -121,6 +121,30 @@ end
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].wire then
+
+  -- move tinned wire to electronics for circuit wires
+  OV.patch_recipes(
+    {
+      {
+        name = "green-wire",
+        ingredients =
+        {
+          {type = "item", name = "angels-wire-tin", amount = "copper-cable"}
+        }
+      },
+      {
+        name = "red-wire",
+        ingredients =
+        {
+          {type = "item", name = "angels-wire-tin", amount = "copper-cable"}
+        }
+      }
+    }
+  )
+  OV.remove_unlock("angels-tin-smelting-1","basic-tinned-copper-wire")
+  OV.add_unlock("electronics","basic-tinned-copper-wire")
+  OV.remove_prereq("electronics","angels-tin-smelting-1")
+
   if data.raw.item["tinned-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
     angelsmods.functions.add_flag("angels-wire-tin", "hidden")
@@ -139,11 +163,6 @@ if angelsmods.trigger.smelting_products["tin"].wire then
           }
         }
       )
-    end
-    if mods["bobelectronics"] then
-      OV.remove_unlock("angels-tin-smelting-1","basic-tinned-copper-wire")
-      OV.add_unlock("electronics","basic-tinned-copper-wire")
-      OV.remove_prereq("electronics","angels-tin-smelting-1")
     end
   end
 else
