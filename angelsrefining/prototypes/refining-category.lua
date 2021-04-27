@@ -15,12 +15,14 @@ data:extend(
     { type = "recipe-category", name = "ore-refining-t4" }, -- refinery
 
     { type = "recipe-category", name = "ore-sorting" },
-    { type = "recipe-category", name = "ore-sorting-t2" },
-    { type = "recipe-category", name = "ore-sorting-t3" },
-    { type = "recipe-category", name = "ore-sorting-t4" },
+    { type = "recipe-category", name = "ore-sorting-2" },
+    { type = "recipe-category", name = "ore-sorting-3" },
+    { type = "recipe-category", name = "ore-sorting-4" },
+
+    { type = "recipe-category", name = "filtering" },
+    { type = "recipe-category", name = "filtering-2" },
 
     { type = "recipe-category", name = "liquifying" },
-    { type = "recipe-category", name = "filtering" },
     { type = "recipe-category", name = "crystallizing" },
     -- water treatment
     { type = "recipe-category", name = "angels-barreling" },

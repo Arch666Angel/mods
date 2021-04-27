@@ -437,7 +437,7 @@ data:extend(
       icon_size = 64,
       prerequisites = {
         "slag-processing-1",
-        "plastics"
+        "advanced-electronics-2"
       },
       effects = {
         {

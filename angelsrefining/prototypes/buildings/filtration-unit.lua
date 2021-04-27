@@ -146,7 +146,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"filtering"},
+      crafting_categories = {"filtering", "filtering-2"},
       crafting_speed = 2.25,
       energy_source = {
         type = "electric",

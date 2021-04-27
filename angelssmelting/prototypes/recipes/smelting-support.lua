@@ -71,7 +71,7 @@ data:extend(
     {
       type = "recipe",
       name = "coolant-used-filtration-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "coolant",
       energy_required = 4,
       enabled = false,

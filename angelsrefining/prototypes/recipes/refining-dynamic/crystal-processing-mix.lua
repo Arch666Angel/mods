@@ -6,7 +6,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix1-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       enabled = false,
@@ -39,7 +39,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix2-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       enabled = false,
@@ -72,7 +72,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix3-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       enabled = false,
@@ -105,7 +105,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix4-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       enabled = false,
@@ -138,7 +138,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix5-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       enabled = false,
@@ -172,7 +172,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore8-crystal-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-t4",
       energy_required = 1.5,
       allow_decomposition = false,
@@ -204,7 +204,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore9-crystal-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-t4",
       energy_required = 1.5,
       allow_decomposition = false,
@@ -237,7 +237,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix6-processing",
-      category = "ore-sorting-t4",
+      category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       allow_decomposition = false,

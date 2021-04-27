@@ -493,7 +493,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-raw-fish-oil-filtering-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "bio-processor-press-fish",
       enabled = false,
       energy_required = 8,

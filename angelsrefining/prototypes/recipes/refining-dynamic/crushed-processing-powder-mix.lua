@@ -6,7 +6,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crushed-mix1-processing",
-      category = "ore-sorting-t2",
+      category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -37,7 +37,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crushed-mix2-processing",
-      category = "ore-sorting-t2",
+      category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -68,7 +68,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crushed-mix3-processing",
-      category = "ore-sorting-t2",
+      category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -99,7 +99,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crushed-mix4-processing",
-      category = "ore-sorting-t2",
+      category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
       enabled = false,
@@ -163,7 +163,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore8-powder-processing",
-      category = "ore-sorting-t2",
+      category = "ore-sorting-2",
       subgroup = "ore-sorting-t2",
       energy_required = 1,
       allow_decomposition = false,
@@ -227,7 +227,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore9-powder-processing",
-      category = "ore-sorting-t2",
+      category = "ore-sorting-2",
       subgroup = "ore-sorting-t2",
       energy_required = 1,
       allow_decomposition = false,

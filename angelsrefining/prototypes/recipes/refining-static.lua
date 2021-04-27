@@ -639,7 +639,7 @@ data:extend(
       type = "recipe",
       name = "angelsore8-anode-sludge-filtering",
       localised_name = {"recipe-name.angelsore8-solution-filtering"},
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
@@ -733,7 +733,7 @@ data:extend(
       type = "recipe",
       name = "angelsore9-anode-sludge-filtering",
       localised_name = {"recipe-name.angelsore9-solution-filtering"},
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "ore-processing-c",
       energy_required = 2,
       enabled = false,
@@ -1108,7 +1108,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-filtering-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "filtering",
       energy_required = 2,
       enabled = false,
@@ -1154,7 +1154,7 @@ data:extend(
     {
       type = "recipe",
       name = "thermal-water-filtering-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "filtering",
       energy_required = 2,
       enabled = false,
@@ -1357,7 +1357,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-slurry-filtering-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "filtering",
       energy_required = 1.5,
       enabled = false,
@@ -1405,7 +1405,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-slurry-filtering-conversion-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "filtering",
       energy_required = 1.5,
       enabled = false,
