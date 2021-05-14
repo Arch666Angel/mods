@@ -1100,7 +1100,7 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
       elseif to_remove.flags then
         for i, f in pairs(to_remove.flags) do
           if f == flag_to_remove then
-            table.insert(to_remove.flags, i)
+            table.remove(to_remove.flags, i)
             break
           end
         end
