@@ -66,7 +66,7 @@ angelsmods.trigger.smelting_products["steel"].rod = angelsmods.trigger.smelting_
 --aluminium
 angelsmods.trigger.smelting_products["aluminium"].plate = mods["bobplates"] and true or false
 --cobalt
-angelsmods.trigger.smelting_products["cobalt"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["cobalt"].plate = --[[mods["bobplates"] and true or]] false
 --copper
 angelsmods.trigger.smelting_products["copper"].plate = true
 angelsmods.trigger.smelting_products["copper"].wire = true
