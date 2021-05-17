@@ -224,3 +224,8 @@ if angelsmods.functions.is_special_vanilla() then
     }
   )
 end
+-------------------------------------------------------------------------------
+-- REMOVE INACTIVE ENTITIES ---------------------------------------------------
+-------------------------------------------------------------------------------
+--angelsmods.functions.add_flag("gas-refinery-4", "hidden")
+OV.add_unlock("angels-nitrogen-processing-4","gas-refinery-4")

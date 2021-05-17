@@ -314,38 +314,38 @@ angelsmods.functions.RB.build(
         result = "gas-refinery-3"
       }
     },
-    -- {
-    -- type = "recipe",
-    -- name = "gas-refinery-4",
-    -- normal =
-    -- {
-    -- energy_required = 5,
-    -- enabled = false,
-    -- ingredients =
-    -- {
-    -- {type="item", name="gas-refinery-3", amount = 1},
-    -- {type="item", name="t5-plate", amount = 10},
-    -- {type="item", name="t5-circuit", amount = 5},
-    -- {type="item", name="t5-brick", amount = 10},
-    -- {type="item", name="t5-pipe", amount = 10},
-    -- },
-    -- result= "gas-refinery-4",
-    -- },
-    -- expensive =
-    -- {
-    -- energy_required = 5 * buildingtime,
-    -- enabled = false,
-    -- ingredients =
-    -- {
-    -- {type="item", name="gas-refinery-3", amount = 1},
-    -- {type="item", name="t5-plate", amount = 10 * buildingmulti},
-    -- {type="item", name="t5-circuit", amount = 5 * buildingmulti},
-    -- {type="item", name="t5-brick", amount = 10 * buildingmulti},
-    -- {type="item", name="t5-pipe", amount = 10 * buildingmulti},
-    -- },
-    -- result= "gas-refinery-4",
-    -- },
-    -- },
+    {
+      type = "recipe",
+      name = "gas-refinery-4",
+      normal =
+      {
+        energy_required = 5,
+        enabled = false,
+        ingredients =
+        {
+          {type="item", name="gas-refinery-3", amount = 1},
+          {type="item", name="t5-plate", amount = 10},
+          {type="item", name="t5-circuit", amount = 5},
+          {type="item", name="t5-brick", amount = 10},
+          {type="item", name="t5-pipe", amount = 10},
+        },
+        result= "gas-refinery-4",
+      },
+      expensive =
+      {
+        energy_required = 5 * buildingtime,
+        enabled = false,
+        ingredients =
+        {
+          {type="item", name="gas-refinery-3", amount = 1},
+          {type="item", name="t5-plate", amount = 10 * buildingmulti},
+          {type="item", name="t5-circuit", amount = 5 * buildingmulti},
+          {type="item", name="t5-brick", amount = 10 * buildingmulti},
+          {type="item", name="t5-pipe", amount = 10 * buildingmulti},
+        },
+        result= "gas-refinery-4",
+      },
+    },
     --STEAM CRACKER
     {
       type = "recipe",

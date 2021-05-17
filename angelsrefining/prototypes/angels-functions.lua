@@ -1058,13 +1058,15 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
   for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
     local to_add = data.raw[type][entity] or nil
     if to_add then
-      if to_add.flags then
-        table.insert(to_add.flags, flag)
-      else
-        to_add.flags = {flag}
-      end
       if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
+        to_add.hidden = true
         angelsmods.functions.disable_barreling_recipes(entity)
+      else
+        if to_add.flags then
+          table.insert(to_add.flags, flag)
+        else
+          to_add.flags = {flag}
+        end
       end
     end
   end
@@ -1089,14 +1091,19 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     return
   end
 
-  for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
-     -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
-    local to_remove = data.raw[type][entity] or nil
+  for _,type in pairs({"item", "tool", "item-with-entity-data", "fluid"}) do
+    local to_remove = data.raw[type][entity]
     if to_remove then
-      if to_remove.flags then
-        table.insert(to_remove.flags, flag)
-      else
-        to_remove.flags = {flag}
+      if type == "fluid" and flag_to_remove == "hidden" then
+        to_remove.hidden = false
+        -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
+      elseif to_remove.flags then
+        for i, f in pairs(to_remove.flags) do
+          if f == flag_to_remove then
+            table.remove(to_remove.flags, i)
+            break
+          end
+        end
       end
     end
   end
