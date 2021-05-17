@@ -251,6 +251,7 @@ if angelsmods.industries.components then
     OV.add_prereq("ore-leaching", "angels-basic-blocks-3")
     OV.add_prereq("advanced-ore-refining-2", "angels-basic-blocks-3")
     OV.add_prereq("ore-electro-whinning-cell", "angels-basic-blocks-3")
+    OV.add_prereq("angels-advanced-chemistry-2", "angels-basic-blocks-3")
     OV.add_prereq("angels-metallurgy-3", "angels-basic-blocks-3")
 
     -----------------------------------------------------------------------------
@@ -311,6 +312,7 @@ if angelsmods.industries.components then
     )
     OV.add_prereq("ore-refining", "angels-advanced-blocks-1")
     OV.add_prereq("advanced-ore-refining-3", "angels-advanced-blocks-1")
+    OV.add_prereq("angels-advanced-chemistry-3", "angels-advanced-blocks-1")
     OV.add_prereq("angels-metallurgy-4", "angels-advanced-blocks-1")
 
     -----------------------------------------------------------------------------
@@ -371,6 +373,7 @@ if angelsmods.industries.components then
       }
     )
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
+    OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
   end
 end
