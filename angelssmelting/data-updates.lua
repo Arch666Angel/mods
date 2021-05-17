@@ -110,6 +110,9 @@ if angelsmods.trigger.smelting_products["copper"].powder then
 end
 --glass
 if angelsmods.trigger.smelting_products["glass"].board then
+  angelsmods.trigger.smelting_products["glass"].fibre = true
+end
+if angelsmods.trigger.smelting_products["glass"].fibre then
   angelsmods.trigger.smelting_products["glass"].mixture = true
   angelsmods.trigger.smelting_products["lead"].ingot = true
   angelsmods.trigger.smelting_products["tin"].ingot = true

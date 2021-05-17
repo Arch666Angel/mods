@@ -3,7 +3,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["cobalt"].ingot = true
-  --angelsmods.trigger.smelting_products["cobalt"].plate = true --has no use at this point, in any mode
+  angelsmods.trigger.smelting_products["cobalt"].plate = true
   angelsmods.trigger.smelting_products["cobalt"].powder = true
 end
 

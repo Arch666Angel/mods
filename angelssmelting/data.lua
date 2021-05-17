@@ -72,6 +72,7 @@ angelsmods.trigger.smelting_products["copper"].plate = true
 angelsmods.trigger.smelting_products["copper"].wire = true
 --glass
 angelsmods.trigger.smelting_products["glass"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["glass"].fibre = false
 angelsmods.trigger.smelting_products["glass"].board = mods["bobplates"] and mods["bobelectronics"] and true or false
 --gold
 angelsmods.trigger.smelting_products["gold"].plate = mods["bobplates"] and true or false
