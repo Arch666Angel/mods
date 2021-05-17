@@ -163,6 +163,8 @@ if angelsmods.trigger.smelting_products["iron"].rod then
   --angelsmods.functions.add_flag("iron-stick", "hidden")
   OV.disable_recipe({"iron-stick"}) --disable vanilla's recipe?
 else
+  angelsmods.functions.add_flag("angels-rod-iron", "hidden")
+  angelsmods.functions.add_flag("angels-rod-stack-iron", "hidden")
   OV.disable_recipe({"rod-stack-iron-casting", "rod-stack-iron-casting-fast"})
   OV.disable_recipe({"angels-rod-iron-plate", "angels-rod-stack-iron-converting"})
 end
