@@ -4,6 +4,8 @@ Date: ??
   Changes:
     - Added HQ tier numbering icons
     - Changed and expanded locale strings and text descriptions (489)
+    - Added a max speed tooltip to non-locomotive class train parts (589)
+    - Reduced the braking force to half across the board (off by 1 error) (589)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 20.01.2021

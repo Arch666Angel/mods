@@ -44,3 +44,4 @@ for _, prototype_type in pairs {
     end
   end
 end
+angelsmods.functions.add_speed_local()

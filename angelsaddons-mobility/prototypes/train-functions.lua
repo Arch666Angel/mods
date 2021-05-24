@@ -14,6 +14,22 @@ local function set_type(name)
   return train_type
 end
 
+function angelsmods.functions.add_speed_local()
+  local parts = {"cargo-wagon","fluid-wagon","artillery-wagon"}
+  for _, part in pairs(parts) do
+    for _,train in pairs(data.raw[part]) do
+      if train then
+        if train.localised_description then --add to table
+          --table.insert(train.localised_description,"\n") --ensure new line at start?
+          table.insert(train.localised_description,{"speed-text.speed-cap", train.max_speed*216})
+        else-- add new table
+          train.localised_description={"speed-text.speed-cap", math.floor(train.max_speed*216*100)/100}--rounded tile/tick converted to km/h
+        end
+      end
+    end
+  end
+end
+
 local function generate_additional_pastable_entities(name)
   all_entity_names = {}
   for _, entity_type_name in pairs{
