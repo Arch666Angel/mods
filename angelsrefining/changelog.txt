@@ -32,6 +32,7 @@ Date: ??
     - Fixed that the method for removing autoplace controls was not universally used (373)
     - Fixed deadlock for bobclasses "fighter" and component mode (394, 559)
     - Fixed in some old saves washing tech was still disabled (for real this time) (368)
+    - Fixed the lib recipe builder fallback to use aluminium, titanium and tungsten plates more frequently
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020

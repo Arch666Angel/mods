@@ -10,10 +10,10 @@
 	--PLATES
 	angelsmods.functions.RB.set_fallback("item", "t0-plate", { { "block-construction-1" }, { "iron-plate", 3 } })
 	angelsmods.functions.RB.set_fallback("item", "t1-plate", { { "block-construction-1" }, { "steel-plate", 3 } })
-	angelsmods.functions.RB.set_fallback("item", "t2-plate", { { "block-construction-2" }, { "steel-plate", 3 } })
-	angelsmods.functions.RB.set_fallback("item", "t3-plate", { { "block-construction-3" }, { "aluminium-plate", 3 }, { "steel-plate", 3 } })
-	angelsmods.functions.RB.set_fallback("item", "t4-plate", { { "block-construction-4" }, { "titanium-plate", 3 }, { "steel-plate", 3 } })
-	angelsmods.functions.RB.set_fallback("item", "t5-plate", { { "block-construction-5" }, { "tungsten-plate", 3 }, { "steel-plate", 3 } })
+	angelsmods.functions.RB.set_fallback("item", "t2-plate", { { "block-construction-2" }, { "steel-plate", 5 } })
+	angelsmods.functions.RB.set_fallback("item", "t3-plate", { { "block-construction-3" }, { "aluminium-plate", 4 }, { "angels-plate-aluminium", 4 }, { "steel-plate", 7 } })
+	angelsmods.functions.RB.set_fallback("item", "t4-plate", { { "block-construction-4" }, { "titanium-plate", 4 }, { "angels-plate-titanium", 4 }, { "steel-plate", 9 } })
+	angelsmods.functions.RB.set_fallback("item", "t5-plate", { { "block-construction-5" }, { "tungsten-plate", 4 }, { "angels-plate-tungsten", 4 }, { "steel-plate", 11 } })
 
 	--BRICK
 	angelsmods.functions.RB.set_fallback("item", "t0-brick", { { "block-construction-1" }, { "stone-brick", 5 } })

@@ -16,7 +16,13 @@ local function check_raw_for (i_type, i_name)
       for _, it in pairs(item_subtypes) do
          local result = dr[it][i_name]
          if result then
-            return result
+            local result_hidden = false
+            for _, f in pairs(result.flags or {}) do
+               result_hidden = result_hidden or (f == "hidden")
+            end
+            if not result_hidden then
+               return result
+            end
          end
       end
       return nil

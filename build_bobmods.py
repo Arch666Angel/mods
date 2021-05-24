@@ -73,7 +73,7 @@ class ModDownloader:
         modRelease = self.__getReleaseInfo(factorioVersion, modVersion)
         print("    Creating '{0}'".format(modRelease["file_name"]))
         modDownloadUrl = 'http://mods.factorio.com{0}?username={1}&token={2}'.format(modRelease["download_url"], self.userData[0], self.userData[1])
-        modDownloadRequest = urllib.request.Request(modDownloadUrl)
+        modDownloadRequest = urllib.request.Request(modDownloadUrl, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(modDownloadRequest) as downloadFile:
             with open('{0}{1}'.format(self.modFolderDir, modRelease["file_name"]), 'wb+') as zipFile:
                 zipFile.write(downloadFile.read())

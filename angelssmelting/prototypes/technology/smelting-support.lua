@@ -83,7 +83,8 @@ data:extend(
       icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-2"
+        "angels-metallurgy-2",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -122,7 +123,8 @@ data:extend(
       icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-3"
+        "angels-metallurgy-3",
+        "production-science-pack"
       },
       effects = {
         {
@@ -162,7 +164,8 @@ data:extend(
       icon_mipmaps = 2,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-4"
+        "angels-metallurgy-4",
+        "utility-science-pack"
       },
       effects = {
         {
