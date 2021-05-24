@@ -553,10 +553,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "puffer-1", amount = 1},
-          {type = "item", name = "t1-plate", amount = 4},
-          {type = "item", name = "t1-circuit", amount = 4},
-          {type = "item", name = "t1-brick", amount = 3},
-          {type = "item", name = "t1-pipe", amount = 11}
+          {type = "item", name = "t3-plate", amount = 4},
+          {type = "item", name = "t3-circuit", amount = 4},
+          {type = "item", name = "t3-brick", amount = 3},
+          {type = "item", name = "t3-pipe", amount = 11}
         },
         result = "bio-refugium-puffer"
       },
@@ -565,10 +565,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "puffer-1", amount = 1},
-          {type = "item", name = "t1-plate", amount = 4 * buildingmulti},
-          {type = "item", name = "t1-circuit", amount = 4 * buildingmulti},
-          {type = "item", name = "t1-brick", amount = 3 * buildingmulti},
-          {type = "item", name = "t1-pipe", amount = 11 * buildingmulti}
+          {type = "item", name = "t3-plate", amount = 4 * buildingmulti},
+          {type = "item", name = "t3-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 3 * buildingmulti},
+          {type = "item", name = "t3-pipe", amount = 11 * buildingmulti}
         },
         result = "bio-refugium-puffer"
       }
@@ -637,10 +637,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "biter-1", amount = 1},
-          {type = "item", name = "t1-plate", amount = 10},
-          {type = "item", name = "t1-circuit", amount = 4},
-          {type = "item", name = "t1-brick", amount = 19},
-          {type = "item", name = "t1-pipe", amount = 11}
+          {type = "item", name = "t4-plate", amount = 10},
+          {type = "item", name = "t4-circuit", amount = 4},
+          {type = "item", name = "t4-brick", amount = 19},
+          {type = "item", name = "t4-pipe", amount = 11}
         },
         result = "bio-refugium-biter"
       },
@@ -649,10 +649,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "biter-1", amount = 1},
-          {type = "item", name = "t1-plate", amount = 10 * buildingmulti},
-          {type = "item", name = "t1-circuit", amount = 4 * buildingmulti},
-          {type = "item", name = "t1-brick", amount = 19 * buildingmulti},
-          {type = "item", name = "t1-pipe", amount = 11 * buildingmulti}
+          {type = "item", name = "t4-plate", amount = 10 * buildingmulti},
+          {type = "item", name = "t4-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t4-brick", amount = 19 * buildingmulti},
+          {type = "item", name = "t4-pipe", amount = 11 * buildingmulti}
         },
         result = "bio-refugium-biter"
       }

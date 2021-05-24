@@ -146,7 +146,7 @@ data:extend(
         "bio-nutrient-paste",
         "angels-sulfur-processing-2",
         "angels-nitrogen-processing-1",
-        "angels-advanced-chemistry-1"
+        "advanced-electronics",
       },
       effects = {
         {
