@@ -95,7 +95,8 @@ data:extend(
       icon_size = 160,
       order = "c-a",
       prerequisites = {
-        "gardens"
+        "gardens",
+        "optics"
       },
       effects = {
         {
