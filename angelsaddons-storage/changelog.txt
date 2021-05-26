@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
-Date: ??
+Date: 26.05.2021
   Changes:
     - Added setting to disable logitics silos and ore silos independently (499)
     - Warehouses now prerequisite on ore silos if both are enabled (428)

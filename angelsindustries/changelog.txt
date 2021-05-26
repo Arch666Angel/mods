@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.12
-Date: ??
+Date: 26.05.2021
   Changes:
     - Regular mode:
       - Ordered vehicle belt immunity equipment (477)
@@ -36,7 +36,8 @@ Date: ??
       - Fixed science tiers on bobs solar panel and accumulator researches
       - Fixed science tiers on power pole and substation researches
       - Fixed the selection and collision box of the main lab did not align (539)
-      - Fixed that speed, productivity, effectivity, and agriculture module 3 couldnt be researched due to no lab taking all required science packs. removed Yellow science analyzer from required packs.
+      - Fixed that speed, productivity, effectivity, and agriculture module 3 couldnt be researched due
+        to no lab taking all required science packs. removed Yellow science analyzer from required packs.
       - Fixed locale on the space science research
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.11

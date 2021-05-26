@@ -9,6 +9,6 @@
   "description": "Adds another type of Crawler.",
   "dependencies": [
      "? angelsindustries >= 0.4.9",
-     "base >= 1.1.0"
+     "base >= 1.1.33"
   ]
 }

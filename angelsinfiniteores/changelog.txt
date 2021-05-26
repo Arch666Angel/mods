@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
-Date: ??
+Date: 26.05.2021
   Changes:
     - Now shows icons next to the autoplace controls (542)
     - Updated the dark-matter-replicators detection script (543)

@@ -8,7 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds infinite ores for the base game, Bob's mods, Yuoki Industries, Uranium Power, Nucular, Dark Matter Replicators and the base ores for Angel's Refining. Works well with RSO mod. Has config options to change the yield for all infinite resources including oil and gas.",
   "dependencies": [
-    "base >= 1.1.24",
+    "base >= 1.1.33",
     "? angelsrefining >= 0.11.19",
     "? rso-mod >= 2.3.3",
     "? bobores >= 0.18.3",
