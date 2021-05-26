@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.18
-Date: ??
+Date: 26.05.2021
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Added agricultural module support with bobs modules
@@ -14,6 +14,8 @@ Date: ??
     - Moved algae farms 2 and 3 deeper into the tech tree (503)
     - In component mode, decreased the cost of algae farm 2 from tier 3 to tier 2 blocks (503)
     - Split plant and fish pressing in two techs to account for the ceramic filter (428)
+    - Hide unused items (plant milk and bio wooden board) (523)
+    - Changed and expanded locale strings and text descriptions (489)
   Bugfixes:
     - Fixed bob modules category icon did not fit the category box size (483)
     - Fixed bob modules tech icons did not fit the tech box (483)
@@ -21,6 +23,9 @@ Date: ??
     - Fixed agricultural modules would not upgrade correctly
     - Fixed agricultural modules all used the same tech icon (493)
     - Fixed angels fishes were not set as consumable items (490)
+    - Fixed with bobs modules that the module 2 and 3 technologies would have wrong icon_size (508)
+    - Added bio-tile to this mod from industries
+      - Still needs recipe and tech-unlock
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.17
 Date: 26.11.2020

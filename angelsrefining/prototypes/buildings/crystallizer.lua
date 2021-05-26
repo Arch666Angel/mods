@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "crystallizer",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/crystallizer.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "c[crystallizer]-a[mk1]",
       place_result = "crystallizer",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "crystallizer",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/crystallizer.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "crystallizer"},
       fast_replaceable_group = "crystallizer",
@@ -103,18 +95,14 @@ data:extend(
     {
       type = "item",
       name = "crystallizer-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/crystallizer.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "c[crystallizer]-b[mk2]",
       place_result = "crystallizer-2",
@@ -123,18 +111,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "crystallizer-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/crystallizer.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "crystallizer-2"},
       fast_replaceable_group = "crystallizer",

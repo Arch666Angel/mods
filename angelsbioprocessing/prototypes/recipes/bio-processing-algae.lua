@@ -66,26 +66,26 @@ data:extend(
       icon_size = 32,
       order = "c[solid-alginic-acid]"
     },
-    -- {
-    -- type = "recipe",
-    -- name = "circuit-wood-fiber-board",
-    -- icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
-    -- category = "advanced-crafting",
-    -- subgroup = "bio-processing-brown",
-    -- enabled = false,
-    -- energy_required = 4,
-    -- ingredients =
-    -- {
-    -- {type="item", name="cellulose-fiber", amount=4},
-    -- {type="item", name="solid-alginic-acid", amount=1},
-    -- },
-    -- results=
-    -- {
-    -- {type="item", name="circuit-wood-fiber-board", amount=3},
-    -- },
-    -- icon_size = 32,
-    -- order = "c[circuit-wood-fiber-board]",
-    -- },
+    --[[{
+      type = "recipe",
+      name = "circuit-wood-fiber-board",
+      icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
+      category = "advanced-crafting",
+      subgroup = "bio-processing-brown",
+      enabled = false,
+      energy_required = 4,
+      ingredients =
+      {
+        {type="item", name="cellulose-fiber", amount=4},
+        {type="item", name="solid-alginic-acid", amount=1},
+      },
+      results=
+      {
+        {type="item", name="circuit-wood-fiber-board", amount=3},
+      },
+      icon_size = 32,
+      order = "c[circuit-wood-fiber-board]",
+    },]]
 
     --GREEN
     {
@@ -103,18 +103,13 @@ data:extend(
         {type = "item", name = "algae-green", amount = 25},
         {type = "item", name = "algae-brown", amount = 5}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-green.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.bioprocessing.number_tint),
       order = "aa[algae-farming]"
     },
     {
@@ -131,18 +126,13 @@ data:extend(
       results = {
         {type = "item", name = "algae-green", amount = 50}
       },
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-green.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.bioprocessing.number_tint),
       order = "ab[algae-farming]"
     },
     {

@@ -8,4 +8,10 @@ else
       "liquid-ethylene-carbonate"
     }
   )
+  angelsmods.functions.add_flag(
+    {
+      "gas-ethylene-oxide",
+      "liquid-ethylene-carbonate"
+    },
+    "hidden")
 end

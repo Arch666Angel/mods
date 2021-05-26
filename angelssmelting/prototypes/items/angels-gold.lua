@@ -17,7 +17,7 @@ data:extend(
     type = "item",
     name = "processed-gold",
     icon = "__angelssmelting__/graphics/icons/processed-gold.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-gold",
     order = "b",
     stack_size = 200
@@ -26,7 +26,7 @@ data:extend(
     type = "item",
     name = "pellet-gold",
     icon = "__angelssmelting__/graphics/icons/pellet-gold.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-gold",
     order = "c",
     stack_size = 200
@@ -78,7 +78,7 @@ data:extend(
     type = "item",
     name = "powder-gold",
     icon = "__angelssmelting__/graphics/icons/powder-gold.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-gold",
     order = "h",
     stack_size = 200

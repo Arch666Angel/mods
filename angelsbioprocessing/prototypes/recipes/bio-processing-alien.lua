@@ -212,7 +212,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-powder-from-dust",
-      category = "ore-sorting-t1-5",
+      category = "ore-refining-t1-5",
       subgroup = "bio-biter-processing-crystal-full",
       enabled = false,
       energy_required = 2,

@@ -74,6 +74,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
         energy_required = 10.5,
         normal = {
           enabled = false,
+          hidden = true, --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {name = "iron-ore", type = "item", amount = "+3"}
           },
@@ -83,6 +84,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
         },
         expensive = {
           enabled = false,
+          hidden = true, --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {"!!"},
             {name = "iron-ore", type = "item", amount = 5 * intermediatemulti}
@@ -110,6 +112,14 @@ if angelsmods.trigger.smelting_products["iron"].plate then
   )
   OV.global_replace_item("angels-plate-iron", "iron-plate")
   angelsmods.functions.add_flag("angels-plate-iron", "hidden")
+  angelsmods.functions.override_item_conditions(
+    {
+      value = 200,
+      list = {
+        "iron-plate"
+      }
+    }
+  )
 
   if angelsmods.refining then
     OV.patch_recipes(
@@ -149,10 +159,12 @@ end
 -- ROD ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].rod then
-  OV.global_replace_item("iron-stick", "angels-rod-iron")
-  angelsmods.functions.add_flag("iron-stick", "hidden")
-  OV.disable_recipe({"iron-stick"})
+  OV.global_replace_item("angels-rod-iron","iron-stick")
+  --angelsmods.functions.add_flag("iron-stick", "hidden")
+  OV.disable_recipe({"iron-stick"}) --disable vanilla's recipe?
 else
+  angelsmods.functions.add_flag("angels-rod-iron", "hidden")
+  angelsmods.functions.add_flag("angels-rod-stack-iron", "hidden")
   OV.disable_recipe({"rod-stack-iron-casting", "rod-stack-iron-casting-fast"})
   OV.disable_recipe({"angels-rod-iron-plate", "angels-rod-stack-iron-converting"})
 end

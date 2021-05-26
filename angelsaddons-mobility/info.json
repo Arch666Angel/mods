@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-mobility",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "factorio_version": "1.1",
   "title": "Angel's Addons - Mass Transit",
   "author": "Arch666Angel, lovely_santa",
@@ -8,7 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "A combination mod of the various themed trains.",
   "dependencies": [
-    "base >= 1.1.0",
+    "base >= 1.1.33",
+    "(?) angelsrefining >= 0.11.20",
     "? angelsindustries >= 0.4.9"
   ]
 }

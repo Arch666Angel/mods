@@ -264,6 +264,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-advanced-chemistry-1",
+        "advanced-electronics",
         "gas-steam-cracking-1",
         "oil-steam-cracking-1"
       },
@@ -318,6 +319,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-advanced-chemistry-2",
+        "advanced-electronics-2",
         "angels-advanced-gas-processing",
         "gas-steam-cracking-2",
         "oil-steam-cracking-2"

@@ -4,7 +4,7 @@ data:extend{
     type = "bool-setting",
     name = "deco-shred-create-spawn-logo",
     setting_type = "startup",
-    default_value = true,
+    default_value = false,
     order = "shred-a[deco]-a",
   },
 

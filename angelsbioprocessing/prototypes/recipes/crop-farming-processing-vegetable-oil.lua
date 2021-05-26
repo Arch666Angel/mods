@@ -97,7 +97,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-raw-vegetable-oil-filtering-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "bio-processor-press-vegetables",
       enabled = false,
       energy_required = 4,

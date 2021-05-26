@@ -71,7 +71,7 @@ data:extend(
     {
       type = "recipe",
       name = "coolant-used-filtration-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "coolant",
       energy_required = 4,
       enabled = false,
@@ -114,19 +114,9 @@ data:extend(
         {type = "fluid", name = "steam", amount = 50, temperature = 175}
       },
       --main_product= "liquid-coolant-clean",
-      icons =
-      {
-        {
-          icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-coolant-used"),
+        3, angelsmods.refining.number_tint),
       order = "h"
     },
     {
@@ -153,19 +143,9 @@ data:extend(
         {type = "fluid", name = "steam", amount = 50, temperature = 150}
       },
       --main_product= "liquid-coolant-clean",
-      icons =
-      {
-        {
-          icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-coolant-used"),
+        2, angelsmods.refining.number_tint),
       order = "g"
     },
     {
@@ -192,19 +172,9 @@ data:extend(
         {type = "fluid", name = "steam", amount = 50, temperature = 125}
       },
       --main_product= "liquid-coolant-clean",
-      icons =
-      {
-        {
-          icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("liquid-coolant-used"),
+        1, angelsmods.refining.number_tint),
       order = "f"
     },
     --MOLDS
@@ -288,24 +258,20 @@ data:extend(
         {type = "item", name = "slag", amount = 1}
       },
       main_product = "mold-non-expendable",
-      icons =
-      {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png"
+          {
+            icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+            icon_size = 32, icon_mipmaps = 1
+          },
+          {
+            icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+            icon_size = 32, icon_mipmaps = 1,
+            scale = 0.4375,
+            shift = {10, -10}
+          }
         },
-        {
-          icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
-          scale = 0.4375,
-          shift = {10, -10}
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.smelting.number_tint),
       order = "c[mold-non-expendable]-a[creation]",
       stack_size = 200
     },
@@ -326,25 +292,20 @@ data:extend(
         {type = "item", name = "mold-non-expendable", amount = 1, probability = 0.90, catalyst_amount = 1},
         {type = "fluid", name = "water-red-waste", amount = 20}
       },
-      icons =
-      {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png"
+          {
+            icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+            icon_size = 32, icon_mipmaps = 1
+          },
+          {
+            icon = "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png",
+            icon_size = 72,
+            scale = 32/72 * 0.4375,
+            shift = {10, -10}
+          }
         },
-        {
-          icon = "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png",
-          icon_size = 72,
-          scale = 32/72 * 0.4375,
-          shift = {10, -10}
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.smelting.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.smelting.number_tint),
       order = "c[mold-non-expendable]-b[cleaning]"
     }
   }

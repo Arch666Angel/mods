@@ -1,15 +1,27 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.15
-Date: ??
+Date: 26.05.2021
   Changes:
     - Split smelting technologies in two parts: (498)
       - Smelting to ingots, faster tech progress to allow additional mid-tier improvements
       - Casting to usable products (plates, wires, rods), similar tech progress as before
-    - Added new graphics to technology, ingots, molted metals, metal rolls and metal wire coils
+    - Added new graphics to
+      - technology,
+      - processed metals, pellets, powder,
+      - ingots, molted metals,
+      - metal rolls and metal wire coils.
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
+    - Updated electronics to not rely on steel processing if bobs is installed (550, 583)
+    - Changed and expanded locale strings and text descriptions (489)
+    - Removed angels iron rod (in favour of the vanilla iron stick) (484,485)
+    - Moved Bobs advanced alloys into angels smelting buildings and removed bobs chemical furnaces (328)(334)
+    - Red/green wires now use Tin wire instead of Copper wire when possible (115)
+    - Circuits now require silver/gold when applicable (115)
   Bugfixes:
-    - Fixed rod stack converting recipes could not use producitivity modules
+    - Fixed rod stack converting recipes could not use productivity modules
+    - Fixed bronze and brass smelting missed some prerequisites (551)
+    - Fixed stack size of iron, copper and steel plates
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.14
 Date: 26.11.2020

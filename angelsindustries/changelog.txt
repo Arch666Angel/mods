@@ -1,20 +1,44 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.12
-Date: ??
+Date: 26.05.2021
   Changes:
     - Regular mode:
       - Ordered vehicle belt immunity equipment (477)
       - Integrated bobs plutonium nucleosynthesis (486)
       - Unlock red and green wires with the (previously empty) electronics technology
+      - Moved Bio-tile data to angelsbioprocessing
+      - Changed and expanded locale strings and text descriptions (489)
     - Component mode:
       - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
+      - Added custom recipes for solar panel and accumulator recipes (base game and bobs mods)
+      - Added custom recipes for assemblers (base game and bobs mods, incl. electronic assemblers)
+    - Science mode:
+      - Moved solar panels from orange to green science tier
   Bugfixes:
     - Regular mode:
       - Fixed the ordering of bobs vehicle roboport antenna (480)
+      - Fixed the vehicle repair roboport would unlock after the vehicle construction port (500)
     - Component mode:
       - Fixed that some science technologies would unlock block components
+      - Fixed boblogistics (inserter overhaul off) recipes to use angels components, not bobs (526)
+      - Fixed boblogistics (w/out bobplates) calling the wrong tin plate (453)
+        - Thanks to @lavafl0w on git for the partial fix which i built off
+      - Fixed battery 6 use and tech when not active under some conditions (453)
+      - Fixed lab not being craftable without science mode.
+      - Fixed that boblogistics' tier 1 robots did not use their appropriate intermediates (532)
+      - Fixed that not all bob train recipes did not require their previous tier s ingredient (537)
     - Science mode:
       - Fixed the technologies from the storage addon had the wrong data core
+      - Fixed the base game lab was visible in the bonus UI (505)
+      - Fixed science tiers on steam engines and boilers of bobs power (519)
+      - Fixed science tiers on heat pipes and heat sources of bobs power (519)
+      - Fixed science tiers on fluid burning generators of bobs power (502)
+      - Fixed science tiers on bobs solar panel and accumulator researches
+      - Fixed science tiers on power pole and substation researches
+      - Fixed the selection and collision box of the main lab did not align (539)
+      - Fixed that speed, productivity, effectivity, and agriculture module 3 couldnt be researched due
+        to no lab taking all required science packs. removed Yellow science analyzer from required packs.
+      - Fixed locale on the space science research
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.11
 Date: 11.01.2021
@@ -35,8 +59,8 @@ Date: 26.11.2020
 Version: 0.4.8
 Date: 16.11.2020
   Bugfixes:
-    - Changed locales for settings and their description to make them more explicit
     - Regular mode:
+      - Changed locales for settings and their description to make them more explicit
       - Tweaked localisation of welcome message info (427)
     - Component mode:
       - Fixed localisation error on the rocket reactor (425)

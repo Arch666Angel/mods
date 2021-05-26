@@ -83,6 +83,8 @@ end
 
 --tech updates part 1
 require("prototypes.overrides.global-tech")
+--double check all items are updated if they had been tweaked wrong
+require("prototypes.overrides.components-base-entity-final-fixes.components-base-buildings-refining-final-fixes")
 
 if angelsmods.industries.components then
   --replace pre-req
@@ -90,8 +92,8 @@ if angelsmods.industries.components then
   --set ingredient return on building pickup
   if angelsmods.industries.return_ingredients then
     add_minable_results()
-    OV.execute()
   end
+  OV.execute()
 end
 
 --OTHER OVERRIDES

@@ -437,7 +437,7 @@ data:extend(
       icon_size = 64,
       prerequisites = {
         "slag-processing-1",
-        "plastics"
+        "advanced-electronics-2"
       },
       effects = {
         {
@@ -587,7 +587,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/chemical-refining.png",
       icon_size = 128,
       prerequisites = {
-        "ore-floatation"
+        "ore-floatation",
+        "advanced-electronics"
       },
       effects = {
         {
@@ -751,7 +752,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
       icon_size = 128,
       prerequisites = {
-        "ore-leaching"
+        "ore-leaching",
+        "advanced-electronics-2"
       },
       effects = {
         {

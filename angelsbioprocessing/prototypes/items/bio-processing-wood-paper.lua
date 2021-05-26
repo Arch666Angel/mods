@@ -1,6 +1,6 @@
 data:extend(
 {
-  {
+  --[[{
     type = "item",
     name = "circuit-wood-fiber-board",
     icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
@@ -8,7 +8,7 @@ data:extend(
     subgroup = "bio-processing-wood",
     order = "c[circuit-wood-fiber-board]",
     stack_size = 200,
-  },
+  },]]
   {
     type = "item",
     name = "cellulose-fiber",

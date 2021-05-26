@@ -65,7 +65,7 @@ if angelsmods.addons.storage.oresilos then
     cont_add.name = "silo-"..name
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/silo-"..name..".png"
     cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-"..name..".png"
-    cont_add.minable.result = "silo-"..name
+    --cont_add.minable.result = "silo-"..name --want to actually return the silo
 
     item_add = table.deepcopy(data.raw.item.silo)
     item_add.name = "silo-"..name
@@ -85,11 +85,11 @@ if angelsmods.addons.storage.silos then
   -- LOGISTIC SILOS -----------------------------------------------------------
   -----------------------------------------------------------------------------
   local log_names = {
-    ["aprovider"] = {order = "i", stacks = 209, mode = "active-provider"},
+    ["aprovider"] = {order = "i", stacks = 384, mode = "active-provider"},
     ["pprovider"] = {order = "j", stacks = 256, mode = "passive-provider"},
     ["storage"]   = {order = "k", stacks = 384, mode = "storage", slots = 1},
-    ["buffer"]    = {order = "l", stacks = 256, mode = "buffer", slots = 12},
-    ["requester"] = {order = "m", stacks = 209, mode = "requester", slots = 12}
+    ["buffer"]    = {order = "l", stacks = 256, mode = "buffer"},
+    ["requester"] = {order = "m", stacks = 209, mode = "requester"}
   }
   local silo_add = {}
   for name,stat in pairs(log_names) do

@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "a[ore-sorting-facility]",
       place_result = "ore-sorting-facility",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -56,7 +48,7 @@ data:extend(
         emissions_per_minute = 0.03 * 60
       },
       energy_usage = "150kW",
-      ingredient_count = 2,
+      --ingredient_count = 2,
       animation = {
         layers = {
           {
@@ -91,18 +83,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "b[ore-sorting-facility-2]",
       place_result = "ore-sorting-facility-2",
@@ -111,18 +99,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-2.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility-2"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -136,7 +120,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting"},
+      crafting_categories = {"ore-sorting", "ore-sorting-2"},
       crafting_speed = 1,
       energy_source = {
         type = "electric",
@@ -144,7 +128,7 @@ data:extend(
         emissions_per_minute = 0.04 * 60
       },
       energy_usage = "200kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
@@ -180,18 +164,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "c[ore-sorting-facility-3]",
       place_result = "ore-sorting-facility-3",
@@ -200,18 +180,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-3.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility-3"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -225,7 +201,7 @@ data:extend(
         module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting"},
+      crafting_categories = {"ore-sorting", "ore-sorting-2", "ore-sorting-3"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",
@@ -233,7 +209,7 @@ data:extend(
         emissions_per_minute = 0.05 * 60
       },
       energy_usage = "250kW",
-      ingredient_count = 6,
+      --ingredient_count = 6,
       animation = {
         layers = {
           {
@@ -269,18 +245,14 @@ data:extend(
     {
       type = "item",
       name = "ore-sorting-facility-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       subgroup = "ore-sorter",
       order = "d[ore-sorting-facility-4]",
       place_result = "ore-sorting-facility-4",
@@ -289,18 +261,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "ore-sorting-facility-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/ore-sorting-facility-4.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "ore-sorting-facility-4"},
       fast_replaceable_group = "ore-sorting-facility",
@@ -313,7 +281,7 @@ data:extend(
         module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting"},
+      crafting_categories = {"ore-sorting", "ore-sorting-2", "ore-sorting-3", "ore-sorting-4"},
       crafting_speed = 2,
       energy_source = {
         type = "electric",
@@ -321,7 +289,7 @@ data:extend(
         emissions_per_minute = 0.06 * 60
       },
       energy_usage = "300kW",
-      ingredient_count = 6,
+      --ingredient_count = 6,
       animation = {
         layers = {
           {

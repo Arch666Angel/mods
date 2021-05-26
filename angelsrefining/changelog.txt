@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.20
-Date: ??
+Date: 26.05.2021
   Changes:
     - Tweaked some technology tree prerequisites as cleanup (428)
     - Hidden the crystallizers fluid box when no fluid is required (475)
@@ -8,11 +8,31 @@ Date: ??
     - Locked bobs gem refining behind technology rather than unlocking from the start (455)
     - Renamed gode crystallization 2 to geode processing 3
     - Make voiding recipes hidden_from_player_crafting instead of plain hidden (492)
+    - Tweaked the lib to hide all objects (entities, items, fluids, tools etc) when a flag is set
+      - NOT just the first thing found.
+      - Also updated the remove flag script to do the same thing
+    - Tweaked the lib to show icons next to the autoplace controls (542)
+    - Sorting Facility 4 no longer has an ingredient limit (defaults to 255) (514)
+    - Added HQ tier numbering icons
+    - Burner crusher is now not counted as tier 1 (but as tier 0, currently without icon) (513)
+    - Hides the unused settings now properly for consistency (538)
+    - Allowed the hydro-plant to be unlocked slightly earlier (550)
+    - Changed and expanded locale strings and text descriptions (489)
+    - Altered the auto-barreling setting to contain options to set the recipe hidden_from_player_crafting (566)
+       - having them hidden can reduce the size of the scroll bar on the crafting menu (in particular, with petrochem)
+    - Added distinction between crafting machine tiers for ore sorting (115)
+    - Ceramic filter recipes can only be crafted in filtration unit 2 (115)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
     - Removed obsolete inventory slots in the clarifier
     - Fixed that recipes were not being hidden correctly and showing in lookup mods (491)
+    - Improved the limited flow capacity in the Thermal bore/extractor (509)
+    - Fixed an issue with Yuoki's icons not being updated (with the old ones already removed)
+    - Fixed that the method for removing autoplace controls was not universally used (373)
+    - Fixed deadlock for bobclasses "fighter" and component mode (394, 559)
+    - Fixed in some old saves washing tech was still disabled (for real this time) (368)
+    - Fixed the lib recipe builder fallback to use aluminium, titanium and tungsten plates more frequently
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020

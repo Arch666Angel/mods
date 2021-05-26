@@ -21,19 +21,19 @@ data.raw["item"]["copper-cable"].icon_size = 32
 data.raw["item"]["copper-cable"].icon_mipmaps = 1
 data.raw["item"]["copper-cable"].subgroup = "angels-copper-casting"
 data.raw["item"]["copper-cable"].order = "k"
-angelsmods.functions.OV.global_replace_icon(
+OV.global_replace_icon(
   "__base__/graphics/icons/plate/iron-plate.png",
   "__angelssmelting__/graphics/icons/plate-iron.png"
 )
-angelsmods.functions.OV.global_replace_icon(
+OV.global_replace_icon(
   "__base__/graphics/icons/plate/steel-plate.png",
   "__angelssmelting__/graphics/icons/plate-steel.png"
 )
-angelsmods.functions.OV.global_replace_icon(
+OV.global_replace_icon(
   "__base__/graphics/icons/plate/copper-plate.png",
   "__angelssmelting__/graphics/icons/plate-copper.png"
 )
-angelsmods.functions.OV.global_replace_icon(
+OV.global_replace_icon(
   "__base__/graphics/icons/plate/copper-cable.png",
   "__angelssmelting__/graphics/icons/wire-copper.png"
 )
@@ -100,8 +100,8 @@ if bobmods and bobmods.plates then
   data.raw["item"]["powdered-tungsten"].icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
   data.raw["item"]["powdered-tungsten"].subgroup = "angels-tungsten"
   data.raw["item"]["powdered-tungsten"].order = "h"
-  data.raw["item"]["powdered-tungsten"].icon_size = 32
-  data.raw["item"]["powdered-tungsten"].icon_mipmaps = 1
+  data.raw["item"]["powdered-tungsten"].icon_size = 64
+  data.raw["item"]["powdered-tungsten"].icon_mipmaps = 4
   data.raw["item"]["cobalt-oxide"].icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
   data.raw["item"]["cobalt-oxide"].subgroup = "angels-cobalt"
   data.raw["item"]["cobalt-oxide"].order = "e"
@@ -175,17 +175,39 @@ if bobmods and bobmods.plates then
     data.raw["item"]["solder"].icon_size = 32
     data.raw["item"]["solder"].icon_mipmaps = 1
 
-    angelsmods.functions.OV.global_replace_icon(
+    OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
       "__angelssmelting__/graphics/icons/wire-tin.png"
     )
-    angelsmods.functions.OV.global_replace_icon(
+    OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmelting__/graphics/icons/wire-gold.png"
     )
-    angelsmods.functions.OV.global_replace_icon(
+    OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/solder.png",
       "__angelssmelting__/graphics/icons/solder.png"
     )
   end
 end
+if mods["bobelectronics"] then
+  --add steel pre-reqs to things that formerly used electronics to req steel
+  --[[for _,tech in pairs(
+    {
+      "radars",
+      "bob-drills-1",
+      "bob-area-drills-1",
+      "bob-repair-pack-2",
+      "automation-2",
+      "solar-energy",
+      "pumpjack",
+      "water-washing-1",
+      "fluid-generator-1"
+    }
+  ) do
+    OV.add_prereq(tech,"steel-processing")
+  end]]
+  if mods["bobpower"] then
+    OV.add_prereq("fluid-generator-1","angels-bronze-smelting-1")
+  end
+end
+OV.add_prereq("electric-energy-distribution-1","steel-processing")

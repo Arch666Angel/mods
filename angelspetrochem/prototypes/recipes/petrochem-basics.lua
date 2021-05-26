@@ -59,6 +59,25 @@ data:extend(
         {type = "item", name = "slag", amount = 1}
       },
       always_show_products = true,
+      --icons = angelsmods.functions.create_gas_recipe_icon(
+      --  {
+      --    {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
+      --    {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
+      --  },
+      --  "ohh",
+      --  {
+      --    {
+      --      {
+      --        icon = "__angelsrefining__/graphics/icons/num_1.png",
+      --        icon_size = 32,
+      --        tint = angelsmods.petrochem.number_tint
+      --        --scale = 0.32,
+      --        --shift = {-12, -12},
+      --      }
+      --    },
+      --    "water"
+      --  }
+      --),
       icons = angelsmods.functions.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
@@ -66,15 +85,7 @@ data:extend(
         },
         "ohh",
         {
-          {
-            {
-              icon = "__angelsrefining__/graphics/icons/num_1.png",
-              icon_size = 32,
-              tint = angelsmods.petrochem.number_tint
-              --scale = 0.32,
-              --shift = {-12, -12},
-            }
-          },
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
           "water"
         }
       ),
@@ -110,15 +121,7 @@ data:extend(
         },
         "ohh",
         {
-          {
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              icon_size = 32,
-              tint = angelsmods.petrochem.number_tint
-              --scale = 0.32,
-              --shift = {-12, -12},
-            }
-          },
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
           "water"
         }
       ),
@@ -151,15 +154,7 @@ data:extend(
         },
         "ohh",
         {
-          {
-            {
-              icon = "__angelsrefining__/graphics/icons/num_1.png",
-              icon_size = 32,
-              tint = angelsmods.petrochem.number_tint
-              --scale = 0.32,
-              --shift = {-12, -12},
-            }
-          },
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
           "water-purified"
         }
       ),
@@ -194,15 +189,7 @@ data:extend(
         },
         "ohh",
         {
-          {
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              icon_size = 32,
-              tint = angelsmods.petrochem.number_tint
-              --scale = 0.32,
-              --shift = {-12, -12},
-            }
-          },
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
           "water-purified"
         }
       ),
@@ -492,18 +479,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-carbon", amount = 3}
       },
-      icons = {
-        {
-          icon = "__angelspetrochem__/graphics/icons/solid-carbon.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-carbon"),
+        1, angelsmods.petrochem.number_tint),
       order = "d[coke-purification]",
       crafting_machine_tint = {
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
@@ -528,18 +506,9 @@ data:extend(
         {type = "item", name = "solid-sodium-carbonate", amount = 1},
         {type = "fluid", name = "water", amount = 10}
       },
-      icons = {
-        {
-          icon = "__angelspetrochem__/graphics/icons/solid-carbon.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-carbon"),
+        2, angelsmods.petrochem.number_tint),
       order = "d[coke-purification]",
       crafting_machine_tint = {
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
@@ -550,7 +519,7 @@ data:extend(
     {
       type = "recipe",
       name = "coal-crushed",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "petrochem-coal",
       energy_required = 1,
       enabled = false,
@@ -577,18 +546,9 @@ data:extend(
       results = {
         {type = "item", name = "solid-coke", amount = 2}
       },
-      icons = {
-        {
-          icon = "__angelspetrochem__/graphics/icons/solid-coke.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-coke"),
+        1, angelsmods.petrochem.number_tint),
       order = "b[coal-crushed]"
     },
     {
@@ -606,18 +566,9 @@ data:extend(
         {type = "item", name = "solid-coke", amount = 2},
         {type = "fluid", name = "water-yellow-waste", amount = 50}
       },
-      icons = {
-        {
-          icon = "__angelspetrochem__/graphics/icons/solid-coke.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("solid-coke"),
+        2, angelsmods.petrochem.number_tint),
       order = "c[solid-coke-sulfur]",
       crafting_machine_tint = {
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
@@ -668,11 +619,7 @@ data:extend(
         },
         "odh",
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            icon_size = 32,
-            tint = angelsmods.refining.number_tint
-          },
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.refining.number_tint),
           {
             icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
             icon_size = 72
@@ -706,11 +653,7 @@ data:extend(
         },
         "odh",
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            icon_size = 32,
-            tint = angelsmods.refining.number_tint
-          },
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.refining.number_tint),
           {
             icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
             icon_size = 72
@@ -744,11 +687,7 @@ data:extend(
         },
         "odh",
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_3.png",
-            icon_size = 32,
-            tint = angelsmods.refining.number_tint
-          },
+          angelsmods.functions.add_number_icon_layer({}, 3, angelsmods.refining.number_tint),
           {
             icon = "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png",
             icon_size = 72
@@ -780,11 +719,7 @@ data:extend(
         },
         "odh",
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_1.png",
-            icon_size = 32,
-            tint = angelsmods.refining.number_tint
-          },
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.refining.number_tint),
           mods["angelssmelting"] and
             {
               icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
@@ -818,11 +753,7 @@ data:extend(
         },
         "odh",
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_2.png",
-            icon_size = 32,
-            tint = angelsmods.refining.number_tint
-          },
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.refining.number_tint),
           mods["angelssmelting"] and
             {
               icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
@@ -856,11 +787,7 @@ data:extend(
         },
         "odh",
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/num_3.png",
-            icon_size = 32,
-            tint = angelsmods.refining.number_tint
-          },
+          angelsmods.functions.add_number_icon_layer({}, 3, angelsmods.refining.number_tint),
           mods["angelssmelting"] and
             {
               icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
@@ -955,15 +882,7 @@ data:extend(
         },
         "odd",
         {
-          {
-            {
-              icon = "__angelsrefining__/graphics/icons/num_1.png",
-              icon_size = 32,
-              tint = angelsmods.petrochem.number_tint
-              --scale = 0.32,
-              --shift = {-12, -12},
-            }
-          },
+          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
           {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64}
         }
       ),
@@ -998,15 +917,7 @@ data:extend(
         },
         "odd",
         {
-          {
-            {
-              icon = "__angelsrefining__/graphics/icons/num_2.png",
-              icon_size = 32,
-              tint = angelsmods.petrochem.number_tint
-              --scale = 0.32,
-              --shift = {-12, -12},
-            }
-          },
+          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
           {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64}
         }
       ),

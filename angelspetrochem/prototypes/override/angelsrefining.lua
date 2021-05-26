@@ -6,16 +6,16 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 if angelsmods.refining then
   move_item("liquifier", "petrochem-buildings-electrolyser", "c[liquifier]-a")
-  data.raw["item"]["liquifier"].icons[2].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("liquifier-2", "petrochem-buildings-electrolyser", "c[liquifier]-b")
-  data.raw["item"]["liquifier-2"].icons[2].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier-2"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("liquifier-3", "petrochem-buildings-electrolyser", "c[liquifier]-c")
-  data.raw["item"]["liquifier-3"].icons[2].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier-3"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("liquifier-4", "petrochem-buildings-electrolyser", "c[liquifier]-d")
-  data.raw["item"]["liquifier-4"].icons[2].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier-4"].icons[3].tint = angelsmods.petrochem.number_tint
 
   angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant", "liquifying")
   angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant-2", "liquifying")

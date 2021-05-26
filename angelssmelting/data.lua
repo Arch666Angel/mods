@@ -66,16 +66,17 @@ angelsmods.trigger.smelting_products["steel"].rod = angelsmods.trigger.smelting_
 --aluminium
 angelsmods.trigger.smelting_products["aluminium"].plate = mods["bobplates"] and true or false
 --cobalt
-angelsmods.trigger.smelting_products["cobalt"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["cobalt"].plate = --[[mods["bobplates"] and true or]] false
 --copper
 angelsmods.trigger.smelting_products["copper"].plate = true
 angelsmods.trigger.smelting_products["copper"].wire = true
 --glass
 angelsmods.trigger.smelting_products["glass"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["glass"].fibre = false
 angelsmods.trigger.smelting_products["glass"].board = mods["bobplates"] and mods["bobelectronics"] and true or false
 --gold
 angelsmods.trigger.smelting_products["gold"].plate = mods["bobplates"] and true or false
-angelsmods.trigger.smelting_products["gold"].wire = mods["bobelectronics"] and data.raw.item["gold-plate"] and true or false
+angelsmods.trigger.smelting_products["gold"].wire = angelsmods.trigger.smelting_products["gold"].plate or (mods["bobelectronics"] and data.raw.item["gold-plate"] and true) or false
 --iron
 angelsmods.trigger.smelting_products["iron"].plate = true
 --lead
@@ -91,7 +92,7 @@ angelsmods.trigger.smelting_products["silicon"].powder = mods["bobplates"] and t
 angelsmods.trigger.smelting_products["silicon"].wafer = mods["bobplates"] and true or false
 --silver
 angelsmods.trigger.smelting_products["silver"].plate = mods["bobplates"] and true or false
-angelsmods.trigger.smelting_products["silver"].wire = angelsmods.trigger.smelting_products["silver"].wire or false
+angelsmods.trigger.smelting_products["silver"].wire = angelsmods.trigger.smelting_products["silver"].wire or angelsmods.trigger.smelting_products["silver"].plate or false
 --stone
 --tin
 angelsmods.trigger.smelting_products["tin"].plate = mods["bobplates"] and true or false

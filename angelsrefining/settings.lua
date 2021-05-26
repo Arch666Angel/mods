@@ -1,10 +1,13 @@
+require "prototypes.angels-settings"
+
 data:extend(
 {
   {
-    type = "bool-setting",
-    name = "angels-enable-auto-barreling",
-    setting_type = "startup",
-    default_value = false,
+    type = "string-setting",
+		name = "angels-enable-auto-barreling",
+		setting_type = "startup",
+		default_value = "Disabled",
+		allowed_values = {"Disabled","Enabled+Hidden","Enabled+Shown"},
     order = "aa"
   },
   {

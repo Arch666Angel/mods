@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-plant",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-chemical-plant",
       order = "a[regular]-b[angel]-a",
       place_result = "angels-chemical-plant",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-plant",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
       minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant"},
       max_health = 300,
@@ -156,18 +148,14 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-plant-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-chemical-plant",
       order = "a[regular]-b[angel]-b",
       place_result = "angels-chemical-plant-2",
@@ -176,18 +164,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-plant-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
       minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-2"},
       max_health = 300,
@@ -309,18 +293,14 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-plant-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-chemical-plant",
       order = "a[regular]-b[angel]-c",
       place_result = "angels-chemical-plant-3",
@@ -329,18 +309,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-plant-3",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
       minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-3"},
       max_health = 300,
@@ -462,18 +438,14 @@ data:extend(
     {
       type = "item",
       name = "angels-chemical-plant-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.petrochem.number_tint),
       subgroup = "petrochem-buildings-chemical-plant",
       order = "a[regular]-b[angel]-d",
       place_result = "angels-chemical-plant-4",
@@ -482,18 +454,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "angels-chemical-plant-4",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelspetrochem__/graphics/icons/chemical-plant.png"
+          {
+            icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+            icon_size = 32, icon_mipmaps = 1,
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_4.png",
-          tint = angelsmods.petrochem.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        4, angelsmods.petrochem.number_tint),
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
       minable = {hardness = 0.2, mining_time = 0.5, result = "angels-chemical-plant-4"},
       max_health = 300,

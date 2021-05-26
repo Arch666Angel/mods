@@ -382,7 +382,7 @@ if angelsmods.industries.components then
         category = "crafting",
         enabled = true, -- enabled from the start
         ingredients = {
-          {type = "item", name = "angels-rod-iron", amount = 1}
+          {type = "item", name = "iron-stick", amount = 1}
         },
         results = {
           {type = "item", name = "angels-gear", amount = 2}

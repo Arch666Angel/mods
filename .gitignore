@@ -2,3 +2,4 @@
 *.dat
 mod-list.json
 .idea/
+.vscode/

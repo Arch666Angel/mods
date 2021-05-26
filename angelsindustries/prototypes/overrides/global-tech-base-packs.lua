@@ -91,7 +91,6 @@ if angelsmods.industries.tech then
   pack_replace("modular-armor", "green", "orange")
   pack_replace("armor-making-3", "green", "orange")
   pack_replace("belt-immunity-equipment", "green", "orange")
-  pack_replace("solar-energy", "green", "orange")
   OV.remove_prereq("electric-engine", "angels-advanced-oil-processing")
   pack_replace("electric-engine", "blue", "orange")
   pack_replace("electric-energy-accumulators", "green", "orange")
@@ -120,6 +119,7 @@ if angelsmods.industries.tech then
   pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
   pack_replace("angels-metallurgy-3", "blue", "orange")
+  OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
   pack_replace("powder-metallurgy-2", "blue", "orange")
   pack_replace("ore-processing-2", "blue", "orange")
   pack_replace("angels-coolant-1", "blue", "orange")
@@ -183,6 +183,7 @@ if angelsmods.industries.tech then
   -- BASE GAME
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
+  OV.remove_prereq("automation-3", "production-science-pack")
   -- INDUSTRIES
   pack_replace("tech-yellow-circuit", "yellow", "blue")
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")

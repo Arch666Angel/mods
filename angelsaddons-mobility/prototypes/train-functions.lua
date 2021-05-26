@@ -14,6 +14,22 @@ local function set_type(name)
   return train_type
 end
 
+function angelsmods.functions.add_speed_local()
+  local parts = {"cargo-wagon","fluid-wagon","artillery-wagon"}
+  for _, part in pairs(parts) do
+    for _,train in pairs(data.raw[part]) do
+      if train then
+        if train.localised_description then --add to table
+          --table.insert(train.localised_description,"\n") --ensure new line at start?
+          table.insert(train.localised_description,{"speed-text.speed-cap", train.max_speed*216})
+        else-- add new table
+          train.localised_description={"speed-text.speed-cap", math.floor(train.max_speed*216*100)/100}--rounded tile/tick converted to km/h
+        end
+      end
+    end
+  end
+end
+
 local function generate_additional_pastable_entities(name)
   all_entity_names = {}
   for _, entity_type_name in pairs{
@@ -163,6 +179,26 @@ local function generate_train_recipe(item, add_unlock)
   data:extend(entries)
 end
 
+local add_tier_number = mods["angelsrefining"] and
+  angelsmods.functions.add_number_icon_layer or
+  function(icon_layers, number_tier, number_tint)
+    local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
+    local new_icon_layers = util.table.deepcopy(icon_layers)
+    table.insert(new_icon_layers, {
+      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-"..number_tier.."-outline.png",
+      icon_size = 64, icon_mipmaps = 2,
+      tint = {0, 0, 0, 255},
+      scale = 0.5 * icon_size_scale
+    })
+    table.insert(new_icon_layers, {
+      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-"..number_tier..".png",
+      icon_size = 64, icon_mipmaps = 2,
+      tint = number_tint,
+      scale = 0.5 * icon_size_scale
+    })
+    return new_icon_layers
+  end
+
 local function generate_train_items(item)
   local entries = {}
   local type = set_type(item.name)
@@ -179,19 +215,17 @@ local function generate_train_items(item)
       copy.localised_name = {"", {"item-name." .. item.name}, " MK" .. i}
       copy.localised_description = {"item-description." .. item.name}
       copy.place_result = name
-      copy.icons = {
+      copy.icons = item.icons or {
         {
           icon = item.icon,
-          icon_size = item.icon_size
-        },
-        {
-          icon = "__angelsaddons-mobility__/graphics/icons/num_" .. i .. ".png",
-          tint = angelsmods.addons.mobility[type].number_tint,
-          scale = 0.32,
-          shift = {12, -12}
+          icon_size = item.icon_size,
+          icon_mipmaps = item.icon_mipmaps
         }
       }
       copy.icon = nil
+      copy.icon_size = nil
+      copy.icon_mipmaps = nil
+      copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[type].number_tint)
       table.insert(entries, copy)
     end
   else
@@ -219,25 +253,24 @@ local function generate_train_entities(item)
 
       copy.name = name
       copy.localised_name = {"", {"entity-name." .. item.name}, " MK" .. i}
-      copy.icons = {
+      copy.icons = item.icons or {
         {
           icon = item.icon,
-          icon_size = item.icon_size
-        },
-        {
-          icon = "__angelsaddons-mobility__/graphics/icons/num_" .. i .. ".png",
-          tint = angelsmods.addons.mobility[type].number_tint,
-          scale = 0.32,
-          shift = {12, -12}
+          icon_size = item.icon_size,
+          icon_mipmaps = item.icon_mipmaps
         }
       }
       copy.icon = nil
+      copy.icon_size = nil
+      copy.icon_mipmaps = nil
+      copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[type].number_tint)
       copy.minable.result = name
       copy.max_health = item.max_health * multiplier
       copy.max_speed = item.max_speed * multiplier
       copy.friction_force = item.friction_force / multiplier
       copy.air_resistance = item.air_resistance / multiplier
       copy.weight = item.weight * multiplier
+      copy.braking_force = item.braking_force * (multiplier * 2 - 1)
       if item.type == "locomotive" then
         copy.max_power = (tonumber(item.max_power:match("%d[%d.]*")) * multiplier) .. "kW"
         copy.reversing_power_modifier = item.reversing_power_modifier * multiplier

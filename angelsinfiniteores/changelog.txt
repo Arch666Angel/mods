@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.9
+Date: 26.05.2021
+  Changes:
+    - Now shows icons next to the autoplace controls (542)
+    - Updated the dark-matter-replicators detection script (543)
+    - Fixed the infinite bob gem mine generation (525)
+    - Fixed that bobs ore from other ore settings were not removing superfluous ores
+---------------------------------------------------------------------------------------------------
 Version: 0.9.8
 Date: 9.12.2020
   Changes:

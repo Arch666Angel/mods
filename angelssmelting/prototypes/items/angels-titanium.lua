@@ -17,7 +17,7 @@ data:extend(
     type = "item",
     name = "processed-titanium",
     icon = "__angelssmelting__/graphics/icons/processed-titanium.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-titanium",
     order = "b",
     stack_size = 200
@@ -26,7 +26,7 @@ data:extend(
     type = "item",
     name = "pellet-titanium",
     icon = "__angelssmelting__/graphics/icons/pellet-titanium.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-titanium",
     order = "c",
     stack_size = 200
@@ -69,7 +69,7 @@ data:extend(
     type = "item",
     name = "powder-titanium",
     icon = "__angelssmelting__/graphics/icons/powder-titanium.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-titanium",
     order = "g",
     stack_size = 200

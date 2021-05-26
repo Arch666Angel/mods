@@ -348,8 +348,8 @@ function add_con_mats()
 end
 
 function add_minable_results()
-  for n, _ in pairs(building_types) do
-    replace_minable_results(building_types[n])
+  for _,building_type in pairs(building_types) do
+    replace_minable_results(building_type)
   end
 end
 
@@ -440,16 +440,20 @@ end
 
 --REPLACE ON MINED RESULTS
 function replace_minable_results(buildings)
-  for assembly_check, build in pairs(data.raw[buildings]) do
-    if data.raw.recipe[assembly_check] then
-      local rec_check = data.raw.recipe[assembly_check]
+  for _, build in pairs(data.raw[buildings]) do
+    if data.raw.recipe[build.name] then
+      local rec_check = data.raw.recipe[build.name]
+      local ing_list = nil
       if rec_check.normal then
         ing_list = rec_check.normal.ingredients
+      elseif rec_check.expensive then
+        ing_list = rec_check.expensive.ingredients
       else
         ing_list = rec_check.ingredients
       end
-      if data.raw[build.type][assembly_check].minable then
-        data.raw[build.type][assembly_check].minable.results = ing_list
+      if ing_list and data.raw[build.type][build.name].minable then
+        data.raw[build.type][build.name].minable.results = ing_list
+        data.raw[build.type][build.name].minable.result = nil
       end
     end
   end

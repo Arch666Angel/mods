@@ -24,7 +24,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   if mods['bobplates'] then
     OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
     angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
-    OV.disable_recipe({"silver-nitrate"})
+    OV.disable_recipe({"silver-nitrate","silver-from-lead"})
   end
 
   if mods['bobplates'] then
@@ -113,6 +113,21 @@ if angelsmods.trigger.smelting_products["silver"].plate then
       },
     })
   end
+  
+  if mods["bobelectronics"] then
+    OV.patch_recipes(
+      {
+        {
+          name = "superior-circuit-board",
+          ingredients =
+          {
+            {type = "item", name = "angels-plate-silver", amount = "gold-plate"},
+          }
+        }
+      }
+    )
+  end
+
 else
   angelsmods.functions.add_flag("angels-plate-silver", "hidden")
   angelsmods.functions.add_flag("angels-roll-silver", "hidden")
@@ -124,6 +139,38 @@ end
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silver"].wire then
+
+  -- advanced circuits require silver wire
+  if mods["bobelectronics"] then
+    OV.patch_recipes(
+      {
+        {
+          name = "electronic-component",
+          ingredients =
+          {
+            {type = "item", name = "angels-wire-silver", amount = "tinned-copper-cable"},
+          }
+        }
+      }
+    )
+  else
+    OV.patch_recipes(
+      {
+        {
+          name = "advanced-circuit",
+          ingredients =
+          {
+            {"!!"},
+            {type = "item", name = "angels-wire-silver", amount = 2},
+            {type = "item", name = "plastic-bar", amount = 2},
+            {type = "item", name = "electronic-circuit", amount = 2}
+          }
+        }
+      }
+    )
+  end
+  OV.add_prereq("advanced-electronics", "angels-silver-smelting-1")
+
   if mods['bobassembly'] then
     OV.patch_recipes({
       {

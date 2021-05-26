@@ -10,6 +10,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["invar"].plate then
   if mods["bobplates"] then
+    OV.hide_recipe("invar-alloy")
     data:extend(
       {
         --INVAR

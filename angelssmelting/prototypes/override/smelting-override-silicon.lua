@@ -105,7 +105,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
 
     angelsmods.functions.move_item("silicon-powder", "angels-silicon", "g")
     data.raw.item["silicon-powder"].icon = "__angelssmelting__/graphics/icons/powder-silica.png"
-    data.raw.item["silicon-powder"].icon_size = 32
+    data.raw.item["silicon-powder"].icon_size = 64
     data.raw.item["silicon-powder"].localised_name = {"item-name.powder-silicon"}
     OV.patch_recipes(
       {

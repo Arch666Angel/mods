@@ -8,7 +8,8 @@ if angelsmods.industries.tech then
     icons = {
       {
         icon = "__angelsindustries__/graphics/icons/main-lab.png",
-        icon_size = 64
+        icon_size = 64, icon_mipmaps = 1,
+        scale = 0.5
       }
     },
     icon_size = 32,
@@ -21,8 +22,7 @@ if angelsmods.industries.tech then
   local lab_entity = {
     type = "lab",
     --name = lab_item.place_result,
-    icon = lab_item.icons[1].icon,
-    icon_size = lab_item.icons[1].icon_size,
+    --icons = lab_item.icons,
     flags = {"placeable-player", "player-creation"},
     minable = {
       mining_time = 1
@@ -33,7 +33,8 @@ if angelsmods.industries.tech then
     dying_explosion = "medium-explosion",
 
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-    selection_box = {{-3.5, -4.5}, {3.5, 3.5}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    drawing_box   = {{-3.5, -4.5}, {3.5, 3.5}},
 
     light = {intensity = 0.75, size = 8},
 
@@ -164,15 +165,7 @@ if angelsmods.industries.tech then
     -- item
     local lab_item_tier = util.table.deepcopy(lab_item)
     lab_item_tier.name = lab_item_tier.name .. string.format("-%i", tier_index)
-    table.insert(
-      lab_item_tier.icons,
-      {
-        icon = string.format("__angelsrefining__/graphics/icons/num_%i.png", tier_index),
-        tint = angelsmods.industries.number_tint,
-        scale = 0.32,
-        shift = {-12, -12}
-      }
-    )
+    lab_item_tier.icons = angelsmods.functions.add_number_icon_layer(lab_item_tier.icons, tier_index, angelsmods.industries.number_tint)
     lab_item_tier.place_result = lab_item_tier.name
     lab_item_tier.order = lab_item_tier.order .. string.format("-%i", tier_index)
 
@@ -188,6 +181,7 @@ if angelsmods.industries.tech then
       "\n",
       {"entity-description.angels-lab-inputs", create_rich_text_icons(lab_entity_tier.inputs)}
     }
+    lab_entity_tier.icons = util.table.deepcopy(lab_item_tier.icons)
     lab_entity_tier.minable.result = lab_item_tier.name
     lab_entity_tier.energy_usage = string.format("%iMW", lab_entity_tier.researching_speed)
 
@@ -484,5 +478,4 @@ if angelsmods.industries.tech then
   )
 
   angelsmods.triggers.lab_ignore_token[lab_item.name .. string.format("-%i", 0)] = true
-
 end

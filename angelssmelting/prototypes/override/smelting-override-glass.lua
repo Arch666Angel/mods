@@ -4,6 +4,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["glass"].mixture = true
   angelsmods.trigger.smelting_products["glass"].plate = true
+  angelsmods.trigger.smelting_products["glass"].fibre = true
   angelsmods.trigger.smelting_products["glass"].board = true
 end
 
@@ -11,7 +12,9 @@ end
 -- MIXTURE --------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["glass"].mixture then
-  if angelsmods.trigger.smelting_products["glass"].plate or angelsmods.trigger.smelting_products["glass"].board then
+  if angelsmods.trigger.smelting_products["glass"].plate or
+     angelsmods.trigger.smelting_products["glass"].fibre or
+      angelsmods.trigger.smelting_products["glass"].board then
   else
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
@@ -83,9 +86,31 @@ else
 end
 
 -------------------------------------------------------------------------------
+-- FIBREGLASS -----------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.smelting_products["glass"].fibre then
+  if mods["bobelectronics"] then
+  else
+    --[[OV.patch_recipes(
+      {
+        {
+          name = "angels-glass-fiber-board",
+          results = {
+            {"!!"},
+            {name = "angels-glass-fiber-board", type = "item", amount = 4}
+          },
+        }
+      }
+    )]]
+  end
+else
+  angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
+  OV.disable_recipe({"angels-coil-glass-fiber"})
+end
+
+-------------------------------------------------------------------------------
 -- BOARD ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
-log(angelsmods.trigger.smelting_products["glass"].board)
 if angelsmods.trigger.smelting_products["glass"].board then
   if mods["bobelectronics"] then
     OV.patch_recipes(
@@ -104,7 +129,9 @@ if angelsmods.trigger.smelting_products["glass"].board then
             },
             {
               icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
-              scale = 0.4375,
+              icon_size = 64,
+              icon_mipmaps = 4,
+              scale = 0.4375*0.5,
               shift = {-10, -10}
             }
           },
@@ -118,22 +145,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
     -- disable bob variant
     OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
     OV.disable_recipe({"fibreglass-board"})
-  else
-    angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
-    OV.disable_recipe({"angels-coil-glass-fiber","angels-glass-fiber-board"})
-    --[[OV.patch_recipes(
-      {
-        {
-          name = "angels-glass-fiber-board",
-          results = {
-            {"!!"},
-            {name = "angels-glass-fiber-board", type = "item", amount = 4}
-          },
-        }
-      }
-    )]]
   end
 else
-  angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
-  OV.disable_recipe({"angels-coil-glass-fiber","angels-glass-fiber-board"})
+  OV.disable_recipe({"angels-glass-fiber-board"})
 end

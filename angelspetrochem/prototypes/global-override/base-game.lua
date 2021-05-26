@@ -5,20 +5,14 @@ local move_item = angelsmods.functions.move_item
 -- CHEMICAL PLANTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
 move_item("chemical-plant", "petrochem-buildings-chemical-plant", "a[regular]-aa[vanilla]")
+data.raw["item"]["chemical-plant"].icons = angelsmods.functions.add_number_icon_layer(
+  angelsmods.functions.get_object_icons("chemical-plant"),
+  1, angelsmods.petrochem.number_tint)
 data.raw["item"]["chemical-plant"].icon = nil
-data.raw["item"]["chemical-plant"].icon_size = 32
-data.raw["item"]["chemical-plant"].icons = {
-  {
-    icon = "__base__/graphics/icons/chemical-plant.png",
-    icon_size = 64
-  },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
+data.raw["item"]["chemical-plant"].icon_size = nil
+data.raw["assembling-machine"]["chemical-plant"].icon = nil
+data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
+data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
 angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 
@@ -38,20 +32,14 @@ end
 -------------------------------------------------------------------------------
 -- oil refinery
 move_item("oil-refinery", "petrochem-buildings-oil-refinery", "b[oil-refinery]-a")
+data.raw["item"]["oil-refinery"].icons = angelsmods.functions.add_number_icon_layer(
+  angelsmods.functions.get_object_icons("oil-refinery"),
+  1, angelsmods.petrochem.number_tint)
 data.raw["item"]["oil-refinery"].icon = nil
-data.raw["item"]["oil-refinery"].icon_size = 32
-data.raw["item"]["oil-refinery"].icons = {
-  {
-    icon = "__base__/graphics/icons/oil-refinery.png",
-    icon_size = 64
-  },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
+data.raw["item"]["oil-refinery"].icon_size = nil
+data.raw["assembling-machine"]["oil-refinery"].icon = nil
+data.raw["assembling-machine"]["oil-refinery"].icon_size = nil
+data.raw["assembling-machine"]["oil-refinery"].icons = util.table.deepcopy(data.raw["item"]["oil-refinery"].icons)
 data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
 -- oil processing
@@ -110,15 +98,12 @@ OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
 data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
 data.raw["recipe"]["explosives"].order = "a[explosives]-a"
 data.raw["recipe"]["explosives"].icon_size = 32
-data.raw["recipe"]["explosives"].icons = {
+data.raw["recipe"]["explosives"].icons = angelsmods.functions.add_number_icon_layer(
   {
-    icon = "__base__/graphics/icons/explosives.png",
-    icon_size = 64
+    {
+      icon = "__base__/graphics/icons/explosives.png",
+      icon_size = 64, icon_mipmaps = 4,
+      scale = 0.5
+    }
   },
-  {
-    icon = "__angelsrefining__/graphics/icons/num_1.png",
-    tint = angelsmods.petrochem.number_tint,
-    scale = 0.32,
-    shift = {-12, -12}
-  }
-}
+  1, angelsmods.petrochem.number_tint)

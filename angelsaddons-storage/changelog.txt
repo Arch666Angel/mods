@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
-Date: ??
+Date: 26.05.2021
   Changes:
     - Added setting to disable logitics silos and ore silos independently (499)
     - Warehouses now prerequisite on ore silos if both are enabled (428)
@@ -8,6 +8,9 @@ Date: ??
     - Changed recipes of ore silos when playing with angels refining (340)
     - Changed some recipes of logistics silos when playing with angels industries (340)
     - Changed some recipes of logistics warehouses when playing with angels industries (340)
+    - Changed slot count for active providers to match the storage variant
+    - Changed ore silo pick-up result to be just the regular silo (541)
+    - Changed and expanded locale strings and text descriptions (489)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 27.11.2020

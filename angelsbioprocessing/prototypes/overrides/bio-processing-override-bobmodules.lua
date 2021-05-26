@@ -110,7 +110,7 @@ if mods["bobmodules"] then
   -----------------------------------------------------------------------------
   -- tier 1 modules
   OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
-  
+
   -- tier 2 modules
   data:extend(
     {
@@ -292,7 +292,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module",
       ingredients = {
         {"!!"},
-        {type = "item", name = "solder", amount = 1},
+        --{type = "item", name = "solder", amount = 1},
         {type="item", name="productivity-module", amount = 1},
         {type="item", name="effectivity-module", amount = 1},
         {type = "item", name = "token-bio", amount = 1}
@@ -302,7 +302,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module-2",
       ingredients = {
         {"!!"},
-        {type = "item", name = "solder", amount = 2},
+        --{type = "item", name = "solder", amount = 2},
         {type="item", name="productivity-module-2", amount = 1},
         {type="item", name="effectivity-module-2", amount = 1},
         {type = "item", name = "token-bio", amount = 1}
@@ -312,13 +312,36 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module-3",
       ingredients = {
         {"!!"},
-        {type = "item", name = "solder", amount = 3},
+        --{type = "item", name = "solder", amount = 3},
         {type="item", name="productivity-module-3", amount = 1},
         {type="item", name="effectivity-module-3", amount = 1},
         {type = "item", name = "token-bio", amount = 1}
       }
     }
   })
+  --adding solder when bobplates is active
+if mods["bobplates"] then
+  OV.patch_recipes({
+    {
+      name = "angels-bio-yield-module",
+      ingredients = {
+        {type = "item", name = "solder", amount = 1}
+      }
+    },
+    {
+      name = "angels-bio-yield-module-2",
+      ingredients = {
+        {type = "item", name = "solder", amount = 2}
+      }
+    },
+    {
+      name = "angels-bio-yield-module-3",
+      ingredients = {
+        {type = "item", name = "solder", amount = 3}
+      }
+    }
+  })
+end
   data.raw.technology["angels-bio-yield-module"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-1.png"
   data.raw.technology["angels-bio-yield-module"].icon_size = 32
   data.raw.technology["angels-bio-yield-module"].icon_mipmaps = 1
@@ -328,7 +351,9 @@ if mods["bobmodules"] then
   data.raw.technology["angels-bio-yield-module-3"].icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-3.png"
   data.raw.technology["angels-bio-yield-module-3"].icon_size = 32
   data.raw.technology["angels-bio-yield-module-3"].icon_mipmaps = 1
-  OV.add_prereq("angels-bio-yield-module", "module-merging")
+  if data.raw.technology["module-merging"] ~= nil then
+    OV.add_prereq("angels-bio-yield-module", "module-merging")
+  end
   for i = 1,3 do
     local ingredients = {{"token-bio", 1}}
     local ingredients_added = {["token-bio"] = true}
@@ -399,7 +424,7 @@ if mods["bobmodules"] then
           enabled = false,
           ingredients =
           {
-            {type = "item", name = "solder", amount = solder_amount},
+            --{type = "item", name = "solder", amount = solder_amount},
             {type = "item", name = "productivity-module-"..i, amount = 1},
             {type = "item", name = "effectivity-module-"..i, amount = 1},
             {type = "item", name = "token-bio", amount = 1}
@@ -434,6 +459,17 @@ if mods["bobmodules"] then
       }
     )
     angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-"..i)
+      --adding solder when bobplates is active
+    if mods["bobplates"] then
+      OV.patch_recipes({
+        {
+          name = "angels-bio-yield-module-" .. i,
+          ingredients = {
+            {type = "item", name = "solder", amount = solder_amount}
+          }
+        }
+      })
+    end
   end
   for i = 1,8 do
     local name = "angels-bio-yield-module"

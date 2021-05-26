@@ -67,27 +67,36 @@ if mods["bobplates"] then
         }
       }
     )
-
-    --local fluid_n=data.raw["fluid"]
-    for _, fluid_n in pairs(data.raw.fluid) do
-      if not (fluid_n.auto_barrel == false or fluid_n.auto_barrel == false) then
-        if string.sub(fluid_n.name, 1, 3) == "gas" then
-          OV.barrel_overrides(fluid_n.name, "gas")
-        elseif not string.find(fluid_n.name, "acid") == nil or string.sub(fluid_n.name, -4) == "acid" then
-          local acid = string.find(fluid_n.name, "acid")
-          OV.barrel_overrides(fluid_n.name, "acid")
-        end
-        if data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"] then
-          data.raw.recipe["fill-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
-        end
-        if data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"] then
-          data.raw.recipe["empty-" .. fluid_n.name .. "-barrel"].category = "barreling-pump"
-        end
+  end
+end
+--General barrelling fix
+for _, fluid_n in pairs(data.raw.fluid) do
+  if not (fluid_n.auto_barrel == false) then
+    OV.patch_recipes(
+      {
+        {
+          name = "fill-" .. fluid_n.name .. "-barrel",
+          category = "barreling-pump",
+          hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling
+        },
+        {
+          name = "empty-" .. fluid_n.name .. "-barrel",
+          category = "barreling-pump",
+          hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling
+        },
+      }
+    )
+    if mods["bobplates"] then
+      if string.sub(fluid_n.name, 1, 3) == "gas" then
+        OV.barrel_overrides(fluid_n.name, "gas")
+      elseif not string.find(fluid_n.name, "acid") == nil or string.sub(fluid_n.name, -4) == "acid" then
+        local acid = string.find(fluid_n.name, "acid")
+        OV.barrel_overrides(fluid_n.name, "acid")
       end
+      --insert custom barrel replacements
+      OV.barrel_overrides("liquid-ferric-chloride-solution", "acid")
+      OV.barrel_overrides("liquid-cupric-chloride-solution", "acid")
     end
-    --insert custom barrel replacements
-    OV.barrel_overrides("liquid-ferric-chloride-solution", "acid")
-    OV.barrel_overrides("liquid-cupric-chloride-solution", "acid")
   end
 end
 
@@ -132,6 +141,7 @@ if data.raw.item["y-res1"] then
   )
 
   --RECIPES
+  local slag_color = {{202, 099, 017}, {097, 052, 020}, {097, 052, 020}}
   data:extend(
     {
       {
@@ -148,8 +158,13 @@ if data.raw.item["y-res1"] then
           {type = "item", name = "y-res1", amount = 1, probability = 0.5},
           {type = "item", name = "y-res2", amount = 1, probability = 0.5}
         },
-        icon = "__angelsrefining__/graphics/icons/slag-processing-yi.png",
-        icon_size = 32,
+        icons = angelsmods.functions.create_liquid_recipe_icon(
+          {
+            "y-res1",
+            "y-res2"
+          },
+          slag_color
+        ),
         order = "a-a [slag-processing-yi]"
       },
       {
@@ -167,8 +182,10 @@ if data.raw.item["y-res1"] then
         results = {
           {type = "item", name = "y-res1", amount = 6}
         },
-        icon = "__angelsrefining__/graphics/icons/angels-ore-mix-yi1-sorting.png",
-        icon_size = 32,
+        icons = {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Yuoki__/graphics/icons/uni-com-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
+        },
         order = "c-i-g[angelsore-chunk-mix-yi1-processing]"
       },
       {
@@ -186,8 +203,10 @@ if data.raw.item["y-res1"] then
         results = {
           {type = "item", name = "y-res2", amount = 6}
         },
-        icon = "__angelsrefining__/graphics/icons/angels-ore-mix-yi2-sorting.png",
-        icon_size = 32,
+        icons = {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
+          {icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
+        },
         order = "c-i-g[angelsore-chunk-mix-yi2-processing]"
       },
       {
@@ -205,8 +224,14 @@ if data.raw.item["y-res1"] then
           {type = "fluid", name = "water-purified", amount = 70},
           {type = "item", name = "sulfur", amount = 1}
         },
-        icon = "__angelsrefining__/graphics/icons/water-yellow-waste-purification-yi.png",
-        icon_size = 32,
+        icons = angelsmods.functions.create_liquid_recipe_icon(
+          {
+            "y-con_water",
+            "water-purified",
+            mods["angelspetrochem"] and {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32} or "sulfur"
+          },
+          "wss"
+        ),--
         order = "a[yellow-waste-water-purification-yi]"
       }
     }

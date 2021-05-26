@@ -17,7 +17,7 @@ data:extend(
     type = "item",
     name = "processed-lead",
     icon = "__angelssmelting__/graphics/icons/processed-lead.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-lead",
     order = "b",
     stack_size = 200
@@ -26,7 +26,7 @@ data:extend(
     type = "item",
     name = "pellet-lead",
     icon = "__angelssmelting__/graphics/icons/pellet-lead.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-lead",
     order = "c",
     stack_size = 200
@@ -78,7 +78,7 @@ data:extend(
     type = "item",
     name = "powder-lead",
     icon = "__angelssmelting__/graphics/icons/powder-lead.png",
-    icon_size = 32,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "angels-lead",
     order = "h",
     stack_size = 200

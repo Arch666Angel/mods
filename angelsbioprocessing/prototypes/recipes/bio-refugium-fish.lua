@@ -493,7 +493,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-raw-fish-oil-filtering-2",
-      category = "filtering",
+      category = "filtering-2",
       subgroup = "bio-processor-press-fish",
       enabled = false,
       energy_required = 8,
@@ -580,18 +580,9 @@ data:extend(
         {type = "item", name = "crystal-splinter-raw", amount = 1, probability = 0.4}
       },
       always_show_products = true,
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-raw.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("crystal-splinter-raw"),
+        1, angelsmods.bioprocessing.number_tint),
       order = "a[crystalization]-a"
     },
     {
@@ -609,18 +600,9 @@ data:extend(
         {type = "item", name = "crystal-splinter-raw", amount = 1}
       },
       always_show_products = true,
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/crystal-splinter-raw.png"
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer(
+        angelsmods.functions.get_object_icons("crystal-splinter-raw"),
+        2, angelsmods.bioprocessing.number_tint),
       order = "a[crystalization]-b"
     }
   }

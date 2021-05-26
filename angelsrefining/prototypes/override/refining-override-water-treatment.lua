@@ -51,6 +51,25 @@ end
 if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   OV.disable_technology({"water-washing-1", "water-washing-2"})
   OV.remove_prereq("geode-processing-2", "water-washing-2")
+  OV.hide_recipe(
+    {
+      "water-viscous-mud",
+      "washing-1",
+      "washing-2",
+      "washing-3",
+      "washing-4",
+      "washing-5",
+      "solid-mud-landfill",
+      "solid-geodes",
+      "solid-clay",
+      "solid-limestone",
+      "solid-sand",
+      --hide buildings too
+      "seafloor-pump",
+      "washing-plant",
+      "washing-plant-2"
+    }
+  )
 end
 
 angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
@@ -80,8 +99,18 @@ if mods["bobplates"] then
             {type = "fluid", name = "chlorine", amount = 20},
             {type = "fluid", name = "hydrogen", amount = 20}
           },
-          icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
-          icon_size = 32,
+          --icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
+          --icon_size = 32,
+          icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+            {
+              "chlorine",
+              "hydrogen",
+              "sodium-hydroxide"
+            },
+            {
+              {039, 112, 194}, {168, 173, 173}, {070, 133, 232}, {185, 185, 185, 0.8}
+            }
+          ),
           subgroup = "bob-fluid-electrolysis",
           order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
         }
@@ -95,8 +124,10 @@ end
 -- LITHIA WATER ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  data.raw.fluid["lithia-water"].icon = "__angelsrefining__/graphics/icons/water-lithia.png"
-  data.raw.fluid["lithia-water"].icon_size = 32 --icon size of 64 overriding caused issues
+  data.raw.fluid["lithia-water"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {032,118,206}, {248,083,099}, {038,137,237,0.8}, {255,073,072,0.8} })
+  data.raw.fluid["lithia-water"].icon = nil
+  data.raw.fluid["lithia-water"].icon_size = nil
+  data.raw.fluid["lithia-water"].icon_mipmaps = nil
   angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
 
   data:extend(

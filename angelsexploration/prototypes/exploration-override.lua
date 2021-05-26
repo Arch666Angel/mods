@@ -30,7 +30,7 @@ if angelsmods.industries then
         }
       }
     )
-    OV.add_prereq("turrets", "military")
+    OV.add_prereq("gun-turret", "military")
 
     if bobmods and bobmods.warfare then
       -- sniper turret

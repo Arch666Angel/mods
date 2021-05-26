@@ -12,7 +12,6 @@ if angelsmods.industries.components then
   -------------------------------------------------------------------------------
   -- INTERMEDIATES --------------------------------------------------------------
   -------------------------------------------------------------------------------
-  -- OV.global_replace_item("iron-stick", "angels-rod-iron")
   OV.global_replace_item("iron-gear-wheel", "angels-gear")
   OV.global_replace_item("engine-unit", "motor-2")
   OV.global_replace_technology("engine", "angels-components-mechanical-2")

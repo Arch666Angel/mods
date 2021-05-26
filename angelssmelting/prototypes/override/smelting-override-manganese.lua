@@ -45,7 +45,7 @@ else
   OV.disable_recipe({"manganese-ore-processing", "manganese-processed-processing"})
   OV.disable_recipe({"pellet-manganese-smelting", "processed-manganese-smelting", "manganese-processed-processing-alt", "solid-manganese-oxide-smelting"})
   OV.disable_recipe({"manganese-ore-smelting", "cathode-manganese-smelting"})
-  OV.disable_recipe({"molten-manganese-smelting"})
+  OV.disable_recipe({"molten-manganese-smelting", "solid-iron-hydroxide-smelting"})
   OV.disable_technology({"angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3"})
   OV.disable_technology({"angels-manganese-casting-2", "angels-manganese-casting-3"})
 end

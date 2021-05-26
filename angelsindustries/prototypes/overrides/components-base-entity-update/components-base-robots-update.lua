@@ -1,6 +1,6 @@
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
-  -- CUSTOM FIXES FOR BASE GAME INSERTERS (+ ANGELS)
+  -- CUSTOM FIXES FOR BASE GAME ROBOTS (+ ANGELS)
 
   OV.patch_recipes(
     {
@@ -213,5 +213,7 @@ if angelsmods.industries.components then
   --OV.remove_science_pack("cargo-robots-3", "chemical-science-pack")
 
   OV.add_prereq("angels-construction-robots-3", "tech-blue-circuit")
-
+  
+  OV.add_prereq("logistic-robotics","cargo-robots-2")
+  OV.add_prereq("construction-robotics","angels-construction-robots")
 end

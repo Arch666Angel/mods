@@ -1,9 +1,10 @@
 local OV = angelsmods.functions.OV
 --require("prototypes.overrides.industries-override-functions")
--------------------------------------------------------------------------------
--- BASE BOBS (MCI) ------------------------------------------------------------
--------------------------------------------------------------------------------
+
 if angelsmods.industries.tech then
+  -------------------------------------------------------------------------------
+  -- BASE BOBS (MCI) ------------------------------------------------------------
+  -------------------------------------------------------------------------------
   if mods["bobplates"] then
     pack_replace("battery-2", "blue", "orange")
     OV.remove_prereq("battery-2", "tech-blue-packs")
@@ -21,6 +22,9 @@ if angelsmods.industries.tech then
       pack_replace("alien-green-research", "yellow", "blue")
       pack_replace("alien-red-research", "yellow", "blue")
     end
+
+    pack_replace("tungsten-processing", "blue", "orange")
+    pack_replace("ceramics", "blue", "orange")
   end
 
   -------------------------------------------------------------------------------
@@ -34,11 +38,8 @@ if angelsmods.industries.tech then
       pack_replace("automation", "grey", "red")
     end
     -- assemblers tier 2+
-    OV.add_prereq("automation-3", "tech-orange-circuit")
     pack_replace("automation-4", "blue", "orange")
     OV.remove_prereq("automation-4", "tech-blue-packs")
-    OV.add_prereq("automation-4", "tech-orange-packs")
-    OV.add_prereq("automation-4", "tech-blue-circuit")
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then
     end
@@ -234,18 +235,43 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
     --adds bob power stuffs
+    -- steam power
+    if settings.startup["bobmods-power-steam"].value == true then
+      pack_replace("bob-steam-engine-4", "blue", "orange")
+      pack_replace("bob-boiler-4", "blue", "orange")
+      pack_replace("bob-oil-boiler-3", "blue", "orange")
+      pack_replace("bob-steam-turbine-1", "green", "orange")
+      pack_replace("bob-heat-exchanger-2", "blue", "orange")
+    end
+    if settings.startup["bobmods-power-fluidgenerator"].value == true then
+      pack_replace("fluid-generator-3", "blue", "orange")
+    end
+    -- solar power
     if settings.startup["bobmods-power-solar"].value == true then
       pack_replace("bob-solar-energy-2", "green", "orange")
+      pack_replace("bob-solar-energy-4", "blue", "yellow")
     end
     if settings.startup["bobmods-power-accumulators"].value == true then
       pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
+      pack_replace("bob-electric-energy-accumulators-4", "blue", "yellow")
     end
-    if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      pack_replace("fluid-generator-1", "red", "orange")
+    -- nuclar power
+    if settings.startup["bobmods-power-steam"].value == true or
+       settings.startup["bobmods-power-nuclear"].value == true or
+       settings.startup["bobmods-power-heatsources"].value == true then
+      pack_replace("bob-heat-pipe-2", "blue", "orange")
     end
-    if settings.startup["bobmods-power-steam"].value == true then
-      pack_replace("bob-steam-engine-3", "green", "orange")
-      pack_replace("bob-steam-turbine-1", "green", "orange")
+    if settings.startup["bobmods-power-heatsources"].value == true then
+      pack_replace("burner-reactor-2", "blue", "orange")
+      pack_replace("fluid-reactor-2", "blue", "orange")
+    end
+    -- power distribution
+    if settings.startup["bobmods-power-poles"].value == true then
+      pack_replace("electric-pole-2", "green", "orange")
+      pack_replace("electric-pole-4", "blue", "yellow")
+      pack_replace("electric-energy-distribution-2", "blue", "orange")
+      pack_replace("electric-substation-3", "blue", "yellow")
+      pack_replace("electric-substation-4", "blue", "white")
     end
   end
 

@@ -3,18 +3,13 @@ data:extend(
     {
       type = "item",
       name = "algae-farm",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.bioprocessing.number_tint),
       subgroup = "bio-processing-buildings-nauvis-a",
       order = "a[algae]-a",
       place_result = "algae-farm",
@@ -23,8 +18,13 @@ data:extend(
     {
       type = "assembling-machine",
       name = "algae-farm",
-      icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
+        },
+        1, angelsmods.bioprocessing.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "algae-farm"},
       max_health = 300,
@@ -98,18 +98,13 @@ data:extend(
     {
       type = "item",
       name = "algae-farm-2",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.bioprocessing.number_tint),
       subgroup = "bio-processing-buildings-nauvis-a",
       order = "a[algae]-b",
       place_result = "algae-farm-2",
@@ -118,8 +113,13 @@ data:extend(
     {
       type = "assembling-machine",
       name = "algae-farm-2",
-      icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
+        },
+        2, angelsmods.bioprocessing.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "algae-farm-2"},
       max_health = 300,
@@ -194,18 +194,13 @@ data:extend(
     {
       type = "item",
       name = "algae-farm-3",
-      icons = {
-        {
-          icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png"
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_3.png",
-          tint = angelsmods.bioprocessing.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        3, angelsmods.bioprocessing.number_tint),
       subgroup = "bio-processing-buildings-nauvis-a",
       order = "a[algae]-c",
       place_result = "algae-farm-3",
@@ -214,8 +209,13 @@ data:extend(
     {
       type = "assembling-machine",
       name = "algae-farm-3",
-      icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
-      icon_size = 32,
+      icons = angelsmods.functions.add_number_icon_layer({
+          {
+            icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
+        },
+        3, angelsmods.bioprocessing.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "algae-farm-3"},
       max_health = 300,

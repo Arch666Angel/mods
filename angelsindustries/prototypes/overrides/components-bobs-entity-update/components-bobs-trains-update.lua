@@ -8,7 +8,6 @@ if angelsmods.industries.components then
       return {
         name = recipe_name,
         ingredients = ingredients_list,
-        minable = { results = ingredients_list }
       }
     end
     OV.patch_recipes(
@@ -16,22 +15,22 @@ if angelsmods.industries.components then
         swap_ingredients("bob-locomotive-2", {
           {"circuit-green-loaded", "circuit-orange-loaded"},
           {"motor-2", "angels-gear"},
-          {"bob-locomotive-2", 0}
+          {"locomotive", 1}
         }),
         swap_ingredients("bob-locomotive-3", {
           {"motor-4", "angels-spring"},
-          {"bob-locomotive-3", 0}
+          {"bob-locomotive-2", 1}
         }),
         swap_ingredients("bob-armoured-locomotive", {
           {"circuit-orange-loaded", 5},
           {"motor-3", 20},
           {"mechanical-parts", 30},
-          {"bob-armoured-locomotive", 0}
+          {"locomotive", 1}
         }),
         swap_ingredients("bob-armoured-locomotive-2", {
           {"circuit-yellow-loaded", "circuit-blue-loaded"},
           {"motor-5", "angels-spring"},
-          {"bob-armoured-locomotive-2", 0}
+          {"bob-armoured-locomotive", 1}
         }),
         swap_ingredients("bob-cargo-wagon-2", {
           {"!!"},
@@ -39,7 +38,8 @@ if angelsmods.industries.components then
           {"angels-servo-motor-2", 15},
           {"circuit-green-loaded", 5},
           {"mechanical-parts", 5},
-          {"brass-chest", 1},
+          data.raw.item["brass-chest"] and {"brass-chest", 1} or {"steel-chest", 2},
+          {"cargo-wagon", 1}
         }),
         swap_ingredients("bob-cargo-wagon-3", {
           {"!!"},
@@ -47,7 +47,8 @@ if angelsmods.industries.components then
           {"angels-servo-motor-4", 15},
           {"circuit-blue-loaded", 5},
           {"mechanical-parts", 5},
-          {"titanium-chest", 1},
+          data.raw.item["titanium-chest"] and {"titanium-chest", 1} or {"steel-chest", 4},
+          {"bob-cargo-wagon-2", 1}
         }),
         swap_ingredients("bob-armoured-cargo-wagon", {
           {"!!"},
@@ -55,7 +56,8 @@ if angelsmods.industries.components then
           {"angels-servo-motor-3", 15},
           {"circuit-orange-loaded", 5},
           {"mechanical-parts", 5},
-          {"brass-chest", 1},
+          data.raw.item["brass-chest"] and {"brass-chest", 1} or {"steel-chest", 2},
+          {"cargo-wagon", 1}
         }),
         swap_ingredients("bob-armoured-cargo-wagon-2", {
           {"!!"},
@@ -63,7 +65,8 @@ if angelsmods.industries.components then
           {"angels-servo-motor-5", 15},
           {"circuit-yellow-loaded", 5},
           {"mechanical-parts", 5},
-          {"titanium-chest", 1},
+          data.raw.item["titanium-chest"] and {"titanium-chest", 1} or {"steel-chest", 4},
+          {"bob-armoured-cargo-wagon", 1}
         }),
         swap_ingredients("bob-fluid-wagon-2", {
           {"!!"},
@@ -72,6 +75,7 @@ if angelsmods.industries.components then
           {"circuit-green-loaded", 5},
           {"mechanical-parts", 5},
           {"storage-tank-2", 1},
+          {"fluid-wagon", 1}
         }),
         swap_ingredients("bob-fluid-wagon-3", {
           {"!!"},
@@ -80,6 +84,7 @@ if angelsmods.industries.components then
           {"circuit-blue-loaded", 5},
           {"mechanical-parts", 5},
           {"storage-tank-4", 1},
+          {"bob-fluid-wagon-2", 1}
         }),
         swap_ingredients("bob-armoured-fluid-wagon", {
           {"!!"},
@@ -88,6 +93,7 @@ if angelsmods.industries.components then
           {"circuit-orange-loaded", 5},
           {"mechanical-parts", 5},
           {"storage-tank-3", 1},
+          {"fluid-wagon", 1}
         }),
         swap_ingredients("bob-armoured-fluid-wagon-2", {
           {"!!"},
@@ -96,6 +102,7 @@ if angelsmods.industries.components then
           {"circuit-yellow-loaded", 5},
           {"mechanical-parts", 5},
           {"bob-storage-tank-all-corners-4", 1},
+          {"bob-armoured-fluid-wagon", 1}
         })
       }
     )

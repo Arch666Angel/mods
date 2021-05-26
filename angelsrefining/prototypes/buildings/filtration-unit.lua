@@ -3,18 +3,14 @@ data:extend(
     {
       type = "item",
       name = "filtration-unit",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/filtration-unit.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "b[filtration-unit]-a[mk1]",
       place_result = "filtration-unit",
@@ -23,18 +19,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "filtration-unit",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/filtration-unit.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_1.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        1, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "filtration-unit"},
       fast_replaceable_group = "filtration-unit",
@@ -118,18 +110,14 @@ data:extend(
     {
       type = "item",
       name = "filtration-unit-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/filtration-unit.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       subgroup = "refining-buildings",
       order = "b[filtration-unit]-b[mk2]",
       place_result = "filtration-unit-2",
@@ -138,18 +126,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "filtration-unit-2",
-      icons = {
+      icons = angelsmods.functions.add_number_icon_layer(
         {
-          icon = "__angelsrefining__/graphics/icons/filtration-unit.png"
+          {
+            icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+            icon_size = 32, icon_mipmaps = 1
+          }
         },
-        {
-          icon = "__angelsrefining__/graphics/icons/num_2.png",
-          tint = angelsmods.refining.number_tint,
-          scale = 0.32,
-          shift = {-12, -12}
-        }
-      },
-      icon_size = 32,
+        2, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 1, result = "filtration-unit-2"},
       fast_replaceable_group = "filtration-unit",
@@ -162,7 +146,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"filtering"},
+      crafting_categories = {"filtering", "filtering-2"},
       crafting_speed = 2.25,
       energy_source = {
         type = "electric",

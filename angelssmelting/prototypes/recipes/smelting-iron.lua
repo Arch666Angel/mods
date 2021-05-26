@@ -438,11 +438,11 @@ data:extend(
         {type = "item", name = "angels-plate-iron", amount = 2}
       },
       results = {
-        {type = "item", name = "angels-rod-iron", amount = 1}
+        {type = "item", name = "iron-stick", amount = 1}
       },
       allow_decomposition = false,
       icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-rod-iron"),
+        angelsmods.functions.get_object_icons("iron-stick"),
         angelsmods.functions.get_object_icons("angels-plate-iron"),
         {-10, -10}, 0.4375),
       order = "m[angels-rod-iron]-a"
@@ -459,10 +459,10 @@ data:extend(
         {type = "item", name = "angels-rod-stack-iron", amount = 1}
       },
       results = {
-        {type = "item", name = "angels-rod-iron", amount = 4}
+        {type = "item", name = "iron-stick", amount = 4}
       },
       icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-rod-iron"),
+        angelsmods.functions.get_object_icons("iron-stick"),
         angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
         {-10, -10}, 0.4375),
       order = "m[angels-rod-iron]-b"

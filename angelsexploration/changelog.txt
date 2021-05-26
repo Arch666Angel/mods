@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.10
-Date: ??
+Date: 26.05.2021
   Bugfixes:
     - Fixed collision box and drawing box of the mammoth heavy tank (476)
+    - Fixed that turret technology did not depend on military (549)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 26.11.2020

@@ -175,6 +175,15 @@ else -- special vanilla
 end
 
 -------------------------------------------------------------------------------
+-- VALVES ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.enableconverter then
+else
+  angelsmods.functions.add_flag("valve-converter", "hidden")
+  OV.disable_recipe("valve-converter")
+end
+
+-------------------------------------------------------------------------------
 -- SPECIAL VANILLA ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.functions.is_special_vanilla() then
@@ -215,3 +224,8 @@ if angelsmods.functions.is_special_vanilla() then
     }
   )
 end
+-------------------------------------------------------------------------------
+-- REMOVE INACTIVE ENTITIES ---------------------------------------------------
+-------------------------------------------------------------------------------
+--angelsmods.functions.add_flag("gas-refinery-4", "hidden")
+OV.add_unlock("angels-nitrogen-processing-4","gas-refinery-4")

@@ -92,7 +92,6 @@ angelsmods.industries.general_replace={
   ["titanium-gear-wheel"]={new="angels-spring",amt_multi=1,unlocked_by="titanium-processing"},
   ["tungsten-gear-wheel"]={new="angels-bearing",amt_multi=1,unlocked_by="tungsten-processing"},
   --intermediates (vanilla)
-  --["iron-stick"]={new="angels-rod-iron",amt_multi=1} --not sure if the right spot for this
   ["engine-unit"]={new="motor-2",amt_multi=1,unlocked_by="engine"},
   ["electric-engine-unit"]={new="motor-4",amt_multi=1,unlocked_by="electric-engine"},
   ["battery"]={new="battery-1",amt_multi=1}
