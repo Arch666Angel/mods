@@ -1,3 +1,5 @@
+local funcs = require("prototypes/train-functions")
+
 local wagons = {
   angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "petro-tank1" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 2 and "petro-tank1-2" or nil,
@@ -44,4 +46,5 @@ for _, prototype_type in pairs {
     end
   end
 end
-angelsmods.functions.add_speed_local()
+
+funcs.add_speed_locale()
