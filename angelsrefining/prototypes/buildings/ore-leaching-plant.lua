@@ -40,7 +40,7 @@ data:extend(
         module_slots = 1
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting-t3"},
+      crafting_categories = {"ore-refining-t3"},
       crafting_speed = 0.75,
       energy_source = {
         type = "electric",
@@ -122,7 +122,7 @@ data:extend(
         module_slots = 2
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting-t3"},
+      crafting_categories = {"ore-refining-t3"},
       crafting_speed = 1,
       energy_source = {
         type = "electric",
@@ -215,7 +215,7 @@ data:extend(
         module_slots = 3
       },
       allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-sorting-t3"},
+      crafting_categories = {"ore-refining-t3"},
       crafting_speed = 1.5,
       energy_source = {
         type = "electric",

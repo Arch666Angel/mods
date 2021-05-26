@@ -39,7 +39,6 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
       }
     }
   )
-  OV.remove_prereq("slag-processing-2", "plastics")
   OV.add_prereq("slag-processing-2", "angels-aluminium-smelting-1")
 
   if angelsmods.trigger.smelting_products["aluminium"].plate then

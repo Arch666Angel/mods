@@ -519,7 +519,7 @@ data:extend(
     {
       type = "recipe",
       name = "coal-crushed",
-      category = "ore-sorting-t1",
+      category = "ore-refining-t1",
       subgroup = "petrochem-coal",
       energy_required = 1,
       enabled = false,

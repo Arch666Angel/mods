@@ -20,6 +20,8 @@ Date: ??
     - Changed and expanded locale strings and text descriptions (489)
     - Altered the auto-barreling setting to contain options to set the recipe hidden_from_player_crafting (566)
        - having them hidden can reduce the size of the scroll bar on the crafting menu (in particular, with petrochem)
+    - Added distinction between crafting machine tiers for ore sorting (115)
+    - Ceramic filter recipes can only be crafted in filtration unit 2 (115)
   Bugfixes:
     - Fixed geode crystalisation 1 did exist without any unlocks
     - Fixed incorrect localisation on hidding voiding recipes
@@ -30,6 +32,7 @@ Date: ??
     - Fixed that the method for removing autoplace controls was not universally used (373)
     - Fixed deadlock for bobclasses "fighter" and component mode (394, 559)
     - Fixed in some old saves washing tech was still disabled (for real this time) (368)
+    - Fixed the lib recipe builder fallback to use aluminium, titanium and tungsten plates more frequently
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.19
 Date: 26.11.2020
