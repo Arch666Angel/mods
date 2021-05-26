@@ -119,6 +119,7 @@ if angelsmods.industries.tech then
   pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
   pack_replace("angels-metallurgy-3", "blue", "orange")
+  OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
   pack_replace("powder-metallurgy-2", "blue", "orange")
   pack_replace("ore-processing-2", "blue", "orange")
   pack_replace("angels-coolant-1", "blue", "orange")
