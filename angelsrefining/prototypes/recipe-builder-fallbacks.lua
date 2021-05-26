@@ -141,6 +141,10 @@
 	angelsmods.functions.RB.set_fallback("item", "chem-3", { { "block-cprocessing-4", 1 }, { "angels-chemical-plant-2" } } )
 	angelsmods.functions.RB.set_fallback("item", "chem-4", { { "block-cprocessing-5", 1 }, { "angels-chemical-plant-3" } } )
 
+	angelsmods.functions.RB.set_fallback("item", "elec-boil-1", { { "block-energy-3", 1 }, { "angels-electric-boiler" } } )
+	angelsmods.functions.RB.set_fallback("item", "elec-boil-2", { { "block-energy-4", 1 }, { "angels-electric-boiler-2" } } )
+	
+
 	--SMELTING
 	angelsmods.functions.RB.set_fallback("item", "orepro-1", { { "block-production-1", 1 } } )
 	angelsmods.functions.RB.set_fallback("item", "orepro-2", { { "block-production-2", 1 }, { "ore-processing-machine" } } )

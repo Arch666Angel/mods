@@ -1144,7 +1144,7 @@ angelsmods.functions.RB.build(
         energy_required = 5,
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-electric-boiler", amount = 1},
+          {type = "item", name = "elec-boil-1", amount = 1},
           {type = "item", name = "t3-plate", amount = 1},
           {type = "item", name = "t3-circuit", amount = 2},
           {type = "item", name = "t3-brick", amount = 1},
@@ -1156,7 +1156,7 @@ angelsmods.functions.RB.build(
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-electric-boiler", amount = 1},
+          {type = "item", name = "elec-boil-1", amount = 1},
           {type = "item", name = "t3-plate", amount = 1 * buildingmulti},
           {type = "item", name = "t3-circuit", amount = 2 * buildingmulti},
           {type = "item", name = "t3-brick", amount = 1 * buildingmulti},
@@ -1172,7 +1172,7 @@ angelsmods.functions.RB.build(
         energy_required = 5,
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-electric-boiler-2", amount = 1},
+          {type = "item", name = "elec-boil-2", amount = 1},
           {type = "item", name = "t5-plate", amount = 1},
           {type = "item", name = "t5-circuit", amount = 2},
           {type = "item", name = "t5-brick", amount = 1},
@@ -1184,7 +1184,7 @@ angelsmods.functions.RB.build(
         energy_required = 5 * buildingtime,
         enabled = false,
         ingredients = {
-          {type = "item", name = "angels-electric-boiler-2", amount = 1},
+          {type = "item", name = "elec-boil-2", amount = 1},
           {type = "item", name = "t5-plate", amount = 1 * buildingmulti},
           {type = "item", name = "t5-circuit", amount = 2 * buildingmulti},
           {type = "item", name = "t5-brick", amount = 1 * buildingmulti},
