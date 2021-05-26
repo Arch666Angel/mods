@@ -191,11 +191,11 @@
 
 	--BIO PROCESSING
 	angelsmods.functions.RB.set_fallback("item", "algaefarm-1", { { "block-electronics-0", 5 } } )
-	angelsmods.functions.RB.set_fallback("item", "algaefarm-2", { { "block-bprocessing-2", 5 }, { "algae-farm" } } )
+	angelsmods.functions.RB.set_fallback("item", "algaefarm-2", { { "block-processing-2", 5 }, { "algae-farm" } } ) --block-bprocessing-2 does not exist
 	angelsmods.functions.RB.set_fallback("item", "algaefarm-3", { { "block-bprocessing-4", 5 }, { "algae-farm-2" } } )
 
-	angelsmods.functions.RB.set_fallback("item", "cropfarm-1", { { "block-production-1", 3 }, { "solid-soil", 15 } } )
-	angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-bprocessing-2", 3 }, { "crop-farm" } } )
+	angelsmods.functions.RB.set_fallback("item", "cropfarm-1", { { "block-production-1", 3 }, { "solid-soil", 15 } } ) 
+	angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-processing-2", 3 }, { "crop-farm" } } ) --block-bprocessing-2 does not exist
 
 	angelsmods.functions.RB.set_fallback("item", "compo-1", { { "block-production-1", 1 }, { "wooden-chest", 1 } } )
 	--angelsmods.functions.RB.set_fallback("item", "compo-2", { { "block-bprocessing-3", 3 }, { "composter" } } )
