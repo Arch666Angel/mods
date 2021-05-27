@@ -219,13 +219,13 @@
 	angelsmods.functions.RB.set_fallback("item", "arboretum-1", { { "block-production-1", 1 }, { "glass", 6 }, { "angels-plate-glass", 6, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false end } } )
 	--angelsmods.functions.RB.set_fallback("item", "arboretum-2", { { "block-bprocessing-3", 3 }, { "bio-arboretum-1" } } )
 
-	angelsmods.functions.RB.set_fallback("item", "puffer-1", { { "block-production-1", 1 }, { "glass", 5 }, { "angels-plate-glass", 5, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false end } } )
+	angelsmods.functions.RB.set_fallback("item", "puffer-1", { { "block-bprocessing-3", 2 }, { "glass", 5 }, { "angels-plate-glass", 5, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false end } } )
 	--angelsmods.functions.RB.set_fallback("item", "puffer-2", { { "block-bprocessing-3", 3 }, { "bio-refugium-puffer" } } )
 
 	angelsmods.functions.RB.set_fallback("item", "fish-1", { { "block-production-1", 1 }, { "glass", 10 }, { "angels-plate-glass", 10, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false end } } )
 	--angelsmods.functions.RB.set_fallback("item", "fish-2", { { "block-bprocessing-3", 3 }, { "bio-refugium-fish" } } )
 
-	angelsmods.functions.RB.set_fallback("item", "biter-1", { { "block-production-1", 1 }, { "stone-wall", 4 } } )
+	angelsmods.functions.RB.set_fallback("item", "biter-1", { { "block-bprocessing-4", 3 }, { "stone-wall", 4 } } )
 	--angelsmods.functions.RB.set_fallback("item", "biter-2", { { "block-bprocessing-3", 3 }, { "bio-refugium-biter" } } )
 
 	angelsmods.functions.RB.set_fallback("item", "hatch-1", { { "block-production-1", 1 }, { "small-lamp", 3 } } )
