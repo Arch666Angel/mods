@@ -145,7 +145,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
     OV.patch_recipes(
       {
         {
-          name = "electronic-component",
+          name = "electronic-components",
           ingredients =
           {
             {type = "item", name = "angels-wire-silver", amount = "tinned-copper-cable"},
