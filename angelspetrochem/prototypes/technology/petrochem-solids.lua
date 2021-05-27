@@ -8,7 +8,9 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "plastics",
-        "angels-advanced-chemistry-2"
+        "gas-steam-cracking-1",
+        "oil-steam-cracking-1",
+        --"angels-advanced-chemistry-2"
       },
       effects = {
         {
