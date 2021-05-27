@@ -11,7 +11,7 @@ data:extend(
       name = "angels-ore-generation",
 
       is_title = true,
-      tag = "",
+      tag = "[item=angels-void] ",
       localised_name = {"tips-and-tricks-name.angels-ore-generation"},
       localised_description = require "prototypes.tips-and-tricks.1-ore-generation.1-ore-generation-description",
       
