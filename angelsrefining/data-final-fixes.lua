@@ -7,3 +7,5 @@ for _, fluid_n in pairs(data.raw.fluid) do
   end
 end
 angelsmods.functions.create_barreling_fluid_subgroup()
+
+require "prototypes.tips-and-tricks.tips-and-tricks"
