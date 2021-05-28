@@ -5,7 +5,7 @@ data:extend(
       name = "angels-ore-refining",
 
       is_title = false,
-      tag = "",
+      tag = "[item=angels-void]",
       localised_name = {"tips-and-tricks-name.angels-ore-refining"},
       localised_description = require "prototypes.tips-and-tricks.1-1-ore-refining.1-1-ore-refining-description",
       
