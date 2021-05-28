@@ -3,6 +3,7 @@ Version: 0.6.16
 Date: ??
   Bugfixes:
     - Fixed bobs electronic circuit board did not use silver wire
+    - Fixed bobs electronics (integrated circuit) used the wrong instance of gold wire
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.15
 Date: 26.05.2021
