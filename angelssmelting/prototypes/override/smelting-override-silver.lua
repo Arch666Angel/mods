@@ -121,7 +121,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
           name = "superior-circuit-board",
           ingredients =
           {
-            {type = "item", name = "angels-plate-silver", amount = "gold-plate"},
+            {type = "item", name = "silver-plate", amount = "gold-plate"},
           }
         }
       }
