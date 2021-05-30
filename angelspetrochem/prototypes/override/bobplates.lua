@@ -96,6 +96,7 @@ if mods["bobplates"] then
   --fuel oil balancing
   data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients = {{type = "fluid", name = "liquid-fuel", amount = 100}} --up from 20
 end
+
 -------------------------------------------------------------------------------
 -- TECH TREE CLEANUP ----------------------------------------------------------
 -------------------------------------------------------------------------------
