@@ -70,7 +70,6 @@ if angelsmods.trigger.smelting_products["silver"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-silver", "silver-plate")
     angelsmods.functions.add_flag("angels-plate-silver", "hidden")
-
     OV.patch_recipes({
       {
         name = "silver-plate",
@@ -112,6 +111,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         order = "m[angels-plate-silver]-a"
       },
     })
+    OV.hide_recipe({"silver-plate"})
   end
   
   if mods["bobelectronics"] then
