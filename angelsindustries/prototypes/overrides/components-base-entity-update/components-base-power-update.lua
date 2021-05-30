@@ -15,7 +15,7 @@ if angelsmods.industries.components then
           {type = "item", name = "block-construction-2", amount = 2},
           {type = "item", name = "block-electronics-2", amount = 2},
           {type = "item", name = "block-energy-2", amount = 3},
-          angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = "angels-plate-glass", amount = 5} or nil,
+          angelsmods.trigger.smelting_products["glass"].plate and {type = "item", name = data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 5} or nil,
         }
       }
     }
