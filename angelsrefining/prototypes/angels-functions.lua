@@ -1061,6 +1061,9 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
       if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
         to_add.hidden = true
         angelsmods.functions.disable_barreling_recipes(entity)
+        for _,void_category in pairs({"water", "chemical"}) do
+          angelsmods.functions.OV.disable_recipe("angels-" .. void_category .. "-void-" .. entity)
+        end
       else
         if to_add.flags then
           table.insert(to_add.flags, flag)

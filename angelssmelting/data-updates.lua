@@ -238,10 +238,10 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
   angelsmods.trigger.smelting_products["iron"].ingot = true
 end
 
---Overrides for refining/angels internal
-require("prototypes.smelting-override")
 --Generic recipe generation
 require("prototypes.smelting-generate")
+--Overrides for refining/angels internal
+require("prototypes.smelting-override")
 
 require("prototypes.smelting-override-global")
 
