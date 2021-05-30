@@ -24,10 +24,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-glass-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-coil-glass-fiber"
         }
       },
       unit = {
@@ -61,6 +57,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-glass-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-coil-glass-fiber"
         }
       },
       unit = {
