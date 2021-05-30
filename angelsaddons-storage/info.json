@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-storage",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "factorio_version": "1.1",
   "title": "Angel's Addons - Storage Options",
   "author": "Arch666Angel",
@@ -10,7 +10,7 @@
   "dependencies": [
     "base >= 1.1.33",
 
-    "(?) angelsfining",
+    "(?) angelsrefining",
     "? angelspetrochem >= 0.9.17"
   ]
 }
