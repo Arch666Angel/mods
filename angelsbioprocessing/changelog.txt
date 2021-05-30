@@ -3,6 +3,7 @@ Version: 0.7.19
 Date: ??
   Bugfixes:
     - Fixed biter refugium technology should depend on walls
+    - Fixed crash related to opening another players inventory
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.18
 Date: 26.05.2021
