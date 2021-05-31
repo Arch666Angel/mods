@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.19
-Date: ??
+Date: 31.05.2021
   Bugfixes:
     - Fixed biter refugium technology should depend on walls
     - Fixed crash related to opening another players inventory
+    - Updated resin and rubber accessibility for red/green wires
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.18
 Date: 26.05.2021

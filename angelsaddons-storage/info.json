@@ -9,8 +9,7 @@
   "description": "Adds pressure tanks (extremely large tanks), warehouses and silos.",
   "dependencies": [
     "base >= 1.1.33",
-
     "(?) angelsrefining",
-    "? angelspetrochem >= 0.9.17"
+    "? angelspetrochem >= 0.9.19"
   ]
 }

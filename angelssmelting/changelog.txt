@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.16
-Date: ??
+Date: 31.05.2021
   Bugfixes:
     - Fixed bobs electronic circuit board did not use silver wire
     - Various instances of recipes calling for hidden angels plate versions instead of bobs
