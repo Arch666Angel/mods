@@ -146,6 +146,8 @@ if angelsmods.industries.overhaul then
       "a[radioactive-element]-e[plutonium-239]"
     )
     angelsmods.functions.add_flag("plutonium-240", "hidden")
+    OV.remove_prereq("plutonium-synthesis", "kovarex-enrichment-process")
+    OV.disable_technology("kovarex-enrichment-process")
 
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
