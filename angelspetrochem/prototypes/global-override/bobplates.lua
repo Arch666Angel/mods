@@ -285,6 +285,7 @@ if mods["bobplates"] then
     {
       {
         name = "bob-rubber",
+        enabled = false,
         ingredients = {
           {"!!"},
           {type = "item", name = "resin", amount = 3}
@@ -319,6 +320,16 @@ if mods["bobplates"] then
   -- bob electronics
   move_item("insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
   OV.patch_recipes({{name = "insulated-cable", subgroup = "petrochem-solids-2", order = "b[rubber]-c[cable]-c"}})
+
+  
+  if mods["bobelectronics"] then --check if it exists first
+    OV.remove_unlock("electronics", "insulated-cable")
+    OV.add_unlock("circuit-network", "insulated-cable")
+    OV.add_unlock("circuit-network", "bob-rubber")
+    if mods["angelsbioprocessing"] then
+      OV.add_prereq("circuit-network", "bio-wood-processing")
+    end
+  end
 end
 
 -------------------------------------------------------------------------------

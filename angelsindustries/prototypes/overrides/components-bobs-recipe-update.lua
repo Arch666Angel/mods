@@ -54,6 +54,7 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobelectronics"] then
     OV.disable_recipe("wooden-board-paper")
+    OV.disable_recipe("superior-circuit-board")
   end
   -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------

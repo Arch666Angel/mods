@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.21
+Date: 31.05.2021
+  Bugfixes:
+    - When hiding a fluid, the corresponding voiding recipe will also be hidden correctly
+---------------------------------------------------------------------------------------------------
 Version: 0.11.20
 Date: 26.05.2021
   Changes:
@@ -13,6 +18,7 @@ Date: 26.05.2021
       - Also updated the remove flag script to do the same thing
     - Tweaked the lib to show icons next to the autoplace controls (542)
     - Sorting Facility 4 no longer has an ingredient limit (defaults to 255) (514)
+    - Sorting Facilities are now tiered, advanced recipes require a higher tier for processing
     - Added HQ tier numbering icons
     - Burner crusher is now not counted as tier 1 (but as tier 0, currently without icon) (513)
     - Hides the unused settings now properly for consistency (538)

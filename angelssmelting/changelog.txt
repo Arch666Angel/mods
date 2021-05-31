@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.16
+Date: 31.05.2021
+  Bugfixes:
+    - Fixed bobs electronic circuit board did not use silver wire
+    - Various instances of recipes calling for hidden angels plate versions instead of bobs
+    - Hide silver direct smelting from silver ore (not used at the game start)
+    - Moved glass fiber coil to glass smelting 2 in some cases
+---------------------------------------------------------------------------------------------------
 Version: 0.6.15
 Date: 26.05.2021
   Changes:

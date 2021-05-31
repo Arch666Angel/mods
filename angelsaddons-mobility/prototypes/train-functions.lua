@@ -14,7 +14,7 @@ local function set_type(name)
   return train_type
 end
 
-function angelsmods.functions.add_speed_local()
+local function add_speed_locale()
   local parts = {"cargo-wagon","fluid-wagon","artillery-wagon"}
   for _, part in pairs(parts) do
     for _,train in pairs(data.raw[part]) do
@@ -405,5 +405,6 @@ return {
   generate_train_recipe = generate_train_recipe,
   generate_train_technology = generate_train_technology,
   update_equipment_grid = update_equipment_grid,
-  update_equipment = update_equipment
+  update_equipment = update_equipment,
+  add_speed_locale = add_speed_locale
 }

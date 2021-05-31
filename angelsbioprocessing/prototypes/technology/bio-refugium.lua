@@ -332,6 +332,7 @@ data:extend(
         --"bio-refugium-butchery-2",
         "bio-refugium-puffer-2",
         "bio-processing-crystal-splinter-2",
+        "stone-wall"
       },
       effects = {
         {

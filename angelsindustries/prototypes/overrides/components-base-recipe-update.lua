@@ -5,6 +5,9 @@ if angelsmods.industries.components then
   OV.remove_unlock("military", "submachine-gun")
   OV.add_unlock("angels-components-weapons-basic", "submachine-gun")
 
+  --battery requirements
+  OV.remove_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber")
+  OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
   --battery usage
   --vanilla replacements
   replace_recipe_ing("accumulator","battery-1","battery-2")

@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.13
+Date: 31.05.2021
+  Bugfixes:
+    - Component mode:
+      - Fixed ingredient tier of puffer and biter refugium
+      - Fixed tin plate could not be inserted into the filter inserter recipe
+      - Fixed glass plate could not be inserted into any solar recipe
+      - Fixed bobs recipe for the superiour circuit board was not hidden correctly
+---------------------------------------------------------------------------------------------------
 Version: 0.4.12
 Date: 26.05.2021
   Changes:
