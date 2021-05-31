@@ -43,7 +43,10 @@ data:extend(
         }
       },
 
-      --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",
+      simulation =
+      {
+        init_file = "__angelsrefining__/prototypes/tips-and-tricks/1-1-1-crushing/1-1-1-crushing-simulation-init.lua"
+      },
     }
   }
 )
