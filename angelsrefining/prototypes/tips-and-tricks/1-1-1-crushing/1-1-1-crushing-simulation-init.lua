@@ -117,4 +117,9 @@ game.surfaces[1].create_entity({
   position = {9, 0},
   force = "neutral",
 })
-
+--recipe
+rendering.draw_sprite({
+  sprite = "tips-and-tricks-angels-crushing-recipe",
+  target = {-5.5, 1.8},
+  surface = game.surfaces[1],
+})

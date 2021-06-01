@@ -1,3 +1,5 @@
+require "prototypes.tips-and-tricks.1-1-1-crushing.1-1-1-crushing-simulation-prototypes"
+
 data:extend(
   {
     {
