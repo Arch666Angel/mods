@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.17
+Date: ??
+  Bugfixes:
+    - Fixed iron and copper ore could not be smelted to plates directly in special vanilla mode
+---------------------------------------------------------------------------------------------------
 Version: 0.6.16
 Date: 31.05.2021
   Bugfixes:

@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
         energy_required = 10.5,
         normal = {
           enabled = false,
-          hidden = true, --this essentially enforces the smelting of ore/advanced methods
+          hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {name = "copper-ore", type = "item", amount = "+3"}
           },
@@ -63,7 +63,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
         },
         expensive = {
           enabled = false,
-          hidden = true, --this essentially enforces the smelting of ore/advanced methods
+          hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {"!!"},
             {name = "copper-ore", type = "item", amount = 5 * intermediatemulti}
@@ -89,6 +89,9 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       }
     }
   )
+  if angelsmods.functions.is_special_vanilla() then
+    OV.add_unlock("ore-crushing", "copper-plate")
+  end
   OV.global_replace_item("angels-plate-copper", "copper-plate")
   angelsmods.functions.add_flag("angels-plate-copper", "hidden")
   angelsmods.functions.override_item_conditions(
