@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.20
 Date: ??
+  Changes:
+    - Added new graphics to the agricultural module technologies
   Bugfixes:
     - Fixed another crash related to opening another players inventory
 ---------------------------------------------------------------------------------------------------
