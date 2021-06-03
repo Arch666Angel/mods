@@ -1,3 +1,5 @@
+require "prototypes.tips-and-tricks.1-1-4-purification.1-1-4-purification-simulation-prototypes"
+
 data:extend(
   {
     {
@@ -21,7 +23,10 @@ data:extend(
         technology = "ore-refining"
       },
 
-      --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",
+      simulation =
+      {
+        init_file = "__angelsrefining__/prototypes/tips-and-tricks/1-1-4-purification/1-1-4-purification-simulation-init.lua"
+      },
     }
   }
 )

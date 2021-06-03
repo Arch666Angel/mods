@@ -1,124 +1,102 @@
-game.camera_position = {-2.5, 1}
-game.camera_zoom = 1.7
+game.camera_position = {-4.5, 1}
+game.camera_zoom = 1.45
 game.camera_alt_info = true
 
--- leaching cell
+-- leaching plant
 game.surfaces[1].create_entity({
-  name = "ore-leaching-plant",
+  name = "ore-refinery",
   position = {0, 0},
   direction = defines.direction.east,
   force = "neutral",
-  recipe = "angelsore1-crystal"
+  recipe = "angelsore1-pure"
 })
 -- inserters (input)
 game.surfaces[1].create_entity({
   name = "fast-inserter",
-  position = {-1, -3},
+  position = {-1, -4},
   force = "neutral",
   direction = defines.direction.north
 })
 game.surfaces[1].create_entity({
   name = "fast-inserter",
-  position = {1, -3},
+  position = {1, -4},
   force = "neutral",
   direction = defines.direction.north
 })
 -- belts (input)
-for x = -12, 2 do
+for x = -16, 2 do
   local belt = game.surfaces[1].create_entity({
     name = "transport-belt",
-    position = {x, -4},
+    position = {x, -5},
     force = "neutral",
     direction = defines.direction.east
   })
   for i = 1, 2 do
     for p = 0, 1, 0.1 do
-      belt.get_transport_line(i).insert_at(p, {name = "angels-ore1-chunk", count = 1})
+      belt.get_transport_line(i).insert_at(p, {name = "angels-ore1-crystal", count = 1})
     end
   end
 end
 game.surfaces[1].create_entity({
   name = "loader",
-  position = {-13, -4},
+  position = {-17, -5},
   force = "neutral",
   direction = defines.direction.east,
   type = "output"
 })
--- pipes (input)
-game.surfaces[1].create_entity({
-  name = "pipe-to-ground",
-  position = {-3, 1},
-  force = "neutral",
-  direction = defines.direction.east
-})
-game.surfaces[1].create_entity({
-  name = "pipe-to-ground",
-  position = {-13, 1},
-  force = "neutral",
-  direction = defines.direction.west
-})
 -- infinity chest (source)
 game.surfaces[1].create_entity({
   name = "infinity-chest",
-  position = {-15, -4},
+  position = {-19, -5},
   force = "neutral",
 }).set_infinity_container_filter(1, {
-  name = "angels-ore1-chunk",
+  name = "angels-ore1-crystal",
   count = 100,
   index = 1
-})
--- infinity pipe (source)
-game.surfaces[1].create_entity({
-  name = "infinity-pipe",
-  position = {-14, 1},
-  force = "neutral",
-}).set_infinity_pipe_filter({
-  name = "liquid-sulfuric-acid",
-  percentage = 1
 })
 -- inserters (output)
 game.surfaces[1].create_entity({
   name = "fast-inserter",
-  position = {-1, 3},
+  position = {-1, 4},
   force = "neutral",
   direction = defines.direction.north
 })
 game.surfaces[1].create_entity({
   name = "fast-inserter",
-  position = {1, 3},
+  position = {1, 4},
   force = "neutral",
   direction = defines.direction.north
 })
 -- belts (output)
 game.surfaces[1].create_entity({
   name = "transport-belt",
-  position = {-1, 4},
+  position = {-1, 5},
   force = "neutral",
   direction = defines.direction.east
 })
 game.surfaces[1].create_entity({
   name = "transport-belt",
-  position = {1, 4},
+  position = {1, 5},
   force = "neutral",
   direction = defines.direction.west
 })
 game.surfaces[1].create_entity({
   name = "transport-belt",
-  position = {0, 4},
+  position = {0, 5},
   force = "neutral",
   direction = defines.direction.south
 })
 for x = 0, 6 do
   game.surfaces[1].create_entity({
     name = "transport-belt",
-    position = {x, 5},
+    position = {x, 6},
     force = "neutral",
     direction = defines.direction.east
   })
 end
 game.surfaces[1].create_entity({
   name = "loader",
-  position = {8, 5},
+  position = {8, 6},
   force = "neutral",
   direction = defines.direction.east,
   type = "input"
@@ -126,7 +104,7 @@ game.surfaces[1].create_entity({
 -- infinity chest (sink)
 game.surfaces[1].create_entity({
   name = "infinity-chest",
-  position = {9, 5},
+  position = {9, 6},
   force = "neutral",
 }).remove_unfiltered_items = true
 -- power
@@ -142,9 +120,9 @@ game.surfaces[1].create_entity({
 })
 --recipe
 rendering.draw_sprite({
-  sprite = "tips-and-tricks-angels-leaching-recipe",
-  target = {-6.5, 1.8},
-  x_scale = 1.11,
-  y_scale = 1.11,
+  sprite = "tips-and-tricks-angels-purification-recipe",
+  target = {-9, 1.5},
+  x_scale = 1.6,
+  y_scale = 1.6,
   surface = game.surfaces[1],
 })
