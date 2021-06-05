@@ -142,6 +142,19 @@ if bobmods then
       }
     )
     OV.add_unlock("bio-paper-1", "wooden-board-paper")
+    OV.patch_recipes(
+      {
+        {
+          name = "insulated-cable",
+          ingredients = {
+            {type = "item", name = "tinned-copper-cable", amount = 60},
+            {type = "item", name = "solid-rubber", amount = 1}
+          },
+          results = {{type = "item", name = "insulated-cable", amount = 60}},
+          energy_required = 15
+        }
+      }
+    )
   end
 
 end
