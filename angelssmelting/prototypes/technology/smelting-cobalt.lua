@@ -9,7 +9,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        "ore-floatation",
+        "ore-leaching",
         "angels-metallurgy-2",
         "angels-coal-processing"
       },
@@ -35,7 +35,8 @@ data:extend(
         count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -76,7 +77,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },
