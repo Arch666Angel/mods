@@ -3,7 +3,6 @@ local OV = angelsmods.functions.OV
 -- lookup table to convert ore name to trigger name
 local special_vanilla = angelsmods.functions.is_special_vanilla()
 local get_trigger_name = angelsmods.functions.get_trigger_names()
-local new_s = special_vanilla and false or angelsmods.refining.new_sorting --force false if special vanilla
 
 local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
 local icon_lookup_table = {
@@ -430,8 +429,7 @@ OV.patch_recipes(
         ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
         ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["zinc-ore"] = (not new_s) and {0, 0, 0, 1},
-        ["tungsten-ore"] = new_s and {0, 0, 0, 1}
+        ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
     -- JIVOLITE
@@ -447,8 +445,7 @@ OV.patch_recipes(
         ["copper-ore"] = (not special_vanilla) and {1, 1, 1, 2},
         ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["zinc-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["silver-ore"] = (not new_s) and {0, 0, 1, 1},
-        ["cobalt-ore"] = new_s and {0, 0, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
         ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
@@ -463,12 +460,10 @@ OV.patch_recipes(
         ["angels-copper-pebbles"] = special_vanilla and {0, 2, 3, 5},
         ["angels-copper-slag"] = special_vanilla and {0, 0, 1, 1},
         ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
-        ["cobalt-ore"] = (not new_s) and {0, 1, 1, 1},
-        ["silver-ore"] = new_s and {0, 1, 1, 1},
+        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["tin-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["uranium-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["bauxite-ore"] = (not new_s) and {0, 0, 0, 1},
-        ["tungsten-ore"] = new_s and {0, 0, 0, 1}
+        ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
 
       }
     ),
@@ -484,11 +479,9 @@ OV.patch_recipes(
         ["angels-copper-slag"] = special_vanilla and {0, 1, 1, 2},
         ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
         ["lead-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["silver-ore"] = (not new_s) and {0, 1, 1, 1},
-        ["bauxite-ore"] = new_s and {0, 1, 1, 1},
-        ["gold-ore"] = (not new_s) and {0, 0, 1, 1},
-        ["rutile-ore"] = (not special_vanilla) and {0, 0, new_s and 1 or 0, 1},
-        ["cobalt-ore"] = new_s and {0, 0, 0, 1},
+        ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 0, 1},
       }
     ),
     -- RUBYTE
@@ -500,12 +493,9 @@ OV.patch_recipes(
         ["lead-ore"] = (not special_vanilla) and {2, 2, 3, 3},
         ["nickel-ore"] = (not special_vanilla) and {1, 1, 1, 2},
         ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["gold-ore"] = (not new_s) and {0, 1, 1, 1},
-        ["quartz"] = new_s and {0, 1, 1, 1},
-        ["rutile-ore"] = (not new_s) and {0, 0, 1, 1},
-        ["gold-ore"] = new_s and {0, 0, 1, 1},
-        ["tungsten-ore"] = (not new_s) and {0, 0, 0, 1},
-        ["uranium-ore"] = new_s and {0, 0, 0, 1}
+        ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["uranium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
     -- BOBMONIUM
@@ -516,12 +506,10 @@ OV.patch_recipes(
         ["!!"] = (not special_vanilla) and {false, false, false, true},
         ["tin-ore"] = (not special_vanilla) and {2, 2, 3, 3},
         ["quartz"] = (not special_vanilla) and {1, 1, 1, 2},
-        ["cobalt-ore"] = (not special_vanilla) and {0,  not new_s and 1 or 0, not new_s and 1 or 0, 1},
-        ["silver-ore"] = new_s and {0, 1, 1, 1},
+        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["zinc-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["bauxite-ore"] = (not new_s) and {0, 0, 1, 1},
-        ["gold-ore"] = new_s and {0, 0, 1, 1},
-        ["uranium-ore"] = (not new_s) and {0, 0, 0, 1},
+        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
     -- FERROUS
@@ -549,12 +537,10 @@ OV.patch_recipes(
           ["!!"] = (not special_vanilla) and {true, true, true, true},
           ["copper-ore"] = (not special_vanilla) and {2, 3, 4, 4},
           ["tin-ore"] = (not special_vanilla) and {2, 2, 2, 2},
-          --quartz in 2 if: not new_s or(platinum and not spec_vanilla)
-          ["quartz"] = (not special_vanilla) and {0, not new_s and 1 or 0, not new_s and 1 or 0, (not ore_enabled("platinum-ore") or not new_s) and 1 or 0},
           ["silver-ore"] = new_s and {0, 1, 1, 1},
           ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
           ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1},
-          ["tungsten-ore"] = (not (--[[special_vanilla]] new_s or ore_enabled("platinum-ore"))) and {0, 0, 0, 1},
+          ["quartz"] = (not (special_vanilla or ore_enabled("platinum-ore"))) and {0, 0, 0, 1},
         },
         true
       ) or

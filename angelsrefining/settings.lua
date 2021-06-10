@@ -126,13 +126,6 @@ data:extend(
     minimum_value = 200,
     maximum_value = 1000,
     order = "d"
-  },
-  {
-    type = "bool-setting",
-    name = "angels-refining-new-sorting",
-    setting_type = "startup",
-    default_value = false,
-    order = "e"
   }
 }
 )
