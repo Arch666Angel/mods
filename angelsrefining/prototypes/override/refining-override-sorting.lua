@@ -3,7 +3,6 @@ local OV = angelsmods.functions.OV
 -- lookup table to convert ore name to trigger name
 local special_vanilla = angelsmods.functions.is_special_vanilla()
 local get_trigger_name = angelsmods.functions.get_trigger_names()
-local new_s = special_vanilla and false or angelsmods.refining.new_sorting --force false if special vanilla
 
 local icon_lookup_table_fallback = {icon = "__angelsrefining__/graphics/icons/void.png"}
 local icon_lookup_table = {
