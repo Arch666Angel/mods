@@ -10,7 +10,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "ore-leaching",
-        "angels-metallurgy-2",
+        "angels-metallurgy-3",
         "angels-coal-processing"
       },
       effects = {
@@ -91,7 +91,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        --"angels-metallurgy-3",
+        "angels-metallurgy-4",
         "strand-casting-2",
         "angels-cobalt-smelting-1"
       },
@@ -123,7 +123,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        --"angels-metallurgy-4",
+        "angels-metallurgy-5",
         "ore-processing-3",
         "angels-cobalt-smelting-2",
         "angels-sulfur-processing-1",
@@ -149,7 +149,8 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 30
       },
@@ -162,7 +163,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        --"angels-metallurgy-4",
+        "angels-metallurgy-5",
         "strand-casting-3",
         "angels-cobalt-casting-2"
       },
@@ -178,7 +179,8 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 30
       },
