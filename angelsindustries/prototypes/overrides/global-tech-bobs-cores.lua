@@ -122,6 +122,12 @@ if angelsmods.industries.tech then
     OV.remove_science_pack("speed-module", "angels-science-pack-orange")
     OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
     OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
+
+    OV.remove_science_pack("speed-module", "datacore-enhance-1")
+    OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
+    OV.remove_science_pack("productivity-module", "datacore-enhance-1")
+    OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
+
     OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
     OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
     OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
