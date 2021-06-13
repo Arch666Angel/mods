@@ -537,7 +537,7 @@ OV.patch_recipes(
           ["!!"] = (not special_vanilla) and {true, true, true, true},
           ["copper-ore"] = (not special_vanilla) and {2, 3, 4, 4},
           ["tin-ore"] = (not special_vanilla) and {2, 2, 2, 2},
-          ["silver-ore"] = new_s and {0, 1, 1, 1},
+          ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
           ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
           ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1},
           ["quartz"] = (not (special_vanilla or ore_enabled("platinum-ore"))) and {0, 0, 0, 1},
