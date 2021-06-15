@@ -18,6 +18,10 @@ data:extend(
       type = "ammo-category",
       name = "electric"
     },
+    {
+      type = "ammo-category",
+      name = "gathering"
+    },
     --DAMAGE TYPE
     {
       type = "damage-type",
@@ -26,6 +30,10 @@ data:extend(
     {
       type = "damage-type",
       name = "bio"
+    },
+    {
+      type = "damage-type",
+      name = "gathering"
     },
     --SUBGROUPS
     ---------------------------------------------------------------------------

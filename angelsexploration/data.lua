@@ -10,6 +10,7 @@ require("prototypes.exploration-category")
 
 --LOAD FUNCTIONS
 require("prototypes.entities.biter-builder")
+require("prototypes.entities.gathering-turret-builder")
 
 --PROTOTYPES
 require("prototypes.entities.ammo-cannon-turret-shells")
@@ -25,6 +26,7 @@ require("prototypes.entities.bio-gun")
 require("prototypes.entities.cannon-turret")
 require("prototypes.entities.rocket-turret")
 require("prototypes.entities.bio-turret")
+require("prototypes.entities.gathering-turret")
 
 require("prototypes.entities.biter")
 
