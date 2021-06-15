@@ -635,7 +635,6 @@ angelsmods.functions.RB.build(
     {
       type = "recipe",
       name = "valve-converter",
-      energy_required = 2,
       normal = {
         energy_required = 2,
         enabled = false,

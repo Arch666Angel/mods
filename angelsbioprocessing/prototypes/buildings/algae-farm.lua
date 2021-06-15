@@ -189,7 +189,6 @@ data:extend(
           pipe_connections = {{type = "input", position = {0, 4}}}
         }
       },
-      pipe_covers = pipecoverspictures()
     },
     {
       type = "item",
@@ -284,7 +283,6 @@ data:extend(
           pipe_connections = {{type = "input", position = {0, 4}}}
         }
       },
-      pipe_covers = pipecoverspictures()
     }
   }
 )

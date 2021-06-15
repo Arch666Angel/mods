@@ -25,7 +25,6 @@ if mods["bobmodules"] then
       },
     }
     data.raw["item-group"]["bobmodules"].order = "lb[bobs]-d[modules]"
-    data.raw["item-group"]["bobmodules"].inventory_order = "lb[bobs]-d[modules]"
 
     -- modules subgroups
     data.raw["item-subgroup"]["module-intermediates"].order = "f-0-a"

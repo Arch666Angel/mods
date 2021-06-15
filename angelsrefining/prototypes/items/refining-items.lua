@@ -520,8 +520,7 @@ data:extend(
       base_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
       flow_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "item",
@@ -544,8 +543,7 @@ data:extend(
       --flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
       flow_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "item",
@@ -626,8 +624,7 @@ data:extend(
       base_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
       flow_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -639,8 +636,7 @@ data:extend(
       base_color = {r = 132 / 255, g = 116 / 255, b = 11 / 255},
       flow_color = {r = 132 / 255, g = 116 / 255, b = 11 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -654,8 +650,7 @@ data:extend(
       --flow_color = {r = 133 / 255, g = 196 / 255, b = 60 / 255},
       flow_color = {r = 133 / 255, g = 224 / 255, b = 28 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "item",
@@ -676,8 +671,7 @@ data:extend(
       base_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
       flow_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -689,8 +683,7 @@ data:extend(
       base_color = {r = 186 / 255, g = 110 / 255, b = 22 / 255},
       flow_color = {r = 186 / 255, g = 110 / 255, b = 22 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -702,8 +695,7 @@ data:extend(
       base_color = {r = 252 / 255, g = 103 / 255, b = 5 / 255},
       flow_color = {r = 252 / 255, g = 103 / 255, b = 5 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "item",
@@ -946,8 +938,7 @@ data:extend(
       base_color = {r = 140 / 255, g = 73 / 255, b = 29 / 255},
       flow_color = {r = 140 / 255, g = 73 / 255, b = 29 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -960,8 +951,7 @@ data:extend(
       base_color = {r = 135 / 255, g = 71 / 255, b = 28 / 255},
       flow_color = {r = 135 / 255, g = 71 / 255, b = 28 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "item",
@@ -1010,8 +1000,7 @@ data:extend(
       base_color = {r = 147 / 255, g = 207 / 255, b = 47 / 255},
       flow_color = {r = 100 / 255, g = 255 / 255, b = 0 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -1024,8 +1013,7 @@ data:extend(
       base_color = {r = 147 / 255, g = 207 / 255, b = 47 / 255},
       flow_color = {r = 100 / 255, g = 255 / 255, b = 0 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -1038,8 +1026,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.6, b = 0.2},
       flow_color = {r = 0.5, g = 0.5, b = 0.5},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     ---------------------------------------------------------------------------
     -- CATALYSTS --------------------------------------------------------------

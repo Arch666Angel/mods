@@ -4,7 +4,7 @@ data:extend(
   -- PROCESSING ---------------------------------------------------------------
   -----------------------------------------------------------------------------
   {
-    type = "item",
+    type = "capsule",
     name = "bio-raw-meat",
     icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
     icon_size = 32,

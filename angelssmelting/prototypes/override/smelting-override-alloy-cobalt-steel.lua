@@ -25,8 +25,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           base_color = {r = 61 / 256, g = 107 / 256, b = 153 / 256},
           flow_color = {r = 61 / 256, g = 107 / 256, b = 153 / 256},
           max_temperature = 100,
-          pressure_to_speed_ratio = 0.4,
-          flow_to_energy_ratio = 0.59,
           auto_barrel = false
         }
       }

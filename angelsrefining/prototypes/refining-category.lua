@@ -44,9 +44,6 @@ data:extend(
       type = "item-group",
       name = "resource-refining",
       order = "la[angels]-a[refining]-a",
-      inventory_order = "la[angels]-a[refining]-a",
-      --icon = "__angelsrefining__/graphics/item-group/ore-refining.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
@@ -234,9 +231,6 @@ data:extend(
       type = "item-group",
       name = "water-treatment",
       order = "la[angels]-c[petrochem]-a",
-      inventory_order = "la[angels]-c[petrochem]-a",
-      --icon = "__angelsrefining__/graphics/item-group/water-treatment-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/technology/water-treatment.png",
@@ -334,9 +328,6 @@ data:extend(
       type = "item-group",
       name = "angels-fluid-control",
       order = "la[angels]-c[petrochem]-c",
-      inventory_order = "la[angels]-c[petrochem]-c",
-      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
@@ -374,9 +365,6 @@ data:extend(
       type = "item-group",
       name = "angels-fluid-converter",
       order = "la[angels]-c[petrochem]-d",
-      inventory_order = "la[angels]-c[petrochem]-c",
-      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/item-group/converter-group.png",
@@ -396,9 +384,6 @@ data:extend(
       type = "item-group",
       name = "angels-void",
       order = "la[angels]-z[void]-a",
-      inventory_order = "la[angels]-z[void]-a",
-      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
