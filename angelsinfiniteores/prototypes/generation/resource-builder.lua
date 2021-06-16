@@ -1054,7 +1054,7 @@ if not angelsmods.functions.make_resource then
         ret_table.normal = input.normal
         ret_table.maximum = input.maximum
         ret_table.minable = {
-          hardness = input.hardness,
+          --hardness = input.hardness,
           mining_particle = input.particle,
           mining_time = input.mining_time,
           fluid_amount = input.acid_amount,

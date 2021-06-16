@@ -19,7 +19,7 @@ data:extend(
       icon = "__angelsaddons-liquidrobot__/graphics/icons/bot-ico.png",
       icon_size = 32,
       flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
-      minable = {hardness = 0.1, mining_time = 0.1, result = "empty-liquid-bot"},
+      minable = {mining_time = 0.1, result = "empty-liquid-bot"},
       max_health = 100,
       collision_box = {{0, 0}, {0, 0}},
       selection_box = {{-0.5, -1.5}, {0.5, -0.5}},

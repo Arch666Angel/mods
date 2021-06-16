@@ -23,7 +23,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/charging-station-icon.png",
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-charging-station"},
+      minable = {mining_time = 0.5, result = "angels-charging-station"},
       fast_replaceable_group = "roboport",
       max_health = 500,
       corpse = "small-remnants",
@@ -74,13 +74,13 @@ data:extend(
         height = 1,
         frame_count = 1
       },
-      door_animation =
+      --[[door_animation =
       {
         filename = "__angelsindustries__/graphics/entity/empty.png",
         width = 1,
         height = 1,
         frame_count = 1
-      },
+      },]]
       door_animation_up =
       {
         filename = "__angelsindustries__/graphics/entity/empty.png",
