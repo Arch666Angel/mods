@@ -128,7 +128,7 @@ data:extend(
       attack_parameters =
       {
         type = "beam",
-        cooldown = 40,
+        cooldown = 60, -- in ticks
         range = 60,
         --turn_range = 0.5, -- 180°
         source_direction_count = 64,
@@ -146,7 +146,7 @@ data:extend(
               type = "beam",
               beam = "gathering-turret-beam",
               max_length = 60,
-              duration = 40,
+              duration = 60,
               source_offset = angelsmods.functions.create_gathering_turret_beam_source_offset{offset = {0, -1.31439 }, shift = {0, -0.46}, scale = 0.78},
             }
           }
@@ -180,7 +180,7 @@ data:extend(
           {
             {
               type = "damage",
-              damage = { amount = 1.5 * 2, type = "gathering"}
+              damage = { amount = 2, type = "gathering"}
             }
           }
         }

@@ -50,7 +50,7 @@ function gathering_turret:init_force_data(force_name)
   global.GT_data.force_data[force_name] = 
   {
     ["turret_range"] = 60, -- the actual gathering range of the turret
-    ["turret_speed"] = 1.5 * 2, -- the actual gathering speed (tiles/s) of this turret
+    ["turret_speed"] = 2, -- the actual gathering speed (tiles/s) of this turret
     ["turret_whitelist"] =  -- the list of items whitelisted to be collected
     {
       ["small-alien-artifact"] = true,
@@ -96,8 +96,7 @@ function gathering_turret:save_new_turret(turret_entity)
     ["target_data"] = { -- the active target of the turret
       item_name = nil, -- name of the item being gathered
       position = nil, -- position of the item being gathered
-      gathering_starting_tick = nil, -- when the gathering procedure started
-      gathering_finishing_tick = nil, -- when the gathering procedure will be finished (in tick)
+      gathering_distance_remaining = nil, -- when the gathering procedure will be finished (in tick)
     },
 
     ["prev_active_turret"] = nil, -- the previous active turret (only if this turret is active, nil otherwise)
@@ -302,7 +301,6 @@ function gathering_turret:update_next_turret()
 end
 
 function gathering_turret:update_searching_turret(turret_data)
-  
   -- The turret is searching for something to gather, see if it can gather something
   local turret_entity = turret_data["entity"]
   local turret_force_name = turret_entity.force.name
@@ -318,9 +316,7 @@ function gathering_turret:update_searching_turret(turret_data)
   turret_data["target_data"] = { -- the active target of the turret
     item_name = turret_target.stack.name,
     position = turret_target.position,
-    gathering_starting_tick = game.tick,
-    --gathering_finishing_tick = game.tick + 60 * self:calculate_distance(turret_target.position, turret_entity.position) / self:get_gathering_speed(turret_force_name),
-    gathering_finishing_tick = game.tick + 1, -- FAST DEBUG ONLY
+    gathering_distance_remaining = self:calculate_distance(turret_target.position, turret_entity.position),
   }
   local target_info =
   {
@@ -352,7 +348,7 @@ function gathering_turret:update_gathering_turret(turret_data)
   end
 
   -- make sure it is not overdue for the collecting of the loot
-  if game.tick >= turret_data["target_data"].gathering_finishing_tick then
+  if turret_data["target_data"].gathering_distance_remaining == 0 then
     turret_data["status"] = global.GT_data["turret_states"]["collecting"]
   end
 end
@@ -391,6 +387,29 @@ function gathering_turret:update_collecting_turret(turret_data)
   end
 end
 
+function gathering_turret:update_gathering_target(turret_surface_index, turret_position)
+  -- This function updates a single turret target. It is up to the caller to make sure
+  -- this function is called only when a gathering cycle has passed.
+
+  -- STEP 1: make sure this turret is still valid for gathering
+  if not global.GT_data["turrets"][turret_surface_index] then return end
+  if not global.GT_data["turrets"][turret_surface_index][turret_position.y] then return end
+
+  local turret_data = global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
+  if not turret_data then return end
+  if turret_data["status"] ~= global.GT_data["turret_states"]["gathering"] then return end
+
+  -- STEP 2: update the turret target
+  local gathering_speed = self:get_gathering_speed(turret_data["entity"].force.name)
+  if turret_data["target_data"].gathering_distance_remaining <= gathering_speed then
+    turret_data["target_data"].gathering_distance_remaining = 0
+  else
+    turret_data["target_data"].gathering_distance_remaining = turret_data["target_data"].gathering_distance_remaining - gathering_speed
+  end
+  game.print("remaining distance: "..turret_data["target_data"].gathering_distance_remaining)
+end
+
+
 
 
 -------------------------------------------------------------------------------
@@ -425,6 +444,10 @@ function gathering_turret:get_whitelisted_gathering_items(force_name)
     self:init_force_data(force_name)
   end
   return global.GT_data.force_data[force_name]["turret_whitelist"]
+end
+
+function gathering_turret:is_gathering_target(target_name)
+  return string.match(target_name, "gathering%-turret%-target%[.+%]") == target_name
 end
 
 function gathering_turret:get_gathering_radius(force_name)
@@ -498,11 +521,15 @@ function gathering_turret:on_remove_entity(removed_entity)
   end
 end
 
-function gathering_turret:on_damaged_entity(damaged_entity, final_health)
-  if final_health == 0 and
-     damaged_entity and damaged_entity.name == self:get_turret_name() and damaged_entity.active == false
-  then
+function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity)
+  -- Event filter 1: damage to (inactive) gathering turret with 0 health remaining
+  if damaged_entity.name == self:get_turret_name() and damaged_entity.active == false then
     damaged_entity.active = true
+
+  -- Event filter 2: gathering damage to a potential gathering target
+  elseif self:is_gathering_target(damaged_entity.name) and
+         damaging_entity and damaging_entity.name == self:get_turret_name() then
+    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position)
   end
 end
 
