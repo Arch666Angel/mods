@@ -41,7 +41,18 @@ function gathering_turret:init_prototype_data()
   return
   {
     ["gathering_turret_name" ] = "gathering-turret", -- the actual turret
+    ["gathering_turret_range"] = 60, -- the max range of the turret (defined in prototype)
     ["gathering_turret_chest"] = "gathering-turret-base", -- the chest storing the loot
+    ["gathering_items"] = -- a complete list of possible items to loot and the technology name to unlock it
+    { -- technology "angels-void" unlocks the technology from the start
+      ["small-alien-artifact"] = "angels-void",
+      ["small-alien-artifact-green"] = "angels-void",
+      ["small-alien-artifact-purple"] = "angels-void",
+      ["small-alien-artifact-blue"] = "angels-void",
+      ["small-alien-artifact-orange"] = "angels-void",
+      ["small-alien-artifact-yellow"] = "angels-void",
+      ["small-alien-artifact-red"] = "angels-void",
+    }
   }
 end
 
@@ -406,9 +417,33 @@ function gathering_turret:update_gathering_target(turret_surface_index, turret_p
   else
     turret_data["target_data"].gathering_distance_remaining = turret_data["target_data"].gathering_distance_remaining - gathering_speed
   end
-  game.print("remaining distance: "..turret_data["target_data"].gathering_distance_remaining)
 end
 
+function gathering_turret:process_dropped_loot(loot_surface, loot_position, loot_content)
+  -- This function will attempt to activate all turrets in range of loot
+
+  -- STEP 1: make sure that at least some of the loot can be gathered
+  local can_be_gathered = false
+  local whitelisted_items = self:get_whitelisted_gathering_items()
+  for loot_name, loot_amount in pairs(loot_content) do
+    if whitelisted_items[loot_name] then
+      can_be_gathered = true
+      break
+    end
+  end
+  if not can_be_gathered then return end
+
+  -- STEP 2: find all gathering turrets in range to activate
+  local turrets = loot_surface.find_entities_filtered{
+    name = self:get_turret_name(),
+    position = loot_position,
+    radius = self:get_gathering_radius(),
+  }
+  local surface_index = loot_surface.index
+  for _, turret_entity in pairs(turrets) do
+    self:activate_turret(surface_index, turret_entity.position)
+  end
+end
 
 
 
@@ -440,10 +475,14 @@ function gathering_turret:get_hidden_entity_data(turret_position)
 end
 
 function gathering_turret:get_whitelisted_gathering_items(force_name)
-  if not global.GT_data.force_data[force_name] then
-    self:init_force_data(force_name)
+  if force_name then
+    if not global.GT_data.force_data[force_name] then
+      self:init_force_data(force_name)
+    end
+    return global.GT_data.force_data[force_name]["turret_whitelist"]
+  else -- if no force name is provided, return all possible items
+    return global.GT_data.prototype_data.gathering_items
   end
-  return global.GT_data.force_data[force_name]["turret_whitelist"]
 end
 
 function gathering_turret:is_gathering_target(target_name)
@@ -451,10 +490,14 @@ function gathering_turret:is_gathering_target(target_name)
 end
 
 function gathering_turret:get_gathering_radius(force_name)
-  if not global.GT_data.force_data[force_name] then
-    self:init_force_data(force_name)
+  if force_name then
+    if not global.GT_data.force_data[force_name] then
+      self:init_force_data(force_name)
+    end
+    return global.GT_data.force_data[force_name]["turret_range"]
+  else -- if no force name is provided, return the max possible range
+    return global.GT_data.prototype_data.gathering_turret_range
   end
-  return global.GT_data.force_data[force_name]["turret_range"]
 end
 
 function gathering_turret:get_gathering_speed(force_name)
@@ -465,6 +508,7 @@ function gathering_turret:get_gathering_speed(force_name)
 end
 
 function gathering_turret:calculate_distance(pos1, pos2)
+  --if true then return 0 end -- QUICK DEBUG ONLY !!!
   local x = (pos1.x) - (pos2.x)
   local y = (pos1.y) - (pos2.y)
   return math.sqrt(x * x + y * y)
@@ -512,6 +556,21 @@ end
 function gathering_turret:on_build_entity(created_entity)
   if created_entity and created_entity.valid and created_entity.name == self:get_turret_name() then
     self:save_new_turret(created_entity)
+  end
+end
+
+function gathering_turret:on_entity_died(removed_entity, loot_inventory)
+  if not removed_entity then return end
+  
+  -- Event filter 1: gathering turret dies
+  if removed_entity.name == self:get_turret_name() then
+    self:remove_saved_turret(removed_entity)
+
+  -- Event filter 2: biter/spitter dies
+  --         +
+  -- Event filter 3: spawner dies
+  elseif not loot_inventory.is_empty() then
+    self:process_dropped_loot(removed_entity.surface, removed_entity.position, loot_inventory.get_contents())
   end
 end
 
