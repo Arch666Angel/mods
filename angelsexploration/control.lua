@@ -40,10 +40,6 @@ script.on_event(defines.events.on_entity_died, function(event)
 end, {
   -- Event raise filter 1: gathering turret dies
   {mode = "or", filter = "name", name = "gathering-turret"},
-  -- Event raise filter 2: biter/spitter dies
-  {mode = "or", filter = "type", type = "unit"},
-  -- Event raise filter 3: spawner dies
-  {mode = "or", filter = "type", type = "unit-spawner"},
 })
 script.on_event(defines.events.on_player_mined_entity, function(event)
   gathering_turret:on_remove_entity(event.entity)
@@ -55,3 +51,9 @@ script.on_event(defines.events.script_raised_destroy, function(event)
   gathering_turret:on_remove_entity(event.entity)
 end)
 
+-- custom script events
+script.on_event(defines.events.on_script_trigger_effect, function(event)
+  if event.effect_id == "gathering_turret_start_collecting_trigger" then
+    gathering_turret:on_loot_dropped(event.surface_index, event.target_position or (event.target_entity and event.target_entity.position) or nil)
+  end
+end)

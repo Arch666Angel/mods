@@ -130,8 +130,8 @@ function angelsmods.functions.create_gathering_turret_target(item_name)
           { type = "bio"       , percent = 100 },
           { type = "gathering" , percent = 100 },
           -- bobs
-          { type = "bob-pierce", percent = 100 },
-          { type = "plasma"    , percent = 100 },
+          --{ type = "bob-pierce", percent = 100 },
+          --{ type = "plasma"    , percent = 100 },
         }
       }
     }
@@ -737,4 +737,34 @@ end
 
 function angelsmods.functions.create_gathering_turret_beam_source_offset(inputs)
   return modify_shift(inputs.offset, inputs.scale, inputs.shift)
+end
+
+function angelsmods.functions.create_gathering_turret_start_trigger(inputs)
+  return
+  {
+    type = "nested-result",
+    action =
+    {
+      type = "area",
+      radius = inputs.range,
+      show_in_tooltip = false,
+      trigger_target_mask = {"gathering_turret_start_collecting_trigger"},
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          type = "script",
+          effect_id = "gathering_turret_start_collecting_trigger"
+        }
+      }
+    },
+  }
+end
+
+function angelsmods.functions.add_gathering_turret_start_trigger(inputs)
+  local unit = data.raw[inputs.type or "unit"][inputs.name]
+  if not unit then return end
+
+  unit.dying_trigger_effect = angelsmods.functions.create_gathering_turret_start_trigger(inputs)
 end

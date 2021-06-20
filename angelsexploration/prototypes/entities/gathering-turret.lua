@@ -18,6 +18,10 @@ data:extend(
       stack_size = 50
     },
     {
+      type = "trigger-target-type",
+      name = "gathering_turret_start_collecting_trigger"
+    },
+    {
       type = "container",
       name = "gathering-turret-base",
 
@@ -51,6 +55,12 @@ data:extend(
         offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}},
         offsets = {{0, 1}},
         damage_type_filters = "fire"
+      },
+      trigger_target_mask =
+      {
+        "common",
+        "ground-unit",
+        "gathering_turret_start_collecting_trigger"
       },
       
       open_sound = sounds.machine_open,
@@ -204,3 +214,13 @@ data:extend(
     }
   }
 )
+
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "small-biter"}
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "medium-biter"}
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "big-biter"}
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "behemoth-biter"}
+
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "small-spitter"}
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "medium-spitter"}
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "big-spitter"}
+angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "behemoth-spitter"}

@@ -419,32 +419,6 @@ function gathering_turret:update_gathering_target(turret_surface_index, turret_p
   end
 end
 
-function gathering_turret:process_dropped_loot(loot_surface, loot_position, loot_content)
-  -- This function will attempt to activate all turrets in range of loot
-
-  -- STEP 1: make sure that at least some of the loot can be gathered
-  local can_be_gathered = false
-  local whitelisted_items = self:get_whitelisted_gathering_items()
-  for loot_name, loot_amount in pairs(loot_content) do
-    if whitelisted_items[loot_name] then
-      can_be_gathered = true
-      break
-    end
-  end
-  if not can_be_gathered then return end
-
-  -- STEP 2: find all gathering turrets in range to activate
-  local turrets = loot_surface.find_entities_filtered{
-    name = self:get_turret_name(),
-    position = loot_position,
-    radius = self:get_gathering_radius(),
-  }
-  local surface_index = loot_surface.index
-  for _, turret_entity in pairs(turrets) do
-    self:activate_turret(surface_index, turret_entity.position)
-  end
-end
-
 
 
 -------------------------------------------------------------------------------
@@ -565,12 +539,6 @@ function gathering_turret:on_entity_died(removed_entity, loot_inventory)
   -- Event filter 1: gathering turret dies
   if removed_entity.name == self:get_turret_name() then
     self:remove_saved_turret(removed_entity)
-
-  -- Event filter 2: biter/spitter dies
-  --         +
-  -- Event filter 3: spawner dies
-  elseif not loot_inventory.is_empty() then
-    self:process_dropped_loot(removed_entity.surface, removed_entity.position, loot_inventory.get_contents())
   end
 end
 
@@ -591,6 +559,12 @@ function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity)
     self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position)
   end
 end
+
+function gathering_turret:on_loot_dropped(surface_index, position)
+  if not position then return end
+  self:activate_turret(surface_index, position)
+end
+
 
 function gathering_turret:on_tick_update()
   -- TODO: for now we call this once every tick, this can be a runtime setting
