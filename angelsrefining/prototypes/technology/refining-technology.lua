@@ -353,6 +353,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-chunk-mix6-processing"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angelsore-chunk-mix7-processing"
         }
       },
       unit = {

@@ -667,6 +667,7 @@ OV.patch_recipes(
         special_vanilla and {type = "item", name = "copper-ore", amount = 3} or {type = "item", name = "nickel-ore", amount = 4},
         {type = "item", name = "bauxite-ore", amount = 4},
         {type = "item", name = "zinc-ore", amount = 4},
+        {type = "item", name = "silver-ore", amount = 4},
         {type = "item", name = "fluorite-ore", amount = 2},
         "unused"
       },
@@ -697,9 +698,13 @@ OV.patch_recipes(
         },
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("silver-ore", 0.5, {10, 10})
+        },
+        --[[6]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
         },
-        --[[6]] nil
+        --[[7]] nil,
       },
       {
         special_vanilla and {
@@ -713,6 +718,7 @@ OV.patch_recipes(
         nil,
         nil,
         nil,
+        nil,
         nil
       }
     ),
@@ -723,7 +729,7 @@ OV.patch_recipes(
         special_vanilla and {type = "item", name = "uranium-ore", amount = 3} or {type = "item", name = "rutile-ore", amount = 6},
         {type = "item", name = "gold-ore", amount = 6},
         {type = "item", name = "cobalt-ore", amount = 6},
-        {type = "item", name = "silver-ore", amount = 6},
+        "unused",
         {type = "item", name = "uranium-ore", amount = special_vanilla and 0 or 3},
         {type = "item", name = "thorium-ore", amount = 3}
       },
@@ -750,10 +756,7 @@ OV.patch_recipes(
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("cobalt-ore", 0.5, {10, 10})
         },
-        --[[4]] {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("silver-ore", 0.5, {10, 10})
-        },
+        --[[4]] nil,
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})

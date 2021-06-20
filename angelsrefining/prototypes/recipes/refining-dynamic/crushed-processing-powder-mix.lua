@@ -5,7 +5,7 @@ data:extend(
     --TIER 1 MIX
     {
       type = "recipe",
-      name = "angelsore-crushed-mix1-processing",
+      name = "angelsore-crushed-mix1-processing", --iron
       category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -36,7 +36,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-crushed-mix2-processing",
+      name = "angelsore-crushed-mix2-processing", --copper
       category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -67,7 +67,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-crushed-mix3-processing",
+      name = "angelsore-crushed-mix3-processing", --lead
       category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -98,7 +98,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-crushed-mix4-processing",
+      name = "angelsore-crushed-mix4-processing", --tin
       category = "ore-sorting-2",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
