@@ -115,6 +115,7 @@ if angelsmods.industries.tech then
   --REFINING
   pack_replace("water-treatment-3", "green", "orange")
   pack_replace("ore-leaching", "blue", "orange")
+  OV.remove_prereq("ore-leaching", "tech-blue-packs")
   pack_replace("geode-processing-2", "green", "orange")
   pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
