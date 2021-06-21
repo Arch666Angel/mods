@@ -667,7 +667,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-leaching",
-        "advanced-ore-refining-2"
+        "advanced-ore-refining-2",
+        "geode-processing-3"
       },
       effects = {
         {
@@ -701,10 +702,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-crystal-mix5-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalysator-orange"
         }
       },
       unit = {
@@ -737,6 +734,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-conversion-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalysator-orange"
         }
       },
       unit = {
