@@ -592,7 +592,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-floatation",
-        "advanced-electronics"
+        "advanced-electronics",
+        "chemical-science-pack"
       },
       effects = {
         {

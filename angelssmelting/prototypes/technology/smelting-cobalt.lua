@@ -49,8 +49,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "ore-processing-2",
+        --"angels-metallurgy-4",
+        "ore-processing-3",
         "angels-cobalt-smelting-1",
         "water-washing-1"
       },

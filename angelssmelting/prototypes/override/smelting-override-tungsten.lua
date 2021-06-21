@@ -98,6 +98,12 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
   if mods['bobplates'] then
     angelsmods.functions.move_item("copper-tungsten-alloy", "angels-tungsten-casting", "l")
   end
+
+  if mods["angelsindustries"] and angelsmods.industries.tech then
+  else -- not angels industry tech mode
+    OV.remove_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-2")
+    OV.add_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-1")
+  end
 else
   angelsmods.functions.add_flag("casting-powder-tungsten", "hidden")
   angelsmods.functions.add_flag("angels-plate-tungsten", "hidden")

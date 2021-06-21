@@ -10,7 +10,7 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "ore-leaching",
-        "angels-metallurgy-2",
+        "angels-metallurgy-3",
         "chlorine-processing-1"
       },
       effects = {
@@ -49,8 +49,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "ore-processing-2",
+        --"angels-metallurgy-4",
+        "ore-processing-3",
         "angels-gold-smelting-1",
         "angels-nitrogen-processing-2"
       },
@@ -95,8 +95,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-4",
-        "strand-casting-2",
+        --"angels-metallurgy-4",
+        "strand-casting-3",
         "angels-gold-smelting-1",
         "angels-copper-casting-2",
       },
@@ -137,8 +137,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-5",
-        "ore-processing-3",
+        --"angels-metallurgy-5",
+        "ore-processing-4",
         "angels-gold-smelting-2",
         "sodium-processing"
       },
@@ -176,8 +176,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       upgrade = true,
       prerequisites = {
-        "angels-metallurgy-5",
-        "strand-casting-3",
+        --"angels-metallurgy-5",
+        "strand-casting-4",
         "angels-gold-casting-2"
       },
       effects = {

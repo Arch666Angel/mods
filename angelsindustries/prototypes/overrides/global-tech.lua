@@ -77,6 +77,7 @@ if angelsmods.industries.tech then
   tech_unlock_reset()
   OV.execute()
 end
+log(serpent.block(data.raw.technology["angels-metallurgy-4"]))
 
 -------------------------------------------------------------------------------
 -- SCIENCE DATACORES ----------------------------------------------------------
@@ -117,6 +118,7 @@ if angelsmods.industries.tech then
   core_tier_upgrade()
   OV.execute()
 end
+log(serpent.block(data.raw.technology["angels-metallurgy-4"]))
 
 -------------------------------------------------------------------------------
 -- CLEAN UP THE TECH TREE -----------------------------------------------------
