@@ -268,25 +268,7 @@ data:extend(
     fuel_value = "3MJ",
     stack_size = 200
   },
-  --SALTS
-  {
-    type = "item",
-    name = "solid-salt",
-    icon = "__angelspetrochem__/graphics/icons/solid-salt.png",
-    icon_size = 32,
-    subgroup = "water-salination",
-    order = "a",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "solid-lithium",
-    icon = "__angelspetrochem__/graphics/icons/solid-lithium.png",
-    icon_size = 32,
-    subgroup = "water-salination",
-    order = "a",
-    stack_size = 200
-  },
+  --SALTS --solid-salt and lithia-salt moved to refining's water treatment items
   {
     type = "item",
     name = "solid-ammonium-nitrate",

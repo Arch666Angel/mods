@@ -8,7 +8,7 @@ if angelsmods.industries.tech then
       OV.disable_recipe("lab")
       OV.disable_technology("lab")
       OV.global_replace_item("lab", "angels-basic-lab-2")
-      angelsmods.functions.add_flag("lab", "hide-from-bonus-gui")
+      angelsmods.functions.add_flag("lab", "hidden")
 
     -- Allow steam science in basic lab
       local lab = data.raw.lab["angels-basic-lab"]
