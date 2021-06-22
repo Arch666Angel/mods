@@ -128,7 +128,6 @@ if angelsmods.industries.tech then
   pack_replace("angels-titanium-smelting-1", "blue", "orange")
   pack_replace("angels-aluminium-smelting-2", "blue", "orange")
   pack_replace("angels-cobalt-smelting-1", "blue", "orange")
-  pack_replace("angels-cobalt-smelting-2", "blue", "orange")
   pack_replace("angels-glass-smelting-2", "blue", "orange")
   pack_replace("angels-gold-smelting-1", "blue", "orange")
   pack_replace("angels-manganese-smelting-2", "blue", "orange")
@@ -187,6 +186,7 @@ if angelsmods.industries.tech then
   OV.remove_prereq("automation-3", "production-science-pack")
   -- SMELTING
   OV.remove_prereq("angels-metallurgy-4", "production-science-pack")
+  OV.remove_science_pack("angels-tungsten-smelting-2", "production-science-pack")
   -- INDUSTRIES
   pack_replace("tech-yellow-circuit", "yellow", "blue")
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")
@@ -214,8 +214,6 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
   -- REFINING
   pack_replace("advanced-ore-refining-4", "blue", "yellow")
-  -- SMELTING
-  pack_replace("angels-tungsten-smelting-2", "blue", "yellow")
   -- BIO PROCESSING
   pack_replace("angels-bio-yield-module-3", "blue", "yellow")
   -- ADDONS
