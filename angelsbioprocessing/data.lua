@@ -22,28 +22,32 @@ end
 
 angelsmods.triggers.bio_pastes = angelsmods.triggers.bio_pastes or {}
 angelsmods.triggers.bio_pastes["cellulose"] = true -- required for petri dish
-if angelsmods.triggers.artifacts["red"] then
-  angelsmods.triggers.bio_pastes["copper"] = true
+
+if angelsmods.functions.is_special_vanilla() then
+else
+  if angelsmods.triggers.artifacts["red"] then
+    angelsmods.triggers.bio_pastes["copper"] = true
+  end
+  if angelsmods.triggers.artifacts["yellow"] then
+    angelsmods.triggers.bio_pastes["gold"] = true
+  end
+  if angelsmods.triggers.artifacts["orange"] then
+    angelsmods.triggers.bio_pastes["tungsten"] = true
+  end
+  if angelsmods.triggers.artifacts["blue"] then
+    angelsmods.triggers.bio_pastes["cobalt"] = true
+  end
+  if angelsmods.triggers.artifacts["purple"] then
+    angelsmods.triggers.bio_pastes["titanium"] = true
+  end
+  if angelsmods.triggers.artifacts["green"] then
+    angelsmods.triggers.bio_pastes["zinc"] = true
+  end
+  if angelsmods.triggers.artifacts["base"] then
+    angelsmods.triggers.bio_pastes["iron"] = true
+  end
+  --angelsmods.triggers.bio_pastes["silver"] = true --unused
 end
-if angelsmods.triggers.artifacts["yellow"] then
-  angelsmods.triggers.bio_pastes["gold"] = true
-end
-if angelsmods.triggers.artifacts["orange"] then
-  angelsmods.triggers.bio_pastes["tungsten"] = true
-end
-if angelsmods.triggers.artifacts["blue"] then
-  angelsmods.triggers.bio_pastes["cobalt"] = true
-end
-if angelsmods.triggers.artifacts["purple"] then
-  angelsmods.triggers.bio_pastes["titanium"] = true
-end
-if angelsmods.triggers.artifacts["green"] then
-  angelsmods.triggers.bio_pastes["zinc"] = true
-end
-if angelsmods.triggers.artifacts["base"] then
-  angelsmods.triggers.bio_pastes["iron"] = true
-end
---angelsmods.triggers.bio_pastes["silver"] = true --unused
 
 -- set triggers for other angel mods
 require("prototypes.bio-processing-triggers")

@@ -5,6 +5,7 @@ Date: ??
     - Added new graphics to the agricultural module technologies
   Bugfixes:
     - Fixed another crash related to opening another players inventory
+    - Fixed crash when bob plates is not active but bob enemies is
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.19
 Date: 31.05.2021
