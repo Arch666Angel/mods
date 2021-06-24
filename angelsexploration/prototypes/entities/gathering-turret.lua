@@ -1,29 +1,26 @@
 
 local sounds = require("__base__.prototypes.entity.sounds")
 
--- GATHERING TARGETS (can be added by other mods, this list can be extended)
-angelsmods.functions.create_gathering_turret_target("angels-void")
-
 -- GATHERING TURRET
 data:extend(
   {
     {
       type = "item",
-      name = "gathering-turret",
+      name = "angels-gathering-turret",
       icon = "__base__/graphics/icons/wooden-chest.png", -- temporary
       icon_size = 64, icon_mipmaps = 4, -- temporary
       subgroup = "angels-electric-a",
       order = "ba",
-      place_result = "gathering-turret",
+      place_result = "angels-gathering-turret",
       stack_size = 50
     },
     {
       type = "trigger-target-type",
-      name = "gathering_turret_start_collecting_trigger"
+      name = "angels_gathering_turret_start_collecting_trigger"
     },
     {
       type = "container",
-      name = "gathering-turret-base",
+      name = "angels-gathering-turret-base",
 
       icon = "__base__/graphics/icons/wooden-chest.png", -- temporary
       icon_size = 64, icon_mipmaps = 4, -- temporary
@@ -40,7 +37,7 @@ data:extend(
         "not-deconstructable",
         "not-repairable"
       },
-      minable = {mining_time = 0.1, result = "gathering-turret"},
+      minable = {mining_time = 0.1, result = "angels-gathering-turret"},
       max_health = 1000,
       
       collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
@@ -60,7 +57,7 @@ data:extend(
       {
         "common",
         "ground-unit",
-        "gathering_turret_start_collecting_trigger"
+        "angels_gathering_turret_start_collecting_trigger"
       },
       
       open_sound = sounds.machine_open,
@@ -78,13 +75,13 @@ data:extend(
     },
     {
       type = "electric-turret",
-      name = "gathering-turret",
+      name = "angels-gathering-turret",
 
       icon = "__base__/graphics/icons/laser-turret.png",
       icon_size = 64, icon_mipmaps = 4,
 
       flags = { "placeable-player", "placeable-enemy", "player-creation"},
-      minable = { mining_time = 0.5, result = "gathering-turret" },
+      minable = { mining_time = 0.5, result = "angels-gathering-turret" },
       max_health = 1000,
 
       collision_box = {{ -0.7, -0.7}, {0.7, 0.7}},
@@ -154,7 +151,7 @@ data:extend(
             action_delivery =
             {
               type = "beam",
-              beam = "gathering-turret-beam",
+              beam = "angels-gathering-turret-beam",
               max_length = 60,
               duration = 60,
               source_offset = angelsmods.functions.create_gathering_turret_beam_source_offset{offset = {0, -1.31439 }, shift = {0, -0.46}, scale = 0.78},
@@ -173,7 +170,7 @@ data:extend(
     },
     {
       type = "beam",
-      name = "gathering-turret-beam",
+      name = "angels-gathering-turret-beam",
       flags = {"not-on-map"},
       width = 0.5,
       damage_interval = 20,
@@ -215,6 +212,7 @@ data:extend(
   }
 )
 
+-- GATHERING TRIGGERS (can be added by other mods, this list can be extended)
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "small-biter"}
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "medium-biter"}
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "big-biter"}
@@ -224,3 +222,26 @@ angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "medium-spitter"}
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "big-spitter"}
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "behemoth-spitter"}
+
+-- GATHERING TARGETS (can be added by other mods, this list can be extended)
+if angelsmods.triggers.artifacts["base"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact"}
+end
+if angelsmods.triggers.artifacts["red"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-red"}
+end
+if angelsmods.triggers.artifacts["yellow"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-yellow"}
+end
+if angelsmods.triggers.artifacts["orange"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-orange"}
+end
+if angelsmods.triggers.artifacts["blue"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-blue"}
+end
+if angelsmods.triggers.artifacts["purple"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-purple"}
+end
+if angelsmods.triggers.artifacts["green"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-green"}
+end

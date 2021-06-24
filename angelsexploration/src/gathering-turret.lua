@@ -40,9 +40,9 @@ end
 function gathering_turret:init_prototype_data()
   return
   {
-    ["gathering_turret_name" ] = "gathering-turret", -- the actual turret
+    ["gathering_turret_name" ] = "angels-gathering-turret", -- the actual turret
     ["gathering_turret_range"] = 60, -- the max range of the turret (defined in prototype)
-    ["gathering_turret_chest"] = "gathering-turret-base", -- the chest storing the loot
+    ["gathering_turret_chest"] = "angels-gathering-turret-base", -- the chest storing the loot
     ["gathering_items"] = -- a complete list of possible items to loot and the technology name to unlock it
     { -- technology "angels-void" unlocks the technology from the start
       ["small-alien-artifact"] = "angels-void",
@@ -331,7 +331,7 @@ function gathering_turret:update_searching_turret(turret_data)
   }
   local target_info =
   {
-    name = "gathering-turret-target[" .. "angels-void" .. "]", -- TODO: convert to gathering item
+    name = "angels-gathering-turret-target[" .. turret_data["target_data"].item_name .. "]",
     position = turret_target.position,
     force = "enemy",
     create_build_effect_smoke = false,

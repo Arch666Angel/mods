@@ -32,112 +32,6 @@ function angelsmods.functions.merge_layers(first, second)
   return result
 end
 
-local function create_sprite_layer_from_icon_layer(icon_layer, layer_scale)
-  return {
-    filename = icon_layer.icon,
-    size = icon_layer.icon_size,
-    scale = (icon_layer.scale or 1) * layer_scale,
-    shift = icon_layer.shift,
-    tint = icon_layer.tint
-  }
-end
-
-local function create_sprite_from_icon_layers(icon_layers, icon_scale)
-  local sprite = { layers = {} }
-  for _, icon_layer in pairs(icon_layers) do
-    table.insert(sprite.layers, create_sprite_layer_from_icon_layer(icon_layer, icon_scale))
-  end
-  return sprite
-end
-
-function angelsmods.functions.create_gathering_turret_target(item_name)
-  local item_data = data.raw.item[item_name]
-  if not item_data then return end
-
-  data:extend(
-    {
-      {
-        type = "land-mine",
-        name = "gathering-turret-target[" .. item_name .. "]",
-
-        icons = angelsmods.functions.get_object_icons(item_name),
-
-        order = item_data.order or "zzz",
-        subgroup = item_data.subgroup or "unknown",
-
-        flags =
-        {
-          "placeable-player",
-          "placeable-enemy",
-          "player-creation",
-          "placeable-off-grid",
-          "not-on-map"
-        },
-
-        minable = { mining_time = 0.025, result = "angels-void" },
-        max_health = 1,
-      
-        --corpse = "land-mine-remnants",
-        --dying_explosion = "land-mine-explosion",
-        create_ghost_on_death = false,
-
-        collision_box = {{-0.14, -0.14}, {0.14, 0.14}},
-        selection_box = {{-0.17, -0.17}, {0.17, 0.17}},
-        hit_visualization_box = {{-0.15, -0.15 }, {0.15, 0.15}},
-
-        damaged_trigger_effect = nil,
-
-        open_sound = sounds.machine_open,
-        close_sound = sounds.machine_close,
-
-        picture_safe      = create_sprite_from_icon_layers(angelsmods.functions.get_object_icons(item_name), 0.5),
-        picture_set       = create_sprite_from_icon_layers(angelsmods.functions.get_object_icons(item_name), 0.5),
-        picture_set_enemy = create_sprite_from_icon_layers(angelsmods.functions.get_object_icons(item_name), 0.5),
-
-        timeout = 0, -- time between placing and the landmine being armed (in ticks)
-        trigger_radius = 1.5,
-        ammo_category = "landmine",
-        action =
-        {
-          type = "direct",
-          action_delivery =
-          {
-            type = "instant",
-            target_effects =
-            {
-              {
-                type = "insert-item",
-                item = item_name,
-                count = 1,
-              },
-            }
-          }
-        },
-
-        hide_resistances = true,
-        resistances = 
-        {
-          -- base game
-          { type = "acid"      , percent = 100 },
-          { type = "electric"  , percent = 100 },
-          { type = "explosion" , percent = 100 },
-          { type = "fire"      , percent = 100 },
-          { type = "impact"    , percent = 100 },
-          { type = "laser"     , percent = 100 },
-          { type = "physical"  , percent = 100 },
-          { type = "poison"    , percent = 100 },
-          -- angels
-          { type = "bio"       , percent = 100 },
-          { type = "gathering" , percent = 100 },
-          -- bobs
-          --{ type = "bob-pierce", percent = 100 },
-          --{ type = "plasma"    , percent = 100 },
-        }
-      }
-    }
-  )
-end
-
 function angelsmods.functions.create_gathering_turret_base(inputs)
   inputs = inputs or {}
   if inputs.type and type(inputs.type) == "table" then
@@ -748,14 +642,14 @@ function angelsmods.functions.create_gathering_turret_start_trigger(inputs)
       type = "area",
       radius = inputs.range,
       show_in_tooltip = false,
-      trigger_target_mask = {"gathering_turret_start_collecting_trigger"},
+      trigger_target_mask = {"angels_gathering_turret_start_collecting_trigger"},
       action_delivery =
       {
         type = "instant",
         target_effects =
         {
           type = "script",
-          effect_id = "gathering_turret_start_collecting_trigger"
+          effect_id = "angels_gathering_turret_start_collecting_trigger"
         }
       }
     },
@@ -767,4 +661,110 @@ function angelsmods.functions.add_gathering_turret_start_trigger(inputs)
   if not unit then return end
 
   unit.dying_trigger_effect = angelsmods.functions.create_gathering_turret_start_trigger(inputs)
+end
+
+local function create_sprite_layer_from_icon_layer(icon_layer, layer_scale)
+  return {
+    filename = icon_layer.icon,
+    size = icon_layer.icon_size,
+    scale = (icon_layer.scale or 1) * layer_scale,
+    shift = icon_layer.shift,
+    tint = icon_layer.tint
+  }
+end
+
+local function create_sprite_from_icon_layers(icon_layers, icon_scale)
+  local sprite = { layers = {} }
+  for _, icon_layer in pairs(icon_layers) do
+    table.insert(sprite.layers, create_sprite_layer_from_icon_layer(icon_layer, icon_scale))
+  end
+  return sprite
+end
+
+function angelsmods.functions.create_gathering_turret_target(inputs)
+  local item_data = data.raw.item[inputs.name]
+  if not item_data then return end
+
+  data:extend(
+    {
+      {
+        type = "land-mine",
+        name = "angels-gathering-turret-target[" .. inputs.name .. "]",
+
+        icons = angelsmods.functions.get_object_icons(inputs.name),
+
+        order = item_data.order or "zzz",
+        subgroup = item_data.subgroup or "unknown",
+
+        flags =
+        {
+          "placeable-player",
+          "placeable-enemy",
+          "player-creation",
+          "placeable-off-grid",
+          "not-on-map"
+        },
+
+        minable = { mining_time = 0.025, result = inputs.name },
+        max_health = 1,
+      
+        --corpse = "land-mine-remnants",
+        --dying_explosion = "land-mine-explosion",
+        create_ghost_on_death = false,
+
+        collision_box = {{-0.14, -0.14}, {0.14, 0.14}},
+        selection_box = {{-0.17, -0.17}, {0.17, 0.17}},
+        hit_visualization_box = {{-0.15, -0.15 }, {0.15, 0.15}},
+
+        damaged_trigger_effect = nil,
+
+        open_sound = sounds.machine_open,
+        close_sound = sounds.machine_close,
+
+        picture_safe      = create_sprite_from_icon_layers(angelsmods.functions.get_object_icons(inputs.name), 0.5),
+        picture_set       = create_sprite_from_icon_layers(angelsmods.functions.get_object_icons(inputs.name), 0.5),
+        picture_set_enemy = create_sprite_from_icon_layers(angelsmods.functions.get_object_icons(inputs.name), 0.5),
+
+        timeout = 0, -- time between placing and the landmine being armed (in ticks)
+        trigger_radius = 1.5,
+        ammo_category = "landmine",
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "instant",
+            target_effects =
+            {
+              {
+                type = "insert-item",
+                item = inputs.name,
+                count = 1,
+              },
+            }
+          }
+        },
+
+        hide_resistances = true,
+        resistances = 
+        {
+          -- base game
+          { type = "acid"      , percent = 100 },
+          { type = "electric"  , percent = 100 },
+          { type = "explosion" , percent = 100 },
+          { type = "fire"      , percent = 100 },
+          { type = "impact"    , percent = 100 },
+          { type = "laser"     , percent = 100 },
+          { type = "physical"  , percent = 100 },
+          { type = "poison"    , percent = 100 },
+          -- angels
+          { type = "bio"       , percent = 100 },
+          { type = "gathering" , percent = 100 },
+          -- bobs
+          --{ type = "bob-pierce", percent = 100 },
+          --{ type = "plasma"    , percent = 100 },
+        }
+      }
+    }
+  )
 end

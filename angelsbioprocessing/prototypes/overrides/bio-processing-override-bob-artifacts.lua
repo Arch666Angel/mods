@@ -531,7 +531,6 @@ if angelsmods.triggers.artifacts["base"] then -- pink
 end
 
 -------------------------------------------------------------------------------
-log(contais_artifacts)
 if contais_artifacts then
 else
   OV.disable_technology("bio-processing-alien-3")
