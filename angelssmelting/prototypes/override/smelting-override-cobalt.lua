@@ -38,9 +38,27 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     end
   end
   
-  if mods["angelsindustries"] and angelsmods.industries.components then
+  if (mods["angelsindustries"] and angelsmods.industries.components) or mods["bobplates"] then
   else
     OV.disable_recipe({"cobalt-ore-processing-alt"})
+    OV.patch_recipes(
+      {
+        {
+          name = "processed-cobalt-smelting",
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+            1, angelsmods.smelting.number_tint),
+        },
+        {
+          name = "solid-cobalt-hydroxide-smelting",
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+            2, angelsmods.smelting.number_tint),
+        },
+      }
+    )
+    OV.remove_prereq("angels-cobalt-smelting-1", "water-washing-1")
+    OV.add_prereq("angels-cobalt-smelting-2", "water-washing-1")
   end
 else
   angelsmods.functions.add_flag("processed-cobalt", "hidden")

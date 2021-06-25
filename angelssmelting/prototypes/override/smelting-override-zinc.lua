@@ -34,6 +34,14 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
   if mods["angelsindustries"] and angelsmods.industries.components then
   else
     OV.disable_recipe({"zinc-ore-processing-alt"})
+    OV.patch_recipes(
+      {
+        {
+          name = "pellet-zinc-smelting",
+          icons = angelsmods.functions.get_object_icons("solid-zinc-oxide"),
+        }
+      }
+    )
   end
 else
   angelsmods.functions.add_flag("processed-zinc", "hidden")

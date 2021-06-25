@@ -4,6 +4,8 @@ Date: ??
   Bugfixes:
     - Fixed iron and copper ore could not be smelted to plates directly in special vanilla mode
     - Fixed iron casting prerequisites in special vanilla mode (614)
+    - Fixed tier numbers cobalt oxide recipes were misaligned in some configurations
+    - Fixed tier numbers on zinc oxide recipes were incorrect and obsolete in some configurations
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.16
 Date: 31.05.2021

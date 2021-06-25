@@ -11,7 +11,8 @@ data:extend(
       prerequisites = {
         "ore-leaching",
         "angels-metallurgy-3",
-        "angels-coal-processing"
+        "angels-coal-processing",
+        "water-washing-1"
       },
       effects = {
         {
@@ -51,8 +52,7 @@ data:extend(
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
-        "angels-cobalt-smelting-1",
-        "water-washing-1"
+        "angels-cobalt-smelting-1"
       },
       effects = {
         {
