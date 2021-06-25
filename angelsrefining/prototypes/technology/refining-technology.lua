@@ -592,6 +592,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-floatation",
+        "advanced-ore-refining-1",
         "advanced-electronics",
         "chemical-science-pack"
       },
@@ -759,6 +760,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-leaching",
+        "advanced-ore-refining-2",
         "advanced-electronics-2"
       },
       effects = {
@@ -962,6 +964,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-powderizer",
+        "advanced-ore-refining-2",
         "thermal-water-extraction-2"
       },
       effects = {
@@ -1012,6 +1015,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-advanced-floatation",
+        "advanced-ore-refining-3",
         "slag-processing-2"
       },
       effects = {
