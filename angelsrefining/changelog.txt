@@ -3,6 +3,8 @@ Version: 0.11.22
 Date: ##.##.2021
   Changes:
     - Activated lithium salination if playing component mode without bobs
+  Bugfixes:
+    - Fixed a bug in the migration script when train stations have an empty stop filter
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.21
 Date: 31.05.2021

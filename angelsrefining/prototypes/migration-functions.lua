@@ -123,7 +123,7 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         controlBehavior.stopped_train_signal = oldSignalID and {
           type = oldSignalID.type,
           name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"] or oldSignalID.name
-        } or nil
+        } or { type = signal_type }
       end
 
       -- decider combinator parameters
