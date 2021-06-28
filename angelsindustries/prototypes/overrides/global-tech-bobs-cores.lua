@@ -86,7 +86,8 @@ if angelsmods.industries.tech then
   -- BOBS CLASSES ---------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobclasses"] then
-    OV.set_science_pack("bodies", "datacore-enhance-2", 2)
+    --OV.set_science_pack("bodies", "datacore-enhance-2", 2)
+    core_replace("bodies","basic","enhance")
   end
 
   -------------------------------------------------------------------------------
@@ -148,8 +149,8 @@ if angelsmods.industries.tech then
     -- modular roboports
     core_replace("bob-robo-modular-1", "basic", "logistic")
     core_replace("bob-robo-modular-2", "basic", "logistic")
-    core_replace("bob-robo-modular-3", "processing", "logistic")
-    core_replace("bob-robo-modular-4", "processing", "logistic")
+    core_replace("bob-robo-modular-3", "basic", "logistic")
+    core_replace("bob-robo-modular-4", "basic", "logistic")
     -- repair packs
     core_replace("bob-repair-pack-2", "basic", "enhance")
     core_replace("bob-repair-pack-3", "basic", "enhance")

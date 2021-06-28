@@ -25,6 +25,7 @@ if angelsmods.industries.tech then
 
     pack_replace("tungsten-processing", "blue", "orange")
     pack_replace("ceramics", "blue", "orange")
+    pack_replace("cobalt-processing", "blue", "orange")
   end
 
   -------------------------------------------------------------------------------
@@ -95,6 +96,9 @@ if angelsmods.industries.tech then
       pack_replace("steel-axe-4", "blue", "orange")
       OV.remove_prereq("steel-axe-4", "tech-blue-packs")
     end
+    --mining drills
+    pack_replace("bob-drills-2", "blue", "orange")
+    pack_replace("bob-area-drills-2", "blue", "orange")
   end
 
   -------------------------------------------------------------------------------
@@ -113,8 +117,9 @@ if angelsmods.industries.tech then
     pack_replace("logistics-0", "red", "grey")
     pack_replace("logistics", "grey", "red")
     -- repair packs
-    pack_replace("bob-repair-pack-4", "green", "blue")
-    pack_replace("bob-repair-pack-5", "green", "yellow")
+    pack_replace("bob-repair-pack-3", "blue", "orange")
+    --pack_replace("bob-repair-pack-4", "green", "blue")
+    pack_replace("bob-repair-pack-5", "blue", "yellow")
     -- toolbelts
     pack_replace("toolbelt-2", "blue", "orange")
     OV.remove_prereq("toolbelt-2", "tech-blue-packs")
@@ -237,14 +242,15 @@ if angelsmods.industries.tech then
     --adds bob power stuffs
     -- steam power
     if settings.startup["bobmods-power-steam"].value == true then
-      pack_replace("bob-steam-engine-4", "blue", "orange")
+      pack_replace("bob-steam-engine-3", "blue", "orange")
       pack_replace("bob-boiler-4", "blue", "orange")
       pack_replace("bob-oil-boiler-3", "blue", "orange")
-      pack_replace("bob-steam-turbine-1", "green", "orange")
+      pack_replace("bob-steam-turbine-1", "blue", "orange")
       pack_replace("bob-heat-exchanger-2", "blue", "orange")
     end
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      pack_replace("fluid-generator-3", "blue", "orange")
+      pack_replace("fluid-generator-2", "blue", "orange")
+      pack_replace("fluid-generator-4", "blue", "yellow")
     end
     -- solar power
     if settings.startup["bobmods-power-solar"].value == true then

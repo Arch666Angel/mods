@@ -36,4 +36,13 @@ if mods["boblogistics"] then
       }
     )
   end
+  --repair pack techs
+  OV.set_science_pack(
+    {
+      "bob-repair-pack-3",
+      "bob-repair-pack-4",
+      "bob-repair-pack-5"
+    },
+    "chemical-science-pack", 1
+  )
 end

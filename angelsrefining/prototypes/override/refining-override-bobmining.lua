@@ -31,5 +31,13 @@ if mods["bobmining"] then
         "water-miner-5"
       }
     )
+
+    OV.set_science_pack(
+      {
+        "bob-drills-2",
+        "bob-area-drills-2",
+      },
+      "chemical-science-pack",1
+    )
   end
   
