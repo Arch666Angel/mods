@@ -24,6 +24,8 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     OV.global_replace_item("solid-cobalt-oxide", "cobalt-oxide")
     angelsmods.functions.add_flag("solid-cobalt-oxide", "hidden")
     OV.disable_recipe({ "cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
+    OV.remove_prereq({"battery-2","rtg"},"cobalt-processing") --based on the oxide not the plate
+    OV.add_prereq({"battery-2","rtg"},"angels-cobalt-smelting-1") --based on the oxide not the plate
   end
 
   if angelsmods.trigger.smelting_products["cobalt"].plate then
@@ -89,6 +91,7 @@ else
   angelsmods.functions.add_flag("angels-roll-cobalt", "hidden")
   OV.disable_recipe({"roll-cobalt-casting", "roll-cobalt-casting-fast"})
   OV.disable_recipe({"angels-plate-cobalt", "angels-roll-cobalt-converting"})
+  angelsmods.functions.add_flag("cobalt-plate", "hidden")
 end
 
 -------------------------------------------------------------------------------

@@ -5,8 +5,10 @@ Date: ##.##.2021
     - Rebalanced the ores and corresponding mixed sorting recipes (THIS WILL BREAK EXISTING BASES)
     - Hybrid catalyst now requires crystalizer mk2
     - Activated lithium salination if playing component mode without bobs
+    - Recipe tweaks to several of bobs entities to reduce cobalt usage (you will understand)
   Bugfixes:
     - Fixed multiple missing prerequisites on higher tiers of ore sorting facility technologies
+    - Properly hid some more items
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.21
 Date: 31.05.2021
