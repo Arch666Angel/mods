@@ -52,7 +52,7 @@ function gathering_turret:init_prototype_data()
       ["small-alien-artifact-orange"] = "angels-void",
       ["small-alien-artifact-yellow"] = "angels-void",
       ["small-alien-artifact-red"] = "angels-void",
-    }
+    },
   }
 end
 
@@ -74,6 +74,8 @@ function gathering_turret:init_force_data(force_name)
     },
   }
 end
+
+
 
 -------------------------------------------------------------------------------
 -- Setter functions to alter data into the data structure
@@ -573,6 +575,8 @@ function gathering_turret:on_tick_update()
     self:update_next_turret()
   end
 end
+
+
 
 -- Return class ---------------------------------------------------------------
 return gathering_turret

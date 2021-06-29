@@ -657,10 +657,22 @@ function angelsmods.functions.create_gathering_turret_start_trigger(inputs)
 end
 
 function angelsmods.functions.add_gathering_turret_start_trigger(inputs)
+  if not data.raw[inputs.type or "unit"] then return end
   local unit = data.raw[inputs.type or "unit"][inputs.name]
   if not unit then return end
 
-  unit.dying_trigger_effect = angelsmods.functions.create_gathering_turret_start_trigger(inputs)
+  if unit.dying_trigger_effect then
+    if unit.dying_trigger_effect.type then -- single existing effect
+      unit.dying_trigger_effect = {
+        util.table.deepcopy(unit.dying_trigger_effect),
+        angelsmods.functions.create_gathering_turret_start_trigger(inputs)
+      }
+    else -- table of existing effects
+      table.insert(unit.dying_trigger_effect, angelsmods.functions.create_gathering_turret_start_trigger(inputs))
+    end
+  else -- no existing effects
+    unit.dying_trigger_effect = angelsmods.functions.create_gathering_turret_start_trigger(inputs)
+  end
 end
 
 local function create_sprite_layer_from_icon_layer(icon_layer, layer_scale)

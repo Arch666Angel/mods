@@ -1,8 +1,10 @@
 local gathering_turret = require "src.gathering-turret"
+local debug_info = require "src.debug-info"
 
 -- initialisation
 script.on_init(function()
   gathering_turret:on_init()
+  debug_info:on_init()
 end)
 
 -- behaviour events
@@ -56,4 +58,9 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   if event.effect_id == "angels_gathering_turret_start_collecting_trigger" then
     gathering_turret:on_loot_dropped(event.surface_index, event.target_position or (event.target_entity and event.target_entity.position) or nil)
   end
+end)
+
+-- player created event
+script.on_event(defines.events.on_player_created, function(event)
+  debug_info:on_player_created(event.player_index)
 end)

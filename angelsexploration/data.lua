@@ -7,6 +7,7 @@ angelsmods.functions = angelsmods.functions or {}
 
 --LOAD PROTOTYPES
 require("prototypes.exploration-category")
+require("prototypes.exploration-debug")
 
 --LOAD FUNCTIONS
 require("prototypes.entities.biter-builder")

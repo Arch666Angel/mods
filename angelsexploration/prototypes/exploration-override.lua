@@ -247,3 +247,5 @@ end
 for _, spawner in pairs(data.raw["unit-spawner"]) do
   spawner.hide_resistances = false
 end
+
+require("prototypes.overrides.gathering-turret-updates")
