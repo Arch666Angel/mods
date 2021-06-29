@@ -169,7 +169,7 @@ data:extend(
     order = "c[thorium]-a",
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-thorium-fuel-cell",
-    fuel_value = "50GJ",
+    fuel_value = "15GJ", --down from 50
     fuel_glow_color = {r = 0.8, g = 0.2, b = 0.2, a = 0.6},
     stack_size = 50,
   },
