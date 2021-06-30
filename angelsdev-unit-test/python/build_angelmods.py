@@ -4,7 +4,6 @@ import json
 class ModBuilder:
 
   def __init__(self):
-    print(os.path.dirname(os.path.abspath(__file__)))
     self.modNames = [modName for modName in next(os.walk(f"{os.path.dirname(os.path.abspath(__file__))}/../.."))[1] if self.__isReleased(modName)]
     self.modFolderDir = None
 
@@ -16,17 +15,16 @@ class ModBuilder:
     if self.modFolderDir == None:
         self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
 
-
   def __isReleased(self, modName):
     if modName.find("angels") >= 0:
+      if modName.find("liquidrobot") >= 0:
+        return False # not released
+
       if modName.find("angelsaddons-") < 0:
         return True # base mod
 
       if modName.find("angelsdev-") < 0:
         return True # dev mod
-
-      if modName.find("liquidrobot") >= 0:
-        return False # not released
 
       return True # released addon
 
