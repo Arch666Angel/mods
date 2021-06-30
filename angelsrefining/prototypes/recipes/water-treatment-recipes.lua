@@ -16,6 +16,7 @@ data:extend(
       },
       main_product = "water-mineralized",
       always_show_products = true,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("water-mineralized"),
       order = "a[water-water-mineralized]"
     },
     {
@@ -381,6 +382,7 @@ data:extend(
         {type = "fluid", name = "water-viscous-mud", amount = 150}
       },
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("water-viscous-mud"),
       order = "a"
     },
     {

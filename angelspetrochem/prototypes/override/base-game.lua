@@ -99,7 +99,12 @@ OV.patch_recipes(
       },
       category = "chemistry",
       subgroup = "petrochem-fuel",
-      order = "hc"
+      order = "hc",
+      crafting_machine_tint = { --default, has no fluids
+        primary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255},
+        secondary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255},
+        tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}
+      }
     }
   }
 )

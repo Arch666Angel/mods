@@ -6,7 +6,7 @@ data:extend(
     {
       type = "fluid",
       name = "gas-natural-1",
-      icons = angelsmods.functions.create_gas_fluid_icon(nil, "aaa"),
+      icons = angelsmods.functions.create_gas_fluid_icon(nil, "ggg"),
       --icon_size = 32,
       subgroup = "petrochem-raw-fluids",
       order = "aa",

@@ -626,6 +626,7 @@ data:extend(
           }
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-semiheavy-1"),
       order = "k[water-enrichment]-a[enriching]-a[semiheavy-1]"
     },
     {
@@ -660,6 +661,7 @@ data:extend(
           }
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-semiheavy-2"),
       order = "k[water-enrichment]-a[enriching]-b[semiheavy-2]"
     },
     {
@@ -694,6 +696,7 @@ data:extend(
           }
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-semiheavy-3"),
       order = "k[water-enrichment]-a[enriching]-c[semiheavy-3]"
     },
     {
@@ -728,6 +731,7 @@ data:extend(
             nil
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-semiheavy-1"),
       order = "k[water-enrichment]-b[cooling]-a[semiheavy-1]"
     },
     {
@@ -762,6 +766,7 @@ data:extend(
             nil
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-semiheavy-2"),
       order = "k[water-enrichment]-b[cooling]-b[semiheavy-2]"
     },
     {
@@ -796,6 +801,7 @@ data:extend(
             nil
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-semiheavy-3"),
       order = "k[water-enrichment]-b[cooling]-c[semiheavy-3]"
     },
     {
@@ -858,6 +864,7 @@ data:extend(
             nil
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-water-heavy"),
       order = "k[water-enrichment]-b[cooling]-d[heavy-water]"
     },
     {

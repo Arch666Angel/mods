@@ -400,6 +400,7 @@ data:extend(
       main_product = "angels-ore8-sludge",
       always_show_products = true,
       show_amount_in_title = false,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
       --icon_size = 32,
       order = "g"
@@ -447,6 +448,7 @@ data:extend(
       main_product = "angels-ore9-sludge",
       always_show_products = true,
       show_amount_in_title = false,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-sludge"),
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
       --icon_size = 32,
       order = "i"
@@ -1056,6 +1058,7 @@ data:extend(
         {{142, 079, 028}, {107, 062, 021}, {075, 040, 015}},
         {"slag"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("slag-slurry"),
       order = "i [slag-processing-dissolution]"
     },
     {
@@ -1078,6 +1081,7 @@ data:extend(
         {{142, 079, 028}, {107, 062, 021}, {075, 040, 015}},
         {"stone-crushed"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("slag-slurry"),
       order = "j [stone-crushed-dissolution]"
     },
     --FILTERING
@@ -1195,6 +1199,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-blue"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "a[geode-blue-liquify]"
     },
     {
@@ -1217,6 +1222,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-red"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "f[geode-red-liquify]"
     },
     {
@@ -1239,6 +1245,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-yellow"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "c[geode-yellow-liquify]"
     },
     {
@@ -1261,6 +1268,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-purple"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "b[geode-purple-liquify]"
     },
     {
@@ -1283,6 +1291,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-cyan"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "e[geode-cyan-liquify]"
     },
     {
@@ -1305,6 +1314,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"geode-lightgreen"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "d[geode-lightgreen-liquify]"
     },
     {
@@ -1327,6 +1337,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"crystal-dust"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "g"
     },
     --FILTERING
