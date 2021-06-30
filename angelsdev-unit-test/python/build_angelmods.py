@@ -4,7 +4,8 @@ import json
 class ModBuilder:
 
   def __init__(self):
-    self.modNames = [modName for modName in next(os.walk('.'))[1] if self.__isReleased(modName)]
+    print(os.path.dirname(os.path.abspath(__file__)))
+    self.modNames = [modName for modName in next(os.walk(f"{os.path.dirname(os.path.abspath(__file__))}/../.."))[1] if self.__isReleased(modName)]
     self.modFolderDir = None
 
     opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
@@ -20,6 +21,9 @@ class ModBuilder:
     if modName.find("angels") >= 0:
       if modName.find("angelsaddons-") < 0:
         return True # base mod
+
+      if modName.find("angelsdev-") < 0:
+        return True # dev mod
 
       if modName.find("liquidrobot") >= 0:
         return False # not released
@@ -64,5 +68,4 @@ class ModBuilder:
       self.createMod(modName)
 
 if __name__ == "__main__":
-  mb = ModBuilder()
-  mb.createAllMods()
+  ModBuilder().createAllMods()
