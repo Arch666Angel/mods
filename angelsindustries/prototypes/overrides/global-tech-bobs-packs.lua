@@ -8,6 +8,8 @@ if angelsmods.industries.tech then
   if mods["bobplates"] then
     pack_replace("battery-2", "blue", "orange")
     OV.remove_prereq("battery-2", "tech-blue-packs")
+    OV.remove_prereq("battery-3", "production-science-pack")
+
     pack_replace("grinding", "green", "orange")
     pack_replace("gem-processing-1", "green", "orange")
     pack_replace("polishing", "green", "blue")
@@ -24,8 +26,11 @@ if angelsmods.industries.tech then
     end
 
     pack_replace("tungsten-processing", "blue", "orange")
+    OV.remove_prereq("nitinol-processing", "production-science-pack")
     pack_replace("ceramics", "blue", "orange")
     pack_replace("cobalt-processing", "blue", "orange")
+
+    OV.remove_prereq("advanced-electronics-3", "production-science-pack")
   end
 
   -------------------------------------------------------------------------------
@@ -57,6 +62,10 @@ if angelsmods.industries.tech then
       pack_replace("bob-distillery-3", "blue", "orange")
       OV.remove_prereq("bob-distillery-3", "tech-blue-packs")
       OV.add_prereq("tech-blue-circuit", "bob-distillery-3")
+    end
+    -- centrifuges
+    if settings.startup["bobmods-assembly-centrifuge"].value then
+      OV.remove_prereq("centrifuge-2", "production-science-pack")
     end
   end
 
@@ -221,6 +230,8 @@ if angelsmods.industries.tech then
     pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
     pack_replace("vehicle-roboport-equipment", "green", "orange")
     pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
+    OV.remove_prereq("vehicle-fusion-cell-equipment-2", "production-science-pack")
+    OV.remove_prereq("vehicle-fusion-reactor-equipment-2", "production-science-pack")
   end
 
   -------------------------------------------------------------------------------

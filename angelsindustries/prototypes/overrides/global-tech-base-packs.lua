@@ -185,6 +185,9 @@ if angelsmods.industries.tech then
   pack_replace("logistic-robotics", "green", "blue")
   pack_replace("electric-energy-distribution-2", "orange", "blue")
   OV.remove_prereq("automation-3", "production-science-pack")
+  OV.remove_prereq("kovarex-enrichment-process", "production-science-pack")
+  -- PETROCHEM
+  OV.remove_prereq("water-chemistry-1", "production-science-pack")
   -- SMELTING
   OV.remove_prereq("angels-metallurgy-4", "production-science-pack")
   OV.remove_science_pack("angels-tungsten-smelting-2", "production-science-pack")
