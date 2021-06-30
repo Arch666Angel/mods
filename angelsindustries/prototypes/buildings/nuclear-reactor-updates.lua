@@ -19,3 +19,5 @@ if data.raw["reactor"]["nuclear-reactor"] then
   data.raw["reactor"]["nuclear-reactor"].use_fuel_glow_color = true -- should use glow color from fuel item prototype as light color and tint for working_light_picture
   data.raw["reactor"]["nuclear-reactor"].default_fuel_glow_color = { 0, 1, 0, 1 } -- color used as working_light_picture tint for fuels that don't have glow color defined
 end
+
+require("prototypes/buildings/angels-reactor")

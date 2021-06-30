@@ -68,6 +68,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "angels-thorium-fuel-cell-reprocessing"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "burner-reactor"
+        }
       },
       unit = {
         count = 1200,
