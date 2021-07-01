@@ -118,3 +118,4 @@ stick.icon_size = 32
 stick.subgroup = "angels-iron-casting"
 stick.order = "m"
 stick.stack_size = 200
+stick.icon_mipmaps = 1
