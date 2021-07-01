@@ -1077,15 +1077,15 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
 	local red, green, blue, alpha, comb = 0,0,0,0,0
 	local ave_denom = #rgb
   if ave_denom == 2 and rgb[1]==icon_tint_table["c"][1] and rgb[2]==icon_tint_table["h"][1] then
-    --Hydrocarbon only
-    m_c = tonumber(multi[1])
-    m_h = tonumber(multi[2])
-    m_t = m_c+m_h+1
-    for i,j in pairs({"r", "g", "b"}) do
-      local diff={}
-      diff = { ((m_c+1)/m_t)^2 , ((m_h+1)/m_t)^2}
-      color[j] = ((m_h-m_c)/m_t+(diff[2]-diff[1])/math.log(diff[2]/diff[1]))*0.899
-    end 
+    -- Hydrocarbon only
+    local m_c = tonumber(multi[1])/8
+    local m_h = tonumber(multi[2])/12
+    local value = ((m_h / m_c / 4) ^ 2.2) / 0.41
+    local function sigmoid(x, b, c) --more maxreader madness :D
+      return 1 / (1 + 2 ^ (-b * (x +c)))
+    end
+    value = sigmoid(value, 20, -0.25)
+    for i, j in pairs({"r", "g", "b"}) do color[j] = value end
   else --everything else
     for i,colour in pairs(rgb) do
       alpha = colour[4] or 1
@@ -1096,7 +1096,7 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
     end
     color = {r = math.sqrt(red/comb), g = math.sqrt(green/comb), b = math.sqrt(blue/comb), a = 1}
       --normalise
-    HSV = RGBtoHSV(color)
+    local HSV = RGBtoHSV(color)
     HSV.v = 0.8*HSV.v
     HSV.s = 1-0.60*(1-HSV.s)
     color = HSVtoRGB(HSV)
