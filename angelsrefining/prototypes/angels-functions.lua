@@ -1080,10 +1080,11 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
     --Hydrocarbon only
     m_c = tonumber(multi[1])
     m_h = tonumber(multi[2])
-    m_t = m_c+m_h
+    m_t = m_c+m_h+1
     for i,j in pairs({"r", "g", "b"}) do
-      --if multi[1]>=8 then multi[1] = 8 end
-      color[j] = ((m_h-m_c)*0.899+m_c*0.01)/(m_h)--maxreader proposed:(6-multi[1])/6*255+10*(multi[2]/multi[1])
+      local diff={}
+      diff = { ((m_c+1)/m_t)^2 , ((m_h+1)/m_t)^2}
+      color[j] = ((m_h-m_c)/m_t+(diff[2]-diff[1])/math.log(diff[2]/diff[1]))*0.899
     end 
   else --everything else
     for i,colour in pairs(rgb) do
