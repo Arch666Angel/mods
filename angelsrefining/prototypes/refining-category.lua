@@ -22,8 +22,10 @@ data:extend(
     { type = "recipe-category", name = "filtering" },
     { type = "recipe-category", name = "filtering-2" },
 
-    { type = "recipe-category", name = "liquifying" },
     { type = "recipe-category", name = "crystallizing" },
+    { type = "recipe-category", name = "crystallizing-2" },
+    
+    { type = "recipe-category", name = "liquifying" },
     -- water treatment
     { type = "recipe-category", name = "angels-barreling" },
     { type = "recipe-category", name = "water-treatment" },

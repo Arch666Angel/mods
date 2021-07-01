@@ -13,12 +13,27 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["manganese"].ingot then
 else
-  OV.remove_prereq("angels-iron-smelting-2", "angels-manganese-smelting-1")
+  OV.remove_prereq("angels-iron-casting-2", "angels-manganese-smelting-1")
 end
 
 if angelsmods.trigger.smelting_products["silicon"].ingot then
 else
-  OV.remove_prereq("angels-iron-smelting-2","angels-silicon-smelting-1")
+  OV.remove_prereq("angels-iron-casting-2","angels-silicon-smelting-1")
+end
+
+if angelsmods.trigger.smelting_products["nickel"].ingot then
+else
+  OV.remove_prereq("angels-iron-casting-3","angels-nickel-smelting-2")
+end
+
+if angelsmods.trigger.smelting_products["cobalt"].ingot then
+else
+  OV.remove_prereq("angels-iron-casting-3","angels-cobalt-smelting-1")
+end
+
+if angelsmods.trigger.smelting_products["chrome"].ingot then
+else
+  OV.remove_prereq("angels-iron-casting-3","angels-chrome-smelting-1")
 end
 
 -------------------------------------------------------------------------------

@@ -353,6 +353,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-chunk-mix6-processing"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angelsore-chunk-mix7-processing"
         }
       },
       unit = {
@@ -588,7 +592,9 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-floatation",
-        "advanced-electronics"
+        "advanced-ore-refining-1",
+        "advanced-electronics",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -662,7 +668,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-leaching",
-        "advanced-ore-refining-2"
+        "advanced-ore-refining-2",
+        "geode-processing-3"
       },
       effects = {
         {
@@ -696,10 +703,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-crystal-mix5-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalysator-orange"
         }
       },
       unit = {
@@ -732,6 +735,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-conversion-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalysator-orange"
         }
       },
       unit = {
@@ -753,6 +760,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-leaching",
+        "advanced-ore-refining-2",
         "advanced-electronics-2"
       },
       effects = {
@@ -905,6 +913,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-advanced-crushing",
+        "advanced-ore-refining-1",
         "lubricant"
       },
       effects = {
@@ -955,6 +964,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-powderizer",
+        "advanced-ore-refining-2",
         "thermal-water-extraction-2"
       },
       effects = {
@@ -1005,6 +1015,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-advanced-floatation",
+        "advanced-ore-refining-3",
         "slag-processing-2"
       },
       effects = {

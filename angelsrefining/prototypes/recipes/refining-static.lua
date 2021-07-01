@@ -687,7 +687,7 @@ data:extend(
       type = "recipe",
       name = "angelsore8-crystal",
       localised_name = {"recipe-name.angelsore8-crystal"},
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
@@ -781,7 +781,7 @@ data:extend(
       type = "recipe",
       name = "angelsore9-crystal",
       localised_name = {"recipe-name.angelsore9-crystal"},
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "ore-processing-d",
       energy_required = 2,
       enabled = false,
@@ -1443,7 +1443,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-brown.png",
       icon_size = 32,
-      order = "i [catalysator-brown]"
+      order = "i[catalysator-brown]"
     },
     {
       type = "recipe",
@@ -1460,12 +1460,12 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-green.png",
       icon_size = 32,
-      order = "j [catalysator-green]"
+      order = "j[catalysator-green]"
     },
     {
       type = "recipe",
       name = "catalysator-orange",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 0.5,
       enabled = false,
@@ -1478,7 +1478,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/catalysator-orange.png",
       icon_size = 32,
-      order = "k [catalysator-orange]"
+      order = "k[catalysator-orange]"
     },
     --VANILLA
     --IRON
