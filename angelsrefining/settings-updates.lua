@@ -37,7 +37,7 @@ if mods["bobores"] then
   angelsmods.settings.hide_setting("double-setting", "bobmods-ores-nickelcobaltratio")
 
   --gems
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-unsortedgemore")
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-unsortedgemore",false)
   angelsmods.settings.hide_setting("double-setting", "bobmods-gems-rubyratio")
   angelsmods.settings.hide_setting("double-setting", "bobmods-gems-sapphireratio")
   angelsmods.settings.hide_setting("double-setting", "bobmods-gems-emeraldratio")
@@ -45,7 +45,7 @@ if mods["bobores"] then
   angelsmods.settings.hide_setting("double-setting", "bobmods-gems-topazratio")
   angelsmods.settings.hide_setting("double-setting", "bobmods-gems-diamondratio")
 
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-gemsfromotherores")
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-gemsfromotherores",false)
   angelsmods.settings.hide_setting("double-setting", "bobmods-ores-gemprobability")
 end
 
