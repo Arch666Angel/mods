@@ -1,5 +1,4 @@
 import os, sys, getopt
-import math
 import struct
 
 class SettingsFileReader:
@@ -130,18 +129,13 @@ class SettingsController:
   #   https://wiki.factorio.com/Mod_settings_file_format
   #   https://wiki.factorio.com/Property_tree
 
-  def __init__(self):
-    self.modFolderDir = None
+  def __init__(self, factorioFolderDir=None):
+    if factorioFolderDir == None:
+      self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+    else:
+      self.modFolderDir = "{0}mods/".format(factorioFolderDir)
 
-    opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
-    for opt, arg in opts:
-        if opt in ('-m', '--moddir'):
-            self.modFolderDir = os.path.realpath(arg.strip())
-
-    if self.modFolderDir == None:
-        self.modFolderDir = f"{os.getenv('APPDATA')}/Factorio/mods/"
-
-  def readSettingsFile(self, filename:str="mod-settings.dat")->None:
+  def readSettingsFile(self, filename:str="mod-settings.dat") -> None:
     with open(f"{self.modFolderDir}/{filename}", "rb") as modSettingsFile:
       modSettings = SettingsFileReader(modSettingsFile)
       self.settings = dict()
@@ -169,7 +163,7 @@ class SettingsController:
           stageSettingIndexName = modSettings.readString()
           self.settings[settingStageName][stageSettingIndex] = [stageSettingIndexName, modSettings.readDictionary(stageSettingIndexName)]
 
-  def writeSettingsFile(self, filename:str="mod-settings.dat")->None:
+  def writeSettingsFile(self, filename:str="mod-settings.dat") -> None:
     filepath = f"{self.modFolderDir}/{filename}"
     if os.path.exists(filepath):
       os.remove(filepath)
@@ -217,7 +211,13 @@ class SettingsController:
     modSettingStage[len(modSettingStage.keys())] = [settingName, { 0 : ['value', settingValue] }]
 
 if __name__ == "__main__":
-  sc = SettingsController()
+  factorioFolderDir = None
+  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
+  for opt, arg in opts:
+    if opt in ('-m', '--factoriodir'):
+      factorioFolderDir = os.path.realpath(arg.strip())
+
+  sc = SettingsController(factorioFolderDir)
   sc.readSettingsFile()
   sc.setSettingValue("startup", "angels-enable-industries", True) # angels override
   sc.writeSettingsFile("mod-settings-dupe.dat")

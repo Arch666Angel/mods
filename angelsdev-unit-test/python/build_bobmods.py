@@ -4,16 +4,11 @@ import json
 
 class ModDownloader:
 
-  def __init__(self, modName):
-    self.factorioFolderDir = None
-
-    opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
-    for opt, arg in opts:
-      if opt in ('-m', '--factoriodir'):
-        self.factorioFolderDir = os.path.realpath(arg.strip())
-
+  def __init__(self, modName, factorioFolderDir=None):
+    self.factorioFolderDir = factorioFolderDir
     if self.factorioFolderDir == None:
       self.factorioFolderDir = "{0}/Factorio/".format(os.getenv('APPDATA'))
+
     self.modFolderDir = "{0}mods/".format(self.factorioFolderDir)
 
     self.modData = self.__getModAPI(modName)
@@ -143,6 +138,12 @@ class ModDownloader:
       os.remove(self.modFolderDir + folder)
 
 if __name__ == "__main__":
+  factorioFolderDir = None
+  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
+  for opt, arg in opts:
+    if opt in ('-m', '--factoriodir'):
+      factorioFolderDir = os.path.realpath(arg.strip())
+
   bobmods = {
     "bobassembly"        : True,
     "bobclasses"         : True,
@@ -164,4 +165,4 @@ if __name__ == "__main__":
     "bobwarfare"         : True
   }
   for bobmod in bobmods:
-    ModDownloader(bobmod).download()
+    ModDownloader(bobmod, factorioFolderDir).download()

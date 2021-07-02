@@ -3,17 +3,13 @@ import json
 
 class ModBuilder:
 
-  def __init__(self):
+  def __init__(self, factorioFolderDir=None):
     self.modNames = [modName for modName in next(os.walk(f"{os.path.dirname(os.path.abspath(__file__))}/../.."))[1] if self.__isReleased(modName)]
-    self.modFolderDir = None
 
-    opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
-    for opt, arg in opts:
-        if opt in ('-m', '--moddir'):
-            self.modFolderDir = os.path.realpath(arg.strip())
-
-    if self.modFolderDir == None:
-        self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+    if factorioFolderDir == None:
+      self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+    else:
+      self.modFolderDir = "{0}mods/".format(factorioFolderDir)
 
   def __isReleased(self, modName):
     if modName.find("angels") >= 0:
@@ -66,4 +62,10 @@ class ModBuilder:
       self.createMod(modName)
 
 if __name__ == "__main__":
-  ModBuilder().createAllMods()
+  factorioFolderDir = None
+  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
+  for opt, arg in opts:
+    if opt in ('-m', '--factoriodir'):
+      factorioFolderDir = os.path.realpath(arg.strip())
+
+  ModBuilder(factorioFolderDir).createAllMods()
