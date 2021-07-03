@@ -22,7 +22,7 @@ if angelsmods.industries.overhaul then
                 effectivity = 0.25,
                 fuel_inventory_size = 1,
                 burnt_inventory_size = 1,
-                light_flicker = {color = {0, 0, 0}, minimum_intensity = 0.7, maximum_intensity = 0.95}
+                light_flicker = {color = {0, 0, 0}, minimum_intensity = 0, maximum_intensity = 0}
             },
             collision_box = {{-4.40, -4.40}, {4.40, 4.40}},
             selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
@@ -31,30 +31,40 @@ if angelsmods.industries.overhaul then
             -- neighbour_collision_increase = 0.25,
             heat_lower_layer_picture = apply_heat_pipe_glow{
                 filename = '__angelsindustries__/graphics/entity/fast-reactor/hr-sprite-for-king-arthur-heat-pipe-heated.png',
-                width = 486,
-                height = 476,
-                shift = util.by_pixel(2, -2),
+                width = 608,
+                height = 596,
+                shift = util.by_pixel(3, -1),
+                scale = 0.5
             },
 
             picture = {
                 layers = {
                     {
                         filename = '__angelsindustries__/graphics/entity/fast-reactor/hr-sprite-for-king-arthur.png',
-                        width = 486,
-                        height = 476,
-                        shift = util.by_pixel(2, -2),
-                        scale = 0.60
+                        width = 608,
+                        height = 596,
+                        shift = util.by_pixel(3, -1),
+                        scale = 0.5
+                    },
+                    {
+                        filename = "__base__/graphics/entity/rocket-silo/hr-00-rocket-silo-shadow.png",
+                        priority = "medium",
+                        width = 612,
+                        height = 578,
+                        draw_as_shadow = true,
+                        shift = util.by_pixel(7, 2),
+                        scale = 0.5
                     }
                 }
             },
 
             working_light_picture = {
                 filename = '__angelsindustries__/graphics/entity/fast-reactor/hr-sprite-for-king-arthur-lights.png',
-                blend_mode = 'additive',
                 draw_as_glow = true,
-                width = 523,
-                height = 513,
-                shift = util.by_pixel(2, -2),
+                width = 608,
+                height = 596,
+                shift = util.by_pixel(3, -1),
+                scale = 0.5
             },
 
             -- light = {intensity = 0.6, size = 9.9, shift = {0.0, 0.0}, color = {r = 0.0, g = 1.0, b = 0.0}},
