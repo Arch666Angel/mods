@@ -1,11 +1,10 @@
-local hit_effects = require('__base__.prototypes.entity.hit-effects')
-local sounds = require('__base__.prototypes.entity.sounds')
+local OV = angelsmods.functions.OV
 
 if angelsmods.industries.overhaul then
     angelsmods.functions.RB.build({
         {
             type = 'recipe',
-            name = 'burner-reactor',
+            name = 'angels-burner-reactor',
             normal = {
                 energy_required = 8,
                 enabled = false,
@@ -16,9 +15,13 @@ if angelsmods.industries.overhaul then
                     {type = 'item', name = 't5-plate', amount = 100},
                     {type = 'item', name = 'angels-plate-lead', amount = 350}
                 },
-                result = 'burner-reactor'
+                result = 'angels-burner-reactor'
             }
         }
     })
 
+end
+
+if mods["bobpower"] then
+    OV.disable_recipe({"angels-burner-reactor"})
 end

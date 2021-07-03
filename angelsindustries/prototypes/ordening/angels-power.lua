@@ -242,14 +242,14 @@ if mods["bobpower"] then
           type = "item-subgroup",
           name = "angels-power-nuclear-reactor-a",
           group = "angels-power",
-          order = "c[nuclear]-b[burner-reactor]"
+          order = "c[nuclear]-b[angels-burner-reactor]"
         }
       }
     )
 
-    move_item("burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
-    move_item("burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
-    move_item("burner-reactor-3", "angels-power-nuclear-reactor-a", "a[fuel-burner]-c")
+    move_item("angels-burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
+    move_item("angels-burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
+    move_item("angels-burner-reactor-3", "angels-power-nuclear-reactor-a", "a[fuel-burner]-c")
 
     move_item("fluid-reactor", "angels-power-nuclear-reactor-a", "b[fluid-burner]-a")
     move_item("fluid-reactor-2", "angels-power-nuclear-reactor-a", "b[fluid-burner]-b")
@@ -292,7 +292,7 @@ if mods["bobpower"] then
         }
       }
     )
-    
+
     move_item("heat-pipe", "angels-power-nuclear-heat-pipe", "a")
     move_item("heat-pipe-2", "angels-power-nuclear-heat-pipe", "b")
     move_item("heat-pipe-3", "angels-power-nuclear-heat-pipe", "c")

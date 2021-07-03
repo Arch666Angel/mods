@@ -262,7 +262,7 @@ if angelsmods.industries.tech then
       pack_replace("bob-heat-pipe-2", "blue", "orange")
     end
     if settings.startup["bobmods-power-heatsources"].value == true then
-      pack_replace("burner-reactor-2", "blue", "orange")
+      pack_replace("angels-burner-reactor-2", "blue", "orange")
       pack_replace("fluid-reactor-2", "blue", "orange")
     end
     -- power distribution

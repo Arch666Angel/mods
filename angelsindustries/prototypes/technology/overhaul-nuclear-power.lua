@@ -70,7 +70,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "burner-reactor"
+          recipe = "angels-burner-reactor"
         }
       },
       unit = {
