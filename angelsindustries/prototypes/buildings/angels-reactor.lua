@@ -22,21 +22,18 @@ if angelsmods.industries.overhaul then
                 effectivity = 0.25,
                 fuel_inventory_size = 1,
                 burnt_inventory_size = 1,
-                light_flicker = {color = {0, 0, 0}, minimum_intensity = 0, maximum_intensity = 0}
+                light_flicker = {
+                    color = {0, 0, 0},
+                    minimum_light_size = 0,
+                    light_intensity_to_size_coefficient = 0,
+                }
             },
             collision_box = {{-4.40, -4.40}, {4.40, 4.40}},
             selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
             damaged_trigger_effect = hit_effects.entity(),
             -- the collision box of a reactor is increased by this on the sides where it connects to another reactor:
             -- neighbour_collision_increase = 0.25,
-            heat_lower_layer_picture = apply_heat_pipe_glow{
-                filename = '__angelsindustries__/graphics/entity/fast-reactor/hr-sprite-for-king-arthur-heat-pipe-heated.png',
-                width = 608,
-                height = 596,
-                shift = util.by_pixel(3, -1),
-                scale = 0.5
-            },
-
+            heat_lower_layer_picture = util.empty_sprite(),
             picture = {
                 layers = {
                     {
@@ -60,6 +57,7 @@ if angelsmods.industries.overhaul then
 
             working_light_picture = {
                 filename = '__angelsindustries__/graphics/entity/fast-reactor/hr-sprite-for-king-arthur-lights.png',
+                blend_mode = "additive",
                 draw_as_glow = true,
                 width = 608,
                 height = 596,
@@ -92,18 +90,12 @@ if angelsmods.industries.overhaul then
                 },
 
                 heat_picture = apply_heat_pipe_glow{
-                    filename = '__base__/graphics/entity/nuclear-reactor/reactor-heated.png',
-                    width = 108,
-                    height = 128,
-                    shift = util.by_pixel(1, -7),
-                    hr_version = {
-                        filename = '__base__/graphics/entity/nuclear-reactor/hr-reactor-heated.png',
-                        width = 216,
-                        height = 256,
-                        scale = 0.5,
-                        shift = util.by_pixel(3, -6.5)
-                    }
-                }
+                    filename = '__angelsindustries__/graphics/entity/fast-reactor/hr-sprite-for-king-arthur-heat-pipe-heated.png',
+                    width = 608,
+                    height = 596,
+                    shift = util.by_pixel(3, -1),
+                    scale = 0.5
+                },
             },
 
             connection_patches_connected = {
