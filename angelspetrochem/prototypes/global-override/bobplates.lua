@@ -97,8 +97,8 @@ if mods["bobplates"] then
   -- oxygen processing --------------------------------------------------------
   OV.converter_fluid("oxygen", "gas-oxygen")
   OV.converter_fluid("hydrogen", "gas-hydrogen")
-  OV.disable_recipe({"water-electrolysis"})
-  OV.remove_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
+  OV.disable_recipe({"water-electrolysis","solid-fuel-from-hydrogen"})
+  --OV.remove_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
 
   -- chloride processing ------------------------------------------------------
   OV.converter_fluid("chlorine", "gas-chlorine")
