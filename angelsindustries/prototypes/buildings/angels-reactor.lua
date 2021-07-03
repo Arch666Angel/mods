@@ -4,16 +4,6 @@ local sounds = require('__base__.prototypes.entity.sounds')
 if angelsmods.industries.overhaul then
     data:extend({
         {
-            type = 'item',
-            name = 'burner-reactor',
-            icon = '__base__/graphics/icons/nuclear-reactor.png',
-            icon_size = 64,
-            icon_mipmaps = 4,
-            subgroup = 'angels-power-nuclear',
-            order = 'a[reactor]-b',
-            place_result = 'burner-reactor',
-            stack_size = 10
-        }, {
             type = 'reactor',
             name = 'burner-reactor',
             icon = '__base__/graphics/icons/nuclear-reactor.png',
@@ -29,7 +19,7 @@ if angelsmods.industries.overhaul then
             energy_source = {
                 type = 'burner',
                 fuel_category = 'nuclear',
-                effectivity = 1,
+                effectivity = 0.25,
                 fuel_inventory_size = 1,
                 burnt_inventory_size = 1,
                 light_flicker = {color = {0, 0, 0}, minimum_intensity = 0.7, maximum_intensity = 0.95}
@@ -246,24 +236,4 @@ if angelsmods.industries.overhaul then
             }
         }
     })
-
-    angelsmods.functions.RB.build({
-        {
-            type = 'recipe',
-            name = 'burner-reactor',
-            normal = {
-                energy_required = 8,
-                enabled = false,
-                ingredients = {
-                    {type = 'item', name = 't4-brick', amount = 100},
-                    {type = 'item', name = 't4-plate', amount = 100},
-                    {type = 'item', name = 't4-circuit', amount = 500},
-                    {type = 'item', name = 't5-plate', amount = 100},
-                    {type = 'item', name = 'angels-plate-lead', amount = 350}
-                },
-                result = 'burner-reactor'
-            }
-        }
-    })
-
 end
