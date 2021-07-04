@@ -83,7 +83,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
           name = "intergrated-electronics",
           ingredients =
           {
-            {type = "item", name = "gilded-copper-cable"--[["angels-wire-gold"]], amount = "tinned-copper-cable"},
+            {type = "item", name = angelsmods.trigger.smelting_products["platinum"].wire and "gilded-copper-wire" or "insulated-cable", amount = "tinned-copper-cable"},
           }
         }
       }
