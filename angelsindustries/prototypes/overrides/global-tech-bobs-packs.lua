@@ -31,6 +31,8 @@ if angelsmods.industries.tech then
     pack_replace("cobalt-processing", "blue", "orange")
 
     OV.remove_prereq("advanced-electronics-3", "production-science-pack")
+
+    pack_replace("kovarex-enrichment-process","yellow","blue")
   end
 
   -------------------------------------------------------------------------------
