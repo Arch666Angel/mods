@@ -3,19 +3,43 @@ from shlex import shlex
 import json
 import re
 
+import psutil
+
 class FactorioController:
   def __init__(self):
-    self.factorioExe = f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe"
+    self.factorioExe = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
     self.factorioProcess = None
 
-  def launchGame(self):
-    self.factorioProcess = subprocess.Popen(args=[self.factorioExe])
+  def launchGame(self) -> None:
+    # https://developer.valvesoftware.com/wiki/Command_Line_Options#Steam_.28Windows.29
+    self.factorioProcess = subprocess.Popen(executable=self.factorioExe, args=[], cwd=os.path.dirname(self.factorioExe), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
-  def waitTillGameCloses(self):
-    #   https://developer.valvesoftware.com/wiki/Command_Line_Options#Steam_.28Windows.29
-    import time
-    while True:
-      time.sleep(1000)
+  def terminateGame(self) -> None:
+    if self.factorioProcess.poll() is None:
+      self.factorioProcess.terminate()
+    self.factorioProcess = None
+
+  def getGameOutput(self) -> str or bool:
+    for stdoutLine in iter(self.factorioProcess.stdout.readline, ""):
+      lineData = stdoutLine.strip().decode('utf-8')
+      if lineData == '':
+        yield self.factorioProcess.poll() is None
+      else:
+        yield lineData
+    self.factorioProcess.stdout.close()
+    return_code = self.factorioProcess.wait()
+    if return_code:
+      raise subprocess.CalledProcessError(return_code, self.factorioExe)
+    return False # App terminated
+
+  def executeUnitTests(self) -> None:
+    # This does not actually execute anything, it waits till the mod signals the tests are finished
+    for line in self.getGameOutput():
+      if type(line) is str:
+        print(line)
+      elif type(line) is bool and line == False:
+        break
+    print("Terminating...")
 
   def __retrieveSteamGameInstallLocation(self, steamGameID:int) -> str:
     # Find install location of steam itself
@@ -74,15 +98,23 @@ class FactorioController:
     if steamGameManifestLocation is None:
       raise ValueError("Could not find install location.")
 
-    # Create the install directory for the game
+    # Find the install directory for the game
     steamGameManifest = None
     with open(steamGameManifestLocation) as steamGameManifestFile:
       steamGameManifest = vdf2json(steamGameManifestFile.read())
     steamGameName = steamGameManifest.get('AppState').get('name')
-    return f"{steamLib}/steamapps/common/{steamGameName}"
+    steamGameFolder = f"{steamLib}/steamapps/common/{steamGameName}"
+
+    # Make sure it has an appropriate steam_appid.txt file
+    steamAppIDLocation = f"{steamGameFolder}/bin/x64/steam_appid.txt"
+    if not os.path.exists(steamAppIDLocation):
+      with open(steamAppIDLocation, 'w') as steamAppIDFile:
+        steamAppIDFile.write(f"{steamGameID}")
+
+    return steamGameFolder
 
 if __name__ == "__main__":
   fc = FactorioController()
   fc.launchGame()
-  fc.waitTillGameCloses()
-
+  fc.executeUnitTests()
+  fc.terminateGame()
