@@ -3,15 +3,15 @@ import json
 
 class ModBuilder:
 
-  def __init__(self, factorioFolderDir=None):
+  def __init__(self, factorioFolderDir:str or None=None):
     self.modNames = [modName for modName in next(os.walk(f"{os.path.dirname(os.path.abspath(__file__))}/../.."))[1] if self.__isReleased(modName)]
 
-    if factorioFolderDir == None:
+    if factorioFolderDir is None:
       self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
     else:
       self.modFolderDir = "{0}mods/".format(factorioFolderDir)
 
-  def __isReleased(self, modName):
+  def __isReleased(self, modName:str) -> None:
     if modName.find("angels") >= 0:
       if modName.find("liquidrobot") >= 0:
         return False # not released
@@ -26,12 +26,12 @@ class ModBuilder:
 
     return False # not part of angels
 
-  def __getModVersion(self, modName):
+  def __getModVersion(self, modName:str) -> str:
     with open("{0}/info.json".format(modName)) as modDataFile:
       modData = json.load(modDataFile)
       return modData['version']
 
-  def __deleteAllVersions(self, modName, deleteZip=True):
+  def __deleteAllVersions(self, modName:str, deleteZip:bool=True) -> None:
     # deleting folders
     folders = [folderName for folderName in next(os.walk(self.modFolderDir))[1] if folderName.find(modName) >= 0]
     for folder in folders:
@@ -44,7 +44,7 @@ class ModBuilder:
       print("    Removing '{0}'".format(folder))
       os.remove(self.modFolderDir + folder)
 
-  def __createNewVersion(self, modName):
+  def __createNewVersion(self, modName:str) -> None:
     folder = "{0}_{1}/".format(modName, self.__getModVersion(modName))
     print("    Creating '{0}'".format(folder))
 
@@ -52,12 +52,12 @@ class ModBuilder:
     dst_dir = self.modFolderDir + folder
     shutil.copytree(src_dir, dst_dir)
 
-  def createMod(self, modName):
+  def createMod(self, modName:str) -> None:
     print("Updating '{0}'".format(modName))
     self.__deleteAllVersions(modName, True)
     self.__createNewVersion(modName)
 
-  def createAllMods(self):
+  def createAllMods(self) -> None:
     for modName in self.modNames:
       self.createMod(modName)
 

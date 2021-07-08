@@ -4,23 +4,24 @@ import json
 
 class ModDownloader:
 
-  def __init__(self, modName, factorioFolderDir=None):
-    self.factorioFolderDir = factorioFolderDir
-    if self.factorioFolderDir == None:
-      self.factorioFolderDir = "{0}/Factorio/".format(os.getenv('APPDATA'))
+  def __init__(self, modName:str, factorioFolderDir:str or None=None):
+    if factorioFolderDir is None:
+      self.factorioFolderDir = f"{os.getenv('APPDATA')}/Factorio/"
+    else:
+      self.factorioFolderDir = factorioFolderDir
 
-    self.modFolderDir = "{0}mods/".format(self.factorioFolderDir)
+    self.modFolderDir = f"{self.factorioFolderDir}mods/"
 
     self.modData = self.__getModAPI(modName)
     self.userData = self.__getUserData()
 
-  def __str__(self):
+  def __str__(self) -> str:
     return json.dumps(self.modData, indent=4, sort_keys=True)
 
-  def getReleases(self):
+  def getReleases(self) -> list:
     return self.modData["releases"]
 
-  def getLatestModVersion(self, factorioVersion = None):
+  def getLatestModVersion(self, factorioVersion:str or None = None) -> list:
     fixedFactorioVersion = False if factorioVersion is None else True
     
     modReleases = self.getReleases()
@@ -55,7 +56,7 @@ class ModDownloader:
       latestReleaseFactorioVersion = None
     return [latestReleaseFactorioVersion, latestReleaseModVersion]
 
-  def downloadModVersion(self, factorioVersion = None, modVersion = None):
+  def downloadModVersion(self, factorioVersion:str or None = None, modVersion:str or None = None) -> None:
     print("Updating '{0}'".format(self.modData["name"]))
 
     # delete any local versions
@@ -69,31 +70,33 @@ class ModDownloader:
     modRelease = self.__getReleaseInfo(factorioVersion, modVersion)
     print("  Creating '{0}'".format(modRelease["file_name"]))
     modDownloadUrl = 'http://mods.factorio.com{0}?username={1}&token={2}'.format(modRelease["download_url"], self.userData[0], self.userData[1])
-    modDownloadRequest = urllib.request.Request(modDownloadUrl, headers={'User-Agent': 'Mozilla/5.0'})
+    modDownloadRequest = urllib.request.Request(modDownloadUrl, headers={'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"})
     with urllib.request.urlopen(modDownloadRequest) as downloadFile:
       with open('{0}{1}'.format(self.modFolderDir, modRelease["file_name"]), 'wb+') as zipFile:
         zipFile.write(downloadFile.read())
 
-  def download(self):
+  def download(self) -> None:
     return self.downloadModVersion()
 
-  def __getUserData(self):
-    with open('{}/player-data.json'.format(self.factorioFolderDir)) as playerDataFile:
+  def __getUserData(self) -> list:
+    with open(f"{self.factorioFolderDir}player-data.json") as playerDataFile:
       playerData = json.load(playerDataFile)
-    return [playerData["service-username"], playerData["service-token"]]
+      if playerData["service-username"] != "":
+        return [playerData["service-username"], playerData["service-token"]]
+    raise NotImplementedError # TODO: implement manual authentification https://wiki.factorio.com/Web_authentication_API
 
-  def __getModAPI(self, modName):
+  def __getModAPI(self, modName:str) -> dict:
     apiQuerry = urllib.request.Request('http://mods.factorio.com/api/mods/{0}'.format(modName))
     try:
       apiRequest = urllib.request.urlopen(apiQuerry).read()
       apiContent = json.loads(apiRequest.decode('utf-8'))
       apiMessage = apiContent["message"]
     except urllib.request.HTTPError:
-      raise NameError("Could not find a mod named '{0}'.".format(modName))
+      raise NameError(f"Could not find a mod named '{modName}'.")
     except KeyError:
       apiMessage = None
     if apiMessage == "Mod not found":
-      raise NameError("Could not find a mod named '{0}'.".format(modName))
+      raise NameError("Could not find a mod named '{modName}'.")
     return apiContent
 
   def __compareVersion(self, version1, version2):
@@ -117,14 +120,13 @@ class ModDownloader:
       if version2[version] > version1[version]:
         return True
 
-  def __getReleaseInfo(self, factorioVersion, modVersion):
+  def __getReleaseInfo(self, factorioVersion:str, modVersion:str) -> dict:
     modReleases = self.getReleases()
     for release in modReleases:
-      if factorioVersion == release["info_json"]["factorio_version"] and\
-         modVersion    == release["version"]:
-         return release
+      if factorioVersion == release["info_json"]["factorio_version"] and modVersion == release["version"]:
+        return release
 
-  def __deleteAllVersions(self, modName, deleteZip=True):
+  def __deleteAllVersions(self, modName:str, deleteZip:bool=True) -> None:
     # deleting folders
     folders = [folderName for folderName in next(os.walk(self.modFolderDir))[1] if folderName.find(modName) >= 0]
     for folder in folders:
@@ -164,5 +166,6 @@ if __name__ == "__main__":
     "bobvehicleequipment": True,
     "bobwarfare"         : True
   }
-  for bobmod in bobmods:
-    ModDownloader(bobmod, factorioFolderDir).download()
+  for name, download in bobmods.items():
+    if download:
+      ModDownloader(name, factorioFolderDir).download()

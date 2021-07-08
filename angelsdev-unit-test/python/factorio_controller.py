@@ -2,12 +2,11 @@ import os, subprocess
 from shlex import shlex
 import json
 import re
-from datetime import datetime
 
 class FactorioController:
+
   def __init__(self):
     self.factorioExe = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
-    #self.factorioArgs = self.__createFactorioArgs(f"angelsdev-unit-test-{datetime.now().strftime(r'%y%m%d-%H%M%S')}.zip")
     self.factorioArgs = self.__createFactorioArgs()
     self.factorioProcess = None
 
@@ -127,7 +126,7 @@ class FactorioController:
     args.append(self.factorioExe) # because factorio expects the exe as first arg...
     #args.extend(convert_to_arglist("--verbose"))
     args.extend(convert_to_arglist(f"--load-scenario base/freeplay"))
-    args.extend(convert_to_arglist(f"--mod-directory {os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/".replace("\\", "/")))
+    #args.extend(convert_to_arglist(f"--mod-directory {os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/".replace("\\", "/")))
     
     return args
 
