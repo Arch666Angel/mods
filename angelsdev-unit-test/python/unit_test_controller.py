@@ -1,10 +1,10 @@
 import os
 
-from .mod_builder import ModBuilder
-from .mod_downloader import ModDownloader
-from .modlist_controller import ModlistController
-from .settings_controller import SettingsController
-from .factorio_controller import FactorioController
+from mod_builder import ModBuilder
+from mod_downloader import ModDownloader
+from modlist_controller import ModlistController
+from settings_controller import SettingsController
+from factorio_controller import FactorioController
 
 class UnitTestController:
 
