@@ -8,8 +8,7 @@ class FactorioController:
   def __init__(self):
     self.factorioExe = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
     #self.factorioArgs = self.__createFactorioArgs(f"angelsdev-unit-test-{datetime.now().strftime(r'%y%m%d-%H%M%S')}.zip")
-    self.factorioArgs = self.__createFactorioArgs("unittesting001.zip")
-    print(self.factorioArgs)
+    self.factorioArgs = self.__createFactorioArgs()
     self.factorioProcess = None
 
   def launchGame(self) -> None:
@@ -120,15 +119,13 @@ class FactorioController:
 
     return steamGameFolder
 
-  def __createFactorioArgs(self, saveFileName:str) -> list:
+  def __createFactorioArgs(self) -> list:
     def convert_to_arglist(arg:str) -> list:
       return arg.split(' ')
 
-    # https://wiki.factorio.com/Command_line_parameters
-    args = []
-    args.append(self.factorioExe)
+    args = [] # https://wiki.factorio.com/Command_line_parameters
+    args.append(self.factorioExe) # because factorio expects the exe as first arg...
     #args.extend(convert_to_arglist("--verbose"))
-    #args.extend(convert_to_arglist(f"--create {os.path.abspath(os.getenv('APPDATA'))}/Factorio/saves/{saveFileName}".replace("\\", "/")))
     args.extend(convert_to_arglist(f"--load-scenario base/freeplay"))
     args.extend(convert_to_arglist(f"--mod-directory {os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/".replace("\\", "/")))
     
