@@ -39,12 +39,17 @@ class FactorioController:
   def executeUnitTests(self) -> None:
     # This does not actually execute anything, it waits till the mod signals the tests are finished while logging all unit test results
     for line in self.getGameOutput():
-      if type(line) is str and re.fullmatch(r"angelsdev\-unit\-test: .*", line):
-        print(line)
-        if re.fullmatch(r"angelsdev\-unit\-test: Finished testing!", line):
-          break # Finished expectedly
+      if type(line) is str:
+        if re.fullmatch(r"angelsdev\-unit\-test: .*", line):
+          print(line)
+          if re.fullmatch(r"angelsdev\-unit\-test: Finished testing!", line):
+            break # Finished expectedly
+        elif re.fullmatch(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\:.*", line):
+          error_msg = line[re.match(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\: *", line).regs[0][1]:]
+          print(f"angelsdev-unit-test: {error_msg}")
+          break # Error during launch launch
       elif type(line) is bool and line == False:
-        break
+        break # Terminated factorio
 
   def __retrieveSteamGameInstallLocation(self, steamGameID:int) -> str:
     # Find install location of steam itself

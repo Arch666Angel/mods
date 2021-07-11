@@ -5,7 +5,10 @@
 -- the unit test interface.
 local unit_test_functions = require("unit-test-functions")
 local unit_test_001 = function()
-  unit_test_functions.print_msg("This is a dummy output for testing...")
+  unit_test_functions.print_msg("Unit testing mod configuration:")
+  for mod_name, mod_version in pairs(game.active_mods) do
+    unit_test_functions.print_msg(mod_name .. " version " .. mod_version)
+  end
   return true
 end
 return unit_test_001
