@@ -73,7 +73,7 @@ game.surfaces[1].create_entity({
   position = {-14, 1},
   force = "neutral",
 }).set_infinity_pipe_filter({
-  name = "liquid-sulfuric-acid",
+  name = game.active_mods["angelspetrochem"] and "liquid-sulfuric-acid" or "sulfuric-acid",
   percentage = 1
 })
 -- inserters (output)
