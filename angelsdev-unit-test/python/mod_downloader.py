@@ -1,10 +1,11 @@
+from typing import Optional
 import os, shutil, sys, getopt
 import urllib.request
 import json
 
 class ModDownloader:
 
-  def __init__(self, modName:str, factorioFolderDir:str or None=None):
+  def __init__(self, modName:str, factorioFolderDir:Optional[str]=None):
     if factorioFolderDir is None:
       self.factorioFolderDir = f"{os.getenv('APPDATA')}/Factorio/"
     else:
@@ -21,7 +22,7 @@ class ModDownloader:
   def getReleases(self) -> list:
     return self.modData["releases"]
 
-  def getLatestModVersion(self, factorioVersion:str or None = None) -> list:
+  def getLatestModVersion(self, factorioVersion:Optional[str] = None) -> list:
     fixedFactorioVersion = False if factorioVersion is None else True
     
     modReleases = self.getReleases()
@@ -56,7 +57,7 @@ class ModDownloader:
       latestReleaseFactorioVersion = None
     return [latestReleaseFactorioVersion, latestReleaseModVersion]
 
-  def downloadModVersion(self, factorioVersion:str or None = None, modVersion:str or None = None) -> None:
+  def downloadModVersion(self, factorioVersion:Optional[str]=None, modVersion:Optional[str]=None) -> None:
     print("Updating '{0}'".format(self.modData["name"]))
 
     # delete any local versions

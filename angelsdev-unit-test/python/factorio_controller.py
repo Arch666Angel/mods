@@ -1,7 +1,9 @@
+from typing import Union
 import os, subprocess
 from shlex import shlex
 import json
 import re
+import time
 
 class FactorioController:
 
@@ -19,11 +21,12 @@ class FactorioController:
     if self.factorioProcess.poll() is None:
       self.factorioProcess.terminate()
       print(f"angelsdev-unit-test: Closing {os.path.basename(self.factorioExe)}")
+      time.sleep(3) # Allow the game to terminate fully
     else:
       print(f"angelsdev-unit-test: {os.path.basename(self.factorioExe)} terminated unexpectedly...")
     self.factorioProcess = None
 
-  def getGameOutput(self) -> str or bool:
+  def getGameOutput(self) -> Union[str, bool]:
     for stdoutLine in iter(self.factorioProcess.stdout.readline, ""):
       lineData = stdoutLine.strip().decode('utf-8')
       if lineData == '':

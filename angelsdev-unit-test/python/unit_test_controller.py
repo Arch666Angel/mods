@@ -1,3 +1,4 @@
+from typing import Optional
 import os
 
 from mod_builder import ModBuilder
@@ -8,7 +9,7 @@ from factorio_controller import FactorioController
 
 class UnitTestController:
 
-  def __init__(self, updateMods:bool=True, factorioFolderDir:str or None=None):
+  def __init__(self, updateMods:bool=True, factorioFolderDir:Optional[str]=None):
     if factorioFolderDir is None:
       self.factorioFolderDir = f"{os.getenv('APPDATA')}/Factorio/"
     else:

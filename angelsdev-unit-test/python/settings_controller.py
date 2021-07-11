@@ -1,3 +1,4 @@
+from typing import Union
 import os, sys, getopt
 import struct
 
@@ -30,7 +31,7 @@ class SettingsFileReader:
       return ""
     return self.file.read(self.readUnsignedInteger(spaceOptimised=True)).decode('utf-8')
 
-  def readDictionary(self, dictName:str="") -> bool or float or str or dict:
+  def readDictionary(self, dictName:str="") -> Union[bool, float, str, dict]:
     treeType = self.readByte()
     treeBool = self.readBool()
     if treeType == 0: # None
@@ -191,7 +192,7 @@ class SettingsController:
           modSettings.writeString(stageSettingKey)
           modSettings.writeDictionary(stageSettingValue)
 
-  def setSettingValue(self, settingType:str, settingName:str, settingValue:bool or float or str or dict) -> None:
+  def setSettingValue(self, settingType:str, settingName:str, settingValue:Union[bool, float, str, dict]) -> None:
     # Check all settings if the setting already exists
     validSettingType = False
     for modSettingsStage in ["startup", "runtime-global", "runtime-per-user"]:
