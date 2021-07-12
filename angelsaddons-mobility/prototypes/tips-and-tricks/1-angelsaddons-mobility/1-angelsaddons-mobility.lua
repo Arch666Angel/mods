@@ -3,7 +3,7 @@ data:extend(
     {
       type = "tips-and-tricks-item-category",
       name = "angelsaddons-mobility",
-      order = "c-a[addons-mobility]"
+      order = "c-ab[addons-mobility]"
     },
 
     {

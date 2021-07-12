@@ -3,7 +3,7 @@ data:extend(
     {
       type = "tips-and-tricks-item-category",
       name = "angelsaddons-cab",
-      order = "c-a[ore-generation]"
+      order = "c-aa[angesaddons-cab]"
     },
 
     {
