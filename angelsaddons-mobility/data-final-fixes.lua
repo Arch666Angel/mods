@@ -1,4 +1,5 @@
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
+require("prototypes.tips-and-tricks.tips-and-tricks")
 
 local wagons = {
   angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "petro-tank1" or nil,
