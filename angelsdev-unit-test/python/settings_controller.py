@@ -132,9 +132,9 @@ class SettingsController:
 
   def __init__(self, factorioFolderDir=None):
     if factorioFolderDir == None:
-      self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+      self.modFolderDir = f"{os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/"
     else:
-      self.modFolderDir = "{0}mods/".format(factorioFolderDir)
+      self.modFolderDir = f"{os.path.abspath(factorioFolderDir)}/mods/"
 
   def readSettingsFile(self, filename:str="mod-settings.dat") -> None:
     with open(f"{self.modFolderDir}/{filename}", "rb") as modSettingsFile:
@@ -143,7 +143,7 @@ class SettingsController:
       # Version of the mod
       self.settings["version"] = [modSettings.readUnsignedShort() for _ in range(4)]
       _ = modSettings.readBool()
-      print(f"Loading {filename} version {'.'.join([str(v) for v in self.settings.get('version')])}")
+      #print(f"Loading {filename} version {'.'.join([str(v) for v in self.settings.get('version')])}")
 
       # Property tree
       propertyTreeType = modSettings.readByte()
@@ -153,7 +153,7 @@ class SettingsController:
       assert settingCount == 3, "Invalid amount of setting stages!"
       for settingIndex in range(settingCount):
         settingStageName = modSettings.readString()
-        print(f"\tReading {settingStageName} settings")
+        #print(f"\tReading {settingStageName} settings")
         self.settings[settingStageName] = dict()
 
         stagePropertyTreeType = modSettings.readByte()
@@ -172,7 +172,7 @@ class SettingsController:
       modSettings = SettingsFileWriter(modSettingsFile)
 
       # Version of the mod
-      print(f"Writing {filename} version {'.'.join([str(v) for v in self.settings.get('version')])}")
+      #print(f"Writing {filename} version {'.'.join([str(v) for v in self.settings.get('version')])}")
       modSettings.writeVersion(self.settings.get('version'))
       modSettings.writeBool(False)
 
@@ -182,7 +182,7 @@ class SettingsController:
       modSettingsStages = ["startup", "runtime-global", "runtime-per-user"]
       modSettings.writeUnsignedInteger(len(modSettingsStages))
       for modSettingsStage in modSettingsStages:
-        print(f"\tWriting {modSettingsStage} settings")
+        #print(f"\tWriting {modSettingsStage} settings")
         modSettings.writeString(modSettingsStage)
         modSettings.writePropertyType('dictionary')
         stageSettingCount = len(self.settings[modSettingsStage].keys())

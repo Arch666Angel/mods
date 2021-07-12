@@ -7,11 +7,11 @@ class ModDownloader:
 
   def __init__(self, modName:str, factorioFolderDir:Optional[str]=None):
     if factorioFolderDir is None:
-      self.factorioFolderDir = f"{os.getenv('APPDATA')}/Factorio/"
+      self.factorioFolderDir = f"{os.path.abspath(os.getenv('APPDATA'))}/Factorio/"
     else:
-      self.factorioFolderDir = factorioFolderDir
+      self.factorioFolderDir = os.path.abspath(factorioFolderDir)
 
-    self.modFolderDir = f"{self.factorioFolderDir}mods/"
+    self.modFolderDir = f"{self.factorioFolderDir}/mods/"
 
     self.modData = self.__getModAPI(modName)
     self.userData = self.__getUserData()
@@ -80,7 +80,7 @@ class ModDownloader:
     return self.downloadModVersion()
 
   def __getUserData(self) -> list:
-    with open(f"{self.factorioFolderDir}player-data.json") as playerDataFile:
+    with open(f"{self.factorioFolderDir}/player-data.json") as playerDataFile:
       playerData = json.load(playerDataFile)
       if playerData["service-username"] != "":
         return [playerData["service-username"], playerData["service-token"]]

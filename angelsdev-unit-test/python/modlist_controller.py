@@ -8,9 +8,9 @@ class ModlistController:
 
   def __init__(self, factorioFolderDir=None):
     if factorioFolderDir == None:
-      self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+      self.modFolderDir = f"{os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/"
     else:
-      self.modFolderDir = "{0}mods/".format(factorioFolderDir)
+      self.modFolderDir = f"{os.path.abspath(factorioFolderDir)}/mods/"
 
   def readConfigurationFile(self, filename:str="mod-list.json") -> None:
     with open(f"{self.modFolderDir}/{filename}", "r") as modlistFile:

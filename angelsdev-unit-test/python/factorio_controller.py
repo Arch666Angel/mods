@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, Optional
 import os, subprocess
 from shlex import shlex
 import json
@@ -7,15 +7,22 @@ import time
 
 class FactorioController:
 
-  def __init__(self):
-    self.factorioExe = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
-    self.factorioArgs = self.__createFactorioArgs()
-    self.factorioProcess = None
+  def __init__(self, factorioInstallDir:Optional[str]=None):
+    if factorioInstallDir is None:
+      self.factorioExe:str = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
+    else:
+      self.factorioExe:str = os.path.abspath(f"{factorioInstallDir}/bin/x64/factorio.exe")
+    self.factorioArgs:list = self.__createFactorioArgs()
+    self.factorioProcess:Optional[subprocess.Popen] = None
 
   def launchGame(self) -> None:
     # https://developer.valvesoftware.com/wiki/Command_Line_Options#Steam_.28Windows.29
     print(f"angelsdev-unit-test: Launching {os.path.basename(self.factorioExe)}")
-    self.factorioProcess = subprocess.Popen(executable=self.factorioExe, args=self.factorioArgs, cwd=os.path.dirname(self.factorioExe), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    try:
+      self.factorioProcess = subprocess.Popen(executable=self.factorioExe, args=self.factorioArgs, cwd=os.path.dirname(self.factorioExe), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    except FileNotFoundError as fnfe:
+      print(f"The system could not find {self.factorioExe}.")
+      raise fnfe
 
   def terminateGame(self) -> None:
     if self.factorioProcess.poll() is None:
