@@ -6,3 +6,4 @@ require("prototypes.tips-and-tricks.1-1-3-bio-nauvis-arbor.1-1-3-bio-nauvis-arbo
 require("prototypes.tips-and-tricks.1-2-bio-vegetables.1-2-bio-vegetables")
 require("prototypes.tips-and-tricks.1-2-1-bio-vegetables-farming.1-2-1-bio-vegetables-farming")
 require("prototypes.tips-and-tricks.1-2-2-bio-vegetables-crops.1-2-2-bio-vegetables-crops")
+require("prototypes.tips-and-tricks.1-3-bio-animals.1-3-bio-animals")
