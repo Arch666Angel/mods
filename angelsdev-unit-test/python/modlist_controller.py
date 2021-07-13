@@ -24,6 +24,15 @@ class ModlistController:
     for mod in self.modlist:
       mod['enabled'] = mod['name'] == "base"
 
+  def disableMod(self, modname:str) -> None:
+    if modname == "base":
+      return
+    for mod in self.modlist:
+      if mod['name'] == modname:
+        mod['enabled'] = modname == "base" # base mod cannot be disabled
+        return
+    self.modlist.append({ 'name': modname, 'enabled': modname == "base" })
+
   def enableMod(self, modname:str) -> None:
     for mod in self.modlist:
       if mod['name'] == modname:

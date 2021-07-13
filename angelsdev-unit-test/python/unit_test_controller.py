@@ -23,6 +23,11 @@ class UnitTestController:
     self.settingsController = SettingsController(self.factorioFolderDir)
     self.factorioController = FactorioController(factorioInstallDir)
 
+  def __del__(self):
+    self.modlistController.readConfigurationFile()
+    self.modlistController.disableMod("angelsdev-unit-test")
+    self.modlistController.writeConfigurationFile()
+
   def TestAllConfiguations(self) -> None:
     self.TestSpecialVanilla()
     self.TestBobAngels()
