@@ -6,4 +6,4 @@ local description = {
   {"tips-and-tricks-description.animals-notes-puffers"},
   {"tips-and-tricks-description.animals-notes-biters"},
 }
-return description
+return angelsmods.functions.clean_localised_description(description)
