@@ -140,12 +140,14 @@ if angelsmods.industries.overhaul then
       data.raw.item["plutonium-239"].icon_size = data.raw.item["plutonium-240"].icon_size
       data.raw.item["plutonium-239"].icons = data.raw.item["plutonium-240"].icons
     end
+
     angelsmods.functions.move_item(
       "plutonium-239",
       "angels-power-nuclear-processing",
       "a[radioactive-element]-e[plutonium-239]"
     )
-    angelsmods.functions.add_flag("plutonium-240", "hidden")
+    OV.disable_recipe("empty-nuclear-fuel-cell")
+    angelsmods.functions.add_flag({"plutonium-240","empty-nuclear-fuel-cell"}, "hidden")
 
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then

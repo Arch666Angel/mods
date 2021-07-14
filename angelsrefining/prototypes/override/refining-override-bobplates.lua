@@ -198,3 +198,10 @@ if mods["bobplates"] then
     move_item("thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
 end
+-------------------------------------------------------------------------------
+-- TECH TREE CLEANUP ----------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  OV.set_science_pack("cobalt-processing","chemical-science-pack",1)
+  
+end

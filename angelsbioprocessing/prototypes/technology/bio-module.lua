@@ -5,7 +5,7 @@ data:extend(
       name = "angels-bio-yield-module",
       icon = "__angelsbioprocessing__/graphics/technology/module-bio-productivity-1-tech.png",
       icon_size = 256,
-      iocn_mipmaps = 4,
+      icon_mipmaps = 4,
       upgrade = true,
       order = "c-a",
       prerequisites = {
@@ -34,7 +34,7 @@ data:extend(
       name = "angels-bio-yield-module-2",
       icon = "__angelsbioprocessing__/graphics/technology/module-bio-productivity-2-tech.png",
       icon_size = 256,
-      iocn_mipmaps = 4,
+      icon_mipmaps = 4,
       upgrade = true,
       order = "c-a",
       prerequisites = {
@@ -64,7 +64,7 @@ data:extend(
       name = "angels-bio-yield-module-3",
       icon = "__angelsbioprocessing__/graphics/technology/module-bio-productivity-3-tech.png",
       icon_size = 256,
-      iocn_mipmaps = 4,
+      icon_mipmaps = 4,
       upgrade = true,
       order = "c-a",
       prerequisites = {

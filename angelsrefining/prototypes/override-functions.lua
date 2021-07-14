@@ -253,16 +253,46 @@ ov_functions.remove_unlock = function(technology, recipe)
   modify_table.technologies[technology].unlocks[recipe] = false
 end
 
-ov_functions.add_prereq = function(technology, prereq)
-  guarantee_subtable(modify_table.technologies, technology)
-  guarantee_subtable(modify_table.technologies[technology], "prereqs")
-  modify_table.technologies[technology].prereqs[prereq] = true
+ov_functions.add_prereq = function(technology, prereq) --handles tech OR prereq as table
+  if type(technology) == "table" then
+    for tk, tech in pairs(technology) do
+      guarantee_subtable(modify_table.technologies, tech)
+      guarantee_subtable(modify_table.technologies[tech], "prereqs")
+      modify_table.technologies[tech].prereqs[prereq] = true
+    end
+  else
+    guarantee_subtable(modify_table.technologies, technology)
+    guarantee_subtable(modify_table.technologies[technology], "prereqs")
+    guarantee_subtable(modify_table.technologies, technology)
+    guarantee_subtable(modify_table.technologies[technology], "prereqs")
+    if type(prereq) == "table" then
+      for pr,req in pairs(prereq) do
+        modify_table.technologies[technology].prereqs[req] = true
+      end
+    else
+      modify_table.technologies[technology].prereqs[prereq] = true
+    end
+  end
 end
 
-ov_functions.remove_prereq = function(technology, prereq)
-  guarantee_subtable(modify_table.technologies, technology)
-  guarantee_subtable(modify_table.technologies[technology], "prereqs")
-  modify_table.technologies[technology].prereqs[prereq] = false
+ov_functions.remove_prereq = function(technology, prereq) --handles tech OR prereq as table
+  if type(technology) == "table" then
+    for tk, tech in pairs(technology) do
+      guarantee_subtable(modify_table.technologies, tech)
+      guarantee_subtable(modify_table.technologies[tech], "prereqs")
+      modify_table.technologies[tech].prereqs[prereq] = false
+    end
+  else
+    guarantee_subtable(modify_table.technologies, technology)
+    guarantee_subtable(modify_table.technologies[technology], "prereqs")
+    if type(prereq) == "table" then
+      for pr,req in pairs(prereq) do
+        modify_table.technologies[technology].prereqs[req] = false
+      end
+    else
+      modify_table.technologies[technology].prereqs[prereq] = false
+    end
+  end
 end
 
 ov_functions.global_replace_technology = function(old, new)

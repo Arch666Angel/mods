@@ -33,7 +33,7 @@ if mods["bobrevamp"] then
     OV.remove_unlock("angels-oil-processing", "solid-fuel-from-hydrogen")
 
     OV.add_unlock("flammables", "liquid-fuel")
-    OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
+    --OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
     OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
 
     OV.add_prereq("chemical-processing-3", "flammables")
