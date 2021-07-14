@@ -2,7 +2,7 @@ require 'util'
 
 -- Create class ---------------------------------------------------------------
 local debug_info = {}
-debug_info.debug_enabled = true -- disable before release!
+debug_info.debug_enabled = false -- disable before release!
 
 -------------------------------------------------------------------------------
 -- Initiation of the class

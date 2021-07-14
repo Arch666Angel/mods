@@ -697,6 +697,27 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
   local item_data = data.raw.item[inputs.name]
   if not item_data then return end
 
+  local resistances =
+  {
+    -- base game
+    { type = "acid"      , percent = 100 },
+    { type = "electric"  , percent = 100 },
+    { type = "explosion" , percent = 100 },
+    { type = "fire"      , percent = 100 },
+    { type = "impact"    , percent = 100 },
+    { type = "laser"     , percent = 100 },
+    { type = "physical"  , percent = 100 },
+    { type = "poison"    , percent = 100 },
+    -- angels
+    { type = "bio"       , percent = 100 },
+    { type = "gathering" , percent = 100 },
+  }
+  if mods["bobwarfare"] then
+    -- bobs
+    table.insert(resistances, { type = "bob-pierce", percent = 100 })
+    table.insert(resistances, { type = "plasma"    , percent = 100 })
+  end
+
   data:extend(
     {
       {
@@ -758,24 +779,7 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
         },
 
         hide_resistances = true,
-        resistances = 
-        {
-          -- base game
-          { type = "acid"      , percent = 100 },
-          { type = "electric"  , percent = 100 },
-          { type = "explosion" , percent = 100 },
-          { type = "fire"      , percent = 100 },
-          { type = "impact"    , percent = 100 },
-          { type = "laser"     , percent = 100 },
-          { type = "physical"  , percent = 100 },
-          { type = "poison"    , percent = 100 },
-          -- angels
-          { type = "bio"       , percent = 100 },
-          { type = "gathering" , percent = 100 },
-          -- bobs
-          --{ type = "bob-pierce", percent = 100 },
-          --{ type = "plasma"    , percent = 100 },
-        }
+        resistances = resistances,
       }
     }
   )
