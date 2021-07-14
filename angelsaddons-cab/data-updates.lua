@@ -1,5 +1,6 @@
 require("prototypes.recipes.cab-updates")
-require "prototypes.entities.cab-updates"
+require("prototypes.entities.cab-updates")
+require("prototypes.tips-and-tricks.tips-and-tricks")
 
 if angelsmods.industries then
   local OV = angelsmods.functions.OV
