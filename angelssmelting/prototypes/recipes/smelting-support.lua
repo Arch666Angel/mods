@@ -273,7 +273,6 @@ data:extend(
         },
         1, angelsmods.smelting.number_tint),
       order = "c[mold-non-expendable]-a[creation]",
-      stack_size = 200
     },
     {
       type = "recipe",

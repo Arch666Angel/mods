@@ -25,7 +25,6 @@ data:extend(
       selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
       max_payload_size = 1,
       speed = 0.02,
-      transfer_distance = 0.5,
       max_energy = "300kJ",
       energy_per_tick = "0.005kJ",
       speed_multiplier_when_out_of_energy = 0.8,

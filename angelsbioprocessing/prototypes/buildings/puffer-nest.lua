@@ -25,7 +25,7 @@ data:extend(
       result = "bio-puffer-egg-1",
       count = 2,
     },
-    emissions_per_tick = -0.0001,
+    emissions_per_second = -0.006,--emissions_per_tick = -0.0001,
     max_health = 20,
     collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
     selection_box = {{-0.9, -0.9}, {0.9, 0.9}},

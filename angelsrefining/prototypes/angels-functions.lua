@@ -1067,7 +1067,17 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
         end
       else
         if to_add.flags then
-          table.insert(to_add.flags, flag)
+          --don't add if already there
+          local duplicate=false
+          for _,flg in pairs(to_add.flags) do
+            if flg==flag then
+              duplicate=true
+              break
+            end
+          end
+          if duplicate==false then
+            table.insert(to_add.flags, flag)
+          end
         else
           to_add.flags = {flag}
         end
@@ -1105,7 +1115,6 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
         for i, f in pairs(to_remove.flags) do
           if f == flag_to_remove then
             table.remove(to_remove.flags, i)
-            break
           end
         end
       end

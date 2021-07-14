@@ -395,7 +395,6 @@ function replace_gen_mats()
     if nme and data.raw.item[nme] then
       OV.global_replace_item(nme, info.new)
       data.raw.recipe[nme].hidden = true
-      data.raw.item[nme].hidden = true
       OV.disable_recipe({nme})
       --in case hiding is not enough
       angelsmods.functions.add_flag(nme, "hidden")

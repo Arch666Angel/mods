@@ -105,7 +105,6 @@ data:extend(
         usage_priority = "secondary-input"
       },
       charging_energy = "1000kW",
-      energy_consumption = "200kW",
       robot_limit = 5,
       construction_radius = 3,
       spawn_and_station_height = 0.4,
@@ -159,7 +158,6 @@ data:extend(
         usage_priority = "secondary-input"
       },
       charging_energy = "2000kW",
-      energy_consumption = "400kW",
       robot_limit = 50,
       construction_radius = 30,
       spawn_and_station_height = 0.4,

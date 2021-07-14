@@ -108,7 +108,6 @@ data:extend(
       name = "solid-resin",
       category = "crafting-with-fluid",
       subgroup = "petrochem-solids",
-      enabled = false,
       normal = {
         enabled = false,
         energy_required = 2,
@@ -211,7 +210,6 @@ data:extend(
       name = "solid-rubber",
       category = "crafting-with-fluid",
       subgroup = "petrochem-solids-2",
-      enabled = false,
       normal = {
         enabled = false,
         energy_required = 2,
