@@ -1,5 +1,10 @@
+# Factorio files
 *.zip
 *.dat
 mod-list.json
+# Python
+__pycache__/
+# IDE config
 .idea/
 .vscode/
+run_unit_tests_PWJ.bat
