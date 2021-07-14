@@ -25,7 +25,7 @@ data:extend(
           {
             type = "build-entity",
             entity = "burner-ore-crusher",
-            cout = 1,
+            count = 1,
           },
           {
             type = "build-entity",
