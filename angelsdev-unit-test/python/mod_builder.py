@@ -8,9 +8,9 @@ class ModBuilder:
     self.modNames = [modName for modName in next(os.walk(f"{os.path.dirname(os.path.abspath(__file__))}/../.."))[1] if self.__isReleased(modName)]
 
     if factorioFolderDir is None:
-      self.modFolderDir = "{0}/Factorio/mods/".format(os.getenv('APPDATA'))
+      self.modFolderDir = f"{os.getenv('APPDATA')}/Factorio/mods/"
     else:
-      self.modFolderDir = "{0}mods/".format(factorioFolderDir)
+      self.modFolderDir = f"{os.path.abspath(factorioFolderDir)}/mods/"
 
   def __isReleased(self, modName:str) -> None:
     if modName.find("angels") >= 0:
@@ -64,9 +64,9 @@ class ModBuilder:
 
 if __name__ == "__main__":
   factorioFolderDir = None
-  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
+  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['factoriodir='])
   for opt, arg in opts:
     if opt in ('-m', '--factoriodir'):
       factorioFolderDir = os.path.realpath(arg.strip())
 
-  ModBuilder(factorioFolderDir).createAllMods()
+  ModBuilder(factorioFolderDir=factorioFolderDir).createAllMods()

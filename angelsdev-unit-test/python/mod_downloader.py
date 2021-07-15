@@ -9,7 +9,7 @@ class ModDownloader:
     if factorioFolderDir is None:
       self.factorioFolderDir = f"{os.path.abspath(os.getenv('APPDATA'))}/Factorio/"
     else:
-      self.factorioFolderDir = os.path.abspath(factorioFolderDir)
+      self.factorioFolderDir = f"{os.path.abspath(factorioFolderDir)}/"
 
     self.modFolderDir = f"{self.factorioFolderDir}/mods/"
 
@@ -142,7 +142,7 @@ class ModDownloader:
 
 if __name__ == "__main__":
   factorioFolderDir = None
-  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
+  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['factoriodir='])
   for opt, arg in opts:
     if opt in ('-m', '--factoriodir'):
       factorioFolderDir = os.path.realpath(arg.strip())

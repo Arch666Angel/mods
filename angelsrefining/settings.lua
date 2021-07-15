@@ -1,5 +1,11 @@
+--INITIALIZE
+angelsmods = angelsmods or {}
+angelsmods.settings = angelsmods.settings or {}
+
+--LOAD FUNCTIONS
 require "prototypes.angels-settings"
 
+--LOAD PROTOTYPES
 data:extend(
 {
   {
