@@ -91,8 +91,8 @@ if angelsmods.industries.tech then
         },
         module_specification = {
           module_slots = 2,
-          max_entity_info_module_icons_per_row = 3,
-          max_entity_info_module_icon_rows = 1,
+          module_info_max_icons_per_row = 3,
+          module_info_max_icon_rows = 1,
           module_info_icon_shift = {0, 0.9}
         }
       },
@@ -168,8 +168,8 @@ if angelsmods.industries.tech then
         },
         module_specification = {
           module_slots = 2,
-          max_entity_info_module_icons_per_row = 3,
-          max_entity_info_module_icon_rows = 1,
+          module_info_max_icons_per_row = 3,
+          module_info_max_icon_rows = 1,
           module_info_icon_shift = {0, 0.9}
         }
       },
@@ -243,8 +243,8 @@ if angelsmods.industries.tech then
         },
         module_specification = {
           module_slots = 3,
-          max_entity_info_module_icons_per_row = 3,
-          max_entity_info_module_icon_rows = 1,
+          module_info_max_icons_per_row = 3,
+          module_info_max_icon_rows = 1,
           module_info_icon_shift = {0, 0.9}
         }
       }

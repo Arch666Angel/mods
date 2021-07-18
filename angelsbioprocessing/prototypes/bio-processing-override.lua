@@ -9,9 +9,6 @@ require("prototypes.overrides.bio-processing-override-angel")
 local OV = angelsmods.functions.OV
 local lab_ignore = angelsmods.triggers.lab_ignore_token
 
---PREPARATION
-OV.remove_output("algae-brown-burning", "angels-void")
-
 --BASE
 data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
 data.raw["capsule"]["raw-fish"].order = "aa"
@@ -53,7 +50,7 @@ end
 
 --CONDITIONAL
 if angelsmods.trigger.smelting_products["glass"].plate then
-  OV.patch_recipes(
+OV.patch_recipes(
     {
       {
         name = "petri-dish",
@@ -89,10 +86,7 @@ else
   if bobmods and bobmods.plates then
     OV.patch_recipes(
       {
-        {name = "algae-brown-burning", results = {{name = "lithium-chloride", amount = 1, type = "item"}}}
-        -- { name = "temperate-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
-        -- { name = "desert-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
-        -- { name = "swamp-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
+        {name = "algae-brown-burning", results = {{"!!"},{name = "lithium-chloride", amount = 1, type = "item"}}}
       }
     )
   else

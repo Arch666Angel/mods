@@ -108,9 +108,6 @@ data:extend(
     type = "item-group",
     name = "bio-processing-nauvis",
     order = "la[angels]-d[bio-processing]-a[nauvis]",
-    inventory_order = "la[angels]-d[bio-processing]-a[nauvis]",
-    --icon = "__angelsbioprocessing__/graphics/technology/algae-farm-group.png",
-    --icon_size = 64,
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
@@ -212,9 +209,6 @@ data:extend(
     type = "item-group",
     name = "bio-processing-vegetables",
     order = "la[angels]-d[bio-processing]-b[farming]",
-    inventory_order = "la[angels]-d[bio-processing]-b[farming]",
-    --icon = "__angelsbioprocessing__/graphics/technology/vegetables-farm-group.png",
-    --icon_size = 128,
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
@@ -321,9 +315,6 @@ data:extend(
     type = "item-group",
     name = "bio-processing-alien",
     order = "la[angels]-d[bio-processing]-c[alien]",
-    inventory_order = "la[angels]-d[bio-processing]-c[alien]",
-    --icon = "__angelsbioprocessing__/graphics/technology/refugium-1-group.png",
-    --icon_size = 64,
     icons = {
       {
         icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",

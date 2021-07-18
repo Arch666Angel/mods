@@ -61,8 +61,6 @@ data:extend(
     base_color = {r = 209/255, g = 209/255, b = 209/255},
     flow_color = {r = 209/255, g = 209/255, b = 209/255},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   -- SMELTING RESULTS
   {
@@ -96,9 +94,7 @@ data:extend(
     base_color = {r = 77/255, g = 78/255, b = 90/255},
     flow_color = {r = 77/255, g = 78/255, b = 90/255},
     max_temperature = 327.5,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
-    auto_barrel = false
+auto_barrel = false
   },
   {
     type = "item",

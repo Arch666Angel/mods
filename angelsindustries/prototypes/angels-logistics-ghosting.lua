@@ -65,7 +65,6 @@ data:extend(
         ingredients = {},
         count = 1
       },
-      disabled = true,
       hidden = true
     },
     {

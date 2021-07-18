@@ -25,8 +25,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           base_color = {r = 224 / 256, g = 155 / 256, b = 58 / 256},
           flow_color = {r = 224 / 256, g = 155 / 256, b = 58 / 256},
           max_temperature = 100,
-          pressure_to_speed_ratio = 0.4,
-          flow_to_energy_ratio = 0.59,
           auto_barrel = false
         }
       }

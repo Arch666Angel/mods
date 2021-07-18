@@ -25,7 +25,6 @@ if mods["bobplates"] then
         },
       }
       data.raw["item-group"]["bob-gems"].order = "lb[bobs]-c[gems]"
-      data.raw["item-group"]["bob-gems"].inventory_order = "lb[bobs]-c[gems]"
     end
 
     -- gems subgroups

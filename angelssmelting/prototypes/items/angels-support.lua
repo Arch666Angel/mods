@@ -13,8 +13,6 @@ data:extend(
     base_color = {r = 109/255, g = 136/255, b = 179/255},
     flow_color = {r = 109/255, g = 136/255, b = 179/255},
     max_temperature = 300,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -28,9 +26,7 @@ data:extend(
     base_color = {r = 68/255, g = 85/255, b = 112/255},
     flow_color = {r = 68/255, g = 85/255, b = 112/255},
     max_temperature = 300,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
-    auto_barrel = false
+auto_barrel = false
   },
   --MOLDS
   {

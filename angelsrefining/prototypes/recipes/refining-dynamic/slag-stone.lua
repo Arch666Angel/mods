@@ -271,15 +271,15 @@ data:extend(
       name = "stone-crushed",
       category = "crafting",
       subgroup = "processing-crafting",
-      energy_required = 0.5,
-      enabled = true,
       normal = {
         ingredients = {
           {type = "item", name = "stone-crushed", amount = 2}
         },
         results = {
           {type = "item", name = "stone", amount = 1}
-        }
+        },
+        energy_required = 0.5,
+        enabled = true,
       },
       expensive = {
         ingredients = {
@@ -287,7 +287,9 @@ data:extend(
         },
         results = {
           {type = "item", name = "stone", amount = 1}
-        }
+        },
+        energy_required = 1,
+        enabled = true,
       },
       icon_size = 32,
       order = "d[stone-crushed]"

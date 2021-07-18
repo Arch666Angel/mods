@@ -730,12 +730,14 @@ local function make_attack_parameter(data_app, data_dmg)
         action_delivery = {
           type = "instant",
           target_effects = {
-            type = "damage",
-            damage = {amount = data_dmg.damage, type = "physical"}
-          },
-          {
-            type = "damage",
-            damage = {amount = data_dmg.damage2, type = "acid"}
+            {
+              type = "damage",
+              damage = {amount = data_dmg.damage, type = "physical"}
+            },
+            {
+              type = "damage",
+              damage = {amount = data_dmg.damage2, type = "acid"}
+            }
           }
         }
       }
@@ -758,12 +760,14 @@ local function make_attack_parameter(data_app, data_dmg)
         action_delivery = {
           type = "instant",
           target_effects = {
-            type = "damage",
-            damage = {amount = data_dmg.damage, type = "physical"}
-          },
-          {
-            type = "damage",
-            damage = {amount = 5, type = "acid"}
+            {
+              type = "damage",
+              damage = {amount = data_dmg.damage, type = "physical"}
+            },
+            {
+              type = "damage",
+              damage = {amount = 5, type = "acid"}
+            }
           }
         }
       }
@@ -817,7 +821,7 @@ local function make_attack_parameter(data_app, data_dmg)
     cooldown = data_dmg.cooldown,
     range = data_dmg.range,
     min_attack_distance = data_dmg.min_attack_distance,
-    projectile_creation_distance = data_dmg.creation_distance,
+    --projectile_creation_distance = data_dmg.creation_distance,
     damage_modifier = data_dmg.damage_modifier,
     warmup = data_dmg.warmup,
     ammo_type = data_dmg.ammo,
@@ -834,10 +838,12 @@ function angelsmods.functions.make_alien(def_data)
     local corpse_base = {
       type = "corpse",
       name = c_name,
-      icon = "__base__/graphics/icons/big-biter-corpse.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      tint = def_data.appearance.tint1,
+      icons={
+        {icon = "__base__/graphics/icons/big-biter-corpse.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        tint = def_data.appearance.tint1,
+      }},
       selection_box = {{-1, -1}, {1, 1}},
       selectable_in_game = false,
       subgroup = "corpses",
@@ -942,7 +948,6 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
         -- in ticks per 1 pu
         pollution_absorption_absolute = 20,
         pollution_absorption_proportional = 0.01,
-        pollution_to_enhance_spawning = 30000,
         loot = {},
         corpse = "biter-spawner-corpse",
         dying_explosion = "blood-explosion-huge",

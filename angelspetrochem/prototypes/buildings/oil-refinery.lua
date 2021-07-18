@@ -166,7 +166,6 @@ data:extend(
           pipe_connections = {{position = {2, -3}}}
         }
       },
-      pipe_covers = pipecoverspictures()
     },
     {
       type = "item",
@@ -325,7 +324,6 @@ data:extend(
           pipe_connections = {{position = {2, -3}}}
         }
       },
-      pipe_covers = pipecoverspictures()
     },
     {
       type = "item",
@@ -483,7 +481,6 @@ data:extend(
           pipe_connections = {{position = {2, -3}}}
         }
       },
-      pipe_covers = pipecoverspictures()
     }
   }
 )

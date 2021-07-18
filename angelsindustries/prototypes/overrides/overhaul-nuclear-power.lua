@@ -96,6 +96,7 @@ if angelsmods.industries.overhaul then
       }
     }
   )
+  data.raw.recipe["nuclear-fuel-reprocessing"].icon=nil
   OV.disable_recipe("kovarex-enrichment-process")
   OV.add_unlock("nuclear-power", "angels-uranium-fuel-cell")
   data.raw.item["uranium-fuel-cell"].fuel_value = "2GJ"

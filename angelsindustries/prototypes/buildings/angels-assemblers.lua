@@ -17,7 +17,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-1.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-0"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-0"},
       max_health = 300,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -79,7 +79,6 @@ data:extend(
       },
       crafting_categories = {"crafting"},
       crafting_speed = 0.5,
-      source_inventory_size = 1,
       energy_source = {
         type = "burner",
         fuel_category = "chemical",
@@ -99,7 +98,6 @@ data:extend(
         -- }
       },
       energy_usage = "90kW",
-      ingredient_count = 2,
       open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.85},
       close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -135,7 +133,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-1.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-small-1"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-small-1"},
       max_health = 300,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -202,7 +200,6 @@ data:extend(
         emissions_per_minute = 0.05 / 1.5
       },
       energy_usage = "90kW",
-      ingredient_count = 1,
       open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.85},
       close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -237,7 +234,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-1.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-big-1"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-big-1"},
       max_health = 300,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -304,7 +301,6 @@ data:extend(
         emissions_per_minute = 0.05 / 1.5
       },
       energy_usage = "90kW",
-      ingredient_count = 4,
       open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.85},
       close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -340,7 +336,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-2.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-small-2"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-small-2"},
       max_health = 350,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -424,7 +420,6 @@ data:extend(
         emissions_per_minute = 0.04 / 2.5
       },
       energy_usage = "150kW",
-      ingredient_count = 2,
       module_specification = {
         module_slots = 2
       },
@@ -446,7 +441,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-2.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-big-2"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-big-2"},
       max_health = 350,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -551,7 +546,6 @@ data:extend(
         emissions_per_minute = 0.04 / 2.5
       },
       energy_usage = "150kW",
-      ingredient_count = 5,
       module_specification = {
         module_slots = 2
       },
@@ -574,7 +568,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-3.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-small-3"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-small-3"},
       max_health = 400,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -658,7 +652,6 @@ data:extend(
         emissions_per_minute = 0.03 / 3.5
       },
       energy_usage = "210kW",
-      ingredient_count = 2,
       module_specification = {
         module_slots = 4
       },
@@ -680,7 +673,7 @@ data:extend(
       icon = "__base__/graphics/icons/assembling-machine-3.png",
       icon_size = 64,
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-assembling-machine-big-3"},
+      minable = {mining_time = 0.5, result = "angels-assembling-machine-big-3"},
       max_health = 400,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",
@@ -785,7 +778,6 @@ data:extend(
         emissions_per_minute = 0.03 / 3.5
       },
       energy_usage = "210kW",
-      ingredient_count = 6,
       module_specification = {
         module_slots = 4
       },

@@ -24,7 +24,7 @@ data:extend(
         {type = "item", name = "temperate-tree", amount = 1},
       }
     },
-    emissions_per_tick = -0.0001,
+    emissions_per_second = -0.006,--emissions_per_tick = -0.0001,
     max_health = 20,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-2, -5}, {2, 1}},
@@ -94,7 +94,7 @@ data:extend(
         {type = "item", name = "swamp-tree", amount = 1},
       }
     },
-    emissions_per_tick = -0.0001,
+    emissions_per_second = -0.006,--emissions_per_tick = -0.0001,
     max_health = 20,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1.5, -5}, {1.5, 1}},
@@ -170,7 +170,7 @@ data:extend(
             {type = "item", name = "desert-tree", amount = 1},
         }
     },
-    emissions_per_tick = -0.0001,
+    emissions_per_second = -0.006,--emissions_per_tick = -0.0001,
     max_health = 20,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-2.5, -5}, {2.5, 1}},
