@@ -3,6 +3,7 @@ Version: 0.9.19
 Date: 31.05.2021
   Bugfixes:
     - Changed prerequisites of plastic before advanced electronics technology
+    - Fixed emissions_multiplier were not applied correctly
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 26.05.2021
