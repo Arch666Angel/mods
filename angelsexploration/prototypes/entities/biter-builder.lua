@@ -1011,10 +1011,35 @@ function angelsmods.functions.update_spawner(us_data)
     local spawner = data.raw["unit-spawner"][s_name]
     --log(serpent.block(spawner))
     spawner.resistances = spawner.resistances or {}
-    table.insert(spawner.resistances, us_data.resistance)
+    for _,new_resistance_data in pairs(us_data.resistance or {}) do
+      local existing_resistace = false
+      for old_resistance_index,old_resistance_data in pairs(spawner.resistances) do
+        if old_resistance_data.type == new_resistance_data.type then
+          spawner.resistances[old_resistance_index] = new_resistance_data
+          existing_resistace = true
+          break
+        end
+      end
+      if not existing_resistance then
+        table.insert(spawner.resistances, new_resistance_data)
+      end
+    end
     spawner.max_health = us_data.appearance.health
     spawner.spawning_cooldown = us_data.appearance.spawn_cooldown
-    table.insert(spawner.result_units, us_data.results)
+    spawner.result_units = spawner.result_units or {}
+    for _,new_result_unit_data in pairs(us_data.results or {}) do
+      local existing_result_unit = false
+      for old_result_unit_index,old_result_unit_data in pairs(spawner.result_units) do
+        if old_result_unit_data[1] == new_result_unit_data[1] then
+          spawner.result_units[old_result_unit_index] = new_result_unit_data
+          existing_result_unit = true
+          break
+        end
+      end
+      if not existing_resistance then
+        table.insert(spawner.result_units, new_result_unit_data)
+      end
+    end
   end
 end
 
