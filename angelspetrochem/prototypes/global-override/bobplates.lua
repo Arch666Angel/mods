@@ -12,12 +12,12 @@ if mods["bobplates"] then
     "air-pump-3",
     "air-pump-4"
   }, "hidden")
-  
+
   angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-2", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-3", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-4", nil)
-  
+
   --OV.remove_unlock("air-compressor-1", "bob-liquid-air")
   OV.disable_technology(
     {
@@ -28,7 +28,7 @@ if mods["bobplates"] then
       "air-compressor-4"
     }
   )
-  
+
   OV.hide_recipe(
     {
       "air-pump",
@@ -103,10 +103,10 @@ if mods["bobplates"] then
   -- chloride processing ------------------------------------------------------
   OV.converter_fluid("chlorine", "gas-chlorine")
   OV.disable_recipe({"salt-water-electrolysis", "salt"})
-  
+
   OV.converter_fluid("hydrogen-chloride", "gas-hydrogen-chloride")
   OV.remove_unlock("chemical-processing-2", "hydrogen-chloride")
-  
+
   OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
   angelsmods.functions.add_flag("calcium-chloride", "hidden")
   OV.disable_recipe("calcium-chloride")
@@ -126,7 +126,7 @@ if mods["bobplates"] then
   OV.global_replace_technology("nitrogen-processing", "angels-nitrogen-processing-2")
   OV.remove_prereq("ceramics", "nitrogen-processing")
   OV.add_prereq("ceramics", "angels-nitrogen-processing-1")
-  
+
   OV.converter_fluid("nitric-acid", "liquid-nitric-acid")
   OV.converter_fluid("nitrogen-dioxide", "gas-nitrogen-dioxide")
 
@@ -139,39 +139,6 @@ end
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  -- liquid fuel --------------------------------------------------------------
-  move_item("liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
-  data.raw["fluid"]["liquid-fuel"].icon = nil
-  data.raw["fluid"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_fluid_icon(
-    nil, 
-    {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
-  )
-  OV.barrel_overrides("liquid-fuel", "acid")
-
-  data.raw["recipe"]["liquid-fuel"].always_show_products = true
-  data.raw["recipe"]["liquid-fuel"].icon = nil
-  data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
-    {"liquid-fuel"},
-    {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
-  )
-  OV.patch_recipes(
-    {
-      {
-        name = "liquid-fuel",
-        ingredients = {
-          {"!!"},
-          {name = "liquid-fuel-oil", type = "fluid", amount = 40},
-          {name = "gas-residual", type = "fluid", amount = 10}
-        },
-        results = {
-          {name = "liquid-fuel", type = "fluid", amount = 50}
-        },
-        subgroup = "petrochem-carbon-oil-feed",
-        order = "h"
-      }
-    }
-  )
-  OV.add_unlock("angels-oil-processing", "liquid-fuel")
 
   move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
@@ -221,102 +188,9 @@ if mods["bobplates"] then
 end
 
 -------------------------------------------------------------------------------
--- RESIN HANDLING -------------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobplates"] then
-  OV.global_replace_item({"solid-resin"}, "resin")
-  angelsmods.functions.add_flag("solid-resin", "hidden")
-  move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
-
-  OV.patch_recipes(
-    {
-      {
-        name = "bob-resin-wood",
-        ingredients = {
-          {name = "wood", type = "item", amount = "+4"}
-        },
-        subgroup = "petrochem-solids",
-        order = "b[resin]-b[solid]-a",
-        icons = angelsmods.functions.add_number_icon_layer(
-          {
-            {
-              icon = "__bobplates__/graphics/icons/resin.png",
-              icon_size = 32, icon_mipmaps = 1,
-            }
-          },
-          1, angelsmods.petrochem.number_tint),
-      },
-      {
-        name = "solid-resin",
-        order = "b[resin]-b[solid]-b",
-        icons = mods["angelsbioprocessing"] and {
-          {
-            icon = "__bobplates__/graphics/icons/resin.png",
-            icon_size = 32, icon_mipmaps = 1,
-          },
-        } or angelsmods.functions.add_number_icon_layer({
-          {
-            icon = "__bobplates__/graphics/icons/resin.png",
-            icon_size = 32, icon_mipmaps = 1,
-          }
-        },
-        2, angelsmods.petrochem.number_tint),
-      }
-    }
-  )
-
-  if mods["angelsbioprocessing"] then
-    OV.disable_recipe({"bob-resin-wood"})
-  end
-
-  OV.remove_unlock("plastics", "synthetic-wood")
-  OV.disable_recipe({"synthetic-wood"})
-end
-
--------------------------------------------------------------------------------
 -- RUBBER HANDLING ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.global_replace_item("solid-rubber", "rubber")
-  angelsmods.functions.add_flag("solid-rubber", "hidden")
-  move_item("rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
-
-  OV.patch_recipes(
-    {
-      {
-        name = "bob-rubber",
-        enabled = false,
-        ingredients = {
-          {"!!"},
-          {type = "item", name = "resin", amount = 3}
-        },
-        subgroup = "petrochem-solids-2",
-        order = "b[rubber]-b[solid]-a",
-        icons = angelsmods.functions.add_number_icon_layer(
-          {
-            {
-              icon = "__bobplates__/graphics/icons/rubber.png",
-              icon_size = 32, icon_mipmaps = 1,
-            }
-          },
-          1, angelsmods.petrochem.number_tint),
-      },
-      {
-        name = "solid-rubber",
-        subgroup = "petrochem-solids-2",
-        order = "b[rubber]-b[solid]-a",
-        icons = angelsmods.functions.add_number_icon_layer(
-          {
-            {
-              icon = "__bobplates__/graphics/icons/rubber.png",
-              icon_size = 32, icon_mipmaps = 1,
-            }
-          },
-          2, angelsmods.petrochem.number_tint),
-      }
-    }
-  )
-
   -- bob electronics
   if mods["bobelectronics"] then --check if it exists first
   move_item("insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
@@ -353,7 +227,7 @@ if mods["bobplates"] then
     }
   )
 
-  
+
     OV.remove_unlock("electronics", "insulated-cable")
     OV.add_unlock("circuit-network", "insulated-cable")
     OV.add_unlock("circuit-network", "bob-rubber")
@@ -367,15 +241,9 @@ end
 -- WATER ENRICHMENT -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if data.raw.recipe["pure-water-pump"] then
-    data.raw.recipe["pure-water-pump"].icon = nil
-    data.raw.recipe["pure-water-pump"].icon_size = 32
-    data.raw.recipe["pure-water-pump"].icons = {{icon = "__angelsrefining__/graphics/icons/water-purified.png"}}
-  end
-
   OV.global_replace_item("salt", "solid-salt")
   angelsmods.functions.add_flag("salt", "hidden")
-  
+
   move_item("heavy-water", "water-treatment-fluid", "eb")
   move_item("deuterium", "petrochem-basic-fluids", "i")
   move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
