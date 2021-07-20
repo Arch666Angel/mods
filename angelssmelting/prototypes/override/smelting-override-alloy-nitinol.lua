@@ -98,6 +98,10 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         }
       }
     )
+    angelsmods.functions.move_item("nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
+    data.raw["item"]["nitinol-alloy"].icon = "__angelssmelting__/graphics/icons/plate-nitinol.png"
+    data.raw["item"]["nitinol-alloy"].icon_size = 32
+    data.raw["item"]["nitinol-alloy"].icon_mipmaps = 1
     OV.add_prereq("nitinol-processing", "angels-nitinol-smelting-1")
     OV.disable_recipe({"nitinol-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-nitinol")

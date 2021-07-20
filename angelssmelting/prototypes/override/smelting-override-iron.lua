@@ -130,6 +130,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
   end
   OV.global_replace_item("angels-plate-iron", "iron-plate")
   angelsmods.functions.add_flag("angels-plate-iron", "hidden")
+  angelsmods.functions.move_item("iron-plate", "angels-iron-casting", "l")
   angelsmods.functions.override_item_conditions(
     {
       value = 200,
@@ -137,6 +138,13 @@ if angelsmods.trigger.smelting_products["iron"].plate then
         "iron-plate"
       }
     }
+  )
+  data.raw["item"]["iron-plate"].icon = "__angelssmelting__/graphics/icons/plate-iron.png"
+  data.raw["item"]["iron-plate"].icon_size = 32
+  data.raw["item"]["iron-plate"].icon_mipmaps = 1
+  OV.global_replace_icon(
+    "__base__/graphics/icons/plate/iron-plate.png",
+    "__angelssmelting__/graphics/icons/plate-iron.png"
   )
 
   if angelsmods.refining then

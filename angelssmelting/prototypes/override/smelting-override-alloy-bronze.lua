@@ -197,6 +197,10 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       }
     )
     OV.add_prereq("alloy-processing-1", "angels-bronze-smelting-1")
+    angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
+    data.raw["item"]["bronze-alloy"].icon = "__angelssmelting__/graphics/icons/plate-bronze.png"
+    data.raw["item"]["bronze-alloy"].icon_size = 32
+    data.raw["item"]["bronze-alloy"].icon_mipmaps = 1
     OV.disable_recipe({"bronze-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------

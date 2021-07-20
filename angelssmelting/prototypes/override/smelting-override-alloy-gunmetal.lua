@@ -99,6 +99,10 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         }
       }
     )
+    angelsmods.functions.move_item("gunmetal-alloy", "angels-alloys-casting", "c[gunmetal]-b[gunmetal-alloy]")
+    data.raw["item"]["gunmetal-alloy"].icon = "__angelssmelting__/graphics/icons/plate-gunmetal.png"
+    data.raw["item"]["gunmetal-alloy"].icon_size = 32
+    data.raw["item"]["gunmetal-alloy"].icon_mipmaps = 1
     OV.disable_recipe({"gunmetal-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-gunmetal")
   end

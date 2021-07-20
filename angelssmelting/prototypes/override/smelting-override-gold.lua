@@ -57,6 +57,11 @@ if angelsmods.trigger.smelting_products["gold"].plate then
     OV.hide_recipe("bob-gold-plate")
     OV.global_replace_item("angels-plate-gold", "gold-plate")
     angelsmods.functions.add_flag("angels-plate-gold", "hidden")
+    data.raw["item"]["gold-plate"].icon = "__angelssmelting__/graphics/icons/plate-gold.png"
+    data.raw["item"]["gold-plate"].icon_size = 32
+    data.raw["item"]["gold-plate"].icon_mipmaps = 1
+    data.raw["item"]["gold-plate"].subgroup = "angels-gold-casting"
+    data.raw["item"]["gold-plate"].order = "l"
 
     OV.global_replace_technology("gold-processing", "angels-gold-smelting-1")
   end
@@ -76,7 +81,14 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     angelsmods.functions.add_flag("angels-wire-gold", "hidden")
     angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "m")
     OV.disable_recipe({"gilded-copper-cable"})
-
+    data.raw["item"]["gilded-copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-gold.png"
+    data.raw["item"]["gilded-copper-cable"].icon_size = 32
+    data.raw["item"]["gilded-copper-cable"].icon_mipmaps = 1
+    OV.global_replace_icon(
+      "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
+      "__angelssmelting__/graphics/icons/wire-gold.png"
+    )
+    
     OV.patch_recipes(
       {
         {

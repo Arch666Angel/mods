@@ -23,6 +23,10 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
   if mods['bobplates'] then
     OV.global_replace_item("solid-aluminium-oxide", "alumina")
     angelsmods.functions.add_flag("solid-aluminium-oxide", "hidden")
+    angelsmods.functions.move_item("alumina", "angels-aluminium", "f")
+    data.raw["item"]["alumina"].icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png"
+    data.raw["item"]["alumina"].icon_size = 32
+    data.raw["item"]["alumina"].icon_mipmaps = 1
 
     OV.global_replace_technology("aluminium-processing", "angels-aluminium-smelting-1")
   end
@@ -76,6 +80,10 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-aluminium", "aluminium-plate")
     angelsmods.functions.add_flag("angels-plate-aluminium", "hidden")
+    angelsmods.functions.move_item("aluminium-plate", "angels-aluminium-casting", "k")
+    data.raw["item"]["aluminium-plate"].icon = "__angelssmelting__/graphics/icons/plate-aluminium.png"
+    data.raw["item"]["aluminium-plate"].icon_size = 32
+    data.raw["item"]["aluminium-plate"].icon_mipmaps = 1
     OV.hide_recipe({"bob-aluminium-plate","alumina"})
   end
 else
