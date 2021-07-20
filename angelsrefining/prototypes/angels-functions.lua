@@ -123,6 +123,8 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
     -- if the icon_layer is empty, we make sure it will be a full sized number after usage in the recipe functions
     icon_size_scale = 32 / 10.24
     icon_size_shift = {11.5 * icon_size_scale, 12 * icon_size_scale}
+  elseif type(icon_layers)=="string" then --to deal with errors passing the void icon as a string
+    icon_layers={{icon=icon_layers, icon_size = 32}}
   elseif icon_layers[1].scale then
     icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale) / 32
   end
@@ -1067,17 +1069,7 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
         end
       else
         if to_add.flags then
-          --don't add if already there
-          local duplicate=false
-          for _,flg in pairs(to_add.flags) do
-            if flg==flag then
-              duplicate=true
-              break
-            end
-          end
-          if duplicate==false then
-            table.insert(to_add.flags, flag)
-          end
+          table.insert(to_add.flags, flag)
         else
           to_add.flags = {flag}
         end
@@ -1115,6 +1107,7 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
         for i, f in pairs(to_remove.flags) do
           if f == flag_to_remove then
             table.remove(to_remove.flags, i)
+            break
           end
         end
       end
