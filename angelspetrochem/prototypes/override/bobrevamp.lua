@@ -33,4 +33,19 @@ if mods["bobrevamp"] then
         }
       }
     )
+    if settings.startup["bobmods-revamp-hardmode"].value then
+      OV.patch_recipes(
+        {
+          {
+            name = "solid-calcium-chloride",
+            icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-calcium-chloride", {"gas-hydrogen-chloride"}),
+            order = "e[solid-calcium-chloride]-a"
+          },
+          {
+            name = "ammonium-chloride-recycling",
+            icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-calcium-chloride", {"gas-ammonium-chloride"}),
+          }
+        }
+      )
+    end
 end

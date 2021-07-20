@@ -6,6 +6,15 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- fluid handling
 OV.add_prereq("fluid-handling", "angels-fluid-control")
+data.raw["item"]["oil-refinery"].icons = angelsmods.functions.add_number_icon_layer(
+  angelsmods.functions.get_object_icons("oil-refinery"),
+  1, angelsmods.petrochem.number_tint)
+data.raw["item"]["oil-refinery"].icon = nil
+data.raw["item"]["oil-refinery"].icon_size = nil
+data.raw["assembling-machine"]["oil-refinery"].icon = nil
+data.raw["assembling-machine"]["oil-refinery"].icon_size = nil
+data.raw["assembling-machine"]["oil-refinery"].icons = util.table.deepcopy(data.raw["item"]["oil-refinery"].icons)
+data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
 -- oil
   data.raw["resource"]["crude-oil"]["minable"].results = {
@@ -27,6 +36,13 @@ OV.add_prereq("plastics", "angels-advanced-chemistry-1")
 OV.remove_prereq("plastics", "oil-processing")
 
 -- sulfur
+data.raw["item"]["sulfur"].icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png"
+data.raw["item"]["sulfur"].icon_size = 32
+data.raw["item"]["sulfur"].icon_mipmaps = 1
+OV.global_replace_icon(
+  {"__base__/graphics/icons/fluid/sulfuric-acid.png"},
+  {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
+)
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
 move_item("sulfuric-acid", "petrochem-sulfer-fluids", "cb", "fluid")
 OV.remove_prereq("battery", "sulfur-processing")
@@ -146,3 +162,17 @@ OV.hide_recipe({
   "heavy-oil-cracking",
   "sulfuric-acid"
 })
+-------------------------------------------------------------------------------
+-- EXPLOSIVES -----------------------------------------------------------------
+-------------------------------------------------------------------------------
+data.raw["recipe"]["explosives"].icon_size = 32
+data.raw["recipe"]["explosives"].icon = nil
+data.raw["recipe"]["explosives"].icons = angelsmods.functions.add_number_icon_layer(
+  {
+    {
+      icon = "__base__/graphics/icons/explosives.png",
+      icon_size = 64, icon_mipmaps = 4,
+      scale = 0.5
+    }
+  },
+  1, angelsmods.petrochem.number_tint)

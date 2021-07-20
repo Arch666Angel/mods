@@ -168,13 +168,7 @@ if mods["bobrevamp"] then
       OV.patch_recipes(
         {
           {
-            name = "solid-calcium-chloride",
-            icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-calcium-chloride", {"gas-hydrogen-chloride"}),
-            order = "e[solid-calcium-chloride]-a"
-          },
-          {
             name = "ammonium-chloride-recycling",
-            icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-calcium-chloride", {"gas-ammonium-chloride"}),
             ingredients =
             {
               --{name = "solid-limestone", type = "item", amount = 1},

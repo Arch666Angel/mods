@@ -5,16 +5,6 @@ local move_item = angelsmods.functions.move_item
 -- CHEMICAL PLANTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
 move_item("chemical-plant", "petrochem-buildings-chemical-plant", "a[regular]-aa[vanilla]")
-data.raw["item"]["chemical-plant"].icons = angelsmods.functions.add_number_icon_layer(
-  angelsmods.functions.get_object_icons("chemical-plant"),
-  1, angelsmods.petrochem.number_tint)
-data.raw["item"]["chemical-plant"].icon = nil
-data.raw["item"]["chemical-plant"].icon_size = nil
-data.raw["assembling-machine"]["chemical-plant"].icon = nil
-data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
-data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
-data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 
 if angelsmods.trigger.disable_vanilla_chemical_plants then
   angelsmods.functions.add_flag("chemical-plant", "hidden")
@@ -25,6 +15,17 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
     "chemistry",
     "liquifying"
   })
+else -- this should not be needed if already removed.
+  data.raw["item"]["chemical-plant"].icons = angelsmods.functions.add_number_icon_layer(
+    angelsmods.functions.get_object_icons("chemical-plant"),
+    1, angelsmods.petrochem.number_tint)
+  data.raw["item"]["chemical-plant"].icon = nil
+  data.raw["item"]["chemical-plant"].icon_size = nil
+  data.raw["assembling-machine"]["chemical-plant"].icon = nil
+  data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
+  data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
+  data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+  angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 end
 
 -------------------------------------------------------------------------------
@@ -32,15 +33,6 @@ end
 -------------------------------------------------------------------------------
 -- oil refinery
 move_item("oil-refinery", "petrochem-buildings-oil-refinery", "b[oil-refinery]-a")
-data.raw["item"]["oil-refinery"].icons = angelsmods.functions.add_number_icon_layer(
-  angelsmods.functions.get_object_icons("oil-refinery"),
-  1, angelsmods.petrochem.number_tint)
-data.raw["item"]["oil-refinery"].icon = nil
-data.raw["item"]["oil-refinery"].icon_size = nil
-data.raw["assembling-machine"]["oil-refinery"].icon = nil
-data.raw["assembling-machine"]["oil-refinery"].icon_size = nil
-data.raw["assembling-machine"]["oil-refinery"].icons = util.table.deepcopy(data.raw["item"]["oil-refinery"].icons)
-data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
 -- oil processing
 OV.converter_fluid("petroleum-gas", "gas-methane")
@@ -60,14 +52,6 @@ OV.disable_recipe({"coal-liquefaction"})
 OV.disable_recipe({"plastic-bar"})
 
 -- sulfur
-data.raw["item"]["sulfur"].icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png"
-data.raw["item"]["sulfur"].icon_size = 32
-data.raw["item"]["sulfur"].icon_mipmaps = 1
-OV.global_replace_icon(
-  {"__base__/graphics/icons/fluid/sulfuric-acid.png"},
-  {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
-)
-
 OV.converter_fluid("sulfuric-acid", "liquid-sulfuric-acid")
 
 OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
@@ -97,13 +81,3 @@ OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
 -------------------------------------------------------------------------------
 data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
 data.raw["recipe"]["explosives"].order = "a[explosives]-a"
-data.raw["recipe"]["explosives"].icon_size = 32
-data.raw["recipe"]["explosives"].icons = angelsmods.functions.add_number_icon_layer(
-  {
-    {
-      icon = "__base__/graphics/icons/explosives.png",
-      icon_size = 64, icon_mipmaps = 4,
-      scale = 0.5
-    }
-  },
-  1, angelsmods.petrochem.number_tint)
