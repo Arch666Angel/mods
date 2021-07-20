@@ -4,7 +4,8 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- CHEMICAL PLANTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.trigger.disable_bobs_chemical_plants then
+--double check bobs is active first for this one...
+if angelsmods.trigger.disable_bobs_chemical_plants and angelsmods.trigger.disable_vanilla_chemical_plants then
   angelsmods.functions.add_flag("chemical-plant", "hidden")
   angelsmods.functions.set_next_upgrade("assembling-machine", "chemical-plant", nil)
   OV.global_replace_item("chemical-plant", "angels-chemical-plant")

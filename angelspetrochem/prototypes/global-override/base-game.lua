@@ -15,17 +15,8 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
     "chemistry",
     "liquifying"
   })
-else -- this should not be needed if already removed.
-  data.raw["item"]["chemical-plant"].icons = angelsmods.functions.add_number_icon_layer(
-    angelsmods.functions.get_object_icons("chemical-plant"),
-    1, angelsmods.petrochem.number_tint)
-  data.raw["item"]["chemical-plant"].icon = nil
-  data.raw["item"]["chemical-plant"].icon_size = nil
-  data.raw["assembling-machine"]["chemical-plant"].icon = nil
-  data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
-  data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
-  data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-  angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
+else
+  OV.add_unlock("basic-chemistry-2","chemical-plant") --give the item a new home if still active
 end
 
 -------------------------------------------------------------------------------
