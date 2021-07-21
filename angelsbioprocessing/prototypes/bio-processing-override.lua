@@ -50,7 +50,7 @@ end
 
 --CONDITIONAL
 if angelsmods.trigger.smelting_products["glass"].plate then
-OV.patch_recipes(
+  OV.patch_recipes(
     {
       {
         name = "petri-dish",

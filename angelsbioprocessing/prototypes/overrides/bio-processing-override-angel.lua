@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+
 if angelsmods.industries and angelsmods.industries.overhaul then
   OV.patch_recipes({{name="algae-brown-burning",results={{"!!"},{name = "solid-lithium", amount = 1}}}})
   -- OV.remove_unlock("bio-paper-1", "circuit-paper-board")
@@ -34,3 +35,43 @@ else
   OV.disable_recipe("algae-brown-burning")
 end
 OV.add_unlock("bio-farm-2","bio-tile")
+
+-- FARMING TOOLTIPS
+for _,item_name in pairs{"solid-beans", "solid-corn", "solid-leafs", "solid-nuts", "solid-pips", "solid-fruit"} do
+  local item = data.raw["item"][item_name]
+  if item then
+    local origin_items = {}
+    for _,biome_name in pairs({"temperate", "desert", "swamp"}) do
+      for tier_number = 1,5 do
+        local recipe = data.raw["recipe"][string.format("sorting-%s-%d", biome_name, tier_number)]
+        for _,recipe_difficulty in pairs({recipe, recipe.normal, recipe.expensive}) do
+          if recipe_difficulty.result == item_name then
+            origin_items[string.format("%s-%d", biome_name, tier_number)] = true
+          end
+          for _,recipe_difficulty_result in pairs(recipe_difficulty.results) do
+            if (recipe_difficulty_result[1] or recipe_difficulty_result.name) == item_name then
+              origin_items[string.format("%s-%d", biome_name, tier_number)] = true
+            end
+          end
+        end
+      end
+    end
+
+    local localised_indentation = {""}
+    table.insert(localised_indentation, {"item-description.loc-nl"})
+    for _=1,7 do
+      table.insert(localised_indentation, {"item-description.loc-space"})
+    end
+    local localised_origin_items = {"", {"item-description.crop-farm-processed"}}
+    for origin_item_name in pairs(origin_items) do
+      table.insert(localised_origin_items, localised_indentation)
+      table.insert(localised_origin_items, {"",
+        string.format("[img=item/%s]", origin_item_name),
+        {"item-description.loc-space"},
+        {string.format("item-name.%s", origin_item_name)}
+      })
+    end
+
+    item.localised_description = util.table.deepcopy(localised_origin_items)
+  end
+end
