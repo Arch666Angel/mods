@@ -4,6 +4,7 @@ Date: 31.05.2021
   Bugfixes:
     - Changed prerequisites of plastic before advanced electronics technology
     - Fixed emissions_multiplier were not applied correctly
+    - Fixed bobs chemical plant 1, distillery 1 and electrolyser 1 were not unlocked correctly
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 26.05.2021
