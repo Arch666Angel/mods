@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
-if mods["bobrevamp"] then
+if mods["bobrevamp"] and mods["bobplates"] then
   -----------------------------------------------------------------------------
   -- SOLID FUEL ---------------------------------------------------------------
   -----------------------------------------------------------------------------
