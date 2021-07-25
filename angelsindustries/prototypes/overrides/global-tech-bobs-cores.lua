@@ -155,7 +155,7 @@ if angelsmods.industries.tech then
     core_replace("bob-repair-pack-2", "basic", "enhance")
     core_replace("bob-repair-pack-3", "basic", "enhance")
     core_replace("bob-repair-pack-4", "basic", "enhance")
-    core_replace("bob-repair-pack-5", "basic", "enhance")
+    core_replace("bob-repair-pack-5", "processing", "enhance")
   end
 
   -------------------------------------------------------------------------------
