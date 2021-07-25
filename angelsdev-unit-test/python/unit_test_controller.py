@@ -160,6 +160,8 @@ class UnitTestController:
   def TestBobAngels(self) -> None:
     self.TestBobAngelsRegular()
     self.TestBobAngelsExtended()
+    self.TestBobAngelsExtendedComponents()
+    self.TestBobAngelsExtendedTechnology()
 
   def TestBobAngelsRegular(self) -> None:
     """Tests BA mode with all mods except industries (seablock related)."""
@@ -240,6 +242,90 @@ class UnitTestController:
           "angels-enable-industries": False, # Angels overhaul
           "angels-enable-components": False, # Angels component mode
           "angels-enable-tech"      : False, # Angels technology mode
+        }
+      }
+    )
+    self.__executeUnitTests()
+
+  def TestBobAngelsExtendedComponents(self) -> None:
+    """Tests BA mode with all mods including industries."""
+    self.__logTestConfiguration("BA (extended components)")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        "angelsexploration",
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": False, # Angels overhaul
+          "angels-enable-components": True, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+        }
+      }
+    )
+    self.__executeUnitTests()
+
+  def TestBobAngelsExtendedTechnology(self) -> None:
+    """Tests BA mode with all mods including industries."""
+    self.__logTestConfiguration("BA (extended technology)")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        "angelsexploration",
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": False, # Angels overhaul
+          "angels-enable-components": False, # Angels component mode
+          "angels-enable-tech"      : True, # Angels technology mode
         }
       }
     )
