@@ -1,8 +1,10 @@
 local unit_test_001 = require("unit-tests.unit-test-001")
+local unit_test_002 = require("unit-tests.unit-test-002")
 
 local unit_tests =
 {
   unit_test_001,
+  unit_test_002,
 }
 
 local unit_test_functions = require("unit-test-functions")
