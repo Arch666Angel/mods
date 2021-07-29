@@ -59,8 +59,10 @@ auto_barrel = false
   {
     type = "item",
     name = "spent-mold-non-expendable",
-    icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32},
+      { icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
+    },
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-b[used]",
     stack_size = 200
