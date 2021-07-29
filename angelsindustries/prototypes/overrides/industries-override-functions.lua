@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+angelsmods.functions.AI = {}
 --replacement tables
 require("prototypes.overrides.replacement-fallbacks")
 --set local table for use in multiple functions
@@ -22,12 +23,12 @@ local building_types = {
   "gate"
 }
 
-function pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
+function angelsmods.functions.AI.pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
   OV.remove_science_pack(techname, "angels-science-pack-" .. old_c)
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
 end
 
-function core_replace(techname, old_c, new_c, tier) -- tech core swapping script
+function angelsmods.functions.AI.core_replace(techname, old_c, new_c, tier) -- tech core swapping script
   tier = tier or 1
   if old_c == "basic" then
     OV.remove_science_pack(techname, "datacore-basic")
@@ -42,7 +43,7 @@ function core_replace(techname, old_c, new_c, tier) -- tech core swapping script
   end
 end
 
-function pre_req_replace(techname, old_tech, new_tech1, new_tech2) -- tech prerequisite replacements
+function angelsmods.functions.AI.pre_req_replace(techname, old_tech, new_tech1, new_tech2) -- tech prerequisite replacements
   OV.remove_prereq(techname, old_tech)
   OV.add_prereq(techname, new_tech1)
   if new_tech2 then
@@ -50,12 +51,12 @@ function pre_req_replace(techname, old_tech, new_tech1, new_tech2) -- tech prere
   end
 end
 
-function core_tier_up(techname, core_n)
+function angelsmods.functions.AI.core_tier_up(techname, core_n)
   OV.remove_science_pack(techname, "datacore-" .. core_n .. "-1")
   OV.set_science_pack(techname, "datacore-" .. core_n .. "-2", 2)
 end
 
-function set_core(techname, core_n)
+function angelsmods.functions.AI.set_core(techname, core_n)
   local has_core = false
   for _, pack in pairs((data.raw.technology[techname] or {unit = {ingredients = {}}}).unit.ingredients) do
     local packname = pack.name or pack[1]
@@ -72,7 +73,7 @@ function set_core(techname, core_n)
   end
 end
 
-function core_builder()
+function angelsmods.functions.AI.core_builder()
   -- Start of research Automated Stack...
   for rec_4tech in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(rec_4tech, angelsmods.industries.tech_exceptions) then
@@ -84,7 +85,7 @@ function core_builder()
           string.find(rec_4tech, "personal") ~= nil
        then
         --war takes next priority
-        set_core(rec_4tech, "datacore-enhance-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-enhance-1", 2)
       elseif
         string.find(rec_4tech, "military") ~= nil or string.find(rec_4tech, "laser") ~= nil or
           string.find(rec_4tech, "combat") ~= nil or
@@ -95,10 +96,10 @@ function core_builder()
           string.find(rec_4tech, "rocket") ~= nil
        then
         --exploration is next
-        set_core(rec_4tech, "datacore-war-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-war-1", 2)
       elseif string.find(rec_4tech, "explor") ~= nil then
         --energy is next
-        set_core(rec_4tech, "datacore-exploration-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-exploration-1", 2)
       elseif
         string.find(rec_4tech, "energy") ~= nil or string.find(rec_4tech, "power") ~= nil or
           string.find(rec_4tech, "cabling") ~= nil or
@@ -111,7 +112,7 @@ function core_builder()
           string.find(rec_4tech, "boiler") ~= nil
        then
         --logistics is next
-        set_core(rec_4tech, "datacore-energy-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-energy-1", 2)
       elseif
         string.find(rec_4tech, "insert") ~= nil or string.find(rec_4tech, "logistic") ~= nil or
           string.find(rec_4tech, "rail") ~= nil or
@@ -122,7 +123,7 @@ function core_builder()
           string.find(rec_4tech, "warehouse") ~= nil
        then
         --production is up next
-        set_core(rec_4tech, "datacore-logistic-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-logistic-1", 2)
       elseif
         string.find(rec_4tech, "processing") ~= nil or string.find(rec_4tech, "automation") ~= nil or
           string.find(rec_4tech, "plastic") ~= nil or
@@ -132,14 +133,14 @@ function core_builder()
           string.find(rec_4tech, "electronic") ~= nil
        then
         --smelting and metallurgy
-        set_core(rec_4tech, "datacore-processing-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       elseif
         string.find(rec_4tech, "smelting") ~= nil or string.find(rec_4tech, "casting") ~= nil or
           string.find(rec_4tech, "metallurgy") ~= nil or
           string.find(rec_4tech, "cool") ~= nil
        then
         --Bioprocessing updates
-        set_core(rec_4tech, "datacore-processing-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       elseif
         string.find(rec_4tech, "bio") ~= nil or string.find(rec_4tech, "farm") ~= nil or
           string.find(rec_4tech, "arbor") ~= nil or
@@ -147,7 +148,7 @@ function core_builder()
           string.find(rec_4tech, "garden") ~= nil
        then
         --more war updates
-        set_core(rec_4tech, "datacore-processing-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       elseif
         string.find(rec_4tech, "wall") ~= nil or string.find(rec_4tech, "gate") ~= nil or
           string.find(rec_4tech, "shoot") ~= nil or
@@ -155,20 +156,20 @@ function core_builder()
           string.find(rec_4tech, "explo") ~= nil
        then
         --petrochem and refining updates
-        set_core(rec_4tech, "datacore-war-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-war-1", 2)
       elseif
         string.find(rec_4tech, "chemistry") ~= nil or string.find(rec_4tech, "ore") ~= nil or
           string.find(rec_4tech, "crack") ~= nil or
           string.find(rec_4tech, "science-pack") ~= nil or
           string.find(rec_4tech, "water") ~= nil
        then
-        set_core(rec_4tech, "datacore-processing-1", 2)
+        angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       end
     end
   end
 end
 
-function pack_count_update(tech, pack, count) --cheap and cheerful replacement (possibly should use a better script but if it works...)
+function angelsmods.functions.AI.pack_count_update(tech, pack, count) --cheap and cheerful replacement (possibly should use a better script but if it works...)
   OV.remove_science_pack(tech, pack)
   OV.set_science_pack(tech, pack, count)
 end
@@ -195,7 +196,7 @@ local function set_research_tiers(tech_name, tech_time, tech_amount)
   end
 end
 
-function tech_unlock_reset()
+function angelsmods.functions.AI.tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
@@ -263,7 +264,7 @@ function tech_unlock_reset()
   end
 end
 
-function core_tier_upgrade()
+function angelsmods.functions.AI.core_tier_upgrade()
   for techname, technology in pairs(data.raw.technology) do
     -- find the science pack and the datacore
     local pack_name = nil
@@ -306,7 +307,7 @@ function core_tier_upgrade()
           ) do
             if pack_name == string.format("angels-science-pack-%s", pack_color) then
               if tier_up then
-                core_tier_up(techname, research_type)
+                angelsmods.functions.AI.core_tier_up(techname, research_type)
               end
 
               if research_type ~= "basic" then
@@ -317,7 +318,7 @@ function core_tier_upgrade()
           end
         end
       elseif angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
-        set_core(techname, "datacore-basic", 2)
+        angelsmods.functions.AI.set_core(techname, "datacore-basic", 2)
 
         if pack_name == "angels-science-pack-grey" then
           OV.add_prereq(techname, "tech-specialised-labs")
@@ -330,7 +331,7 @@ function core_tier_upgrade()
 end
 
 --gets the row count so you can iterate through row count
-function table_rows(table_chk)
+local function table_rows(table_chk)
   local ct = 0
   if type(table_chk) == "table" then
     for _ in pairs(table_chk) do
@@ -341,20 +342,20 @@ function table_rows(table_chk)
 end
 
 --ADD BUILDING BLOCKS TO BUILDINGS
-function add_con_mats()
+function angelsmods.functions.AI.add_con_mats()
   for n, _ in pairs(building_types) do
-    replace_con_mats(building_types[n])
+    angelsmods.functions.AI.replace_con_mats(building_types[n])
   end
 end
 
-function add_minable_results()
+function angelsmods.functions.AI.add_minable_results()
   for _,building_type in pairs(building_types) do
-    replace_minable_results(building_type)
+    angelsmods.functions.AI.replace_minable_results(building_type)
   end
 end
 
 -- uses block_replace table from /overrides/replacement-fallbacks.lua
-function replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
+function angelsmods.functions.AI.replace_blocks_list(ing_list) --specifically build to be used for replace_con_mats function
   local block_replace = angelsmods.industries.block_replace
   --reset existing each call
   local existing = {}
@@ -390,7 +391,7 @@ end
 
 --Replace non-construction components with angels components
 -- uses general_replace table from /overrides/replacement-fallbacks.lua
-function replace_gen_mats()
+function angelsmods.functions.AI.replace_gen_mats()
   for nme, info in pairs(angelsmods.industries.general_replace) do
     if nme and data.raw.item[nme] then
       OV.global_replace_item(nme, info.new)
@@ -413,24 +414,24 @@ function replace_gen_mats()
 end
 
 --REPLACE CONSTRUCTION BLOCKS
-function replace_con_mats(buildings)
+function angelsmods.functions.AI.replace_con_mats(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
     if data.raw.recipe[assembly_check] then
       local rec_check = data.raw.recipe[assembly_check]
       if rec_check.normal or rec_check.expensive then
         if rec_check.normal then
           ing_list = rec_check.normal.ingredients
-          replace_blocks_list(ing_list)
+          angelsmods.functions.AI.replace_blocks_list(ing_list)
           rec_check.normal.energy_required = 0.5
         end
         if rec_check.expensive then
           ing_list = rec_check.expensive.ingredients
-          replace_blocks_list(ing_list)
+          angelsmods.functions.AI.replace_blocks_list(ing_list)
           rec_check.expensive.energy_required = 0.5
         end
       else
         ing_list = rec_check.ingredients
-        replace_blocks_list(ing_list)
+        angelsmods.functions.AI.replace_blocks_list(ing_list)
         rec_check.energy_required = 0.5
       end
     end
@@ -438,7 +439,7 @@ function replace_con_mats(buildings)
 end
 
 --REPLACE ON MINED RESULTS
-function replace_minable_results(buildings)
+function angelsmods.functions.AI.replace_minable_results(buildings)
   for _, build in pairs(data.raw[buildings]) do
     if data.raw.recipe[build.name] then
       local rec_check = data.raw.recipe[build.name]
@@ -458,7 +459,7 @@ function replace_minable_results(buildings)
   end
 end
 
-function rec_tab_replace(table,old,new,count)
+function angelsmods.functions.AI.rec_tab_replace(table,old,new,count)
   --iterate through table
   for _,entry in pairs(table) do
     if entry.name == old then
@@ -475,7 +476,7 @@ function rec_tab_replace(table,old,new,count)
   end
 end
 
-function replace_recipe_ing(recipe,old_ing,new_ing,new_count)
+function angelsmods.functions.AI.replace_recipe_ing(recipe,old_ing,new_ing,new_count)
   if type(recipe) ~= table then
     recipe = data.raw.recipe[recipe]
   end
@@ -486,13 +487,13 @@ function replace_recipe_ing(recipe,old_ing,new_ing,new_count)
       end
     end
     if recipe.ingredients then
-      rec_tab_replace(recipe.ingredients,old_ing,new_ing,new_count)
+      angelsmods.functions.AI.rec_tab_replace(recipe.ingredients,old_ing,new_ing,new_count)
     end
     if recipe.normal and recipe.normal.ingredients then
-      rec_tab_replace(recipe.normal.ingredients,old_ing,new_ing,new_count)
+      angelsmods.functions.AI.rec_tab_replace(recipe.normal.ingredients,old_ing,new_ing,new_count)
     end
     if recipe.expensive and recipe.expensive.ingredients then
-      rec_tab_replace(recipe.expensive.ingredients,old_ing,new_ing,new_count)
+      angelsmods.functions.AI.rec_tab_replace(recipe.expensive.ingredients,old_ing,new_ing,new_count)
     end
   end
 end

@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+local AI = angelsmods.functions.AI
 --require("prototypes.overrides.industries-override-functions")
 
 if angelsmods.industries.tech then
@@ -6,33 +7,33 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    pack_replace("battery-2", "blue", "orange")
+    AI.pack_replace("battery-2", "blue", "orange")
     OV.remove_prereq("battery-2", "tech-blue-packs")
     OV.remove_prereq("battery-3", "production-science-pack")
 
-    pack_replace("grinding", "green", "orange")
-    pack_replace("gem-processing-1", "green", "orange")
-    pack_replace("polishing", "green", "blue")
-    pack_replace("gem-processing-2", "green", "blue")
+    AI.pack_replace("grinding", "green", "orange")
+    AI.pack_replace("gem-processing-1", "green", "orange")
+    AI.pack_replace("polishing", "green", "blue")
+    AI.pack_replace("gem-processing-2", "green", "blue")
     --OV.remove_science_pack("lubricant", "angels-science-pack-green")
 
     if not mods["bobtech"] then --alien resources
-      pack_replace("alien-blue-research", "yellow", "blue")
-      pack_replace("alien-orange-research", "yellow", "blue")
-      pack_replace("alien-purple-research", "yellow", "blue")
-      pack_replace("alien-yellow-research", "yellow", "blue")
-      pack_replace("alien-green-research", "yellow", "blue")
-      pack_replace("alien-red-research", "yellow", "blue")
+      AI.pack_replace("alien-blue-research", "yellow", "blue")
+      AI.pack_replace("alien-orange-research", "yellow", "blue")
+      AI.pack_replace("alien-purple-research", "yellow", "blue")
+      AI.pack_replace("alien-yellow-research", "yellow", "blue")
+      AI.pack_replace("alien-green-research", "yellow", "blue")
+      AI.pack_replace("alien-red-research", "yellow", "blue")
     end
 
-    pack_replace("tungsten-processing", "blue", "orange")
+    AI.pack_replace("tungsten-processing", "blue", "orange")
     OV.remove_prereq("nitinol-processing", "production-science-pack")
-    pack_replace("ceramics", "blue", "orange")
-    pack_replace("cobalt-processing", "blue", "orange")
+    AI.pack_replace("ceramics", "blue", "orange")
+    AI.pack_replace("cobalt-processing", "blue", "orange")
 
     OV.remove_prereq("advanced-electronics-3", "production-science-pack")
 
-    pack_replace("kovarex-enrichment-process","yellow","blue")
+    AI.pack_replace("kovarex-enrichment-process","yellow","blue")
   end
 
   -------------------------------------------------------------------------------
@@ -42,11 +43,11 @@ if angelsmods.industries.tech then
     --adds bobassembly stuffs
     -- burner assemblers and/ore tier 1 electric
     if settings.startup["bobmods-assembly-burner"].value == true then
-      pack_replace("basic-automation", "red", "grey")
-      pack_replace("automation", "grey", "red")
+      AI.pack_replace("basic-automation", "red", "grey")
+      AI.pack_replace("automation", "grey", "red")
     end
     -- assemblers tier 2+
-    pack_replace("automation-4", "blue", "orange")
+    AI.pack_replace("automation-4", "blue", "orange")
     OV.remove_prereq("automation-4", "tech-blue-packs")
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then
@@ -61,7 +62,7 @@ if angelsmods.industries.tech then
     end
     --distillery
     if settings.startup["bobmods-assembly-distilleries"].value then
-      pack_replace("bob-distillery-3", "blue", "orange")
+      AI.pack_replace("bob-distillery-3", "blue", "orange")
       OV.remove_prereq("bob-distillery-3", "tech-blue-packs")
       OV.add_prereq("tech-blue-circuit", "bob-distillery-3")
     end
@@ -104,13 +105,13 @@ if angelsmods.industries.tech then
     --adds bob mining stuffs
     --axe(s)
     if settings.startup["bobmods-mining-miningaxes"].value == true then
-      pack_replace("steel-axe-4", "blue", "orange")
+      AI.pack_replace("steel-axe-4", "blue", "orange")
       OV.remove_prereq("steel-axe-4", "tech-blue-packs")
     end
     --mining drills
-    pack_replace("bob-drills-3", "blue", "orange")
-    pack_replace("bob-area-drills-2", "blue", "orange")
-    pack_replace("bob-area-drills-4", "blue", "yellow")
+    AI.pack_replace("bob-drills-3", "blue", "orange")
+    AI.pack_replace("bob-area-drills-2", "blue", "orange")
+    AI.pack_replace("bob-area-drills-4", "blue", "yellow")
   end
 
   -------------------------------------------------------------------------------
@@ -126,44 +127,44 @@ if angelsmods.industries.tech then
   if mods["boblogistics"] then
     --adds bob logistics stuffs
     -- basic logistics
-    pack_replace("logistics-0", "red", "grey")
-    pack_replace("logistics", "grey", "red")
+    AI.pack_replace("logistics-0", "red", "grey")
+    AI.pack_replace("logistics", "grey", "red")
     -- repair packs
-    pack_replace("bob-repair-pack-4", "blue", "orange")
+    AI.pack_replace("bob-repair-pack-4", "blue", "orange")
     -- toolbelts
-    pack_replace("toolbelt-2", "blue", "orange")
+    AI.pack_replace("toolbelt-2", "blue", "orange")
     OV.remove_prereq("toolbelt-2", "tech-blue-packs")
     -- modular roboports
-    --pack_replace("bob-robo-modular-1", "green", "orange")
-    pack_replace("bob-robo-modular-2", "blue", "orange")
+    --AI.pack_replace("bob-robo-modular-1", "green", "orange")
+    AI.pack_replace("bob-robo-modular-2", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-2", "tech-blue-packs")
     -- robots
     OV.remove_science_pack("construction-robotics", "angels-science-pack-orange")
-    pack_replace("bob-robots-1", "blue", "orange")
+    AI.pack_replace("bob-robots-1", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-3", "production-science-pack")
     if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       OV.remove_science_pack("robotics", "angels-science-pack-orange")
-      pack_replace("bob-robotics-2", "blue", "orange")
+      AI.pack_replace("bob-robotics-2", "blue", "orange")
       OV.remove_prereq("bob-robotics-3", "production-science-pack")
     end
     -- inserter techs
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.remove_prereq("stack-inserter", "tech-orange-circuit")
-      pack_replace("stack-inserter", "orange", "green")
-      pack_replace("express-inserters", "blue", "orange")
-      pack_replace("stack-inserter-2", "blue", "orange")
+      AI.pack_replace("stack-inserter", "orange", "green")
+      AI.pack_replace("express-inserters", "blue", "orange")
+      AI.pack_replace("stack-inserter-2", "blue", "orange")
     else
-      pack_replace("express-inserters", "green", "blue")
-      pack_replace("stack-inserter-2", "blue", "yellow")
+      AI.pack_replace("express-inserters", "green", "blue")
+      AI.pack_replace("stack-inserter-2", "blue", "yellow")
     end
     -- belt techs
-    pack_replace("logistics-3", "blue", "orange")
+    AI.pack_replace("logistics-3", "blue", "orange")
     OV.remove_prereq("logistics-3", "tech-blue-packs")
     -- railway
-    pack_replace("bob-railway-2", "green", "orange")
-    pack_replace("bob-armoured-railway-2", "blue", "yellow")
-    pack_replace("bob-fluid-wagon-2", "green", "orange")
-    pack_replace("bob-armoured-fluid-wagon-2", "blue", "yellow")
+    AI.pack_replace("bob-railway-2", "green", "orange")
+    AI.pack_replace("bob-armoured-railway-2", "blue", "yellow")
+    AI.pack_replace("bob-fluid-wagon-2", "green", "orange")
+    AI.pack_replace("bob-armoured-fluid-wagon-2", "blue", "yellow")
   end
 
   -------------------------------------------------------------------------------
@@ -187,37 +188,37 @@ if angelsmods.industries.tech then
   if mods["bobwarfare"] then
     --adds bob warfare stuffs
     --turrets
-    pack_replace("bob-plasma-turrets-3", "blue", "orange")
-    pack_replace("bob-turrets-3", "green", "orange")
-    pack_replace("bob-turrets-5", "blue", "yellow")
-    pack_replace("bob-laser-turrets-2", "green", "orange")
-    pack_replace("bob-plasma-turrets-2", "green", "orange")
-    pack_replace("bob-sniper-turrets-2", "blue", "orange")
+    AI.pack_replace("bob-plasma-turrets-3", "blue", "orange")
+    AI.pack_replace("bob-turrets-3", "green", "orange")
+    AI.pack_replace("bob-turrets-5", "blue", "yellow")
+    AI.pack_replace("bob-laser-turrets-2", "green", "orange")
+    AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
+    AI.pack_replace("bob-sniper-turrets-2", "blue", "orange")
     OV.remove_prereq("bob-sniper-turrets-2", "tech-blue-packs")
     if mods["angelsexploration"] then
-      pack_replace("angels-rocket-turret", "green", "orange")
+      AI.pack_replace("angels-rocket-turret", "green", "orange")
     end
     --laser rifles
-    pack_replace("bob-laser-rifle", "green", "blue")
-    pack_replace("bob-laser-rifle-ammo-1", "green", "blue")
-    pack_replace("bob-laser-rifle-ammo-4", "blue", "yellow")
-    pack_replace("bob-laser-rifle-ammo-5", "blue", "yellow")
-    pack_replace("bob-laser-rifle-ammo-6", "blue", "yellow")
+    AI.pack_replace("bob-laser-rifle", "green", "blue")
+    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "blue")
+    AI.pack_replace("bob-laser-rifle-ammo-4", "blue", "yellow")
+    AI.pack_replace("bob-laser-rifle-ammo-5", "blue", "yellow")
+    AI.pack_replace("bob-laser-rifle-ammo-6", "blue", "yellow")
     --Drones/CombatBots
-    pack_replace("bob-robot-gun-1", "green", "orange")
-    pack_replace("bob-robot-gun-drones", "green", "orange")
-    pack_replace("bob-robot-plasma-drones", "green", "orange")
-    pack_replace("bob-robot-laser-drones", "green", "orange")
-    pack_replace("bob-robot-flamethrower-drones", "green", "orange")
+    AI.pack_replace("bob-robot-gun-1", "green", "orange")
+    AI.pack_replace("bob-robot-gun-drones", "green", "orange")
+    AI.pack_replace("bob-robot-plasma-drones", "green", "orange")
+    AI.pack_replace("bob-robot-laser-drones", "green", "orange")
+    AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
     --Rockets
-    pack_replace("rocketry", "green", "orange")
-    pack_replace("bob-rocket", "green", "orange")
+    AI.pack_replace("rocketry", "green", "orange")
+    AI.pack_replace("bob-rocket", "green", "orange")
     pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
-    pack_replace("radars-4", "blue", "yellow")
+    AI.pack_replace("radars-4", "blue", "yellow")
     --small fixes
-    pack_replace("follower-robot-count-1", "green", "orange")
-    pack_replace("follower-robot-count-2", "green", "orange")
+    AI.pack_replace("follower-robot-count-1", "green", "orange")
+    AI.pack_replace("follower-robot-count-2", "green", "orange")
     OV.remove_prereq("nitroglycerin-processing", "chlorine-processing-2") -- no clue why it works nowhere else...
   end
 
@@ -226,10 +227,10 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobvehicleequipment"] then
     --adds bob vehicle equipment stuffs
-    pack_replace("vehicle-roboport-equipment", "green", "orange")
-    pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
-    pack_replace("vehicle-roboport-equipment", "green", "orange")
-    pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
+    AI.pack_replace("vehicle-roboport-equipment", "green", "orange")
+    AI.pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
+    AI.pack_replace("vehicle-roboport-equipment", "green", "orange")
+    AI.pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
     OV.remove_prereq("vehicle-fusion-cell-equipment-2", "production-science-pack")
     OV.remove_prereq("vehicle-fusion-reactor-equipment-2", "production-science-pack")
   end
@@ -239,11 +240,11 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobequipment"] then
     --adds bob personal equipment stuffs
-    pack_replace("personal-roboport-equipment", "green", "orange")
-    pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    pack_replace("exoskeleton-equipment", "green", "orange")
-    pack_replace("solar-panel-equipment-2", "green", "orange")
-    pack_replace("solar-panel-equipment-4", "blue", "yellow")
+    AI.pack_replace("personal-roboport-equipment", "green", "orange")
+    AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
+    AI.pack_replace("exoskeleton-equipment", "green", "orange")
+    AI.pack_replace("solar-panel-equipment-2", "green", "orange")
+    AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
   end
 
   -------------------------------------------------------------------------------
@@ -253,42 +254,42 @@ if angelsmods.industries.tech then
     --adds bob power stuffs
     -- steam power
     if settings.startup["bobmods-power-steam"].value == true then
-      pack_replace("bob-steam-engine-4", "blue", "orange")
-      pack_replace("bob-boiler-4", "blue", "orange")
-      pack_replace("bob-oil-boiler-3", "blue", "orange")
-      pack_replace("bob-steam-turbine-1", "blue", "orange")
-      pack_replace("bob-steam-turbine-3", "blue", "yellow")
-      pack_replace("bob-heat-exchanger-2", "blue", "orange")
+      AI.pack_replace("bob-steam-engine-4", "blue", "orange")
+      AI.pack_replace("bob-boiler-4", "blue", "orange")
+      AI.pack_replace("bob-oil-boiler-3", "blue", "orange")
+      AI.pack_replace("bob-steam-turbine-1", "blue", "orange")
+      AI.pack_replace("bob-steam-turbine-3", "blue", "yellow")
+      AI.pack_replace("bob-heat-exchanger-2", "blue", "orange")
     end
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      pack_replace("fluid-generator-3", "blue", "orange")
+      AI.pack_replace("fluid-generator-3", "blue", "orange")
     end
     -- solar power
     if settings.startup["bobmods-power-solar"].value == true then
-      pack_replace("bob-solar-energy-2", "green", "orange")
-      pack_replace("bob-solar-energy-4", "blue", "yellow")
+      AI.pack_replace("bob-solar-energy-2", "green", "orange")
+      AI.pack_replace("bob-solar-energy-4", "blue", "yellow")
     end
     if settings.startup["bobmods-power-accumulators"].value == true then
-      pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
-      pack_replace("bob-electric-energy-accumulators-4", "blue", "yellow")
+      AI.pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
+      AI.pack_replace("bob-electric-energy-accumulators-4", "blue", "yellow")
     end
     -- nuclar power
     if settings.startup["bobmods-power-steam"].value == true or
        settings.startup["bobmods-power-nuclear"].value == true or
        settings.startup["bobmods-power-heatsources"].value == true then
-      pack_replace("bob-heat-pipe-2", "blue", "orange")
+      AI.pack_replace("bob-heat-pipe-2", "blue", "orange")
     end
     if settings.startup["bobmods-power-heatsources"].value == true then
-      pack_replace("burner-reactor-2", "blue", "orange")
-      pack_replace("fluid-reactor-2", "blue", "orange")
+      AI.pack_replace("burner-reactor-2", "blue", "orange")
+      AI.pack_replace("fluid-reactor-2", "blue", "orange")
     end
     -- power distribution
     if settings.startup["bobmods-power-poles"].value == true then
-      pack_replace("electric-pole-2", "green", "orange")
-      pack_replace("electric-pole-4", "blue", "yellow")
-      pack_replace("electric-energy-distribution-2", "blue", "orange")
-      pack_replace("electric-substation-3", "blue", "yellow")
-      pack_replace("electric-substation-4", "blue", "white")
+      AI.pack_replace("electric-pole-2", "green", "orange")
+      AI.pack_replace("electric-pole-4", "blue", "yellow")
+      AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
+      AI.pack_replace("electric-substation-3", "blue", "yellow")
+      AI.pack_replace("electric-substation-4", "blue", "white")
     end
   end
 
@@ -300,7 +301,7 @@ if angelsmods.industries.tech then
     if mods["bobpower"] then
       OV.set_science_pack("hydrazine-generator", "datacore-energy-2", 2)
     end
-    pre_req_replace("turrets", "military", "angels-components-weapons-basic")
+    AI.pre_req_replace("turrets", "military", "angels-components-weapons-basic")
   end
 
   -------------------------------------------------------------------------------

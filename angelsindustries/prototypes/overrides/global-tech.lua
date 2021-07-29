@@ -74,7 +74,7 @@ require("prototypes.overrides.global-tech-popular-addons") -- overrides for PMU 
 
 -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
 if angelsmods.industries.tech then
-  tech_unlock_reset()
+  angelsmods.functions.AI.tech_unlock_reset()
   OV.execute()
 end
 
@@ -114,7 +114,7 @@ require("prototypes.overrides.global-tech-bobs-cores") -- overrides for bobs
 
 -- GLOBAL UPDATE CORE TIERS DEPENDING ON SCIENCE PACKS
 if angelsmods.industries.tech then
-  core_tier_upgrade()
+  angelsmods.functions.AI.core_tier_upgrade()
   OV.execute()
 end
 

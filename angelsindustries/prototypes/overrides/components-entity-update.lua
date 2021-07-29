@@ -1,14 +1,15 @@
 local OV = angelsmods.functions.OV
 local RB = angelsmods.functions.RB
+local AI = angelsmods.functions.AI
 --require("prototypes.overrides.industries-override-functions")
 local buildingmulti = angelsmods.marathon.buildingmulti
 local buildingtime = angelsmods.marathon.buildingtime
 
 if angelsmods.industries.components then
-  add_con_mats()
+  AI.add_con_mats()
   OV.execute()
 
-  replace_gen_mats()
+  AI.replace_gen_mats()
   OV.execute()
 end
 
