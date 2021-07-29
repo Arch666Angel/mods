@@ -593,7 +593,7 @@ data:extend(
       {
         {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.95, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-3", amount = 1, probability = 0.90, catalyst_amount = 1},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1},
       },
       icons =
@@ -634,7 +634,7 @@ data:extend(
       {
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.90, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-2", amount = 1, probability = 0.85, catalyst_amount = 1},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-2", amount = 1},
       },
       icons =
@@ -675,7 +675,7 @@ data:extend(
       {
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.85, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-3", amount = 1, probability = 0.80, catalyst_amount = 1},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-3", amount = 1},
       },
       icons =
@@ -716,7 +716,7 @@ data:extend(
       {
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.80, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-4", amount = 1, probability = 0.75, catalyst_amount = 1},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-4", amount = 1},
       },
       icons =
@@ -757,7 +757,7 @@ data:extend(
       {
         {type = "item", name = "bio-puffer-1", amount = 1, probability = 0.75, catalyst_amount = 1},
         {type = "item", name = "bio-puffer-5", amount = 1, probability = 0.70, catalyst_amount = 1},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-5", amount = 1}
       },
       icons =
