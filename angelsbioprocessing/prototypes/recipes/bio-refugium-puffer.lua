@@ -408,7 +408,7 @@ data:extend(
       results =
       {
         {type = "item", name = "bio-puffer-1", amount = 2, catalyst_amount = 2},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
@@ -444,7 +444,7 @@ data:extend(
       results =
       {
         {type = "item", name = "bio-puffer-2", amount = 2, catalyst_amount = 2},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.75},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
@@ -480,7 +480,7 @@ data:extend(
       results =
       {
         {type = "item", name = "bio-puffer-3", amount = 2, catalyst_amount = 2},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.7},
@@ -516,7 +516,7 @@ data:extend(
       results =
       {
         {type = "item", name = "bio-puffer-4", amount = 2, catalyst_amount = 2},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
@@ -552,7 +552,7 @@ data:extend(
       results =
       {
         {type = "item", name = "bio-puffer-5", amount = 2, catalyst_amount = 2},
-        {type = "fluid", name = "gas-acid", amount = 20},
+        {type = "fluid", name = "gas-acid", amount = 20, catalyst_amount = 20},
         {type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-2", amount = 1, probability = 0.1, show_details_in_recipe_tooltip = false},
         {type = "item", name = "bio-puffer-egg-3", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},

@@ -194,3 +194,27 @@ angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-2")
 angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-0")
 angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-0")
 angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-0")
+
+-- fish breeding
+angelsmods.functions.allow_bio_productivity("fish-breeding-0")
+angelsmods.functions.allow_bio_productivity("fish-breeding-1")
+angelsmods.functions.allow_bio_productivity("fish-breeding-2")
+angelsmods.functions.allow_bio_productivity("fish-breeding-3")
+
+-- puffer breeding
+angelsmods.functions.allow_bio_productivity("puffer-breeding-1")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-2")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-3")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-4")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-5")
+
+angelsmods.functions.allow_bio_productivity("puffer-breeding-23")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-12")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-13")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-14")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-15")
+
+-- biter breeding
+angelsmods.functions.allow_bio_productivity("biter-small-breeding")
+angelsmods.functions.allow_bio_productivity("biter-medium-breeding")
+angelsmods.functions.allow_bio_productivity("biter-big-breeding")

@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - Added new graphics to the agricultural module technologies
     - Added descriptions to farming products on how to obtain them
+    - Allowed argricultural productivity modules on fish, puffer and biter breeding
   Bugfixes:
     - Fixed another crash related to opening another players inventory
     - Fixed crash when bob plates is not active but bob enemies is
