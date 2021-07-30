@@ -60,8 +60,8 @@ auto_barrel = false
     type = "item",
     name = "spent-mold-non-expendable",
     icons = {
-      { icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32},
-      { icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
+      { icon = "__angelssmelting__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32},
+      --{ icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
     },
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-b[used]",
