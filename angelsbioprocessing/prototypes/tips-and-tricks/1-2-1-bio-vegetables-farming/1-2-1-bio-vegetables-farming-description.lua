@@ -5,7 +5,7 @@ local description = {
 local tnt = angelsmods.functions.TNT
 
 local items = {""}
-local mid_string = " and the equivalent seed"
+local mid_string = " and the equivalent seed "
 table.insert(items, tnt.get_item_from_name("temperate-garden","item","\n[font=default-bold]"))
 table.insert(items, tnt.get_items_from_name( {"temperate-1", "temperate-1-seed"}, "item", mid_string))
 table.insert(items, tnt.get_items_from_name( {"temperate-2", "temperate-2-seed"}, "item", mid_string))
