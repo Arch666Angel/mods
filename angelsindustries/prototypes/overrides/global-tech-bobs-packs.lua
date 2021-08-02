@@ -213,7 +213,7 @@ if angelsmods.industries.tech then
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")
     AI.pack_replace("bob-rocket", "green", "orange")
-    pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
+    AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
     AI.pack_replace("radars-4", "blue", "yellow")
     --small fixes
