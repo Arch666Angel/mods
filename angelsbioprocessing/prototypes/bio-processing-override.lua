@@ -157,6 +157,13 @@ angelsmods.functions.allow_productivity("bio-plastic-1")
 angelsmods.functions.allow_productivity("bio-plastic-2")
 angelsmods.functions.allow_productivity("bio-rubber")
 
+-- algae
+angelsmods.functions.allow_bio_productivity("algae-green-simple")
+angelsmods.functions.allow_bio_productivity("algae-green")
+angelsmods.functions.allow_bio_productivity("algae-brown")
+angelsmods.functions.allow_bio_productivity("algae-red")
+angelsmods.functions.allow_bio_productivity("algae-blue")
+
 -- plant growing
 angelsmods.functions.allow_bio_productivity("temperate-1")
 angelsmods.functions.allow_bio_productivity("temperate-2")

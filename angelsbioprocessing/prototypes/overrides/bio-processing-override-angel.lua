@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
 
 if angelsmods.industries and angelsmods.industries.overhaul then
-  OV.patch_recipes({{name="algae-brown-burning",results={{"!!"},{name = "solid-lithium", amount = 1}}}})
+  OV.patch_recipes({{name="algae-brown-burning",results={{"!!"},{name = "solid-lithium", amount = 2}}}})
   -- OV.remove_unlock("bio-paper-1", "circuit-paper-board")
   OV.modify_input("bio-tile",{type = "item", name = "solid-glass-mixture", amount = 1})
   -- MODULES

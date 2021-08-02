@@ -2,7 +2,19 @@ data:extend(
 {
   {
     type = "recipe-category",
-    name = "bio-processing",
+    name = "bio-processing", -- algae farm
+  },
+  {
+    type = "recipe-category",
+    name = "bio-processing-2",
+  },
+  {
+    type = "recipe-category",
+    name = "bio-processing-3",
+  },
+  {
+    type = "recipe-category",
+    name = "bio-processing-4",
   },
   {
     type = "recipe-category",
