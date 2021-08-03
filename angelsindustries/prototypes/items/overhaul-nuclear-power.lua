@@ -116,7 +116,7 @@ data:extend(
 -- NUCLEAR FUEL CELLS ---------------------------------------------------------
 -------------------------------------------------------------------------------
 if data.raw["item"]["uranium-fuel-cell"] then
-  data.raw["item"]["uranium-fuel-cell"].fuel_glow_color = {r = 0.15, g = 1, b = 0.15, a = 0.6}
+  data.raw["item"]["uranium-fuel-cell"].fuel_glow_color = util.color("00ff00") -- Green
 end
 data:extend(
 {
@@ -131,7 +131,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-uranium-fuel-cell",
     fuel_value = "1.5GJ",
-    fuel_glow_color = {r = 0.2, g = 0.8, b = 0.2, a = 0.6},
+    fuel_glow_color = util.color("6aff00"), -- Green with hint of yellow
     stack_size = 50,
   },
   --order "a[uranium]-b" reserved for uranium-fuel-cell
@@ -147,7 +147,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-AMOX-cell",
     fuel_value = "8GJ",
-    fuel_glow_color = {r = 0.8, g = 0.5, b = 0.2, a = 0.6},
+    fuel_glow_color = util.color("ff9500"), -- Orange, slightly yellow
     stack_size = 50,
   },
   {
@@ -170,7 +170,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-thorium-fuel-cell",
     fuel_value = "50GJ",
-    fuel_glow_color = {r = 0.8, g = 0.2, b = 0.2, a = 0.6},
+    fuel_glow_color = util.color("ff190d"), -- Red, slightly towards orange
     stack_size = 50,
   },
   {
@@ -193,7 +193,7 @@ data:extend(
     fuel_category = "nuclear",
     burnt_result = "used-up-angels-deuterium-fuel-cell",
     fuel_value = "80GJ",
-    fuel_glow_color = {r = 0.2, g = 0.35, b = 0.8, a = 0.6},
+    fuel_glow_color = util.color("00d5ff"), -- cyan per Lovely_Santa
     stack_size = 50,
   },
   {
