@@ -25,8 +25,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           base_color = {r = 204 / 256, g = 153 / 256, b = 102 / 256},
           flow_color = {r = 204 / 256, g = 153 / 256, b = 102 / 256},
           max_temperature = 100,
-          pressure_to_speed_ratio = 0.4,
-          flow_to_energy_ratio = 0.59,
           auto_barrel = false
         }
       }
@@ -201,6 +199,10 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         }
       }
     )
+    angelsmods.functions.move_item("brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
+    data.raw["item"]["brass-alloy"].icon = "__angelssmelting__/graphics/icons/plate-brass.png"
+    data.raw["item"]["brass-alloy"].icon_size = 32
+    data.raw["item"]["brass-alloy"].icon_mipmaps = 1
     OV.disable_recipe({"brass-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-brass")
     OV.add_prereq("zinc-processing", "angels-brass-smelting-1")

@@ -13,7 +13,7 @@ data:extend(
     name = "angels-inserter",
     icon = "__base__/graphics/icons/inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "angels-inserter"},
+    minable = {mining_time = 0.5, result = "angels-inserter"},
     max_health = 40,
     corpse = "small-remnants",
     resistances =
@@ -136,7 +136,7 @@ data:extend(
     name = "angels-long-inserter",
     icon = "__base__/graphics/icons/inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "angels-long-inserter"},
+    minable = {mining_time = 0.5, result = "angels-long-inserter"},
     max_health = 40,
     corpse = "small-remnants",
     resistances =
@@ -262,7 +262,7 @@ data:extend(
     name = "angels-filter-inserter",
     icon = "__base__/graphics/icons/inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "angels-filter-inserter"},
+    minable = {mining_time = 0.5, result = "angels-filter-inserter"},
     max_health = 40,
     corpse = "small-remnants",
     resistances =

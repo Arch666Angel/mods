@@ -62,6 +62,14 @@ end
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["platinum"].wire then
+  OV.patch_recipes({
+    {
+      name = "processing-electronics",
+      ingredients = { 
+        { type = "item", name = "angels-wire-platinum", amount = "gilded-copper-cable"}
+      }
+    }
+  })
   if mods['bobassembly'] then
     OV.patch_recipes({
       {

@@ -52,9 +52,6 @@ data:extend(
       type = "item-group",
       name = "petrochem-refining",
       order = "la[angels]-c[petrochem]-b",
-      inventory_order = "la[angels]-c[petrochem]-b",
-      --icon = "__angelspetrochem__/graphics/technology/petrochem.png",
-      --icon_size = 64,
       icons = {
         {
           icon = "__angelspetrochem__/graphics/technology/gas-refinery-tech.png",

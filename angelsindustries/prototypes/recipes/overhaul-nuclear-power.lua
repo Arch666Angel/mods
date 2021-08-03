@@ -486,7 +486,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 450,
+    energy_required = 400, --450
     ingredients =
     {
       {type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 5},
@@ -549,7 +549,7 @@ data:extend(
     enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 1000,
+    energy_required = 800, -- 1000
     ingredients =
     {
       {type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 10},
@@ -838,4 +838,3 @@ data:extend(
     },
   }
 )
-

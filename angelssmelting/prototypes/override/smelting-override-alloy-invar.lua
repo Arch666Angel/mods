@@ -27,8 +27,6 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           base_color = {r = 95 / 256, g = 125 / 256, b = 122 / 256},
           flow_color = {r = 95 / 256, g = 125 / 256, b = 122 / 256},
           max_temperature = 100,
-          pressure_to_speed_ratio = 0.4,
-          flow_to_energy_ratio = 0.59,
           auto_barrel = false
         }
       }
@@ -102,6 +100,10 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         }
       }
     )
+    angelsmods.functions.move_item("invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
+    data.raw["item"]["invar-alloy"].icon = "__angelssmelting__/graphics/icons/plate-invar.png"
+    data.raw["item"]["invar-alloy"].icon_size = 32
+    data.raw["item"]["invar-alloy"].icon_mipmaps = 1
     OV.global_replace_technology("invar-processing", "angels-invar-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-invar")
   end

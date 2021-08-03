@@ -74,8 +74,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-liquor",
     order = "a",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -89,8 +87,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-liquor",
     order = "b",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -104,8 +100,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-liquor",
     order = "c",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -119,8 +113,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-liquor",
     order = "d",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -134,8 +126,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-liquor",
     order = "e",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "item",

@@ -57,7 +57,7 @@ data:extend(
       },
       energy_usage = "90kW",
       mining_speed = 0.75,
-      mining_power = 3,
+      --mining_power = 3,
       resource_searching_radius = 0.49,
       vector_to_place_result = {0, 0},
       module_specification = {
@@ -226,7 +226,7 @@ data:extend(
       },
       energy_usage = "90kW",
       mining_speed = 2,
-      mining_power = 3,
+      --mining_power = 3,
       resource_searching_radius = 0.49,
       vector_to_place_result = {0, 0},
       module_specification = {

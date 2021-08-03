@@ -73,8 +73,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r = 214/255, g = 135/255, b = 010/255},
     flow_color = {r = 239/255, g = 168/255, b = 044/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -87,8 +85,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r = 194/255, g = 122/255, b = 29/255},
     flow_color = {r = 194/255, g = 122/255, b = 29/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -101,8 +97,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r = 255/255, g = 255/255, b = 060/255},
     flow_color = {r = 255/255, g = 255/255, b = 000/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   --[[{
     type = "item",
@@ -124,8 +118,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r = 255/255, g = 255/255, b = 255/255},
     flow_color = {r = 245/255, g = 245/255, b = 245/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },]]
   {
     type = "fluid",
@@ -140,8 +132,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -155,8 +145,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -170,8 +158,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -185,8 +171,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -200,8 +184,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -215,8 +197,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -230,8 +210,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=184/255, g=171/255, b=28/255},
     flow_color = {r=184/255, g=171/255, b=28/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
 }
 )

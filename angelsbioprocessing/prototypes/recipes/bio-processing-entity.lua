@@ -31,6 +31,16 @@ data:extend(
       },
       result = "algae-farm-3"
     },
+    {
+      type = "recipe",
+      name = "algae-farm-4",
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "algae-farm-3", amount = 1}
+      },
+      result = "algae-farm-4"
+    },
     --CROP FARM
     {
       type = "recipe",

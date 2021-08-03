@@ -47,48 +47,6 @@ funcs.generate_train_entities(
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
     selection_box = {{-1, -2.703125}, {1, 3.296875}},
     color = tintable_tint,
-    gui_front_tank = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/front-tank.png",
-      width = 64,
-      height = 64,
-      flags = {"icon"}
-    },
-    gui_center_tank = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/center-tank.png",
-      width = 64,
-      height = 64,
-      flags = {"icon"}
-    },
-    gui_back_tank = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/back-tank.png",
-      width = 64,
-      height = 64,
-      flags = {"icon"}
-    },
-    gui_connect_front_center_tank = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/connector-front-center.png",
-      width = 64,
-      height = 64,
-      flags = {"icon"}
-    },
-    gui_connect_center_back_tank = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/connector-center-back.png",
-      width = 64,
-      height = 64,
-      flags = {"icon"}
-    },
-    gui_front_center_tank_indiciation = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/1.png",
-      width = 32,
-      height = 32,
-      flags = {"icon"}
-    },
-    gui_center_back_tank_indiciation = {
-      filename = "__base__/graphics/entity/fluid-wagon/gui/2.png",
-      width = 32,
-      height = 32,
-      flags = {"icon"}
-    },
     vertical_selection_shift = -0.796875,
     weight = 1000,
     max_speed = 1.5,
@@ -203,7 +161,6 @@ funcs.generate_train_entities(
       }
     },
     wheels = standard_train_wheels,
-    rail_category = "regular",
     drive_over_tie_trigger = drive_over_tie(),
     tie_distance = 50,
     working_sound = {

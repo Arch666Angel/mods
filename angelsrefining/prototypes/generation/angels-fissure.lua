@@ -28,7 +28,7 @@ data:extend(
       infinite_depletion_amount = 10,
       resource_patch_search_radius = 12,
       minable = {
-        hardness = 1,
+        --hardness = 1,
         mining_time = 1,
         results = {
           {

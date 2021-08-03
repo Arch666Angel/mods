@@ -36,6 +36,11 @@ if angelsmods.trigger.smelting_products["glass"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-glass", "glass")
     angelsmods.functions.add_flag("angels-plate-glass", "hidden")
+    angelsmods.functions.move_item("glass", "angels-glass-casting", "d")
+    data.raw["item"]["glass"].icon = "__angelssmelting__/graphics/icons/plate-glass.png"
+    data.raw["item"]["glass"].icon_size = 32
+    data.raw["item"]["glass"].icon_mipmaps = 1
+  
     data.raw["recipe"]["angels-plate-glass-2"].normal.main_product = "glass"
     data.raw["recipe"]["angels-plate-glass-2"].expensive.main_product = "glass"
     data.raw["recipe"]["angels-plate-glass-3"].normal.main_product = "glass"

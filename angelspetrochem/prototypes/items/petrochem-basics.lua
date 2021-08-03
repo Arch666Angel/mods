@@ -16,8 +16,6 @@ data:extend(
       base_color = {r = 180/255, g = 180/255, b = 225/255},
       flow_color = {r = 120/255, g = 120/255, b = 150/255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
     },
     {
       type = "fluid",
@@ -38,8 +36,7 @@ data:extend(
       base_color = {r = 1, g = 1, b = 1},
       flow_color = {r = 1, g = 1, b = 1},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -60,8 +57,7 @@ data:extend(
       base_color = {r = 1, g = 0, b = 0},
       flow_color = {r = 1, g = 0, b = 0},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -82,8 +78,7 @@ data:extend(
       base_color = {r = 1, g = 0, b = 0},
       flow_color = {r = 1, g = 0, b = 0},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -102,8 +97,7 @@ data:extend(
       base_color = {r = 1, g = 0.4, b = 0.4},
       flow_color = {r = 1, g = 0.4, b = 0.4},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -124,8 +118,7 @@ data:extend(
       base_color = {r = 1, g = 0.5, b = 0.5},
       flow_color = {r = 1, g = 0.5, b = 0.5},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -144,8 +137,7 @@ data:extend(
       base_color = {r = 0, g = 1, b = 0.5},
       flow_color = {r = 0, g = 1, b = 0.5},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -163,8 +155,7 @@ data:extend(
       base_color = {r = 0, g = 1, b = 0.5},
       flow_color = {r = 0, g = 1, b = 0.5},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     --ENRICHED WATER
     {
@@ -182,8 +173,7 @@ data:extend(
       base_color = {r = 255/255, g = 128/255, b = 128/255},
       flow_color = {r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -200,8 +190,7 @@ data:extend(
       base_color = {r = 255/255, g = 128/255, b = 128/255},
       flow_color = {r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -218,8 +207,7 @@ data:extend(
       base_color = {r = 255/255, g = 128/255, b = 128/255},
       flow_color = {r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -238,8 +226,7 @@ data:extend(
       base_color = {r = 255/255, g = 128/255, b = 128/255},
       flow_color = {r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 101,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -259,8 +246,7 @@ data:extend(
       base_color = {r = 196 / 255, g = 196 / 255, b = 156 / 255},
       flow_color = {r = 196 / 255, g = 196 / 255, b = 156 / 255},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     --VOID
     {

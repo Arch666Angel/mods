@@ -101,7 +101,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -127,7 +127,7 @@ data:extend(
         },
         {
           apply_recipe_tint = "primary",
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -278,7 +278,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -304,7 +304,7 @@ data:extend(
         },
         {
           apply_recipe_tint = "primary",
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -455,7 +455,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -481,7 +481,7 @@ data:extend(
         },
         {
           apply_recipe_tint = "primary",
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -631,7 +631,7 @@ data:extend(
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_visualisations = {
         {
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
@@ -657,7 +657,7 @@ data:extend(
         },
         {
           apply_recipe_tint = "primary",
-          fade_out = true,
+          fadeout = true,
           constant_speed = true,
           animation = {
             filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",

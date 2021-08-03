@@ -35,7 +35,11 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
   if mods['bobplates'] then
     OV.global_replace_item("powder-tungsten", "powdered-tungsten")
     angelsmods.functions.add_flag("powder-tungsten", "hidden")
-    data.raw.item["powdered-tungsten"].localised_name = {"item-name.powder-tungsten"}
+    angelsmods.functions.move_item("powdered-tungsten", "angels-tungsten", "h")
+    data.raw["item"]["powdered-tungsten"].icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
+    data.raw["item"]["powdered-tungsten"].icon_size = 64
+    data.raw["item"]["powdered-tungsten"].icon_mipmaps = 4
+    data.raw["item"]["powdered-tungsten"].localised_name = {"item-name.powder-tungsten"}
     OV.disable_recipe({"powdered-tungsten"})
   end
 else
@@ -57,6 +61,10 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-tungsten", "tungsten-plate")
     angelsmods.functions.add_flag("angels-plate-tungsten", "hidden")
+    angelsmods.functions.move_item("tungsten-plate", "angels-tungsten-casting", "j")
+    data.raw["item"]["tungsten-plate"].icon = "__angelssmelting__/graphics/icons/plate-tungsten.png"
+    data.raw["item"]["tungsten-plate"].icon_size = 32
+    data.raw["item"]["tungsten-plate"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-tungsten-plate" })
     OV.add_prereq( "tungsten-processing", "angels-tungsten-smelting-1" )
   end
@@ -97,6 +105,12 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
 
   if mods['bobplates'] then
     angelsmods.functions.move_item("copper-tungsten-alloy", "angels-tungsten-casting", "l")
+  end
+
+  if mods["angelsindustries"] and angelsmods.industries.tech then
+  else -- not angels industry tech mode
+    OV.remove_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-2")
+    OV.add_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-1")
   end
 else
   angelsmods.functions.add_flag("casting-powder-tungsten", "hidden")

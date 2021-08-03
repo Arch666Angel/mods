@@ -27,7 +27,7 @@ if not angelsmods.functions.make_resource then
           {
             type = "optimized-particle",
             name = input.name .. "-particle",
-            flags = {"not-on-map"},
+            --flags = {"not-on-map"},
             life_time = 180,
             pictures = {
               {
@@ -968,10 +968,10 @@ if not angelsmods.functions.make_resource then
           input.normal = 1500
           input.maximum = 6000
         end
-        --Set mining hardness
+        --[[Set mining hardness
         if input.hardness == nil then
           input.hardness = 0.9
-        end
+        end]]
         --Set stages count according to resource type
         if input.type == "item" then
           if input.infinite == true then
@@ -1054,7 +1054,7 @@ if not angelsmods.functions.make_resource then
         ret_table.normal = input.normal
         ret_table.maximum = input.maximum
         ret_table.minable = {
-          hardness = input.hardness,
+          --hardness = input.hardness,
           mining_particle = input.particle,
           mining_time = input.mining_time,
           fluid_amount = input.acid_amount,

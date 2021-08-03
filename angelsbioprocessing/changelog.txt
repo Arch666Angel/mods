@@ -3,8 +3,14 @@ Version: 0.7.20
 Date: ??
   Changes:
     - Added new graphics to the agricultural module technologies
+    - Added descriptions to farming products on how to obtain them
+    - Allow agricultural modules on fish, puffer and biter breeding recipes
+    - Allow agricultural modules on algae recipes
+    - Increased productivity on lithia salt (647)
+    - Added new tier of algae farm inbetween the existing MK1 and MK2 (647)
   Bugfixes:
     - Fixed another crash related to opening another players inventory
+    - Fixed crash when bob plates is not active but bob enemies is
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.19
 Date: 31.05.2021

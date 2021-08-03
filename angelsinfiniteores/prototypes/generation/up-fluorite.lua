@@ -40,7 +40,7 @@ if angelsmods.ores.enableinfiniteuraniumpower then
 		maximum=6000,
 		minable =
 		{
-		  hardness = 0.4,
+		  --hardness = 0.4,
 		  mining_particle = "stone-particle",
 		  mining_time = 2,
 		  results = {
@@ -120,7 +120,7 @@ if angelsmods.ores.enableinfiniteuraniumpower then
 		maximum=6000,
 		minable =
 		{
-		  hardness = 0.4,
+		  --hardness = 0.4,
 		  mining_particle = "stone-particle",
 		  mining_time = 2,
 		  results = {

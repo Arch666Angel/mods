@@ -64,8 +64,6 @@ data:extend(
     base_color = {r = 125/255, g = 145/255, b = 161/255},
     flow_color = {r = 125/255, g = 145/255, b = 161/255},
     max_temperature = 1538,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
   {
@@ -118,3 +116,4 @@ stick.icon_size = 32
 stick.subgroup = "angels-iron-casting"
 stick.order = "m"
 stick.stack_size = 200
+stick.icon_mipmaps = 1

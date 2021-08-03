@@ -4,7 +4,8 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- CHEMICAL PLANTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.trigger.disable_bobs_chemical_plants then
+--double check bobs is active first for this one...
+if angelsmods.trigger.disable_vanilla_chemical_plants then
   angelsmods.functions.add_flag("chemical-plant", "hidden")
   angelsmods.functions.set_next_upgrade("assembling-machine", "chemical-plant", nil)
   OV.global_replace_item("chemical-plant", "angels-chemical-plant")
@@ -13,6 +14,8 @@ if angelsmods.trigger.disable_bobs_chemical_plants then
     "chemistry",
     "liquifying"
   })
+else
+  OV.add_unlock("basic-chemistry-2","chemical-plant") --give the item a new home if still active
 end
 
 if mods["bobassembly"] then
@@ -73,6 +76,7 @@ if mods["bobplates"] then
     OV.disable_recipe("electrolyser")
   else
     angelsmods.functions.add_crafting_category("assembling-machine", "electrolyser", "petrochem-electrolyser")
+    OV.add_unlock("basic-chemistry","electrolyser") --give the item a new home if still active
   end
 
   if mods["bobassembly"] then
@@ -144,6 +148,8 @@ if mods["bobplates"] then
     --OV.remove_unlock("bob-distillery")
     angelsmods.functions.remove_crafting_category("assembling-machine", "bob-distillery", "distillery")
     angelsmods.functions.add_crafting_category("assembling-machine", "angels-chemical-plant", "distillery")
+  else
+    OV.add_unlock("basic-chemistry-2", "bob-distillery") --give the item a new home if still active
   end
 
   if mods["bobassembly"] then
@@ -158,6 +164,8 @@ if mods["bobplates"] then
       OV.disable_technology("bob-distillery-2")
       angelsmods.functions.remove_crafting_category("assembling-machine", "bob-distillery-2", "distillery")
       angelsmods.functions.add_crafting_category("assembling-machine", "angels-chemical-plant-2", "distillery")
+    else
+      OV.add_prereq("bob-distillery-2", "basic-chemistry-2")
     end
 
     -- Distillery 3

@@ -1,9 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.14
-Date: ##.##.2021
+Date: ??
   Changes:
+    - Regular mode:
+      - Thorium fuel cells value dropped considerably, some recipes faster to compensate
+    - Component mode:
+      - Ensured that bobmodules uses each tier of electronic now
+      - Reduced lithia salt requirement on battery 5 (647)
     - Science mode:
       - Fixed an issue with an incorrect tag being given to the regualr lab, causing a crash
+      - Fixed some techs could not be researched due to wrong combination of science packs (643)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.13
 Date: 31.05.2021

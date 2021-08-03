@@ -46,7 +46,6 @@ data:extend(
       type = "item-group",
       name = "angels-components",
       order = "la[angels]-e[industries]-aa",
-      inventory_order = "la[angels]-e[industries]-a",
       icons = {
         {
           icon = "__base__/graphics/item-group/intermediate-products.png",
@@ -218,7 +217,6 @@ data:extend(
       type = "item-group",
       name = "angels-blocks",
       order = "la[angels]-e[industries]-ab",
-      inventory_order = "la[angels]-e[industries]-ab",
       icon_size = 64,
       icon = "__angelsindustries__/graphics/item-group/components-tech.png"
     },
@@ -309,7 +307,6 @@ data:extend(
       type = "item-group",
       name = "angels-tech",
       order = "la[angels]-e[industries]-b",
-      inventory_order = "la[angels]-e[industries]-b",
       icon_size = 64,
       icon = "__angelsindustries__/graphics/item-group/science-group.png"
     },
@@ -368,7 +365,6 @@ data:extend(
     --  type = "item-group",
     --  name = "angels-enhancement",
     --  order = "la[angels]-e[industries]-c",
-    --  inventory_order = "la[angels]-e[industries]-c",
     --  icon_size = 64,
     --  icon = "__angelsindustries__/graphics/item-group/vequip.png",
     --},
@@ -421,7 +417,6 @@ data:extend(
       type = "item-group",
       name = "angels-power",
       order = "la[angels]-e[industries]-c",
-      inventory_order = "la[angels]-e[industries]-c",
       icons = {
         {
           icon = "__angelsindustries__/graphics/technology/vequip.png",
@@ -479,9 +474,6 @@ data:extend(
       type = "item-group",
       name = "angels-logistics",
       order = "la[angels]-e[industries]-d",
-      inventory_order = "la[angels]-e[industries]-d",
-      --icon = "__angelsindustries__/graphics/item-group/cargo-roboport-group.png",
-      --icon_size = 64,
       icons = {
         {
           icon = "__angelsindustries__/graphics/technology/cargo-roboport-tech.png",
@@ -567,7 +559,6 @@ data:extend(
       type = "item-group",
       name = "angels-vehicles",
       order = "la[angels]-e[industries]-e",
-      inventory_order = "la[angels]-e[industries]-e",
       icons = {
         {
           icon = "__angelsindustries__/graphics/technology/crawler-tech.png",
@@ -622,7 +613,6 @@ data:extend(
     --  type = "item-group",
     --  name = "angels-warfare",
     --  order = "la[angels]-f[warfare]-a",
-    --  inventory_order = "la[angels]-f[warfare]-a",
     --  icons = {
     --    {
     --      icon = "__base__/graphics/item-group/military.png",

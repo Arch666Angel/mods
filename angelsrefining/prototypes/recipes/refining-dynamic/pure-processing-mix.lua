@@ -5,7 +5,7 @@ data:extend(
     --TIER 4 MIX
     {
       type = "recipe",
-      name = "angelsore-pure-mix1-processing",
+      name = "angelsore-pure-mix1-processing", --tungsten
       category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
@@ -15,7 +15,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "angels-ore2-pure", amount = 2},
           {type = "item", name = "angels-ore3-pure", amount = 2},
-          {type = "item", name = "angels-ore6-pure", amount = 2},
+          {type = "item", name = "angels-ore1-pure", amount = 2},
           {type = "item", name = "catalysator-orange", amount = 1}
         },
         results = {
@@ -26,7 +26,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "angels-ore2-pure", amount = 3 * rawmulti},
           {type = "item", name = "angels-ore3-pure", amount = 3 * rawmulti},
-          {type = "item", name = "angels-ore6-pure", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore1-pure", amount = 3 * rawmulti},
           {type = "item", name = "catalysator-orange", amount = 1}
         },
         results = {
@@ -38,7 +38,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-pure-mix2-processing",
+      name = "angelsore-pure-mix2-processing", --platinum
       category = "ore-sorting-4",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
@@ -80,7 +80,7 @@ data:extend(
       normal = {
         ingredients = {
           {type = "item", name = "angels-ore2-pure", amount = 2},
-          {type = "item", name = "angels-ore3-pure", amount = 2},
+          {type = "item", name = "angels-ore4-pure", amount = 2},
           {type = "item", name = "angels-ore5-pure", amount = 2},
           {type = "item", name = "catalysator-orange", amount = 1}
         },
@@ -91,7 +91,7 @@ data:extend(
       expensive = {
         ingredients = {
           {type = "item", name = "angels-ore2-pure", amount = 3 * rawmulti},
-          {type = "item", name = "angels-ore3-pure", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore4-pure", amount = 3 * rawmulti},
           {type = "item", name = "angels-ore5-pure", amount = 3 * rawmulti},
           {type = "item", name = "catalysator-orange", amount = 1}
         },

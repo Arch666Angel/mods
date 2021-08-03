@@ -1,19 +1,21 @@
 local OV = angelsmods.functions.OV
 local RB = angelsmods.functions.RB
+local AI = angelsmods.functions.AI
 --require("prototypes.overrides.industries-override-functions")
 local buildingmulti = angelsmods.marathon.buildingmulti
 local buildingtime = angelsmods.marathon.buildingtime
 
 if angelsmods.industries.components then
-  add_con_mats()
+  AI.add_con_mats()
   OV.execute()
 
-  replace_gen_mats()
+  AI.replace_gen_mats()
   OV.execute()
 end
 
 -- custom fixes base game
 require "prototypes.overrides.components-base-entity-update.components-base-assemblers-update"
+require "prototypes.overrides.components-base-entity-update.components-base-algae-farms-update"
 require "prototypes.overrides.components-base-entity-update.components-base-inserters-update"
 require "prototypes.overrides.components-base-entity-update.components-base-power-update"
 require "prototypes.overrides.components-base-entity-update.components-base-robots-update"

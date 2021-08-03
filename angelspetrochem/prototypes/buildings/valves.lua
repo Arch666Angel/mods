@@ -17,7 +17,7 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "valve-inspector"},
+    minable = {mining_time = 0.5, result = "valve-inspector"},
     max_health = 80,
     corpse = "small-remnants",
     resistances =
@@ -146,7 +146,7 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/valve-return.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "valve-return"},
+    minable = {mining_time = 0.5, result = "valve-return"},
     max_health = 80,
     corpse = "small-remnants",
     resistances =
@@ -275,7 +275,7 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/valve-overflow.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "valve-overflow"},
+    minable = {mining_time = 0.5, result = "valve-overflow"},
     max_health = 80,
     corpse = "small-remnants",
     resistances =
@@ -405,7 +405,7 @@ data:extend(
     icon = "__angelspetrochem__/graphics/icons/valve-underflow.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "valve-underflow"},
+    minable = {mining_time = 0.5, result = "valve-underflow"},
     max_health = 80,
     corpse = "small-remnants",
     resistances =
