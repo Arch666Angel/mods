@@ -1,7 +1,6 @@
 local OV = angelsmods.functions.OV
 local buildingmulti = angelsmods.marathon.buildingmulti
 local buildingtime = angelsmods.marathon.buildingtime
-
 if angelsmods.industries.overhaul then
     angelsmods.functions.RB.build({
         {
@@ -33,9 +32,4 @@ if angelsmods.industries.overhaul then
             },
         }
     })
-
-end
-
-if mods["bobpower"] then
-    OV.disable_recipe({"angels-burner-reactor"})
 end

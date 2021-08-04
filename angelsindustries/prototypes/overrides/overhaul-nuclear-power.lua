@@ -224,9 +224,7 @@ if angelsmods.industries.overhaul then
       OV.disable_technology("plutonium-fuel-cell")
     end
   end
-
 else
-
   -- disable all nuclear stuff
   -- uranium fuel cell
   angelsmods.functions.add_flag("uranium-234", "hidden")
@@ -260,5 +258,8 @@ else
   angelsmods.functions.add_flag("angels-nuclear-fuel-2", "hidden")
   OV.disable_recipe({"angels-nuclear-fuel", "angels-nuclear-fuel-2"})
   OV.disable_recipe({"angels-atomic-bomb", "angels-atomic-bomb-2"})
-
+end
+if mods["bobpower"] or not angelsmods.industries.overhaul then
+  OV.disable_recipe({"angels-burner-reactor"})
+  angelsmods.functions.add_flag("angels-burner-reactor", "hidden")
 end
