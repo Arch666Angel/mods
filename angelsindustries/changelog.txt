@@ -4,6 +4,8 @@ Date: ??
   Changes:
     - Regular mode:
       - Thorium fuel cells value dropped considerably, some recipes faster to compensate
+      - Added burner reactor that uses up fuel cells at a faster rate but less heat output
+      - Adjusted nuclear reactor glow tints and color
     - Component mode:
       - Ensured that bobmodules uses each tier of electronic now
       - Reduced lithia salt requirement on battery 5 (647)
