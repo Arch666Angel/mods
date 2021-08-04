@@ -247,9 +247,9 @@ if mods["bobpower"] then
       }
     )
 
-    move_item("angels-burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
-    move_item("angels-burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
-    move_item("angels-burner-reactor-3", "angels-power-nuclear-reactor-a", "a[fuel-burner]-c")
+    move_item("burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
+    move_item("burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
+    move_item("burner-reactor-3", "angels-power-nuclear-reactor-a", "a[fuel-burner]-c")
 
     move_item("fluid-reactor", "angels-power-nuclear-reactor-a", "b[fluid-burner]-a")
     move_item("fluid-reactor-2", "angels-power-nuclear-reactor-a", "b[fluid-burner]-b")
