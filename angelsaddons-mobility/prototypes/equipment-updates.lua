@@ -49,6 +49,19 @@ if mods["Krastorio2"] then
   funcs.update_equipment("roboport-equipment", "vehicle-roboport", "angels-basegame-construction")
 end
 
+if mods["Power Armor MK3"] then
+  funcs.update_equipment("energy-shield-equipment", "pamk3-esmk3", "angels-basegame-defense")
+
+  funcs.update_equipment("battery-equipment", "pamk3-battmk3", "angels-basegame-energy")
+  funcs.update_equipment("generator-equipment", "pamk3-pnr", "angels-basegame-energy")
+  funcs.update_equipment("generator-equipment", "pamk3-se", "angels-basegame-energy")
+end
+
+if mods["Portable_power"] then
+  funcs.update_equipment("generator-equipment", "portable-generator-equipment", "angels-basegame-energy")
+  funcs.update_equipment("generator-equipment", "portable-reactor-equipment", "angels-basegame-energy")
+end
+
 if angelsmods.petrochem then
   local OV = angelsmods.functions.OV
   if angelsmods.addons.mobility.petrotrain.tier_amount > 1 then
