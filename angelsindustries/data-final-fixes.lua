@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
 require("prototypes.overrides.global-components-recipe")
-log(serpent.block(data.raw.recipe["bob-area-mining-drill-1"].ingredients))
+
 if angelsmods.industries.components then
   --hide the unused advanced tech blocks
   OV.global_replace_item(
@@ -98,4 +98,3 @@ end
 
 --OTHER OVERRIDES
 --require("prototypes.overrides.global-loaders")
-log(serpent.block(data.raw.recipe["bob-area-mining-drill-1"].ingredients))
