@@ -15,10 +15,13 @@ if angelsmods.industries.components then
   OV.remove_prereq("electric-energy-accumulators", "battery")
   OV.add_prereq("electric-energy-accumulators", "angels-components-batteries-2")
 --do i want to leave this for bobs bots?
-  --if (not mods["boblogistics"]) then --if i want to actually move it to battery-2
+  if (not mods["boblogistics"]) then --if i want to actually move it to battery-2
     AI.replace_recipe_ing("flying-robot-frame","battery","battery-4")
-    OV.remove_prereq("robotics", "battery")
-    OV.add_prereq("robotics", "angels-components-batteries-4")
+    AI.pre_req_replace("robotics","battery","angels-components-batteries-4")
+  else
+    AI.pre_req_replace("robotics","battery","angels-components-batteries-2")
+  end
+
   --end
   AI.replace_recipe_ing("battery-equipment","battery-1","battery-3")
   OV.remove_prereq("battery-equipment", "battery")

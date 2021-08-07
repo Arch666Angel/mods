@@ -416,7 +416,7 @@ end
 --REPLACE CONSTRUCTION BLOCKS
 function angelsmods.functions.AI.replace_con_mats(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
-    if data.raw.recipe[assembly_check] then
+    if data.raw[buildings][assembly_check] and data.raw.recipe[assembly_check] then
       local rec_check = data.raw.recipe[assembly_check]
       if rec_check.normal or rec_check.expensive then
         if rec_check.normal then

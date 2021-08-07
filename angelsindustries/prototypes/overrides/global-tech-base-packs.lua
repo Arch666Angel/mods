@@ -153,6 +153,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("bio-processing-crystal-splinter-1", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
+  AI.pack_replace("bio-arboretum-2","green","orange")
   --PETROCHEM
   AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
   AI.pack_replace("plastic-1", "green", "orange")

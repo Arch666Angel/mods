@@ -25,6 +25,8 @@ angelsmods.industries.return_ingredients =
   angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
 angelsmods.industries.block_stack_size = settings.startup["angels-components-stack-size"].value
 
+log(serpent.block(data.raw.recipe["bob-area-mining-drill-1"].ingredients))
+
 -- set triggers for other angel mods
 require("prototypes.angels-industries-triggers")
 

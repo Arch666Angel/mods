@@ -7,6 +7,8 @@ local move_item = angelsmods.functions.move_item
 if mods["bobpower"] and mods["bobplates"] then
   --update to blue science level
   OV.set_science_pack("bob-steam-turbine-1","chemical-science-pack",1)
+  --make HX-1 the same tier
+  OV.set_science_pack("bob-heat-exchanger-1","chemical-science-pack",1)
   OV.patch_recipes(
     {
       {
