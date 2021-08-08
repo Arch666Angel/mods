@@ -2,7 +2,9 @@ local unit_tests =
 {
   require("unit-tests.unit-test-001"),
   require("unit-tests.unit-test-002"),
-  require("unit-tests.unit-test-002"),
+  require("unit-tests.unit-test-003"),
+  require("unit-tests.unit-test-004"),
+  require("unit-tests.unit-test-005"),
 }
 
 local unit_test_functions = require("unit-test-functions")
