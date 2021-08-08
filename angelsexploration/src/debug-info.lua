@@ -14,6 +14,7 @@ function debug_info:on_init()
 end
 
 function debug_info:init_global_data()
+  if not debug_info.debug_enabled then return {} end
   local debug_data =
   {
     ["version"] = 1, -- version of the global data
