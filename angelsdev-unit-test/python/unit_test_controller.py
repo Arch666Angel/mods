@@ -19,14 +19,22 @@ class UnitTestController:
       self.__buildAngelsMods()
       self.__buildBobsMods()
 
+    # Backup the current mod config and mod settings
+    self.currentModlistController = ModlistController(self.factorioFolderDir)
+    self.currentModlistController.readConfigurationFile()
+    self.currentSettingsController = SettingsController(self.factorioFolderDir)
+    self.currentSettingsController.readSettingsFile()
+
+    # New controllers for the unit tests
     self.modlistController = ModlistController(self.factorioFolderDir)
     self.settingsController = SettingsController(self.factorioFolderDir)
     self.factorioController = FactorioController(factorioInstallDir)
 
   def __del__(self):
-    self.modlistController.readConfigurationFile()
-    self.modlistController.disableMod("angelsdev-unit-test")
-    self.modlistController.writeConfigurationFile()
+    # Reset mod config and mod settings to the backed up values
+    self.currentModlistController.disableMod("angelsdev-unit-test")
+    self.currentModlistController.writeConfigurationFile()
+    self.currentSettingsController.writeSettingsFile()
 
   def TestAllConfiguations(self) -> None:
     self.TestSpecialVanilla()
