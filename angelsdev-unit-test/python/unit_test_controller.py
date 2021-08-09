@@ -32,6 +32,7 @@ class UnitTestController:
     self.TestSpecialVanilla()
     self.TestBobAngels()
     self.TestPureAngels()
+    self.TestBobsSettings()
 
   #############################################################################
   ### SPECIAL VANILLA                                                       ###
@@ -403,6 +404,385 @@ class UnitTestController:
           "angels-enable-industries": False, # Angels overhaul
           "angels-enable-components": False, # Angels component mode
           "angels-enable-tech"      : True, # Angels technology mode
+        }
+      }
+    )
+    self.__executeUnitTests()
+  #############################################################################
+  ### BOB and ANGELS                                                        ###
+  #############################################################################
+  def TestBobsSettings(self) -> None:
+    self.TestBobPowerSettings1()
+    self.TestBobPowerSettings1()
+    self.TestBobPowerSettings3()
+    self.TestBobAssemblySettings()
+    self.TestBobLogisticsSettings()
+    self.TestBobRevampSettings()
+    self.TestBobOtherSettings()
+
+  def TestBobPowerSettings1(self) -> None:
+    """Tests bob power non-default settings industries."""
+    self.__logTestConfiguration("BobPower non-default industries")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": False, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+
+          #"bobmods-burnerphase" : False, #defaults true
+          #"bobmods-revamp-rtg" : False, #defaults true
+          "bobmods-power-poles" : False, #defaults true
+          "bobmods-power-steam" : False, #defaults true
+          "bobmods-power-fluid-generator" : False, #defaults true
+          "bobmods-power-solar" : False, #defaults true
+          "bobmods-power-accumulators" : False, #defaults true
+          "bobmods-power-heatsources" : False, #defaults true
+          "bobmods-power-nuclear" : False, #defaults true
+        }
+      }
+    )
+    self.__executeUnitTests()
+
+  def TestBobPowerSettings2(self) -> None:
+    """Tests bob power non-default settings components."""
+    self.__logTestConfiguration("BobPower non-default components")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": True, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+
+          #"bobmods-burnerphase" : False, #defaults true
+          #"bobmods-revamp-rtg" : False, #defaults true
+          "bobmods-power-poles" : False, #defaults true
+          "bobmods-power-steam" : False, #defaults true
+          "bobmods-power-fluid-generator" : False, #defaults true
+          "bobmods-power-solar" : False, #defaults true
+          "bobmods-power-accumulators" : False, #defaults true
+          "bobmods-power-heatsources" : False, #defaults true
+          "bobmods-power-nuclear" : False, #defaults true
+        }
+      }
+    )
+    self.__executeUnitTests()
+  def TestBobPowerSettings3(self) -> None:
+    """Tests bob power non-default settings tech."""
+    self.__logTestConfiguration("BobPower non-default tech")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": True, # Angels component mode
+          "angels-enable-tech"      : True, # Angels technology mode
+
+          #"bobmods-burnerphase" : False, #defaults true
+          #"bobmods-revamp-rtg" : False, #defaults true
+          "bobmods-power-poles" : False, #defaults true
+          "bobmods-power-steam" : False, #defaults true
+          "bobmods-power-fluid-generator" : False, #defaults true
+          "bobmods-power-solar" : False, #defaults true
+          "bobmods-power-accumulators" : False, #defaults true
+          "bobmods-power-heatsources" : False, #defaults true
+          "bobmods-power-nuclear" : False, #defaults true
+        }
+      }
+    )
+    self.__executeUnitTests()
+  def TestBobAssemblySettings(self) -> None:
+    """Tests bob assembly non-default settings industries."""
+    self.__logTestConfiguration("BobAssembly non-default")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": False, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+
+          "bobmods-assembly-burner" : False, #defaults true
+          "bobmods-assembly-chemicalplants" : False, #defaults true
+          "bobmods-assembly-oilfurnaces" : False, #defaults true
+          "bobmods-assembly-multipurposefurnaces" : False, #defaults true
+          "bobmods-assembly-electrolysers" : False, #defaults true
+          "bobmods-assembly-distilleries" : False, #defaults true
+          "bobmods-assembly-centrifuge" : False, #defaults true
+          "bobmods-assembly-electronicmachines" : False, #defaults true
+          "bobmods-power-poles" : True, #defaults true
+          "bobmods-power-steam" : True, #defaults true
+          "bobmods-power-fluid-generator" : True, #defaults true
+          "bobmods-power-solar" : True, #defaults true
+          "bobmods-power-accumulators" : True, #defaults true
+          "bobmods-power-heatsources" : True, #defaults true
+          "bobmods-power-nuclear" : True, #defaults true
+        }
+      }
+    )
+    self.__executeUnitTests()
+  def TestBobLogisticsSettings(self) -> None:
+    """Tests bob logistics non-default settings industries."""
+    self.__logTestConfiguration("BobLogistics non-default")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": False, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+
+          "bobmods-logistics-disableroboports" : False, #defaults true
+          "bobmods-logistics-flyingrobotframes" : False, #defaults true
+          "bobmods-logistics-robotpoarts" : False, #defaults true
+          "bobmods-logistics-inserteroverhaul" : False, #defaults true
+          "bobmods-logistics-beltoverhaul" : False, #defaults true
+        }
+      }
+    )
+    self.__executeUnitTests()
+
+  def TestBobRevampSettings(self) -> None:
+    """Tests bob logistics non-default settings industries."""
+    self.__logTestConfiguration("BobRevamp non-default")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": False, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+
+          "bobmods-logistics-disableroboports" : True, #defaults true
+          "bobmods-logistics-flyingrobotframes" : True, #defaults true
+          "bobmods-logistics-robotpoarts" : True, #defaults true
+          "bobmods-logistics-inserteroverhaul" : True, #defaults true
+          "bobmods-logistics-beltoverhaul" : True, #defaults true
+
+          "bobmods-revamp-rtg" : False, #defaults true
+          "bobmods-revamp-nuclear" : False, #defaults true
+          "bobmods-revamp-oil" : False, #defaults true
+          "bobmods-revamp-old-oil" : False, #defaults true
+          "bobmods-revamp-hardmode" : False, #defaults true
+        }
+      }
+    )
+    self.__executeUnitTests()
+
+  def TestBobOtherSettings(self) -> None:
+    """Tests bob general non-default settings industries."""
+    self.__logTestConfiguration("Bobs other non-default")
+    self.__setupTestConfiguration(
+      [
+        "angelsrefining",
+        "angelspetrochem",
+        "angelssmelting",
+        "angelsbioprocessing",
+        "angelsindustries",
+        #"angelsexploration"
+
+        "boblibrary",
+        "bobassembly",
+        "bobclasses",
+        "bobelectronics",
+        "bobenemies",
+        "bobequipment",
+        "bobgreenhouse",
+        "bobinserters",
+        "boblogistics",
+        "bobmining",
+        "bobmodules",
+        "bobores",
+        "bobplates",
+        "bobpower",
+        "bobrevamp",
+        "bobtech",
+        "bobvehicleequipment",
+        "bobwarfare",
+      ],
+      {
+        'startup':
+        {
+          "angels-enable-industries": True, # Angels overhaul
+          "angels-enable-components": False, # Angels component mode
+          "angels-enable-tech"      : False, # Angels technology mode
+
+          "bobmods-revamp-rtg" : True, #defaults true
+          "bobmods-revamp-nuclear" : True, #defaults true
+          "bobmods-revamp-oil" : True, #defaults true
+          "bobmods-revamp-old-oil" : True, #defaults true
+          "bobmods-revamp-hardmode" : True, #defaults true
+
+          "bobmods-burner-phase" : False, #defaults true
+          "bobmods-mining-minimaxes" : False, #defaults true
+          "bobmods-plates-purewater" : False, #defaults true
+          "bobmods-ores-unsortedgems" : False, #defaults true
+          "bobmods-tech-colorupdate" : False, #defaults true
+          "bobmods-burner-phase" : False, #defaults true
         }
       }
     )
