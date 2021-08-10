@@ -112,7 +112,6 @@ local barreling_pump = {
       pipe_connections = {{position = {0, -2}}}
     }
   },
-  pipe_covers = pipecoverspictures()
 }
 
 if angelsmods.trigger.enable_auto_barreling then

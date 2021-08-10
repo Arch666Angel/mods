@@ -101,8 +101,7 @@ if mods["aai-industry"] then
   angelsmods.industries.block_replace["stone-brick"]={new="block-construction-1",amt_multi=2}
 end
 if mods["bobelectronics"] then
-  angelsmods.industries.block_replace["electronic-circuit"]={new="block-electronics-2",amt_multi=1}
-  angelsmods.industries.block_replace["advanced-circuit"]={new="block-electronics-3",amt_multi=1}
+  angelsmods.industries.block_replace["advanced-circuit"] = {new="block-electronics-2",amt_multi=1}
   angelsmods.industries.general_replace["electronic-circuit"]={new="circuit-red-loaded",amt_multi=1,unlock_by="electronics"}
   angelsmods.industries.general_replace["advanced-circuit"]={new="circuit-orange-loaded",amt_multi=1,unlock_by="advanced-electronics"}
 end

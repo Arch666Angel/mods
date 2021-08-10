@@ -429,7 +429,7 @@ OV.patch_recipes(
         ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
         ["nickel-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["zinc-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
     -- JIVOLITE
@@ -445,7 +445,7 @@ OV.patch_recipes(
         ["copper-ore"] = (not special_vanilla) and {1, 1, 1, 2},
         ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["zinc-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["silver-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 1, 1},
         ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
@@ -460,10 +460,11 @@ OV.patch_recipes(
         ["angels-copper-pebbles"] = special_vanilla and {0, 2, 3, 5},
         ["angels-copper-slag"] = special_vanilla and {0, 0, 1, 1},
         ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
-        ["cobalt-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["tin-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["uranium-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["bauxite-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+
       }
     ),
     -- CROTINIUM
@@ -478,9 +479,9 @@ OV.patch_recipes(
         ["angels-copper-slag"] = special_vanilla and {0, 1, 1, 2},
         ["iron-ore"] = (not special_vanilla) and {1, 1, 1, 2},
         ["lead-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["rutile-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 0, 1},
       }
     ),
     -- RUBYTE
@@ -492,9 +493,9 @@ OV.patch_recipes(
         ["lead-ore"] = (not special_vanilla) and {2, 2, 3, 3},
         ["nickel-ore"] = (not special_vanilla) and {1, 1, 1, 2},
         ["bauxite-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["gold-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["rutile-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["tungsten-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["uranium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
     -- BOBMONIUM
@@ -505,10 +506,10 @@ OV.patch_recipes(
         ["!!"] = (not special_vanilla) and {false, false, false, true},
         ["tin-ore"] = (not special_vanilla) and {2, 2, 3, 3},
         ["quartz"] = (not special_vanilla) and {1, 1, 1, 2},
-        ["cobalt-ore"] = (not special_vanilla) and {0, 1, 1, 1},
+        ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
         ["zinc-ore"] = (not special_vanilla) and {0, 1, 1, 1},
-        ["bauxite-ore"] = (not special_vanilla) and {0, 0, 1, 1},
-        ["uranium-ore"] = (not special_vanilla) and {0, 0, 0, 1}
+        ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
+        ["cobalt-ore"] = (not special_vanilla) and {0, 0, 0, 1}
       }
     ),
     -- FERROUS
@@ -536,10 +537,10 @@ OV.patch_recipes(
           ["!!"] = (not special_vanilla) and {true, true, true, true},
           ["copper-ore"] = (not special_vanilla) and {2, 3, 4, 4},
           ["tin-ore"] = (not special_vanilla) and {2, 2, 2, 2},
-          ["quartz"] = (not special_vanilla) and {0, 1, 1, 1},
+          ["silver-ore"] = (not special_vanilla) and {0, 1, 1, 1},
           ["gold-ore"] = (not special_vanilla) and {0, 0, 1, 1},
           ["platinum-ore"] = (not special_vanilla) and {0, 0, 0, 1},
-          ["tungsten-ore"] = (not (special_vanilla or ore_enabled("platinum-ore"))) and {0, 0, 0, 1},
+          ["quartz"] = (not (special_vanilla or ore_enabled("platinum-ore"))) and {0, 0, 0, 1},
         },
         true
       ) or
@@ -666,6 +667,7 @@ OV.patch_recipes(
         special_vanilla and {type = "item", name = "copper-ore", amount = 3} or {type = "item", name = "nickel-ore", amount = 4},
         {type = "item", name = "bauxite-ore", amount = 4},
         {type = "item", name = "zinc-ore", amount = 4},
+        {type = "item", name = "silver-ore", amount = 4},
         {type = "item", name = "fluorite-ore", amount = 2},
         "unused"
       },
@@ -696,9 +698,13 @@ OV.patch_recipes(
         },
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
+          tweaked_icon_lookup("silver-ore", 0.5, {10, 10})
+        },
+        --[[6]] {
+          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("fluorite-ore", 0.5, {10, 10})
         },
-        --[[6]] nil
+        --[[7]] nil,
       },
       {
         special_vanilla and {
@@ -712,6 +718,7 @@ OV.patch_recipes(
         nil,
         nil,
         nil,
+        nil,
         nil
       }
     ),
@@ -722,7 +729,7 @@ OV.patch_recipes(
         special_vanilla and {type = "item", name = "uranium-ore", amount = 3} or {type = "item", name = "rutile-ore", amount = 6},
         {type = "item", name = "gold-ore", amount = 6},
         {type = "item", name = "cobalt-ore", amount = 6},
-        {type = "item", name = "silver-ore", amount = 6},
+        "unused",
         {type = "item", name = "uranium-ore", amount = special_vanilla and 0 or 3},
         {type = "item", name = "thorium-ore", amount = 3}
       },
@@ -749,10 +756,7 @@ OV.patch_recipes(
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("cobalt-ore", 0.5, {10, 10})
         },
-        --[[4]] {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
-          tweaked_icon_lookup("silver-ore", 0.5, {10, 10})
-        },
+        --[[4]] nil,
         --[[5]] {
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png"},
           tweaked_icon_lookup("uranium-ore", 0.5, {10, 10})

@@ -58,6 +58,10 @@ if angelsmods.trigger.smelting_products["nickel"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-nickel", "nickel-plate")
     angelsmods.functions.add_flag("angels-plate-nickel", "hidden")
+    angelsmods.functions.move_item("nickel-plate", "angels-nickel-casting", "j")
+    data.raw["item"]["nickel-plate"].icon = "__angelssmelting__/graphics/icons/plate-nickel.png"
+    data.raw["item"]["nickel-plate"].icon_size = 32
+    data.raw["item"]["nickel-plate"].icon_mipmaps = 1
   end
 else
   angelsmods.functions.add_flag("angels-plate-nickel", "hidden")

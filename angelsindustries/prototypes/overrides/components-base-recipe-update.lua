@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+local AI = angelsmods.functions.AI
 
 if angelsmods.industries.components then
   -- submachine gun
@@ -10,27 +11,30 @@ if angelsmods.industries.components then
   OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
   --battery usage
   --vanilla replacements
-  replace_recipe_ing("accumulator","battery-1","battery-2")
+  AI.replace_recipe_ing("accumulator","battery-1","battery-2")
   OV.remove_prereq("electric-energy-accumulators", "battery")
   OV.add_prereq("electric-energy-accumulators", "angels-components-batteries-2")
 --do i want to leave this for bobs bots?
-  --if (not mods["boblogistics"]) then --if i want to actually move it to battery-2
-    replace_recipe_ing("flying-robot-frame","battery","battery-4")
-    OV.remove_prereq("robotics", "battery")
-    OV.add_prereq("robotics", "angels-components-batteries-4")
+  if (not mods["boblogistics"]) then --if i want to actually move it to battery-2
+    AI.replace_recipe_ing("flying-robot-frame","battery","battery-4")
+    AI.pre_req_replace("robotics","battery","angels-components-batteries-4")
+  else
+    AI.pre_req_replace("robotics","battery","angels-components-batteries-2")
+  end
+
   --end
-  replace_recipe_ing("battery-equipment","battery-1","battery-3")
+  AI.replace_recipe_ing("battery-equipment","battery-1","battery-3")
   OV.remove_prereq("battery-equipment", "battery")
   OV.add_prereq("battery-equipment", "angels-components-batteries-3")
-  replace_recipe_ing("battery-mk2-equipment","battery-equipment","battery-4")
+  AI.replace_recipe_ing("battery-mk2-equipment","battery-equipment","battery-4")
   OV.add_prereq("battery-mk2-equipment", "angels-components-batteries-4")
 
   OV.add_prereq("angels-cobalt-smelting-1", "water-washing-1")
   OV.remove_prereq("angels-cobalt-smelting-2", "water-washing-1")
 
-  replace_recipe_ing("personal-roboport-equipment","battery-1","battery-4")
+  AI.replace_recipe_ing("personal-roboport-equipment","battery-1","battery-4")
   --OV.add_prereq("personal-roboport-equipment", "angels-components-batteries-4")
-  replace_recipe_ing("personal-roboport-mk2-equipment","battery-1","battery-5")
+  AI.replace_recipe_ing("personal-roboport-mk2-equipment","battery-1","battery-5")
   OV.patch_recipes(
     {
       {

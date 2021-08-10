@@ -114,8 +114,10 @@ require("prototypes.angels-logistics-ghosting")
 -- NUCLEAR -----------------------------------------------------------
 --ENTITIES
 require("prototypes.buildings.centrifuge")
+require("prototypes.buildings.angels-reactor")
 --ITEMS
 require("prototypes.items.overhaul-nuclear-power")
+require("prototypes.items.angels-reactor")
 --RECIPES
 require("prototypes.recipes.overhaul-nuclear-power")
 --TECHS

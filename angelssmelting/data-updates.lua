@@ -243,7 +243,5 @@ require("prototypes.smelting-generate")
 --Overrides for refining/angels internal
 require("prototypes.smelting-override")
 
-require("prototypes.smelting-override-global")
-
 -- EXECUTE OVERRIDES
 angelsmods.functions.OV.execute()

@@ -9,7 +9,6 @@ end
 -------------------------------------------------------------------------------
 if mods["boblogistics"] then
   data.raw["item-group"]["bob-logistics"].order = "lb[bobs]-a[logistics]"
-  data.raw["item-group"]["bob-logistics"].inventory_order = "lb[bobs]-a[logistics]"
   data.raw["item-group"]["bob-logistics"].icon = nil
   data.raw["item-group"]["bob-logistics"].icon_size = nil
   data.raw["item-group"]["bob-logistics"].icons = {

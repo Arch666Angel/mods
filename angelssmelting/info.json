@@ -1,6 +1,6 @@
 {
   "name": "angelssmelting",
-  "version": "0.6.16",
+  "version": "0.6.17",
   "factorio_version": "1.1",
   "title": "Angel's Smelting",
   "author": "Arch666Angel",
@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Angel's Smelting provides alternative ways to produce plate and increase ore yield at the expense of space and energy.",
   "dependencies": [
-    "angelsrefining >= 0.11.21",
-    "angelspetrochem >= 0.9.19",
+    "angelsrefining >= 0.12.0",
+    "angelspetrochem >= 0.9.20",
     "? bobplates >= 0.18.8"
   ]
 }

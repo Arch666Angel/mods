@@ -7,7 +7,6 @@ angelsmods.functions.RB.build(
     {
       type = "recipe",
       name = "burner-ore-crusher",
-      energy_required = 5,
       normal = {
         energy_required = 5,
         enabled = true,

@@ -30,7 +30,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/small-logistic-zone-expander-icon.png",
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-zone-expander"},
+      minable = {mining_time = 0.5, result = "angels-zone-expander"},
       fast_replaceable_group = "roboport",
       max_health = 500,
       corpse = "small-remnants",
@@ -40,14 +40,8 @@ data:extend(
       dying_explosion = "medium-explosion",
       energy_source = {
         type = "void",
-        usage_priority = "secondary-input",
-        input_flow_limit = "1kW",
-        buffer_capacity = "1kJ",
         render_no_power_icon = false,
         render_no_network_icon = false,
-        --input_flow_limit = "0.10MW", -- 50 drain + 50kW buffer filling
-        --buffer_capacity = "2MJ",
-        --drain = "50kW"
       },
       charging_energy = "0kW",
       recharge_minimum = "0MJ",
@@ -77,12 +71,6 @@ data:extend(
         animation_speed = 0.25
       },
       base_patch = {
-        filename = "__angelsindustries__/graphics/entity/empty.png",
-        width = 1,
-        height = 1,
-        frame_count = 1
-      },
-      door_animation = {
         filename = "__angelsindustries__/graphics/entity/empty.png",
         width = 1,
         height = 1,
@@ -135,7 +123,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/medium-logistic-zone-expander-icon.png",
       icon_size = 32,
       flags = {"placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-zone-expander-2"},
+      minable = {mining_time = 0.5, result = "angels-zone-expander-2"},
       fast_replaceable_group = "roboport",
       max_health = 500,
       corpse = "small-remnants",
@@ -145,9 +133,6 @@ data:extend(
       dying_explosion = "medium-explosion",
       energy_source = {
         type = "void",
-        usage_priority = "secondary-input",
-        input_flow_limit = "1kW",
-        buffer_capacity = "1kJ",
         render_no_power_icon = false,
         render_no_network_icon = false,
         --input_flow_limit = "0.3MW", -- 100kW drain + 200kW buffer filling
@@ -182,12 +167,6 @@ data:extend(
         animation_speed = 0.25 * 2/3
       },
       base_patch = {
-        filename = "__angelsindustries__/graphics/entity/empty.png",
-        width = 1,
-        height = 1,
-        frame_count = 1
-      },
-      door_animation = {
         filename = "__angelsindustries__/graphics/entity/empty.png",
         width = 1,
         height = 1,
@@ -240,7 +219,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/icons/large-logistic-zone-expander-icon.png",
       icon_size = 64,
       flags = {"placeable-player", "player-creation"},
-      minable = {hardness = 0.2, mining_time = 0.5, result = "angels-zone-expander-3"},
+      minable = {mining_time = 0.5, result = "angels-zone-expander-3"},
       fast_replaceable_group = "roboport",
       max_health = 500,
       corpse = "small-remnants",
@@ -250,9 +229,6 @@ data:extend(
       dying_explosion = "medium-explosion",
       energy_source = {
         type = "void",
-        usage_priority = "secondary-input",
-        input_flow_limit = "1kW",
-        buffer_capacity = "1kJ",
         render_no_power_icon = false,
         render_no_network_icon = false,
         --input_flow_limit = "0.3MW", -- 100kW drain + 200kW buffer filling
@@ -286,12 +262,6 @@ data:extend(
         animation_speed = 0.25 * 2/3
       },
       base_patch = {
-        filename = "__angelsindustries__/graphics/entity/empty.png",
-        width = 1,
-        height = 1,
-        frame_count = 1
-      },
-      door_animation = {
         filename = "__angelsindustries__/graphics/entity/empty.png",
         width = 1,
         height = 1,

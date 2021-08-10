@@ -553,7 +553,6 @@ data:extend(
         height = 64,
         flags = {"icon"}
       },
-      indicator_light = {intensity = 0.8, size = 0.9},
       gun_animation_render_layer = "object",
       gun_animation_secondary_draw_order = 1,
       base_picture_render_layer = "lower-object-above-shadow",

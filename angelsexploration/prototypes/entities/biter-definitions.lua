@@ -44,7 +44,7 @@ small_biter =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 10,
+    damage = 8,
     damage2 = 5,
   },
   resistance = {
@@ -77,7 +77,7 @@ medium_biter =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 20,
+    damage = 16,
     damage2 = 10,
   },
   resistance = {
@@ -110,7 +110,7 @@ big_biter =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 30,
+    damage = 24,
     damage2 = 20,
   },
   resistance = {
@@ -143,7 +143,7 @@ behemoth_biter =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 40,
+    damage = 32,
     damage2 = 30,
   },
   resistance = {
@@ -178,7 +178,7 @@ colossal_biter =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 50,
+    damage = 40,
     damage2 = 40,
   },
   resistance = {
@@ -373,10 +373,10 @@ small_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 5,
+    damage = 8,
   },
   resistance = {
-    {type = "physical", decrease = 2.5, percent = 20},
+    {type = "physical", decrease = 2.5, percent = 15},
     {type = "fire", decrease = 7.5, percent = 40},
     {type = "explosion", decrease = 7.5, percent = 30},
     {type = "laser", decrease = 7.5, percent = 40},
@@ -404,7 +404,7 @@ medium_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 10,
+    damage = 15,
   },
   resistance = {
     {type = "physical", decrease = 7.5, percent = 40},
@@ -435,7 +435,7 @@ big_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 20,
+    damage = 25,
   },
   resistance = {
     {type = "physical", decrease = 12.5, percent = 50},
@@ -455,7 +455,7 @@ behemoth_scarab =
     tint1 = {r=0.30, g=0.90, b=0.30, a=1.00},
     tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
     speed = 0.185,
-    health = 600,
+    health = 900,
     order = "b-a-i",
     box_scale = 1.75,
   },
@@ -466,7 +466,7 @@ behemoth_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 30,
+    damage = 35,
   },
   resistance = {
     {type = "physical", decrease = 17.5, percent = 60},
@@ -486,7 +486,7 @@ colossal_scarab =
     tint1 = {r=1.00, g=0.68, b=0.00, a=1.00},
     tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
     speed = 0.185,
-    health = 750,
+    health = 2000,
     order = "b-a-j",
     box_scale = 2,
   },
@@ -497,7 +497,7 @@ colossal_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 40,
+    damage = 45,
   },
   resistance = {
     {type = "physical", decrease = 12.5, percent = 50},
@@ -678,14 +678,16 @@ biter_spawner =
     spawn_cooldown = {360, 150},
     order = "b-d-a",
   },
-  results ={"colossal-biter", {{0.9, 0.0}, {1.0, 0.8}}},
-  resistance = --[[{
-    {type = "physical", decrease = 5, percent = 10},
+  results = {
+    {"colossal-biter", { {0.95, 0.0}, {1.0, 0.8} }}
+  },
+  resistance = {
+    --[[{type = "physical", decrease = 5, percent = 10},
     {type = "explosion", decrease = 5, percent = 10},
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
     {type = "plasma", decrease = 5, percent = 10}
-  --}
+  }
 }
 
 spitter_spawner =
@@ -697,14 +699,16 @@ spitter_spawner =
     spawn_cooldown = {360, 150},
     order = "b-d-b"
   },
-  results ={"colossal-spitter", {{0.9, 0.0}, {1.0, 0.8}}},
-  resistance = --[[{
-    {type = "physical", decrease = 5, percent = 10},
+  results = {
+    {"colossal-spitter", { {0.95, 0.0}, {1.0, 0.8} }}
+  },
+  resistance = {
+    --[[{type = "physical", decrease = 5, percent = 10},
     {type = "explosion", decrease = 5, percent = 10},
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
     {type = "plasma", decrease = 5, percent = 10}
-  --}
+  }
 }
 
 scarab_spawner =
@@ -717,11 +721,12 @@ scarab_spawner =
     order = "b-d-c",
   },
   results = {
-    {"small-scarab", {{0.0, 0.2}, {0.4, 0.0}}},
-    {"medium-scarab", {{0.2, 0.0},{0.45,0.3}, {0.6, 0.0}}},
-    {"big-scarab", {{0.4, 0.0}, {0.6,0.6},{0.8, 0.4}}},
-    {"behemoth-scarab", {{0.6, 0.0}, {1.0, 0.6}}},
-    {"colossal-scarab", {{0.8, 0.0}, {1.0, 0.8}}},
+    {"small-biter",     { {0.0  , 0.2}, {0.1 , 0.4}, {0.2 , 0.0} }},
+    {"small-scarab",    { {0.1  , 0.0}, {0.25, 0.2}, {0.75, 0.0} }},
+    {"medium-scarab",   { {0.25 , 0.0}, {0.5 , 0.3}, {1.0 , 0.2} }},
+    {"big-scarab",      { {0.55 , 0.0}, {0.75, 0.4}, {0.8 , 0.4} }},
+    {"behemoth-scarab", { {0.93 , 0.0}, {1.0 , 0.6}              }},
+    {"colossal-scarab", { {0.965, 0.0}, {1.0 , 0.8}              }},
   },
   resistance = {
     {type = "physical", decrease = 5, percent = 10},
@@ -742,11 +747,13 @@ psyker_spawner =
     order = "b-d-d",
   },
   results = {
-    {"small-psyker", {{0.0, 0.2}, {0.4, 0.0}}},
-    {"medium-psyker", {{0.2, 0.0},{0.45,0.3}, {0.6, 0.0}}},
-    {"big-psyker", {{0.4, 0.0}, {0.6,0.6},{0.8, 0.4}}},
-    {"behemoth-psyker", {{0.6, 0.0}, {1.0, 0.6}}},
-    {"colossal-psyker", {{0.8, 0.0}, {1.0, 0.8}}},
+    {"small-biter",     { {0.0  , 1.6}, {0.1 , 1.6}, {0.2, 0.4}, {0.3, 0.0} }},
+    {"small-scarab",    { {0.1  , 0.0}, {0.2 , 0.4}, {0.3, 1.5}, {0.4, 0.0} }},
+    {"small-psyker",    { {0.3  , 0.0}, {0.4 , 0.4}, {0.7, 0.0}             }},
+    {"medium-psyker",   { {0.45 , 0.0}, {0.55, 0.1}, {0.7, 0.8}, {1.0, 0.1} }},
+    {"big-psyker",      { {0.55 , 0.0}, {0.7 , 0.5}                         }},
+    {"behemoth-psyker", { {0.93 , 0.0}, {1.0 , 0.6}                         }},
+    {"colossal-psyker", { {0.965, 0.0}, {1.0 , 0.8}                         }},
   },
   resistance = {
     {type = "physical", decrease = 5, percent = 10},

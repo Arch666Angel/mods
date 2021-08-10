@@ -120,7 +120,6 @@ data:extend(
         }
         --off_when_no_fluid_recipe = true
       },
-      pipe_covers = pipecoverspictures(),
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
         sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg"},
@@ -247,7 +246,6 @@ data:extend(
         }
         --off_when_no_fluid_recipe = true
       },
-      pipe_covers = pipecoverspictures(),
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
         sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg"},

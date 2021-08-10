@@ -58,7 +58,6 @@ data:extend(
     type = "item-group",
     name = "angels-smelting",
     order = "la[angels]-b[smelting]-a",
-    inventory_order = "la[angels]-b[smelting]-a",
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
@@ -239,7 +238,6 @@ data:extend(
     type = "item-group",
     name = "angels-casting",
     order = "la[angels]-b[smelting]-b",
-    inventory_order = "la[angels]-b[smelting]-b",
     icons = {
       {
         icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",

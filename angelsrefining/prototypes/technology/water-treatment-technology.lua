@@ -133,10 +133,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "solid-salt-dissolving"
         },
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "solid-lithium"
-        }
+        }]]
       },
       unit = {
         count = 30,

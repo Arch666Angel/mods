@@ -53,6 +53,10 @@ if angelsmods.trigger.smelting_products["silicon"].mono then
   if mods["bobplates"] then
     OV.global_replace_item("silicon", "angels-mono-silicon")
     angelsmods.functions.add_flag("silicon", "hidden")
+    --angelsmods.functions.move_item("silicon", "angels-silicon-casting", "k")
+    --data.raw["item"]["silicon"].icon = "__angelssmelting__/graphics/icons/plate-silicon.png"
+    --data.raw["item"]["silicon"].icon_size = 32
+    --data.raw["item"]["silicon"].icon_mipmaps = 1
     OV.disable_recipe({"bob-silicon-plate"})
   end
 else
@@ -100,6 +104,14 @@ end
 if angelsmods.trigger.smelting_products["silicon"].powder then
   if mods["bobplates"] then
     OV.global_replace_item("powder-silicon", "silicon-powder")
+    angelsmods.functions.override_item_conditions(
+      {
+        value = 200,
+        list = {
+          "silicon-powder"
+        }
+      }
+    )
     angelsmods.functions.add_flag("powder-silicon", "hidden")
     OV.disable_recipe({"powder-silicon"})
 
@@ -112,6 +124,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
         {
           name = "silicon-powder",
           subgroup = "angels-silicon",
+          energy_required = 0.5,
           ingredients = {
             {"!!"},
             {"ingot-silicon", 1}
@@ -120,6 +133,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
         }
       }
     )
+    angelsmods.functions.remove_productivity("silicon-powder")
     OV.add_prereq("silicon-processing", "angels-silicon-smelting-1")
   end
 

@@ -110,6 +110,7 @@ local function clean_table(t)
   return t
 end
 angelsmods.functions.clean_ingredient_list = clean_table
+angelsmods.functions.clean_localised_description = clean_table
 
 function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, number_tint, outline_tint)
   -- adds a new layer to icon_layers to show the tier number (with a color)
@@ -122,6 +123,8 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
     -- if the icon_layer is empty, we make sure it will be a full sized number after usage in the recipe functions
     icon_size_scale = 32 / 10.24
     icon_size_shift = {11.5 * icon_size_scale, 12 * icon_size_scale}
+  elseif type(icon_layers)=="string" then --to deal with errors passing the void icon as a string
+    icon_layers={{icon=icon_layers, icon_size = 32}}
   elseif icon_layers[1].scale then
     icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale) / 32
   end

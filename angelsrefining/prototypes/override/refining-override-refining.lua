@@ -179,3 +179,6 @@ if angelsmods.functions.is_special_vanilla() then
     }
   )
 end
+-- Currently crystal-matrix has no use
+OV.disable_recipe({"crystal-matrix"})
+data.raw.fluid["crystal-matrix"].hidden = true

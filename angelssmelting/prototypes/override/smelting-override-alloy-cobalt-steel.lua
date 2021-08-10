@@ -25,8 +25,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           base_color = {r = 61 / 256, g = 107 / 256, b = 153 / 256},
           flow_color = {r = 61 / 256, g = 107 / 256, b = 153 / 256},
           max_temperature = 100,
-          pressure_to_speed_ratio = 0.4,
-          flow_to_energy_ratio = 0.59,
           auto_barrel = false
         }
       }
@@ -91,7 +89,8 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
             count = 50,
             ingredients = {
               {type = "item", name = "automation-science-pack", amount = 1},
-              {type = "item", name = "logistic-science-pack", amount = 1}
+              {type = "item", name = "logistic-science-pack", amount = 1},
+              {type = "item", name = "chemical-science-pack", amount = 1}
             },
             time = 30
           },
@@ -99,6 +98,10 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         }
       }
     )
+    angelsmods.functions.move_item("cobalt-steel-alloy", "angels-alloys-casting", "e[cobalt-steel]-b[cobalt-steel-alloy]")
+    data.raw["item"]["cobalt-steel-alloy"].icon = "__angelssmelting__/graphics/icons/plate-cobalt-steel.png"
+    data.raw["item"]["cobalt-steel-alloy"].icon_size = 32
+    data.raw["item"]["cobalt-steel-alloy"].icon_mipmaps = 1
     OV.add_prereq("cobalt-processing", "angels-cobalt-steel-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-cobalt-steel")
   end

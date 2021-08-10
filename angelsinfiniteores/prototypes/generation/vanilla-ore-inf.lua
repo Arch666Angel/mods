@@ -30,7 +30,7 @@ angelsmods.functions.add_resource("make", {
 	output_min = 1,
 	output_max = 1,
 	output_probability = angelsmods.ores.loweryield,
-	icon = "__base__/graphics/icons/coal.png",
+	--icon = "__base__/graphics/icons/coal.png",
 	autoplace = {
 		starting_area = false,
 		--resource_index = 0,
@@ -73,7 +73,7 @@ if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 		output_min = 1,
 		output_max = 1,
 		output_probability = angelsmods.ores.loweryield,
-		icon = "__base__/graphics/icons/iron-ore.png",
+		--icon = "__base__/graphics/icons/iron-ore.png",
 		autoplace = {
 			starting_area = false,
 			--resource_index = 1,
@@ -115,7 +115,7 @@ if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 		output_min = 1,
 		output_max = 1,
 		output_probability = angelsmods.ores.loweryield,
-		icon = "__base__/graphics/icons/copper-ore.png",
+		--icon = "__base__/graphics/icons/copper-ore.png",
 		autoplace = {
 			starting_area = false,
 			--resource_index = 2,
@@ -157,7 +157,7 @@ if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 		output_min = 1,
 		output_max = 1,
 		output_probability = angelsmods.ores.loweryield,
-		icon = "__base__/graphics/icons/stone.png",
+		--icon = "__base__/graphics/icons/stone.png",
 		autoplace = {
 			starting_area = false,
 			--resource_index = 3,
@@ -199,7 +199,7 @@ if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 		output_min = 1,
 		output_max = 1,
 		output_probability = angelsmods.ores.loweryield,
-		icon = "__base__/graphics/icons/uranium-ore.png",
+		--icon = "__base__/graphics/icons/uranium-ore.png",
 		autoplace = {
 			starting_area = false,
 			--resource_index = 4,

@@ -89,3 +89,19 @@ if angelsmods.industries.components then
 
   OV.execute()
 end
+-----------------------------------------------------------------------------
+-- BOB MODULES --------------------------------------------------------------
+-----------------------------------------------------------------------------
+if mods["bobmodules"] then
+  --replace green with orange boards on logic step
+  local module_recs={}
+  for _,type in pairs({"speed","effectivity","productivity","pollution-clean","pollution-create"}) do
+    table.insert(module_recs,{
+      name = type.."-processor-2",
+      ingredients = {
+        { type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"}
+      }
+    })
+  end
+  OV.patch_recipes(module_recs)
+end

@@ -14,7 +14,7 @@ data:extend(
         ammo_category = "bio",
         cooldown = 2,
         movement_slow_down_factor = 0.6,
-        projectile_creation_distance = 0.6,
+        --projectile_creation_distance = 0.6,
         gun_barrel_length = 0.8,
         gun_center_shift = {0, -1},
         range = 15,

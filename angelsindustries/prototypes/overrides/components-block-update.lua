@@ -315,6 +315,7 @@ if angelsmods.industries.components then
     OV.add_prereq("angels-advanced-chemistry-3", "angels-advanced-blocks-1")
     OV.add_prereq("angels-metallurgy-4", "angels-advanced-blocks-1")
     OV.remove_prereq("bio-refugium-biter-1", "stone-wall")
+    OV.add_prereq("bio-processing-blue", "angels-advanced-blocks-1")
 
     -----------------------------------------------------------------------------
     -- ADVANCED BLOCKS 2 --------------------------------------------------------

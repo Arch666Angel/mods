@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.0
+Date: 10.08.2021
+  Changes:
+    - Rebalanced the ores and corresponding mixed sorting recipes (THIS WILL BREAK EXISTING BASES)
+    - Hybrid catalyst now requires crystalizer mk2
+    - Activated lithium salination if playing component mode without bobs
+    - Recipe tweaks to several of bobs entities to reduce cobalt usage (you will understand)
+    - Added several tips and tricks for new players to understand some core mechanics/ideas
+  Bugfixes:
+    - Fixed multiple missing prerequisites on higher tiers of ore sorting facility technologies
+    - Properly hid some more items
+    - Fixed a bug in the migration script when train stations have an empty stop filter
+---------------------------------------------------------------------------------------------------
 Version: 0.11.21
 Date: 31.05.2021
   Bugfixes:

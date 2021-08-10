@@ -12,8 +12,6 @@ data:extend(
     base_color = {r = 0.8, g = 0.8, b = 1},
     flow_color = {r = 0.8, g = 0.8, b = 1},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -26,8 +24,6 @@ data:extend(
     base_color = {r = 1, g = 0.8, b = 0.4},
     flow_color = {r = 1, g = 0.8, b = 0.4},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -40,8 +36,6 @@ data:extend(
     base_color = {r = 0.75, g = 0.75, b = 1},
     flow_color = {r = 0.75, g = 0.75, b = 1},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   --SOLIDS
   {
@@ -156,8 +150,6 @@ data:extend(
     base_color = {r = 0.9, g = 0.9, b = 0.9},
     flow_color = {r = 0.9, g = 0.9, b = 0.9},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   --CATALYSTS
   {
@@ -268,25 +260,7 @@ data:extend(
     fuel_value = "3MJ",
     stack_size = 200
   },
-  --SALTS
-  {
-    type = "item",
-    name = "solid-salt",
-    icon = "__angelspetrochem__/graphics/icons/solid-salt.png",
-    icon_size = 32,
-    subgroup = "water-salination",
-    order = "a",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "solid-lithium",
-    icon = "__angelspetrochem__/graphics/icons/solid-lithium.png",
-    icon_size = 32,
-    subgroup = "water-salination",
-    order = "a",
-    stack_size = 200
-  },
+  --SALTS --solid-salt and lithia-salt moved to refining's water treatment items
   {
     type = "item",
     name = "solid-ammonium-nitrate",

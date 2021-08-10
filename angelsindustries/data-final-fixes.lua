@@ -91,7 +91,7 @@ if angelsmods.industries.components then
   OV.global_replace_technology("battery", "angels-components-batteries-1")
   --set ingredient return on building pickup
   if angelsmods.industries.return_ingredients then
-    add_minable_results()
+    angelsmods.functions.AI.add_minable_results()
   end
   OV.execute()
 end

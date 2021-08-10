@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.17
+Date: 10.08.2021
+  Bugfixes:
+    - Fixed iron and copper ore could not be smelted to plates directly in special vanilla mode
+    - Fixed iron casting prerequisites in special vanilla mode (614)
+    - Fixed tier numbers cobalt oxide recipes were misaligned in some configurations
+    - Fixed tier numbers on zinc oxide recipes were incorrect and obsolete in some configurations
+    - Tweaked coolant filtering crafting times to help differentiate the two paths more (568)
+    - Balanced chrome smelting ratio's to not be sodium/sulfur positive (579)
+    - Fixed stack size of silicon powder when bobs mods are enabled (642)
+    - Removed productivity and reduced crafting time of the silicon powder recipe when playing
+      with bobs mods (642)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.16
 Date: 31.05.2021
   Bugfixes:

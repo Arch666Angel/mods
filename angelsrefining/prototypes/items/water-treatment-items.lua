@@ -62,8 +62,7 @@ data:extend(
       base_color = {r = 0.9, g = 0.9, b = 1},
       flow_color = {r = 0.9, g = 0.9, b = 1},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -76,8 +75,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 1},
       flow_color = {r = 0.7, g = 0.7, b = 1},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -90,8 +88,7 @@ data:extend(
       base_color = {r = 0.9, g = 0.9, b = 0.4},
       flow_color = {r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -104,8 +101,7 @@ data:extend(
       base_color = {r = 0.9, g = 0.4, b = 0.4},
       flow_color = {r = 0.9, g = 0.4, b = 0.4},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -118,8 +114,7 @@ data:extend(
       base_color = {r = 0.4, g = 0.9, b = 0.4},
       flow_color = {r = 0.4, g = 0.9, b = 0.4},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -132,8 +127,7 @@ data:extend(
       base_color = {r = 0.9, g = 0.9, b = 0.4},
       flow_color = {r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -146,8 +140,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     --WASHING
     {
@@ -161,8 +154,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -175,8 +167,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -189,8 +180,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -203,8 +193,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     {
       type = "fluid",
@@ -217,8 +206,7 @@ data:extend(
       base_color = {r = 0.7, g = 0.7, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59
+
     },
     --VOID
     {

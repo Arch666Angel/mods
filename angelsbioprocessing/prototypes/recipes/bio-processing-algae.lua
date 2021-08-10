@@ -115,7 +115,7 @@ data:extend(
     {
       type = "recipe",
       name = "algae-green",
-      category = "bio-processing",
+      category = "bio-processing-2",
       subgroup = "bio-processing-green",
       enabled = false,
       energy_required = 15,
@@ -178,7 +178,7 @@ data:extend(
     {
       type = "recipe",
       name = "algae-blue",
-      category = "bio-processing",
+      category = "bio-processing-4",
       subgroup = "bio-processing-blue",
       enabled = false,
       energy_required = 20,
@@ -236,7 +236,7 @@ data:extend(
     {
       type = "recipe",
       name = "algae-red",
-      category = "bio-processing",
+      category = "bio-processing-3",
       subgroup = "bio-processing-red",
       enabled = false,
       energy_required = 20,

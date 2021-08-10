@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
         energy_required = 10.5,
         normal = {
           enabled = false,
-          hidden = true, --this essentially enforces the smelting of ore/advanced methods
+          hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {name = "copper-ore", type = "item", amount = "+3"}
           },
@@ -63,7 +63,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
         },
         expensive = {
           enabled = false,
-          hidden = true, --this essentially enforces the smelting of ore/advanced methods
+          hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
           ingredients = {
             {"!!"},
             {name = "copper-ore", type = "item", amount = 5 * intermediatemulti}
@@ -89,8 +89,12 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       }
     }
   )
+  if angelsmods.functions.is_special_vanilla() then
+    OV.add_unlock("ore-crushing", "copper-plate")
+  end
   OV.global_replace_item("angels-plate-copper", "copper-plate")
   angelsmods.functions.add_flag("angels-plate-copper", "hidden")
+  angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
   angelsmods.functions.override_item_conditions(
     {
       value = 200,
@@ -98,6 +102,13 @@ if angelsmods.trigger.smelting_products["copper"].plate then
         "copper-plate"
       }
     }
+  )
+  data.raw["item"]["copper-plate"].icon = "__angelssmelting__/graphics/icons/plate-copper.png"
+  data.raw["item"]["copper-plate"].icon_size = 32
+  data.raw["item"]["copper-plate"].icon_mipmaps = 1
+  OV.global_replace_icon(
+    "__base__/graphics/icons/plate/copper-plate.png",
+    "__angelssmelting__/graphics/icons/plate-copper.png"
   )
 
   if angelsmods.refining then
@@ -162,6 +173,14 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   angelsmods.functions.remove_productivity("copper-cable")
   OV.global_replace_item("angels-wire-copper", "copper-cable")
   angelsmods.functions.add_flag("angels-wire-copper", "hidden")
+  angelsmods.functions.move_item("copper-cable", "angels-copper-casting", "k")
+  data.raw["item"]["copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-copper.png"
+  data.raw["item"]["copper-cable"].icon_size = 32
+  data.raw["item"]["copper-cable"].icon_mipmaps = 1
+  OV.global_replace_icon(
+    "__base__/graphics/icons/plate/copper-cable.png",
+    "__angelssmelting__/graphics/icons/wire-copper.png"
+  )
 
   if mods["bobassembly"] then
     OV.patch_recipes(

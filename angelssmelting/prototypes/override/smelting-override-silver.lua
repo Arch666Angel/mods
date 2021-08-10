@@ -24,6 +24,10 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   if mods['bobplates'] then
     OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
     angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
+    angelsmods.functions.move_item("silver-nitrate", "angels-silver", "d")
+    data.raw["item"]["silver-nitrate"].icon = "__angelssmelting__/graphics/icons/solid-silver-nitrate.png"
+    data.raw["item"]["silver-nitrate"].icon_size = 32
+    data.raw["item"]["silver-nitrate"].icon_mipmaps = 1
     OV.disable_recipe({"silver-nitrate","silver-from-lead"})
   end
 
@@ -70,6 +74,11 @@ if angelsmods.trigger.smelting_products["silver"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-silver", "silver-plate")
     angelsmods.functions.add_flag("angels-plate-silver", "hidden")
+    angelsmods.functions.move_item("silver-plate", "angels-silver-casting", "m")
+    data.raw["item"]["silver-plate"].icon = "__angelssmelting__/graphics/icons/plate-silver.png"
+    data.raw["item"]["silver-plate"].icon_size = 32
+    data.raw["item"]["silver-plate"].icon_mipmaps = 1
+
     OV.patch_recipes({
       {
         name = "silver-plate",

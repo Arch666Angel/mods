@@ -206,7 +206,6 @@ funcs.generate_train_entities(
       }
     },
     wheels = standard_train_wheels,
-    rail_category = "regular",
     stop_trigger = {
       -- left side
       {

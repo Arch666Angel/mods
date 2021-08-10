@@ -96,6 +96,7 @@ if angelsmods.industries.overhaul then
       }
     }
   )
+  data.raw.recipe["nuclear-fuel-reprocessing"].icon=nil
   OV.disable_recipe("kovarex-enrichment-process")
   OV.add_unlock("nuclear-power", "angels-uranium-fuel-cell")
   data.raw.item["uranium-fuel-cell"].fuel_value = "2GJ"
@@ -140,12 +141,14 @@ if angelsmods.industries.overhaul then
       data.raw.item["plutonium-239"].icon_size = data.raw.item["plutonium-240"].icon_size
       data.raw.item["plutonium-239"].icons = data.raw.item["plutonium-240"].icons
     end
+
     angelsmods.functions.move_item(
       "plutonium-239",
       "angels-power-nuclear-processing",
       "a[radioactive-element]-e[plutonium-239]"
     )
-    angelsmods.functions.add_flag("plutonium-240", "hidden")
+    OV.disable_recipe("empty-nuclear-fuel-cell")
+    angelsmods.functions.add_flag({"plutonium-240","empty-nuclear-fuel-cell"}, "hidden")
 
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
@@ -221,9 +224,7 @@ if angelsmods.industries.overhaul then
       OV.disable_technology("plutonium-fuel-cell")
     end
   end
-
 else
-
   -- disable all nuclear stuff
   -- uranium fuel cell
   angelsmods.functions.add_flag("uranium-234", "hidden")
@@ -257,5 +258,8 @@ else
   angelsmods.functions.add_flag("angels-nuclear-fuel-2", "hidden")
   OV.disable_recipe({"angels-nuclear-fuel", "angels-nuclear-fuel-2"})
   OV.disable_recipe({"angels-atomic-bomb", "angels-atomic-bomb-2"})
-
+end
+if mods["bobpower"] or not angelsmods.industries.overhaul then
+  OV.disable_recipe({"angels-burner-reactor"})
+  angelsmods.functions.add_flag("angels-burner-reactor", "hidden")
 end

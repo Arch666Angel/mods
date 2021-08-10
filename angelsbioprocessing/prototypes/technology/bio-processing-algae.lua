@@ -52,6 +52,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "algae-farm-2"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "algae-green"
         },
         {
@@ -90,7 +94,7 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "algae-farm-2"
+          recipe = "algae-farm-3"
         },
         {
           type = "unlock-recipe",
@@ -126,7 +130,7 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "algae-farm-3"
+          recipe = "algae-farm-4"
         },
         {
           type = "unlock-recipe",

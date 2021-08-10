@@ -696,7 +696,7 @@ if angelsmods.industries.components then
         {type = "item", name = "angels-wire-platinum", amount = 3},
         {type = "item", name = "solid-lithium", amount =1},
         {type = "item", name = "copper-plate", amount =1},
-        {type = "item", name = "solid-manganese-oxide", amount =1},--should be dioxide, not oxide
+        {type = "item", name = "solid-manganese-oxide", amount =1}, --should be dioxide, not oxide
       },
       results=
       {
@@ -714,7 +714,7 @@ if angelsmods.industries.components then
       ingredients =
       { --liquid-molten-glass/lithium-chloride
         {type = "fluid", name = "liquid-molten-glass", amount = 10},
-        {type = "item", name = "solid-lithium", amount =10} --prefer lithium chloride or perchlorate
+        {type = "item", name = "solid-lithium", amount = 5} --prefer lithium chloride or perchlorate
       },
       results=
       {
