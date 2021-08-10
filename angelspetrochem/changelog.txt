@@ -1,11 +1,18 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.19
-Date: 31.05.2021
+Version: 0.9.20
+Date: 10.08.2021
   Bugfixes:
     - Changed prerequisites of plastic before advanced electronics technology
     - Fixed emissions_multiplier were not applied correctly
     - Fixed bobs chemical plant 1, distillery 1 and electrolyser 1 were not unlocked correctly
     - Fixed heavy water separation did not enforce the fluid temperature constraint correctly
+    - Added some tips-and-tricks for new players (around air separation, more to come)
+    - Cleaned up old migrations
+---------------------------------------------------------------------------------------------------
+Version: 0.9.19
+Date: 31.05.2021
+  Bugfixes:
+    - Changed prerequisites of plastic before advanced electronics technology
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 26.05.2021

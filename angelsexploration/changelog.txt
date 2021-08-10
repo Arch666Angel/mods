@@ -1,9 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.10
-Date: 26.05.2021
+Version: 0.3.11
+Date: 10.08.2021
   Changes:
     - Balancing iteration of the spawn probabilities of enemies
     - Reduced evolution due to killing enemy bases even further
+    - Tweaked enemy spawn rate and armour to be more forgiving in the early game
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 26.05.2021
   Bugfixes:
     - Fixed collision box and drawing box of the mammoth heavy tank (476)
     - Fixed that turret technology did not depend on military (549)

@@ -1,14 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.14
-Date: ??
+Date: 10.08.2021
   Changes:
     - Regular mode:
       - Thorium fuel cells value dropped considerably, some recipes faster to compensate
       - Added burner reactor that uses up fuel cells at a faster rate but less heat output
+        - BIG THANKS to Kirazy and kingarthur91 for putting this together
       - Adjusted nuclear reactor glow tints and color
     - Component mode:
       - Ensured that bobmodules uses each tier of electronic now
       - Reduced lithia salt requirement on battery 5 (647)
+      - Fixed bobs miners using incorrect electronic block
     - Science mode:
       - Fixed an issue with an incorrect tag being given to the regualr lab, causing a crash
       - Fixed some techs could not be researched due to wrong combination of science packs (643)
