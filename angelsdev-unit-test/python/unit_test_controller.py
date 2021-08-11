@@ -785,12 +785,11 @@ class UnitTestController:
           "bobmods-revamp-old-oil" : True, #defaults true
           "bobmods-revamp-hardmode" : True, #defaults true
 
-          "bobmods-burner-phase" : False, #defaults true
-          "bobmods-mining-minimaxes" : False, #defaults true
+          "bobmods-burnerphase" : False, #defaults true
+          "bobmods-mining-miningaxes" : False, #defaults true
           "bobmods-plates-purewater" : False, #defaults true
           "bobmods-ores-unsortedgems" : False, #defaults true
           "bobmods-tech-colorupdate" : False, #defaults true
-          "bobmods-burner-phase" : False, #defaults true
         }
       }
     )

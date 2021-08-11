@@ -12,7 +12,7 @@ Date: 10.08.2021
       - Reduced lithia salt requirement on battery 5 (647)
       - Fixed bobs miners using incorrect electronic block
     - Science mode:
-      - Fixed an issue with an incorrect tag being given to the regualr lab, causing a crash
+      - Fixed an issue with an incorrect tag being given to the regular lab, causing a crash
       - Fixed some techs could not be researched due to wrong combination of science packs (643)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.13
