@@ -26,19 +26,21 @@ local unit_test_003 = function()
 
       local recipe_products = recipe_data.products
       for _, recipe_product in pairs(recipe_products) do
-        if recipe_product.type == "item" then
-          if game.item_prototypes[recipe_product.name].has_flag("hidden") then
-            unit_test_functions.print_msg(string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name))
+        --add exception list for results (void results)
+        if not (recipe_product.name == "chemical-void" or recipe_product.name == "water-void") then
+          if recipe_product.type == "item" then
+            if game.item_prototypes[recipe_product.name].has_flag("hidden") then
+              unit_test_functions.print_msg(string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name))
+            end
+          elseif recipe_product.type == "fluid" then
+            if game.fluid_prototypes[recipe_product.name].hidden then
+              unit_test_functions.print_msg(string.format("Recipe %q makes %q (fluid), which is hidden.", recipe_name, recipe_product.name))
+            end
+          else
+            unit_test_functions.print_msg(string.format("Unhandled testing case for recipe result type %q!", recipe_product.type))
           end
-        elseif recipe_product.type == "fluid" then
-          if game.fluid_prototypes[recipe_product.name].hidden then
-            unit_test_functions.print_msg(string.format("Recipe %q makes %q (fluid), which is hidden.", recipe_name, recipe_product.name))
-          end
-        else
-          unit_test_functions.print_msg(string.format("Unhandled testing case for recipe result type %q!", recipe_product.type))
         end
       end
-
     end
   end
   return true
