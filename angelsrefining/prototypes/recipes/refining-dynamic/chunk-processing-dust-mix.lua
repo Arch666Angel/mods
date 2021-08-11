@@ -168,7 +168,7 @@ data:extend(
       allow_decomposition = false,
       normal = {
         ingredients = {
-          {type = "item", name = "angels-ore4-chunk", amount = 2},
+          {type = "item", name = "angels-ore8-powder", amount = 2},
           {type = "item", name = "angels-ore2-chunk", amount = 2},
           {type = "item", name = "catalysator-green", amount = 1}
         },
