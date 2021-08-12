@@ -1,9 +1,12 @@
 local OV = angelsmods.functions.OV
+if angelsmods.trigger.smelting_products["glass"].board then --only change it if glass is actually active
+  OV.modify_input("bio-tile",{type = "item", name = "solid-glass-mixture", amount = 1})
+end
 
 if angelsmods.industries and angelsmods.industries.overhaul then
   OV.patch_recipes({{name="algae-brown-burning",results={{"!!"},{name = "solid-lithium", amount = 2}}}})
   -- OV.remove_unlock("bio-paper-1", "circuit-paper-board")
-  OV.modify_input("bio-tile",{type = "item", name = "solid-glass-mixture", amount = 1})
+  
   -- MODULES
   OV.modify_input("speed-module", {"crystal-splinter-blue"})
   OV.modify_input("speed-module-2", {"crystal-shard-blue"})
@@ -28,7 +31,6 @@ if angelsmods.industries and angelsmods.industries.overhaul then
   OV.modify_input("beacon", {"crystal-full-harmonic"})
   OV.add_prereq("effect-transmission", "bio-processing-crystal-full")
 elseif mods["bobplates"] then
-  OV.modify_input("bio-tile",{type = "item", name = "solid-glass-mixture", amount = 1})
   -- nothing to change
 else
   OV.modify_input("bio-tile",{type = "item", name = "steel-plate", amount = 1})
