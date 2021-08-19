@@ -223,7 +223,7 @@ data:extend(
       collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
       selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
       fast_replaceable_group = "algae-farm",
-      next_upgrade = "algae-farm-3",
+      next_upgrade = "algae-farm-4",
       module_specification = {
         module_slots = 2
       },
