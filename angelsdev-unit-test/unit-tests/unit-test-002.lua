@@ -2,7 +2,11 @@
 -- that all technologies can be researched in a lab.
 local unit_test_functions = require("unit-test-functions")
 
+local unit_test_result = true
+
 local function log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+  unit_test_result = nil -- soft failure
+
   unit_test_functions.print_msg(string.format("Technology %q has an invalid research pack configuration:", tech_name))
   unit_test_functions.print_msg(string.format("  Science analysers: %s", tech_analysers[1] or "None"))
   if #tech_analysers > 1 then
@@ -106,7 +110,7 @@ local unit_test_002 = function()
     end
   end
 
-  return true
+  return unit_test_result
 end
 
 return unit_test_002

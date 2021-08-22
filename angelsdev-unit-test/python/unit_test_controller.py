@@ -43,11 +43,16 @@ class UnitTestController:
     self.currentModlistController.writeConfigurationFile()
     self.currentSettingsController.writeSettingsFile()
 
-  def TestConfiguations(self:UnitTestController, testConfigurations:UnitTestConfiguration) -> None:
+  def TestConfiguations(self:UnitTestController, testConfigurations:UnitTestConfiguration, logSummary:bool=True) -> None:
+    testResults:dict[str, bool] = dict()
     for configName, modList, settingCustomisation in testConfigurations:
       self.__logTestConfiguration(configName)
       self.__setupTestConfiguration(modList, settingCustomisation)
-      self.__executeUnitTests()
+      testResults[configName] = self.__executeUnitTests()
+    if logSummary:
+      self.logger("Summary:", leading_newline=True)
+      for testName, testResult in testResults.items():
+        self.logger(f"{'V' if testResult else 'X'} {testName}")
 
   def __buildAngelsMods(self) -> None:
     ModBuilder(self.factorioFolderDir).createAllMods()
@@ -97,11 +102,12 @@ class UnitTestController:
         self.settingsController.setSettingValue(settingsStage, settingsName, settingsValue)
     self.settingsController.writeSettingsFile()
 
-  def __executeUnitTests(self) -> None:
+  def __executeUnitTests(self) -> bool:
     # Execute unit tests for the current test configuration
     self.factorioController.launchGame()
-    self.factorioController.executeUnitTests()
+    testResult:bool = self.factorioController.executeUnitTests()
     self.factorioController.terminateGame()
+    return testResult
 
 if __name__ == "__main__":
   factorioFolderDir:Optional[str]=None

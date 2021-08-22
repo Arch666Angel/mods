@@ -50,19 +50,20 @@ class FactorioController:
       raise subprocess.CalledProcessError(return_code, self.factorioExe)
     return False # App terminated
 
-  def executeUnitTests(self) -> None:
+  def executeUnitTests(self) -> bool:
     # This does not actually execute anything, it waits till the mod signals the tests are finished while logging all unit test results
     for line in self.getGameOutput():
       if type(line) is str:
         if re.fullmatch(r"angelsdev\-unit\-test: .*", line):
           self.log(line[21:])
-          if re.fullmatch(r"angelsdev\-unit\-test: Finished testing!", line):
-            break # Finished expectedly
+          if re.fullmatch(r"angelsdev\-unit\-test: Finished testing!.*", line):
+            return True if re.fullmatch(r".* All unit tests passed!", line) else False
         elif re.fullmatch(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\:.*", line):
           self.log(line[re.match(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\: *", line).regs[0][1]:])
-          break # Error during launch launch
+          return False # Error during launch launch
       elif type(line) is bool and line == False:
-        break # Terminated factorio
+        return False # Terminated factorio
+    return False # unexpected end
 
   def __retrieveSteamGameInstallLocation(self, steamGameID:int) -> str:
     # Find install location of steam itself
