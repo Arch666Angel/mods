@@ -89,7 +89,10 @@ if angelsmods.trigger.smelting_products["steel"].plate then
           {"!!"},
           {type = "item", name = "iron-plate", amount = 1}
         },
-        result = "angels-plate-hot-iron",
+        results = {
+          {"!!"},
+          {type = "item", name = "angels-plate-hot-iron", amount = 1}
+        },
         subgroup = "angels-steel-casting",
         order = "l[angels-plate-steel]-aa"
       }
