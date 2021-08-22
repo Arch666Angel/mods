@@ -52,7 +52,7 @@ class UnitTestController:
     if logSummary:
       self.logger("Summary:", leading_newline=True)
       for testName, testResult in testResults.items():
-        self.logger(f"{'V' if testResult else 'X'} {testName}")
+        self.logger(f"[{'PASSED' if testResult else 'FAILED'}] {testName}")
 
   def __buildAngelsMods(self) -> None:
     ModBuilder(self.factorioFolderDir).createAllMods()
