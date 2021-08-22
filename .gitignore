@@ -2,9 +2,14 @@
 *.zip
 *.dat
 mod-list.json
+
 # Python
 __pycache__/
+
 # IDE config
 .idea/
 .vscode/
+
+# Unit test files
+angelsdev-unit-test/log/
 run_unit_tests_PWJ.bat

@@ -8,10 +8,11 @@ from modlist_controller import ModlistController
 from settings_controller import SettingsController
 from factorio_controller import FactorioController
 from unit_test_configuration import UnitTestConfiguration
+from unit_test_logger import UnitTestLogger
 
 class UnitTestController:
 
-  def __init__(self:UnitTestController, updateMods:bool=True, factorioInstallDir:Optional[str]=None, factorioFolderDir:Optional[str]=None):
+  def __init__(self:UnitTestController, updateMods:bool=True, factorioInstallDir:Optional[str]=None, factorioFolderDir:Optional[str]=None, logToFile:bool=False):
     if factorioFolderDir is None:
       self.factorioFolderDir:str = os.path.abspath(f"{os.getenv('APPDATA')}/Factorio/")
     else:
@@ -27,10 +28,14 @@ class UnitTestController:
     self.currentSettingsController = SettingsController(self.factorioFolderDir)
     self.currentSettingsController.readSettingsFile()
 
+    # Logger for unit test output
+    self.logger = UnitTestLogger(logToFile)
+
     # New controllers for the unit tests
     self.modlistController = ModlistController(self.factorioFolderDir)
     self.settingsController = SettingsController(self.factorioFolderDir)
-    self.factorioController = FactorioController(factorioInstallDir)
+    self.factorioController = FactorioController(factorioInstallDir, self.logger)
+    
 
   def __del__(self:UnitTestController):
     # Reset mod config and mod settings to the backed up values
@@ -73,7 +78,7 @@ class UnitTestController:
         ModDownloader(name, self.factorioFolderDir).download()
 
   def __logTestConfiguration(self, configName:str) -> None:
-    print(f"\nangelsdev-unit-test: Testing {configName}")
+    self.logger(f"Testing {configName}", True)
 
   def __setupTestConfiguration(self, modList:list[str], settingCustomisation:dict[str, dict[str, bool]]) -> None:
     # Configure Mods
@@ -101,12 +106,15 @@ class UnitTestController:
 if __name__ == "__main__":
   factorioFolderDir:Optional[str]=None
   factorioInstallDir:Optional[str]=None
+  logToFile:bool=False
 
-  opts, args = getopt.getopt(sys.argv[1:], "f:i:", ['factoriodir=', 'installdir='])
+  opts, args = getopt.getopt(sys.argv[1:], "f:i:l:", ['factoriodir=', 'installdir='])
   for opt, arg in opts:
     if opt in ('-f', '--factoriodir'):
       factorioFolderDir = os.path.realpath(arg.strip())
     if opt in ('-i', '--installdir'):
       factorioInstallDir = os.path.realpath(arg.strip())
+    if opt in ('-l'):
+      logToFile = True
 
-  UnitTestController(updateMods=False, factorioInstallDir=factorioInstallDir, factorioFolderDir=factorioFolderDir).TestConfiguations(UnitTestConfiguration())
+  UnitTestController(updateMods=False, factorioInstallDir=factorioInstallDir, factorioFolderDir=factorioFolderDir, logToFile=logToFile).TestConfiguations(UnitTestConfiguration())

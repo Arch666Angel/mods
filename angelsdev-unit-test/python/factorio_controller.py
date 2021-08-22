@@ -1,4 +1,4 @@
-from typing import Union, Optional
+from typing import Callable, Union, Optional
 import os, subprocess
 from shlex import shlex
 import json
@@ -7,17 +7,21 @@ import time
 
 class FactorioController:
 
-  def __init__(self, factorioInstallDir:Optional[str]=None):
+  def __init__(self, factorioInstallDir:Optional[str]=None, log:Optional[Callable[[str], None]]=None):
     if factorioInstallDir is None:
       self.factorioExe:str = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
     else:
       self.factorioExe:str = os.path.abspath(f"{factorioInstallDir}/bin/x64/factorio.exe")
+    if log is None:
+      self.log:Callable[[str], None] = lambda msg : print(f"angelsdev-unit-test: {msg}")
+    else:
+      self.log:Callable[[str], None] = log
     self.factorioArgs:list = self.__createFactorioArgs()
     self.factorioProcess:Optional[subprocess.Popen] = None
 
   def launchGame(self) -> None:
     # https://developer.valvesoftware.com/wiki/Command_Line_Options#Steam_.28Windows.29
-    print(f"angelsdev-unit-test: Launching {os.path.basename(self.factorioExe)}")
+    self.log(f"Launching {os.path.basename(self.factorioExe)}")
     try:
       self.factorioProcess = subprocess.Popen(executable=self.factorioExe, args=self.factorioArgs, cwd=os.path.dirname(self.factorioExe), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     except FileNotFoundError as fnfe:
@@ -27,10 +31,10 @@ class FactorioController:
   def terminateGame(self) -> None:
     if self.factorioProcess.poll() is None:
       self.factorioProcess.terminate()
-      print(f"angelsdev-unit-test: Closing {os.path.basename(self.factorioExe)}")
+      self.log(f"Closing {os.path.basename(self.factorioExe)}")
       time.sleep(3) # Allow the game to terminate fully
     else:
-      print(f"angelsdev-unit-test: {os.path.basename(self.factorioExe)} terminated unexpectedly...")
+      self.log(f"{os.path.basename(self.factorioExe)} terminated unexpectedly...")
     self.factorioProcess = None
 
   def getGameOutput(self) -> Union[str, bool]:
@@ -51,12 +55,11 @@ class FactorioController:
     for line in self.getGameOutput():
       if type(line) is str:
         if re.fullmatch(r"angelsdev\-unit\-test: .*", line):
-          print(line)
+          self.log(line[21:])
           if re.fullmatch(r"angelsdev\-unit\-test: Finished testing!", line):
             break # Finished expectedly
         elif re.fullmatch(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\:.*", line):
-          error_msg = line[re.match(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\: *", line).regs[0][1]:]
-          print(f"angelsdev-unit-test: {error_msg}")
+          self.log(line[re.match(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\: *", line).regs[0][1]:])
           break # Error during launch launch
       elif type(line) is bool and line == False:
         break # Terminated factorio
