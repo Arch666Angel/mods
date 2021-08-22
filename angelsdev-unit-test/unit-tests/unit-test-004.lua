@@ -7,13 +7,17 @@ local tech_unlocked_by_script =
   -- ["tech-name"] = true
 }
 
+local tech_hidden = function(tech_prototype)
+  return tech_prototype.hidden or (not (tech_prototype.enabled or tech_prototype.visible_when_disabled))
+end
+
 local unit_test_004 = function()
   local tech_prototypes = game.technology_prototypes
   for tech_name, tech_prototype in pairs(tech_prototypes) do
-    if (not tech_prototype.enabled) and (not tech_prototype.hidden) and (not tech_unlocked_by_script[tech_name]) then
-      -- tech depends on prerequisites
+    if (not tech_hidden(tech_prototype)) and (not tech_unlocked_by_script[tech_name]) then
+      -- tech visible and might depends on prerequisites
       for prereq_name, prereq_prototype in pairs(tech_prototype.prerequisites) do
-        if prereq_prototype.hidden and (not tech_unlocked_by_script[prereq_name]) then -- tech cannot be researched
+        if tech_hidden(prereq_prototype) and (not tech_unlocked_by_script[prereq_name]) then -- tech cannot be researched
           unit_test_functions.print_msg(string.format("Technology %q depends on %q, which is hidden.", tech_name, prereq_name))
         end
       end

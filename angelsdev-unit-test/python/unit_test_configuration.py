@@ -114,6 +114,44 @@ UnitTestConfiguration.addConfiguration("Special vanilla (BA)",
 ###############################################################################
 ### BOB and ANGELS                                                          ###
 ###############################################################################
+UnitTestConfiguration.addConfiguration("BA (light)",
+  [
+    "angelsrefining",
+    "angelspetrochem",
+    #"angelssmelting",
+    #"angelsbioprocessing",
+    #"angelsindustries",
+    #"angelsexploration",
+
+    "boblibrary",
+    #"bobassembly",
+    #"bobclasses",
+    #"bobelectronics",
+    #"bobenemies",
+    #"bobequipment",
+    #"bobgreenhouse",
+    #"bobinserters",
+    #"boblogistics",
+    #"bobmining",
+    #"bobmodules",
+    #"bobores",
+    "bobplates",
+    #"bobpower",
+    #"bobrevamp",
+    #"bobtech",
+    #"bobvehicleequipment",
+    #"bobwarfare",
+  ],
+  {
+    'startup':
+    {
+      #"angels-enable-industries": False, # Angels overhaul
+      #"angels-enable-components": False, # Angels component mode
+      #"angels-enable-tech"      : False, # Angels technology mode
+    }
+  }
+)
+
 UnitTestConfiguration.addConfiguration("BA (regular)",
   [
     "angelsrefining",
