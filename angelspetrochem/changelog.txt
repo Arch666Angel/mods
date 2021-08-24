@@ -8,6 +8,7 @@ Date: 10.08.2021
     - Fixed heavy water separation did not enforce the fluid temperature constraint correctly
     - Added some tips-and-tricks for new players (around air separation, more to come)
     - Cleaned up old migrations
+    - Rebalanced rubber usage in insuated wire recipes depending on rubber from wood ratio (606)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.19
 Date: 31.05.2021
