@@ -4,6 +4,7 @@ Date: ??
   Bugfixes:
     - Science mode:
       - Fixed crash when player dies (664)
+      - Fixed that bobs lab mk2, module lab and alien lab required the hidden base game lab (670)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.14
 Date: 10.08.2021
