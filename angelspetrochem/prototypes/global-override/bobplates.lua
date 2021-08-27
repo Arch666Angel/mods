@@ -63,12 +63,25 @@ if mods["bobplates"] then
   --move small tanks to fluid-control
   OV.add_unlock("angels-fluid-control","bob-small-storage-tank")
   OV.add_unlock("angels-fluid-control","bob-small-inline-storage-tank")
+
+  OV.global_replace_technology("electrolysis-1", "basic-chemistry")
+  OV.global_replace_technology("electrolysis-2", "basic-chemistry-2")
   OV.disable_technology({"electrolysis-1","electrolysis-2"})
+
   --clean-up pre-requisites
   OV.remove_prereq("steel-processing","electrolysis-1")
   OV.remove_prereq("lithium-processing","electrolysis-1")
+  OV.remove_prereq("zinc-processing","electrolysis-1")
+  OV.remove_prereq("lead-processing","electrolysis-1")
+  OV.remove_prereq("cobalt-processing","electrolysis-1")
+
   OV.remove_prereq("chemical-processing-2","electrolysis-2")
   OV.remove_prereq("plastics","electrolysis-2")
+  OV.remove_prereq("aluminium-processing","electrolysis-2")
+  OV.add_prereq("aluminium-processing","chlorine-processing-1")
+  OV.remove_prereq("gold-processing-2","electrolysis-2")
+  OV.add_prereq("gold-processing","chlorine-processing-1")
+  OV.remove_prereq("battery-3","electrolysis-2")
 end
 
 -------------------------------------------------------------------------------

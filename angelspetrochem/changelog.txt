@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.21
+Date: ??
+  Bugfixes:
+    - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: 10.08.2021
   Bugfixes:

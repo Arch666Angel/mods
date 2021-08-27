@@ -157,6 +157,7 @@ if angelsmods.industries.overhaul then
     else
       --if not rtg, remove bobingabout process
       OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
+      OV.disable_recipe("bobingabout-enrichment-process")
       OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
       OV.disable_technology("bobingabout-enrichment-process")
     end
@@ -167,6 +168,8 @@ if angelsmods.industries.overhaul then
     OV.disable_recipe("thorium-processing")
     OV.global_replace_technology("thorium-processing", "angels-thorium-power")
     OV.disable_technology("thorium-processing")
+
+    OV.disable_recipe("thorium-fuel-cell")
     angelsmods.functions.add_flag("thorium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("thorium-fuel-cell", "hide-from-fuel-tooltip")
 

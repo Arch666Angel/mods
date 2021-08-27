@@ -52,7 +52,7 @@ if mods["bobrevamp"] then
   OV.converter_fluid("ammonia", "gas-ammonia")
   angelsmods.functions.disable_barreling_recipes("ammonia")
 
-  if mods["bobplates"] and settings.startup["bobmods-revamp-old-oil"] then
+  if settings.startup["bobmods-revamp-old-oil"] then
     OV.hide_recipe(
       {
         "oil-processing-with-sulfur",
@@ -62,12 +62,11 @@ if mods["bobrevamp"] then
       }
     )
   end
-  if mods["bobplates"] and settings.startup["bobmods-revamp-oil"] then
-    OV.hide_recipe(
-      {
-        "solid-fuel-from-sour-gas",
-      }
-    )
+  if settings.startup["bobmods-revamp-oil"] then
+    OV.hide_recipe("solid-fuel-from-sour-gas")
+    if mods["bobelectronics"] then
+      OV.hide_recipe("bob-oil-processing")
+    end
   end
 
   if angelsmods.trigger.disable_bobs_chemical_plants then

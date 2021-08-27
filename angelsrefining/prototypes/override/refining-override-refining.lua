@@ -108,6 +108,18 @@ else
     }
   )
 
+  OV.patch_recipes(
+    {
+      {
+        name = "angelsore-chunk-mix6-processing",
+        ingredients =
+        {
+          {name = "angels-ore3-chunk", amount = "angels-ore8-powder"}
+        }
+      }
+    }
+  )
+
   --OV.remove_unlock("ore-powderizer", "angelsore8-powder")
   --OV.remove_unlock("ore-powderizer", "angelsore8-powder-processing")
   --OV.remove_unlock("ore-advanced-floatation", "angelsore8-sludge")
