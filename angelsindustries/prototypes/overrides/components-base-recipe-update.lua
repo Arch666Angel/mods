@@ -75,7 +75,18 @@ if angelsmods.industries.components then
     angelsmods.functions.add_flag("battery-6", "hidden")
     angelsmods.functions.add_flag("battery-anode-6", "hidden")
     angelsmods.functions.add_flag("battery-cathode-6", "hidden")
+    angelsmods.functions.add_flag("battery-electrolyte-6", "hidden")
     angelsmods.functions.add_flag("battery-frame-6", "hidden")
+    OV.disable_recipe(
+      {
+        "battery-6",
+        "battery-anode-6",
+        "battery-cathode-6",
+        "battery-electrolyte-6",
+        "battery-frame-6",
+        "battery-casing-6"
+      }
+    )
   end
 
   if mods["bobmodules"] then
