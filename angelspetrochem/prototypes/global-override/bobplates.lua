@@ -206,39 +206,39 @@ end
 if mods["bobplates"] then
   -- bob electronics
   if mods["bobelectronics"] then --check if it exists first
-  move_item("insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
-  --[[
-    Normal Bob's (w or w/o Greenhouses) is 1 wood per 1 rubber per 2 circuit wires.
-    Bob's + Angel's Petrochem is 15 wood per 1 rubber per 2 circuit wires
-    Bob's + Angel's Petrochem + Bob's Greenhouses is 27 wood per 1 rubber per 2 circuit wires.
-    Bob's + Angel's Bioprocessing (w or w/o Greenhouses) is 30 wood per 1 rubber per 2 circuit wires.
-    How much tinned wire, and the yield is caculated by:
-        insulated-cable amount = wood_per_rubber * 2
-        tinned-copper-cable amount = wood_per_rubber * 2
-        energy_required = wood_per_rubber / 2
-    ]]
-  local wood_per_rubber = 15
-  if angelsmods.bioprocessing then
-    wood_per_rubber = 30
-  elseif mods["bobgreenhouse"] then
-    wood_per_rubber = 27
-  end
+    move_item("insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
+    --[[
+      Normal Bob's (w or w/o Greenhouses) is 1 wood per 1 rubber per 2 circuit wires.
+      Bob's + Angel's Petrochem is 15 wood per 1 rubber per 2 circuit wires
+      Bob's + Angel's Petrochem + Bob's Greenhouses is 27 wood per 1 rubber per 2 circuit wires.
+      Bob's + Angel's Bioprocessing (w or w/o Greenhouses) is 30 wood per 1 rubber per 2 circuit wires.
+      How much tinned wire, and the yield is caculated by:
+          insulated-cable amount = wood_per_rubber * 2
+          tinned-copper-cable amount = wood_per_rubber * 2
+          energy_required = wood_per_rubber / 2
+      ]]
+    local wood_per_rubber = 15
+    if angelsmods.bioprocessing then
+      wood_per_rubber = 30
+    elseif mods["bobgreenhouse"] then
+      wood_per_rubber = 27
+    end
 
-  OV.patch_recipes(
-    {
+    OV.patch_recipes(
       {
-        name = "insulated-cable",
-        subgroup = "petrochem-solids-2",
-        order = "b[rubber]-c[cable]-c",
-        ingredients = {
-          {type = "item", name = "tinned-copper-cable", amount = wood_per_rubber * 2},
-          {type = "item", name = "rubber", amount = 1}
-        },
-        results = {{type = "item", name = "insulated-cable", amount = wood_per_rubber * 2}},
-        energy_required = wood_per_rubber / 2
+        {
+          name = "insulated-cable",
+          subgroup = "petrochem-solids-2",
+          order = "b[rubber]-c[cable]-c",
+          ingredients = {
+            {type = "item", name = "tinned-copper-cable", amount = wood_per_rubber * 2},
+            {type = "item", name = "rubber", amount = 1}
+          },
+          results = {{type = "item", name = "insulated-cable", amount = wood_per_rubber * 2}},
+          energy_required = wood_per_rubber / 2
+        }
       }
-    }
-  )
+    )
 
 
     OV.remove_unlock("electronics", "insulated-cable")

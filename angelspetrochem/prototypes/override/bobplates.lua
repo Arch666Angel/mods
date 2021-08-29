@@ -210,41 +210,45 @@ if mods["bobplates"] then
   angelsmods.functions.add_flag("solid-rubber", "hidden")
   move_item("rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
 
-  OV.patch_recipes(
-    {
+  if mods["bobelectronics"] then
+    OV.patch_recipes(
       {
-        name = "bob-rubber",
-        enabled = false,
-        ingredients = {
-          {"!!"},
-          {type = "item", name = "resin", amount = 3}
+        {
+          name = "bob-rubber",
+          enabled = false,
+          ingredients = {
+            {"!!"},
+            {type = "item", name = "resin", amount = 3}
+          },
+          subgroup = "petrochem-solids-2",
+          order = "b[rubber]-b[solid]-a",
+          icons = angelsmods.functions.add_number_icon_layer(
+            {
+              {
+                icon = "__bobplates__/graphics/icons/rubber.png",
+                icon_size = 32, icon_mipmaps = 1,
+              }
+            },
+            1, angelsmods.petrochem.number_tint),
         },
-        subgroup = "petrochem-solids-2",
-        order = "b[rubber]-b[solid]-a",
-        icons = angelsmods.functions.add_number_icon_layer(
-          {
+        {
+          name = "solid-rubber",
+          subgroup = "petrochem-solids-2",
+          order = "b[rubber]-b[solid]-a",
+          icons = angelsmods.functions.add_number_icon_layer(
             {
-              icon = "__bobplates__/graphics/icons/rubber.png",
-              icon_size = 32, icon_mipmaps = 1,
-            }
-          },
-          1, angelsmods.petrochem.number_tint),
-      },
-      {
-        name = "solid-rubber",
-        subgroup = "petrochem-solids-2",
-        order = "b[rubber]-b[solid]-a",
-        icons = angelsmods.functions.add_number_icon_layer(
-          {
-            {
-              icon = "__bobplates__/graphics/icons/rubber.png",
-              icon_size = 32, icon_mipmaps = 1,
-            }
-          },
-          2, angelsmods.petrochem.number_tint),
+              {
+                icon = "__bobplates__/graphics/icons/rubber.png",
+                icon_size = 32, icon_mipmaps = 1,
+              }
+            },
+            2, angelsmods.petrochem.number_tint),
+        }
       }
-    }
-  )
+    )
+  else
+    OV.disable_recipe("bob-rubber")
+  end
 end
 
 -------------------------------------------------------------------------------
