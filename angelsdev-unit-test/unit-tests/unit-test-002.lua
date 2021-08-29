@@ -2,11 +2,7 @@
 -- that all technologies can be researched in a lab.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = true
-
 local function log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
-  unit_test_result = nil -- soft failure
-
   unit_test_functions.print_msg(string.format("Technology %q has an invalid research pack configuration:", tech_name))
   unit_test_functions.print_msg(string.format("  Science analysers: %s", tech_analysers[1] or "None"))
   if #tech_analysers > 1 then
@@ -28,6 +24,8 @@ local function log_invalid_science_configuration(tech_name, tech_analysers, tech
 end
 
 local unit_test_002 = function()
+  local unit_test_result = unit_test_functions.test_succesfull
+
   if not game.active_mods["angelsindustries"] then return true end -- skip test
   local industries_tech_setting = settings.startup["angels-enable-tech"]
   if (not industries_tech_setting) or (industries_tech_setting.value == false) then return true end -- skip test
@@ -92,16 +90,19 @@ local unit_test_002 = function()
       -- Key researches have (one or) more analysers but no datacores
       if #tech_analysers > 1 and (#tech_datacore_T1 + #tech_datacore_T2) > 0 then
         log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
 
       -- Other researches should only have one type of datacore
       if (#tech_datacore_T1 + #tech_datacore_T2) > 1 then
         log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
 
       -- Other researches should also have one type of analyser
       if (#tech_datacore_T1 + #tech_datacore_T2) == 1 and #tech_analysers ~= 1 then
         log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
 
       if (#tech_analysers + #tech_datacore_T1 + #tech_datacore_T2) == 0 then

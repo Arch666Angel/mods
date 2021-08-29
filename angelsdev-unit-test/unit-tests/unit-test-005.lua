@@ -1,8 +1,6 @@
 -- This unit tests validate that each visible recipe can be unlocked by tech.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = true
-
 local recipes_to_ignore =
 {
   ["electric-energy-interface"] = true, -- base game
@@ -27,12 +25,14 @@ local function can_be_researched(recipe_name)
 end
 
 local unit_test_005 = function()
+  local unit_test_result = unit_test_functions.test_succesfull
+
   local recipe_prototypes = game.recipe_prototypes
   for recipe_name, recipe_prototype in pairs(recipe_prototypes) do
     if (not recipe_prototype.enabled) and (not recipe_prototype.hidden) then -- recipe must be researched
       if not can_be_researched(recipe_name) then
         unit_test_functions.print_msg(string.format("Recipe %q cannot be unlocked by research.", recipe_name))
-        unit_test_result = nil
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
     end
   end

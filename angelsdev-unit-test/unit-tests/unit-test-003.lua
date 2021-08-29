@@ -2,8 +2,6 @@
 -- sure that they are also visible.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = true
-
 local recipes_to_ignore =
 {
   ["chemical-void"] = true,
@@ -12,6 +10,8 @@ local recipes_to_ignore =
 }
 
 local unit_test_003 = function()
+  local unit_test_result = unit_test_functions.test_succesfull
+  
   local recipe_prototypes = game.recipe_prototypes
   local item_prototypes = game.item_prototypes
   local fluid_prototypes = game.fluid_prototypes
@@ -23,16 +23,16 @@ local unit_test_003 = function()
         if recipe_ingredient.type == "item" then
           if item_prototypes[recipe_ingredient.name].has_flag("hidden") then
             unit_test_functions.print_msg(string.format("Recipe %q requires %q (item), which is hidden.", recipe_name, recipe_ingredient.name))
-            unit_test_result = nil -- soft failure
+            unit_test_result = unit_test_functions.test_failed -- soft failure
           end
         elseif recipe_ingredient.type == "fluid" then
           if fluid_prototypes[recipe_ingredient.name].hidden then
             unit_test_functions.print_msg(string.format("Recipe %q requires %q (fluid), which is hidden.", recipe_name, recipe_ingredient.name))
-            unit_test_result = nil -- soft failure
+            unit_test_result = unit_test_functions.test_failed -- soft failure
           end
         else
           unit_test_functions.print_msg(string.format("Unhandled testing case for recipe ingredient type %q!", recipe_ingredient.type))
-          return false -- hard failure
+          return unit_test_functions.test_invalid -- hard failure
         end
       end
 
@@ -43,16 +43,16 @@ local unit_test_003 = function()
           if recipe_product.type == "item" then
             if item_prototypes[recipe_product.name].has_flag("hidden") then
               unit_test_functions.print_msg(string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name))
-              unit_test_result = nil -- soft failure
+              unit_test_result = unit_test_functions.test_failed -- soft failure
             end
           elseif recipe_product.type == "fluid" then
             if fluid_prototypes[recipe_product.name].hidden then
               unit_test_functions.print_msg(string.format("Recipe %q makes %q (fluid), which is hidden.", recipe_name, recipe_product.name))
-              unit_test_result = nil -- soft failure
+              unit_test_result = unit_test_functions.test_failed -- soft failure
             end
           else
             unit_test_functions.print_msg(string.format("Unhandled testing case for recipe result type %q!", recipe_product.type))
-            return false -- hard failure
+            return unit_test_functions.test_invalid -- hard failure
           end
         end
       end
