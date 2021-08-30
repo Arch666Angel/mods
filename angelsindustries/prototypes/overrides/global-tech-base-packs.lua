@@ -157,7 +157,6 @@ if angelsmods.industries.tech then
   --PETROCHEM
   AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
   AI.pack_replace("plastic-1", "green", "orange")
-  AI.pack_replace("resin-3", "blue", "yellow")
   --AI.pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
   AI.pack_replace("rubber", "green", "orange")
   --AI.pack_replace("rocket-booster-1", "green", "orange")
