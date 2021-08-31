@@ -34,7 +34,8 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
       }
     }
   )
-else
+elseif angelsmods.functions.is_special_vanilla() then
+  --still needed outside of spec vanilla
   OV.disable_recipe(
     {
       "red-waste-water-purification",
