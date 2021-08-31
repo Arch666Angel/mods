@@ -2,6 +2,9 @@ local OV = angelsmods.functions.OV
 
 --MODIFICATION TO REFINING
 
+--OVERRIDE FOR BASE GAME
+require("prototypes.override.refining-override-base")
+
 --OVERRIDE FOR BUILDINGS
 require("prototypes.recipes.refining-entity-angels")
 require("prototypes.override.refining-override-buildings")

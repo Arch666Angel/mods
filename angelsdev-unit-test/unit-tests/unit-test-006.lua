@@ -6,6 +6,11 @@ local unit_test_functions = require("unit-test-functions")
 
 local unit_test_result = unit_test_functions.test_succesfull
 
+-- this unit test currently doesn't cover bobs technologies
+local technologies_to_ignore =
+{
+}
+
 local science_pack_level =
 {
   -- level 0 = no science pack requirements
@@ -109,6 +114,7 @@ end
 
 local function calculate_tech_unlock_level(technology_prototype, effect_level_from_start)
   local tech_effect_level = effect_level_from_start or 0
+  local item_prototypes = game.item_prototypes
   local recipe_prototypes = game.recipe_prototypes
   for _, tech_effect in pairs(technology_prototype.effects) do
     if tech_effect.type == "unlock-recipe" then
@@ -117,6 +123,14 @@ local function calculate_tech_unlock_level(technology_prototype, effect_level_fr
         local recipe_product_level = science_pack_level[recipe_product.name]
         if recipe_product_level then
           tech_effect_level = math.max(tech_effect_level, recipe_product_level)
+        end
+        if recipe_product.type == 'item' then
+          for _, rocket_launch_product in pairs(item_prototypes[recipe_product.name].rocket_launch_products) do
+            local rocket_launch_product_level = science_pack_level[rocket_launch_product.name]
+            if rocket_launch_product_level then
+              tech_effect_level = math.max(tech_effect_level, rocket_launch_product_level)
+            end
+          end
         end
       end
     end
@@ -133,7 +147,7 @@ local unit_test_006 = function()
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game
 
   for tech_name, tech_prototype in pairs(tech_prototypes) do
-    if not tech_hidden(tech_prototype) then
+    if not (technologies_to_ignore[tech_name] and true or tech_hidden(tech_prototype)) then
       -- calculate tech_ingredient_level for this technology if not calculated yet
       if not tech_ingredient_levels[tech_name] then
         local tech_ingredient_level = calculate_tech_ingredient_level(tech_prototype)
@@ -181,7 +195,7 @@ local unit_test_006 = function()
         unit_test_functions.print_msg(string.format("Technology %q requires prerequisites with higher science packs.", tech_name))
         unit_test_result = unit_test_functions.test_failed
       elseif tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level) then
-        unit_test_functions.print_msg(string.format("Technology %q requires higher science packs than its prerequisites provide. %d %d", tech_name, prereq_ingredient_level, prereq_unlock_level))
+        unit_test_functions.print_msg(string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name))
         unit_test_result = unit_test_functions.test_failed
       end
     end

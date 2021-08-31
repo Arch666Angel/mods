@@ -440,7 +440,9 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-3",
-        "angels-nitrogen-processing-2"
+        "angels-nitrogen-processing-2",
+        "slag-processing-1",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -722,7 +724,8 @@ data:extend(
       upgrade = true,
       prerequisites = {
         "chlorine-processing-2",
-        "water-treatment-3"
+        "water-treatment-3",
+        "chemical-science-pack"
       },
       effects = {
         {

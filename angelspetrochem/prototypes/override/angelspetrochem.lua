@@ -193,7 +193,7 @@ if angelsmods.functions.is_special_vanilla() then
       "gas-chlor-methane",
       "gas-allylchlorid",
       "gas-epichlorhydrin",
-      "liquid-glycerol",
+      --"liquid-glycerol",
       --"solid-sodium-chlorate",
       --"solid-sodium-perchlorate",
       --"liquid-perchloric-acid"

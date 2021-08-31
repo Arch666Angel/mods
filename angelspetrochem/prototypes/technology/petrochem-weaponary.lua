@@ -67,7 +67,8 @@ data:extend(
       prerequisites = {
         "explosives",
         "angels-nitrogen-processing-2",
-        "angels-sulfur-processing-2"
+        "chlorine-processing-2",
+        "military-science-pack"
       },
       effects = {
         {

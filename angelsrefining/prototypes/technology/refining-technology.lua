@@ -535,7 +535,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
       icon_size = 128,
       prerequisites = {
-        "thermal-water-extraction"
+        "thermal-water-extraction",
+        "advanced-electronics-2"
       },
       effects = {
         {
