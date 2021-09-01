@@ -26,7 +26,7 @@ data:extend(
     {
       type = "recipe",
       name = "glass-mixture-2",
-      category = "powder-mixing",
+      category = "powder-mixing-2",
       subgroup = "angels-glass",
       energy_required = 4,
       enabled = false,
@@ -45,7 +45,7 @@ data:extend(
     {
       type = "recipe",
       name = "glass-mixture-3",
-      category = "powder-mixing",
+      category = "powder-mixing-3",
       subgroup = "angels-glass",
       energy_required = 4,
       enabled = false,
@@ -65,7 +65,7 @@ data:extend(
     {
       type = "recipe",
       name = "glass-mixture-4",
-      category = "powder-mixing",
+      category = "powder-mixing-3",
       subgroup = "angels-glass",
       energy_required = 4,
       enabled = false,

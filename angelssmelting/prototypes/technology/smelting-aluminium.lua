@@ -56,6 +56,7 @@ data:extend(
       prerequisites = {
         --"angels-metallurgy-3",
         "ore-processing-2",
+        "powder-metallurgy-2",
         "angels-aluminium-smelting-1",
       },
       effects = {

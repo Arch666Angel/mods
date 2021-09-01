@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.18
 Date: ??
+  Changes:
+    - Changed recipe categories to appropriate powder mixing tier requirements (673)
   Bugfixes:
     - Fixed bug with Iron hot plate was not a 1:1 ratio to Iron plate with bobs mods (666)
 ---------------------------------------------------------------------------------------------------

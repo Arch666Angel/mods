@@ -174,7 +174,7 @@ data:extend(
     {
       type = "recipe",
       name = "casting-powder-tungsten-1",
-      category = "powder-mixing",
+      category = "powder-mixing-2",
       subgroup = "angels-tungsten-casting",
       energy_required = 4,
       enabled = false,
@@ -193,7 +193,7 @@ data:extend(
     {
       type = "recipe",
       name = "casting-powder-tungsten-2",
-      category = "powder-mixing",
+      category = "powder-mixing-3",
       subgroup = "angels-tungsten-casting",
       energy_required = 4,
       enabled = false,
