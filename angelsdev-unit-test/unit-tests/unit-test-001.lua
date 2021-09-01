@@ -12,7 +12,7 @@ local unit_test_001 = function()
   for mod_name, mod_version in pairs(game.active_mods) do
     unit_test_functions.print_msg(mod_name .. " version " .. mod_version)
   end
-  return unit_test_functions.test_succesfull -- unit test succeeded.
+  return unit_test_functions.test_successful -- unit test succeeded.
   --return unit_test_functions.test_failed   -- unit test failed.
   --return unit_test_functions.test_invalid  -- unit testing structure failed.
 end

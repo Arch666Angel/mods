@@ -24,7 +24,7 @@ local function log_invalid_science_configuration(tech_name, tech_analysers, tech
 end
 
 local unit_test_002 = function()
-  local unit_test_result = unit_test_functions.test_succesfull
+  local unit_test_result = unit_test_functions.test_successful
 
   if not game.active_mods["angelsindustries"] then return true end -- skip test
   local industries_tech_setting = settings.startup["angels-enable-tech"]

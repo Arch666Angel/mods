@@ -25,7 +25,7 @@ local function can_be_researched(recipe_name)
 end
 
 local unit_test_005 = function()
-  local unit_test_result = unit_test_functions.test_succesfull
+  local unit_test_result = unit_test_functions.test_successful
 
   local recipe_prototypes = game.recipe_prototypes
   for recipe_name, recipe_prototype in pairs(recipe_prototypes) do

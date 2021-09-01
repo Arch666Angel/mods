@@ -125,7 +125,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-processing-red"
+        "bio-processing-red",
+        "chemical-science-pack"
       },
       effects = {
         {

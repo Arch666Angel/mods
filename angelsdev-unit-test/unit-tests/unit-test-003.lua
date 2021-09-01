@@ -10,7 +10,7 @@ local recipes_to_ignore =
 }
 
 local unit_test_003 = function()
-  local unit_test_result = unit_test_functions.test_succesfull
+  local unit_test_result = unit_test_functions.test_successful
   
   local recipe_prototypes = game.recipe_prototypes
   local item_prototypes = game.item_prototypes

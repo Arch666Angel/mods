@@ -1,7 +1,7 @@
 local functions = {}
 
 -- potential return values:
-functions.test_succesfull = true  -- unit test succeeded.
+functions.test_successful = true  -- unit test succeeded.
 functions.test_failed     = nil   -- unit test failed.
 functions.test_invalid    = false -- unit testing structure failed.
 

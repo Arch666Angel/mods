@@ -814,7 +814,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-sulfur-processing-1"
+        "angels-sulfur-processing-1",
+        "logistic-science-pack",
       },
       effects = {
         -- {
@@ -904,7 +905,8 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-plastic-1"
+        "bio-plastic-1",
+        "chemical-science-pack"
       },
       effects = {
         {

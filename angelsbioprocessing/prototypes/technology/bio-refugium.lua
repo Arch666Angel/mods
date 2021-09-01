@@ -96,7 +96,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "gardens",
-        "optics"
+        "optics",
+        "logistic-science-pack"
       },
       effects = {
         {

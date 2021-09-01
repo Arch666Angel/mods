@@ -12,7 +12,7 @@ local tech_hidden = function(tech_prototype)
 end
 
 local unit_test_004 = function()
-  local unit_test_result = unit_test_functions.test_succesfull
+  local unit_test_result = unit_test_functions.test_successful
   
   local tech_prototypes = game.technology_prototypes
   for tech_name, tech_prototype in pairs(tech_prototypes) do

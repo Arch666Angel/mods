@@ -359,6 +359,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-temperate-2",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -486,6 +487,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-swamp-2",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -613,6 +615,7 @@ data:extend(
     prerequisites =
     {
       "bio-arboretum-desert-2",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -721,6 +724,7 @@ data:extend(
     prerequisites =
     {
       "bio-paper-2",
+      "chlorine-processing-3",
     },
     effects =
     {

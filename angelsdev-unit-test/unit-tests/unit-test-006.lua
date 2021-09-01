@@ -4,7 +4,7 @@
 -- depends on a technology unlocking the required science level.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = unit_test_functions.test_succesfull
+local unit_test_result = unit_test_functions.test_successful
 
 -- this unit test currently doesn't cover bobs technologies
 local technologies_to_ignore =
@@ -56,22 +56,22 @@ local science_pack_level =
   ["angels-science-pack-blue"] = 50,
   ["angels-science-pack-yellow"] = 60,
   ["angels-science-pack-white"] = 70,
-  ["token-bio"] = 30,
+  ["token-bio"] = 20, -- unlocked early at red science, neglectable
 
   -- angels datacores (priority range similar to angels science packs)
-  ["datacore-basic"] = 15,
-  ["datacore-exploration-1"] = 25,
-  ["datacore-exploration-2"] = 55,
-  ["datacore-enhance-1"] = 25,
-  ["datacore-enhance-2"] = 55,
-  ["datacore-energy-1"] = 25,
-  ["datacore-energy-2"] = 55,
-  ["datacore-logistic-1"] = 25,
-  ["datacore-logistic-2"] = 55,
-  ["datacore-war-1"] = 25,
-  ["datacore-war-2"] = 55,
-  ["datacore-processing-1"] = 25,
-  ["datacore-processing-2"] = 55,
+  ["datacore-basic"] = 10,
+  ["datacore-exploration-1"] = 20,
+  ["datacore-exploration-2"] = 50,
+  ["datacore-enhance-1"] = 20,
+  ["datacore-enhance-2"] = 50,
+  ["datacore-energy-1"] = 20,
+  ["datacore-energy-2"] = 50,
+  ["datacore-logistic-1"] = 20,
+  ["datacore-logistic-2"] = 50,
+  ["datacore-war-1"] = 20,
+  ["datacore-war-2"] = 50,
+  ["datacore-processing-1"] = 20,
+  ["datacore-processing-2"] = 50,
   ["datacore-processing-3"] = nil, -- unused
   ["datacore-processing-4"] = nil, -- unused
   ["datacore-processing-5"] = nil, -- unused
@@ -139,7 +139,7 @@ local function calculate_tech_unlock_level(technology_prototype, effect_level_fr
 end
 
 local unit_test_006 = function()
-  local unit_test_result = unit_test_functions.test_succesfull
+  local unit_test_result = unit_test_functions.test_successful
 
   local tech_prototypes = game.technology_prototypes
   local tech_ingredient_levels = {} -- the technology level defined by the research ingredients
