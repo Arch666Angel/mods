@@ -210,7 +210,8 @@ if angelsmods.industries.components then
         icon_mipmaps = 4,
         prerequisites = {
           "angels-platinum-smelting-1",
-          "angels-components-batteries-4"
+          "angels-components-batteries-4",
+          "utility-science-pack"
         },
         effects = {
           {

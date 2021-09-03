@@ -161,6 +161,7 @@ if angelsmods.industries.overhaul then
       OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
       OV.disable_technology("bobingabout-enrichment-process")
     end
+    OV.add_prereq("angels-plutonium-power", "production-science-pack")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
 

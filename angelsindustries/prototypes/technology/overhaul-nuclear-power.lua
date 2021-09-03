@@ -49,7 +49,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-plutonium-power",
-        "ore-electro-whinning-cell"
+        "ore-electro-whinning-cell",
+        "utility-science-pack"
       },
       effects = {
         {

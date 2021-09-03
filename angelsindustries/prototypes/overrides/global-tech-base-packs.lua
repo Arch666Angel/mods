@@ -169,13 +169,11 @@ if angelsmods.industries.tech then
   OV.remove_science_pack("tech-blue-circuit", "tech-blue-packs")
   OV.remove_prereq("tech-blue-circuit", "angels-components-batteries-4")
   OV.add_prereq("tech-blue-circuit", "angels-components-batteries-3")
-  AI.pack_replace("angels-components-mechanical-4", "green", "orange")
+  AI.pack_replace("angels-components-mechanical-4", "blue", "orange")
   OV.add_prereq("angels-components-construction-4", "tech-orange-packs")
   AI.pack_replace("angels-components-construction-4", "blue", "orange")
-  OV.remove_prereq("angels-components-construction-4", "tech-blue-packs")
-  AI.pack_replace("angels-components-weapons-advanced", "green", "orange")
+  AI.pack_replace("angels-components-weapons-advanced", "blue", "orange")
   AI.pack_replace("angels-components-cabling-4", "blue", "orange")
-  OV.remove_prereq("angels-components-cabling-4", "tech-blue-packs")
   AI.pack_replace("cargo-robots-2", "green", "orange")
   AI.pack_replace("angels-construction-robots-2", "green", "orange")
   AI.pack_replace("angels-components-batteries-3", "green", "orange")
@@ -198,9 +196,7 @@ if angelsmods.industries.tech then
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")
   OV.add_prereq("tech-yellow-circuit", "angels-components-batteries-4")
   AI.pack_replace("angels-components-construction-5", "yellow", "blue")
-  OV.remove_prereq("angels-components-construction-5", "tech-yellow-packs")
   AI.pack_replace("angels-components-cabling-5", "yellow", "blue")
-  OV.remove_prereq("angels-components-cabling-5", "tech-yellow-packs")
 
   -------------------------------------------------------------------------------
   -- YELOW SCIENCE PACKS --------------------------------------------------------
