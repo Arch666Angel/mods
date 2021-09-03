@@ -3,6 +3,7 @@ Version: 0.12.1
 Date: ??
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
+    - Fixed broken localisations on sludge processing in special vanilla (676)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 10.08.2021
