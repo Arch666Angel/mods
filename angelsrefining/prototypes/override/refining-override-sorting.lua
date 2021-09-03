@@ -392,7 +392,7 @@ local create_slag_recipes = function(recipe_base_name, ore_result_products, reci
     elseif #locale_index==3 then
       recipe.localised_name={"recipe-name.slag_processing_3",locale_index[1],locale_index[2],locale_index[3]}
     else
-      recipe.localised_name={"recipe-name.slag_processing_1",recipe_index}
+      recipe.localised_name={"recipe-name.slag_processing_1",locale_index[1]}
     end
 
   end
