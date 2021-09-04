@@ -6,6 +6,8 @@ Date: ??
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Clarifier, Crystallizer, Hydro plant, Salination plant
       - Ore crusher, Floatation cell, Ore refinery, Ore sorting facility
+    - Changed T1 buildings to take steel pipe
+    - Changed T2 buildings to take bronze plate and bronze pipe
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)

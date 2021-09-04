@@ -324,10 +324,10 @@ angelsmods.functions.RB.build(
         ingredients =
         {
           {type="item", name="gas-refinery-3", amount = 1},
-          {type="item", name="t5-plate", amount = 10},
-          {type="item", name="t5-circuit", amount = 5},
-          {type="item", name="t5-brick", amount = 10},
-          {type="item", name="t5-pipe", amount = 10},
+          {type="item", name="t6-plate", amount = 10},
+          {type="item", name="t6-circuit", amount = 5},
+          {type="item", name="t6-brick", amount = 10},
+          {type="item", name="t6-pipe", amount = 10},
         },
         result= "gas-refinery-4",
       },
@@ -338,10 +338,10 @@ angelsmods.functions.RB.build(
         ingredients =
         {
           {type="item", name="gas-refinery-3", amount = 1},
-          {type="item", name="t5-plate", amount = 10 * buildingmulti},
-          {type="item", name="t5-circuit", amount = 5 * buildingmulti},
-          {type="item", name="t5-brick", amount = 10 * buildingmulti},
-          {type="item", name="t5-pipe", amount = 10 * buildingmulti},
+          {type="item", name="t6-plate", amount = 10 * buildingmulti},
+          {type="item", name="t6-circuit", amount = 5 * buildingmulti},
+          {type="item", name="t6-brick", amount = 10 * buildingmulti},
+          {type="item", name="t6-pipe", amount = 10 * buildingmulti},
         },
         result= "gas-refinery-4",
       },
