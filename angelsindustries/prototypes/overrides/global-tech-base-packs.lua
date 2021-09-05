@@ -98,7 +98,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("electric-energy-accumulators", "green", "orange")
   AI.pack_replace("energy-shield-equipment", "green", "orange")
   AI.pack_replace("night-vision-equipment", "green", "orange")
-  AI.pack_replace("battery-equipment", "green", "orange")
+  AI.pack_replace("battery-equipment", "blue", "orange")
   AI.pack_replace("solar-panel-equipment", "green", "orange")
   AI.pack_replace("sulfur-processing", "green", "orange")
   --AI.pack_replace("plastics","green","orange")
@@ -176,7 +176,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-components-cabling-4", "blue", "orange")
   AI.pack_replace("cargo-robots-2", "green", "orange")
   AI.pack_replace("angels-construction-robots-2", "green", "orange")
-  AI.pack_replace("angels-components-batteries-3", "green", "orange")
+  AI.pack_replace("angels-components-batteries-3", "blue", "orange")
 
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
