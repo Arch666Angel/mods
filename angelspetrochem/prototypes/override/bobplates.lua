@@ -106,47 +106,47 @@ if mods["bobplates"] then
   if mods["bobelectronics"] then
     OV.add_prereq("electronics","angels-coal-processing")
   end
+  -- chemical processing tech patch -------------------------------------------
+  OV.add_prereq("chemical-processing-2","logistic-science-pack")
 end
 
 -------------------------------------------------------------------------------
--- ICON ADJUSTMENTS
-----------------------------------------------------------
+-- ICON ADJUSTMENTS -----------------------------------------------------------
 -------------------------------------------------------------------------------
-
 if mods["bobplates"] then
- -- liquid fuel --------------------------------------------------------------
- move_item("liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
- data.raw["fluid"]["liquid-fuel"].icon = nil
- data.raw["fluid"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_fluid_icon(
-   nil,
-   {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
- )
- OV.barrel_overrides("liquid-fuel", "acid")
-
- data.raw["recipe"]["liquid-fuel"].always_show_products = true
- data.raw["recipe"]["liquid-fuel"].icon = nil
- data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
-   {"liquid-fuel"},
-   {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
- )
- OV.patch_recipes(
-   {
-     {
-       name = "liquid-fuel",
-       ingredients = {
-         {"!!"},
-         {name = "liquid-fuel-oil", type = "fluid", amount = 40},
-         {name = "gas-residual", type = "fluid", amount = 10}
-       },
-       results = {
-         {name = "liquid-fuel", type = "fluid", amount = 50}
-       },
-       subgroup = "petrochem-carbon-oil-feed",
-       order = "h"
-     }
-   }
- )
- OV.add_unlock("angels-oil-processing", "liquid-fuel")
+  -- liquid fuel --------------------------------------------------------------
+  move_item("liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
+  data.raw["fluid"]["liquid-fuel"].icon = nil
+  data.raw["fluid"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_fluid_icon(
+    nil,
+    {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
+  )
+  OV.barrel_overrides("liquid-fuel", "acid")
+  
+  data.raw["recipe"]["liquid-fuel"].always_show_products = true
+  data.raw["recipe"]["liquid-fuel"].icon = nil
+  data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
+    {"liquid-fuel"},
+    {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
+  )
+  OV.patch_recipes(
+    {
+      {
+        name = "liquid-fuel",
+        ingredients = {
+          {"!!"},
+          {name = "liquid-fuel-oil", type = "fluid", amount = 40},
+          {name = "gas-residual", type = "fluid", amount = 10}
+        },
+        results = {
+          {name = "liquid-fuel", type = "fluid", amount = 50}
+        },
+        subgroup = "petrochem-carbon-oil-feed",
+        order = "h"
+      }
+    }
+  )
+  OV.add_unlock("angels-oil-processing", "liquid-fuel")
 
 end
 
@@ -202,6 +202,7 @@ if mods["bobplates"] then
   OV.remove_unlock("plastics", "synthetic-wood")
   OV.disable_recipe({"synthetic-wood"})
 end
+
 -------------------------------------------------------------------------------
 -- RUBBER HANDLING ------------------------------------------------------------
 -------------------------------------------------------------------------------

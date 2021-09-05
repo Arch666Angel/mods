@@ -18,6 +18,8 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.disable_technology("deuterium-processing")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+  OV.set_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)
+  OV.set_science_pack("deuterium-fuel-cell-2", "utility-science-pack", 1)
 
 elseif angelsmods.industries and angelsmods.industries.overhaul then
   -- everything is good, nothing to change
