@@ -31,6 +31,7 @@ if angelsmods.industries.components then
   AI.replace_recipe_ing("battery-equipment","battery-1","battery-3")
   OV.remove_prereq("battery-equipment", "battery")
   OV.add_prereq("battery-equipment", "angels-components-batteries-3")
+  table.insert(data.raw.technology["battery-equipment"].unit.ingredients,{type = "item", name = "chemical-science-pack", amount = 1})
   AI.replace_recipe_ing("battery-mk2-equipment","battery-equipment","battery-4")
   OV.add_prereq("battery-mk2-equipment", "angels-components-batteries-4")
 
