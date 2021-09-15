@@ -171,7 +171,7 @@ if bobmods and bobmods.ores then
             end
 		end
 
-		if settings.startup['bobmods-ores-enablenickelore'].value == true then
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablenickelore'].value == true then
             if data.raw.resource['nickel-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-nickel-ore',
