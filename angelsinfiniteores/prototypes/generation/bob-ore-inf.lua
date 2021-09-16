@@ -1,70 +1,75 @@
 if bobmods and bobmods.ores then
-    if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
-        if mods['bobplates'] and settings.startup['bobmods-plates-oreoverride'].value then
-            if data.raw.resource['bauxite-ore'] then
-                angelsmods.functions.add_resource('make', {
-                    name = 'infinite-bauxite-ore',
-                    get = 'bauxite-ore',
-                    order = 'b',
-                    sheet = 3,
-                    infinite = true,
-                    glow = true,
-                    var = 3,
-                    map_color = {r = 0.777, g = 0.7, b = 0.333},
-                    tint = {r = 0.777, g = 0.7, b = 0.333},
-                    mining_time = 1,
-                    type = 'item',
-                    minimum = angelsmods.ores.yield,
-                    normal = 1500,
-                    maximum = 6000,
-                    acid_to_mine = 'sulfuric-acid',
-                    output_name = 'bauxite-ore',
-                    output_min = 1,
-                    output_max = 1,
-                    output_probability = angelsmods.ores.loweryield,
-                    -- icon = "__bobores__/graphics/icons/bauxite-ore.png",
-                    autoplace = {
-                        starting_area = false,
-                        resource_index = 'bauxite-ore',
-                        base_density = 5,
-                        regular_rq_factor_multiplier = 0.3,
-                        starting_rq_factor_multiplier = 0.5
-                    }
-                })
-            end
+	if angelsmods.ores.disable_ore_override or (not angelsmods.refining) then
 
-            if data.raw.resource['cobalt-ore'] then
-                angelsmods.functions.add_resource('make', {
-                    name = 'infinite-cobalt-ore',
-                    get = 'cobalt-ore',
-                    order = 'b',
-                    sheet = 3,
-                    infinite = true,
-                    glow = true,
-                    var = 3,
-                    map_color = {r = 0.18, g = 0.35, b = 0.53},
-                    tint = {r = 0.3, g = 0.53, b = 0.77},
-                    mining_time = 1,
-                    type = 'item',
-                    minimum = angelsmods.ores.yield,
-                    normal = 1500,
-                    maximum = 6000,
-                    acid_to_mine = 'sulfuric-acid',
-                    output_name = 'cobalt-ore',
-                    output_min = 1,
-                    output_max = 1,
-                    output_probability = angelsmods.ores.loweryield,
-                    -- icon = "__bobores__/graphics/icons/cobalt-ore.png",
-                    autoplace = {
-                        starting_area = false,
-                        -- resource_index = 31,
-                        base_density = 5,
-                        regular_rq_factor_multiplier = 0.3,
-                        starting_rq_factor_multiplier = 0.5
-                    }
-                })
-            end
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablebauxite'].value == true then
+			if data.raw.resource['bauxite-ore'] then
+				angelsmods.functions.add_resource('make', {
+					name = 'infinite-bauxite-ore',
+					get = 'bauxite-ore',
+					order = 'b',
+					sheet = 3,
+					infinite = true,
+					glow = true,
+					var = 3,
+					map_color = {r = 0.777, g = 0.7, b = 0.333},
+					tint = {r = 0.777, g = 0.7, b = 0.333},
+					mining_time = 1,
+					type = 'item',
+					minimum = angelsmods.ores.yield,
+					normal = 1500,
+					maximum = 6000,
+					acid_to_mine = 'sulfuric-acid',
+					output_name = 'bauxite-ore',
+					output_min = 1,
+					output_max = 1,
+					output_probability = angelsmods.ores.loweryield,
+					-- icon = "__bobores__/graphics/icons/bauxite-ore.png",
+					autoplace = {
+						starting_area = false,
+						resource_index = 'bauxite-ore',
+						base_density = 5,
+						regular_rq_factor_multiplier = 0.3,
+						starting_rq_factor_multiplier = 0.5
+					}
+				})
+			end
+		end
 
+		if settings.startup['bobmods-ores-enablecobaltore'].value == true then
+			if data.raw.resource['cobalt-ore'] then
+				angelsmods.functions.add_resource('make', {
+					name = 'infinite-cobalt-ore',
+					get = 'cobalt-ore',
+					order = 'b',
+					sheet = 3,
+					infinite = true,
+					glow = true,
+					var = 3,
+					map_color = {r = 0.18, g = 0.35, b = 0.53},
+					tint = {r = 0.3, g = 0.53, b = 0.77},
+					mining_time = 1,
+					type = 'item',
+					minimum = angelsmods.ores.yield,
+					normal = 1500,
+					maximum = 6000,
+					acid_to_mine = 'sulfuric-acid',
+					output_name = 'cobalt-ore',
+					output_min = 1,
+					output_max = 1,
+					output_probability = angelsmods.ores.loweryield,
+					-- icon = "__bobores__/graphics/icons/cobalt-ore.png",
+					autoplace = {
+						starting_area = false,
+						-- resource_index = 31,
+						base_density = 5,
+						regular_rq_factor_multiplier = 0.3,
+						starting_rq_factor_multiplier = 0.5
+					}
+				})
+			end
+		end
+
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablegemsore'].value == true then
             if data.raw.resource['gem-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-gem-ore',
@@ -96,7 +101,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablegoldore'].value == true then
             if data.raw.resource['gold-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-gold-ore',
@@ -128,7 +135,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enableleadore'].value == true then
             if data.raw.resource['lead-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-lead-ore',
@@ -160,7 +169,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablenickelore'].value == true then
             if data.raw.resource['nickel-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-nickel-ore',
@@ -192,7 +203,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablequartz'].value == true then
             if data.raw.resource['quartz'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-quartz',
@@ -224,7 +237,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablerutile'].value == true then
             if data.raw.resource['rutile-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-rutile-ore',
@@ -256,7 +271,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablesilverore'].value == true then
             if data.raw.resource['silver-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-silver-ore',
@@ -288,7 +305,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if settings.startup['bobmods-ores-enablesulfur'].value == true then
             if data.raw.resource['sulfur'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-sulfur',
@@ -320,7 +339,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablethoriumore'].value == true then
             if data.raw.resource['thorium-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-thorium-ore',
@@ -352,7 +373,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enabletinore'].value == true then
             if data.raw.resource['tin-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-tin-ore',
@@ -384,7 +407,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enabletungstenore'].value == true then
             if data.raw.resource['tungsten-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-tungsten-ore',
@@ -416,7 +441,9 @@ if bobmods and bobmods.ores then
                     }
                 })
             end
+		end
 
+		if (settings.startup['bobmods-plates-oreoverride'] and settings.startup['bobmods-plates-oreoverride'].value == true) or settings.startup['bobmods-ores-enablezincore'].value == true then
             if data.raw.resource['zinc-ore'] then
                 angelsmods.functions.add_resource('make', {
                     name = 'infinite-zinc-ore',
@@ -449,5 +476,5 @@ if bobmods and bobmods.ores then
                 })
             end
         end
-    end
+	end
 end
