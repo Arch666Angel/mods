@@ -119,7 +119,6 @@ if mods["bobmodules"] then
         icon = "__base__/graphics/technology/module.png",
         icon_size = 256,
         icon_mipmaps = 4,
-        upgrade = true,
         prerequisites =
         {
           "modules",
@@ -189,7 +188,6 @@ if mods["bobmodules"] then
         icon = "__base__/graphics/technology/module.png",
         icon_size = 256,
         icon_mipmaps = 4,
-        upgrade = true,
         prerequisites =
         {
           "modules-2",
@@ -437,7 +435,6 @@ end
           icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-"..i..".png",
           icon_size = 32, icon_mipmaps = 1,
           order = "c-a",
-          upgrade = true,
           prerequisites = {
             "angels-bio-yield-module-"..i-1,
             "productivity-module-"..i,

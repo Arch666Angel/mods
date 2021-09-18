@@ -5,7 +5,6 @@ data:extend(
       name = "angels-stone-smelting-1",
       icon = "__angelssmelting__/graphics/technology/cement-tech.png",
       icon_size = 128,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "water-washing-1"
@@ -38,7 +37,6 @@ data:extend(
       name = "angels-stone-smelting-2",
       icon = "__angelssmelting__/graphics/technology/cement-tech.png",
       icon_size = 128,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-2",
         "powder-metallurgy-1",
@@ -87,7 +85,6 @@ data:extend(
       name = "angels-stone-smelting-3",
       icon = "__angelssmelting__/graphics/technology/cement-tech.png",
       icon_size = 128,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "powder-metallurgy-2",

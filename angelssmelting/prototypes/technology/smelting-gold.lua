@@ -7,7 +7,6 @@ data:extend(
       localised_description = {"technology-description.angels-gold-metallurgy"},
       icon = "__angelssmelting__/graphics/technology/casting-gold-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         "ore-leaching",
         "angels-metallurgy-3",
@@ -47,7 +46,6 @@ data:extend(
       name = "angels-gold-smelting-2",
       icon = "__angelssmelting__/graphics/technology/smelting-gold-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
@@ -93,7 +91,6 @@ data:extend(
       name = "angels-gold-casting-2",
       icon = "__angelssmelting__/graphics/technology/casting-gold-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "strand-casting-3",
@@ -135,7 +132,6 @@ data:extend(
       name = "angels-gold-smelting-3",
       icon = "__angelssmelting__/graphics/technology/smelting-gold-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-5",
         "ore-processing-4",
@@ -174,7 +170,6 @@ data:extend(
       name = "angels-gold-casting-3",
       icon = "__angelssmelting__/graphics/technology/casting-gold-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-5",
         "strand-casting-4",
