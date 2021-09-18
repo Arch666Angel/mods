@@ -145,7 +145,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           name = "angels-brass-smelting-2",
           icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
           icon_size = 256, icon_mipmaps = 4,
-          upgrade = true,
           prerequisites = {
             "angels-metallurgy-3",
             "angels-brass-smelting-1",
@@ -173,7 +172,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           name = "angels-brass-smelting-3",
           icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
           icon_size = 256, icon_mipmaps = 4,
-          upgrade = true,
           prerequisites = {
             "angels-metallurgy-4",
             "angels-brass-smelting-2",
