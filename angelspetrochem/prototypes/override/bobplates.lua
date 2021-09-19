@@ -6,6 +6,7 @@ if mods["bobplates"] then
 
   OV.set_science_pack("electric-engine", "chemical-science-pack")
 end
+
 -------------------------------------------------------------------------------
 -- CONVERT FLUIDS TO ANGELS VERSION -------------------------------------------
 -------------------------------------------------------------------------------
@@ -106,8 +107,6 @@ if mods["bobplates"] then
   if mods["bobelectronics"] then
     OV.add_prereq("electronics","angels-coal-processing")
   end
-  -- chemical processing tech patch -------------------------------------------
-  OV.add_prereq("chemical-processing-2","logistic-science-pack")
 end
 
 -------------------------------------------------------------------------------

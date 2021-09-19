@@ -257,6 +257,7 @@ data:extend(
       icon_mipmaps = 1,
       prerequisites = {
         "kovarex-enrichment-process",
+        "utility-science-pack",
         "rocket-fuel"
       },
       effects = {

@@ -5,6 +5,7 @@ Date: ??
     - Component mode:
       - Fixed some unused components were incorrectly hidden in pure angels configuration
       - Fixed battery and its components could not accept productivity modules (680)
+      - Fixed bob battery tech 2 and 3 were still visible but obsolete (625)
     - Science mode:
       - Fixed crash when player dies (664)
       - Fixed that bobs lab mk2, module lab and alien lab required the hidden base game lab (670)

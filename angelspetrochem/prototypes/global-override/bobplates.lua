@@ -152,7 +152,6 @@ end
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-
   move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({{name = "enriched-fuel-from-liquid-fuel", subgroup = "petrochem-fuel", order = "g"}})
   OV.disable_technology({"oil-processing-2", "oil-processing-3", "oil-processing-4"})
@@ -261,4 +260,12 @@ if mods["bobplates"] then
   move_item("deuterium", "petrochem-basic-fluids", "i")
   move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
   move_item("heavy-water-electrolysis", "petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
+end
+
+-------------------------------------------------------------------------------
+-- TECH TREE CLEANUP ----------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  -- chemical processing tech patch -------------------------------------------
+  OV.add_prereq("chemical-processing-2","logistic-science-pack")
 end
