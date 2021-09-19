@@ -5,7 +5,6 @@ data:extend(
       type = "technology",
       name = "basic-chemistry",
       icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
-      upgrade = true,
       prerequisites = {
         "automation"
       },
@@ -44,7 +43,6 @@ data:extend(
       type = "technology",
       name = "basic-chemistry-2",
       icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
-      upgrade = true,
       prerequisites = {
         "basic-chemistry",
         "water-treatment",
@@ -85,7 +83,6 @@ data:extend(
       type = "technology",
       name = "basic-chemistry-3",
       icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
-      upgrade = true,
       prerequisites = {
         "basic-chemistry-2",
         "angels-coal-processing",
@@ -123,7 +120,6 @@ data:extend(
       type = "technology",
       name = "water-chemistry-1",
       icons = angelsmods.functions.create_gas_tech_icon("ohh"),
-      upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-2",
         "water-treatment-4",
@@ -177,7 +173,6 @@ data:extend(
       type = "technology",
       name = "water-chemistry-2",
       icons = angelsmods.functions.create_gas_tech_icon("ohh"),
-      upgrade = true,
       prerequisites = {
         "water-chemistry-1",
         "angels-electric-boiler-2",
@@ -219,7 +214,6 @@ data:extend(
       type = "technology",
       name = "angels-coal-processing",
       icons = angelsmods.functions.create_gas_tech_icon({{067, 067, 067}, {056, 056, 056}, {045, 045, 045}}),
-      upgrade = true,
       prerequisites = {
         "basic-chemistry"
       },
@@ -250,7 +244,6 @@ data:extend(
       type = "technology",
       name = "angels-coal-processing-2",
       icons = angelsmods.functions.create_gas_tech_icon({{067, 067, 067}, {056, 056, 056}, {045, 045, 045}}),
-      upgrade = true,
       prerequisites = {
         "angels-coal-processing",
         --"basic-chemistry-3",
@@ -280,7 +273,6 @@ data:extend(
       type = "technology",
       name = "angels-coal-processing-3",
       icons = angelsmods.functions.create_gas_tech_icon({{067, 067, 067}, {056, 056, 056}, {045, 045, 045}}),
-      upgrade = true,
       prerequisites = {
         "angels-coal-processing-2",
         "chlorine-processing-1",
@@ -343,7 +335,6 @@ data:extend(
       type = "technology",
       name = "angels-sulfur-processing-1",
       icons = angelsmods.functions.create_gas_tech_icon("sss"),
-      upgrade = true,
       prerequisites = {
         "basic-chemistry-2"
       },
@@ -366,7 +357,6 @@ data:extend(
       type = "technology",
       name = "angels-sulfur-processing-2",
       icons = angelsmods.functions.create_gas_tech_icon("sss"),
-      upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-1",
         "water-treatment-2"
@@ -403,7 +393,6 @@ data:extend(
       type = "technology",
       name = "angels-sulfur-processing-3",
       icons = angelsmods.functions.create_gas_tech_icon("sss"),
-      upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-2",
         "angels-advanced-chemistry-1",
@@ -437,7 +426,6 @@ data:extend(
       type = "technology",
       name = "angels-sulfur-processing-4",
       icons = angelsmods.functions.create_gas_tech_icon("sss"),
-      upgrade = true,
       prerequisites = {
         "angels-sulfur-processing-3",
         "angels-nitrogen-processing-2",
@@ -473,7 +461,6 @@ data:extend(
       type = "technology",
       name = "angels-nitrogen-processing-1",
       icons = angelsmods.functions.create_gas_tech_icon("nnn"),
-      upgrade = true,
       prerequisites = {
         "basic-chemistry-2"
       },
@@ -508,7 +495,6 @@ data:extend(
       type = "technology",
       name = "angels-nitrogen-processing-2",
       icons = angelsmods.functions.create_gas_tech_icon("nnn"),
-      upgrade = true,
       prerequisites = {
         "angels-nitrogen-processing-1",
         "angels-advanced-chemistry-1",
@@ -563,7 +549,6 @@ data:extend(
       type = "technology",
       name = "angels-nitrogen-processing-3",
       icons = angelsmods.functions.create_gas_tech_icon("nnn"),
-      upgrade = true,
       prerequisites = {
         "angels-nitrogen-processing-2",
         "angels-advanced-chemistry-3"
@@ -605,7 +590,6 @@ data:extend(
       type = "technology",
       name = "angels-nitrogen-processing-4",
       icons = angelsmods.functions.create_gas_tech_icon("nnn"),
-      upgrade = true,
       prerequisites = {
         "angels-nitrogen-processing-3",
         "angels-advanced-chemistry-4"
@@ -644,7 +628,6 @@ data:extend(
       type = "technology",
       name = "chlorine-processing-1",
       icons = angelsmods.functions.create_gas_tech_icon("lll"),
-      upgrade = true,
       prerequisites = {
         --"basic-chemistry-2",
         --"water-treatment",
@@ -683,7 +666,6 @@ data:extend(
       type = "technology",
       name = "chlorine-processing-2",
       icons = angelsmods.functions.create_gas_tech_icon("lll"),
-      upgrade = true,
       prerequisites = {
         "chlorine-processing-1",
         "gas-steam-cracking-1"
@@ -721,7 +703,6 @@ data:extend(
       type = "technology",
       name = "chlorine-processing-3",
       icons = angelsmods.functions.create_gas_tech_icon("lll"),
-      upgrade = true,
       prerequisites = {
         "chlorine-processing-2",
         "water-treatment-3",
