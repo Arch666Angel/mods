@@ -3,6 +3,7 @@ Version: 0.7.21
 Date: ??
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
+    - Fixed another bug where agricultural modules could be duplicated (682)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.20
 Date: 10.08.2021
