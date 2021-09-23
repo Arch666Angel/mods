@@ -839,77 +839,77 @@ data:extend(
   }
 )
 data:extend({
-	{
-		type = "recipe",
-		name = "thorium-fuel-burning",
-		energy_required = 50000,
-		--enabled = false,
+  {
+    type = "recipe",
+    name = "thorium-fuel-burning",
+    energy_required = 50000,
+    --enabled = false,
     --hidden = true,
-		category = "chemistry",
-		ingredients =
-		{
-			{type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-thorium-fuel-cell" or "thorium-fuel-cell", amount=1},
-		},
-		order = "c-b-b",
-		results =
-		{
-			{type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "used-up-angels-thorium-fuel-cell" or "used-up-thorium-fuel-cell", amount=1}
-		},
-	},
-	{
-		type = "recipe",
-		name = "uranium-fuel-burning",
-		energy_required = 2000,
-		--enabled = false,
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-thorium-fuel-cell" or "thorium-fuel-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "used-up-angels-thorium-fuel-cell" or "used-up-thorium-fuel-cell", amount=1}
+    },
+  },
+  {
+    type = "recipe",
+    name = "uranium-fuel-burning",
+    energy_required = 2000,
+    --enabled = false,
     --hidden = true,
-		category = "chemistry",
-		ingredients =
-		{
-			{type="item", name="uranium-fuel-cell", amount=1},
-		},
-		order = "c-b-b",
-		results =
-		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=1}
-		},
-	},
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name="uranium-fuel-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name="used-up-uranium-fuel-cell", amount=1}
+    },
+  },
 }
 )
 if mods["angelsindustries"] and angelsmods.industries.overhaul then
-	data:extend({
-	{
-		type = "recipe",
-		name = "amox-fuel-burning",
-		energy_required = 8000,
-		--enabled = false,
+  data:extend({
+  {
+    type = "recipe",
+    name = "amox-fuel-burning",
+    energy_required = 8000,
+    --enabled = false,
     --hidden = true,
-		category = "chemistry",
-		ingredients =
-		{
-			{type="item", name="AMOX-cell", amount=1},
-		},
-		order = "c-b-b",
-		results =
-		{
-			{type="item", name="used-up-AMOX-cell", amount=1}
-		},
-	},
-	{
-		type = "recipe",
-		name = "uranium-234-fuel-burning",
-		energy_required = 1500,
-		--enabled = false,
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name="AMOX-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name="used-up-AMOX-cell", amount=1}
+    },
+  },
+  {
+    type = "recipe",
+    name = "uranium-234-fuel-burning",
+    energy_required = 1500,
+    --enabled = false,
     --hidden = true,
-		category = "chemistry",
-		ingredients =
-		{
-			{type="item", name="angels-uranium-fuel-cell", amount=1},
-		},
-		order = "c-b-b",
-		results =
-		{
-			{type="item", name="used-up-uranium-fuel-cell", amount=1}
-		},
-	}
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name="angels-uranium-fuel-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name="used-up-uranium-fuel-cell", amount=1}
+    },
+  }
 })
 end
