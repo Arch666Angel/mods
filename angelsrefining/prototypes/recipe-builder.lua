@@ -137,7 +137,7 @@ local p_blocked = {
    amount = true,
    amount_min = true,
    amount_max = true,
-   crafting_machine_tints = true
+   crafting_machine_tints = true,
 }
 -- list of properties which activate in the normal/expensive blocks
 local p_splittable = {
@@ -152,6 +152,10 @@ local p_splittable = {
    hide_from_player_crafting = true,
    allow_decomposition = true,
    allow_as_intermediate = true,
+   always_show_in_title = true,
+   always_show_made_in = true,
+   show_amount_in_title = true,
+   always_show_products = true
 }
 
 local function prioritize(a, b)

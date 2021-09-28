@@ -838,7 +838,8 @@ data:extend(
     },
   }
 )
-data:extend({
+--for testing purposes only
+--[[data:extend({
   {
     type = "recipe",
     name = "thorium-fuel-burning",
@@ -912,4 +913,4 @@ if mods["angelsindustries"] and angelsmods.industries.overhaul then
     },
   }
 })
-end
+end]]

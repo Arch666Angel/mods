@@ -10,8 +10,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -20,6 +22,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -40,8 +45,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -50,6 +57,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -67,8 +77,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -77,6 +89,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -94,8 +109,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -104,6 +121,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -121,8 +141,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -131,6 +153,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -148,8 +173,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -158,6 +185,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -175,8 +205,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -185,6 +217,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -202,8 +237,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -212,6 +249,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
@@ -229,8 +269,10 @@ data:extend(
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
-      allow_decomposition = false,
       normal = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 50}
         },
@@ -239,6 +281,9 @@ data:extend(
         }
       },
       expensive = {
+        allow_decomposition = false,
+        show_amount_in_title = false,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti}
         },
