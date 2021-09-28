@@ -142,7 +142,7 @@ data:extend(
         {type = "fluid", name = "gas-methanol", amount = 70},
         {type = "fluid", name = "gas-carbon-monoxide", amount = 30},
         {type = "fluid", name = "water-purified", amount = 50},
-        {type = "item", name = "catalyst-metal-green", amount = 1}
+        {type = "item", name = "catalyst-metal-red", amount = 1}
       },
       results = {
         {type = "fluid", name = "liquid-acetic-acid", amount = 100},
