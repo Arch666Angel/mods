@@ -5,6 +5,7 @@ Date: ??
     - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
     - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)
     - Fixed bug where gas refinery 3 could not be upgraded with the upgrade planner (677)
+    - Fixed bug where Lithium and Lithium perchlorate could only be made in Electrolyser 1 in some configurations (701)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: 10.08.2021
