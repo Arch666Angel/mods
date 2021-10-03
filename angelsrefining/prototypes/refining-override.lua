@@ -118,7 +118,7 @@ if data.raw.item["y-res1"] then
       },
       {
         name = "angelsore3-chunk-processing",
-        ingredients = {{type = "item", name = "angels-ore4-chunk", amount = "+1"}},
+        ingredients = {{type = "item", name = "angels-ore3-chunk", amount = "+1"}},
         results = {{type = "item", name = "y-res2", amount = 1}}
       },
       --TIER 3
@@ -129,7 +129,7 @@ if data.raw.item["y-res1"] then
       },
       {
         name = "angelsore3-crystal-processing",
-        ingredients = {{type = "item", name = "angels-ore4-crystal", amount = "+1"}},
+        ingredients = {{type = "item", name = "angels-ore3-crystal", amount = "+1"}},
         results = {{type = "item", name = "y-res2", amount = 1}}
       },
       --TIER 4
@@ -140,7 +140,7 @@ if data.raw.item["y-res1"] then
       },
       {
         name = "angelsore3-pure-processing",
-        ingredients = {{type = "item", name = "angels-ore4-pure", amount = "+1"}},
+        ingredients = {{type = "item", name = "angels-ore3-pure", amount = "+1"}},
         results = {{type = "item", name = "y-res2", amount = 1}}
       }
     }
