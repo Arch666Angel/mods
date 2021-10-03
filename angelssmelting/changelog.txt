@@ -6,6 +6,7 @@ Date: ??
   Bugfixes:
     - Fixed bug with Iron hot plate was not a 1:1 ratio to Iron plate with bobs mods (666)
     - Fixed Tungsten Oxide used the wrong icon when bobs mods are present (688)
+    - Fixed Lead sheet roll casting 2 had 2 technologies unlocking it (700)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.17
 Date: 10.08.2021
