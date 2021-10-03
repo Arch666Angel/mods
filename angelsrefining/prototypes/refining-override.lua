@@ -37,6 +37,7 @@ require("prototypes.override.refining-override-bobclasses")
 require("prototypes.override.refining-override-boblogistics")
 require("prototypes.override.refining-override-bobmodules")
 require("prototypes.override.refining-override-bobpower")
+require("prototypes.override.refining-override-bobvehicleequipment")
 
 if mods["bobplates"] then
   --revamp override
