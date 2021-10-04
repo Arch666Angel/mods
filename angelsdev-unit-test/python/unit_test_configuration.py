@@ -23,7 +23,9 @@ UnitTestConfiguration.addConfiguration("Special vanilla (light)",
     "angelssmelting",
     #"angelsbioprocessing",
     #"angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage"
   ],
   {
     'startup':
@@ -42,7 +44,9 @@ UnitTestConfiguration.addConfiguration("Special vanilla (regular)",
     "angelssmelting",
     "angelsbioprocessing",
     #"angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage"
   ],
   {
     'startup':
@@ -61,7 +65,9 @@ UnitTestConfiguration.addConfiguration("Special vanilla (extended)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    "angelsexploration"
+    "angelsexploration",
+
+    "angelsaddons-storage"
   ],
   {
     'startup':
@@ -81,6 +87,8 @@ UnitTestConfiguration.addConfiguration("Special vanilla (BA)",
     "angelsbioprocessing",
     "angelsindustries",
     "angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -123,6 +131,8 @@ UnitTestConfiguration.addConfiguration("BA (light)",
     #"angelsindustries",
     #"angelsexploration",
 
+    "angelsaddons-storage",
+
     "boblibrary",
     #"bobassembly",
     #"bobclasses",
@@ -160,6 +170,8 @@ UnitTestConfiguration.addConfiguration("BA (regular)",
     "angelsbioprocessing",
     #"angelsindustries",
     #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -199,6 +211,8 @@ UnitTestConfiguration.addConfiguration("BA (extended)",
     "angelsindustries",
     "angelsexploration",
 
+    "angelsaddons-storage",
+
     "boblibrary",
     "bobassembly",
     "bobclasses",
@@ -236,6 +250,8 @@ UnitTestConfiguration.addConfiguration("BA (extended components)",
     "angelsbioprocessing",
     "angelsindustries",
     "angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -275,6 +291,8 @@ UnitTestConfiguration.addConfiguration("BA (extended technology)",
     "angelsindustries",
     "angelsexploration",
 
+    "angelsaddons-storage",
+
     "boblibrary",
     "bobassembly",
     "bobclasses",
@@ -312,7 +330,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + overhaul)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -360,7 +380,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + components)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -408,7 +430,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + technology)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -456,7 +480,9 @@ UnitTestConfiguration.addConfiguration("BA (BobAssembly non-default + overhaul)"
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -510,7 +536,9 @@ UnitTestConfiguration.addConfiguration("BA (BobLogistics non-default + overhaul)
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -554,7 +582,9 @@ UnitTestConfiguration.addConfiguration("BA (BobRevamp non-default + overhaul)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -604,7 +634,9 @@ UnitTestConfiguration.addConfiguration("BA (Bob other non-default + overhaul)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    #"angelsexploration"
+    #"angelsexploration",
+
+    "angelsaddons-storage",
 
     "boblibrary",
     "bobassembly",
@@ -657,7 +689,9 @@ UnitTestConfiguration.addConfiguration("Pure Angels (overhaul)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    "angelsexploration"
+    "angelsexploration",
+
+    "angelsaddons-storage"
   ],
   {
     'startup':
@@ -676,7 +710,9 @@ UnitTestConfiguration.addConfiguration("Pure Angels (components)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    "angelsexploration"
+    "angelsexploration",
+
+    "angelsaddons-storage"
   ],
   {
     'startup':
@@ -695,7 +731,9 @@ UnitTestConfiguration.addConfiguration("Pure Angels (technology)",
     "angelssmelting",
     "angelsbioprocessing",
     "angelsindustries",
-    "angelsexploration"
+    "angelsexploration",
+
+    "angelsaddons-storage"
   ],
   {
     'startup':
