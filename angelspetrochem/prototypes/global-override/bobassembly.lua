@@ -80,9 +80,9 @@ if mods["bobplates"] then
   end
 
   -- Electrolyser 2
-  move_item("electrolyser-2", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-b")
+  angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser-2", "electrolysis")
   if mods["bobassembly"] then
-    angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser-2", "electrolysis")
+    move_item("electrolyser-2", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-b")
     if angelsmods.trigger.disable_bobs_electrolysers then
       angelsmods.functions.add_flag("electrolyser-2", "hidden")
       angelsmods.functions.set_next_upgrade("assembling-machine", "electrolyser-2", nil)
