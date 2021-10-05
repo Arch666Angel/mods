@@ -79,7 +79,7 @@ script.on_event(defines.events.on_player_fast_transferred, function(event)
         if player_cursor_stack.name == module_name then
           local player_cursor_stack_count = player_cursor_stack.count
           player_cursor_stack.set_stack{name=module_name, count=player_cursor_stack_count + remaining}
-          remaining = player_cursor_stack.count - player_cursor_stack_count
+          remaining = remaining - (player_cursor_stack.count - player_cursor_stack_count)
         end
       else
         if player_cursor_stack.can_set_stack{name=module_name, count=1} then

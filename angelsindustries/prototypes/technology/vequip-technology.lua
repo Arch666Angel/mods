@@ -34,7 +34,8 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/vequip.png",
       icon_size = 128,
       prerequisites = {
-        "angels-vequipment-1"
+        "angels-vequipment-1",
+        "chemical-science-pack"
       },
       effects = {
         {

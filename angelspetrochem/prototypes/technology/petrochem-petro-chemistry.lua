@@ -91,7 +91,8 @@ data:extend(
       icon_size = 256,
       icon_mipmaps = 4,
       prerequisites = {
-        "oil-processing"
+        "oil-processing",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -160,7 +161,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/gas-refinery-tech.png",
       icon_size = 128,
       prerequisites = {
-        "gas-processing"
+        "gas-processing",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -391,7 +393,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-advanced-chemistry-3"
+        "angels-advanced-chemistry-3",
+        "utility-science-pack"
       },
       effects = {
         {
@@ -546,7 +549,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "gas-steam-cracking-1",
-        "angels-advanced-chemistry-2"
+        "angels-advanced-chemistry-2",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -613,7 +617,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "oil-steam-cracking-1",
-        "angels-advanced-chemistry-2"
+        "angels-advanced-chemistry-2",
+        "chemical-science-pack"
       },
       effects = {
         {

@@ -875,7 +875,7 @@ data:extend(
       energy_required = 4,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "liquid-water-heavy", amount = 100}
+        {type = "fluid", name = "liquid-water-heavy", amount = 100, maximum_temperature = 30}
       },
       results = {
         {type = "fluid", name = "gas-oxygen", amount = 40},
@@ -908,7 +908,7 @@ data:extend(
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "liquid-water-heavy", amount = 100},
+        {type = "fluid", name = "liquid-water-heavy", amount = 100, maximum_temperature = 30},
         {type = "item", name = "angels-electrode", amount = 1}
       },
       results = {

@@ -77,7 +77,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-aluminium-smelting",
-      category = "powder-mixing",
+      category = "powder-mixing-2",
       subgroup = "angels-aluminium",
       energy_required = 6,
       enabled = false,

@@ -1,5 +1,11 @@
+--INITIALIZE
+angelsmods = angelsmods or {}
+angelsmods.settings = angelsmods.settings or {}
+
+--LOAD FUNCTIONS
 require "prototypes.angels-settings"
 
+--LOAD PROTOTYPES
 data:extend(
 {
   {
@@ -126,6 +132,6 @@ data:extend(
     minimum_value = 200,
     maximum_value = 1000,
     order = "d"
-  },
+  }
 }
 )

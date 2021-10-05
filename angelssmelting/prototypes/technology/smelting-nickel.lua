@@ -7,7 +7,6 @@ data:extend(
       localised_description = {"technology-description.angels-nickel-metallurgy"},
       icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         "ore-crushing",
         "angels-metallurgy-1",
@@ -41,7 +40,6 @@ data:extend(
       name = "angels-nickel-smelting-2",
       icon = "__angelssmelting__/graphics/technology/smelting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-2",
         "ore-processing-1",
@@ -81,7 +79,6 @@ data:extend(
       name = "angels-nickel-casting-2",
       icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-2",
         "strand-casting-1",
@@ -112,7 +109,6 @@ data:extend(
       name = "angels-nickel-smelting-3",
       icon = "__angelssmelting__/graphics/technology/smelting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "ore-processing-2",
@@ -149,7 +145,6 @@ data:extend(
       name = "angels-nickel-casting-3",
       icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "strand-casting-2",

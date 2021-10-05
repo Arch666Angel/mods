@@ -52,7 +52,7 @@ data:extend(
       name = "coolant-used-filtration-1",
       category = "filtering",
       subgroup = "coolant",
-      energy_required = 4,
+      energy_required = 5,--4
       enabled = false,
       ingredients =
       {
@@ -73,7 +73,7 @@ data:extend(
       name = "coolant-used-filtration-2",
       category = "filtering-2",
       subgroup = "coolant",
-      energy_required = 4,
+      energy_required = 3.5,--4
       enabled = false,
       ingredients =
       {
@@ -273,7 +273,6 @@ data:extend(
         },
         1, angelsmods.smelting.number_tint),
       order = "c[mold-non-expendable]-a[creation]",
-      stack_size = 200
     },
     {
       type = "recipe",

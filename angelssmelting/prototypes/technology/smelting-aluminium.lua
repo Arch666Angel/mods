@@ -7,7 +7,6 @@ data:extend(
       localised_description = {"technology-description.angels-aluminium-metallurgy"},
       icon = "__angelssmelting__/graphics/technology/casting-aluminium-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         "ore-floatation",
         --"angels-metallurgy-2",
@@ -52,10 +51,10 @@ data:extend(
       name = "angels-aluminium-smelting-2",
       icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "ore-processing-2",
+        "powder-metallurgy-2",
         "angels-aluminium-smelting-1",
       },
       effects = {
@@ -88,7 +87,6 @@ data:extend(
       name = "angels-aluminium-casting-2",
       icon = "__angelssmelting__/graphics/technology/casting-aluminium-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-3",
         "strand-casting-2",
@@ -125,7 +123,6 @@ data:extend(
       name = "angels-aluminium-smelting-3",
       icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
@@ -163,7 +160,6 @@ data:extend(
       name = "angels-aluminium-casting-3",
       icon = "__angelssmelting__/graphics/technology/casting-aluminium-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "strand-casting-3",

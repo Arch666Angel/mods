@@ -138,7 +138,7 @@ data:extend(
     results = 
     {
       {type = "item", name = "thorium-232", amount = 4},
-      {type = "item", name = "plutonium-240", amount = 1, probability=0.15}, --must be low enough to not be self-sustainable
+      {type = "item", name = "plutonium-240", amount = 1, probability=0.15}, --must be low enough to not be self-sustainable (<=0.15)
     },
     icons = 
     {
@@ -371,9 +371,9 @@ data:extend(
     },
     results = 
     {
-      {type = "item", name = "plutonium-240", amount = 4},
+      {type = "item", name = "plutonium-240", amount = 2},
       {type = "item", name = "slag", amount = 10},
-      {type = "item", name = "curium-245", amount = 2,probability=0.45},
+      {type = "item", name = "curium-245", amount = 3,probability=0.45},
       {type = "item", name = "uranium-235", amount = 1,probability=0.2},
       {type = "fluid", name = "water-greenyellow-waste", amount = 60},
     },
@@ -433,12 +433,12 @@ data:extend(
     {
       {type = "item", name = "thorium-232", amount = 17},
       {type = "item", name = "curium-245", amount = 1},
-      {type = "item", name = "plutonium-240", amount = 3},
-      {type = "item", name = "angels-plate-zinc", amount = 10},
+      {type = "item", name = "plutonium-240", amount = 8},
+      {type = "item", name = "angels-plate-zinc", amount = 15},
     },
     results = 
     {
-      {type = "item", name = "angels-thorium-fuel-cell", amount = 10},
+      {type = "item", name = "angels-thorium-fuel-cell", amount = 15},
     },
     main_product = "angels-thorium-fuel-cell",
     always_show_products = true,
@@ -486,7 +486,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 450,
+    energy_required = 400, --450
     ingredients =
     {
       {type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 5},
@@ -497,7 +497,7 @@ data:extend(
       {type = "item", name = "neptunium-240", amount = 1},
       {type = "item", name = "thorium-232", amount = 2},
       {type = "item", name = "uranium-234", amount = 1,probability=0.05},
-      {type = "item", name = "curium-245", amount = 1,probability=0.1},
+      {type = "item", name = "curium-245", amount = 1,probability=0.25},--p=0.1 (0.5 is self sustaining)
     },
     icons = 
     {
@@ -549,7 +549,7 @@ data:extend(
     enabled = false,
     category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
-    energy_required = 1000,
+    energy_required = 800, -- 1000
     ingredients =
     {
       {type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 10},
@@ -838,4 +838,79 @@ data:extend(
     },
   }
 )
-
+--for testing purposes only
+--[[data:extend({
+  {
+    type = "recipe",
+    name = "thorium-fuel-burning",
+    energy_required = 50000,
+    --enabled = false,
+    --hidden = true,
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-thorium-fuel-cell" or "thorium-fuel-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "used-up-angels-thorium-fuel-cell" or "used-up-thorium-fuel-cell", amount=1}
+    },
+  },
+  {
+    type = "recipe",
+    name = "uranium-fuel-burning",
+    energy_required = 2000,
+    --enabled = false,
+    --hidden = true,
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name="uranium-fuel-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name="used-up-uranium-fuel-cell", amount=1}
+    },
+  },
+}
+)
+if mods["angelsindustries"] and angelsmods.industries.overhaul then
+  data:extend({
+  {
+    type = "recipe",
+    name = "amox-fuel-burning",
+    energy_required = 8000,
+    --enabled = false,
+    --hidden = true,
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name="AMOX-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name="used-up-AMOX-cell", amount=1}
+    },
+  },
+  {
+    type = "recipe",
+    name = "uranium-234-fuel-burning",
+    energy_required = 1500,
+    --enabled = false,
+    --hidden = true,
+    category = "chemistry",
+    ingredients =
+    {
+      {type="item", name="angels-uranium-fuel-cell", amount=1},
+    },
+    order = "c-b-b",
+    results =
+    {
+      {type="item", name="used-up-uranium-fuel-cell", amount=1}
+    },
+  }
+})
+end]]

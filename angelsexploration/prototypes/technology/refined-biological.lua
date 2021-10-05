@@ -78,7 +78,11 @@ data:extend(
           modifier = 0.2
         }
       },
-      prerequisites = {"angels-refined-biological-2"},
+      prerequisites =
+      {
+        "angels-refined-biological-2",
+        "chemical-science-pack"
+      },
       unit = {
         count = 100 * 3,
         ingredients = {
@@ -109,7 +113,11 @@ data:extend(
           modifier = 0.3
         }
       },
-      prerequisites = {"angels-refined-biological-3"},
+      prerequisites =
+      {
+        "angels-refined-biological-3",
+        "utility-science-pack"
+      },
       unit = {
         count = 100 * 4,
         ingredients = {

@@ -4,7 +4,7 @@ data:extend(
     type = "tile",
     name = "clay-bricks",
     needs_correction = false,
-    minable = {hardness = 0.2, mining_time = 0.5, result = "clay-brick"},
+    minable = {mining_time = 0.5, result = "clay-brick"},
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"ground-tile"},
     walking_speed_modifier = 1.25,
@@ -83,7 +83,7 @@ data:extend(
     },
     map_color={r=50, g=50, b=50},
     pollution_absorption_per_second = 0,
-    ageing=0,
+    --ageing=0,
     vehicle_friction_modifier = 1.1
   },
 }

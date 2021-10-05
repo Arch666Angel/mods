@@ -44,7 +44,7 @@ data:extend(
     {
       type = "recipe",
       name = "cement-mixture-2",
-      category = "powder-mixing",
+      category = "powder-mixing-2",
       subgroup = "angels-stone",
       energy_required = 4,
       enabled = false,

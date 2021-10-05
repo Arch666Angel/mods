@@ -27,12 +27,16 @@ if mods["bobores"] then
 
   if bobmods.ores.settings.LeadGivesNickel == true then
     bobmods.lib.resource.add_result("infinite-lead-ore", {name = "nickel-ore", probability = bobmods.ores.settings.LeadNickelRatio})
-    angelsmods.functions.remove_resource("infinite-nickel-ore")
+    if bobmods.ores.nickel.enabled == false then
+      angelsmods.functions.remove_resource("infinite-nickel-ore")
+    end
   end
 
 
   if bobmods.ores.settings.NickelGivesCobalt == true then
-    angelsmods.functions.remove_resource("infinite-cobalt-ore")
+    if bobmods.ores.cobalt.enabled == false then
+      angelsmods.functions.remove_resource("infinite-cobalt-ore")
+    end
     if bobmods.ores.nickel.enabled then
       bobmods.lib.resource.add_result("infinite-nickel-ore", {name = "cobalt-ore", probability = bobmods.ores.settings.NickelCobaltRatio})
     else

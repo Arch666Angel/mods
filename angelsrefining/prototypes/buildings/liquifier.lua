@@ -92,7 +92,6 @@ data:extend(
           pipe_connections = {{position = {0, -2}}}
         }
       },
-      pipe_covers = pipecoverspictures()
       --off_when_no_fluid_recipe = true
     },
     {
@@ -187,7 +186,6 @@ data:extend(
           pipe_connections = {{position = {0, -2}}}
         }
       },
-      pipe_covers = pipecoverspictures()
       --off_when_no_fluid_recipe = true
     },
     {
@@ -282,7 +280,6 @@ data:extend(
           pipe_connections = {{position = {0, -2}}}
         }
       },
-      pipe_covers = pipecoverspictures()
       --off_when_no_fluid_recipe = true
     },
     {
@@ -376,7 +373,6 @@ data:extend(
           pipe_connections = {{position = {0, -2}}}
         }
       },
-      pipe_covers = pipecoverspictures()
       --off_when_no_fluid_recipe = true
     }
   }

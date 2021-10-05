@@ -180,7 +180,6 @@ data:extend(
       name = "roll-copper-casting-fast",
       category = "strand-casting-2",
       subgroup = "angels-copper-casting",
-      energy_required = 2,
       normal = {
         enabled = false,
         energy_required = 2,
@@ -289,7 +288,6 @@ data:extend(
       name = "angels-plate-copper",
       category = "casting",
       subgroup = "angels-copper-casting",
-      energy_required = 4,
       normal = {
         enabled = false,
         energy_required = 4,

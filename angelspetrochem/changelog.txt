@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.21
+Date: ??
+  Bugfixes:
+    - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
+    - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)
+    - Fixed bug where gas refinery 3 could not be upgraded with the upgrade planner (677)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.20
+Date: 10.08.2021
+  Bugfixes:
+    - Changed prerequisites of plastic before advanced electronics technology
+    - Fixed emissions_multiplier were not applied correctly
+    - Fixed bobs chemical plant 1, distillery 1 and electrolyser 1 were not unlocked correctly
+    - Fixed heavy water separation did not enforce the fluid temperature constraint correctly
+    - Added some tips-and-tricks for new players (around air separation, more to come)
+    - Cleaned up old migrations
+    - Rebalanced rubber usage in insuated wire recipes depending on rubber from wood ratio (606)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.19
 Date: 31.05.2021
   Bugfixes:

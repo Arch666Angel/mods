@@ -30,6 +30,7 @@ data:extend(
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator"},
     fast_replaceable_group = "separator",
+    next_upgrade = "separator-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -110,7 +111,6 @@ data:extend(
         pipe_connections = {{ position = {2, -3} }}
       }
     },
-    pipe_covers = pipecoverspictures()
   },
   {
     type = "item",
@@ -143,6 +143,7 @@ data:extend(
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator-2"},
     fast_replaceable_group = "separator",
+    next_upgrade = "separator-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -223,7 +224,6 @@ data:extend(
         pipe_connections = {{ position = {2, -3} }}
       }
     },
-    pipe_covers = pipecoverspictures()
   },
   {
     type = "item",
@@ -255,6 +255,7 @@ data:extend(
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "separator-3"},
     fast_replaceable_group = "separator",
+    next_upgrade = "separator-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -335,7 +336,6 @@ data:extend(
         pipe_connections = {{ position = {2, -3} }}
       }
     },
-    pipe_covers = pipecoverspictures()
   },
   {
     type = "item",
@@ -447,7 +447,6 @@ data:extend(
         pipe_connections = {{ position = {2, -3} }}
       }
     },
-    pipe_covers = pipecoverspictures()
   },
 }
 )

@@ -88,10 +88,10 @@ else
   angelsmods.functions.add_flag("angels-ore8-powder", "hidden")
   angelsmods.functions.add_flag("angels-ore8-dust", "hidden")
   angelsmods.functions.add_flag("angels-ore8-crystal", "hidden")
-  data.raw.fluid["angels-ore8-sludge"].hidden = true
-  data.raw.fluid["angels-ore8-solution"].hidden = true
-  data.raw.fluid["angels-ore8-anode-sludge"].hidden = true
-  data.raw.fluid["angels-ore8-slime"].hidden = true
+  angelsmods.functions.add_flag("angels-ore8-sludge", "hidden")
+  angelsmods.functions.add_flag("angels-ore8-solution", "hidden")
+  angelsmods.functions.add_flag("angels-ore8-anode-sludge", "hidden")
+  angelsmods.functions.add_flag("angels-ore8-slime", "hidden")
 
   OV.disable_recipe(
     {
@@ -105,6 +105,18 @@ else
       "angelsore8-anode-sludge-filtering",
       "angelsore8-crystal",
       "angelsore8-crystal-processing"
+    }
+  )
+
+  OV.patch_recipes(
+    {
+      {
+        name = "angelsore-chunk-mix6-processing",
+        ingredients =
+        {
+          {name = "angels-ore3-chunk", amount = "angels-ore8-powder"}
+        }
+      }
     }
   )
 
@@ -133,10 +145,10 @@ else
   angelsmods.functions.add_flag("angels-ore9-powder", "hidden")
   angelsmods.functions.add_flag("angels-ore9-dust", "hidden")
   angelsmods.functions.add_flag("angels-ore9-crystal", "hidden")
-  data.raw.fluid["angels-ore9-sludge"].hidden = true
-  data.raw.fluid["angels-ore9-solution"].hidden = true
-  data.raw.fluid["angels-ore9-anode-sludge"].hidden = true
-  data.raw.fluid["angels-ore9-slime"].hidden = true
+  angelsmods.functions.add_flag("angels-ore9-sludge", "hidden")
+  angelsmods.functions.add_flag("angels-ore9-solution", "hidden")
+  angelsmods.functions.add_flag("angels-ore9-anode-sludge", "hidden")
+  angelsmods.functions.add_flag("angels-ore9-slime", "hidden")
 
   OV.disable_recipe(
     {
@@ -179,3 +191,6 @@ if angelsmods.functions.is_special_vanilla() then
     }
   )
 end
+-- Currently crystal-matrix has no use
+OV.disable_recipe({"crystal-matrix"})
+angelsmods.functions.add_flag("crystal-matrix","hidden")

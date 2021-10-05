@@ -6,20 +6,16 @@ angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
---angelsmods.industries.tech=false --temp overrides to disable until ready
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
---Enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
 if angelsmods.industries.tech == true then
   angelsmods.industries.components = true
 end
---angelsmods.industries.components = false --temp overrides to disable until ready
 
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
 if mods["bobplates"] or angelsmods.industries.components then
   angelsmods.industries.overhaul = true
 end
---angelsmods.industries.overhaul=false --temp overrides
 
 angelsmods.industries.return_ingredients =
   angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
@@ -114,8 +110,10 @@ require("prototypes.angels-logistics-ghosting")
 -- NUCLEAR -----------------------------------------------------------
 --ENTITIES
 require("prototypes.buildings.centrifuge")
+require("prototypes.buildings.angels-reactor")
 --ITEMS
 require("prototypes.items.overhaul-nuclear-power")
+require("prototypes.items.angels-reactor")
 --RECIPES
 require("prototypes.recipes.overhaul-nuclear-power")
 --TECHS

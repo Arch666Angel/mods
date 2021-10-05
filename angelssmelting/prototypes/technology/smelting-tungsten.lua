@@ -5,7 +5,6 @@ data:extend(
       name = "angels-tungsten-smelting-1",
       icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         "ore-refining",
         --"angels-metallurgy-3",
@@ -56,7 +55,6 @@ data:extend(
       name = "angels-tungsten-smelting-2",
       icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-4",
         "ore-processing-3",
@@ -100,7 +98,6 @@ data:extend(
       name = "angels-tungsten-smelting-3",
       icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
       icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
       prerequisites = {
         --"angels-metallurgy-5",
         "ore-processing-4",

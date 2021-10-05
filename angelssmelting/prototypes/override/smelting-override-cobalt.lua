@@ -23,7 +23,13 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
   if mods['bobplates'] then
     OV.global_replace_item("solid-cobalt-oxide", "cobalt-oxide")
     angelsmods.functions.add_flag("solid-cobalt-oxide", "hidden")
+    angelsmods.functions.move_item("cobalt-oxide", "angels-cobalt", "e")
+    data.raw["item"]["cobalt-oxide"].icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
+    data.raw["item"]["cobalt-oxide"].icon_size = 32
+    data.raw["item"]["cobalt-oxide"].icon_mipmaps = 1
     OV.disable_recipe({ "cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
+    OV.remove_prereq({"battery-2","rtg"},"cobalt-processing") --based on the oxide not the plate
+    OV.add_prereq({"battery-2","rtg"},"angels-cobalt-smelting-1") --based on the oxide not the plate
   end
 
   if angelsmods.trigger.smelting_products["cobalt"].plate then
@@ -38,9 +44,27 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     end
   end
   
-  if mods["angelsindustries"] and angelsmods.industries.components then
+  if (mods["angelsindustries"] and angelsmods.industries.components) or mods["bobplates"] then
   else
     OV.disable_recipe({"cobalt-ore-processing-alt"})
+    OV.patch_recipes(
+      {
+        {
+          name = "processed-cobalt-smelting",
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+            1, angelsmods.smelting.number_tint),
+        },
+        {
+          name = "solid-cobalt-hydroxide-smelting",
+          icons = angelsmods.functions.add_number_icon_layer(
+            angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+            2, angelsmods.smelting.number_tint),
+        },
+      }
+    )
+    OV.remove_prereq("angels-cobalt-smelting-1", "water-washing-1")
+    OV.add_prereq("angels-cobalt-smelting-2", "water-washing-1")
   end
 else
   angelsmods.functions.add_flag("processed-cobalt", "hidden")
@@ -65,18 +89,28 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-cobalt", "cobalt-plate")
     angelsmods.functions.add_flag("angels-plate-cobalt", "hidden")
+    angelsmods.functions.move_item("cobalt-plate", "angels-cobalt-casting", "j")
+    data.raw["item"]["cobalt-plate"].icon = "__angelssmelting__/graphics/icons/plate-cobalt.png"
+    data.raw["item"]["cobalt-plate"].icon_size = 32
+    data.raw["item"]["cobalt-plate"].icon_mipmaps = 1
   end
 else
   angelsmods.functions.add_flag("angels-plate-cobalt", "hidden")
   angelsmods.functions.add_flag("angels-roll-cobalt", "hidden")
   OV.disable_recipe({"roll-cobalt-casting", "roll-cobalt-casting-fast"})
   OV.disable_recipe({"angels-plate-cobalt", "angels-roll-cobalt-converting"})
+  angelsmods.functions.add_flag("cobalt-plate", "hidden")
 end
 
 -------------------------------------------------------------------------------
 -- POWDER ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["cobalt"].powder then
+  if mods["angelsindustries"] and angelsmods.industries.tech then
+  else -- not angels industry tech mode
+    OV.remove_unlock("angels-cobalt-smelting-2", "powder-cobalt")
+    OV.add_unlock("angels-cobalt-smelting-1", "powder-cobalt")
+  end
 else
   angelsmods.functions.add_flag("powder-cobalt", "hidden")
   OV.disable_recipe({ "powder-cobalt" })

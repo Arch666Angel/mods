@@ -4,7 +4,6 @@ data:extend(
       type = "item-group",
       name = "liquid-bot",
       order = "ld",
-      inventory_order = "ld",
       icon = "__angelsaddons-liquidrobot__/graphics/technology/bot-tech.png",
       scale = 0.5,
       icon_size = 128

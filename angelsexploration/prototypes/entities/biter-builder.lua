@@ -730,12 +730,14 @@ local function make_attack_parameter(data_app, data_dmg)
         action_delivery = {
           type = "instant",
           target_effects = {
-            type = "damage",
-            damage = {amount = data_dmg.damage, type = "physical"}
-          },
-          {
-            type = "damage",
-            damage = {amount = data_dmg.damage2, type = "acid"}
+            {
+              type = "damage",
+              damage = {amount = data_dmg.damage, type = "physical"}
+            },
+            {
+              type = "damage",
+              damage = {amount = data_dmg.damage2, type = "acid"}
+            }
           }
         }
       }
@@ -758,12 +760,14 @@ local function make_attack_parameter(data_app, data_dmg)
         action_delivery = {
           type = "instant",
           target_effects = {
-            type = "damage",
-            damage = {amount = data_dmg.damage, type = "physical"}
-          },
-          {
-            type = "damage",
-            damage = {amount = 5, type = "acid"}
+            {
+              type = "damage",
+              damage = {amount = data_dmg.damage, type = "physical"}
+            },
+            {
+              type = "damage",
+              damage = {amount = 5, type = "acid"}
+            }
           }
         }
       }
@@ -817,7 +821,7 @@ local function make_attack_parameter(data_app, data_dmg)
     cooldown = data_dmg.cooldown,
     range = data_dmg.range,
     min_attack_distance = data_dmg.min_attack_distance,
-    projectile_creation_distance = data_dmg.creation_distance,
+    --projectile_creation_distance = data_dmg.creation_distance,
     damage_modifier = data_dmg.damage_modifier,
     warmup = data_dmg.warmup,
     ammo_type = data_dmg.ammo,
@@ -834,10 +838,12 @@ function angelsmods.functions.make_alien(def_data)
     local corpse_base = {
       type = "corpse",
       name = c_name,
-      icon = "__base__/graphics/icons/big-biter-corpse.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      tint = def_data.appearance.tint1,
+      icons={
+        {icon = "__base__/graphics/icons/big-biter-corpse.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        tint = def_data.appearance.tint1,
+      }},
       selection_box = {{-1, -1}, {1, 1}},
       selectable_in_game = false,
       subgroup = "corpses",
@@ -942,7 +948,6 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
         -- in ticks per 1 pu
         pollution_absorption_absolute = 20,
         pollution_absorption_proportional = 0.01,
-        pollution_to_enhance_spawning = 30000,
         loot = {},
         corpse = "biter-spawner-corpse",
         dying_explosion = "blood-explosion-huge",
@@ -1006,10 +1011,35 @@ function angelsmods.functions.update_spawner(us_data)
     local spawner = data.raw["unit-spawner"][s_name]
     --log(serpent.block(spawner))
     spawner.resistances = spawner.resistances or {}
-    table.insert(spawner.resistances, us_data.resistance)
+    for _,new_resistance_data in pairs(us_data.resistance or {}) do
+      local existing_resistace = false
+      for old_resistance_index,old_resistance_data in pairs(spawner.resistances) do
+        if old_resistance_data.type == new_resistance_data.type then
+          spawner.resistances[old_resistance_index] = new_resistance_data
+          existing_resistace = true
+          break
+        end
+      end
+      if not existing_resistance then
+        table.insert(spawner.resistances, new_resistance_data)
+      end
+    end
     spawner.max_health = us_data.appearance.health
     spawner.spawning_cooldown = us_data.appearance.spawn_cooldown
-    table.insert(spawner.result_units, us_data.results)
+    spawner.result_units = spawner.result_units or {}
+    for _,new_result_unit_data in pairs(us_data.results or {}) do
+      local existing_result_unit = false
+      for old_result_unit_index,old_result_unit_data in pairs(spawner.result_units) do
+        if old_result_unit_data[1] == new_result_unit_data[1] then
+          spawner.result_units[old_result_unit_index] = new_result_unit_data
+          existing_result_unit = true
+          break
+        end
+      end
+      if not existing_resistance then
+        table.insert(spawner.result_units, new_result_unit_data)
+      end
+    end
   end
 end
 

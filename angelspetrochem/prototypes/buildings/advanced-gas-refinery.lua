@@ -305,6 +305,7 @@ data:extend(
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "gas-refinery-3"},
     fast_replaceable_group = "gas-refinery",
+    next_upgrade = "gas-refinery-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",

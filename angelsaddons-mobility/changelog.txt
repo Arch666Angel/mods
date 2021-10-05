@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 10.08.2021
+  Features:
+    - Added compatibility for grid equipment from "Power Armor MK3" & "Portable Power" mods
+    - Added some basic tips and tricks for the trains
+    - Superfluous property clean-up
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 26.05.2021
   Bugfixes:

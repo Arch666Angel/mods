@@ -12,8 +12,6 @@ data:extend(
     base_color = {r = 0.8, g = 0.8, b = 1},
     flow_color = {r = 0.8, g = 0.8, b = 1},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -26,8 +24,6 @@ data:extend(
     base_color = {r = 1, g = 0.8, b = 0.4},
     flow_color = {r = 1, g = 0.8, b = 0.4},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -40,8 +36,6 @@ data:extend(
     base_color = {r = 0.75, g = 0.75, b = 1},
     flow_color = {r = 0.75, g = 0.75, b = 1},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   --SOLIDS
   {
@@ -156,8 +150,6 @@ data:extend(
     base_color = {r = 0.9, g = 0.9, b = 0.9},
     flow_color = {r = 0.9, g = 0.9, b = 0.9},
     max_temperature = 100,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   --CATALYSTS
   {

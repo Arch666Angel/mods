@@ -77,7 +77,6 @@ if mods["bobplates"] then
         icon = "__angelsrefining__/graphics/technology/geode-processing-cyan.png",
         icon_size = 256,
         icon_mipmaps = 2,
-        upgrade = true,
         prerequisites = {
           "geode-processing-2"
         },
@@ -123,7 +122,6 @@ if mods["bobplates"] then
         icon = "__angelsrefining__/graphics/technology/geode-processing-blue.png",
         icon_size = 256,
         icon_mipmaps = 2,
-        upgrade = true,
         prerequisites = {
         "geode-crystallization-1"
         },
@@ -197,4 +195,14 @@ if mods["bobplates"] then
   else
     move_item("thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
+end
+
+-------------------------------------------------------------------------------
+-- TECH TREE CLEANUP ----------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  OV.add_prereq("zinc-processing", "ore-floatation")
+
+  OV.set_science_pack("cobalt-processing", "chemical-science-pack", 1)
+  OV.add_prereq("cobalt-processing", "ore-leaching")
 end

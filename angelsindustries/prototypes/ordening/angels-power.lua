@@ -242,7 +242,7 @@ if mods["bobpower"] then
           type = "item-subgroup",
           name = "angels-power-nuclear-reactor-a",
           group = "angels-power",
-          order = "c[nuclear]-b[burner-reactor]"
+          order = "c[nuclear]-b[angels-burner-reactor]"
         }
       }
     )
@@ -292,7 +292,7 @@ if mods["bobpower"] then
         }
       }
     )
-    
+
     move_item("heat-pipe", "angels-power-nuclear-heat-pipe", "a")
     move_item("heat-pipe-2", "angels-power-nuclear-heat-pipe", "b")
     move_item("heat-pipe-3", "angels-power-nuclear-heat-pipe", "c")

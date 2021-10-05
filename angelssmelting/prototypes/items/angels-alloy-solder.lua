@@ -24,8 +24,6 @@ data:extend(
     base_color = {r = 106/255, g = 138/255, b = 129/255},
     flow_color = {r = 106/255, g = 138/255, b = 129/255},
     max_temperature = 200,
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
     auto_barrel = false
   },
   {
