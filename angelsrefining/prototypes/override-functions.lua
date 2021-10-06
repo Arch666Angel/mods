@@ -554,7 +554,8 @@ end
 -------------------------------------------------------------------------------
 -- OVERRIDE ITEM FUNCTIONS ----------------------------------------------------
 -------------------------------------------------------------------------------
-ov_functions.global_replace_science_packs = function(primary_old, secondary_old, new, amount) -- if a technology uses primary_old science packs for research, replaces them with new science packs and also removes any science packs in secondary_old (may be a table containing a list of packs)
+ov_functions.global_replace_science_packs = function(primary_old, secondary_old, new, amount)
+-- if a technology uses primary_old science packs for research, replaces them with new science packs and also removes any science packs in secondary_old (may be a table containing a list of packs)
   substitution_table.science_packs[primary_old] = {add = new, amount = amount or 1}
   if secondary_old then
     if type(secondary_old) == "table" then
@@ -565,7 +566,8 @@ ov_functions.global_replace_science_packs = function(primary_old, secondary_old,
   end
 end
 
-ov_functions.set_science_pack = function(technology, pack, amount) -- adds science packs of type pack to technology (both may be tables), may optionally take an amount of science packs to set to (default 1)
+ov_functions.set_science_pack = function(technology, pack, amount) 
+-- adds science packs of type pack to technology (both may be tables), may optionally take an amount of science packs to set to (default 1)
   if type(technology) == "table" then
     for k, tech in pairs(technology) do
       ov_functions.set_science_pack(tech, pack, amount)
@@ -581,7 +583,8 @@ ov_functions.set_science_pack = function(technology, pack, amount) -- adds scien
   end
 end
 
-ov_functions.remove_science_pack = function(technology, pack) -- removes science packs of type pack from technology (both may be tables)
+ov_functions.remove_science_pack = function(technology, pack)
+-- removes science packs of type pack from technology (both may be tables)
   ov_functions.set_science_pack(technology, pack, 0)
 end
 
@@ -599,64 +602,6 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
     }
   end
 end
-
---[[-- INCOMPLETE FUNCTION: have to duplicate barrel as well
-ov_functions.duplicate_barreling_at_temperature = function(fluid, temp, min_temp, max_temp)
-  temp = temp or nil
-  min_temp = min_temp or nil
-  max_temp = max_temp or nil
-  if data.raw.fluid[fluid] then
-    local fluid = data.raw.fluid[fluid]
-    local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
-    local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
-    local duplicate
-    if fill_barrel then
-      duplicate = table.deepcopy(fill_barrel)
-      duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
-      for _, ingredient in pairs(duplicate.ingredients) do
-        if ingredient.type == "fluid" and ingredient.name == fluid.name then
-          if temp then
-            ingredient.temperature = temp
-          else
-            ingredient.minimum_temperature = min_temp
-            ingredient.maximum_temperature = max_temp
-          end
-        end
-      end
-      data:extend(
-        {
-          duplicate
-        }
-      )
-    end
-    if empty_barrel then
-      duplicate = table.deepcopy(empty_barrel)
-      duplicate.name = duplicate.name .. "-" .. (temp or "") .. (min_temp or "") .. (max_temp or "")
-      for _, ingredient in pairs(empty_barrel.results) do
-        if ingredient.type == "fluid" and ingredient.name == fluid.name then
-          if temp then
-            ingredient.temperature = temp
-          else
-            ingredient.minimum_temperature = min_temp
-            ingredient.maximum_temperature = max_temp
-          end
-        end
-      end
-      if temp then
-        fill_barrel.temperature = temp
-      else
-        fill_barrel.minimum_temperature = min_temp
-        fill_barrel.maximum_temperature = max_temp
-      end
-      data:extend(
-        {
-          duplicate
-        }
-      )
-    end
-  end
-end
---]]--
 
 ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_temp)
   temp = temp or nil

@@ -59,8 +59,8 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.9, g = 0.9, b = 1},
-      flow_color = {r = 0.9, g = 0.9, b = 1},
+      base_color = angelsmods.functions.fluid_color({"w4","a","l"}),--{r = 0.9, g = 0.9, b = 1},
+      flow_color = angelsmods.functions.flow_color({"w4","a","l"}),--{r = 0.9, g = 0.9, b = 1},
       max_temperature = 100,
 
     },
@@ -72,8 +72,8 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.2KJ",
-      base_color = {r = 0.7, g = 0.7, b = 1},
-      flow_color = {r = 0.7, g = 0.7, b = 1},
+      base_color = angelsmods.functions.fluid_color({"w"}),--{r = 0.7, g = 0.7, b = 1},
+      flow_color = angelsmods.functions.flow_color({"w"}),--{r = 0.7, g = 0.7, b = 1},
       max_temperature = 100,
 
     },
@@ -85,8 +85,8 @@ data:extend(
       order = "a",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.9, g = 0.9, b = 0.4},
-      flow_color = {r = 0.9, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w2","s"}),--{r = 0.9, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"w2","s"}),--{r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -98,8 +98,8 @@ data:extend(
       order = "d",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.9, g = 0.4, b = 0.4},
-      flow_color = {r = 0.9, g = 0.4, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w2","o"}),--{r = 0.9, g = 0.4, b = 0.4}, --red calls for oxy, even though it should be blue for nitrogen
+      flow_color = angelsmods.functions.flow_color({"w2","o"}),--{r = 0.9, g = 0.4, b = 0.4},
       max_temperature = 100,
 
     },
@@ -111,8 +111,8 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.4, g = 0.9, b = 0.4},
-      flow_color = {r = 0.4, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w2","l"}),--{r = 0.4, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"w2","l"}),--{r = 0.4, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -124,8 +124,8 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.9, g = 0.9, b = 0.4},
-      flow_color = {r = 0.9, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w2","f"}),--{r = 0.9, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"w2","f"}),--{r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },

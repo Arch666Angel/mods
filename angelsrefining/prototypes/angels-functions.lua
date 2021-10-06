@@ -164,6 +164,7 @@ local icon_tint_table = {
   i = {{142, 148, 148}, {142, 148, 148}, {142, 148, 148}}, -- Silicon
   t = {{135, 090, 023}, {nil, nil, nil}, {nil, nil, nil}}, -- Tungsten
   w = {{094, 114, 174}, {088, 104, 163}, {088, 101, 155}}, -- Water/Steam
+  e = {{243, 135, 000}}, -- thermal water/lithium
   m = {{041, 041, 180}}, -- Complex
   a = {{115, 063, 163}}, -- Sodium
   p = {{244, 125, 001}}, -- Phosphorus
@@ -1039,6 +1040,7 @@ local function RGBtoHSV(color)
 		a = color.a or 1
 	}
 end
+
 local function HSVtoRGB(color)
 	local h,s,v,a = color.h, color.s, color.v, color.a
 	local function f(n)
@@ -1052,6 +1054,7 @@ local function HSVtoRGB(color)
 		a = color.a or 1
 	}
 end
+
 --The following 3 functions utilise features developed in PCPRedux by @Pezzawinkle
 local function formula_extraction_1(chemical_formula)
   local rgb = {}
@@ -1064,6 +1067,7 @@ local function formula_extraction_1(chemical_formula)
     end
   return rgb
 end
+
 local function formula_extraction_2(chemical_formula)
   local multi = {}
   for n,form in pairs(chemical_formula) do
@@ -1072,6 +1076,15 @@ local function formula_extraction_2(chemical_formula)
   end
   return multi
 end
+local function total_shade(chemical_formula)
+  local change = 0
+  local multi = formula_extraction_2(chemical_formula)
+  for _, sum in pairs(multi) do
+    change = change + sum
+  end
+  return change
+end
+
 function angelsmods.functions.fluid_color(chemical_formula) --color blending based on a general chemical formula
   local color = {}
   local rgb = formula_extraction_1(chemical_formula)
@@ -1104,6 +1117,13 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
     HSV.s = 1-0.60*(1-HSV.s)
     color = HSVtoRGB(HSV)
   end
+  return color
+end
+
+function angelsmods.functions.flow_color(chemical_formula) --makes it lighter by some margin
+  change = total_shade(chemical_formula)*6
+  table.insert(chemical_formula,"h"..change)
+  local color = angelsmods.functions.fluid_color(chemical_formula)
   return color
 end
 
