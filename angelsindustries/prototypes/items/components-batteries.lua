@@ -249,8 +249,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {r = 255, g = 216, b = 0,a=0.5},
-      flow_color = {r = 255, g = 216, b = 0,a=0.5}
+      base_color = angelsmods.functions.fluid_color({--[[sulfuric]]"s","h2","o4","w",--[[saline]]"w4","a","l"}),--{r = 255, g = 216, b = 0,a=0.5},
+      flow_color = angelsmods.functions.flow_color({--[[sulfuric]]"s","h2","o4","w",--[[saline]]"w4","a","l"}),--{r = 255, g = 216, b = 0,a=0.5}
     },
     {
       type = "fluid",
@@ -263,8 +263,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color({--[[saline]]"w4","a","l",--[[water]],"w4"}),--{1,1,1},
+      flow_color = angelsmods.functions.flow_color({--[[saline]]"w4","a","l",--[[water]],"w4"}),--{1,1,1}
     },
     {
       type = "fluid",
@@ -277,8 +277,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color({--[[lithia]]"e2",--[[water]],"w2",--[[C]]"c"}),--{1,1,1},
+      flow_color = angelsmods.functions.flow_color({--[[lithia]]"e2",--[[water]],"w2",--[[C]]"c"}),--{1,1,1}
     },
     {
       type = "fluid",
@@ -291,8 +291,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = {r = 0.8, g = 0.8, b = 1},
+      flow_color = {r = 0.8, g = 0.8, b = 1},
     },
     {
       type = "fluid",
@@ -305,8 +305,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color({--[[lithia]]"e",--[[glass]]"m"}),--{1,1,1},
+      flow_color = angelsmods.functions.flow_color({--[[lithia]]"e",--[[glass]]"m"}),--{1,1,1}
     },
     {
       type = "fluid",
@@ -319,8 +319,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color({--[[sodium]],"a"}),--{1,1,1},
+      flow_color = angelsmods.functions.flow_color({--[[sodium]],"a"}),--{1,1,1}
     },
   })
 end

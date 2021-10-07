@@ -14,8 +14,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 1, b = 0.3},
-      flow_color = {r = 1, g = 1, b = 0.3},
+      base_color = angelsmods.functions.fluid_color({"h2","s"}),--{r = 1, g = 1, b = 0.3},
+      flow_color = angelsmods.functions.flow_color({"h2","s"}),--{r = 1, g = 1, b = 0.3},
       max_temperature = 100,
     },
     {
@@ -28,8 +28,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 1, b = 0.3},
-      flow_color = {r = 1, g = 1, b = 0.3},
+      base_color = angelsmods.functions.fluid_color({"s2","h","w"}),--{r = 1, g = 1, b = 0.3},
+      flow_color = angelsmods.functions.flow_color({"s2","h","w"}),--{r = 1, g = 1, b = 0.3},
       max_temperature = 100,
       auto_barrel = false
     },
@@ -44,8 +44,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.9, g = 0.9, b = 0.2},
-      flow_color = {r = 0.9, g = 0.9, b = 0.2},
+      base_color = angelsmods.functions.fluid_color({"s","o2"}),--{r = 0.9, g = 0.9, b = 0.2},
+      flow_color = angelsmods.functions.flow_color({"s","o2"}),--{r = 0.9, g = 0.9, b = 0.2},
       max_temperature = 100,
     },
     {
@@ -58,8 +58,8 @@ data:extend(
       order = "ca",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.8, g = 0.8, b = 0.1},
-      flow_color = {r = 0.8, g = 0.8, b = 0.1},
+      base_color = angelsmods.functions.fluid_color({"s","h2","o4","w"}),--{r = 0.8, g = 0.8, b = 0.1},
+      flow_color = angelsmods.functions.flow_color({"s","h2","o4","w"}),--{r = 0.8, g = 0.8, b = 0.1},
       max_temperature = 100,
     },
     {

@@ -34,7 +34,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"h"}),--{r = 1, g = 1, b = 1},
-      flow_color = angelsmods.functions.fluid_color({"h"}),--{r = 1, g = 1, b = 1},
+      flow_color = angelsmods.functions.flow_color({"h"}),--{r = 1, g = 1, b = 1},
       max_temperature = 100,
 
     },
@@ -55,7 +55,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"o"}),--{r = 1, g = 0, b = 0},
-      flow_color = angelsmods.functions.fluid_color({"o"}),--{r = 1, g = 0, b = 0},
+      flow_color = angelsmods.functions.flow_color({"o"}),--{r = 1, g = 0, b = 0},
       max_temperature = 100,
 
     },
@@ -76,7 +76,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"h","o"}),--{r = 1, g = 0, b = 0},
-      flow_color = angelsmods.functions.fluid_color({"h","o"}),--{r = 1, g = 0, b = 0},
+      flow_color = angelsmods.functions.flow_color({"h","o"}),--{r = 1, g = 0, b = 0},
       max_temperature = 100,
 
     },
@@ -95,7 +95,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"c","o"}),--{r = 1, g = 0.4, b = 0.4},
-      flow_color = angelsmods.functions.fluid_color({"c","o"}),--{r = 1, g = 0.4, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"c","o"}),--{r = 1, g = 0.4, b = 0.4},
       max_temperature = 100,
 
     },
@@ -116,7 +116,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"c","o2"}),--{r = 1, g = 0.5, b = 0.5},
-      flow_color = angelsmods.functions.fluid_color({"c","o2"}),--{r = 1, g = 0.5, b = 0.5},
+      flow_color = angelsmods.functions.flow_color({"c","o2"}),--{r = 1, g = 0.5, b = 0.5},
       max_temperature = 100,
 
     },
@@ -135,7 +135,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"h","f"}),--{r = 0, g = 1, b = 0.5},
-      flow_color = angelsmods.functions.fluid_color({"h","f"}),--{r = 0, g = 1, b = 0.5},
+      flow_color = angelsmods.functions.flow_color({"h","f"}),--{r = 0, g = 1, b = 0.5},
       max_temperature = 100,
 
     },
@@ -153,7 +153,7 @@ data:extend(
       default_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"h","f","w"}),--{r = 0, g = 1, b = 0.5},
-      flow_color = angelsmods.functions.fluid_color({"h","f","w"}),--{r = 0, g = 1, b = 0.5},
+      flow_color = angelsmods.functions.flow_color({"h","f","w"}),--{r = 0, g = 1, b = 0.5},
       max_temperature = 100,
 
     },
@@ -170,8 +170,8 @@ data:extend(
       order = "h[water-enriched]-a[semiheavy]-a[mk1]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color({"w5","d1"}),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color({"w5","d1"}),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
 
     },
@@ -187,8 +187,8 @@ data:extend(
       order = "h[water-enriched]-a[semiheavy]-b[mk2]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color({"w3","d1"}),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color({"w3","d1"}),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
 
     },
@@ -204,8 +204,8 @@ data:extend(
       order = "h[water-enriched]-a[semiheavy]-c[mk3]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color({"w1","d3"}),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color({"w1","d3"}),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
 
     },
@@ -223,8 +223,8 @@ data:extend(
       order = "h[water-enriched]-b[heavy]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color({"d5","w1"}),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color({"d5","w1"}),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 101,
 
     },
@@ -244,7 +244,7 @@ data:extend(
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
       base_color = angelsmods.functions.fluid_color({"d"}),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
-      flow_color = angelsmods.functions.fluid_color({"d"}),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
+      flow_color = angelsmods.functions.flow_color({"d"}),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
       max_temperature = 100,
 
     },

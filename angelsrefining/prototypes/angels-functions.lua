@@ -151,24 +151,26 @@ end
 -- ICON GENERATION ------------------------------------------------------------
 -------------------------------------------------------------------------------
 local icon_tint_table = {
+  a = {{115, 063, 163}},                                   -- Sodium
   c = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon
-  k = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, -- Coal/Oil
-  h = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, -- Hydrogen
-  o = {{249, 013, 013}, {214, 012, 012}, {198, 011, 011}}, -- Oxygen
   d = {{224, 244, 202}, {206, 206, 173}, {196, 196, 156}}, -- Deuterium
-  n = {{045, 075, 180}, {045, 076, 175}, {038, 063, 150}}, -- Nitrogen
-  l = {{031, 229, 031}, {057, 211, 040}, {075, 195, 045}}, -- Chlorine
-  s = {{225, 210, 000}, {216, 196, 017}, {210, 187, 030}}, -- Sulfur
-  g = {{105, 135, 090}, {096, 122, 082}, {088, 113, 075}}, -- Natural Gas
+  e = {{243, 135, 000}},                                   -- thermal water/lithium
   f = {{181, 208, 000}, {181, 208, 000}, {181, 208, 000}}, -- Fluoride
+  g = {{105, 135, 090}, {096, 122, 082}, {088, 113, 075}}, -- Natural Gas
+  h = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, -- Hydrogen
   i = {{142, 148, 148}, {142, 148, 148}, {142, 148, 148}}, -- Silicon
+  k = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, -- Coal/Oil
+  l = {{031, 229, 031}, {057, 211, 040}, {075, 195, 045}}, -- Chlorine
+  m = {{041, 041, 180}},                                   -- Complex
+  n = {{045, 075, 180}, {045, 076, 175}, {038, 063, 150}}, -- Nitrogen
+  o = {{249, 013, 013}, {214, 012, 012}, {198, 011, 011}}, -- Oxygen
+  p = {{244, 125, 001}},                                   -- Phosphorus
+  r = {{139, 049, 003}},                                   -- ferric metal
+  s = {{225, 210, 000}, {216, 196, 017}, {210, 187, 030}}, -- Sulfur
   t = {{135, 090, 023}, {nil, nil, nil}, {nil, nil, nil}}, -- Tungsten
+  u = {{184, 115, 051}},                                   -- cupric metal
   w = {{094, 114, 174}, {088, 104, 163}, {088, 101, 155}}, -- Water/Steam
-  e = {{243, 135, 000}}, -- thermal water/lithium
-  m = {{041, 041, 180}}, -- Complex
-  a = {{115, 063, 163}}, -- Sodium
-  p = {{244, 125, 001}}, -- Phosphorus
-  y = {{255, 105, 180}}, -- Syngas
+  y = {{255, 105, 180}},                                   -- Syngas
 }
 
 local function create_recipe_molecule_icons(molecules_icon, molecules_shift, molecules_scale)
@@ -936,8 +938,8 @@ end
 -------------------------------------------------------------------------------
 --the following functions were gratefully donated by @Maxreader on Discord
 local function isColor(input)
-	if type(input) ~= "table" then
-		return nil
+  if type(input) ~= "table" then
+    return nil
     end
     local length = table_size(input)
     if length ~= 3 and length ~= 4 then
@@ -955,104 +957,104 @@ local function isColor(input)
             input[k] = v/255
         end
     end
-	local color = {
-		r = input.r or input[1],
-		g = input.g or input[2],
-		b = input.b or input[3],
-		a = input.a or input[4] or 1
-	}
-	return color
+  local color = {
+    r = input.r or input[1],
+    g = input.g or input[2],
+    b = input.b or input[3],
+    a = input.a or input[4] or 1
+  }
+  return color
 end
 local function findRGB(inputString)
-	if type(inputString) ~= "string" then
-		return nil
-	end
-	if inputString:find("%a") then	
-		return nil
-	end
-	local rawColor = util.split(inputString:gsub("%D", " "), " ")
-	if #rawColor < 3 then
-		return nil
-	end
-	local color = {}
-	for k,v in pairs(rawColor) do
-		color[k] = v / 255
-	end
-	return {
-		r = color[1],
-		g = color[2],
-		b = color[3],
-		a = color[4] or 1
-	}
+  if type(inputString) ~= "string" then
+    return nil
+  end
+  if inputString:find("%a") then  
+    return nil
+  end
+  local rawColor = util.split(inputString:gsub("%D", " "), " ")
+  if #rawColor < 3 then
+    return nil
+  end
+  local color = {}
+  for k,v in pairs(rawColor) do
+    color[k] = v / 255
+  end
+  return {
+    r = color[1],
+    g = color[2],
+    b = color[3],
+    a = color[4] or 1
+  }
 end
 
 --modified version of util.color provided by API
 local function findHex(hex)
-	if type(hex) ~= "string" then
-		return nil
-	end
-	if hex:find("%X") or #hex > 8  or #hex == 5 or #hex == 7 then
-		return nil
-	end
+  if type(hex) ~= "string" then
+    return nil
+  end
+  if hex:find("%X") or #hex > 8  or #hex == 5 or #hex == 7 then
+    return nil
+  end
 
-	local function h(i,j)
-	  return j and tonumber("0x"..hex:sub(i,j)) / 255 or tonumber("0x"..hex:sub(i,i)) / 15
-	end
+  local function h(i,j)
+    return j and tonumber("0x"..hex:sub(i,j)) / 255 or tonumber("0x"..hex:sub(i,i)) / 15
+  end
 
-	hex = hex:gsub("#","")
-	return #hex == 6 and {r = h(1,2), g = h(3,4), b = h(5,6)}
-	  or #hex == 3 and {r = h(1), g = h(2), b = h(3)}
-	  or #hex == 8 and {r = h(1,2), g = h(3,4), b = h(5,6), a = h(7,8)}
-	  or #hex == 4 and {r = h(1), g = h(2), b = h(3), a = h(4)}
-	  or #hex == 2 and {r = h(1,2), g = h(1,2), b = h(1,2)}
-	  or #hex == 1 and {r = h(1), g = h(1), b = h(1)}
-	  or {r=1, g=1, b=1}
+  hex = hex:gsub("#","")
+  return #hex == 6 and {r = h(1,2), g = h(3,4), b = h(5,6)}
+    or #hex == 3 and {r = h(1), g = h(2), b = h(3)}
+    or #hex == 8 and {r = h(1,2), g = h(3,4), b = h(5,6), a = h(7,8)}
+    or #hex == 4 and {r = h(1), g = h(2), b = h(3), a = h(4)}
+    or #hex == 2 and {r = h(1,2), g = h(1,2), b = h(1,2)}
+    or #hex == 1 and {r = h(1), g = h(1), b = h(1)}
+    or {r=1, g=1, b=1}
 end
 
 local function toColor(color)
-	return isColor(color) or findHex(color) or findRGB(color) or {r=0,g=0,b=0,a=1}
+  return isColor(color) or findHex(color) or findRGB(color) or {r=0,g=0,b=0,a=1}
 end
 local function RGBtoHSV(color)
   color = toColor(color)
-	local r,g,b = color.r, color.g, color.b
-	local max = math.max(r,g,b)
-	local min = math.min(r,g,b)
-	local range = max - min
-	local h
-	if range == 0 then
-		h = 0
-	elseif max == r then
-		h = (g-b)/range*60
-	elseif max == g then
-		h = (2+(b-r)/range)*60
-	elseif max == b then
-		h = (4+(r-g)/range)*60
-	end
-	if h < 0 then
-		h = h + 360
-	end
-	local v = max
-	local s = range/max
-	return{
-		h = h,
-		s = s,
-		v = v,
-		a = color.a or 1
-	}
+  local r,g,b = color.r, color.g, color.b
+  local max = math.max(r,g,b)
+  local min = math.min(r,g,b)
+  local range = max - min
+  local h
+  if range == 0 then
+    h = 0
+  elseif max == r then
+    h = (g-b)/range*60
+  elseif max == g then
+    h = (2+(b-r)/range)*60
+  elseif max == b then
+    h = (4+(r-g)/range)*60
+  end
+  if h < 0 then
+    h = h + 360
+  end
+  local v = max
+  local s = range/max
+  return{
+    h = h,
+    s = s,
+    v = v,
+    a = color.a or 1
+  }
 end
 
 local function HSVtoRGB(color)
-	local h,s,v,a = color.h, color.s, color.v, color.a
-	local function f(n)
-		local k = (n + h/60) % 6
-		return v - v*s*math.max(math.min(k,4-k,1),0)
-	end
-	return {
-		r = f(5),
-		g = f(3),
-		b = f(1),
-		a = color.a or 1
-	}
+  local h,s,v,a = color.h, color.s, color.v, color.a
+  local function f(n)
+    local k = (n + h/60) % 6
+    return v - v*s*math.max(math.min(k,4-k,1),0)
+  end
+  return {
+    r = f(5),
+    g = f(3),
+    b = f(1),
+    a = color.a or 1
+  }
 end
 
 --The following 3 functions utilise features developed in PCPRedux by @Pezzawinkle
@@ -1088,10 +1090,10 @@ end
 function angelsmods.functions.fluid_color(chemical_formula) --color blending based on a general chemical formula
   local color = {}
   local rgb = formula_extraction_1(chemical_formula)
-	local multi = formula_extraction_2(chemical_formula)
-	--should only consist of the first 3 items, with an optional 4th
-	local red, green, blue, alpha, comb = 0,0,0,0,0
-	local ave_denom = #rgb
+  local multi = formula_extraction_2(chemical_formula)
+  --should only consist of the first 3 items, with an optional 4th
+  local red, green, blue, alpha, comb = 0,0,0,0,0
+  local ave_denom = #rgb
   if ave_denom == 2 and rgb[1]==icon_tint_table["c"][1] and rgb[2]==icon_tint_table["h"][1] then
     -- Hydrocarbon only
     local m_c = tonumber(multi[1])/8

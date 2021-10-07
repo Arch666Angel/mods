@@ -130,8 +130,8 @@ data:extend(
     gas_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=184/255, g=171/255, b=28/255},
-    flow_color = {r=184/255, g=171/255, b=28/255},
+    base_color = angelsmods.functions.fluid_color({"c2","h6","o"}),--{r=184/255, g=171/255, b=28/255},
+    flow_color = angelsmods.functions.flow_color({"c2","h6","o"}),--{r=184/255, g=171/255, b=28/255},
   },
   {
     type = "fluid",
@@ -156,8 +156,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=184/255, g=171/255, b=28/255},
-    flow_color = {r=184/255, g=171/255, b=28/255},
+    base_color = angelsmods.functions.fluid_color({"c2","h4","o"}),--{r=184/255, g=171/255, b=28/255},
+    flow_color = angelsmods.functions.flow_color({"c2","h4","o"}),--{r=184/255, g=171/255, b=28/255},
   },
   {
     type = "fluid",
@@ -169,8 +169,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=184/255, g=171/255, b=28/255},
-    flow_color = {r=184/255, g=171/255, b=28/255},
+    base_color = angelsmods.functions.fluid_color({"c4","h6","o3"}),--{r=184/255, g=171/255, b=28/255},
+    flow_color = angelsmods.functions.flow_color({"c4","h6","o3"}),--{r=184/255, g=171/255, b=28/255},
   },
   {
     type = "fluid",
@@ -195,8 +195,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=184/255, g=171/255, b=28/255},
-    flow_color = {r=184/255, g=171/255, b=28/255},
+    base_color = angelsmods.functions.fluid_color({"c4","h14","o13"}),--{r=184/255, g=171/255, b=28/255},
+    flow_color = angelsmods.functions.flow_color({"c4","h14","o13"}),--{r=184/255, g=171/255, b=28/255},
   },
   {
     type = "fluid",
@@ -208,8 +208,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=184/255, g=171/255, b=28/255},
-    flow_color = {r=184/255, g=171/255, b=28/255},
+    base_color = angelsmods.functions.fluid_color({"c3","h6","o2"}),--{r=184/255, g=171/255, b=28/255},
+    flow_color = angelsmods.functions.flow_color({"c3","h6","o2"}),--{r=184/255, g=171/255, b=28/255},
   },
 }
 )
