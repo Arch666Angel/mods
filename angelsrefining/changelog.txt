@@ -3,6 +3,7 @@ Version: 0.12.1
 Date: ??
   Changes:
     - Allowed higher tier techs to show in tech tree search results
+    - Added HQ graphics to the clarifier
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)
