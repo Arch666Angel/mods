@@ -97,39 +97,6 @@ function filtrationpipepictures()
   }
 end
 
-function crystallizerpipepictures()
-  return {
-    north = {
-      filename = "__angelsrefining__/graphics/entity/crystallizer/pipe-north.png",
-      priority = "extra-high",
-      width = 34,
-      height = 42,
-      shift = {0, 0.6}
-    },
-    east = {
-      filename = "__angelsrefining__/graphics/entity/crystallizer/pipe-east.png",
-      priority = "extra-high",
-      width = 38,
-      height = 31,
-      shift = {-0.8, 0.05}
-    },
-    south = {
-      filename = "__angelsrefining__/graphics/entity/crystallizer/pipe-south.png",
-      priority = "extra-high",
-      width = 34,
-      height = 39,
-      shift = {0, -0.75}
-    },
-    west = {
-      filename = "__angelsrefining__/graphics/entity/crystallizer/pipe-west.png",
-      priority = "extra-high",
-      width = 34,
-      height = 47,
-      shift = {0.7, -0.05}
-    }
-  }
-end
-
 function hydropipepictures()
   return {
     north = {
