@@ -344,7 +344,6 @@ data:extend(
             width = 64,
             height = 64,
             repeat_count = 36,
-            shift = 0,
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               draw_as_shadow = true,
               filename = "__angelsrefining__/graphics/entity/clarifier/hr-vertical-pipe-shadow-patch.png",
