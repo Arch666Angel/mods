@@ -1,4 +1,5 @@
 function floatationpipepictures()
+  -- used by electrowinning still... not by floatation cell itself
   return {
     north = {
       filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/pipe-north.png",
@@ -93,72 +94,6 @@ function filtrationpipepictures()
       width = 34,
       height = 47,
       shift = {0.7, -0.1}
-    }
-  }
-end
-
-function hydropipepictures()
-  return {
-    north = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/pipe-north1.png",
-      priority = "extra-high",
-      width = 48,
-      height = 48,
-      shift = {-0.08, 0.45}
-    },
-    east = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/blank.png",
-      priority = "extra-high",
-      width = 1,
-      height = 1,
-      shift = {0, 0}
-    },
-    south = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/pipe-south1.png",
-      priority = "extra-high",
-      width = 48,
-      height = 48,
-      shift = {0.06, -0.6}
-    },
-    west = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/pipe-east1.png",
-      priority = "extra-high",
-      width = 48,
-      height = 48,
-      shift = {0.62, 0.05}
-    }
-  }
-end
-
-function hydropipepictures2()
-  return {
-    north = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/pipe-north2.png",
-      priority = "extra-high",
-      width = 48,
-      height = 48,
-      shift = {-0.08, 0.45}
-    },
-    east = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/blank.png",
-      priority = "extra-high",
-      width = 1,
-      height = 1,
-      shift = {0, 0}
-    },
-    south = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/pipe-south1.png",
-      priority = "extra-high",
-      width = 48,
-      height = 48,
-      shift = {0.06, -0.6}
-    },
-    west = {
-      filename = "__angelsrefining__/graphics/entity/hydro-plant/pipe-east2.png",
-      priority = "extra-high",
-      width = 48,
-      height = 48,
-      shift = {0.62, 0.05}
     }
   }
 end
