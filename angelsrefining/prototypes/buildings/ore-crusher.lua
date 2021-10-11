@@ -4,14 +4,14 @@ data:extend(
     {
       type = "item",
       name = "burner-ore-crusher",
-      icons = --angelsmods.functions.add_number_icon_layer(
+      icons = angelsmods.functions.add_number_icon_layer(
         {
           {
-            icon = "__angelsrefining__/graphics/icons/ore-crusher-burner.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 64, icon_mipmaps = 4
           }
         },
-        --1, angelsmods.refining.number_tint),
+        0, angelsmods.refining.number_tint),
       subgroup = "ore-crusher",
       order = "a[burner-ore-crusher]",
       place_result = "burner-ore-crusher",
@@ -20,14 +20,14 @@ data:extend(
     {
       type = "assembling-machine",
       name = "burner-ore-crusher",
-      icons = --angelsmods.functions.add_number_icon_layer(
+      icons = angelsmods.functions.add_number_icon_layer(
         {
           {
-            icon = "__angelsrefining__/graphics/icons/ore-crusher-burner.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 64, icon_mipmaps = 4
           }
         },
-        --1, angelsmods.refining.number_tint),
+        0, angelsmods.refining.number_tint),
       flags = {"placeable-neutral", "player-creation"},
       minable = {mining_time = 0.5, result = "burner-ore-crusher"},
       fast_replaceable_group = "ore-crusher",
@@ -50,7 +50,7 @@ data:extend(
             name = "smoke",
             deviation = {0.1, 0.1},
             frequency = 5,
-            position = {0.0, -0.8},
+            position = util.by_pixel_hr(48, -108),
             starting_vertical_speed = 0.08,
             starting_frame_deviation = 60
           }
@@ -61,32 +61,55 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-crusher/1ore-crusher.png",
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-base.png",
             priority = "extra-high",
-            width = 128,
-            height = 128,
+            width = 94,
+            height = 108,
             frame_count = 16,
             line_length = 4,
-            shift = {0.45, -0.25},
-            animation_speed = 0.5
+            shift = util.by_pixel(0, -5),
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-base.png",
+              priority = "extra-high",
+              width = 189,
+              height = 214,
+              frame_count = 16,
+              line_length = 4,
+              shift = util.by_pixel(-0.5, -5),
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-crusher/2ore-crusher-overlay.png",
-            tint = {r = 0.2, g = 0.2, b = 0.2},
-            priority = "high",
-            width = 128,
-            height = 128,
-            frame_count = 16,
-            line_length = 4,
-            shift = {0.45, -0.25}
-          }
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-shadow.png",
+            priority = "extra-high",
+            width = 141,
+            height = 72,
+            repeat_count = 16,
+            shift = util.by_pixel(25, 17),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-shadow.png",
+              priority = "extra-high",
+              width = 282,
+              height = 140,
+              repeat_count = 16,
+              shift = util.by_pixel(24, 17.5),
+              draw_as_shadow = true,
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg", volume = 0.8},
+        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg", volume = 0.6},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2
+        audible_distance_modifier = 0.5,
+        apparent_volume = 1.25
       }
     },
     --Ore-Crusher
@@ -97,7 +120,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         1, angelsmods.refining.number_tint),
@@ -113,7 +136,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         1, angelsmods.refining.number_tint),
@@ -140,20 +163,57 @@ data:extend(
       energy_usage = "100kW",
       ingredient_count = 3,
       animation = {
-        filename = "__angelsrefining__/graphics/entity/ore-crusher/1ore-crusher.png",
-        priority = "extra-high",
-        width = 128,
-        height = 128,
-        frame_count = 16,
-        line_length = 4,
-        shift = {0.45, -0.25},
-        animation_speed = 0.5
+        layers = {
+          {
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-base.png",
+            priority = "extra-high",
+            width = 94,
+            height = 108,
+            frame_count = 16,
+            line_length = 4,
+            shift = util.by_pixel(0, -5),
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-base.png",
+              priority = "extra-high",
+              width = 189,
+              height = 214,
+              frame_count = 16,
+              line_length = 4,
+              shift = util.by_pixel(-0.5, -5),
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-shadow.png",
+            priority = "extra-high",
+            width = 141,
+            height = 72,
+            repeat_count = 16,
+            shift = util.by_pixel(25, 17),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-shadow.png",
+              priority = "extra-high",
+              width = 282,
+              height = 140,
+              repeat_count = 16,
+              shift = util.by_pixel(24, 17.5),
+              draw_as_shadow = true,
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg", volume = 0.6},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2
+        audible_distance_modifier = 0.5,
+        apparent_volume = 1.25
       }
     },
     {
@@ -162,8 +222,8 @@ data:extend(
       icons = angelsmods.functions.add_number_icon_layer(
         {
           {
-            icon = "__angelsrefining__/graphics/icons/ore-crusher-2.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         2, angelsmods.refining.number_tint),
@@ -178,8 +238,8 @@ data:extend(
       icons = angelsmods.functions.add_number_icon_layer(
         {
           {
-            icon = "__angelsrefining__/graphics/icons/ore-crusher-2.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         2, angelsmods.refining.number_tint),
@@ -208,32 +268,55 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-crusher/1ore-crusher.png",
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-base.png",
             priority = "extra-high",
-            width = 128,
-            height = 128,
+            width = 94,
+            height = 108,
             frame_count = 16,
             line_length = 4,
-            shift = {0.45, -0.25},
-            animation_speed = 0.5
+            shift = util.by_pixel(0, -5),
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-base.png",
+              priority = "extra-high",
+              width = 189,
+              height = 214,
+              frame_count = 16,
+              line_length = 4,
+              shift = util.by_pixel(-0.5, -5),
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-crusher/2ore-crusher-overlay.png",
-            tint = {r = 0.2, g = 0.3, b = 0.45},
-            priority = "high",
-            width = 128,
-            height = 128,
-            frame_count = 16,
-            line_length = 4,
-            shift = {0.45, -0.25}
-          }
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-shadow.png",
+            priority = "extra-high",
+            width = 141,
+            height = 72,
+            repeat_count = 16,
+            shift = util.by_pixel(25, 17),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-shadow.png",
+              priority = "extra-high",
+              width = 282,
+              height = 140,
+              repeat_count = 16,
+              shift = util.by_pixel(24, 17.5),
+              draw_as_shadow = true,
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg", volume = 0.6},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2
+        audible_distance_modifier = 0.5,
+        apparent_volume = 1.25
       }
     },
     {
@@ -242,8 +325,8 @@ data:extend(
       icons = angelsmods.functions.add_number_icon_layer(
         {
           {
-            icon = "__angelsrefining__/graphics/icons/ore-crusher-3.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         3, angelsmods.refining.number_tint),
@@ -258,8 +341,8 @@ data:extend(
       icons = angelsmods.functions.add_number_icon_layer(
         {
           {
-            icon = "__angelsrefining__/graphics/icons/ore-crusher-3.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         3, angelsmods.refining.number_tint),
@@ -287,32 +370,55 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-crusher/1ore-crusher.png",
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-base.png",
             priority = "extra-high",
-            width = 128,
-            height = 128,
+            width = 94,
+            height = 108,
             frame_count = 16,
             line_length = 4,
-            shift = {0.45, -0.25},
-            animation_speed = 0.5
+            shift = util.by_pixel(0, -5),
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-base.png",
+              priority = "extra-high",
+              width = 189,
+              height = 214,
+              frame_count = 16,
+              line_length = 4,
+              shift = util.by_pixel(-0.5, -5),
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-crusher/2ore-crusher-overlay.png",
-            tint = {r = 0.50, g = 0.1, b = 0.05},
-            priority = "high",
-            width = 128,
-            height = 128,
-            frame_count = 16,
-            line_length = 4,
-            shift = {0.45, -0.25}
-          }
+            filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-shadow.png",
+            priority = "extra-high",
+            width = 141,
+            height = 72,
+            repeat_count = 16,
+            shift = util.by_pixel(25, 17),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-shadow.png",
+              priority = "extra-high",
+              width = 282,
+              height = 140,
+              repeat_count = 16,
+              shift = util.by_pixel(24, 17.5),
+              draw_as_shadow = true,
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-crusher.ogg", volume = 0.6},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2
+        audible_distance_modifier = 0.5,
+        apparent_volume = 1.25
       }
     }
   }

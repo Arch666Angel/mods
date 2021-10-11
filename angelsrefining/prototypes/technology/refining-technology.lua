@@ -5,7 +5,7 @@ data:extend(
       type = "technology",
       name = "ore-crushing",
       icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "automation"
       },
@@ -236,7 +236,7 @@ data:extend(
       type = "technology",
       name = "ore-floatation",
       icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-crushing",
         "water-treatment-2",
