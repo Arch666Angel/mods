@@ -5,6 +5,7 @@ Date: ??
     - Allowed higher tier techs to show in tech tree search results
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Clarifier, Crystallizer, Hydro plant
+      - Ore crusher
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)
