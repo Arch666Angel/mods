@@ -924,6 +924,44 @@ function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
     nil
 end
 
+function angelsmods.functions.get_recipe_tints(primary, secondary, tertiary)
+  --can parse direct colours or search for items (currently only works for multiple fluids)
+  local tints={}
+  for index, name in pairs({primary, secondary, tertiary}) do
+    if type(name)== "table" then
+      tints[index] = name
+      --ammend alpha
+      --tints[index].a = (tints[index].r < 1 and tints[index].g <1) and 185/255 or 185
+    elseif name == nil then --skip
+    elseif type(name)== "string" then
+      --search through items and fluids
+      local found = ""
+      for _, type in pairs({"fluid"--[[,"item"]]}) do
+        if data.raw[type][name] then
+          local base = data.raw[type][name]
+          tints[index] = {
+            r = base.base_color.r or 0,
+            g = base.base_color.g or 0,
+            b = base.base_color.b or 0,
+            --a = (base.base_color.r < 1 and base.base_color.g < 1 ) and 185/255 or 185
+          }
+          break
+        end
+      end
+    end
+  end
+  return {
+    primary = tints[1] or 
+      {r = 0, g = 0, b = 0},
+    secondary = tints[2] or 
+      {r = 0, g = 0, b = 0},
+    --[[tertiary = tints[3]  or 
+      {r = 0, g = 0, b = 0, a = 185/255}, --i think only centrifuges use this with bobs
+    quaternary = tints[4]  or 
+      {r = 0, g = 0, b = 0, a = 185/255},]]
+  }
+end
+
 --COMPARES ARGUMENT (ARG) AGAINST A TABLE (EXCEP), RETURNS FALSE IF ARG == EXCEP ELSE TRUE
 function angelsmods.functions.check_exception(arg, excep)
   for _, exception in pairs(excep) do
@@ -1455,6 +1493,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_output_item = "water-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
+      void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name--[[,"water"]])
     elseif void_category == "chemical" then
       void_amount = void_amount or 100
       void_input_amount = void_amount > 1 and void_amount or 1
@@ -1464,6 +1503,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_output_item = "chemical-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
+      void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name)
     else
       recipe = nil -- no valid void category found
     end
@@ -1514,6 +1554,9 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.always_show_made_in = true
     recipe.allow_decomposition = false
     recipe.allow_as_intermediate = false
+    log(fluid_name.."-water-void")
+    log(serpent.block(void_tint))
+    recipe.crafting_machine_tint = void_tint or nil
     recipe.hide_from_stats = false
     recipe.subgroup = "angels-" .. void_category .. "-void"
     recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order or "z"

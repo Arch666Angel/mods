@@ -10,15 +10,18 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     {
       {
         name = "angelsore2-chunk",
-        results = {{name = "water-greenyellow-waste", type = "fluid", amount = "water-yellow-waste"}}
+        results = {{name = "water-greenyellow-waste", type = "fluid", amount = "water-yellow-waste"}},
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-greenyellow-waste",angelsmods.refining.ore_tints["ore2"])
       },
       {
         name = "angelsore4-chunk",
-        results = {{name = "water-green-waste", type = "fluid", amount = "water-yellow-waste"}}
+        results = {{name = "water-green-waste", type = "fluid", amount = "water-yellow-waste"}},
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-green-waste",angelsmods.refining.ore_tints["ore4"])
       },
       {
         name = "angelsore5-chunk",
-        results = {{name = "water-red-waste", type = "fluid", amount = "water-yellow-waste"}}
+        results = {{name = "water-red-waste", type = "fluid", amount = "water-yellow-waste"}},
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-red-waste",angelsmods.refining.ore_tints["ore5"])
       },
       {
         name = "greenyellow-waste-water-purification",

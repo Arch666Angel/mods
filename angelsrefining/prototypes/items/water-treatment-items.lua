@@ -85,8 +85,8 @@ data:extend(
       order = "a",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w2","s"}),--{r = 0.9, g = 0.9, b = 0.4},
-      flow_color = angelsmods.functions.flow_color({"w2","s"}),--{r = 0.9, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w1","s"}),--{r = 0.9, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"w1","s"}),--{r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -111,8 +111,8 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w2","l"}),--{r = 0.4, g = 0.9, b = 0.4},
-      flow_color = angelsmods.functions.flow_color({"w2","l"}),--{r = 0.4, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w1","l"}),--{r = 0.4, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"w1","l"}),--{r = 0.4, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -124,8 +124,8 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w2","f"}),--{r = 0.9, g = 0.9, b = 0.4},
-      flow_color = angelsmods.functions.flow_color({"w2","f"}),--{r = 0.9, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color({"w1","f"}),--{r = 0.9, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color({"w1","f"}),--{r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -151,7 +151,7 @@ data:extend(
       order = "a",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = {r = 0.55, g = 0.55, b = 0.5},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
@@ -164,7 +164,7 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = {r = 0.6, g = 0.6, b = 0.55},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
@@ -177,7 +177,7 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = {r = 0.6, g = 0.65, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
@@ -190,7 +190,7 @@ data:extend(
       order = "d",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = {r = 0.65, g = 0.65, b = 0.6},
       flow_color = {r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 

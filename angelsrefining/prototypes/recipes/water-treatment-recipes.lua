@@ -16,7 +16,7 @@ data:extend(
       },
       main_product = "water-mineralized",
       always_show_products = true,
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("water-mineralized"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water"--[[,"stone-crushed"]],"water-mineralised"),--get_fluid_recipe_tint("water-mineralized"),
       order = "a[water-water-mineralized]"
     },
     {
