@@ -1,3 +1,26 @@
+local function mud_blending(w,alpha) --w is weighting
+  local tint_A = util.color("6a492c") --mud custom colour
+  local tint_B = angelsmods.functions.fluid_color({"w"}) --purified water
+  local A = {
+    r = tint_A.r or tint_A[1],
+    g = tint_A.g or tint_A[1],
+    b = tint_A.b or tint_A[1],
+    a = tint_A.a or tint_A[1] or 1,
+  }
+  local B = {
+    r = tint_B.r or tint_B[1],
+    g = tint_B.g or tint_B[1],
+    b = tint_B.b or tint_B[1],
+    a = tint_B.a or tint_B[1] or 1,
+  }
+  return {
+    r = A.r*w + B.r*(1-w),
+    g = A.g*w + B.g*(1-w),
+    b = A.b*w + B.b*(1-w),
+    a = alpha or 1,
+}
+end
+
 data:extend(
   {
     --ITEMS
@@ -151,8 +174,8 @@ data:extend(
       order = "a",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.55, g = 0.55, b = 0.5},
-      flow_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = mud_blending(1),--{r = 0.55, g = 0.55, b = 0.5},
+      flow_color = mud_blending(1,0.9),--{r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
     },
@@ -164,8 +187,8 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.6, g = 0.6, b = 0.55},
-      flow_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = mud_blending(0.8),--{r = 0.6, g = 0.6, b = 0.55},
+      flow_color = mud_blending(0.8,0.9),--{r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
     },
@@ -177,8 +200,8 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.6, g = 0.65, b = 0.6},
-      flow_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = mud_blending(0.6),--{r = 0.6, g = 0.65, b = 0.6},
+      flow_color = mud_blending(0.6,0.9),--{r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
     },
@@ -190,8 +213,8 @@ data:extend(
       order = "d",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.65, g = 0.65, b = 0.6},
-      flow_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = mud_blending(0.4),--{r = 0.65, g = 0.65, b = 0.6},
+      flow_color = mud_blending(0.4,0.9),--{r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
     },
@@ -203,8 +226,8 @@ data:extend(
       order = "e",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0.7, g = 0.7, b = 0.6},
-      flow_color = {r = 0.7, g = 0.7, b = 0.6},
+      base_color = mud_blending(0.2),--{r = 0.7, g = 0.7, b = 0.6},
+      flow_color = mud_blending(0.2,0.9),--{r = 0.7, g = 0.7, b = 0.6},
       max_temperature = 100,
 
     },

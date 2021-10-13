@@ -924,14 +924,17 @@ function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
     nil
 end
 
-function angelsmods.functions.get_recipe_tints(primary, secondary, tertiary)
+function angelsmods.functions.get_recipe_tints(primary, secondary, tertiary, opacity)
   --can parse direct colours or search for items (currently only works for multiple fluids)
   local tints={}
+  local opacity = opacity or 185/255
+  local alpha = opacity > 1 and opacity/255 or opacity
   for index, name in pairs({primary, secondary, tertiary}) do
     if type(name)== "table" then
       tints[index] = name
       --ammend alpha
-      --tints[index].a = (tints[index].r < 1 and tints[index].g <1) and 185/255 or 185
+      tints[index].a = tints[index].a and tints[index].a --if alpha, maintain
+        or ((tints[index].r < 1 and tints[index].g <1) and alpha or alpha*255)
     elseif name == nil then --skip
     elseif type(name)== "string" then
       --search through items and fluids
@@ -943,7 +946,8 @@ function angelsmods.functions.get_recipe_tints(primary, secondary, tertiary)
             r = base.base_color.r or 0,
             g = base.base_color.g or 0,
             b = base.base_color.b or 0,
-            --a = (base.base_color.r < 1 and base.base_color.g < 1 ) and 185/255 or 185
+            a = base.base_color.a or --if alpha, maintain
+              ((base.base_color.r < 1 and base.base_color.g < 1 ) and alpha or alpha*255)
           }
           break
         end
