@@ -20,21 +20,21 @@ if angelsmods.trigger.enableacids then
         ingredients = {
           {name = "liquid-hydrofluoric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
         },
-        crafting_machine_tint = angelsmods.functions.get_recipe_tints("liquid-hydrofluoric-acid",ore_tints["ore2"])
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-hydrofluoric-acid",angelsmods.refining.ore_tints["ore2"]})
       },
       {
         name = "angelsore4-crystal",
         ingredients = {
           {name = "liquid-hydrochloric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
         },
-        crafting_machine_tint = angelsmods.functions.get_recipe_tints("liquid-hydrochloric-acid",ore_tints["ore4"])
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-hydrochloric-acid",angelsmods.refining.ore_tints["ore4"]})
       },
       {
         name = "angelsore5-crystal",
         ingredients = {
           {name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid"}
         },
-        crafting_machine_tint = angelsmods.functions.get_recipe_tints("liquid-nitric-acid",ore_tints["ore5"])
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-nitric-acid",angelsmods.refining.ore_tints["ore5"]})
       }
     }
   )

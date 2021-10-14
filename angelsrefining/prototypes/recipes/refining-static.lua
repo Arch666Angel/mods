@@ -266,7 +266,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore1-chunk.png",
       --icon_size = 32,
       order = "a[angelsore1-chunk]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-yellow-waste",ore_tints["ore1"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-yellow-waste",ore_tints["ore1"]})
     },
     {
       type = "recipe",
@@ -289,7 +289,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore2-chunk.png",
       --icon_size = 32,
       order = "b[angelsore2-chunk]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-yellow-waste",ore_tints["ore2"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-yellow-waste",ore_tints["ore2"]})
     },
     {
       type = "recipe",
@@ -312,7 +312,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore3-chunk.png",
       --icon_size = 32,
       order = "c[angelsore3-chunk]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-yellow-waste",ore_tints["ore3"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-yellow-waste",ore_tints["ore3"]})
     },
     {
       type = "recipe",
@@ -335,7 +335,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore4-chunk.png",
       --icon_size = 32,
       order = "d[angelsore4-chunk]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-yellow-waste",ore_tints["ore4"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-yellow-waste",ore_tints["ore4"]})
     },
     {
       type = "recipe",
@@ -358,7 +358,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore5-chunk.png",
       --icon_size = 32,
       order = "e[angelsore5-chunk]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-yellow-waste",ore_tints["ore5"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-yellow-waste",ore_tints["ore5"]})
     },
     {
       type = "recipe",
@@ -381,7 +381,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-chunk.png",
       --icon_size = 32,
       order = "f[angelsore6-chunk]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-yellow-waste",ore_tints["ore6"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-yellow-waste",ore_tints["ore6"]})
     },
     ---------------------------------------------------------------------------
     -- TIER 2.5 ---------------------------------------------------------------
@@ -408,7 +408,7 @@ data:extend(
       main_product = "angels-ore8-sludge",
       always_show_products = true,
       show_amount_in_title = false,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("angels-ore8-sludge","thermal-water","sulfuric-acid"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore8-sludge","thermal-water","sulfuric-acid"}),
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
       --icon_size = 32,
       order = "g"
@@ -460,7 +460,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
       --icon_size = 32,
       order = "i",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("thermal-water","sulfuric-acid","angels-ore9-sludge")
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"thermal-water","sulfuric-acid","angels-ore9-sludge"})
     },
     {
       type = "recipe",
@@ -508,7 +508,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore1-crystal.png",
       --icon_size = 32,
       order = "a[angelsore1-crystal]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore1"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"sulfuric-acid",ore_tints["ore1"]})
     },
     {
       type = "recipe",
@@ -531,7 +531,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore2-crystal.png",
       --icon_size = 32,
       order = "b[angelsore2-crystal]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore2"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"sulfuric-acid",ore_tints["ore2"]})
     },
     {
       type = "recipe",
@@ -554,7 +554,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore3-crystal.png",
       --icon_size = 32,
       order = "c[angelsore3-crystal]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore3"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"sulfuric-acid",ore_tints["ore3"]})
     },
     {
       type = "recipe",
@@ -577,7 +577,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore4-crystal.png",
       --icon_size = 32,
       order = "d[angelsore4-crystal]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore4"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"sulfuric-acid",ore_tints["ore4"]})
     },
     {
       type = "recipe",
@@ -600,7 +600,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore5-crystal.png",
       --icon_size = 32,
       order = "e[angelsore5-crystal]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore5"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"sulfuric-acid",ore_tints["ore5"]})
     },
     {
       type = "recipe",
@@ -623,7 +623,7 @@ data:extend(
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
       order = "f[angelsore6-crystal]",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore6"])
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"sulfuric-acid",ore_tints["ore6"]})
     },
     ---------------------------------------------------------------------------
     -- TIER 3.5 ---------------------------------------------------------------
@@ -651,6 +651,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore8-solution","sulfuric-acid"}),
       order = "g"
     },
     {
@@ -677,6 +678,7 @@ data:extend(
         { {104,112,113}, {133,196,060}, {133,196,060}, {113,224,028,0.9} }
       ),
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore8-slime","water-purified","water-yellow-waste"}),
       order = "h"
     },
     {
@@ -699,6 +701,7 @@ data:extend(
       main_product = "angels-ore8-anode-sludge",
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore8-anode-sludge","angels-ore8-slime","water-yellow-waste"}),
       order = "g"
     },
     {
@@ -720,6 +723,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-anode-sludge"),
       order = "h"
     },
     {
@@ -743,6 +747,7 @@ data:extend(
       main_product = "angels-ore9-solution",
       always_show_products = true,
       show_amount_in_title = false,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore9-solution","sulfuric-acid"}),
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
       order = "i"
@@ -771,6 +776,7 @@ data:extend(
         { {095,106,090}, {254,110,022}, {254,110,022,0.8}, {252,103,005,0.9} }
       ),
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore9-slime","water-purified","water-yellow-waste"}),
       order = "j"
     },
     {
@@ -793,6 +799,7 @@ data:extend(
       main_product = "angels-ore9-anode-sludge",
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"angels-ore9-anode-sludge","angels-ore9-slime","water-yellow-waste"}),
       order = "i"
     },
     {
@@ -814,6 +821,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-anode-sludge"),
       order = "j"
     },
     ---------------------------------------------------------------------------

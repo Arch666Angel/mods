@@ -924,12 +924,12 @@ function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
     nil
 end
 
-function angelsmods.functions.get_recipe_tints(primary, secondary, tertiary, opacity)
+function angelsmods.functions.get_recipe_tints(layers, opacity)
   --can parse direct colours or search for items (currently only works for multiple fluids)
   local tints={}
   local opacity = opacity or 185/255
   local alpha = opacity > 1 and opacity/255 or opacity
-  for index, name in pairs({primary, secondary, tertiary}) do
+  for index, name in pairs(layers) do
     if type(name)== "table" then
       tints[index] = name
       --ammend alpha
@@ -959,10 +959,8 @@ function angelsmods.functions.get_recipe_tints(primary, secondary, tertiary, opa
       {r = 0, g = 0, b = 0},
     secondary = tints[2] or 
       {r = 0, g = 0, b = 0},
-    --[[tertiary = tints[3]  or 
-      {r = 0, g = 0, b = 0, a = 185/255}, --i think only centrifuges use this with bobs
-    quaternary = tints[4]  or 
-      {r = 0, g = 0, b = 0, a = 185/255},]]
+    tertiary = tints[3] or nil,
+    quaternary = tints[4] or nil,
   }
 end
 

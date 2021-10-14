@@ -16,7 +16,7 @@ data:extend(
       },
       main_product = "water-mineralized",
       always_show_products = true,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water"--[[,"stone-crushed"]],"water-mineralised"),--get_fluid_recipe_tint("water-mineralized"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water"--[[,"stone-crushed"]],"water-mineralised"}),--get_fluid_recipe_tint("water-mineralized"),
       order = "a[water-water-mineralized]"
     },
     {
@@ -93,7 +93,7 @@ data:extend(
         },
         "wss"
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-mineralised","water-yellow-waste","water-purified"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-mineralised","water-yellow-waste","water-purified"}),
       order = "d[yellow-waste-water-purification]"
     },
     {
@@ -119,7 +119,7 @@ data:extend(
         },
         "wcc"
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-mineralised","water-red-waste","water-purified"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-mineralised","water-red-waste","water-purified"}),
       order = "g[red-waste-water-purification]"
     },
     {
@@ -145,7 +145,7 @@ data:extend(
         },
         "wll"
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-saline","water-green-waste","water-purified"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","water-green-waste","water-purified"}),
       order = "f[green-waste-water-purification]"
     },
     {
@@ -172,7 +172,7 @@ data:extend(
         },
         "wff"
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-mineralised","water-greenyellow-waste","water-purified"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-mineralised","water-greenyellow-waste","water-purified"}),
       order = "e[greenyellow-waste-water-purification]"
     },
     --SALINATION
@@ -198,7 +198,7 @@ data:extend(
           "water"
         }
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-saline","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","water"}),
       order = "a[water-saline]-a[water]"
     },
     {
@@ -224,7 +224,7 @@ data:extend(
           "solid-salt"
         }
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-saline","water-purified"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","water-purified"}),
       order = "a[water-saline]-b[salt]"
     },
     {
@@ -260,7 +260,7 @@ data:extend(
       },
       main_product = "solid-salt",
       icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-salt", {"water"}),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-saline","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","water"}),
       order = "c[solid-salt]"
     },
     {
@@ -298,7 +298,7 @@ data:extend(
       },
       main_product = "water-heavy-mud",
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-heavy-mud","water-viscous-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-heavy-mud","water-viscous-mud","water"}),
       order = "b"
     },
     {
@@ -318,7 +318,7 @@ data:extend(
       },
       main_product = "water-concentrated-mud",
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-concentrated-mud","water-heavy-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-concentrated-mud","water-heavy-mud","water"}),
       order = "c"
     },
     {
@@ -338,7 +338,7 @@ data:extend(
       },
       main_product = "water-light-mud",
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-light-mud","water-concentrated-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-light-mud","water-concentrated-mud","water"}),
       order = "d"
     },
     {
@@ -358,7 +358,7 @@ data:extend(
       },
       main_product = "water-thin-mud",
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-thin-mud","water-light-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-thin-mud","water-light-mud","water"}),
       order = "e"
     },
     {
@@ -378,7 +378,7 @@ data:extend(
       },
       main_product = "water-saline",
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-saline","water-thin-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","water-thin-mud","water"}),
       order = "f"
     },
     {
@@ -396,7 +396,7 @@ data:extend(
         {type = "fluid", name = "water-viscous-mud", amount = 150}
       },
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-viscous-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-viscous-mud","water"}),
       order = "a"
     },
     {
@@ -437,7 +437,7 @@ data:extend(
       },
       icon = "__angelsrefining__/graphics/icons/geode-blue.png",
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-heavy-mud",{r = 0.5, g = 0.5, b = 0.5},"water"),--may need a better custom tint for "rainbow"
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-heavy-mud",{r = 1, g = 0, b = 0},"water",{r = 0, g = 0, b = 1},{r = 0, g = 1, b = 0},{r = 0, g = 0.5, b = 0.5},{r = 0.5, g = 0, b = 0.5}}),--may need a better custom tint for "rainbow"
       order = "b"
     },
     {
@@ -455,7 +455,7 @@ data:extend(
         {type = "item", name = "solid-clay", amount = 3}
       },
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({r = 100/255, g = 065/255, b = 042/255},"water-concentrated-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({{r = 100/255, g = 065/255, b = 042/255},"water-concentrated-mud","water"}),
       order = "c"
     },
     {
@@ -473,7 +473,7 @@ data:extend(
         {type = "item", name = "solid-limestone", amount = 3}
       },
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({r = 185/255, g = 152/255, b = 126/255},"water-light-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({{r = 185/255, g = 152/255, b = 126/255},"water-light-mud","water"}),
       order = "d"
     },
     {
@@ -491,7 +491,7 @@ data:extend(
         {type = "item", name = "solid-sand", amount = 5}
       },
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({r = 199/255, g = 192/255, b = 181/255},"water-thin-mud","water"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({{r = 199/255, g = 192/255, b = 181/255},"water-thin-mud","water"}),
       order = "e"
     }
   }
