@@ -755,7 +755,7 @@ data:extend(
       type = "technology",
       name = "ore-refining",
       icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-leaching",
         "advanced-ore-refining-2",

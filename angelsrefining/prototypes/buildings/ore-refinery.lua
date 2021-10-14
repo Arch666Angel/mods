@@ -7,7 +7,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         1, angelsmods.refining.number_tint),
@@ -23,7 +23,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         1, angelsmods.refining.number_tint),
@@ -52,48 +52,150 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-refinery/1ore-refinery.png",
-            width = 256,
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-base.png",
+            priority = "extra-high",
+            width = 221,
             height = 256,
-            frame_count = 16,
-            line_length = 4,
-            animation_speed = 0.5,
-            shift = {0.5, -0.5}
-          }
-          -- {
-          -- filename = "__angelsrefining__/graphics/entity/ore-refinery/2ore-refinery-overlay.png",
-          -- width = 256,
-          -- height = 256,
-          -- frame_count = 16,
-          -- line_length = 4,
-          -- animation_speed = 0.5,
-          -- shift = {0.5, -0.5},
-          -- },
+            shift = util.by_pixel(0, -16),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
+              priority = "extra-high",
+              width = 440,
+              height = 509,
+              shift = util.by_pixel(0.5, -16),
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
+            priority = "extra-high",
+            width = 261,
+            height = 170,
+            shift = util.by_pixel(22, 30),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
+              priority = "extra-high",
+              width = 522,
+              height = 340,
+              shift = util.by_pixel(21.5, 29),
+              draw_as_shadow = true,
+              scale = 0.5,
+            } or nil
+          },
         }
       },
-      -- working_visualisations =
-      -- {
-      -- {
-      -- animation =
-      -- {
-      -- filename = "__angelsrefining__/graphics/entity/ore-refinery/smoke-2.png",
-      -- priority = "extra-high",
-      -- width = 128,
-      -- height = 192,
-      -- line_length = 11,
-      -- frame_count = 110,
-      -- shift = { -0.6, -6.25},
-      -- scale = 0.75,
-      -- animation_speed = 0.5,
-      -- },
-      -- light = {intensity = 1, size = 1}
-      -- }
-      -- },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-refinery.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-refinery.ogg", volume = 0.7},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
+      },
+      working_visualisations = {
+        {
+          fadeout = true,
+          effect = "uranium-glow",
+          animation = {
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-lights.png",
+            priority = "extra-high",
+            width = 221,
+            height = 256,
+            shift = util.by_pixel(0, -16),
+            draw_as_glow = true,
+            blend_mode = "additive-soft",
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-lights.png",
+              priority = "extra-high",
+              width = 440,
+              height = 509,
+              shift = util.by_pixel(0.5, -16),
+              draw_as_glow = true,
+              blend_mode = "additive-soft",
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel_hr(-63, -255),
+          east_position = util.by_pixel_hr(-63, -255),
+          south_position = util.by_pixel_hr(-63, -255),
+          west_position = util.by_pixel_hr(-63, -255),
+          render_layer = "wires",
+          animation = {
+            filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-outer.png",
+            frame_count = 47,
+            line_length = 16,
+            width = 46,
+            height = 94,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-2, -40),
+            tint = util.color("808080"),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-smoke-outer.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 90,
+              height = 188,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-2, -40),
+              tint = util.color("808080"),
+              scale = 0.5
+            } or nil
+          }
+        },
+        {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel_hr(-63, -255),
+          east_position = util.by_pixel_hr(-63, -255),
+          south_position = util.by_pixel_hr(-63, -255),
+          west_position = util.by_pixel_hr(-63, -255),
+          render_layer = "wires",
+          animation = {
+            filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-inner.png",
+            frame_count = 47,
+            line_length = 16,
+            width = 20,
+            height = 42,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -14),
+            tint = util.color("b3b3b3"),
+            scale = 1.2,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-smoke-inner.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 40,
+              height = 84,
+              animation_speed = 0.5,
+              shift = util.by_pixel(0, -14),
+              tint = util.color("b3b3b3"),
+              scale = 0.5*1.2,
+            } or nil
+          }
+        },
+        {
+          always_draw = true,
+          render_layer = "wires",
+          animation = {
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/stack-patch-overlay.png",
+            priority = "extra-high",
+            width = 22,
+            height = 12,
+            shift = util.by_pixel(-30, -123),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-stack-patch-overlay.png",
+              priority = "extra-high",
+              width = 46,
+              height = 25,
+              shift = util.by_pixel_hr(-61, -246),
+              scale = 0.5,
+            } or nil
+          }
+        }
       }
     },
     {
@@ -103,7 +205,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         2, angelsmods.refining.number_tint),
@@ -119,7 +221,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         2, angelsmods.refining.number_tint),
@@ -147,31 +249,150 @@ data:extend(
       animation = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-refinery/1ore-refinery.png",
-            width = 256,
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-base.png",
+            priority = "extra-high",
+            width = 221,
             height = 256,
-            frame_count = 16,
-            line_length = 4,
-            animation_speed = 0.5,
-            shift = {0.5, -0.5}
+            shift = util.by_pixel(0, -16),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
+              priority = "extra-high",
+              width = 440,
+              height = 509,
+              shift = util.by_pixel(0.5, -16),
+              scale = 0.5,
+            } or nil
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-refinery/2ore-refinery-overlay.png",
-            width = 256,
-            height = 256,
-            frame_count = 16,
-            line_length = 4,
-            tint = {r = 0.2, g = 0.3, b = 0.45},
-            animation_speed = 0.5,
-            shift = {0.5, -0.5}
-          }
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
+            priority = "extra-high",
+            width = 261,
+            height = 170,
+            shift = util.by_pixel(22, 30),
+            draw_as_shadow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
+              priority = "extra-high",
+              width = 522,
+              height = 340,
+              shift = util.by_pixel(21.5, 29),
+              draw_as_shadow = true,
+              scale = 0.5,
+            } or nil
+          },
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-refinery.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-refinery.ogg", volume = 0.7},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
+      },
+      working_visualisations = {
+        {
+          fadeout = true,
+          effect = "uranium-glow",
+          animation = {
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-lights.png",
+            priority = "extra-high",
+            width = 221,
+            height = 256,
+            shift = util.by_pixel(0, -16),
+            draw_as_glow = true,
+            blend_mode = "additive-soft",
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-lights.png",
+              priority = "extra-high",
+              width = 440,
+              height = 509,
+              shift = util.by_pixel(0.5, -16),
+              draw_as_glow = true,
+              blend_mode = "additive-soft",
+              scale = 0.5,
+            } or nil
+          }
+        },
+        {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel_hr(-63, -255),
+          east_position = util.by_pixel_hr(-63, -255),
+          south_position = util.by_pixel_hr(-63, -255),
+          west_position = util.by_pixel_hr(-63, -255),
+          render_layer = "wires",
+          animation = {
+            filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-outer.png",
+            frame_count = 47,
+            line_length = 16,
+            width = 46,
+            height = 94,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-2, -40),
+            tint = util.color("808080"),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-smoke-outer.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 90,
+              height = 188,
+              animation_speed = 0.5,
+              shift = util.by_pixel(-2, -40),
+              tint = util.color("808080"),
+              scale = 0.5
+            } or nil
+          }
+        },
+        {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel_hr(-63, -255),
+          east_position = util.by_pixel_hr(-63, -255),
+          south_position = util.by_pixel_hr(-63, -255),
+          west_position = util.by_pixel_hr(-63, -255),
+          render_layer = "wires",
+          animation = {
+            filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-inner.png",
+            frame_count = 47,
+            line_length = 16,
+            width = 20,
+            height = 42,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -14),
+            tint = util.color("b3b3b3"),
+            scale = 1.2,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-smoke-inner.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 40,
+              height = 84,
+              animation_speed = 0.5,
+              shift = util.by_pixel(0, -14),
+              tint = util.color("b3b3b3"),
+              scale = 0.5*1.2,
+            } or nil
+          }
+        },
+        {
+          always_draw = true,
+          render_layer = "wires",
+          animation = {
+            filename = "__angelsrefining__/graphics/entity/ore-refinery/stack-patch-overlay.png",
+            priority = "extra-high",
+            width = 22,
+            height = 12,
+            shift = util.by_pixel(-30, -123),
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-stack-patch-overlay.png",
+              priority = "extra-high",
+              width = 46,
+              height = 25,
+              shift = util.by_pixel_hr(-61, -246),
+              scale = 0.5,
+            } or nil
+          }
+        }
       }
     }
   }
