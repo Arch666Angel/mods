@@ -14,7 +14,7 @@ if angelsmods.industries.overhaul then
                     {type = 'item', name = 't4-plate', amount = 100},
                     {type = 'item', name = 't4-circuit', amount = 500},
                     {type = 'item', name = 't5-plate', amount = 100},
-                    {type = 'item', name = 'angels-plate-lead', amount = 350}
+                    {type = 'item', name = 't3-plate', amount = 350}
                 },
                 result = 'angels-burner-reactor'
             },
@@ -26,7 +26,7 @@ if angelsmods.industries.overhaul then
                     {type = 'item', name = 't4-plate', amount = 100 * buildingmulti},
                     {type = 'item', name = 't4-circuit', amount = 500 * buildingmulti},
                     {type = 'item', name = 't5-plate', amount = 100 * buildingmulti},
-                    {type = 'item', name = 'angels-plate-lead', amount = 350 * buildingmulti}
+                    {type = 'item', name = 't3-plate', amount = 350 * buildingmulti}
                 },
                 result = 'angels-burner-reactor'
             },
