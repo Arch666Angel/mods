@@ -1558,8 +1558,6 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.always_show_made_in = true
     recipe.allow_decomposition = false
     recipe.allow_as_intermediate = false
-    log(fluid_name.."-water-void")
-    log(serpent.block(void_tint))
     recipe.crafting_machine_tint = void_tint or nil
     recipe.hide_from_stats = false
     recipe.subgroup = "angels-" .. void_category .. "-void"

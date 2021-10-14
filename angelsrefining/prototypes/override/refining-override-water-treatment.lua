@@ -115,6 +115,7 @@ if mods["bobplates"] then
               {039, 112, 194}, {168, 173, 173}, {070, 133, 232}, {185, 185, 185, 0.8}
             }
           ),
+          crafting_machine_tint = angelsmods.functions.get_recipe_tints("water-saline","chlorine","hydrogen"),
           subgroup = "bob-fluid-electrolysis",
           order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
         }
@@ -163,6 +164,7 @@ if mods["bobplates"] then
             {243,135,000}, {247,140,003}, {247,140,003}
           }
         ),
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints("thermal-water","lithia-water","water-purified"),
         order = "g[water-thermal-lithia]"
       }
     }
@@ -181,7 +183,7 @@ if mods["bobplates"] then
     angelsmods.functions.disable_barreling_recipes("pure-water")
   end
 
-  --Insert water resources to bob recipes
+  --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes(
     {
       {name = "water-electrolysis", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}},

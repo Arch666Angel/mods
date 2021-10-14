@@ -240,7 +240,8 @@ if data.raw.item["y-res1"] then
           },
           "wss"
         ),--
-        order = "a[yellow-waste-water-purification-yi]"
+        order = "a[yellow-waste-water-purification-yi]",
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints("y-con_water","water-yellow-waste","water-purified"),
       }
     }
   )

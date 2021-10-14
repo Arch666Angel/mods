@@ -408,7 +408,7 @@ data:extend(
       main_product = "angels-ore8-sludge",
       always_show_products = true,
       show_amount_in_title = false,
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("angels-ore8-sludge","thermal-water","sulfuric-acid"),
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
       --icon_size = 32,
       order = "g"
@@ -432,7 +432,8 @@ data:extend(
       main_product = "angels-ore8-dust",
       --icon = "__angelsrefining__/graphics/icons/angels-ore8-dust.png",
       --icon_size = 32,
-      order = "h"
+      order = "h",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge")
     },
     {
       type = "recipe",
@@ -456,10 +457,10 @@ data:extend(
       main_product = "angels-ore9-sludge",
       always_show_products = true,
       show_amount_in_title = false,
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-sludge"),
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crushed.png",
       --icon_size = 32,
-      order = "i"
+      order = "i",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("thermal-water","sulfuric-acid","angels-ore9-sludge")
     },
     {
       type = "recipe",
@@ -480,7 +481,8 @@ data:extend(
       main_product = "angels-ore9-dust",
       --icon = "__angelsrefining__/graphics/icons/angels-ore9-dust.png",
       --icon_size = 32,
-      order = "j"
+      order = "j",
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-sludge")
     },
     ---------------------------------------------------------------------------
     -- TIER 3 -----------------------------------------------------------------
@@ -505,7 +507,8 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore1-crystal.png",
       --icon_size = 32,
-      order = "a[angelsore1-crystal]"
+      order = "a[angelsore1-crystal]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore1"])
     },
     {
       type = "recipe",
@@ -527,7 +530,8 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore2-crystal.png",
       --icon_size = 32,
-      order = "b[angelsore2-crystal]"
+      order = "b[angelsore2-crystal]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore2"])
     },
     {
       type = "recipe",
@@ -549,7 +553,8 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore3-crystal.png",
       --icon_size = 32,
-      order = "c[angelsore3-crystal]"
+      order = "c[angelsore3-crystal]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore3"])
     },
     {
       type = "recipe",
@@ -571,7 +576,8 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore4-crystal.png",
       --icon_size = 32,
-      order = "d[angelsore4-crystal]"
+      order = "d[angelsore4-crystal]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore4"])
     },
     {
       type = "recipe",
@@ -593,7 +599,8 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore5-crystal.png",
       --icon_size = 32,
-      order = "e[angelsore5-crystal]"
+      order = "e[angelsore5-crystal]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore5"])
     },
     {
       type = "recipe",
@@ -615,7 +622,8 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-crystal.png",
       --icon_size = 32,
-      order = "f[angelsore6-crystal]"
+      order = "f[angelsore6-crystal]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints("sulfuric-acid",ore_tints["ore6"])
     },
     ---------------------------------------------------------------------------
     -- TIER 3.5 ---------------------------------------------------------------
