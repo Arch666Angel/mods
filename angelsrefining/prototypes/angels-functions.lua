@@ -955,12 +955,17 @@ function angelsmods.functions.get_recipe_tints(layers, opacity)
     end
   end
   return {
-    primary = tints[1] or 
-      {r = 0, g = 0, b = 0},
-    secondary = tints[2] or 
-      {r = 0, g = 0, b = 0},
-    tertiary = tints[3] or nil,
-    quaternary = tints[4] or nil,
+    primary = (layers[1] ~= nil) and tints[1] or nil,
+    secondary = (layers[2] ~= nil) and tints[2] or nil,
+    tertiary = (layers[3] ~= nil) and tints[3] or nil,
+    quaternary = (layers[4] ~= nil) and tints[4] or nil,
+    quinary = (layers[5] ~= nil) and tints[5] or nil, --this and the remaining ones are kind of silly, but may be used in future
+    senary = (layers[6] ~= nil) and tints[6] or nil,
+    septenary = (layers[7] ~= nil) and tints[7] or nil,
+    octanry = (layers[8] ~= nil) and tints[8] or nil,
+    nonary = (layers[9] ~= nil) and tints[9] or nil,
+    denary = (layers[10] ~= nil) and tints[10] or nil,
+    --im not even going to entertain more than 10 layers
   }
 end
 
