@@ -933,8 +933,8 @@ function angelsmods.functions.get_recipe_tints(layers, opacity)
     if type(name)== "table" then
       tints[index] = name
       --ammend alpha
-      tints[index].a = tints[index].a and tints[index].a --if alpha, maintain
-        or ((tints[index].r < 1 and tints[index].g <1) and alpha or alpha*255)
+      tints[index].a = opacity or (tints[index].a and tints[index].a --if alpha, maintain
+        or ((tints[index].r < 1 and tints[index].g <1) and alpha or alpha*255))
     elseif name == nil then --skip
     elseif type(name)== "string" then
       --search through items and fluids

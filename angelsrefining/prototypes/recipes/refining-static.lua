@@ -846,6 +846,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore1-pure.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.refining.ore_tints["ore1"]},0.6),
       order = "a[angelsore1-pure]"
     },
     {
@@ -867,6 +868,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore2-pure.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.refining.ore_tints["ore2"]},0.6),
       order = "b[angelsore2-pure]"
     },
     {
@@ -888,6 +890,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore3-pure.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.refining.ore_tints["ore3"]},0.6),
       order = "c[angelsore3-pure]"
     },
     {
@@ -909,6 +912,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore4-pure.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.refining.ore_tints["ore4"]},0.6),
       order = "d[angelsore4-pure]"
     },
     {
@@ -930,6 +934,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore5-pure.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.refining.ore_tints["ore5"]},0.6),
       order = "e[angelsore5-pure]"
     },
     {
@@ -951,6 +956,7 @@ data:extend(
       show_amount_in_title = false,
       --icon = "__angelsrefining__/graphics/icons/angels-ore6-pure.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.refining.ore_tints["ore6"]},0.6),
       order = "f[angelsore6-pure]"
     },
     --SLAG PROCESSING
@@ -1177,6 +1183,7 @@ data:extend(
         { {243,135,000}, {230,116,017}, {247,140,003} }
       ),
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"mineral-sludge","thermal-water"}),
       order = "a[filtering-mineral]-a[thermal-processing]-a[coal]"
     },
     {
@@ -1199,6 +1206,7 @@ data:extend(
         { {243,135,000}, {230,116,017}, {247,140,003} }
       ),
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"mineral-sludge","thermal-water"}),
       order = "a[filtering-mineral]-a[thermal-processing]-b[ceramic]"
     },
     --CRYSTAL SLURRY
