@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.21
 Date: ??
+  Changes:
+    - Changed Agriculture module insertion checks (706)
+      - Agriculture modules will no longer be listed in tooltips for Mining Drills, Furnaces, and Labs
+      - Removed pollution effect from Productivity Modules and God Modules (Bob's Modules)
+      - Disallowed modules with a pollution effect from Mining Drills, Furnaces, and Labs
+      - Disallowed modules with a pollution effect from Beacons when Bob's Modules setting Transmit Productivity is enabled
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
     - Fixed another bug where agricultural modules could be duplicated (682)
