@@ -7,7 +7,7 @@ local item_recipes_to_ignore = {}
 
 local fluid_recipes_to_ignore = {}
 
-local function is_used(recipe_filters, recipes_to_ignore)
+local function has_recipe(recipe_filters, recipes_to_ignore)
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
 
   if #recipe_prototypes == 0 then
@@ -60,7 +60,7 @@ local unit_test_007 = function()
     table.insert(recipe_filters, {filter = "hidden", invert = true, mode = "and"})
     table.insert(recipe_filters, {filter = "has-ingredient-item", invert = false, mode = "and", elem_filters = {{filter = "name", name = item_name}}})
 
-    if not is_used(recipe_filters, item_recipes_to_ignore) then
+    if not has_recipe(recipe_filters, item_recipes_to_ignore) then
       unit_test_functions.print_msg(string.format("Item %q is unused.", item_name))
       unit_test_result = unit_test_functions.test_failed
     end
@@ -78,7 +78,7 @@ local unit_test_007 = function()
     table.insert(recipe_filters, {filter = "hidden", invert = true, mode = "and"})
     table.insert(recipe_filters, {filter = "has-ingredient-fluid", invert = false, mode = "and", elem_filters = {{filter = "name", name = fluid_name}}})
 
-    if not is_used(recipe_filters, fluid_recipes_to_ignore) then
+    if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
       unit_test_functions.print_msg(string.format("Fluid %q is unused.", fluid_name))
       unit_test_result = unit_test_functions.test_failed
     end
