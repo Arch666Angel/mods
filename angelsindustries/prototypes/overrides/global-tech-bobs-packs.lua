@@ -199,11 +199,8 @@ if angelsmods.industries.tech then
       AI.pack_replace("angels-rocket-turret", "green", "orange")
     end
     --laser rifles
-    AI.pack_replace("bob-laser-rifle", "green", "blue")
-    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "blue")
-    AI.pack_replace("bob-laser-rifle-ammo-4", "blue", "yellow")
-    AI.pack_replace("bob-laser-rifle-ammo-5", "blue", "yellow")
-    AI.pack_replace("bob-laser-rifle-ammo-6", "blue", "yellow")
+    AI.pack_replace("bob-laser-rifle", "green", "orange")
+    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "orange")
     --Drones/CombatBots
     AI.pack_replace("bob-robot-gun-1", "green", "orange")
     AI.pack_replace("bob-robot-gun-drones", "green", "orange")
