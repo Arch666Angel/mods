@@ -4,8 +4,6 @@
 -- depends on a technology unlocking the required science level.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = unit_test_functions.test_successful
-
 -- this unit test currently doesn't cover bobs technologies
 local technologies_to_ignore =
 {

@@ -1,8 +1,6 @@
 -- This unit test checks for items and fluids that are unused
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = unit_test_functions.test_successful
-
 local item_recipes_to_ignore = {}
 
 local fluid_recipes_to_ignore = {}
@@ -61,7 +59,7 @@ local unit_test_007 = function()
     table.insert(recipe_filters, {filter = "has-ingredient-item", invert = false, mode = "and", elem_filters = {{filter = "name", name = item_name}}})
 
     if not has_recipe(recipe_filters, item_recipes_to_ignore) then
-      unit_test_functions.print_msg(string.format("Item %q is unused.", item_name))
+      unit_test_functions.print_msg(string.format("No (useful) recipe is using item %q as an ingredient.", item_name))
       unit_test_result = unit_test_functions.test_failed
     end
   end
@@ -79,7 +77,7 @@ local unit_test_007 = function()
     table.insert(recipe_filters, {filter = "has-ingredient-fluid", invert = false, mode = "and", elem_filters = {{filter = "name", name = fluid_name}}})
 
     if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
-      unit_test_functions.print_msg(string.format("Fluid %q is unused.", fluid_name))
+      unit_test_functions.print_msg(string.format("No (useful) recipe is using fluid %q as an ingredient.", fluid_name))
       unit_test_result = unit_test_functions.test_failed
     end
   end

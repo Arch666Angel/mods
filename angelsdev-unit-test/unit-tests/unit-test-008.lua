@@ -1,8 +1,6 @@
 -- This unit test validates that each visible item and fluid has a visible recipe
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = unit_test_functions.test_successful
-
 local items_to_ignore = {}
 local fluids_to_ignore = {}
 local item_recipes_to_ignore = {}
@@ -103,7 +101,7 @@ local unit_test_008 = function()
       table.insert(recipe_filters, {filter = "has-product-item", invert = false, mode = "and", elem_filters = {{filter = "name", name = item_name}}})
 
       if not has_recipe(recipe_filters, item_recipes_to_ignore) then
-        unit_test_functions.print_msg(string.format("Item %q is not produced.", item_name))
+        unit_test_functions.print_msg(string.format("No recipe is creating item %q as a product.", item_name))
         unit_test_result = unit_test_functions.test_failed
       end
     end
@@ -122,7 +120,7 @@ local unit_test_008 = function()
       table.insert(recipe_filters, {filter = "has-product-fluid", invert = false, mode = "and", elem_filters = {{filter = "name", name = fluid_name}}})
 
       if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
-        unit_test_functions.print_msg(string.format("Fluid %q is not produced.", fluid_name))
+        unit_test_functions.print_msg(string.format("No recipe is creating fluid %q as a product.", fluid_name))
         unit_test_result = unit_test_functions.test_failed
       end
     end

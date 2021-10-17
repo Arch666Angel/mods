@@ -7,7 +7,17 @@ local unit_test_result = unit_test_functions.test_successful
 local entities_to_ignore_recipe = {
   ["rocket-silo"] = true,
 }
-local entities_to_ignore_item = {}
+local entities_to_ignore_item = {
+  ["simple-entity-with-force"] = true,
+  ["simple-entity-with-owner"] = true,
+  ["burner-generator"] = true,
+  ["electric-energy-interface"] = true,
+  ["heat-interface"] = true,
+  ["linked-belt"] = true,
+  ["linked-chest"] = true,
+  ["infinity-chest"] = true,
+  ["infinity-pipe"] = true,
+}
 
 local function has_recipe(recipe_filters, recipes_to_ignore)
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
@@ -46,7 +56,7 @@ local unit_test_009 = function()
       end
 
       if not has_recipe(recipe_filters, {}) then
-        unit_test_functions.print_msg(string.format("Entity %q has no recipes available.", entity_name))
+        unit_test_functions.print_msg(string.format("There are no available recipes that can be crafted in entity %q.", entity_name))
         unit_test_result = unit_test_functions.test_failed
       end
     end
