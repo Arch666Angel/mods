@@ -26,7 +26,7 @@ local function has_recipe(recipe_filters, recipes_to_ignore)
   end
 end
 
-local unit_test_007 = function()
+local unit_test_008 = function()
   local unit_test_result = unit_test_functions.test_successful
 
   -- Populate items_to_ignore with burnt results
