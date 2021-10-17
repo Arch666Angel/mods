@@ -7,6 +7,7 @@ Date: ??
       - Fixed battery and its components could not accept productivity modules (680)
       - Fixed bob battery tech 2 and 3 were still visible but obsolete (625)
       - Ensured that bobs laser riffle ammo uses each tier of batteries now (699)
+      - Ensured that bobs laser turrets uses each tier of batteries now (699)
       - Ensured that bobs plasma turrets uses each tier of batteries now (699)
     - Science mode:
       - Fixed crash when player dies (664)
