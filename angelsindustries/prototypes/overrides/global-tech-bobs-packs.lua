@@ -12,9 +12,9 @@ if angelsmods.industries.tech then
     OV.remove_prereq("battery-3", "production-science-pack")
 
     AI.pack_replace("grinding", "green", "orange")
+    AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
-    AI.pack_replace("polishing", "green", "blue")
-    AI.pack_replace("gem-processing-2", "green", "blue")
+    AI.pack_replace("gem-processing-2", "green", "orange")
     --OV.remove_science_pack("lubricant", "angels-science-pack-green")
 
     if not mods["bobtech"] then --alien resources

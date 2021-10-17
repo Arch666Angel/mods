@@ -61,7 +61,7 @@ if angelsmods.industries.components then
     OV.add_prereq("bob-laser-rifle", "military-science-pack")
     OV.add_prereq("bob-laser-rifle-ammo-2", "military-3") -- also depends on batteries 2 indirectly
     --OV.add_prereq("bob-laser-rifle-ammo-2", "angels-components-batteries-2")
-    OV.add_prereq("bob-laser-rifle-ammo-3", "angels-components-batteries-3")
+    --OV.add_prereq("bob-laser-rifle-ammo-3", "angels-components-batteries-3")
     OV.add_prereq("bob-laser-rifle-ammo-4", "angels-components-batteries-4")
     OV.add_prereq("bob-laser-rifle-ammo-5", "angels-components-batteries-5")
     OV.set_science_pack("bob-laser-rifle-ammo-5", "utility-science-pack", 1)
