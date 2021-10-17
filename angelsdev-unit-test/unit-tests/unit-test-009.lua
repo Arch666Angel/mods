@@ -2,8 +2,6 @@
 -- and has an item to place it
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = unit_test_functions.test_successful
-
 local entities_to_ignore_recipe = {
   ["rocket-silo"] = true,
 }
