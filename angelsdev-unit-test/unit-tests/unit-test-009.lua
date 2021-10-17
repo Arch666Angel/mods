@@ -42,8 +42,8 @@ local unit_test_009 = function()
       local recipe_filters = {}
       for category_name, _ in pairs(entity.crafting_categories) do
         table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = category_name})
+        table.insert(recipe_filters, {filter = "hidden", invert = true, mode = "and"})
       end
-      table.insert(recipe_filters, {filter = "hidden", invert = true, mode = "and"})
 
       if not has_recipe(recipe_filters, {}) then
         unit_test_functions.print_msg(string.format("Entity %q has no recipes available.", entity_name))
@@ -55,7 +55,6 @@ local unit_test_009 = function()
   -- Check entities have an item to place them
   local entity_filters = {}
   table.insert(entity_filters, {filter = "item-to-place", invert = false, mode = "and"})
-  --table.insert(entity_filters, {filter = "buildable", invert = false, mode = "and"})
   table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
 
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
@@ -71,8 +70,8 @@ local unit_test_009 = function()
           item_name = item.name
         end
         table.insert(item_filters, {filter = "name", invert = false, mode = "or", name = item_name})
+        table.insert(item_filters, {filter = "flag", invert = true, mode = "and", flag = "hidden"})
       end
-      table.insert(item_filters, {filter = "flag", invert = true, mode = "and", flag = "hidden"})
 
       local item_prototypes = game.get_filtered_item_prototypes(item_filters)
       if #item_prototypes == 0 then
@@ -81,8 +80,6 @@ local unit_test_009 = function()
       end
     end
   end
-  
-  log(#entity_prototypes .. ' entities found')
 
   return unit_test_result
 end
