@@ -56,7 +56,6 @@ if angelsmods.industries.components then
         },
       }
     )
-
     OV.remove_prereq("bob-laser-rifle", "angels-components-batteries-1") -- depends on in through "laser"
     OV.remove_prereq("bob-laser-rifle", "military-3")
     OV.add_prereq("bob-laser-rifle", "military-science-pack")
