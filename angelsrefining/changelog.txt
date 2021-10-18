@@ -4,7 +4,7 @@ Date: ??
   Changes:
     - Allowed higher tier techs to show in tech tree search results
     - Added HQ graphics to the following machines, and tweaked their sounds:
-      - Clarifier, Crystallizer, Hydro plant
+      - Clarifier, Crystallizer, Hydro plant, Salination plant
       - Ore crusher, Floatation cell, Ore refinery
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
