@@ -30,28 +30,28 @@ if angelsmods.industries.components then
           name = "laser-rifle-battery-emerald",
           ingredients =
           {
-            { type = "item", name = "battery-3", amount = "battery-1" }
+            { type = "item", name = "battery-3", amount = mods["bobplates"] and "battery-3" or "battery-1" }
           },
         },
         {
           name = "laser-rifle-battery-amethyst",
           ingredients =
           {
-            { type = "item", name = "battery-4", amount = "battery-1" }
+            { type = "item", name = "battery-4", amount = mods["bobplates"] and "battery-3" or "battery-1" }
           },
         },
         {
           name = "laser-rifle-battery-topaz",
           ingredients =
           {
-            { type = "item", name = "battery-5", amount = "battery-1" }
+            { type = "item", name = "battery-5", amount = mods["bobplates"] and "battery-6" or "battery-1" }
           },
         },
         {
           name = "laser-rifle-battery-diamond",
           ingredients =
           {
-            { type = "item", name = mods["bobplates"] and "battery-6" or "battery-5", amount = "battery-1" }
+            { type = "item", name = mods["bobplates"] and "battery-6" or "battery-5", amount = mods["bobplates"] and "battery-6" or "battery-1" }
           },
         },
       }

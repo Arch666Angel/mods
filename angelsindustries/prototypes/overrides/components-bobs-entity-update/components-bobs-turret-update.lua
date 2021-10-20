@@ -16,7 +16,7 @@ if angelsmods.industries.components then
           name = "bob-laser-turret-3",
           ingredients =
           {
-            { type = "item", name = "battery-3", amount = "battery-1" },
+            { type = "item", name = "battery-3", amount = mods["bobplates"] and "battery-3" or "battery-1" },
             { type = "item", name = "angels-plate-aluminium", amount = "steel-plate" },
             { type = "item", name = "circuit-orange-loaded", amount = 20 }
           },
@@ -25,7 +25,7 @@ if angelsmods.industries.components then
           name = "bob-laser-turret-4",
           ingredients =
           {
-            { type = "item", name = "battery-4", amount = "battery-1" },
+            { type = "item", name = "battery-4", amount = mods["bobplates"] and "battery-3" or "battery-1" },
             { type = "item", name = "angels-plate-titanium", amount = "steel-plate" }
           },
         },
@@ -33,7 +33,7 @@ if angelsmods.industries.components then
           name = "bob-laser-turret-5",
           ingredients =
           {
-            { type = "item", name = "battery-5", amount = "battery-1" },
+            { type = "item", name = "battery-5", amount = mods["bobplates"] and "battery-6" or "battery-1" },
             { type = "item", name = "angels-plate-tungsten", amount = "steel-plate" },
             { type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded" }
           },
@@ -74,7 +74,7 @@ if angelsmods.industries.components then
           name = "bob-plasma-turret-3",
           ingredients =
           {
-            { type = "item", name = "battery-3", amount = "battery-1" },
+            { type = "item", name = "battery-3", amount = mods["bobplates"] and "battery-3" or "battery-1" },
             { type = "item", name = "angels-plate-aluminium", amount = "steel-plate" },
             { type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded" }
           },
@@ -83,7 +83,7 @@ if angelsmods.industries.components then
           name = "bob-plasma-turret-4",
           ingredients =
           {
-            { type = "item", name = "battery-4", amount = "battery-1" },
+            { type = "item", name = "battery-4", amount = mods["bobplates"] and "battery-3" or "battery-1" },
             { type = "item", name = "angels-plate-titanium", amount = "steel-plate" }
           },
         },
@@ -91,7 +91,7 @@ if angelsmods.industries.components then
           name = "bob-plasma-turret-5",
           ingredients =
           {
-            { type = "item", name = "battery-5", amount = "battery-1" },
+            { type = "item", name = "battery-5", amount = mods["bobplates"] and "battery-6" or "battery-1" },
             { type = "item", name = "angels-plate-tungsten", amount = "steel-plate" },
             { type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded" }
           },
