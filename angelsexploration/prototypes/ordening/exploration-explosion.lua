@@ -19,7 +19,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-explosion-ba",
-        group = "angels-exploration",
+        group = "combat",
         order = "d-b-a"
       }
     }
@@ -59,7 +59,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-explosion-bb",
-        group = "angels-exploration",
+        group = "combat",
         order = "d-b-b"
       }
     }
