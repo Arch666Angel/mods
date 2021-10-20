@@ -194,8 +194,8 @@ if angelsmods.industries.tech then
     OV.remove_prereq("bob-sniper-turrets-2", "tech-blue-packs")
     AI.pack_replace("bob-laser-turrets-2", "green", "orange")
     AI.pack_replace("bob-laser-turrets-3", "blue", "orange")
+    AI.pack_replace("bob-plasma-turrets-1", "green", "orange")
     AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
-    AI.pack_replace("bob-plasma-turrets-3", "blue", "orange")
     if mods["angelsexploration"] then
       AI.pack_replace("angels-rocket-turret", "green", "orange")
     end
