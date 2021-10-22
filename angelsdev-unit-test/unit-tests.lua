@@ -6,6 +6,9 @@ local unit_tests =
   require("unit-tests.unit-test-004"),
   require("unit-tests.unit-test-005"),
   require("unit-tests.unit-test-006"),
+  require("unit-tests.unit-test-007"),
+  require("unit-tests.unit-test-008"),
+  require("unit-tests.unit-test-009"),
 }
 
 local unit_test_functions = require("unit-test-functions")
