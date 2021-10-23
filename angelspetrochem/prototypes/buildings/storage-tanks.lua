@@ -309,8 +309,8 @@ data:extend(
     {
       type = "item",
       name = "angels-storage-tank-3",
-      icon = "__angelspetrochem__/graphics/icons/storage-tank-3.png",
-      icon_size = 32,
+      icon = "__angelspetrochem__/graphics/icons/petrochem-inline-tank.png",
+      icon_size = 64, icon_mipmaps = 4,
       subgroup = "angels-fluid-tanks",
       order = "d",
       place_result = "angels-storage-tank-3",
@@ -319,14 +319,15 @@ data:extend(
     {
       type = "storage-tank",
       name = "angels-storage-tank-3",
-      icon = "__angelspetrochem__/graphics/icons/storage-tank-3.png",
-      icon_size = 32,
+      icon = "__angelspetrochem__/graphics/icons/petrochem-inline-tank.png",
+      icon_size = 64, icon_mipmaps = 4,
       flags = {"placeable-player", "player-creation"},
       minable = {mining_time = 3, result = "angels-storage-tank-3"},
       max_health = 500,
       corpse = "medium-remnants",
       collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
       selection_box = {{-1, -1}, {1, 1}},
+      drawing_box = {{-1, -1.9}, {1, 1}},
       two_direction_only = false,
       fluid_box =
       {
@@ -343,15 +344,43 @@ data:extend(
       {
         picture =
         {
-          sheet =
-          {
-            filename = "__angelspetrochem__/graphics/entity/storage-tanks/storage-tank-3.png",
-            priority = "extra-high",
-            frames = 4,
-            width = 256,
-            height = 320,
-            scale = 0.495,
-            shift = {0, -0.5}
+          sheets = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
+              priority = "extra-high",
+              frames = 4,
+              width = 71,
+              height = 102,
+              shift = util.by_pixel(-0.5, -8),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+                priority = "extra-high",
+                frames = 4,
+                width = 142,
+                height = 199,
+                shift = util.by_pixel(0, -7.5),
+                scale = 0.5
+              } or nil
+            },
+            {
+              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
+              priority = "extra-high",
+              frames = 4,
+              width = 106,
+              height = 101,
+              shift = util.by_pixel(17, 8),
+              draw_as_shadow = true,
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+                priority = "extra-high",
+                frames = 4,
+                width = 207,
+                height = 199,
+                shift = util.by_pixel(16.5, 9),
+                draw_as_shadow = true,
+                scale = 0.5
+              } or nil
+            }
           }
         },
         fluid_background =
