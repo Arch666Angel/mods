@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Flare stack
+      - Petrochem gas tank, Petrochem oil tank
   Bugfixes:
     - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
     - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)
