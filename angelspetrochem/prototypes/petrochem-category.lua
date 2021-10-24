@@ -54,7 +54,7 @@ data:extend(
       order = "la[angels]-c[petrochem]-b",
       icons = {
         {
-          icon = "__angelspetrochem__/graphics/technology/gas-refinery-tech.png",
+          icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
           icon_size = 128,
           scale = 0.5
         },
