@@ -5,7 +5,7 @@ data:extend(
       type = "technology",
       name = "ore-crushing",
       icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "automation"
       },
@@ -76,7 +76,7 @@ data:extend(
       type = "technology",
       name = "advanced-ore-refining-1",
       icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         --"ore-crushing",
         "slag-processing-1"
@@ -236,7 +236,7 @@ data:extend(
       type = "technology",
       name = "ore-floatation",
       icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-crushing",
         "water-treatment-2",
@@ -310,7 +310,7 @@ data:extend(
       type = "technology",
       name = "advanced-ore-refining-2",
       icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         --"ore-floatation",
         "advanced-ore-refining-1",
@@ -664,7 +664,7 @@ data:extend(
       type = "technology",
       name = "advanced-ore-refining-3",
       icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-leaching",
         "advanced-ore-refining-2",
@@ -755,7 +755,7 @@ data:extend(
       type = "technology",
       name = "ore-refining",
       icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-leaching",
         "advanced-ore-refining-2",
@@ -830,7 +830,7 @@ data:extend(
       type = "technology",
       name = "advanced-ore-refining-4",
       icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-refining",
         "advanced-ore-refining-3"

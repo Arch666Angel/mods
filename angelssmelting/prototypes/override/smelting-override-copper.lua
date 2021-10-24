@@ -182,7 +182,7 @@ if angelsmods.trigger.smelting_products["copper"].wire then
     "__angelssmelting__/graphics/icons/wire-copper.png"
   )
 
-  if mods["bobassembly"] then
+  if mods["bobassembly"] and mods["bobelectronics"] then
     OV.patch_recipes(
       {
         {

@@ -196,8 +196,8 @@ data:extend(
     {
       type = "technology",
       name = "angels-flare-stack",
-      icon = "__angelspetrochem__/graphics/technology/flare-stack.png",
-      icon_size = 128,
+      icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "angels-fluid-control",
         "basic-chemistry-3"

@@ -12,9 +12,9 @@ if angelsmods.industries.tech then
     OV.remove_prereq("battery-3", "production-science-pack")
 
     AI.pack_replace("grinding", "green", "orange")
+    AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
-    AI.pack_replace("polishing", "green", "blue")
-    AI.pack_replace("gem-processing-2", "green", "blue")
+    AI.pack_replace("gem-processing-2", "green", "orange")
     --OV.remove_science_pack("lubricant", "angels-science-pack-green")
 
     if not mods["bobtech"] then --alien resources
@@ -188,22 +188,20 @@ if angelsmods.industries.tech then
   if mods["bobwarfare"] then
     --adds bob warfare stuffs
     --turrets
-    AI.pack_replace("bob-plasma-turrets-3", "blue", "orange")
     AI.pack_replace("bob-turrets-3", "green", "orange")
     AI.pack_replace("bob-turrets-5", "blue", "yellow")
-    AI.pack_replace("bob-laser-turrets-2", "green", "orange")
-    AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
     AI.pack_replace("bob-sniper-turrets-2", "blue", "orange")
     OV.remove_prereq("bob-sniper-turrets-2", "tech-blue-packs")
+    AI.pack_replace("bob-laser-turrets-2", "green", "orange")
+    AI.pack_replace("bob-laser-turrets-3", "blue", "orange")
+    AI.pack_replace("bob-plasma-turrets-1", "green", "orange")
+    AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
     if mods["angelsexploration"] then
       AI.pack_replace("angels-rocket-turret", "green", "orange")
     end
     --laser rifles
-    AI.pack_replace("bob-laser-rifle", "green", "blue")
-    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "blue")
-    AI.pack_replace("bob-laser-rifle-ammo-4", "blue", "yellow")
-    AI.pack_replace("bob-laser-rifle-ammo-5", "blue", "yellow")
-    AI.pack_replace("bob-laser-rifle-ammo-6", "blue", "yellow")
+    AI.pack_replace("bob-laser-rifle", "green", "orange")
+    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "orange")
     --Drones/CombatBots
     AI.pack_replace("bob-robot-gun-1", "green", "orange")
     AI.pack_replace("bob-robot-gun-drones", "green", "orange")

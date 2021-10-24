@@ -53,6 +53,7 @@ if mods["bobwarfare"] and (not mods["angelsexploration"]) then
   move_item("robot-drone-frame", intermediate_subgroup, "z[others]-f[robot-drone-frame]")
   move_item("robot-drone-frame-large", intermediate_subgroup, "z[others]-g[robot-drone-frame]")
 end
+
 --------------------------------------------------------------------------------------------------
 -- Armour patching
 --------------------------------------------------------------------------------------------------

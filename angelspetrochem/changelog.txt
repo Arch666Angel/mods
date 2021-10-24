@@ -2,6 +2,9 @@
 Version: 0.9.21
 Date: ??
   Changes:
+    - Added HQ graphics to the following machines, and tweaked their sounds:
+      - Flare stack
+      - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
     - Updated Hydrazine recipe to take Blue metal catalyst instead of Green (692)
     - Added ingredient Yellow metal catalyst to Dinitrogen tetroxide recipe (692)
     - Moved Dinitrogen tetroxide recipe from Liquefier to Chemical plant (692)

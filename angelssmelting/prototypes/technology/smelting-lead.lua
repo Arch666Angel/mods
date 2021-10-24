@@ -132,10 +132,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "anode-lead-smelting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "roll-lead-casting-fast"
         }
       },
       unit = {

@@ -4,10 +4,13 @@
 -- depends on a technology unlocking the required science level.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_result = unit_test_functions.test_successful
-
 -- this unit test currently doesn't cover bobs technologies
 local technologies_to_ignore =
+{
+}
+
+-- a list with all bonus upgrade technologies (this list is extended dynamically)
+local bonus_upgrade_technologies =
 {
 }
 
@@ -78,8 +81,75 @@ local science_pack_level =
   ["datacore-processing-6"] = nil, -- unused
 }
 
+local tech_bonus_effects =
+{
+  -- inserter bonus
+  ["inserter-stack-size-bonus"] = true,
+  ["stack-inserter-capacity-bonus"] = true,
+  -- lab bonus
+  ["laboratory-speed"] = true,
+  ["laboratory-productivity"] = true,
+  -- bot logistic bonus
+  ["worker-robot-speed"] = true,
+  ["worker-robot-storage"] = true,
+  ["worker-robot-battery"] = true,
+  -- bot building bonus
+  ["ghost-time-to-live"] = true,
+  ["deconstruction-time-to-live"] = true,
+  ["max-failed-attempts-per-tick-per-construction-queue"] = true,
+  ["max-successful-attempts-per-tick-per-construction-queue"] = true,
+  -- military bonus
+  ["turret-attack"] = true,
+  ["gun-speed"] = true,
+  ["ammo-damage"] = true,
+  ["maximum-following-robots-count"] = true,
+  ["follower-robot-lifetime"] = true,
+  ["artillery-range"] = true,
+  -- character bonus
+  ["character-crafting-speed"] = true,
+  ["character-mining-speed"] = true,
+  ["character-running-speed"] = true,
+  ["character-build-distance"] = true,
+  ["character-item-drop-distance"] = true,
+  ["character-reach-distance"] = true,
+  ["character-resource-reach-distance"] = true,
+  ["character-item-pickup-distance"] = true,
+  ["character-loot-pickup-distance"] = true,
+  ["character-inventory-slots-bonus"] = true,
+  ["character-logistic-trash-slots"] = true,
+  ["character-logistic-requests"] = true,
+  ["character-health-bonus"] = true,
+  ["character-additional-mining-categories"] = true,
+  -- map view bonus
+  ["zoom-to-world-enabled"] = true,
+  ["zoom-to-world-ghost-building-enabled"] = true,
+  ["zoom-to-world-blueprint-enabled"] = true,
+  ["zoom-to-world-deconstruction-planner-enabled"] = true,
+  ["zoom-to-world-upgrade-planner-enabled"] = true,
+  ["zoom-to-world-selection-tool-enabled"] = true,
+  -- mining drill bonus
+  ["mining-drill-productivity-bonus"] = true,
+  -- train bonus
+  ["train-braking-force-bonus"] = true,
+  -- non bonus
+  ["nothing"] = false,
+  ["give-item"] = false,
+  ["unlock-recipe"] = false,
+}
+
 local function tech_hidden(tech_prototype)
   return tech_prototype.hidden or (not (tech_prototype.enabled or tech_prototype.visible_when_disabled))
+end
+
+local function tech_unlocks_only_bonus_upgrades(technology_prototype)
+  for _, tech_effect in pairs(technology_prototype.effects) do
+    if tech_bonus_effects[tech_effect.type] then
+      -- continue
+    else
+      return false
+    end
+  end
+  return true
 end
 
 local function calculate_tech_ingredient_level(technology_prototype)
@@ -147,6 +217,23 @@ local unit_test_006 = function()
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game
 
   for tech_name, tech_prototype in pairs(tech_prototypes) do
+    -- first calculate if this technology is a bonus technology
+    if tech_unlocks_only_bonus_upgrades(tech_prototype) then
+      local is_first_bonus_upgrade = true
+      for tech_prereq_name, tech_prereq_prototype in pairs(tech_prototype.prerequisites) do
+        if tech_unlocks_only_bonus_upgrades(tech_prereq_prototype) then
+          is_first_bonus_upgrade = false
+        end
+      end
+
+      if is_first_bonus_upgrade then
+        -- still has to depend on the correct prerequisites, this case we ignore
+      else
+        -- these technologies can depend on lower tier science packs
+        bonus_upgrade_technologies[tech_name] = true
+      end
+    end
+
     if not (technologies_to_ignore[tech_name] and true or tech_hidden(tech_prototype)) then
       -- calculate tech_ingredient_level for this technology if not calculated yet
       if not tech_ingredient_levels[tech_name] then
@@ -194,7 +281,7 @@ local unit_test_006 = function()
       if tech_ingredient_levels[tech_name] < prereq_ingredient_level then
         unit_test_functions.print_msg(string.format("Technology %q requires prerequisites with higher science packs.", tech_name))
         unit_test_result = unit_test_functions.test_failed
-      elseif tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level) then
+      elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_functions.print_msg(string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name))
         unit_test_result = unit_test_functions.test_failed
       end
