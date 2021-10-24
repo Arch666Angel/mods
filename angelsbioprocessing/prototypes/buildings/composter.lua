@@ -69,7 +69,7 @@ data:extend(
         shift = {0, 0},
         --animation_speed = 0.5
     },
-    working_visualisations =
+    --[[working_visualisations = --looks like a pick 1... this or animation?
     {
         filename = "__angelsbioprocessing__/graphics/entity/composter/composter-animation.png",
         width = 128,
@@ -78,7 +78,7 @@ data:extend(
         line_length = 5,
         shift = {0, 1},
         animation_speed = 0.5
-    },
+    },]]
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },

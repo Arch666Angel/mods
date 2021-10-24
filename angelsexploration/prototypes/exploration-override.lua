@@ -182,10 +182,10 @@ if angelsmods.industries then
             }
           },
           {
-            name = "laser-turret",
+            name = "bob-plasma-turret-1",
             ingredients = {
               {type = "item", name = "laser-rifle", amount = 1},
-              {type = "item", name = "steel-plate", amount = 0}
+              {type = "item", name = "steel-plate", amount = 60}
             }
           }
         }

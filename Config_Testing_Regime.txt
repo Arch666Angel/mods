@@ -1,0 +1,86 @@
+-------------------------------
+-- Special Vanilla ------------
+-------------------------------
+Refining
+Petrochem
+Smelting
+Bioprocessing
+Industries (no overhaul)
+-------------------------------
+-- Special VanillaBobs --------
+-- This is with NO bobplates
+-- Quite likely to break things
+--[[ Add each in isolation:
+== boblogistics
+== bobassembly
+== bobelectronics
+== bobmodules
+== bobpower
+== bobmining
+== bobrevamp
+== bobwarfare ]]
+-- Run full bobs (minus plates)
+-------------------------------
+Refining
+Petrochem
+Smelting
+Bioprocessing
+Industries (no overhaul)
+-------------------------------
+-- Full Angels ----------------
+-------------------------------
+Industries (overhaul)
+Industries (components)
+Industries (tech)
+Exploration (no comp/tech)
+-------------------------------
+-- ANGELBOBS ------------------
+-- This is with bobplates/ores
+-- considered standard set
+-- default bob settings
+--[[ Add each in isolation:
+== boblogistics
+== bobassembly
+== bobelectronics
+== bobmodules
+== bobpower
+== bobmining
+== bobrevamp
+== bobwarfare ]]
+-- Run full bobs
+-------------------------------
+Refining
+Petrochem
+Smelting
+Bioprocessing
+Industries (no overhaul)
+Industries (overhaul)
+Industries (components)
+Industries (tech)
+Exploration (no comp/tech)
+-------------------------------
+-- BOB Configs ----------------
+-- Run with Industries (Overhaul)
+-- Each mod in isolation
+-- with and without plates
+-------------------------------
+-- Assembly: Burner/steam assembling machines
+-- Assembly: IF CHANGED ANY OF THE OTHER UNITS
+--== those settings
+-- Logistics: Belt overhaul (not the speed overhaul)
+-- Logistics: Inserterter overhaul
+-- Plates: New Steel (should be forced and hidden with smelting?)
+-- Plates: Nuclear fuel update
+-- Mining: Large area Mining
+-- Mining: Steam mining drills
+-- Mining: Water mining pumpjacks
+-- Ores: Enable water ores
+-- Ores: Enable infinite (should be off and hidden with refining?)
+-- Power: New nuclear generators
+-- Power: Fluid burning generators
+-- Power: Burner and fluid powered heat sources
+-- Power: New steam power related entities
+-- Revamp: Extra Chemistry
+-- Revamp: Nuclear power overhaul
+-- Revamp: RTG
+-- Tech: Burner phase

@@ -13,8 +13,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-a[spores]",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "item",
@@ -36,8 +34,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=0.572, g=0.392, b=0.894},
     flow_color = {r=0.572, g=0.392, b=0.894},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
 
 

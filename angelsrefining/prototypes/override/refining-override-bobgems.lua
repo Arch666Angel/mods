@@ -43,7 +43,8 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   angelsmods.functions.move_item("gem-ore", "bob-gems-crystallization", "g")
-  if mods["bobores"] and settings.startup["bobmods-ores-unsortedgemore"].value == true then
+  angelsmods.functions.add_flag("gem-ore","hidden")
+  --[[if mods["bobores"] and settings.startup["bobmods-ores-unsortedgemore"].value == true then
     data:extend(
       {
         {
@@ -68,7 +69,7 @@ if mods["bobplates"] then
         }
       }
     )
-  end
+  end]]
 end
 
 -------------------------------------------------------------------------------

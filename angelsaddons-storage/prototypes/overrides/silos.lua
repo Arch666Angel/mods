@@ -67,3 +67,13 @@ if angelsmods.industries then
   data.raw["item-subgroup"]["angels-ore-silo"].group = "angels-logistics"
   data.raw["item-subgroup"]["angels-ore-silo"].order = "ac[chests-silo]"
 end
+
+--OVERRIDE FOR BOBS
+--LOGISTICS
+if angelsmods.addons.storage.silos then
+  if mods["boblogistics"] then
+  else
+    table.insert(data.raw.technology["logistic-silos"].unit.ingredients,
+      {type = "item", name = "utility-science-pack", amount = 1})
+  end
+end

@@ -34,6 +34,14 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
   if mods["angelsindustries"] and angelsmods.industries.components then
   else
     OV.disable_recipe({"zinc-ore-processing-alt"})
+    OV.patch_recipes(
+      {
+        {
+          name = "pellet-zinc-smelting",
+          icons = angelsmods.functions.get_object_icons("solid-zinc-oxide"),
+        }
+      }
+    )
   end
 else
   angelsmods.functions.add_flag("processed-zinc", "hidden")
@@ -59,6 +67,10 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
   if mods['bobplates'] then
     OV.global_replace_item("angels-plate-zinc", "zinc-plate")
     angelsmods.functions.add_flag("angels-plate-zinc", "hidden")
+    angelsmods.functions.move_item("zinc-plate", "angels-zinc-casting", "j")
+    data.raw["item"]["zinc-plate"].icon = "__angelssmelting__/graphics/icons/plate-zinc.png"
+    data.raw["item"]["zinc-plate"].icon_size = 32
+    data.raw["item"]["zinc-plate"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-zinc-plate" })
   end
 else

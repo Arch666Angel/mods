@@ -2,6 +2,9 @@ local OV = angelsmods.functions.OV
 
 --MODIFICATION TO REFINING
 
+--OVERRIDE FOR BASE GAME
+--require("prototypes.override.refining-override-base")
+
 --OVERRIDE FOR BUILDINGS
 require("prototypes.recipes.refining-entity-angels")
 require("prototypes.override.refining-override-buildings")
@@ -30,8 +33,10 @@ require("prototypes.override.refining-override-bobgems")
 require("prototypes.override.refining-override-bobtech")
 require("prototypes.override.refining-override-bobrevamp")
 require("prototypes.override.refining-override-bobwarfare")
-require("prototypes.override.refining-override-bobclasses")
 require("prototypes.override.refining-override-boblogistics")
+require("prototypes.override.refining-override-bobmodules")
+require("prototypes.override.refining-override-bobpower")
+require("prototypes.override.refining-override-bobvehicleequipment")
 
 if mods["bobplates"] then
   --revamp override
@@ -486,6 +491,8 @@ angelsmods.functions.allow_productivity("angelsore-chunk-mix2-processing")
 angelsmods.functions.allow_productivity("angelsore-chunk-mix3-processing")
 angelsmods.functions.allow_productivity("angelsore-chunk-mix4-processing")
 angelsmods.functions.allow_productivity("angelsore-chunk-mix5-processing")
+angelsmods.functions.allow_productivity("angelsore-chunk-mix6-processing")
+angelsmods.functions.allow_productivity("angelsore-chunk-mix7-processing")
 
 angelsmods.functions.allow_productivity("angelsore-crystal-mix1-processing")
 angelsmods.functions.allow_productivity("angelsore-crystal-mix2-processing")

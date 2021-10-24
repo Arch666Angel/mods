@@ -101,7 +101,6 @@ funcs.generate_train_entities(
       shift = {0, -0.75}
     },
     wheels = standard_train_wheels,
-    rail_category = "regular",
     drive_over_tie_trigger = drive_over_tie(),
     tie_distance = 50,
     working_sound = {

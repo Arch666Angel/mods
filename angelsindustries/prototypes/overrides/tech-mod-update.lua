@@ -3,13 +3,21 @@ local OV = angelsmods.functions.OV
 
 if angelsmods.industries.tech then
   if mods["bobtech"] then
-    if settings.startup["bobmods-burnerphase"].value then
-    -- gets re-enabled as an unlock
+      -- gets re-enabled as an unlock
       OV.disable_recipe("lab")
       OV.disable_technology("lab")
       OV.global_replace_item("lab", "angels-basic-lab-2")
-      angelsmods.functions.add_flag("lab", "hide-from-bonus-gui")
-
+      angelsmods.functions.add_flag("lab", "hidden")
+      --lab2
+      OV.disable_recipe("lab-2")
+      OV.disable_technology("advanced-research")
+      OV.global_replace_item("lab-2", "angels-basic-lab-3")
+    if settings.startup["bobmods-burnerphase"].value then
+      --clobber basic-lab
+      OV.disable_recipe("burner-lab")
+      angelsmods.functions.add_flag("burner-lab", "hidden")
+      OV.global_replace_item("lab", "angels-basic-lab")
+      
     -- Allow steam science in basic lab
       local lab = data.raw.lab["angels-basic-lab"]
       if lab then

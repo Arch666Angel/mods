@@ -89,7 +89,10 @@ if angelsmods.trigger.smelting_products["steel"].plate then
           {"!!"},
           {type = "item", name = "iron-plate", amount = 1}
         },
-        result = "angels-plate-hot-iron",
+        results = {
+          {"!!"},
+          {type = "item", name = "angels-plate-hot-iron", amount = 1}
+        },
         subgroup = "angels-steel-casting",
         order = "l[angels-plate-steel]-aa"
       }
@@ -99,6 +102,7 @@ if angelsmods.trigger.smelting_products["steel"].plate then
   OV.add_prereq("steel-processing", "automation")
   OV.global_replace_item("angels-plate-steel", "steel-plate")
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")
+  angelsmods.functions.move_item("steel-plate", "angels-steel-casting", "l")
   angelsmods.functions.override_item_conditions(
     {
       value = 200,
@@ -106,6 +110,13 @@ if angelsmods.trigger.smelting_products["steel"].plate then
         "steel-plate"
       }
     }
+  )
+  data.raw["item"]["steel-plate"].icon = "__angelssmelting__/graphics/icons/plate-steel.png"
+  data.raw["item"]["steel-plate"].icon_size = 32
+  data.raw["item"]["steel-plate"].icon_mipmaps = 1
+  OV.global_replace_icon(
+    "__base__/graphics/icons/plate/steel-plate.png",
+    "__angelssmelting__/graphics/icons/plate-steel.png"
   )
 else
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")

@@ -277,27 +277,9 @@ data:extend(
             action_delivery = {
               type = "stream",
               stream = "bio-stream",
-              max_length = 15,
-              duration = 160
             }
           }
         }
-        --{
-        --  source_type = "vehicle",
-        --  consumption_modifier = 1.125,
-        --  category = "flamethrower",
-        --  target_type = "position",
-        --  clamp_position = true,
-        --  action = {
-        --    type = "direct",
-        --    action_delivery = {
-        --      type = "stream",
-        --      stream = "tank-flamethrower-fire-stream",
-        --      max_length = 9,
-        --      duration = 160,
-        --    }
-        --  }
-        --},
       },
       magazine_size = 100,
       subgroup = "angels-fire",

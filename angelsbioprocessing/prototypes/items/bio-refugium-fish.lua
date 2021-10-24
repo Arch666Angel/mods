@@ -11,8 +11,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=156/255, g=206/255, b=0/255},
     flow_color = {r=156/255, g=206/255, b=0/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -25,8 +23,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=156/255, g=206/255, b=0/255},
     flow_color = {r=156/255, g=206/255, b=0/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   -----------------------------------------------------------------------------
   -- FISH ---------------------------------------------------------------------
@@ -162,8 +158,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=194/255, g=122/255, b=29/255},
     flow_color = {r=194/255, g=122/255, b=29/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "fluid",
@@ -176,8 +170,6 @@ data:extend(
     heat_capacity = "1KJ",
     base_color = {r=194/255, g=122/255, b=29/255},
     flow_color = {r=194/255, g=122/255, b=29/255},
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
   },
   {
     type = "item",

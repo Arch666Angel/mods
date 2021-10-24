@@ -216,7 +216,7 @@ data:extend(
       ingredients = {
         {type = "item", name = "angels-void", amount = 1}
       },
-      result = "liquifier"
+      --result = "liquifier"
     },
     {
       type = "recipe",

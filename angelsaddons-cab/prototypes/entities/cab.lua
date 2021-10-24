@@ -655,7 +655,7 @@ data:extend(
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
     flags = {"not-blueprintable", "not-deconstructable", "not-on-map", "hide-alt-info"},
-    --minable = {hardness = 0.2, mining_time = 0.5, result = "medium-electric-pole"},
+    --minable = {mining_time = 0.5, result = "medium-electric-pole"},
     max_health = 200,
     corpse = "small-remnants",
     track_coverage_during_build_by_moving = false,

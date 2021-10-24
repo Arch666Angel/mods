@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.12
+Date: ??
+  Changes:
+    - Merged the vanilla crafting tab "combat" with angels exploration tab (699)
+  Bugfixes:
+    - Fixed laser turrets depended on laser riffle when playing with bobs warfare
+---------------------------------------------------------------------------------------------------
+Version: 0.3.11
+Date: 10.08.2021
+  Changes:
+    - Balancing iteration of the spawn probabilities of enemies
+    - Reduced evolution due to killing enemy bases even further
+    - Tweaked enemy spawn rate and armour to be more forgiving in the early game
+---------------------------------------------------------------------------------------------------
 Version: 0.3.10
 Date: 26.05.2021
   Bugfixes:

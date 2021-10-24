@@ -9,9 +9,6 @@ require("prototypes.overrides.bio-processing-override-angel")
 local OV = angelsmods.functions.OV
 local lab_ignore = angelsmods.triggers.lab_ignore_token
 
---PREPARATION
-OV.remove_output("algae-brown-burning", "angels-void")
-
 --BASE
 data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
 data.raw["capsule"]["raw-fish"].order = "aa"
@@ -89,10 +86,7 @@ else
   if bobmods and bobmods.plates then
     OV.patch_recipes(
       {
-        {name = "algae-brown-burning", results = {{name = "lithium-chloride", amount = 1, type = "item"}}}
-        -- { name = "temperate-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
-        -- { name = "desert-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
-        -- { name = "swamp-upgrade", ingredients = {{"!!"}, {name="token-bio", 5}, {"electronic-circuit", 2}, {"steel-plate", 2}, {"clay-brick", 2}, {"t2-pipe", 2}, } },
+        {name = "algae-brown-burning", results = {{"!!"},{name = "lithium-chloride", amount = 1, type = "item"}}}
       }
     )
   else
@@ -163,6 +157,13 @@ angelsmods.functions.allow_productivity("bio-plastic-1")
 angelsmods.functions.allow_productivity("bio-plastic-2")
 angelsmods.functions.allow_productivity("bio-rubber")
 
+-- algae
+angelsmods.functions.allow_bio_productivity("algae-green-simple")
+angelsmods.functions.allow_bio_productivity("algae-green")
+angelsmods.functions.allow_bio_productivity("algae-brown")
+angelsmods.functions.allow_bio_productivity("algae-red")
+angelsmods.functions.allow_bio_productivity("algae-blue")
+
 -- plant growing
 angelsmods.functions.allow_bio_productivity("temperate-1")
 angelsmods.functions.allow_bio_productivity("temperate-2")
@@ -200,3 +201,27 @@ angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-2")
 angelsmods.functions.allow_bio_productivity("temperate-tree-arboretum-0")
 angelsmods.functions.allow_bio_productivity("desert-tree-arboretum-0")
 angelsmods.functions.allow_bio_productivity("swamp-tree-arboretum-0")
+
+-- fish breeding
+angelsmods.functions.allow_bio_productivity("fish-breeding-0")
+angelsmods.functions.allow_bio_productivity("fish-breeding-1")
+angelsmods.functions.allow_bio_productivity("fish-breeding-2")
+angelsmods.functions.allow_bio_productivity("fish-breeding-3")
+
+-- puffer breeding
+angelsmods.functions.allow_bio_productivity("puffer-breeding-1")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-2")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-3")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-4")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-5")
+
+angelsmods.functions.allow_bio_productivity("puffer-breeding-23")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-12")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-13")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-14")
+angelsmods.functions.allow_bio_productivity("puffer-breeding-15")
+
+-- biter breeding
+angelsmods.functions.allow_bio_productivity("biter-small-breeding")
+angelsmods.functions.allow_bio_productivity("biter-medium-breeding")
+angelsmods.functions.allow_bio_productivity("biter-big-breeding")

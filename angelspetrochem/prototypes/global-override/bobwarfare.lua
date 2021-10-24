@@ -22,22 +22,12 @@ if mods["bobwarfare"] then
   local hide_sulfuric_nitric_acid_mixture = false
   if data.raw.fluid["sulfuric-nitric-acid"] then
     angelsmods.functions.move_item("sulfuric-nitric-acid", "petrochem-nitrogen-fluids", "oa", "fluid")
-    data.raw["fluid"]["sulfuric-nitric-acid"].icon = nil
-    data.raw["fluid"]["sulfuric-nitric-acid"].icons = angelsmods.functions.create_liquid_fluid_icon(
-      {"__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png", 32},
-      "nso"
-    )
 
     OV.patch_recipes({{name = "sulfuric-nitric-acid", subgroup = "petrochem-rocket", order = "ia"}})
     data.raw["recipe"]["sulfuric-nitric-acid"].always_show_products = true
-    data.raw["recipe"]["sulfuric-nitric-acid"].icon = nil
-    data.raw["recipe"]["sulfuric-nitric-acid"].icons = angelsmods.functions.create_liquid_recipe_icon(
-      {{"__bobwarfare__/graphics/icons/sulfuric-nitric-acid.png", 32}},
-      "nso"
-    )
 
     hide_sulfuric_nitric_acid_mixture = true -- with petrochem we can actualy use 3 inputs instead of making a submixture first
-    if hide_sulfuric_nitric_acid_mixture then 
+    if hide_sulfuric_nitric_acid_mixture then
       angelsmods.functions.add_flag("sulfuric-nitric-acid", "hidden")
       OV.disable_recipe({"sulfuric-nitric-acid"})
     end
@@ -50,11 +40,6 @@ if mods["bobwarfare"] then
   -- NITROGLYCERIN ------------------------------------------------------------
   -----------------------------------------------------------------------------
   angelsmods.functions.move_item("nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
-  data.raw["fluid"]["nitroglycerin"].icon = nil
-  data.raw["fluid"]["nitroglycerin"].icons = angelsmods.functions.create_liquid_fluid_icon(
-    {"__bobwarfare__/graphics/icons/nitroglycerin.png", 64},
-    "cno"
-  )
 
   OV.patch_recipes(
     {
@@ -72,12 +57,6 @@ if mods["bobwarfare"] then
     }
   )
   data.raw["recipe"]["nitroglycerin"].always_show_products = true
-  data.raw["recipe"]["nitroglycerin"].icon = nil
-  data.raw["recipe"]["nitroglycerin"].icons = angelsmods.functions.create_liquid_recipe_icon(
-    {{"__bobwarfare__/graphics/icons/nitroglycerin.png", 64}}, 
-    "cno"
-  )
-  OV.barrel_overrides("nitroglycerin", "vanilla")
 
   OV.remove_unlock("nitroglycerin-processing", "glycerol")
   OV.add_prereq("nitroglycerin-processing", "chlorine-processing-2")

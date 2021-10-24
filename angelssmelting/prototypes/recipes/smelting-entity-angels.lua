@@ -138,7 +138,6 @@ angelsmods.functions.RB.build(
     {
       type = "recipe",
       name = "pellet-press-2",
-      energy_required = 5,
       normal = {
         energy_required = 5,
         enabled = false,
@@ -165,7 +164,6 @@ angelsmods.functions.RB.build(
     {
       type = "recipe",
       name = "pellet-press-3",
-      energy_required = 5,
       normal = {
         energy_required = 5,
         enabled = false,
@@ -192,7 +190,6 @@ angelsmods.functions.RB.build(
     {
       type = "recipe",
       name = "pellet-press-4",
-      energy_required = 5,
       normal = {
         energy_required = 5,
         enabled = false,

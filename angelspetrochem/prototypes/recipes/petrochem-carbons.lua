@@ -224,6 +224,7 @@ data:extend(
       normal = {
         enabled = false,
         energy_required = 2,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "liquid-multi-phase-oil", amount = 100}
         },
@@ -236,6 +237,7 @@ data:extend(
       expensive = {
         enabled = false,
         energy_required = 2,
+        always_show_products = true,
         ingredients = {
           {type = "fluid", name = "liquid-multi-phase-oil", amount = 120 * rawmulti}
         },
@@ -243,9 +245,8 @@ data:extend(
           {type = "fluid", name = "gas-raw-1", amount = 20},
           {type = "fluid", name = "crude-oil", amount = 70},
           {type = "fluid", name = "water-yellow-waste", amount = 10}
-        }
+        },
       },
-      always_show_products = true,
       icons = angelsmods.functions.create_liquid_recipe_icon(
         {
           "crude-oil",
@@ -419,7 +420,7 @@ data:extend(
         {
           "liquid-mineral-oil"
         },
-        {{192, 096, 096}, {089, 102, 157}, {036, 036, 036}}
+        {{192, 096, 096}, {243,135,000}--[[{089, 102, 157}]], {036, 036, 036}}
       ),
       order = "f"
     },

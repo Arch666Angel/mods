@@ -41,11 +41,10 @@ data:extend(
     ---------------------------------------------------------------------------
     {
       type = "item-group",
-      name = "angels-exploration",
+      --name = "angels-exploration",
+      name = "combat", -- vanilla group
+      localised_name = {"item-group-name.angels-exploration"},
       order = "la[angels]-f[exploration]-a", -- order la[angels]-f[exploration]-b reserved for warfare
-      inventory_order = "la[angels]-f[exploration]-a",
-      --icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
-      --icon_size = 128
       icons = {
         {
           icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
@@ -63,7 +62,7 @@ data:extend(
     {
       type = "item-subgroup",
       name = "angels-physical-aa", -- regular gun
-      group = "angels-exploration",
+      group = "combat",
       order = "a-a-a"
     },
     -- order "a-a-b" taken by bobwarfare
@@ -73,26 +72,26 @@ data:extend(
     {
       type = "item-subgroup",
       name = "angels-physical-ba", -- shotgun
-      group = "angels-exploration",
+      group = "combat",
       order = "a-b-a"
     },
     -- order "a-b-b" taken by bobwarfare
     {
       type = "item-subgroup",
       name = "angels-fire",
-      group = "angels-exploration", -- fire stuffs
+      group = "combat", -- fire stuffs
       order = "b"
     },
     {
       type = "item-subgroup",
       name = "angels-capsules-a", -- capsule stuffs
-      group = "angels-exploration",
+      group = "combat",
       order = "c-a"
     },
     {
       type = "item-subgroup",
       name = "angels-explosion-a", -- rocket
-      group = "angels-exploration",
+      group = "combat",
       order = "d-a"
     },
     -- order "d-b-a" taken by bobwarfare
@@ -100,19 +99,19 @@ data:extend(
     {
       type = "item-subgroup",
       name = "angels-exploration-tank-a",
-      group = "angels-exploration",
+      group = "combat",
       order = "d-c-a"
     },
     {
       type = "item-subgroup",
       name = "angels-exploration-tank-b",
-      group = "angels-exploration",
+      group = "combat",
       order = "d-c-b"
     },
     {
       type = "item-subgroup",
       name = "angels-electric-a", -- laser
-      group = "angels-exploration",
+      group = "combat",
       order = "e-a"
     },
     -- order "e-b" taken by bobwarfare
@@ -120,19 +119,19 @@ data:extend(
     {
       type = "item-subgroup",
       name = "angels-artillery-a", -- artillery
-      group = "angels-exploration",
+      group = "combat",
       order = "f-a"
     },
     {
       type = "item-subgroup",
       name = "angels-exploration-troups",
-      group = "angels-exploration",
+      group = "combat",
       order = "g"
     },
     {
       type = "item-subgroup",
       name = "angels-exploration-walls",
-      group = "angels-exploration",
+      group = "combat",
       order = "h"
     }
   }

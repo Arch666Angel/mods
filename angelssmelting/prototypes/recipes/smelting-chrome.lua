@@ -44,7 +44,7 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "item", name = "pellet-chrome", amount = 8},
-        {type = "item", name = "solid-sodium-carbonate", amount = 6},
+        {type = "item", name = "solid-sodium-carbonate", amount = 7},
         {type = "fluid", name = "gas-oxygen", amount = 60}
       },
       results = {
@@ -61,12 +61,12 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "item", name = "solid-chromate", amount = 12},
-        {type = "fluid", name = "liquid-sulfuric-acid", amount = 30}
+        {type = "fluid", name = "liquid-sulfuric-acid", amount = 40}
       },
       results = {
         {type = "item", name = "solid-dichromate", amount = 12},
         {type = "item", name = "solid-sodium-sulfate", amount = 1},
-        {type = "fluid", name = "water-purified", amount = 30}
+        {type = "fluid", name = "water-purified", amount = 40}
       },
       main_product = "solid-dichromate",
       order = "e[solid-dichromate]"

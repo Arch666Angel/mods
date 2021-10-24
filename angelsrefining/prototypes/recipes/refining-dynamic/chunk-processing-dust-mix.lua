@@ -5,7 +5,7 @@ data:extend(
     --TIER 2 MIX
     {
       type = "recipe",
-      name = "angelsore-chunk-mix1-processing",
+      name = "angelsore-chunk-mix1-processing", --quartz
       category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -13,7 +13,7 @@ data:extend(
       allow_decomposition = false,
       normal = {
         ingredients = {
-          {type = "item", name = "angels-ore1-chunk", amount = 2},
+          {type = "item", name = "angels-ore5-chunk", amount = 2},
           {type = "item", name = "angels-ore6-chunk", amount = 2},
           {type = "item", name = "catalysator-green", amount = 1}
         },
@@ -23,7 +23,7 @@ data:extend(
       },
       expensive = {
         ingredients = {
-          {type = "item", name = "angels-ore1-chunk", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore5-chunk", amount = 3 * rawmulti},
           {type = "item", name = "angels-ore6-chunk", amount = 3 * rawmulti},
           {type = "item", name = "catalysator-green", amount = 1}
         },
@@ -36,7 +36,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-chunk-mix2-processing",
+      name = "angelsore-chunk-mix2-processing",--nickel
       category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -67,7 +67,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-chunk-mix3-processing",
+      name = "angelsore-chunk-mix3-processing",--aluminium
       category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -76,7 +76,7 @@ data:extend(
       normal = {
         ingredients = {
           {type = "item", name = "angels-ore2-chunk", amount = 2},
-          {type = "item", name = "angels-ore5-chunk", amount = 2},
+          {type = "item", name = "angels-ore4-chunk", amount = 2},
           {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
@@ -86,7 +86,7 @@ data:extend(
       expensive = {
         ingredients = {
           {type = "item", name = "angels-ore2-chunk", amount = 3 * rawmulti},
-          {type = "item", name = "angels-ore5-chunk", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore4-chunk", amount = 3 * rawmulti},
           {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
@@ -98,7 +98,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-chunk-mix4-processing",
+      name = "angelsore-chunk-mix4-processing", --zinc
       category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -129,7 +129,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-chunk-mix5-processing",
+      name = "angelsore-chunk-mix5-processing", --silver-ore
       category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
@@ -138,7 +138,7 @@ data:extend(
       normal = {
         ingredients = {
           {type = "item", name = "angels-ore3-chunk", amount = 2},
-          {type = "item", name = "angels-ore5-chunk", amount = 2},
+          {type = "item", name = "angels-ore6-chunk", amount = 2},
           {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
@@ -148,7 +148,7 @@ data:extend(
       expensive = {
         ingredients = {
           {type = "item", name = "angels-ore3-chunk", amount = 3 * rawmulti},
-          {type = "item", name = "angels-ore5-chunk", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore6-chunk", amount = 3 * rawmulti},
           {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
@@ -160,7 +160,38 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "angelsore-chunk-mix6-processing",
+      name = "angelsore-chunk-mix6-processing", --fluorite
+      category = "ore-sorting-3",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1,
+      enabled = false,
+      allow_decomposition = false,
+      normal = {
+        ingredients = {
+          {type = "item", name = "angels-ore8-powder", amount = 2},
+          {type = "item", name = "angels-ore2-chunk", amount = 2},
+          {type = "item", name = "catalysator-green", amount = 1}
+        },
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
+        }
+      },
+      expensive = {
+        ingredients = {
+          {type = "item", name = "angels-ore4-chunk", amount = 3 * rawmulti},
+          {type = "item", name = "angels-ore2-chunk", amount = 3 * rawmulti},
+          {type = "item", name = "catalysator-green", amount = 1}
+        },
+        results = {
+          {type = "item", name = "angels-void", amount = 1}
+        }
+      },
+      icon_size = 32,
+      order = "j"
+    },
+    {
+      type = "recipe",
+      name = "angelsore-chunk-mix7-processing", --unused
       category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,

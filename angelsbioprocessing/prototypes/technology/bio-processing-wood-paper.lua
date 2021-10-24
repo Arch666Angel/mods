@@ -103,7 +103,6 @@ data:extend(
       },
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -163,7 +162,6 @@ data:extend(
       },
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -214,7 +212,6 @@ data:extend(
       },
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -261,7 +258,6 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -312,7 +308,6 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -354,11 +349,11 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
       "bio-arboretum-temperate-2",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -392,7 +387,6 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -439,7 +433,6 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -481,11 +474,11 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
       "bio-arboretum-swamp-2",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -519,7 +512,6 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -566,7 +558,6 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -608,11 +599,11 @@ data:extend(
       }
     },
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
       "bio-arboretum-desert-2",
+      "chemical-science-pack",
     },
     effects =
     {
@@ -642,7 +633,6 @@ data:extend(
     name = "bio-paper-1",
     icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -673,7 +663,6 @@ data:extend(
     name = "bio-paper-2",
     icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
@@ -716,11 +705,11 @@ data:extend(
     name = "bio-paper-3",
     icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
     icon_size = 128,
-    upgrade = true,
     order = "c-a",
     prerequisites =
     {
       "bio-paper-2",
+      "chlorine-processing-3",
     },
     effects =
     {

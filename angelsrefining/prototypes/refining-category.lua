@@ -22,8 +22,10 @@ data:extend(
     { type = "recipe-category", name = "filtering" },
     { type = "recipe-category", name = "filtering-2" },
 
-    { type = "recipe-category", name = "liquifying" },
     { type = "recipe-category", name = "crystallizing" },
+    { type = "recipe-category", name = "crystallizing-2" },
+    
+    { type = "recipe-category", name = "liquifying" },
     -- water treatment
     { type = "recipe-category", name = "angels-barreling" },
     { type = "recipe-category", name = "water-treatment" },
@@ -42,14 +44,11 @@ data:extend(
       type = "item-group",
       name = "resource-refining",
       order = "la[angels]-a[refining]-a",
-      inventory_order = "la[angels]-a[refining]-a",
-      --icon = "__angelsrefining__/graphics/item-group/ore-refining.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
-          icon_size = 128,
-          scale = 0.5
+          icon_size = 256, icon_mipmaps = 4,
+          scale = 0.25
         },
         {
           icon = "__angelsrefining__/graphics/icons/void.png",
@@ -232,14 +231,11 @@ data:extend(
       type = "item-group",
       name = "water-treatment",
       order = "la[angels]-c[petrochem]-a",
-      inventory_order = "la[angels]-c[petrochem]-a",
-      --icon = "__angelsrefining__/graphics/item-group/water-treatment-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/technology/water-treatment.png",
-          icon_size = 128,
-          scale = 0.5
+          icon_size = 256, icon_mipmaps = 4,
+          scale = 64 / 256
         },
         {
           icon = "__angelsrefining__/graphics/icons/void.png",
@@ -332,9 +328,6 @@ data:extend(
       type = "item-group",
       name = "angels-fluid-control",
       order = "la[angels]-c[petrochem]-c",
-      inventory_order = "la[angels]-c[petrochem]-c",
-      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
@@ -372,9 +365,6 @@ data:extend(
       type = "item-group",
       name = "angels-fluid-converter",
       order = "la[angels]-c[petrochem]-d",
-      inventory_order = "la[angels]-c[petrochem]-c",
-      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/item-group/converter-group.png",
@@ -394,9 +384,6 @@ data:extend(
       type = "item-group",
       name = "angels-void",
       order = "la[angels]-z[void]-a",
-      inventory_order = "la[angels]-z[void]-a",
-      --icon = "__angelsrefining__/graphics/item-group/heavy-pump-group.png",
-      --icon_size = 64
       icons = {
         {
           icon = "__angelsrefining__/graphics/item-group/barreling-group.png",

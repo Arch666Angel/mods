@@ -11,7 +11,8 @@ if angelsmods.industries.components then
         icon = "__angelsindustries__/graphics/technology/steel-components.png",
         icon_size = 128,
         prerequisites = {
-          "angels-steel-smelting-1"
+          "angels-steel-smelting-1",
+          "logistic-science-pack"
         },
         effects = {
           {

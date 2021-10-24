@@ -25,8 +25,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           base_color = {r = 224 / 256, g = 155 / 256, b = 58 / 256},
           flow_color = {r = 224 / 256, g = 155 / 256, b = 58 / 256},
           max_temperature = 100,
-          pressure_to_speed_ratio = 0.4,
-          flow_to_energy_ratio = 0.59,
           auto_barrel = false
         }
       }
@@ -146,7 +144,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           name = "angels-bronze-smelting-2",
           icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
           icon_size = 256, icon_mipmaps = 4,
-          upgrade = true,
           prerequisites = {
             "angels-metallurgy-2",
             "angels-bronze-smelting-1",
@@ -173,7 +170,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           name = "angels-bronze-smelting-3",
           icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
           icon_size = 256, icon_mipmaps = 4,
-          upgrade = true,
           prerequisites = {
             "angels-metallurgy-3",
             "angels-bronze-smelting-2",
@@ -199,11 +195,18 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       }
     )
     OV.add_prereq("alloy-processing-1", "angels-bronze-smelting-1")
+    angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
+    data.raw["item"]["bronze-alloy"].icon = "__angelssmelting__/graphics/icons/plate-bronze.png"
+    data.raw["item"]["bronze-alloy"].icon_size = 32
+    data.raw["item"]["bronze-alloy"].icon_mipmaps = 1
     OV.disable_recipe({"bronze-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------
     if mods["bobplates"] then
       OV.add_prereq("alloy-processing","angels-bronze-smelting-1")
+    end
+    if mods["bobpower"] then
+      OV.add_prereq("fluid-generator-1","angels-bronze-smelting-1")
     end
   end
 end

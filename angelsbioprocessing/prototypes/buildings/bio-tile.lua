@@ -31,7 +31,7 @@ data:extend(
       type = "tile",
       name = "bio-tile",
       needs_correction = false,
-      minable = {hardness = 0.2, mining_time = 0.5, result = "bio-tile"},
+      minable = {mining_time = 0.5, result = "bio-tile"},
       mined_sound = {filename = "__base__/sound/deconstruct-bricks.ogg"},
       collision_mask = {"ground-tile"},
       walking_speed_modifier = 1.5,
@@ -96,7 +96,7 @@ data:extend(
         }
       },
       map_color = {r = 50, g = 50, b = 50},
-      ageing = 0,
+      --ageing = 0,
       vehicle_friction_modifier = 1.1
     }
   }
