@@ -9,6 +9,10 @@ angelsmods.trigger = angelsmods.trigger or {}
 --CONVERTER RECIPES
 angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"].value
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
+--PETRO PRODUCS
+angelsmods.trigger.plastic = true
+angelsmods.trigger.resin = not angelsmods.functions.is_special_vanilla()
+angelsmods.trigger.rubber = not angelsmods.functions.is_special_vanilla()
 --HIDE UNUSED BUILDINGS
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
 angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value

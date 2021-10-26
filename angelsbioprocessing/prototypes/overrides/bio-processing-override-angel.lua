@@ -1,4 +1,5 @@
 local OV = angelsmods.functions.OV
+
 if angelsmods.trigger.smelting_products["glass"].board then --only change it if glass is actually active
   OV.modify_input("bio-tile",{type = "item", name = "solid-glass-mixture", amount = 1})
 end
