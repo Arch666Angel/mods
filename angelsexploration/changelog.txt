@@ -5,6 +5,7 @@ Date: ??
     - Merged the vanilla crafting tab "combat" with angels exploration tab (699)
   Bugfixes:
     - Fixed laser turrets depended on laser riffle when playing with bobs warfare
+    - Fixed psykers did show up as a bonus upgrade effect in the technology tree (712)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.11
 Date: 10.08.2021
