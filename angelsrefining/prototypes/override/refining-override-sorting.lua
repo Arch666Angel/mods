@@ -549,10 +549,6 @@ OV.patch_recipes(
 )
 
 if special_vanilla then
-  -- disable catalysts
-  angelsmods.functions.add_flag("catalysator-brown", "hidden")
-  angelsmods.functions.add_flag("catalysator-green", "hidden")
-  angelsmods.functions.add_flag("catalysator-orange", "hidden")
 else
   -- disable the nuggets and pebbles
   OV.disable_recipe(

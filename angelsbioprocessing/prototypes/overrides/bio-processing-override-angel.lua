@@ -78,3 +78,6 @@ for _,item_name in pairs{"solid-beans", "solid-corn", "solid-leafs", "solid-nuts
     item.localised_description = util.table.deepcopy(localised_origin_items)
   end
 end
+
+-- Puffer nests cannot be created
+angelsmods.functions.add_flag("puffer-nest", "hidden")

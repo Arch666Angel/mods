@@ -1079,7 +1079,7 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
       if flag == "hidden" and to_add.place_result == entity then
         for _,type in pairs(building_types) do
           to_add = data.raw[type][entity] --entity-types...
-          if to_add then
+          if to_add and (not to_add.autoplace) then -- do not hide entities that are autoplaced (required for editor mode)
             if to_add.flags then
               table.insert(to_add.flags, flag)
             else
