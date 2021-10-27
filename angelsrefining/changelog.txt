@@ -10,6 +10,7 @@ Date: ??
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)
     - Fixed hand crafting recipes not usable with alternative character mods (710)
+    - Hide Electro whinning cells and Milling drums when they are unused (691)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 10.08.2021

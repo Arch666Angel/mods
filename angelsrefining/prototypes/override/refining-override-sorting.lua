@@ -548,7 +548,12 @@ OV.patch_recipes(
   }
 )
 
-if not special_vanilla then
+if special_vanilla then
+  -- disable catalysts
+  angelsmods.functions.add_flag("catalysator-brown", "hidden")
+  angelsmods.functions.add_flag("catalysator-green", "hidden")
+  angelsmods.functions.add_flag("catalysator-orange", "hidden")
+else
   -- disable the nuggets and pebbles
   OV.disable_recipe(
     {
@@ -578,17 +583,33 @@ else
       "ore-electro-whinning-cell"
     }
   )
-  --also hide buildings
+  
+  -- hide electro winning cells
   OV.hide_recipe({
-    "ore-powderizer",
-    "ore-powderizer-2",
-    "ore-powderizer-3",
-    "milling-drum",
-    "milling-drum-used",
     "electro-whinning-cell",
     "electro-whinning-cell-2",
     "electro-whinning-cell-3",
   })
+  angelsmods.functions.add_flag("electro-whinning-cell", "hidden")
+  angelsmods.functions.add_flag("electro-whinning-cell-2", "hidden")
+  angelsmods.functions.add_flag("electro-whinning-cell-3", "hidden")
+
+  if angelsmods.bioprocessing then
+  else
+    -- hide milling drums
+    OV.hide_recipe({
+      "ore-powderizer",
+      "ore-powderizer-2",
+      "ore-powderizer-3",
+      "milling-drum",
+      "milling-drum-used",
+    })
+    angelsmods.functions.add_flag("ore-powderizer", "hidden")
+    angelsmods.functions.add_flag("ore-powderizer-2", "hidden")
+    angelsmods.functions.add_flag("ore-powderizer-3", "hidden")
+    angelsmods.functions.add_flag("milling-drum", "hidden")
+    angelsmods.functions.add_flag("milling-drum-used", "hidden")
+  end
 end
 
 if ore_enabled("ferrous") and ore_enabled("cupric") then
@@ -596,12 +617,10 @@ else
   OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
 end
-if not ore_enabled("ferrous") then
---I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!
+if not ore_enabled("ferrous") then --I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!
   OV.disable_recipe({"angelsore8-crushed","angelsore8-crushed-processing"})
 end
-if not ore_enabled("cupric") then
---I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!
+if not ore_enabled("cupric") then --I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!
   OV.disable_recipe({"angelsore9-crushed","angelsore9-crushed-processing"})
 end
 
