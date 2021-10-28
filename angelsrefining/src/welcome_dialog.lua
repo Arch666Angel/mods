@@ -94,7 +94,7 @@ function welcome_dialog:create_welcome_dialog(player_index)
     }
   )
 
-  local enemySizeSetting = player.surface.map_gen_settings['autoplace_controls']['angels-biter-slider'].size > 1 and "enabled" or "disabled"
+  local enemySizeSetting = ((player.surface.map_gen_settings['autoplace_controls'] or {})['angels-biter-slider'] or {["size"]=0})["size"] > 1 and "enabled" or "disabled"
   welcomeFrameContent.add(
     {
       type = 'label',
