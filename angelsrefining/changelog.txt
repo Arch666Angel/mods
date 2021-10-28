@@ -6,10 +6,13 @@ Date: ??
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Clarifier, Crystallizer, Hydro plant, Salination plant
       - Ore crusher, Floatation cell, Ore refinery, Ore sorting facility
+    - Reworked the control behaviour to multiple smaller files to keep it organized.
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)
     - Fixed hand crafting recipes not usable with alternative character mods (710)
+    - Hide Electro whinning cells and Milling drums when they are unused (691)
+    - Fixed crash when generating a new world without any autoplace settings (713)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 10.08.2021

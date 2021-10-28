@@ -216,16 +216,46 @@ if angelsmods.functions.is_special_vanilla() then
       "cumene-process",
       "liquid-bisphenol-a",
       "gas-phosgene",
-      "solid-resin",
-      "liquid-resin-1",
-      "liquid-resin-2",
-      "liquid-resin-3",
-      "liquid-rubber-1",
-      "solid-rubber",
-      "liquid-rubber-1"
     }
   )
 end
+
+if angelsmods.trigger.resin then
+else
+  OV.disable_recipe(
+    {
+      "solid-resin",
+      "liquid-resin-1",
+      "liquid-resin-2",
+      "liquid-resin-3"
+    }
+  )
+  angelsmods.functions.add_flag("solid-resin", "hidden")
+  angelsmods.functions.add_flag("liquid-resin", "hidden")
+  OV.disable_technology({
+    "resins",
+    "resin-1",
+    "resin-2",
+    "resin-3"
+  })
+end
+
+if angelsmods.trigger.rubber then
+else
+  OV.disable_recipe(
+    {
+      "liquid-rubber-1",
+      "solid-rubber"
+    }
+  )
+  angelsmods.functions.add_flag("solid-rubber", "hidden")
+  angelsmods.functions.add_flag("liquid-rubber", "hidden")
+  OV.disable_technology({
+    "rubbers",
+    "rubber",
+  })
+end
+
 -------------------------------------------------------------------------------
 -- REMOVE INACTIVE ENTITIES ---------------------------------------------------
 -------------------------------------------------------------------------------
