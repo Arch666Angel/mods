@@ -353,6 +353,7 @@ data:extend(
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-naphtha", AF.fluid_color({"c"})}),
       order = "b[solid-fuel-naphtha]"
     },
     {
@@ -375,6 +376,7 @@ data:extend(
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-fuel-oil", AF.fluid_color({"c"})}),
       order = "c[solid-fuel-fuel-oil]"
     },
     {
@@ -397,7 +399,7 @@ data:extend(
         },
         "solid-fuel"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255},"gas-synthesis",{r = 1, g = 1, b = 1}}),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "gas-synthesis", AF.fluid_color({"c"})}),
       order = "d[solid-fuel-synthesis]"
     },
     {
@@ -419,7 +421,7 @@ data:extend(
         },
         "solid-fuel"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255},"gas-hydrazine"}),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "gas-hydrazine"}),
       order = "e[solid-fuel-hydrazine]"
     },
     --CATALYSTS

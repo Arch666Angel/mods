@@ -1,3 +1,4 @@
+local AF = angelsmods.functions
 data:extend(
   {
     --NITROGEN
@@ -13,10 +14,11 @@ data:extend(
         {type = "fluid", name = "gas-compressed-air", amount = 200}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {"gas-compressed-air"},
         {{180, 180, 225}, {150, 150, 187}, {120, 120, 150}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-compressed-air"}),
       order = "a"
     },
     {
@@ -35,13 +37,14 @@ data:extend(
         --{type="fluid", name="gas-inert", amount=1},
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/nitrogen.png", 64},
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72}
         },
         "nno"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-nitrogen","gas-compressed-air","gas-oxygen"}),
       order = "b[air]-a[separation]"
     },
     {
@@ -60,13 +63,14 @@ data:extend(
         {type = "fluid", name = "gas-nitrogen-dioxide", amount = 20}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72}
         },
         "nno"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-nitrogen-monoxide","gas-compressed-air","gas-nitrogen-dioxide", AF.fluid_color({"a","n","o3"}--[[NaNO3]])}),
       order = "b[air]-b[nitrate-processing]"
     },
     {
@@ -86,12 +90,13 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72}
         },
         "noo"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-nitrogen-monoxide","gas-ammonia","gas-oxygen"}),
       order = "c[gas-nitrogen-dioxide]"
     },
     {
@@ -109,12 +114,13 @@ data:extend(
         {type = "fluid", name = "gas-nitrogen-dioxide", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72}
         },
         "noo"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-nitrogen-dioxide","gas-oxygen","gas-nitrogen-monoxide"}),
       order = "d"
     },
     {
@@ -134,12 +140,13 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72}
         },
         "nhh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-ammonia","gas-nitrogen","gas-hydrogen"}),
       order = "e"
     },
     {
@@ -157,12 +164,13 @@ data:extend(
         {type = "fluid", name = "gas-ammonium-chloride", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ammonium-chloride.png", 72}
         },
         "nhl"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-ammonium-chloride","gas-ammonia","gas-hydrogen-chloride"}),
       order = "f"
     },
     {
@@ -181,13 +189,14 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 20}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/urea.png", 72},
           "water-purified"
         },
         "cno"
-      ),
+      ),      
+      crafting_machine_tint = AF.get_recipe_tints({"gas-urea","gas-ammonia","water-purified","gas-carbon-dioxide"}),
       order = "g"
     },
     {
@@ -205,7 +214,7 @@ data:extend(
         {type = "fluid", name = "liquid-nitric-acid", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72}
         },
@@ -214,6 +223,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72}
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-nitric-acid","gas-nitrogen-dioxide","water-purified"}),
       order = "h[nitric-acid]-a[water-purified]"
     },
     {
@@ -231,7 +241,7 @@ data:extend(
         {type = "fluid", name = "liquid-nitric-acid", amount = 40}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72}
         },
@@ -240,6 +250,7 @@ data:extend(
           "solid-sodium-nitrate"
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-nitric-acid","liquid-sulfuric-acid", AF.fluid_color({"a","n","o3"}--[[NaNO3]])}),
       order = "h[nitric-acid]-b[sulfuric-acid]"
     },
     {
@@ -258,12 +269,13 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/melamine.png", 72}
         },
         "chn"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-melamine","gas-urea"}),
       order = "i"
     },
     --ROCKET FUEL
@@ -282,12 +294,13 @@ data:extend(
         {type = "fluid", name = "gas-monochloramine", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/chloramine.png", 72}
         },
         "nhl"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-monochloramine","gas-ammonia",AF.fluid_color({"a","o","l"}--[[NaOCl]])}),
       order = "a"
     },
     {
@@ -308,12 +321,13 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72}
         },
         "nhh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-hydrazine","gas-monochloramine","gas-hydrogen-chloride","gas-ammonia"}),
       order = "b"
     },
     {
@@ -332,13 +346,14 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/methylamine.png", 72},
           "water-purified"
         },
         "chn"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methylamine","gas-methanol","water-purified","gas-ammonia"}),
       order = "c"
     },
     {
@@ -357,13 +372,14 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/dimethylamine.png", 72},
           "water-purified"
         },
         "chn"
-      ),
+      ),      
+      crafting_machine_tint = AF.get_recipe_tints({"gas-dimethylamine","gas-methylamine","water-purified","gas-methanol"}),
       order = "d"
     },
     {
@@ -382,13 +398,14 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/dimethylhydrazine.png", 72},
           "water-purified"
         },
         "chn"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-dimethylhydrazine","gas-dimethylamine","water-purified","gas-monochloramine"}),
       order = "e"
     },
     {
@@ -405,12 +422,13 @@ data:extend(
         {type = "fluid", name = "gas-dinitrogen-tetroxide", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72}
         },
         "noo"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-dinitrogen-tetroxide","gas-nitrogen-dioxide"}),
       order = "f"
     },
     --SOLID ROCKET FUEL
@@ -429,6 +447,7 @@ data:extend(
         {type = "item", name = "solid-ammonium-nitrate", amount = 3}
       },
       icon_size = 32,
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"n2","h4","o3"}--[[NH4NO3]]),"gas-ammonia","liquid-nitric-acid"}),
       order = "g"
     },
     {
@@ -448,6 +467,7 @@ data:extend(
       },
       icon_size = 32,
       main_product = "solid-ammonium-perchlorate",
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"n","h4","o4","l"}--[[NH4ClO4]]),"gas-ammonia", AF.fluid_color({"n","l"}--[[NaCl]]),"liquid-perchloric-acid"}),
       order = "h"
     },
     --FUEL CAPSULES
@@ -466,6 +486,7 @@ data:extend(
         {type = "item", name = "rocket-oxidizer-capsule", amount = 2}
       },
       icon_size = 32,
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-nitric-acid","gas-dinitrogen-tetroxide"}),
       order = "ha"
     },
     {
@@ -483,6 +504,7 @@ data:extend(
         {type = "item", name = "rocket-fuel-capsule", amount = 2}
       },
       icon_size = 32,
+      crafting_machine_tint = AF.get_recipe_tints({"gas-dimethylhydrazine","gas-hydrazine"}),
       order = "hb"
     },
     --ROCKET BOOSTER
