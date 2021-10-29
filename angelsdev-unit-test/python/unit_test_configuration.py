@@ -25,7 +25,10 @@ UnitTestConfiguration.addConfiguration("Special vanilla (light)",
     #"angelsindustries",
     #"angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
     'startup':
@@ -46,7 +49,10 @@ UnitTestConfiguration.addConfiguration("Special vanilla (regular)",
     #"angelsindustries",
     #"angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
     'startup':
@@ -67,7 +73,10 @@ UnitTestConfiguration.addConfiguration("Special vanilla (extended)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
     'startup':
@@ -89,6 +98,9 @@ UnitTestConfiguration.addConfiguration("Special vanilla (BA)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -132,6 +144,9 @@ UnitTestConfiguration.addConfiguration("BA (light)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     #"bobassembly",
@@ -172,6 +187,9 @@ UnitTestConfiguration.addConfiguration("BA (regular)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -212,6 +230,9 @@ UnitTestConfiguration.addConfiguration("BA (extended)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -252,6 +273,9 @@ UnitTestConfiguration.addConfiguration("BA (extended components)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -292,6 +316,9 @@ UnitTestConfiguration.addConfiguration("BA (extended technology)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -333,6 +360,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + overhaul)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -383,6 +413,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + components)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -433,6 +466,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + technology)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -483,6 +519,9 @@ UnitTestConfiguration.addConfiguration("BA (BobAssembly non-default + overhaul)"
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -539,6 +578,9 @@ UnitTestConfiguration.addConfiguration("BA (BobLogistics non-default + overhaul)
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -585,6 +627,9 @@ UnitTestConfiguration.addConfiguration("BA (BobRevamp non-default + overhaul)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -637,6 +682,9 @@ UnitTestConfiguration.addConfiguration("BA (Bob other non-default + overhaul)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -691,7 +739,10 @@ UnitTestConfiguration.addConfiguration("Pure Angels (overhaul)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
     'startup':
@@ -712,7 +763,10 @@ UnitTestConfiguration.addConfiguration("Pure Angels (components)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
     'startup':
@@ -733,7 +787,10 @@ UnitTestConfiguration.addConfiguration("Pure Angels (technology)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
     'startup':
