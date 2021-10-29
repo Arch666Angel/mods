@@ -94,7 +94,8 @@ OV.patch_recipes(
         {name = "steel-plate", type = "item", amount = 5},
         {name = "liquid-fuel-oil", type = "fluid", amount = 50},
         {name = "liquid-naphtha", type = "fluid", amount = 50}
-      }
+      },
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-fuel-oil","liquid-naphtha"})
     }
   }
 )

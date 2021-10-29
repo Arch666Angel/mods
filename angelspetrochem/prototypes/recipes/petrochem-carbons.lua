@@ -1,4 +1,5 @@
 local rawmulti = angelsmods.marathon.rawmulti
+local AF = angelsmods.functions
 
 data:extend(
   {
@@ -40,8 +41,9 @@ data:extend(
           "liquid-condensates",
           "gas-raw-1"
         },
-        "aaa"
+        "ggg"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-raw-1","gas-natural-1","water-yellow-waste"}),
       order = "a[gas-separation]"
     },
     {
@@ -65,8 +67,9 @@ data:extend(
           "liquid-ngl",
           "gas-acid"
         },
-        "aas"
+        "ggs"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-acid","gas-raw-1","liquid-ngl"}),
       order = "b[gas-refining]"
     },
     {
@@ -93,6 +96,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methane","liquid-ngl","gas-butane"}),
       order = "c[gas-fractioning]"
     },
     {
@@ -124,6 +128,7 @@ data:extend(
           "gas-synthesis"
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methane","liquid-ngl","gas-carbon-monoxide","gas-synthesis"}),
       order = "d"
     },
     {
@@ -155,6 +160,7 @@ data:extend(
           "liquid-condensates"
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-ethane","liquid-ngl","liquid-naphtha","liquid-condensates"}),
       order = "e"
     },
     {
@@ -186,6 +192,7 @@ data:extend(
           "gas-residual"
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-residual","gas-ethane","gas-residual","liquid-toluene"}),
       order = "f"
     },
     {
@@ -213,6 +220,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","thermal-water","gas-methane", AF.fluid_color({"c"}--[[coke]])}),
       order = "g"
     },
     --OIL FEED
@@ -254,6 +262,7 @@ data:extend(
         },
         {{100, 100, 100}, {171, 161, 055}, {127, 163, 109}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-raw-1","liquid-multi-phase-oil","crude-oil","water-yellow-waste"}),
       order = "a[oil-separation]"
     },
     {
@@ -281,6 +290,7 @@ data:extend(
         },
         "kkk"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","crude-oil","liquid-fuel-oil","liquid-mineral-oil"}),
       order = "b[oil-refining]"
     },
     {
@@ -312,6 +322,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","crude-oil","liquid-mineral-oil","hydrogen","liquid-fuel-oil"}),
       order = "c[advanced-oil-refining]"
     },
     {
@@ -343,6 +354,7 @@ data:extend(
           "liquid-condensates"
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-mineral-oil","crude-oil","liquid-naphtha","liquid-condensates","liquid-fuel-oil"}),
       order = "d[condensates-oil-refining]"
     },
     {
@@ -374,6 +386,7 @@ data:extend(
           "gas-residual"
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-mineral-oil","crude-oil","liquid-fuel-oil","gas-residual","liquid-naphtha"}),
       order = "e"
     },
     {
@@ -398,6 +411,7 @@ data:extend(
         },
         {{196, 075, 085}, {170, 071, 081}, {148, 066, 075}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-synthesis","liquid-naphtha","gas-residual","steam"}),
       order = "e[steam-cracking-naphtha]"
     },
     {
@@ -422,6 +436,7 @@ data:extend(
         },
         {{192, 096, 096}, {243,135,000}--[[{089, 102, 157}]], {036, 036, 036}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-mineral-oil","liquid-naphtha","thermal-water","gas-carbon-monoxide"}),
       order = "f"
     },
     {
@@ -446,6 +461,7 @@ data:extend(
         },
         {{063, 189, 063}, {058, 173, 58}, {053, 159, 053}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-mineral-oil","gas-synthesis","steam","gas-residual"}),
       order = "f[catalyst-steam-cracking-mineral-oil]"
     },
     {
@@ -470,6 +486,7 @@ data:extend(
         },
         {{237, 212, 104}, {239, 210, 093}, {247, 216, 081}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-synthesis","liquid-fuel-oil","gas-residual","steam"}),
       order = "g[catalyst-steam-cracking-fuel-oil]"
     },
     {
@@ -493,6 +510,7 @@ data:extend(
         },
         {{063, 189, 063}, {058, 173, 58}, {053, 159, 053}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"lubricant","liquid-mineral-oil","gas-residual"}),
       order = "g"
     },
     --SYNTHESIS
@@ -518,6 +536,7 @@ data:extend(
         },
         {{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-hydrogen","gas-synthesis","gas-carbon-monoxide"}),
       order = "a[gas-synthesis-separation]"
     },
     {
@@ -541,6 +560,7 @@ data:extend(
         },
         {{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-synthesis","carbon-monoxide","gas-hydrogen"}),
       order = "b[gas-synthesis-reforming]"
     },
     {
@@ -570,6 +590,7 @@ data:extend(
         },
         {{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methane","gas-synthesis","gas-butane","gas-hydrogen"}),
       order = "c[gas-synthesis-methanation]"
     },
     {
@@ -595,6 +616,7 @@ data:extend(
         },
         {{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","gas-synthesis","gas-carbon-monoxide"}),
       order = "d[liquid-mineral-oil-catalyst]"
     },
     {
@@ -621,6 +643,7 @@ data:extend(
         },
         {{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methanol","gas-synthesis","water-purified","gas-carbon-monoxide"}),
       order = "e[gas-synthesis-methanol]"
     },
     {
@@ -644,6 +667,7 @@ data:extend(
         },
         {{064, 000, 064}, {128, 000, 128}, {192, 000, 192}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-synthesis","gas-residual","steam"}),
       order = "f[steam-cracking-gas-residual]"
     },
     {
@@ -667,6 +691,7 @@ data:extend(
         },
         {{064, 000, 064}, {128, 000, 128}, {192, 000, 192}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-residual","steam"}),
       order = "g[steam-cracking-oil-residual]"
     },
     --STEAM CRACKING
@@ -692,6 +717,7 @@ data:extend(
         },
         "chw"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methanol","gas-methane","gas-residual","steam"}),
       order = "a[steam-cracking-methane]"
     },
     {
@@ -716,6 +742,7 @@ data:extend(
         },
         "chw"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-ethylene","gas-ethane","gas-residual","steam"}),
       order = "b[steam-cracking-ethane]"
     },
     {
@@ -740,6 +767,7 @@ data:extend(
         },
         "chw"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-benzene","gas-butane","gas-residual","steam"}),
       order = "c[steam-cracking-butane]"
     },
     {
@@ -766,6 +794,7 @@ data:extend(
         },
         "chw"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-butadiene","liquid-naphtha","gas-residual","steam"}),
       order = "d[catalyst-steam-cracking-butane]"
     },
     {
@@ -791,6 +820,7 @@ data:extend(
         },
         {{196, 075, 085}, {170, 071, 081}, {148, 066, 075}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-propene","liquid-naphtha","steam"}),
       order = "e[catalyst-steam-cracking-naphtha]"
     },
     --CHEMISTRY
@@ -816,6 +846,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-benzene","gas-methane"}),
       order = "d[gas-benzene-catalyst]"
     },
     {
@@ -840,6 +871,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-polyethylene","gas-ethylene"}),
       order = "c[liquid-polyethylene-catalyst]"
     },
     {
@@ -865,6 +897,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-methanol","gas-carbon-dioxide","gas-hydrogen"}),
       order = "a[gas-methanol-catalyst]"
     },
     {
@@ -891,6 +924,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-ethylene-oxide","gas-ethylene","gas-oxygen"}),
       order = "b[gas-ethylene-oxide-catalyst]"
     },
     {
@@ -916,6 +950,7 @@ data:extend(
         },
         {{196, 075, 085}, {170, 071, 081}, {148, 066, 075}}
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-toluene","liquid-naphtha","gas-hydrogen"}),
       order = "e[toluene]-a"
     },
     {
@@ -942,6 +977,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-toluene","gas-benzene","gas-hydrogen-chloride","gas-chlor-methane"}),
       order = "e[toluene]-b"
     },
     {
@@ -966,6 +1002,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-formaldehyde","gas-methanol"}),
       order = "a[gas-formaldehyde-catalyst]"
     },
     {
@@ -990,6 +1027,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-styrene","liquid-ethylbenzene"}),
       order = "a[liquid-styrene-catalyst]"
     },
     {
@@ -1015,6 +1053,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-phenol","gas-benzene","gas-oxygen"}),
       order = "d[liquid-phenol-catalyst]-a"
     },
     {
@@ -1039,6 +1078,7 @@ data:extend(
         },
         "chw"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-propene","gas-methanol","gas-residual","steam"}),
       order = "e[gas-propene-synthesis]"
     },
     --ADVANCED CHEMISTRY
@@ -1066,6 +1106,7 @@ data:extend(
         },
         "chh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-ethylbenzene","gas-benzene","liquid-hydrofluoric-acid","gas-hydrogen-fluoride"}),
       order = "b[liquid-ethylbenzene-catalyst]"
     },
     {
@@ -1078,7 +1119,7 @@ data:extend(
       ingredients = {
         {type = "fluid", name = "gas-ethylene-oxide", amount = 100},
         {type = "fluid", name = "gas-carbon-dioxide", amount = 100},
-        --{type = "item", name = "catalyst-metal-green", amount = 1}--ideally a zinc catalyst
+        --{type = "item", name = "catalyst-metal-green", amount = 1} --ideally a zinc catalyst
       },
       results = {
         {type = "fluid", name = "liquid-ethylene-carbonate", amount = 90},
@@ -1092,6 +1133,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-ethyelene-carbonate","liquid-ethylene-oxide","gas-carbon-dioxide"}),
       order = "c[ethylene-carbonate]"
     },
     {
@@ -1120,6 +1162,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-phenol","gas-benzene","gas-acetone","gas-oxygen"}),
       order = "d[liquid-phenol-catalyst]-b"
     },
     {
@@ -1144,6 +1187,7 @@ data:extend(
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-bisphenol-a","liquid-phenol","liquid-acetone","liquid-hydrochloric-acid"}),
       order = "e"
     }
   }
