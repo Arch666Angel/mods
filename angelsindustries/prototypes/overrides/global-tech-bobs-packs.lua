@@ -118,7 +118,8 @@ if angelsmods.industries.tech then
   -- BOBS MODULES ---------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobmodules"] then
-    --adds bob modules stuffs
+    OV.remove_science_pack("angels-bio-yield-module", "angels-science-pack-orange")
+    AI.pack_replace("modules-3", "blue", "yellow")
   end
 
   -------------------------------------------------------------------------------
