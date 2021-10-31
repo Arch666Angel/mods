@@ -324,8 +324,6 @@ data:extend(
           } or nil
         },
       },
-  
-      -- Vertical Pipe Shadow Patch
       {
         always_draw = true,
         north_animation = {
@@ -805,8 +803,6 @@ data:extend(
           } or nil
         },
       },
-  
-      -- Vertical Pipe Shadow Patch
       {
         always_draw = true,
         north_animation = {
@@ -1286,8 +1282,6 @@ data:extend(
           } or nil
         },
       },
-  
-      -- Vertical Pipe Shadow Patch
       {
         always_draw = true,
         north_animation = {
@@ -1766,8 +1760,6 @@ data:extend(
           } or nil
         },
       },
-  
-      -- Vertical Pipe Shadow Patch
       {
         always_draw = true,
         north_animation = {
