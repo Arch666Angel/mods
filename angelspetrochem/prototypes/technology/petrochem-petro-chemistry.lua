@@ -159,7 +159,7 @@ data:extend(
       type = "technology",
       name = "angels-advanced-gas-processing",
       icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 2,
       prerequisites = {
         "gas-processing",
         "chemical-science-pack"

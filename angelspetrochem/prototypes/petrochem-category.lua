@@ -55,8 +55,8 @@ data:extend(
       icons = {
         {
           icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
-          icon_size = 128,
-          scale = 0.5
+          icon_size = 256, icon_mipmaps = 2,
+          scale = 0.25
         },
         {
           icon = "__angelsrefining__/graphics/icons/void.png",
