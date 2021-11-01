@@ -45,6 +45,7 @@ data:extend(
         {type = "fluid", name = "liquid-coolant", amount = 100}
       },
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-coolant"),
       order = "b"
     },
     {
