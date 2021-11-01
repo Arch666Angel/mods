@@ -13,6 +13,7 @@ Date: ??
     - Fixed hand crafting recipes not usable with alternative character mods (710)
     - Hide Electro whinning cells and Milling drums when they are unused (691)
     - Fixed crash when generating a new world without any autoplace settings (713)
+    - Fixed crash when playing with bobs vehicle equipment without bob technology mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 10.08.2021

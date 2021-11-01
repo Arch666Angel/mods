@@ -70,27 +70,33 @@ local function calculate_science_pack_level()
   end
 
   if game.active_mods["bobtech"] then
+    -- bobs regular science packs
     for pack_name, pack_level in pairs{
-      -- bobs regular science packs (blue science)
-      ["advanced-logistic-science-pack"] = 450,
-
-      -- bobs alien science packs (blue science)
-      ["science-pack-gold"] = 450,
-      ["alien-science-pack"] = 450,
-      ["alien-science-pack-blue"] = 450,
-      ["alien-science-pack-orange"] = 450,
-      ["alien-science-pack-purple"] = 450,
-      ["alien-science-pack-yellow"] = 450,
-      ["alien-science-pack-green"] = 450,
-      ["alien-science-pack-red"] = 450,
+      ["advanced-logistic-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]),
     } do
       science_pack_level[pack_name] = pack_level
+    end
+
+    if game.active_mods["bobenemies"] then
+      -- bobs alien science packs
+      for pack_name, pack_level in pairs{
+        ["science-pack-gold"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack-blue"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack-orange"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack-purple"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack-yellow"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack-green"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["alien-science-pack-red"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+      } do
+        science_pack_level[pack_name] = pack_level
+      end
     end
   end
 
   if game.active_mods["bobmodules"] then
     for pack_name, pack_level in pairs{
-      -- bobs module science packs (priority range similar to vanilla)
+      -- bobs module science packs
       ["speed-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
       ["effectivity-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
       ["productivity-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
