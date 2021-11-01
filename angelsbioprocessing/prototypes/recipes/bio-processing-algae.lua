@@ -1,3 +1,12 @@
+local AF = angelsmods.functions
+local tints = {
+  ["solid-sodium-carbonate"] = {AF.fluid_color({"a2","c","o3"})},
+  ["solid-alginic-acid"] = {AF.fluid_color({"c6","h8","o6"})},
+  ["algae-brown"] = {r = 225/255, g = 160/255, b = 106/255},
+  ["algae-green"] = {r = 84/255, g = 118/255, b = 76/255},
+  ["algae-blue"] = {r = 89/255, g = 89/255, b = 188/255},
+  ["algae-red"] = {r = 188/255, g = 89/255, b = 89/255},
+}
 data:extend(
   {
     --BROWN
@@ -48,6 +57,7 @@ data:extend(
         {type = "item", name = "solid-sodium-carbonate", amount = 1}
       },
       icon_size = 32,
+      crafting_machine_tint = AF.get_recipe_tints({tints["solid-sodium-carbonate"], tints["algae-brown"], "water-purified", tints["solid-sodium-carbonate"]}),
       order = "b[algae-brown-burning-wash]"
     },
     {
@@ -103,7 +113,7 @@ data:extend(
         {type = "item", name = "algae-green", amount = 25},
         {type = "item", name = "algae-brown", amount = 5}
       },
-      icons = angelsmods.functions.add_number_icon_layer({
+      icons = AF.add_number_icon_layer({
           {
             icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
             icon_size = 32, icon_mipmaps = 1
@@ -126,7 +136,7 @@ data:extend(
       results = {
         {type = "item", name = "algae-green", amount = 50}
       },
-      icons = angelsmods.functions.add_number_icon_layer({
+      icons = AF.add_number_icon_layer({
           {
             icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
             icon_size = 32, icon_mipmaps = 1
@@ -166,12 +176,13 @@ data:extend(
         {type = "fluid", name = "gas-methanol", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/methanol.png", 72}
         },
         "coh"
       ),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("gas-methanol"),
       order = "k[gas-methanol-from-wood]"
     },
     --BLUE
@@ -224,12 +235,13 @@ data:extend(
         {type = "fluid", name = "gas-ammonia", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72}
         },
         "nhh"
       ),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("gas-ammonia"),
       order = "c[gas-ammonia-from-blue-fiber]"
     },
     --RED
@@ -283,6 +295,7 @@ data:extend(
       },
       icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
       icon_size = 32,
+      crafting_machine_tint = AF.get_recipe_tints({tints["solid-calcium-carbonate"],tints["algae-red"],tints["solid-calcium-carbonate"],tints["algae-red"]}),
       order = "c[solid-calcium-carbonate]"
     }
   }

@@ -71,6 +71,7 @@ data:extend(
         },
         "ccc"
       ),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}, "gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}}),
       order = "e"
     },
     {
@@ -104,6 +105,7 @@ data:extend(
         {type = "item", name = "solid-carbon", amount = 2}
       },
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.functions.flow_color({"c"}), "gas-oxygen", angelsmods.functions.flow_color({"c"}), "gas-oxygen"}),
       order = "g"
     },
     --PULP
@@ -145,6 +147,7 @@ data:extend(
       },
       main_product = "liquid-pulping-liquor",
       always_show_products = true,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-pulping-liquor", "gas-sulfur-dioxide", "water", "gas-oxygen"}),
       order = "ba"
     },
     {
@@ -173,6 +176,7 @@ data:extend(
         }
       },
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-red-waste", "liquid-brown-liquor", angelsmods.functions.flow_color({"a2","s","o3"}), angelsmods.functions.flow_color({"a","h","o"})}),
       order = "bb"
     },
     {
@@ -195,6 +199,7 @@ data:extend(
       icons = angelsmods.functions.add_number_icon_layer(
         angelsmods.functions.get_object_icons("solid-wood-pulp"),
         2, angelsmods.bioprocessing.number_tint),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-brown-liquor", "liquid-pulping-liquor", "gas-ammonia", "water"}),
       order = "ab"
     },
     --T3 KRAFT PROCESS (SULFATE PROCESS)
