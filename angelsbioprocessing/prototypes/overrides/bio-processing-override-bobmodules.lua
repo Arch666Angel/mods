@@ -116,6 +116,10 @@ if mods["bobmodules"] then
       tech.upgrade = "false"
     end
   end
+  OV.remove_science_pack("module-merging", {
+    "module-case",
+    "module-circuit-board",
+  })
   -- tier 2 modules
   data:extend(
     {
@@ -199,6 +203,29 @@ if mods["bobmodules"] then
       2,--processor circuit board
     })
   end
+  for _, type in pairs{"raw-speed", "green", "raw-productivity"} do
+    OV.set_research_difficulty(type.."-module-3", 60, 100)
+    OV.set_research_difficulty(type.."-module-4", 60, 150)
+    OV.set_research_difficulty(type.."-module-5", 60, 200)
+    OV.set_science_pack({
+      type.."-module-5"
+    }, {
+      "module-case",
+      "module-circuit-board",
+    }, {
+      0,--module case
+      1,--module-circuit-board
+    })
+  end
+  OV.set_science_pack("raw-speed-module-5", {
+    "speed-processor", "effectivity-processor"
+  }, 2)
+  OV.set_science_pack("green-module-5", {
+    "pollution-clean-processor", "effectivity-processor"
+  }, 2)
+  OV.set_science_pack("raw-productivity-module-5", {
+    "pollution-clean-processor", "effectivity-processor", "productivity-processor"
+  }, 2)
 
   -- tier 3 modules
   data:extend(
@@ -260,6 +287,11 @@ if mods["bobmodules"] then
   for _, type in pairs{"speed", "effectivity", "productivity", "pollution-clean", "pollution-create"} do
     OV.remove_unlock(type.."-module-6", type.."-processor-3")
     OV.add_prereq(type.."-module-6", "modules-3")
+    OV.set_research_difficulty(type.."-module-6", 120, 300)
+    OV.set_research_difficulty(type.."-module-7", 120, 400)
+    OV.set_research_difficulty(type.."-module-8", 120, 500)
+  end
+  for _, type in pairs{"raw-speed", "green", "raw-productivity"} do
     OV.set_research_difficulty(type.."-module-6", 120, 300)
     OV.set_research_difficulty(type.."-module-7", 120, 400)
     OV.set_research_difficulty(type.."-module-8", 120, 500)

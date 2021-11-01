@@ -13,6 +13,7 @@ if mods["bobequipment"] then
   end
 
   if mods["bobenemies"] and mods["bobtech"] then
+    OV.add_prereq("bob-energy-shield-equipment-4", "alien-research")
   else -- not alien technology
     OV.set_science_pack({
       "bob-energy-shield-equipment-4",
@@ -32,12 +33,24 @@ if mods["bobequipment"] then
   -- FUSION REACTOR EQUIPMENT -------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobenemies"] and mods["bobtech"] then
+    OV.remove_science_pack("fusion-reactor-equipment", "utility-science-pack")
+    OV.set_science_pack("fusion-reactor-equipment", "production-science-pack")
+    OV.remove_prereq("fusion-reactor-equipment", "utility-science-pack")
+    OV.add_prereq("fusion-reactor-equipment", "production-science-pack")
     OV.add_prereq("fusion-reactor-equipment-2", "alien-research")
   end
 
   -----------------------------------------------------------------------------
   -- LASER DEFENSE EQUIPMENT --------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.add_prereq("personal-laser-defence-equipment-4", "utility-science-pack")
-  
+  OV.add_prereq("personal-laser-defense-equipment-4", "utility-science-pack")
+
+  -----------------------------------------------------------------------------
+  -- EXOSKELETON EQUIPMENT ----------------------------------------------------
+  -----------------------------------------------------------------------------
+  OV.set_science_pack("exoskeleton-equipment", "chemical-science-pack")
+  if mods["boblogistics"] and (not mods["angelsindustries"]) then
+    OV.add_prereq("exoskeleton-equipment", "chemical-science-pack")
+  end
+
 end

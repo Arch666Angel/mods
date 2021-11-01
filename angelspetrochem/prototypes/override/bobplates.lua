@@ -3,8 +3,6 @@ local move_item = angelsmods.functions.move_item
 
 if mods["bobplates"] then
   OV.disable_recipe({"bob-resin-oil"})
-
-  OV.set_science_pack("electric-engine", "chemical-science-pack")
 end
 
 -------------------------------------------------------------------------------

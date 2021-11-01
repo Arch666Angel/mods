@@ -241,7 +241,7 @@ if angelsmods.industries.tech then
     --adds bob personal equipment stuffs
     AI.pack_replace("personal-roboport-equipment", "green", "orange")
     AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    AI.pack_replace("exoskeleton-equipment", "green", "orange")
+    AI.pack_replace("exoskeleton-equipment", "blue", "orange")
     AI.pack_replace("solar-panel-equipment-2", "green", "orange")
     AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
   end

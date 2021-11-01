@@ -1032,23 +1032,20 @@ end
 -- MODIFY FLAGS ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 local building_types = {
-  "assembling-machine",
+  "assembling-machine", "furnace",
   "mining-drill",
   "lab",
-  "furnace",
   "offshore-pump",
-  "pump",
+  "pump", "pipe", "pipe-to-ground",
   "rocket-silo",
   "radar",
   "beacon",
-  "boiler",
-  "generator",
-  "solar-panel",
-  "accumulator",
-  "reactor",
+  "boiler", "generator",
+  "solar-panel", "accumulator",
+  "reactor", "heat-pipe",
   "electric-pole",
-  "wall",
-  "gate"
+  "wall", "gate",
+  "container", "storage-tank",
 }
 function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
@@ -1370,7 +1367,7 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
   if angelsmods.trigger.enableconverter then
     if data.raw.fluid[fluid_name_angels] and data.raw.fluid[fluid_name_other] then
       --LOCALS
-      hide_converter = angelsmods.trigger.hideconverter
+      local hide_converter = angelsmods.trigger.hideconverter
 
       --ORDER COUNTER
       if not angelsmods.functions.converter_counter then
@@ -1426,10 +1423,14 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
           }
         }
       )
-      if angelsmods.trigger.hideconverter then
+      if hide_converter then
         angelsmods.functions.OV.hide_recipe(
           {"converter-other-" .. fluid_name_other, "converter-angels-" .. fluid_name_angels}
         )
+      end
+      if angelsmods.trigger.enableconverter then
+      else -- hide the unused other fluid
+        angelsmods.functions.add_flag(fluid_name_other, "hidden")
       end
     end
   end

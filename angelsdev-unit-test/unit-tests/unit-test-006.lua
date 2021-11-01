@@ -28,21 +28,25 @@ local function calculate_science_pack_level()
       ["angels-science-pack-blue"] = 400,
       ["angels-science-pack-yellow"] = 600,
       ["angels-science-pack-white"] = 700,
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
 
-      -- angels datacores (priority range similar to angels science packs)
-      ["datacore-basic"] = 50,
-      ["datacore-exploration-1"] = 100,
-      ["datacore-exploration-2"] = 400,
-      ["datacore-enhance-1"] = 100,
-      ["datacore-enhance-2"] = 400,
-      ["datacore-energy-1"] = 100,
-      ["datacore-energy-2"] = 400,
-      ["datacore-logistic-1"] = 100,
-      ["datacore-logistic-2"] = 400,
-      ["datacore-war-1"] = 100,
-      ["datacore-war-2"] = 400,
-      ["datacore-processing-1"] = 100,
-      ["datacore-processing-2"] = 400,
+    for pack_name, pack_level in pairs{
+      -- angels datacores
+      ["datacore-basic"] = science_pack_level["angels-science-pack-grey"],
+      ["datacore-exploration-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-exploration-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-enhance-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-enhance-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-energy-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-energy-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-logistic-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-logistic-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-war-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-war-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-processing-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-processing-2"] = science_pack_level["angels-science-pack-blue"],
       ["datacore-processing-3"] = nil, -- unused
       ["datacore-processing-4"] = nil, -- unused
       ["datacore-processing-5"] = nil, -- unused
