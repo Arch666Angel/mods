@@ -1,4 +1,5 @@
--- This unit test validates that each visible item and fluid has a visible recipe
+-- This unit test validates that each visible item and fluid has a valid source:
+-- A visible recipe, can be mined, or is dropped as loot
 local unit_test_functions = require("unit-test-functions")
 
 local items_to_ignore = {}
@@ -74,14 +75,45 @@ local unit_test_008 = function()
     end
   end
 
+  -- Populate items_to_ignore with enemy drops
+  local entity_filters = {}
+  table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
+
+  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+
+  for entity_name, entity in pairs(entity_prototypes) do
+    local loot = entity.loot
+    if loot then
+      for _, loot_item in pairs(loot) do
+        if (loot_item.probability > 0) and (loot_item.count_max > 0) then
+          items_to_ignore[loot_item.item] = true
+        end
+      end
+    end
+  end
+
   -- Populate fluid_recipes_to_ignore with unbarreling recipes
   local recipe_filters = {}
-  table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = "barreling-pump"})
+  table.insert(recipe_filters, {filter = "category", invert = false, mode = "and", category = "barreling-pump"})
 
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
 
   for recipe_name, recipe in pairs(recipe_prototypes) do
     fluid_recipes_to_ignore[recipe_name] = true
+  end
+
+  -- Populate fluid_recipes_to_ignore with offshore pump results
+  local entity_filters = {}
+  table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
+  table.insert(entity_filters, {filter = "type", type = "offshore-pump", mode = "and"})
+
+  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+
+  for entity_name, entity in pairs(entity_prototypes) do
+    local fluid = entity.fluid
+    if fluid then
+      fluid_recipes_to_ignore[fluid.name] = true
+    end
   end
 
   -- Check items
