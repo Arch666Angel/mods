@@ -4,6 +4,9 @@ require("prototypes.bio-processing-override")
 require("prototypes.bio-processing-generate")
 require("prototypes.tips-and-tricks.tips-and-tricks")
 
+-- AGRICULTURE MODULES
+require("prototypes.overrides.bio-processing-override-agriculture-modules")
+
 -- hoggers are not implemented, hide them in the meantime
 angelsmods.functions.add_flag("bio-hogger-1", "hidden")
 angelsmods.functions.add_flag("bio-hogger-2", "hidden")
