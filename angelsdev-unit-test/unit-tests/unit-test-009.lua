@@ -64,6 +64,7 @@ local unit_test_009 = function()
   local entity_filters = {}
   table.insert(entity_filters, {filter = "item-to-place", invert = false, mode = "and"})
   table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
+  table.insert(entity_filters, {filter = "autoplace", invert = true, mode = "and"})
 
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
 
