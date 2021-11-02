@@ -102,7 +102,7 @@ local unit_test_008 = function()
     fluid_recipes_to_ignore[recipe_name] = true
   end
 
-  -- Populate fluid_recipes_to_ignore with offshore pump results
+  -- Populate fluids_to_ignore with offshore pump results
   local entity_filters = {}
   table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
   table.insert(entity_filters, {filter = "type", type = "offshore-pump", mode = "and"})
@@ -112,7 +112,7 @@ local unit_test_008 = function()
   for entity_name, entity in pairs(entity_prototypes) do
     local fluid = entity.fluid
     if fluid then
-      fluid_recipes_to_ignore[fluid.name] = true
+      fluids_to_ignore[fluid.name] = true
     end
   end
 
