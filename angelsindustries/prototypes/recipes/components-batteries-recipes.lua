@@ -236,6 +236,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-1", amount = 10},
       },
       allow_decomposition = true,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"battery-electrolyte-1","liquid-sulfuric-acid","water-saline","battery-electrolyte-1"}),
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -344,6 +345,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-2", amount = 10},
       },
       allow_decomposition = true,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"battery-electrolyte-2","water-purified","water-saline","battery-electrolyte-2"}),
       icon_size = 64,
     },
     -----------------------------------------------------------------------------
@@ -495,6 +497,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-3", amount = 10},
       },
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"battery-electrolyte-3","liquid-ethylene-carbonate","thermal-water","battery-electrolyte-3"}),
       allow_decomposition = true,
       icon_size = 64,
     },
@@ -606,6 +609,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-4", amount = 10},
       },
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"battery-electrolyte-4","liquid-rubber",angelsmods.functions.fluid_color("Li"),"battery-electrolyte-4"}),
       allow_decomposition = true,
       icon_size = 64,
     },
@@ -720,6 +724,7 @@ if angelsmods.industries.components then
       {
         {type = "fluid", name = "battery-electrolyte-5", amount = 10},
       },
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"battery-electrolyte-5","liquid-molten-glass",angelsmods.functions.fluid_color("Li"),"battery-electrolyte-5"}),
       allow_decomposition = true,
       icon_size = 64,
     },
@@ -828,6 +833,7 @@ if angelsmods.industries.components then
         {type = "fluid", name = "battery-electrolyte-6", amount = 10},
       },
       allow_decomposition = true,
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"battery-electrolyte-6","liquid-aqueous-sodium-hydroxide","liquid-aqueous-sodium-hydroxide","battery-electrolyte-6"}),
       icon_size = 64,
     },
     -----------------------------------------------------------------------------

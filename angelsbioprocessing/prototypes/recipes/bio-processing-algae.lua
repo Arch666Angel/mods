@@ -1,7 +1,7 @@
 local AF = angelsmods.functions
 local tints = {
-  ["solid-sodium-carbonate"] = {AF.fluid_color({"a2","c","o3"})},
-  ["solid-alginic-acid"] = {AF.fluid_color({"c6","h8","o6"})},
+  ["solid-sodium-carbonate"] = {AF.fluid_color("Na2CO3")},
+  ["solid-alginic-acid"] = {AF.fluid_color("C6H8O6")},
   ["algae-brown"] = {r = 225/255, g = 160/255, b = 106/255},
   ["algae-green"] = {r = 84/255, g = 118/255, b = 76/255},
   ["algae-blue"] = {r = 89/255, g = 89/255, b = 188/255},
@@ -180,7 +180,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/methanol.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_fluid_recipe_tint("gas-methanol"),
       order = "k[gas-methanol-from-wood]"
@@ -239,7 +239,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72}
         },
-        "nhh"
+        "NHH"
       ),
       crafting_machine_tint = AF.get_fluid_recipe_tint("gas-ammonia"),
       order = "c[gas-ammonia-from-blue-fiber]"

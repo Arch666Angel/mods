@@ -353,7 +353,7 @@ data:extend(
         },
         "solid-fuel"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-naphtha", AF.fluid_color({"c"})}),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-naphtha", AF.fluid_color("Cb")}),
       order = "b[solid-fuel-naphtha]"
     },
     {
@@ -376,7 +376,7 @@ data:extend(
         },
         "solid-fuel"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-fuel-oil", AF.fluid_color({"c"})}),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-fuel-oil", AF.fluid_color("Cb")}),
       order = "c[solid-fuel-fuel-oil]"
     },
     {
@@ -399,7 +399,7 @@ data:extend(
         },
         "solid-fuel"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "gas-synthesis", AF.fluid_color({"c"})}),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "gas-synthesis", AF.fluid_color("Cb")}),
       order = "d[solid-fuel-synthesis]"
     },
     {

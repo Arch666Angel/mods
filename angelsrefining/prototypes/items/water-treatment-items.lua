@@ -1,6 +1,6 @@
 local function mud_blending(w,alpha) --w is weighting
   local tint_A = util.color("6a492c") --mud custom colour
-  local tint_B = angelsmods.functions.fluid_color({"w"}) --purified water
+  local tint_B = angelsmods.functions.fluid_color("Ws") --purified water
   local A = {
     r = tint_A.r or tint_A[1],
     g = tint_A.g or tint_A[1],
@@ -82,8 +82,8 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w4","a","l"}),--{r = 0.9, g = 0.9, b = 1},
-      flow_color = angelsmods.functions.flow_color({"w4","a","l"}),--{r = 0.9, g = 0.9, b = 1},
+      base_color = angelsmods.functions.fluid_color("Ws4NaCl"),--{r = 0.9, g = 0.9, b = 1},
+      flow_color = angelsmods.functions.flow_color("Ws4NaCl"),--{r = 0.9, g = 0.9, b = 1},
       max_temperature = 100,
 
     },
@@ -95,8 +95,8 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.2KJ",
-      base_color = angelsmods.functions.fluid_color({"w"}),--{r = 0.7, g = 0.7, b = 1},
-      flow_color = angelsmods.functions.flow_color({"w"}),--{r = 0.7, g = 0.7, b = 1},
+      base_color = angelsmods.functions.fluid_color("Ws"),--{r = 0.7, g = 0.7, b = 1},
+      flow_color = angelsmods.functions.flow_color("Ws"),--{r = 0.7, g = 0.7, b = 1},
       max_temperature = 100,
 
     },
@@ -108,8 +108,8 @@ data:extend(
       order = "a",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w1","s"}),--{r = 0.9, g = 0.9, b = 0.4},
-      flow_color = angelsmods.functions.flow_color({"w1","s"}),--{r = 0.9, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color("WsS"),--{r = 0.9, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color("WsS"),--{r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -121,8 +121,8 @@ data:extend(
       order = "d",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w2","o"}),--{r = 0.9, g = 0.4, b = 0.4}, --red calls for oxy, even though it should be blue for nitrogen
-      flow_color = angelsmods.functions.flow_color({"w2","o"}),--{r = 0.9, g = 0.4, b = 0.4},
+      base_color = angelsmods.functions.fluid_color("Ws2O"),--{r = 0.9, g = 0.4, b = 0.4}, --red calls for oxy, even though it should be blue for nitrogen
+      flow_color = angelsmods.functions.flow_color("Ws2O"),--{r = 0.9, g = 0.4, b = 0.4},
       max_temperature = 100,
 
     },
@@ -134,8 +134,8 @@ data:extend(
       order = "c",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w1","l"}),--{r = 0.4, g = 0.9, b = 0.4},
-      flow_color = angelsmods.functions.flow_color({"w1","l"}),--{r = 0.4, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color("Ws1Cl"),--{r = 0.4, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color("Ws1Cl"),--{r = 0.4, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },
@@ -147,8 +147,8 @@ data:extend(
       order = "b",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color({"w1","f"}),--{r = 0.9, g = 0.9, b = 0.4},
-      flow_color = angelsmods.functions.flow_color({"w1","f"}),--{r = 0.9, g = 0.9, b = 0.4},
+      base_color = angelsmods.functions.fluid_color("Ws1F"),--{r = 0.9, g = 0.9, b = 0.4},
+      flow_color = angelsmods.functions.flow_color("Ws1F"),--{r = 0.9, g = 0.9, b = 0.4},
       max_temperature = 100,
 
     },

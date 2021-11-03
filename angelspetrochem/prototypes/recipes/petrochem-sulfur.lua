@@ -27,7 +27,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
         },
-        "shh"
+        "SHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-hydrogen-sulfide", "gas-acid", "gas-carbon-dioxide", "gas-hydrogen-fluoride"}),
       order = "a[gas-acid-catalyst]"
@@ -51,9 +51,9 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32}
         },
-        "sss"
+        "SSS"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({ AF.fluid_color({"s"}), "gas-hydrogen-sulfide", "gas-oxygen"}),
+      crafting_machine_tint = AF.get_recipe_tints({ AF.fluid_color("S"), "gas-hydrogen-sulfide", "gas-oxygen"}),
       order = "b[solid-sulfur]"
     },
     {
@@ -75,9 +75,9 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72}
         },
-        "soo"
+        "SOO"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({"gas-sulfur-dioxide", "gas-oxygen", AF.fluid_color({"s"})}),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-sulfur-dioxide", "gas-oxygen", AF.fluid_color("S")}),
       order = "ca[gas-sulfur-dioxide]"
     },
     {
@@ -100,7 +100,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72}
         },
-        "soo"
+        "SOO"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-sulfur-dioxide", "water-purified", {r = 90/255, g = 92/255, b = 93/255}}),
       order = "cb[gas-sulfur-dioxide-calcium-sulfate]"
@@ -124,7 +124,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/sulfuric-acid.png", 72}
         },
-        "sho"
+        "SHO"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-sulfuric-acid", "gas-sulfur-dioxide", "water-purified"}),
       order = "d[liquid-sulfuric-acid]"
@@ -149,12 +149,12 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
         },
-        "fhh",
+        "FHH",
         {
           "fluorite-ore"
         }
       ),
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-hydrofluoric-acid", AF.fluid_color({"f"}), "sulfuric-acid", {r = 90/255, g = 92/255, b = 93/255}}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-hydrofluoric-acid", AF.fluid_color("F"), "sulfuric-acid", {r = 90/255, g = 92/255, b = 93/255}}),
       order = "e[liquid-hydrofluoric-acid]-a"
     },
     {
@@ -179,7 +179,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
         },
-        "fhh",
+        "FHH",
         {
           "water-purified"
         }
@@ -208,7 +208,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72}
         },
-        "fhh"
+        "FHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-hydrogen-fluoride", "liquid-hydrofluoric-acid", "water-greenyellow-waste"}),
       order = "e[liquid-hydrofluoric-acid]-c"
@@ -251,7 +251,7 @@ data:extend(
         {
           "filter-lime"
         },
-        "sss"
+        "SSS"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"water-yellow-waste", "water"}),
       order = "g"
@@ -277,7 +277,7 @@ data:extend(
         {
           "gas-acid"
         },
-        "sss"
+        "SSF"
       ),
       crafting_machine_tint = AF.get_fluid_recipe_tint("gas-acid"),
       order = "h"
@@ -303,7 +303,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72}
         },
-        "sww"
+        "SWsWs"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-enriched-hydrogen-sulfide", "gas-hydrogen-sulfide", "water-purified", "steam"}),
       order = "i[enriched-hydrogen-sulfide]-a[enrichment]"

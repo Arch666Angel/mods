@@ -57,7 +57,7 @@ data:extend(
     type = "fluid",
     name = "gas-tungsten-hexafluoride",
     localised_description = show_formula and {"tooltip-description.chemical-formula", "WF[font=default-tiny-bold]6[/font]"} or nil,
-    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 }, "tff"),
+    icons = angelsmods.functions.create_gas_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 }, "WFF"),
     subgroup = "angels-tungsten",
     order = "f",
     default_temperature = 100,

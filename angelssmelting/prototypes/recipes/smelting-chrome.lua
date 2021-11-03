@@ -70,7 +70,7 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 40}
       },
       main_product = "solid-dichromate",
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-molten-chrome", "liquid-sulfuric-acid", AF.fluid_color({"a2","s","o4"}--[[NaSO4]]), "water-purified"}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-molten-chrome", "liquid-sulfuric-acid", AF.fluid_color("NaSO4"), "water-purified"}),
       order = "e[solid-dichromate]"
     },
     {

@@ -41,7 +41,7 @@ data:extend(
           "liquid-condensates",
           "gas-raw-1"
         },
-        "ggg"
+        "NgNgNg"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-raw-1","gas-natural-1","water-yellow-waste"}),
       order = "a[gas-separation]"
@@ -67,7 +67,7 @@ data:extend(
           "liquid-ngl",
           "gas-acid"
         },
-        "ggs"
+        "NgNgS"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-acid","gas-raw-1","liquid-ngl"}),
       order = "b[gas-refining]"
@@ -94,7 +94,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/butane.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/ethane.png", 72}
         },
-        "chh"
+        "CHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-methane","liquid-ngl","gas-butane"}),
       order = "c[gas-fractioning]"
@@ -123,7 +123,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/butane.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/ethane.png", 72}
         },
-        "chh",
+        "CHH",
         {
           "gas-synthesis"
         }
@@ -155,7 +155,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/butane.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/ethane.png", 72}
         },
-        "chh",
+        "CHH",
         {
           "liquid-condensates"
         }
@@ -187,7 +187,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/butane.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/ethane.png", 72}
         },
-        "chh",
+        "CHH",
         {
           "gas-residual"
         }
@@ -218,9 +218,9 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/methane.png", 72},
           "liquid-naphtha"
         },
-        "chh"
+        "CHH"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","thermal-water","gas-methane", AF.fluid_color({"c"}--[[coke]])}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","thermal-water","gas-methane", AF.fluid_color("Cb"--[[coke]])}),
       order = "g"
     },
     --OIL FEED
@@ -288,7 +288,7 @@ data:extend(
           "liquid-naphtha",
           "liquid-mineral-oil"
         },
-        "kkk"
+        "OiOiOi"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha","crude-oil","liquid-fuel-oil","liquid-mineral-oil"}),
       order = "b[oil-refining]"
@@ -317,7 +317,7 @@ data:extend(
           "liquid-naphtha",
           "liquid-mineral-oil"
         },
-        "kkk",
+        "OiOiOi",
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         }
@@ -349,7 +349,7 @@ data:extend(
           "liquid-naphtha",
           "liquid-mineral-oil"
         },
-        "kkk",
+        "OiOiOi",
         {
           "liquid-condensates"
         }
@@ -381,7 +381,7 @@ data:extend(
           "liquid-naphtha",
           "liquid-mineral-oil"
         },
-        "kkk",
+        "OiOiOi",
         {
           "gas-residual"
         }
@@ -715,7 +715,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/methanol.png", 72}
         },
-        "chw"
+        "CHWs"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-methanol","gas-methane","gas-residual","steam"}),
       order = "a[steam-cracking-methane]"
@@ -740,7 +740,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72}
         },
-        "chw"
+        "CHWs"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-ethylene","gas-ethane","gas-residual","steam"}),
       order = "b[steam-cracking-ethane]"
@@ -765,7 +765,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/benzene.png", 72}
         },
-        "chw"
+        "CHWs"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-benzene","gas-butane","gas-residual","steam"}),
       order = "c[steam-cracking-butane]"
@@ -792,7 +792,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/butadiene.png", 72}
         },
-        "chw"
+        "CHWs"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-butadiene","liquid-naphtha","gas-residual","steam"}),
       order = "d[catalyst-steam-cracking-butane]"
@@ -844,7 +844,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/benzene.png", 72}
         },
-        "chh"
+        "CHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-benzene","gas-methane"}),
       order = "d[gas-benzene-catalyst]"
@@ -869,7 +869,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/polyethylene.png", 72, {11.5 * 32 / 10.24, 0}, 32 / 10.24}
         },
-        "chh"
+        "CHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-polyethylene","gas-ethylene"}),
       order = "c[liquid-polyethylene-catalyst]"
@@ -895,7 +895,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/methanol.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-methanol","gas-carbon-dioxide","gas-hydrogen"}),
       order = "a[gas-methanol-catalyst]"
@@ -922,7 +922,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ethylene-oxide.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-ethylene-oxide","gas-ethylene","gas-oxygen"}),
       order = "b[gas-ethylene-oxide-catalyst]"
@@ -975,7 +975,7 @@ data:extend(
         {
           "liquid-toluene"
         },
-        "chh"
+        "CHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-toluene","gas-benzene","gas-hydrogen-chloride","gas-chlor-methane"}),
       order = "e[toluene]-b"
@@ -1000,7 +1000,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/formaldehyde.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-formaldehyde","gas-methanol"}),
       order = "a[gas-formaldehyde-catalyst]"
@@ -1025,7 +1025,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/styrene.png", 72}
         },
-        "chh"
+        "CHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-styrene","liquid-ethylbenzene"}),
       order = "a[liquid-styrene-catalyst]"
@@ -1051,7 +1051,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/phenol.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-phenol","gas-benzene","gas-oxygen"}),
       order = "d[liquid-phenol-catalyst]-a"
@@ -1076,7 +1076,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/propene.png", 72}
         },
-        "chw"
+        "CHWs"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-propene","gas-methanol","gas-residual","steam"}),
       order = "e[gas-propene-synthesis]"
@@ -1104,7 +1104,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ethylbenzene.png", 72}
         },
-        "chh"
+        "CHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-ethylbenzene","gas-benzene","liquid-hydrofluoric-acid","gas-hydrogen-fluoride"}),
       order = "b[liquid-ethylbenzene-catalyst]"
@@ -1131,7 +1131,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ethylene-carbonate.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-ethyelene-carbonate","liquid-ethylene-oxide","gas-carbon-dioxide"}),
       order = "c[ethylene-carbonate]"
@@ -1160,7 +1160,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/phenol.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/acetone.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-phenol","gas-benzene","gas-acetone","gas-oxygen"}),
       order = "d[liquid-phenol-catalyst]-b"
@@ -1185,7 +1185,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/bisphenol_a.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-bisphenol-a","liquid-phenol","liquid-acetone","liquid-hydrochloric-acid"}),
       order = "e"

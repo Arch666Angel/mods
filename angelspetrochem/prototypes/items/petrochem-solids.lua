@@ -147,8 +147,8 @@ data:extend(
     order = "j",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
-    base_color = angelsmods.functions.fluid_color({"a2","o2","h2","w"}),--{r = 0.9, g = 0.9, b = 0.9},
-    flow_color = angelsmods.functions.flow_color({"a2","o2","h2","w"}),--{r = 0.9, g = 0.9, b = 0.9},
+    base_color = angelsmods.functions.fluid_color("Na2O2H2Ws"),--{r = 0.9, g = 0.9, b = 0.9},
+    flow_color = angelsmods.functions.flow_color("Na2O2H2Ws"),--{r = 0.9, g = 0.9, b = 0.9},
     max_temperature = 100,
   },
   --CATALYSTS

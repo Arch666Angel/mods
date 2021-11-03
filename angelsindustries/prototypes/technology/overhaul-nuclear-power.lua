@@ -97,7 +97,7 @@ data:extend(
           },
         },
         angelsmods.functions.add_icon_layer(
-          angelsmods.functions.modify_icon_layers(angelsmods.functions.create_gas_recipe_icon(nil, "ddd", nil), {-25, -20}, 85/32),
+          angelsmods.functions.modify_icon_layers(angelsmods.functions.create_gas_recipe_icon(nil, "HdHdHd", nil), {-25, -20}, 85/32),
           {
             {
               icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-cell.png"
@@ -151,7 +151,7 @@ data:extend(
           },
         },
         angelsmods.functions.add_icon_layer(
-          angelsmods.functions.modify_icon_layers(angelsmods.functions.create_gas_recipe_icon(nil, "ddd", nil), {-25, -20}, 85/32),
+          angelsmods.functions.modify_icon_layers(angelsmods.functions.create_gas_recipe_icon(nil, "HdHdHd", nil), {-25, -20}, 85/32),
           {
             {
               icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-cell.png"

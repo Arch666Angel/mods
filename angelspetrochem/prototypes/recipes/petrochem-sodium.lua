@@ -24,7 +24,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72},
           "solid-sodium"
         },
-        "lll"
+        "ClClCl"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-chlorine"}),
       order = "a[sodium]-a[generation]"
@@ -49,7 +49,7 @@ data:extend(
       },
       main_product = "solid-sodium",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a"}--[[Na]]), AF.fluid_color({"a","o","h"}--[[NaOH]]), "water-purified", "gas-oxygen"}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("Na"), AF.fluid_color("NaOH"), "water-purified", "gas-oxygen"}), --tempted to swap the NaOH with the "liquid" variant
       order = "a[sodium]-b[hydroxide]"
     },
     {
@@ -68,7 +68,6 @@ data:extend(
         {type = "item", name = "sulfur", amount = 2}
       },
       main_product = "solid-sodium",
-      --icon = "__angelspetrochem__/graphics/icons/solid-sodium.png",
       icon_size = 32,
       order = "a[sodium]-c[sulfate]"
     },
@@ -89,7 +88,7 @@ data:extend(
         {type = "item", name = "solid-sodium-carbonate", amount = 5}
       },
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a","c","o3"}--[[NaCO3]]), "gas-carbon-dioxide", AF.fluid_color({"a"}--[[Na]])}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaCO3"), "gas-carbon-dioxide", AF.fluid_color("Na")}),
       order = "b[sodium]-a[sodium-carbonate]"
     },
     {
@@ -113,7 +112,7 @@ data:extend(
       },
       main_product = "solid-sodium-cyanide",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a","c","n"}--[[NaCN]]), AF.fluid_color({"a"}), "gas-hydrogen", "gas-ammonia", AF.fluid_color({"c"}--[[Na]])}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaCN"), AF.fluid_color("Na"), "gas-hydrogen", "gas-ammonia", AF.fluid_color("Cb")}),
       order = "b[sodium]-b[solid-sodium-cyanide]"
     },
     -- SODIUM HYDROXIDE
@@ -134,7 +133,7 @@ data:extend(
       },
       main_product = "solid-sodium-hydroxide",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a","h","o"}--[[NaOH]]), "water-purified", AF.fluid_color({"a"}--[[Na]])}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaOH"), "water-purified", AF.fluid_color("Na")}),
       order = "c[sodium-hydroxide]-a[generation]"
     },
     {
@@ -154,7 +153,7 @@ data:extend(
       },
       main_product = "solid-sodium-hydroxide",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a","h","o"}--[[NaOH]]), "liquid-aqueous-sodium-hydroxide"}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaOH"), "liquid-aqueous-sodium-hydroxide"}),
       order = "c[sodium-hydroxide]-b[hydroxide]"
     },
     -- SODIUM HYDROXIDE SYNTHESIS
@@ -174,9 +173,8 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 60}
       },
       main_product = "solid-sodium-sulfate",
-      --icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a2","s","o4"}--[[Na2SO4]]), "liquid-sulfuric-acid", AF.fluid_color({"a","o","h"}--[[NaOH]])}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("Na2SO4"), "liquid-sulfuric-acid", AF.fluid_color("NaOH")}),
       order = "d[sodium-hydroxide]"
     },
     -- LIQUID HYDROXIDE
@@ -201,7 +199,7 @@ data:extend(
       main_product = "liquid-aqueous-sodium-hydroxide",
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(nil, {{151, 212, 255}, {255, 255, 255}, {255, 255, 255}}),
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-aqueous-sodium-hydroxide", "water-purified", AF.fluid_color({"a2","c","o3"}--[[Na2CO3]]),"gas-carbon-dioxide"}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-aqueous-sodium-hydroxide", "water-purified", AF.fluid_color("Na2CO3"),"gas-carbon-dioxide"}),
       order = "e[liquid-sodium-hydroxide]-a[generation]"
     },
     {
@@ -222,7 +220,7 @@ data:extend(
       main_product = "liquid-aqueous-sodium-hydroxide",
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(nil, {{151, 212, 255}, {255, 255, 255}, {255, 255, 255}}),
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-aqueous-sodium-hydroxide", "water-purified", AF.fluid_color({"a","h","o"}--[[NaOH]])}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-aqueous-sodium-hydroxide", "water-purified", AF.fluid_color("NaOH")}),
       order = "e[liquid-sodium-hydroxide]-b[hydroxide]"
     },
     -- LIQUID HYDROXIDE SYNTHESIS
@@ -241,9 +239,8 @@ data:extend(
         {type = "item", name = "solid-sodium-hypochlorite", amount = 5}
       },
       main_product = "solid-sodium-hypochlorite",
-      --icon = "__angelspetrochem__/graphics/icons/solid-sodium-hypochlorite.png",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a","o","l"}--[[NaOCl]]), "liquid-aqueous-sodium-hydroxide", "gas-chlorine"}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaOCl"), "liquid-aqueous-sodium-hydroxide", "gas-chlorine"}),
       order = "f[liquid-sodium-hydroxide]-a[sodium-hypochlorite]"
     },
     {
@@ -261,9 +258,8 @@ data:extend(
         {type = "item", name = "solid-sodium-chlorate", amount = 5}
       },
       main_product = "solid-sodium-chlorate",
-      --icon = "__angelspetrochem__/graphics/icons/solid-sodium-chlorate.png",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a","l","o3"}--[[NaClO3]]), "liquid-aqueous-sodium-hydroxide", "gas-hydrogen-chloride"}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaClO3"), "liquid-aqueous-sodium-hydroxide", "gas-hydrogen-chloride"}),
       order = "f[liquid-sodium-hydroxide]-b[solid-sodium-chlorate]"
     },
     {
@@ -283,9 +279,8 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       main_product = "solid-sodium-perchlorate",
-      --icon = "__angelspetrochem__/graphics/icons/solid-sodium-perchlorate.png",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color({"a2","c","o4"}--[[Na2CO4]]), AF.fluid_color({"a","l","o3"}--[[NaClO3]]), "water-purified"}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("Na2CO4"), AF.fluid_color("NaClO3"), "water-purified"}),
       order = "f[liquid-sodium-hydroxide]-c[solid-sodium-perchlorate]"
     }
   }

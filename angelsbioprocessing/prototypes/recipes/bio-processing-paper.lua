@@ -1,3 +1,4 @@
+local AF = angelsmods.functions
 data:extend(
   {
     {
@@ -65,13 +66,13 @@ data:extend(
         {type = "fluid", name = "gas-carbon-dioxide", amount = 70}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72}
         },
-        "ccc"
+        "COO"
       ),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}, "gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}}),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}, "gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}}),
       order = "e"
     },
     {
@@ -105,7 +106,7 @@ data:extend(
         {type = "item", name = "solid-carbon", amount = 2}
       },
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({angelsmods.functions.flow_color({"c"}), "gas-oxygen", angelsmods.functions.flow_color({"c"}), "gas-oxygen"}),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("Cb"), "gas-oxygen", AF.fluid_color("C"), "gas-oxygen"}),
       order = "g"
     },
     --PULP
@@ -124,8 +125,8 @@ data:extend(
       results = {
         {type = "item", name = "solid-wood-pulp", amount = 20}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("solid-wood-pulp"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("solid-wood-pulp"),
         1, angelsmods.bioprocessing.number_tint),
       order = "aa"
     },
@@ -147,7 +148,7 @@ data:extend(
       },
       main_product = "liquid-pulping-liquor",
       always_show_products = true,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-pulping-liquor", "gas-sulfur-dioxide", "water", "gas-oxygen"}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-pulping-liquor", "gas-sulfur-dioxide", "water", "gas-oxygen"}),
       order = "ba"
     },
     {
@@ -176,7 +177,7 @@ data:extend(
         }
       },
       icon_size = 32,
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-red-waste", "liquid-brown-liquor", angelsmods.functions.flow_color({"a2","s","o3"}), angelsmods.functions.flow_color({"a","h","o"})}),
+      crafting_machine_tint = AF.get_recipe_tints({"water-red-waste", "liquid-brown-liquor", AF.fluid_color("NaSO3"), AF.fluid_color("NaOH")}),
       order = "bb"
     },
     {
@@ -196,10 +197,10 @@ data:extend(
         {type = "item", name = "solid-wood-pulp", amount = 25},
         {type = "fluid", name = "liquid-brown-liquor", amount = 75}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("solid-wood-pulp"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("solid-wood-pulp"),
         2, angelsmods.bioprocessing.number_tint),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-brown-liquor", "liquid-pulping-liquor", "gas-ammonia", "water"}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-brown-liquor", "liquid-pulping-liquor", "gas-ammonia", "water"}),
       order = "ab"
     },
     --T3 KRAFT PROCESS (SULFATE PROCESS)
@@ -220,6 +221,7 @@ data:extend(
       },
       main_product = "liquid-white-liquor",
       always_show_products = true,
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-white-liquor", "water", AF.fluid_color("Na2SO3"), AF.fluid_color("NaOH")}),
       order = "caa"
     },
     {
@@ -237,6 +239,7 @@ data:extend(
       },
       main_product = "liquid-green-liquor",
       always_show_products = true,
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-green-liquor", "liquid-black-liquor", "liquid-green-liquor", "liquid-black-liquor"}),
       order = "cb"
     },
     {
@@ -257,6 +260,7 @@ data:extend(
       },
       main_product = "liquid-white-liquor",
       always_show_products = true,
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-white-liquor", "water", AF.fluid_color("Na2SO3"), AF.fluid_color("NaOH")}),
       order = "cab"
     },
     {
@@ -275,9 +279,10 @@ data:extend(
         {type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40}
       },
       always_show_products = true,
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("solid-wood-pulp"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("solid-wood-pulp"),
         3, angelsmods.bioprocessing.number_tint),
+        crafting_machine_tint = AF.get_recipe_tints({"liquid-black-liquor", "liquid-white-liquor", "liquid-black-liquor", "liquid-white-liquor"}),
       order = "ac"
     },
     --PAPER BLEACHING
@@ -296,8 +301,8 @@ data:extend(
       },
       --main_product = "solid-paper",
       allow_decomposition = false,
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("solid-paper"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("solid-paper"),
         1, angelsmods.bioprocessing.number_tint),
       order = "ba"
     },
@@ -319,9 +324,10 @@ data:extend(
       },
       --main_product = "solid-paper",
       allow_decomposition = false,
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("solid-paper"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("solid-paper"),
         2, angelsmods.bioprocessing.number_tint),
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("NaOCl"),"gas-chlorine",AF.fluid_color("NaOH"),{1,1,1,1}--[[paper]]}),
       order = "bb"
     },
     {
@@ -345,9 +351,10 @@ data:extend(
       },
       --main_product = "solid-paper",
       allow_decomposition = false,
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("solid-paper"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("solid-paper"),
         3, angelsmods.bioprocessing.number_tint),
+      crafting_machine_tint = AF.get_recipe_tints({"water-yellow-waste","water","gas-oxygen","gas-sulfur-dioxide"}),
       order = "bc"
     }
   }

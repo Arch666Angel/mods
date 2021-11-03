@@ -33,6 +33,7 @@ if angelsmods.industries.tech then
   }
   data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"
   data.raw.technology["space-science-pack"].icon_size = 128
+  data.raw.technology["space-science-pack"].icon_mipmaps = nil
   data.raw.technology["space-science-pack"].localised_name = {"technology-name.tech-white-packs"}
   OV.add_unlock("space-science-pack", "angels-science-pack-white")
   OV.add_unlock("space-science-pack", "angels-main-lab-7")

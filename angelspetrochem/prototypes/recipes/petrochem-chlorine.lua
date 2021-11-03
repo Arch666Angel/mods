@@ -24,7 +24,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         },
-        "lhh"
+        "ClHH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-hydrogen","water-saline","gas-chlorine"}),
       order = "a[water-saline-separation]"
@@ -48,7 +48,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72}
         },
-        "llh"
+        "ClClH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-hydrogen-chloride","gas-hydrogen","gas-chlorine"}),
       order = "c[gas-hydrogen-chloride]"
@@ -73,7 +73,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         },
-        "llh"
+        "ClClH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-hydrogen-chloride","gas-chlorine","gas-hydrogen"}),
       order = "d[gas-hydrogen-chloride]"
@@ -97,7 +97,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/chloromethane.png", 72}
         },
-        "clh"
+        "CClH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-chlor-methane","gas-methane","gas-chlorine"}),
       order = "e[gas-chlor-methane]"
@@ -121,7 +121,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72}
         },
-        "lho"
+        "ClHO"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-hydrochloric-acid","gas-hydrogen-chloride","water-purified"}),
       order = "f[liquid-hydrochloric-acid]"
@@ -146,9 +146,9 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72}
         },
-        "lho"
+        "ClHO"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-hydrchloric-acid","liquid-sulfuric-acid", AF.fluid_color({"a","l"})--[[NaCl]], AF.fluid_color({"a2","s","o4"})--[[Na2SO4]]}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-hydrchloric-acid","liquid-sulfuric-acid", AF.fluid_color("NaCl"), AF.fluid_color("Na2SO4")}),
       order = "g"
     },
     {
@@ -169,7 +169,7 @@ data:extend(
       always_show_products = true,
       --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-ferric-chloride-solution","gas-hydrogen-chloride", AF.fluid_color({"r"})--[[Fe]]}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-ferric-chloride-solution","gas-hydrogen-chloride", AF.fluid_color("Fe")}),
       order = "h"
     },
     {
@@ -190,7 +190,7 @@ data:extend(
       always_show_products = true,
       --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-cupric-chloride-solution","gas-hydrogen-chloride", AF.fluid_color({"u"})--[[Cu]]}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-cupric-chloride-solution","gas-hydrogen-chloride", AF.fluid_color("Cu")}),
       order = "i"
     },
     {
@@ -213,7 +213,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/allyl-chloride.png", 72}
         },
-        "clh"
+        "CClH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"lgas-allylchlorid","gas-propene","gas-hydrogen-chloride","gas-chlorine"}),
       order = "h[gas-allylchlorid]"
@@ -238,7 +238,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72}
         },
-        "clc"
+        "CClC"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-epichlorhydrin","gas-allylchlorid","liquid-hydrochloric-acid"}),
       order = "i[gas-epichlorhydrin]"
@@ -262,7 +262,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72}
         },
-        "coh"
+        "COH"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-glycerol","gas-epichlorhydrin","water-purified"}),
       order = "j[liquid-glycerol]"
@@ -286,9 +286,9 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/perchloric-acid.png", 72}
         },
-        "lho"
+        "ClHO"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({"liquid-perchloric-acid","liquid-hydrochloric-acid", AF.fluid_color({"a","l","o4"})--[[NaClO4]]}),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-perchloric-acid","liquid-hydrochloric-acid", AF.fluid_color("NaClO4")}),
       order = "k[liquid-perchloric-acid]"
     },
     {
@@ -311,9 +311,9 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72}
         },
-        "clc"
+        "CClC"
       ),
-      crafting_machine_tint = AF.get_recipe_tints({"gas-phosgene","gas-carbon-monoxide","gas-chlorine", AF.fluid_color({"c"})--[[C]]}),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-phosgene","gas-carbon-monoxide","gas-chlorine", AF.fluid_color("Cb")--[[C]]}),
       order = "l"
     }
   }

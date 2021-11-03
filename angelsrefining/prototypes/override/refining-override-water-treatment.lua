@@ -133,8 +133,8 @@ if mods["bobplates"] then
   data.raw.fluid["lithia-water"].icon = nil
   data.raw.fluid["lithia-water"].icon_size = nil
   data.raw.fluid["lithia-water"].icon_mipmaps = nil
-  data.raw.fluid["lithia-water"].base_color = angelsmods.functions.fluid_color({"w4","e"})
-  data.raw.fluid["lithia-water"].flow_color = angelsmods.functions.flow_color({"w4","e"})
+  data.raw.fluid["lithia-water"].base_color = angelsmods.functions.fluid_color("Ws4Tw")
+  data.raw.fluid["lithia-water"].flow_color = angelsmods.functions.flow_color("Ws4Tw")
   angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
 
   data:extend(

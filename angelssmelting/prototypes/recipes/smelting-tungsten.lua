@@ -111,7 +111,7 @@ data:extend(
       always_show_products = true,
       icons = angelsmods.functions.create_gas_recipe_icon(
         {{"__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72}},
-        "tff"
+        "WFF"
       ),
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-tungsten-hexafluoride"),
       order = "f[gas-tungsten-hexafluoride]"

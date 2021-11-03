@@ -18,7 +18,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon({
         "steam"
-      }, "www", {
+      }, "WsWsWs", {
         "water"
       }),
       crafting_machine_tint = AF.get_recipe_tints({"steam","water"}),
@@ -40,7 +40,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon({
         "steam"
-      }, "www", {
+      }, "WsWsWs", {
         "water-purified"
       }),
       crafting_machine_tint = AF.get_recipe_tints({"steam","water-purified"}),
@@ -67,7 +67,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         },
-        "ohh",
+        "OHH",
         {
           AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
           "water"
@@ -103,7 +103,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         },
-        "ohh",
+        "OHH",
         {
           AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
           "water"
@@ -136,7 +136,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         },
-        "ohh",
+        "OHH",
         {
           AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
           "water-purified"
@@ -171,7 +171,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
         },
-        "ohh",
+        "OHH",
         {
           AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
           "water-purified"
@@ -203,7 +203,7 @@ data:extend(
         {
           "water-purified"
         },
-        "www"
+        "WsWsWs"
       ),
       order = "a[water-synthesis]",
       crafting_machine_tint = AF.get_recipe_tints({"water-purified","hydrogen","oxygen"}),--[[{
@@ -229,7 +229,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon(
         {{"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72}},
-        "ccc"
+        "CCC"
       ),
       order = "b[carbon-separation-1]",
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-monoxide","water-purified",{r=0,g=0,b=0,a=1}}),--[[{
@@ -254,7 +254,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon(
         {{"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72}},
-        "ccc"
+        "CCC"
       ),
       order = "d[carbon-separation-2]",
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-dioxide",{r=0,g=0,b=0,a=1}}),--[[{
@@ -307,7 +307,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72}
         },
-        "whk"
+        "WsHOi"
       ),
       order = "f",
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-dioxide","steam","gas-hydrogen","gas-carbon-monoxide"})--[[{
@@ -337,7 +337,7 @@ data:extend(
           "water-purified",
           {"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72}
         },
-        "whk"
+        "WsHOi"
       ),
       order = "g",
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-monoxide","gas-hydrogen","water-purified","gas-carbon-dioxide"}),--[[{
@@ -370,7 +370,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/benzene.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72}
         },
-        "kkk"
+        "OiOiOi"
       ),
       order = "f[coal-cracking-1]",
       crafting_machine_tint = AF.get_recipe_tints({{r = 1, g = 1, b = 1}--[[coke]],"gas-hydrogen-sulfide","gas-methane","gas-benzene"}),--[[{
@@ -405,7 +405,7 @@ data:extend(
           "liquid-ngl",
           "liquid-naphtha"
         },
-        "kkk"
+        "OiOiOi"
       ),
       order = "g[coal-cracking-2]",
       crafting_machine_tint = AF.get_recipe_tints({"liquid-naphtha",{r = 1, g = 1, b = 1},"liquid-ngl","gas-hydrogen","liquid-mineral-oil"}) ,--[[{
@@ -440,7 +440,7 @@ data:extend(
           "gas-synthesis",
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72}
         },
-        "kkk"
+        "OiOiOi"
       ),
       order = "h[coal-cracking-3]",
       crafting_machine_tint = AF.get_recipe_tints({"gas-synthesis","gas-oxygen","gas-carbon-dioxide","steam","gas-hydrogen-sulfide"}),--[[{
@@ -494,7 +494,7 @@ data:extend(
         AF.get_object_icons("solid-carbon"),
         2, angelsmods.petrochem.number_tint),
       order = "d[coke-purification]",
-      crafting_machine_tint = AF.get_recipe_tints({{r = 1, g = 1, b = 1},"gas-nitrogen","water", AF.fluid_color({"a2","c","o3"})}),--[[{
+      crafting_machine_tint = AF.get_recipe_tints({{r = 1, g = 1, b = 1},"gas-nitrogen","water", AF.fluid_color("NaCO3")}),--[[{
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
         secondary = {r = 1, g = 0.5, b = 0.5, a = 0},
         tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}
@@ -601,7 +601,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
         },
-        "odh",
+        "OHdH",
         {
           AF.add_number_icon_layer({}, 1, angelsmods.refining.number_tint),
           {
@@ -636,7 +636,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
         },
-        "odh",
+        "OHdH",
         {
           AF.add_number_icon_layer({}, 2, angelsmods.refining.number_tint),
           {
@@ -671,7 +671,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
         },
-        "odh",
+        "OHdH",
         {
           AF.add_number_icon_layer({}, 3, angelsmods.refining.number_tint),
           {
@@ -704,7 +704,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
         },
-        "odh",
+        "OHdH",
         {
           AF.add_number_icon_layer({}, 1, angelsmods.refining.number_tint),
           mods["angelssmelting"] and
@@ -739,7 +739,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
         },
-        "odh",
+        "OHdH",
         {
           AF.add_number_icon_layer({}, 2, angelsmods.refining.number_tint),
           mods["angelssmelting"] and
@@ -774,7 +774,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
         },
-        "odh",
+        "OHdH",
         {
           AF.add_number_icon_layer({}, 3, angelsmods.refining.number_tint),
           mods["angelssmelting"] and
@@ -808,7 +808,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64}
         },
-        "odd",
+        "OHdHd",
         {
           nil,
           {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72}
@@ -837,7 +837,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64}
         },
-        "odd",
+        "OHdHd",
         {
           nil,
           mods["angelssmelting"] and
@@ -871,7 +871,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/deuterium.png", 64},
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72}
         },
-        "odd",
+        "OHdHd",
         {
           AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
           {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64}
@@ -906,7 +906,7 @@ data:extend(
           {"__angelspetrochem__/graphics/icons/molecules/deuterium.png", 64},
           {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72}
         },
-        "odd",
+        "OHdHd",
         {
           AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
           {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64}
