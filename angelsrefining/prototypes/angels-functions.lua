@@ -1054,6 +1054,11 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
     end
     return
   end
+  if type(flag) == "table" then
+    for _, f in pairs(flag) do
+      angelsmods.functions.add_flag(entity, f)
+    end
+  end
 
   for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
     local to_add = data.raw[type][entity] or nil

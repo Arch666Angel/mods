@@ -610,6 +610,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "gas-dimethylhydrazine"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-refinery-4"
         }
       },
       unit = {

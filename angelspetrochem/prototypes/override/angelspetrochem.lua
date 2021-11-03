@@ -192,32 +192,46 @@ if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe(
     {
       "solid-calcium-chloride",
-      "gas-chlor-methane",
-      "gas-allylchlorid",
-      "gas-epichlorhydrin",
-      --"liquid-glycerol",
-      --"solid-sodium-chlorate",
-      --"solid-sodium-perchlorate",
-      --"liquid-perchloric-acid"
-    }
-  )
-  OV.disable_recipe(
-    {
+      "catalyst-steam-cracking-butane", -- "gas-butadiene"
+      "liquid-styrene-catalyst", -- "liquid-styrene"
+      "liquid-ethylbenzene-catalyst", -- "liquid-ethylbenzene"
+      "cumene-process", -- "gas-acetone"
+      "liquid-bisphenol-a",
+      "gas-phosgene",
       "gas-ammonium-chloride",
-      "gas-urea",
       "gas-melamine"
     }
   )
-  OV.disable_recipe(
-    {
-      "catalyst-steam-cracking-butane",
-      "liquid-styrene-catalyst",
-      "liquid-ethylbenzene-catalyst",
-      "cumene-process",
-      "liquid-bisphenol-a",
-      "gas-phosgene",
-    }
-  )
+  angelsmods.functions.add_flag({
+    "solid-calcium-chloride",
+    "gas-butadiene",
+    "liquid-styrene",
+    "liquid-ethylbenzene",
+    "liquid-bisphenol-a",
+    "gas-phosgene",
+    "gas-ammonium-chloride",
+    "gas-melamine"
+  }, "hidden")
+  
+  if angelsmods.bioprocessing then
+  else
+    OV.disable_recipe(
+      {
+        "gas-urea",
+      }
+    )
+    angelsmods.functions.add_flag({
+      "gas-urea",
+      "gas-acetone",
+    }, "hidden")
+  end
+
+  if mods["bobrevamp"] then
+  else
+    angelsmods.functions.add_flag({
+      "gas-hydrogen-peroxide",
+    }, "hidden")
+  end
 end
 
 if angelsmods.trigger.resin then
@@ -255,9 +269,3 @@ else
     "rubber",
   })
 end
-
--------------------------------------------------------------------------------
--- REMOVE INACTIVE ENTITIES ---------------------------------------------------
--------------------------------------------------------------------------------
---angelsmods.functions.add_flag("gas-refinery-4", "hidden")
-OV.add_unlock("angels-nitrogen-processing-4","gas-refinery-4")
