@@ -1,7 +1,8 @@
 local OV = angelsmods.functions.OV
 
 -- SINTERING OVEN
-if angelsmods.functions.is_special_vanilla() then
+if angelsmods.trigger.sintering_tech then
+else
   OV.disable_recipe({
     "sintering-oven",
     "sintering-oven-2",
