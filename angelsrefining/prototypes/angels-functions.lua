@@ -1083,23 +1083,23 @@ end
 local function isColor(input)
   if type(input) ~= "table" then
     return nil
+  end
+  local length = table_size(input)
+  if length ~= 3 and length ~= 4 then
+    return nil
+  end
+  local is_small = true
+  for _,v in pairs(input) do 
+    if v > 1 then
+      is_small = false
+      break
     end
-    local length = table_size(input)
-    if length ~= 3 and length ~= 4 then
-        return nil
+  end
+  if not is_small then
+    for k,v in pairs(input) do
+      input[k] = v/255
     end
-    local is_small = true
-    for _,v in pairs(input) do 
-        if v > 1 then
-            is_small = false
-            break
-        end
-    end
-    if not is_small then
-        for k,v in pairs(input) do
-            input[k] = v/255
-        end
-    end
+  end
   local color = {
     r = input.r or input[1],
     g = input.g or input[2],
@@ -1108,6 +1108,7 @@ local function isColor(input)
   }
   return color
 end
+
 local function findRGB(inputString)
   if type(inputString) ~= "string" then
     return nil
