@@ -242,7 +242,7 @@ local icon_tints_table = {
 local function get_molecule_codes(molec_formula)
   local string_codes = {} 
   while string.len(molec_formula) > 0 do
-  local trim = 1
+    local trim = 1
     if string.find(molec_formula,"(%u%l)%d+") == 1 then --do it bit-wise
       string_codes[#string_codes+1] = {form = string.sub(molec_formula, 1, 2), amount = tonumber(string.sub(molec_formula,3,string.find(molec_formula,"(%d+)")))}
       trim = string.len(tostring(string_codes[#string_codes].amount))+1 
