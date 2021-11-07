@@ -229,7 +229,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon(
         {{"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72}},
-        "CCC"
+        "CCOc"
       ),
       order = "b[carbon-separation-1]",
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-monoxide","water-purified",{r=0,g=0,b=0,a=1}}),--[[{
@@ -254,7 +254,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon(
         {{"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72}},
-        "CCC"
+        "COcOc"
       ),
       order = "d[carbon-separation-2]",
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-dioxide",{r=0,g=0,b=0,a=1}}),--[[{
