@@ -1229,9 +1229,9 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
   local arrays = get_molecule_codes(chemical_formula)
   local lettering,multi,rgb = {},{},{}
   for i=1, #arrays do
-    lettering[#lettering+1] = arrays[i].form
-    multi[#multi+1] = arrays[i].amount
- --   rgb[#rgb+1] = arrays[i].rgb
+    table.insert(lettering, arrays[i].form)
+    table.insert(multi, arrays[i].amount)
+    --table.insert(rgb, arrays[i].rgb)
   end
   rgb = rgb_fetch(chemical_formula)
   --local rgb = formula_extraction_1a(chemical_formula)--formula_extraction_1(chemical_formula)
