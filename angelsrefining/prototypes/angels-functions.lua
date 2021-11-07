@@ -179,7 +179,7 @@ local icon_tints_table = {
   H  = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, --Hydrogen
   Hd = {{255, 255, 192}, {206, 206, 173}, {196, 196, 156}}, --Deuterium
   Li = {{204, 128, 255}},                                   --Lithium
-  C  = {{064, 064, 064}, {080, 080, 080}, {144, 144, 144}}, --Carbon 14,13,12
+  C  = {{044, 044, 044}, {064, 064, 064}, {090, 090, 090}}, --Carbon -- but darkened
   N  = {{048, 080, 248}, {045, 076, 175}, {038, 063, 150}}, --Nitrogen
   O  = {{255, 013, 013}, {214, 012, 012}, {198, 011, 011}}, --Oxygen
   F  = {{144, 224, 080}, {181, 208, 000}, {181, 208, 000}}, --Fluorine
@@ -227,6 +227,7 @@ local icon_tints_table = {
   Cb = {{015, 015, 015}},                                   --Other Carbon Solids
   Ax = {{241, 050, 238}},                                   --Alien Stuffs
   Aw = {{194, 227, 091}, {184, 239, 000}, {156, 207, 000}},  --Alien Feed (gas/water)
+  Oc = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon (oxides) darker for less contrast
 }
 --[[{ unused materials
   Ne = {{179, 227, 245}}, Ar = {{128, 209, 227}}, Sc = {{230, 230, 230}}, V  = {{166, 166, 171}}, Ga = {{194, 143, 143}}, Ge = {{102, 143, 143}}, As = {{189, 128, 227}}, Se = {{255, 161, 000}}, 
@@ -240,19 +241,22 @@ local icon_tints_table = {
   Hs = {{230, 000, 046}}, Mt = {{235, 000, 038}}, }]]
 
 local function get_molecule_codes(molec_formula)
+  local orig = molec_formula
   local string_codes = {} 
   while string.len(molec_formula) > 0 do
-    local trim = 1
-    if string.find(molec_formula,"(%u%l)%d+") == 1 then --do it bit-wise
-      string_codes[#string_codes+1] = {form = string.sub(molec_formula, 1, 2), amount = tonumber(string.sub(molec_formula,3,string.find(molec_formula,"(%d+)")))}
+  local trim = 1
+    if string.find(molec_formula,"^%u%l%d+") == 1 then --do it bit-wise
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
       trim = string.len(tostring(string_codes[#string_codes].amount))+1 
-    elseif string.find(molec_formula,"(%u%l)") == 1 then
-      string_codes[#string_codes+1] = {form = string.sub(molec_formula, 1, 2), amount = 1} --no amount-default 1
-    elseif string.find(molec_formula,"(%u)%d+") == 1 then
-      string_codes[#string_codes+1] = {form = string.sub(molec_formula, 1, 1), amount = tonumber(string.sub(molec_formula,2,string.find(molec_formula,"(%d+)")))}
+    elseif string.find(molec_formula,"^%u%l") == 1 then
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = 1}) --no amount-default 1
+    elseif string.find(molec_formula,"^%u%d+") == 1 then
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
       trim = string.len(tostring(string_codes[#string_codes].amount))+1
-    elseif string.find(molec_formula,"(%u)") == 1 then
-      string_codes[#string_codes+1] = {form = string.sub(molec_formula, 1, 1), amount = 1} --no amount-default 1
+    elseif string.find(molec_formula,"^%u") == 1 then
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = 1}) --no amount-default 1
+    else
+      error("Cannot determine next string code in '"..(molec_formula or "").."of original code "..orig.."'. Please report this to the Angel's dev team.")
     end
     local symbol = string_codes[#string_codes].form
     trim = trim + string.len(symbol)
@@ -373,11 +377,10 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
-      ref = {reference[1].form,reference[2].form,reference[3].form} --don't go past the 3
       tints = {
-        top = unify_tint(icon_tints_table[ref[1]][1] or {}),
-        mid = unify_tint(icon_tints_table[ref[2]][2] or {}),
-        bot = unify_tint(icon_tints_table[ref[3]][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -434,11 +437,10 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
-      ref = {reference[1].form,reference[2].form,reference[3].form} --don't go past the 3
       tints = {
-        top = unify_tint(icon_tints_table[ref[1]][1] or {}),
-        mid = unify_tint(icon_tints_table[ref[2]][2] or {}),
-        bot = unify_tint(icon_tints_table[ref[3]][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -496,11 +498,10 @@ function angelsmods.functions.create_gas_tech_icon(tints)
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
-      ref = {reference[1].form,reference[2].form,reference[3].form} --don't go past the 3
       tints = {
-        top = unify_tint(icon_tints_table[ref[1]][1] or {}),
-        mid = unify_tint(icon_tints_table[ref[2]][2] or {}),
-        bot = unify_tint(icon_tints_table[ref[3]][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -579,11 +580,10 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
-      ref = {reference[1].form,reference[2].form,reference[3].form} --don't go past the 3
       tints = {
-        top = unify_tint(icon_tints_table[ref[1]][1] or {}),
-        mid = unify_tint(icon_tints_table[ref[2]][2] or {}),
-        bot = unify_tint(icon_tints_table[ref[3]][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -640,11 +640,10 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
-      ref = {reference[1].form,reference[2].form,reference[3].form} --don't go past the 3
       tints = {
-        top = unify_tint(icon_tints_table[ref[1]][1] or {}),
-        mid = unify_tint(icon_tints_table[ref[2]][2] or {}),
-        bot = unify_tint(icon_tints_table[ref[3]][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)

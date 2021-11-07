@@ -70,7 +70,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72}
         },
-        "COO"
+        "COcOc"
       ),
       crafting_machine_tint = AF.get_recipe_tints({"gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}, "gas-carbon-dioxide", {r = 225/255, g = 160/255, b = 106/255}}),
       order = "e"

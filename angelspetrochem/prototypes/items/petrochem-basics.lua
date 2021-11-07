@@ -86,7 +86,7 @@ data:extend(
       localised_description = show_formula and {"tooltip-description.chemical-formula", "CO"} or nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72},
-        "COC"
+        "CCOc"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
@@ -107,7 +107,7 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72},
-        "CCO"
+        "COcOc"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",

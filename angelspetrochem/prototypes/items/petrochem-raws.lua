@@ -49,8 +49,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = angelsmods.functions.fluid_color("Ng3c2S"),--{r = 0.2, g = 0.45, b = 0.2},
-      flow_color = angelsmods.functions.flow_color("Ng3c2S"),--{r = 0.2, g = 0.45, b = 0.2},
+      base_color = angelsmods.functions.fluid_color("Ng3C2S"),--{r = 0.2, g = 0.45, b = 0.2},
+      flow_color = angelsmods.functions.flow_color("Ng3C2S"),--{r = 0.2, g = 0.45, b = 0.2},
       max_temperature = 100,
     },
     -- {
