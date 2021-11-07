@@ -5,19 +5,8 @@ data:extend(
     {
       type = "item",
       name = "bio-tile",
-      icons = { --temp use base version of landfill as the icon
-        {
-          icon= "__base__/graphics/technology/landfill.png",
-          icon_size = 256,
-          icon_mipmaps = 4
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/brick-clay.png",
-          icon_size = 32,
-          scale = 0.4375 * 1.6,
-          shift = {9, 9}
-        }
-      },
+      icon = "__angelsbioprocessing__/graphics/icons/tile-bio.png",
+      icon_size = 64,
       subgroup = "angels-stone",
       order = "f",
       stack_size = angelsmods.trigger.pavement_stack_size,

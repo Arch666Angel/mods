@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.21
 Date: ??
+  Changes:
+    - Added graphic icon to the biologically active tile
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
     - Fixed another bug where agricultural modules could be duplicated (682)
