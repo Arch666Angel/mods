@@ -86,7 +86,8 @@ local function try_find_entity_for(recipe)
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
-    if entity.ingredient_count >= item_ingredient_count then
+    if ((not entity.fixed_recipe) or (entity.fixed_recipe == recipe.name)) and
+        (entity.ingredient_count >= item_ingredient_count) then
       return true
     end
   end
