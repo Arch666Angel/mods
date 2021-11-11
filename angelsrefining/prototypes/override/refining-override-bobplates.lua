@@ -28,7 +28,6 @@ if mods["bobplates"] then
 
   OV.disable_recipe(
     {
-      "lithia-water", -- lithia water
       "pure-water-pump", -- purified water
       "ground-water" -- regular water
     }

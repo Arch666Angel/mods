@@ -53,4 +53,8 @@ if mods["bobequipment"] then
     OV.add_prereq("exoskeleton-equipment", "chemical-science-pack")
   end
 
+  -----------------------------------------------------------------------------
+  -- unknown ------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  angelsmods.functions.add_flag("combat-robot-dispenser-equipment", "hidden")
 end
