@@ -269,3 +269,23 @@ else
     "rubber",
   })
 end
+
+if angelsmods.trigger.liquid_ferric_chloride_solution then
+else
+  OV.disable_recipe(
+    {
+      "liquid-ferric-chloride-solution"
+    }
+  )
+  angelsmods.functions.add_flag("liquid-ferric-chloride-solution", "hidden")
+end
+
+if angelsmods.trigger.liquid_cupric_chloride_solution then
+else
+  OV.disable_recipe(
+    {
+      "liquid-cupric-chloride-solution"
+    }
+  )
+  angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
+end

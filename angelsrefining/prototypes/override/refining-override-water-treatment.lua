@@ -215,4 +215,11 @@ if mods["bobplates"] then
       {name = "advanced-oil-processing", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}}
     }
   )
+else
+  if (angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate or mods["bobplates"]) or
+     (angelsmods.industries and angelsmods.industries.overhaul) then
+  else
+    angelsmods.functions.add_flag("solid-lithium", "hidden")
+    OV.disable_recipe("solid-lithium")
+  end
 end
