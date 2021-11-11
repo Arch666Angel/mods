@@ -8,6 +8,7 @@ Date: ??
       - Added out-of-the-world pollution absorption (literally)
       - Added pollution absorption modifier setting (default to 3x)
       - Added localised description explaining the behaviour of this tile
+      - Reduced the complexity of the recipe slightly
     - Added better walking sounds to the b
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
