@@ -78,11 +78,15 @@ local function try_find_entity_for(recipe)
   table.insert(entity_filters, {filter = "type", type = "assembling-machine", mode = "or"})
   table.insert(entity_filters, {filter = "crafting-category", crafting_category = recipe.category, mode = "and"})
   table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
-
+  
   table.insert(entity_filters, {filter = "type", type = "furnace", mode = "or"})
   table.insert(entity_filters, {filter = "crafting-category", crafting_category = recipe.category, mode = "and"})
   table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
 
+  table.insert(entity_filters, {filter = "type", type = "rocket-silo", mode = "or"})
+  table.insert(entity_filters, {filter = "crafting-category", crafting_category = recipe.category, mode = "and"})
+  table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
+  
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
