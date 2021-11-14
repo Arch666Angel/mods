@@ -235,7 +235,7 @@ local function get_molecule_codes(molec_formula)
     elseif string.find(molec_formula,"^%u") == 1 then --One letter code without number
       table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = 1}) --no amount-default 1
     else --none of the above segments
-      error("Cannot determine next string code in '"..(molec_formula or "").."of original code "..orig.."'. Please report this to the Angel's dev team.")
+      error("Cannot determine next string code in '"..(molec_formula or "").." of original code "..orig.."'. Please report this to the Angel's dev team.")
     end
     --trim string correctly
     local symbol = string_codes[#string_codes].form
