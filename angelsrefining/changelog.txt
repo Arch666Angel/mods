@@ -6,6 +6,8 @@ Date: ??
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Clarifier, Crystallizer, Hydro plant
       - Ore crusher, Floatation cell, Ore refinery
+    - Added fluid and recipe tints for all of angels core mods, including some functions to support the change
+    - Small library clean-ups
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)

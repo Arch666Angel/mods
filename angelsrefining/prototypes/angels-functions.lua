@@ -150,28 +150,6 @@ end
 -------------------------------------------------------------------------------
 -- ICON GENERATION ------------------------------------------------------------
 -------------------------------------------------------------------------------
---[[local icon_tint_table = {
-  a = {{115, 063, 163}},                                   -- Sodium
-  c = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon
-  d = {{224, 244, 202}, {206, 206, 173}, {196, 196, 156}}, -- Deuterium
-  e = {{243, 135, 000}},                                   -- thermal water/lithium
-  f = {{181, 208, 000}, {181, 208, 000}, {181, 208, 000}}, -- Fluoride
-  g = {{105, 135, 090}, {096, 122, 082}, {088, 113, 075}}, -- Natural Gas
-  h = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, -- Hydrogen
-  i = {{142, 148, 148}, {142, 148, 148}, {142, 148, 148}}, -- Silicon
-  k = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, -- Coal/Oil
-  l = {{031, 229, 031}, {057, 211, 040}, {075, 195, 045}}, -- Chlorine
-  m = {{041, 041, 180}},                                   -- Complex
-  n = {{045, 075, 180}, {045, 076, 175}, {038, 063, 150}}, -- Nitrogen
-  o = {{249, 013, 013}, {214, 012, 012}, {198, 011, 011}}, -- Oxygen
-  p = {{244, 125, 001}},                                   -- Phosphorus
-  r = {{139, 049, 003}},                                   -- ferric metal
-  s = {{225, 210, 000}, {216, 196, 017}, {210, 187, 030}}, -- Sulfur
-  t = {{135, 090, 023}, {nil, nil, nil}, {nil, nil, nil}}, -- Tungsten
-  u = {{184, 115, 051}},                                   -- cupric metal
-  w = {{094, 114, 174}, {088, 104, 163}, {088, 101, 155}}, -- Water/Steam
-  y = {{255, 105, 180}},                                   -- Syngas
-}]]
 local icon_tints_table = {
   --Sourced from:
   --https://sciencenotes.org/molecule-atom-colors-cpk-colors/
@@ -242,22 +220,24 @@ local icon_tints_table = {
 
 local function get_molecule_codes(molec_formula)
   local orig = molec_formula
-  local string_codes = {} 
+  local string_codes = {} --subtables of tint codes eg. {{form = Ws ,amount = 12},}
   while string.len(molec_formula) > 0 do
-  local trim = 1
-    if string.find(molec_formula,"^%u%l%d+") == 1 then --do it bit-wise
+    --take first segment (or throw error) and trim each code off and repeat until empty or error
+    local trim = 1 --always trim at least 1 per code
+    if string.find(molec_formula,"^%u%l%d+") == 1 then --Two letter code with number
       table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
-      trim = string.len(tostring(string_codes[#string_codes].amount))+1 
-    elseif string.find(molec_formula,"^%u%l") == 1 then
+      trim = string.len(tostring(string_codes[#string_codes].amount)) + 1 
+    elseif string.find(molec_formula,"^%u%l") == 1 then --Two letter code without number
       table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = 1}) --no amount-default 1
-    elseif string.find(molec_formula,"^%u%d+") == 1 then
+    elseif string.find(molec_formula,"^%u%d+") == 1 then --One letter code with number
       table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
-      trim = string.len(tostring(string_codes[#string_codes].amount))+1
-    elseif string.find(molec_formula,"^%u") == 1 then
+      trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
+    elseif string.find(molec_formula,"^%u") == 1 then --One letter code without number
       table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = 1}) --no amount-default 1
-    else
+    else --none of the above segments
       error("Cannot determine next string code in '"..(molec_formula or "").."of original code "..orig.."'. Please report this to the Angel's dev team.")
     end
+    --trim string correctly
     local symbol = string_codes[#string_codes].form
     trim = trim + string.len(symbol)
     molec_formula = string.sub(molec_formula, trim)
@@ -433,7 +413,7 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
   top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
@@ -494,7 +474,7 @@ end
 -- CREATE GAS TECH ICONS
 function angelsmods.functions.create_gas_tech_icon(tints)
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
@@ -576,7 +556,7 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
   end
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
@@ -636,7 +616,7 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
   top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
@@ -1056,13 +1036,12 @@ function angelsmods.functions.get_recipe_tints(layers, opacity)
     secondary = (layers[2] ~= nil) and tints[2] or nil,
     tertiary = (layers[3] ~= nil) and tints[3] or nil,
     quaternary = (layers[4] ~= nil) and tints[4] or nil,
-    quinary = (layers[5] ~= nil) and tints[5] or nil, --this and the remaining ones are kind of silly, but may be used in future
+    --[[quinary = (layers[5] ~= nil) and tints[5] or nil, --this and the remaining ones are not currently supported by base game
     senary = (layers[6] ~= nil) and tints[6] or nil,
     septenary = (layers[7] ~= nil) and tints[7] or nil,
     octanry = (layers[8] ~= nil) and tints[8] or nil,
     nonary = (layers[9] ~= nil) and tints[9] or nil,
-    denary = (layers[10] ~= nil) and tints[10] or nil,
-    --im not even going to entertain more than 10 layers
+    denary = (layers[10] ~= nil) and tints[10] or nil]]
   }
 end
 
