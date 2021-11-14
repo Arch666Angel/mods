@@ -257,7 +257,6 @@ if angelsmods.industries.tech then
       AI.pack_replace("bob-boiler-4", "blue", "orange")
       AI.pack_replace("bob-oil-boiler-3", "blue", "orange")
       AI.pack_replace("bob-steam-turbine-1", "blue", "orange")
-      AI.pack_replace("bob-heat-exchanger-1","blue","green")
       AI.pack_replace("bob-steam-turbine-3", "blue", "yellow")
       AI.pack_replace("bob-heat-exchanger-2", "blue", "orange")
     end
