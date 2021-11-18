@@ -53,9 +53,8 @@ end
 -- WASHING --------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
-  OV.disable_technology({"water-washing-1", "water-washing-2"})
-  OV.remove_prereq("geode-processing-2", "water-washing-2")
-  OV.hide_recipe(
+  -- disable products
+  OV.disable_recipe(
     {
       "water-viscous-mud",
       "washing-1",
@@ -68,12 +67,35 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
       "solid-clay",
       "solid-limestone",
       "solid-sand",
-      --hide buildings too
+    }
+  )
+  angelsmods.functions.add_flag({
+    "water-viscous-mud",
+    "water-heavy-mud",
+    "water-concentrated-mud",
+    "water-light-mud",
+    "water-thin-mud",
+    "solid-mud",
+    "solid-clay",
+    "solid-limestone",
+    "solid-sand"
+  }, "hidden")
+  -- disable the buildings as well
+  OV.disable_recipe(
+    {
       "seafloor-pump",
       "washing-plant",
       "washing-plant-2"
     }
   )
+  angelsmods.functions.add_flag({
+    "seafloor-pump",
+    "washing-plant",
+    "washing-plant-2"
+  }, "hidden")
+  -- disable technology
+  OV.disable_technology({"water-washing-1", "water-washing-2"})
+  OV.remove_prereq("geode-processing-2", "water-washing-2")
 end
 
 angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
@@ -200,4 +222,11 @@ if mods["bobplates"] then
       {name = "advanced-oil-processing", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}}
     }
   )
+else
+  if (angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate or mods["bobplates"]) or
+     (angelsmods.industries and angelsmods.industries.overhaul) then
+  else
+    angelsmods.functions.add_flag("solid-lithium", "hidden")
+    OV.disable_recipe("solid-lithium")
+  end
 end

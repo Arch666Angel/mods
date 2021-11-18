@@ -1353,23 +1353,20 @@ end
 -- MODIFY FLAGS ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 local building_types = {
-  "assembling-machine",
+  "assembling-machine", "furnace",
   "mining-drill",
   "lab",
-  "furnace",
   "offshore-pump",
-  "pump",
+  "pump", "pipe", "pipe-to-ground",
   "rocket-silo",
   "radar",
   "beacon",
-  "boiler",
-  "generator",
-  "solar-panel",
-  "accumulator",
-  "reactor",
+  "boiler", "generator",
+  "solar-panel", "accumulator",
+  "reactor", "heat-pipe",
   "electric-pole",
-  "wall",
-  "gate"
+  "wall", "gate",
+  "container", "storage-tank",
 }
 function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
@@ -1377,6 +1374,11 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
       angelsmods.functions.add_flag(ent, flag)
     end
     return
+  end
+  if type(flag) == "table" then
+    for _, f in pairs(flag) do
+      angelsmods.functions.add_flag(entity, f)
+    end
   end
 
   for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
@@ -1395,19 +1397,34 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
           to_add.flags = {flag}
         end
       end
-    end
-  end
-  --actual entity if not not just an item
-  for _,type in pairs(building_types) do
-    to_add = data.raw[type][entity] --entity-types...
-    if to_add then
-      if to_add.flags then
-        table.insert(to_add.flags, flag)
-      else
-        to_add.flags = {flag}
+
+      --hide actual (building) entity if not not just an item
+      if flag == "hidden" and to_add.place_result == entity then
+        for _,type in pairs(building_types) do
+          to_add = data.raw[type][entity] --entity-types...
+          if to_add and (not to_add.autoplace) then -- do not hide entities that are autoplaced (required for editor mode)
+            if to_add.flags then
+              table.insert(to_add.flags, flag)
+            else
+              to_add.flags = {flag}
+            end
+            -- also have to make sure next_upgrade is not set to this (hidden) entity
+            if to_add.fast_replaceable_group then
+              for _,type in pairs(building_types) do
+                for _,entity in pairs(data.raw[type]) do
+                  if entity.fast_replaceable_group == to_add.fast_replaceable_group and entity.next_upgrade == to_add.name then
+                    entity.next_upgrade = to_add.next_upgrade
+                  end
+                end
+              end
+            end
+          end
+        end
       end
+
     end
   end
+
 end
 
 function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
@@ -1679,7 +1696,7 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
   if angelsmods.trigger.enableconverter then
     if data.raw.fluid[fluid_name_angels] and data.raw.fluid[fluid_name_other] then
       --LOCALS
-      hide_converter = angelsmods.trigger.hideconverter
+      local hide_converter = angelsmods.trigger.hideconverter
 
       --ORDER COUNTER
       if not angelsmods.functions.converter_counter then
@@ -1735,10 +1752,14 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
           }
         }
       )
-      if angelsmods.trigger.hideconverter then
+      if hide_converter then
         angelsmods.functions.OV.hide_recipe(
           {"converter-other-" .. fluid_name_other, "converter-angels-" .. fluid_name_angels}
         )
+      end
+      if angelsmods.trigger.enableconverter then
+      else -- hide the unused other fluid
+        angelsmods.functions.add_flag(fluid_name_other, "hidden")
       end
     end
   end

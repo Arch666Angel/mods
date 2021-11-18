@@ -104,6 +104,9 @@ angelsmods.trigger.smelting_products["tungsten"].plate = mods["bobplates"] and t
 --zinc
 angelsmods.trigger.smelting_products["zinc"].plate = mods["bobplates"] and true or false
 
+--create building triggers -----------------------------------------------------
+angelsmods.trigger.sintering_tech = not angelsmods.functions.is_special_vanilla()
+
 require("prototypes.angels-smelting-category")
 
 require("prototypes.buildings.induction-furnace")

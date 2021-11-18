@@ -3,6 +3,7 @@ from typing import Iterable
 
 class UnitTestConfiguration:
   """An iterable object containing all test configurations."""
+  default_settings:dict[str, dict[str, bool]] = {}
   configurations:list[tuple[str, list[str], dict[str, bool]]] = []
 
   @classmethod
@@ -10,8 +11,73 @@ class UnitTestConfiguration:
     return iter(cls.configurations)
 
   @classmethod
+  def addDefaultSetting(cls:UnitTestConfiguration, settingStage:str, settingName:str, settingDefaultValue:bool) -> None:
+    if settingStage not in cls.default_settings.keys():
+      cls.default_settings[settingStage] = {}
+    cls.default_settings[settingStage][settingName] = settingDefaultValue
+
+  @classmethod
   def addConfiguration(cls:UnitTestConfiguration, configName:str, modList:list[str], settingCustomisation:dict[str, dict[str, bool]]) -> None:
+    for settingStage, stageSettings in cls.default_settings.items():
+      if settingStage not in settingCustomisation.keys():
+        settingCustomisation[settingStage] = {}
+      for settingName, settingDefaultValue in stageSettings.items():
+        if settingName not in settingCustomisation[settingStage].keys():
+          settingCustomisation[settingStage][settingName] = settingDefaultValue
     cls.configurations.append((configName, modList, settingCustomisation))
+
+###############################################################################
+### DEFAULT SETTINGS                                                        ###
+###############################################################################
+# Angels petrochem
+UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-converter", False) # We do not test the converter valve as this is just there for compatibility
+UnitTestConfiguration.addDefaultSetting("startup", "angels-hide-converter", True)
+
+# Angels industries
+UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-industries", False)
+UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-components", False)
+UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-tech", False)
+
+# BobPower
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-burnerphase", False) # TODO: add testing cases if we want to support this
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-rtg", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-poles", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-steam", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-fluid-generator", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-solar", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-accumulators", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-heatsources", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-nuclear", True)
+
+# BobAssembly
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-burner", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-chemicalplants", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-oilfurnaces", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-multipurposefurnaces", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-electrolysers", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-distilleries", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-centrifuge", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-electronicmachines", True)
+
+# BobLogistics
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-disableroboports", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-flyingrobotframes", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-robotpoarts", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-inserteroverhaul", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-beltoverhaul", True)
+
+# BobRevamp
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-rtg", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-nuclear", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-oil", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-old-oil", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-hardmode", True)
+
+# BobOther
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-mining-miningaxes", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-plates-purewater", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-ores-unsortedgems", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-tech-colorupdate", True)
 
 ###############################################################################
 ### SPECIAL VANILLA                                                         ###
@@ -25,10 +91,13 @@ UnitTestConfiguration.addConfiguration("Special vanilla (light)",
     #"angelsindustries",
     #"angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
-    'startup':
+    "startup":
     {
       #"angels-enable-industries": False, # Angels overhaul
       #"angels-enable-components": False, # Angels component mode
@@ -46,10 +115,13 @@ UnitTestConfiguration.addConfiguration("Special vanilla (regular)",
     #"angelsindustries",
     #"angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
-    'startup':
+    "startup":
     {
       #"angels-enable-industries": False, # Angels overhaul
       #"angels-enable-components": False, # Angels component mode
@@ -67,10 +139,13 @@ UnitTestConfiguration.addConfiguration("Special vanilla (extended)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -89,6 +164,9 @@ UnitTestConfiguration.addConfiguration("Special vanilla (BA)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -110,7 +188,7 @@ UnitTestConfiguration.addConfiguration("Special vanilla (BA)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -132,6 +210,9 @@ UnitTestConfiguration.addConfiguration("BA (light)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     #"bobassembly",
@@ -153,7 +234,7 @@ UnitTestConfiguration.addConfiguration("BA (light)",
     #"bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       #"angels-enable-industries": False, # Angels overhaul
       #"angels-enable-components": False, # Angels component mode
@@ -172,6 +253,9 @@ UnitTestConfiguration.addConfiguration("BA (regular)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -193,7 +277,7 @@ UnitTestConfiguration.addConfiguration("BA (regular)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       #"angels-enable-industries": False, # Angels overhaul
       #"angels-enable-components": False, # Angels component mode
@@ -212,6 +296,9 @@ UnitTestConfiguration.addConfiguration("BA (extended)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -233,7 +320,7 @@ UnitTestConfiguration.addConfiguration("BA (extended)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -252,6 +339,9 @@ UnitTestConfiguration.addConfiguration("BA (extended components)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -273,7 +363,7 @@ UnitTestConfiguration.addConfiguration("BA (extended components)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": True, # Angels component mode
@@ -292,6 +382,9 @@ UnitTestConfiguration.addConfiguration("BA (extended technology)",
     "angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -313,7 +406,7 @@ UnitTestConfiguration.addConfiguration("BA (extended technology)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -333,6 +426,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + overhaul)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -354,7 +450,7 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + overhaul)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -383,6 +479,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + components)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -404,7 +503,7 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + components)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": True, # Angels component mode
@@ -433,6 +532,9 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + technology)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -454,7 +556,7 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default + technology)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": True, # Angels component mode
@@ -483,6 +585,9 @@ UnitTestConfiguration.addConfiguration("BA (BobAssembly non-default + overhaul)"
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -504,7 +609,7 @@ UnitTestConfiguration.addConfiguration("BA (BobAssembly non-default + overhaul)"
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -518,13 +623,6 @@ UnitTestConfiguration.addConfiguration("BA (BobAssembly non-default + overhaul)"
       "bobmods-assembly-distilleries" : False, #defaults true
       "bobmods-assembly-centrifuge" : False, #defaults true
       "bobmods-assembly-electronicmachines" : False, #defaults true
-      "bobmods-power-poles" : True, #defaults true
-      "bobmods-power-steam" : True, #defaults true
-      "bobmods-power-fluid-generator" : True, #defaults true
-      "bobmods-power-solar" : True, #defaults true
-      "bobmods-power-accumulators" : True, #defaults true
-      "bobmods-power-heatsources" : True, #defaults true
-      "bobmods-power-nuclear" : True, #defaults true
     }
   }
 )
@@ -539,6 +637,9 @@ UnitTestConfiguration.addConfiguration("BA (BobLogistics non-default + overhaul)
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -560,7 +661,7 @@ UnitTestConfiguration.addConfiguration("BA (BobLogistics non-default + overhaul)
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -585,6 +686,9 @@ UnitTestConfiguration.addConfiguration("BA (BobRevamp non-default + overhaul)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -606,17 +710,11 @@ UnitTestConfiguration.addConfiguration("BA (BobRevamp non-default + overhaul)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
       "angels-enable-tech"      : False, # Angels technology mode
-
-      "bobmods-logistics-disableroboports" : True, #defaults true
-      "bobmods-logistics-flyingrobotframes" : True, #defaults true
-      "bobmods-logistics-robotpoarts" : True, #defaults true
-      "bobmods-logistics-inserteroverhaul" : True, #defaults true
-      "bobmods-logistics-beltoverhaul" : True, #defaults true
 
       "bobmods-revamp-rtg" : False, #defaults true
       "bobmods-revamp-nuclear" : False, #defaults true
@@ -637,6 +735,9 @@ UnitTestConfiguration.addConfiguration("BA (Bob other non-default + overhaul)",
     #"angelsexploration",
 
     "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
 
     "boblibrary",
     "bobassembly",
@@ -658,17 +759,11 @@ UnitTestConfiguration.addConfiguration("BA (Bob other non-default + overhaul)",
     "bobwarfare",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
       "angels-enable-tech"      : False, # Angels technology mode
-
-      "bobmods-revamp-rtg" : True, #defaults true
-      "bobmods-revamp-nuclear" : True, #defaults true
-      "bobmods-revamp-oil" : True, #defaults true
-      "bobmods-revamp-old-oil" : True, #defaults true
-      "bobmods-revamp-hardmode" : True, #defaults true
 
       "bobmods-burnerphase" : False, #defaults true
       "bobmods-mining-miningaxes" : False, #defaults true
@@ -691,10 +786,13 @@ UnitTestConfiguration.addConfiguration("Pure Angels (overhaul)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": True, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
@@ -712,10 +810,13 @@ UnitTestConfiguration.addConfiguration("Pure Angels (components)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": True, # Angels component mode
@@ -733,10 +834,13 @@ UnitTestConfiguration.addConfiguration("Pure Angels (technology)",
     "angelsindustries",
     "angelsexploration",
 
-    "angelsaddons-storage"
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
   ],
   {
-    'startup':
+    "startup":
     {
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode

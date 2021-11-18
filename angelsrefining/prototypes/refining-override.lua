@@ -29,14 +29,15 @@ data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 --OVERRIDE FOR BOBs
 require("prototypes.override.refining-override-bobmining")
 require("prototypes.override.refining-override-bobplates")
+require("prototypes.override.refining-override-bobores")
 require("prototypes.override.refining-override-bobgems")
 require("prototypes.override.refining-override-bobtech")
 require("prototypes.override.refining-override-bobrevamp")
 require("prototypes.override.refining-override-bobwarfare")
-require("prototypes.override.refining-override-bobclasses")
 require("prototypes.override.refining-override-boblogistics")
 require("prototypes.override.refining-override-bobmodules")
 require("prototypes.override.refining-override-bobpower")
+require("prototypes.override.refining-override-bobequipment")
 require("prototypes.override.refining-override-bobvehicleequipment")
 
 if mods["bobplates"] then

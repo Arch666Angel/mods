@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: ??
+  Changes:
+    - Added HQ graphics to the following machines, and tweaked their sounds:
+      - Flare stack
+      - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
+      - Gas refinery, Advanced gas refinery
+    - Dynamically disable Resin and Rubber when required
   Bugfixes:
     - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
     - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)

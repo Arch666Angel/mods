@@ -20,7 +20,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-artillery-b",
-        group = "angels-exploration",
+        group = "combat",
         order = "f-b"
       },
     }

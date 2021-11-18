@@ -7,7 +7,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         1, angelsmods.refining.number_tint),
@@ -23,7 +23,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         1, angelsmods.refining.number_tint),
@@ -50,19 +50,56 @@ data:extend(
       energy_usage = "200kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant.png",
-        priority = "extra-high",
-        width = 288,
-        height = 320,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0, -0.5},
-        animation_speed = 0.5
+        layers = {
+          {
+            filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-base.png",
+            priority = "extra-high",
+            width = 244,
+            height = 270,
+            frame_count = 36,
+            line_length = 6,
+            shift = util.by_pixel(-2, -12),
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-base.png",
+              priority = "extra-high",
+              width = 484,
+              height = 540,
+              frame_count = 36,
+              line_length = 6,
+              shift = util.by_pixel(-2.5, -12),
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-shadow.png",
+            priority = "extra-high",
+            width = 255,
+            height = 235,
+            repeat_count = 36,
+            shift = util.by_pixel(11, 6),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
+              priority = "extra-high",
+              width = 509,
+              height = 467,
+              repeat_count = 36,
+              shift = util.by_pixel(10, 6.5),
+              draw_as_shadow = true,
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg", volume = 0.8},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {
@@ -90,7 +127,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         2, angelsmods.refining.number_tint),
@@ -106,7 +143,7 @@ data:extend(
         {
           {
             icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
+            icon_size = 64, icon_mipmaps = 4
           }
         },
         2, angelsmods.refining.number_tint),
@@ -132,19 +169,56 @@ data:extend(
       energy_usage = "250kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant.png",
-        priority = "extra-high",
-        width = 288,
-        height = 320,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0, -0.5},
-        animation_speed = 0.5
+        layers = {
+          {
+            filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-base.png",
+            priority = "extra-high",
+            width = 244,
+            height = 270,
+            frame_count = 36,
+            line_length = 6,
+            shift = util.by_pixel(-2, -12),
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-base.png",
+              priority = "extra-high",
+              width = 484,
+              height = 540,
+              frame_count = 36,
+              line_length = 6,
+              shift = util.by_pixel(-2.5, -12),
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
+          {
+            filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-shadow.png",
+            priority = "extra-high",
+            width = 255,
+            height = 235,
+            repeat_count = 36,
+            shift = util.by_pixel(11, 6),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
+              priority = "extra-high",
+              width = 509,
+              height = 467,
+              repeat_count = 36,
+              shift = util.by_pixel(10, 6.5),
+              draw_as_shadow = true,
+              animation_speed = 0.5,
+              scale = 0.5,
+            } or nil
+          },
+        }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
+        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg", volume = 0.8},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       },
       fluid_boxes = {

@@ -108,5 +108,8 @@ if angelsmods.industries.components then
   OV.execute()
 end
 
+--hide the unused advanced defences
+angelsmods.functions.add_flag("angels-rocket-defense-equipment-vequip", "hidden")
+
 --OTHER OVERRIDES
 --require("prototypes.overrides.global-loaders")

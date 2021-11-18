@@ -109,7 +109,17 @@ if mods["bobmodules"] then
   -----------------------------------------------------------------------------
   -- tier 1 modules
   OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
-
+  for _, type in pairs{"speed", "effectivity", "productivity"} do
+    -- remove the marked as upgrade from base game
+    local tech = data.raw.technology[type.."-module-2"]
+    if tech then
+      tech.upgrade = "false"
+    end
+  end
+  OV.remove_science_pack("module-merging", {
+    "module-case",
+    "module-circuit-board",
+  })
   -- tier 2 modules
   data:extend(
     {
@@ -167,17 +177,55 @@ if mods["bobmodules"] then
       },
     }
   )
-  OV.remove_unlock("speed-module-3", "speed-processor-2")
-  OV.remove_unlock("productivity-module-3", "productivity-processor-2")
-  OV.remove_unlock("effectivity-module-3", "effectivity-processor-2")
-  OV.remove_unlock("pollution-clean-module-3", "pollution-clean-processor-2")
-  OV.remove_unlock("pollution-create-module-3", "pollution-create-processor-2")
-  OV.add_prereq("speed-module-3", "modules-2")
-  OV.add_prereq("productivity-module-3", "modules-2")
-  OV.add_prereq("effectivity-module-3", "modules-2")
-  OV.add_prereq("pollution-clean-module-3", "modules-2")
-  OV.add_prereq("pollution-create-module-3", "modules-2")
   OV.remove_unlock("advanced-electronics-2", "module-processor-board-2")
+  for _, type in pairs{"speed", "effectivity", "productivity"} do
+    -- remove the marked as upgrade from base game
+    local tech = data.raw.technology[type.."-module-3"]
+    if tech then
+      tech.upgrade = "false"
+    end
+  end
+  for _, type in pairs{"speed", "effectivity", "productivity", "pollution-clean", "pollution-create"} do
+    OV.remove_unlock(type.."-module-3", type.."-processor-2")
+    OV.add_prereq(type.."-module-3", "modules-2")
+    OV.set_research_difficulty(type.."-module-3", 60, 100)
+    OV.set_research_difficulty(type.."-module-4", 60, 150)
+    OV.set_research_difficulty(type.."-module-5", 60, 200)
+    OV.set_science_pack({
+      type.."-module-5"
+    }, {
+      "module-case",
+      "module-circuit-board",
+      type.."-processor"
+    }, {
+      0,--module case
+      1,--module-circuit-board
+      2,--processor circuit board
+    })
+  end
+  for _, type in pairs{"raw-speed", "green", "raw-productivity"} do
+    OV.set_research_difficulty(type.."-module-3", 60, 100)
+    OV.set_research_difficulty(type.."-module-4", 60, 150)
+    OV.set_research_difficulty(type.."-module-5", 60, 200)
+    OV.set_science_pack({
+      type.."-module-5"
+    }, {
+      "module-case",
+      "module-circuit-board",
+    }, {
+      0,--module case
+      1,--module-circuit-board
+    })
+  end
+  OV.set_science_pack("raw-speed-module-5", {
+    "speed-processor", "effectivity-processor"
+  }, 2)
+  OV.set_science_pack("green-module-5", {
+    "pollution-clean-processor", "effectivity-processor"
+  }, 2)
+  OV.set_science_pack("raw-productivity-module-5", {
+    "pollution-clean-processor", "effectivity-processor", "productivity-processor"
+  }, 2)
 
   -- tier 3 modules
   data:extend(
@@ -236,16 +284,18 @@ if mods["bobmodules"] then
       },
     }
   )
-  OV.remove_unlock("speed-module-6", "speed-processor-3")
-  OV.remove_unlock("productivity-module-6", "productivity-processor-3")
-  OV.remove_unlock("effectivity-module-6", "effectivity-processor-3")
-  OV.remove_unlock("pollution-clean-module-6", "pollution-clean-processor-3")
-  OV.remove_unlock("pollution-create-module-6", "pollution-create-processor-3")
-  OV.add_prereq("speed-module-6", "modules-3")
-  OV.add_prereq("productivity-module-6", "modules-3")
-  OV.add_prereq("effectivity-module-6", "modules-3")
-  OV.add_prereq("pollution-clean-module-6", "modules-3")
-  OV.add_prereq("pollution-create-module-6", "modules-3")
+  for _, type in pairs{"speed", "effectivity", "productivity", "pollution-clean", "pollution-create"} do
+    OV.remove_unlock(type.."-module-6", type.."-processor-3")
+    OV.add_prereq(type.."-module-6", "modules-3")
+    OV.set_research_difficulty(type.."-module-6", 120, 300)
+    OV.set_research_difficulty(type.."-module-7", 120, 400)
+    OV.set_research_difficulty(type.."-module-8", 120, 500)
+  end
+  for _, type in pairs{"raw-speed", "green", "raw-productivity"} do
+    OV.set_research_difficulty(type.."-module-6", 120, 300)
+    OV.set_research_difficulty(type.."-module-7", 120, 400)
+    OV.set_research_difficulty(type.."-module-8", 120, 500)
+  end
   if data.raw.technology["advanced-electronics-3"] then
     OV.remove_unlock("advanced-electronics-3", "module-processor-board-3")
     OV.add_prereq("modules-3", "advanced-electronics-3")
@@ -366,9 +416,9 @@ end
       end
     end
     data.raw.technology[i > 1 and "angels-bio-yield-module-"..i or "angels-bio-yield-module"].unit = {
-      count = data.raw.technology[i > 1 and "productivity-module-"..i or "productivity-module"].unit.count,
+      count = i<3 and (25*i) or ((i-2)*100),
       ingredients = ingredients,
-      time = data.raw.technology[i > 1 and "productivity-module-"..i or "productivity-module"].unit.time
+      time = i<3 and 30 or 60
     }
   end
 
@@ -377,8 +427,8 @@ end
     local ingredients = {{"token-bio", 1}}
     local ingredients_added = {["token-bio"] = true}
     for _, tech_name in pairs{
-      "productivity-module-"..i,
-      "effectivity-module-"..i,
+      "productivity-module-"..(i<6 and 4 or 6),
+      "effectivity-module-"..(i<6 and 4 or 6),
     } do
       for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
         if not ingredients_added[ingredient.name or ingredient[1]] then
@@ -447,9 +497,9 @@ end
             }
           },
           unit = {
-            count = data.raw.technology["productivity-module-"..i].unit.count,
+            count = i<6 and ((i-1)*50) or ((i-3)*100),
             ingredients = ingredients,
-            time = data.raw.technology["productivity-module-"..i].unit.time
+            time = data.raw.technology["productivity-module-"..(i<6 and 4 or 6)].unit.time
           }
         }
       }

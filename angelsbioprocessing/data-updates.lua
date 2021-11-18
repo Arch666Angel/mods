@@ -1,3 +1,5 @@
+local OV = angelsmods.functions.OV
+
 require("prototypes.bio-processing-override")
 require("prototypes.bio-processing-generate")
 require("prototypes.tips-and-tricks.tips-and-tricks")
@@ -9,7 +11,7 @@ angelsmods.functions.add_flag("bio-hogger-3", "hidden")
 angelsmods.functions.add_flag("bio-hogger-4", "hidden")
 angelsmods.functions.add_flag("bio-hogger-5", "hidden")
 angelsmods.functions.add_flag("bio-refugium-hogger", "hidden")
-angelsmods.functions.OV.hide_recipe({
+OV.disable_recipe({
   "hogger-hogging-1",
   "hogger-hogging-2",
   "hogger-hogging-3",
@@ -25,6 +27,7 @@ angelsmods.functions.OV.hide_recipe({
   "hogger-butchery-2",
   "hogger-butchery-3",
   "hogger-butchery-4",
-  "hogger-butchery-5"})
+  "hogger-butchery-5"
+})
 
-angelsmods.functions.OV.execute()
+OV.execute()

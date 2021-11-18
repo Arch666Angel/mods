@@ -1,7 +1,11 @@
 local OV = angelsmods.functions.OV
 
 -- manual crafting
-table.insert(data.raw["character"]["character"].crafting_categories, "angels-manual-crafting")
+for _, character in pairs(data.raw.character) do
+  if character.crafting_categories then
+    table.insert(character.crafting_categories, "angels-manual-crafting")
+  end
+end
 
 -------------------------------------------------------------------------------
 -- SAPHIRITE ------------------------------------------------------------------
@@ -119,17 +123,6 @@ else
       }
     }
   )
-
-  --OV.remove_unlock("ore-powderizer", "angelsore8-powder")
-  --OV.remove_unlock("ore-powderizer", "angelsore8-powder-processing")
-  --OV.remove_unlock("ore-advanced-floatation", "angelsore8-sludge")
-  --OV.remove_unlock("ore-advanced-floatation", "angelsore8-dust")
-  --OV.remove_unlock("ore-advanced-floatation", "angelsore8-dust-processing")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-solution")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-anode-sludge")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-anode-sludge-filtering")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-crystal")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore8-crystal-processing")
 end
 
 -------------------------------------------------------------------------------
@@ -164,17 +157,6 @@ else
       "angelsore9-crystal-processing"
     }
   )
-
-  --OV.remove_unlock("ore-powderizer", "angelsore9-powder")
-  --OV.remove_unlock("ore-powderizer", "angelsore9-powder-processing")
-  --OV.remove_unlock("ore-advanced-floatation", "angelsore9-sludge")
-  --OV.remove_unlock("ore-advanced-floatation", "angelsore9-dust")
-  --OV.remove_unlock("ore-advanced-floatation", "angelsore9-dust-processing")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-solution")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-anode-sludge")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-anode-sludge-filtering")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal")
-  --OV.remove_unlock("ore-electro-whinning-cell", "angelsore9-crystal-processing")
 end
 
 -------------------------------------------------------------------------------
@@ -190,7 +172,12 @@ if angelsmods.functions.is_special_vanilla() then
       "catalysator-orange",
     }
   )
+  angelsmods.functions.add_flag("crystal-seedling", "hidden")
+  angelsmods.functions.add_flag("catalysator-brown", "hidden")
+  angelsmods.functions.add_flag("catalysator-green", "hidden")
+  angelsmods.functions.add_flag("catalysator-orange", "hidden")
 end
+
 -- Currently crystal-matrix has no use
 OV.disable_recipe({"crystal-matrix"})
 angelsmods.functions.add_flag("crystal-matrix","hidden")
