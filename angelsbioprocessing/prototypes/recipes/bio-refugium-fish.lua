@@ -3,7 +3,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-fish-atmosphere",
-      category = "advanced-chemistry",
+      category = "chemistry",
       subgroup = "bio-fish",
       enabled = false,
       energy_required = 15,
