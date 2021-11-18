@@ -9,7 +9,7 @@ Date: ??
       - Added pollution absorption modifier setting (default to 3x)
       - Added localised description explaining the behaviour of this tile
       - Reduced the complexity of the recipe slightly
-    - Added better walking sounds to the b
+      - Added better walking sounds
     - Alien plant-life samples changes (720):
       - Reworked farming technologies such that garden duplication can be unlocked when
         playing with a high tech cost modifier.
