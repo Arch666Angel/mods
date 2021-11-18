@@ -11,7 +11,8 @@ Date: ??
       - Reduced the complexity of the recipe slightly
     - Added better walking sounds to the b
     - Alien plant-life samples changes (720):
-      - Reshuffled farming techs so that garden duplication can be unlocked when playing with a high tech cost modifier
+      - Reworked farming technologies such that garden duplication can be unlocked when
+        playing with a high tech cost modifier.
       - Advanced farming recipes now require specialized farms
       - More techs now require Alien plant-life samples to research
   Bugfixes:
