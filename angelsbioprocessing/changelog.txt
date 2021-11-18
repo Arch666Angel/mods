@@ -10,6 +10,10 @@ Date: ??
       - Added localised description explaining the behaviour of this tile
       - Reduced the complexity of the recipe slightly
     - Added better walking sounds to the b
+    - Alien plant-life samples changes (720):
+      - Reshuffled farming techs so that garden duplication can be unlocked when playing with a high tech cost modifier
+      - T2 farming recipes now require T2 farms
+      - More techs now require Alien plant-life samples to research
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
     - Fixed another bug where agricultural modules could be duplicated (682)
