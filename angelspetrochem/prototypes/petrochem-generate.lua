@@ -51,6 +51,7 @@ if angelsmods.refining then
   --CREATE BARRELS
   angelsmods.functions.make_void("gas-compressed-air", "chemical")
   angelsmods.functions.make_void("gas-hydrogen", "chemical")
+  --angelsmods.functions.make_void("gas-deuterium", "chemical")
   angelsmods.functions.make_void("gas-oxygen", "chemical")
   angelsmods.functions.make_void("gas-hydrogen-peroxide", "chemical")
   angelsmods.functions.make_void("gas-carbon-monoxide", "chemical")
@@ -67,6 +68,7 @@ if angelsmods.refining then
   angelsmods.functions.make_void("gas-epichlorhydrin", "chemical")
   angelsmods.functions.make_void("gas-chlor-methane", "chemical")
   angelsmods.functions.make_void("liquid-perchloric-acid", "chemical")
+  angelsmods.functions.make_void("gas-phosgene","chemical")
   if data.raw.fluid["ferric-chloride-solution"] then
     angelsmods.functions.make_void("ferric-chloride-solution", "chemical") 
   end
@@ -77,6 +79,7 @@ if angelsmods.refining then
   angelsmods.functions.make_void("gas-ammonia", "chemical")
   angelsmods.functions.make_void("gas-nitrogen-dioxide", "chemical")
   angelsmods.functions.make_void("gas-dinitrogen-tetroxide", "chemical")
+  angelsmods.functions.make_void("gas-nitrogen-monoxide", "chemical")
   angelsmods.functions.make_void("gas-ammonium-chloride", "chemical")
   angelsmods.functions.make_void("gas-urea", "chemical")
   angelsmods.functions.make_void("gas-melamine", "chemical")

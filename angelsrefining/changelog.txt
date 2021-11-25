@@ -7,6 +7,8 @@ Date: ??
       - Clarifier, Crystallizer, Hydro plant, Salination plant
       - Ore crusher, Floatation cell, Ore refinery, Ore sorting facility
     - Reworked the control behaviour to multiple smaller files to keep it organized.
+    - Added fluid and recipe tints for all of angels core mods, including some functions to support the change
+    - Small library clean-up
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)

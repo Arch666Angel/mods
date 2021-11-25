@@ -10,15 +10,18 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     {
       {
         name = "angelsore2-chunk",
-        results = {{name = "water-greenyellow-waste", type = "fluid", amount = "water-yellow-waste"}}
+        results = {{name = "water-greenyellow-waste", type = "fluid", amount = "water-yellow-waste"}},
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-greenyellow-waste",angelsmods.refining.ore_tints["ore2"]})
       },
       {
         name = "angelsore4-chunk",
-        results = {{name = "water-green-waste", type = "fluid", amount = "water-yellow-waste"}}
+        results = {{name = "water-green-waste", type = "fluid", amount = "water-yellow-waste"}},
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-green-waste",angelsmods.refining.ore_tints["ore4"]})
       },
       {
         name = "angelsore5-chunk",
-        results = {{name = "water-red-waste", type = "fluid", amount = "water-yellow-waste"}}
+        results = {{name = "water-red-waste", type = "fluid", amount = "water-yellow-waste"}},
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-red-waste",angelsmods.refining.ore_tints["ore5"]})
       },
       {
         name = "greenyellow-waste-water-purification",
@@ -134,6 +137,7 @@ if mods["bobplates"] then
               {039, 112, 194}, {168, 173, 173}, {070, 133, 232}, {185, 185, 185, 0.8}
             }
           ),
+          crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","chlorine","hydrogen"}),
           subgroup = "bob-fluid-electrolysis",
           order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
         }
@@ -151,6 +155,8 @@ if mods["bobplates"] then
   data.raw.fluid["lithia-water"].icon = nil
   data.raw.fluid["lithia-water"].icon_size = nil
   data.raw.fluid["lithia-water"].icon_mipmaps = nil
+  data.raw.fluid["lithia-water"].base_color = angelsmods.functions.fluid_color("Ws4Tw")
+  data.raw.fluid["lithia-water"].flow_color = angelsmods.functions.flow_color("Ws4Tw")
   angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
 
   data:extend(
@@ -180,6 +186,7 @@ if mods["bobplates"] then
             {243,135,000}, {247,140,003}, {247,140,003}
           }
         ),
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"thermal-water","lithia-water","water-purified"}),
         order = "g[water-thermal-lithia]"
       }
     }
@@ -198,7 +205,7 @@ if mods["bobplates"] then
     angelsmods.functions.disable_barreling_recipes("pure-water")
   end
 
-  --Insert water resources to bob recipes
+  --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes(
     {
       {name = "water-electrolysis", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}},

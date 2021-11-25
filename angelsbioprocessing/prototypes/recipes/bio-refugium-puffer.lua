@@ -20,6 +20,7 @@ data:extend(
       main_product = "gas-puffer-atmosphere",
       always_show_products = true,
       icons = angelsmods.functions.create_gas_recipe_icon(nil, {{194, 227, 091}, {184, 239, 000}, {156, 207, 000}}),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-puffer-atmosphere","gas-sulfur-dioxide","gas-oxygen", "gas-hydrogen-fluoride"}),
       order = "b"
     },
     {

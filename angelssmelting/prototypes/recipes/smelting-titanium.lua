@@ -56,7 +56,7 @@ data:extend(
         angelsmods.functions.create_liquid_recipe_icon(
           {
             {"__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72}
-          }, "ill"
+          }, "SiClCl"
         ), 1, angelsmods.smelting.number_tint),
       order = "d[liquid-titanium-tetrachloride]-a"
     },
@@ -81,7 +81,7 @@ data:extend(
         angelsmods.functions.create_liquid_recipe_icon(
           {
             {"__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72}
-          }, "ill"
+          }, "SiClCl"
         ), 2, angelsmods.smelting.number_tint),
       order = "d[liquid-titanium-tetrachloride]-b"
     },

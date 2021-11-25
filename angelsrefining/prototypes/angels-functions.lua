@@ -150,25 +150,100 @@ end
 -------------------------------------------------------------------------------
 -- ICON GENERATION ------------------------------------------------------------
 -------------------------------------------------------------------------------
-local icon_tint_table = {
-  c = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon
-  k = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, -- Coal/Oil
-  h = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, -- Hydrogen
-  o = {{249, 013, 013}, {214, 012, 012}, {198, 011, 011}}, -- Oxygen
-  d = {{224, 244, 202}, {206, 206, 173}, {196, 196, 156}}, -- Deuterium
-  n = {{045, 075, 180}, {045, 076, 175}, {038, 063, 150}}, -- Nitrogen
-  l = {{031, 229, 031}, {057, 211, 040}, {075, 195, 045}}, -- Chlorine
-  s = {{225, 210, 000}, {216, 196, 017}, {210, 187, 030}}, -- Sulfur
-  a = {{105, 135, 090}, {096, 122, 082}, {088, 113, 075}}, -- Natural Gas
-  f = {{181, 208, 000}, {181, 208, 000}, {181, 208, 000}}, -- Fluoride
-  i = {{142, 148, 148}, {142, 148, 148}, {142, 148, 148}}, -- Silicon
-  t = {{135, 090, 023}, {nil, nil, nil}, {nil, nil, nil}}, -- Tungsten
-  w = {{094, 114, 174}, {088, 104, 163}, {088, 101, 155}} -- Water/Steam
-  --m = { r = 041, g = 041, b = 180 }, -- Complex
-  --s = { r = 115, g = 063, b = 163 }, -- Sodium
-  --p = { r = 244, g = 125, b = 001 }, -- Phosphorus
-  --y = { r = 255, g = 105, b = 180 }, -- Syngas
+local icon_tints_table = {
+  --Sourced from:
+  --https://sciencenotes.org/molecule-atom-colors-cpk-colors/
+  -- Sorted by periodic atomic number
+  H  = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, --Hydrogen
+  Hd = {{255, 255, 192}, {206, 206, 173}, {196, 196, 156}}, --Deuterium
+  Li = {{204, 128, 255}},                                   --Lithium
+  C  = {{044, 044, 044}, {064, 064, 064}, {090, 090, 090}}, --Carbon -- but darkened
+  N  = {{048, 080, 248}, {045, 076, 175}, {038, 063, 150}}, --Nitrogen
+  O  = {{255, 013, 013}, {214, 012, 012}, {198, 011, 011}}, --Oxygen
+  F  = {{144, 224, 080}, {181, 208, 000}, {181, 208, 000}}, --Fluorine
+  Na = {{171, 092, 242}},                                   --Sodium
+  Mg = {{138, 255, 000}},                                   --Magnesium
+  Al = {{191, 166, 166}},                                   --Aluminium
+  Si = {{240, 200, 160}},                                   --Silicon
+  P  = {{255, 128, 000}},                                   --Phosphorus
+  S  = {{255, 255, 048}, {216, 196, 017}, {210, 187, 030}}, --Sulfur
+  Cl = {{031, 240, 031}, {057, 211, 040}, {075, 195, 045}}, --Chlorine
+  K  = {{143, 064, 212}},                                   --Potassium
+  Ca = {{061, 255, 000}},                                   --Calcium
+  Ti = {{191, 194, 199}},                                   --Titanium
+  Cr = {{138, 153, 199}},                                   --Chrome
+  Mn = {{156, 122, 199}},                                   --Manganese
+  Fe = {{224, 102, 051}},                                   --Iron
+  Co = {{240, 144, 160}},                                   --Cobalt
+  Ni = {{080, 208, 080}},                                   --Nickel
+  Cu = {{200, 128, 051}},                                   --Copper
+  Zn = {{125, 128, 176}},                                   --Zinc
+  Ag = {{192, 192, 192}},                                   --Silver
+  Sn = {{102, 128, 128}},                                   --Tin
+  Cs = {{087, 023, 143}},                                   --Cesium
+  W  = {{033, 148, 214}},                                   --Tungsten (Wolfram)
+  Os = {{038, 102, 150}},                                   --Osmium
+  Pt = {{208, 208, 224}},                                   --Platium
+  Au = {{255, 209, 035}},                                   --Gold
+  Hg = {{184, 184, 208}},                                   --Mercury
+  Pb = {{087, 089, 097}},                                   --Lead
+  Po = {{171, 092, 000}},                                   --Polonium
+  Th = {{000, 186, 255}},                                   --Thorium
+  Pa = {{000, 161, 255}},                                   --Protactinium
+  U  = {{000, 143, 255}},                                   --Uranium
+  Np = {{000, 128, 255}},                                   --Neptunium
+  Pu = {{000, 107, 255}},                                   --Plutonium
+  Am = {{084, 092, 242}},                                   --Americium
+  Cm = {{120, 092, 227}},                                   --Curium
+  --fake/compicated/custom tints
+  Tw = {{243, 135, 000}},                                   --Thermal water
+  Oi = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, --Coal/Oil
+  Xx = {{041, 041, 180}},                                   --Complex (really strange materials)
+  Ws = {{094, 114, 174}, {088, 104, 163}, {088, 101, 155}}, --Water/Steam
+  Sg = {{255, 105, 180}},                                   --Syngas
+  Ng = {{105, 135, 090}, {096, 122, 082}, {088, 113, 075}}, --Natural Gas
+  Cb = {{015, 015, 015}},                                   --Other Carbon Solids
+  Ax = {{241, 050, 238}},                                   --Alien Stuffs
+  Aw = {{194, 227, 091}, {184, 239, 000}, {156, 207, 000}},  --Alien Feed (gas/water)
+  Oc = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon (oxides) darker for less contrast
 }
+--[[{ unused materials
+  Ne = {{179, 227, 245}}, Ar = {{128, 209, 227}}, Sc = {{230, 230, 230}}, V  = {{166, 166, 171}}, Ga = {{194, 143, 143}}, Ge = {{102, 143, 143}}, As = {{189, 128, 227}}, Se = {{255, 161, 000}}, 
+  Br = {{166, 041, 041}}, Kr = {{092, 184, 209}}, Rb = {{112, 046, 176}}, Sr = {{000, 255, 000}}, Y  = {{148, 255, 255}}, Zr = {{148, 224, 224}}, Nb = {{115, 194, 201}}, Mo = {{084, 181, 181}}, 
+  Tc = {{059, 158, 158}}, Ru = {{036, 143, 143}}, Rh = {{010, 125, 140}}, Pd = {{000, 105, 133}}, Cd = {{255, 217, 143}}, In = {{166, 117, 115}}, Sb = {{158, 099, 181}}, Te = {{212, 122, 000}}, 
+  I  = {{148, 000, 148}}, Xe = {{066, 158, 176}}, Ba = {{000, 201, 000}}, La = {{112, 212, 255}}, Ce = {{255, 255, 199}}, Pr = {{217, 255, 199}}, Nd = {{199, 255, 199}}, Pm = {{163, 255, 199}}, 
+  Sm = {{143, 255, 199}}, Eu = {{097, 255, 199}}, Gd = {{069, 255, 199}}, Tb = {{048, 255, 199}}, Dy = {{031, 255, 199}}, Ho = {{000, 255, 156}}, Er = {{000, 230, 117}}, Tm = {{000, 212, 082}},  
+  Yb = {{000, 191, 056}}, Lu = {{000, 171, 036}}, Hf = {{077, 194, 255}}, Ta = {{077, 166, 255}}, Re = {{038, 125, 171}}, Ir = {{023, 084, 135}}, Tl = {{166, 084, 077}}, Bi = {{158, 079, 181}}, 
+  At = {{117, 079, 069}}, Rn = {{066, 130, 150}}, Fr = {{066, 000, 102}}, Ra = {{000, 125, 000}}, Ac = {{112, 171, 250}}, Bk = {{138, 079, 227}}, Cf = {{161, 054, 212}}, Es = {{179, 031, 212}}, 
+  Fm = {{179, 031, 186}}, Md = {{179, 013, 166}}, No = {{189, 013, 135}}, Lr = {{199, 000, 102}}, Rf = {{204, 000, 089}}, Db = {{209, 000, 079}}, Sg = {{217, 000, 069}}, Bh = {{224, 000, 056}}, 
+  Hs = {{230, 000, 046}}, Mt = {{235, 000, 038}}, }]]
+
+local function get_molecule_codes(molec_formula)
+  local orig = molec_formula
+  local string_codes = {} --subtables of tint codes eg. {{form = Ws ,amount = 12},}
+  while string.len(molec_formula) > 0 do
+    --take first segment (or throw error) and trim each code off and repeat until empty or error
+    local trim = 1 --always trim at least 1 per code
+    if string.find(molec_formula,"^%u%l%d+") == 1 then --Two letter code with number
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
+      trim = string.len(tostring(string_codes[#string_codes].amount)) + 1 
+    elseif string.find(molec_formula,"^%u%l") == 1 then --Two letter code without number
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = 1}) --no amount-default 1
+    elseif string.find(molec_formula,"^%u%d+") == 1 then --One letter code with number
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
+      trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
+    elseif string.find(molec_formula,"^%u") == 1 then --One letter code without number
+      table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = 1}) --no amount-default 1
+    else --none of the above segments
+      error("Cannot determine next string code in '"..(molec_formula or "").." of original code "..orig.."'. Please report this to the Angel's dev team.")
+    end
+    --trim string correctly
+    local symbol = string_codes[#string_codes].form
+    trim = trim + string.len(symbol)
+    molec_formula = string.sub(molec_formula, trim)
+  end
+  return string_codes
+end
 
 local function create_recipe_molecule_icons(molecules_icon, molecules_shift, molecules_scale)
   molecules_icon = clean_table(molecules_icon) or {}
@@ -281,10 +356,11 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
   -- allows a string of max 3 characters for default tints
   if tints then
     if type(tints) ~= "table" then
+      local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint((icon_tint_table[string.sub(tints, 1, 1)] or {})[1]),
-        mid = unify_tint((icon_tint_table[string.sub(tints, 2, 2)] or {})[2]),
-        bot = unify_tint((icon_tint_table[string.sub(tints, 3, 3)] or {})[3])
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -337,13 +413,14 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
   top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
+      local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint((icon_tint_table[string.sub(tints, 1, 1)] or {})[1]),
-        mid = unify_tint((icon_tint_table[string.sub(tints, 2, 2)] or {})[2]),
-        bot = unify_tint((icon_tint_table[string.sub(tints, 3, 3)] or {})[3])
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -397,13 +474,14 @@ end
 -- CREATE GAS TECH ICONS
 function angelsmods.functions.create_gas_tech_icon(tints)
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
+      local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint((icon_tint_table[string.sub(tints, 1, 1)] or {})[1]),
-        mid = unify_tint((icon_tint_table[string.sub(tints, 2, 2)] or {})[2]),
-        bot = unify_tint((icon_tint_table[string.sub(tints, 3, 3)] or {})[3])
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -478,13 +556,14 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
   end
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
+      local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint((icon_tint_table[string.sub(tints, 1, 1)] or {})[1]),
-        mid = unify_tint((icon_tint_table[string.sub(tints, 2, 2)] or {})[2]),
-        bot = unify_tint((icon_tint_table[string.sub(tints, 3, 3)] or {})[3])
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -537,13 +616,14 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
   top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
-  -- allows a string of max 3 characters for default tints
+  -- uses the get_molecule_codes for default tints
   if tints then
     if type(tints) ~= "table" then
+      local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint((icon_tint_table[string.sub(tints, 1, 1)] or {})[1]),
-        mid = unify_tint((icon_tint_table[string.sub(tints, 2, 2)] or {})[2]),
-        bot = unify_tint((icon_tint_table[string.sub(tints, 3, 3)] or {})[3])
+        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -916,9 +996,53 @@ function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
         g = fluid.flow_color.g or 0,
         b = fluid.flow_color.b or 0,
         a = 185 / 255
-      }
+      },
     } or
     nil
+end
+
+function angelsmods.functions.get_recipe_tints(layers, opacity)
+  --can parse direct colours or search for items (currently only works for multiple fluids)
+  local tints={}
+  local opacity = opacity or 185/255
+  local alpha = opacity > 1 and opacity/255 or opacity
+  for index, name in pairs(layers) do
+    if type(name)== "table" then
+      tints[index] = name
+      --ammend alpha
+      tints[index].a = opacity or (tints[index].a and tints[index].a --if alpha, maintain
+        or ((tints[index].r < 1 and tints[index].g <1) and alpha or alpha*255))
+    elseif name == nil then --skip
+    elseif type(name)== "string" then
+      --search through items and fluids
+      local found = ""
+      for _, type in pairs({"fluid"--[[,"item"]]}) do
+        if data.raw[type][name] then
+          local base = data.raw[type][name]
+          tints[index] = {
+            r = base.base_color.r or 0,
+            g = base.base_color.g or 0,
+            b = base.base_color.b or 0,
+            a = base.base_color.a or --if alpha, maintain
+              ((base.base_color.r < 1 and base.base_color.g < 1 ) and alpha or alpha*255)
+          }
+          break
+        end
+      end
+    end
+  end
+  return {
+    primary = (layers[1] ~= nil) and tints[1] or nil,
+    secondary = (layers[2] ~= nil) and tints[2] or nil,
+    tertiary = (layers[3] ~= nil) and tints[3] or nil,
+    quaternary = (layers[4] ~= nil) and tints[4] or nil,
+    --[[quinary = (layers[5] ~= nil) and tints[5] or nil, --this and the remaining ones are not currently supported by base game
+    senary = (layers[6] ~= nil) and tints[6] or nil,
+    septenary = (layers[7] ~= nil) and tints[7] or nil,
+    octanry = (layers[8] ~= nil) and tints[8] or nil,
+    nonary = (layers[9] ~= nil) and tints[9] or nil,
+    denary = (layers[10] ~= nil) and tints[10] or nil]]
+  }
 end
 
 --COMPARES ARGUMENT (ARG) AGAINST A TABLE (EXCEP), RETURNS FALSE IF ARG == EXCEP ELSE TRUE
@@ -929,6 +1053,203 @@ function angelsmods.functions.check_exception(arg, excep)
     end
   end
   return true
+end
+-------------------------------------------------------------------------------
+-- FLUID FLOW AND RECIPE COLOUR FUNCTIONS -------------------------------------
+-------------------------------------------------------------------------------
+--the following functions were gratefully donated by @Maxreader on Discord
+local function isColor(input)
+  if type(input) ~= "table" then
+    return nil
+  end
+  local length = table_size(input)
+  if length ~= 3 and length ~= 4 then
+    return nil
+  end
+  local is_small = true
+  for _,v in pairs(input) do 
+    if v > 1 then
+      is_small = false
+      break
+    end
+  end
+  if not is_small then
+    for k,v in pairs(input) do
+      input[k] = v/255
+    end
+  end
+  local color = {
+    r = input.r or input[1],
+    g = input.g or input[2],
+    b = input.b or input[3],
+    a = input.a or input[4] or 1
+  }
+  return color
+end
+
+local function findRGB(inputString)
+  if type(inputString) ~= "string" then
+    return nil
+  end
+  if inputString:find("%a") then  
+    return nil
+  end
+  local rawColor = util.split(inputString:gsub("%D", " "), " ")
+  if #rawColor < 3 then
+    return nil
+  end
+  local color = {}
+  for k,v in pairs(rawColor) do
+    color[k] = v / 255
+  end
+  return {
+    r = color[1],
+    g = color[2],
+    b = color[3],
+    a = color[4] or 1
+  }
+end
+
+--modified version of util.color provided by API
+local function findHex(hex)
+  if type(hex) ~= "string" then
+    return nil
+  end
+  if hex:find("%X") or #hex > 8  or #hex == 5 or #hex == 7 then
+    return nil
+  end
+
+  local function h(i,j)
+    return j and tonumber("0x"..hex:sub(i,j)) / 255 or tonumber("0x"..hex:sub(i,i)) / 15
+  end
+
+  hex = hex:gsub("#","")
+  return #hex == 6 and {r = h(1,2), g = h(3,4), b = h(5,6)}
+    or #hex == 3 and {r = h(1), g = h(2), b = h(3)}
+    or #hex == 8 and {r = h(1,2), g = h(3,4), b = h(5,6), a = h(7,8)}
+    or #hex == 4 and {r = h(1), g = h(2), b = h(3), a = h(4)}
+    or #hex == 2 and {r = h(1,2), g = h(1,2), b = h(1,2)}
+    or #hex == 1 and {r = h(1), g = h(1), b = h(1)}
+    or {r = 1, g = 1, b = 1}
+end
+
+local function toColor(color)
+  return isColor(color) or findHex(color) or findRGB(color) or {r = 0, g = 0, b = 0, a = 1}
+end
+local function RGBtoHSV(color)
+  color = toColor(color)
+  local r,g,b = color.r, color.g, color.b
+  local max = math.max(r,g,b)
+  local min = math.min(r,g,b)
+  local range = max - min
+  local h
+  if range == 0 then
+    h = 0
+  elseif max == r then
+    h = (g-b)/range*60
+  elseif max == g then
+    h = (2+(b-r)/range)*60
+  elseif max == b then
+    h = (4+(r-g)/range)*60
+  end
+  if h < 0 then
+    h = h + 360
+  end
+  local v = max
+  local s = range/max
+  return{
+    h = h,
+    s = s,
+    v = v,
+    a = color.a or 1
+  }
+end
+
+local function HSVtoRGB(color)
+  local h,s,v,a = color.h, color.s, color.v, color.a
+  local function f(n)
+    local k = (n + h/60) % 6
+    return v - v*s*math.max(math.min(k,4-k,1),0)
+  end
+  return {
+    r = f(5),
+    g = f(3),
+    b = f(1),
+    a = color.a or 1
+  }
+end
+
+local function rgb_fetch(chemical_formula)
+  local rgb = {}
+  local codes = get_molecule_codes(chemical_formula)
+  for i=1, #codes do 
+    local tint_table = icon_tints_table[codes[i].form]
+    if tint_table then
+      rgb[i] = #tint_table <= i and tint_table[i] or tint_table[1]
+    else
+      rgb[i] = {0,0,0}
+    end
+  end
+  return rgb
+end
+
+local function total_shade(chemical_formula)
+  local change = 0
+  local array = get_molecule_codes(chemical_formula)
+  for i=1, #array do
+    change = change + array[i].amount
+  end
+  return change
+end
+
+function angelsmods.functions.fluid_color(chemical_formula) --color blending based on a general chemical formula
+  local color = {}
+  local arrays = get_molecule_codes(chemical_formula)
+  local lettering,multi,rgb = {},{},{}
+  for i=1, #arrays do
+    table.insert(lettering, arrays[i].form)
+    table.insert(multi, arrays[i].amount)
+    --table.insert(rgb, arrays[i].rgb)
+  end
+  rgb = rgb_fetch(chemical_formula)
+  --local rgb = formula_extraction_1a(chemical_formula)--formula_extraction_1(chemical_formula)
+  --local multi = formula_extraction_2(chemical_formula)
+  --should only consist of the first 3 items, with an optional 4th
+  local red, green, blue, alpha, comb = 0,0,0,0,0
+  local ave_denom = #rgb
+  if ave_denom == 2 and ((rgb[1]==icon_tints_table["C"][1] and rgb[2]==icon_tints_table["H"][1]) or (rgb[1]==icon_tints_table["H"][1] and rgb[2]==icon_tints_table["C"][1])) then
+    -- Hydrocarbon only
+    local m_c = tonumber(multi[1])/8
+    local m_h = tonumber(multi[2])/12
+    local value = ((m_h / m_c / 4) ^ 2.2) / 0.41
+    local function sigmoid(x, b, c) --more maxreader madness :D
+      return 1 / (1 + 2 ^ (-b * (x +c)))
+    end
+    value = sigmoid(value, 20, -0.25)
+    for i, j in pairs({"r", "g", "b"}) do color[j] = value end
+  else --everything else
+    for i,colour in pairs(rgb) do
+      alpha = colour[4] or 1
+      red = red + ((colour[1]/255)^2 * tonumber(multi[i])*alpha)
+      green = green + ((colour[2]/255)^2 * tonumber(multi[i])*alpha)
+      blue = blue + ((colour[3]/255)^2 * tonumber(multi[i])*alpha)
+      comb = comb + tonumber(multi[i]*alpha)
+    end
+    color = {r = math.sqrt(red/comb), g = math.sqrt(green/comb), b = math.sqrt(blue/comb), a = 1}
+      --normalise
+    local HSV = RGBtoHSV(color)
+    HSV.v = 0.8*HSV.v
+    HSV.s = 1-0.60*(1-HSV.s)
+    color = HSVtoRGB(HSV)
+  end
+  return color
+end
+
+function angelsmods.functions.flow_color(chemical_formula) --makes it lighter by some margin
+  change = total_shade(chemical_formula)*6
+  chemical_formula = chemical_formula.."H"..change--table.insert(chemical_formula,"H"..change)
+  local color = angelsmods.functions.fluid_color(chemical_formula)
+  return color
 end
 
 -------------------------------------------------------------------------------
@@ -1274,6 +1595,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_output_item = "water-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
+      void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name--[[,"water"]])
     elseif void_category == "chemical" then
       void_amount = void_amount or 100
       void_input_amount = void_amount > 1 and void_amount or 1
@@ -1283,6 +1605,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_output_item = "chemical-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
+      void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name)
     else
       recipe = nil -- no valid void category found
     end
@@ -1333,6 +1656,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.always_show_made_in = true
     recipe.allow_decomposition = false
     recipe.allow_as_intermediate = false
+    recipe.crafting_machine_tint = void_tint or nil
     recipe.hide_from_stats = false
     recipe.subgroup = "angels-" .. void_category .. "-void"
     recipe.order = data.raw["item-group"][data.raw["item-subgroup"][void_input_subgroup].group].order or "z"
