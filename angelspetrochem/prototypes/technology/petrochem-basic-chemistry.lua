@@ -291,7 +291,7 @@ data:extend(
           type = "unlock-recipe",
           recipe = "coke-purification-2"
         },
-	    {
+        {
           type = "unlock-recipe",
           recipe = "pellet-coke"
         },
