@@ -239,7 +239,7 @@ if data.raw.item["y-res1"] then
             "water-purified",
             mods["angelspetrochem"] and {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32} or "sulfur"
           },
-          "wss"
+          "WsSS"
         ),--
         order = "a[yellow-waste-water-purification-yi]",
         crafting_machine_tint = angelsmods.functions.get_recipe_tints({"y-con_water","water-yellow-waste","water-purified"}),
