@@ -75,6 +75,7 @@ data:extend(
       main_product = "alien-goo",
       --icon = "__angelsbioprocessing__/graphics/icons/alien-goo.png",
       --icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("alien-goo"),
       order = "a[alien]-c[goo]"
     },
     {
@@ -258,6 +259,7 @@ data:extend(
         {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}},
         {"crystal-powder"}
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
       order = "a[creation]-b[slurry]"
     }
   }

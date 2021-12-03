@@ -480,6 +480,7 @@ data:extend(
           "bio-resin"
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-resin","gas-ethanol","liquid-resin","gas-ethanol"}),
       order = "c[processing]-a[bio-resin]"
     },
     {
@@ -506,6 +507,7 @@ data:extend(
           mods["bobplates"] and {"__bobplates__/graphics/icons/resin.png", 32} or "solid-resin"
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-resin","gas-ethanol","liquid-resin","gas-ethanol"}),
       order = "c[processing]-b[solid-resin]-a[liquification]"
     },
     {
@@ -727,6 +729,7 @@ data:extend(
           "bio-plastic"
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-plastic","gas-acetone","liquid-plastic","gas-acetone"}),
       order = "c[processing]"
     },
     -- DESERT WOOD GENERATOR
@@ -927,6 +930,7 @@ data:extend(
           "bio-rubber"
         }
       ),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-rubber","gas-acetone","liquid-rubber","gas-acetone"}),
       order = "c[processing]"
     }
   }

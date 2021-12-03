@@ -5,10 +5,11 @@ angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 1}
 
 --TRIGGER CHECKS
 angelsmods.triggers = angelsmods.triggers or {}
+--BIO TOKEN
 angelsmods.triggers.lab_ignore_token = angelsmods.triggers.lab_ignore_token or {}
 angelsmods.triggers.lab_ignore_token["lab-alien"] = true
 angelsmods.triggers.lab_ignore_token["lab-module"] = true
-
+--ARTIFACTS
 angelsmods.triggers.artifacts = angelsmods.triggers.artifacts or {}
 if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
   angelsmods.triggers.artifacts["red"] = true
@@ -19,7 +20,7 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
   angelsmods.triggers.artifacts["green"] = true
   angelsmods.triggers.artifacts["base"] = true -- pink
 end
-
+--BIO PASTES
 angelsmods.triggers.bio_pastes = angelsmods.triggers.bio_pastes or {}
 angelsmods.triggers.bio_pastes["cellulose"] = true -- required for petri dish
 
@@ -48,6 +49,10 @@ else
   end
   --angelsmods.triggers.bio_pastes["silver"] = true --unused
 end
+--BIO ALTERNATIVES FOR PETRO
+angelsmods.triggers.bio_rubber = angelsmods.triggers.bio_rubber or angelsmods.trigger.rubber or false
+angelsmods.triggers.bio_resin = angelsmods.triggers.bio_resin or angelsmods.trigger.resin or false
+angelsmods.triggers.bio_plastic = angelsmods.triggers.bio_plastic or (angelsmods.trigger.plastic and (angelsmods.triggers.bio_resin or angelsmods.triggers.bio_rubber)) or false
 
 -- set triggers for other angel mods
 require("prototypes.bio-processing-triggers")

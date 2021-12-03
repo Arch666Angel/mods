@@ -42,6 +42,7 @@ else
   angelsmods.functions.add_flag("cathode-manganese", "hidden")
   angelsmods.functions.add_flag("ingot-manganese", "hidden")
   angelsmods.functions.add_flag("liquid-molten-manganese", "hidden")
+  angelsmods.functions.add_flag("solid-iron-hydroxide", "hidden")
   OV.disable_recipe({"manganese-ore-processing", "manganese-processed-processing"})
   OV.disable_recipe({"pellet-manganese-smelting", "processed-manganese-smelting", "manganese-processed-processing-alt", "solid-manganese-oxide-smelting"})
   OV.disable_recipe({"manganese-ore-smelting", "cathode-manganese-smelting"})

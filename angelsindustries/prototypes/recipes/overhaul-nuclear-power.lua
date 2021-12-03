@@ -630,6 +630,7 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "d[deuterium]-a",
+    --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,
@@ -834,6 +835,7 @@ data:extend(
       {
         {type = "item", name = "atomic-bomb", amount = 2}
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
       order="d[rocket-launcher]-d[atomic-bomb]-b"
     },
   }

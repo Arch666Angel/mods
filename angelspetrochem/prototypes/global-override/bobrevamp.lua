@@ -179,6 +179,7 @@ if mods["bobrevamp"] then
               {type = "fluid", name = "gas-ammonia", amount = 40}, -- 40 instead of 50 to be ammonia neutral (no production of it)
             },
             subgroup = "petrochem-basics",
+            crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-ammonia","gas-ammonium-chloride"}),
             order = "e[solid-calcium-chloride]-b"
           }
         }

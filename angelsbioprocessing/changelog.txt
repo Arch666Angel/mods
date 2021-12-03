@@ -2,10 +2,24 @@
 Version: 0.7.21
 Date: ??
   Changes:
+    - Reworked the biologically active tile:
+      - Added custom graphic icon
+      - Added custom walking sounds
+      - Added out-of-the-world pollution absorption (literally)
+      - Added pollution absorption modifier setting (default to 3x)
+      - Added localised description explaining the behaviour of this tile
+      - Reduced the complexity of the recipe slightly
+      - Added better walking sounds
+    - Alien plant-life samples changes (720):
+      - Reworked farming technologies such that garden duplication can be unlocked when
+        playing with a high tech cost modifier.
+      - Advanced farming recipes now require specialized farms
+      - More techs now require Alien plant-life samples to research
     - Updated Acetic acid recipe to take Red metal catalyst instead of Green (692)
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
     - Fixed another bug where agricultural modules could be duplicated (682)
+    - Fixed progression of module research when playing with bobmodules
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.20
 Date: 10.08.2021

@@ -29,6 +29,7 @@ data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 --OVERRIDE FOR BOBs
 require("prototypes.override.refining-override-bobmining")
 require("prototypes.override.refining-override-bobplates")
+require("prototypes.override.refining-override-bobores")
 require("prototypes.override.refining-override-bobgems")
 require("prototypes.override.refining-override-bobtech")
 require("prototypes.override.refining-override-bobrevamp")
@@ -36,6 +37,7 @@ require("prototypes.override.refining-override-bobwarfare")
 require("prototypes.override.refining-override-boblogistics")
 require("prototypes.override.refining-override-bobmodules")
 require("prototypes.override.refining-override-bobpower")
+require("prototypes.override.refining-override-bobequipment")
 require("prototypes.override.refining-override-bobvehicleequipment")
 
 if mods["bobplates"] then
@@ -170,6 +172,7 @@ if data.raw.item["y-res1"] then
           },
           slag_color
         ),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
         order = "a-a [slag-processing-yi]"
       },
       {
@@ -212,6 +215,7 @@ if data.raw.item["y-res1"] then
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
           {icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
         },
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
         order = "c-i-g[angelsore-chunk-mix-yi2-processing]"
       },
       {
@@ -237,7 +241,8 @@ if data.raw.item["y-res1"] then
           },
           "wss"
         ),--
-        order = "a[yellow-waste-water-purification-yi]"
+        order = "a[yellow-waste-water-purification-yi]",
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"y-con_water","water-yellow-waste","water-purified"}),
       }
     }
   )

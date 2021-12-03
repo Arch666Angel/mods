@@ -882,7 +882,8 @@ function angelsmods.functions.make_alien(def_data)
             "placeable-enemy",
             "placeable-off-grid",
             "not-repairable",
-            "breaths-air"
+            "breaths-air",
+            "hidden"
           },
           max_health = def_data.appearance.health,
           resistances = def_data.resistance,

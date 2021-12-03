@@ -35,6 +35,7 @@ data:extend(
       results = {
         {type = "item", name = "angels-void", amount = 1}
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "a"
     },
@@ -67,6 +68,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "b"
     },
@@ -99,6 +101,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "c"
     },
@@ -131,6 +134,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "d"
     },
@@ -163,6 +167,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "e"
     },
@@ -195,6 +200,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "f"
     },
@@ -227,6 +233,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "g"
     },
@@ -259,6 +266,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "h"
     },
@@ -291,6 +299,7 @@ data:extend(
           {type = "item", name = "angels-void", amount = 1}
         }
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
       icon_size = 32,
       order = "i"
     },

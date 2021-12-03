@@ -73,7 +73,7 @@ data:extend(
     {
       type = "recipe",
       name = "temperate-4",
-      category = "temperate-farming",
+      category = "advanced-temperate-farming",
       subgroup = "farming-temperate",
       enabled = false,
       energy_required = 30,
@@ -97,7 +97,7 @@ data:extend(
     {
       type = "recipe",
       name = "temperate-5",
-      category = "temperate-farming",
+      category = "advanced-temperate-farming",
       subgroup = "farming-temperate",
       enabled = false,
       energy_required = 30,
@@ -278,7 +278,7 @@ data:extend(
     {
       type = "recipe",
       name = "desert-4",
-      category = "desert-farming",
+      category = "advanced-desert-farming",
       subgroup = "farming-desert",
       enabled = false,
       energy_required = 30,
@@ -302,7 +302,7 @@ data:extend(
     {
       type = "recipe",
       name = "desert-5",
-      category = "desert-farming",
+      category = "advanced-desert-farming",
       subgroup = "farming-desert",
       enabled = false,
       energy_required = 30,
@@ -483,7 +483,7 @@ data:extend(
     {
       type = "recipe",
       name = "swamp-4",
-      category = "swamp-farming",
+      category = "advanced-swamp-farming",
       subgroup = "farming-swamp",
       enabled = false,
       energy_required = 30,
@@ -507,7 +507,7 @@ data:extend(
     {
       type = "recipe",
       name = "swamp-5",
-      category = "swamp-farming",
+      category = "advanced-swamp-farming",
       subgroup = "farming-swamp",
       enabled = false,
       energy_required = 30,

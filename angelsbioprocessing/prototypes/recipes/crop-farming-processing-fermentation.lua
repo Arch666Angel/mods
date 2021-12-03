@@ -1,3 +1,4 @@
+local AF = angelsmods.functions
 data:extend(
   {
     {
@@ -26,6 +27,7 @@ data:extend(
           shift = {-10, -10}
         }
       },
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-fermentation-raw","water","gas-acid"--[[for the yellow]],"gas-acid"--[[for the yellow]]}),
       icon_size = 32
     },
     {
@@ -54,6 +56,7 @@ data:extend(
           shift = {-10, -10}
         }
       },
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-fermentation-raw","water", AF.fluid_color("P")--[[for the orange]], AF.fluid_color("P")--[[for the orange]]}),
       icon_size = 32
     },
     {
@@ -72,12 +75,13 @@ data:extend(
       },
       main_product = "liquid-acetic-acid",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72}
         },
-        "coh"
+        "COH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-acetic-acid","liquid-fermentation-raw","liquid-acetic-acid","liquid-fermentation-raw"}),
       order = "c"
     },
     -- PROCESSING
@@ -97,12 +101,13 @@ data:extend(
       },
       main_product = "gas-ethanol",
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72}
         },
-        "coh"
+        "COH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-ethanol","liquid-fermentation-raw","liquid-ethanol","liquid-fermentation-raw"}),
       order = "d"
     },
     {
@@ -122,12 +127,13 @@ data:extend(
       },
       main_product = "gas-ethylene",
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72}
         },
-        "chh"
+        "CHH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"gas-ethylene","liquid-sulfuric-acid","water-yellow-waste","gas-ethanol"}),
       order = "e"
     },
     --BIO PLASTICS
@@ -150,12 +156,13 @@ data:extend(
       },
       main_product = "liquid-acetic-acid",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72}
         },
-        "coh"
+        "COH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-acetic-acid","gas-methanol","water-purified","gas-carbon-monoxide"}),
       order = "a"
     },
     {
@@ -175,12 +182,13 @@ data:extend(
       },
       main_product = "liquid-acetic-anhydride",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelsbioprocessing__/graphics/icons/molecule-acetic-anhydride.png", 72}
         },
-        "coh"
+        "COH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-acetic-anhydride", "liquid-acetic-acid","gas-methanol","gas-carbon-monoxide"}),
       order = "b"
     },
     {
@@ -201,6 +209,7 @@ data:extend(
       },
       main_product = "liquid-cellulose-acetate-mixture",
       always_show_products = true,
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-cellulose-acetate-mixture","liquid-acetic-anhydride", "liquid-acetic-acid","liquid-sulfuric-acid"}),
       order = "c"
     },
     {
@@ -220,13 +229,15 @@ data:extend(
       },
       main_product = "liquid-cellulose-acetate",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelsbioprocessing__/graphics/icons/molecule-cellulose-acetate.png", 72}
         },
-        "coh"
+        "COH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-cellulose-acetate","liquid-cellulose-acetate-mixture","water-yellow-waste", "water-purified"}),
       order = "d"
+      
     },
     {
       type = "recipe",
@@ -244,13 +255,14 @@ data:extend(
       },
       main_product = "liquid-plastic",
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.bioprocessing.number_tint)
+          AF.add_number_icon_layer({}, 1, angelsmods.bioprocessing.number_tint)
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","liquid-cellulose-acetate","gas-acetone", "liquid-plastic"}),
       order = "e"
     },
     {
@@ -272,12 +284,13 @@ data:extend(
       },
       main_product = "liquid-propionic-acid",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelsbioprocessing__/graphics/icons/molecule-propionic-acid.png", 72}
         },
-        "coh"
+        "COH"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-propionic-acid","gas-ethylene","gas-carbon-monoxide", "water-purified"}),
       order = "f"
     },
     {
@@ -297,13 +310,14 @@ data:extend(
       },
       main_product = "liquid-plastic",
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.bioprocessing.number_tint)
+          AF.add_number_icon_layer({}, 2, angelsmods.bioprocessing.number_tint)
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","liquid-propionic-acid","liquid-acetic-acid", "liquid-plastic"}),
       order = "g"
     }
   }
