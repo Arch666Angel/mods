@@ -85,7 +85,8 @@ if mods["bobrevamp"] then
     --OV.remove_unlock("lithium-processing", "sodium-chlorate")
     OV.disable_recipe({"sodium-chlorate","sodium-perchlorate"})
     --make pre-reqs match new unlock point
-    OV.add_prereq("battery-2", "chlorine-processing-3")
+    OV.add_prereq("lithium-processing", "chlorine-processing-4")
+    OV.set_science_pack("lithium-processing", "chemical-science-pack", 1)
 
     OV.converter_fluid("carbon-dioxide", "gas-carbon-dioxide")
     angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
