@@ -400,7 +400,7 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "fluid", name = "gas-nitrogen-dioxide", amount = 100},
-        {type = "item", name = "catalyst-metal-yellow", amount = 1, catalyst_amount = 1}
+        {type = "item", name = "catalyst-metal-yellow", amount = 1}
       },
       results = {
         {type = "fluid", name = "gas-dinitrogen-tetroxide", amount = 50},
