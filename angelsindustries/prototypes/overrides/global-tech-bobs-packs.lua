@@ -120,6 +120,8 @@ if angelsmods.industries.tech then
   if mods["bobmodules"] then
     OV.remove_science_pack("angels-bio-yield-module", "angels-science-pack-orange")
     AI.pack_replace("modules-3", "blue", "yellow")
+    AI.pack_replace("effect-transmission", "yellow", "orange")
+    OV.remove_prereq("effect-transmission-2", "production-science-pack")
   end
 
   -------------------------------------------------------------------------------
