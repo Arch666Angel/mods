@@ -1010,7 +1010,7 @@ data:extend(
       order = "c[crystal]-b",
       default_temperature = 25,
       heat_capacity = "1KJ",
-      base_color = {r = 147 / 255, g = 207 / 255, b = 47 / 255},
+      base_color = {r = 105 / 255, g = 237 / 255, b = 38 / 255},
       flow_color = {r = 100 / 255, g = 255 / 255, b = 0 / 255},
       max_temperature = 100,
 
@@ -1023,8 +1023,8 @@ data:extend(
       order = "c[crystal]-c",
       default_temperature = 25,
       heat_capacity = "1KJ",
-      base_color = {r = 0.7, g = 0.6, b = 0.2},
-      flow_color = {r = 0.5, g = 0.5, b = 0.5},
+      base_color = {r = 153/255, g = 71/255, b = 28/255},
+      flow_color = {r = 100/255, g = 255/255, b = 0/255},
       max_temperature = 100,
 
     },

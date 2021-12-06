@@ -1,23 +1,12 @@
-local concrete_vehicle_speed_modifier = 0.8
-
+local pollution_absorption_per_second = data.raw["tile"]["out-of-map"].pollution_absorption_per_second * settings.startup["angels-bio-tile-pollution-absorbtion-multiplier"].value
 data:extend(
   {
     {
       type = "item",
       name = "bio-tile",
-      icons = { --temp use base version of landfill as the icon
-        {
-          icon= "__base__/graphics/technology/landfill.png",
-          icon_size = 256,
-          icon_mipmaps = 4
-        },
-        {
-          icon = "__angelssmelting__/graphics/icons/brick-clay.png",
-          icon_size = 32,
-          scale = 0.4375 * 1.6,
-          shift = {9, 9}
-        }
-      },
+      localised_description = {"item-description.bio-tile", string.format("%.6f", pollution_absorption_per_second)},
+      icon = "__angelsbioprocessing__/graphics/icons/bio-tile.png",
+      icon_size = 64,
       subgroup = "angels-stone",
       order = "f",
       stack_size = angelsmods.trigger.pavement_stack_size,
@@ -34,10 +23,10 @@ data:extend(
       minable = {mining_time = 0.5, result = "bio-tile"},
       mined_sound = {filename = "__base__/sound/deconstruct-bricks.ogg"},
       collision_mask = {"ground-tile"},
-      walking_speed_modifier = 1.5,
+      walking_speed_modifier = 1.3,
       layer = 80,
       decorative_removal_probability = 1,
-      pollution_absorption_per_second = 0.000008,
+      pollution_absorption_per_second = data.raw["tile"]["out-of-map"].pollution_absorption_per_second * (2^(settings.startup["angels-bio-tile-pollution-absorbtion-multiplier"].value-1)),
       variants = {
         main = {
           {
@@ -79,20 +68,44 @@ data:extend(
       },
       walking_sound = {
         {
-          filename = "__base__/sound/walking/concrete-01.ogg",
-          volume = 1.2
+          filename = "__base__/sound/walking/decorative-grass-01.ogg",
+          volume = 0.8
         },
         {
-          filename = "__base__/sound/walking/concrete-02.ogg",
-          volume = 1.2
+          filename = "__base__/sound/walking/decorative-grass-02.ogg",
+          volume = 0.8
         },
         {
-          filename = "__base__/sound/walking/concrete-03.ogg",
-          volume = 1.2
+          filename = "__base__/sound/walking/decorative-grass-03.ogg",
+          volume = 0.8
         },
         {
-          filename = "__base__/sound/walking/concrete-04.ogg",
-          volume = 1.2
+          filename = "__base__/sound/walking/decorative-grass-04.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/walking/decorative-grass-05.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/walking/decorative-grass-06.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/walking/decorative-grass-07.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/walking/decorative-grass-08.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/walking/decorative-grass-09.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/walking/decorative-grass-10.ogg",
+          volume = 0.8
         }
       },
       map_color = {r = 50, g = 50, b = 50},

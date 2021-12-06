@@ -30,16 +30,17 @@ if mods["bobpower"] then
   if settings.startup["bobmods-power-poles"].value == true then
     if angelsmods.functions.is_special_vanilla() then
       OV.add_prereq("electric-pole-3", "chemical-science-pack")
+    else
+      OV.set_science_pack("electric-pole-4", "production-science-pack")
     end
 
     OV.add_prereq("electric-substation-4", "production-science-pack")
+    OV.set_science_pack("electric-substation-4", "production-science-pack")
   end
 
   if mods["bobplates"] then
     --update to blue science level
     OV.set_science_pack("bob-steam-turbine-1","chemical-science-pack",1)
-    --make HX-1 the same tier
-    OV.set_science_pack("bob-heat-exchanger-1","chemical-science-pack",1)
     OV.patch_recipes(
       {
         {

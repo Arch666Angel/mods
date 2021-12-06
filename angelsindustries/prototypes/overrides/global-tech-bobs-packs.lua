@@ -118,7 +118,10 @@ if angelsmods.industries.tech then
   -- BOBS MODULES ---------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobmodules"] then
-    --adds bob modules stuffs
+    OV.remove_science_pack("angels-bio-yield-module", "angels-science-pack-orange")
+    AI.pack_replace("modules-3", "blue", "yellow")
+    AI.pack_replace("effect-transmission", "yellow", "orange")
+    OV.remove_prereq("effect-transmission-2", "production-science-pack")
   end
 
   -------------------------------------------------------------------------------
@@ -240,7 +243,7 @@ if angelsmods.industries.tech then
     --adds bob personal equipment stuffs
     AI.pack_replace("personal-roboport-equipment", "green", "orange")
     AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    AI.pack_replace("exoskeleton-equipment", "green", "orange")
+    AI.pack_replace("exoskeleton-equipment", "blue", "orange")
     AI.pack_replace("solar-panel-equipment-2", "green", "orange")
     AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
   end
@@ -256,7 +259,6 @@ if angelsmods.industries.tech then
       AI.pack_replace("bob-boiler-4", "blue", "orange")
       AI.pack_replace("bob-oil-boiler-3", "blue", "orange")
       AI.pack_replace("bob-steam-turbine-1", "blue", "orange")
-      AI.pack_replace("bob-heat-exchanger-1","blue","green")
       AI.pack_replace("bob-steam-turbine-3", "blue", "yellow")
       AI.pack_replace("bob-heat-exchanger-2", "blue", "orange")
     end

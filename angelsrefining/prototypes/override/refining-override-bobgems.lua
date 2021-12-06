@@ -108,4 +108,16 @@ else
   OV.disable_recipe("angelsore7-crystallization-4")
   OV.disable_recipe("angelsore7-crystallization-5")
   OV.disable_recipe("angelsore7-crystallization-6")
+
+  if mods["bobores"] then
+    angelsmods.functions.add_flag({
+      "gem-ore",
+      "ruby-ore",
+      "sapphire-ore",
+      "emerald-ore",
+      "amethyst-ore",
+      "topaz-ore",
+      "diamond-ore"
+    }, "hidden")
+  end
 end

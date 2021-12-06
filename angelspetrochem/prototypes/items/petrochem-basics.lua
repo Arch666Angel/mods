@@ -25,7 +25,7 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72},
-        "hhh"
+        "HHH"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
@@ -33,8 +33,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 1, b = 1},
-      flow_color = {r = 1, g = 1, b = 1},
+      base_color = angelsmods.functions.fluid_color("H"),--{r = 1, g = 1, b = 1},
+      flow_color = angelsmods.functions.flow_color("H"),--{r = 1, g = 1, b = 1},
       max_temperature = 100,
 
     },
@@ -46,7 +46,7 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
-        "ooo"
+        "OOO"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
@@ -54,8 +54,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 0, b = 0},
-      flow_color = {r = 1, g = 0, b = 0},
+      base_color = angelsmods.functions.fluid_color("O"),--{r = 1, g = 0, b = 0},
+      flow_color = angelsmods.functions.flow_color("O"),--{r = 1, g = 0, b = 0},
       max_temperature = 100,
 
     },
@@ -67,7 +67,7 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/hydrogen-peroxide.png", 72},
-        "ooh"
+        "OOH"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
@@ -75,8 +75,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 0, b = 0},
-      flow_color = {r = 1, g = 0, b = 0},
+      base_color = angelsmods.functions.fluid_color("HO"),--{r = 1, g = 0, b = 0},
+      flow_color = angelsmods.functions.flow_color("HO"),--{r = 1, g = 0, b = 0},
       max_temperature = 100,
 
     },
@@ -86,7 +86,7 @@ data:extend(
       localised_description = show_formula and {"tooltip-description.chemical-formula", "CO"} or nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72},
-        "ccc"
+        "CCOc"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
@@ -94,8 +94,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 0.4, b = 0.4},
-      flow_color = {r = 1, g = 0.4, b = 0.4},
+      base_color = angelsmods.functions.fluid_color("CO"),--{r = 1, g = 0.4, b = 0.4},
+      flow_color = angelsmods.functions.flow_color("CO"),--{r = 1, g = 0.4, b = 0.4},
       max_temperature = 100,
 
     },
@@ -107,7 +107,7 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72},
-        "ccc"
+        "COcOc"
       ),
       --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
@@ -115,8 +115,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 1, g = 0.5, b = 0.5},
-      flow_color = {r = 1, g = 0.5, b = 0.5},
+      base_color = angelsmods.functions.fluid_color("CO2"),--{r = 1, g = 0.5, b = 0.5},
+      flow_color = angelsmods.functions.flow_color("CO2"),--{r = 1, g = 0.5, b = 0.5},
       max_temperature = 100,
 
     },
@@ -126,7 +126,7 @@ data:extend(
       localised_description = show_formula and {"tooltip-description.chemical-formula", "HF"} or nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72},
-        "fhh"
+        "FHH"
       ),
       --icon_size = 32,
       subgroup = "petrochem-sulfer-fluids",
@@ -134,8 +134,8 @@ data:extend(
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0, g = 1, b = 0.5},
-      flow_color = {r = 0, g = 1, b = 0.5},
+      base_color = angelsmods.functions.fluid_color("HF"),--{r = 0, g = 1, b = 0.5},
+      flow_color = angelsmods.functions.flow_color("HF"),--{r = 0, g = 1, b = 0.5},
       max_temperature = 100,
 
     },
@@ -145,15 +145,15 @@ data:extend(
       localised_description = show_formula and {"tooltip-description.chemical-formula", "HF"} or nil,
       icons = angelsmods.functions.create_liquid_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72},
-        "fhh"
+        "FHH"
       ),
       --icon_size = 32,
       subgroup = "petrochem-sulfer-fluids",
       order = "f",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 0, g = 1, b = 0.5},
-      flow_color = {r = 0, g = 1, b = 0.5},
+      base_color = angelsmods.functions.fluid_color("HFWs"),--{r = 0, g = 1, b = 0.5},
+      flow_color = angelsmods.functions.flow_color("HFWs"),--{r = 0, g = 1, b = 0.5},
       max_temperature = 100,
 
     },
@@ -164,14 +164,14 @@ data:extend(
       localised_name = {"fluid-name.liquid-water-semiheavy", "7.5"},
       icons = angelsmods.functions.create_liquid_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72},
-        "odh"
+        "OHdH"
       ),
       subgroup = "water-enrichment",
       order = "h[water-enriched]-a[semiheavy]-a[mk1]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color("Ws5Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color("Ws5Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
 
     },
@@ -181,14 +181,14 @@ data:extend(
       localised_name = {"fluid-name.liquid-water-semiheavy", "12.5"},
       icons = angelsmods.functions.create_liquid_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72},
-        "odh"
+        "OHdH"
       ),
       subgroup = "water-enrichment",
       order = "h[water-enriched]-a[semiheavy]-b[mk2]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color("Ws3Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color("Ws3Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
 
     },
@@ -198,14 +198,14 @@ data:extend(
       localised_name = {"fluid-name.liquid-water-semiheavy", "15"},
       icons = angelsmods.functions.create_liquid_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72},
-        "odh"
+        "OHdH"
       ),
       subgroup = "water-enrichment",
       order = "h[water-enriched]-a[semiheavy]-c[mk3]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color("WsHd3"),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color("WsHd3"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
 
     },
@@ -217,14 +217,14 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_liquid_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64},
-        "odd"
+        "OHdHd"
       ),
       subgroup = "water-enrichment",
       order = "h[water-enriched]-b[heavy]",
       default_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 255/255, g = 128/255, b = 128/255},
-      flow_color = {r = 255/255, g = 128/255, b = 128/255},
+      base_color = angelsmods.functions.fluid_color("WsHd5"),--{r = 255/255, g = 128/255, b = 128/255},
+      flow_color = angelsmods.functions.flow_color("WsHd5"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 101,
 
     },
@@ -236,15 +236,15 @@ data:extend(
         nil,
       icons = angelsmods.functions.create_gas_fluid_icon(
         {"__angelspetrochem__/graphics/icons/molecules/deuterium.png", 64},
-        "ddd"
+        "HdHdHd"
       ),
       subgroup = "petrochem-basic-fluids",
       order = "i",
       default_temperature = 25,
       gas_temperature = 25,
       heat_capacity = "0.1KJ",
-      base_color = {r = 196 / 255, g = 196 / 255, b = 156 / 255},
-      flow_color = {r = 196 / 255, g = 196 / 255, b = 156 / 255},
+      base_color = angelsmods.functions.fluid_color("Hd"),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
+      flow_color = angelsmods.functions.flow_color("Hd"),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
       max_temperature = 100,
 
     },
@@ -267,6 +267,6 @@ data:extend(
       subgroup = "angels-void",
       order = "zzz[chemical-void]",
       stack_size = 200
-    }
+    },
   }
 )

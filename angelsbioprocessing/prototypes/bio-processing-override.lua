@@ -1,8 +1,10 @@
 require("prototypes.overrides.bio-processing-override-special-vanilla")
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
---PASTE
+--UPDATE BIO PRODUCT RECIPES
+require("prototypes.overrides.bio-processing-override-arboretum")
 require("prototypes.overrides.bio-processing-override-paste")
+-- UPDATE OTHER STUFF
 require("prototypes.overrides.bio-processing-override-angel")
 
 -- body

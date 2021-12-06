@@ -1,4 +1,5 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
+local AF = angelsmods.functions
 
 data:extend(
   {
@@ -18,7 +19,7 @@ data:extend(
         {type = "item", name = "processed-silver", amount = 2}
       },
       order = "b[processed-silver]",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -49,6 +50,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-silver-nitrate", amount = 12}
       },
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
       order = "d[solid-silver-nitrate]"
     },
     {
@@ -100,8 +102,8 @@ data:extend(
       results = {
         {type = "item", name = "ingot-silver", amount = 24}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-silver"),
         1, angelsmods.smelting.number_tint),
       order = "h[ingot-silver]-a"
     },
@@ -118,8 +120,8 @@ data:extend(
       results = {
         {type = "item", name = "ingot-silver", amount = 24}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-silver"),
         2, angelsmods.smelting.number_tint),
       order = "h[ingot-silver]-b"
     },
@@ -136,8 +138,8 @@ data:extend(
       results = {
         {type = "item", name = "ingot-silver", amount = 24}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-silver"),
         3, angelsmods.smelting.number_tint),
       order = "h[ingot-silver]-c"
     },
@@ -171,7 +173,7 @@ data:extend(
         {type = "fluid", name = "liquid-molten-silver", amount = 120}
       },
       order = "j[liquid-molten-silver]",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -200,11 +202,11 @@ data:extend(
           {type = "item", name = "angels-roll-silver", amount = 2}
         }
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-roll-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-roll-silver"),
         1, angelsmods.smelting.number_tint),
       order = "k[angels-roll-silver]-a",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -237,11 +239,11 @@ data:extend(
         },
         main_product = "angels-roll-silver"
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-roll-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-roll-silver"),
         2, angelsmods.smelting.number_tint),
       order = "k[angels-roll-silver]-b",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -272,11 +274,11 @@ data:extend(
           {type = "item", name = "angels-wire-coil-silver", amount = 4}
         }
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-coil-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-wire-coil-silver"),
         1, angelsmods.smelting.number_tint),
       order = "l[angels-wire-coil-silver]-a",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver")
     },
     {
       type = "recipe",
@@ -311,11 +313,11 @@ data:extend(
         },
         main_product = "angels-wire-coil-silver"
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-coil-silver"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-wire-coil-silver"),
         2, angelsmods.smelting.number_tint),
       order = "l[angels-wire-coil-silver]-b",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silver")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver")
     },
     -- CASTING RESULT
     {
@@ -343,9 +345,9 @@ data:extend(
           {type = "item", name = "angels-plate-silver", amount = 4}
         }
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-silver"),
-        angelsmods.functions.get_object_icons("liquid-molten-silver"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-plate-silver"),
+        AF.get_object_icons("liquid-molten-silver"),
         {-10, -10}, 0.4375),
       order = "m[angels-plate-silver]-b" -- m[angels-plate-silver]-a reserved for silver ore smelting (see silver overrides)
     },
@@ -363,9 +365,9 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-silver", amount = 4}
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-silver"),
-        angelsmods.functions.get_object_icons("angels-roll-silver"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-plate-silver"),
+        AF.get_object_icons("angels-roll-silver"),
         {-10, -10}, 0.4375),
       order = "m[angels-plate-silver]-c"
     },
@@ -385,9 +387,9 @@ data:extend(
         {type = "item", name = "angels-wire-silver", amount = 5}
       },
       allow_decomposition = false,
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-silver"),
-        angelsmods.functions.get_object_icons("angels-plate-silver"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-wire-silver"),
+        AF.get_object_icons("angels-plate-silver"),
         {-10, -10}, 0.4375),
       order = "n[angels-wire-silver]-a"
     },
@@ -405,9 +407,9 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-silver", amount = 16}
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-silver"),
-        angelsmods.functions.get_object_icons("angels-wire-coil-silver"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-wire-silver"),
+        AF.get_object_icons("angels-wire-coil-silver"),
         {-10, -10}, 0.4375),
       order = "n[angels-wire-silver]-b"
     }

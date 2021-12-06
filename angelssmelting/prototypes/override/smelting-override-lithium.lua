@@ -15,10 +15,4 @@ if --[[mods['bobplates'] and]] angelsmods.trigger.smelting_products["lithium"].p
     { name = "lithium-cobalt-oxide", subgroup = "angels-alloys", order = "b[lithium]-c" },
     { name = "lithium-water-electrolysis", subgroup = "angels-alloys", order = "b[lithium]-d" }
   })
-  if not mods['bobplates'] then
-    --OV.add_unlock("thermal-water-extraction","solid-lithium")
-  else
-    OV.disable_recipe("solid-lithium")
-    --angelsmods.functions.add_flag("solid-lithium", "hidden")
-  end
 end

@@ -249,8 +249,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {r = 255, g = 216, b = 0,a=0.5},
-      flow_color = {r = 255, g = 216, b = 0,a=0.5}
+      base_color = angelsmods.functions.fluid_color("H4S2O8Ws5NaCl"),
+      flow_color = angelsmods.functions.flow_color("H4S2O8Ws5NaCl"),
     },
     {
       type = "fluid",
@@ -263,8 +263,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color("Ws8NaCl"),
+      flow_color = angelsmods.functions.flow_color("Ws8NaCl"),
     },
     {
       type = "fluid",
@@ -277,8 +277,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color("LiCWs2"),
+      flow_color = angelsmods.functions.flow_color("LiCWs2"),
     },
     {
       type = "fluid",
@@ -291,8 +291,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = {r = 0.8, g = 0.8, b = 1},
+      flow_color = {r = 0.8, g = 0.8, b = 1},
     },
     {
       type = "fluid",
@@ -305,8 +305,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color("LiXx"),
+      flow_color = angelsmods.functions.flow_color("LiXx"),
     },
     {
       type = "fluid",
@@ -319,8 +319,8 @@ if angelsmods.industries.components then
       auto_barrel = false,
       heat_capacity = "0.01J",
       max_temperature = 100,
-      base_color = {1,1,1},
-      flow_color = {1,1,1}
+      base_color = angelsmods.functions.fluid_color("NaOHWs"),
+      flow_color = angelsmods.functions.flow_color("NaOHWs"),
     },
   })
 end
