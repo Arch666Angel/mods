@@ -727,6 +727,32 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "gas-phosgene"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "chlorine-processing-4",
+      icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
+      prerequisites = {
+        "chlorine-processing-3",
+        "sodium-processing",
+        "angels-advanced-chemistry-3"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
           recipe = "solid-sodium-chlorate"
         },
         {
@@ -736,10 +762,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquid-perchloric-acid"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-phosgene"
         }
       },
       unit = {
