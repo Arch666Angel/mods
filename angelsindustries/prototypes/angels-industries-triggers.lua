@@ -62,4 +62,5 @@ if angelsmods.industries.components then
 
   --BIOPROCESSING TRIGGERS
   angelsmods.triggers.bio_resin = true
+  angelsmods.triggers.bio_rubber = true
 end
