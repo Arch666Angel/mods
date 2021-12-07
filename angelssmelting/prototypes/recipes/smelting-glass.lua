@@ -236,7 +236,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-glass-fiber-board",
-      category = "advanced-crafting",
+      category = "crafting-with-fluid",
       subgroup = "angels-glass-casting",
       energy_required = 1,
       enabled = false,

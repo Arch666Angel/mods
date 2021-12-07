@@ -13,6 +13,7 @@ Date: ??
       - Fixed crash when player dies (664)
       - Fixed that bobs lab mk2, module lab and alien lab required the hidden base game lab (670)
       - Tweaked bobs laser riffle ammo technologies to be inline with their requirements (699)
+      - Fixed beacons were only accessible at yellow science when playing with bob modules (671)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.14
 Date: 10.08.2021
