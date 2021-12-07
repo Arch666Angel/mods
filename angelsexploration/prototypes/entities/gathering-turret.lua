@@ -7,8 +7,8 @@ data:extend(
     {
       type = "item",
       name = "angels-gathering-turret",
-      icon = "__base__/graphics/icons/wooden-chest.png", -- temporary
-      icon_size = 64, icon_mipmaps = 4, -- temporary
+      icon = "__angelsexploration__/graphics/icons/gathering-turret.png",
+      icon_size = 64, icon_mipmaps = 4,
       subgroup = "angels-electric-a",
       order = "ba",
       place_result = "angels-gathering-turret",
@@ -22,8 +22,8 @@ data:extend(
       type = "container",
       name = "angels-gathering-turret-base",
 
-      icon = "__base__/graphics/icons/wooden-chest.png", -- temporary
-      icon_size = 64, icon_mipmaps = 4, -- temporary
+      icon = "__angelsexploration__/graphics/icons/gathering-turret.png",
+      icon_size = 64, icon_mipmaps = 4,
 
       flags =
       {
@@ -86,6 +86,7 @@ data:extend(
 
       collision_box = {{ -0.7, -0.7}, {0.7, 0.7}},
       selection_box = {{ -1, -1}, {1, 1}},
+      drawing_box = {{ -1, -1.5}, {1, 0.5}},
 
       damaged_trigger_effect = nil,
 
@@ -208,29 +209,54 @@ data:extend(
       body = angelsmods.functions.create_gathering_turret_beam_body{flags = { "trilinear-filtering" }, blend_mode = "additive-soft"},
       light_animations = angelsmods.functions.create_gathering_turret_beam_light{flags = { "trilinear-filtering" }, blend_mode = "additive-soft"},
       ground_light_animations = angelsmods.functions.create_gathering_turret_beam_ground_light{tint = {0.05, 0.5, 0.5}}
-    }
+    },
+    {
+      type = "technology",
+      name = "angels-gathering-turret", -- has to be here in order for the targets to be added properly
+      icon = "__angelsexploration__/graphics/technology/gathering-turret.png",
+      icon_size = 256, icon_mipmaps = 4,
+      prerequisites = {
+        "military-science-pack"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-gathering-turret"
+        },
+      },
+      unit = {
+        count = 80,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 2}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
   }
 )
 
 -- GATHERING TARGETS (can be added by other mods, this list can be extended)
 if angelsmods.triggers.artifacts["base"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact", require_tech_unlock = "angels-gathering-turret"}
 end
 if angelsmods.triggers.artifacts["red"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-red"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-red", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
 end
 if angelsmods.triggers.artifacts["yellow"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-yellow"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-yellow", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
 end
 if angelsmods.triggers.artifacts["orange"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-orange"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-orange", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
 end
 if angelsmods.triggers.artifacts["blue"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-blue"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-blue", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
 end
 if angelsmods.triggers.artifacts["purple"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-purple"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-purple", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
 end
 if angelsmods.triggers.artifacts["green"] then
-  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-green"}
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-green", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
 end

@@ -97,32 +97,6 @@ data:extend(
       },
       order = "c-a"
     },
-    --GATHERING TECH
-    {
-      type = "technology",
-      name = "angels-gathering-turret",
-      icon = "__angelsexploration__/graphics/technology/gathering-turret.png",
-      icon_size = 256, icon_mipmaps = 4,
-      prerequisites = {
-        "military-science-pack"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-gathering-turret"
-        },
-      },
-      unit = {
-        count = 80,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "military-science-pack", amount = 2}
-        },
-        time = 15
-      },
-      order = "c-a"
-    },
     --BIO TECH
     {
       type = "technology",

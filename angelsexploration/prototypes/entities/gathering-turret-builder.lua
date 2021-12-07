@@ -693,6 +693,55 @@ local function create_sprite_from_icon_layers(icon_layers, icon_scale)
   return sprite
 end
 
+local function create_gathering_turret_target_tech(inputs)
+  if type(inputs.require_tech_unlock) == "boolean" then
+    inputs.require_tech_unlock = "angels-gathering-turret-target[" .. inputs.name .. "]"
+    return create_gathering_turret_target_tech(inputs)
+  end
+
+  local item_data = data.raw.item[inputs.name]
+  if not item_data then return end
+
+  -- create tech if it doesn't exist yet
+  local tech_data = data.raw.technology[inputs.require_tech_unlock]
+  if not tech_data then
+    data:extend(
+      {
+        {
+          type = "technology",
+          name = inputs.require_tech_unlock,
+          localised_name = {"technology-name.angels-gathering-turret-target", "__ITEM__"..inputs.name.."__"},
+          icon = "__angelsexploration__/graphics/technology/gathering-turret-target.png",
+          icon_size = 256, icon_mipmaps = 4,
+          prerequisites = inputs.additional_tech_prerequisites and (
+            type(inputs.additional_tech_prerequisites) == "string" and {inputs.additional_tech_prerequisites} or
+            type(inputs.additional_tech_prerequisites) == "table" and inputs.additional_tech_prerequisites
+          ) or nil,
+          effects = {},
+          unit = {
+            count = 150,
+            ingredients = {
+              {type = "item", name = "automation-science-pack", amount = 1},
+              {type = "item", name = "logistic-science-pack", amount = 1},
+              {type = "item", name = "military-science-pack", amount = 2}
+            },
+            time = 25
+          },
+          order = "c-a"
+        },
+      }
+    )
+    tech_data = data.raw.technology[inputs.require_tech_unlock]
+  end
+
+  -- add effect to the tech
+  table.insert(tech_data.effects, {
+    type = "nothing",
+    icons = angelsmods.functions.get_object_icons(inputs.name),
+    effect_description = {"effect-description.angels-gathering-turret-target", "__ITEM__"..inputs.name.."__"}
+  })
+end
+
 function angelsmods.functions.create_gathering_turret_target(inputs)
   local item_data = data.raw.item[inputs.name]
   if not item_data then return end
@@ -783,4 +832,9 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
       }
     }
   )
+
+  if inputs.require_tech_unlock then
+    -- create technology to unlock the gathering of this target
+    create_gathering_turret_target_tech(inputs)
+  end
 end

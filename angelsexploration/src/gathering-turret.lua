@@ -42,36 +42,37 @@ function gathering_turret:init_prototype_data()
   {
     ["gathering_turret_name" ] = "angels-gathering-turret", -- the actual turret
     ["gathering_turret_range"] = 60, -- the max range of the turret (defined in prototype)
+    ["gathering_turret_base_speed"] = 2, -- the gathering of the turret (defined in prototype)
     ["gathering_turret_chest"] = "angels-gathering-turret-base", -- the chest storing the loot
     ["gathering_items"] = -- a complete list of possible items to loot and the technology name to unlock it
     { -- technology "angels-void" unlocks the technology from the start
-      ["small-alien-artifact"] = "angels-void",
-      ["small-alien-artifact-green"] = "angels-void",
-      ["small-alien-artifact-purple"] = "angels-void",
-      ["small-alien-artifact-blue"] = "angels-void",
-      ["small-alien-artifact-orange"] = "angels-void",
-      ["small-alien-artifact-yellow"] = "angels-void",
-      ["small-alien-artifact-red"] = "angels-void",
+      ["small-alien-artifact"] = "angels-gathering-turret",
+      ["small-alien-artifact-green"] = "angels-gathering-turret-target[small-alien-artifact-green]",
+      ["small-alien-artifact-purple"] = "angels-gathering-turret-target[small-alien-artifact-purple]",
+      ["small-alien-artifact-blue"] = "angels-gathering-turret-target[small-alien-artifact-blue]",
+      ["small-alien-artifact-orange"] = "angels-gathering-turret-target[small-alien-artifact-orange]",
+      ["small-alien-artifact-yellow"] = "angels-gathering-turret-target[small-alien-artifact-yellow]",
+      ["small-alien-artifact-red"] = "angels-gathering-turret-target[small-alien-artifact-red]",
     },
   }
 end
 
 function gathering_turret:init_force_data(force_name)
-  -- TODO: check this dynamically using technology
+  local function create_whitelist_for_force()
+    local force_whitelist = {}
+    local force_technologies = (game.forces[force_name] or {technologies = {}}).technologies
+    local gathering_items = self:get_whitelisted_gathering_items()
+    for gathering_item, req_tech_name in pairs(gathering_items) do
+      force_whitelist[gathering_item] = (req_tech_name == "angels-void") or (force_technologies[req_tech_name] and force_technologies[req_tech_name].researched) or false
+    end
+    return force_whitelist
+  end
+
   global.GT_data.force_data[force_name] = 
   {
-    ["turret_range"] = 60, -- the actual gathering range of the turret
-    ["turret_speed"] = 2, -- the actual gathering speed (tiles/s) of this turret
-    ["turret_whitelist"] =  -- the list of items whitelisted to be collected
-    {
-      ["small-alien-artifact"] = true,
-      ["small-alien-artifact-green"] = true,
-      ["small-alien-artifact-purple"] = true,
-      ["small-alien-artifact-blue"] = true,
-      ["small-alien-artifact-orange"] = true,
-      ["small-alien-artifact-yellow"] = true,
-      ["small-alien-artifact-red"] = true,
-    },
+    ["turret_range"] = self:get_gathering_radius(), -- the actual gathering range of the turret
+    ["turret_speed"] = self:get_gathering_speed(), -- the actual gathering speed (tiles/s) of this turret
+    ["turret_whitelist"] = create_whitelist_for_force(), -- the list of items whitelisted to be collected
   }
 end
 
@@ -281,7 +282,6 @@ function gathering_turret:update_next_turret()
   -- STEP 1: make sure there is a turret to be updated
   local update_turret_ref = global.GT_data["next_active_turret"]
   if not update_turret_ref then return end
-  game.print(serpent.line(update_turret_ref))
 
   local turret_surface_index = update_turret_ref.surface_index
   local turret_position = update_turret_ref.position
@@ -320,7 +320,6 @@ function gathering_turret:update_searching_turret(turret_data)
   local turret_target = self:get_next_target(turret_data)
 
   if not turret_target then
-    game.print("no new target found")
     self:deactivate_turret(turret_entity.surface.index, turret_entity.position)
     return
   end
@@ -421,6 +420,25 @@ function gathering_turret:update_gathering_target(turret_surface_index, turret_p
   end
 end
 
+function gathering_turret:update_gathering_target_whitelist(force_name, technology_name, allow_gathering)
+  -- This function updates the gathering whitelist depending on which items are researched
+  local force_data = global.GT_data.force_data[force_name]
+  if force_data then
+    local gathering_items = self:get_whitelisted_gathering_items()
+    local force_whitelist = force_data["turret_whitelist"]
+    for gathering_item, req_tech_name in pairs(gathering_items) do
+      if req_tech_name == technology_name then
+        force_whitelist[gathering_item] = allow_gathering == true or false
+        -- TODO: re-activate all inactive turrets in this force
+        --       to search for new gathering targets
+        -- TODO: quit gathering of disallowed gathering items?
+      end
+    end
+  else
+    self:init_force_data(force_name)
+  end
+end
+
 
 
 -------------------------------------------------------------------------------
@@ -462,7 +480,7 @@ function gathering_turret:get_whitelisted_gathering_items(force_name)
 end
 
 function gathering_turret:is_gathering_target(target_name)
-  return string.match(target_name, "gathering%-turret%-target%[.+%]") == target_name
+  return string.match(target_name, "angels%-gathering%-turret%-target%[.+%]") == target_name
 end
 
 function gathering_turret:get_gathering_radius(force_name)
@@ -477,10 +495,14 @@ function gathering_turret:get_gathering_radius(force_name)
 end
 
 function gathering_turret:get_gathering_speed(force_name)
-  if not global.GT_data.force_data[force_name] then
-    self:init_force_data(force_name)
+  if force_name then
+    if not global.GT_data.force_data[force_name] then
+      self:init_force_data(force_name)
+    end
+    return global.GT_data.force_data[force_name]["turret_speed"]
+  else -- if no force name is provided, return the base speed
+    return global.GT_data.prototype_data.gathering_turret_base_speed
   end
-  return global.GT_data.force_data[force_name]["turret_speed"]
 end
 
 function gathering_turret:calculate_distance(pos1, pos2)
@@ -567,12 +589,25 @@ function gathering_turret:on_loot_dropped(surface_index, position)
   self:activate_turret(surface_index, position)
 end
 
-
 function gathering_turret:on_tick_update()
   -- TODO: for now we call this once every tick, this can be a runtime setting
   -- faster update times result in higher ups but smoother behaviour
   if global.GT_data["active_turret_count"] > 0 then
     self:update_next_turret()
+  end
+end
+
+function gathering_turret:on_tech_research_finished(force_name, technology_name)
+  self:update_gathering_target_whitelist(force_name, technology_name, true)
+end
+
+function gathering_turret:on_tech_research_reversed(force_name, technology_name)
+  self:update_gathering_target_whitelist(force_name, technology_name, false)
+end
+
+function gathering_turret:on_tech_research_reset(force_name)
+  if global.GT_data.force_data[force_name] then
+    self:init_force_data(force_name) -- re-init all force data to reapply settings
   end
 end
 
