@@ -7,6 +7,7 @@ Date: ??
       - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
       - Gas refinery, Advanced gas refinery
     - Dynamically disable Resin and Rubber when required
+    - Removed the oxygen from the products of soidum hydroxide electrolysis
   Bugfixes:
     - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
     - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)
