@@ -1,6 +1,10 @@
 local gathering_turret = require "src.gathering-turret"
 local debug_info = require "src.debug-info"
 
+-- config changes
+local on_configuration_changed = require("src.mod-config")
+script.on_configuration_changed(on_configuration_changed)
+
 -- initialisation
 script.on_init(function()
   gathering_turret:on_init()

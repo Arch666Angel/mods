@@ -592,7 +592,7 @@ end
 function gathering_turret:on_tick_update()
   -- TODO: for now we call this once every tick, this can be a runtime setting
   -- faster update times result in higher ups but smoother behaviour
-  if global.GT_data["active_turret_count"] > 0 then
+  if global.GT_data and global.GT_data["active_turret_count"] > 0 then
     self:update_next_turret()
   end
 end
