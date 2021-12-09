@@ -32,3 +32,26 @@ angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "big-psyker"}
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "behemoth-psyker"}
 angelsmods.functions.add_gathering_turret_start_trigger{range = 60, type = "unit", name = "colossal-psyker"}
+
+-- GATHERING TARGETS (can be added by other mods, this list can be extended)
+if angelsmods.triggers.artifacts["base"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact", require_tech_unlock = "angels-gathering-turret"}
+end
+if angelsmods.triggers.artifacts["red"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-red", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
+end
+if angelsmods.triggers.artifacts["yellow"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-yellow", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
+end
+if angelsmods.triggers.artifacts["orange"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-orange", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
+end
+if angelsmods.triggers.artifacts["blue"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-blue", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
+end
+if angelsmods.triggers.artifacts["purple"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-purple", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
+end
+if angelsmods.triggers.artifacts["green"] then
+  angelsmods.functions.create_gathering_turret_target{name = "small-alien-artifact-green", require_tech_unlock = true, additional_tech_prerequisites = "angels-gathering-turret"}
+end

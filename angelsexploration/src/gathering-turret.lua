@@ -428,7 +428,7 @@ function gathering_turret:update_gathering_target_whitelist(force_name, technolo
     local force_whitelist = force_data["turret_whitelist"]
     for gathering_item, req_tech_name in pairs(gathering_items) do
       if req_tech_name == technology_name then
-        force_whitelist[gathering_item] = allow_gathering == true or false
+        force_whitelist[gathering_item] = (allow_gathering == true) or false
         -- TODO: re-activate all inactive turrets in this force
         --       to search for new gathering targets
         -- TODO: quit gathering of disallowed gathering items?
@@ -606,7 +606,7 @@ function gathering_turret:on_tech_research_reversed(force_name, technology_name)
 end
 
 function gathering_turret:on_tech_research_reset(force_name)
-  if global.GT_data.force_data[force_name] then
+  if global.GT_data and global.GT_data.force_data[force_name] then
     self:init_force_data(force_name) -- re-init all force data to reapply settings
   end
 end

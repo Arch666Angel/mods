@@ -721,11 +721,11 @@ local function create_gathering_turret_target_tech(inputs)
           unit = {
             count = 150,
             ingredients = {
-              {type = "item", name = "automation-science-pack", amount = 1},
+              {type = "item", name = "automation-science-pack", amount = 2},
               {type = "item", name = "logistic-science-pack", amount = 1},
               {type = "item", name = "military-science-pack", amount = 2}
             },
-            time = 25
+            time = 30
           },
           order = "c-a"
         },
@@ -837,4 +837,37 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
     -- create technology to unlock the gathering of this target
     create_gathering_turret_target_tech(inputs)
   end
+end
+
+function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology(inputs)
+  inputs.level = inputs.level and inputs.level > 0 and inputs.level or 1
+  return {
+    type = "technology",
+    name = "angels-gathering-speed-"..inputs.level,
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_speed("__angelsexploration__/graphics/technology/gathering-turret-speed.png"),
+    prerequisites = {
+      inputs.level == 1 and "angels-gathering-turret" or ("angels-gathering-speed-"..(inputs.level-1)),
+    },
+    effects = {
+      inputs.modifier and (inputs.modifier > 0) and {
+        type = "gun-speed",
+        ammo_category = "gathering",
+        modifier = inputs.modifier
+      },
+    },
+    unit = {
+      count = inputs.cost or 50,
+      ingredients = {
+        inputs.level > 0 and {type = "item", name = "automation-science-pack", amount = 1} or nil,
+        inputs.level > 0 and {type = "item", name = "logistic-science-pack", amount = 2} or nil,
+        inputs.level > 0 and {type = "item", name = "military-science-pack", amount = 2} or nil,
+        inputs.level > 3 and {type = "item", name = "chemical-science-pack", amount = 1} or nil,
+        inputs.level > 5 and {type = "item", name = "utility-science-pack", amount = 1} or nil
+      },
+      time = 30
+    },
+    upgrade = true,
+    order = "c-a"
+  }
 end
