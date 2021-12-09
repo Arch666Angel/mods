@@ -399,7 +399,7 @@ function gathering_turret:update_collecting_turret(turret_data)
   end
 end
 
-function gathering_turret:update_gathering_target(turret_surface_index, turret_position)
+function gathering_turret:update_gathering_target(turret_surface_index, turret_position, turret_gathering_damage_amount)
   -- This function updates a single turret target. It is up to the caller to make sure
   -- this function is called only when a gathering cycle has passed.
 
@@ -412,11 +412,11 @@ function gathering_turret:update_gathering_target(turret_surface_index, turret_p
   if turret_data["status"] ~= global.GT_data["turret_states"]["gathering"] then return end
 
   -- STEP 2: update the turret target
-  local gathering_speed = self:get_gathering_speed(turret_data["entity"].force.name)
-  if turret_data["target_data"].gathering_distance_remaining <= gathering_speed then
+  --local gathering_speed = self:get_gathering_speed(turret_data["entity"].force.name, turret_gathering_damage_amount) -- TODO: speed unused
+  if turret_data["target_data"].gathering_distance_remaining <= turret_gathering_damage_amount then
     turret_data["target_data"].gathering_distance_remaining = 0
   else
-    turret_data["target_data"].gathering_distance_remaining = turret_data["target_data"].gathering_distance_remaining - gathering_speed
+    turret_data["target_data"].gathering_distance_remaining = turret_data["target_data"].gathering_distance_remaining - turret_gathering_damage_amount
   end
 end
 
@@ -572,7 +572,7 @@ function gathering_turret:on_remove_entity(removed_entity)
   end
 end
 
-function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity)
+function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealth)
   -- Event filter 1: damage to (inactive) gathering turret with 0 health remaining
   if damaged_entity.name == self:get_turret_name() and damaged_entity.active == false then
     damaged_entity.active = true
@@ -580,7 +580,7 @@ function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity)
   -- Event filter 2: gathering damage to a potential gathering target
   elseif self:is_gathering_target(damaged_entity.name) and
          damaging_entity and damaging_entity.name == self:get_turret_name() then
-    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position)
+    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position, raw_damage_dealth)
   end
 end
 

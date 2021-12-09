@@ -32,7 +32,7 @@ end)
 
 -- destroy events
 script.on_event(defines.events.on_entity_damaged, function(event)
-  gathering_turret:on_damaged_entity(event.entity, event.cause)
+  gathering_turret:on_damaged_entity(event.entity, event.cause, event.original_damage_amount)
 end, {
   -- Event raise filter 1: damage to (inactive) gathering turret with 0 health remaining
   {mode = "or", filter = "name", name = "angels-gathering-turret"},

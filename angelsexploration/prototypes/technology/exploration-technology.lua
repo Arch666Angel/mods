@@ -122,12 +122,12 @@ data:extend(
       },
       order = "c-a"
     },
-    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 1, cost =  100, modifier = 0.1}), -- +0.2/s
-    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 2, cost =  150, modifier = 0.2}), -- +0.4/s
-    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 3, cost =  250, modifier = 0.3}), -- +0.6/s
-    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 4, cost =  400, modifier = 0.3}), -- +0.6/s
-    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 5, cost =  600, modifier = 0.4}), -- +0.8/s
-    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 6, cost =  750, modifier = 0.4}), -- +0.8/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 1, cost =  100, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 2, cost =  150, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 3, cost =  250, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 4, cost =  400, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 5, cost =  600, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 6, cost =  750, modifier = 0.5}), -- +1.0/s
     angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 7, cost = 1000, modifier = 0.5}), -- +1.0/s
     --BIO TECH
     {

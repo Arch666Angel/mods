@@ -845,13 +845,13 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     type = "technology",
     name = "angels-gathering-speed-"..inputs.level,
     icon_size = 256, icon_mipmaps = 4,
-    icons = util.technology_icon_constant_speed("__angelsexploration__/graphics/technology/gathering-turret-speed.png"),
+    icons = util.technology_icon_constant_damage("__angelsexploration__/graphics/technology/gathering-turret-speed.png"),
     prerequisites = {
       inputs.level == 1 and "angels-gathering-turret" or ("angels-gathering-speed-"..(inputs.level-1)),
     },
     effects = {
       inputs.modifier and (inputs.modifier > 0) and {
-        type = "gun-speed",
+        type = "ammo-damage",
         ammo_category = "gathering",
         modifier = inputs.modifier
       },
