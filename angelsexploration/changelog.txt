@@ -3,6 +3,8 @@ Version: 0.3.12
 Date: ??
   Changes:
     - Merged the vanilla crafting tab "combat" with angels exploration tab (699)
+    - Always enables bobs artifacts when playing with bobenemies
+    - Enemies will now only drop small alien artifacts (only if they drop artifacts)
   Bugfixes:
     - Fixed laser turrets depended on laser riffle when playing with bobs warfare
     - Fixed psykers did show up as a bonus upgrade effect in the technology tree (712)

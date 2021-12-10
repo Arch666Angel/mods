@@ -217,33 +217,4 @@ if mods["bobvehicleequipment"] then
   data.raw.car["angels-heavy-tank"].equipment_grid = "angels-heavy-tank"
 end
 
--- function modify_biter(biter, resistance, health, damage, evolution)
--- data.raw.unit[biter].resistances = resistance
--- data.raw.unit[biter].max_health = health
--- data.raw.unit[biter].attack_parameters.ammo_type.action.action_delivery.target_effects = damage
--- end
-
---ADD RESISTANCES
-angelsmods.functions.update_alien(small_biter)
-angelsmods.functions.update_alien(medium_biter)
-angelsmods.functions.update_alien(big_biter)
-angelsmods.functions.update_alien(behemoth_biter)
-angelsmods.functions.update_alien(colossal_biter)
-
-angelsmods.functions.update_alien(small_spitter)
-angelsmods.functions.update_alien(medium_spitter)
-angelsmods.functions.update_alien(big_spitter)
-angelsmods.functions.update_alien(behemoth_spitter)
-angelsmods.functions.update_alien(colossal_spitter)
-
-angelsmods.functions.update_spawner(spitter_spawner)
-angelsmods.functions.update_spawner(biter_spawner)
-
---SHOW RESISTANCES
-for _, unit in pairs(data.raw.unit) do
-  unit.hide_resistances = false
-end
-
-for _, spawner in pairs(data.raw["unit-spawner"]) do
-  spawner.hide_resistances = false
-end
+require("prototypes.overrides.biter-updates")
