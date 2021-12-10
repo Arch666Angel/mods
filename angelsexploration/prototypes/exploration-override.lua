@@ -218,3 +218,5 @@ if mods["bobvehicleequipment"] then
 end
 
 require("prototypes.overrides.biter-updates")
+require("prototypes.overrides.gathering-turret-updates")
+
