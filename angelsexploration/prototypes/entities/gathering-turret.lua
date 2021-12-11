@@ -53,12 +53,6 @@ data:extend(
         offsets = {{0, 1}},
         damage_type_filters = "fire"
       },
-      trigger_target_mask =
-      {
-        "common",
-        "ground-unit",
-        "angels_gathering_turret_start_collecting_trigger"
-      },
       
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
@@ -100,6 +94,10 @@ data:extend(
         input_flow_limit = "9600kW",
         drain = "24kW",
         usage_priority = "primary-input"
+      },
+      attack_target_mask =
+      {
+        "angels_gathering_turret_start_collecting_trigger"
       },
       
       -- folded state

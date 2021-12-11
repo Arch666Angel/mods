@@ -809,6 +809,12 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
 
         timeout = 0, -- time between placing and the landmine being armed (in ticks)
         trigger_radius = 1.5,
+
+        trigger_target_mask =
+        {
+          "angels_gathering_turret_start_collecting_trigger"
+        },
+
         ammo_category = "landmine",
         action =
         {
