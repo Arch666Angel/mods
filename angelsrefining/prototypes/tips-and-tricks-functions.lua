@@ -37,4 +37,11 @@ tnt.get_items_from_name = function(item_name, item_type, mid_string, before, end
   return arr
 end
 
+tnt.number_to_string = function(number, decimal_places)
+  -- returns a string representation of a number, rounded to a certain amount of decimal places (default to 0)
+  if decimal_places == nil then decimal_places = 0 end
+  local decimal_factor = 10^decimal_places
+  return string.format((decimal_places>0) and ("%."..decimal_places.."f") or "%d", math.floor(number*decimal_factor+0.5)/decimal_factor)
+end
+
 return tnt

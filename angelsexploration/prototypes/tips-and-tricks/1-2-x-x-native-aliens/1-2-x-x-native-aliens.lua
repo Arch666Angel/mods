@@ -1,4 +1,4 @@
-local create_description = require "prototypes.tips-and-tricks.1-2-x-native-houses.1-2-x-native-houses-description"
+local create_description = require "prototypes.tips-and-tricks.1-2-x-x-native-aliens.1-2-x-x-native-aliens-description"
 local navive_data = angelsmods.functions.compile_alien_data()
 
 for spawner_idx, spawner_data in pairs(navive_data) do

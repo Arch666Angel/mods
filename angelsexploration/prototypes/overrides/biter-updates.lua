@@ -97,7 +97,7 @@ if angelsmods.triggers.artifacts["purple"] then
   loot_to_be_converted["alien-artifact-purple"] = {name="small-alien-artifact-purple", rate=2}
 end
 if angelsmods.triggers.artifacts["green"] then
-  loot_to_be_converted["alien-artifact-red"] = {name="small-alien-artifact-green", rate=2}
+  loot_to_be_converted["alien-artifact-green"] = {name="small-alien-artifact-green", rate=2}
 end
 
 local function update_loot_table(loot_table)
