@@ -10,6 +10,8 @@ return function(spawner_name, unit_name, evolution_factor)
   if not unit then return "Unknown entity '"..(unit_name or 'nil').."'." end
 
   local description = {""}
+
+  -- BASIC INFO
   table.insert(description, {"tips-and-tricks-description.angels-native-inhabitants-unit-intro", unit_name, spawner_name, tnt.number_to_string(evolution_factor*100,2).."%"})
 
   -- DAMAGE INFO
