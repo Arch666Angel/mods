@@ -62,7 +62,7 @@ local function update_loot_table(loot_table)
     end
   end
 end
-for _,type in pairs({"unit", "unit-spawner"}) do
+for _,type in pairs({"unit", "unit-spawner", "turret"}) do
   for _,unit in pairs(data.raw[type] or {}) do
     update_loot_table(unit.loot)
   end
