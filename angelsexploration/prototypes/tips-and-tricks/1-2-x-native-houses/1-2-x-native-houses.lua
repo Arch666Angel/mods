@@ -1,6 +1,5 @@
 local create_description = require "prototypes.tips-and-tricks.1-2-x-native-houses.1-2-x-native-houses-description"
 local navive_data = angelsmods.functions.compile_alien_data()
-log(serpent.block(navive_data))
 
 for spawner_idx, spawner_data in pairs(navive_data) do
   local spawner_char = string.char(string.byte("a")+spawner_idx-1)
