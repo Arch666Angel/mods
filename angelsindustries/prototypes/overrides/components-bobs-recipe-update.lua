@@ -56,6 +56,7 @@ if angelsmods.industries.components then
     OV.disable_recipe("wooden-board-paper")
     OV.disable_recipe("superior-circuit-board")
   end
+
   -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -115,6 +116,13 @@ if angelsmods.industries.components then
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")
     OV.add_unlock("angels-components-batteries-6", "silver-oxide")
+  end
+
+  -----------------------------------------------------------------------------
+  -- BOB POWER ----------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobpower"] then
+    OV.add_prereq("bob-boiler-2", "angels-components-construction-2")
   end
 
   OV.execute()

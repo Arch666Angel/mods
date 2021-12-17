@@ -59,7 +59,6 @@ if angelsmods.industries.tech then
   OV.add_prereq("tech-green-circuit", "bio-arboretum-temperate-1")
   OV.remove_prereq("tech-green-circuit", "angels-components-batteries-2")
   OV.add_prereq("tech-green-circuit", "angels-components-batteries-1")
-  AI.pack_replace("angels-components-construction-2", "green", "red")
   AI.pack_replace("angels-components-cabling-2", "green", "red")
   AI.pack_replace("angels-components-mechanical-2", "green", "red")
 
