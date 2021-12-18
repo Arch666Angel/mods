@@ -7,6 +7,9 @@ Date: ??
       - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
       - Gas refinery, Advanced gas refinery
     - Dynamically disable Resin and Rubber when required
+    - Updated Hydrazine recipe to take Blue metal catalyst instead of Green (692)
+    - Added ingredient Yellow metal catalyst to Dinitrogen tetroxide recipe (692)
+    - Moved Dinitrogen tetroxide recipe from Liquefier to Chemical plant (692)
     - Tweaked some technology tree prerequisites (724)
     - Removed the oxygen from the products of sodium hydroxide electrolysis to prevent excess oxygen in cyclic recipe (698)
   Bugfixes:

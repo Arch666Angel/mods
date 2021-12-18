@@ -15,6 +15,7 @@ Date: ??
         playing with a high tech cost modifier.
       - Advanced farming recipes now require specialized farms
       - More techs now require Alien plant-life samples to research
+    - Updated Acetic acid recipe to take Red metal catalyst instead of Green (692)
     - Always enables bobs small artifacts (when artifacts are enabled in bobenemies)
     - Always enables bobs coloured artifacts (when artifacts are enabled in bobenemies)
   Bugfixes:

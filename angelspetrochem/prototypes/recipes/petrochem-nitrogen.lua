@@ -313,7 +313,7 @@ data:extend(
       ingredients = {
         {type = "fluid", name = "gas-monochloramine", amount = 50},
         {type = "fluid", name = "gas-ammonia", amount = 200},
-        {type = "item", name = "catalyst-metal-green", amount = 1} --Al
+        {type = "item", name = "catalyst-metal-blue", amount = 1}
       },
       results = {
         {type = "fluid", name = "gas-hydrazine", amount = 100},
@@ -411,15 +411,17 @@ data:extend(
     {
       type = "recipe",
       name = "gas-dinitrogen-tetroxide",
-      category = "liquifying",
+      category = "chemistry",
       subgroup = "petrochem-rocket",
       energy_required = 2,
       enabled = false,
       ingredients = {
-        {type = "fluid", name = "gas-nitrogen-dioxide", amount = 100}
+        {type = "fluid", name = "gas-nitrogen-dioxide", amount = 100},
+        {type = "item", name = "catalyst-metal-yellow", amount = 1}
       },
       results = {
-        {type = "fluid", name = "gas-dinitrogen-tetroxide", amount = 50}
+        {type = "fluid", name = "gas-dinitrogen-tetroxide", amount = 50},
+        {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
       icons = AF.create_gas_recipe_icon(
