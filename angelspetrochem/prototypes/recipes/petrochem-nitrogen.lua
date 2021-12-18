@@ -424,6 +424,7 @@ data:extend(
         {type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
+      main_product = "gas-dinitrogen-tetroxide",
       icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72}
