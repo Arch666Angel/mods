@@ -8,7 +8,7 @@ Date: ??
       - Gas refinery, Advanced gas refinery
     - Dynamically disable Resin and Rubber when required
     - Tweaked some technology tree prerequisites (724)
-    - Removed the oxygen from the products of soidum hydroxide electrolysis
+    - Removed the oxygen from the products of sodium hydroxide electrolysis to prevent excess oxygen in cyclic recipe (698)
   Bugfixes:
     - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
     - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)

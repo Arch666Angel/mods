@@ -2,6 +2,9 @@
 Version: 0.4.15
 Date: ??
   Bugfixes:
+    - Regular mode:
+      - Slight rebalance of some higher tier nuclear recipes to hopefully reduce the dependance on previous tiers
+      - Fixed an issue with the recipe for the burner reactor not having the correct ingredients
     - Component mode:
       - Fixed some unused components were incorrectly hidden in pure angels configuration
       - Fixed battery and its components could not accept productivity modules (680)
