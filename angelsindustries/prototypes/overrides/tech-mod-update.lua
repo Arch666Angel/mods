@@ -24,6 +24,9 @@ if angelsmods.industries.tech then
         table.insert(lab.inputs, 1, "steam-science-pack")
       end
     end
+  else
+    OV.global_replace_item("lab", "angels-basic-lab")
+    angelsmods.functions.add_flag("lab", "hidden")
   end
   
   data.raw["item"]["satellite"].rocket_launch_product = {

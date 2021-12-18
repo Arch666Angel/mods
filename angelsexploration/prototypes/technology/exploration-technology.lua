@@ -97,6 +97,38 @@ data:extend(
       },
       order = "c-a"
     },
+    {
+      type = "technology",
+      name = "angels-gathering-turret",
+      icon = "__angelsexploration__/graphics/technology/gathering-turret.png",
+      icon_size = 256, icon_mipmaps = 4,
+      prerequisites = {
+        "military-science-pack"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-gathering-turret"
+        },
+      },
+      unit = {
+        count = 80,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 2},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "military-science-pack", amount = 2}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 1, cost =  100, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 2, cost =  150, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 3, cost =  250, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 4, cost =  400, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 5, cost =  600, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 6, cost =  750, modifier = 0.5}), -- +1.0/s
+    angelsmods.functions.generate_gathering_turret_speed_upgrade_technology({level = 7, cost = 1000, modifier = 0.5}), -- +1.0/s
     --BIO TECH
     {
       type = "technology",

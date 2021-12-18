@@ -61,5 +61,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.smelting_products["lithium"].plate = true
 
   --BIOPROCESSING TRIGGERS
+  angelsmods.triggers.bio_plastic = true
   angelsmods.triggers.bio_resin = true
+  angelsmods.triggers.bio_rubber = true
 end

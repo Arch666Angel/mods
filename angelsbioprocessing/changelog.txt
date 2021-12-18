@@ -16,6 +16,8 @@ Date: ??
       - Advanced farming recipes now require specialized farms
       - More techs now require Alien plant-life samples to research
     - Updated Acetic acid recipe to take Red metal catalyst instead of Green (692)
+    - Always enables bobs small artifacts (when artifacts are enabled in bobenemies)
+    - Always enables bobs coloured artifacts (when artifacts are enabled in bobenemies)
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
     - Fixed another bug where agricultural modules could be duplicated (682)

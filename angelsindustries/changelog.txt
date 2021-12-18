@@ -2,6 +2,9 @@
 Version: 0.4.15
 Date: ??
   Bugfixes:
+    - Regular mode:
+      - Slight rebalance of some higher tier nuclear recipes to hopefully reduce the dependance on previous tiers
+      - Fixed an issue with the recipe for the burner reactor not having the correct ingredients
     - Component mode:
       - Fixed some unused components were incorrectly hidden in pure angels configuration
       - Fixed battery and its components could not accept productivity modules (680)
@@ -9,10 +12,12 @@ Date: ??
       - Ensured that bobs laser riffle ammo uses each tier of batteries now (699)
       - Ensured that bobs laser turrets uses each tier of batteries now (699)
       - Ensured that bobs plasma turrets uses each tier of batteries now (699)
+      - Bob's boiler 2 technology now depends on construction components (733)
     - Science mode:
       - Fixed crash when player dies (664)
       - Fixed that bobs lab mk2, module lab and alien lab required the hidden base game lab (670)
       - Tweaked bobs laser riffle ammo technologies to be inline with their requirements (699)
+      - Fixed beacons were only accessible at yellow science when playing with bob modules (671)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.14
 Date: 10.08.2021

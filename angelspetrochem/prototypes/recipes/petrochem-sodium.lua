@@ -45,11 +45,11 @@ data:extend(
         {type = "item", name = "solid-sodium", amount = 5},
         {type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1},
         {type = "fluid", name = "water-purified", amount = 50},
-        {type = "fluid", name = "gas-oxygen", amount = 50}
+        --{type = "fluid", name = "gas-oxygen", amount = 50}
       },
       main_product = "solid-sodium",
       icon_size = 32,
-      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("Na"), AF.fluid_color("NaOH"), "water-purified", "gas-oxygen"}), --tempted to swap the NaOH with the "liquid" variant
+      crafting_machine_tint = AF.get_recipe_tints({AF.fluid_color("Na"), AF.fluid_color("NaOH"), "water-purified"}), --tempted to swap the NaOH with the "liquid" variant
       order = "a[sodium]-b[hydroxide]"
     },
     {

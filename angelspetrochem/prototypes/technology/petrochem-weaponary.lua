@@ -36,7 +36,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "rocket-booster-1",
-        "angels-nitrogen-processing-3"
+        "chlorine-processing-4"
       },
       effects = {
         {
