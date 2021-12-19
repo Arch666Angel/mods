@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.18
+Date: 19.12.2021
+  Changes:
+    - Changed recipe categories to appropriate powder mixing tier requirements (673)
+  Bugfixes:
+    - Fixed bug with Iron hot plate was not a 1:1 ratio to Iron plate with bobs mods (666)
+    - Fixed Tungsten Oxide used the wrong icon when bobs mods are present (688)
+    - Fixed Lead sheet roll casting 2 had 2 technologies unlocking it (700)
+    - Hide Sintering Ovens when they are unused (691)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.17
 Date: 10.08.2021
   Bugfixes:

@@ -147,6 +147,7 @@ if angelsmods.industries.components then
           ingredients = {
             {type = "item", name = "automation-science-pack", amount = 1},
             {type = "item", name = "logistic-science-pack", amount = 1},
+            {type = "item", name = "chemical-science-pack", amount = 1},
           },
           time = 60
         },
@@ -210,7 +211,8 @@ if angelsmods.industries.components then
         icon_mipmaps = 4,
         prerequisites = {
           "angels-platinum-smelting-1",
-          "angels-components-batteries-4"
+          "angels-components-batteries-4",
+          "utility-science-pack"
         },
         effects = {
           {

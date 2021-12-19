@@ -35,7 +35,7 @@ data:extend(
     type = "fluid",
     name = "liquid-titanium-tetrachloride",
     localised_description = show_formula and {"tooltip-description.chemical-formula", "TiCl[font=default-tiny-bold]4[/font]"} or nil,
-    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 }, "ill"),
+    icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 }, "SiClCl"),
     subgroup = "angels-titanium",
     order = "d",
     default_temperature = 1668,

@@ -26,7 +26,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-physical-ab",
-        group = "angels-exploration",
+        group = "combat",
         order = "a-a-b"
       },
     }
@@ -52,7 +52,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-physical-ac",
-        group = "angels-exploration",
+        group = "combat",
         order = "a-a-c"
       },
     }
@@ -92,7 +92,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-physical-ad",
-        group = "angels-exploration",
+        group = "combat",
         order = "a-a-d"
       },
     }
@@ -132,7 +132,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-physical-ae",
-        group = "angels-exploration",
+        group = "combat",
         order = "a-a-e"
       },
     }
@@ -195,7 +195,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-physical-bb",
-        group = "angels-exploration",
+        group = "combat",
         order = "a-b-b"
       },
     }
@@ -235,7 +235,7 @@ if mods["bobwarfare"] then
       {
         type = "item-subgroup",
         name = "angels-physical-bc",
-        group = "angels-exploration",
+        group = "combat",
         order = "a-b-c"
       },
     }

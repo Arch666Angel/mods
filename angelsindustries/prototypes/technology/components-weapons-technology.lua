@@ -98,7 +98,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "military-science-pack", amount = 1}
+          {type = "item", name = "military-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 60
       },

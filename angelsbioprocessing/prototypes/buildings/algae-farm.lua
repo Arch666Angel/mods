@@ -223,6 +223,7 @@ data:extend(
       collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
       selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
       fast_replaceable_group = "algae-farm",
+      next_upgrade = "algae-farm-4",
       module_specification = {
         module_slots = 2
       },
@@ -326,9 +327,9 @@ data:extend(
       energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = -100/3 * 1.5
+        emissions_per_minute = -100/3 * 2
       },
-      energy_usage = "150kW",
+      energy_usage = "175kW",
       ingredient_count = 4,
       animation = {
         filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",

@@ -68,7 +68,8 @@ if angelsmods.industries.components then
         prerequisites = {
           "angels-components-mechanical-1",
           "angels-stone-smelting-2",
-          "angels-steel-smelting-1"
+          "angels-steel-smelting-1",
+          "logistic-science-pack"
         },
         effects = {
           {
@@ -207,7 +208,8 @@ if angelsmods.industries.components then
           count = 64,
           ingredients = {
             {type = "item", name = "automation-science-pack", amount = 1},
-            {type = "item", name = "logistic-science-pack", amount = 1}
+            {type = "item", name = "logistic-science-pack", amount = 1},
+            {type = "item", name = "chemical-science-pack", amount = 1}
           },
           time = 60
         },

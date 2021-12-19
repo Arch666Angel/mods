@@ -375,7 +375,16 @@ if angelsmods.industries.components then
       }
     )
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
+    OV.set_science_pack("advanced-ore-refining-4", "utility-science-pack", 1)
     OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
+
+    if mods["bobmodules"] then
+    else
+      OV.set_science_pack("speed-module-3", "utility-science-pack", 1)
+      OV.set_science_pack("productivity-module-3", "utility-science-pack", 1)
+      OV.set_science_pack("effectivity-module-3", "utility-science-pack", 1)
+      OV.set_science_pack("angels-bio-yield-module-3", "utility-science-pack", 1)
+    end
   end
 end

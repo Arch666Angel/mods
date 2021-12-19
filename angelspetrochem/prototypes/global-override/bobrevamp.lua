@@ -52,7 +52,7 @@ if mods["bobrevamp"] then
   OV.converter_fluid("ammonia", "gas-ammonia")
   angelsmods.functions.disable_barreling_recipes("ammonia")
 
-  if mods["bobplates"] and settings.startup["bobmods-revamp-old-oil"] then
+  if settings.startup["bobmods-revamp-old-oil"] then
     OV.hide_recipe(
       {
         "oil-processing-with-sulfur",
@@ -62,12 +62,11 @@ if mods["bobrevamp"] then
       }
     )
   end
-  if mods["bobplates"] and settings.startup["bobmods-revamp-oil"] then
-    OV.hide_recipe(
-      {
-        "solid-fuel-from-sour-gas",
-      }
-    )
+  if settings.startup["bobmods-revamp-oil"] then
+    OV.hide_recipe("solid-fuel-from-sour-gas")
+    if mods["bobelectronics"] then
+      OV.hide_recipe("bob-oil-processing")
+    end
   end
 
   if angelsmods.trigger.disable_bobs_chemical_plants then
@@ -86,7 +85,8 @@ if mods["bobrevamp"] then
     --OV.remove_unlock("lithium-processing", "sodium-chlorate")
     OV.disable_recipe({"sodium-chlorate","sodium-perchlorate"})
     --make pre-reqs match new unlock point
-    OV.add_prereq("battery-2", "chlorine-processing-3")
+    OV.add_prereq("lithium-processing", "chlorine-processing-4")
+    OV.set_science_pack("lithium-processing", "chemical-science-pack", 1)
 
     OV.converter_fluid("carbon-dioxide", "gas-carbon-dioxide")
     angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
@@ -180,6 +180,7 @@ if mods["bobrevamp"] then
               {type = "fluid", name = "gas-ammonia", amount = 40}, -- 40 instead of 50 to be ammonia neutral (no production of it)
             },
             subgroup = "petrochem-basics",
+            crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-ammonia","gas-ammonium-chloride"}),
             order = "e[solid-calcium-chloride]-b"
           }
         }

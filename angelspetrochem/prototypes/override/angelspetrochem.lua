@@ -18,6 +18,8 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.disable_technology("deuterium-processing")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+  OV.set_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)
+  OV.set_science_pack("deuterium-fuel-cell-2", "utility-science-pack", 1)
 
 elseif angelsmods.industries and angelsmods.industries.overhaul then
   -- everything is good, nothing to change
@@ -190,42 +192,100 @@ if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe(
     {
       "solid-calcium-chloride",
-      "gas-chlor-methane",
-      "gas-allylchlorid",
-      "gas-epichlorhydrin",
-      "liquid-glycerol",
-      --"solid-sodium-chlorate",
-      --"solid-sodium-perchlorate",
-      --"liquid-perchloric-acid"
-    }
-  )
-  OV.disable_recipe(
-    {
+      "catalyst-steam-cracking-butane", -- "gas-butadiene"
+      "liquid-styrene-catalyst", -- "liquid-styrene"
+      "liquid-ethylbenzene-catalyst", -- "liquid-ethylbenzene"
+      "cumene-process", -- "gas-acetone"
+      "liquid-bisphenol-a",
+      "gas-phosgene",
       "gas-ammonium-chloride",
-      "gas-urea",
       "gas-melamine"
     }
   )
+  angelsmods.functions.add_flag({
+    "solid-calcium-chloride",
+    "gas-butadiene",
+    "liquid-styrene",
+    "liquid-ethylbenzene",
+    "liquid-bisphenol-a",
+    "gas-phosgene",
+    "gas-ammonium-chloride",
+    "gas-melamine"
+  }, "hidden")
+  
+  if angelsmods.bioprocessing then
+  else
+    OV.disable_recipe(
+      {
+        "gas-urea",
+      }
+    )
+    angelsmods.functions.add_flag({
+      "gas-urea",
+      "gas-acetone",
+    }, "hidden")
+  end
+
+  if mods["bobrevamp"] then
+  else
+    angelsmods.functions.add_flag({
+      "gas-hydrogen-peroxide",
+    }, "hidden")
+  end
+end
+
+if angelsmods.trigger.resin then
+else
   OV.disable_recipe(
     {
-      "catalyst-steam-cracking-butane",
-      "liquid-styrene-catalyst",
-      "liquid-ethylbenzene-catalyst",
-      "cumene-process",
-      "liquid-bisphenol-a",
-      "gas-phosgene",
       "solid-resin",
       "liquid-resin-1",
       "liquid-resin-2",
-      "liquid-resin-3",
-      "liquid-rubber-1",
-      "solid-rubber",
-      "liquid-rubber-1"
+      "liquid-resin-3"
     }
   )
+  angelsmods.functions.add_flag("solid-resin", "hidden")
+  angelsmods.functions.add_flag("liquid-resin", "hidden")
+  OV.disable_technology({
+    "resins",
+    "resin-1",
+    "resin-2",
+    "resin-3"
+  })
 end
--------------------------------------------------------------------------------
--- REMOVE INACTIVE ENTITIES ---------------------------------------------------
--------------------------------------------------------------------------------
---angelsmods.functions.add_flag("gas-refinery-4", "hidden")
-OV.add_unlock("angels-nitrogen-processing-4","gas-refinery-4")
+
+if angelsmods.trigger.rubber then
+else
+  OV.disable_recipe(
+    {
+      "liquid-rubber-1",
+      "solid-rubber"
+    }
+  )
+  angelsmods.functions.add_flag("solid-rubber", "hidden")
+  angelsmods.functions.add_flag("liquid-rubber", "hidden")
+  OV.disable_technology({
+    "rubbers",
+    "rubber",
+  })
+end
+
+if angelsmods.trigger.liquid_ferric_chloride_solution then
+else
+  OV.disable_recipe(
+    {
+      "liquid-ferric-chloride-solution"
+    }
+  )
+  angelsmods.functions.add_flag("liquid-ferric-chloride-solution", "hidden")
+end
+
+if angelsmods.trigger.liquid_cupric_chloride_solution then
+else
+  OV.disable_recipe(
+    {
+      "liquid-cupric-chloride-solution"
+    }
+  )
+  angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
+end

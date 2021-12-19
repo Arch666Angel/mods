@@ -49,6 +49,7 @@ if angelsmods.industries.tech then
   -- BIO PROCESSING
   AI.pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)
   AI.pack_replace("bio-fermentation", "green", "red")
+  OV.remove_prereq("bio-fermentation", "tech-green-packs")
   AI.pack_replace("bio-arboretum-temperate-1", "green", "red")
   OV.remove_prereq("bio-arboretum-temperate-1", "resins")
   OV.add_prereq("bio-arboretum-temperate-2", "resins")
@@ -58,7 +59,6 @@ if angelsmods.industries.tech then
   OV.add_prereq("tech-green-circuit", "bio-arboretum-temperate-1")
   OV.remove_prereq("tech-green-circuit", "angels-components-batteries-2")
   OV.add_prereq("tech-green-circuit", "angels-components-batteries-1")
-  AI.pack_replace("angels-components-construction-2", "green", "red")
   AI.pack_replace("angels-components-cabling-2", "green", "red")
   AI.pack_replace("angels-components-mechanical-2", "green", "red")
 
@@ -92,12 +92,11 @@ if angelsmods.industries.tech then
   AI.pack_replace("modular-armor", "green", "orange")
   AI.pack_replace("armor-making-3", "green", "orange")
   AI.pack_replace("belt-immunity-equipment", "green", "orange")
-  OV.remove_prereq("electric-engine", "angels-advanced-oil-processing")
   AI.pack_replace("electric-engine", "blue", "orange")
   AI.pack_replace("electric-energy-accumulators", "green", "orange")
   AI.pack_replace("energy-shield-equipment", "green", "orange")
   AI.pack_replace("night-vision-equipment", "green", "orange")
-  AI.pack_replace("battery-equipment", "green", "orange")
+  AI.pack_replace("battery-equipment", "blue", "orange")
   AI.pack_replace("solar-panel-equipment", "green", "orange")
   AI.pack_replace("sulfur-processing", "green", "orange")
   --AI.pack_replace("plastics","green","orange")
@@ -157,7 +156,6 @@ if angelsmods.industries.tech then
   --PETROCHEM
   AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
   AI.pack_replace("plastic-1", "green", "orange")
-  AI.pack_replace("resin-3", "blue", "yellow")
   --AI.pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
   AI.pack_replace("rubber", "green", "orange")
   --AI.pack_replace("rocket-booster-1", "green", "orange")
@@ -169,16 +167,14 @@ if angelsmods.industries.tech then
   OV.remove_science_pack("tech-blue-circuit", "tech-blue-packs")
   OV.remove_prereq("tech-blue-circuit", "angels-components-batteries-4")
   OV.add_prereq("tech-blue-circuit", "angels-components-batteries-3")
-  AI.pack_replace("angels-components-mechanical-4", "green", "orange")
+  AI.pack_replace("angels-components-mechanical-4", "blue", "orange")
   OV.add_prereq("angels-components-construction-4", "tech-orange-packs")
   AI.pack_replace("angels-components-construction-4", "blue", "orange")
-  OV.remove_prereq("angels-components-construction-4", "tech-blue-packs")
-  AI.pack_replace("angels-components-weapons-advanced", "green", "orange")
+  AI.pack_replace("angels-components-weapons-advanced", "blue", "orange")
   AI.pack_replace("angels-components-cabling-4", "blue", "orange")
-  OV.remove_prereq("angels-components-cabling-4", "tech-blue-packs")
   AI.pack_replace("cargo-robots-2", "green", "orange")
   AI.pack_replace("angels-construction-robots-2", "green", "orange")
-  AI.pack_replace("angels-components-batteries-3", "green", "orange")
+  AI.pack_replace("angels-components-batteries-3", "blue", "orange")
 
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -198,9 +194,7 @@ if angelsmods.industries.tech then
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")
   OV.add_prereq("tech-yellow-circuit", "angels-components-batteries-4")
   AI.pack_replace("angels-components-construction-5", "yellow", "blue")
-  OV.remove_prereq("angels-components-construction-5", "tech-yellow-packs")
   AI.pack_replace("angels-components-cabling-5", "yellow", "blue")
-  OV.remove_prereq("angels-components-cabling-5", "tech-yellow-packs")
 
   -------------------------------------------------------------------------------
   -- YELOW SCIENCE PACKS --------------------------------------------------------

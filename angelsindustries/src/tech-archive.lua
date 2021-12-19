@@ -160,7 +160,7 @@ end
 
 function tech_archive:on_pre_player_died(player_index)
   if game.entity_prototypes[tech_archive.main_lab[1]] then
-    self:remove_lab_from_inv(game.players[event.player_index].get_main_inventory())
+    self:remove_lab_from_inv(game.players[player_index].get_main_inventory())
   end
 end
 

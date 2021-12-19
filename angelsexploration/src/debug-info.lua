@@ -214,12 +214,16 @@ end
 function debug_info:create_graph_colors()
   return
   {
-    {r=1, g=0, b=0},
-    {r=0, g=1, b=0},
-    {r=0, g=0, b=1},
-    {r=1, g=0, b=1},
-    {r=1, g=1, b=0},
-    {r=0, g=1, b=1}
+    {r=1      , g=0      , b=0      },
+    {r=0      , g=1      , b=0      },
+    {r=0      , g=0      , b=1      },
+    {r=1      , g=0      , b=1      },
+    {r=1      , g=1      , b=0      },
+    {r=0      , g=1      , b=1      },
+    {r=1      , g=165/255, b=0      },
+    {r=0      , g=0.5    , b=0.5    },
+    {r=165/255, g=042/255, b=042/255},
+    {r=150/255, g=1      , b=0.2    },
   }
 end
 
@@ -266,6 +270,10 @@ function debug_info:create_enemy_statistics(root_element)
 
   -- STEP 2: create graph content space
   local content_table = frame.add{
+    type = "scroll-pane",
+    horizontal_scroll_policy = "never",
+    vertical_scroll_policy = "auto"
+  }.add{
     type = "table",
     column_count = 2,
     draw_horizontal_lines = true
@@ -281,6 +289,17 @@ function debug_info:create_enemy_statistics(root_element)
       type = "label",
       caption = {"", "[img=entity/" .. spawner_name .. "] ", {"entity-name."..spawner_name}},
       style = "heading_2_label"
+    }
+    local legend_pane = legend_flow.add{
+      type = "scroll-pane",
+      horizontal_scroll_policy = "never",
+      vertical_scroll_policy = "always"
+    }
+    legend_pane.style.width = 250
+    legend_pane.style.height = 170
+    legend_flow = legend_pane.add{
+      type = "flow",
+      direction = "vertical",
     }
     local enemy_order = self:create_enemy_spawn_order()
     local graph_colors = self:create_graph_colors()

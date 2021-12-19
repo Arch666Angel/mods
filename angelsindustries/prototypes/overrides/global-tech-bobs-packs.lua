@@ -12,9 +12,9 @@ if angelsmods.industries.tech then
     OV.remove_prereq("battery-3", "production-science-pack")
 
     AI.pack_replace("grinding", "green", "orange")
+    AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
-    AI.pack_replace("polishing", "green", "blue")
-    AI.pack_replace("gem-processing-2", "green", "blue")
+    AI.pack_replace("gem-processing-2", "green", "orange")
     --OV.remove_science_pack("lubricant", "angels-science-pack-green")
 
     if not mods["bobtech"] then --alien resources
@@ -118,7 +118,10 @@ if angelsmods.industries.tech then
   -- BOBS MODULES ---------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobmodules"] then
-    --adds bob modules stuffs
+    OV.remove_science_pack("angels-bio-yield-module", "angels-science-pack-orange")
+    AI.pack_replace("modules-3", "blue", "yellow")
+    AI.pack_replace("effect-transmission", "yellow", "orange")
+    OV.remove_prereq("effect-transmission-2", "production-science-pack")
   end
 
   -------------------------------------------------------------------------------
@@ -188,22 +191,20 @@ if angelsmods.industries.tech then
   if mods["bobwarfare"] then
     --adds bob warfare stuffs
     --turrets
-    AI.pack_replace("bob-plasma-turrets-3", "blue", "orange")
     AI.pack_replace("bob-turrets-3", "green", "orange")
     AI.pack_replace("bob-turrets-5", "blue", "yellow")
-    AI.pack_replace("bob-laser-turrets-2", "green", "orange")
-    AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
     AI.pack_replace("bob-sniper-turrets-2", "blue", "orange")
     OV.remove_prereq("bob-sniper-turrets-2", "tech-blue-packs")
+    AI.pack_replace("bob-laser-turrets-2", "green", "orange")
+    AI.pack_replace("bob-laser-turrets-3", "blue", "orange")
+    AI.pack_replace("bob-plasma-turrets-1", "green", "orange")
+    AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
     if mods["angelsexploration"] then
       AI.pack_replace("angels-rocket-turret", "green", "orange")
     end
     --laser rifles
-    AI.pack_replace("bob-laser-rifle", "green", "blue")
-    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "blue")
-    AI.pack_replace("bob-laser-rifle-ammo-4", "blue", "yellow")
-    AI.pack_replace("bob-laser-rifle-ammo-5", "blue", "yellow")
-    AI.pack_replace("bob-laser-rifle-ammo-6", "blue", "yellow")
+    AI.pack_replace("bob-laser-rifle", "green", "orange")
+    AI.pack_replace("bob-laser-rifle-ammo-1", "green", "orange")
     --Drones/CombatBots
     AI.pack_replace("bob-robot-gun-1", "green", "orange")
     AI.pack_replace("bob-robot-gun-drones", "green", "orange")
@@ -242,7 +243,7 @@ if angelsmods.industries.tech then
     --adds bob personal equipment stuffs
     AI.pack_replace("personal-roboport-equipment", "green", "orange")
     AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    AI.pack_replace("exoskeleton-equipment", "green", "orange")
+    AI.pack_replace("exoskeleton-equipment", "blue", "orange")
     AI.pack_replace("solar-panel-equipment-2", "green", "orange")
     AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
   end
@@ -258,7 +259,6 @@ if angelsmods.industries.tech then
       AI.pack_replace("bob-boiler-4", "blue", "orange")
       AI.pack_replace("bob-oil-boiler-3", "blue", "orange")
       AI.pack_replace("bob-steam-turbine-1", "blue", "orange")
-      AI.pack_replace("bob-heat-exchanger-1","blue","green")
       AI.pack_replace("bob-steam-turbine-3", "blue", "yellow")
       AI.pack_replace("bob-heat-exchanger-2", "blue", "orange")
     end

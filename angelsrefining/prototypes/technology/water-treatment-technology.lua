@@ -31,7 +31,7 @@ data:extend(
       type = "technology",
       name = "water-treatment",
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         mods["angelspetrochem"] and "angels-fluid-control" or "electronics"
       },
@@ -70,7 +70,7 @@ data:extend(
       type = "technology",
       name = "water-treatment-2",
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment",
         --"ore-crushing"
@@ -111,7 +111,7 @@ data:extend(
       type = "technology",
       name = "water-treatment-3",
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment-2",
         "advanced-electronics"
@@ -133,10 +133,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "solid-salt-dissolving"
         },
-        --[[{
+        {
           type = "unlock-recipe",
           recipe = "solid-lithium"
-        }]]
+        }
       },
       unit = {
         count = 30,
@@ -152,7 +152,7 @@ data:extend(
       type = "technology",
       name = "water-treatment-4",
       icon = "__angelsrefining__/graphics/technology/water-treatment.png",
-      icon_size = 128,
+      icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment-3",
         "thermal-water-processing"

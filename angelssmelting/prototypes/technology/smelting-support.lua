@@ -9,7 +9,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "steel-processing"
       },
@@ -42,7 +41,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-1",
         "advanced-material-processing"
@@ -81,7 +79,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2",
         "chemical-science-pack"
@@ -121,7 +118,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-3",
         "production-science-pack"
@@ -162,7 +158,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-4",
         "utility-science-pack"
@@ -195,7 +190,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2"
       },
@@ -225,7 +219,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-3",
         "powder-metallurgy-1"
@@ -257,7 +250,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-4",
         "powder-metallurgy-2"
@@ -290,7 +282,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-5",
         "powder-metallurgy-3"
@@ -327,7 +318,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2",
         "angels-cooling"
@@ -354,7 +344,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-3",
         "strand-casting-1",
@@ -383,7 +372,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-4",
         "strand-casting-2"
@@ -412,7 +400,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-5",
         "strand-casting-3"
@@ -445,7 +432,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/processing-machine-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-2"
       },
@@ -471,7 +457,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-3",
         "ore-processing-1"
@@ -503,7 +488,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-4",
         "ore-processing-2"
@@ -536,7 +520,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "angels-metallurgy-5",
         "ore-processing-3"
@@ -570,7 +553,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
-      upgrade = true,
       prerequisites = {
         "ore-processing-4"
       },

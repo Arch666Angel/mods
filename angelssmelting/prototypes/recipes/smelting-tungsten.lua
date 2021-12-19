@@ -51,6 +51,7 @@ data:extend(
       main_product = "liquid-tungstic-acid",
       always_show_products = true,
       icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{135, 090, 023}, {170, 170, 180}, {170, 170, 180}}),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-tungstic-acid"),
       order = "d[liquid-tungstic-acid]"
     },
     {
@@ -110,8 +111,9 @@ data:extend(
       always_show_products = true,
       icons = angelsmods.functions.create_gas_recipe_icon(
         {{"__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72}},
-        "tff"
+        "WFF"
       ),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-tungsten-hexafluoride"),
       order = "f[gas-tungsten-hexafluoride]"
     },
     {
@@ -174,7 +176,7 @@ data:extend(
     {
       type = "recipe",
       name = "casting-powder-tungsten-1",
-      category = "powder-mixing",
+      category = "powder-mixing-2",
       subgroup = "angels-tungsten-casting",
       energy_required = 4,
       enabled = false,
@@ -193,7 +195,7 @@ data:extend(
     {
       type = "recipe",
       name = "casting-powder-tungsten-2",
-      category = "powder-mixing",
+      category = "powder-mixing-3",
       subgroup = "angels-tungsten-casting",
       energy_required = 4,
       enabled = false,

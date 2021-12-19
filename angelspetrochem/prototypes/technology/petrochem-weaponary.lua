@@ -36,7 +36,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "rocket-booster-1",
-        "angels-nitrogen-processing-3"
+        "chlorine-processing-4"
       },
       effects = {
         {
@@ -67,7 +67,8 @@ data:extend(
       prerequisites = {
         "explosives",
         "angels-nitrogen-processing-2",
-        "angels-sulfur-processing-2"
+        "chlorine-processing-2",
+        "military-science-pack"
       },
       effects = {
         {

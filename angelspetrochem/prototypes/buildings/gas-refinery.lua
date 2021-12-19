@@ -8,7 +8,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         1, angelsmods.petrochem.number_tint),
@@ -24,7 +24,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         1, angelsmods.petrochem.number_tint),
@@ -37,6 +37,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -5.75}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -51,16 +52,187 @@ data:extend(
       energy_usage = "300kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-small.png",
-        width = 512,
-        height = 512,
-        scale = 0.5,
-        frame_count = 1,
-        line_length = 1,
-        shift = {0.5, -0.5}
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 167,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 334,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 255,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 508,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 668,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 510,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1016,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 501,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 1002,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 765,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1524,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        }
       },
       working_visualisations = {
         {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-57.5, -152.5),
+          east_position = util.by_pixel(49.5, -189.5),
+          south_position = util.by_pixel(59, -69),
+          west_position = util.by_pixel(-50, -62.5),
           animation = {
             filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
@@ -68,21 +240,237 @@ data:extend(
             height = 40,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 2,
-            shift = {2, -2.5},
-            hr_version = {
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
               line_length = 10,
               width = 40,
               height = 81,
               frame_count = 60,
               animation_speed = 0.75,
-              scale = 1,
-              shift = {2, -2.5}
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          east_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 167,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          south_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 334,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 668,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          west_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 501,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 1002,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, -2},
+                  scale = 0.5,
+                } or nil
+              },
             }
           },
-          light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-        }
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+            }
+          }
+        },
       },
       fluid_boxes = {
         {
@@ -113,8 +501,9 @@ data:extend(
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg"},
+        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg", volume = 0.5},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -125,7 +514,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         2, angelsmods.petrochem.number_tint),
@@ -141,7 +530,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         2, angelsmods.petrochem.number_tint),
@@ -154,6 +543,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -5.75}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -168,16 +558,187 @@ data:extend(
       energy_usage = "350kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-small.png",
-        width = 512,
-        height = 512,
-        scale = 0.5,
-        frame_count = 1,
-        line_length = 1,
-        shift = {0.5, -0.5}
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 167,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 334,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 255,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 508,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 668,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 510,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1016,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 501,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 1002,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 765,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1524,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        }
       },
       working_visualisations = {
         {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-57.5, -152.5),
+          east_position = util.by_pixel(49.5, -189.5),
+          south_position = util.by_pixel(59, -69),
+          west_position = util.by_pixel(-50, -62.5),
           animation = {
             filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
@@ -185,21 +746,237 @@ data:extend(
             height = 40,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 2,
-            shift = {2, -2.5},
-            hr_version = {
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
               line_length = 10,
               width = 40,
               height = 81,
               frame_count = 60,
               animation_speed = 0.75,
-              scale = 1,
-              shift = {2, -2.5}
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          east_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 167,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          south_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 334,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 668,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          west_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 501,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 1002,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, -2},
+                  scale = 0.5,
+                } or nil
+              },
             }
           },
-          light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-        }
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+            }
+          }
+        },
       },
       fluid_boxes = {
         {
@@ -230,8 +1007,9 @@ data:extend(
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg"},
+        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg", volume = 0.5},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -242,7 +1020,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         3, angelsmods.petrochem.number_tint),
@@ -258,7 +1036,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         3, angelsmods.petrochem.number_tint),
@@ -271,6 +1049,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -5.75}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -285,16 +1064,187 @@ data:extend(
       energy_usage = "400kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-small.png",
-        width = 512,
-        height = 512,
-        scale = 0.5,
-        frame_count = 1,
-        line_length = 1,
-        shift = {0.5, -0.5}
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 167,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 334,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 255,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 508,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 668,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 510,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1016,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 501,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 1002,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 765,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1524,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        }
       },
       working_visualisations = {
         {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-57.5, -152.5),
+          east_position = util.by_pixel(49.5, -189.5),
+          south_position = util.by_pixel(59, -69),
+          west_position = util.by_pixel(-50, -62.5),
           animation = {
             filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
@@ -302,21 +1252,237 @@ data:extend(
             height = 40,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 2,
-            shift = {2, -2.5},
-            hr_version = {
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
               line_length = 10,
               width = 40,
               height = 81,
               frame_count = 60,
               animation_speed = 0.75,
-              scale = 1,
-              shift = {2, -2.5}
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          east_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 167,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          south_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 334,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 668,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          west_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 501,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 1002,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, -2},
+                  scale = 0.5,
+                } or nil
+              },
             }
           },
-          light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-        }
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+            }
+          }
+        },
       },
       fluid_boxes = {
         {
@@ -347,8 +1513,9 @@ data:extend(
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg"},
+        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg", volume = 0.5},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     },
@@ -359,7 +1526,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         4, angelsmods.petrochem.number_tint),
@@ -375,7 +1542,7 @@ data:extend(
         {
           {
             icon = "__angelspetrochem__/graphics/icons/gas-refinery-small.png",
-            icon_size = 32, icon_mipmaps = 1,
+            icon_size = 64, icon_mipmaps = 4,
           }
         },
         4, angelsmods.petrochem.number_tint),
@@ -387,6 +1554,7 @@ data:extend(
       dying_explosion = "medium-explosion",
       collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
       selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+      drawing_box = {{-2.5, -5.75}, {2.5, 2.5}},
       module_specification = {
         module_slots = 2
       },
@@ -401,16 +1569,187 @@ data:extend(
       energy_usage = "425kW",
       ingredient_count = 4,
       animation = {
-        filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-small.png",
-        width = 512,
-        height = 512,
-        scale = 0.5,
-        frame_count = 1,
-        line_length = 1,
-        shift = {0.5, -0.5}
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 167,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 334,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 255,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 508,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 668,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 510,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1016,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+              priority = "extra-high",
+              width = 167,
+              height = 278,
+              x = 501,
+              frame_count = 1,
+              shift = util.by_pixel(-0.5, -47),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
+                priority = "extra-high",
+                width = 334,
+                height = 553,
+                x = 1002,
+                frame_count = 1,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
+              } or nil
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+              priority = "extra-high",
+              width = 255,
+              height = 171,
+              x = 765,
+              frame_count = 1,
+              shift = util.by_pixel(44, 7),
+              hr_version = angelsmods.trigger.enable_hq_graphics and {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
+                priority = "extra-high",
+                width = 508,
+                height = 338,
+                x = 1524,
+                frame_count = 1,
+                shift = util.by_pixel(43.5, 6.5),
+                scale = 0.5,
+              } or nil
+            }
+          }
+        }
       },
       working_visualisations = {
         {
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-57.5, -152.5),
+          east_position = util.by_pixel(49.5, -189.5),
+          south_position = util.by_pixel(59, -69),
+          west_position = util.by_pixel(-50, -62.5),
           animation = {
             filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
@@ -418,21 +1757,237 @@ data:extend(
             height = 40,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 2,
-            shift = {2, -2.5},
-            hr_version = {
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
               filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
               line_length = 10,
               width = 40,
               height = 81,
               frame_count = 60,
               animation_speed = 0.75,
-              scale = 1,
-              shift = {2, -2.5}
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          east_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 167,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 334,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          south_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 334,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 668,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+          west_animation = {
+            filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-light.png",
+            priority = "extra-high",
+            width = 167,
+            height = 278,
+            x = 501,
+            frame_count = 1,
+            shift = util.by_pixel(-0.5, -47),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            hr_version = angelsmods.trigger.enable_hq_graphics and {
+              filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-light.png",
+              priority = "extra-high",
+              width = 334,
+              height = 553,
+              x = 1002,
+              frame_count = 1,
+              shift = util.by_pixel(0, -48),
+              blend_mode = "additive-soft",
+              draw_as_glow = true,
+              scale = 0.5,
+            } or nil
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, -2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, -2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, -2},
+                  scale = 0.5,
+                } or nil
+              },
             }
           },
-          light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-        }
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {-2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {-2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {0, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {0, 2},
+                  scale = 0.5,
+                } or nil
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                shift = {2, 2},
+                hr_version = angelsmods.trigger.enable_hq_graphics and {
+                  draw_as_shadow = true,
+                  filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-vertical-pipe-shadow-patch.png",
+                  priority = "high",
+                  width = 128,
+                  height = 128,
+                  repeat_count = 36,
+                  shift = {2, 2},
+                  scale = 0.5,
+                } or nil
+              },
+            }
+          }
+        },
       },
       fluid_boxes = {
         {
@@ -463,8 +2018,9 @@ data:extend(
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
       working_sound = {
-        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg"},
+        sound = {filename = "__angelspetrochem__/sound/gas-refinery.ogg", volume = 0.5},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+        audible_distance_modifier = 0.5,
         apparent_volume = 2.5
       }
     }

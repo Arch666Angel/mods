@@ -58,7 +58,7 @@ data:extend(
         {
           {"__angelssmelting__/graphics/icons/molecule-trichlorosilane.png", 72}
         },
-        "ihl"
+        "SiHCl"
       ),
       order = "d[liquid-trichlorosilane]"
     },
@@ -84,7 +84,7 @@ data:extend(
         {
           {"__angelssmelting__/graphics/icons/molecule-silane.png", 72}
         },
-        "ihh"
+        "SiHH"
       ),
       order = "e[gas-silane]"
     },

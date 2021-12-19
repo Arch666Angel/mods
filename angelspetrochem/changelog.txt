@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.21
+Date: 19.12.2021
+  Changes:
+    - Added HQ graphics to the following machines, and tweaked their sounds:
+      - Flare stack
+      - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
+      - Gas refinery, Advanced gas refinery
+    - Dynamically disable Resin and Rubber when required
+    - Updated Hydrazine recipe to take Blue metal catalyst instead of Green (692)
+    - Added ingredient Yellow metal catalyst to Dinitrogen tetroxide recipe (692)
+    - Moved Dinitrogen tetroxide recipe from Liquefier to Chemical plant (692)
+    - Tweaked some technology tree prerequisites (724)
+    - Removed the oxygen from the products of sodium hydroxide electrolysis to prevent excess oxygen in cyclic recipe (698)
+  Bugfixes:
+    - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
+    - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)
+    - Fixed bug where gas refinery 3 could not be upgraded with the upgrade planner (677)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: 10.08.2021
   Bugfixes:
@@ -8,6 +26,7 @@ Date: 10.08.2021
     - Fixed heavy water separation did not enforce the fluid temperature constraint correctly
     - Added some tips-and-tricks for new players (around air separation, more to come)
     - Cleaned up old migrations
+    - Rebalanced rubber usage in insuated wire recipes depending on rubber from wood ratio (606)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.19
 Date: 31.05.2021

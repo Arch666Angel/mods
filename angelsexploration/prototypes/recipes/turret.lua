@@ -47,6 +47,22 @@ data:extend(
       results = {
         {type = "item", name = "angels-bio-turret", amount = 1}
       }
+    },
+    --GATHERING TURRET
+    {
+      type = "recipe",
+      name = "angels-gathering-turret",
+      energy_required = 10,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "iron-gear-wheel", amount = 15},
+        {type = "item", name = "pipe", amount = 10},
+        {type = "item", name = "steel-plate", amount = 30}
+      },
+      results = {
+        {type = "item", name = "angels-gathering-turret", amount = 1}
+      }
     }
   }
 )

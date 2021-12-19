@@ -1,4 +1,5 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
+local AF = angelsmods.functions
 
 data:extend(
   {
@@ -18,7 +19,7 @@ data:extend(
         {type = "item", name = "processed-platinum", amount = 2}
       },
       order = "b[processed-platinum]",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -52,7 +53,8 @@ data:extend(
       },
       main_product = "liquid-hexachloroplatinic-acid",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{230, 191, 163}, {092, 218, 079}, {086, 112, 192}}),
+      icons = AF.create_liquid_recipe_icon(nil, {{230, 191, 163}, {092, 218, 079}, {086, 112, 192}}),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
       order = "d[liquid-hexachloroplatinic-acid]"
     },
     {
@@ -85,8 +87,8 @@ data:extend(
       results = {
         {type = "item", name = "ingot-platinum", amount = 24}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-platinum"),
         1, angelsmods.smelting.number_tint),
       order = "f[ingot-platinum]-a"
     },
@@ -104,8 +106,8 @@ data:extend(
       results = {
         {type = "item", name = "ingot-platinum", amount = 24}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-platinum"),
         2, angelsmods.smelting.number_tint),
       order = "f[ingot-platinum]-b"
     },
@@ -122,8 +124,8 @@ data:extend(
       results = {
         {type = "item", name = "ingot-platinum", amount = 24}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-platinum"),
         3, angelsmods.smelting.number_tint),
       order = "f[ingot-platinum]-c"
     },
@@ -157,7 +159,7 @@ data:extend(
         {type = "fluid", name = "liquid-molten-platinum", amount = 120}
       },
       order = "h[liquid-molten-platinum]",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -186,11 +188,11 @@ data:extend(
           {type = "item", name = "angels-roll-platinum", amount = 2}
         }
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-roll-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-roll-platinum"),
         1, angelsmods.smelting.number_tint),
       order = "i[angels-roll-platinum]-a",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -223,11 +225,11 @@ data:extend(
         },
         main_product = "angels-roll-platinum"
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-roll-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-roll-platinum"),
         2, angelsmods.smelting.number_tint),
       order = "i[angels-roll-platinum]-b",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -258,11 +260,11 @@ data:extend(
           {type = "item", name = "angels-wire-coil-platinum", amount = 4}
         }
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-coil-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-wire-coil-platinum"),
         1, angelsmods.smelting.number_tint),
       order = "j[angels-wire-coil-platinum]-a",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     {
       type = "recipe",
@@ -297,11 +299,11 @@ data:extend(
         },
         main_product = "angels-wire-coil-platinum"
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-coil-platinum"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-wire-coil-platinum"),
         2, angelsmods.smelting.number_tint),
       order = "j[angels-wire-coil-platinum]-b",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-platinum")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum")
     },
     -- CASTING RESULT
     {
@@ -329,9 +331,9 @@ data:extend(
           {type = "item", name = "angels-plate-platinum", amount = 4}
         }
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-platinum"),
-        angelsmods.functions.get_object_icons("liquid-molten-platinum"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-plate-platinum"),
+        AF.get_object_icons("liquid-molten-platinum"),
         {-10, -10}, 0.4375),
       order = "k[angels-plate-platinum]-a"
     },
@@ -349,9 +351,9 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-platinum", amount = 4}
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-platinum"),
-        angelsmods.functions.get_object_icons("angels-roll-platinum"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-plate-platinum"),
+        AF.get_object_icons("angels-roll-platinum"),
         {-10, -10}, 0.4375),
       order = "k[angels-plate-platinum]-b"
     },
@@ -371,9 +373,9 @@ data:extend(
         {type = "item", name = "angels-wire-platinum", amount = 5}
       },
       allow_decomposition = false,
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-platinum"),
-        angelsmods.functions.get_object_icons("angels-plate-platinum"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-wire-platinum"),
+        AF.get_object_icons("angels-plate-platinum"),
         {-10, -10}, 0.4375),
       order = "l[angels-wire-platinum]-a"
     },
@@ -391,9 +393,9 @@ data:extend(
       results = {
         {type = "item", name = "angels-wire-platinum", amount = 16}
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-wire-platinum"),
-        angelsmods.functions.get_object_icons("angels-wire-coil-platinum"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-wire-platinum"),
+        AF.get_object_icons("angels-wire-coil-platinum"),
         {-10, -10}, 0.4375),
       order = "l[angels-wire-platinum]-b"
     }

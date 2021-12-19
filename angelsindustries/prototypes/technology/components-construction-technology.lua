@@ -39,7 +39,6 @@ if angelsmods.industries.components then
           count = 64,
           ingredients = {
             {type = "item", name = "automation-science-pack", amount = 1},
-            {type = "item", name = "logistic-science-pack", amount = 1}
           },
           time = 60
         },

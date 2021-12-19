@@ -56,6 +56,7 @@ if angelsmods.industries.components then
     OV.disable_recipe("wooden-board-paper")
     OV.disable_recipe("superior-circuit-board")
   end
+
   -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -86,22 +87,43 @@ if angelsmods.industries.components then
     OV.add_prereq("angels-rocket-ion-thruster", "heat-shield")
     OV.add_prereq("angels-rocket-hull", "heat-shield")
   end
+  
+  -----------------------------------------------------------------------------
+  -- BOB MODULES --------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobmodules"] then
+    --replace green with orange boards on logic step
+    local module_recs={}
+    for _,type in pairs({"speed","effectivity","productivity","pollution-clean","pollution-create"}) do
+      table.insert(module_recs,{
+        name = type.."-processor-2",
+        ingredients = {
+          { type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"}
+        }
+      })
+    end
+    OV.patch_recipes(module_recs)
+  end
+
+  -----------------------------------------------------------------------------
+  -- BOB PLATES ---------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobplates"] then
+    OV.global_replace_technology("battery-2", "angels-components-batteries-3")
+    OV.disable_technology("battery-2")
+    OV.disable_recipe("lithium-cobalt-oxide")
+
+    OV.global_replace_technology("battery-3", "angels-components-batteries-4")
+    OV.disable_technology("battery-3")
+    OV.add_unlock("angels-components-batteries-6", "silver-oxide")
+  end
+
+  -----------------------------------------------------------------------------
+  -- BOB POWER ----------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobpower"] then
+    OV.add_prereq("bob-boiler-2", "angels-components-construction-2")
+  end
 
   OV.execute()
-end
------------------------------------------------------------------------------
--- BOB MODULES --------------------------------------------------------------
------------------------------------------------------------------------------
-if mods["bobmodules"] then
-  --replace green with orange boards on logic step
-  local module_recs={}
-  for _,type in pairs({"speed","effectivity","productivity","pollution-clean","pollution-create"}) do
-    table.insert(module_recs,{
-      name = type.."-processor-2",
-      ingredients = {
-        { type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded"}
-      }
-    })
-  end
-  OV.patch_recipes(module_recs)
 end

@@ -16,8 +16,13 @@ if angelsmods.industries.components then
   OV.add_prereq("electric-energy-accumulators", "angels-components-batteries-2")
 --do i want to leave this for bobs bots?
   if (not mods["boblogistics"]) then --if i want to actually move it to battery-2
-    AI.replace_recipe_ing("flying-robot-frame","battery","battery-4")
-    AI.pre_req_replace("robotics","battery","angels-components-batteries-4")
+    if angelsmods.industries.tech then
+      AI.replace_recipe_ing("flying-robot-frame","battery","battery-3")
+      AI.pre_req_replace("robotics","battery","angels-components-batteries-3")
+    else
+      AI.replace_recipe_ing("flying-robot-frame","battery","battery-4")
+      AI.pre_req_replace("robotics","battery","angels-components-batteries-4")
+    end
   else
     AI.pre_req_replace("robotics","battery","angels-components-batteries-2")
   end
@@ -26,6 +31,7 @@ if angelsmods.industries.components then
   AI.replace_recipe_ing("battery-equipment","battery-1","battery-3")
   OV.remove_prereq("battery-equipment", "battery")
   OV.add_prereq("battery-equipment", "angels-components-batteries-3")
+  OV.set_science_pack("battery-equipment", "chemical-science-pack", 1)
   AI.replace_recipe_ing("battery-mk2-equipment","battery-equipment","battery-4")
   OV.add_prereq("battery-mk2-equipment", "angels-components-batteries-4")
 
@@ -75,7 +81,18 @@ if angelsmods.industries.components then
     angelsmods.functions.add_flag("battery-6", "hidden")
     angelsmods.functions.add_flag("battery-anode-6", "hidden")
     angelsmods.functions.add_flag("battery-cathode-6", "hidden")
+    angelsmods.functions.add_flag("battery-electrolyte-6", "hidden")
     angelsmods.functions.add_flag("battery-frame-6", "hidden")
+    OV.disable_recipe(
+      {
+        "battery-6",
+        "battery-anode-6",
+        "battery-cathode-6",
+        "battery-electrolyte-6",
+        "battery-frame-6",
+        "battery-casing-6"
+      }
+    )
   end
 
   if mods["bobmodules"] then

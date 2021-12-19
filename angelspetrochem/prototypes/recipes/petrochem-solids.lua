@@ -1,4 +1,5 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
+local AF = angelsmods.functions
 
 data:extend(
   {
@@ -29,6 +30,7 @@ data:extend(
         }
       },
       icon_size = 32,
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
       order = "a[plastic]-b[solid]"
     },
     {
@@ -45,13 +47,14 @@ data:extend(
         {type = "fluid", name = "liquid-plastic", amount = 10}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","gas-propene"}),
       order = "a[plastic]-a[liquid]-a"
     },
     {
@@ -69,13 +72,14 @@ data:extend(
         {type = "fluid", name = "liquid-plastic", amount = 20}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","liquid-naphthta","liquid-polyethylene"}),
       order = "a[plastic]-a[liquid]-b"
     },
     {
@@ -93,13 +97,14 @@ data:extend(
         {type = "fluid", name = "liquid-plastic", amount = 30}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 255, 255}, {255, 255, 255}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","gas-formaldehyde","liquid-phenol"}),
       order = "a[plastic]-a[liquid]-c"
     },
     --RESIN
@@ -130,6 +135,7 @@ data:extend(
       },
       icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
       icon_size = 32,
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-resin"),
       order = "b[resin]-b[solid]"
     },
     {
@@ -147,13 +153,14 @@ data:extend(
         {type = "fluid", name = "liquid-resin", amount = 10}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 225, 155}, {255, 225, 155}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-resin","gas-urea","gas-formaldehyde"}),
       order = "b[resin]-a[liquid]-a"
     },
     {
@@ -171,13 +178,14 @@ data:extend(
         {type = "fluid", name = "liquid-resin", amount = 20}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 225, 155}, {255, 225, 155}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-resin","gas-melamine","gas-formaldehyde"}),
       order = "b[resin]-a[liquid]-b"
     },
     {
@@ -195,13 +203,14 @@ data:extend(
         {type = "fluid", name = "liquid-resin", amount = 30}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{255, 225, 155}, {255, 225, 155}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-resin","liquid-bisphenol-a","gas-epichlorhydrin"}),
       order = "b[resin]-a[liquid]-c"
     },
     --RUBBER
@@ -232,6 +241,7 @@ data:extend(
       },
       icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
       icon_size = 32,
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-rubber"),
       order = "b[rubber]-b[solid]"
     },
     {
@@ -249,13 +259,14 @@ data:extend(
         {type = "fluid", name = "liquid-rubber", amount = 10}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{193, 197, 255}, {193, 197, 255}},
         {
-          angelsmods.functions.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
+          AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
         }
       ),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-rubber","liquid-styrene","gas-butadiene"}),
       order = "b[rubber]-a[liquid]"
     },
     --GLASS
@@ -313,12 +324,13 @@ data:extend(
       results = {
         {type = "item", name = "solid-fuel", amount = 2}
       },
-      icons = angelsmods.functions.create_solid_recipe_icon(
+      icons = AF.create_solid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/methane.png", 72}
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 1, g = 1, b = 1},"gas-methane"}),
       order = "a[solid-fuel-methane]"
     },
     {
@@ -335,12 +347,13 @@ data:extend(
       results = {
         {type = "item", name = "solid-fuel", amount = 2}
       },
-      icons = angelsmods.functions.create_solid_recipe_icon(
+      icons = AF.create_solid_recipe_icon(
         {
           "liquid-naphtha"
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-naphtha", AF.fluid_color("Cb")}),
       order = "b[solid-fuel-naphtha]"
     },
     {
@@ -357,12 +370,13 @@ data:extend(
       results = {
         {type = "item", name = "solid-fuel", amount = 2}
       },
-      icons = angelsmods.functions.create_solid_recipe_icon(
+      icons = AF.create_solid_recipe_icon(
         {
           "liquid-fuel-oil"
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "liquid-fuel-oil", AF.fluid_color("Cb")}),
       order = "c[solid-fuel-fuel-oil]"
     },
     {
@@ -379,12 +393,13 @@ data:extend(
       results = {
         {type = "item", name = "solid-fuel", amount = 2}
       },
-      icons = angelsmods.functions.create_solid_recipe_icon(
+      icons = AF.create_solid_recipe_icon(
         {
           "gas-synthesis"
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "gas-synthesis", AF.fluid_color("Cb")}),
       order = "d[solid-fuel-synthesis]"
     },
     {
@@ -400,12 +415,13 @@ data:extend(
       results = {
         {type = "item", name = "solid-fuel", amount = 2}
       },
-      icons = angelsmods.functions.create_solid_recipe_icon(
+      icons = AF.create_solid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72}
         },
         "solid-fuel"
       ),
+      crafting_machine_tint = AF.get_recipe_tints({{r = 105/255, g = 105/255, b = 105/255}, "gas-hydrazine"}),
       order = "e[solid-fuel-hydrazine]"
     },
     --CATALYSTS
@@ -538,6 +554,7 @@ data:extend(
       },
       icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
       icon_size = 32,
+      crafting_machine_tint = AF.get_recipe_tints({"water-mineralized","water-purified","water"}),
       order = "a[electrode]-b[recycle]"
     },
     --EXPLOSIVES
@@ -557,10 +574,11 @@ data:extend(
       results = {
         {type = "item", name = "explosives", amount = 2}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("explosives"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("explosives"),
         2, angelsmods.petrochem.number_tint),
       main_product = "explosives",
+      crafting_machine_tint = AF.get_recipe_tints({{r = 1, g = 0, b = 0},"liquid-glycerol","liquid-sulfuric-acid","liquid-nitric-acid"}),
       order = "a[explosives]-b"
     },
     {
@@ -580,10 +598,11 @@ data:extend(
         {type = "item", name = "explosives", amount = 3},
         {type = "fluid", name = "water-yellow-waste", amount = 25}
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("explosives"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("explosives"),
         3, angelsmods.petrochem.number_tint),
       main_product = "explosives",
+      crafting_machine_tint = AF.get_recipe_tints({{r = 1, g = 0, b = 0},"liquid-toluene","liquid-sulfuric-acid","liquid-nitric-acid"}),
       order = "a[explosives]-c"
     }
   }

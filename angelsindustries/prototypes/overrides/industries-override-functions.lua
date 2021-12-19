@@ -26,6 +26,7 @@ local building_types = {
 function angelsmods.functions.AI.pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
   OV.remove_science_pack(techname, "angels-science-pack-" .. old_c)
   OV.set_science_pack(techname, "angels-science-pack-" .. new_c)
+  OV.remove_prereq(techname, "tech-" .. old_c .. "-packs")
 end
 
 function angelsmods.functions.AI.core_replace(techname, old_c, new_c, tier) -- tech core swapping script

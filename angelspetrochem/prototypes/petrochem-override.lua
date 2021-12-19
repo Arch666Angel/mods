@@ -24,6 +24,8 @@ require("prototypes.override.bobwarfare")
 --UPDATE ENTITY RECIPES
 require("prototypes.recipes.petrochem-entity-angels")
 
+OV.execute()
+
 --ENABLE PRODUCTIVITY
 angelsmods.functions.allow_productivity("liquid-plastic-1")
 angelsmods.functions.allow_productivity("liquid-plastic-2")

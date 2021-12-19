@@ -70,7 +70,7 @@ if angelsmods.trigger.smelting_products["platinum"].wire then
       }
     }
   })
-  if mods['bobassembly'] then
+  if mods["bobassembly"] and mods["bobelectronics"] then
     OV.patch_recipes({
       {
         name = "basic-platinated-copper-wire",
