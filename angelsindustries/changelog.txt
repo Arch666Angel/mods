@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.15
-Date: ??
+Date: 19.12.2021
   Bugfixes:
     - Regular mode:
       - Slight rebalance of some higher tier nuclear recipes to hopefully reduce the dependance on previous tiers

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
-Date: ??
+Date: 19.12.2021
   Bugfixes:
     - Fixed technology cost of logistics silos when not playing with bobslogisitcs
     - Fixed technology cost of logistics warehouses when not playing with bobslogisitcs

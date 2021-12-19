@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
-Date: ??
+Date: 19.12.2021
   Changes:
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Flare stack

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.12
-Date: ??
+Date: 19.12.2021
   Changes:
     - Merged the vanilla crafting tab "combat" with angels exploration tab (699)
     - Always enables bobs artifacts when playing with bobenemies

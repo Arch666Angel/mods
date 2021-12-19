@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.1
-Date: ??
+Date: 19.12.2021
   Changes:
     - Allowed higher tier techs to show in tech tree search results
     - Added HQ graphics to the following machines, and tweaked their sounds:
