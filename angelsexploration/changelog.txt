@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.13
+Date: xx.12.2021
+  Bugfixes:
+    - Fixed crash when playing with bob enemies
+    - Fixed incorrect tips and tricks information when bob enemies do not drop artifacts
+---------------------------------------------------------------------------------------------------
 Version: 0.3.12
 Date: 19.12.2021
   Changes:

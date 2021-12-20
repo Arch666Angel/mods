@@ -35,7 +35,7 @@ return function(spawner_name, unit_name, evolution_factor)
 
   -- LOOT INFO
   local loot = unit.loot
-  if loot then
+  if loot and (#loot>0) then
     local loot_description = {"", {"tips-and-tricks-description.angels-native-inhabitants-unit-loot"}}
     for _,drop in pairs(loot) do
       local min = tnt.number_to_string(drop.count_min or 1)

@@ -119,7 +119,7 @@ if mods["bobenemies"] then
   for _, biter in pairs({"behemoth-biter", "behemoth-spitter"}) do
     local unit = data.raw.unit[biter]
     if biter then
-      for _,loot in pairs(unit.loot) do
+      for _,loot in pairs(unit.loot or {}) do
         if loot.item == "small-alien-artifact" then
           loot.count_min = ((loot.count_min == nil and 1) or loot.count_min) / 4 --  4 -> 1
           loot.count_max = ((loot.count_max == nil and 1) or loot.count_max) / 4 -- 12 -> 3
