@@ -5,6 +5,7 @@ Date: xx.12.2021
     - Fixed crash when the bob enemies do not drop artifacts (setting disabled)
     - Fixed crash when there are too many types of spawners or biters/spawner (737)
     - Fixed crash when a spawner spawns something else than a unit (737)
+    - Fixed gathering turrets would remain idle after they all deactivated
     - Fixed incorrect tips and tricks information when bob enemies do not drop artifacts
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.12
