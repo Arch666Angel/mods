@@ -65,7 +65,7 @@ end
 -- Setter functions to alter data into the data structure
 -------------------------------------------------------------------------------
 function tips_and_tricks_triggers:remove_trigger(force_name, trigger_name)
-  if force_name and global.TNT_data.force_data[force_name] then
+  if force_name and global.TNT_data and global.TNT_data.force_data[force_name] then
     local force_triggers = global.TNT_data.force_data[force_name]["trigger_data"]
     local triggers_to_remove = {}
     for trigger_key,trigger_value in pairs(force_triggers) do

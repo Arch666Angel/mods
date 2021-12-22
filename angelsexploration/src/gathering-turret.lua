@@ -68,12 +68,14 @@ function gathering_turret:init_force_data(force_name)
     return force_whitelist
   end
 
-  global.GT_data.force_data[force_name] = 
-  {
-    ["turret_range"] = self:get_gathering_radius(), -- the actual gathering range of the turret
-    ["turret_speed"] = self:get_gathering_speed(), -- the actual gathering speed (tiles/s) of this turret
-    ["turret_whitelist"] = create_whitelist_for_force(), -- the list of items whitelisted to be collected
-  }
+  if global.GT_data and global.GT_data.force_data then
+    global.GT_data.force_data[force_name] = 
+    {
+      ["turret_range"] = self:get_gathering_radius(), -- the actual gathering range of the turret
+      ["turret_speed"] = self:get_gathering_speed(), -- the actual gathering speed (tiles/s) of this turret
+      ["turret_whitelist"] = create_whitelist_for_force(), -- the list of items whitelisted to be collected
+    }
+  end
 end
 
 
@@ -422,7 +424,7 @@ end
 
 function gathering_turret:update_gathering_target_whitelist(force_name, technology_name, allow_gathering)
   -- This function updates the gathering whitelist depending on which items are researched
-  local force_data = global.GT_data.force_data[force_name]
+  local force_data = global.GT_data and global.GT_data.force_data and global.GT_data.force_data[force_name]
   if force_data then
     local gathering_items = self:get_whitelisted_gathering_items()
     local force_whitelist = force_data["turret_whitelist"]

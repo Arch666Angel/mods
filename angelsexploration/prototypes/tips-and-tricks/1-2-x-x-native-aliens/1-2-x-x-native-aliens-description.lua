@@ -1,5 +1,21 @@
 local tnt = angelsmods.functions.TNT
 
+local function compress_localised_string(localised_string)
+  if type(localised_string)~='table' or localised_string[1]~="" then return localised_string end
+  local compressed_localised_string = {""}
+  for idx=2,#localised_string,19 do
+    local compressed_string_section = {""}
+    for i=idx,math.min(#localised_string, idx+19) do
+      table.insert(compressed_string_section, util.table.deepcopy(localised_string[i]))
+    end
+    table.insert(compressed_localised_string, compressed_string_section)
+  end
+  if #compressed_localised_string>20 then
+    return compress_localised_string(compressed_localised_string)
+  end
+  return compressed_localised_string
+end
+
 local deals_area_damage = function(attack_parameters)
   -- checks if these attack parameters deal damange in an area around the target
   return true -- TODO
@@ -67,7 +83,7 @@ return function(spawner_name, unit_name, evolution_factor)
       end
       table.insert(drop_description, "[img=item."..drop.item.."]")
       table.insert(drop_description, (data.raw.item[drop.item] or {}).localised_name or {"tips-and-tricks-description.angels-native-inhabitants-unit-loot-item-name", "__ITEM__"..drop.item.."__"})
-      table.insert(loot_description, drop_description)
+      table.insert(loot_description, compress_localised_string(drop_description))
     end
     table.insert(description, loot_description)
   end
