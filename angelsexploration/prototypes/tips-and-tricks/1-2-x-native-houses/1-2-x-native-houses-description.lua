@@ -1,5 +1,21 @@
 local tnt = angelsmods.functions.TNT
 
+local function compress_localised_string(localised_string)
+  if type(localised_string)~='table' or localised_string[1]~="" then return localised_string end
+  local compressed_localised_string = {""}
+  for idx=2,#localised_string,19 do
+    local compressed_string_section = {""}
+    for i=idx,math.min(#localised_string, idx+19) do
+      table.insert(compressed_string_section, util.table.deepcopy(localised_string[i]))
+    end
+    table.insert(compressed_localised_string, compressed_string_section)
+  end
+  if #compressed_localised_string>20 then
+    return compress_localised_string(compressed_localised_string)
+  end
+  return compressed_localised_string
+end
+
 return function(spawner_name, spawn_data)
   local spawner = data.raw["unit-spawner"][spawner_name]
   if not spawner then return "Unknown entity '"..(spawner_name or 'nil').."'." end
@@ -26,11 +42,11 @@ return function(spawner_name, spawn_data)
       table.insert(spawn_description, spawn_unit)
     end
   end
-  table.insert(description, spawn_description)
+  table.insert(description, compress_localised_string(spawn_description))
 
   -- LOOT INFO
   local loot = spawner.loot
-  if loot then
+  if loot and (#loot>0) then
     local loot_description = {"", {"tips-and-tricks-description.angels-native-inhabitants-spawner-loot"}}
     for _,drop in pairs(loot) do
       local min = tnt.number_to_string(drop.count_min or 1)
@@ -64,7 +80,7 @@ return function(spawner_name, spawn_data)
       table.insert(drop_description, (data.raw.item[drop.item] or {}).localised_name or {"tips-and-tricks-description.angels-native-inhabitants-spawner-loot-item-name", "__ITEM__"..drop.item.."__"})
       table.insert(loot_description, drop_description)
     end
-    table.insert(description, loot_description)
+    table.insert(description, compress_localised_string(loot_description))
   end
 
   return description

@@ -2,10 +2,10 @@ local create_description = require "prototypes.tips-and-tricks.1-2-x-x-native-al
 local navive_data = angelsmods.functions.compile_alien_data()
 
 for spawner_idx, spawner_data in pairs(navive_data) do
-  local spawner_char = string.char(string.byte("a")+spawner_idx-1)
+  local spawner_char = string.char(string.byte("a")+math.floor(spawner_idx/26)) .. string.char(string.byte("a")+(spawner_idx%26)-1)
   local spawner_name, spawn_data = next(spawner_data)
   for unit_idx, unit_data in pairs(spawn_data) do
-    local unit_char = string.char(string.byte("a")+unit_idx-1)
+    local unit_char = string.char(string.byte("a")+math.floor(unit_idx/26)) .. string.char(string.byte("a")+(unit_idx%26)-1)
     local unit_name, evolution_factor = next(unit_data)
     data:extend(
       {

@@ -1088,7 +1088,12 @@ function angelsmods.functions.compile_alien_data() -- creates an overview of the
   for _,spawner in pairs(data.raw["unit-spawner"]) do
     spawners[spawner.name] = {}
     for _,spawn in pairs(spawner.result_units) do
-      spawners[spawner.name][spawn.unit or spawn[1]] = combine_spawn_data(spawners[spawner.name][spawn.unit or spawn[1]], calculate_spawn_data(spawn.spawn_points or spawn[2]))
+      local spawn_name = spawn.unit or spawn[1]
+      if data.raw['unit'][spawn_name] then
+        spawners[spawner.name][spawn_name] = combine_spawn_data(spawners[spawner.name][spawn_name], calculate_spawn_data(spawn.spawn_points or spawn[2]))
+      else
+        --log(spawn_name)
+      end
     end
   end
 
