@@ -12,7 +12,10 @@ if mods["bobequipment"] then
     }, "production-science-pack")
   end
 
-  if mods["bobenemies"] and mods["bobtech"] then
+  if mods["bobenemies"] and mods["bobtech"] and
+     settings.startup["bobmods-enemies-enableartifacts"].value and
+     settings.startup["bobmods-enemies-enablenewartifacts"].value
+  then
     OV.add_prereq("bob-energy-shield-equipment-4", "alien-research")
   else -- not alien technology
     OV.set_science_pack({
@@ -25,14 +28,20 @@ if mods["bobequipment"] then
   -----------------------------------------------------------------------------
   -- BATTERY EQUIPMENT --------------------------------------------------------
   -----------------------------------------------------------------------------
-  if mods["bobenemies"] and mods["bobtech"] then
+  if mods["bobenemies"] and mods["bobtech"] and
+     settings.startup["bobmods-enemies-enableartifacts"].value and
+     settings.startup["bobmods-enemies-enablenewartifacts"].value
+  then
     OV.add_prereq("bob-battery-equipment-4", "alien-research")
   end
 
   -----------------------------------------------------------------------------
   -- FUSION REACTOR EQUIPMENT -------------------------------------------------
   -----------------------------------------------------------------------------
-  if mods["bobenemies"] and mods["bobtech"] then
+  if mods["bobenemies"] and mods["bobtech"] and
+     settings.startup["bobmods-enemies-enableartifacts"].value and
+     settings.startup["bobmods-enemies-enablenewartifacts"].value
+  then
     OV.remove_science_pack("fusion-reactor-equipment", "utility-science-pack")
     OV.set_science_pack("fusion-reactor-equipment", "production-science-pack")
     OV.remove_prereq("fusion-reactor-equipment", "utility-science-pack")

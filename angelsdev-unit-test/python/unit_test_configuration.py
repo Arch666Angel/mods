@@ -66,6 +66,9 @@ UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-robotpoart
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-inserteroverhaul", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-beltoverhaul", True)
 
+# BobEnemies
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-enemies-enableartifacts", True)
+
 # BobRevamp
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-rtg", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-nuclear", True)
@@ -416,6 +419,51 @@ UnitTestConfiguration.addConfiguration("BA (extended technology)",
 )
 
 # none-default BA to test certain settings
+UnitTestConfiguration.addConfiguration("BA (BobEnemies non-default)",
+  [
+    "angelsrefining",
+    "angelspetrochem",
+    "angelssmelting",
+    "angelsbioprocessing",
+    "angelsindustries",
+    #"angelsexploration",
+
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
+
+    "boblibrary",
+    "bobassembly",
+    "bobclasses",
+    "bobelectronics",
+    "bobenemies",
+    "bobequipment",
+    "bobgreenhouse",
+    "bobinserters",
+    "boblogistics",
+    "bobmining",
+    "bobmodules",
+    "bobores",
+    "bobplates",
+    "bobpower",
+    "bobrevamp",
+    "bobtech",
+    "bobvehicleequipment",
+    "bobwarfare",
+  ],
+  {
+    "startup":
+    {
+      "angels-enable-industries": False, # Angels overhaul
+      "angels-enable-components": False, # Angels component mode
+      "angels-enable-tech"      : False, # Angels technology mode
+
+      "bobmods-enemies-enableartifacts": False #defaults true
+    }
+  }
+)
+
 UnitTestConfiguration.addConfiguration("BA (BobPower non-default + overhaul)",
   [
     "angelsrefining",

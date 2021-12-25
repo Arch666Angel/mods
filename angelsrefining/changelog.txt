@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.2
+Date: xx.xx.2021
+  Bugfixes:
+    - Fixed crash when playing with bob enemies and bob equipment without bob artifacts enabled
+---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 19.12.2021
   Changes:

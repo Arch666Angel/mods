@@ -79,7 +79,10 @@ if mods["bobwarfare"] then
     OV.add_prereq("bob-armor-making-4","chemical-science-pack")
   end
 
-  if mods["bobenemies"] and mods["bobtech"] then
+  if mods["bobenemies"] and mods["bobtech"] and
+     settings.startup["bobmods-enemies-enableartifacts"].value and
+     settings.startup["bobmods-enemies-enablenewartifacts"].value
+  then
     OV.remove_science_pack("bob-power-armor-2", "utility-science-pack")
     OV.set_science_pack("bob-power-armor-2", "production-science-pack")
     OV.remove_prereq("bob-power-armor-2", "utility-science-pack")
