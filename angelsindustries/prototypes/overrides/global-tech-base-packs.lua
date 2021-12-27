@@ -84,8 +84,8 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   AI.pack_replace("stack-inserter", "green", "orange")
-  AI.pack_replace("inserter-capacity-bonus-1", "green", "orange")
-  AI.pack_replace("inserter-capacity-bonus-2", "green", "orange")
+  AI.pack_replace("inserter-capacity-bonus-3", "blue", "orange")
+  AI.pack_replace("inserter-capacity-bonus-4", "blue", "orange")
   --AI.pack_replace("battery","green","orange")
   AI.pack_replace("oil-processing", "green", "orange")
   --AI.pack_replace("circuit-network","green","orange")

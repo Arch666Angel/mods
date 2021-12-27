@@ -2,6 +2,12 @@
 Version: 0.4.15
 Date: 19.12.2021
   Bugfixes:
+    - Science mode:
+      - Fixed science tiers of inserter stack size bonusses (740)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.15
+Date: 19.12.2021
+  Bugfixes:
     - Regular mode:
       - Slight rebalance of some higher tier nuclear recipes to hopefully reduce the dependance on previous tiers
       - Fixed an issue with the recipe for the burner reactor not having the correct ingredients
