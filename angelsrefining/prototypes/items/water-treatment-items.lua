@@ -237,16 +237,23 @@ data:extend(
       name = "water-void",
       icons = {
         {
-          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-mid.png",
+          icon_size = 750,
+          scale = 32/750
         },
         {
           icon = "__angelsrefining__/graphics/icons/clarifier.png",
           icon_size = 64,
-          scale = 0.4*0.5,
+          icon_mipmaps = 4,
+          scale = 0.7*0.5,
+        },
+        {
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 0.4,
           shift = {9.6, 9.6}
         }
       },
-      icon_size = 32,
       flags = {"hidden"},
       subgroup = "angels-void",
       order = "zzz[water-void]",
