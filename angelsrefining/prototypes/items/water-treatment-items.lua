@@ -241,7 +241,8 @@ data:extend(
         },
         {
           icon = "__angelsrefining__/graphics/icons/clarifier.png",
-          scale = 0.4,
+          icon_size = 64,
+          scale = 0.4*0.5,
           shift = {9.6, 9.6}
         }
       },

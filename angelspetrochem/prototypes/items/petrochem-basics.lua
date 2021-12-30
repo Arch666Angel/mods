@@ -258,8 +258,9 @@ data:extend(
         },
         {
           icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
-          scale = 0.4,
-          shift = {9.6, 9.6}
+          icon_size = 64,
+          scale = 0.4*0.75,
+          shift = {12.5, 8.7}
         }
       },
       icon_size = 32,
