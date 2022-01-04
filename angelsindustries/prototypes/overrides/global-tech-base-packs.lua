@@ -84,8 +84,8 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- BASE GAME
   AI.pack_replace("stack-inserter", "green", "orange")
-  AI.pack_replace("inserter-capacity-bonus-3", "blue", "orange")
-  AI.pack_replace("inserter-capacity-bonus-4", "blue", "orange")
+  AI.pack_replace("inserter-capacity-bonus-1", "green", "orange")
+  AI.pack_replace("inserter-capacity-bonus-2", "green", "orange")
   --AI.pack_replace("battery","green","orange")
   AI.pack_replace("oil-processing", "green", "orange")
   --AI.pack_replace("circuit-network","green","orange")
@@ -207,6 +207,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("productivity-module-3", "blue", "yellow")
   AI.pack_replace("effectivity-module-3", "blue", "yellow")
   AI.pack_replace("effect-transmission", "blue", "yellow")
+  AI.pack_replace("inserter-capacity-bonus-6", "blue", "yellow")
   OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
   OV.set_science_pack("rocket-silo", "angels-science-pack-red")
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")

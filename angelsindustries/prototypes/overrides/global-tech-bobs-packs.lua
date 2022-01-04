@@ -151,6 +151,8 @@ if angelsmods.industries.tech then
       OV.remove_prereq("bob-robotics-3", "production-science-pack")
     end
     -- inserter techs
+    AI.pack_replace("inserter-capacity-bonus-1", "orange", "green")
+    AI.pack_replace("inserter-capacity-bonus-3", "blue", "orange")
     AI.pack_replace("inserter-stack-size-bonus-2", "blue", "orange")
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.remove_prereq("stack-inserter", "tech-orange-circuit")
