@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.22
+Date: ???
+  Bugfixes:
+    - Polluted fish water from fish breeding was not being included in fluid production graphs #750
+---------------------------------------------------------------------------------------------------
 Version: 0.7.21
 Date: 19.12.2021
   Changes:
