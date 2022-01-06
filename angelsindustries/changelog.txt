@@ -5,6 +5,7 @@ Date: xx.xx.202x
     - Science mode:
       - Fixed science tiers of inserter stack size bonusses (740)
       - Fixed exploration tech lab 2 did not accept bio tokens (745)
+      - Added some basic compatibility for Nanobots (741)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.15
 Date: 19.12.2021
