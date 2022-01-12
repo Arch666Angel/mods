@@ -3,6 +3,7 @@ Version: 0.9.22
 Date: ???
   Changes:
     - Removed excessive logging entries from the log file (743)
+    - lowered the fuel value of crude to 35% to be more inline with the other fuels
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: 19.12.2021

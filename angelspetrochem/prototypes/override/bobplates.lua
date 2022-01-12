@@ -74,7 +74,7 @@ local Energy_table = {
   ["gas-propene"]     = { fv = 521.5, em = 5}, --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
   ["gas-methanol"]    = { fv = 101.2}, --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
   ["gas-ethylene"]    = { fv = 365.2}, --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
-  ["crude-oil"]       = { fv = 1000, turr = false}, --liquid crude (crude oil)
+  ["crude-oil"]       = { fv = 350, turr = false}, --liquid crude (crude oil)
   ["gas-hydrogen"]    = { fv = 33, em = 0.2--[[>>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.]]}, --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
   ["gas-hydrazine"]   = { fv = 126.9, em = 0.1}, --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
   ["liquid-fuel"]     = { fv = 300, em = 1.5, turr = false}, --down from 2.3MJ
