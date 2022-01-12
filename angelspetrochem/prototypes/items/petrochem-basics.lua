@@ -7,7 +7,6 @@ data:extend(
       type = "fluid",
       name = "gas-compressed-air",
       icons = angelsmods.functions.create_gas_fluid_icon(nil, {{180, 180, 225}, {150, 150, 187}, {120, 120, 150}}),
-      --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
       order = "b",
       default_temperature = 25,
@@ -27,7 +26,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72},
         "HHH"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
       order = "h",
       default_temperature = 25,
@@ -36,7 +34,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("H"),--{r = 1, g = 1, b = 1},
       flow_color = angelsmods.functions.flow_color("H"),--{r = 1, g = 1, b = 1},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -48,7 +45,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72},
         "OOO"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
       order = "d",
       default_temperature = 25,
@@ -57,7 +53,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("O"),--{r = 1, g = 0, b = 0},
       flow_color = angelsmods.functions.flow_color("O"),--{r = 1, g = 0, b = 0},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -69,7 +64,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/hydrogen-peroxide.png", 72},
         "OOH"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
       order = "e",
       default_temperature = 25,
@@ -78,7 +72,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("HO"),--{r = 1, g = 0, b = 0},
       flow_color = angelsmods.functions.flow_color("HO"),--{r = 1, g = 0, b = 0},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -88,7 +81,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72},
         "CCOc"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
       order = "f",
       default_temperature = 25,
@@ -97,7 +89,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("CO"),--{r = 1, g = 0.4, b = 0.4},
       flow_color = angelsmods.functions.flow_color("CO"),--{r = 1, g = 0.4, b = 0.4},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -109,7 +100,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72},
         "COcOc"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-basic-fluids",
       order = "g",
       default_temperature = 25,
@@ -118,7 +108,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("CO2"),--{r = 1, g = 0.5, b = 0.5},
       flow_color = angelsmods.functions.flow_color("CO2"),--{r = 1, g = 0.5, b = 0.5},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -128,7 +117,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72},
         "FHH"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-sulfer-fluids",
       order = "e",
       default_temperature = 25,
@@ -137,7 +125,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("HF"),--{r = 0, g = 1, b = 0.5},
       flow_color = angelsmods.functions.flow_color("HF"),--{r = 0, g = 1, b = 0.5},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -147,7 +134,6 @@ data:extend(
         {"__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72},
         "FHH"
       ),
-      --icon_size = 32,
       subgroup = "petrochem-sulfer-fluids",
       order = "f",
       default_temperature = 25,
@@ -155,7 +141,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("HFWs"),--{r = 0, g = 1, b = 0.5},
       flow_color = angelsmods.functions.flow_color("HFWs"),--{r = 0, g = 1, b = 0.5},
       max_temperature = 100,
-
     },
     --ENRICHED WATER
     {
@@ -173,7 +158,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("Ws5Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
       flow_color = angelsmods.functions.flow_color("Ws5Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -190,7 +174,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("Ws3Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
       flow_color = angelsmods.functions.flow_color("Ws3Hd1"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -207,7 +190,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("WsHd3"),--{r = 255/255, g = 128/255, b = 128/255},
       flow_color = angelsmods.functions.flow_color("WsHd3"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 100,
-
     },
     {
       type = "fluid",
@@ -226,7 +208,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("WsHd5"),--{r = 255/255, g = 128/255, b = 128/255},
       flow_color = angelsmods.functions.flow_color("WsHd5"),--{r = 255/255, g = 128/255, b = 128/255},
       max_temperature = 101,
-
     },
     {
       type = "fluid",
@@ -246,7 +227,6 @@ data:extend(
       base_color = angelsmods.functions.fluid_color("Hd"),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
       flow_color = angelsmods.functions.flow_color("Hd"),--{r = 196 / 255, g = 196 / 255, b = 156 / 255},
       max_temperature = 100,
-
     },
     --VOID
     {
