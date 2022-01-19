@@ -211,7 +211,7 @@ data:extend(
         {
           {"__angelspetrochem__/graphics/icons/molecules/acetone.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/butane.png", 72},
-          {"__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/ethanol.png", 72}
         },
         {{214, 146, 040}, {169, 130, 039}, {120, 083, 004}}
       ),

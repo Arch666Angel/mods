@@ -32,8 +32,9 @@ else
     {
       "solid-sodium-cyanide",
       "solid-sodium-carbonate",
-      "solid-sodium-sulfate-separation"
+      "solid-sodium-sulfate-separation",
+      "solid-sodium-carbonate-electrolysis"
     }
   )
-  angelsmods.functions.add_flag("solid-sodium-cyanide", "hidden")
+  angelsmods.functions.add_flag({"solid-sodium-cyanide","solid-sodium-carbonate"}, "hidden")
 end

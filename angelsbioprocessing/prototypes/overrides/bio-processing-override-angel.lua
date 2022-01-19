@@ -81,3 +81,9 @@ end
 
 -- Puffer nests cannot be created
 angelsmods.functions.add_flag("puffer-nest", "hidden")
+
+--place "petrochem" products in the correct subgroups
+data.raw.fluid["gas-ethanol"].subgroup = "bio-processor-fermentation"
+data.raw.fluid["liquid-acetic-acid"].subgroup = "bio-processor-fermentation"
+data.raw.fluid["liquid-acetic-anhydride"].subgroup = "bio-processor-fermentation"
+data.raw.fluid["liquid-propionic-acid"].subgroup = "bio-plastic"

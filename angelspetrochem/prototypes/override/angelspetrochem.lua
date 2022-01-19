@@ -289,3 +289,54 @@ else
   )
   angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
 end
+
+if angelsmods.trigger.carbon then
+else
+  OV.disable_recipe({
+    "coke-purification",
+    "coke-purification-2",
+    "carbon-separation-1"
+  })
+  angelsmods.functions.add_flag("solid-carbon","hidden")
+end
+
+if angelsmods.trigger.rocket_booster then
+else --may need to look at other configs and split out if needed
+  OV.disable_recipe({
+    "rocket-booster-1",
+    "rocket-booster-2",
+    "solid-ammonium-nitrate",
+    "solid-ammonium-perchlorate",
+    "perchloric-acid",
+    "solid-sodium-perchlorate",
+    "solid-sodium-chlorate"
+  })
+  angelsmods.functions.add_flag({
+    "solid-sodium-chlorate",
+    "solid-sodium-perchlorate",
+    "liquid-perchloric-acid",
+    "solid-ammonium-nitrate",
+    "solid-ammonium-perchlorate",
+    "rocket-booster",
+  },"hidden")
+end
+
+if angelsmods.trigger.solid_from_gas then
+else
+  OV.disable_recipe({
+    "solid-fuel-methane",
+    "solid-fuel-synthesis",
+    "solid-fuel-hydrazine"
+  })
+end
+if angelsmods.trigger.plastic_b1 then
+else
+  angelsmods.functions.add_flag({"liquid-cellulose-acetate","liquid-acetic-anhydride"},"hidden")  
+end
+if angelsmods.trigger.plastic_b2 then
+else
+  angelsmods.functions.add_flag({"liquid-propionic-acid","gas-ethanol"},"hidden")
+  if (not angelsmods.trigger.plastic_b1) then
+    angelsmods.functions.add_flag("liquid-acetic-acid","hidden")
+  end
+end

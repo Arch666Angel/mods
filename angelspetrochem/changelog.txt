@@ -4,6 +4,12 @@ Date: ???
   Changes:
     - Removed excessive logging entries from the log file (743)
     - lowered the fuel value of crude to 35% to be more inline with the other fuels
+    - Moved some chemistry assets from bioprocessing to petrochem (fluids and molecule icons)
+    - Added some intial triggers for "end-product" items, so as to clear out full chains if not active
+    - Special_vanilla:
+      - Disabled Carbon without the smelting mod as it is not used (gas shift can cover CO needs)
+      - Disabled rocket-boosters and the extra chains to make them
+      - Disabled some solid-fuel recipes (hydrazine, synthesis-gas, methane)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: 19.12.2021

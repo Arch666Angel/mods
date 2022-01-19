@@ -39,3 +39,7 @@ if angelsmods.triggers.bio_pastes["zinc"] then
   angelsmods.trigger.ores["zinc"] = true
   angelsmods.trigger.smelting_products["zinc"].powder = true
 end
+--activate petrochem triggers for bioplastics
+angelsmods.trigger.plastic_b1 = true
+angelsmods.trigger.plastic_b2 = true
+angelsmods.trigger.plastic_b3 = true

@@ -77,7 +77,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(
         {
-          {"__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/acetic-acid.png", 72}
         },
         "COH"
       ),
@@ -103,7 +103,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_gas_recipe_icon(
         {
-          {"__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/ethanol.png", 72}
         },
         "COH"
       ),
@@ -158,7 +158,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(
         {
-          {"__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/acetic-acid.png", 72}
         },
         "COH"
       ),
@@ -184,7 +184,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(
         {
-          {"__angelsbioprocessing__/graphics/icons/molecule-acetic-anhydride.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/acetic-anhydride.png", 72}
         },
         "COH"
       ),
@@ -231,7 +231,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(
         {
-          {"__angelsbioprocessing__/graphics/icons/molecule-cellulose-acetate.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/cellulose-acetate.png", 72}
         },
         "COH"
       ),
@@ -286,7 +286,7 @@ data:extend(
       always_show_products = true,
       icons = AF.create_liquid_recipe_icon(
         {
-          {"__angelsbioprocessing__/graphics/icons/molecule-propionic-acid.png", 72}
+          {"__angelspetrochem__/graphics/icons/molecules/propionic-acid.png", 72}
         },
         "COH"
       ),

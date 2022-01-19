@@ -44,6 +44,7 @@ angelsmods.trigger.smelting_products["tin"] = angelsmods.trigger.smelting_produc
 angelsmods.trigger.smelting_products["titanium"] = angelsmods.trigger.smelting_products["titanium"] or {}
 angelsmods.trigger.smelting_products["tungsten"] = angelsmods.trigger.smelting_products["tungsten"] or {}
 angelsmods.trigger.smelting_products["zinc"] = angelsmods.trigger.smelting_products["zinc"] or {}
+angelsmods.trigger.carbon = true
 
 --create casting products -----------------------------------------------------
 --alloy-brass

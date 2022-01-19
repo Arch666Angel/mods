@@ -528,7 +528,7 @@ data:extend(
       enabled = false,
       ingredients = {
         {type = "item", name = "steel-plate", amount = 1},
-        {type = "item", name = "solid-carbon", amount = 1}
+        {type = "item", name = angelsmods.trigger.carbon and  "solid-carbon" or "pellet-coke", amount = 1}
       },
       results = {
         {type = "item", name = "angels-electrode", amount = 1}
