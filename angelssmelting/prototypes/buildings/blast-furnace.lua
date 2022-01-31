@@ -67,7 +67,7 @@ data:extend(
         }
       },
       energy_usage = "150kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
@@ -272,7 +272,7 @@ data:extend(
         }
       },
       energy_usage = "200kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
@@ -477,7 +477,7 @@ data:extend(
         }
       },
       energy_usage = "250kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
@@ -681,7 +681,7 @@ data:extend(
         }
       },
       energy_usage = "300kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
