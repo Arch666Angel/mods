@@ -214,5 +214,72 @@ data:extend(
       max_temperature = 100,
     },
     -- order "o" reserved for bobwarfare
+    --PCPRedux Nitrogens
+    {
+      type = "fluid",
+      name = "gas-hydrogen-cyanide", --HCN
+      icons =angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/hydrogen-cyanide.png", 72},"CHN"),
+      icon_size = 32,
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "HCN"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      gas_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = angelsmods.functions.fluid_color("HCN"),--{r = 44/255, g = 44/255, b = 114/255}, -- CN
+      flow_color = angelsmods.functions.flow_color("HCN"),--{r = 150/255, g = 150/255, b = 185/255}, --HCN
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "liquid-acetone-cyanohydrin", --C4H7NO
+      icons =angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/acetone-cyanohydrin.png", 72},"CNO"),
+      icon_size = 32,
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]7[/font]NO"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = angelsmods.functions.fluid_color("C4H7NO"),--{r = 63/255, g = 63/255, b = 85/255}, --C4H7N {taken as (C3, H7) blended with 1 N}
+      flow_color = angelsmods.functions.flow_color("C4H7NO"),--{r = 146/255, g = 38/255, b = 73/255}, --C4H7NO
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "liquid-acrylonitrile",
+      icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/acrylonitrile.png", 72},"CHN"),
+      icon_size = 32,
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]3[/font]N"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = angelsmods.functions.fluid_color("C3H3N"),--{r = 151/255, g = 151/255, b = 151/255}, -- C3H3
+      flow_color = angelsmods.functions.flow_color("C3H3N"),--{r = 96/255, g = 96/255, b = 166/255}, --C3H3N
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "gas-nitrous-oxide",
+      icons =angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/nitrous-oxide.png", 72},"NNO"),
+      icon_size = 32,
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "N[font=default-tiny-bold]2[/font]O"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      gas_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = angelsmods.functions.fluid_color("N2O"),--{r = 41/255, g = 41/255, b = 180/255}, --NN
+      flow_color = angelsmods.functions.flow_color("N2O"),--{r = 1180/255, g = 41/255, b = 180/255}, --NNO
+      max_temperature = 100,
+      auto_barrel=true,
+    },
   }
 )

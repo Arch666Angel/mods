@@ -311,5 +311,80 @@ data:extend(
     fuel_top_speed_multiplier = 1.15,
     stack_size = 200
   },
+  --PCPRedux Solids
+  --plastics
+  {
+    type = "item",
+    name = "solid-pvc",
+    icon = "__angelspetrochem__/graphics/icons/solid-polyvinyl-chloride.png",
+    icon_size = 32,
+    subgroup = "petrochem-solids-fluids",
+    order = "d[solid-pvc]",
+    stack_size = 1
+  },
+  {
+    type = "item",
+    name = "solid-abs",
+    icon = "__angelspetrochem__/graphics/icons/solid-acrylonitrile-butadiene-styrene.png",
+    icon_size = 32,
+    subgroup = "petrochem-solids-fluids",
+    order = "d[solid-abs]",
+    stack_size = 1
+  },
+  {
+    type = "item",
+    name = "solid-pmma",
+    icon = "__angelspetrochem__/graphics/icons/solid-polymethyl-methacrylate.png",
+    icon_size = 32,
+    subgroup = "petrochem-solids-fluids",
+    order = "d[solid-pmma]",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "solid-pc",
+    icon = "__angelspetrochem__/graphics/icons/solid-polycarbonate.png",
+    icon_size = 32,
+    subgroup = "petrochem-solids-fluids",
+    order = "d[solid-pc]",
+    stack_size = 100
+  },
+  --misc
+  {
+    type = "item",
+    name = "solid-ammonium-sulphate",
+    icon = "__angelspetrochem__/graphics/icons/solid-ammonium-sulphate.png",
+    icon_size = 32,
+    subgroup = "petrochem-sulfur",
+    order = "a[solid-ammonium-sulphate]",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "solid-sodium-nitrate",
+    icon = "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png",
+    icon_size = 32,
+    subgroup = "petrochem-sodium",
+    order = "a[solid-sodium-nitrate]",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "catalyst-metal-cyan",
+    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-cyan.png",
+    icon_size = 32,
+    subgroup = "petrochem-catalysts",
+    order = "e[catalyst-metal-cyan]",
+    stack_size = 100
+  },
+  { --only active with bioprocessing
+    type = "item",
+    name = "bacterial-growth-seed",
+    icon = "__angelspetrochem__/graphics/icons/bacterial-mother-2.png",
+    icon_size = 64,
+    subgroup = "bio-processor-fermentation" or "petrochem-catalysts",
+    order = "a[bacterial-growth-seed]",
+    stack_size = 20
+  },
 }
 )

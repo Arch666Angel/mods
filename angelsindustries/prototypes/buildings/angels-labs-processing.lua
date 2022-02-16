@@ -260,5 +260,5 @@ if angelsmods.industries.tech then
     }
   )
   
-  angelsmods.triggers.lab_ignore_token["angels-processing-lab-3"] = true
+  angelsmods.trigger.lab_ignore_token["angels-processing-lab-3"] = true
 end

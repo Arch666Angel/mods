@@ -192,7 +192,7 @@ if angelsmods.industries.tech then
       }
     )
 
-    angelsmods.triggers.lab_ignore_token[lab_entity_tier.name] = true
+    angelsmods.trigger.lab_ignore_token[lab_entity_tier.name] = true
   end
 
   -- disable base game lab as it is obsolete
@@ -477,5 +477,5 @@ if angelsmods.industries.tech then
     }
   )
 
-  angelsmods.triggers.lab_ignore_token[lab_item.name .. string.format("-%i", 0)] = true
+  angelsmods.trigger.lab_ignore_token[lab_item.name .. string.format("-%i", 0)] = true
 end

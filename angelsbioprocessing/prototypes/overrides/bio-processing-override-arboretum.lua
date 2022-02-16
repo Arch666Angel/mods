@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 
-if angelsmods.triggers.bio_rubber then
+if angelsmods.trigger.bio_rubber then
 else
   OV.disable_recipe({
     "desert-tree-generator-1",
@@ -21,7 +21,7 @@ else
   })
 end
 
-if angelsmods.triggers.bio_resin then
+if angelsmods.trigger.bio_resin then
 else
   OV.disable_recipe({
     "temperate-tree-generator-1",
@@ -44,7 +44,7 @@ else
   })
 end
 
-if angelsmods.triggers.bio_plastic then
+if angelsmods.trigger.bio_plastic then
 else
   OV.hide_recipe({
     "swamp-tree-generator-1",

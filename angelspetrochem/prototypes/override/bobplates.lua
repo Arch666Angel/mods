@@ -151,7 +151,7 @@ end
 -- RESIN HANDLING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if angelsmods.trigger.resin then
+  if angelsmods.trigger.petrochem.resin then
     OV.global_replace_item({"solid-resin"}, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
     move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
@@ -212,7 +212,7 @@ end
 -- RUBBER HANDLING ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if angelsmods.trigger.rubber then
+  if angelsmods.trigger.petrochem.rubber then
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
     move_item("rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")

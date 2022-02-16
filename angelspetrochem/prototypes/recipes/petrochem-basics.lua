@@ -516,7 +516,7 @@ data:extend(
   }
 )
 --ENRICHED WATER
-if angelsmods.trigger.deuterium then
+--if angelsmods.trigger.petrochem.deuterium then
   data:extend(
     {
       {
@@ -851,7 +851,29 @@ if angelsmods.trigger.deuterium then
         ),
         order = "a[water-separation]-c[water-heavy]-b",
         crafting_machine_tint = AF.get_recipe_tints({"gas-deuterium","liquid-water-heavy","gas-oxygen"}),
-      }
+      },
+      {
+        type = "recipe",
+        name = "liquid-fuel-oil-catalyst",
+        category = "advanced-chemistry",
+        subgroup = "petrochem-carbon-oil-feed",
+        energy_required = 6,
+        enabled = false,
+        ingredients = {
+          {type = "fluid", name = "gas-nitrous-oxide", amount = 20},
+          {type = "fluid", name = "liquid-cupric-chloride-solution", amount = 30},
+          {type = "fluid", name = "gas-synthesis", amount = 90},
+          {type = "item", name = "catalyst-metal-blue", amount = 1},
+        },
+        results = {
+          {type = "fluid", name = "liquid-fuel-oil", amount = 80},
+          {type = "item", name = "catalyst-metal-carrier", amount = 1},
+        },
+        icons = angelsmods.functions.create_liquid_recipe_icon({"liquid-fuel-oil"}, {{r = 233/255, g = 254/255, b = 127/255},{r = 233/255, g = 254/255, b = 127/255},{ r = 255, g = 105, b = 180 }}),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-fuel-oil"),
+        order = "f"
+      },
+
     }
   )
-end
+--end

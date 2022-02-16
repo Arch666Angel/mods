@@ -18,11 +18,6 @@ angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"] and setti
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 --PETRO PRODUCS
 require("prototypes.petrochem-triggers")
-angelsmods.trigger.plastic = true
-angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or (not mods["bobelectronics"]))
-angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or (not mods["bobelectronics"]))
-angelsmods.trigger.liquid_ferric_chloride_solution = not angelsmods.functions.is_special_vanilla()
-angelsmods.trigger.liquid_cupric_chloride_solution = not angelsmods.functions.is_special_vanilla()
 
 --LOAD PROTOTYPES
 require("prototypes.petrochem-category")

@@ -1956,3 +1956,20 @@ function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_m
   --check upgrade_category
   angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine_name, next_upgrade)
 end
+-------------------------------------------------------------------------------
+-- Remove table items ---------------------------------------------------------
+-------------------------------------------------------------------------------
+--used primarily for removing unused fluids from flamer turret etc...
+function angelsmods.functions.remove_item(tab, item)
+  if type(item) == "table" then
+    for _, liq in pairs(item) do
+      angelsmods.functions.remove_item(tab, liq)
+    end
+  else
+    for k, v in pairs(tab) do
+      if v.type == item then
+        table.remove(tab, k)
+      end
+    end
+  end
+end

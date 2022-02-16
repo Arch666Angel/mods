@@ -5,6 +5,28 @@ angelsmods.functions.move_item("water", "water-treatment-fluid", "a", "fluid")
 -------------------------------------------------------------------------------
 -- REFINERY ACID WASTE PRODUCTS -----------------------------------------------
 -------------------------------------------------------------------------------
+if angelsmods.functions.is_special_vanilla() then
+  --disable without rubyte
+  OV.disable_recipe(
+    {
+      "red-waste-water-purification",
+      "solid-salt-dissolving"
+    }
+  )
+  angelsmods.functions.add_flag("water-red-waste","hidden")
+  --without acids or petrochem in spec_vanilla, only sulfur(yellow) waste is used
+  if (angelsmods.petrochem and angelsmods.trigger.enableacids) or angelsmods.smelting then
+  else
+    OV.disable_recipe(
+      {
+        "green-waste-water-purification",
+        "greenyellow-waste-water-purification",
+        "gas-hydrogen-fluoride"
+      }
+    )
+    angelsmods.functions.add_flag({"water-green-waste","water-greenyellow-waste"},"hidden")
+  end
+end
 if angelsmods.petrochem and angelsmods.trigger.enableacids then
   OV.patch_recipes(
     {
@@ -35,16 +57,6 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
         name = "green-waste-water-purification",
         results = {{name = "solid-salt", type = "item", amount = 1}}
       }
-    }
-  )
-elseif angelsmods.functions.is_special_vanilla() then
-  --still needed outside of spec vanilla
-  OV.disable_recipe(
-    {
-      "red-waste-water-purification",
-      "green-waste-water-purification",
-      "greenyellow-waste-water-purification",
-      "solid-salt-dissolving"
     }
   )
 end

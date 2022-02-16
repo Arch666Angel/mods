@@ -255,7 +255,7 @@ if angelsmods.industries.tech then
     }
   )
 
-  --angelsmods.triggers.lab_ignore_token["angels-enhance-lab-1"] = true
-  --angelsmods.triggers.lab_ignore_token["angels-enhance-lab-2"] = true
-  angelsmods.triggers.lab_ignore_token["angels-enhance-lab-3"] = true
+  --angelsmods.trigger.lab_ignore_token["angels-enhance-lab-1"] = true
+  --angelsmods.trigger.lab_ignore_token["angels-enhance-lab-2"] = true
+  angelsmods.trigger.lab_ignore_token["angels-enhance-lab-3"] = true
 end

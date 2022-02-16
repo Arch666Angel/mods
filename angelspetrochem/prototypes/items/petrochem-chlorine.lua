@@ -166,5 +166,55 @@ data:extend(
       flow_color = angelsmods.functions.flow_color("Cu4Cl2Ws"),--{r = 165 / 255, g = 93 / 255, b = 51 / 255},
       max_temperature = 100,
     },
+    --PCPRedux Chlorine Fluids
+    {
+      type = "fluid",
+      name = "liquid-dichlorobutene", --C4H6Cl2
+      icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/dichlorobutene.png", 72},"CHCl"),
+      icon_size = 32,
+      localised_description = show_formula and
+          {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]6[/font]Cl[font=default-tiny-bold]2[/font]"} or
+          nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      heat_capacity = "0.1KJ",
+      base_color = angelsmods.functions.fluid_color("C4H6Cl2"),-- {r = 172/255, g = 172/255, b = 172/255}, --C4H6
+      flow_color = angelsmods.functions.flow_color("C4H6Cl2"),--{r = 180/255, g = 197/255, b = 129/255}, --C4H6Cl2
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "liquid-chlorobutadiene", --C4H5Cl
+      icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/chloroprene.png", 72},"CHCl"),
+      icon_size = 32,
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]5[/font]Cl"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = angelsmods.functions.fluid_color("C4H5Cl"),--{r = 44/255, g = 44/255, b = 114/255}, -- CN
+      flow_color = angelsmods.functions.flow_color("C4H5Cl"),--{r = 150/255, g = 150/255, b = 185/255}, --HCN
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "gas-vinyl-chloride", --C2H3Cl
+      icons = angelsmods.functions.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/vinyl-chloride.png", 72},"CClH"),
+      icon_size = 32,
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]3[/font]Cl"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      gas_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = angelsmods.functions.fluid_color("C2H3Cl"),--{r = 172/255, g = 172/255, b = 172/255}, --C2H3
+      flow_color = angelsmods.functions.flow_color("C2H3Cl"),--{r = 180/255, g = 197/255, b = 129/255}, --C2H3Cl
+      max_temperature = 100,
+      auto_barrel=true,
+    },
   }
 )

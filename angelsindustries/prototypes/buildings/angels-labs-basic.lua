@@ -282,7 +282,7 @@ if angelsmods.industries.tech then
     }
   )
   
-  angelsmods.triggers.lab_ignore_token["angels-basic-lab"] = true
-  angelsmods.triggers.lab_ignore_token["angels-basic-lab-2"] = true
-  angelsmods.triggers.lab_ignore_token["angels-basic-lab-3"] = true
+  angelsmods.trigger.lab_ignore_token["angels-basic-lab"] = true
+  angelsmods.trigger.lab_ignore_token["angels-basic-lab-2"] = true
+  angelsmods.trigger.lab_ignore_token["angels-basic-lab-3"] = true
 end

@@ -368,6 +368,68 @@ data:extend(
       base_color = AF.fluid_color("C3H6O2"),--{r=184/255, g=171/255, b=28/255},
       flow_color = AF.flow_color("C3H6O2"),--{r=184/255, g=171/255, b=28/255},
     },
+    {
+      type = "fluid",
+      name = "liquid-methyl-methacrylate",
+      icons = AF.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/methyl-methacrylate.png", 72},"CHO"),
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]5[/font]H[font=default-tiny-bold]8[/font]O[font=default-tiny-bold]2[/font]"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = AF.fluid_color("C5H8O2"),--{r = 186/255, g = 186/255, b = 186/255}, --C5H8 {taken as (C4, H8)}
+      flow_color = AF.fluid_color("C5H8O2"),--{r = 200/255, g = 128/255, b = 128/255}, --C5H8O2 {Taken as (C2,H4,O)}
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "gas-acetylene", --C2H2
+      icons =AF.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/acetylene.png", 72},"CHH"),
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]2[/font]"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      gas_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = AF.fluid_color("C2H2"),--{r = 172/255, g = 172/255, b = 172/255}, --C2H2
+      flow_color = AF.flow_color("C2H2"),--{r = 172/255, g = 172/255, b = 172/255}, --C2H2
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "gas-vinyl-acetylene", --C4H6O2
+      icons = AF.create_gas_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/vinyl-acetylene.png", 72},"CCH"),
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]2[/font]"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      gas_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = AF.fluid_color("C4H6O2"),--{r = 172/255, g = 172/255, b = 172/255}, --C4H6
+      flow_color = AF.flow_color("C4H6O2"),--{r = 172/255, g = 172/255, b = 172/255}, --C4H6O2
+      max_temperature = 100,
+      auto_barrel=true,
+    },
+    {
+      type = "fluid",
+      name = "liquid-lactic-acid",--C3H6O3
+      icons = AF.create_liquid_fluid_icon({ "__angelspetrochem__/graphics/icons/molecules/lactic-acid.png", 72},"COH"),
+      localised_description = show_formula and
+      {"tooltip-description.chemical-formula", "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]3[/font]"} or
+      nil,
+      subgroup = "petrochem-chlorine-fluids",
+      default_temperature = 25,
+      heat_capacity = "1KJ",
+      base_color = AF.fluid_color("C2H6O3"),--{r = 1, g = 1, b = 1},
+      flow_color = AF.flow_color("C2H6O3"),--{r = 1, g = 1, b = 1},
+      max_temperature = 100,
+      auto_barrel=true,
+    },
   }
 )
 

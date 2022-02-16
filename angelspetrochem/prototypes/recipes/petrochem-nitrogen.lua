@@ -544,6 +544,104 @@ data:extend(
       },
       icon_size = 32,
       order = "ib"
-    }
+    },
+    --PCPRedux Components
+    {
+      type = "recipe",
+      name = "acetone-cyanohydrin-synthesis",
+      category = "chemistry",
+      subgroup = "petrochem-nitrogen",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-acetone", amount = 50},
+        {type = "fluid", name = "gas-hydrogen-cyanide", amount = 50},
+      },
+      results =
+      {
+        {type = "fluid", name = "liquid-acetone-cyanohydrin", amount = 100}
+      },
+      icons = AF.create_liquid_recipe_icon({"liquid-acetone-cyanohydrin"}, "CON"),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-acetone-cyanohydrin"),
+      order = "m[acetone-cyanohydrin-synthesis]",
+    },
+    {
+      type = "recipe",
+      name = "nitrous-oxide-synthesis-1",
+      category = "advanced-chemistry",
+      subgroup = "petrochem-nitrogen",
+      energy_required = 2,
+      enabled = false,
+      ingredients ={
+        {type = "fluid", name = "gas-urea", amount = 50},
+        {type = "fluid", name = "liquid-nitric-acid", amount = 20},
+        {type = "fluid", name = "liquid-sulfuric-acid", amount = 30}
+      },
+      results = {
+        {type = "item", name = "solid-ammonium-sulphate", amount = 4},
+        {type = "fluid", name = "gas-nitrous-oxide", amount = 60}
+      },
+      icons = AF.create_gas_recipe_icon({"gas-nitrous-oxide","solid-ammonium-sulphate"}, "NNO"),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("gas-nitrous-oxide"),
+      order = "k[nitrous-oxide-synthesis-1]",
+    },
+    {
+      type = "recipe",
+      name = "nitrous-oxide-synthesis-2",
+      category = "chemistry",
+      subgroup = "petrochem-nitrogen",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "solid-ammonium-sulphate", amount = 5},
+        {type = "item", name = "solid-sodium-nitrate", amount = 5},
+      },
+      results =
+      {
+        {type = "fluid", name = "gas-nitrous-oxide", amount = 100}
+      },
+      icons = AF.create_gas_recipe_icon({"gas-nitrous-oxide"}, "NNO"),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("gas-nitrous-oxide"),
+      order = "l[nitrous-oxide-synthesis-2]",
+    },
+    {
+      type = "recipe",
+      name = "sodium-nitrate-synthesis",
+      category = "liquifying",
+      subgroup = "petrochem-basics",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "solid-sodium-hydroxide", amount = 5},
+        {type = "fluid", name = "liquid-nitric-acid", amount = 50},
+      },
+      results=
+      {
+        {type = "item", name = "solid-sodium-nitrate", amount = 10}
+      },
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-nitric-acid"),
+      order = "i[sodium-nitrate-synthesis]",
+    },
+    {
+      type = "recipe",
+      name = "hydrogen-cyanide-synthesis",
+      category = "advanced-chemistry",
+      subgroup = "petrochem-nitrogen",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-methane", amount = 20},
+        {type = "fluid", name = "gas-ammonia", amount = 20},
+        {type = "fluid", name = "gas-oxygen", amount = 30},
+        {type = "item", name = "catalyst-metal-green", amount = 1}
+      },
+      results ={
+        {type = "fluid", name = "gas-hydrogen-cyanide", amount = 20},
+        {type = "item", name = "catalyst-metal-carrier", amount = 1}
+      },
+      icons = AF.create_gas_recipe_icon({"gas-hydrogen-cyanide"}, "CNH"),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("gas-hydrogen-cyanide"),
+      order = "l"
+    },
   }
 )

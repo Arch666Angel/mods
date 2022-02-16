@@ -19,7 +19,7 @@ data:extend(
         {type = "item", name = "solid-sodium-hydroxide", amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
@@ -44,7 +44,7 @@ data:extend(
         {type = "fluid", name = "gas-hydrogen-chloride", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72}
         },
@@ -68,7 +68,7 @@ data:extend(
         {type = "fluid", name = "gas-hydrogen", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72},
           {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}
@@ -93,7 +93,7 @@ data:extend(
         {type = "fluid", name = "gas-chlor-methane", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/chloromethane.png", 72}
         },
@@ -117,7 +117,7 @@ data:extend(
         {type = "fluid", name = "liquid-hydrochloric-acid", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72}
         },
@@ -142,7 +142,7 @@ data:extend(
         {type = "item", name = "solid-sodium-sulfate", amount = 3}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72}
         },
@@ -209,7 +209,7 @@ data:extend(
         {type = "fluid", name = "gas-hydrogen-chloride", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/allyl-chloride.png", 72}
         },
@@ -234,7 +234,7 @@ data:extend(
         {type = "fluid", name = "gas-epichlorhydrin", amount = 90}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72}
         },
@@ -258,7 +258,7 @@ data:extend(
         {type = "fluid", name = "liquid-glycerol", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72}
         },
@@ -282,7 +282,7 @@ data:extend(
         {type = "fluid", name = "liquid-perchloric-acid", amount = 50}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/perchloric-acid.png", 72}
         },
@@ -307,7 +307,7 @@ data:extend(
         {type = "fluid", name = "gas-phosgene", amount = 100}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_gas_recipe_icon(
+      icons = AF.create_gas_recipe_icon(
         {
           {"__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72}
         },

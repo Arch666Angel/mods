@@ -47,8 +47,8 @@ if angelsmods.industries.components then
   angelsmods.trigger.ores["platinum"] = true
 
   --PETROCHEM TRIGGERS
-  angelsmods.trigger.resin = true
-  angelsmods.trigger.rubber = true
+  angelsmods.trigger.petrochem.resin = true
+  angelsmods.trigger.petrochem.rubber = true
 
   --SMELTING TRIGGERS
   angelsmods.trigger.smelting_molds = true
@@ -61,7 +61,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.smelting_products["lithium"].plate = true
 
   --BIOPROCESSING TRIGGERS
-  angelsmods.triggers.bio_plastic = true
-  angelsmods.triggers.bio_resin = true
-  angelsmods.triggers.bio_rubber = true
+  angelsmods.trigger.petrochem.bio_plastic = true
+  angelsmods.trigger.petrochem.bio_resin = true
+  angelsmods.trigger.petrochem.bio_rubber = true
 end

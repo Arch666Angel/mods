@@ -100,22 +100,9 @@ OV.patch_recipes(
   }
 )
 
-local function remove_item(tab, liquid)
-  if type(liquid) == "table" then
-    for _, liq in pairs(liquid) do
-      remove_item(tab, liq)
-    end
-  else
-    for k, v in pairs(tab) do
-      if v.type == liquid then
-        table.remove(tab, k)
-      end
-    end
-  end
-end
 --do we want to add all "thermal fluids" to this list... in particular, in exploration?
 local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
-remove_item(turret_params, {"heavy-oil", "light-oil"})
+angelsmods.functions.remove_item(turret_params, {"heavy-oil", "light-oil"})
 table.insert(turret_params, {type = "liquid-naphtha", damage_modifier = 1.05})
 table.insert(turret_params, {type = "liquid-fuel-oil", damage_modifier = 1.1})
 

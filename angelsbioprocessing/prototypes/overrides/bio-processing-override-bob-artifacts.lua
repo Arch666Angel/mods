@@ -1,15 +1,15 @@
 local OV = angelsmods.functions.OV
 
 local contais_artifacts = false
-for color, available in pairs(angelsmods.triggers.artifacts) do
+for color, available in pairs(angelsmods.trigger.artifacts) do
   contais_artifacts = contais_artifacts or available or false
 end
 
 -------------------------------------------------------------------------------
 -- RED ARTIFACTS --------------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["red"] then
-  if angelsmods.triggers.bio_pastes["copper"] then
+if angelsmods.trigger.artifacts["red"] then
+  if angelsmods.trigger.bio_pastes["copper"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -74,7 +74,7 @@ if angelsmods.triggers.artifacts["red"] then
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-red"] then
-    if angelsmods.triggers.bio_pastes["copper"] then
+    if angelsmods.trigger.bio_pastes["copper"] then
       angelsmods.functions.move_item("small-alien-artifact-red", "bio-processing-alien-small", "a[red]")
     end
     angelsmods.functions.move_item("alien-artifact-red", "bio-processing-alien-large", "a[red]")
@@ -89,8 +89,8 @@ end
 -------------------------------------------------------------------------------
 -- YELLOW ARTIFACTS -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["yellow"] then
-  if angelsmods.triggers.bio_pastes["gold"] then
+if angelsmods.trigger.artifacts["yellow"] then
+  if angelsmods.trigger.bio_pastes["gold"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -155,7 +155,7 @@ if angelsmods.triggers.artifacts["yellow"] then
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-yellow"] then
-    if angelsmods.triggers.bio_pastes["gold"] then
+    if angelsmods.trigger.bio_pastes["gold"] then
       angelsmods.functions.move_item("small-alien-artifact-yellow", "bio-processing-alien-small", "b[yellow]")
     end
     angelsmods.functions.move_item("alien-artifact-yellow", "bio-processing-alien-large", "b[yellow]")
@@ -170,8 +170,8 @@ end
 -------------------------------------------------------------------------------
 -- ORANGE ARTIFACTS -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["orange"] then
-  if angelsmods.triggers.bio_pastes["tungsten"] then
+if angelsmods.trigger.artifacts["orange"] then
+  if angelsmods.trigger.bio_pastes["tungsten"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -236,7 +236,7 @@ if angelsmods.triggers.artifacts["orange"] then
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-orange"] then
-    if angelsmods.triggers.bio_pastes["tungsten"] then
+    if angelsmods.trigger.bio_pastes["tungsten"] then
       angelsmods.functions.move_item("small-alien-artifact-orange", "bio-processing-alien-small", "c[orange]")
     end
     angelsmods.functions.move_item("alien-artifact-orange", "bio-processing-alien-large", "c[orange]")
@@ -251,8 +251,8 @@ end
 -------------------------------------------------------------------------------
 -- BLUE ARTIFACTS -------------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["blue"] then
-  if angelsmods.triggers.bio_pastes["cobalt"] then
+if angelsmods.trigger.artifacts["blue"] then
+  if angelsmods.trigger.bio_pastes["cobalt"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -317,7 +317,7 @@ if angelsmods.triggers.artifacts["blue"] then
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
-    if angelsmods.triggers.bio_pastes["cobalt"] then
+    if angelsmods.trigger.bio_pastes["cobalt"] then
       angelsmods.functions.move_item("small-alien-artifact-blue", "bio-processing-alien-small", "d[blue]")
     end
     angelsmods.functions.move_item("alien-artifact-blue", "bio-processing-alien-large", "d[blue]")
@@ -332,8 +332,8 @@ end
 -------------------------------------------------------------------------------
 -- PURPLE ARTIFACTS -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["purple"] then
-  if angelsmods.triggers.bio_pastes["titanium"] then
+if angelsmods.trigger.artifacts["purple"] then
+  if angelsmods.trigger.bio_pastes["titanium"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -398,7 +398,7 @@ if angelsmods.triggers.artifacts["purple"] then
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-purple"] then
-    if angelsmods.triggers.bio_pastes["titanium"] then
+    if angelsmods.trigger.bio_pastes["titanium"] then
       angelsmods.functions.move_item("small-alien-artifact-purple", "bio-processing-alien-small", "e[purple]")
     end
     angelsmods.functions.move_item("alien-artifact-purple", "bio-processing-alien-large", "e[purple]")
@@ -413,8 +413,8 @@ end
 -------------------------------------------------------------------------------
 -- GREEN ARTIFACTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["green"] then
-  if angelsmods.triggers.bio_pastes["zinc"] then
+if angelsmods.trigger.artifacts["green"] then
+  if angelsmods.trigger.bio_pastes["zinc"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -479,7 +479,7 @@ if angelsmods.triggers.artifacts["green"] then
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-green"] then
-    if angelsmods.triggers.bio_pastes["zinc"] then
+    if angelsmods.trigger.bio_pastes["zinc"] then
       angelsmods.functions.move_item("small-alien-artifact-green", "bio-processing-alien-small", "f[green]")
     end
     angelsmods.functions.move_item("alien-artifact-green", "bio-processing-alien-large", "f[green]")
@@ -494,8 +494,8 @@ end
 -------------------------------------------------------------------------------
 -- BASE ARTIFACTS (pink) ------------------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.triggers.artifacts["base"] then -- pink
-  if angelsmods.triggers.bio_pastes["iron"] then
+if angelsmods.trigger.artifacts["base"] then -- pink
+  if angelsmods.trigger.bio_pastes["iron"] then
     data:extend(
       {
         --PRE ARTIFACT
@@ -551,7 +551,7 @@ if angelsmods.triggers.artifacts["base"] then -- pink
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
-    if angelsmods.triggers.bio_pastes["iron"] then
+    if angelsmods.trigger.bio_pastes["iron"] then
       angelsmods.functions.move_item("small-alien-artifact", "bio-processing-alien-small", "g[base]")
     end
     angelsmods.functions.move_item("alien-artifact", "bio-processing-alien-large", "g[base]")

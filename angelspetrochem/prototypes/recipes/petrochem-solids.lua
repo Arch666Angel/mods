@@ -4,6 +4,7 @@ local AF = angelsmods.functions
 data:extend(
   {
     --SOLIDS
+    --==Plastic==--
     {
       type = "recipe",
       name = "solid-plastic",
@@ -33,6 +34,7 @@ data:extend(
       crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
       order = "a[plastic]-b[solid]"
     },
+    --Plastic Tier 1
     {
       type = "recipe",
       name = "liquid-plastic-1",
@@ -57,6 +59,31 @@ data:extend(
       crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","gas-propene"}),
       order = "a[plastic]-a[liquid]-a"
     },
+    --Plastic Alt Tier 1
+    {
+      type = "recipe",
+      name = "liquid-plastic-pc",
+      category = "chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "solid-pc", amount = 1},
+      },
+      results = {
+        {type = "fluid", name = "liquid-plastic", amount = 20},
+      },
+      icons = AF.create_viscous_liquid_recipe_icon(
+        {"solid-pc"},
+        {{255, 255, 255}, {255, 255, 255}},
+        {
+          AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
+        }
+      ),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
+      order = "a[plastic]-a[liquid]-ab",
+    },
+    --Plastic Tier 2
     {
       type = "recipe",
       name = "liquid-plastic-2",
@@ -82,6 +109,32 @@ data:extend(
       crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","liquid-naphthta","liquid-polyethylene"}),
       order = "a[plastic]-a[liquid]-b"
     },
+    --Plastic Alt Tier 2
+    {
+      type = "recipe",
+      name = "liquid-plastic-pvc",
+      category = "chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "liquid-naphtha", amount = 5},
+        {type = "fluid", name = "gas-vinyl-chloride", amount = 30},
+      },
+      results = {
+        {type = "fluid", name = "liquid-plastic", amount = 20}
+      },
+      icons = AF.create_viscous_liquid_recipe_icon(
+        {{ "__angelspetrochem__/graphics/icons/molecules/vinyl-chloride.png", 72}},
+        {{255, 255, 255}, {255, 255, 255}},
+        {
+          AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
+        }
+      ),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
+      order = "a[plastic]-a[liquid]-bb",
+    },
+    --Plastic Tier 3
     {
       type = "recipe",
       name = "liquid-plastic-3",
@@ -106,6 +159,136 @@ data:extend(
       ),
       crafting_machine_tint = AF.get_recipe_tints({"liquid-plastic","gas-formaldehyde","liquid-phenol"}),
       order = "a[plastic]-a[liquid]-c"
+    },
+    --Plastic Alt Tier 3
+    {
+      type = "recipe",
+      name = "liquid-plastic-pmma",
+      category = "chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 2,
+      enabled = false,
+      ingredients ={
+        {type="item", name="solid-pmma", amount=1},
+      },
+      results=
+      {
+        {type="fluid", name="liquid-plastic", amount=30},
+      },
+      icons = AF.create_viscous_liquid_recipe_icon(
+        {"solid-pmma"},
+        {{255, 255, 255}, {255, 255, 255}},
+        {
+          AF.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
+        }
+      ),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
+      order = "a[plastic]-a[liquid]-cb",
+    },
+    --Plastic Tier 4
+    {
+      type = "recipe",
+      name = "liquid-plastic-abs",
+      category = "advanced-chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 3 ,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-butadiene", amount = 20},
+        {type = "fluid", name = "liquid-styrene", amount = 50},
+        {type = "fluid", name = "liquid-acrylonitrile", amount = 30}
+      },
+      results = {
+        {type = "fluid", name = "liquid-plastic", amount = 100}
+      },
+      icons = AF.create_viscous_liquid_recipe_icon(
+        {
+          { "__angelspetrochem__/graphics/icons/molecules/vinyl-chloride.png", 72},
+          { "__angelspetrochem__/graphics/icons/molecules/butadiene.png", 72},
+          { "__angelspetrochem__/graphics/icons/molecules/styrene.png", 72},
+        },
+        {{255, 255, 255}, {255, 255, 255}},
+        {
+          AF.add_number_icon_layer({}, 4, angelsmods.petrochem.number_tint),
+        }
+      ),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
+      order = "a[plastic]-a[liquid]-d",
+    },
+    --new plastic pre-synthesis
+    {
+      type = "recipe",
+      name = "pc-synthesis",
+      category = "chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "liquid-bisphenol-a", amount = 10},
+        {type = "fluid", name = "gas-phosgene", amount = 10},
+      },
+      results = {
+        {type = "item", name = "solid-pc", amount = 1}
+      },
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
+      order = "j[pc-synthesis]",
+    },
+    {
+      type = "recipe",
+      name = "vinyl-chloride-synthesis",
+      category = "chemistry",
+      subgroup = "petrochem-chlorine",
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-ethylene", amount = 150},
+        {type = "fluid", name = "gas-chlorine", amount = 75},
+        {type = "item", name = "catalyst-metal-red", amount = 1},
+        {type = "item", name = "catalyst-metal-blue", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "gas-vinyl-chloride", amount = 75},
+        {type = "item", name = "catalyst-metal-carrier", amount = 2}
+      },
+      icons = AF.create_gas_recipe_icon({"gas-vinyl-chloride"}, "CClH"),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("gas-vinyl-chloride"),
+      order = "j",
+    },
+    {
+      type = "recipe",
+      name = "pmma-synthesis",
+      category = "chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "liquid-methyl-methacrylate", amount = 20},
+      },
+      results = {
+        {type = "item", name = "solid-pmma", amount = 1}
+      },
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-methyl-methacrylate"),
+      order = "i[pmma-synthesis]",
+    },
+    {
+      type = "recipe",
+      name = "acrylonitrile-synthesis",
+      category = "chemistry",
+      subgroup = "petrochem-nitrogen",
+      energy_required = 2,
+      enabled = "false",
+      ingredients = {
+        {type = "fluid", name = "gas-propene", amount = 100},
+        {type = "fluid", name = "gas-ammonia", amount = 100},
+        {type = "item", name = "catalyst-metal-cyan", amount = 1}
+      },
+      results = {
+        {type = "fluid", name = "liquid-acrylonitrile", amount = 100},
+        {type = "item", name = "catalyst-metal-carrier", amount = 1}
+      },
+      icons = AF.create_liquid_recipe_icon({"liquid-acrylonitrile"}, "CNH"),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-acrylonitrile"),
+      order = "j[acryllonitrile-synthesis]",
     },
     --RESIN
     {
@@ -213,6 +396,25 @@ data:extend(
       crafting_machine_tint = AF.get_recipe_tints({"liquid-resin","liquid-bisphenol-a","gas-epichlorhydrin"}),
       order = "b[resin]-a[liquid]-c"
     },
+    --Phenol-Formaldehyde Resin
+    {
+      type = "recipe",
+      name = "PF-resin",
+      category = "chemistry",
+      subgroup = "petrochem-solids",
+      energy_required = 3,
+      enabled = false,
+      ingredients = {
+        {type = "fluid", name = "gas-formaldehyde", amount = 20},
+        {type = "fluid", name = "liquid-phenol", amount = 20},
+      },
+      results = {
+        {type = "fluid", name = "liquid-resin", amount = 40}
+      },
+      icons = AF.add_number_icon_layer(AF.get_object_icons("liquid-resin"), 4, angelsmods.petrochem.number_tint),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-resin"),
+      order = "b[resin]-a[liquid]-d",
+    },
     --RUBBER
     {
       type = "recipe",
@@ -269,6 +471,7 @@ data:extend(
       crafting_machine_tint = AF.get_recipe_tints({"liquid-rubber","liquid-styrene","gas-butadiene"}),
       order = "b[rubber]-a[liquid]"
     },
+
     --GLASS
     -- {
     -- type = "recipe",
@@ -517,6 +720,25 @@ data:extend(
       icon = "__angelspetrochem__/graphics/icons/catalyst-metal-yellow.png",
       icon_size = 32,
       order = "c[catalyst-metal]-e[yellow]"
+    },
+    {
+      type = "recipe",
+      name = "catalyst-metal-cyan",
+      category = "crafting",
+      subgroup = "petrochem-catalysts",
+      energy_required = 2,
+      enabled = "false",
+      ingredients = {
+        {type = "item", name = "catalyst-metal-carrier", amount = 10},
+        --{type="item", name="zinc-ore", amount=1},
+        --{type="item", name="gold-ore", amount=1},
+      },
+      results = {
+        {type = "item", name = "catalyst-metal-cyan", amount = 10},
+      },
+      icon = "__angelspetrochem__/graphics/icons/catalyst-metal-cyan.png",
+      icon_size = 32,
+      order = "c[catalyst-metal]-g[cyan]",--leave f for clowns one?
     },
     --SPECIAL CATALYSTS
     {
