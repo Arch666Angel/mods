@@ -1,15 +1,17 @@
 if mods["bobores"] then
-  if bobmods.ores.settings.UnsortedGemOre == true then
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="gem-ore"})
-  else
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="diamond-ore", probability = bobmods.gems.DiamondRatio})
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="emerald-ore", probability = bobmods.gems.EmeraldRatio})
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="amethyst-ore", probability = bobmods.gems.AmethystRatio})
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="ruby-ore", probability = bobmods.gems.RubyRatio})
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="sapphire-ore", probability = bobmods.gems.SapphireRatio})
-    bobmods.lib.resource.add_result("infinite-gem-ore", {name="topaz-ore", probability = bobmods.gems.TopazRatio})
-    --remove regular gems
-    bobmods.lib.resource.remove_result("infinite-gem-ore", "gem-ore")
+  if settings.startup["bobmods-ores-enablegemsore"].value == true then
+    if bobmods.ores.settings.UnsortedGemOre == true then
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="gem-ore"})
+    else
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="diamond-ore", probability = bobmods.gems.DiamondRatio})
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="emerald-ore", probability = bobmods.gems.EmeraldRatio})
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="amethyst-ore", probability = bobmods.gems.AmethystRatio})
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="ruby-ore", probability = bobmods.gems.RubyRatio})
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="sapphire-ore", probability = bobmods.gems.SapphireRatio})
+      bobmods.lib.resource.add_result("infinite-gem-ore", {name="topaz-ore", probability = bobmods.gems.TopazRatio})
+      --remove regular gems
+      bobmods.lib.resource.remove_result("infinite-gem-ore", "gem-ore")
+    end
   end
 
   if bobmods.ores.settings.GemsFromOtherOres == true then
