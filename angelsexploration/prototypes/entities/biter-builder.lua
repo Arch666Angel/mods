@@ -830,6 +830,38 @@ local function make_attack_parameter(data_app, data_dmg)
   }
 end
 
+local function make_loot(loot_data)
+  if type(loot_data) ~= 'table' then return nil end
+  if next(loot_data) == nil then return nil end
+
+  loot_proto = {}
+  for _,loot_item in pairs(loot_data) do
+    local item_found = false
+    for _,item_type in pairs({"item","tool","item-with-entity-data"}) do
+      if data.raw[item_type][loot_item.item] then
+        item_found = true
+      end
+    end
+    if item_found then
+      local min = (loot_item.avg_amount or 1) - (loot_item.variation or 0)/2
+      local max = (loot_item.avg_amount or 1) + (loot_item.variation or 0)/2
+      if max < min then min, max = max, min end
+      if max > 0 then
+        local prob = max < 1 and max or 1
+        if prob < 1 then min, max = min/max, 1 end
+        table.insert(loot_proto, {
+          item=loot_data.item,
+          probability=prob < 1 and prob or nil,
+          count_min=min,
+          count_max=max
+        })
+      end
+    end
+  end
+  return loot_proto
+end
+
+
 function angelsmods.functions.make_alien(def_data)
   --log(serpent.block(def_data))
   if def_data ~= nil then
@@ -901,6 +933,7 @@ function angelsmods.functions.make_alien(def_data)
           min_pursue_time = 10 * 60,
           max_pursue_distance = 50,
           corpse = c_name,
+          loot = make_loot(def_data.loot),
           dying_explosion = "blood-explosion-big",
           dying_sound = make_die_sound(def_data.appearance.type, 0.4),
           working_sound = make_call_sounds(0.3),
@@ -951,6 +984,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
         pollution_absorption_proportional = 0.01,
         loot = {},
         corpse = "biter-spawner-corpse",
+        loot = make_loot(spawn_data.loot),
         dying_explosion = "blood-explosion-huge",
         max_count_of_owned_units = 7,
         max_friends_around_to_spawn = 5,
@@ -1003,6 +1037,7 @@ function angelsmods.functions.update_alien(ua_data)
     unit.max_health = ua_data.appearance.health
     unit.movement_speed = ua_data.appearance.speed
     unit.attack_parameters = make_attack_parameter(ua_data.appearance, ua_data.attack)
+    unit.loot = ua_data.loot and make_loot(ua_data.loot) or unit.loot
   end
 end
 
@@ -1041,6 +1076,7 @@ function angelsmods.functions.update_spawner(us_data)
         table.insert(spawner.result_units, new_result_unit_data)
       end
     end
+    spawner.loot = us_data.loot and make_loot(us_data.loot) or spawner.loot
   end
 end
 

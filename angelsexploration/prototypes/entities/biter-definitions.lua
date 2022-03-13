@@ -54,6 +54,9 @@ small_biter =
     {type = "laser", decrease = 5, percent = 20},
     {type = "plasma", decrease = 0, percent = 0}
   }
+  --loot = {
+  --  angelsmods.triggers.artifacts["base"] and {item = "small-alien-artifact", avg_amount = 0.25, variation = 0.1} or nil,
+  --}
 }
 
 medium_biter =
