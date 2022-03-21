@@ -35,7 +35,20 @@ if mods["bobplates"] then
       "air-pump-2",
       "air-pump-3",
       "air-pump-4",
+      "void-ammonia",
+      "void-carbon-dioxide",
+      "void-chlorine",
+      "void-deuterium",
+      "void-hydrogen",
+      "void-hydrogen-chloride",
+      "void-hydrogen-sulfide",
+      "void-nitrogen",
+      "void-oxygen",
+      "void-petroleum-gas",
       "void-pump",
+      "void-sour-gas",
+      "void-steam",
+      "void-sulfur-dioxide",
     }
   )
 end
