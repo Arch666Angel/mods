@@ -5,6 +5,7 @@ Date: ??
     - Removed the obsolete ingredient_count limitation on some refining buildings (763)
   Bugfixes:
     - Fixed crash when playing with bob enemies and bob equipment without bob artifacts enabled
+    - Fixed the void item group icon
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 19.12.2021
