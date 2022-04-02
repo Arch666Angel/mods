@@ -10,7 +10,7 @@ data:extend(
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
-        "steel-processing"
+        "automation"
       },
       effects = {
         {
