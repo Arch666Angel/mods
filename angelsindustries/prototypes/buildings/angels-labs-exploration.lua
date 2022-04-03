@@ -130,7 +130,8 @@ if angelsmods.industries.tech then
             create_rich_text_icons {
               "angels-science-pack-blue",
               "angels-science-pack-yellow",
-              "datacore-exploration-2"
+              "datacore-exploration-2",
+              "token-bio"
             }
           }
         },
@@ -175,7 +176,8 @@ if angelsmods.industries.tech then
         inputs = {
           "angels-science-pack-blue",
           "angels-science-pack-yellow",
-          "datacore-exploration-2"
+          "datacore-exploration-2",
+          "token-bio"
         },
         module_specification = {
           module_slots = 2,
