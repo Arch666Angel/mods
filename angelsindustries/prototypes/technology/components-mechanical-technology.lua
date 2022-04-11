@@ -68,8 +68,9 @@ if angelsmods.industries.components then
         prerequisites = {
           "angels-components-mechanical-1",
           "angels-stone-smelting-2",
-          "angels-steel-smelting-1",
-          "logistic-science-pack"
+          "logistic-science-pack",
+          "steel-processing",
+          "angels-iron-smelting-1"
         },
         effects = {
           {
