@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: ???
+  Bugfixes:
+    - Fixed technology cost of logistics silos when playing with bobtech
+    - Fixed technology cost of logistics warehouses when playing with bobtech
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 19.12.2021
   Bugfixes:
