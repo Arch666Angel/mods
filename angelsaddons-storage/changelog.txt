@@ -4,12 +4,14 @@ Date: ???
   Bugfixes:
     - Fixed technology cost of logistics silos when playing with bobtech
     - Fixed technology cost of logistics warehouses when playing with bobtech
+    - Added missing setting localisation
+    - Fixed active / passive provider warehouse descriptions
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 19.12.2021
   Bugfixes:
-    - Fixed technology cost of logistics silos when not playing with bobslogisitcs
-    - Fixed technology cost of logistics warehouses when not playing with bobslogisitcs
+    - Fixed technology cost of logistics silos when not playing with bobslogistics
+    - Fixed technology cost of logistics warehouses when not playing with bobslogistics
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 10.08.2021
