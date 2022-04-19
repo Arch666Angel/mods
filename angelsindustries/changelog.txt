@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.16
 Date: xx.xx.202x
+  Changes:
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
   Bugfixes:
     - Science mode:
       - Fixed science tiers of inserter stack size bonusses (740)

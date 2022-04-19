@@ -1540,18 +1540,30 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
   end
 
   for fn, fd in pairs(fluids_to_move) do
-    local recipe = recipes[fn]
-
-    local subgroup_name = fd.subgroup or (recipe and recipe.subgroup) or "vanilla"
-    local subgroup = subgroups[subgroup_name]
-    local subgroup_order = subgroup and subgroup.order or "z"
-
-    local group = groups[subgroup and subgroup.group or "vanilla"]
-    local group_order = group and group.order or "z"
-
     local barrel = items[fn .. "-barrel"]
 
-    if subgroup and barrel then
+    if barrel then
+      local recipe = recipes[fn]
+      local subgroup_name
+      if barrel.subgroup ~= "barrel" then
+        subgroup_name = barrel.subgroup
+      elseif fd.subgroup then
+        subgroup_name = fd.subgroup
+      elseif recipe and recipe.subgroup then
+        if recipe.subgroup == "fluid-recipes" then
+          subgroup_name = "vanilla"
+        else
+          subgroup_name = recipe.subgroup
+        end
+      else
+        subgroup_name = "vanilla"
+      end
+      local subgroup = subgroups[subgroup_name]
+      local subgroup_order = subgroup and subgroup.order or "z"
+
+      local group = groups[subgroup and subgroup.group or "vanilla"]
+      local group_order = group and group.order or "z"
+
       barrel.subgroup = "angels-fluid-control-" .. subgroup_name
       barrel.order = fd.order or (recipe and recipe.order) or "z"
 
