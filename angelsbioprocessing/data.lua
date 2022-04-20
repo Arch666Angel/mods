@@ -19,6 +19,7 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
   angelsmods.triggers.artifacts["purple"] = true
   angelsmods.triggers.artifacts["green"] = true
   angelsmods.triggers.artifacts["base"] = true -- pink
+  bobmods.enemies.small_alien_artifacts = true
 end
 --BIO PASTES
 angelsmods.triggers.bio_pastes = angelsmods.triggers.bio_pastes or {}
