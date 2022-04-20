@@ -44,7 +44,4 @@ if angelsmods.refining then
   
   --MOVE STORAGE TANK
   angelsmods.functions.move_item("storage-tank", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-a[regular]")
-  
-  --MODIFY BARRELING RECIPES
-  angelsmods.functions.modify_barreling_recipes()
 end
