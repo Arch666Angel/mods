@@ -212,6 +212,7 @@ if angelsmods.industries.overhaul then
         if data.raw.reactor["nuclear-reactor-2"] then
           data.raw.item["angels-thorium-fuel-cell"].fuel_category = "thorium"
           OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
+          OV.set_science_pack("bob-nuclear-power-2", "utility-science-pack")
         end
       end
 
