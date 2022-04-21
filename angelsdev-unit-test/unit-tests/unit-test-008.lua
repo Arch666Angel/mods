@@ -128,6 +128,23 @@ local unit_test_008 = function()
     end
   end
 
+  -- Populate fluid_to_ignore with boiler results
+  local entity_filters = {}
+  table.insert(entity_filters, {filter="type", type="boiler", mode="or"})
+  table.insert(entity_filters, {filter="hidden", mode="and", invert=true})
+  table.insert(entity_filters, {filter="type", type="boiler", mode="or"})
+  table.insert(entity_filters, {filter="flag", flag="player-creation", mode="and"})
+  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+
+  for boiler_name, boiler in pairs(entity_prototypes) do
+    for _, fluidbox in pairs(boiler.fluidbox_prototypes) do
+      if fluidbox.filter and fluidbox.production_type == "output" then
+        fluids_to_ignore[fluidbox.filter.name] = true
+        break
+      end
+    end
+  end
+
   -- Check items
   local item_filters = {}
   table.insert(item_filters, {filter = "flag", invert = true, mode = "and", flag = "hidden"})
