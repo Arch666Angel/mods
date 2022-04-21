@@ -43,6 +43,9 @@ require("prototypes.override.refining-override-bobvehicleequipment")
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+    angelsmods.functions.disable_barreling_recipes("brine")
+    angelsmods.functions.add_flag("brine", "hidden")
+    OV.disable_recipe({"brine-electrolysis"}) -- equivalent of angels recipe "water-saline-seperation"
     OV.global_replace_item("brine", "water-saline")
     OV.disable_recipe("brine")
   end

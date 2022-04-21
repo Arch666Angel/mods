@@ -107,8 +107,6 @@ if mods["bobplates"] then
   OV.remove_unlock("chemical-processing-1", "carbon")
 
   -- lithium processing -------------------------------------------------------
-  OV.global_replace_item("lithium-chloride", "solid-lithium")
-  angelsmods.functions.add_flag("lithium-chloride", "hidden")
   OV.patch_recipes(
     {
       {

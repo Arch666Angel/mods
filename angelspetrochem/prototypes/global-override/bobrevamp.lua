@@ -141,13 +141,9 @@ if mods["bobrevamp"] then
     if settings.startup["bobmods-revamp-hardmode"].value then
       OV.disable_recipe(
         {
-          "brine-electrolysis", -- equivalent of angels recipe "water-saline-seperation"
           "ammoniated-brine", "sodium-bicarbonate", "sodium-carbonate", -- angels has own process of creating "solid-sodium-carbonate" from saline water
         }
       )
-
-      angelsmods.functions.add_flag("brine", "hidden")
-      angelsmods.functions.disable_barreling_recipes("brine")
 
       angelsmods.functions.add_flag("ammoniated-brine", "hidden")
       angelsmods.functions.disable_barreling_recipes("ammoniated-brine")
