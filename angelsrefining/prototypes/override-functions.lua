@@ -1,5 +1,5 @@
-local RB = require "recipe-builder"
-require "angels-functions"
+local RB = require("prototypes.recipe-builder")
+require("prototypes.angels-functions")
 
 local ov_functions = {}
 -- OVERRIDE DATA TABLES
