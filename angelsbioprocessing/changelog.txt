@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.22
 Date: ???
+  Changes:
+    - Moved Garden cultivation recipe unlock to a new technology Garden processing 3
+      This recipe exists in case gardens of a particular type do not spawn
+      It is not for duplication of Gardens / Alien plant-life samples
   Bugfixes:
     - Polluted fish water from fish breeding was not being included in fluid production graphs #750
 ---------------------------------------------------------------------------------------------------
