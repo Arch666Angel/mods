@@ -447,11 +447,19 @@ end
 -- Getter functions to extract data from the data structure
 -------------------------------------------------------------------------------
 function gathering_turret:get_turret_name()
-  return global.GT_data.prototype_data.gathering_turret_name
+  if global.GT_data then
+    return global.GT_data.prototype_data.gathering_turret_name
+  else
+    return "angels-void"
+  end
 end
 
 function gathering_turret:get_turret_chest_name()
-  return global.GT_data.prototype_data.gathering_turret_chest
+  if global.GT_data then
+    return global.GT_data.prototype_data.gathering_turret_chest
+  else
+    return "angels-void"
+  end
 end
 
 function gathering_turret:get_turret_chest_data_index()
