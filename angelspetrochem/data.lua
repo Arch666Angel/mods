@@ -54,6 +54,7 @@ require("prototypes.buildings.flare-stack")
 require("prototypes.buildings.electric-boiler")
 require("prototypes.buildings.valves")
 require("prototypes.buildings.storage-tanks")
+require("prototypes.buildings.fluid-boiler")
 --require("prototypes.buildings.fluid-splitter")
 
 require("prototypes.items.petrochem-basics")
