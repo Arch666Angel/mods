@@ -43,7 +43,9 @@ move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
 OV.remove_prereq("lubricant", "oil-processing")
 OV.remove_prereq("lubricant", "chemical-plant")
 OV.add_prereq("lubricant", "oil-steam-cracking-1")
-
+-------------------------------------------------------------------------------
+-- INTERMEDIATES --------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- plastics
 --OV.add_unlock("plastics", "solid-plastic")
 move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
@@ -102,9 +104,11 @@ OV.patch_recipes(
 
 --do we want to add all "thermal fluids" to this list... in particular, in exploration?
 local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
-angelsmods.functions.remove_item(turret_params, {"heavy-oil", "light-oil"})
-table.insert(turret_params, {type = "liquid-naphtha", damage_modifier = 1.05})
-table.insert(turret_params, {type = "liquid-fuel-oil", damage_modifier = 1.1})
+if turret_params ~= nil then --sanity check in case other mods remove the turret... and not just hides it
+  angelsmods.functions.remove_item(turret_params, {"heavy-oil", "light-oil"})
+  table.insert(turret_params, {type = "liquid-naphtha", damage_modifier = 1.05})
+  table.insert(turret_params, {type = "liquid-fuel-oil", damage_modifier = 1.1})
+end
 
 -- rocket fuel
 OV.patch_recipes(

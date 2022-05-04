@@ -1,6 +1,13 @@
 -------------------------------------------------------------------------------
 -- GET ICON/ICONS FROM FLUID/ITEM ---------------------------------------------
 -------------------------------------------------------------------------------
+--icon cleaner can be called after get_icons to clean out since the new array uses icons only
+function angelsmods.functions.icon_array_cleaner(parent_path)--use very, very carefully...
+  parent_path.icon = nil
+  parent_path.icon_size = nil
+  parent_path.icon_mipmaps = nil
+end
+
 local function get_icons(object_name)
   for _, prototype in pairs({"item", "fluid", "ammo", "capsule"}) do
     local object = data.raw[prototype][object_name]
@@ -25,6 +32,9 @@ local function get_icons(object_name)
   return "__angelsrefining__/graphics/icons/void.png"
 end
 angelsmods.functions.get_object_icons = get_icons
+
+
+
 
 function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_shift, layer_scale)
   local icon_layers = util.table.deepcopy(icon_layers)
