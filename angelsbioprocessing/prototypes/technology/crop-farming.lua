@@ -75,8 +75,9 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "bio-farm-alien",
-        "chemical-science-pack"
+        "bio-farm-1",
+        "bio-paper-1",
+        "logistic-science-pack"
       },
       effects = {
         {
