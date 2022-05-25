@@ -2,6 +2,8 @@
 Version: 0.4.16
 Date: xx.xx.202x
   Bugfixes:
+    - Component mode:
+      - Fixed bobs personal roboport mk2 depended on battery 5 (761)
     - Science mode:
       - Fixed science tiers of inserter stack size bonusses (740)
       - Fixed exploration tech lab 2 did not accept bio tokens (745)
