@@ -51,7 +51,9 @@ if angelsmods.industries.overhaul then
         always_show_products = true,
         show_amount_in_title = false,
         crafting_machine_tint = {
-          primary = tint_colors.green
+          primary = tint_colors.green,
+          secondary = tint_colors.green,
+          tertiary = tint_colors.green,
         }
       },
       {
@@ -66,7 +68,9 @@ if angelsmods.industries.overhaul then
           {type = "item", name = "slag", amount = 5}
         },
         crafting_machine_tint = {
-          primary = tint_colors.green
+          primary = tint_colors.green,
+          secondary = tint_colors.green,
+          tertiary = tint_colors.green,
         },
         icons = {
           { -- need to have something as bottom layer

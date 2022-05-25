@@ -2,6 +2,8 @@
 Version: 0.4.16
 Date: xx.xx.202x
   Bugfixes:
+    - Regular mode:
+      - Fixed centrifuges did not have their customizable lights enabled as intended (772)
     - Component mode:
       - Fixed bobs personal roboport mk2 depended on battery 5 (761)
     - Science mode:
