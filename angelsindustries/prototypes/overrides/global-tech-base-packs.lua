@@ -92,7 +92,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("modular-armor", "green", "orange")
   AI.pack_replace("armor-making-3", "green", "orange")
   AI.pack_replace("belt-immunity-equipment", "green", "orange")
-  AI.pack_replace("electric-engine", "blue", "orange")
+  AI.pack_replace("electric-engine", "green", "orange")
   AI.pack_replace("electric-energy-accumulators", "green", "orange")
   AI.pack_replace("energy-shield-equipment", "green", "orange")
   AI.pack_replace("night-vision-equipment", "green", "orange")

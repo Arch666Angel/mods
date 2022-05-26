@@ -76,7 +76,8 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
             "angels-steel-smelting-1",
-            "angels-nickel-smelting-1"
+            "angels-nickel-smelting-1",
+            "logistic-science-pack",
           },
           effects = {
             {

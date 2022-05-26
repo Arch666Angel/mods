@@ -61,6 +61,7 @@ if angelsmods.industries.components then
   -- BOB EQUIPMENT ------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobequipment"] then
+    -- roboports
     OV.patch_recipes(
       {
         {
@@ -74,6 +75,23 @@ if angelsmods.industries.components then
     OV.remove_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
     OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-3")
     OV.add_prereq("personal-roboport-mk3-equipment", "angels-components-batteries-4")
+
+    -- exoskeleton
+    OV.patch_recipes(
+      {
+        {
+          name = "exoskeleton-equipment",
+          ingredients =
+          {
+            { type = "item", name = "motor-3", amount = "motor-4" },
+          },
+        }
+      }
+    )
+    log(serpent.block(data.raw.technology["exoskeleton-equipment"]))
+    OV.remove_prereq("exoskeleton-equipment", "electric-engine")
+    OV.add_prereq("exoskeleton-equipment", "angels-components-mechanical-3")
+    OV.add_prereq("exoskeleton-equipment", "tech-orange-circuit")
   end
 
   -----------------------------------------------------------------------------

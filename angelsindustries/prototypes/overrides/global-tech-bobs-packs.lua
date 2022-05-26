@@ -110,7 +110,7 @@ if angelsmods.industries.tech then
     end
     --mining drills
     AI.pack_replace("bob-drills-3", "blue", "orange")
-    AI.pack_replace("bob-area-drills-2", "blue", "orange")
+    AI.pack_replace("bob-area-drills-2", "green", "orange")
     AI.pack_replace("bob-area-drills-4", "blue", "yellow")
   end
 
@@ -216,7 +216,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")
-    AI.pack_replace("bob-rocket", "green", "orange")
+    AI.pack_replace("bob-rocket", "blue", "orange")
     AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
     AI.pack_replace("radars-4", "blue", "yellow")
@@ -246,7 +246,7 @@ if angelsmods.industries.tech then
     --adds bob personal equipment stuffs
     AI.pack_replace("personal-roboport-equipment", "green", "orange")
     AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    AI.pack_replace("exoskeleton-equipment", "blue", "orange")
+    AI.pack_replace("exoskeleton-equipment", "green", "orange")
     AI.pack_replace("solar-panel-equipment-2", "green", "orange")
     AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
   end
@@ -289,7 +289,7 @@ if angelsmods.industries.tech then
     end
     -- power distribution
     if settings.startup["bobmods-power-poles"].value == true then
-      AI.pack_replace("electric-pole-2", "green", "orange")
+      AI.pack_replace("electric-pole-2", "blue", "orange")
       AI.pack_replace("electric-pole-4", "blue", "yellow")
       AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
       AI.pack_replace("electric-substation-3", "blue", "yellow")
