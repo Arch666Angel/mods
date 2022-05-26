@@ -85,10 +85,10 @@ local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_par
 if mods["bobplates"] then
   for fluid, vals in pairs(Energy_table) do
     if vals.fv then
-      data.raw.fluid[fluid].fuel_value = vals.fv .."kJ"
+      data.raw.fluid[fluid].fuel_value = (math.floor(vals.fv/5+0.5))*5 .."kJ"
       data.raw.fluid[fluid].emissions_multiplier = vals.em or data.raw.fluid[fluid].emissions_multiplier or 1
       if vals.turr ~= false then
-        table.insert(turret_params, {type = fluid, damage_modifier = vals.fv/Energy_table["gas-methane"].fv})
+        table.insert(turret_params, {type = fluid, damage_modifier = math.floor(vals.fv/Energy_table["gas-methane"].fv*10+0.5)/10})
       end
     end
   end
