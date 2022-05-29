@@ -66,6 +66,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   {
@@ -122,6 +124,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   {
@@ -176,6 +180,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },
 })
@@ -213,6 +219,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.green,
+      secondary = tint_colors.green,
+      tertiary = tint_colors.green,
     },
   },
   --advanced reprocessing
@@ -298,6 +306,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   --basic reprocessing
@@ -354,6 +364,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   --advanced reprocessing
@@ -448,6 +460,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },
   --advanced fuel cell
@@ -477,6 +491,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },]]
   --basic reprocessing
@@ -540,6 +556,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },
   -- advanced reprocessing
@@ -688,6 +706,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,
+      secondary = tint_colors.blue,
+      tertiary = tint_colors.blue,
     },
   },
   -- advanced reprocessing
@@ -750,6 +770,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,
+      secondary = tint_colors.blue,
+      tertiary = tint_colors.blue,
     },
   },
 })

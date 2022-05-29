@@ -58,6 +58,25 @@ if angelsmods.industries.components then
   end
 
   -----------------------------------------------------------------------------
+  -- BOB EQUIPMENT ------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobequipment"] then
+    OV.patch_recipes(
+      {
+        {
+          name = "personal-roboport-mk2-equipment",
+          ingredients = {
+            { type = "item", name = "battery-3", amount = "battery-5"}
+          }
+        },
+      }
+    )
+    OV.remove_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
+    OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-3")
+    OV.add_prereq("personal-roboport-mk3-equipment", "angels-components-batteries-4")
+  end
+
+  -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobrevamp"] then
