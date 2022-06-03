@@ -357,6 +357,7 @@ local unit_test_006 = function()
         unit_test_result = unit_test_functions.test_failed
       elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_functions.print_msg(string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name))
+        unit_test_result = unit_test_functions.test_failed
       elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_result = unit_test_functions.test_failed
       end

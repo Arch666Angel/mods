@@ -21,4 +21,14 @@ if angelsmods.industries.components then
     }
   )
 
+  if mods["bobwarfare"] then
+    -- laser rifle
+    if angelsmods.industries.tech then
+    else
+      OV.remove_prereq("bob-laser-rifle-ammo-2", "military-3")
+      OV.add_prereq("bob-laser-rifle-ammo-3", "military-3")
+    end
+  end
+
+
 end
