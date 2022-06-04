@@ -130,11 +130,6 @@ if mods["bobrevamp"] then
       }
     )
   end
-  -----------------------------------------------------------------------------
-  -- PEROXIDE DEAD END --------------------------------------------------------
-  -----------------------------------------------------------------------------
-  --this may be used at a later date, but for now, it is a dead-end
-  angelsmods.functions.add_flag("gas-hydrogen-peroxide","hidden")
 
   -----------------------------------------------------------------------------
   -- RTG ----------------------------------------------------------------------
@@ -146,13 +141,9 @@ if mods["bobrevamp"] then
     if settings.startup["bobmods-revamp-hardmode"].value then
       OV.disable_recipe(
         {
-          "brine-electrolysis", -- equivalent of angels recipe "water-saline-seperation"
           "ammoniated-brine", "sodium-bicarbonate", "sodium-carbonate", -- angels has own process of creating "solid-sodium-carbonate" from saline water
         }
       )
-
-      angelsmods.functions.add_flag("brine", "hidden")
-      angelsmods.functions.disable_barreling_recipes("brine")
 
       angelsmods.functions.add_flag("ammoniated-brine", "hidden")
       angelsmods.functions.disable_barreling_recipes("ammoniated-brine")
@@ -165,26 +156,7 @@ if mods["bobrevamp"] then
       OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
       angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
 
-      OV.patch_recipes(
-        {
-          {
-            name = "ammonium-chloride-recycling",
-            ingredients =
-            {
-              --{name = "solid-limestone", type = "item", amount = 1},
-              {name = "gas-ammonium-chloride", type = "fluid", amount = 20},
-              {name = "ammonium-chloride", type = "item", amount = 0}
-            },
-            results =
-            {
-              {type = "fluid", name = "gas-ammonia", amount = 40}, -- 40 instead of 50 to be ammonia neutral (no production of it)
-            },
-            subgroup = "petrochem-basics",
-            crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-ammonia","gas-ammonium-chloride"}),
-            order = "e[solid-calcium-chloride]-b"
-          }
-        }
-      )
+      OV.disable_recipe({"ammonium-chloride-recycling"})
       OV.converter_fluid("ammonium-chloride", "gas-ammonium-chloride")
       angelsmods.functions.add_flag("ammonium-chloride", "hidden")
     end

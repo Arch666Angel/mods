@@ -69,11 +69,17 @@ if angelsmods.industries then
 end
 
 --OVERRIDE FOR BOBS
---LOGISTICS
 if angelsmods.addons.storage.silos then
+  --LOGISTICS
   if mods["boblogistics"] then
   else
     table.insert(data.raw.technology["logistic-silos"].unit.ingredients,
       {type = "item", name = "utility-science-pack", amount = 1})
+  end
+
+  --TECHNOLOGY
+  if mods["bobtech"] then
+    table.insert(data.raw.technology["logistic-silos"].unit.ingredients,
+      {type = "item", name = "advanced-logistic-science-pack", amount = 1})
   end
 end

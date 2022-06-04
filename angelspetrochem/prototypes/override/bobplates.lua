@@ -119,7 +119,7 @@ if mods["bobplates"] then
     {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
   )
   OV.barrel_overrides("liquid-fuel", "acid")
-  
+
   data.raw["recipe"]["liquid-fuel"].always_show_products = true
   data.raw["recipe"]["liquid-fuel"].icon = nil
   data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(

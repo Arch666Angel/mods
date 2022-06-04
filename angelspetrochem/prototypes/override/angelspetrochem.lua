@@ -226,12 +226,6 @@ if angelsmods.functions.is_special_vanilla() then
     }, "hidden")
   end
 
-  if mods["bobrevamp"] then
-  else
-    angelsmods.functions.add_flag({
-      "gas-hydrogen-peroxide",
-    }, "hidden")
-  end
 end
 
 if angelsmods.trigger.resin then
@@ -289,3 +283,17 @@ else
   )
   angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
 end
+
+-----------------------------------------------------------------------------
+-- DEAD ENDS ----------------------------------------------------------------
+-----------------------------------------------------------------------------
+--Hydrogen peroxide may be used at a later date, but for now, it is a dead-end
+angelsmods.functions.add_flag({
+  "gas-hydrogen-peroxide",
+  "gas-phosgene"
+}, "hidden")
+OV.disable_recipe(
+  {
+    "gas-phosgene"
+  }
+)

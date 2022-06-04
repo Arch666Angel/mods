@@ -3,6 +3,7 @@ Version: 0.6.19
 Date: ???
   Changes:
     - Removed the obsolete ingredient_count limitation on all smelting buildings (763)
+    - Disabled Ammonium chloride gas when platinum is disabled (769)
     - Added build and mining sounds to concrete brick tiles (776)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.18

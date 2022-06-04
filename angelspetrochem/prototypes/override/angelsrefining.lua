@@ -79,7 +79,7 @@ if angelsmods.refining then
   OV.remove_science_pack("lubricant", "chemical-science-pack")
 
   -- handle electric engine since lubricant moved...
-  if mods["boblogistics"] and (not mods["angelsindustries"]) then
+  if mods["boblogistics"] then
     -- robotics required at green science
   else
     -- robotics required at blue science

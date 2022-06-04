@@ -27,6 +27,10 @@ if angelsmods.industries.components then
   OV.remove_science_pack("angels-steel-smelting-1", "logistic-science-pack")
   OV.remove_prereq("angels-steel-smelting-1", "angels-metallurgy-2")
   OV.add_prereq("angels-steel-smelting-1", "angels-metallurgy-1")
+  -- update depending technologies accordingly
+  if angelsmods.trigger.smelting_products["invar"].plate and mods["bobplates"] then
+    OV.add_prereq("angels-invar-smelting-1", "logistic-science-pack")
+  end
 
   -----------------------------------------------------------------------------
   -- ADD ELECTRONIC RECIPES TO ELECTRONIC ASSMBLY -----------------------------

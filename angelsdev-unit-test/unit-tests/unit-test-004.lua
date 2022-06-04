@@ -44,7 +44,14 @@ end
 
 local unit_test_004 = function()
   local unit_test_result = unit_test_functions.test_successful
-  
+
+  if game.active_mods["SeaBlock"] then
+    tech_unlocked_by_script["sb-startup1"] = true
+    tech_unlocked_by_script["sb-startup2"] = true
+    tech_unlocked_by_script["sb-startup3"] = true
+    tech_unlocked_by_script["sct-automation-science-pack"] = true
+  end
+
   local tech_prototypes = game.technology_prototypes
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     if (not tech_hidden(tech_prototype)) and (not tech_unlocked_by_script[tech_name]) then

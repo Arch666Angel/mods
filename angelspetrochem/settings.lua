@@ -44,13 +44,6 @@ data:extend(
     },
     {
       type = "bool-setting",
-      name = "angels-disable-bobs-distilleries",
-      setting_type = "startup",
-      default_value = true,
-      order = "cc"
-    },
-    {
-      type = "bool-setting",
       name = "angels-show-chemical-formula",
       setting_type = "startup",
       default_value = true,

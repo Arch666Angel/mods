@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
-Date: xx.xx.202x
+Date: ???
   Bugfixes:
+    - Fixed technology cost of logistics silos when playing with bobtech
+    - Fixed technology cost of logistics warehouses when playing with bobtech
     - Added missing setting localisation
     - Fixed active / passive provider warehouse descriptions
 ---------------------------------------------------------------------------------------------------

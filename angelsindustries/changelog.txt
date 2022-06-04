@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.16
 Date: xx.xx.202x
+  Changes:
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
   Bugfixes:
     - Regular mode:
       - Fixed centrifuges did not have their customizable lights enabled as intended (772)

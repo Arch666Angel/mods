@@ -1488,14 +1488,14 @@ end
 
 function angelsmods.functions.modify_barreling_icon()
   for ix, item in pairs(data.raw.item) do
-    if item.subgroup == "fill-barrel" then
+    if item.subgroup and string.sub(item.name, -6, -1) == "barrel" then
       local icon_name = string.sub(item.name, 1, -8)
       for kx, fluid in pairs(data.raw.fluid) do
         if fluid.name == icon_name then
           if item.icons then
             local icon_size = fluid.icon_size or 32
             if fluid.icon then
-              table.insert(item.icons, {icon = fluid.icon, icon_size = icon_size, shift = {0, 5}, scale = 16 / icon_size})
+              table.insert(item.icons, {icon = fluid.icon, icon_size = icon_size, icon_mipmaps = fluid.icon_mipmaps, shift = {0, 5}, scale = 16 / icon_size})
             end
             if fluid.icons then
               item.icons = util.combine_icons(item.icons, fluid.icons, {scale = 16 / icon_size, shift = {0, 5}})
@@ -1540,18 +1540,30 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
   end
 
   for fn, fd in pairs(fluids_to_move) do
-    local recipe = recipes[fn]
-
-    local subgroup_name = fd.subgroup or (recipe and recipe.subgroup) or "vanilla"
-    local subgroup = subgroups[subgroup_name]
-    local subgroup_order = subgroup and subgroup.order or "z"
-
-    local group = groups[subgroup and subgroup.group or "vanilla"]
-    local group_order = group and group.order or "z"
-
     local barrel = items[fn .. "-barrel"]
 
-    if subgroup and barrel then
+    if barrel then
+      local recipe = recipes[fn]
+      local subgroup_name
+      if barrel.subgroup ~= "barrel" then
+        subgroup_name = barrel.subgroup
+      elseif fd.subgroup then
+        subgroup_name = fd.subgroup
+      elseif recipe and recipe.subgroup then
+        if recipe.subgroup == "fluid-recipes" then
+          subgroup_name = "vanilla"
+        else
+          subgroup_name = recipe.subgroup
+        end
+      else
+        subgroup_name = "vanilla"
+      end
+      local subgroup = subgroups[subgroup_name]
+      local subgroup_order = subgroup and subgroup.order or "z"
+
+      local group = groups[subgroup and subgroup.group or "vanilla"]
+      local group_order = group and group.order or "z"
+
       barrel.subgroup = "angels-fluid-control-" .. subgroup_name
       barrel.order = fd.order or (recipe and recipe.order) or "z"
 
