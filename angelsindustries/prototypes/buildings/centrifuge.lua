@@ -257,3 +257,77 @@ for _,centrifuge_name in pairs{
     }
   end
 end
+
+-- add pipe input to the centrifuge
+for _,centrifuge_name in pairs{
+  "centrifuge",
+  "centrifuge-2",
+  "centrifuge-3",
+} do
+  local centrifuge = data.raw["assembling-machine"][centrifuge_name]
+  if centrifuge then
+
+    local has_fluid_input_box = false
+    local has_fluid_output_box = false
+    if centrifuge.fluid_boxes then
+      for fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
+        if fluid_box_prototype.production_type == "input" and fluid_box_prototype.filter == nil then
+          has_fluid_input_box = true
+        end
+        if fluid_box_prototype.production_type == "output" and fluid_box_prototype.filter == nil then
+          has_fluid_output_box = true
+        end
+      end
+    else
+      centrifuge.fluid_boxes = {}
+    end
+
+    if has_fluid_input_box then
+    else
+      table.insert(centrifuge.fluid_boxes, {
+        production_type = "input",
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{type = "input", position = {0, -2}}} -- assume 3x3 entity collision box
+      })
+    end
+
+    if has_fluid_output_box then
+    else
+      table.insert(centrifuge.fluid_boxes, {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = {{type = "input", position = {0, 2}}} -- assume 3x3 entity collision box
+      })
+    end
+
+  end
+end
+
+-- add tiered crafting categories
+local bob_centrifuge_2 = mods["bobsassembly"] and data.raw["assembling-machine"]["centrifuge-2"] and true or false
+local bob_centrifuge_3 = bob_centrifuge_2 and data.raw["assembling-machine"]["centrifuge-3"] and true or false
+for centrifuge_name,centrifuge_categegories in pairs{
+  ["centrifuge"] = bob_centrifuge_2 and {"centrifuging"} or {"centrifuging", "centrifuging-2", "centrifuging-3"},
+  ["centrifuge-2"] = bob_centrifuge_3 and {"centrifuging", "centrifuging-2"} or {"centrifuging", "centrifuging-2", "centrifuging-3"},
+  ["centrifuge-3"] = {"centrifuging", "centrifuging-2", "centrifuging-3"},
+} do
+  local centrifuge = data.raw["assembling-machine"][centrifuge_name]
+  if centrifuge then
+    for _,centrifuge_category in pairs(centrifuge_categegories) do
+      local centrifuge_category_present = false
+      for category in pairs(centrifuge.crafting_categories) do
+        if category == centrifuge_category then
+          centrifuge_category_present = true
+        end
+      end
+      if centrifuge_category_present then
+      else
+        table.insert(centrifuge.crafting_categories, centrifuge_category)
+      end
+    end
+  end
+end

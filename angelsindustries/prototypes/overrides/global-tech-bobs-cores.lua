@@ -69,6 +69,11 @@ if angelsmods.industries.tech then
       AI.core_replace("bob-distillery-2", "basic", "processing")
       AI.core_replace("bob-distillery-3", "basic", "processing")
     end
+    -- centrifuge
+    if settings.startup["bobmods-assembly-centrifuge"].value then
+      AI.core_replace("centrifuge-2", "processing", "energy")
+      AI.core_replace("centrifuge-3", "processing", "energy")
+    end
   end
 
   -------------------------------------------------------------------------------
