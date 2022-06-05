@@ -11,11 +11,11 @@
   --PLATES
   angelsmods.functions.RB.set_fallback("item", "t0-plate", { { "block-construction-1" }, { "iron-plate", 3 } })
   angelsmods.functions.RB.set_fallback("item", "t1-plate", { { "block-construction-1" }, { "steel-plate", 3 } })
-  angelsmods.functions.RB.set_fallback("item", "t2-plate", { { "block-construction-2" }, { "bronze-alloy", 3 }, { "steel-plate", 5 } })
+  angelsmods.functions.RB.set_fallback("item", "t2-plate", { { "block-construction-2" }, { "bronze-alloy", 3, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["bronze"].plate or false end }, { "steel-plate", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t3-plate", { { "block-construction-3" }, { "aluminium-plate", 4 }, { "angels-plate-aluminium", 4, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["aluminium"].plate or false end }, { "steel-plate", 7 } })
   angelsmods.functions.RB.set_fallback("item", "t4-plate", { { "block-construction-4" }, { "titanium-plate", 4 }, { "angels-plate-titanium", 4, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["titanium"].plate or false end }, { "steel-plate", 9 } })
   angelsmods.functions.RB.set_fallback("item", "t5-plate", { { "block-construction-5" }, { "tungsten-plate", 4 }, { "angels-plate-tungsten", 4, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false end }, { "steel-plate", 11 } })
-  angelsmods.functions.RB.set_fallback("item", "t6-plate", { { "block-construction-5" }, { "tungsten-carbide", 4 }, { "angels-plate-tungsten", 4, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false end }, { "steel-plate", 13 } })
+  angelsmods.functions.RB.set_fallback("item", "t6-plate", { { "block-construction-5" }, { "tungsten-carbide", 4, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false end }, { "angels-plate-tungsten", 4, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false end }, { "steel-plate", 13 } })
 
   --BRICK
   angelsmods.functions.RB.set_fallback("item", "t0-brick", { { "block-construction-1" }, { "stone-brick", 5 } })
@@ -41,8 +41,8 @@
   angelsmods.functions.RB.set_fallback("item", "t2-pipe", { { "block-fluidbox-1" }, { "bronze-pipe", 3 }, { "pipe", 6} })
   angelsmods.functions.RB.set_fallback("item", "t3-pipe", { { "block-fluidbox-2" }, { "brass-pipe", 3 }, { "pipe", 7 } })
   angelsmods.functions.RB.set_fallback("item", "t4-pipe", { { "block-fluidbox-2" }, { "titanium-pipe", 3 }, { "pipe", 8 } })
-  angelsmods.functions.RB.set_fallback("item", "t5-pipe", { { "block-fluidbox-2" }, { "tungsten-pipe", 3 }, { "pipe", 8 } })
-  angelsmods.functions.RB.set_fallback("item", "t6-pipe", { { "block-fluidbox-2" }, { "copper-tungsten-pipe", 3 }, { "pipe", 9 } })
+  angelsmods.functions.RB.set_fallback("item", "t5-pipe", { { "block-fluidbox-2" }, { "tungsten-pipe", 3 }, { "pipe", 9 } })
+  angelsmods.functions.RB.set_fallback("item", "t6-pipe", { { "block-fluidbox-2" }, { "copper-tungsten-pipe", 3 }, { "pipe", 10 } })
 
   --BIO
   angelsmods.functions.RB.set_fallback("item", "t1-bio", { { "block-production-1" } })

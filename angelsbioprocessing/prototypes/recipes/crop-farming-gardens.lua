@@ -9,39 +9,19 @@ data:extend(
       name = "temperate-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-temperate-seed",
-      normal =
+      enabled = false,
+      energy_required = 300,
+      ingredients =
       {
-        enabled = false,
-        energy_required = 300,
-        ingredients =
-        {
-          {type = "item", name = "temperate-garden", amount = 1}
-        },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 32}
-        },
-        main_product = "token-bio",
-        always_show_products = true,
-        show_amount_in_title = false,
+        {type = "item", name = "temperate-garden", amount = 1}
       },
-      expensive =
+      results =
       {
-        enabled = false,
-        energy_required = 300,
-        ingredients =
-        {
-          {type = "item", name = "temperate-garden", amount = 1}
-        },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
-          {type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1}
-        },
-        main_product = "token-bio",
-        always_show_products = true,
-        show_amount_in_title = false,
+        {type = "item", name = "token-bio", amount = 32}
       },
+      main_product = "token-bio",
+      always_show_products = true,
+      show_amount_in_title = false,
       icons =
       {
         {
@@ -59,7 +39,7 @@ data:extend(
     {
       type = "recipe",
       name = "temperate-garden-cultivating-b",
-      category = "advanced-temperate-farming",
+      category = "temperate-farming",
       subgroup = "farming-temperate-seed",
       enabled = false,
       energy_required = 60,
@@ -202,39 +182,19 @@ data:extend(
       name = "desert-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-desert-seed",
-      normal =
+      enabled = false,
+      energy_required = 300,
+      ingredients =
       {
-        enabled = false,
-        energy_required = 300,
-        ingredients =
-        {
-          {type = "item", name = "desert-garden", amount = 1}
-        },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 32}
-        },
-        main_product = "token-bio",
-        always_show_products = true,
-        show_amount_in_title = false,
+        {type = "item", name = "desert-garden", amount = 1}
       },
-      expensive =
+      results =
       {
-        enabled = false,
-        energy_required = 300,
-        ingredients =
-        {
-          {type = "item", name = "desert-garden", amount = 1}
-        },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
-          {type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1}
-        },
-        main_product = "token-bio",
-        always_show_products = true,
-        show_amount_in_title = false,
+        {type = "item", name = "token-bio", amount = 32}
       },
+      main_product = "token-bio",
+      always_show_products = true,
+      show_amount_in_title = false,
       icons =
       {
         {
@@ -252,7 +212,7 @@ data:extend(
     {
       type = "recipe",
       name = "desert-garden-cultivating-b",
-      category = "advanced-desert-farming",
+      category = "desert-farming",
       subgroup = "farming-desert-seed",
       enabled = false,
       energy_required = 60,
@@ -395,39 +355,19 @@ data:extend(
       name = "swamp-garden-cultivating-a",
       category = "seed-extractor",
       subgroup = "farming-swamp-seed",
-      normal =
+      enabled = false,
+      energy_required = 300,
+      ingredients =
       {
-        enabled = false,
-        energy_required = 300,
-        ingredients =
-        {
-          {type = "item", name = "swamp-garden", amount = 1}
-        },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 32}
-        },
-        main_product = "token-bio",
-        always_show_products = true,
-        show_amount_in_title = false,
+        {type = "item", name = "swamp-garden", amount = 1}
       },
-      expensive =
+      results =
       {
-        enabled = false,
-        energy_required = 300,
-        ingredients =
-        {
-          {type = "item", name = "swamp-garden", amount = 1}
-        },
-        results =
-        {
-          {type = "item", name = "token-bio", amount = 1, probability = 1 / (2 * intermediatemulti)},
-          {type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1}
-        },
-        main_product = "token-bio",
-        always_show_products = true,
-        show_amount_in_title = false,
+        {type = "item", name = "token-bio", amount = 32}
       },
+      main_product = "token-bio",
+      always_show_products = true,
+      show_amount_in_title = false,
       icons =
       {
         {
@@ -445,7 +385,7 @@ data:extend(
     {
       type = "recipe",
       name = "swamp-garden-cultivating-b",
-      category = "advanced-swamp-farming",
+      category = "swamp-farming",
       subgroup = "farming-swamp-seed",
       enabled = false,
       energy_required = 60,

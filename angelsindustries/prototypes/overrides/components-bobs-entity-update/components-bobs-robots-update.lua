@@ -96,6 +96,14 @@ if angelsmods.industries.components then
   end
   OV.add_prereq("bob-robotics-4", "angels-components-mechanical-5")
   OV.add_prereq("bob-robotics-4", "tech-yellow-circuit")
+  if angelsmods.industries.tech then
+  else
+    OV.set_science_pack("bob-robotics-4", "utility-science-pack")
+    OV.set_science_pack("bob-robots-3", "utility-science-pack")
+    if mods["bobwarfare"] then
+      OV.set_science_pack("bob-laser-robot", "utility-science-pack")
+    end
+  end
 
   -- charging pads
   OV.patch_recipes(

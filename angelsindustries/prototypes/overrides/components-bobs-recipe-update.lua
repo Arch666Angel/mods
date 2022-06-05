@@ -56,6 +56,43 @@ if angelsmods.industries.components then
     OV.disable_recipe("wooden-board-paper")
     OV.disable_recipe("superior-circuit-board")
   end
+
+  -----------------------------------------------------------------------------
+  -- BOB EQUIPMENT ------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobequipment"] then
+    -- roboports
+    OV.patch_recipes(
+      {
+        {
+          name = "personal-roboport-mk2-equipment",
+          ingredients = {
+            { type = "item", name = "battery-3", amount = "battery-5"}
+          }
+        },
+      }
+    )
+    OV.remove_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
+    OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-3")
+    OV.add_prereq("personal-roboport-mk3-equipment", "angels-components-batteries-4")
+
+    -- exoskeleton
+    OV.patch_recipes(
+      {
+        {
+          name = "exoskeleton-equipment",
+          ingredients =
+          {
+            { type = "item", name = "motor-3", amount = "motor-4" },
+          },
+        }
+      }
+    )
+    OV.remove_prereq("exoskeleton-equipment", "electric-engine")
+    OV.add_prereq("exoskeleton-equipment", "angels-components-mechanical-3")
+    OV.add_prereq("exoskeleton-equipment", "tech-orange-circuit")
+  end
+
   -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -115,6 +152,13 @@ if angelsmods.industries.components then
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")
     OV.add_unlock("angels-components-batteries-6", "silver-oxide")
+  end
+
+  -----------------------------------------------------------------------------
+  -- BOB POWER ----------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobpower"] then
+    OV.add_prereq("bob-boiler-2", "angels-components-construction-2")
   end
 
   OV.execute()

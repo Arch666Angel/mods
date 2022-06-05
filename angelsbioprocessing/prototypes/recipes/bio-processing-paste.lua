@@ -18,6 +18,7 @@ data:extend(
       },
       icon = "__angelsbioprocessing__/graphics/icons/paste-cellulose.png",
       icon_size = 32,
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-chlor-methane"),
       order = "c[paste-cellulose]"
     },
     {

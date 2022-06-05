@@ -7,6 +7,10 @@ local function copyGrid(name, tile_data)
   grid.localised_name = {"tile-name."..name}
   grid.needs_correction = false
   grid.minable = {mining_time = 0.1, result = name}
+  
+  local concrete = data.raw.tile["concrete"]
+  grid.build_sound = table.deepcopy(concrete.build_sound)
+  grid.mined_sound = table.deepcopy(concrete.mined_sound)
 
   for k, v in pairs(tile_data or {}) do
     grid[k] = v
@@ -14,9 +18,6 @@ local function copyGrid(name, tile_data)
 
   return grid
 end
-
-local concrete_brick_tile_data = 
-
 
 data:extend(
   {

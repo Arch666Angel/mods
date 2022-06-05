@@ -29,6 +29,7 @@ data.raw.item["landfill"].stack_size = angelsmods.trigger.pavement_stack_size
 --OVERRIDE FOR BOBs
 require("prototypes.override.refining-override-bobmining")
 require("prototypes.override.refining-override-bobplates")
+require("prototypes.override.refining-override-bobores")
 require("prototypes.override.refining-override-bobgems")
 require("prototypes.override.refining-override-bobtech")
 require("prototypes.override.refining-override-bobrevamp")
@@ -36,11 +37,15 @@ require("prototypes.override.refining-override-bobwarfare")
 require("prototypes.override.refining-override-boblogistics")
 require("prototypes.override.refining-override-bobmodules")
 require("prototypes.override.refining-override-bobpower")
+require("prototypes.override.refining-override-bobequipment")
 require("prototypes.override.refining-override-bobvehicleequipment")
 
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+    angelsmods.functions.disable_barreling_recipes("brine")
+    angelsmods.functions.add_flag("brine", "hidden")
+    OV.disable_recipe({"brine-electrolysis"}) -- equivalent of angels recipe "water-saline-seperation"
     OV.global_replace_item("brine", "water-saline")
     OV.disable_recipe("brine")
   end
@@ -50,8 +55,11 @@ if mods["bobplates"] then
     data.raw.item["empty-canister"].order = "i"
     data.raw.item["gas-canister"].subgroup = "angels-fluid-control"
     data.raw.item["gas-canister"].order = "j"
-    data.raw.technology["gas-canisters"].prerequisites = {"fluid-handling"}
+    data.raw.technology["gas-canisters"].prerequisites = {"fluid-canister-processing"}
     data.raw.technology["gas-canisters"].enabled = true
+    OV.remove_prereq("fluid-canister-processing", "water-bore-1")
+    OV.add_prereq("fluid-canister-processing", "fluid-barrel-processing")
+    OV.remove_prereq("fluid-barrel-processing", "water-bore-1")
     OV.patch_recipes(
       {
         {
@@ -73,6 +81,8 @@ if mods["bobplates"] then
       }
     )
   end
+  OV.remove_unlock("fluid-handling", "barreling-pump")
+  OV.add_unlock("fluid-barrel-processing", "barreling-pump")
 end
 --General barrelling fix
 for _, fluid_n in pairs(data.raw.fluid) do
@@ -91,6 +101,7 @@ for _, fluid_n in pairs(data.raw.fluid) do
         },
       }
     )
+
     if mods["bobplates"] then
       if string.sub(fluid_n.name, 1, 3) == "gas" then
         OV.barrel_overrides(fluid_n.name, "gas")
@@ -170,6 +181,7 @@ if data.raw.item["y-res1"] then
           },
           slag_color
         ),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
         order = "a-a [slag-processing-yi]"
       },
       {
@@ -212,6 +224,7 @@ if data.raw.item["y-res1"] then
           {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
           {icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
         },
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
         order = "c-i-g[angelsore-chunk-mix-yi2-processing]"
       },
       {
@@ -235,9 +248,10 @@ if data.raw.item["y-res1"] then
             "water-purified",
             mods["angelspetrochem"] and {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32} or "sulfur"
           },
-          "wss"
+          "WsSS"
         ),--
-        order = "a[yellow-waste-water-purification-yi]"
+        order = "a[yellow-waste-water-purification-yi]",
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"y-con_water","water-yellow-waste","water-purified"}),
       }
     }
   )

@@ -23,4 +23,10 @@ if angelsmods.addons.storage.warehouses then
       {type = "item", name = "utility-science-pack", amount = 1})
   end
 
+  --TECHNOLOGY
+  if mods["bobtech"] then
+    table.insert(data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
+      {type = "item", name = "advanced-logistic-science-pack", amount = 1})
+  end
+
 end

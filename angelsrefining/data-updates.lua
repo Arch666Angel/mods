@@ -18,6 +18,9 @@ if angelsmods.trigger.refinery_products["ferrous"] then
   angelsmods.trigger.refinery_products["saphirite"] = true
   angelsmods.trigger.refinery_products["jivolite"] = true
   angelsmods.trigger.refinery_products["rubyte"] = true
+  if angelsmods.petrochem then
+    angelsmods.trigger.liquid_ferric_chloride_solution = true
+  end
 end
 
 angelsmods.trigger.refinery_products["cupric"] =
@@ -26,6 +29,9 @@ if angelsmods.trigger.refinery_products["cupric"] then
   angelsmods.trigger.refinery_products["stiratite"] = true
   angelsmods.trigger.refinery_products["crotinnium"] = true
   angelsmods.trigger.refinery_products["bobmonium"] = true
+  if angelsmods.petrochem then
+    angelsmods.trigger.liquid_cupric_chloride_solution = true
+  end
 end
 
 --Fallbacks for the recipe builder

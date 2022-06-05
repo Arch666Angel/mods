@@ -120,6 +120,7 @@ if angelsmods.industries.components then
         OV.add_prereq("bob-solar-energy-2", "angels-basic-blocks-3")
         OV.add_prereq("bob-solar-energy-3", "angels-advanced-blocks-1")
         OV.add_prereq("bob-solar-energy-4", "angels-advanced-blocks-2")
+        OV.set_science_pack("bob-solar-energy-4", "utility-science-pack")
       end
     end
 
@@ -231,6 +232,7 @@ if angelsmods.industries.components then
         --OV.add_prereq("bob-electric-energy-accumulators-2", "angels-basic-blocks-3")
         OV.add_prereq("bob-electric-energy-accumulators-3", "angels-advanced-blocks-1")
         OV.add_prereq("bob-electric-energy-accumulators-4", "angels-advanced-blocks-2")
+        OV.set_science_pack("bob-electric-energy-accumulators-4", "utility-science-pack")
       end
     end
 

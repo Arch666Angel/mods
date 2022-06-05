@@ -4,7 +4,6 @@
 -- depends on a technology unlocking the required science level.
 local unit_test_functions = require("unit-test-functions")
 
--- this unit test currently doesn't cover bobs technologies
 local technologies_to_ignore =
 {
 }
@@ -14,128 +13,201 @@ local bonus_upgrade_technologies =
 {
 }
 
-local science_pack_level =
-{
-  -- level 0 = no science pack requirements
+local science_pack_level = {}
+local function calculate_science_pack_level()
+  local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value or false
 
-  -- vanilla science packs (priority range 100 - 999)
-  ["automation-science-pack"] = 100,
-  ["logistic-science-pack"] = 200,
-  ["military-science-pack"] = 300,
-  ["chemical-science-pack"] = 400,
-  ["production-science-pack"] = 500,
-  ["utility-science-pack"] = 600,
-  ["space-science-pack"] = 700,
+  if technology_overhaul then
+    for pack_name, pack_level in pairs{
+      -- angels science packs
+      ["angels-science-pack-grey"] = 50,
+      ["angels-science-pack-red"] = 100,
+      ["angels-science-pack-green"] = 200,
+      ["angels-science-pack-orange"] = 300,
+      ["angels-science-pack-blue"] = 400,
+      ["angels-science-pack-yellow"] = 600,
+      ["angels-science-pack-white"] = 700,
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
 
-  -- bobs regular science packs (priority range similar to vanilla)
-  ["advanced-logistic-science-pack"] = 450,
+    for pack_name, pack_level in pairs{
+      -- angels datacores
+      ["datacore-basic"] = science_pack_level["angels-science-pack-grey"],
+      ["datacore-exploration-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-exploration-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-enhance-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-enhance-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-energy-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-energy-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-logistic-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-logistic-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-war-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-war-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-processing-1"] = science_pack_level["angels-science-pack-red"],
+      ["datacore-processing-2"] = science_pack_level["angels-science-pack-blue"],
+      ["datacore-processing-3"] = nil, -- unused
+      ["datacore-processing-4"] = nil, -- unused
+      ["datacore-processing-5"] = nil, -- unused
+      ["datacore-processing-6"] = nil, -- unused
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
+  else
+    for pack_name, pack_level in pairs{
+      -- vanilla science packs
+      ["automation-science-pack"] = 100,
+      ["logistic-science-pack"] = 200,
+      ["military-science-pack"] = 300,
+      ["chemical-science-pack"] = 400,
+      ["production-science-pack"] = 500,
+      ["utility-science-pack"] = 600,
+      ["space-science-pack"] = 700,
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
+  end
 
-  -- bobs module science packs (priority range similar to vanilla)
-  ["speed-processor"] = 250,
-  ["effectivity-processor"] = 250,
-  ["productivity-processor"] = 250,
-  ["pollution-clean-processor"] = 250,
-  ["pollution-create-processor"] = 250,
-  ["module-circuit-board"] = 450,
-  ["module-case"] = 550,
+  if game.active_mods["angelsbioprocessing"] then
+    science_pack_level["token-bio"] = science_pack_level["angels-science-pack-red"] or science_pack_level["automation-science-pack"]
+  end
 
-  -- bobs alien science packs (priority range similar to vanilla)
-  ["science-pack-gold"] = 450,
-  ["alien-science-pack"] = 450,
-  ["alien-science-pack-blue"] = 450,
-  ["alien-science-pack-orange"] = 450,
-  ["alien-science-pack-purple"] = 450,
-  ["alien-science-pack-yellow"] = 450,
-  ["alien-science-pack-green"] = 450,
-  ["alien-science-pack-red"] = 450,
+  if game.active_mods["bobtech"] then
+    -- bobs regular science packs
+    for pack_name, pack_level in pairs{
+      ["steam-science-pack"] = 30,
+      ["advanced-logistic-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]),
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
 
-  -- angels science packs (priority range 1 - 99)
-  -- priorities set lower than vanilla science packs such that
-  -- a prerequisite with regular packs will throw an error
-  ["angels-science-pack-grey"] = 10,
-  ["angels-science-pack-red"] = 20,
-  ["angels-science-pack-green"] = 30,
-  ["angels-science-pack-orange"] = 40,
-  ["angels-science-pack-blue"] = 50,
-  ["angels-science-pack-yellow"] = 60,
-  ["angels-science-pack-white"] = 70,
-  ["token-bio"] = 20, -- unlocked early at red science, neglectable
+    if game.active_mods["bobenemies"] then
+      -- bobs alien science packs
+      for pack_name, pack_level in pairs{
+        ["science-pack-gold"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-blue"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-orange"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-purple"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-yellow"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-green"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-red"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+      } do
+        science_pack_level[pack_name] = pack_level
+      end
+    end
+  end
 
-  -- angels datacores (priority range similar to angels science packs)
-  ["datacore-basic"] = 10,
-  ["datacore-exploration-1"] = 20,
-  ["datacore-exploration-2"] = 50,
-  ["datacore-enhance-1"] = 20,
-  ["datacore-enhance-2"] = 50,
-  ["datacore-energy-1"] = 20,
-  ["datacore-energy-2"] = 50,
-  ["datacore-logistic-1"] = 20,
-  ["datacore-logistic-2"] = 50,
-  ["datacore-war-1"] = 20,
-  ["datacore-war-2"] = 50,
-  ["datacore-processing-1"] = 20,
-  ["datacore-processing-2"] = 50,
-  ["datacore-processing-3"] = nil, -- unused
-  ["datacore-processing-4"] = nil, -- unused
-  ["datacore-processing-5"] = nil, -- unused
-  ["datacore-processing-6"] = nil, -- unused
-}
+  if game.active_mods["bobmodules"] then
+    for pack_name, pack_level in pairs{
+      -- bobs module science packs
+      ["speed-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
+      ["effectivity-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
+      ["productivity-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
+      ["pollution-clean-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
+      ["pollution-create-processor"] = 50 + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
+      ["module-circuit-board"] = science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"],
+      ["module-case"] = science_pack_level["angels-science-pack-yellow"] or science_pack_level["production-science-pack"],
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
+    technologies_to_ignore["effectivity-module-5"] = true
+    technologies_to_ignore["green-module-1"] = true
+    technologies_to_ignore["god-module-1"] = true
+    technologies_to_ignore["pollution-clean-module-5"] = true
+    technologies_to_ignore["pollution-create-module-5"] = true
+    technologies_to_ignore["productivity-module-5"] = true
+    technologies_to_ignore["raw-productivity-module-1"] = true
+    technologies_to_ignore["raw-speed-module-1"] = true
+    technologies_to_ignore["speed-module-5"] = true
+  end
 
-local tech_bonus_effects =
-{
-  -- inserter bonus
-  ["inserter-stack-size-bonus"] = true,
-  ["stack-inserter-capacity-bonus"] = true,
-  -- lab bonus
-  ["laboratory-speed"] = true,
-  ["laboratory-productivity"] = true,
-  -- bot logistic bonus
-  ["worker-robot-speed"] = true,
-  ["worker-robot-storage"] = true,
-  ["worker-robot-battery"] = true,
-  -- bot building bonus
-  ["ghost-time-to-live"] = true,
-  ["deconstruction-time-to-live"] = true,
-  ["max-failed-attempts-per-tick-per-construction-queue"] = true,
-  ["max-successful-attempts-per-tick-per-construction-queue"] = true,
-  -- military bonus
-  ["turret-attack"] = true,
-  ["gun-speed"] = true,
-  ["ammo-damage"] = true,
-  ["maximum-following-robots-count"] = true,
-  ["follower-robot-lifetime"] = true,
-  ["artillery-range"] = true,
-  -- character bonus
-  ["character-crafting-speed"] = true,
-  ["character-mining-speed"] = true,
-  ["character-running-speed"] = true,
-  ["character-build-distance"] = true,
-  ["character-item-drop-distance"] = true,
-  ["character-reach-distance"] = true,
-  ["character-resource-reach-distance"] = true,
-  ["character-item-pickup-distance"] = true,
-  ["character-loot-pickup-distance"] = true,
-  ["character-inventory-slots-bonus"] = true,
-  ["character-logistic-trash-slots"] = true,
-  ["character-logistic-requests"] = true,
-  ["character-health-bonus"] = true,
-  ["character-additional-mining-categories"] = true,
-  -- map view bonus
-  ["zoom-to-world-enabled"] = true,
-  ["zoom-to-world-ghost-building-enabled"] = true,
-  ["zoom-to-world-blueprint-enabled"] = true,
-  ["zoom-to-world-deconstruction-planner-enabled"] = true,
-  ["zoom-to-world-upgrade-planner-enabled"] = true,
-  ["zoom-to-world-selection-tool-enabled"] = true,
-  -- mining drill bonus
-  ["mining-drill-productivity-bonus"] = true,
-  -- train bonus
-  ["train-braking-force-bonus"] = true,
-  -- non bonus
-  ["nothing"] = false,
-  ["give-item"] = false,
-  ["unlock-recipe"] = false,
-}
+  if game.active_mods["SeaBlock"] then
+    for pack_name, pack_level in pairs{
+      ["sb-angelsore3-tool"] = 0,
+      ["sb-algae-brown-tool"] = 0,
+      ["sb-lab-tool"] = 0,
+      ["sb-basic-circuit-board-tool"] = 0
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
+  end
+
+  if game.active_mods["ScienceCostTweakerM"] then
+    science_pack_level["sct-bio-science-pack"] = science_pack_level["token-bio"]
+  end
+
+  if game.active_mods["SpaceMod"] then
+    technologies_to_ignore["space-assembly"] = true
+    technologies_to_ignore["protection-fields"] = true
+    technologies_to_ignore["fusion-reactor"] = true
+    technologies_to_ignore["fuel-cells"] = true
+    technologies_to_ignore["habitation"] = true
+    technologies_to_ignore["life-support-systems"] = true
+    technologies_to_ignore["spaceship-command"] = true
+    technologies_to_ignore["astrometrics"] = true
+    technologies_to_ignore["ftl-theory-A"] = true
+  end
+end
+
+local tech_bonus_effects = {}
+local function calculate_tech_bonus_effects()
+  tech_bonus_effects =
+  {
+    -- inserter bonus
+    ["inserter-stack-size-bonus"] = true,
+    ["stack-inserter-capacity-bonus"] = true,
+    -- lab bonus
+    ["laboratory-speed"] = true,
+    ["laboratory-productivity"] = true,
+    -- bot logistic bonus
+    ["worker-robot-speed"] = true,
+    ["worker-robot-storage"] = true,
+    ["worker-robot-battery"] = true,
+    -- bot building bonus
+    ["ghost-time-to-live"] = true,
+    ["deconstruction-time-to-live"] = true,
+    ["max-failed-attempts-per-tick-per-construction-queue"] = true,
+    ["max-successful-attempts-per-tick-per-construction-queue"] = true,
+    -- military bonus
+    ["turret-attack"] = true,
+    ["gun-speed"] = true,
+    ["ammo-damage"] = true,
+    ["maximum-following-robots-count"] = true,
+    ["follower-robot-lifetime"] = true,
+    ["artillery-range"] = true,
+    -- character bonus
+    ["character-crafting-speed"] = true,
+    ["character-mining-speed"] = true,
+    ["character-running-speed"] = true,
+    ["character-build-distance"] = true,
+    ["character-item-drop-distance"] = true,
+    ["character-reach-distance"] = true,
+    ["character-resource-reach-distance"] = true,
+    ["character-item-pickup-distance"] = true,
+    ["character-loot-pickup-distance"] = true,
+    ["character-inventory-slots-bonus"] = true,
+    ["character-logistic-trash-slots"] = true,
+    ["character-logistic-requests"] = true,
+    ["character-health-bonus"] = true,
+    ["character-additional-mining-categories"] = true,
+    -- map view bonus
+    ["zoom-to-world-enabled"] = true,
+    ["zoom-to-world-ghost-building-enabled"] = true,
+    ["zoom-to-world-blueprint-enabled"] = true,
+    ["zoom-to-world-deconstruction-planner-enabled"] = true,
+    ["zoom-to-world-upgrade-planner-enabled"] = true,
+    ["zoom-to-world-selection-tool-enabled"] = true,
+    -- mining drill bonus
+    ["mining-drill-productivity-bonus"] = true,
+    -- train bonus
+    ["train-braking-force-bonus"] = true,
+    -- non bonus
+    ["nothing"] = false,
+    ["give-item"] = false,
+    ["unlock-recipe"] = false,
+  }
+end
 
 local function tech_hidden(tech_prototype)
   return tech_prototype.hidden or (not (tech_prototype.enabled or tech_prototype.visible_when_disabled))
@@ -210,6 +282,8 @@ end
 
 local unit_test_006 = function()
   local unit_test_result = unit_test_functions.test_successful
+  calculate_tech_bonus_effects()
+  calculate_science_pack_level()
 
   local tech_prototypes = game.technology_prototypes
   local tech_ingredient_levels = {} -- the technology level defined by the research ingredients
@@ -283,6 +357,8 @@ local unit_test_006 = function()
         unit_test_result = unit_test_functions.test_failed
       elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_functions.print_msg(string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name))
+        unit_test_result = unit_test_functions.test_failed
+      elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_result = unit_test_functions.test_failed
       end
     end

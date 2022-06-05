@@ -1,4 +1,5 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
+local AF = angelsmods.functions
 
 data:extend(
   {
@@ -18,7 +19,7 @@ data:extend(
         {type = "item", name = "processed-chrome", amount = 2}
       },
       order = "b[processed-chrome]",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     {
       type = "recipe",
@@ -69,6 +70,7 @@ data:extend(
         {type = "fluid", name = "water-purified", amount = 40}
       },
       main_product = "solid-dichromate",
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-molten-chrome", "liquid-sulfuric-acid", AF.fluid_color("NaSO4"), "water-purified"}),
       order = "e[solid-dichromate]"
     },
     {
@@ -107,8 +109,8 @@ data:extend(
         {type = "fluid", name = "gas-carbon-monoxide", amount = 60}
       },
       main_product = "ingot-chrome",
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-chrome"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-chrome"),
         1, angelsmods.smelting.number_tint),
       order = "g[ingot-chrome]-a"
     },
@@ -128,8 +130,8 @@ data:extend(
         {type = "fluid", name = "gas-carbon-monoxide", amount = 60}
       },
       main_product = "ingot-chrome",
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-chrome"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-chrome"),
         2, angelsmods.smelting.number_tint),
       order = "g[ingot-chrome]-b"
     },
@@ -149,8 +151,8 @@ data:extend(
         {type = "item", name = "solid-chrome-oxide", amount = 6}
       },
       main_product = "ingot-chrome",
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("ingot-chrome"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("ingot-chrome"),
         3, angelsmods.smelting.number_tint),
       order = "g[ingot-chrome]-c"
     },
@@ -184,7 +186,7 @@ data:extend(
         {type = "fluid", name = "liquid-molten-chrome", amount = 120}
       },
       order = "i[liquid-molten-chrome]",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     {
       type = "recipe",
@@ -213,11 +215,11 @@ data:extend(
           {type = "item", name = "angels-roll-chrome", amount = 2}
         }
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-roll-chrome"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-roll-chrome"),
         1, angelsmods.smelting.number_tint),
       order = "j[angels-roll-chrome]-a",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     {
       type = "recipe",
@@ -250,11 +252,11 @@ data:extend(
         },
         main_product = "angels-roll-chrome"
       },
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("angels-roll-chrome"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("angels-roll-chrome"),
         2, angelsmods.smelting.number_tint),
       order = "j[angels-roll-chrome]-b",
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-chrome")
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-chrome")
     },
     -- CASTING RESULT
     {
@@ -282,9 +284,9 @@ data:extend(
           {type = "item", name = "angels-plate-chrome", amount = 4}
         }
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-chrome"),
-        angelsmods.functions.get_object_icons("liquid-molten-chrome"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-plate-chrome"),
+        AF.get_object_icons("liquid-molten-chrome"),
         {-10, -10}, 0.4375),
       order = "k[angels-plate-chrome]-a"
     },
@@ -302,9 +304,9 @@ data:extend(
       results = {
         {type = "item", name = "angels-plate-chrome", amount = 4}
       },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-chrome"),
-        angelsmods.functions.get_object_icons("angels-roll-chrome"),
+      icons = AF.add_icon_layer(
+        AF.get_object_icons("angels-plate-chrome"),
+        AF.get_object_icons("angels-roll-chrome"),
         {-10, -10}, 0.4375),
       order = "k[angels-plate-chrome]-b"
     }

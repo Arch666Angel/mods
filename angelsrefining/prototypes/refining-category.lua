@@ -386,9 +386,10 @@ data:extend(
       order = "la[angels]-z[void]-a",
       icons = {
         {
-          icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
+          icon = "__angelsrefining__/graphics/item-group/void-group.png",
           icon_size = 128,
-          scale = 0.5
+          scale = 0.5,
+          icon_mipmaps = 2
         },
         {
           icon = "__angelsrefining__/graphics/icons/void.png",

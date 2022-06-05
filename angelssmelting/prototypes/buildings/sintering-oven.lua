@@ -50,7 +50,7 @@ data:extend(
         emissions_per_minute = 0.03 * 60
       },
       energy_usage = "150kW",
-      ingredient_count = 2,
+      --ingredient_count = 2,
       animation = {
         layers = {
           {
@@ -191,7 +191,7 @@ data:extend(
         emissions_per_minute = 0.04 * 60
       },
       energy_usage = "200kW",
-      ingredient_count = 4,
+      --ingredient_count = 4,
       animation = {
         layers = {
           {
@@ -332,7 +332,7 @@ data:extend(
         emissions_per_minute = 0.05 * 60
       },
       energy_usage = "250kW",
-      ingredient_count = 6,
+      --ingredient_count = 6,
       animation = {
         layers = {
           {
@@ -472,7 +472,7 @@ data:extend(
         emissions_per_minute = 0.06 * 60
       },
       energy_usage = "250kW",
-      ingredient_count = 6,
+      --ingredient_count = 6,
       animation = {
         layers = {
           {

@@ -18,7 +18,7 @@ data:extend(
     name = "angels-plutonium-synthesis",
     localised_name = {"recipe-name.angels-plutonium-synthesis"},
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-2",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 120,--180
     ingredients =
@@ -66,13 +66,15 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   {
     type = "recipe",
     name = "angels-americium-regeneration",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-2",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 210,--540
     ingredients =
@@ -122,13 +124,15 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   {
     type = "recipe",
     name = "angels-thorium-processing",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
     ingredients =
@@ -176,6 +180,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },
 })
@@ -213,6 +219,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.green,
+      secondary = tint_colors.green,
+      tertiary = tint_colors.green,
     },
   },
   --advanced reprocessing
@@ -277,7 +285,7 @@ data:extend(
     type = "recipe",
     name = "angels-mixed-oxide-cell",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80,--1200
     ingredients =
@@ -298,6 +306,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   --basic reprocessing
@@ -305,7 +315,7 @@ data:extend(
     type = "recipe",
     name = "angels-mixed-oxide-reprocessing",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 110,--330
     ingredients =
@@ -354,6 +364,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
   --advanced reprocessing
@@ -426,7 +438,7 @@ data:extend(
     type = "recipe",
     name = "angels-thorium-fuel-cell",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 500,--1000
     ingredients =
@@ -448,6 +460,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },
   --advanced fuel cell
@@ -455,7 +469,7 @@ data:extend(
     type = "recipe",
     name = "angels-thorium-fuel-cell-2",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 900,
     ingredients =
@@ -477,6 +491,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },]]
   --basic reprocessing
@@ -484,7 +500,7 @@ data:extend(
     type = "recipe",
     name = "angels-thorium-fuel-cell-reprocessing",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 400, --450
     ingredients =
@@ -540,6 +556,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.red,
+      secondary = tint_colors.red,
+      tertiary = tint_colors.red,
     },
   },
   -- advanced reprocessing
@@ -630,6 +648,7 @@ data:extend(
     show_amount_in_title = false,
     icon_size = 32,
     order = "d[deuterium]-a",
+    --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,
@@ -640,7 +659,7 @@ data:extend(
     type = "recipe",
     name = "angels-deuterium-fuel-cell-reprocessing",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients =
@@ -687,6 +706,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,
+      secondary = tint_colors.blue,
+      tertiary = tint_colors.blue,
     },
   },
   -- advanced reprocessing
@@ -694,7 +715,7 @@ data:extend(
     type = "recipe",
     name = "angels-advanced-deuterium-fuel-cell-reprocessing",
     enabled = false,
-    category = "centrifuging",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients =
@@ -749,6 +770,8 @@ data:extend(
     crafting_machine_tint = 
     {
       primary = tint_colors.blue,
+      secondary = tint_colors.blue,
+      tertiary = tint_colors.blue,
     },
   },
 })
@@ -762,7 +785,7 @@ data:extend(
       name = "angels-nuclear-fuel",
       energy_required = 90,
       enabled = false,
-      category = "centrifuging",
+      category = "centrifuging-2",
       ingredients ={
         {type = "item", name = "plutonium-240", amount = 1},
         {type = "item", name = "rocket-fuel", amount = 1}
@@ -779,7 +802,7 @@ data:extend(
       name = "angels-nuclear-fuel-2",
       energy_required = 90,
       enabled = false,
-      category = "centrifuging",
+      category = "centrifuging-3",
       ingredients ={
         {type = "item", name = "plutonium-240", amount = 2},
         {type = "item", name = "rocket-fuel", amount = 3},
@@ -834,6 +857,7 @@ data:extend(
       {
         {type = "item", name = "atomic-bomb", amount = 2}
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
       order="d[rocket-launcher]-d[atomic-bomb]-b"
     },
   }

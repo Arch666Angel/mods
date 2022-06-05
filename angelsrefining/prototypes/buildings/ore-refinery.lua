@@ -119,6 +119,7 @@ data:extend(
         {
           fadeout = true,
           constant_speed = true,
+          apply_recipe_tint = "primary",
           north_position = util.by_pixel_hr(-63, -255),
           east_position = util.by_pixel_hr(-63, -255),
           south_position = util.by_pixel_hr(-63, -255),
@@ -149,6 +150,7 @@ data:extend(
         {
           fadeout = true,
           constant_speed = true,
+          --apply_recipe_tint = "primary",
           north_position = util.by_pixel_hr(-63, -255),
           east_position = util.by_pixel_hr(-63, -255),
           south_position = util.by_pixel_hr(-63, -255),
@@ -179,6 +181,7 @@ data:extend(
         },
         {
           always_draw = true,
+          apply_recipe_tint = "primary",
           render_layer = "wires",
           animation = {
             filename = "__angelsrefining__/graphics/entity/ore-refinery/stack-patch-overlay.png",
@@ -316,6 +319,7 @@ data:extend(
         {
           fadeout = true,
           constant_speed = true,
+          apply_recipe_tint = "primary",
           north_position = util.by_pixel_hr(-63, -255),
           east_position = util.by_pixel_hr(-63, -255),
           south_position = util.by_pixel_hr(-63, -255),
@@ -346,6 +350,7 @@ data:extend(
         {
           fadeout = true,
           constant_speed = true,
+          --apply_recipe_tint = "primary",
           north_position = util.by_pixel_hr(-63, -255),
           east_position = util.by_pixel_hr(-63, -255),
           south_position = util.by_pixel_hr(-63, -255),

@@ -32,7 +32,7 @@ data:extend(
       },
       allowed_effects = {"consumption", "speed", "pollution"},
       crafting_speed = 2,
-      ingredient_count = 4,
+      --ingredient_count = 4,
       resistances =
       {
         {

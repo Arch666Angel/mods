@@ -247,12 +247,15 @@ data:extend(
       energy_required = 1,
       enabled = false,
       ingredients = {
-        {type = "item", name = "reinforced-concrete-brick", amount = 1},
-        {type = "item", name = "token-bio", amount = 2},
-        {type = "item", name = "solid-soil", amount = 1},
+        {type = "item", name = "concrete-brick", amount = 2},
+        {type = "item", name = "token-bio", amount = 1},
+        {type = "item", name = "solid-soil", amount = 2},
         --{type = "item", name = "steel-plate", amount = 1}
       },
-      result = "bio-tile"
+      results = {
+        {type = "item", name = "bio-tile", amount_min = 5, amount_max = 10}
+      },
+      main_product = "bio-tile"
     }
   }
 )

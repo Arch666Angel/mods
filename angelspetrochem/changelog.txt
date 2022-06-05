@@ -1,11 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.22
+Date: ???
+  Changes:
+    - Removed excessive logging entries from the log file (743)
+    - Lowered the fuel value of crude to 35% to be more inline with the other fuels
+    - Hid Ammonium chloride recycling recipe from Bob's revamp (769)
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+    - Increased the ingredient tier of Advanced gas refinery 4 (674)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.21
-Date: ??
+Date: 19.12.2021
   Changes:
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Flare stack
       - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
-    - Increased the ingredient tier of Advanced gas refinery 4 (674)
+      - Gas refinery, Advanced gas refinery
+    - Dynamically disable Resin and Rubber when required
+    - Updated Hydrazine recipe to take Blue metal catalyst instead of Green (692)
+    - Added ingredient Yellow metal catalyst to Dinitrogen tetroxide recipe (692)
+    - Moved Dinitrogen tetroxide recipe from Liquefier to Chemical plant (692)
+    - Tweaked some technology tree prerequisites (724)
+    - Removed the oxygen from the products of sodium hydroxide electrolysis to prevent excess oxygen in cyclic recipe (698)
   Bugfixes:
     - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
     - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)

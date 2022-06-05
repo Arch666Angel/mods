@@ -319,6 +319,7 @@ if angelsmods.industries.components then
           {type = "fluid", name = "liquid-resin", amount = 2},
           {type = "fluid", name = "liquid-plastic", amount = 2}
         },
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-resin"),
         result = "circuit-yellow-board",
         icon_size = 32
       },

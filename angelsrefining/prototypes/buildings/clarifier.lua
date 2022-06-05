@@ -312,8 +312,8 @@ data:extend(
         },
         {
           fadeout = true,
+          apply_recipe_tint = "primary",
           animation = {
-            apply_recipe_tint = "primary",
             filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-recipe-mask.png",
             priority = "extra-high",
             width = 189,

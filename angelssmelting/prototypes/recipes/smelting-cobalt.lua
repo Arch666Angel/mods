@@ -49,6 +49,7 @@ data:extend(
       results = {
         {type = "item", name = "solid-cobalt-hydroxide", amount = 6}
       },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt"),
       order = "d[solid-cobalt-hydroxide]"
     },
     {

@@ -1,9 +1,37 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.22
+Date: ???
+  Changes:
+    - Moved Garden cultivation recipe unlock to a new technology Garden processing 3 #783
+      This recipe exists in case gardens of a particular type do not spawn
+      It is not for duplication of Gardens / Alien plant-life samples
+  Bugfixes:
+    - Polluted fish water from fish breeding was not being included in fluid production graphs #750
+    - Fixed Alien plant life sample recipes in expensive mode were bypassing Alienated fertilizer #783
+---------------------------------------------------------------------------------------------------
 Version: 0.7.21
-Date: ??
+Date: 19.12.2021
+  Changes:
+    - Reworked the biologically active tile:
+      - Added custom graphic icon
+      - Added custom walking sounds
+      - Added out-of-the-world pollution absorption (literally)
+      - Added pollution absorption modifier setting (default to 3x)
+      - Added localised description explaining the behaviour of this tile
+      - Reduced the complexity of the recipe slightly
+      - Added better walking sounds
+    - Alien plant-life samples changes (720):
+      - Reworked farming technologies such that garden duplication can be unlocked when
+        playing with a high tech cost modifier.
+      - Advanced farming recipes now require specialized farms
+      - More techs now require Alien plant-life samples to research
+    - Updated Acetic acid recipe to take Red metal catalyst instead of Green (692)
+    - Always enables bobs small artifacts (when artifacts are enabled in bobenemies)
+    - Always enables bobs coloured artifacts (when artifacts are enabled in bobenemies)
   Bugfixes:
     - Fixed incorrect properties on the new algae farm 4 (661)
     - Fixed another bug where agricultural modules could be duplicated (682)
+    - Fixed progression of module research when playing with bobmodules
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.20
 Date: 10.08.2021

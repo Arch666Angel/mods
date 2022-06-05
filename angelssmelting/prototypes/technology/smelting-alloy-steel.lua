@@ -7,9 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "angels-metallurgy-2",
-        "angels-iron-smelting-1",
-        "steel-processing",
-        "basic-chemistry"
+        "basic-chemistry-3"
       },
       effects = {
         {
@@ -23,10 +21,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-steel"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-rod-steel-plate"
         }
       },
       unit = {

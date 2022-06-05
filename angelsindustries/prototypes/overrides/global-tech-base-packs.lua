@@ -46,6 +46,8 @@ if angelsmods.industries.tech then
   AI.pack_replace("armor-making-2", "green", "red") --move armour making down a tier
   AI.pack_replace("automation-2", "green", "red")
   OV.remove_prereq("automation-2", "tech-green-packs")
+  -- SMELTING
+  OV.add_prereq("angels-metallurgy-1","tech-specialised-labs-basic-processing-1")
   -- BIO PROCESSING
   AI.pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)
   AI.pack_replace("bio-fermentation", "green", "red")
@@ -59,7 +61,6 @@ if angelsmods.industries.tech then
   OV.add_prereq("tech-green-circuit", "bio-arboretum-temperate-1")
   OV.remove_prereq("tech-green-circuit", "angels-components-batteries-2")
   OV.add_prereq("tech-green-circuit", "angels-components-batteries-1")
-  AI.pack_replace("angels-components-construction-2", "green", "red")
   AI.pack_replace("angels-components-cabling-2", "green", "red")
   AI.pack_replace("angels-components-mechanical-2", "green", "red")
 
@@ -93,7 +94,6 @@ if angelsmods.industries.tech then
   AI.pack_replace("modular-armor", "green", "orange")
   AI.pack_replace("armor-making-3", "green", "orange")
   AI.pack_replace("belt-immunity-equipment", "green", "orange")
-  OV.remove_prereq("electric-engine", "angels-advanced-oil-processing")
   AI.pack_replace("electric-engine", "blue", "orange")
   AI.pack_replace("electric-energy-accumulators", "green", "orange")
   AI.pack_replace("energy-shield-equipment", "green", "orange")
@@ -209,6 +209,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("productivity-module-3", "blue", "yellow")
   AI.pack_replace("effectivity-module-3", "blue", "yellow")
   AI.pack_replace("effect-transmission", "blue", "yellow")
+  AI.pack_replace("inserter-capacity-bonus-6", "blue", "yellow")
   OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
   OV.set_science_pack("rocket-silo", "angels-science-pack-red")
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")

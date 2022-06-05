@@ -68,21 +68,27 @@ end
 -- FERROUS/CUPRIC REFINING ----------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.refining then
+  -- move lubricant to green science in any configuration
   if mods["bobplates"] then
     OV.remove_prereq("lubricant", "oil-processing")
   else
     OV.remove_prereq("lubricant", "advanced-oil-processing")
+    OV.remove_prereq("lubricant", "oil-steam-cracking-1")
+    OV.add_prereq("lubricant", "gas-steam-cracking-1")
   end
-  for _, tech_name in pairs({ "lubricant", "ore-powderizer" }) do
-    local ingredients = ((data.raw.technology[tech_name] or {}).unit or {}).ingredients or {}
-    for index, ingredient in pairs(ingredients) do
-      if ingredient[1] == "chemical-science-pack" or ingredient.name == "chemical-science-pack" then
-        table.remove(ingredients, index)
-        break
-      end
-    end
+  OV.remove_science_pack("lubricant", "chemical-science-pack")
+
+  -- handle electric engine since lubricant moved...
+  if mods["boblogistics"] then
+    -- robotics required at green science
+  else
+    -- robotics required at blue science
+    OV.set_science_pack("electric-engine", "chemical-science-pack")
+    OV.add_prereq("electric-engine", "chemical-science-pack")
   end
-  OV.add_prereq("electric-engine", "advanced-oil-processing")
+
+  -- update lubricant dependencies in green science
+  OV.remove_science_pack("ore-powderizer", "chemical-science-pack")
 
   move_item("liquid-ferric-chloride-solution", "ore-processing-fluid", "a[ferrous]-e", "fluid")
   OV.add_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")

@@ -51,7 +51,9 @@ if angelsmods.industries.overhaul then
         always_show_products = true,
         show_amount_in_title = false,
         crafting_machine_tint = {
-          primary = tint_colors.green
+          primary = tint_colors.green,
+          secondary = tint_colors.green,
+          tertiary = tint_colors.green,
         }
       },
       {
@@ -66,7 +68,9 @@ if angelsmods.industries.overhaul then
           {type = "item", name = "slag", amount = 5}
         },
         crafting_machine_tint = {
-          primary = tint_colors.green
+          primary = tint_colors.green,
+          secondary = tint_colors.green,
+          tertiary = tint_colors.green,
         },
         icons = {
           { -- need to have something as bottom layer
@@ -133,6 +137,15 @@ if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- Bob nuclear addaption
   -------------------------------------------------------------------------------
+  if mods["bobassembly"] and data.raw["assembling-machine"]["centrifuge-2"] then
+    OV.add_prereq("angels-plutonium-power", "centrifuge-2")
+  else
+    OV.add_prereq("angels-plutonium-power", "production-science-pack")
+  end
+  if mods["bobassembly"] and data.raw["assembling-machine"]["centrifuge-3"] then
+    OV.remove_prereq("angels-thorium-power", "utility-science-pack")
+    OV.add_prereq("angels-thorium-power", "centrifuge-3")
+  end
   if mods["bobplates"] then
     --basically remove all of bobs things (Sorry bob)
     OV.global_replace_item("plutonium-240", "plutonium-239") --use bobs plutonium
@@ -150,10 +163,17 @@ if angelsmods.industries.overhaul then
     OV.disable_recipe("empty-nuclear-fuel-cell")
     angelsmods.functions.add_flag({"plutonium-240","empty-nuclear-fuel-cell"}, "hidden")
 
+    if data.raw.recipe["plutonium-nucleosynthesis"] then
+      data.raw.recipe["plutonium-nucleosynthesis"].category = "centrifuging-2"
+    end
+    
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
       OV.add_prereq("bobingabout-enrichment-process", "angels-plutonium-power")
       OV.patch_recipes({{name = "bobingabout-enrichment-process", subgroup = "angels-power-nuclear-processing", order="b[AMOX]-c[duplication]"}})
+      if data.raw.recipe["bobingabout-enrichment-process"] then
+        data.raw.recipe["bobingabout-enrichment-process"].category = "centrifuging-2"
+      end
     else
       --if not rtg, remove bobingabout process
       OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
@@ -161,7 +181,6 @@ if angelsmods.industries.overhaul then
       OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
       OV.disable_technology("bobingabout-enrichment-process")
     end
-    OV.add_prereq("angels-plutonium-power", "production-science-pack")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
@@ -212,6 +231,7 @@ if angelsmods.industries.overhaul then
         if data.raw.reactor["nuclear-reactor-2"] then
           data.raw.item["angels-thorium-fuel-cell"].fuel_category = "thorium"
           OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
+          OV.set_science_pack("bob-nuclear-power-2", "utility-science-pack")
         end
       end
 

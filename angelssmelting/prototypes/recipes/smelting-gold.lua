@@ -77,6 +77,7 @@ data:extend(
       main_product = "liquid-chlorauric-acid",
       always_show_products = true,
       icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{241, 214, 020}, {120, 203, 000}, {120, 203, 000}}),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
       order = "e[liquid-chlorauric-acid]"
     },
     {

@@ -1,17 +1,38 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.12.1
+Version: 0.12.2
 Date: ??
+  Changes:
+    - Removed the obsolete ingredient_count limitation on some refining buildings (763)
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+    - Removed setting for Bob's distilleries. These will now always be disabled (769)
+    - Hide Bob's salt, brine, and lithium chloride (769)
+    - Changed the recipe builder to use more bob items when available:
+      - T1 buildings now attempt to use steel pipes over iron pipes
+      - T2 buildings now attempt to use bronze plates over steel plates
+      - T2 buildings now attempt to use bronze pipes over steel pipes
+  Bugfixes:
+    - Fixed crash when playing with bob enemies and bob equipment without bob artifacts enabled
+    - Fixed the void item group icon (770)
+---------------------------------------------------------------------------------------------------
+Version: 0.12.1
+Date: 19.12.2021
   Changes:
     - Allowed higher tier techs to show in tech tree search results
     - Added HQ graphics to the following machines, and tweaked their sounds:
       - Clarifier, Crystallizer, Hydro plant, Salination plant
       - Ore crusher, Floatation cell, Ore refinery, Ore sorting facility
-    - Changed T1 buildings to take steel pipe
-    - Changed T2 buildings to take bronze plate and bronze pipe
+    - Reworked the control behaviour to multiple smaller files to keep it organized.
+    - Added fluid and recipe tints for all of angels core mods, including some functions to support the change
+    - Small library clean-up
   Bugfixes:
     - Fixed incorrect behaviour of some library functions
     - Fixed broken localisations on sludge processing in special vanilla (676)
     - Fixed hand crafting recipes not usable with alternative character mods (710)
+    - Hide Electro whinning cells and Milling drums when they are unused (691)
+    - Fixed crash when generating a new world without any autoplace settings (713)
+    - Fixed crash when playing with bobs vehicle equipment without bob technology mod
+    - Fixed heat was unusable at green science as heat exchanger required blue science (669)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 10.08.2021

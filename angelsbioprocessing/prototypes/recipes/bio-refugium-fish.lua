@@ -1,9 +1,10 @@
+local AF = angelsmods.functions
 data:extend(
   {
     {
       type = "recipe",
       name = "liquid-fish-atmosphere",
-      category = "advanced-chemistry",
+      category = "chemistry",
       subgroup = "bio-fish",
       enabled = false,
       energy_required = 15,
@@ -16,7 +17,8 @@ data:extend(
       },
       main_product = "liquid-fish-atmosphere",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {194, 227, 091}, {184, 239, 000}, {156, 207, 000} }),
+      icons = AF.create_liquid_recipe_icon(nil, { {194, 227, 091}, {184, 239, 000}, {156, 207, 000} }),
+      crafting_machine_tint = AF.get_recipe_tints({"liquid-fish-atmosphere","water","water-saline", "liquid-fish-atmosphere"}),
       order = "b"
     },
     {
@@ -35,7 +37,8 @@ data:extend(
       },
       main_product = "liquid-polluted-fish-atmosphere",
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(nil, { {194, 227, 091}, {241,050,238}, {241,050,238} }),
+      icons = AF.create_liquid_recipe_icon(nil, { {194, 227, 091}, {241,050,238}, {241,050,238} }),
+      crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-polluted-fish-atmosphere"),
       order = "b"
     },
     ---------------------------------------------------------------------------
@@ -164,7 +167,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "raw-fish", amount_min = 2, amount_max = 4, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
         --{type="fluid", name="water-yellow-waste", amount=20},
       },
       icons = {
@@ -195,7 +198,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "alien-fish-1-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icons = {
         {
@@ -223,7 +226,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "alien-fish-2-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icons = {
         {
@@ -251,7 +254,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "alien-fish-3-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icons = {
         {
@@ -354,7 +357,7 @@ data:extend(
       },
       main_product = "liquid-raw-fish-oil",
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
         {
@@ -380,7 +383,7 @@ data:extend(
       },
       main_product = "liquid-raw-fish-oil",
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
         {
@@ -406,7 +409,7 @@ data:extend(
       },
       main_product = "liquid-raw-fish-oil",
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
         {
@@ -432,7 +435,7 @@ data:extend(
       },
       main_product = "liquid-raw-fish-oil",
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         { {200,113,048}, {200,113,048}, {241,155,057,0.8}, {241,155,057,0.8} },
         {
@@ -456,7 +459,7 @@ data:extend(
         {type = "fluid", name = "liquid-nutrient-pulp", amount = 20}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      icons = AF.create_viscous_liquid_recipe_icon(
         nil,
         {{214, 135, 010}, nil, {239, 168, 044}},
         {
@@ -483,7 +486,7 @@ data:extend(
         {type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+      icons = AF.create_viscous_liquid_filtering_recipe_icon(
         "coal",
         { {200,113,048}, {191,155,037}, {241,155,057,0.8}, {244,191,015,0.8} }
       ),
@@ -508,7 +511,7 @@ data:extend(
         {type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+      icons = AF.create_viscous_liquid_filtering_recipe_icon(
         "ceramic",
         { {200,113,048}, {191,155,037}, {241,155,057,0.8}, {244,191,015,0.8} }
       ),
@@ -530,7 +533,7 @@ data:extend(
         {type = "fluid", name = "lubricant", amount = 60}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           "liquid-fermentation-raw",
           "lubricant"
@@ -554,7 +557,7 @@ data:extend(
         {type = "fluid", name = "liquid-mineral-oil", amount = 25}
       },
       always_show_products = true,
-      icons = angelsmods.functions.create_liquid_recipe_icon(
+      icons = AF.create_liquid_recipe_icon(
         {
           "liquid-fermentation-raw",
           "liquid-mineral-oil"
@@ -580,8 +583,8 @@ data:extend(
         {type = "item", name = "crystal-splinter-raw", amount = 1, probability = 0.4}
       },
       always_show_products = true,
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("crystal-splinter-raw"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("crystal-splinter-raw"),
         1, angelsmods.bioprocessing.number_tint),
       order = "a[crystalization]-a"
     },
@@ -600,8 +603,8 @@ data:extend(
         {type = "item", name = "crystal-splinter-raw", amount = 1}
       },
       always_show_products = true,
-      icons = angelsmods.functions.add_number_icon_layer(
-        angelsmods.functions.get_object_icons("crystal-splinter-raw"),
+      icons = AF.add_number_icon_layer(
+        AF.get_object_icons("crystal-splinter-raw"),
         2, angelsmods.bioprocessing.number_tint),
       order = "a[crystalization]-b"
     }

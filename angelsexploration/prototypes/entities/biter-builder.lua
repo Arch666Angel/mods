@@ -830,6 +830,38 @@ local function make_attack_parameter(data_app, data_dmg)
   }
 end
 
+local function make_loot(loot_data)
+  if type(loot_data) ~= 'table' then return nil end
+  if next(loot_data) == nil then return nil end
+
+  loot_proto = {}
+  for _,loot_item in pairs(loot_data) do
+    local item_found = false
+    for _,item_type in pairs({"item","tool","item-with-entity-data"}) do
+      if data.raw[item_type][loot_item.item] then
+        item_found = true
+      end
+    end
+    if item_found then
+      local min = (loot_item.avg_amount or 1) - (loot_item.variation or 0)/2
+      local max = (loot_item.avg_amount or 1) + (loot_item.variation or 0)/2
+      if max < min then min, max = max, min end
+      if max > 0 then
+        local prob = max < 1 and max or 1
+        if prob < 1 then min, max = min/max, 1 end
+        table.insert(loot_proto, {
+          item=loot_data.item,
+          probability=prob < 1 and prob or nil,
+          count_min=min,
+          count_max=max
+        })
+      end
+    end
+  end
+  return loot_proto
+end
+
+
 function angelsmods.functions.make_alien(def_data)
   --log(serpent.block(def_data))
   if def_data ~= nil then
@@ -882,7 +914,8 @@ function angelsmods.functions.make_alien(def_data)
             "placeable-enemy",
             "placeable-off-grid",
             "not-repairable",
-            "breaths-air"
+            "breaths-air",
+            "hidden"
           },
           max_health = def_data.appearance.health,
           resistances = def_data.resistance,
@@ -900,6 +933,7 @@ function angelsmods.functions.make_alien(def_data)
           min_pursue_time = 10 * 60,
           max_pursue_distance = 50,
           corpse = c_name,
+          loot = make_loot(def_data.loot),
           dying_explosion = "blood-explosion-big",
           dying_sound = make_die_sound(def_data.appearance.type, 0.4),
           working_sound = make_call_sounds(0.3),
@@ -950,6 +984,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
         pollution_absorption_proportional = 0.01,
         loot = {},
         corpse = "biter-spawner-corpse",
+        loot = make_loot(spawn_data.loot),
         dying_explosion = "blood-explosion-huge",
         max_count_of_owned_units = 7,
         max_friends_around_to_spawn = 5,
@@ -1002,6 +1037,7 @@ function angelsmods.functions.update_alien(ua_data)
     unit.max_health = ua_data.appearance.health
     unit.movement_speed = ua_data.appearance.speed
     unit.attack_parameters = make_attack_parameter(ua_data.appearance, ua_data.attack)
+    unit.loot = ua_data.loot and make_loot(ua_data.loot) or unit.loot
   end
 end
 
@@ -1040,8 +1076,163 @@ function angelsmods.functions.update_spawner(us_data)
         table.insert(spawner.result_units, new_result_unit_data)
       end
     end
+    spawner.loot = us_data.loot and make_loot(us_data.loot) or spawner.loot
   end
 end
 
 -- log(serpent.block(data.raw["unit-spawner"]["biter-spawner"].autoplace))
 -- log(serpent.block(data.raw["unit-spawner"]["spitter-spawner"].autoplace))
+
+function angelsmods.functions.compile_alien_data() -- creates an overview of the current alien data
+  -- map biter spawn range on each spawner
+  local spawners = {}
+  local calculate_spawn_data = function(raw_spawn_points)
+    local spawn_points = {}
+    for _,spawn_point in pairs(raw_spawn_points) do -- convert indices to numbers
+      table.insert(spawn_points, util.table.deepcopy(spawn_point))
+    end
+    
+    local _,first_spawn_point = next(spawn_points)
+    if (first_spawn_point.evolution_factor or first_spawn_point[1]) ~= 0 and
+      (first_spawn_point.spawn_weight     or first_spawn_point[2]) ~= 0 then
+      table.insert(spawn_points, 1, {0,0}) -- insert start spawn point (if needed)
+    end
+    
+    local res = {} -- look for spawn ranges (=wanted data)
+    for spawn_idx,spawn_point in pairs(spawn_points) do
+      if ((#res)%2) == 0 then -- looking for a weight > 0
+        if (spawn_point.spawn_weight or spawn_point[2]) ~= 0 then
+          if spawn_idx == 1 then
+            table.insert(res, 0) -- spawns from the start
+          else
+            table.insert(res, spawn_points[spawn_idx-1].evolution_factor or spawn_points[spawn_idx-1][1])
+          end
+        end
+      else -- looking for a weight == 0
+        table.insert(res, spawn_point.evolution_factor or spawn_point[1])
+      end
+    end
+    
+    return ((#res)>0) and res or nil -- return the result (if any)
+  end
+  local combine_spawn_data = function(spawn_data_1, spawn_data_2)
+    if spawn_data_1 == nil then return spawn_data_2 end
+    if spawn_data_2 == nil then return spawn_data_1 end
+    log("TODO!!!")
+    return spawn_data_1
+  end
+  for _,spawner in pairs(data.raw["unit-spawner"]) do
+    spawners[spawner.name] = {}
+    for _,spawn in pairs(spawner.result_units) do
+      local spawn_name = spawn.unit or spawn[1]
+      if data.raw['unit'][spawn_name] then
+        spawners[spawner.name][spawn_name] = combine_spawn_data(spawners[spawner.name][spawn_name], calculate_spawn_data(spawn.spawn_points or spawn[2]))
+      else
+        --log(spawn_name)
+      end
+    end
+  end
+
+  -- map units to single spawner (=earliest)
+  local units = {}
+  for spawner,spawner_data in pairs(spawners) do
+    for unit,spawn_data in pairs(spawner_data) do
+      units[unit] = units[unit] or {}
+      units[unit][spawner] = spawn_data[1] -- first point this unit is spawning
+    end
+  end
+  for unit,spawn_data in pairs(units) do
+    local lowest_evo_factor = 2
+    for spawner,evo_factor in pairs(spawn_data) do
+      if evo_factor < lowest_evo_factor then
+        lowest_evo_factor = evo_factor
+      end
+    end
+    if lowest_evo_factor > 1 then
+      lowest_evo_factor = -lowest_evo_factor
+    end
+    local spawners_to_remove = {}
+    local highest_evo_factor_2 = 0
+    for spawner,evo_factor in pairs(spawn_data) do
+      if evo_factor == lowest_evo_factor then
+        local evo_factor_2 = (#spawners[spawner][unit]) > 1 and spawners[spawner][unit][2] or 1
+        if evo_factor_2 > highest_evo_factor_2 then
+          highest_evo_factor_2 = evo_factor_2
+        end
+      else
+        table.insert(spawners_to_remove, spawner)
+      end
+    end
+    local picked = false
+    for spawner,evo_factor in pairs(spawn_data) do
+      if evo_factor == lowest_evo_factor then
+        local evo_factor_2 = (#spawners[spawner][unit]) > 1 and spawners[spawner][unit][2] or 1
+        if evo_factor_2 < highest_evo_factor_2 or picked then
+          table.insert(spawners_to_remove, spawner)
+        else
+          picked = true -- picking the first if multiple spawners are 'equal'
+        end
+      end
+    end
+    for _,spawner_to_remove in pairs(spawners_to_remove) do
+      units[unit][spawner_to_remove] = nil
+    end
+  end
+
+  -- map all units to the spawner they are assigned to
+  spawners = {}
+  for unit,unit_data in pairs(units) do
+    for spawner,evo_factor in pairs(unit_data) do
+      spawners[spawner] = spawners[spawner] or {}
+      spawners[spawner][unit] = evo_factor
+    end
+  end
+
+  -- order biters in rising evolution factor for each spawner
+  local order_units
+  order_units = function(units)
+    local highest_evo_factor = -1
+    for _,evo_factor in pairs(units) do
+      if evo_factor > highest_evo_factor then
+        highest_evo_factor = evo_factor
+      end
+    end
+    if highest_evo_factor < 0 then return units end -- recursion end
+    local ordered_units = util.table.deepcopy(units)
+    for unit,evo_factor in pairs(ordered_units) do
+      if evo_factor == highest_evo_factor then
+        ordered_units[unit] = nil
+        ordered_units = order_units(ordered_units) -- recursion
+        table.insert(ordered_units, {[unit]=evo_factor})
+        return ordered_units
+      end
+    end
+  end
+  for spawner,unit_data in pairs(spawners) do
+    spawners[spawner] = order_units(unit_data)
+  end
+
+  -- order spawners in rising evolution factor in unique biter spawns
+  local order_spawners
+  order_spawners = function(spawners)
+    local highest_evo_factor = -1
+    for _,spawner_data in pairs(spawners) do
+      local _,evo_factor = next(spawner_data[1])
+      if evo_factor > highest_evo_factor then
+        highest_evo_factor = evo_factor
+      end
+    end
+    if highest_evo_factor < 0 then return spawners end -- recursion end
+    local ordered_spawners = util.table.deepcopy(spawners)
+    for spawner,spawner_data in pairs(ordered_spawners) do
+      local _,evo_factor = next(spawner_data[1])
+      if evo_factor == highest_evo_factor then
+        ordered_spawners[spawner] = nil
+        ordered_spawners = order_spawners(ordered_spawners) -- recursion
+        table.insert(ordered_spawners, {[spawner]=util.table.deepcopy(spawner_data)})
+        return ordered_spawners
+      end
+    end
+  end
+  return order_spawners(spawners)
+end

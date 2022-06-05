@@ -1,8 +1,10 @@
 require("prototypes.overrides.bio-processing-override-special-vanilla")
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
---PASTE
+--UPDATE BIO PRODUCT RECIPES
+require("prototypes.overrides.bio-processing-override-arboretum")
 require("prototypes.overrides.bio-processing-override-paste")
+-- UPDATE OTHER STUFF
 require("prototypes.overrides.bio-processing-override-angel")
 
 -- body
@@ -86,7 +88,7 @@ else
   if bobmods and bobmods.plates then
     OV.patch_recipes(
       {
-        {name = "algae-brown-burning", results = {{"!!"},{name = "lithium-chloride", amount = 1, type = "item"}}}
+        {name = "algae-brown-burning", results = {{"!!"},{name = "solid-lithium", amount = 1, type = "item"}}}
       }
     )
   else
