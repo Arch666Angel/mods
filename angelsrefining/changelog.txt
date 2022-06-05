@@ -3,9 +3,13 @@ Version: 0.12.2
 Date: ??
   Changes:
     - Removed the obsolete ingredient_count limitation on some refining buildings (763)
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+    - Removed setting for Bob's distilleries. These will now always be disabled (769)
+    - Hide Bob's salt, brine, and lithium chloride (769)
   Bugfixes:
     - Fixed crash when playing with bob enemies and bob equipment without bob artifacts enabled
-    - Fixed the void item group icon
+    - Fixed the void item group icon (770)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 19.12.2021

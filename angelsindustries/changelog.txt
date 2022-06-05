@@ -1,7 +1,17 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.16
 Date: xx.xx.202x
+  Changes:
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+    - Added tiered centrifuge requirements for all nuclear fuel recipes
   Bugfixes:
+    - Regular mode:
+      - Fixed centrifuges did not have their customizable lights enabled as intended (772)
+      - Fixed centrifuges did not have a fluid inbox to craft the advanced deuterium reprocessing
+        recipe (759)
+    - Component mode:
+      - Fixed bobs personal roboport mk2 depended on battery 5 (761)
     - Science mode:
       - Fixed science tiers of inserter stack size bonusses (740)
       - Fixed exploration tech lab 2 did not accept bio tokens (745)

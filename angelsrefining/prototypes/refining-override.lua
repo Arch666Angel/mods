@@ -43,6 +43,9 @@ require("prototypes.override.refining-override-bobvehicleequipment")
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+    angelsmods.functions.disable_barreling_recipes("brine")
+    angelsmods.functions.add_flag("brine", "hidden")
+    OV.disable_recipe({"brine-electrolysis"}) -- equivalent of angels recipe "water-saline-seperation"
     OV.global_replace_item("brine", "water-saline")
     OV.disable_recipe("brine")
   end
@@ -52,8 +55,11 @@ if mods["bobplates"] then
     data.raw.item["empty-canister"].order = "i"
     data.raw.item["gas-canister"].subgroup = "angels-fluid-control"
     data.raw.item["gas-canister"].order = "j"
-    data.raw.technology["gas-canisters"].prerequisites = {"fluid-handling"}
+    data.raw.technology["gas-canisters"].prerequisites = {"fluid-canister-processing"}
     data.raw.technology["gas-canisters"].enabled = true
+    OV.remove_prereq("fluid-canister-processing", "water-bore-1")
+    OV.add_prereq("fluid-canister-processing", "fluid-barrel-processing")
+    OV.remove_prereq("fluid-barrel-processing", "water-bore-1")
     OV.patch_recipes(
       {
         {
@@ -75,6 +81,8 @@ if mods["bobplates"] then
       }
     )
   end
+  OV.remove_unlock("fluid-handling", "barreling-pump")
+  OV.add_unlock("fluid-barrel-processing", "barreling-pump")
 end
 --General barrelling fix
 for _, fluid_n in pairs(data.raw.fluid) do
@@ -93,6 +101,7 @@ for _, fluid_n in pairs(data.raw.fluid) do
         },
       }
     )
+
     if mods["bobplates"] then
       if string.sub(fluid_n.name, 1, 3) == "gas" then
         OV.barrel_overrides(fluid_n.name, "gas")

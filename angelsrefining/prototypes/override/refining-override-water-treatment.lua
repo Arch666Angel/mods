@@ -107,7 +107,7 @@ if mods["bobplates"] then
   angelsmods.functions.add_flag("salt", "hidden")
 
   if not angelsmods.petrochem then
-    OV.disable_recipe({"solid-salt-from-saline", "solid-salt"})
+    OV.global_replace_item("salt", "solid-salt")
 
     data:extend(
       {
@@ -205,6 +205,10 @@ if mods["bobplates"] then
     angelsmods.functions.disable_barreling_recipes("pure-water")
   end
 
+  -- lithium processing -------------------------------------------------------
+  OV.global_replace_item("lithium-chloride", "solid-lithium")
+  angelsmods.functions.add_flag("lithium-chloride", "hidden")
+
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes(
     {
@@ -223,7 +227,7 @@ if mods["bobplates"] then
     }
   )
 else
-  if (angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate or mods["bobplates"]) or
+  if (angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate) or
      (angelsmods.industries and angelsmods.industries.overhaul) then
   else
     angelsmods.functions.add_flag("solid-lithium", "hidden")

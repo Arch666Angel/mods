@@ -31,22 +31,17 @@ if angelsmods.refining then
   
   if bobmods and bobmods.plates then
     angelsmods.functions.make_void("lithia-water", "water")
+  else
+    --ADD THE BARRELING PUMP
+    angelsmods.functions.OV.add_unlock("fluid-handling", "barreling-pump")
   end
-  
-  --ADD THE BARRELING PUMP
-  angelsmods.functions.OV.add_unlock("fluid-handling", "barreling-pump")
   
   --MOVE EMPTY BARREL
   data.raw["item-subgroup"]["fill-barrel"].group = "angels-fluid-control"
   data.raw["item-subgroup"]["empty-barrel"].group = "angels-fluid-control"
   angelsmods.functions.move_item("empty-barrel", "angels-fluid-control", "h")
   angelsmods.functions.move_item("empty-barrel", "angels-fluid-control", "h", "recipe")
-  --angelsmods.functions.OV.set_special_recipe_override("empty-barrel", { subgroup = "angels-fluid-control", order = "h" })
   
   --MOVE STORAGE TANK
   angelsmods.functions.move_item("storage-tank", "angels-fluid-tanks", "b[medium-tank]-a[mk1]-a[regular]")
-  --angelsmods.functions.OV.set_special_recipe_override("storage-tank", { subgroup = "angels-fluid-tanks", order = "a" })
-  
-  --MODIFY BARRELING RECIPES
-  angelsmods.functions.modify_barreling_recipes()
 end

@@ -4,9 +4,12 @@ local unit_test_functions = require("unit-test-functions")
 
 local recipes_to_ignore =
 {
+  ["electric-energy-interface"] = true, -- base game
+}
+local products_to_ignore =
+{
   ["chemical-void"] = true,
   ["water-void"] = true,
-  ["electric-energy-interface"] = true, -- base game
 }
 
 local unit_test_003 = function()
@@ -39,7 +42,7 @@ local unit_test_003 = function()
       local recipe_products = recipe_data.products
       for _, recipe_product in pairs(recipe_products) do
         --add exception list for results (void results)
-        if not (recipe_product.name == "chemical-void" or recipe_product.name == "water-void") then
+        if not products_to_ignore[recipe_product.name] then
           if recipe_product.type == "item" then
             if item_prototypes[recipe_product.name].has_flag("hidden") then
               unit_test_functions.print_msg(string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name))

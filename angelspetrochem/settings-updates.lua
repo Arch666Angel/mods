@@ -3,5 +3,4 @@ if mods["bobplates"] then
 else
   angelsmods.settings.hide_setting("bool-setting", "angels-disable-bobs-electrolysers", true)
   angelsmods.settings.hide_setting("bool-setting", "angels-disable-bobs-chemical-plants", true)
-  angelsmods.settings.hide_setting("bool-setting", "angels-disable-bobs-distilleries", true)
 end

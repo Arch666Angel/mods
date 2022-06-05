@@ -5,6 +5,11 @@ local item_recipes_to_ignore = {}
 
 local fluid_recipes_to_ignore = {}
 
+local recipe_categories_to_ignore =
+{
+  "barreling-pump"
+}
+
 local function has_recipe(recipe_filters, recipes_to_ignore)
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
 
@@ -63,12 +68,34 @@ local unit_test_007 = function()
     end
   end
 
+  if game.active_mods["SpaceMod"] then
+    table.insert(items_to_ignore, "drydock-assembly")
+    table.insert(items_to_ignore, "drydock-structural")
+    table.insert(items_to_ignore, "fusion-reactor")
+    table.insert(items_to_ignore, "hull-component")
+    table.insert(items_to_ignore, "protection-field")
+    table.insert(items_to_ignore, "space-thruster")
+    table.insert(items_to_ignore, "fuel-cell")
+    table.insert(items_to_ignore, "habitation")
+    table.insert(items_to_ignore, "life-support")
+    table.insert(items_to_ignore, "command")
+    table.insert(items_to_ignore, "astrometrics")
+    table.insert(items_to_ignore, "ftl-drive")
+  end
+  
   -- Populate fluid_recipes_to_ignore with voiding and barreling recipes
   local recipe_filters = {}
   table.insert(recipe_filters, {filter = "has-product-item", invert = false, mode = "or", elem_filters = {{filter = "name", name = "chemical-void"}}})
   table.insert(recipe_filters, {filter = "has-product-item", invert = false, mode = "or", elem_filters = {{filter = "name", name = "water-void"}}})
-  table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = "barreling-pump"})
 
+  if #recipe_categories_to_ignore > 0 then
+    for _, category_name in pairs(recipe_categories_to_ignore) do
+      if game.recipe_category_prototypes[category] then
+        table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = category_name})
+      end
+    end
+  end
+  
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
 
   for recipe_name, recipe in pairs(recipe_prototypes) do
