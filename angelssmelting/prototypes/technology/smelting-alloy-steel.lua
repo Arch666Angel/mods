@@ -1,7 +1,3 @@
-local OV = angelsmods.functions.OV
-OV.add_prereq("steel-processing","angels-metallurgy-1")
-table.insert(data.raw["technology"]["steel-processing"].effects,{type = "unlock-recipe", recipe = "angels-rod-steel-plate"})
-
 data:extend(
   {
     {

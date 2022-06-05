@@ -100,6 +100,7 @@ if angelsmods.trigger.smelting_products["steel"].plate then
   )
   OV.add_unlock("steel-processing", "angels-plate-steel-pre-heating")
   OV.add_prereq("steel-processing", "automation")
+  OV.add_prereq("steel-processing", "angels-metallurgy-1")
   OV.global_replace_item("angels-plate-steel", "steel-plate")
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")
   angelsmods.functions.move_item("steel-plate", "angels-steel-casting", "l")
@@ -138,6 +139,7 @@ end
 -- ROD ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["steel"].rod then
+  OV.add_unlock("steel-processing", "angels-rod-steel-plate")
 else
   angelsmods.functions.add_flag("angels-rod-stack-steel", "hidden")
   angelsmods.functions.add_flag("angels-rod-steel", "hidden")

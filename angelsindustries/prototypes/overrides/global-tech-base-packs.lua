@@ -46,9 +46,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("armor-making-2", "green", "red") --move armour making down a tier
   AI.pack_replace("automation-2", "green", "red")
   OV.remove_prereq("automation-2", "tech-green-packs")
-
   -- SMELTING
-  
   OV.add_prereq("angels-metallurgy-1","tech-specialised-labs-basic-processing-1")
   -- BIO PROCESSING
   AI.pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)

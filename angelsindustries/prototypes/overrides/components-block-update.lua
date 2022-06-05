@@ -23,11 +23,6 @@ if angelsmods.industries.components then
   OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")
   OV.add_prereq("angels-components-mechanical-2", "angels-stone-smelting-1")
 
-  -- move steel smelting 1 from green to red science
-  OV.remove_science_pack("angels-steel-smelting-1", "logistic-science-pack")
-  OV.remove_prereq("angels-steel-smelting-1", "angels-metallurgy-2")
-  OV.add_prereq("angels-steel-smelting-1", "angels-metallurgy-1")
-
   -----------------------------------------------------------------------------
   -- ADD ELECTRONIC RECIPES TO ELECTRONIC ASSMBLY -----------------------------
   -----------------------------------------------------------------------------
