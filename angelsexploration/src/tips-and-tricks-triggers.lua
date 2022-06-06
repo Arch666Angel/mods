@@ -47,9 +47,11 @@ function tips_and_tricks_triggers:init_force_data(force_name)
   local trigger_data = self:get_trigger_data()
   local technologies = game.forces[force_name].technologies
   for alien_name, trigger_name in pairs(trigger_data) do
-    if technologies[trigger_name].researched then
-    else
-      force_trigger_data[alien_name] = trigger_name
+    if technologies[trigger_name] then
+      if technologies[trigger_name].researched then
+      else
+        force_trigger_data[alien_name] = trigger_name
+      end
     end
   end
 
