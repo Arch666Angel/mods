@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.19
-Date: 16.06.2022
+Date: 06.06.2022
   Changes:
     - Removed the obsolete ingredient_count limitation on all smelting buildings (763)
     - Disabled Ammonium chloride gas when platinum is disabled (769)
