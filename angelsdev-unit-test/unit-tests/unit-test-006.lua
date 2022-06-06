@@ -147,6 +147,7 @@ local function calculate_science_pack_level()
     technologies_to_ignore["spaceship-command"] = true
     technologies_to_ignore["astrometrics"] = true
     technologies_to_ignore["ftl-theory-A"] = true
+    technologies_to_ignore["ftl-propulsion"] = true
   end
 end
 

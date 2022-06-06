@@ -49,6 +49,7 @@ local unit_test_004 = function()
     tech_unlocked_by_script["sb-startup1"] = true
     tech_unlocked_by_script["sb-startup2"] = true
     tech_unlocked_by_script["sb-startup3"] = true
+    tech_unlocked_by_script["sb-startup4"] = true
     tech_unlocked_by_script["sct-automation-science-pack"] = true
   end
 

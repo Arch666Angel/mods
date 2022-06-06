@@ -10,6 +10,7 @@ local products_to_ignore =
 {
   ["chemical-void"] = true,
   ["water-void"] = true,
+  ["void"] = true -- Bob's void
 }
 
 local unit_test_003 = function()
