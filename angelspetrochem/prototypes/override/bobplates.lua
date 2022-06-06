@@ -152,8 +152,8 @@ if mods["bobplates"] then
       }
     }
   )
-    OV.add_unlock("flammables", "liquid-fuel")
-    OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
+  OV.add_unlock("flammables", "liquid-fuel")
+  OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
 end
 
 -------------------------------------------------------------------------------
