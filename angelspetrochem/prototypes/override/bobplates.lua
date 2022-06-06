@@ -74,7 +74,7 @@ local Energy_table = {
   ["gas-propene"]     = { fv = 521.5, em = 5}, --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
   ["gas-methanol"]    = { fv = 101.2}, --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
   ["gas-ethylene"]    = { fv = 365.2}, --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
-  ["crude-oil"]       = { fv = 1000, turr = false}, --liquid crude (crude oil)
+  ["crude-oil"]       = { fv = 350, turr = false}, --liquid crude (crude oil)
   ["gas-hydrogen"]    = { fv = 33, em = 0.2--[[>>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.]]}, --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
   ["gas-hydrazine"]   = { fv = 126.9, em = 0.1}, --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
   ["liquid-fuel"]     = { fv = 300, em = 1.5, turr = false}, --down from 2.3MJ
@@ -85,10 +85,10 @@ local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_par
 if mods["bobplates"] then
   for fluid, vals in pairs(Energy_table) do
     if vals.fv then
-      data.raw.fluid[fluid].fuel_value = vals.fv .."kJ"
+      data.raw.fluid[fluid].fuel_value = (math.floor(vals.fv/5+0.5))*5 .."kJ"
       data.raw.fluid[fluid].emissions_multiplier = vals.em or data.raw.fluid[fluid].emissions_multiplier or 1
       if vals.turr ~= false then
-        table.insert(turret_params, {type = fluid, damage_modifier = vals.fv/Energy_table["gas-methane"].fv})
+        table.insert(turret_params, {type = fluid, damage_modifier = math.floor(vals.fv/Energy_table["gas-methane"].fv*10+0.5)/10})
       end
     end
   end
@@ -119,13 +119,18 @@ if mods["bobplates"] then
     {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
   )
   OV.barrel_overrides("liquid-fuel", "acid")
-  
+
   data.raw["recipe"]["liquid-fuel"].always_show_products = true
   data.raw["recipe"]["liquid-fuel"].icon = nil
   data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
     {"liquid-fuel"},
     {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
   )
+  --update bobs tungstic acid to use new icon
+  data.raw.fluid["tungstic-acid"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {235,235,240}, {235,235,240}, {135,090,023,0.75}, {135,090,023,0.75} })
+  data.raw.fluid["tungstic-acid"].icon = nil
+  data.raw.fluid["tungstic-acid"].icon_size = nil
+  data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
   OV.patch_recipes(
     {
       {
@@ -140,11 +145,15 @@ if mods["bobplates"] then
         },
         subgroup = "petrochem-carbon-oil-feed",
         order = "h"
+      },
+      {
+        name = "tungstic-acid",
+        icons = angelsmods.functions.create_liquid_recipe_icon(nil,{{135, 090, 023}, {170, 170, 180}, {170, 170, 180}},{{"__bobplates__/graphics/icons/tungstic-acid.png",32}})
       }
     }
   )
-  OV.add_unlock("angels-oil-processing", "liquid-fuel")
-
+  OV.add_unlock("flammables", "liquid-fuel")
+  OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
 end
 
 -------------------------------------------------------------------------------

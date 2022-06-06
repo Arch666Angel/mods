@@ -110,7 +110,7 @@ if angelsmods.industries.tech then
     end
     --mining drills
     AI.pack_replace("bob-drills-3", "blue", "orange")
-    AI.pack_replace("bob-area-drills-2", "blue", "orange")
+    AI.pack_replace("bob-area-drills-2", "green", "orange")
     AI.pack_replace("bob-area-drills-4", "blue", "yellow")
   end
 
@@ -143,14 +143,21 @@ if angelsmods.industries.tech then
     OV.remove_prereq("bob-robo-modular-2", "tech-blue-packs")
     -- robots
     OV.remove_science_pack("construction-robotics", "angels-science-pack-orange")
+    AI.pack_replace("logistic-robotics", "blue", "orange")
     AI.pack_replace("bob-robots-1", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-3", "production-science-pack")
+    AI.pack_replace("worker-robots-storage-1", "blue", "orange")
     if settings.startup["bobmods-logistics-flyingrobotframes"].value == true then
       OV.remove_science_pack("robotics", "angels-science-pack-orange")
       AI.pack_replace("bob-robotics-2", "blue", "orange")
       OV.remove_prereq("bob-robotics-3", "production-science-pack")
+      AI.pack_replace("bob-robotics-4", "blue", "yellow")
+      AI.pack_replace("bob-robots-3", "blue", "yellow")
     end
     -- inserter techs
+    AI.pack_replace("inserter-capacity-bonus-1", "orange", "green")
+    AI.pack_replace("inserter-capacity-bonus-3", "blue", "orange")
+    AI.pack_replace("inserter-stack-size-bonus-2", "blue", "orange")
     if settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
       OV.remove_prereq("stack-inserter", "tech-orange-circuit")
       AI.pack_replace("stack-inserter", "orange", "green")
@@ -194,9 +201,11 @@ if angelsmods.industries.tech then
     AI.pack_replace("bob-turrets-3", "green", "orange")
     AI.pack_replace("bob-turrets-5", "blue", "yellow")
     AI.pack_replace("bob-sniper-turrets-2", "blue", "orange")
-    OV.remove_prereq("bob-sniper-turrets-2", "tech-blue-packs")
+    OV.remove_prereq("bob-sniper-turrets-2", "military-3")
     AI.pack_replace("bob-laser-turrets-2", "green", "orange")
     AI.pack_replace("bob-laser-turrets-3", "blue", "orange")
+    OV.remove_prereq("bob-laser-turrets-3", "military-3")
+    OV.add_prereq("bob-laser-turrets-4", "military-3")
     AI.pack_replace("bob-plasma-turrets-1", "green", "orange")
     AI.pack_replace("bob-plasma-turrets-2", "green", "orange")
     if mods["angelsexploration"] then
@@ -205,15 +214,20 @@ if angelsmods.industries.tech then
     --laser rifles
     AI.pack_replace("bob-laser-rifle", "green", "orange")
     AI.pack_replace("bob-laser-rifle-ammo-1", "green", "orange")
+    AI.pack_replace("bob-laser-rifle-ammo-2", "green", "orange")
+    OV.remove_prereq("bob-laser-rifle-ammo-2", "military-3")
+    OV.add_prereq("bob-laser-rifle-ammo-3", "military-3")
     --Drones/CombatBots
     AI.pack_replace("bob-robot-gun-1", "green", "orange")
     AI.pack_replace("bob-robot-gun-drones", "green", "orange")
     AI.pack_replace("bob-robot-plasma-drones", "green", "orange")
     AI.pack_replace("bob-robot-laser-drones", "green", "orange")
     AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
+    AI.pack_replace("bob-laser-robot", "blue", "yellow")
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")
-    AI.pack_replace("bob-rocket", "green", "orange")
+    AI.pack_replace("bob-rocket", "blue", "orange")
+    AI.pre_req_replace("bob-rocket", "military-3", "angels-components-weapons-advanced")
     AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
     AI.pack_replace("radars-4", "blue", "yellow")
@@ -233,7 +247,12 @@ if angelsmods.industries.tech then
     AI.pack_replace("vehicle-roboport-equipment", "green", "orange")
     AI.pack_replace("vehicle-roboport-modular-equipment-1", "green", "orange")
     OV.remove_prereq("vehicle-fusion-cell-equipment-2", "production-science-pack")
+    AI.pack_replace("vehicle-fusion-cell-equipment-3", "yellow", "blue")
     OV.remove_prereq("vehicle-fusion-reactor-equipment-2", "production-science-pack")
+    AI.pack_replace("vehicle-fusion-reactor-equipment-2", "yellow", "blue")
+    AI.pack_replace("vehicle-fusion-reactor-equipment-3", "yellow", "blue")
+    AI.pack_replace("vehicle-big-turret-equipment-3", "yellow", "blue")
+    AI.pre_req_replace("vehicle-big-turret-equipment-3", "military-4", "military-3")
   end
 
   -------------------------------------------------------------------------------
@@ -243,7 +262,7 @@ if angelsmods.industries.tech then
     --adds bob personal equipment stuffs
     AI.pack_replace("personal-roboport-equipment", "green", "orange")
     AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    AI.pack_replace("exoskeleton-equipment", "blue", "orange")
+    AI.pack_replace("exoskeleton-equipment", "green", "orange")
     AI.pack_replace("solar-panel-equipment-2", "green", "orange")
     AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
   end
@@ -253,6 +272,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
     --adds bob power stuffs
+    OV.remove_science_pack("electric-engine", "angels-science-pack-green")
     -- steam power
     if settings.startup["bobmods-power-steam"].value == true then
       AI.pack_replace("bob-steam-engine-4", "blue", "orange")
@@ -286,7 +306,7 @@ if angelsmods.industries.tech then
     end
     -- power distribution
     if settings.startup["bobmods-power-poles"].value == true then
-      AI.pack_replace("electric-pole-2", "green", "orange")
+      AI.pack_replace("electric-pole-2", "blue", "orange")
       AI.pack_replace("electric-pole-4", "blue", "yellow")
       AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
       AI.pack_replace("electric-substation-3", "blue", "yellow")

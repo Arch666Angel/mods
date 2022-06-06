@@ -20,7 +20,10 @@ local function add_speed_locale()
     for _,train in pairs(data.raw[part]) do
       if train then
         if train.localised_description then --add to table
-          --table.insert(train.localised_description,"\n") --ensure new line at start?
+          if type(train.localised_description) == 'string' then
+            train.localised_description = {"", train.localised_description}
+          end
+          table.insert(train.localised_description,"\n") --ensure new line at start
           table.insert(train.localised_description,{"speed-text.speed-cap", train.max_speed*216})
         else-- add new table
           train.localised_description={"speed-text.speed-cap", math.floor(train.max_speed*216*100)/100}--rounded tile/tick converted to km/h

@@ -6,12 +6,18 @@ local items_to_ignore = {}
 local fluids_to_ignore = {}
 local item_recipes_to_ignore = {}
 local fluid_recipes_to_ignore = {}
+local recipe_categories_to_ignore =
+{
+  "barreling-pump"
+}
 
 local function has_recipe(recipe_filters, recipes_to_ignore)
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
 
   if #recipe_prototypes == 0 then
     return false
+  elseif #recipes_to_ignore == 0 then
+    return true
   else
     local used = false
     for recipe_name, recipe in pairs(recipe_prototypes) do
@@ -94,7 +100,13 @@ local unit_test_008 = function()
 
   -- Populate fluid_recipes_to_ignore with unbarreling recipes
   local recipe_filters = {}
-  table.insert(recipe_filters, {filter = "category", invert = false, mode = "and", category = "barreling-pump"})
+  if #recipe_categories_to_ignore > 0 then
+    for _, category_name in pairs(recipe_categories_to_ignore) do
+      if game.recipe_category_prototypes[category] then
+        table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = category_name})
+      end
+    end
+  end
 
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
 
@@ -113,6 +125,23 @@ local unit_test_008 = function()
     local fluid = entity.fluid
     if fluid then
       fluids_to_ignore[fluid.name] = true
+    end
+  end
+
+  -- Populate fluid_to_ignore with boiler results
+  local entity_filters = {}
+  table.insert(entity_filters, {filter="type", type="boiler", mode="or"})
+  table.insert(entity_filters, {filter="hidden", mode="and", invert=true})
+  table.insert(entity_filters, {filter="type", type="boiler", mode="or"})
+  table.insert(entity_filters, {filter="flag", flag="player-creation", mode="and"})
+  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+
+  for boiler_name, boiler in pairs(entity_prototypes) do
+    for _, fluidbox in pairs(boiler.fluidbox_prototypes) do
+      if fluidbox.filter and fluidbox.production_type == "output" then
+        fluids_to_ignore[fluidbox.filter.name] = true
+        break
+      end
     end
   end
 

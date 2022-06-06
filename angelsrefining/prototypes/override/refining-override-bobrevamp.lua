@@ -28,23 +28,3 @@ if mods["bobrevamp"] then
     OV.hide_recipe({"sulfuric-acid","sulfur"})
   end
 end
-  
---local ammonium = data.raw.recipe["ammonium-chloride-recycling"]
---if ammonium then
---  ammonium.icon = nil
---  if angelsmods.petrochem then
---    ammonium.icons =
---      angelsmods.functions.create_solid_recipe_icon(
---      {"solid-limestone", "gas-ammonium-chloride"},
---      "solid-calcium-chloride",
---      {"gas-ammonia"}
---    )
---  else
---    ammonium.icons =
---      angelsmods.functions.create_solid_recipe_icon(
---      {"limestone", "ammonium-chloride"},
---      "calcium-chloride",
---      {"ammonia"}
---    )
---  end
---end

@@ -17,6 +17,8 @@ if angelsmods.industries.tech then
     AI.core_replace("electric-mixing-furnace", "basic", "processing")
     AI.core_replace("steel-chemical-furnace", "basic", "processing")
     AI.core_replace("electric-chemical-furnace", "basic", "processing")
+    AI.core_replace("fluid-barrel-processing", "logistic", "processing")
+    AI.core_replace("fluid-canister-processing", "logistic", "processing")
     AI.core_replace("gas-canisters", "basic", "processing")
     AI.core_replace("ceramics", "basic", "processing")
 
@@ -66,6 +68,11 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-assembly-distilleries"].value then
       AI.core_replace("bob-distillery-2", "basic", "processing")
       AI.core_replace("bob-distillery-3", "basic", "processing")
+    end
+    -- centrifuge
+    if settings.startup["bobmods-assembly-centrifuge"].value then
+      AI.core_replace("centrifuge-2", "processing", "energy")
+      AI.core_replace("centrifuge-3", "processing", "energy")
     end
   end
 
@@ -151,7 +158,7 @@ if angelsmods.industries.tech then
     AI.core_replace("bob-robo-modular-1", "basic", "logistic")
     AI.core_replace("bob-robo-modular-2", "basic", "logistic")
     AI.core_replace("bob-robo-modular-3", "basic", "logistic")
-    AI.core_replace("bob-robo-modular-4", "basic", "logistic")
+    AI.core_replace("bob-robo-modular-4", "processing", "logistic")
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
@@ -180,7 +187,7 @@ if angelsmods.industries.tech then
     AI.core_replace("radars", "basic", "exploration")
     AI.core_replace("radars-2", "basic", "exploration")
     AI.core_replace("radars-3", "basic", "exploration")
-    AI.core_replace("radars-4", "war", "exploration")
+    AI.core_replace("radars-4", "processing", "exploration")
     --mines
     AI.core_replace("poison-mine", "basic", "war")
     AI.core_replace("slowdown-mine", "basic", "war")
@@ -254,6 +261,9 @@ if angelsmods.industries.tech then
       OV.remove_science_pack("vehicle-energy-shield-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-energy-shield-equipment-5", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-energy-shield-equipment-6", "datacore-enhance-1")
+      OV.remove_science_pack("bob-explosive-artillery-shells", "datacore-war-1")
+      OV.remove_science_pack("bob-fire-artillery-shells", "datacore-war-1")
+      OV.remove_science_pack("bob-poison-artillery-shells", "datacore-war-1")
       --yellow tier
       OV.remove_science_pack("bob-power-armor-3", "datacore-enhance-1")
       OV.remove_science_pack("bob-power-armor-4", "datacore-enhance-1")

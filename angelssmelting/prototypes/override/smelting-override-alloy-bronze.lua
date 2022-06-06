@@ -202,9 +202,8 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     OV.disable_recipe({"bronze-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------
-    if mods["bobplates"] then
-      OV.add_prereq("alloy-processing","angels-bronze-smelting-1")
-    end
+    OV.add_prereq("alloy-processing","angels-bronze-smelting-1")
+    OV.add_prereq("angels-metallurgy-2", "alloy-processing")
     if mods["bobpower"] then
       OV.add_prereq("fluid-generator-1","angels-bronze-smelting-1")
     end

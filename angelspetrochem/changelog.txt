@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.22
+Date: 06.06.2022
+  Changes:
+    - Removed excessive logging entries from the log file (743)
+    - Lowered the fuel value of crude to 35% to be more inline with the other fuels
+    - Hid Ammonium chloride recycling recipe from Bob's revamp (769)
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: 19.12.2021
   Changes:

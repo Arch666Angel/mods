@@ -167,7 +167,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "raw-fish", amount_min = 2, amount_max = 4, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
         --{type="fluid", name="water-yellow-waste", amount=20},
       },
       icons = {
@@ -198,7 +198,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "alien-fish-1-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icons = {
         {
@@ -226,7 +226,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "alien-fish-2-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icons = {
         {
@@ -254,7 +254,7 @@ data:extend(
       },
       results = {
         {type = "item", name = "alien-fish-3-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2},
-        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100, catalyst_amount = 100}
+        {type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100}
       },
       icons = {
         {

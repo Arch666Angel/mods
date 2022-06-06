@@ -254,15 +254,17 @@ data:extend(
       name = "chemical-void",
       icons = {
         {
-          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
+          icon_size = 64,
+          icon_mipmaps = 4
         },
         {
-          icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
+          icon = "__angelsrefining__/graphics/icons/void.png",
+          icon_size = 32,
           scale = 0.4,
           shift = {9.6, 9.6}
-        }
+        },
       },
-      icon_size = 32,
       flags = {"hidden"},
       subgroup = "angels-void",
       order = "zzz[chemical-void]",

@@ -269,6 +269,6 @@ if angelsmods.industries.tech then
   )
 
   -- angelsmods.triggers.lab_ignore_token["angels-exploration-lab-1"] = true
-  angelsmods.triggers.lab_ignore_token["angels-exploration-lab-2"] = true
+  -- angelsmods.triggers.lab_ignore_token["angels-exploration-lab-2"] = true
   angelsmods.triggers.lab_ignore_token["angels-exploration-lab-3"] = true
 end

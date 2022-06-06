@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.2
+Date: 06.06.2022
+  Changes:
+    - Removed the obsolete ingredient_count limitation on some refining buildings (763)
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+    - Removed setting for Bob's distilleries. These will now always be disabled (769)
+    - Hide Bob's salt, brine, and lithium chloride (769)
+    - Changed the recipe builder to use more bob items when available: (674)
+      - T1 buildings now attempt to use steel pipes over iron pipes
+      - T2 buildings now attempt to use bronze plates over steel plates
+      - T2 buildings now attempt to use bronze pipes over steel pipes
+  Bugfixes:
+    - Fixed crash when playing with bob enemies and bob equipment without bob artifacts enabled
+    - Fixed the void item group icon (770)
+---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 19.12.2021
   Changes:

@@ -44,6 +44,7 @@ data:extend(
       prerequisites = {
         "bio-farm-1",
         "bio-paper-1",
+        "logistic-science-pack"
       },
       effects = {
         {
@@ -57,16 +58,40 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "swamp-garden-cultivating-a"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
+        time = 30
+      }
+    },
+    {
+      type = "technology",
+      name = "gardens-3",
+      icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+      icon_size = 128,
+      order = "c-a",
+      prerequisites = {
+        "bio-farm-alien",
+        "chemical-science-pack"
+      },
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "garden-cultivating"
         }
       },
       unit = {
-        count = 50,
+        count = 100,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
       }

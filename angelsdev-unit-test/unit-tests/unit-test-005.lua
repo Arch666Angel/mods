@@ -13,7 +13,11 @@ local tech_unlocked_by_script =
 
 local function can_be_researched(recipe_name)
   if recipes_to_ignore[recipe_name] then return true end
-  local tech_prototypes = game.technology_prototypes
+
+  local tech_filters = {}
+  table.insert(tech_filters, {filter = "hidden", invert = true, mode = "and"})
+  local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
+
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     for _, tech_effect in pairs(tech_prototype.effects) do
       if tech_effect.type == "unlock-recipe" and tech_effect.recipe == recipe_name then

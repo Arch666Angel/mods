@@ -4,7 +4,6 @@
 -- depends on a technology unlocking the required science level.
 local unit_test_functions = require("unit-test-functions")
 
--- this unit test currently doesn't cover bobs technologies
 local technologies_to_ignore =
 {
 }
@@ -76,6 +75,7 @@ local function calculate_science_pack_level()
   if game.active_mods["bobtech"] then
     -- bobs regular science packs
     for pack_name, pack_level in pairs{
+      ["steam-science-pack"] = 30,
       ["advanced-logistic-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]),
     } do
       science_pack_level[pack_name] = pack_level
@@ -84,14 +84,14 @@ local function calculate_science_pack_level()
     if game.active_mods["bobenemies"] then
       -- bobs alien science packs
       for pack_name, pack_level in pairs{
-        ["science-pack-gold"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack-blue"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack-orange"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack-purple"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack-yellow"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack-green"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
-        ["alien-science-pack-red"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
+        ["science-pack-gold"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-blue"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-orange"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-purple"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-yellow"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-green"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+        ["alien-science-pack-red"] = 50 + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
       } do
         science_pack_level[pack_name] = pack_level
       end
@@ -111,6 +111,43 @@ local function calculate_science_pack_level()
     } do
       science_pack_level[pack_name] = pack_level
     end
+    technologies_to_ignore["effectivity-module-5"] = true
+    technologies_to_ignore["green-module-1"] = true
+    technologies_to_ignore["god-module-1"] = true
+    technologies_to_ignore["pollution-clean-module-5"] = true
+    technologies_to_ignore["pollution-create-module-5"] = true
+    technologies_to_ignore["productivity-module-5"] = true
+    technologies_to_ignore["raw-productivity-module-1"] = true
+    technologies_to_ignore["raw-speed-module-1"] = true
+    technologies_to_ignore["speed-module-5"] = true
+  end
+
+  if game.active_mods["SeaBlock"] then
+    for pack_name, pack_level in pairs{
+      ["sb-angelsore3-tool"] = 0,
+      ["sb-algae-brown-tool"] = 0,
+      ["sb-lab-tool"] = 0,
+      ["sb-basic-circuit-board-tool"] = 0
+    } do
+      science_pack_level[pack_name] = pack_level
+    end
+  end
+
+  if game.active_mods["ScienceCostTweakerM"] then
+    science_pack_level["sct-bio-science-pack"] = science_pack_level["token-bio"]
+  end
+
+  if game.active_mods["SpaceMod"] then
+    technologies_to_ignore["space-assembly"] = true
+    technologies_to_ignore["protection-fields"] = true
+    technologies_to_ignore["fusion-reactor"] = true
+    technologies_to_ignore["fuel-cells"] = true
+    technologies_to_ignore["habitation"] = true
+    technologies_to_ignore["life-support-systems"] = true
+    technologies_to_ignore["spaceship-command"] = true
+    technologies_to_ignore["astrometrics"] = true
+    technologies_to_ignore["ftl-theory-A"] = true
+    technologies_to_ignore["ftl-propulsion"] = true
   end
 end
 
@@ -321,6 +358,7 @@ local unit_test_006 = function()
         unit_test_result = unit_test_functions.test_failed
       elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_functions.print_msg(string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name))
+        unit_test_result = unit_test_functions.test_failed
       elseif ((bonus_upgrade_technologies[tech_name] ~= true) and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)) then
         unit_test_result = unit_test_functions.test_failed
       end

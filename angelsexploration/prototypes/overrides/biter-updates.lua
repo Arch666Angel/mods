@@ -52,6 +52,7 @@ end
 --end
 
 --ADD RESISTANCES
+require("prototypes.entities.biter-definitions") -- does not hurt to re-include it to make sure the variables are up to date
 angelsmods.functions.update_alien(small_biter)
 angelsmods.functions.update_alien(medium_biter)
 angelsmods.functions.update_alien(big_biter)

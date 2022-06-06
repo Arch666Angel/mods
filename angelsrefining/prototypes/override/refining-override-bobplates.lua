@@ -205,3 +205,15 @@ if mods["bobplates"] then
   OV.set_science_pack("cobalt-processing", "chemical-science-pack", 1)
   OV.add_prereq("cobalt-processing", "ore-leaching")
 end
+
+-------------------------------------------------------------------------------
+-- DISTILLERIES ---------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  -- Distillery 1
+  angelsmods.functions.add_flag("bob-distillery", "hidden")
+  angelsmods.functions.set_next_upgrade("assembling-machine", "bob-distillery", nil)
+  angelsmods.functions.set_next_upgrade("furnace", "bob-distillery", nil)
+  OV.global_replace_item("bob-distillery", "chemical-plant")
+  OV.disable_recipe("bob-distillery")
+end
