@@ -38,20 +38,23 @@ if angelsmods.industries.components then
   OV.add_prereq("angels-cobalt-smelting-1", "water-washing-1")
   OV.remove_prereq("angels-cobalt-smelting-2", "water-washing-1")
 
-  AI.replace_recipe_ing("personal-roboport-equipment","battery-1","battery-4")
-  --OV.add_prereq("personal-roboport-equipment", "angels-components-batteries-4")
-  AI.replace_recipe_ing("personal-roboport-mk2-equipment","battery-1","battery-5")
-  OV.patch_recipes(
-    {
+  -- roboports
+  if not mods["bobequipment"] then
+    AI.replace_recipe_ing("personal-roboport-equipment","battery-1","battery-4")
+    AI.replace_recipe_ing("personal-roboport-mk2-equipment","battery-1","battery-5")
+    OV.patch_recipes(
       {
-        name = "personal-roboport-mk2-equipment",
-        ingredients = {
-          {type = "item", name = "battery-5", amount = 25}
+        {
+          name = "personal-roboport-mk2-equipment",
+          ingredients = {
+            {type = "item", name = "battery-5", amount = 25}
+          }
         }
       }
-    }
-  )
-  OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
+    )
+    OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
+  end
+
   if mods["bobplates"] then
     OV.patch_recipes(
       {
