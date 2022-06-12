@@ -126,6 +126,11 @@ if mods["bobplates"] then
     {"liquid-fuel"},
     {{237, 212, 104}, {247, 216, 081}, {247, 216, 081}}
   )
+  --update bobs tungstic acid to use new icon
+  data.raw.fluid["tungstic-acid"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {235,235,240}, {235,235,240}, {135,090,023,0.75}, {135,090,023,0.75} })
+  data.raw.fluid["tungstic-acid"].icon = nil
+  data.raw.fluid["tungstic-acid"].icon_size = nil
+  data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
   OV.patch_recipes(
     {
       {
@@ -140,11 +145,15 @@ if mods["bobplates"] then
         },
         subgroup = "petrochem-carbon-oil-feed",
         order = "h"
+      },
+      {
+        name = "tungstic-acid",
+        icons = angelsmods.functions.create_liquid_recipe_icon(nil,{{135, 090, 023}, {170, 170, 180}, {170, 170, 180}},{{"__bobplates__/graphics/icons/tungstic-acid.png",32}})
       }
     }
   )
-  OV.add_unlock("angels-oil-processing", "liquid-fuel")
-
+  OV.add_unlock("flammables", "liquid-fuel")
+  OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
 end
 
 -------------------------------------------------------------------------------

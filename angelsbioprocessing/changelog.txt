@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.22
-Date: ???
+Date: 06.06.2022
   Changes:
     - Moved Garden cultivation recipe unlock to a new technology Garden processing 3 #783
       This recipe exists in case gardens of a particular type do not spawn

@@ -21,6 +21,8 @@ if data.raw["item"]["fluorite"] then
   OV.global_replace_item("fluorite", "fluorite-ore")
 end
 
+OV.execute()
+
 --RECIPE TINTS
 local recipe_categories = -- a list of all crafting categories for which (petrochem) machines supporting recipe tints
 {

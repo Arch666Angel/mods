@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.14
-Date: xx.xx.2021
+Date: 06.06.2022
   Bugfixes:
     - Fixed crash when adding a newer version of this mod to an existing save while other mods are
       (wrongfully) placing entities while the configuration changes are being executed...
+    - Fixed crash related to biter tips and tricks when playing with other biter mods
   Changes:
     - Added small description to the gathering turret
 ---------------------------------------------------------------------------------------------------
