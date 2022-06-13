@@ -232,6 +232,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "angels-chemical-plant-2"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "advanced-chemical-plant"
         },
         {
@@ -276,7 +280,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-plant-2"
+          recipe = "angels-chemical-plant-3"
         },
         {
           type = "unlock-recipe",
@@ -333,7 +337,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-plant-3"
+          recipe = "angels-chemical-plant-4"
         },
         {
           type = "unlock-recipe",
@@ -397,10 +401,6 @@ data:extend(
         "utility-science-pack"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant-4"
-        },
         {
           type = "unlock-recipe",
           recipe = "separator-4"

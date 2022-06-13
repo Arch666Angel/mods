@@ -11,11 +11,11 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-plant"
+          recipe = "angels-electrolyser"
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-electrolyser"
+          recipe = "angels-chemical-plant"
         },
         {
           type = "unlock-recipe",
