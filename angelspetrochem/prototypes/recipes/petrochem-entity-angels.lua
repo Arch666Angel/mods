@@ -900,6 +900,34 @@ angelsmods.functions.RB.build(
     --OIL REFINERY
     {
       type = "recipe",
+      name = "oil-refinery",
+      normal = {
+        energy_required = 5,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "oilref-1", amount = 1},
+          {type = "item", name = "t1-plate", amount = 2},
+          {type = "item", name = "t1-gears", amount = 4},
+          {type = "item", name = "t1-circuit", amount = 4},
+          {type = "item", name = "t1-pipe", amount = 12}
+        },
+        result = "oil-refinery"
+      },
+      expensive = {
+        energy_required = 5 * buildingtime,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "oilref-1", amount = 1},
+          {type = "item", name = "t1-plate", amount = 2 * buildingmulti},
+          {type = "item", name = "t1-gears", amount = 4 * buildingmulti},
+          {type = "item", name = "t1-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t1-pipe", amount = 12 * buildingmulti}
+        },
+        result = "oil-refinery"
+      }
+    },
+    {
+      type = "recipe",
       name = "oil-refinery-2",
       normal = {
         energy_required = 5,
