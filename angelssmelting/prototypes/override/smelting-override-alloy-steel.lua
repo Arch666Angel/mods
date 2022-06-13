@@ -39,8 +39,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   if angelsmods.trigger.smelting_products["steel"].plate or
      angelsmods.trigger.smelting_products["steel"].rod   then
   else
-    OV.remove_prereq("angels-steel-smelting-2", "strand-casting-2")
-    OV.remove_prereq("angels-steel-smelting-3", "strand-casting-3")
+    OV.remove_prereq("angels-steel-smelting-3", "strand-casting-2")
   end
 
   if angelsmods.trigger.smelting_products["steel"].powder then
@@ -67,40 +66,12 @@ end
 -- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["steel"].plate then
-  OV.patch_recipes(
+  OV.disable_recipe(
     {
-      {
-        name = "steel-plate",
-        icons = {
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-iron-hot.png",
-            icon_size = 64,
-          },
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-iron.png",
-            scale = 0.4375,
-            shift = {-10, -10}
-          }
-        },
-        icon_size = 32,
-        energy_required = 3,
-        category = "smelting",
-        ingredients = {
-          {"!!"},
-          {type = "item", name = "iron-plate", amount = 1}
-        },
-        results = {
-          {"!!"},
-          {type = "item", name = "angels-plate-hot-iron", amount = 1}
-        },
-        subgroup = "angels-steel-casting",
-        order = "l[angels-plate-steel]-aa"
-      }
+      "steel-plate"
     }
   )
-  OV.add_unlock("steel-processing", "angels-plate-steel-pre-heating")
-  OV.add_prereq("steel-processing", "automation")
-  OV.add_prereq("steel-processing", "angels-metallurgy-1")
+  OV.add_prereq("steel-processing", "angels-steel-smelting-1")
   OV.global_replace_item("angels-plate-steel", "steel-plate")
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")
   angelsmods.functions.move_item("steel-plate", "angels-steel-casting", "l")

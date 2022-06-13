@@ -67,7 +67,6 @@ if mods["bobplates"] then
       --end
     end
     -- tech tree updates
-    OV.add_prereq("steel-mixing-furnace","angels-steel-smelting-1") --regular steel processing is already a pre-req for a prereq so puh
     OV.add_prereq("electric-mixing-furnace","steel-mixing-furnace")
     OV.remove_prereq("steel-mixing-furnace","alloy-processing")
     OV.remove_prereq("electric-mixing-furnace","alloy-processing")

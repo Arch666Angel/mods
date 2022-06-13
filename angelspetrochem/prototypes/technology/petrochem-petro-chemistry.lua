@@ -199,8 +199,7 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "angels-fluid-control",
-        "basic-chemistry-3"
+        "angels-fluid-control"
       },
       effects = {
         {
@@ -211,8 +210,7 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 15
       },

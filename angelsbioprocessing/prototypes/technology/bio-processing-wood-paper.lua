@@ -669,7 +669,7 @@ data:extend(
     {
       "bio-paper-1",
       "chlorine-processing-1",
-      "angels-nitrogen-processing-1",
+      "angels-nitrogen-processing-2",
       "angels-sulfur-processing-2",
     },
     effects =

@@ -11,6 +11,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "angels-chemical-plant"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "angels-electrolyser"
         },
         {
@@ -21,14 +25,6 @@ data:extend(
           type = "unlock-recipe",
           recipe = "carbon-separation-2"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-carrier"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-red"
-        }
       },
       unit = {
         count = 50,
@@ -45,8 +41,7 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon({{105, 113, 090}, {088, 113, 075}, {070, 090, 060}}),
       prerequisites = {
         "basic-chemistry",
-        "water-treatment",
-        "steel-processing"
+        "water-treatment"
       },
       effects = {
         {
@@ -64,10 +59,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "water-gas-shift-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant"
         }
       },
       unit = {
@@ -104,6 +95,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "water-separation-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalyst-metal-carrier"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalyst-metal-red"
         }
       },
       unit = {
@@ -462,7 +461,7 @@ data:extend(
       name = "angels-nitrogen-processing-1",
       icons = angelsmods.functions.create_gas_tech_icon("NNN"),
       prerequisites = {
-        "basic-chemistry-2"
+        "basic-chemistry"
       },
       effects = {
         {
@@ -476,10 +475,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "air-separation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-ammonia"
         }
       },
       unit = {
@@ -499,12 +494,17 @@ data:extend(
         "angels-nitrogen-processing-1",
         "angels-advanced-chemistry-1",
         "chlorine-processing-1",
-        "water-treatment-2"
+        "water-treatment-2",
+        "angels-sulfur-processing-1"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "angels-air-filter-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-ammonia"
         },
         {
           type = "unlock-recipe",
