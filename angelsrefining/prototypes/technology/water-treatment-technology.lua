@@ -114,7 +114,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment-2",
-        "advanced-electronics"
+        "advanced-electronics",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -142,7 +143,8 @@ data:extend(
         count = 30,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },

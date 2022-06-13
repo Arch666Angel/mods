@@ -314,7 +314,8 @@ data:extend(
       prerequisites = {
         --"ore-floatation",
         "advanced-ore-refining-1",
-        "geode-processing-2"
+        "geode-processing-2",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -362,7 +363,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
@@ -833,7 +835,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-refining",
-        "advanced-ore-refining-3"
+        "advanced-ore-refining-3",
+        "production-science-pack"
       },
       effects = {
         {
@@ -862,7 +865,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 15
       },
