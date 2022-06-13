@@ -13,7 +13,7 @@ data:extend(
     {
       type = "recipe",
       name = "algae-brown",
-      category = "bio-processing",
+      category = "bio-processing-2",
       subgroup = "bio-processing-brown",
       enabled = false,
       energy_required = 30,

@@ -7,16 +7,12 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
-        "water-treatment"
+        "automation"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "algae-farm"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "algae-brown"
         },
         {
           type = "unlock-recipe",
@@ -47,12 +43,16 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-processing-brown",
-        "basic-chemistry"
+        "water-treatment"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "algae-farm-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "algae-brown"
         },
         {
           type = "unlock-recipe",
