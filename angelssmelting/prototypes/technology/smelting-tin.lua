@@ -23,10 +23,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-tin"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "basic-tinned-copper-wire"
         }
       },
       unit = {

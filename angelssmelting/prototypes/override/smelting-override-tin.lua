@@ -146,7 +146,6 @@ if angelsmods.trigger.smelting_products["tin"].wire then
       }
     }
   )
-  OV.remove_unlock("angels-tin-smelting-1","basic-tinned-copper-wire")
   OV.add_unlock("electronics","basic-tinned-copper-wire")
   OV.remove_prereq("electronics","angels-tin-smelting-1")
 
