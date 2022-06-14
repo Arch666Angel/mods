@@ -23,6 +23,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   if (not angelsmods.trigger.smelting_products["silicon"]      ) or
      (not angelsmods.trigger.smelting_products["silicon"].ingot) then
     OV.remove_prereq("angels-steel-smelting-2", "angels-silicon-smelting-2")
+    OV.add_prereq("angels-steel-smelting-2", "strand-casting-1")
   end
 
   if (not angelsmods.trigger.smelting_products["manganese"]      ) or
@@ -30,16 +31,25 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
     OV.remove_prereq("angels-steel-smelting-2", "angels-manganese-smelting-1")
   end
 
-  if special_vanilla then
-    OV.add_unlock("angels-steel-smelting-2", "angels-roll-steel-casting-fast")
-    OV.add_prereq("angels-steel-smelting-2", "angels-coolant-1")
-    OV.disable_technology("angels-steel-smelting-3")
-  end
-
   if angelsmods.trigger.smelting_products["steel"].plate or
      angelsmods.trigger.smelting_products["steel"].rod   then
   else
     OV.remove_prereq("angels-steel-smelting-3", "strand-casting-2")
+  end
+
+  if (not angelsmods.trigger.smelting_products["nickel"]      ) or 
+     (not angelsmods.trigger.smelting_products["nickel"].ingot) then
+    OV.remove_prereq("angels-steel-smelting-3", "angels-nickel-smelting-3")
+  end
+
+  if (not angelsmods.trigger.smelting_products["chrome"]      ) or 
+     (not angelsmods.trigger.smelting_products["chrome"].ingot) then
+    OV.remove_prereq("angels-steel-smelting-3", "angels-chrome-smelting-1")
+  end
+
+  if (not angelsmods.trigger.smelting_products["tungsten"]       ) or 
+     (not angelsmods.trigger.smelting_products["tungsten"].powder) then
+    OV.remove_prereq("angels-steel-smelting-3", "angels-tungsten-smelting-1")
   end
 
   if angelsmods.trigger.smelting_products["steel"].powder then
