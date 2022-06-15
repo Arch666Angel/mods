@@ -51,6 +51,8 @@ if angelsmods.industries.components then
     )
   end
   OV.add_prereq("automation-2", "angels-components-construction-2")
+  OV.remove_prereq("automation-2", "steel-processing")
+  OV.remove_prereq("automation-2", "electronics")
 
   -------------------------------------------------------------------------------
   -- BASE GAME TRAIN ------------------------------------------------------------

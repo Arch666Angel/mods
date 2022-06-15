@@ -2,10 +2,27 @@ local OV = angelsmods.functions.OV
 local AI = angelsmods.functions.AI
 
 if angelsmods.industries.components then
-  -- submachine gun
+  -- vanilla weapons
   OV.remove_unlock("military", "submachine-gun")
+  OV.remove_unlock("military", "shotgun")
+  OV.remove_unlock("military", "shotgun-shell")
   OV.add_unlock("angels-components-weapons-basic", "submachine-gun")
+  OV.add_unlock("angels-components-weapons-basic", "shotgun")
+  OV.add_unlock("angels-components-weapons-basic", "shotgun-shell")
 
+  OV.remove_prereq("military-2", "steel-processing")
+  OV.remove_unlock("military-2", "piercing-rounds-magazine")
+  OV.remove_unlock("military-2", "grenade")
+  OV.add_unlock("military", "piercing-rounds-magazine")
+  OV.add_unlock("military", "grenade")
+
+  OV.remove_prereq("heavy-armor", "steel-processing")
+
+  OV.remove_prereq("weapon-shooting-speed-1", "military")
+  OV.remove_prereq("physical-projectile-damage-1", "military")
+  OV.add_prereq("weapon-shooting-speed-1", "angels-components-weapons-basic")
+  OV.add_prereq("physical-projectile-damage-1", "angels-components-weapons-basic")
+  
   --battery requirements
   OV.remove_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber")
   OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
@@ -164,6 +181,9 @@ if angelsmods.industries.components then
     OV.add_prereq("productivity-module-2", "tech-blue-circuit")
     OV.add_prereq("productivity-module-3", "tech-yellow-circuit")
   end
+  
+  OV.remove_prereq("advanced-material-processing", "steel-processing")
+  OV.add_prereq("advanced-material-processing", "angels-components-construction-2")
 end
 
 if angelsmods.industries.components then

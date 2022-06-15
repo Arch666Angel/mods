@@ -50,6 +50,7 @@ OV.add_unlock("military", "weapon-2")
 OV.add_unlock("military", "angels-explosionchamber")
 OV.add_unlock("military", "weapon-parts-explosionchamber")
 OV.add_prereq("military", "angels-components-weapons-basic")
+OV.add_prereq("military", "angels-steel-smelting-1")
 
 -------------------------------------------------------------------------------
 -- WEAPON PARTS 3 -------------------------------------------------------------
@@ -58,7 +59,7 @@ OV.add_unlock("military-2", "body-3")
 OV.add_unlock("military-2", "weapon-3")
 OV.add_unlock("military-2", "angels-fluidchamber")
 OV.add_unlock("military-2", "weapon-parts-fluidchamber")
-OV.add_prereq("military-2", "steel-processing")
+OV.add_prereq("military-2", "angels-aluminium-smelting-1")
 
 -------------------------------------------------------------------------------
 -- WEAPON PARTS 4 -------------------------------------------------------------
