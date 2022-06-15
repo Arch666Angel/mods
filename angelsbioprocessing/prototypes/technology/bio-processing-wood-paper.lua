@@ -8,6 +8,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "bio-processing-brown"
     },
     effects =
     {
