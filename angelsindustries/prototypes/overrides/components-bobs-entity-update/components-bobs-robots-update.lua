@@ -85,7 +85,7 @@ if angelsmods.industries.components then
     
     OV.remove_prereq("bob-robotics-4", "ceramics")
     OV.remove_prereq("bob-robotics-4", "battery-3")
-    if data.raw.technology["angels-components-batteries-6"] then
+    if mods["bobplates"] then
       OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
     else
       OV.add_prereq("bob-robotics-4", "angels-components-batteries-5")
