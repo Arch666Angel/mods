@@ -833,7 +833,6 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   end
   if disable_table.technologies[k] or substitution_table.technologies[k] then
     data.raw.technology[k].enabled = false
-    data.raw.technology[k].hidden = true
   end
   -- adjust effects
   local dup_table = {}
