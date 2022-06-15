@@ -175,7 +175,7 @@ if angelsmods.industries.components then
           { "!!" },
           { type = "item", name = "circuit-yellow-loaded", amount = 5 },
           { type = "item", name = "cable-harness-5", amount = 2 },
-            { type = "item", name = mods["bobplates"] and "battery-6" or "battery-5", amount = 2 },
+          { type = "item", name = mods["bobplates"] and "battery-6" or "battery-5", amount = 2 }
         },
       },
     }
