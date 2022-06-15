@@ -89,9 +89,7 @@ if angelsmods.industries.components then
           {
             name = "personal-roboport-mk4-equipment",
             ingredients = {
-              mods["bobplates"] and
-                { type = "item", name = "battery-6", amount = "battery-1" } or
-                { type = "item", name = "battery-5", amount = "battery-1" }
+              { type = "item", name = mods["bobplates"] and "battery-6" or "battery-5", amount = "battery-1" }
             }
           },
         }
