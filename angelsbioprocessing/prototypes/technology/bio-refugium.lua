@@ -91,7 +91,6 @@ data:extend(
       icon_size = 160,
       order = "c-a",
       prerequisites = {
-        "gardens",
         "optics",
         "chemical-science-pack"
       },
