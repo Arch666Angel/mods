@@ -82,7 +82,8 @@ if angelsmods.industries.components then
           {
             name = "personal-roboport-mk3-equipment",
             ingredients = {
-              { type = "item", name = "battery-4", amount = "battery-1" }
+              { type = "item", name = "battery-4", amount = "battery-1" },
+              { type = "item", name = "battery-4", amount = "battery-3" }
             }
           },
           {
