@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.20
+Date: ???
+  Bugfixes:
+    - Fixed tech prerequisites for Batteries 3 tech from Bob's Metals, Chemicals, and Intermediates mod (799)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.19
 Date: 06.06.2022
   Changes:
