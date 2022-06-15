@@ -61,6 +61,48 @@ if angelsmods.industries.components then
   -- BOB EQUIPMENT ------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobequipment"] then
+    -- roboports
+    if mods["boblogistics"] then
+      OV.remove_input("personal-roboport-mk2-equipment", "battery-5")
+    else
+      OV.patch_recipes(
+        {
+          {
+            name = "personal-roboport-equipment",
+            ingredients = {
+              { type = "item", name = "battery-2", amount = "battery-4" }
+            }
+          },
+          {
+            name = "personal-roboport-mk2-equipment",
+            ingredients = {
+              { type = "item", name = "battery-3", amount = "battery-5" }
+            }
+          },
+          {
+            name = "personal-roboport-mk3-equipment",
+            ingredients = {
+              { type = "item", name = "battery-4", amount = "battery-1" }
+            }
+          },
+          {
+            name = "personal-roboport-mk4-equipment",
+            ingredients = {
+              mods["bobplates"] and
+                { type = "item", name = "battery-6", amount = "battery-1" } or
+                { type = "item", name = "battery-5", amount = "battery-1" }
+            }
+          },
+        }
+      )
+      if mods["bobplates"] then
+        OV.add_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-6")
+      else
+        OV.add_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-5")
+      end
+    end
+    OV.remove_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
+
     -- exoskeleton
     OV.patch_recipes(
       {

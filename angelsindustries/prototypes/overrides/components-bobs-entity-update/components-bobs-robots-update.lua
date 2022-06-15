@@ -72,6 +72,26 @@ if angelsmods.industries.components then
         }
       }
     )
+
+    OV.add_prereq("bob-robotics-2", "angels-components-mechanical-4")
+    OV.add_prereq("bob-robotics-2", "tech-blue-circuit")
+
+    OV.remove_prereq("bob-robotics-3", "titanium-processing")
+    OV.remove_prereq("bob-robotics-3", "advanced-electronics-2")
+    OV.remove_prereq("bob-robotics-3", "battery-2")
+    OV.add_prereq("bob-robotics-3", "angels-components-batteries-4")
+    OV.add_prereq("bob-robotics-3", "angels-components-mechanical-4")
+    OV.add_prereq("bob-robotics-3", "tech-blue-circuit")
+    
+    OV.remove_prereq("bob-robotics-4", "ceramics")
+    OV.remove_prereq("bob-robotics-4", "battery-3")
+    if data.raw.technology["angels-components-batteries-6"] then
+      OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
+    else
+      OV.add_prereq("bob-robotics-4", "angels-components-batteries-5")
+    end
+    OV.add_prereq("bob-robotics-4", "angels-components-mechanical-5")
+    OV.add_prereq("bob-robotics-4", "tech-yellow-circuit")
   end
   
   OV.remove_prereq("robotics", "angels-components-batteries-4")
@@ -79,23 +99,33 @@ if angelsmods.industries.components then
   OV.add_prereq("robotics", "angels-components-mechanical-3")
   OV.add_prereq("robotics", "tech-orange-circuit")
 
-  OV.add_prereq("bob-robotics-2", "angels-components-mechanical-4")
-  OV.add_prereq("bob-robotics-2", "tech-blue-circuit")
+  -- T2
+  OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-3")
+  OV.add_prereq("bob-robo-modular-2", "angels-components-batteries-3")
+  OV.add_prereq("vehicle-roboport-equipment-2", "angels-components-batteries-3")
 
-  OV.remove_prereq("bob-robotics-3", "titanium-processing")
-  OV.remove_prereq("bob-robotics-3", "advanced-electronics-2")
-  OV.remove_prereq("bob-robotics-3", "battery-2")
-  OV.add_prereq("bob-robotics-3", "angels-components-batteries-4")
-  OV.add_prereq("bob-robotics-3", "angels-components-mechanical-4")
-  OV.add_prereq("bob-robotics-3", "tech-blue-circuit")
+  -- T3
+  OV.remove_prereq("personal-roboport-mk3-equipment", "angels-components-batteries-3")
+  OV.remove_prereq("bob-robo-modular-3", "angels-components-batteries-3")
+  OV.remove_prereq("vehicle-roboport-equipment-3", "angels-components-batteries-3")
+  OV.add_prereq("personal-roboport-mk3-equipment", "angels-components-batteries-4")
+  OV.add_prereq("bob-robo-modular-3", "angels-components-batteries-4")
+  OV.add_prereq("vehicle-roboport-equipment-3", "angels-components-batteries-4")
   
-  OV.remove_prereq("bob-robotics-4", "ceramics")
-  OV.remove_prereq("bob-robotics-4", "battery-3")
-  if data.raw.technology["angels-components-batteries-6"] then
-    OV.add_prereq("bob-robotics-4", "angels-components-batteries-6")
+  -- T4
+  OV.remove_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-4")
+  OV.remove_prereq("bob-robo-modular-4", "angels-components-batteries-4")
+  OV.remove_prereq("vehicle-roboport-equipment-4", "angels-components-batteries-4")
+  if mods["bobplates"] then
+    OV.add_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-6")
+    OV.add_prereq("bob-robo-modular-4", "angels-components-batteries-6")
+    OV.add_prereq("vehicle-roboport-equipment-4", "angels-components-batteries-6")
+  else
+    OV.add_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-5")
+    OV.add_prereq("bob-robo-modular-4", "angels-components-batteries-5")
+    OV.add_prereq("vehicle-roboport-equipment-4", "angels-components-batteries-5")
   end
-  OV.add_prereq("bob-robotics-4", "angels-components-mechanical-5")
-  OV.add_prereq("bob-robotics-4", "tech-yellow-circuit")
+
   if angelsmods.industries.tech then
   else
     OV.set_science_pack("bob-robotics-4", "utility-science-pack")
@@ -145,13 +175,12 @@ if angelsmods.industries.components then
           { "!!" },
           { type = "item", name = "circuit-yellow-loaded", amount = 5 },
           { type = "item", name = "cable-harness-5", amount = 2 },
-          { type = "item", name = "battery-5", amount = 2 }
+          mods["bobplates"] and 
+            { type = "item", name = "battery-6", amount = 2 } or
+            { type = "item", name = "battery-5", amount = 2 }
         },
       },
     }
   )
 
-  OV.remove_prereq("bob-robo-modular-2", "bob-robotics-2")
-  OV.remove_prereq("bob-robo-modular-3", "bob-robotics-3")
-  OV.remove_prereq("bob-robo-modular-4", "bob-robotics-4")
 end
