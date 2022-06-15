@@ -11,7 +11,7 @@ if angelsmods.industries.components then
         icon = "__angelsindustries__/graphics/technology/cable-components.png",
         icon_size = 128,
         prerequisites = {
-          "electronics",
+          "angels-tin-smelting-1",
           "logistic-science-pack"
         },
         effects = {

@@ -85,8 +85,7 @@ if angelsmods.industries.components then
           icon_size = 64,
           prerequisites = {
             "tech-red-circuit",
-            "angels-components-mechanical-1",
-            "angels-components-weapons-basic"
+            "angels-components-mechanical-1"
           },
           effects = {
             {
@@ -199,7 +198,7 @@ if angelsmods.industries.components then
           icon_size = 64,
           prerequisites = {
             "angels-basic-blocks-2",
-            "military-2",
+            "military-science-pack",
             "tech-orange-circuit",
             "angels-components-mechanical-3",
             "angels-components-cabling-3"
@@ -242,6 +241,8 @@ if angelsmods.industries.components then
         }
       }
     )
+    OV.add_unlock("military-science-pack", "block-fluidbox-2")
+    OV.add_unlock("military-science-pack", "block-mechanical-2")
     OV.add_prereq("ore-leaching", "angels-basic-blocks-3")
     OV.add_prereq("advanced-ore-refining-2", "angels-basic-blocks-3")
     OV.add_prereq("ore-electro-whinning-cell", "angels-basic-blocks-3")

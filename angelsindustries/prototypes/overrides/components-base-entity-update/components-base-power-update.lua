@@ -55,10 +55,4 @@ if angelsmods.industries.components then
     OV.add_prereq("electric-energy-accumulator", "angels-basic-blocks-3")
   end
 
-  -----------------------------------------------------------------------------
-  -- ELECTRIC POLES------------------------------------------------------------
-  -----------------------------------------------------------------------------
-  OV.add_prereq("electric-energy-distribution-1", "angels-components-construction-2")
-  OV.remove_prereq("electric-energy-distribution-1", "electronics")
-
 end

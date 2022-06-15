@@ -62,6 +62,5 @@ if angelsmods.industries.components then
   )
   OV.add_prereq("fast-inserter", "tech-red-circuit")
   OV.add_prereq("stack-inserter", "tech-orange-circuit")
-  OV.remove_prereq("fast-inserter", "electronics")
 
 end
