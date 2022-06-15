@@ -190,7 +190,8 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
       icon_size = 128,
       prerequisites = {
-        "water-treatment"
+        "water-treatment",
+        "steel-processing"
       },
       effects = {
         {

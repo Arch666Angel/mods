@@ -71,6 +71,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   AI.pack_replace("lubricant", "blue", "green")
   -- BIO PROCESSING
+  OV.remove_prereq("bio-refugium-fish-1", "water-treatment-3")
   OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")
   -- INDUSTRIES
   OV.remove_prereq("tech-orange-circuit", "angels-components-batteries-3")

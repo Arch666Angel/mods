@@ -29,8 +29,6 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     data.raw["item"]["silver-nitrate"].icon_size = 32
     data.raw["item"]["silver-nitrate"].icon_mipmaps = 1
     OV.disable_recipe({"silver-nitrate","silver-from-lead"})
-    OV.remove_prereq("battery-3", "nitrogen-processing")
-    OV.add_prereq("battery-3", "angels-silver-smelting-2")
   end
 
   if mods['bobplates'] then
