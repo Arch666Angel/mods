@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.20
+Date: ???
+  Changes:
+    - Changed the ingredient tier of some buildings (674)
+      - Blast furnace 1, 2
+      - Casting machine 1, 2
+      - Chemical furnace 1
+      - Induction furnace 1, 2
+      - Ore processing machine
+      - Pellet press
+      - Powder mixer
+    - Removed Glowing hot iron plates
+    - Disabled Solder mixture, unless using Component overhaul from Angel's Industries
+    - Made Advanced steel smelting and casting available at red science tech
+---------------------------------------------------------------------------------------------------
 Version: 0.6.19
 Date: 06.06.2022
   Changes:
@@ -11,7 +26,6 @@ Version: 0.6.18
 Date: 19.12.2021
   Changes:
     - Changed recipe categories to appropriate powder mixing tier requirements (673)
-    - Increased the ingredient tier of Ore processing machine, Pellet press, and Powder mixer (674)
   Bugfixes:
     - Fixed bug with Iron hot plate was not a 1:1 ratio to Iron plate with bobs mods (666)
     - Fixed Tungsten Oxide used the wrong icon when bobs mods are present (688)
