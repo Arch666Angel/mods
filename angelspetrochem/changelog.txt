@@ -16,7 +16,7 @@ Date: ???
     - Moved Ammonia synthesis recipe to Nitrogen processing 2
     - Changed the science pack tier of some techs
       - Advanced chemistry 2
-      - Flare stack
+      - Flare stack tech
       - Rubber
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.22
