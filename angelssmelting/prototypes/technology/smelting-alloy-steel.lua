@@ -7,8 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "angels-iron-smelting-1",
-        "angels-nitrogen-processing-1",
-        "angels-flare-stack"
+        "basic-chemistry"
       },
       effects = {
         {
