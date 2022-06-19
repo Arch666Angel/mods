@@ -8,6 +8,7 @@ Date: ???
       - Ore crusher 2
       - Ore sorting facility 2
       - Seafloor pump
+      - Thermal water extractor
       - Washing plant 1
     - Changed the science pack tier of some techs
       - Advanced ore refining 2

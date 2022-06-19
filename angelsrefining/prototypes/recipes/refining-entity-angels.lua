@@ -709,11 +709,11 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "thermal-2", amount = 1},
-          {type = "item", name = "t4-plate", amount = 6},
-          {type = "item", name = "t4-circuit", amount = 4},
-          {type = "item", name = "t4-pipe", amount = 4},
-          {type = "item", name = "t4-brick", amount = 4},
-          {type = "item", name = "t4-gears", amount = 4}
+          {type = "item", name = "t3-plate", amount = 6},
+          {type = "item", name = "t3-circuit", amount = 4},
+          {type = "item", name = "t3-pipe", amount = 4},
+          {type = "item", name = "t3-brick", amount = 4},
+          {type = "item", name = "t3-gears", amount = 4}
         },
         result = "thermal-extractor"
       },
@@ -722,11 +722,11 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "thermal-2", amount = 1},
-          {type = "item", name = "t4-plate", amount = 6 * buildingmulti},
-          {type = "item", name = "t4-circuit", amount = 4 * buildingmulti},
-          {type = "item", name = "t4-pipe", amount = 4 * buildingmulti},
-          {type = "item", name = "t4-brick", amount = 4 * buildingmulti},
-          {type = "item", name = "t4-gears", amount = 4 * buildingmulti}
+          {type = "item", name = "t3-plate", amount = 6 * buildingmulti},
+          {type = "item", name = "t3-circuit", amount = 4 * buildingmulti},
+          {type = "item", name = "t3-pipe", amount = 4 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 4 * buildingmulti},
+          {type = "item", name = "t3-gears", amount = 4 * buildingmulti}
         },
         result = "thermal-extractor"
       }
