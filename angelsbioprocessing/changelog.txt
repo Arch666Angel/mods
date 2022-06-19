@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.23
-Date: ???
+Date: ##.##.2022
   Changes:
+    - Special Vanilla: Removed paper and full harmonic crystal as they had no use (at this point)
     - Added blue science pack to techs (674)
       - Hatchery
       - Puffer refugium 1

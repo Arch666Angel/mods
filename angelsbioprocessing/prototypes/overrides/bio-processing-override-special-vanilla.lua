@@ -14,9 +14,17 @@ if angelsmods.refining and angelsmods.functions.is_special_vanilla() then
       --"angelsore-crystal-mix6-processing",
       "electro-whinning-cell",
       "electro-whinning-cell-2",
-      "electro-whinning-cell-3"
+      "electro-whinning-cell-3",
+      "crystal-full-harmonic",
+      "crystal-full-blue",
+      "crystal-full-red"
     }
   )
+  angelsmods.functions.add_flag({
+    "crystal-full-harmonic",
+    "crystal-full-blue",
+    "crystal-full-red"
+  },"hidden")
 
   OV.remove_prereq("ore-powderizer", "ore-advanced-crushing")
 
