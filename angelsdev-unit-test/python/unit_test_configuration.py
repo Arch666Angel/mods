@@ -717,7 +717,7 @@ UnitTestConfiguration.addConfiguration("BA (BobLogistics non-default + overhaul)
 
       "bobmods-logistics-disableroboports" : False, #defaults true
       "bobmods-logistics-flyingrobotframes" : False, #defaults true
-      "bobmods-logistics-robotpoarts" : False, #defaults true
+      "bobmods-logistics-robotparts" : False, #defaults true
       "bobmods-logistics-inserteroverhaul" : False, #defaults true
       "bobmods-logistics-beltoverhaul" : False, #defaults true
     }
