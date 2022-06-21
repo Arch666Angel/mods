@@ -161,8 +161,7 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
       icon_size = 256, icon_mipmaps = 2,
       prerequisites = {
-        "gas-processing",
-        "chemical-science-pack"
+        "gas-steam-cracking-2"
       },
       effects = {
         {
@@ -323,7 +322,6 @@ data:extend(
         "angels-advanced-chemistry-2",
         "advanced-electronics-2",
         "angels-advanced-gas-processing",
-        "gas-steam-cracking-2",
         "oil-steam-cracking-2"
       },
       effects = {
