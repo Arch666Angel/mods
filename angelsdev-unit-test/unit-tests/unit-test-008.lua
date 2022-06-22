@@ -103,7 +103,7 @@ local unit_test_008 = function()
   local recipe_filters = {}
   if #recipe_categories_to_ignore > 0 then
     for _, category_name in pairs(recipe_categories_to_ignore) do
-      if game.recipe_category_prototypes[category] then
+      if game.recipe_category_prototypes[category_name] then
         table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = category_name})
       end
     end
