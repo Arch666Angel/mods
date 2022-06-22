@@ -42,6 +42,10 @@ angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
 angelsmods.trigger.pavement_stack_size = settings.startup["angels-pavement-stack-size"].value -- Stack size for items you can use to pave the world
 angelsmods.trigger.washing_tech = angelsmods.trigger.washing_tech or false
+angelsmods.trigger.slag = angelsmods.trigger.slag or false
+angelsmods.trigger.geode_red = angelsmods.trigger.geode_red or false
+angelsmods.trigger.geode_cyan = angelsmods.trigger.geode_cyan or false
+angelsmods.trigger.salt = angelsmods.trigger.salt or false
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}

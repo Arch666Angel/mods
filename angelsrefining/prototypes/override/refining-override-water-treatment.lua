@@ -96,6 +96,9 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   -- disable technology
   OV.disable_technology({"water-washing-1", "water-washing-2"})
   OV.remove_prereq("geode-processing-2", "water-washing-2")
+else
+  angelsmods.trigger.geode_red = true
+  angelsmods.trigger.geode_cyan = true
 end
 
 angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
@@ -103,48 +106,62 @@ angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
 -------------------------------------------------------------------------------
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then
-  angelsmods.functions.add_flag("salt", "hidden")
+if angelsmods.trigger.salt == true then
+  if mods["bobplates"] then
+    angelsmods.functions.add_flag("salt", "hidden")
 
-  if not angelsmods.petrochem then
-    OV.global_replace_item("salt", "solid-salt")
+    if not angelsmods.petrochem then
+      OV.global_replace_item("salt", "solid-salt")
 
-    data:extend(
-      {
+      data:extend(
         {
-          type = "recipe",
-          name = "salt-water-electrolysis-2",
-          category = "electrolysis",
-          enabled = false,
-          energy_required = 1,
-          ingredients = {
-            {type = "fluid", name = "water-saline", amount = 40}
-          },
-          results = {
-            {type = "item", name = "sodium-hydroxide", amount = 1},
-            {type = "fluid", name = "chlorine", amount = 20},
-            {type = "fluid", name = "hydrogen", amount = 20}
-          },
-          --icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
-          --icon_size = 32,
-          icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
-            {
-              "chlorine",
-              "hydrogen",
-              "sodium-hydroxide"
+          {
+            type = "recipe",
+            name = "salt-water-electrolysis-2",
+            category = "electrolysis",
+            enabled = false,
+            energy_required = 1,
+            ingredients = {
+              {type = "fluid", name = "water-saline", amount = 40}
             },
-            {
-              {039, 112, 194}, {168, 173, 173}, {070, 133, 232}, {185, 185, 185, 0.8}
-            }
-          ),
-          crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","chlorine","hydrogen"}),
-          subgroup = "bob-fluid-electrolysis",
-          order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
+            results = {
+              {type = "item", name = "sodium-hydroxide", amount = 1},
+              {type = "fluid", name = "chlorine", amount = 20},
+              {type = "fluid", name = "hydrogen", amount = 20}
+            },
+            --icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
+            --icon_size = 32,
+            icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+              {
+                "chlorine",
+                "hydrogen",
+                "sodium-hydroxide"
+              },
+              {
+                {039, 112, 194}, {168, 173, 173}, {070, 133, 232}, {185, 185, 185, 0.8}
+              }
+            ),
+            crafting_machine_tint = angelsmods.functions.get_recipe_tints({"water-saline","chlorine","hydrogen"}),
+            subgroup = "bob-fluid-electrolysis",
+            order = "b[fluid-chemistry]-b[salt-water-electrolysis]"
+          }
         }
-      }
-    )
-    OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
+      )
+      OV.add_unlock("water-treatment", "salt-water-electrolysis-2")
+    end
   end
+else
+  angelsmods.functions.add_flag({"solid-salt", "salination-plant", "salination-plant-2"}, "hidden")
+
+  OV.disable_recipe({
+    "salination-plant",
+    "salination-plant-2",
+    "water-saline",
+    "solid-salt-from-saline",
+    "solid-salt",
+  })
+
+  OV.disable_technology("water-treatment-4")
 end
 
 -------------------------------------------------------------------------------
@@ -233,4 +250,25 @@ else
     angelsmods.functions.add_flag("solid-lithium", "hidden")
     OV.disable_recipe("solid-lithium")
   end
+end
+
+-------------------------------------------------------------------------------
+-- GEODES ---------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.geode_cyan == false then
+  angelsmods.functions.add_flag("geode-cyan", "hidden")
+
+  OV.disable_recipe({
+    "geode-cyan-processing",
+    "geode-cyan-liquify",
+  })
+end
+
+if angelsmods.trigger.geode_red == false then
+  angelsmods.functions.add_flag("geode-red", "hidden")
+
+  OV.disable_recipe({
+    "geode-red-processing",
+    "geode-red-liquify",
+  })
 end

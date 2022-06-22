@@ -169,7 +169,9 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/slag-processing.png",
       icon_size = 64,
       prerequisites = {
-        "ore-crushing"
+        "ore-crushing",
+        "water-treatment",
+        "sulfur-processing",
       },
       effects = {
         {
@@ -183,6 +185,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquifier"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquifier-2"
         },
         {
           type = "unlock-recipe",
@@ -239,7 +245,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-crushing",
-        "water-treatment-2",
+        "water-treatment",
         "automation-2"
       },
       effects = {
@@ -452,7 +458,11 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "liquifier-2"
+          recipe = "liquifier-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquifier-4"
         },
         {
           type = "unlock-recipe",
