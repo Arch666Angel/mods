@@ -1531,7 +1531,7 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = true,
+      enabled = false,
       ingredients = {{type = "item", name = "angels-iron-pebbles", amount = 4}},
       results = {
         {type = "item", name = "iron-plate", amount = 2}
@@ -1559,7 +1559,7 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = true,
+      enabled = false,
       ingredients = {{type = "item", name = "angels-iron-nugget", amount = 2}},
       results = {
         {type = "item", name = "iron-plate", amount = 3}
@@ -1587,7 +1587,7 @@ data:extend(
       category = "ore-refining-t1",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = true,
+      enabled = false,
       ingredients = {{type = "item", name = "iron-ore", amount = 2}},
       results = {
         {type = "item", name = "angels-iron-pebbles", amount = 4}
@@ -1603,7 +1603,7 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = true,
+      enabled = false,
       ingredients = {{type = "item", name = "angels-copper-pebbles", amount = 4}},
       results = {
         {type = "item", name = "copper-plate", amount = 2}
@@ -1631,7 +1631,7 @@ data:extend(
       category = "smelting",
       subgroup = "raw-material",
       energy_required = 7,
-      enabled = true,
+      enabled = false,
       ingredients = {{type = "item", name = "angels-copper-nugget", amount = 2}},
       results = {
         {type = "item", name = "copper-plate", amount = 3}
@@ -1659,7 +1659,7 @@ data:extend(
       category = "ore-refining-t1",
       subgroup = "ore-sorting-advanced",
       energy_required = 1,
-      enabled = true,
+      enabled = false,
       ingredients = {{type = "item", name = "copper-ore", amount = 2}},
       results = {
         {type = "item", name = "angels-copper-pebbles", amount = 4}

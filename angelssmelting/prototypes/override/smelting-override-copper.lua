@@ -89,9 +89,6 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       }
     }
   )
-  if angelsmods.functions.is_special_vanilla() then
-    OV.add_unlock("ore-crushing", "copper-plate")
-  end
   OV.global_replace_item("angels-plate-copper", "copper-plate")
   angelsmods.functions.add_flag("angels-plate-copper", "hidden")
   angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
