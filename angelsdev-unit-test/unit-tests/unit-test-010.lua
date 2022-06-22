@@ -140,7 +140,7 @@ local function process_tech(tech)
   for fluid_name, recipe_names in pairs(ingredients.fluids) do
     if not result.fluids[fluid_name] then
       for recipe_name, _ in pairs(recipe_names) do
-        unit_test_functions.print_msg(string.format("Recipe %q uses Fluid %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this fluid", fluid_name, recipe_name, tech.name))
+        unit_test_functions.print_msg(string.format("Recipe %q uses Fluid %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this fluid", recipe_name, fluid_name, tech.name))
       end
       unit_test_result = unit_test_functions.test_failed      
     end
