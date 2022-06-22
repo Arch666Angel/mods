@@ -117,7 +117,6 @@ local function process_tech(tech)
       for recipe_name, _ in pairs(recipe_names) do
         unit_test_functions.print_msg(string.format("Recipe %q uses Item %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this item", recipe_name, item_name, tech.name))
       end
-      log(item_name)
       unit_test_result = unit_test_functions.test_failed
     end
   end
@@ -126,7 +125,6 @@ local function process_tech(tech)
       for recipe_name, _ in pairs(recipe_names) do
         unit_test_functions.print_msg(string.format("Recipe %q uses Fluid %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this fluid", fluid_name, recipe_name, tech.name))
       end
-      log(fluid_name)
       unit_test_result = unit_test_functions.test_failed      
     end
   end
@@ -197,9 +195,6 @@ local function make_starting_unlocks()
 end
 
 local unit_test_010 = function()
-  log(unit_test_result)
-  unit_test_result = unit_test_functions.test_successful
-  log(unit_test_result)
   -- Build lists of items and fluids unlocked at the start of the game
   make_starting_unlocks()
   
