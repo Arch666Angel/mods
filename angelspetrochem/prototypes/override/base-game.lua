@@ -36,9 +36,9 @@ end
     {type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1}
   }
 move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
-move_item("petroleum-gas", "petrochem-carbon-fluids", "a", "fluid")
-move_item("light-oil", "petrochem-carbon-fluids", "dab", "fluid")
-move_item("heavy-oil", "petrochem-carbon-fluids", "ddd", "fluid")
+angelsmods.functions.add_flag("petroleum-gas", "hidden")
+angelsmods.functions.add_flag("light-oil", "hidden")
+angelsmods.functions.add_flag("heavy-oil", "hidden")
 move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
 OV.remove_prereq("lubricant", "oil-processing")
 OV.remove_prereq("lubricant", "chemical-plant")
@@ -59,7 +59,7 @@ OV.global_replace_icon(
   {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
 )
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
-move_item("sulfuric-acid", "petrochem-sulfer-fluids", "cb", "fluid")
+angelsmods.functions.add_flag("sulfuric-acid", "hidden")
 OV.remove_prereq("battery", "sulfur-processing")
 OV.add_prereq("battery", "angels-sulfur-processing-2")
 
