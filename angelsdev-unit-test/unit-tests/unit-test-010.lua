@@ -14,21 +14,41 @@ local function process_tech(tech)
   for _, modifier in pairs(tech.effects) do
     if modifier.type == "unlock-recipe" then
       local recipe = game.recipe_prototypes[modifier.recipe]
+      local skip = false
 
-      for _, product in pairs(recipe.products) do
-        if product.type == "item" then
-          result.items[product.name] = true
-        else
-          result.fluids[product.name] = true
+      -- Skip unbarelling recipes
+      if recipe.name ~= "empty-barrel" and
+         string.sub(recipe.name, 1, 6) == "empty-" and
+         string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+        log(recipe.name)
+      end
+
+      if not skip then
+        for _, product in pairs(recipe.products) do
+          if product.type == "item" then
+            result.items[product.name] = true
+          else
+            result.fluids[product.name] = true
+          end
         end
       end
 
+      skip = false
+
+      -- Skip barelling recipes
+      if string.sub(recipe.name, 1, 5) = "fill-" and
+         string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+        log(recipe.name)
+      end
+
       -- Skip building recipes
-      local skip = false
       if (#recipe.products == 1) and (recipe.products[1].type == "item") then
         local item = game.item_prototypes[recipe.products[1].name]
         if item.place_result then
           skip = true
+          log(recipe.name)
         end
       end
 
