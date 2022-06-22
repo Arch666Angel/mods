@@ -63,9 +63,11 @@ end
 -- REGULAR REFINING -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.refining then
+  OV.remove_prereq("ore-crushing", "automation")
+  OV.add_prereq("ore-crushing", "basic-chemistry")
   OV.remove_prereq("ore-floatation", "automation-2")
   OV.remove_prereq("ore-floatation", "water-treatment")
-  --OV.add_prereq("ore-floatation", "basic-chemistry-3")
+  OV.add_prereq("ore-floatation", "basic-chemistry-3")
 end
 
 -------------------------------------------------------------------------------
@@ -77,8 +79,6 @@ if angelsmods.refining then
     OV.remove_prereq("lubricant", "oil-processing")
   else
     OV.remove_prereq("lubricant", "advanced-oil-processing")
-    OV.remove_prereq("lubricant", "oil-steam-cracking-1")
-    OV.add_prereq("lubricant", "gas-steam-cracking-1")
   end
   OV.remove_science_pack("lubricant", "chemical-science-pack")
 

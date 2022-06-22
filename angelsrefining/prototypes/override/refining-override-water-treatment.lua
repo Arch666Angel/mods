@@ -44,9 +44,22 @@ elseif angelsmods.functions.is_special_vanilla() then
       "red-waste-water-purification",
       "green-waste-water-purification",
       "greenyellow-waste-water-purification",
-      "solid-salt-dissolving"
     }
   )
+end
+
+if angelsmods.trigger.water_red_waste == false then
+  OV.disable_recipe(
+    {
+      "red-waste-water-purification",
+      "solid-sodium-nitrate-processing",
+      "sodium-nitrate-acid-processing"
+    }
+  )
+  angelsmods.functions.add_flag({
+    "water-red-waste",
+    "solid-sodium-nitrate",
+  }, "hidden")
 end
 
 -------------------------------------------------------------------------------

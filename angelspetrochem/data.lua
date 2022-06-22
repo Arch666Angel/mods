@@ -15,6 +15,7 @@ angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or (no
 angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or (not mods["bobelectronics"]))
 angelsmods.trigger.liquid_ferric_chloride_solution = not angelsmods.functions.is_special_vanilla()
 angelsmods.trigger.liquid_cupric_chloride_solution = not angelsmods.functions.is_special_vanilla()
+angelsmods.trigger.water_red_waste = angelsmods.trigger.water_red_waste or false
 --HIDE UNUSED BUILDINGS
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
 angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
@@ -22,6 +23,9 @@ angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"] and setti
 
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
+angelsmods.trigger.slag = true
+angelsmods.trigger.salt = true
+
 if mods["bobplates"] then
   angelsmods.trigger.ores["fluorite"] = true
 elseif mods["angelsindustries"] then

@@ -42,7 +42,8 @@ angelsmods.functions.add_flag("heavy-oil", "hidden")
 move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
 OV.remove_prereq("lubricant", "oil-processing")
 OV.remove_prereq("lubricant", "chemical-plant")
-OV.add_prereq("lubricant", "oil-steam-cracking-1")
+OV.add_prereq("lubricant", "angels-oil-processing")
+OV.add_prereq("lubricant", "gas-steam-cracking-1")
 
 -- plastics
 --OV.add_unlock("plastics", "solid-plastic")

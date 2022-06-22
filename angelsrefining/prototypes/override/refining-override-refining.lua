@@ -60,6 +60,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["rubyte"] then
   angelsmods.trigger.geode_cyan = true
+  angelsmods.trigger.water_red_waste = true
 else
   angelsmods.functions.add_flag("angels-ore5", "hidden")
   angelsmods.functions.add_flag("angels-ore5-crushed", "hidden")
