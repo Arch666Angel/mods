@@ -9,11 +9,17 @@ local unit_test_result = unit_test_functions.test_successful
 local function process_tech(tech)
   -- Build lists of items and fluids unlocked by this tech
   local result = {name = tech.name, items = {}, fluids = {}}
-  local ingredients = {items = {}, fluids = {}}
+  local recipes = {}
 
   for _, modifier in pairs(tech.effects) do
     if modifier.type == "unlock-recipe" then
       local recipe = game.recipe_prototypes[modifier.recipe]
+      recipes[recipe.name] =
+        {
+          processed = false,
+          ingredients = {items = {}, fluids = {}},
+          products = {items = {}, fluids = {}}
+        }
       local skip = false
 
       -- Skip unbarelling recipes
@@ -26,9 +32,9 @@ local function process_tech(tech)
       if not skip then
         for _, product in pairs(recipe.products) do
           if product.type == "item" then
-            result.items[product.name] = true
+            recipes[recipe.name].products.items[product.name] = true
           else
-            result.fluids[product.name] = true
+            recipes[recipe.name].products.fluids[product.name] = true
           end
         end
       end
@@ -52,59 +58,54 @@ local function process_tech(tech)
       if not skip then
         for  _, ingredient in pairs(recipe.ingredients) do
           if ingredient.type == "item" then
-            if not ingredients.items[ingredient.name] then
-              ingredients.items[ingredient.name] = {}
-            end
-            ingredients.items[ingredient.name][recipe.name] = true
+            recipes[recipe.name].ingredients.items[ingredient.name] = true
           else
-            if not ingredients.fluids[ingredient.name] then
-              ingredients.fluids[ingredient.name] = {}
-            end
-            ingredients.fluids[ingredient.name][recipe.name] = true
+            recipes[recipe.name].ingredients.fluids[ingredient.name] = true
           end
         end
       end
-    end
-  end
 
-  local item_names = {}
-  for item_name, _ in pairs(result.items) do
-    table.insert(item_names, item_name)
-  end
+      local item_names = {}
+      for item_name, _ in pairs(recipes[recipe.name].products.items) do
+        table.insert(item_names, item_name)
+      end
 
-  -- Items from Burnt Result
+      -- Items from Burnt Result
 
-  local item_filters = {}
-  table.insert(item_filters, {filter = "name", mode = "and", name = item_names})
-  table.insert(item_filters, {filter = "burnt-result", mode = "and"})
-  local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_filters = {}
+      table.insert(item_filters, {filter = "name", mode = "and", name = item_names})
+      table.insert(item_filters, {filter = "burnt-result", mode = "and"})
+      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
 
-  for _, item in pairs(item_prototypes) do
-    result.items[item.burnt_result.name] = true
-  end
+      for _, item in pairs(item_prototypes) do
+        recipes[recipe.name].products.items[item.burnt_result.name] = true
+      end
 
-  -- Fluids from Boilers
-  -- Fluids from Offshore Pumps
+      -- Fluids from Boilers
+      -- Fluids from Offshore Pumps
 
-  local item_filters = {}
-  table.insert(item_filters, {filter = "name", mode = "and", name = item_names})
-  table.insert(item_filters, {filter = "place-result", mode = "and"})
-  local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_filters = {}
+      table.insert(item_filters, {filter = "name", mode = "and", name = item_names})
+      table.insert(item_filters, {filter = "place-result", mode = "and"})
+      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
 
-  for _, item in pairs(item_prototypes) do
-    local entity = item.place_result
-    if entity.type == "boiler" then
-      for _, fluidbox in pairs(entity.fluidbox_prototypes) do
-        if fluidbox.filter and fluidbox.production_type == "output" then
-          result.fluids[fluidbox.filter.name] = true
+      for _, item in pairs(item_prototypes) do
+        local entity = item.place_result
+        if entity.type == "boiler" then
+          for _, fluidbox in pairs(entity.fluidbox_prototypes) do
+            if fluidbox.filter and fluidbox.production_type == "output" then
+              recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
+            end
+          end
+        elseif entity.type == "offshore-pump" then
+          recipes[recipe.name].products.fluids[entity.fluid.name] = true
         end
       end
-    elseif entity.type == "offshore-pump" then
-      result.fluids[entity.fluid.name] = true
+
     end
   end
 
-  -- Combine unlocks with unlocks from prerequisite techs
+  -- Get unlocks from prerequisite techs
   for prereq_name, _ in pairs(tech.prerequisites) do
     local prereq = processed_techs[prereq_name]
     if prereq then
@@ -129,22 +130,74 @@ local function process_tech(tech)
   end
 
   -- Check if any recipes unlocked by this tech use ingredients that are not available
-  for item_name, recipe_names in pairs(ingredients.items) do
-    if not result.items[item_name] then
-      for recipe_name, _ in pairs(recipe_names) do
-        unit_test_functions.print_msg(string.format("Recipe %q uses Item %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this item", recipe_name, item_name, tech.name))
+  -- Use while loop with escape to catch reipes that feed each other
+  -- Example
+  --   Recipe 1: A > B
+  --   Recipe 2: B > A
+  --   If neither A or B have previously been unlocked, then this should error
+  -- Escape after a full loop without finding any more recipes that can be processed
+  local escape = false
+  while not escape do
+    escape = true
+
+    for recipe_name, recipe in pairs(recipes) do
+      if recipe.processed == false then
+        local found_all_prerequisites = true
+        for item_name, _ in pairs(recipe.ingredients.items) do
+          if result.items[item_name] then
+            recipe.ingredients.items[item_name] = false
+          else
+            found_all_prerequisites = false
+          end
+        end
+        for fluid_name, _ in pairs(recipe.ingredients.fluids) do
+          if result.fluids[fluid_name] then
+            recipe.ingredients.fluids[fluid_name] = false
+          else
+            found_all_prerequisites = false
+          end
+        end
+
+        if found_all_prerequisites then
+          recipe.processed = true
+          escape = false
+          -- Add recipe results to products
+          for item_name, _ in pairs(recipe.products.items) do
+            result.items[item_name] = true
+          end
+          for fluid_name, _ in pairs(recipe.products.fluids) do
+            result.fluids[fluid_name] = true
+          end
+        end
       end
-      unit_test_result = unit_test_functions.test_failed
     end
   end
-  for fluid_name, recipe_names in pairs(ingredients.fluids) do
-    if not result.fluids[fluid_name] then
-      for recipe_name, _ in pairs(recipe_names) do
-        unit_test_functions.print_msg(string.format("Recipe %q uses Fluid %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this fluid", recipe_name, fluid_name, tech.name))
+
+  for recipe_name, recipe in pairs(recipes) do
+    if not recipe.processed then
+      for item_name, missing in pairs(recipe.ingredients.items) do
+        if missing == true then
+          unit_test_functions.print_msg(string.format("Recipe %q uses Item %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this item", recipe_name, item_name, tech.name))
+          unit_test_result = unit_test_functions.test_failed
+        end
       end
-      unit_test_result = unit_test_functions.test_failed      
+      for fluid_name, missing in pairs(recipe.ingredients.fluids) do
+        if missing == true then
+          unit_test_functions.print_msg(string.format("Recipe %q uses Fluid %q and is unlocked by Tech %q. None of the tech's prerequisites unlock this fluid", recipe_name, fluid_name, tech.name))
+          unit_test_result = unit_test_functions.test_failed
+        end
+      end
+
+      -- Add recipe results to products anyway else all following techs will fail
+      for item_name, _ in pairs(recipe.products.items) do
+        result.items[item_name] = true
+      end
+      for fluid_name, _ in pairs(recipe.products.fluids) do
+        result.fluids[fluid_name] = true
+      end
     end
   end
+
   return result
 end
 
