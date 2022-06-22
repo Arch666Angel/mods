@@ -21,7 +21,6 @@ local function process_tech(tech)
          string.sub(recipe.name, 1, 6) == "empty-" and
          string.sub(recipe.name, -7, -1) == "-barrel" then
         skip = true
-        log(recipe.name)
       end
 
       if not skip then
@@ -37,10 +36,9 @@ local function process_tech(tech)
       skip = false
 
       -- Skip barelling recipes
-      if string.sub(recipe.name, 1, 5) = "fill-" and
+      if string.sub(recipe.name, 1, 5) == "fill-" and
          string.sub(recipe.name, -7, -1) == "-barrel" then
         skip = true
-        log(recipe.name)
       end
 
       -- Skip building recipes
@@ -48,7 +46,6 @@ local function process_tech(tech)
         local item = game.item_prototypes[recipe.products[1].name]
         if item.place_result then
           skip = true
-          log(recipe.name)
         end
       end
 
