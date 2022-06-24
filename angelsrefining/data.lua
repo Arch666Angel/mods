@@ -45,7 +45,11 @@ angelsmods.trigger.washing_tech = angelsmods.trigger.washing_tech or false
 angelsmods.trigger.slag = angelsmods.trigger.slag or false
 angelsmods.trigger.geode_red = angelsmods.trigger.geode_red or false
 angelsmods.trigger.geode_cyan = angelsmods.trigger.geode_cyan or false
-angelsmods.trigger.salt = angelsmods.trigger.salt or false
+angelsmods.trigger.salt_production = angelsmods.trigger.salt_production or false
+angelsmods.trigger.salt_consumption = angelsmods.trigger.salt_consumption or false
+angelsmods.trigger.water_red_waste = angelsmods.trigger.water_red_waste or false
+angelsmods.trigger.water_green_waste = angelsmods.trigger.water_green_waste or false
+angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.water_greenyellow_waste or false
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}
