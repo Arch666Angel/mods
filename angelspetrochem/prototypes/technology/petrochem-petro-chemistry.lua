@@ -374,6 +374,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "catalyst-metal-blue"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-toluene-from-benzene"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-toluene-from-naphtha"
         }
       },
       unit = {
@@ -560,10 +568,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "steam-cracking-gas-residual"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-toluene-from-benzene"
         }
       },
       unit = {
@@ -640,10 +644,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "steam-cracking-oil-residual"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-toluene-from-naphtha"
         }
       },
       unit = {

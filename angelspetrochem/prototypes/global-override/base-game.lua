@@ -45,7 +45,7 @@ OV.disable_recipe({"plastic-bar"})
 -- sulfur
 OV.converter_fluid("sulfuric-acid", "liquid-sulfuric-acid")
 
-OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
+OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-2")
 OV.disable_recipe("sulfur")
 
 -- Balance/fix rocket fuel
@@ -73,3 +73,9 @@ OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
 -------------------------------------------------------------------------------
 data.raw["recipe"]["explosives"].subgroup = "petrochem-solids-2"
 data.raw["recipe"]["explosives"].order = "a[explosives]-a"
+
+-------------------------------------------------------------------------------
+-- PLASTIC --------------------------------------------------------------------
+-------------------------------------------------------------------------------
+OV.add_prereq("plastics", "plastic-1")
+OV.add_unlock("plastics", "solid-plastic")

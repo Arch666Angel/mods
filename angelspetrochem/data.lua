@@ -25,7 +25,8 @@ angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"] and setti
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 angelsmods.trigger.slag = true
 angelsmods.trigger.salt_production = true
-angelsmods.trigger.salt_consumption = true
+angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids or (angelsmods.functions.is_special_vanilla() == false)
+angelsmods.trigger.water_green_waste = angelsmods.trigger.enableacids
 
 if mods["bobplates"] then
   angelsmods.trigger.ores["fluorite"] = true

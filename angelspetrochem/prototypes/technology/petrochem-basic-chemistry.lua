@@ -86,7 +86,7 @@ data:extend(
       prerequisites = {
         "basic-chemistry-2",
         "angels-coal-processing",
-        "automation-2"
+        "fluid-handling"
       },
       effects = {
         {
@@ -339,10 +339,6 @@ data:extend(
         "basic-chemistry-2"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-sulfuric-acid"
-        }
       },
       unit = {
         count = 50,
@@ -351,20 +347,25 @@ data:extend(
         },
         time = 15
       },
-      order = "c-a"
+      order = "c-a",
+      enabled = false,
+      hidden = true
     },
     {
       type = "technology",
       name = "angels-sulfur-processing-2",
       icons = angelsmods.functions.create_gas_tech_icon("SSF"),
       prerequisites = {
-        "angels-sulfur-processing-1",
         "water-treatment-2"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "gas-sulfur-dioxide"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-sulfuric-acid"
         },
         {
           type = "unlock-recipe",

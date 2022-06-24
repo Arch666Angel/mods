@@ -7,19 +7,13 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/plastic-1-tech.png",
       icon_size = 128,
       prerequisites = {
-        "plastics",
         "gas-steam-cracking-1",
-        "oil-steam-cracking-1",
-        --"angels-advanced-chemistry-2"
+        "oil-steam-cracking-1"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "liquid-plastic-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-plastic"
         }
       },
       unit = {

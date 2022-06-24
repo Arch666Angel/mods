@@ -5,6 +5,7 @@ local move_item = angelsmods.functions.move_item
 -- WATER ENRICHMENT -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
+  angelsmods.trigger.water_green_waste = true
   OV.converter_fluid("heavy-water", "liquid-water-heavy")
   angelsmods.functions.disable_barreling_recipes("heavy-water")
   OV.converter_fluid("deuterium", "gas-deuterium")
@@ -22,6 +23,7 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.set_science_pack("deuterium-fuel-cell-2", "utility-science-pack", 1)
 
 elseif angelsmods.industries and angelsmods.industries.overhaul then
+  angelsmods.trigger.water_green_waste = true
   -- everything is good, nothing to change
 
 --elseif data.raw["fluid"]["deuterium"] then
@@ -199,7 +201,9 @@ if angelsmods.functions.is_special_vanilla() then
       "liquid-bisphenol-a",
       "gas-phosgene",
       "gas-ammonium-chloride",
-      "gas-melamine"
+      "gas-melamine",
+      "liquid-hydrofluoric-acid",
+      "liquid-hydrogen-fluoride"
     }
   )
   angelsmods.functions.add_flag({
@@ -210,9 +214,20 @@ if angelsmods.functions.is_special_vanilla() then
     "liquid-bisphenol-a",
     "gas-phosgene",
     "gas-ammonium-chloride",
-    "gas-melamine"
+    "gas-melamine",
+    "liquid-hydrofluoric-acid",
+    "gas-hydrogen-fluoride"
   }, "hidden")
-  
+  OV.patch_recipes(
+    {
+      {
+        name = "gas-acid-catalyst",
+        results = {{name = "gas-hydrogen-fluoride", type = "fluid", amount = 0}},
+        category = "chemistry"
+      }
+    }
+  )
+
   if angelsmods.bioprocessing then
   else
     OV.disable_recipe(
