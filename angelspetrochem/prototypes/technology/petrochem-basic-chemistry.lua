@@ -552,7 +552,8 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("NNN"),
       prerequisites = {
         "angels-nitrogen-processing-2",
-        "angels-advanced-chemistry-3"
+        "angels-advanced-chemistry-3",
+        "sodium-processing"
       },
       effects = {
         {
@@ -782,9 +783,8 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/sodium-tech.png",
       icon_size = 128,
       prerequisites = {
-        "basic-chemistry-3",
         "chlorine-processing-3",
-        "angels-coal-processing"
+        "angels-coal-processing-3"
       },
       effects = {
         {

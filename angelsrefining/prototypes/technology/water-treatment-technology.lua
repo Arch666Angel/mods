@@ -136,6 +136,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-lithium"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-salt"
         }
       },
       unit = {
@@ -165,10 +169,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-salt-from-saline"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-salt"
         }
       },
       unit = {

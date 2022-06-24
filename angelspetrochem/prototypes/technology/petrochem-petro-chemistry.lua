@@ -322,6 +322,7 @@ data:extend(
         "angels-advanced-chemistry-2",
         "advanced-electronics-2",
         "angels-advanced-gas-processing",
+        "chlorine-processing-1",
         "oil-steam-cracking-2"
       },
       effects = {
