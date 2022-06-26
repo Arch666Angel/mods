@@ -276,9 +276,11 @@ local unit_test_010 = function()
   local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
 
   local I = 0
+  local escape = false
   
-  while #tech_prototypes > I do
+  while (#tech_prototypes > I) and (escape == false) do
     for tech_name, tech in pairs(tech_prototypes) do
+      escape = true
       if not processed_techs[tech_name] then
         local all_prereqs_processed = true
         for prereq_name, prereq in pairs(tech.prerequisites) do
@@ -291,6 +293,7 @@ local unit_test_010 = function()
         if all_prereqs_processed then
           processed_techs[tech_name] = process_tech(tech)
           I = I + 1
+          escape = false
         end
       end
     end  
