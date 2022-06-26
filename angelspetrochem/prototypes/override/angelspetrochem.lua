@@ -201,9 +201,7 @@ if angelsmods.functions.is_special_vanilla() then
       "liquid-bisphenol-a",
       "gas-phosgene",
       "gas-ammonium-chloride",
-      "gas-melamine",
-      "liquid-hydrofluoric-acid",
-      "liquid-hydrogen-fluoride"
+      "gas-melamine"
     }
   )
   angelsmods.functions.add_flag({
@@ -214,9 +212,7 @@ if angelsmods.functions.is_special_vanilla() then
     "liquid-bisphenol-a",
     "gas-phosgene",
     "gas-ammonium-chloride",
-    "gas-melamine",
-    "liquid-hydrofluoric-acid",
-    "gas-hydrogen-fluoride"
+    "gas-melamine"
   }, "hidden")
   OV.patch_recipes(
     {
@@ -312,3 +308,19 @@ OV.disable_recipe(
     "gas-phosgene"
   }
 )
+
+-----------------------------------------------------------------------------
+-- ACIDS --------------------------------------------------------------------
+-----------------------------------------------------------------------------
+if angelsmods.trigger.enableacids == false then
+  OV.disable_recipe(
+    {
+      "liquid-hydrofluoric-acid",
+      "liquid-hydrogen-fluoride"
+    }
+  )
+  angelsmods.functions.add_flag({
+    "liquid-hydrofluoric-acid",
+    "gas-hydrogen-fluoride"
+  }, "hidden")
+end

@@ -38,4 +38,5 @@ if angelsmods.trigger.enableacids then
       }
     }
   )
+  OV.add_prereq("ore-leaching", "chlorine-processing-1")
 end
