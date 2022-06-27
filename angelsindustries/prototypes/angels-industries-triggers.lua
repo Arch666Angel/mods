@@ -49,6 +49,7 @@ if angelsmods.industries.components then
   --PETROCHEM TRIGGERS
   angelsmods.trigger.resin = true
   angelsmods.trigger.rubber = true
+  angelsmods.trigger.early_sulfuric_acid = true
 
   --SMELTING TRIGGERS
   angelsmods.trigger.smelting_molds = true
