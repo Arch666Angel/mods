@@ -889,8 +889,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-fermentation",
-        "bio-nutrient-paste",
-        "plastics"
+        "bio-nutrient-paste"
       },
       effects = {
         {
@@ -912,10 +911,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "bio-plastic-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-plastic"
         }
       },
       unit = {

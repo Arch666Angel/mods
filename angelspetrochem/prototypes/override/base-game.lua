@@ -45,11 +45,13 @@ OV.remove_prereq("lubricant", "chemical-plant")
 OV.add_prereq("lubricant", "angels-oil-processing")
 OV.add_prereq("lubricant", "gas-steam-cracking-1")
 
--- plastics
---OV.add_unlock("plastics", "solid-plastic")
+-------------------------------------------------------------------------------
+-- PLASTICS -------------------------------------------------------------------
+-------------------------------------------------------------------------------
 move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
-OV.add_prereq("plastics", "angels-advanced-chemistry-1")
 OV.remove_prereq("plastics", "oil-processing")
+OV.add_prereq("plastics", "plastic-1")
+OV.add_unlock("plastics", "solid-plastic")
 
 -- sulfur
 data.raw["item"]["sulfur"].icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png"
