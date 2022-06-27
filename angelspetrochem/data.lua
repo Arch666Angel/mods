@@ -16,6 +16,7 @@ angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or (n
 angelsmods.trigger.liquid_ferric_chloride_solution = not angelsmods.functions.is_special_vanilla()
 angelsmods.trigger.liquid_cupric_chloride_solution = not angelsmods.functions.is_special_vanilla()
 angelsmods.trigger.early_sulfuric_acid = false
+angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids"].value or (mods["angelsbioprocessing"] and true or false)
 
 --HIDE UNUSED BUILDINGS
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value

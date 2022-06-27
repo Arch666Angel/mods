@@ -214,15 +214,6 @@ if angelsmods.functions.is_special_vanilla() then
     "gas-ammonium-chloride",
     "gas-melamine"
   }, "hidden")
-  OV.patch_recipes(
-    {
-      {
-        name = "gas-acid-catalyst",
-        results = {{name = "gas-hydrogen-fluoride", type = "fluid", amount = 0}},
-        category = "chemistry"
-      }
-    }
-  )
 
   if angelsmods.bioprocessing then
   else
@@ -320,8 +311,7 @@ if angelsmods.trigger.enableacids == false then
     }
   )
   angelsmods.functions.add_flag({
-    "liquid-hydrofluoric-acid",
-    "gas-hydrogen-fluoride"
+    "liquid-hydrofluoric-acid"
   }, "hidden")
 end
 
@@ -382,4 +372,22 @@ if angelsmods.trigger.early_sulfuric_acid == true then
 else
   -- Hide sulfur 4
   OV.disable_technology("angels-sulfur-processing-4")
+end
+
+-----------------------------------------------------------------------------
+-- HYDROGEN FLUORIDE GAS ----------------------------------------------------
+-----------------------------------------------------------------------------
+if angelsmods.trigger.gas_hydrogen_fluoride == false then
+  OV.patch_recipes(
+    {
+      {
+        name = "gas-acid-catalyst",
+        results = {{name = "gas-hydrogen-fluoride", type = "fluid", amount = 0}},
+        category = "chemistry"
+      }
+    }
+  )
+  angelsmods.functions.add_flag({
+    "gas-hydrogen-fluoride"
+  }, "hidden")
 end
