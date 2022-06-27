@@ -87,6 +87,7 @@ else
     "liquid-white-liquor",
     "liquid-black-liquor",
     "liquid-green-liquor",
+    "liquid-pulping-liquor",
     "solid-paper",
     "solid-wood-pulp",
     "solid-alginic-acid"

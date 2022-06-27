@@ -48,6 +48,13 @@ else
     "water-red-waste",
     "solid-sodium-nitrate",
   }, "hidden")
+  if angelsmods.bioprocessing then
+    OV.disable_recipe(
+      {
+        "puffer-puffing-13"
+      }
+    )
+  end
 end
 if angelsmods.trigger.water_green_waste == true then
   angelsmods.trigger.salt_consumption = true
@@ -68,6 +75,13 @@ else
   angelsmods.functions.add_flag({
     "water-green-waste",
   }, "hidden")
+  if angelsmods.bioprocessing then
+    OV.disable_recipe(
+      {
+        "puffer-puffing-15"
+      }
+    )
+  end
 end
 if angelsmods.trigger.water_greenyellow_waste == true then
   OV.patch_recipes(
@@ -100,6 +114,13 @@ else
       "fluorite-ore",
       "solid-calcium-sulfate"
     }, "hidden")
+  end
+  if angelsmods.bioprocessing then
+    OV.disable_recipe(
+      {
+        "puffer-puffing-14"
+      }
+    )
   end
 end
 
