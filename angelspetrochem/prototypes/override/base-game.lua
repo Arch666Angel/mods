@@ -61,12 +61,16 @@ OV.global_replace_icon(
 )
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
 angelsmods.functions.add_flag("sulfuric-acid", "hidden")
-OV.remove_prereq("battery", "sulfur-processing")
-OV.add_prereq("battery", "angels-sulfur-processing-2")
+if angelsmods.trigger.early_sulfuric_acid == true then
+  OV.remove_prereq("battery", "sulfur-processing")
+  OV.add_prereq("battery", "angels-sulfur-processing-2")
+end
 
 move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
-OV.remove_prereq("explosives", "sulfur-processing")
-OV.add_prereq("explosives", "angels-sulfur-processing-2")
+if angelsmods.trigger.early_sulfuric_acid == true then
+  OV.remove_prereq("explosives", "sulfur-processing")
+  OV.add_prereq("explosives", "angels-sulfur-processing-2")
+end
 
 -- solid fuel
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")

@@ -45,7 +45,7 @@ OV.disable_recipe({"plastic-bar"})
 -- sulfur
 OV.converter_fluid("sulfuric-acid", "liquid-sulfuric-acid")
 
-OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-2")
+OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
 OV.disable_recipe("sulfur")
 
 -- Balance/fix rocket fuel

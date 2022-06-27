@@ -336,26 +336,6 @@ data:extend(
       name = "angels-sulfur-processing-1",
       icons = angelsmods.functions.create_gas_tech_icon("SSS"),
       prerequisites = {
-        "basic-chemistry-2"
-      },
-      effects = {
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a",
-      enabled = false,
-      hidden = true
-    },
-    {
-      type = "technology",
-      name = "angels-sulfur-processing-2",
-      icons = angelsmods.functions.create_gas_tech_icon("SSF"),
-      prerequisites = {
         "water-treatment-2"
       },
       effects = {
@@ -392,10 +372,10 @@ data:extend(
     },
     {
       type = "technology",
-      name = "angels-sulfur-processing-3",
-      icons = angelsmods.functions.create_gas_tech_icon("SSS"),
+      name = "angels-sulfur-processing-2",
+      icons = angelsmods.functions.create_gas_tech_icon("SSF"),
       prerequisites = {
-        "angels-sulfur-processing-2",
+        "angels-sulfur-processing-1",
         "angels-advanced-chemistry-1",
         "gas-processing"
       },
@@ -425,10 +405,10 @@ data:extend(
     },
     {
       type = "technology",
-      name = "angels-sulfur-processing-4",
+      name = "angels-sulfur-processing-3",
       icons = angelsmods.functions.create_gas_tech_icon("SSS"),
       prerequisites = {
-        "angels-sulfur-processing-3",
+        "angels-sulfur-processing-2",
         "angels-nitrogen-processing-2",
         "slag-processing-1",
         "chemical-science-pack"
@@ -446,6 +426,26 @@ data:extend(
           type = "unlock-recipe",
           recipe = "angels-sulfur-scrubber"
         }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-sulfur-processing-4",
+      icons = angelsmods.functions.create_gas_tech_icon("SSS"),
+      prerequisites = {
+        "angels-sulfur-processing-3"
+      },
+      effects = {
       },
       unit = {
         count = 50,
