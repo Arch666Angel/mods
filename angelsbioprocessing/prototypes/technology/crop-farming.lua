@@ -140,7 +140,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-nitrogen-processing-2"
+        "angels-nitrogen-processing-2",
+        "angels-stone-smelting-2"
       },
       effects = {
         {
