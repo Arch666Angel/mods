@@ -137,7 +137,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "flammables",
-        "military-science-pack"
+        "military-science-pack",
+        "angels-sulfur-processing-1"
       },
       effects = {
         {
