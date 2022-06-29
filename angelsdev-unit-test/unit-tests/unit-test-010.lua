@@ -6,6 +6,7 @@ local starting_unlocks = {items = {}, fluids = {}}
 local processed_techs = {}
 local unit_test_result = unit_test_functions.test_successful
 local ignored_unlocks = {}
+local ignore_building_recipes = false
 
 local function process_tech(tech)
   -- Build lists of items and fluids unlocked by this tech
@@ -49,7 +50,7 @@ local function process_tech(tech)
       end
 
       -- Skip building recipes
-      if (#recipe.products == 1) and (recipe.products[1].type == "item") then
+      if (ignore_building_recipes == true) and (#recipe.products == 1) and (recipe.products[1].type == "item") then
         local item = game.item_prototypes[recipe.products[1].name]
         if item.place_result then
           skip = true
@@ -277,6 +278,7 @@ end
 
 local function add_ignores()
   if game.active_mods["angelsrefining"] then
+    ignore_building_recipes = true
     ignored_unlocks["ore-powderizer"] = {items = {"milling-drum-used"}, fluids = {}}
   end
   if game.active_mods["angelssmelting"] then
