@@ -5,6 +5,7 @@ local unit_test_functions = require("unit-test-functions")
 local starting_unlocks = {items = {}, fluids = {}}
 local processed_techs = {}
 local unit_test_result = unit_test_functions.test_successful
+local ignored_unlocks = {}
 
 local function process_tech(tech)
   -- Build lists of items and fluids unlocked by this tech
@@ -116,6 +117,16 @@ local function process_tech(tech)
       for fluid_name, _ in pairs(prereq.fluids) do
         result.fluids[fluid_name] = true
       end
+    end
+  end
+
+  -- Get ignored unlocks
+  if ignored_unlocks[tech.name] then
+    for _, item_name in pairs(ignored_unlocks[tech.name].items) do
+      result.items[item_name] = true
+    end
+    for _, fluid_name in pairs(ignored_unlocks[tech.name].fluids) do
+      result.fluids[fluid_name] = true
     end
   end
 
@@ -264,9 +275,32 @@ local function make_starting_unlocks()
   starting_unlocks = process_tech(starting_tech)
 end
 
+local function add_ignores()
+  if game.active_mods["angelsrefining"] then
+    ignored_unlocks["ore-powderizer"] = {items = {"milling-drum-used"}, fluids = {}}
+  end
+  if game.active_mods["angelssmelting"] then
+    ignored_unlocks["angels-coolant-1"] = {items = {}, fluids = {"liquid-coolant-used"}}
+  end
+  if game.active_mods["angelsbioprocessing"] then
+    ignored_unlocks["plastics"] = {items = {}, fluids = {"liquid-plastic"}}
+    -- TODO: Tidy up puffer / crop prerequisites
+    ignored_unlocks["bio-refugium-hatchery"] = {items = {"bio-puffer-egg-2", "bio-puffer-egg-3", "bio-puffer-egg-4", "bio-puffer-egg-5"}, fluids = {}}
+    ignored_unlocks["bio-fermentation"] = {items = {"solid-corn", "solid-fruit"}, fluids = {}}
+    ignored_unlocks["bio-nutrient-paste"] = {items = {"solid-beans", "solid-corn", "solid-leafs", "solid-nuts", "solid-pips", "solid-fruit"}, fluids = {}}
+    ignored_unlocks["bio-pressing-1"] = {items = {"solid-nuts", "solid-pips", "solid-beans"}, fluids = {}}
+    -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
+    ignored_unlocks["angels-bio-yield-module"] = {items = {"crystal-splinter-green"}, fluids = {""}}
+    ignored_unlocks["angels-bio-yield-module-2"] = {items = {"crystal-shard-green"}, fluids = {""}}
+    ignored_unlocks["angels-bio-yield-module-3"] = {items = {"crystal-full-green"}, fluids = {""}}
+  end
+end
+
 local unit_test_010 = function()
   -- Build lists of items and fluids unlocked at the start of the game
   make_starting_unlocks()
+
+  add_ignores()
   
   -- Build list of technologies with the items and fluids unlocked by each
 
