@@ -615,7 +615,8 @@ data:extend(
       prerequisites = {
         "angels-metallurgy-3",
         "angels-cooling",
-        "angels-oil-processing"
+        "angels-oil-processing",
+        "slag-processing-1"
       },
       effects = {
         {

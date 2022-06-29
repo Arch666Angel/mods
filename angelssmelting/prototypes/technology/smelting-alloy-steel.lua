@@ -7,6 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "angels-metallurgy-2",
+        "angels-iron-smelting-1",
         "basic-chemistry-3"
       },
       effects = {

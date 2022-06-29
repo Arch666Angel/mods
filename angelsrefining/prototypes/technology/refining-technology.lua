@@ -125,7 +125,8 @@ data:extend(
       icon_mipmaps = 2,
       prerequisites = {
         --"ore-crushing",
-        "ore-floatation"
+        "ore-floatation",
+        "water-washing-2"
       },
       effects = {
         {
@@ -383,8 +384,7 @@ data:extend(
       prerequisites = {
         --"ore-crushing",
         "geode-processing-1",
-        "slag-processing-1",
-        "water-washing-2"
+        "slag-processing-1"
       },
       effects = {
         {
