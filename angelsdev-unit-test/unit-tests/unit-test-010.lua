@@ -279,8 +279,8 @@ local unit_test_010 = function()
   local escape = false
   
   while (#tech_prototypes > I) and (escape == false) do
+    escape = true
     for tech_name, tech in pairs(tech_prototypes) do
-      escape = true
       if not processed_techs[tech_name] then
         local all_prereqs_processed = true
         for prereq_name, prereq in pairs(tech.prerequisites) do
@@ -297,6 +297,11 @@ local unit_test_010 = function()
         end
       end
     end  
+  end
+
+  if escape == true then
+    unit_test_functions.print_msg('Not all techs were checked. Possibly due to hidden prerequisites')
+    unit_test_result = unit_test_functions.test_failed  
   end
 
   return unit_test_result
