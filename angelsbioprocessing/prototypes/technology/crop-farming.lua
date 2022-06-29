@@ -889,7 +889,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-fermentation",
-        "bio-nutrient-paste"
+        "bio-nutrient-paste",
+        "plastics"
       },
       effects = {
         {
