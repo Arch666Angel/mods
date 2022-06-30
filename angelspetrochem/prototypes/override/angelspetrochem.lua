@@ -194,25 +194,15 @@ if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe(
     {
       "solid-calcium-chloride",
-      "catalyst-steam-cracking-butane", -- "gas-butadiene"
-      "liquid-styrene-catalyst", -- "liquid-styrene"
-      "liquid-ethylbenzene-catalyst", -- "liquid-ethylbenzene"
       "cumene-process", -- "gas-acetone"
-      "liquid-bisphenol-a",
       "gas-phosgene",
-      "gas-ammonium-chloride",
-      "gas-melamine"
+      "gas-ammonium-chloride"
     }
   )
   angelsmods.functions.add_flag({
     "solid-calcium-chloride",
-    "gas-butadiene",
-    "liquid-styrene",
-    "liquid-ethylbenzene",
-    "liquid-bisphenol-a",
     "gas-phosgene",
-    "gas-ammonium-chloride",
-    "gas-melamine"
+    "gas-ammonium-chloride"
   }, "hidden")
 
   if angelsmods.bioprocessing then
@@ -237,11 +227,20 @@ else
       "solid-resin",
       "liquid-resin-1",
       "liquid-resin-2",
-      "liquid-resin-3"
+      "liquid-resin-3",
+      "gas-melamine",
+      "liquid-bisphenol-a"
     }
   )
-  angelsmods.functions.add_flag("solid-resin", "hidden")
-  angelsmods.functions.add_flag("liquid-resin", "hidden")
+  angelsmods.functions.add_flag(
+    {
+      "solid-resin",
+      "liquid-resin",
+      "gas-melamine",
+      "liquid-bisphenol-a"
+    },
+    "hidden"
+  )
   OV.disable_technology({
     "resins",
     "resin-1",
@@ -255,11 +254,22 @@ else
   OV.disable_recipe(
     {
       "liquid-rubber-1",
-      "solid-rubber"
+      "solid-rubber",
+      "liquid-styrene-catalyst",
+      "liquid-ethylbenzene-catalyst",
+      "catalyst-steam-cracking-butane"
     }
   )
-  angelsmods.functions.add_flag("solid-rubber", "hidden")
-  angelsmods.functions.add_flag("liquid-rubber", "hidden")
+  angelsmods.functions.add_flag(
+    {
+      "solid-rubber",
+      "liquid-rubber",
+      "liquid-styrene",
+      "liquid-ethylbenzene",
+      "gas-butadiene"
+    },
+    "hidden"
+  )
   OV.disable_technology({
     "rubbers",
     "rubber",
