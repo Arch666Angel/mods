@@ -28,26 +28,28 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
 end
 
 if angelsmods.trigger.water_red_waste == true then
-  OV.patch_recipes(
-    {
+  if angelsmods.petrochem then
+    OV.patch_recipes(
       {
-        name = "red-waste-water-purification",
-        results = {{name = "solid-sodium-nitrate", type = "item", amount = 1}}
+        {
+          name = "red-waste-water-purification",
+          results = {{name = "solid-sodium-nitrate", type = "item", amount = 1}}
+        }
       }
-    }
-  )
+    )
+  end
 else
+  OV.disable_recipe("red-waste-water-purification")
+  angelsmods.functions.add_flag("water-red-waste", "hidden")
+  if angelsmods.petrochem then
   OV.disable_recipe(
     {
-      "red-waste-water-purification",
       "solid-sodium-nitrate-processing",
       "sodium-nitrate-acid-processing"
     }
   )
-  angelsmods.functions.add_flag({
-    "water-red-waste",
-    "solid-sodium-nitrate",
-  }, "hidden")
+  angelsmods.functions.add_flag("solid-sodium-nitrate", "hidden")
+  end
   if angelsmods.bioprocessing then
     OV.disable_recipe(
       {
@@ -95,9 +97,7 @@ if angelsmods.trigger.water_greenyellow_waste == true then
 else
   OV.disable_recipe(
     {
-      "greenyellow-waste-water-purification",
-      "solid-sodium-nitrate-processing",
-      "sodium-nitrate-acid-processing"
+      "greenyellow-waste-water-purification"
     }
   )
   angelsmods.functions.add_flag({
