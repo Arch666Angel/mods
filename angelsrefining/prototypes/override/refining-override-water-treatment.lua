@@ -238,17 +238,19 @@ else
 end
 
 if angelsmods.trigger.salt_production == false then
-  angelsmods.functions.add_flag({"salination-plant", "salination-plant-2"}, "hidden")
-
+  if angelsmods.trigger.smelting_products["lithium"].plate ~= true then
+    angelsmods.functions.add_flag({"salination-plant", "salination-plant-2"}, "hidden")
+    OV.disable_recipe({
+      "salination-plant",
+      "salination-plant-2"
+    })
+    OV.disable_technology("water-treatment-4")
+  end
   OV.disable_recipe({
-    "salination-plant",
-    "salination-plant-2",
     "water-saline",
     "solid-salt-from-saline",
     "solid-salt",
   })
-
-  OV.disable_technology("water-treatment-4")
 end
 
 if angelsmods.trigger.salt_consumption == false then
@@ -302,6 +304,10 @@ if mods["bobplates"] then
     }
   )
   OV.add_unlock("thermal-water-extraction", "water-thermal-lithia")
+  OV.remove_prereq("lithium-processing", "logistic-science-pack")
+  OV.remove_prereq("lithium-processing", "electrolysis-1")
+  OV.remove_prereq("lithium-processing", "chemical-processing-1")
+  OV.add_prereq("lithium-processing", "thermal-water-extraction")
 end
 
 -------------------------------------------------------------------------------
@@ -336,9 +342,9 @@ if mods["bobplates"] then
       {name = "advanced-oil-processing", ingredients = {{name = "water-purified", type = "fluid", amount = "water"}}}
     }
   )
+  OV.add_prereq("electrolysis-1", "water-treatment")
 else
-  if (angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate) or
-     (angelsmods.industries and angelsmods.industries.overhaul) then
+  if (angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate) then
   else
     angelsmods.functions.add_flag("solid-lithium", "hidden")
     OV.disable_recipe("solid-lithium")
