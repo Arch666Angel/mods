@@ -498,9 +498,10 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("NNN"),
       prerequisites = {
         "angels-nitrogen-processing-1",
+        "angels-sulfur-processing-1",
         "angels-advanced-chemistry-1",
         "chlorine-processing-1",
-        "water-treatment-2"
+        "water-treatment-2",
       },
       effects = {
         {

@@ -42,13 +42,14 @@ else
   OV.disable_recipe("red-waste-water-purification")
   angelsmods.functions.add_flag("water-red-waste", "hidden")
   if angelsmods.petrochem then
-  OV.disable_recipe(
-    {
-      "solid-sodium-nitrate-processing",
-      "sodium-nitrate-acid-processing"
-    }
-  )
-  angelsmods.functions.add_flag("solid-sodium-nitrate", "hidden")
+    OV.disable_recipe(
+      {
+        "solid-sodium-nitrate-processing",
+        "sodium-nitrate-acid-processing"
+      }
+    )
+    angelsmods.functions.add_flag("solid-sodium-nitrate", "hidden")
+    OV.remove_prereq("angels-nitrogen-processin-2", "angels-sulfur-processing-1")
   end
   if angelsmods.bioprocessing then
     OV.disable_recipe(

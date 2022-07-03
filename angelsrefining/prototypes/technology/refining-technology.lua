@@ -321,7 +321,8 @@ data:extend(
       prerequisites = {
         --"ore-floatation",
         "advanced-ore-refining-1",
-        "geode-processing-2"
+        "geode-processing-2",
+        "ore-powderizer"
       },
       effects = {
         {

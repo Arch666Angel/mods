@@ -154,6 +154,8 @@ if mods["bobplates"] then
   )
   OV.add_unlock("flammables", "liquid-fuel")
   OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
+  OV.remove_prereq("flammables", "gas-processing")
+  OV.add_prereq("flammables", "gas-steam-cracking-1")
 end
 
 -------------------------------------------------------------------------------
@@ -214,6 +216,8 @@ if mods["bobplates"] then
       "bob-resin-wood",
       "solid-resin",
     })
+    OV.remove_unlock("plastics", "synthetic-wood")
+    OV.add_unlock("plastic-1", "synthetic-wood")
   end
 end
 

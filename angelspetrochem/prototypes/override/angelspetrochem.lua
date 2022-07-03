@@ -17,6 +17,7 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.disable_technology("heavy-water-processing")
   OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
   OV.disable_technology("deuterium-processing")
+  OV.add_prereq("water-chemistry-2", "nuclear-fuel-reprocessing")
 
   OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
   OV.set_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)

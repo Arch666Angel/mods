@@ -89,6 +89,7 @@ if angelsmods.refining then
 
   -- update lubricant dependencies in green science
   OV.remove_science_pack("ore-powderizer", "chemical-science-pack")
+  OV.remove_prereq("ore-powderizer", "chemical-science-pack")
 
   move_item("liquid-ferric-chloride-solution", "ore-processing-fluid", "a[ferrous]-e", "fluid")
   OV.add_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")

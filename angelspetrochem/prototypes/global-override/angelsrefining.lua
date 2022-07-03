@@ -39,4 +39,7 @@ if angelsmods.trigger.enableacids then
     }
   )
   OV.add_prereq("ore-leaching", "chlorine-processing-1")
+  if angelsmods.trigger.refinery_products["rubyte"] then
+    OV.add_prereq("ore-leaching", "angels-nitrogen-processing-2")
+  end
 end

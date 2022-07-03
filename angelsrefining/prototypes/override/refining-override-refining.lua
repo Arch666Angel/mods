@@ -125,6 +125,7 @@ else
       }
     }
   )
+  OV.remove_prereq("advanced-ore-refining-2", "ore-powderizer")
 end
 
 -------------------------------------------------------------------------------
