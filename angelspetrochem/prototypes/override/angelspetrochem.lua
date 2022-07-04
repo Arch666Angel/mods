@@ -284,6 +284,7 @@ else
       "liquid-ferric-chloride-solution"
     }
   )
+  OV.remove_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")
   angelsmods.functions.add_flag("liquid-ferric-chloride-solution", "hidden")
 end
 
@@ -294,6 +295,7 @@ else
       "liquid-cupric-chloride-solution"
     }
   )
+  OV.remove_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
   angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
 end
 

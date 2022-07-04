@@ -157,6 +157,10 @@ if mods["bobplates"] then
   -- sulfur processing --------------------------------------------------------
   OV.converter_fluid("sulfur-dioxide", "gas-sulfur-dioxide")
   OV.converter_fluid("hydrogen-sulfide", "gas-hydrogen-sulfide")
+elseif mods["bobelectronics"] then
+  -- chloride processing ------------------------------------------------------
+  OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
+  OV.disable_recipe({"ferric-chloride-solution"})
 end
 
 -------------------------------------------------------------------------------

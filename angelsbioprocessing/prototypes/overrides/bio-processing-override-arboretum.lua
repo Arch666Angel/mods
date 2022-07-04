@@ -114,4 +114,5 @@ else
   })
   --rereq clean-out
   OV.remove_prereq("gardens-2","bio-paper-1")
+  OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end
