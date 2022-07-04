@@ -90,13 +90,13 @@ else
       "crystal-full-harmonic",
       "crystal-full-blue",
       "crystal-full-red",
-      "crystal-full-green"
+      --"crystal-full-green" -- Used for agriculture modules
     }
   )
   angelsmods.functions.add_flag({
     "crystal-full-harmonic",
     "crystal-full-blue",
     "crystal-full-red",
-    "crystal-full-green"
+    --"crystal-full-green" -- Used for agriculture modules
   },"hidden")
 end
