@@ -843,8 +843,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-sulfur-processing-1",
-        "logistic-science-pack",
+        "angels-sulfur-processing-1"
       },
       effects = {
         -- {
