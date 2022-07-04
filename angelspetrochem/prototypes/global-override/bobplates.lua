@@ -258,6 +258,8 @@ if mods["bobplates"] then
     if mods["angelsbioprocessing"] then
       OV.add_prereq("circuit-network", "bio-wood-processing")
     end
+    OV.add_prereq("rubbers", "circuit-network")
+    OV.add_prereq("advanced-electronics-2", "rubbers")
   end
 end
 

@@ -85,13 +85,13 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/resins-tech.png",
       icon_size = 128,
       prerequisites = {
-        "basic-chemistry-3"
+        "resin-1"
       },
       effects = {
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "solid-resin"
-        --},
+        {
+          type = "unlock-recipe",
+          recipe = "solid-resin"
+        }
       },
       unit = {
         count = 50,
@@ -109,7 +109,6 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
       icon_size = 128,
       prerequisites = {
-        "resins",
         "angels-advanced-chemistry-1",
         "angels-nitrogen-processing-2"
       },
@@ -117,11 +116,7 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquid-resin-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-resin"
-        },
+        }
       },
       unit = {
         count = 50,
@@ -193,13 +188,13 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/rubbers-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-oil-processing"
+        "rubber"
       },
       effects = {
-        --{
-        --  type = "unlock-recipe",
-        --  recipe = "solid-rubber"
-        --},
+        {
+          type = "unlock-recipe",
+          recipe = "solid-rubber"
+        }
       },
       unit = {
         count = 50,
@@ -217,7 +212,6 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
       icon_size = 128,
       prerequisites = {
-        "rubbers",
         --"oil-steam-cracking-1",
         "angels-advanced-chemistry-2"
       },
@@ -225,10 +219,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquid-rubber-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-rubber"
         }
       },
       unit = {
