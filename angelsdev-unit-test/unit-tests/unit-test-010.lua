@@ -277,15 +277,23 @@ local function make_starting_unlocks()
 end
 
 local function add_ignores()
+  -- base game exception
+  ignored_unlocks["artillery"] = {items = {"concrete"}, fluids = {}}
+
   if game.active_mods["angelsrefining"] then
     ignore_building_recipes = true
     ignored_unlocks["ore-powderizer"] = {items = {"milling-drum-used"}, fluids = {}}
   end
+
   if game.active_mods["angelssmelting"] then
     ignored_unlocks["angels-coolant-1"] = {items = {}, fluids = {"liquid-coolant-used"}}
   end
+
   if game.active_mods["angelsbioprocessing"] then
     ignored_unlocks["plastics"] = {items = {}, fluids = {"liquid-plastic"}}
+    ignored_unlocks["rubbers"] = {items = {}, fluids = {"liquid-rubber"}}
+    ignored_unlocks["resins"] = {items = {}, fluids = {"liquid-resin"}}
+    ignored_unlocks["bio-processing-paste"] = {items = {"powder-cobalt", "powder-copper", "powder-gold", "powder-iron", "powder-titanium", "powdered-tungsten", "powder-zinc"}, fluids = {}}
     -- TODO: Tidy up puffer / crop prerequisites
     ignored_unlocks["bio-refugium-hatchery"] = {items = {"bio-puffer-egg-2", "bio-puffer-egg-3", "bio-puffer-egg-4", "bio-puffer-egg-5"}, fluids = {}}
     ignored_unlocks["bio-fermentation"] = {items = {"solid-corn", "solid-fruit"}, fluids = {}}
