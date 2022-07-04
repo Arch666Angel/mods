@@ -304,6 +304,11 @@ local function add_ignores()
     ignored_unlocks["angels-bio-yield-module-2"] = {items = {"crystal-shard-green"}, fluids = {""}}
     ignored_unlocks["angels-bio-yield-module-3"] = {items = {"crystal-full-green"}, fluids = {""}}
   end
+
+  if game.active_mods["angelsindustries"] then
+    ignored_unlocks["angels-nuclear-fuel"] = {items = {"plutonium-240", "thorium-232"}, fluids = {}}
+    ignored_unlocks["atomic-bomb"] = {items = {"plutonium-240", "angels-muon-fusion-catalyst"}, fluids = {"gas-deuterium"}}
+  end
 end
 
 local unit_test_010 = function()
