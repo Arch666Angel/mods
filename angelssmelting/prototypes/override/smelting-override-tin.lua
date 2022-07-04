@@ -113,6 +113,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
         }
       }
     )
+    OV.remove_unlock("ore-crushing", "tin-plate")
   end
 
 else

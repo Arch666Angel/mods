@@ -125,6 +125,9 @@ if angelsmods.trigger.smelting_products["iron"].plate then
       }
     }
   )
+  if not angelsmods.functions.is_special_vanilla() then
+    OV.remove_unlock("ore-crushing", "iron-plate")
+  end
   OV.global_replace_item("angels-plate-iron", "iron-plate")
   angelsmods.functions.add_flag("angels-plate-iron", "hidden")
   angelsmods.functions.move_item("iron-plate", "angels-iron-casting", "l")
