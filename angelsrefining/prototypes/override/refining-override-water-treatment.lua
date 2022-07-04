@@ -349,6 +349,7 @@ else
   else
     angelsmods.functions.add_flag("solid-lithium", "hidden")
     OV.disable_recipe("solid-lithium")
+    OV.disable_recipe("algae-brown-burning")
   end
 end
 

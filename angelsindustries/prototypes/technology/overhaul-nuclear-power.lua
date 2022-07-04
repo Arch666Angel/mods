@@ -50,7 +50,8 @@ data:extend(
       prerequisites = {
         "angels-plutonium-power",
         "ore-electro-whinning-cell",
-        "utility-science-pack"
+        "utility-science-pack",
+        "angels-zinc-smelting-1"
       },
       effects = {
         {
