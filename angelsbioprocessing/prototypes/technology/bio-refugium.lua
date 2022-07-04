@@ -142,7 +142,7 @@ data:extend(
         --"bio-refugium-fish-1"
         "bio-nutrient-paste",
         "angels-sulfur-processing-2",
-        "angels-nitrogen-processing-1",
+        "angels-nitrogen-processing-2",
         "advanced-electronics",
         "chlorine-processing-1"
       },

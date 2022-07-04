@@ -21,14 +21,6 @@ data:extend(
           type = "unlock-recipe",
           recipe = "carbon-separation-2"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-carrier"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-red"
-        }
       },
       unit = {
         count = 50,
@@ -86,7 +78,8 @@ data:extend(
       prerequisites = {
         "basic-chemistry-2",
         "angels-coal-processing",
-        "fluid-handling"
+        "fluid-handling",
+        "ore-crushing"
       },
       effects = {
         {
@@ -104,6 +97,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "water-separation-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalyst-metal-carrier"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalyst-metal-red"
         }
       },
       unit = {
@@ -477,10 +478,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "air-separation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-ammonia"
         }
       },
       unit = {
@@ -507,6 +504,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-air-filter-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-ammonia"
         },
         {
           type = "unlock-recipe",
@@ -785,7 +786,8 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "chlorine-processing-3",
-        "angels-coal-processing-3"
+        "angels-coal-processing-3",
+        "angels-nitrogen-processing-2"
       },
       effects = {
         {

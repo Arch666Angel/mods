@@ -88,7 +88,7 @@ data:extend(
       prerequisites = {
         --"bio-processing-brown",
         "bio-processing-green",
-        "angels-nitrogen-processing-1",
+        "angels-nitrogen-processing-2",
         "thermal-water-extraction"
       },
       effects = {
