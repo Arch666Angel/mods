@@ -186,6 +186,7 @@ if mods["bobplates"] then
       "sulfur-2",
       "sulfur-3",
       "carbon",
+      "bob-resin-oil"
     }
   )
   -- plastics -----------------------------------------------------------------
@@ -207,6 +208,14 @@ if mods["bobplates"] then
           {name = "liquid-mineral-oil", type = "fluid", amount = "liquid-fuel-oil"}
         }
       }
+    }
+  )
+elseif mods["bobelectronics"] then
+  --hide disabled
+  OV.hide_recipe(
+    {
+      "coal-cracking",
+      "bob-resin-oil"
     }
   )
 end

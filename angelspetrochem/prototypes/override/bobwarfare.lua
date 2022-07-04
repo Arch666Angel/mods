@@ -39,7 +39,7 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   -- RUBBER -------------------------------------------------------------------
   -----------------------------------------------------------------------------
-  if settings.startup["bobmods-warfare-spidertron-overhaul"].value == true then
+  if (settings.startup["bobmods-warfare-spidertron-overhaul"].value == true) and angelsmods.trigger.rubber then
     OV.add_prereq("walking-vehicle", "rubbers")
   end
 end

@@ -1,10 +1,6 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
-if mods["bobplates"] then
-  OV.disable_recipe({"bob-resin-oil"})
-end
-
 -------------------------------------------------------------------------------
 -- CONVERT FLUIDS TO ANGELS VERSION -------------------------------------------
 -------------------------------------------------------------------------------

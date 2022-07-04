@@ -112,7 +112,7 @@ end
 
 --ADDED RECIPES BOBS
 if bobmods then
-  if bobmods.electronics then
+  if bobmods.electronics and angelsmods.triggers.paper then
     data:extend(
       {
         --CIRCUIT BOARD
