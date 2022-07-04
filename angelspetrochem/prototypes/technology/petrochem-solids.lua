@@ -135,7 +135,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "resin-1",
-        "angels-advanced-chemistry-3"
+        "angels-nitrogen-processing-3"
       },
       effects = {
         {

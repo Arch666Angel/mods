@@ -268,7 +268,8 @@ data:extend(
         "angels-advanced-chemistry-1",
         "advanced-electronics",
         "gas-steam-cracking-1",
-        "oil-steam-cracking-1"
+        "oil-steam-cracking-1",
+        "angels-sulfur-processing-2"
       },
       effects = {
         {
