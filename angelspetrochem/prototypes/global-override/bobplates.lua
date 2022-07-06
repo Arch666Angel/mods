@@ -157,6 +157,10 @@ if mods["bobplates"] then
   -- sulfur processing --------------------------------------------------------
   OV.converter_fluid("sulfur-dioxide", "gas-sulfur-dioxide")
   OV.converter_fluid("hydrogen-sulfide", "gas-hydrogen-sulfide")
+elseif mods["bobelectronics"] then
+  -- chloride processing ------------------------------------------------------
+  OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
+  OV.disable_recipe({"ferric-chloride-solution"})
 end
 
 -------------------------------------------------------------------------------
@@ -186,6 +190,7 @@ if mods["bobplates"] then
       "sulfur-2",
       "sulfur-3",
       "carbon",
+      "bob-resin-oil"
     }
   )
   -- plastics -----------------------------------------------------------------
@@ -207,6 +212,14 @@ if mods["bobplates"] then
           {name = "liquid-mineral-oil", type = "fluid", amount = "liquid-fuel-oil"}
         }
       }
+    }
+  )
+elseif mods["bobelectronics"] then
+  --hide disabled
+  OV.hide_recipe(
+    {
+      "coal-cracking",
+      "bob-resin-oil"
     }
   )
 end
@@ -258,6 +271,18 @@ if mods["bobplates"] then
     if mods["angelsbioprocessing"] then
       OV.add_prereq("circuit-network", "bio-wood-processing")
     end
+    OV.add_prereq("rubbers", "circuit-network")
+    OV.add_prereq("advanced-electronics-2", "rubbers")
+  end
+end
+
+-------------------------------------------------------------------------------
+-- RESIN ----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  -- bob electronics
+  if mods["bobelectronics"] then --check if it exists first
+    OV.add_prereq("advanced-electronics", "resins")
   end
 end
 

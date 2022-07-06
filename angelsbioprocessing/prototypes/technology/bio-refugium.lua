@@ -144,6 +144,7 @@ data:extend(
         "angels-sulfur-processing-2",
         "angels-nitrogen-processing-2",
         "advanced-electronics",
+        "chlorine-processing-1"
       },
       effects = {
         {

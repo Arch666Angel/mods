@@ -6,7 +6,7 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/vequip.png",
       icon_size = 128,
       prerequisites = {
-        "logistic-science-pack"
+        "advanced-electronics"
       },
       effects = {
         {

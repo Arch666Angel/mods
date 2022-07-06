@@ -20,6 +20,7 @@ require("prototypes.override.bobgreenhouse")
 require("prototypes.override.boblogistics")
 require("prototypes.override.bobrevamp")
 require("prototypes.override.bobwarfare")
+require("prototypes.override.bobclasses")
 
 --UPDATE ENTITY RECIPES
 require("prototypes.recipes.petrochem-entity-angels")

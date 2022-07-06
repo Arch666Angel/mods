@@ -105,5 +105,10 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
     data.raw["item"]["gunmetal-alloy"].icon_mipmaps = 1
     OV.disable_recipe({"gunmetal-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-gunmetal")
+
+    if mods["bobwarfare"] then
+      OV.add_prereq("bob-bullets", "angels-gunmetal-smelting-1")
+      OV.add_prereq("bob-shotgun-shells", "angels-gunmetal-smelting-1")
+    end
   end
 end

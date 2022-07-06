@@ -77,7 +77,8 @@ data:extend(
       prerequisites = {
         "basic-chemistry-2",
         "angels-coal-processing",
-        "automation-2"
+        "fluid-handling",
+        "ore-crushing"
       },
       effects = {
         {
@@ -335,35 +336,16 @@ data:extend(
       name = "angels-sulfur-processing-1",
       icons = angelsmods.functions.create_gas_tech_icon("SSS"),
       prerequisites = {
-        "basic-chemistry-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-sulfuric-acid"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
-    },
-    {
-      type = "technology",
-      name = "angels-sulfur-processing-2",
-      icons = angelsmods.functions.create_gas_tech_icon("SSF"),
-      prerequisites = {
-        "angels-sulfur-processing-1",
         "water-treatment-2"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "gas-sulfur-dioxide"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-sulfuric-acid"
         },
         {
           type = "unlock-recipe",
@@ -390,10 +372,10 @@ data:extend(
     },
     {
       type = "technology",
-      name = "angels-sulfur-processing-3",
-      icons = angelsmods.functions.create_gas_tech_icon("SSS"),
+      name = "angels-sulfur-processing-2",
+      icons = angelsmods.functions.create_gas_tech_icon("SSF"),
       prerequisites = {
-        "angels-sulfur-processing-2",
+        "angels-sulfur-processing-1",
         "angels-advanced-chemistry-1",
         "gas-processing"
       },
@@ -423,10 +405,10 @@ data:extend(
     },
     {
       type = "technology",
-      name = "angels-sulfur-processing-4",
+      name = "angels-sulfur-processing-3",
       icons = angelsmods.functions.create_gas_tech_icon("SSS"),
       prerequisites = {
-        "angels-sulfur-processing-3",
+        "angels-sulfur-processing-2",
         "angels-nitrogen-processing-2",
         "slag-processing-1",
         "chemical-science-pack"
@@ -444,6 +426,26 @@ data:extend(
           type = "unlock-recipe",
           recipe = "angels-sulfur-scrubber"
         }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-sulfur-processing-4",
+      icons = angelsmods.functions.create_gas_tech_icon("SSS"),
+      prerequisites = {
+        "angels-sulfur-processing-3"
+      },
+      effects = {
       },
       unit = {
         count = 50,
@@ -492,6 +494,7 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("NNN"),
       prerequisites = {
         "angels-nitrogen-processing-1",
+        "angels-sulfur-processing-1",
         "angels-advanced-chemistry-1",
         "chlorine-processing-1",
         "water-treatment-2",
@@ -551,7 +554,8 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("NNN"),
       prerequisites = {
         "angels-nitrogen-processing-2",
-        "angels-advanced-chemistry-3"
+        "angels-advanced-chemistry-3",
+        "sodium-processing"
       },
       effects = {
         {
@@ -781,9 +785,9 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/sodium-tech.png",
       icon_size = 128,
       prerequisites = {
-        "basic-chemistry-3",
         "chlorine-processing-3",
-        "angels-coal-processing"
+        "angels-coal-processing-3",
+        "angels-nitrogen-processing-2"
       },
       effects = {
         {

@@ -1,10 +1,6 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
-if mods["bobplates"] then
-  OV.disable_recipe({"bob-resin-oil"})
-end
-
 -------------------------------------------------------------------------------
 -- CONVERT FLUIDS TO ANGELS VERSION -------------------------------------------
 -------------------------------------------------------------------------------
@@ -50,6 +46,9 @@ if mods["bobplates"] then
 
   OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
   angelsmods.functions.disable_barreling_recipes("ferric-chloride-solution")
+  if mods["bobelectronics"] then
+    OV.add_prereq("advanced-electronics", "chlorine-processing-1")
+  end
 end
 
 -------------------------------------------------------------------------------
@@ -154,6 +153,8 @@ if mods["bobplates"] then
   )
   OV.add_unlock("flammables", "liquid-fuel")
   OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
+  OV.remove_prereq("flammables", "gas-processing")
+  OV.add_prereq("flammables", "gas-steam-cracking-1")
 end
 
 -------------------------------------------------------------------------------
@@ -214,6 +215,8 @@ if mods["bobplates"] then
       "bob-resin-wood",
       "solid-resin",
     })
+    OV.remove_unlock("plastics", "synthetic-wood")
+    OV.add_unlock("plastic-1", "synthetic-wood")
   end
 end
 

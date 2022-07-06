@@ -140,7 +140,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-nitrogen-processing-2"
+        "angels-nitrogen-processing-2",
+        "angels-stone-smelting-2"
       },
       effects = {
         {
@@ -851,8 +852,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-sulfur-processing-1",
-        "logistic-science-pack",
+        "angels-sulfur-processing-1"
       },
       effects = {
         -- {
@@ -921,10 +921,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "bio-plastic-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-plastic"
         }
       },
       unit = {

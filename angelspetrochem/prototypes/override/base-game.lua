@@ -36,19 +36,22 @@ end
     {type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1}
   }
 move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
-move_item("petroleum-gas", "petrochem-carbon-fluids", "a", "fluid")
-move_item("light-oil", "petrochem-carbon-fluids", "dab", "fluid")
-move_item("heavy-oil", "petrochem-carbon-fluids", "ddd", "fluid")
+angelsmods.functions.add_flag("petroleum-gas", "hidden")
+angelsmods.functions.add_flag("light-oil", "hidden")
+angelsmods.functions.add_flag("heavy-oil", "hidden")
 move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
 OV.remove_prereq("lubricant", "oil-processing")
 OV.remove_prereq("lubricant", "chemical-plant")
-OV.add_prereq("lubricant", "oil-steam-cracking-1")
+OV.add_prereq("lubricant", "angels-oil-processing")
+OV.add_prereq("lubricant", "gas-steam-cracking-1")
 
--- plastics
---OV.add_unlock("plastics", "solid-plastic")
+-------------------------------------------------------------------------------
+-- PLASTICS -------------------------------------------------------------------
+-------------------------------------------------------------------------------
 move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
-OV.add_prereq("plastics", "angels-advanced-chemistry-1")
 OV.remove_prereq("plastics", "oil-processing")
+OV.add_prereq("plastics", "plastic-1")
+OV.add_unlock("plastics", "solid-plastic")
 
 -- sulfur
 data.raw["item"]["sulfur"].icon = "__angelspetrochem__/graphics/icons/solid-sulfur.png"
@@ -59,13 +62,17 @@ OV.global_replace_icon(
   {"__angelspetrochem__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64}
 )
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
-move_item("sulfuric-acid", "petrochem-sulfer-fluids", "cb", "fluid")
-OV.remove_prereq("battery", "sulfur-processing")
-OV.add_prereq("battery", "angels-sulfur-processing-2")
+angelsmods.functions.add_flag("sulfuric-acid", "hidden")
+if angelsmods.trigger.early_sulfuric_acid == true then
+  OV.remove_prereq("battery", "sulfur-processing")
+  OV.add_prereq("battery", "angels-sulfur-processing-2")
+end
 
 move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
-OV.remove_prereq("explosives", "sulfur-processing")
-OV.add_prereq("explosives", "angels-sulfur-processing-2")
+if angelsmods.trigger.early_sulfuric_acid == true then
+  OV.remove_prereq("explosives", "sulfur-processing")
+  OV.add_prereq("explosives", "angels-sulfur-processing-2")
+end
 
 -- solid fuel
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")

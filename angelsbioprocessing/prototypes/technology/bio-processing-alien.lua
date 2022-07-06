@@ -68,7 +68,8 @@ data:extend(
       prerequisites = {
         "bio-refugium-fish-1",
         "bio-processing-red",
-        "bio-processing-paste"
+        "bio-processing-paste",
+        "plastics"
       },
       effects = {
         {
