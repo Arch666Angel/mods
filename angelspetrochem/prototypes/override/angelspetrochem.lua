@@ -384,8 +384,7 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_unlock("angels-sulfur-processing-4", "angels-sulfur-scrubber")
 
   -- Dependent techs
-  OV.remove_prereq("slag-processing-1", "angels-sulfur-processing-1")
-  OV.add_prereq("slag-processing-1", "angels-sulfur-processing-2")
+  OV.add_prereq("slag-processing-1", "logistic-science-pack")
   OV.add_prereq("bio-fermentation", "logistic-science-pack")
 else
   -- Hide sulfur 4
