@@ -103,6 +103,7 @@ require("prototypes.overrides.components-base-entity-final-fixes.components-base
 if angelsmods.industries.components then
   --replace pre-req
   OV.global_replace_technology("battery", "angels-components-batteries-1")
+  OV.add_prereq("laser", "logistic-science-pack")
   --set ingredient return on building pickup
   if angelsmods.industries.return_ingredients then
     angelsmods.functions.AI.add_minable_results()

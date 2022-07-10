@@ -329,7 +329,8 @@ data:extend(
         "advanced-electronics-2",
         "angels-advanced-gas-processing",
         "chlorine-processing-1",
-        "oil-steam-cracking-2"
+        "oil-steam-cracking-2",
+        "thermal-water-extraction"
       },
       effects = {
         {

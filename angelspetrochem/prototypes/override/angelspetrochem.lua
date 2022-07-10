@@ -332,6 +332,10 @@ end
 -- SULFURIC ACID ------------------------------------------------------------
 -----------------------------------------------------------------------------
 if angelsmods.trigger.early_sulfuric_acid == true then
+  -- Replace base game sulfur tech early
+  -- Else bob's library technology prerequisite cleanup will cause issues
+  OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
+
   -- Sulfur 1
   OV.set_science_pack("angels-sulfur-processing-1", "logistic-science-pack", 0)
 
