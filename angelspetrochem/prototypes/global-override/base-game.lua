@@ -65,7 +65,6 @@ OV.set_science_pack(
 OV.set_research_difficulty("rocket-fuel", 15, 50)
 
 -- Update kovarex for nuclear fuel separation
-OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
 OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
 
 -------------------------------------------------------------------------------

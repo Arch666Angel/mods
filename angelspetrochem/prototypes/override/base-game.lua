@@ -148,6 +148,7 @@ OV.patch_recipes(
   }
 )
 OV.remove_prereq("rocketry", "rocket-fuel")
+OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
 
 data.raw["item"]["rocket-fuel"].icon = "__angelspetrochem__/graphics/icons/rocket-fuel.png"
 data.raw["item"]["rocket-fuel"].icon_size = 32

@@ -88,13 +88,14 @@ if mods["bobplates"] then
   OV.remove_prereq("lead-processing","electrolysis-1")
   OV.remove_prereq("cobalt-processing","electrolysis-1")
 
-  OV.remove_prereq("chemical-processing-2","electrolysis-2")
-  OV.remove_prereq("plastics","electrolysis-2")
-  OV.remove_prereq("aluminium-processing","electrolysis-2")
-  OV.add_prereq("aluminium-processing","chlorine-processing-1")
-  OV.remove_prereq("gold-processing-2","electrolysis-2")
-  OV.add_prereq("gold-processing","chlorine-processing-1")
-  OV.remove_prereq("battery-3","electrolysis-2")
+  OV.remove_prereq("chemical-processing-2", "electrolysis-2")
+  OV.remove_prereq("plastics", "electrolysis-2")
+  OV.remove_prereq("aluminium-processing", "electrolysis-2")
+  OV.add_prereq("aluminium-processing", "chlorine-processing-1")
+  OV.remove_prereq("gold-processing-2", "electrolysis-2")
+  OV.add_prereq("gold-processing", "chlorine-processing-1")
+  OV.remove_prereq("battery-3", "electrolysis-2")
+  OV.add_prereq("grinding", "steel-processing")
 end
 
 -------------------------------------------------------------------------------
