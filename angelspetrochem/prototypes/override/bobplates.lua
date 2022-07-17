@@ -46,9 +46,6 @@ if mods["bobplates"] then
 
   OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
   angelsmods.functions.disable_barreling_recipes("ferric-chloride-solution")
-  if mods["bobelectronics"] then
-    OV.add_prereq("advanced-electronics", "chlorine-processing-1")
-  end
 end
 
 -------------------------------------------------------------------------------
