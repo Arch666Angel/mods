@@ -34,6 +34,11 @@ end
 local unit_test_008 = function()
   local unit_test_result = unit_test_functions.test_successful
 
+  -- Populate items_to_ignore with script items
+  if game.active_mods["angelsindustries"] and (settings.startup["angels-enable-tech"].value == true) then
+    items_to_ignore["angels-main-lab-0"] = true
+  end
+
   -- Populate items_to_ignore with burnt results
   local item_filters = {}
   table.insert(item_filters, {filter = "flag", invert = true, mode = "and", flag = "hidden"})
