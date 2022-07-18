@@ -53,6 +53,7 @@ if angelsmods.refining then
   OV.add_unlock("angels-advanced-chemistry-1", "liquifier-2")
   OV.add_unlock("angels-advanced-chemistry-2", "liquifier-3")
   OV.add_unlock("angels-advanced-chemistry-3", "liquifier-4")
+  OV.add_prereq("ore-advanced-floatation", "chlorine-processing-1")
 end
 
 -------------------------------------------------------------------------------

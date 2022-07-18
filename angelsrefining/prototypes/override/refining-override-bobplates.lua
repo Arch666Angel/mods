@@ -205,6 +205,12 @@ if mods["bobplates"] then
   OV.set_science_pack("cobalt-processing", "chemical-science-pack", 1)
   OV.add_prereq("cobalt-processing", "ore-leaching")
   OV.add_prereq("ore-powderizer", "chemical-science-pack")
+  OV.add_prereq("silicon-processing", "ore-crushing")
+  OV.add_prereq("aluminium-processing", "ore-floatation")
+  OV.set_science_pack("gold-processing", "chemical-science-pack", 1)
+  OV.add_prereq("gold-processing", "ore-leaching")
+  OV.add_prereq("titanium-processing", "ore-leaching")
+  OV.add_prereq("tungsten-processing", "ore-refining")
 end
 
 -------------------------------------------------------------------------------
@@ -227,6 +233,7 @@ if mods["bobplates"] then
   OV.add_unlock("ore-crushing", "lead-plate")
   OV.add_unlock("ore-crushing", "quartz-glass")
   OV.add_unlock("lead-processing", "silver-plate")
+  OV.add_prereq("battery-3", "lead-processing")
   OV.patch_recipes(
     {
       {

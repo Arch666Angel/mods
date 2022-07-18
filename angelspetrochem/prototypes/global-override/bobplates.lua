@@ -106,6 +106,8 @@ if mods["bobplates"] then
   OV.global_replace_item("carbon", "solid-carbon")
   angelsmods.functions.add_flag("carbon", "hidden")
   OV.remove_unlock("chemical-processing-1", "carbon")
+  OV.add_prereq("lead-processing", "angels-coal-processing")
+  OV.add_prereq("silicon-processing", "angels-coal-processing")
 
   -- lithium processing -------------------------------------------------------
   OV.patch_recipes(
@@ -124,6 +126,7 @@ if mods["bobplates"] then
   OV.converter_fluid("hydrogen", "gas-hydrogen")
   OV.disable_recipe({"water-electrolysis","solid-fuel-from-hydrogen"})
   --OV.remove_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
+  OV.add_prereq("chemical-processing-1", "basic-chemistry")
 
   -- chloride processing ------------------------------------------------------
   OV.converter_fluid("chlorine", "gas-chlorine")
@@ -136,6 +139,8 @@ if mods["bobplates"] then
   angelsmods.functions.add_flag("calcium-chloride", "hidden")
   OV.disable_recipe("calcium-chloride")
   OV.remove_unlock("chemical-processing-2", "calcium-chloride")
+  OV.add_prereq("silicon-processing", "chlorine-processing-2")
+  OV.add_prereq("titanium-processing", "chlorine-processing-2")
 
   OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
   OV.disable_recipe({"ferric-chloride-solution"})
