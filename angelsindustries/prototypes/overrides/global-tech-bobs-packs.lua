@@ -26,7 +26,6 @@ if angelsmods.industries.tech then
       AI.pack_replace("alien-red-research", "yellow", "blue")
     end
 
-    AI.pack_replace("tungsten-processing", "blue", "orange")
     OV.remove_prereq("nitinol-processing", "production-science-pack")
     AI.pack_replace("ceramics", "blue", "orange")
     AI.pack_replace("cobalt-processing", "blue", "orange")
@@ -111,7 +110,6 @@ if angelsmods.industries.tech then
       OV.remove_prereq("steel-axe-4", "tech-blue-packs")
     end
     --mining drills
-    AI.pack_replace("bob-drills-3", "blue", "orange")
     AI.pack_replace("bob-area-drills-2", "green", "orange")
     AI.pack_replace("bob-area-drills-4", "blue", "yellow")
   end
@@ -134,8 +132,6 @@ if angelsmods.industries.tech then
     -- basic logistics
     AI.pack_replace("logistics-0", "red", "grey")
     AI.pack_replace("logistics", "grey", "red")
-    -- repair packs
-    AI.pack_replace("bob-repair-pack-4", "blue", "orange")
     -- toolbelts
     AI.pack_replace("toolbelt-2", "blue", "orange")
     OV.remove_prereq("toolbelt-2", "tech-blue-packs")
@@ -228,7 +224,6 @@ if angelsmods.industries.tech then
     AI.pack_replace("bob-laser-robot", "blue", "yellow")
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")
-    AI.pack_replace("bob-rocket", "blue", "orange")
     AI.pre_req_replace("bob-rocket", "military-3", "angels-components-weapons-advanced")
     AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
@@ -277,15 +272,8 @@ if angelsmods.industries.tech then
     OV.remove_science_pack("electric-engine", "angels-science-pack-green")
     -- steam power
     if settings.startup["bobmods-power-steam"].value == true then
-      AI.pack_replace("bob-steam-engine-4", "blue", "orange")
-      AI.pack_replace("bob-boiler-4", "blue", "orange")
-      AI.pack_replace("bob-oil-boiler-3", "blue", "orange")
       AI.pack_replace("bob-steam-turbine-1", "blue", "orange")
       AI.pack_replace("bob-steam-turbine-3", "blue", "yellow")
-      AI.pack_replace("bob-heat-exchanger-2", "blue", "orange")
-    end
-    if settings.startup["bobmods-power-fluidgenerator"].value == true then
-      AI.pack_replace("fluid-generator-3", "blue", "orange")
     end
     -- solar power
     if settings.startup["bobmods-power-solar"].value == true then
@@ -301,10 +289,6 @@ if angelsmods.industries.tech then
        settings.startup["bobmods-power-nuclear"].value == true or
        settings.startup["bobmods-power-heatsources"].value == true then
       AI.pack_replace("bob-heat-pipe-2", "blue", "orange")
-    end
-    if settings.startup["bobmods-power-heatsources"].value == true then
-      AI.pack_replace("burner-reactor-2", "blue", "orange")
-      AI.pack_replace("fluid-reactor-2", "blue", "orange")
     end
     -- power distribution
     if settings.startup["bobmods-power-poles"].value == true then
