@@ -19,7 +19,7 @@
 
   --BRICK
   angelsmods.functions.RB.set_fallback("item", "t0-brick", { { "block-construction-1" }, { "stone-brick", 5 } })
-  angelsmods.functions.RB.set_fallback("item", "t1-brick", { { "block-construction-1" }, { "stone-brick", 5 } })
+  angelsmods.functions.RB.set_fallback("item", "t1-brick", { { "block-construction-1" }, { "clay-brick", 5 }, { "stone-brick", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t2-brick", { { "block-construction-2" }, { "clay-brick", 5 }, { "stone-brick", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t3-brick", { { "block-construction-3" }, { "concrete-brick", 5 }, { "stone-brick", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t4-brick", { { "block-construction-4" }, { "reinforced-concrete-brick", 5 }, { "stone-brick", 5 } })
