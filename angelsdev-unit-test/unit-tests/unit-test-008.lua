@@ -34,6 +34,11 @@ end
 local unit_test_008 = function()
   local unit_test_result = unit_test_functions.test_successful
 
+  -- Populate items_to_ignore with script items
+  if game.active_mods["angelsindustries"] and (settings.startup["angels-enable-tech"].value == true) then
+    items_to_ignore["angels-main-lab-0"] = true
+  end
+
   -- Populate items_to_ignore with burnt results
   local item_filters = {}
   table.insert(item_filters, {filter = "flag", invert = true, mode = "and", flag = "hidden"})
@@ -49,6 +54,7 @@ local unit_test_008 = function()
   local entity_filters = {}
   table.insert(entity_filters, {filter = "hidden", invert = true, mode = "and"})
   table.insert(entity_filters, {filter = "minable", invert = false, mode = "and"})
+  table.insert(entity_filters, {filter = "autoplace", invert = false, mode = "and"})
 
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
 
@@ -102,7 +108,7 @@ local unit_test_008 = function()
   local recipe_filters = {}
   if #recipe_categories_to_ignore > 0 then
     for _, category_name in pairs(recipe_categories_to_ignore) do
-      if game.recipe_category_prototypes[category] then
+      if game.recipe_category_prototypes[category_name] then
         table.insert(recipe_filters, {filter = "category", invert = false, mode = "or", category = category_name})
       end
     end

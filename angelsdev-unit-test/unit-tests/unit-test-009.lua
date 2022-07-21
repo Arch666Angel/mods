@@ -5,6 +5,7 @@ local unit_test_functions = require("unit-test-functions")
 
 local entities_to_ignore_recipe = {
   ["rocket-silo"] = true,
+  ["valve-converter"] = true,
 }
 local entities_to_ignore_item = {
   ["simple-entity-with-force"] = true,
