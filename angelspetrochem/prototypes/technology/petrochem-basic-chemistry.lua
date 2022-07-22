@@ -498,7 +498,6 @@ data:extend(
         "angels-advanced-chemistry-1",
         "chlorine-processing-1",
         "water-treatment-2",
-        "angels-sulfur-processing-1"
       },
       effects = {
         {
