@@ -497,7 +497,8 @@ data:extend(
         "angels-sulfur-processing-1",
         "angels-advanced-chemistry-1",
         "chlorine-processing-1",
-        "water-treatment-2"
+        "water-treatment-2",
+        "angels-sulfur-processing-1"
       },
       effects = {
         {
