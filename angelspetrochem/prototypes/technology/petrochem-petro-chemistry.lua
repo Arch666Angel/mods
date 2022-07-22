@@ -199,8 +199,7 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "angels-fluid-control",
-        "basic-chemistry-3"
+        "angels-fluid-control"
       },
       effects = {
         {
@@ -211,8 +210,7 @@ data:extend(
       unit = {
         count = 50,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 15
       },
@@ -231,6 +229,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-electrolyser-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-chemical-plant-2"
         },
         {
           type = "unlock-recipe",
@@ -268,7 +270,8 @@ data:extend(
         "angels-advanced-chemistry-1",
         "advanced-electronics",
         "gas-steam-cracking-1",
-        "oil-steam-cracking-1"
+        "oil-steam-cracking-1",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -277,7 +280,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-plant-2"
+          recipe = "angels-chemical-plant-3"
         },
         {
           type = "unlock-recipe",
@@ -308,7 +311,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
@@ -333,7 +337,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-chemical-plant-3"
+          recipe = "angels-chemical-plant-4"
         },
         {
           type = "unlock-recipe",
@@ -397,10 +401,6 @@ data:extend(
         "utility-science-pack"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant-4"
-        },
         {
           type = "unlock-recipe",
           recipe = "separator-4"

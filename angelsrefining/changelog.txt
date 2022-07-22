@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.3
+Date: ???
+  Changes:
+    - Changed the ingredient tier of some buildings (674)
+      - Crystallizer 1
+      - Filtration unit 1
+      - Ore crusher 2
+      - Ore sorting facility 2
+      - Seafloor pump
+      - Thermal water extractor
+      - Washing plant 1
+    - Changed the science pack tier of some techs
+      - Advanced ore refining 2
+      - Advanced ore refining 4
+      - Water treatment 3
+---------------------------------------------------------------------------------------------------
 Version: 0.12.2
 Date: 06.06.2022
   Changes:

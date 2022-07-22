@@ -1,6 +1,18 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.20
 Date: ???
+  Changes:
+    - Changed the ingredient tier of some buildings (674)
+      - Blast furnace 1, 2
+      - Casting machine 1, 2
+      - Chemical furnace 1
+      - Induction furnace 1, 2
+      - Ore processing machine
+      - Pellet press
+      - Powder mixer
+    - Removed Glowing hot iron plates
+    - Disabled Solder mixture, unless using Component overhaul from Angel's Industries
+    - Made Advanced steel smelting and casting available at red science tech
   Bugfixes:
     - Fixed tech prerequisites for Batteries 3 tech from bobplates (799)
     - Moved the silver oxide recipe to be used in a powder mixer

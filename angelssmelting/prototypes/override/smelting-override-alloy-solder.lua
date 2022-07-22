@@ -3,6 +3,7 @@ local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["solder"].wire = true
+  angelsmods.trigger.smelting_products["solder"].mixture = true
 end
 
 -------------------------------------------------------------------------------
@@ -27,13 +28,25 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     angelsmods.functions.add_flag("solder-alloy", "hidden")
     OV.remove_unlock("electronics", "solder-alloy-lead")
     
-    OV.add_prereq("electronics", "angels-solder-smelting-basic" )
+    if angelsmods.trigger.smelting_products["solder"].mixture then
+      OV.add_prereq("electronics", "angels-solder-smelting-basic" )
+    else
+      OV.add_prereq("electronics", "angels-solder-smelting-1" )
+    end
 
     OV.patch_recipes({ { name = "angels-roll-solder-converting", category = "electronics-machine"} })
   end
 
-  if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
-    OV.add_prereq("angels-solder-smelting-basic", "automation-science-pack")
+  if angelsmods.trigger.smelting_products["solder"].mixture then
+    if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
+      OV.add_prereq("angels-solder-smelting-basic", "automation-science-pack")
+    end
+  else
+    angelsmods.functions.add_flag("angels-solder-mixture", "hidden")
+    OV.disable_recipe({"angels-solder-mixture", "angels-solder-smelting-1", "angels-solder-mixture-smelting"})
+    OV.disable_technology({"angels-solder-smelting-basic"})
+    OV.remove_prereq("angels-solder-smelting-1", "angels-solder-smelting-basic")
+    OV.remove_unlock("angels-solder-smelting-1", "angels-solder-smelting-1")
   end
 else
   angelsmods.functions.add_flag("angels-solder-mixture", "hidden")

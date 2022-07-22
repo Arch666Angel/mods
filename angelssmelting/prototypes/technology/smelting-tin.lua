@@ -8,8 +8,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-tin-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "angels-metallurgy-1",
-        "ore-crushing"
+        "angels-metallurgy-1"
       },
       effects = {
         {
@@ -23,10 +22,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-tin"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "basic-tinned-copper-wire"
         }
       },
       unit = {

@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.23
+Date: ???
+  Changes:
+    - Changed the ingredient tier of some buildings (674)
+      - Advance chemical plant 1
+      - Advanced gas refinery 4
+      - Air filter 1
+      - Chemical plant
+      - Flare stack
+      - Oil refinery 1
+      - Petrochem small inline tank
+      - Steam cracker 1
+    - Made Chemical plants unlock earlier in tech tree
+    - Moved Red metal catalyst to Basic chemistry 3
+    - Moved Ammonia synthesis recipe to Nitrogen processing 2
+    - Changed the science pack tier of some techs
+      - Advanced chemistry 2
+      - Flare stack tech
+      - Rubber
+---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 06.06.2022
   Changes:

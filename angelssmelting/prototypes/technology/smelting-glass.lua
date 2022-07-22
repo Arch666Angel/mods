@@ -6,7 +6,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/glass-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "ore-crushing",
         --"angels-metallurgy-2",
         "powder-metallurgy-1",
         "strand-casting-1"

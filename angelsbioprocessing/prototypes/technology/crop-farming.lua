@@ -305,6 +305,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -318,7 +319,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-temperate-farming-1",
-        "bio-farm-alien"
+        "bio-farm-alien",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -339,6 +341,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -441,6 +444,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -454,7 +458,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-desert-farming-1",
-        "bio-farm-alien"
+        "bio-farm-alien",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -475,6 +480,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -577,6 +583,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -590,7 +597,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-swamp-farming-1",
-        "bio-farm-alien"
+        "bio-farm-alien",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -611,6 +619,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30

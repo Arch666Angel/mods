@@ -51,6 +51,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.rubber = true
 
   --SMELTING TRIGGERS
+  angelsmods.trigger.smelting_products["solder"].mixture = true
   angelsmods.trigger.smelting_molds = true
   angelsmods.trigger.smelting_products["glass"].fibre = true
   angelsmods.trigger.smelting_products["iron"].rod = true
