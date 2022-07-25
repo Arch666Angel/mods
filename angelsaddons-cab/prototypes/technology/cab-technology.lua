@@ -8,7 +8,9 @@ data:extend {
     icon_size = 128,
     prerequisites = {
       "automobilism",
-      "electric-energy-distribution-1"
+      "electric-energy-distribution-1",
+      "circuit-network",
+      "chemical-science-pack"
     },
     effects = {
       {

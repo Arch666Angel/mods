@@ -88,13 +88,14 @@ if mods["bobplates"] then
   OV.remove_prereq("lead-processing","electrolysis-1")
   OV.remove_prereq("cobalt-processing","electrolysis-1")
 
-  OV.remove_prereq("chemical-processing-2","electrolysis-2")
-  OV.remove_prereq("plastics","electrolysis-2")
-  OV.remove_prereq("aluminium-processing","electrolysis-2")
-  OV.add_prereq("aluminium-processing","chlorine-processing-1")
-  OV.remove_prereq("gold-processing-2","electrolysis-2")
-  OV.add_prereq("gold-processing","chlorine-processing-1")
-  OV.remove_prereq("battery-3","electrolysis-2")
+  OV.remove_prereq("chemical-processing-2", "electrolysis-2")
+  OV.remove_prereq("plastics", "electrolysis-2")
+  OV.remove_prereq("aluminium-processing", "electrolysis-2")
+  OV.add_prereq("aluminium-processing", "chlorine-processing-1")
+  OV.remove_prereq("gold-processing-2", "electrolysis-2")
+  OV.add_prereq("gold-processing", "chlorine-processing-1")
+  OV.remove_prereq("battery-3", "electrolysis-2")
+  OV.add_prereq("grinding", "steel-processing")
 end
 
 -------------------------------------------------------------------------------
@@ -105,6 +106,8 @@ if mods["bobplates"] then
   OV.global_replace_item("carbon", "solid-carbon")
   angelsmods.functions.add_flag("carbon", "hidden")
   OV.remove_unlock("chemical-processing-1", "carbon")
+  OV.add_prereq("lead-processing", "angels-coal-processing")
+  OV.add_prereq("silicon-processing", "angels-coal-processing")
 
   -- lithium processing -------------------------------------------------------
   OV.patch_recipes(
@@ -123,6 +126,7 @@ if mods["bobplates"] then
   OV.converter_fluid("hydrogen", "gas-hydrogen")
   OV.disable_recipe({"water-electrolysis","solid-fuel-from-hydrogen"})
   --OV.remove_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
+  OV.add_prereq("chemical-processing-1", "basic-chemistry")
 
   -- chloride processing ------------------------------------------------------
   OV.converter_fluid("chlorine", "gas-chlorine")
@@ -135,6 +139,8 @@ if mods["bobplates"] then
   angelsmods.functions.add_flag("calcium-chloride", "hidden")
   OV.disable_recipe("calcium-chloride")
   OV.remove_unlock("chemical-processing-2", "calcium-chloride")
+  OV.add_prereq("silicon-processing", "chlorine-processing-2")
+  OV.add_prereq("titanium-processing", "chlorine-processing-2")
 
   OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
   OV.disable_recipe({"ferric-chloride-solution"})
@@ -157,6 +163,10 @@ if mods["bobplates"] then
   -- sulfur processing --------------------------------------------------------
   OV.converter_fluid("sulfur-dioxide", "gas-sulfur-dioxide")
   OV.converter_fluid("hydrogen-sulfide", "gas-hydrogen-sulfide")
+elseif mods["bobelectronics"] then
+  -- chloride processing ------------------------------------------------------
+  OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
+  OV.disable_recipe({"ferric-chloride-solution"})
 end
 
 -------------------------------------------------------------------------------
@@ -186,6 +196,7 @@ if mods["bobplates"] then
       "sulfur-2",
       "sulfur-3",
       "carbon",
+      "bob-resin-oil"
     }
   )
   -- plastics -----------------------------------------------------------------
@@ -198,7 +209,8 @@ if mods["bobplates"] then
         name = "petroleum-jelly",
         ingredients = {
           {name = "gas-residual", type = "fluid", amount = "liquid-naphtha"}
-        }
+        },
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-residual"}),
       },
       {
         name = "polishing-compound",
@@ -206,6 +218,14 @@ if mods["bobplates"] then
           {name = "liquid-mineral-oil", type = "fluid", amount = "liquid-fuel-oil"}
         }
       }
+    }
+  )
+elseif mods["bobelectronics"] then
+  --hide disabled
+  OV.hide_recipe(
+    {
+      "coal-cracking",
+      "bob-resin-oil"
     }
   )
 end
@@ -257,6 +277,18 @@ if mods["bobplates"] then
     if mods["angelsbioprocessing"] then
       OV.add_prereq("circuit-network", "bio-wood-processing")
     end
+    OV.add_prereq("rubbers", "circuit-network")
+    OV.add_prereq("advanced-electronics-2", "rubbers")
+  end
+end
+
+-------------------------------------------------------------------------------
+-- RESIN ----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  -- bob electronics
+  if mods["bobelectronics"] then --check if it exists first
+    OV.add_prereq("advanced-electronics", "resins")
   end
 end
 

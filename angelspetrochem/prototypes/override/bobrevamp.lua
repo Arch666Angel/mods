@@ -43,5 +43,6 @@ if mods["bobrevamp"] and mods["bobplates"] then
         }
       )
     end
+    OV.add_prereq("rtg", "sodium-processing")
   end
 end

@@ -92,6 +92,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "cargo-roboport"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "angels-construction-zone-expander-2"
         },
         {

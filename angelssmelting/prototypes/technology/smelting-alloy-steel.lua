@@ -6,8 +6,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "angels-metallurgy-2",
-        "basic-chemistry-3"
+        "angels-iron-smelting-1",
+        "basic-chemistry"
       },
       effects = {
         {
@@ -24,10 +24,9 @@ data:extend(
         }
       },
       unit = {
-        count = 150,
+        count = 100,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       },
@@ -39,8 +38,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "strand-casting-2",
+        --"angels-metallurgy-2",
         "angels-steel-smelting-1",
         "angels-silicon-smelting-2",
         "angels-manganese-smelting-1",
@@ -76,11 +74,10 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -93,11 +90,10 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-4",
-        "strand-casting-3",
+        "strand-casting-2",
         "angels-steel-smelting-2",
         "angels-nickel-smelting-3",
-        --"angels-cobalt-smelting-2", -- prerequisite of tungsten
+        --"angels-cobalt-smelting-1", -- prerequisite of tungsten
         "angels-chrome-smelting-1",
         "angels-tungsten-smelting-1"
       },
@@ -120,12 +116,11 @@ data:extend(
         }
       },
       unit = {
-        count = 250,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },

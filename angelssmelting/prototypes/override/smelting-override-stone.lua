@@ -39,7 +39,6 @@ OV.patch_recipes({
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
   { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
-OV.add_prereq("concrete", "ore-crushing")
 
 -------------------------------------------------------------------------------
 -- ANGEL OVERRIDES ------------------------------------------------------------

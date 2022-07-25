@@ -8,7 +8,6 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-copper-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "ore-crushing",
         "angels-metallurgy-1"
       },
       effects = {

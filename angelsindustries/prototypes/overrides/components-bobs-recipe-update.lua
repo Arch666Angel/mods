@@ -174,6 +174,7 @@ if angelsmods.industries.components then
     OV.global_replace_technology("battery-2", "angels-components-batteries-3")
     OV.disable_technology("battery-2")
     OV.disable_recipe("lithium-cobalt-oxide")
+    angelsmods.functions.add_flag("lithium-cobalt-oxide", "hidden")
 
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")

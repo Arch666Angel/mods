@@ -12,6 +12,7 @@ if angelsmods.industries.tech then
       OV.disable_recipe("lab-2")
       OV.disable_technology("advanced-research")
       OV.global_replace_item("lab-2", "angels-basic-lab-3")
+      angelsmods.functions.add_flag("lab-2", "hidden")
     if settings.startup["bobmods-burnerphase"].value then
       --clobber basic-lab
       OV.disable_recipe("burner-lab")

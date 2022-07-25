@@ -72,6 +72,8 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
     data.raw["item"]["zinc-plate"].icon_size = 32
     data.raw["item"]["zinc-plate"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-zinc-plate" })
+    OV.remove_prereq("battery-3", "zinc-processing")
+    OV.add_prereq("battery-3", "angels-zinc-smelting-1")
   end
 else
   angelsmods.functions.add_flag("angels-plate-zinc", "hidden")

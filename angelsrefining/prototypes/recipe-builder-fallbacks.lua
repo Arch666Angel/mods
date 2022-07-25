@@ -19,7 +19,7 @@
 
   --BRICK
   angelsmods.functions.RB.set_fallback("item", "t0-brick", { { "block-construction-1" }, { "stone-brick", 5 } })
-  angelsmods.functions.RB.set_fallback("item", "t1-brick", { { "block-construction-1" }, { "stone-brick", 5 } })
+  angelsmods.functions.RB.set_fallback("item", "t1-brick", { { "block-construction-1" }, { "clay-brick", 5 }, { "stone-brick", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t2-brick", { { "block-construction-2" }, { "clay-brick", 5 }, { "stone-brick", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t3-brick", { { "block-construction-3" }, { "concrete-brick", 5 }, { "stone-brick", 5 } })
   angelsmods.functions.RB.set_fallback("item", "t4-brick", { { "block-construction-4" }, { "reinforced-concrete-brick", 5 }, { "stone-brick", 5 } })
@@ -203,12 +203,12 @@
 
   --BIO PROCESSING
   angelsmods.functions.RB.set_fallback("item", "algaefarm-1", { { "block-electronics-0", 5 } } )
-  angelsmods.functions.RB.set_fallback("item", "algaefarm-2", { { "block-processing-1", 5 }, { "algae-farm" } } ) --block-bprocessing-1 does not exist
-  angelsmods.functions.RB.set_fallback("item", "algaefarm-3", { { "block-processing-2", 5 }, { "algae-farm-2" } } ) --block-bprocessing-2 does not exist
+  angelsmods.functions.RB.set_fallback("item", "algaefarm-2", { { "block-production-1", 5 }, { "algae-farm" } } ) --block-bprocessing-1 does not exist
+  angelsmods.functions.RB.set_fallback("item", "algaefarm-3", { { "block-production-2", 5 }, { "algae-farm-2" } } ) --block-bprocessing-2 does not exist
   angelsmods.functions.RB.set_fallback("item", "algaefarm-4", { { "block-bprocessing-4", 5 }, { "algae-farm-3" } } )
 
   angelsmods.functions.RB.set_fallback("item", "cropfarm-1", { { "block-production-1", 3 }, { "solid-soil", 15 } } ) 
-  angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-processing-2", 3 }, { "crop-farm" } } ) --block-bprocessing-2 does not exist
+  angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-production-2", 3 }, { "crop-farm" } } ) --block-bprocessing-2 does not exist
 
   angelsmods.functions.RB.set_fallback("item", "compo-1", { { "block-production-1", 1 }, { "wooden-chest", 1 } } )
   --angelsmods.functions.RB.set_fallback("item", "compo-2", { { "block-bprocessing-3", 3 }, { "composter" } } )

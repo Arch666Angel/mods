@@ -1,13 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.23
+Date: ##.##.2022
+  Changes:
+    - Special Vanilla: Removed paper and full harmonic crystal as they had no use (at this point)
+    - Added blue science pack to techs (674)
+      - Hatchery
+      - Puffer refugium 1
+      - Butchery 2
+      - Temperate farming environment
+      - Temperate farming 2
+      - Desert farming environment
+      - Desert farming 2
+      - Swamp farming environment
+      - Swamp farming 2
+---------------------------------------------------------------------------------------------------
 Version: 0.7.22
 Date: 06.06.2022
   Changes:
-    - Moved Garden cultivation recipe unlock to a new technology Garden processing 3 #783
+    - Moved Garden cultivation recipe unlock to a new technology Garden processing 3 (783)
       This recipe exists in case gardens of a particular type do not spawn
       It is not for duplication of Gardens / Alien plant-life samples
   Bugfixes:
-    - Polluted fish water from fish breeding was not being included in fluid production graphs #750
-    - Fixed Alien plant life sample recipes in expensive mode were bypassing Alienated fertilizer #783
+    - Polluted fish water from fish breeding was not being included in fluid production graphs (750)
+    - Fixed Alien plant life sample recipes in expensive mode were bypassing Alienated fertilizer (783)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.21
 Date: 19.12.2021

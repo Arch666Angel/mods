@@ -8,6 +8,7 @@ data:extend(
     order = "c-a",
     prerequisites =
     {
+      "bio-processing-brown"
     },
     effects =
     {
@@ -282,10 +283,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-resin-resin-liquification"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-resin"
       }
     },
     unit =
@@ -532,10 +529,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "bio-rubber"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-rubber"
       }
     },
     unit =
@@ -668,7 +661,7 @@ data:extend(
     {
       "bio-paper-1",
       "chlorine-processing-1",
-      "angels-nitrogen-processing-1",
+      "angels-nitrogen-processing-2",
       "angels-sulfur-processing-2",
     },
     effects =

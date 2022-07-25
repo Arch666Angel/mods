@@ -34,6 +34,10 @@ if angelsmods.trigger.refinery_products["cupric"] then
   end
 end
 
+if angelsmods.petrochem and angelsmods.trigger.enableacids and angelsmods.trigger.refinery_products["rubyte"] then
+  angelsmods.trigger.water_red_waste = true
+end
+
 --Fallbacks for the recipe builder
 require("prototypes.recipe-builder-fallbacks")
 --Overrides for refining/angels internal

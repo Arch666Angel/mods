@@ -10,7 +10,7 @@ data:extend(
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
-        "automation"
+        "ore-crushing"
       },
       effects = {
         {
@@ -615,7 +615,8 @@ data:extend(
       prerequisites = {
         "angels-metallurgy-3",
         "angels-cooling",
-        "angels-oil-processing"
+        "angels-oil-processing",
+        "slag-processing-1"
       },
       effects = {
         {

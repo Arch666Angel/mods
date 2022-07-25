@@ -59,6 +59,7 @@ end
 -- RUBYTE ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["rubyte"] then
+  angelsmods.trigger.geode_cyan = true
 else
   angelsmods.functions.add_flag("angels-ore5", "hidden")
   angelsmods.functions.add_flag("angels-ore5-crushed", "hidden")
@@ -71,6 +72,7 @@ end
 -- BOBMONIUM ------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["bobmonium"] then
+  angelsmods.trigger.geode_red = true
 else
   angelsmods.functions.add_flag("angels-ore6", "hidden")
   angelsmods.functions.add_flag("angels-ore6-crushed", "hidden")
@@ -123,6 +125,7 @@ else
       }
     }
   )
+  OV.remove_prereq("advanced-ore-refining-2", "ore-powderizer")
 end
 
 -------------------------------------------------------------------------------
@@ -181,3 +184,16 @@ end
 -- Currently crystal-matrix has no use
 OV.disable_recipe({"crystal-matrix"})
 angelsmods.functions.add_flag("crystal-matrix","hidden")
+
+-------------------------------------------------------------------------------
+-- SLAG -----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if angelsmods.trigger.slag == false then
+  OV.disable_recipe(
+    {
+      "slag-processing-stone",
+      "slag-processing-dissolution"
+    }
+  )
+  angelsmods.functions.add_flag("slag", "hidden")
+end

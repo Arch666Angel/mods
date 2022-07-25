@@ -108,7 +108,7 @@ if mods["bobmodules"] then
   -- EXISTING MODULES TECHNOLOGY ----------------------------------------------
   -----------------------------------------------------------------------------
   -- tier 1 modules
-  OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
+  OV.add_prereq("modules", "bio-processing-crystal-splinter-2")
   for _, type in pairs{"speed", "effectivity", "productivity"} do
     -- remove the marked as upgrade from base game
     local tech = data.raw.technology[type.."-module-2"]
@@ -133,7 +133,7 @@ if mods["bobmodules"] then
         {
           "modules",
           "advanced-electronics-2",
-          "bio-processing-crystal-shard-1",
+          "bio-processing-crystal-shard-2",
         },
         effects =
         {
