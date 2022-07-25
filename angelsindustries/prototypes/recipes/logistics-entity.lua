@@ -159,6 +159,22 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "cargo-roboport",
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        {type = "item", name = "steel-plate", amount = 60},
+        {type = "item", name = "stone-brick", amount = 40},
+        {type = "item", name = "iron-gear-wheel", amount = 60},
+        {type = "item", name = "electronic-circuit", amount = 60}
+      },
+      results = {
+        {type = "item", name = "cargo-roboport", amount = 1}
+      },
+      icon_size = 32
+    },
+    {
+      type = "recipe",
       name = "cargo-box",
       enabled = false,
       energy_required = 5,

@@ -130,6 +130,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
         }
       }
     )
+    OV.remove_unlock("ore-crushing", "lead-plate")
   end
 else
   angelsmods.functions.add_flag("angels-plate-lead", "hidden")

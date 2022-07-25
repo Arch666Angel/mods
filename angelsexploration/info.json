@@ -13,7 +13,7 @@
     "angelssmelting >= 0.6.18",
     "angelsbioprocessing >= 0.7.21",
     "angelsindustries >= 0.4.15",
-    "? bobenemies >= 0.18.5",
-    "? bobwarfare >= 0.18.6"
+    "? bobenemies >= 1.1.5",
+    "? bobwarfare >= 1.1.5"
   ]
 }

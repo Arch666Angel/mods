@@ -146,6 +146,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
     )
     OV.add_unlock("angels-glass-smelting-2", "angels-glass-fiber-board")
     OV.add_prereq("advanced-electronics-2", "angels-glass-smelting-2")
+    OV.add_prereq("angels-glass-smelting-2", "resin-1")
 
     -- disable bob variant
     OV.remove_unlock("advanced-electronics-2", "fibreglass-board")

@@ -162,25 +162,24 @@ if angelsmods.industries.overhaul then
     )
     OV.disable_recipe("empty-nuclear-fuel-cell")
     angelsmods.functions.add_flag({"plutonium-240","empty-nuclear-fuel-cell"}, "hidden")
-
-    if data.raw.recipe["plutonium-nucleosynthesis"] then
-      data.raw.recipe["plutonium-nucleosynthesis"].category = "centrifuging-2"
-    end
     
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
-      OV.add_prereq("bobingabout-enrichment-process", "angels-plutonium-power")
-      OV.patch_recipes({{name = "bobingabout-enrichment-process", subgroup = "angels-power-nuclear-processing", order="b[AMOX]-c[duplication]"}})
-      if data.raw.recipe["bobingabout-enrichment-process"] then
-        data.raw.recipe["bobingabout-enrichment-process"].category = "centrifuging-2"
-      end
-    else
-      --if not rtg, remove bobingabout process
-      OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
-      OV.disable_recipe("bobingabout-enrichment-process")
-      OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
-      OV.disable_technology("bobingabout-enrichment-process")
+      -- patch rtg to use uranium 239 instead of plutonium
+      -- rtg needs to be available at blue science for bob's character bodies
+      -- plutonium isn't available until purple science
+      OV.patch_recipes({{name = "rtg", ingredients = {{type = "item", name = "uranium-235", amount = "plutonium-239"}}}})
+      OV.remove_prereq("rtg", "nuclear-fuel-reprocessing")
+      OV.add_prereq("rtg", "uranium-processing")
     end
+
+    -- remove bobingabout process
+    OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
+    OV.disable_recipe("bobingabout-enrichment-process")
+    OV.disable_recipe("plutonium-nucleosynthesis")
+    OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
+    OV.disable_technology("bobingabout-enrichment-process")
+
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
 

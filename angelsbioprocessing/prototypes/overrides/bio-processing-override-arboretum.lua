@@ -1,6 +1,9 @@
 local OV = angelsmods.functions.OV
 
 if angelsmods.triggers.bio_rubber then
+  OV.remove_prereq("rubbers", "rubber")
+  OV.add_prereq("rubbers", "angels-oil-processing")
+  OV.add_prereq("rubber", "rubbers")
 else
   OV.disable_recipe({
     "desert-tree-generator-1",
@@ -22,6 +25,9 @@ else
 end
 
 if angelsmods.triggers.bio_resin then
+  OV.remove_prereq("resins", "resin-1")
+  OV.add_prereq("resins", "basic-chemistry-3")
+  OV.add_prereq("resin-1", "resins")
 else
   OV.disable_recipe({
     "temperate-tree-generator-1",
@@ -45,6 +51,9 @@ else
 end
 
 if angelsmods.triggers.bio_plastic then
+  OV.remove_prereq("plastics", "plastic-1")
+  OV.add_prereq("plastics", "angels-advanced-chemistry-1")
+  OV.add_prereq("plastic-1", "plastics")
 else
   OV.hide_recipe({
     "swamp-tree-generator-1",
@@ -87,6 +96,7 @@ else
     "liquid-white-liquor",
     "liquid-black-liquor",
     "liquid-green-liquor",
+    "liquid-pulping-liquor",
     "solid-paper",
     "solid-wood-pulp",
     "solid-alginic-acid"
@@ -104,4 +114,5 @@ else
   })
   --rereq clean-out
   OV.remove_prereq("gardens-2","bio-paper-1")
+  OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end

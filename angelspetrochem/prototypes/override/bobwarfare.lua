@@ -35,4 +35,11 @@ if mods["bobwarfare"] then
   -- move_item needs to be called before barrel_overrides
   angelsmods.functions.move_item("nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
   OV.barrel_overrides("nitroglycerin", "vanilla")
+
+  -----------------------------------------------------------------------------
+  -- RUBBER -------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if (settings.startup["bobmods-warfare-spidertron-overhaul"].value == true) and angelsmods.trigger.rubber then
+    OV.add_prereq("walking-vehicle", "rubbers")
+  end
 end

@@ -39,8 +39,10 @@ if angelsmods.industries then
           {
             name = "rifle",
             ingredients = {
+              {"!!"},
               {type = "item", name = "submachine-gun", amount = 1},
-              {type = "item", name = "steel-plate", amount = 5}
+              {type = "item", name = "steel-plate", amount = 15},
+              {type = "item", name = "copper-plate", amount = 5}
             }
           },
           {

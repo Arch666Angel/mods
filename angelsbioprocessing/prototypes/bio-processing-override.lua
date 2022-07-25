@@ -11,12 +11,8 @@ require("prototypes.overrides.bio-processing-override-angel")
 local OV = angelsmods.functions.OV
 local lab_ignore = angelsmods.triggers.lab_ignore_token
 
---BASE
-data.raw["capsule"]["raw-fish"].subgroup = "bio-fish"
-data.raw["capsule"]["raw-fish"].order = "aa"
-
-data.raw["item"]["wood"].subgroup = "bio-processing-wood"
-data.raw["item"]["wood"].order = "a[wood]"
+--OVERRIDE FOR BASE
+require("prototypes.overrides.bio-processing-override-base-game")
 
 --REFINING
 if angelsmods.refining then
@@ -63,6 +59,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
       },
     }
   )
+  OV.remove_prereq("bio-processing-alien-1", "plastics")
 end
 
 if angelsmods.functions.is_special_vanilla() then
@@ -115,7 +112,7 @@ end
 
 --ADDED RECIPES BOBS
 if bobmods then
-  if bobmods.electronics then
+  if bobmods.electronics and angelsmods.triggers.paper then
     data:extend(
       {
         --CIRCUIT BOARD

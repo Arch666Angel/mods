@@ -92,6 +92,7 @@ data:extend(
       icon_mipmaps = 4,
       prerequisites = {
         "oil-processing",
+        "gas-steam-cracking-1",
         "chemical-science-pack"
       },
       effects = {
@@ -161,8 +162,7 @@ data:extend(
       icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
       icon_size = 256, icon_mipmaps = 2,
       prerequisites = {
-        "gas-processing",
-        "chemical-science-pack"
+        "gas-steam-cracking-2"
       },
       effects = {
         {
@@ -271,7 +271,8 @@ data:extend(
         "advanced-electronics",
         "gas-steam-cracking-1",
         "oil-steam-cracking-1",
-        "chemical-science-pack"
+        "chemical-science-pack",
+        "angels-sulfur-processing-2"
       },
       effects = {
         {
@@ -327,8 +328,9 @@ data:extend(
         "angels-advanced-chemistry-2",
         "advanced-electronics-2",
         "angels-advanced-gas-processing",
-        "gas-steam-cracking-2",
-        "oil-steam-cracking-2"
+        "chlorine-processing-1",
+        "oil-steam-cracking-2",
+        "thermal-water-extraction"
       },
       effects = {
         {
@@ -378,6 +380,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "catalyst-metal-blue"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-toluene-from-benzene"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquid-toluene-from-naphtha"
         }
       },
       unit = {
@@ -560,10 +570,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "steam-cracking-gas-residual"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-toluene-from-benzene"
         }
       },
       unit = {
@@ -640,10 +646,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "steam-cracking-oil-residual"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-toluene-from-naphtha"
         }
       },
       unit = {

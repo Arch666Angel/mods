@@ -73,7 +73,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment",
-        --"ore-crushing"
+        "ore-floatation"
       },
       effects = {
         {
@@ -137,6 +137,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-lithium"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-salt"
         }
       },
       unit = {
@@ -167,10 +171,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-salt-from-saline"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-salt"
         }
       },
       unit = {

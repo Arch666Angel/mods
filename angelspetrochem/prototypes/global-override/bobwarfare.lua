@@ -34,6 +34,8 @@ if mods["bobwarfare"] then
 
     OV.add_prereq("nitroglycerin-processing", "angels-sulfur-processing-2")
     OV.add_prereq("nitroglycerin-processing", "angels-nitrogen-processing-2")
+  else
+    OV.add_prereq("cordite-processing", "angels-nitrogen-processing-2")
   end
 
   -----------------------------------------------------------------------------
