@@ -117,6 +117,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("ore-leaching", "blue", "orange")
   OV.remove_prereq("ore-leaching", "tech-blue-packs")
   AI.pack_replace("geode-processing-2", "green", "orange")
+  AI.pack_replace("advanced-ore-refining-2","blue","orange")
   --SMELTING
   AI.pack_replace("angels-metallurgy-3", "blue", "orange")
   OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
