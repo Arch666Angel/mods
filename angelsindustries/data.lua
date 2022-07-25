@@ -8,8 +8,20 @@ angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
+angelsmods.industries.blocks = angelsmods.industries.blocks or {}
+angelsmods.industries.blocks.exploration = false
+angelsmods.industries.blocks.logistic = false
+angelsmods.industries.blocks.warfare = false
+angelsmods.industries.blocks.enhancement5 = false
+angelsmods.industries.blocks.energy5 = false
+
 if angelsmods.industries.tech == true then
   angelsmods.industries.components = true
+  angelsmods.industries.blocks.exploration = true
+  angelsmods.industries.blocks.logistic = true
+  angelsmods.industries.blocks.warfare = true
+  angelsmods.industries.blocks.enhancement5 = true
+  angelsmods.industries.blocks.energy5 = true
 end
 
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries

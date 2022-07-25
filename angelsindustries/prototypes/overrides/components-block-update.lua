@@ -315,66 +315,180 @@ if angelsmods.industries.components then
     -----------------------------------------------------------------------------
     -- ADVANCED BLOCKS 2 --------------------------------------------------------
     -----------------------------------------------------------------------------
-    if angelsmods.industries.tech then --these component blocks only show up in tech mode -at this point
-      data:extend(
+    data:extend(
+      {
         {
-          {
-            type = "technology",
-            name = "angels-advanced-blocks-2",
-            icon = "__angelsindustries__/graphics/technology/components-tech.png",
-            icon_size = 64,
-            prerequisites = {
-              "angels-advanced-blocks-1",
-              "utility-science-pack",
-              "tech-yellow-circuit",
-              "angels-components-mechanical-5",
-              "angels-components-cabling-5"
+          type = "technology",
+          name = "angels-advanced-blocks-2",
+          icon = "__angelsindustries__/graphics/technology/components-tech.png",
+          icon_size = 64,
+          prerequisites = {
+            "angels-advanced-blocks-1",
+            "utility-science-pack",
+            "tech-yellow-circuit",
+            "angels-components-mechanical-5",
+            "angels-components-cabling-5"
+          },
+          effects = {
+            {
+              type = "unlock-recipe",
+              recipe = "block-enhancement-5"
             },
-            effects = {
-              {
-                type = "unlock-recipe",
-                recipe = "block-enhancement-5"
-              },
-              {
-                type = "unlock-recipe",
-                recipe = "block-energy-5"
-              },
-              {
-                type = "unlock-recipe",
-                recipe = "block-exploration-5"
-              },
-              {
-                type = "unlock-recipe",
-                recipe = "block-logistic-5"
-              },
-              {
-                type = "unlock-recipe",
-                recipe = "block-production-5"
-              },
-              {
-                type = "unlock-recipe",
-                recipe = "block-warfare-5"
-              }
+            {
+              type = "unlock-recipe",
+              recipe = "block-energy-5"
             },
-            unit = {
-              count = 64,
-              ingredients = {
-                {type = "item", name = "automation-science-pack", amount = 1},
-                {type = "item", name = "logistic-science-pack", amount = 1},
-                {type = "item", name = "chemical-science-pack", amount = 1},
-                {type = "item", name = "utility-science-pack", amount = 1}
-              },
-              time = 60
+            {
+              type = "unlock-recipe",
+              recipe = "block-exploration-5"
             },
-            order = "a-5"
-          }
+            {
+              type = "unlock-recipe",
+              recipe = "block-logistic-5"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "block-production-5"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "block-warfare-5"
+            }
+          },
+          unit = {
+            count = 64,
+            ingredients = {
+              {type = "item", name = "automation-science-pack", amount = 1},
+              {type = "item", name = "logistic-science-pack", amount = 1},
+              {type = "item", name = "chemical-science-pack", amount = 1},
+              {type = "item", name = "utility-science-pack", amount = 1}
+            },
+            time = 60
+          },
+          order = "a-5"
         }
-      )
-    end
+      }
+    )
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
     OV.set_science_pack("advanced-ore-refining-4", "utility-science-pack", 1)
     OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
+
+    -- Disable unused blocks
+
+    if angelsmods.industries.blocks.exploration == false then
+      OV.disable_recipe(
+        {
+          "block-exploration-1",
+          "block-exploration-2",
+          "block-exploration-3",
+          "block-exploration-4",
+          "block-exploration-5"
+        }
+      )
+      angelsmods.functions.add_flag(
+        {
+          "block-exploration-1",
+          "block-exploration-2",
+          "block-exploration-3",
+          "block-exploration-4",
+          "block-exploration-5"
+        },
+        "hidden"
+      )
+    end
+    if angelsmods.industries.blocks.logistic == false then
+      OV.disable_recipe(
+        {
+          "block-logistic-1",
+          "block-logistic-2",
+          "block-logistic-3",
+          "block-logistic-4",
+          "block-logistic-5"
+        }
+      )
+      angelsmods.functions.add_flag(
+        {
+          "block-logistic-1",
+          "block-logistic-2",
+          "block-logistic-3",
+          "block-logistic-4",
+          "block-logistic-5"
+        },
+        "hidden"
+      )
+    end
+    if angelsmods.industries.blocks.warfare == false then
+      OV.disable_recipe(
+        {
+          "block-warfare-1",
+          "weapon-1",
+          "body-1",
+          "weapon-parts-trigger",
+          "angels-trigger",
+          "block-warfare-2",
+          "weapon-2",
+          "body-2",
+          "weapon-parts-explosionchamber",
+          "angels-explosionchamber",
+          "block-warfare-3",
+          "weapon-3",
+          "body-3",
+          "weapon-parts-fluidchamber",
+          "angels-fluidchamber",
+          "block-warfare-4",
+          "weapon-4",
+          "body-4",
+          "weapon-parts-energycrystal",
+          "angels-energycrystal",
+          "block-warfare-5",
+          "weapon-5",
+          "body-5",
+          "weapon-parts-acceleratorcoil",
+          "angels-acceleratorcoil"
+        }
+      )
+      angelsmods.functions.add_flag(
+        {
+          "block-warfare-1",
+          "weapon-1",
+          "body-1",
+          "weapon-parts",
+          "angels-trigger",
+          "block-warfare-2",
+          "weapon-2",
+          "body-2",
+          "angels-explosionchamber",
+          "block-warfare-3",
+          "weapon-3",
+          "body-3",
+          "angels-fluidchamber",
+          "block-warfare-4",
+          "weapon-4",
+          "body-4",
+          "angels-energycrystal",
+          "block-warfare-5",
+          "weapon-5",
+          "body-5",
+          "angels-acceleratorcoil"
+        },
+        "hidden"
+      )
+    end
+    if angelsmods.industries.blocks.enhancement5 == false then
+      OV.disable_recipe("block-enhancement-5")
+      angelsmods.functions.add_flag("block-enhancement-5", "hidden")
+    end
+    if angelsmods.industries.blocks.energy5 == false then
+      OV.disable_recipe("block-energy-5")
+      angelsmods.functions.add_flag("block-energy-5", "hidden")
+    end
+    if (angelsmods.industries.blocks.enhancement5 == false) and
+       (angelsmods.industries.blocks.exploration == false) and
+       (angelsmods.industries.blocks.logistic == false) then
+      OV.disable_recipe("angels-servo-motor-5")
+      angelsmods.functions.add_flag("angels-servo-motor-5", "hidden")
+    end
 
     if mods["bobmodules"] then
     else
