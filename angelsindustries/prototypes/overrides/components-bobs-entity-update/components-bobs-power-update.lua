@@ -112,6 +112,8 @@ if angelsmods.industries.components then
         }
       )
 
+      angelsmods.industries.blocks.energy5 = true
+
       if angelsmods.industries.tech then
         OV.add_prereq("bob-solar-energy-2", "tech-specialised-labs-basic-energy-3")
         OV.add_prereq("bob-solar-energy-3", "tech-specialised-labs-advanced-energy-1")
@@ -221,6 +223,9 @@ if angelsmods.industries.components then
           }
         }
       )
+
+      angelsmods.industries.blocks.enhancement5 = true
+      angelsmods.industries.blocks.energy5 = true
 
       OV.remove_prereq("bob-electric-energy-accumulators-3", "advanced-electronics")
       OV.remove_prereq("bob-electric-energy-accumulators-4", "advanced-electronics-2")
