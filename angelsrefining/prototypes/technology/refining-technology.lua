@@ -125,7 +125,8 @@ data:extend(
       icon_mipmaps = 2,
       prerequisites = {
         --"ore-crushing",
-        "ore-floatation"
+        "ore-floatation",
+        "water-washing-2"
       },
       effects = {
         {
@@ -169,7 +170,9 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/slag-processing.png",
       icon_size = 64,
       prerequisites = {
-        "ore-crushing"
+        "ore-crushing",
+        "water-treatment",
+        "sulfur-processing",
       },
       effects = {
         {
@@ -183,6 +186,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquifier"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquifier-2"
         },
         {
           type = "unlock-recipe",
@@ -239,7 +246,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-crushing",
-        "water-treatment-2",
+        "water-treatment",
         "automation-2"
       },
       effects = {
@@ -314,7 +321,9 @@ data:extend(
       prerequisites = {
         --"ore-floatation",
         "advanced-ore-refining-1",
-        "geode-processing-2"
+        "geode-processing-2",
+        "chemical-science-pack",
+        "ore-powderizer"
       },
       effects = {
         {
@@ -362,7 +371,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
@@ -377,8 +387,7 @@ data:extend(
       prerequisites = {
         --"ore-crushing",
         "geode-processing-1",
-        "slag-processing-1",
-        "water-washing-2"
+        "slag-processing-1"
       },
       effects = {
         {
@@ -452,7 +461,11 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "liquifier-2"
+          recipe = "liquifier-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquifier-4"
         },
         {
           type = "unlock-recipe",
@@ -833,7 +846,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-refining",
-        "advanced-ore-refining-3"
+        "advanced-ore-refining-3",
+        "production-science-pack"
       },
       effects = {
         {
@@ -862,7 +876,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 15
       },

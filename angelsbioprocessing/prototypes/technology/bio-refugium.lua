@@ -91,9 +91,8 @@ data:extend(
       icon_size = 160,
       order = "c-a",
       prerequisites = {
-        "gardens",
         "optics",
-        "logistic-science-pack"
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -126,6 +125,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -142,8 +142,9 @@ data:extend(
         --"bio-refugium-fish-1"
         "bio-nutrient-paste",
         "angels-sulfur-processing-2",
-        "angels-nitrogen-processing-1",
+        "angels-nitrogen-processing-2",
         "advanced-electronics",
+        "chlorine-processing-1"
       },
       effects = {
         {
@@ -180,7 +181,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          --{type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -635,6 +636,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30

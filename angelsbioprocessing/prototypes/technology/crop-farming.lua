@@ -140,7 +140,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-nitrogen-processing-2"
+        "angels-nitrogen-processing-2",
+        "angels-stone-smelting-2"
       },
       effects = {
         {
@@ -305,6 +306,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -318,7 +320,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-temperate-farming-1",
-        "bio-farm-alien"
+        "bio-farm-alien",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -339,6 +342,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -441,6 +445,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -454,7 +459,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-desert-farming-1",
-        "bio-farm-alien"
+        "bio-farm-alien",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -475,6 +481,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -577,6 +584,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -590,7 +598,8 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-swamp-farming-1",
-        "bio-farm-alien"
+        "bio-farm-alien",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -611,6 +620,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 4},
           {type = "item", name = "logistic-science-pack", amount = 4},
+          {type = "item", name = "chemical-science-pack", amount = 4},
           {type = "item", name = "token-bio", amount = 1}
         },
         time = 30
@@ -842,8 +852,7 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-farm-1",
-        "angels-sulfur-processing-1",
-        "logistic-science-pack",
+        "angels-sulfur-processing-1"
       },
       effects = {
         -- {
@@ -912,10 +921,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "bio-plastic-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-plastic"
         }
       },
       unit = {

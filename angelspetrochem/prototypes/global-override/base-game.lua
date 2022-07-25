@@ -46,6 +46,7 @@ OV.disable_recipe({"plastic-bar"})
 OV.converter_fluid("sulfuric-acid", "liquid-sulfuric-acid")
 
 OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
+OV.disable_recipe("sulfur")
 
 -- Balance/fix rocket fuel
 OV.add_prereq("rocket-fuel", "angels-nitrogen-processing-4")
@@ -64,7 +65,6 @@ OV.set_science_pack(
 OV.set_research_difficulty("rocket-fuel", 15, 50)
 
 -- Update kovarex for nuclear fuel separation
-OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
 OV.remove_unlock("kovarex-enrichment-process", "nuclear-fuel")
 
 -------------------------------------------------------------------------------

@@ -280,37 +280,6 @@ data:extend(
     -- STEEL CASTING RESULT
     {
       type = "recipe",
-      name = "angels-plate-steel-pre-heating",
-      category = "advanced-crafting",
-      subgroup = "angels-steel-casting",
-      normal = {
-        enabled = false,
-        energy_required = 4,
-        ingredients = {
-          {type = "item", name = "angels-plate-hot-iron", amount = 8}
-        },
-        results = {
-          {type = "item", name = "angels-plate-steel", amount = 1}
-        }
-      },
-      expensive = {
-        enabled = false,
-        energy_required = 4,
-        ingredients = {
-          {type = "item", name = "angels-plate-hot-iron", amount = 8 * intermediatemulti}
-        },
-        results = {
-          {type = "item", name = "angels-plate-steel", amount = 1}
-        }
-      },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("angels-plate-steel"),
-        angelsmods.functions.get_object_icons("angels-plate-hot-iron"),
-        {-10, -10}, 0.4375),
-      order = "l[angels-plate-steel]-ab"
-    },
-    {
-      type = "recipe",
       name = "angels-plate-steel",
       category = "casting",
       subgroup = "angels-steel-casting",

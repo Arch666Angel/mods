@@ -42,6 +42,15 @@ angelsmods.trigger.enable_hide_void = settings.startup["angels-enable-hide-void"
 angelsmods.trigger.starting_resource_base = settings.startup["angels-starting-resource-base"].value -- Unused so far
 angelsmods.trigger.pavement_stack_size = settings.startup["angels-pavement-stack-size"].value -- Stack size for items you can use to pave the world
 angelsmods.trigger.washing_tech = angelsmods.trigger.washing_tech or false
+angelsmods.trigger.slag = angelsmods.trigger.slag or false
+angelsmods.trigger.geode_red = angelsmods.trigger.geode_red or false
+angelsmods.trigger.geode_cyan = angelsmods.trigger.geode_cyan or false
+angelsmods.trigger.salt_production = angelsmods.trigger.salt_production or false
+angelsmods.trigger.salt_consumption = angelsmods.trigger.salt_consumption or false
+angelsmods.trigger.water_red_waste = angelsmods.trigger.water_red_waste or false
+angelsmods.trigger.water_green_waste = angelsmods.trigger.water_green_waste or false
+angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.water_greenyellow_waste or false
+angelsmods.trigger.smelting_products = angelsmods.trigger.smelting_products or {}
 
 --REFINERY SORTING TRIGGERS
 angelsmods.trigger.ores = angelsmods.trigger.ores or {}
@@ -72,12 +81,19 @@ if mods["bobplates"] then
   --angelsmods.trigger.ores["gem-amethyst"] = ore_exists("amethyst-ore")
   --angelsmods.trigger.ores["gem-topaz"] = ore_exists("topaz-ore")
   --angelsmods.trigger.ores["gem-diamond"] = ore_exists("diamond-ore")
+  angelsmods.trigger.slag = true
+  bobmods.ores.cobalt.enabled = ore_exists("cobalt-ore")
 end
 angelsmods.trigger.ores["fluorite"] = angelsmods.trigger.ores["fluorite"] or false -- angels petrochem enables this
 angelsmods.trigger.ores["manganese"] = angelsmods.trigger.ores["manganese"] or false -- angels smelting enables this
 angelsmods.trigger.ores["chrome"] = angelsmods.trigger.ores["chrome"] or false -- angels smelting enables this
 angelsmods.trigger.ores["platinum"] = angelsmods.trigger.ores["platinum"] or false -- angels industries enables this
 angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or false --angels industries enables this
+
+-- SMELTING TRIGGERS
+-- lithium
+angelsmods.trigger.smelting_products["lithium"] = angelsmods.trigger.smelting_products["lithium"] or {}
+angelsmods.trigger.smelting_products["lithium"].plate = mods["bobplates"] and true or false
 
 -- MARATHON MODE
 angelsmods.marathon = angelsmods.marathon or {}

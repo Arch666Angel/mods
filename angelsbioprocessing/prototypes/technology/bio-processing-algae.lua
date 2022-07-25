@@ -7,6 +7,7 @@ data:extend(
       icon_size = 128,
       order = "c-a",
       prerequisites = {
+        "automation"
       },
       effects = {
         {
@@ -42,7 +43,6 @@ data:extend(
       order = "c-a",
       prerequisites = {
         "bio-processing-brown",
-        "basic-chemistry",
         "water-treatment"
       },
       effects = {
@@ -88,7 +88,7 @@ data:extend(
       prerequisites = {
         --"bio-processing-brown",
         "bio-processing-green",
-        "angels-nitrogen-processing-1",
+        "angels-nitrogen-processing-2",
         "thermal-water-extraction"
       },
       effects = {

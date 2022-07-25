@@ -107,9 +107,9 @@ if angelsmods.industries.components then
     }
   )
 
-  OV.add_unlock("angels-steel-smelting-2", "angels-casing-steel-2")
-  OV.add_prereq("angels-steel-smelting-2", "angels-components-mechanical-2")
-  OV.add_prereq("angels-steel-smelting-2", "angels-stone-smelting-3")
+  OV.add_unlock("angels-steel-smelting-3", "angels-casing-steel-2")
+  OV.add_prereq("angels-steel-smelting-3", "angels-components-mechanical-2")
+  OV.add_prereq("angels-steel-smelting-3", "angels-stone-smelting-3")
 
   -------------------------------------------------------------------------------
   -- MECHANICAL PARTS 3 ---------------------------------------------------------

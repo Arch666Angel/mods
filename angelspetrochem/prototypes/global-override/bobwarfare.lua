@@ -20,7 +20,7 @@ if mods["bobwarfare"] then
   -- SULFURIC NITRIC ACID -----------------------------------------------------
   -----------------------------------------------------------------------------
   local hide_sulfuric_nitric_acid_mixture = false
-  if data.raw.fluid["sulfuric-nitric-acid"] then
+  if data.raw.fluid["sulfuric-nitric-acid"] then --active if plates is active, nitric is added with warfare
     angelsmods.functions.move_item("sulfuric-nitric-acid", "petrochem-nitrogen-fluids", "oa", "fluid")
 
     OV.patch_recipes({{name = "sulfuric-nitric-acid", subgroup = "petrochem-rocket", order = "ia"}})
@@ -34,6 +34,8 @@ if mods["bobwarfare"] then
 
     OV.add_prereq("nitroglycerin-processing", "angels-sulfur-processing-2")
     OV.add_prereq("nitroglycerin-processing", "angels-nitrogen-processing-2")
+  else
+    OV.add_prereq("cordite-processing", "angels-nitrogen-processing-2")
   end
 
   -----------------------------------------------------------------------------
@@ -52,7 +54,8 @@ if mods["bobwarfare"] then
           {type="fluid", name="liquid-sulfuric-acid", amount=15},
           {type="fluid", name="liquid-nitric-acid", amount=15},
         } or nil,
-        crafting_category = hide_sulfuric_nitric_acid_mixture and "advanced-chemistry" or nil
+        crafting_category = hide_sulfuric_nitric_acid_mixture and "advanced-chemistry" or nil,
+        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"liquid-glycerol", "liquid-sulfuric-acid","liquid-nitric-acid"}),
       }
     }
   )

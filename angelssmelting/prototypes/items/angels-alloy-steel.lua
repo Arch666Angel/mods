@@ -56,15 +56,6 @@ data:extend(
   -- STEEL CASTING RESULT
   {
     type = "item",
-    name = "angels-plate-hot-iron",
-    icon = "__angelssmelting__/graphics/icons/plate-iron-hot.png",
-    icon_size = 64,
-    subgroup = "angels-iron",
-    order = "la",
-    stack_size = 200
-  },
-  {
-    type = "item",
     name = "angels-plate-steel",
     icon = "__angelssmelting__/graphics/icons/plate-steel.png",
     icon_size = 32,

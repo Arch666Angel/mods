@@ -204,6 +204,13 @@ if mods["bobplates"] then
 
   OV.set_science_pack("cobalt-processing", "chemical-science-pack", 1)
   OV.add_prereq("cobalt-processing", "ore-leaching")
+  OV.add_prereq("ore-powderizer", "chemical-science-pack")
+  OV.add_prereq("silicon-processing", "ore-crushing")
+  OV.add_prereq("aluminium-processing", "ore-floatation")
+  OV.set_science_pack("gold-processing", "chemical-science-pack", 1)
+  OV.add_prereq("gold-processing", "ore-leaching")
+  OV.add_prereq("titanium-processing", "ore-leaching")
+  OV.add_prereq("tungsten-processing", "ore-refining")
 end
 
 -------------------------------------------------------------------------------
@@ -216,4 +223,36 @@ if mods["bobplates"] then
   angelsmods.functions.set_next_upgrade("furnace", "bob-distillery", nil)
   OV.global_replace_item("bob-distillery", "chemical-plant")
   OV.disable_recipe("bob-distillery")
+end
+
+-------------------------------------------------------------------------------
+-- SMELTING -------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  OV.add_unlock("ore-crushing", "tin-plate")
+  OV.add_unlock("ore-crushing", "lead-plate")
+  OV.add_unlock("ore-crushing", "quartz-glass")
+  OV.add_unlock("lead-processing", "silver-plate")
+  OV.add_prereq("battery-3", "lead-processing")
+  OV.patch_recipes(
+    {
+      {
+        name = "tin-plate",
+        enabled = false
+      },
+      {
+        name = "lead-plate",
+        enabled = false
+      },
+      {
+        name = "quartz-glass",
+        enabled = false
+      },
+      {
+        name = "silver-plate",
+        enabled = false
+      }
+    }
+  )
+  OV.add_prereq("nickel-processing", "ore-crushing")
 end

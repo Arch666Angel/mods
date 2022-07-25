@@ -29,13 +29,15 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     data.raw["item"]["silver-nitrate"].icon_size = 32
     data.raw["item"]["silver-nitrate"].icon_mipmaps = 1
     OV.disable_recipe({"silver-nitrate","silver-from-lead"})
+    OV.remove_prereq("battery-3", "nitrogen-processing")
+    OV.add_prereq("battery-3", "angels-silver-smelting-2")
   end
 
   if mods['bobplates'] then
     angelsmods.functions.move_item("silver-oxide", "angels-silver", "e")
     data.raw.item["silver-oxide"].icon = "__angelssmelting__/graphics/icons/solid-silver-oxide.png"
     data.raw.item["silver-oxide"].icon_size = 32
-    OV.patch_recipes({ { name = "silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]" } })
+    OV.patch_recipes({ { name = "silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]", category = "powder-mixing" } })
   end
 
   if angelsmods.trigger.smelting_products["silver"].plate or

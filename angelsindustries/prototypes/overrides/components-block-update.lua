@@ -315,60 +315,62 @@ if angelsmods.industries.components then
     -----------------------------------------------------------------------------
     -- ADVANCED BLOCKS 2 --------------------------------------------------------
     -----------------------------------------------------------------------------
-    data:extend(
-      {
+    if angelsmods.industries.tech then --these component blocks only show up in tech mode -at this point
+      data:extend(
         {
-          type = "technology",
-          name = "angels-advanced-blocks-2",
-          icon = "__angelsindustries__/graphics/technology/components-tech.png",
-          icon_size = 64,
-          prerequisites = {
-            "angels-advanced-blocks-1",
-            "utility-science-pack",
-            "tech-yellow-circuit",
-            "angels-components-mechanical-5",
-            "angels-components-cabling-5"
-          },
-          effects = {
-            {
-              type = "unlock-recipe",
-              recipe = "block-enhancement-5"
+          {
+            type = "technology",
+            name = "angels-advanced-blocks-2",
+            icon = "__angelsindustries__/graphics/technology/components-tech.png",
+            icon_size = 64,
+            prerequisites = {
+              "angels-advanced-blocks-1",
+              "utility-science-pack",
+              "tech-yellow-circuit",
+              "angels-components-mechanical-5",
+              "angels-components-cabling-5"
             },
-            {
-              type = "unlock-recipe",
-              recipe = "block-energy-5"
+            effects = {
+              {
+                type = "unlock-recipe",
+                recipe = "block-enhancement-5"
+              },
+              {
+                type = "unlock-recipe",
+                recipe = "block-energy-5"
+              },
+              {
+                type = "unlock-recipe",
+                recipe = "block-exploration-5"
+              },
+              {
+                type = "unlock-recipe",
+                recipe = "block-logistic-5"
+              },
+              {
+                type = "unlock-recipe",
+                recipe = "block-production-5"
+              },
+              {
+                type = "unlock-recipe",
+                recipe = "block-warfare-5"
+              }
             },
-            {
-              type = "unlock-recipe",
-              recipe = "block-exploration-5"
+            unit = {
+              count = 64,
+              ingredients = {
+                {type = "item", name = "automation-science-pack", amount = 1},
+                {type = "item", name = "logistic-science-pack", amount = 1},
+                {type = "item", name = "chemical-science-pack", amount = 1},
+                {type = "item", name = "utility-science-pack", amount = 1}
+              },
+              time = 60
             },
-            {
-              type = "unlock-recipe",
-              recipe = "block-logistic-5"
-            },
-            {
-              type = "unlock-recipe",
-              recipe = "block-production-5"
-            },
-            {
-              type = "unlock-recipe",
-              recipe = "block-warfare-5"
-            }
-          },
-          unit = {
-            count = 64,
-            ingredients = {
-              {type = "item", name = "automation-science-pack", amount = 1},
-              {type = "item", name = "logistic-science-pack", amount = 1},
-              {type = "item", name = "chemical-science-pack", amount = 1},
-              {type = "item", name = "utility-science-pack", amount = 1}
-            },
-            time = 60
-          },
-          order = "a-5"
+            order = "a-5"
+          }
         }
-      }
-    )
+      )
+    end
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
     OV.set_science_pack("advanced-ore-refining-4", "utility-science-pack", 1)
     OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-2")

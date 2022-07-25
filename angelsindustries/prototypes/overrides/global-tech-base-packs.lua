@@ -71,7 +71,6 @@ if angelsmods.industries.tech then
   AI.pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   AI.pack_replace("lubricant", "blue", "green")
   -- BIO PROCESSING
-  OV.remove_prereq("bio-refugium-fish-1", "water-treatment-3")
   OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")
   -- INDUSTRIES
   OV.remove_prereq("tech-orange-circuit", "angels-components-batteries-3")
@@ -115,11 +114,9 @@ if angelsmods.industries.tech then
   AI.pack_replace("construction-robotics", "blue", "orange")
   AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
   --REFINING
-  AI.pack_replace("water-treatment-3", "green", "orange")
   AI.pack_replace("ore-leaching", "blue", "orange")
   OV.remove_prereq("ore-leaching", "tech-blue-packs")
   AI.pack_replace("geode-processing-2", "green", "orange")
-  AI.pack_replace("advanced-ore-refining-2", "green", "orange")
   --SMELTING
   AI.pack_replace("angels-metallurgy-3", "blue", "orange")
   OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
@@ -135,7 +132,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-gold-smelting-1", "blue", "orange")
   AI.pack_replace("angels-manganese-smelting-2", "blue", "orange")
   AI.pack_replace("angels-silver-smelting-2", "blue", "orange")
-  AI.pack_replace("angels-steel-smelting-2", "blue", "orange")
+  AI.pack_replace("angels-steel-smelting-2", "green", "orange")
   AI.pack_replace("angels-zinc-smelting-2", "blue", "orange")
   AI.pack_replace("angels-copper-smelting-3", "blue", "orange")
   AI.pack_replace("angels-lead-smelting-3", "blue", "orange")
@@ -151,19 +148,16 @@ if angelsmods.industries.tech then
   AI.pack_replace("bio-processing-alien-2", "green", "orange")
   AI.pack_replace("bio-processing-alien-3", "green", "orange")
   AI.pack_replace("geode-crystallization-1", "green", "orange")
+  AI.pack_replace("geode-crystallization-2", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-1", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
   AI.pack_replace("bio-arboretum-2","green","orange")
   --PETROCHEM
-  AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
   AI.pack_replace("plastic-1", "green", "orange")
   --AI.pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
-  AI.pack_replace("rubber", "green", "orange")
   --AI.pack_replace("rocket-booster-1", "green", "orange")
   AI.pack_replace("rocket-explosives-1", "green", "orange")
-  AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
-  AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
   --INDUSTRIES
   AI.pack_replace("tech-blue-circuit", "blue", "orange")
   OV.remove_science_pack("tech-blue-circuit", "tech-blue-packs")

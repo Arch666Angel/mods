@@ -73,7 +73,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment",
-        --"ore-crushing"
+        "ore-floatation"
       },
       effects = {
         {
@@ -114,7 +114,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment-2",
-        "advanced-electronics"
+        "advanced-electronics",
+        "chemical-science-pack"
       },
       effects = {
         {
@@ -136,13 +137,18 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-lithium"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "solid-salt"
         }
       },
       unit = {
         count = 30,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
@@ -165,10 +171,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "solid-salt-from-saline"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-salt"
         }
       },
       unit = {
@@ -188,8 +190,7 @@ data:extend(
       icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
       icon_size = 128,
       prerequisites = {
-        "water-treatment",
-        "steel-processing"
+        "water-treatment"
       },
       effects = {
         {

@@ -2,6 +2,7 @@ local OV = angelsmods.functions.OV
 
 if angelsmods.trigger.smelting_products["glass"].board then --only change it if glass is actually active
   OV.modify_input("bio-tile",{type = "item", name = "solid-glass-mixture", amount = 1})
+  OV.add_prereq("bio-farm-2", "angels-glass-smelting-1")
 end
 
 if angelsmods.industries and angelsmods.industries.overhaul then
@@ -81,3 +82,21 @@ end
 
 -- Puffer nests cannot be created
 angelsmods.functions.add_flag("puffer-nest", "hidden")
+
+if angelsmods.triggers.crystals_full == true then
+else
+  OV.disable_recipe(
+    {
+      "crystal-full-harmonic",
+      "crystal-full-blue",
+      "crystal-full-red",
+      --"crystal-full-green" -- Used for agriculture modules
+    }
+  )
+  angelsmods.functions.add_flag({
+    "crystal-full-harmonic",
+    "crystal-full-blue",
+    "crystal-full-red",
+    --"crystal-full-green" -- Used for agriculture modules
+  },"hidden")
+end
