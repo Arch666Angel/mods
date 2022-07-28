@@ -840,7 +840,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
         icon_size = 256,
         scale = 32 / 256,
         tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7},
-        shift = molecule_icon and {3.5, 0} or nil
+        --shift = top_molecules_icon and {3.5, 0} or nil
       } or
       nil,
     tints.bot and
@@ -849,7 +849,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
         icon_size = 256,
         scale = 32 / 256,
         tint = tints.bot,
-        shift = molecule_icon and {3.5, 0} or nil
+        --shift = top_molecules_icon and {3.5, 0} or nil
       } or
       nil,
     tints.bot_left and
@@ -858,7 +858,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
         icon_size = 256,
         scale = 32 / 256,
         tint = tints.bot_left,
-        shift = molecule_icon and {3.5, 0} or nil
+        --shift = top_molecules_icon and {3.5, 0} or nil
       } or
       nil,
     tints.bot_left and
@@ -867,7 +867,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
         icon_size = 256,
         scale = 32 / 256,
         tint = tints.bot_right,
-        shift = molecule_icon and {3.5, 0} or nil
+        --shift = top_molecules_icon and {3.5, 0} or nil
       } or
       nil,
     tints.bot_mask and
@@ -876,7 +876,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
         icon_size = 256,
         scale = 32 / 256,
         tint = tints.bot_mask,
-        shift = molecule_icon and {3.5, 0} or nil
+        --shift = top_molecules_icon and {3.5, 0} or nil
       } or
       nil,
     {
@@ -884,7 +884,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.top,
-      shift = molecule_icon and {3.5, 0} or nil
+      --shift = top_molecules_icon and {3.5, 0} or nil
     },
     tints.top_mask and
       {
@@ -892,7 +892,7 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
         icon_size = 256,
         scale = 32 / 256,
         tint = tints.top_mask,
-        shift = molecule_icon and {3.5, 0} or nil
+        --shift = top_molecules_icon and {3.5, 0} or nil
       } or
       nil
   }
