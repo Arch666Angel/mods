@@ -47,12 +47,25 @@ data:extend(
         projectile_center = {-0.15625, -0.07812},
         projectile_creation_distance = 1,
         range = 20,
-        sound = heavy_gunshot --[[{
+        sound =
           {
-            filename="__base__/prototypes/entity/sounds/heavy_gunshot.ogg",--make_heavy_gunshot_sounds()
-            volume=1.0,
-          }
-        },]]
+            {
+              filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
+              volume = 0.4
+            },
+            {
+              filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
+              volume = 0.4
+            },
+            {
+              filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
+              volume = 0.4
+            },
+            {
+              filename = "__base__/sound/fight/heavy-gunshot-4.ogg",
+              volume = 0.4
+            }
+          },
       },
       stack_size = 1
     },

@@ -1,3 +1,5 @@
+local biter_definitions = {}
+
 --HEALTH:
 --SCARAB: 150/300/450/600/750
 --BITER 100/200/300/400/500
@@ -23,7 +25,7 @@
 -------------------------------------------------------------------------------
 -- BITER DEFINITIONS ----------------------------------------------------------
 -------------------------------------------------------------------------------
-small_biter =
+biter_definitions.small_biter =
 {
   appearance = {
     type = "biter",
@@ -59,7 +61,7 @@ small_biter =
   --}
 }
 
-medium_biter =
+biter_definitions.medium_biter =
 {
   appearance = {
     type = "biter",
@@ -92,7 +94,7 @@ medium_biter =
   }
 }
 
-big_biter =
+biter_definitions.big_biter =
 {
   appearance = {
     type = "biter",
@@ -125,7 +127,7 @@ big_biter =
   }
 }
 
-behemoth_biter =
+biter_definitions.behemoth_biter =
 {
   appearance = {
     type = "biter",
@@ -158,7 +160,7 @@ behemoth_biter =
   }
 }
 
-colossal_biter =
+biter_definitions.colossal_biter =
 {
   appearance = {
     type = "biter",
@@ -196,7 +198,7 @@ colossal_biter =
 -------------------------------------------------------------------------------
 -- SPITTER DEFINITIONS --------------------------------------------------------
 -------------------------------------------------------------------------------
-small_spitter =
+biter_definitions.small_spitter =
 {
   appearance = {
     type = "spitter",
@@ -227,7 +229,7 @@ small_spitter =
   }
 }
 
-medium_spitter =
+biter_definitions.medium_spitter =
 {
   appearance = {
     type = "spitter",
@@ -258,7 +260,7 @@ medium_spitter =
   }
 }
 
-big_spitter =
+biter_definitions.big_spitter =
 {
   appearance = {
     type = "spitter",
@@ -289,7 +291,7 @@ big_spitter =
   }
 }
 
-behemoth_spitter =
+biter_definitions.behemoth_spitter =
 {
   appearance = {
     type = "spitter",
@@ -320,7 +322,7 @@ behemoth_spitter =
   }
 }
 
-colossal_spitter =
+biter_definitions.colossal_spitter =
 {
   appearance = {
     type = "spitter",
@@ -356,7 +358,7 @@ colossal_spitter =
 -------------------------------------------------------------------------------
 -- SCARAB DEFINITIONS ---------------------------------------------------------
 -------------------------------------------------------------------------------
-small_scarab =
+biter_definitions.small_scarab =
 {
   appearance = {
     type = "scarab",
@@ -387,7 +389,7 @@ small_scarab =
   }
 }
 
-medium_scarab =
+biter_definitions.medium_scarab =
 {
   appearance = {
     type = "scarab",
@@ -418,7 +420,7 @@ medium_scarab =
   }
 }
 
-big_scarab =
+biter_definitions.big_scarab =
 {
   appearance = {
     type = "scarab",
@@ -449,7 +451,7 @@ big_scarab =
   }
 }
 
-behemoth_scarab =
+biter_definitions.behemoth_scarab =
 {
   appearance = {
     type = "scarab",
@@ -480,7 +482,7 @@ behemoth_scarab =
   }
 }
 
-colossal_scarab =
+biter_definitions.colossal_scarab =
 {
   appearance = {
     type = "scarab",
@@ -514,7 +516,7 @@ colossal_scarab =
 -------------------------------------------------------------------------------
 -- PSYKER DEFINITIONS ---------------------------------------------------------
 -------------------------------------------------------------------------------
-small_psyker =
+biter_definitions.small_psyker =
 {
   appearance = {
     type = "psyker",
@@ -545,7 +547,7 @@ small_psyker =
   }
 }
 
-medium_psyker =
+biter_definitions.medium_psyker =
 {
   appearance = {
     type = "psyker",
@@ -576,7 +578,7 @@ medium_psyker =
   }
 }
 
-big_psyker =
+biter_definitions.big_psyker =
 {
   appearance = {
     type = "psyker",
@@ -607,7 +609,7 @@ big_psyker =
   }
 }
 
-behemoth_psyker =
+biter_definitions.behemoth_psyker =
 {
   appearance = {
     type = "psyker",
@@ -638,7 +640,7 @@ behemoth_psyker =
   }
 }
 
-colossal_psyker =
+biter_definitions.colossal_psyker =
 {
   appearance = {
     type = "psyker",
@@ -672,7 +674,7 @@ colossal_psyker =
 -------------------------------------------------------------------------------
 -- SPAWNER DEFINITIONS --------------------------------------------------------
 -------------------------------------------------------------------------------
-biter_spawner =
+biter_definitions.biter_spawner =
 {
   appearance = {
     type = "biter",
@@ -693,7 +695,7 @@ biter_spawner =
   }
 }
 
-spitter_spawner =
+biter_definitions.spitter_spawner =
 {
   appearance = {
     type = "spitter",
@@ -714,7 +716,7 @@ spitter_spawner =
   }
 }
 
-scarab_spawner =
+biter_definitions.scarab_spawner =
 {
   appearance = {
     type = "scarab",
@@ -740,7 +742,7 @@ scarab_spawner =
   }
 }
 
-psyker_spawner =
+biter_definitions.psyker_spawner =
 {
   appearance = {
     type = "psyker",
@@ -766,3 +768,5 @@ psyker_spawner =
     {type = "plasma", decrease = 5, percent = 10}
   }
 }
+
+return biter_definitions

@@ -1,4 +1,4 @@
-function floatationpipepictures()
+function angelsmods.refining.floatationpipepictures()
   -- used by electrowinning still... not by floatation cell itself
   return {
     north = {
@@ -32,7 +32,7 @@ function floatationpipepictures()
   }
 end
 
-function leachingpipepictures()
+function angelsmods.refining.leachingpipepictures()
   return {
     north = {
       filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/empty.png",
@@ -65,7 +65,7 @@ function leachingpipepictures()
   }
 end
 
-function filtrationpipepictures()
+function angelsmods.refining.filtrationpipepictures()
   return {
     north = {
       filename = "__angelsrefining__/graphics/entity/filtration-unit/pipe-north.png",

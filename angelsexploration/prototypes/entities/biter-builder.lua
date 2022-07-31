@@ -14,6 +14,8 @@ local function new_random_seed()
   return enemy_random_seed
 end
 
+local control_name = "enemy-base"
+
 -- Copy from base.. since local...
 local function enemy_autoplace(params)
   local distance_factor = params.distance_factor or 1
@@ -825,7 +827,7 @@ local function make_attack_parameter(data_app, data_dmg)
     damage_modifier = data_dmg.damage_modifier,
     warmup = data_dmg.warmup,
     ammo_type = data_dmg.ammo,
-    sound = make_roar_sound(data_app.type, volume),
+    sound = make_roar_sound(data_app.type, nil), -- TODO: replace nil with atual volume
     animation = make_attack_animation(data_app)
   }
 end
@@ -1048,11 +1050,11 @@ function angelsmods.functions.update_spawner(us_data)
     --log(serpent.block(spawner))
     spawner.resistances = spawner.resistances or {}
     for _,new_resistance_data in pairs(us_data.resistance or {}) do
-      local existing_resistace = false
+      local existing_resistance = false
       for old_resistance_index,old_resistance_data in pairs(spawner.resistances) do
         if old_resistance_data.type == new_resistance_data.type then
           spawner.resistances[old_resistance_index] = new_resistance_data
-          existing_resistace = true
+          existing_resistance = true
           break
         end
       end
@@ -1072,7 +1074,7 @@ function angelsmods.functions.update_spawner(us_data)
           break
         end
       end
-      if not existing_resistance then
+      if not existing_result_unit then
         table.insert(spawner.result_units, new_result_unit_data)
       end
     end

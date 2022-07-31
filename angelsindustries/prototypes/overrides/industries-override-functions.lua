@@ -282,7 +282,7 @@ function angelsmods.functions.AI.core_tier_upgrade()
     -- now update the core if required and also depend on the correct tech
     if pack_name then
       if core_name then
-        core_type = string.sub(core_name, 9, -2)
+        local core_type = string.sub(core_name, 9, -2)
         if string.sub(core_type, 1, 1) == "-" and string.sub(core_type, -1, -1) == "-" then
           local research_type = string.sub(core_type, 2, -2)
 
@@ -366,10 +366,10 @@ function angelsmods.functions.AI.replace_blocks_list(ing_list) --specifically bu
   end
   --now do the replacements -- id rather not have to do a double loop
   for n, _ in pairs(ing_list) do
-    nme = ing_list[n].name
+    local nme = ing_list[n].name
     if block_replace[nme] then
-      new = block_replace[nme].new
-      amt_multi = block_replace[nme].amt_multi
+      local new = block_replace[nme].new
+      local amt_multi = block_replace[nme].amt_multi
       if existing[new] then
         --if it exists, just add more? may just remove this
         if ing_list[n].amount and ing_list[n].amount ~= existing[new][amount] then
@@ -421,17 +421,17 @@ function angelsmods.functions.AI.replace_con_mats(buildings)
       local rec_check = data.raw.recipe[assembly_check]
       if rec_check.normal or rec_check.expensive then
         if rec_check.normal then
-          ing_list = rec_check.normal.ingredients
+          local ing_list = rec_check.normal.ingredients
           angelsmods.functions.AI.replace_blocks_list(ing_list)
           rec_check.normal.energy_required = 0.5
         end
         if rec_check.expensive then
-          ing_list = rec_check.expensive.ingredients
+          local ing_list = rec_check.expensive.ingredients
           angelsmods.functions.AI.replace_blocks_list(ing_list)
           rec_check.expensive.energy_required = 0.5
         end
       else
-        ing_list = rec_check.ingredients
+        local ing_list = rec_check.ingredients
         angelsmods.functions.AI.replace_blocks_list(ing_list)
         rec_check.energy_required = 0.5
       end

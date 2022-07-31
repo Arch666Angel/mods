@@ -52,21 +52,21 @@ end
 --end
 
 --ADD RESISTANCES
-require("prototypes.entities.biter-definitions") -- does not hurt to re-include it to make sure the variables are up to date
-angelsmods.functions.update_alien(small_biter)
-angelsmods.functions.update_alien(medium_biter)
-angelsmods.functions.update_alien(big_biter)
-angelsmods.functions.update_alien(behemoth_biter)
-angelsmods.functions.update_alien(colossal_biter)
+local biter_definitions = require("prototypes.entities.biter-definitions")
+angelsmods.functions.update_alien(biter_definitions.small_biter)
+angelsmods.functions.update_alien(biter_definitions.medium_biter)
+angelsmods.functions.update_alien(biter_definitions.big_biter)
+angelsmods.functions.update_alien(biter_definitions.behemoth_biter)
+angelsmods.functions.update_alien(biter_definitions.colossal_biter)
 
-angelsmods.functions.update_alien(small_spitter)
-angelsmods.functions.update_alien(medium_spitter)
-angelsmods.functions.update_alien(big_spitter)
-angelsmods.functions.update_alien(behemoth_spitter)
-angelsmods.functions.update_alien(colossal_spitter)
+angelsmods.functions.update_alien(biter_definitions.small_spitter)
+angelsmods.functions.update_alien(biter_definitions.medium_spitter)
+angelsmods.functions.update_alien(biter_definitions.big_spitter)
+angelsmods.functions.update_alien(biter_definitions.behemoth_spitter)
+angelsmods.functions.update_alien(biter_definitions.colossal_spitter)
 
-angelsmods.functions.update_spawner(spitter_spawner)
-angelsmods.functions.update_spawner(biter_spawner)
+angelsmods.functions.update_spawner(biter_definitions.spitter_spawner)
+angelsmods.functions.update_spawner(biter_definitions.biter_spawner)
 
 --SHOW RESISTANCES
 for _, unit in pairs(data.raw.unit) do

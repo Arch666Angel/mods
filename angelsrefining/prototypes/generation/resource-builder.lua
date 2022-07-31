@@ -169,7 +169,7 @@ local function make_resgfx(input)
       input.variation_count = 8
     end
     if input.get then
-      stages_copy = table.deepcopy(data.raw.resource[input.get].stages)
+      local stages_copy = table.deepcopy(data.raw.resource[input.get].stages)
       --log(serpent.block(stages_copy))
       return stages_copy
     else
@@ -382,6 +382,7 @@ local function make_resgfx(input)
         }
       end
       if input.sheet == 9 then
+        local sheet_id
         if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
           sheet_id = 11
         else
@@ -542,7 +543,7 @@ local function make_resglow(input)
   if input.glow == true then
     if input.type == "item" then
       if input.get and data.raw.resource[input.get] then
-        stages_input = data.raw.resource[input.get].stages
+        local stages_input = data.raw.resource[input.get].stages
         input.frame_count = stages_input.sheet.frame_count
         input.variation_count = stages_input.sheet.variation_count
       else
@@ -916,7 +917,7 @@ end
 --CREATE RESOURCE FROM STORE
 function angelsmods.functions.make_resource()
   for r, input in pairs(angelsmods.functions.store.make) do
-    ret_table = {
+    local ret_table = {
       type = "resource",
       flags = {"placeable-neutral"},
       tree_removal_probability = 0.8,
@@ -924,7 +925,7 @@ function angelsmods.functions.make_resource()
       infinite_depletion_amount = 10,
       resource_patch_search_radius = 12
     }
-    autoplace_ret_table = {
+    local autoplace_ret_table = {
       name = input.name,
       order = input.order,
       base_density = input.autoplace.base_density,
@@ -975,6 +976,7 @@ function angelsmods.functions.make_resource()
         input.hardness = 0.9
       end]]
       --Set stages count according to resource type
+      local stages_count
       if input.type == "item" then
         if input.infinite == true then
           stages_count = {1}

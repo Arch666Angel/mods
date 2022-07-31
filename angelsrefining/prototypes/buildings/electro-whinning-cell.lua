@@ -80,7 +80,7 @@ data:extend(
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
@@ -88,7 +88,7 @@ data:extend(
         },
         {
           production_type = "input",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
@@ -96,14 +96,14 @@ data:extend(
         },
         {
           production_type = "output",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{position = {1, -3}}}
         },
         {
           production_type = "output",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{position = {-1, -3}}}
@@ -190,7 +190,7 @@ data:extend(
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
@@ -198,7 +198,7 @@ data:extend(
         },
         {
           production_type = "input",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
@@ -206,14 +206,14 @@ data:extend(
         },
         {
           production_type = "output",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{position = {1, -3}}}
         },
         {
           production_type = "output",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{position = {-1, -3}}}
@@ -299,7 +299,7 @@ data:extend(
       fluid_boxes = {
         {
           production_type = "input",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
@@ -307,7 +307,7 @@ data:extend(
         },
         {
           production_type = "input",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = -1,
@@ -315,14 +315,14 @@ data:extend(
         },
         {
           production_type = "output",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{position = {1, -3}}}
         },
         {
           production_type = "output",
-          pipe_picture = floatationpipepictures(),
+          pipe_picture = angelsmods.refining.floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
           pipe_connections = {{position = {-1, -3}}}
