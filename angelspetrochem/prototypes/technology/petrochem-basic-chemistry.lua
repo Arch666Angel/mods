@@ -123,8 +123,7 @@ data:extend(
       prerequisites = {
         "angels-sulfur-processing-2",
         "water-treatment-4",
-        "angels-advanced-chemistry-3",
-        "production-science-pack",
+        "angels-advanced-chemistry-4",
         mods["angelssmelting"] and "angels-coolant-1" or "basic-chemistry-2"
       },
       effects = {
@@ -595,7 +594,7 @@ data:extend(
       icons = angelsmods.functions.create_gas_tech_icon("NNN"),
       prerequisites = {
         "angels-nitrogen-processing-3",
-        "angels-advanced-chemistry-4"
+        "angels-advanced-chemistry-5"
       },
       effects = {
         {
@@ -625,6 +624,7 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 15

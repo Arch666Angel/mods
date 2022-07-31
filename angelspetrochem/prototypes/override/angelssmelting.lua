@@ -6,10 +6,10 @@ if angelsmods.smelting then
     OV.add_prereq("angels-advanced-chemistry-2", "angels-aluminium-smelting-1")
   end
   if angelsmods.trigger.smelting_products["titanium"].plate then
-    OV.add_prereq("angels-advanced-chemistry-3", "angels-titanium-smelting-1")
+    OV.add_prereq("angels-advanced-chemistry-4", "angels-titanium-smelting-1")
   end
   if angelsmods.trigger.smelting_products["tungsten"].plate then
-    OV.add_prereq("angels-advanced-chemistry-4", "angels-tungsten-smelting-1")
+    OV.add_prereq("angels-advanced-chemistry-5", "angels-tungsten-smelting-1")
   end
   if angelsmods.trigger.smelting_products["silver"].ingot or
      angelsmods.trigger.smelting_products["silver"].wire or
