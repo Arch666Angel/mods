@@ -211,6 +211,7 @@ if mods["bobplates"] then
   OV.add_prereq("gold-processing", "ore-leaching")
   OV.add_prereq("titanium-processing", "ore-leaching")
   OV.add_prereq("tungsten-processing", "ore-refining")
+  OV.set_science_pack("tungsten-processing", "production-science-pack", 1)
 end
 
 -------------------------------------------------------------------------------

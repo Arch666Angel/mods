@@ -681,7 +681,8 @@ data:extend(
       prerequisites = {
         "ore-leaching",
         "advanced-ore-refining-2",
-        "geode-processing-3"
+        "ore-electro-whinning-cell",
+        "production-science-pack"
       },
       effects = {
         {
@@ -695,6 +696,14 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "ore-sorting-facility-4"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "ore-powderizer-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "electro-whinning-cell-2"
         },
         {
           type = "unlock-recipe",
@@ -722,7 +731,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 15
       },
@@ -772,7 +782,8 @@ data:extend(
       prerequisites = {
         "ore-leaching",
         "advanced-ore-refining-2",
-        "advanced-electronics-2"
+        "advanced-electronics-2",
+        "production-science-pack"
       },
       effects = {
         {
@@ -833,7 +844,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },
@@ -847,7 +859,7 @@ data:extend(
       prerequisites = {
         "ore-refining",
         "advanced-ore-refining-3",
-        "production-science-pack"
+        "utility-science-pack"
       },
       effects = {
         {
@@ -857,6 +869,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "ore-refinery-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "electro-whinning-cell-3"
         },
         {
           type = "unlock-recipe",
@@ -877,7 +893,8 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 15
       },
@@ -1028,13 +1045,12 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "ore-advanced-floatation",
-        "advanced-ore-refining-3",
-        "slag-processing-2"
+        "geode-processing-3"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "ore-powderizer-3"
+          recipe = "electro-whinning-cell"
         },
         {
           type = "unlock-recipe",
@@ -1079,18 +1095,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angelsore-crystal-mix6-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "electro-whinning-cell"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "electro-whinning-cell-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "electro-whinning-cell-3"
         }
       },
       unit = {
