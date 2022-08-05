@@ -489,7 +489,7 @@ data:extend(
       name = "gas-synthesis",
       icons = angelsmods.functions.create_gas_tech_icon({{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}),
       prerequisites = {
-        "angels-advanced-chemistry-4"
+        "angels-advanced-chemistry-3"
       },
       effects = {
         {
@@ -522,8 +522,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },
