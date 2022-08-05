@@ -547,7 +547,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "thermal-water-extraction",
-        "advanced-electronics-2"
+        "advanced-ore-refining-2"
       },
       effects = {
         {
