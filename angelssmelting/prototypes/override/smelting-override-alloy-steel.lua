@@ -44,12 +44,12 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
 
   if (not angelsmods.trigger.smelting_products["chrome"]      ) or 
      (not angelsmods.trigger.smelting_products["chrome"].ingot) then
-    OV.remove_prereq("angels-steel-smelting-3", "angels-chrome-smelting-1")
+    OV.remove_prereq("angels-steel-smelting-4", "angels-chrome-smelting-1")
   end
 
   if (not angelsmods.trigger.smelting_products["tungsten"]       ) or 
      (not angelsmods.trigger.smelting_products["tungsten"].powder) then
-    OV.remove_prereq("angels-steel-smelting-3", "angels-tungsten-smelting-1")
+    OV.remove_prereq("angels-steel-smelting-4", "angels-tungsten-smelting-1")
   end
 
   if angelsmods.trigger.smelting_products["steel"].powder then
@@ -69,7 +69,7 @@ else
       "molten-steel-smelting-5"
     }
   )
-  OV.disable_technology({"angels-steel-smelting-1", "angels-steel-smelting-2", "angels-steel-smelting-3"})
+  OV.disable_technology({"angels-steel-smelting-1", "angels-steel-smelting-2", "angels-steel-smelting-3", "angels-steel-smelting-4"})
 end
 
 -------------------------------------------------------------------------------
