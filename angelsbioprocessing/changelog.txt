@@ -13,6 +13,8 @@ Date: ##.##.2022
       - Desert farming 2
       - Swamp farming environment
       - Swamp farming 2
+  Bugfixes:
+    - Fixed fishes prevented landfill from being blueprinted on water (815)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.22
 Date: 06.06.2022

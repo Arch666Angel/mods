@@ -37,6 +37,7 @@ data:extend(
         }
       },
     },
+    protected_from_tile_building = false,
   },
   {
     type = "fish",
@@ -75,6 +76,7 @@ data:extend(
         }
       },
     },
+    protected_from_tile_building = false,
   },
   {
     type = "fish",
@@ -113,6 +115,7 @@ data:extend(
         }
       },
     },
+    protected_from_tile_building = false,
   },
 }
 )
