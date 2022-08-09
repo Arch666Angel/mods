@@ -62,19 +62,45 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobequipment"] then
     -- roboports
-    OV.patch_recipes(
-      {
+    if mods["boblogistics"] then
+      OV.remove_input("personal-roboport-mk2-equipment", "battery-5")
+    else
+      OV.patch_recipes(
         {
-          name = "personal-roboport-mk2-equipment",
-          ingredients = {
-            { type = "item", name = "battery-3", amount = "battery-5"}
-          }
-        },
-      }
-    )
+          {
+            name = "personal-roboport-equipment",
+            ingredients = {
+              { type = "item", name = "battery-2", amount = "battery-4" }
+            }
+          },
+          {
+            name = "personal-roboport-mk2-equipment",
+            ingredients = {
+              { type = "item", name = "battery-3", amount = "battery-5" }
+            }
+          },
+          {
+            name = "personal-roboport-mk3-equipment",
+            ingredients = {
+              { type = "item", name = "battery-4", amount = "battery-1" },
+              { type = "item", name = "battery-4", amount = "battery-3" }
+            }
+          },
+          {
+            name = "personal-roboport-mk4-equipment",
+            ingredients = {
+              { type = "item", name = mods["bobplates"] and "battery-6" or "battery-5", amount = "battery-1" }
+            }
+          },
+        }
+      )
+      if mods["bobplates"] then
+        OV.add_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-6")
+      else
+        OV.add_prereq("personal-roboport-mk4-equipment", "angels-components-batteries-5")
+      end
+    end
     OV.remove_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-5")
-    OV.add_prereq("personal-roboport-mk2-equipment", "angels-components-batteries-3")
-    OV.add_prereq("personal-roboport-mk3-equipment", "angels-components-batteries-4")
 
     -- exoskeleton
     OV.patch_recipes(
