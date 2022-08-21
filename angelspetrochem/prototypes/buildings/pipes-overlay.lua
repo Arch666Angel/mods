@@ -1,4 +1,4 @@
-function electrolyserpictures()
+function angelsmods.petrochem.electrolyserpictures()
   return
   {
     north =
@@ -36,7 +36,7 @@ function electrolyserpictures()
   }
 end
 
-function coverpictures()
+local function coverpictures()
   return
   {
     north =
@@ -75,7 +75,7 @@ function coverpictures()
   }
 end
 
-function polypictures1()
+local function polypictures1()
   return
   {
 	north =
@@ -117,7 +117,7 @@ function polypictures1()
   }
 end
 
-function polypictures2()
+local function polypictures2()
   return
   {
 	north =
@@ -159,7 +159,7 @@ function polypictures2()
   }
 end
 
-function polypictures3()
+local function polypictures3()
   return
   {
 	north =

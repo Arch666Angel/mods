@@ -48,6 +48,8 @@ angelsmods.functions.add_resource(
   }
 )
 
+local ore_3_icon
+local ore_3_icon_size
 if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
   ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3.png"
   ore_3_icon_size = 32

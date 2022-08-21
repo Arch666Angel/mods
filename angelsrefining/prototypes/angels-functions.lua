@@ -299,8 +299,8 @@ local function create_recipe_molecule_icons(molecules_icon, molecules_shift, mol
     molecule_icon = molecules_icon[molecule_index]
 
     -- now shift this icon to its correct position
-    molecule_shift = molecules_shift[molecule_index] or {0, 0}
-    molecule_scale = molecules_scale
+    local molecule_shift = molecules_shift[molecule_index] or {0, 0}
+    local molecule_scale = molecules_scale
     for layer_index, layer in pairs(molecule_icon) do
       layer.scale = layer.scale or 1
       layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
@@ -1246,8 +1246,8 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
 end
 
 function angelsmods.functions.flow_color(chemical_formula) --makes it lighter by some margin
-  change = total_shade(chemical_formula)*6
-  chemical_formula = chemical_formula.."H"..change--table.insert(chemical_formula,"H"..change)
+  local change = total_shade(chemical_formula)*6
+  local chemical_formula = chemical_formula.."H"..change--table.insert(chemical_formula,"H"..change)
   local color = angelsmods.functions.fluid_color(chemical_formula)
   return color
 end
@@ -1453,7 +1453,7 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
   end
   --actual entity if not not just an item
   for _,type in pairs(building_types) do
-    to_remove = data.raw[type][entity] --entity-types...
+    local to_remove = data.raw[type][entity] --entity-types...
     if to_remove then
       for flag_index, flag in pairs(to_remove.flags or {}) do
         if flag == flag_to_remove then
@@ -1596,7 +1596,15 @@ end
 function angelsmods.functions.make_void(fluid_name, void_category, void_amount) -- categories: chemical (fluid, flare-stack)
   --LOCAL DEFINITIONS                                                           --             water (fluild, clarifier)
   local recipe = {}                                                             --             bio (item, compost)
-                                                                                -- amount(optional): amount of input/output, default 1
+  local void_input_amount                                                       -- amount(optional): amount of input/output, default 1
+  local void_input_type
+  local void_input_subgroup
+  local void_process_time
+  local void_output_item
+  local void_output_amount
+  local void_output_probability
+  local void_tint
+
   if data.raw.fluid[fluid_name] then -- fluid voids
     if void_category == "water" then
       void_amount = void_amount or 400

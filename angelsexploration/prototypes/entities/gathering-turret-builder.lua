@@ -526,7 +526,6 @@ function angelsmods.functions.create_gathering_turret_beam_body(inputs)
       width = 32,
       height = 39,
       frame_count = 16,
-      tint = beam_tint,
       blend_mode = inputs.blend_mode
     },
     {

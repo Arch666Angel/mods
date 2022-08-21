@@ -1,5 +1,7 @@
 require("util")
 
+local tech_unlocks = {}
+
 local function set_type(name)
   local train_type
   if string.find(name,"crawler") then
@@ -34,7 +36,7 @@ local function add_speed_locale()
 end
 
 local function generate_additional_pastable_entities(name)
-  all_entity_names = {}
+  local all_entity_names = {}
   for _, entity_type_name in pairs{
     "crawler-locomotive",
     "crawler-locomotive-wagon",
