@@ -334,15 +334,6 @@ if angelsmods.industries.tech then
       OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
       OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
     end
-
-    --remove all advanced-logistics packs
-    OV.disable_recipe({"advanced-logistic-science-pack"})
-    angelsmods.functions.add_flag("advanced-logistic-science-pack", "hidden")
-    for rec_4tech in pairs(data.raw.technology) do
-      OV.remove_science_pack(rec_4tech, "advanced-logistic-science-pack")
-      OV.remove_prereq(rec_4tech, "advanced-logistic-science-pack")
-    end
-    OV.disable_technology({"advanced-logistic-science-pack"})
   end
 
   OV.execute()

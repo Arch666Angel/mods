@@ -78,7 +78,7 @@ if angelsmods.addons.storage.silos then
   end
 
   --TECHNOLOGY
-  if mods["bobtech"] then
+  if mods["bobtech"] and bobmods.tech.advanced_logistic_science then
     table.insert(data.raw.technology["logistic-silos"].unit.ingredients,
       {type = "item", name = "advanced-logistic-science-pack", amount = 1})
   end
