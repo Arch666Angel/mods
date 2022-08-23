@@ -217,18 +217,16 @@ if mods["bobpower"] then
       )
 
       move_item("accumulator", "angels-power-accumulator", "a[capacity]-a")
+      move_item("large-accumulator-2", "angels-power-accumulator", "a[capacity]-b")
+      move_item("large-accumulator-3", "angels-power-accumulator", "a[capacity]-c")
 
-      move_item("large-accumulator", "angels-power-accumulator", "a[capacity]-b")
-      move_item("large-accumulator-2", "angels-power-accumulator", "a[capacity]-c")
-      move_item("large-accumulator-3", "angels-power-accumulator", "a[capacity]-d")
+      move_item("slow-accumulator", "angels-power-accumulator", "b[slow]-a")
+      move_item("slow-accumulator-2", "angels-power-accumulator", "b[slow]-b")
+      move_item("slow-accumulator-3", "angels-power-accumulator", "b[slow]-c")
 
-      move_item("slow-accumulator", "angels-power-accumulator", "b[slow]-b")
-      move_item("slow-accumulator-2", "angels-power-accumulator", "b[slow]-c")
-      move_item("slow-accumulator-3", "angels-power-accumulator", "b[slow]-d")
-
-      move_item("fast-accumulator", "angels-power-accumulator", "c[fast]-b")
-      move_item("fast-accumulator-2", "angels-power-accumulator", "c[fast]-c")
-      move_item("fast-accumulator-3", "angels-power-accumulator", "c[fast]-d")
+      move_item("fast-accumulator", "angels-power-accumulator", "c[fast]-a")
+      move_item("fast-accumulator-2", "angels-power-accumulator", "c[fast]-b")
+      move_item("fast-accumulator-3", "angels-power-accumulator", "c[fast]-c")
   end
 
   -----------------------------------------------------------------------------
