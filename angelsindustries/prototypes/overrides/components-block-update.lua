@@ -474,6 +474,7 @@ if angelsmods.industries.components then
         },
         "hidden"
       )
+      OV.remove_prereq("military-3", "angels-tungsten-smelting-1")
     end
     if angelsmods.industries.blocks.enhancement5 == false then
       OV.disable_recipe("block-enhancement-5")

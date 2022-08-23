@@ -117,8 +117,6 @@ if mods["bobrevamp"] then
     angelsmods.functions.disable_barreling_recipes("hydrazine")
     OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
 
-    --OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
-    --OV.remove_unlock("rocket-fuel", "dinitrogen-tetroxide")
     OV.disable_recipe(
       {
         "dinitrogen-tetroxide",
