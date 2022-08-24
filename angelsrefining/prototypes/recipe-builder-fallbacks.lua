@@ -76,10 +76,12 @@
   angelsmods.functions.RB.set_fallback("item", "sorter-4", { { "block-mprocessing-4", 5 }, { "ore-sorting-facility-3" } } )
 
   angelsmods.functions.RB.set_fallback("item", "filter-1", { { "block-production-2", 3 } } )
-  angelsmods.functions.RB.set_fallback("item", "filter-2", { { "block-production-4", 3 }, { "filtration-unit" } } )
+  angelsmods.functions.RB.set_fallback("item", "filter-2", { { "block-production-3", 3 }, { "filtration-unit" } } )
+  angelsmods.functions.RB.set_fallback("item", "filter-3", { { "block-production-4", 3 }, { "filtration-unit-2" } } )
 
   angelsmods.functions.RB.set_fallback("item", "cryst-1", { { "block-production-2", 3 } } )
-  angelsmods.functions.RB.set_fallback("item", "cryst-2", { { "block-mprocessing-4", 3 }, { "crystallizer" } } )
+  angelsmods.functions.RB.set_fallback("item", "cryst-2", { { "block-mprocessing-3", 3 }, { "crystallizer" } } )
+  angelsmods.functions.RB.set_fallback("item", "cryst-3", { { "block-mprocessing-4", 3 }, { "crystallizer-2" } } )
 
   angelsmods.functions.RB.set_fallback("item", "liqui-1", { { "block-production-1", 1 } } )
   angelsmods.functions.RB.set_fallback("item", "liqui-2", { { "block-production-2", 1 }, { "liquifier" } } )

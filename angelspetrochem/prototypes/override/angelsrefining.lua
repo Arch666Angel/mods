@@ -48,7 +48,7 @@ if angelsmods.refining then
   OV.add_prereq("advanced-ore-refining-1", "ore-crushing")
   OV.remove_unlock("slag-processing-1", "liquifier-2")
   OV.remove_unlock("slag-processing-2", "liquifier-3")
-  OV.remove_unlock("slag-processing-2", "liquifier-4")
+  OV.remove_unlock("slag-processing-3", "liquifier-4")
   OV.add_prereq("slag-processing-2", "ore-leaching")
   OV.add_unlock("angels-advanced-chemistry-1", "liquifier-2")
   OV.add_unlock("angels-advanced-chemistry-2", "liquifier-3")

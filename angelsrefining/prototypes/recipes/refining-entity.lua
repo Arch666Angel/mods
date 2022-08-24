@@ -186,6 +186,16 @@ data:extend(
       },
       result = "filtration-unit-2"
     },
+    {
+      type = "recipe",
+      name = "filtration-unit-3",
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "filtration-unit-2", amount = 1}
+      },
+      result = "filtration-unit-3"
+    },
     --CRYSTALLIZER
     {
       type = "recipe",
@@ -206,6 +216,16 @@ data:extend(
         {type = "item", name = "crystallizer", amount = 1}
       },
       result = "crystallizer-2"
+    },
+    {
+      type = "recipe",
+      name = "crystallizer-3",
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "crystallizer-2", amount = 1}
+      },
+      result = "crystallizer-3"
     },
     --LIQUIFIER
     {

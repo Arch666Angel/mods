@@ -1002,7 +1002,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-shard-crystalization-1",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       hidden = false,
@@ -1025,7 +1025,7 @@ data:extend(
     {
       type = "recipe",
       name = "crystal-shard-crystalization-2",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "bio-biter-processing-crystal-shard",
       enabled = false,
       hidden = false,

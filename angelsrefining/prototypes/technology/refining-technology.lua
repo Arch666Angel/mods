@@ -448,7 +448,7 @@ data:extend(
       icon_size = 64,
       prerequisites = {
         "slag-processing-1",
-        "advanced-electronics-2"
+        "ore-leaching"
       },
       effects = {
         {
@@ -462,10 +462,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "liquifier-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquifier-4"
         },
         {
           type = "unlock-recipe",
@@ -513,7 +509,47 @@ data:extend(
         },
         time = 30
       },
-      order = "a-a-a1"
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "slag-processing-3",
+      icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+      icon_size = 64,
+      prerequisites = {
+        "geode-processing-3",
+        "advanced-electronics-2",
+        "production-science-pack",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "filtration-unit-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "crystallizer-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "liquifier-4"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "catalysator-orange"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
     },
     {
       type = "technology",
@@ -682,7 +718,7 @@ data:extend(
         "ore-leaching",
         "advanced-ore-refining-2",
         "ore-electro-whinning-cell",
-        "production-science-pack"
+        "slag-processing-3"
       },
       effects = {
         {
@@ -756,10 +792,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "crystal-slurry-filtering-conversion-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalysator-orange"
         }
       },
       unit = {

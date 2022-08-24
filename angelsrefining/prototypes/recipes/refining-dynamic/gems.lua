@@ -6,7 +6,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore7-crystallization-1",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 4,
       enabled = false,
@@ -34,7 +34,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore7-crystallization-2",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 4,
       enabled = false,
@@ -62,7 +62,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore7-crystallization-3",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 4,
       enabled = false,
@@ -90,7 +90,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore7-crystallization-4",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 4,
       enabled = false,
@@ -118,7 +118,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore7-crystallization-5",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 4,
       enabled = false,
@@ -146,7 +146,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore7-crystallization-6",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "geode-crystallization",
       energy_required = 4,
       enabled = false,

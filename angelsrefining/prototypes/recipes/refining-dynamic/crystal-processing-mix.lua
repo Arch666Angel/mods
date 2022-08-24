@@ -246,7 +246,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "angels-ore8-crystal", amount = 2},
           {type = "item", name = "angels-ore9-crystal", amount = 2},
-          {type = "item", name = "catalysator-orange", amount = 1}
+          {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
@@ -257,7 +257,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "angels-ore8-crystal", amount = 3 * rawmulti},
           {type = "item", name = "angels-ore9-crystal", amount = 3 * rawmulti},
-          {type = "item", name = "catalysator-orange", amount = 1}
+          {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
