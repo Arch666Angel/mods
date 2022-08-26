@@ -34,6 +34,9 @@ if angelsmods.industries.components then
     }
   )
   for _, metal in pairs({"iron", "steel", "aluminium", "titanium" --[[,"tungsten"]]}) do --all of the metals in one go
+    local num
+    local molten1
+    local molten2
     if metal == "iron" then
       num = 1
       molten1 = {type = "fluid", name = "liquid-molten-iron", amount = 15}

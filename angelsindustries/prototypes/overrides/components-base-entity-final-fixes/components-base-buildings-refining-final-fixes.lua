@@ -41,7 +41,7 @@ if angelsmods.industries.components then
         name = "ore-floatation-cell",
         ingredients = {
           {"!!"},
-          {type = "item", name = "block-production-1", amount = 3},
+          {type = "item", name = "block-production-2", amount = 3},
           {type = "item", name = "block-construction-2", amount = 12},
           {type = "item", name = "block-fluidbox-1", amount = 4},
           {type = "item", name = "block-electronics-2", amount = 8},

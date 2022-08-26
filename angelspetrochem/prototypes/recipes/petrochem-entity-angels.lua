@@ -323,7 +323,7 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients =
         {
-          {type="item", name="gas-refinery-3", amount = 1},
+          {type="item", name="gasref-4", amount = 1},
           {type="item", name="t6-plate", amount = 10},
           {type="item", name="t6-circuit", amount = 5},
           {type="item", name="t6-brick", amount = 10},

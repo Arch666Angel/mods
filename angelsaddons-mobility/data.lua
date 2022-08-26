@@ -20,8 +20,6 @@ angelsmods.addons.mobility.smeltingtrain.number_tint = {r = 1, g = 0.38, b = 0, 
 
 
 
-tech_unlocks = {}
-
 require("prototypes.categories")
 --CRAWLER
 require("prototypes.entities.crawler-locomotive")
@@ -45,5 +43,3 @@ require("prototypes.technology.crawler-technology")
 require("prototypes.technology.petro-technology")
 --SMELTING
 require("prototypes.technology.smelting-technology")
-
-tech_unlocks = nil

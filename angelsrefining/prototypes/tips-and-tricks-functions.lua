@@ -1,4 +1,4 @@
-tnt = {} --init table
+local tnt = {} --init table
 
 tnt.get_item_from_name = function(item_name, item_type, before, ending)
   before = before or "- "

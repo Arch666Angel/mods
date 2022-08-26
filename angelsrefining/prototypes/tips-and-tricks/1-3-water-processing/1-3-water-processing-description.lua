@@ -14,8 +14,8 @@ else -- overhaul mode
     table.insert(items,tnt.get_item_from_name("solid-salt","item", "- gives: "))
     table.insert(items,tnt.get_item_from_name("water-greenyellow-waste","fluid","\n[font=default-bold]"))
     table.insert(items,tnt.get_item_from_name("fluorite-ore","item", "- gives: "))
+    table.insert(description, items)
   end
-  table.insert(description, items)
 end
 table.insert(description,{"tips-and-tricks-description.angels-water-processing-voiding"})
 return description
