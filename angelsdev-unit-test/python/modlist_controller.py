@@ -6,8 +6,10 @@ class ModlistController:
   #   https://wiki.factorio.com/Mod_settings_file_format
   #   https://wiki.factorio.com/Property_tree
 
-  def __init__(self, factorioFolderDir=None):
-    if factorioFolderDir == None:
+  def __init__(self, factorioFolderDir=None, factorioModDir=None):
+    if factorioModDir != None:
+      self.modFolderDir = factorioModDir
+    elif factorioFolderDir == None:
       self.modFolderDir = f"{os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/"
     else:
       self.modFolderDir = f"{os.path.abspath(factorioFolderDir)}/mods/"
@@ -41,13 +43,17 @@ class ModlistController:
     self.modlist.append({ 'name': modname, 'enabled': True })
 
 if __name__ == "__main__":
-  factorioFolderDir = None
-  opts, args = getopt.getopt(sys.argv[1:], ":m:", ['dir='])
-  for opt, arg in opts:
-    if opt in ('-m', '--factoriodir'):
-      factorioFolderDir = os.path.realpath(arg.strip())
+  factorioFolderDir:Optional[str]=None
+  factorioModDir:Optional[str]=None
 
-  mc = ModlistController(factorioFolderDir)
+  opts, args = getopt.getopt(sys.argv[1:], "f:m:", ['factoriodir=', 'mod-directory='])
+  for opt, arg in opts:
+    if opt in ('-f', '--factoriodir'):
+      factorioFolderDir = os.path.realpath(arg.strip())
+    if opt in ('-m'):
+      factorioModDir = os.path.realpath(arg.strip())
+
+  mc = ModlistController(factorioFolderDir, factorioModDir)
   mc.readConfigurationFile()
   mc.disableAllMods()
   mc.enableMod("angelsinfiniteores")
