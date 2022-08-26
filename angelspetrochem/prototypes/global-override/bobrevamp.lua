@@ -73,6 +73,25 @@ if mods["bobrevamp"] then
     OV.global_replace_technology("chemical-plant", "basic-chemistry-2")
   end
 
+  OV.converter_fluid("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
+  angelsmods.functions.disable_barreling_recipes("dinitrogen-tetroxide")
+
+  OV.converter_fluid("hydrogen-peroxide", "gas-hydrogen-peroxide")
+  angelsmods.functions.disable_barreling_recipes("hydrogen-peroxide")
+
+  OV.converter_fluid("hydrazine", "gas-hydrazine")
+  angelsmods.functions.disable_barreling_recipes("hydrazine")
+  OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
+
+  OV.disable_recipe(
+    {
+      "dinitrogen-tetroxide",
+      "hydrazine",
+      "hydrogen-peroxide",
+      "enriched-fuel-from-hydrazine",
+    }
+  )
+
   -----------------------------------------------------------------------------
   -- HARDMODE -----------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -107,24 +126,10 @@ if mods["bobrevamp"] then
     OV.converter_fluid("nitric-dioxide", "gas-nitrogen-dioxide")
     angelsmods.functions.disable_barreling_recipes("nitric-dioxide")
 
-    OV.converter_fluid("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
-    angelsmods.functions.disable_barreling_recipes("dinitrogen-tetroxide")
-
-    OV.converter_fluid("hydrogen-peroxide", "gas-hydrogen-peroxide")
-    angelsmods.functions.disable_barreling_recipes("hydrogen-peroxide")
-
-    OV.converter_fluid("hydrazine", "gas-hydrazine")
-    angelsmods.functions.disable_barreling_recipes("hydrazine")
-    OV.global_replace_technology("hydrazine", "angels-nitrogen-processing-3")
-
     OV.disable_recipe(
       {
-        "dinitrogen-tetroxide",
         "nitric-oxide",
-        "hydrazine",
-        "hydrogen-peroxide",
-        "carbon-dioxide",
-        "enriched-fuel-from-hydrazine",
+        "carbon-dioxide"
       }
     )
   end
