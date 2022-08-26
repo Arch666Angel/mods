@@ -167,7 +167,7 @@ data:extend(
         {
           production_type = "input",
           pipe_covers = pipecoverspictures(),
-          pipe_picture = filtrationpipepictures(),
+          pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_area = 10,
           base_level = -1,
           pipe_connections = {{type = "input", position = {1, 3}}}
@@ -175,7 +175,7 @@ data:extend(
         {
           production_type = "input",
           pipe_covers = pipecoverspictures(),
-          pipe_picture = filtrationpipepictures(),
+          pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_area = 10,
           base_level = -1,
           pipe_connections = {{type = "input", position = {-1, 3}}}
@@ -183,14 +183,14 @@ data:extend(
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
-          pipe_picture = filtrationpipepictures(),
+          pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
           pipe_connections = {{position = {1, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
-          pipe_picture = filtrationpipepictures(),
+          pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
           pipe_connections = {{position = {-1, -3}}}
         }
