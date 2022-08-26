@@ -158,7 +158,7 @@ if angelsmods.industries.tech then
     AI.core_replace("bob-robo-modular-1", "basic", "logistic")
     AI.core_replace("bob-robo-modular-2", "basic", "logistic")
     AI.core_replace("bob-robo-modular-3", "basic", "logistic")
-    AI.core_replace("bob-robo-modular-4", "processing", "logistic")
+    AI.core_replace("bob-robo-modular-4", "basic", "logistic")
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
