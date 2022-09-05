@@ -52,8 +52,10 @@ if angelsmods.industries.tech then
   AI.pack_count_update("bio-temperate-farming", "angels-science-pack-red", 4)
   AI.pack_replace("bio-fermentation", "green", "red")
   OV.remove_prereq("bio-fermentation", "tech-green-packs")
+  OV.remove_science_pack("bio-fermentation", "token-bio")
   AI.pack_replace("bio-arboretum-temperate-1", "green", "red")
   OV.remove_prereq("bio-arboretum-temperate-1", "resins")
+  OV.remove_science_pack("bio-arboretum-temperate-1", "token-bio")
   OV.add_prereq("bio-arboretum-temperate-2", "resins")
   -- INDUSTRIES
   AI.pack_replace("tech-green-circuit", "green", "red")
