@@ -221,7 +221,7 @@ if __name__ == "__main__":
   for opt, arg in opts:
     if opt in ('-f', '--factoriodir'):
       factorioFolderDir = os.path.realpath(arg.strip())
-    if opt in ('-m'):
+    if opt in ('-m', '--mod-directory'):
       factorioModDir = os.path.realpath(arg.strip())
 
   sc = SettingsController(factorioFolderDir, factorioModDir)
