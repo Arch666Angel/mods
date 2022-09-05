@@ -9,10 +9,13 @@ if mods["angelsbioprocessing"] and data.raw.item["solid-paper"] then
   -- replace recipe icons
   data.raw.recipe["paper-bleaching-1"].icons[1].icon = data.raw.item["solid-paper"].icon
   data.raw.recipe["paper-bleaching-1"].icons[1].icon_size = data.raw.item["solid-paper"].icon_size
+  data.raw.recipe["paper-bleaching-1"].icons[1].scale = 32/data.raw.item["solid-paper"].icon_size
   data.raw.recipe["paper-bleaching-2"].icons[1].icon = data.raw.item["solid-paper"].icon
   data.raw.recipe["paper-bleaching-2"].icons[1].icon_size = data.raw.item["solid-paper"].icon_size
+  data.raw.recipe["paper-bleaching-2"].icons[1].scale = 32/data.raw.item["solid-paper"].icon_size
   data.raw.recipe["paper-bleaching-3"].icons[1].icon = data.raw.item["solid-paper"].icon
   data.raw.recipe["paper-bleaching-3"].icons[1].icon_size = data.raw.item["solid-paper"].icon_size
+  data.raw.recipe["paper-bleaching-3"].icons[1].scale = 32/data.raw.item["solid-paper"].icon_size
 
   -- replace technology icons
   data.raw.technology["bio-paper-1"].icon = data.raw.item["solid-paper"].icon
