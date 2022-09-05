@@ -44,8 +44,6 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-assembly-burner"].value == true then
       AI.pack_replace("basic-automation", "red", "grey")
       AI.pack_replace("automation", "grey", "red")
-      OV.remove_prereq("bio-processing-brown", "automation")
-      OV.add_prereq("bio-processing-brown", "basic-automation")
     end
     -- assemblers tier 2+
     AI.pack_replace("automation-4", "blue", "orange")
