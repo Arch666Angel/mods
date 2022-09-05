@@ -302,7 +302,13 @@ ov_functions.disable_technology = function(technology) -- disable technology (ma
 end
 
 ov_functions.set_special_technology_override = function(technology, t)
-  override_table.technologies[technology] = t
+  if type(technology) =="table" then
+    for _,tech in pairs(technology) do
+      override_table.technologies[tech] = t
+    end
+  else
+    override_table.technologies[technology] = t
+  end
 end
 
 -------------------------------------------------------------------------------
