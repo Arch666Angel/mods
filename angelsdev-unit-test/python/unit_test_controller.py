@@ -123,7 +123,7 @@ if __name__ == "__main__":
       factorioInstallDir = os.path.realpath(arg.strip())
     if opt in ('-l'):
       logToFile = True
-    if opt in ('-m'):
+    if opt in ('-m', '--mod-directory'):
       factorioModDir = os.path.realpath(arg.strip())
 
   UnitTestController(updateMods=False, factorioInstallDir=factorioInstallDir, factorioFolderDir=factorioFolderDir, logToFile=logToFile, factorioModDir=factorioModDir).TestConfiguations(UnitTestConfiguration())
