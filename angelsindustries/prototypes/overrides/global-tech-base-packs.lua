@@ -210,9 +210,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")
   OV.set_science_pack("rocket-silo", "angels-science-pack-orange")
   OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
-  if data.raw.technology["rocket-silo"] then
-    data.raw.technology["rocket-silo"].ignore_tech_cost_multiplier = true
-  end
+  OV.set_special_technology_override("rocket-silo", "ignore_tech_cost_multiplier")
   -- REFINING
   AI.pack_replace("advanced-ore-refining-4", "blue", "yellow")
   -- BIO PROCESSING
