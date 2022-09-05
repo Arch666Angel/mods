@@ -37,7 +37,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -64,7 +65,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -92,7 +94,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -129,7 +132,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -158,7 +162,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- ENERGY LABS --------------------------------------------------------------
@@ -193,7 +198,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -220,7 +226,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -248,7 +255,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -285,7 +293,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -314,7 +323,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- LOGISTICS LABS -----------------------------------------------------------
@@ -349,7 +359,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -376,7 +387,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -404,7 +416,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -441,7 +454,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -470,7 +484,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- ENHANCEMENT LABS ---------------------------------------------------------
@@ -505,7 +520,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -532,7 +548,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -560,7 +577,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -597,7 +615,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -626,7 +645,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- PRODUCTION LABS ----------------------------------------------------------
@@ -662,7 +682,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -689,7 +710,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -718,7 +740,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -756,7 +779,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -786,7 +810,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- WARFARE LABS -------------------------------------------------------------
@@ -822,7 +847,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -850,7 +876,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -879,7 +906,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -917,7 +945,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -947,7 +976,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- BASIC LABS ---------------------------------------------------------------
@@ -975,7 +1005,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     {
       type = "technology",
@@ -1004,7 +1035,8 @@ data:extend(
         },
         time = pack_time_base
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     },
     -----------------------------------------------------------------------------
     -- POST ROCKET LABS ---------------------------------------------------------
@@ -1061,7 +1093,8 @@ data:extend(
         time = pack_time_base
         --pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
+      ignore_tech_cost_multiplier = true
     }
   }
 )

@@ -13,6 +13,7 @@ Date: ##.##.2022
       - Desert farming 2
       - Swamp farming environment
       - Swamp farming 2
+    - Changed technologies Basic algae processing and Paper making 1 to ignore tech cost modifier (820)
   Bugfixes:
     - Fixed fishes prevented landfill from being blueprinted on water (815)
 ---------------------------------------------------------------------------------------------------

@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.17
+Date: ##.##.2022
+  Changes:
+    - Science mode:
+      - Changed technologies that are researched in tech Tech archive to ignore tech cost modifier (820)
+      - Removed Alien plant-life sample from technologies Fermentation processes and Temperate arboretum 1 (820)
+      - Added Miniloader support (820)
+      - Made Nanobots available sooner (820)
+      - When Bob's Assemling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation  (820)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.16
 Date: 06.06.2022
   Changes:

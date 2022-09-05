@@ -619,7 +619,7 @@ data:extend(
         {type="item", name="token-bio", amount = 1}
       },
       time = 30
-    },
+    }
   },
   {
     type = "technology",
@@ -650,6 +650,7 @@ data:extend(
       },
       time = 30
     },
+    ignore_tech_cost_multiplier = true
   },
   {
     type = "technology",

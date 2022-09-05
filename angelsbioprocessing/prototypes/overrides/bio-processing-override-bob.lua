@@ -54,3 +54,8 @@ if bobmods then
     { name = "bob-coal-from-wood", ingredients = { {type="item", name="wood", amount = 5} } },
   })
 end
+
+if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
+  OV.remove_prereq("bio-processing-brown", "automation")
+  OV.add_prereq("bio-processing-brown", "basic-automation")
+end

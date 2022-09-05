@@ -43,7 +43,11 @@ if mods["bobplates"] then
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-multipurposefurnaces"].value then
     -- keep metal mixing furnaces around
-    OV.add_unlock("automation", "stone-mixing-furnace")
+    if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
+      OV.add_unlock("basic-automation", "stone-mixing-furnace")
+    else
+      OV.add_unlock("automation", "stone-mixing-furnace")
+    end
     OV.patch_recipes({
       {
         name = "electric-chemical-mixing-furnace",
