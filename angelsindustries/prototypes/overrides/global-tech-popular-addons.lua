@@ -60,6 +60,24 @@ if angelsmods.industries.tech then
     OV.remove_prereq("nano-range-4", "robotics")
     OV.add_prereq("nano-range-4", "angels-components-mechanical-5")
   end
-  
+
+  -------------------------------------------------------------------------------
+  -- MINILOADER -----------------------------------------------------------------
+  -------------------------------------------------------------------------------
+  if mods["miniloader"] then
+    AI.core_replace("miniloader", "basic", "logistic")
+    AI.core_replace("fast-miniloader", "basic", "logistic")
+    AI.core_replace("express-miniloader", "basic", "logistic")
+    OV.remove_science_pack("express-miniloader", "production-science-pack")
+    if mods["boblogistics"] then
+      AI.pack_replace("basic-miniloader", "red", "grey")
+      AI.pack_replace("express-miniloader", "blue", "orange")
+      AI.core_replace("turbo-miniloader", "basic", "logistic")
+      AI.core_replace("ultimate-miniloader", "basic", "logistic")
+      OV.remove_science_pack("turbo-miniloader", "production-science-pack")
+      OV.remove_science_pack("ultimate-miniloader", "production-science-pack")
+    end
+  end
+
   OV.execute()
 end
