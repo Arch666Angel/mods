@@ -27,7 +27,6 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["Nanobots"] then
     AI.pack_replace("nanobots", "red", "grey")
-    OV.add_prereq("nanobots", "tech-red-circuit")
     if mods["boblogistics"] then
       OV.remove_prereq("nanobots", "logistics")
       OV.add_prereq("nanobots", "logistics-0")
