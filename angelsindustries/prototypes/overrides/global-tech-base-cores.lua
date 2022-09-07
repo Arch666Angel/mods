@@ -34,6 +34,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("tech-orange-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-blue-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-yellow-circuit", "datacore-basic", 2)
+  OV.remove_science_pack("tech-yellow-circuit", "datacore-processing-1")
   -- DECORATION ADDONS
   if mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]] then
     --if angelsmods.addons.decorations then
@@ -114,6 +115,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-components-batteries-3", "datacore-energy-1", 2)
   OV.set_science_pack("angels-components-batteries-4", "datacore-energy-1", 2)
   OV.set_science_pack("angels-components-batteries-5", "datacore-energy-1", 2)
+  AI.core_replace("angels-components-batteries-6", "processing", "energy")
   AI.core_replace("angels-rocket-fusion-reactor", "war", "energy")
 
   -------------------------------------------------------------------------------
