@@ -302,7 +302,13 @@ ov_functions.disable_technology = function(technology) -- disable technology (ma
 end
 
 ov_functions.set_special_technology_override = function(technology, t)
-  override_table.technologies[technology] = t
+  if type(technology) =="table" then
+    for _,tech in pairs(technology) do
+      override_table.technologies[tech] = t
+    end
+  else
+    override_table.technologies[technology] = t
+  end
 end
 
 -------------------------------------------------------------------------------
@@ -816,6 +822,9 @@ end
 
 local function adjust_technology(tech, k) -- check a tech for basic adjustments based on tables and make any necessary changes
   local function override_subtable(subtable, o_subtable) -- handle special case changes (sort of a partial deep copy/overwrite)
+    if type(o_subtable) == "string" then
+      o_subtable = {o_subtable}
+    end
     for ok, ov in pairs(o_subtable) do
       if type(ov) == "table" then
         if not subtable[ok] then
@@ -903,7 +912,11 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   end
   local overrides = override_table.technologies[k]
   if overrides then
-    override_subtable(tech, overrides)
+    if type(overrides) =="string" then
+      tech[overrides] = (not tech[overrides]) or true
+    else
+      override_subtable(tech, overrides)
+    end
   end
   --adjust difficulty (time and amount of ingredients)
   if modify_table.technologies[k] then

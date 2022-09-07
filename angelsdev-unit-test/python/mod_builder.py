@@ -4,10 +4,12 @@ import json
 
 class ModBuilder:
 
-  def __init__(self, factorioFolderDir:Optional[str]=None):
+  def __init__(self, factorioFolderDir:Optional[str]=None, factorioModDir:Optional[str]=None):
     self.modNames = [modName for modName in next(os.walk(f"{os.path.dirname(os.path.abspath(__file__))}/../.."))[1] if self.__isReleased(modName)]
 
-    if factorioFolderDir is None:
+    if factorioModDir != None:
+      self.modFolderDir = factorioModDir
+    elif factorioFolderDir is None:
       self.modFolderDir = f"{os.getenv('APPDATA')}/Factorio/mods/"
     else:
       self.modFolderDir = f"{os.path.abspath(factorioFolderDir)}/mods/"

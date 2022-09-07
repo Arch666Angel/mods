@@ -29,7 +29,8 @@ if angelsmods.industries.tech then
           },
           time = pack_time_base
         },
-        order = "a-5"
+        order = "a-5",
+        ignore_tech_cost_multiplier = true
       },
       --TIER 2
       {
@@ -63,7 +64,8 @@ if angelsmods.industries.tech then
           },
           time = pack_time_base
         },
-        order = "a-5"
+        order = "a-5",
+        ignore_tech_cost_multiplier = true
       },
       --TIER 2.5
       {
@@ -94,7 +96,8 @@ if angelsmods.industries.tech then
           },
           time = pack_time_base
         },
-        order = "a-5"
+        order = "a-5",
+        ignore_tech_cost_multiplier = true
       },
       --TIER 3
       {
@@ -130,7 +133,8 @@ if angelsmods.industries.tech then
           },
           time = pack_time_base
         },
-        order = "a-5"
+        order = "a-5",
+        ignore_tech_cost_multiplier = true
       },
       --TIER 4
       {
@@ -163,7 +167,8 @@ if angelsmods.industries.tech then
           },
           time = pack_time_base
         },
-        order = "a-5"
+        order = "a-5",
+        ignore_tech_cost_multiplier = true
       }
     }
   )
