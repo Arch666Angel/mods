@@ -158,17 +158,12 @@ data:extend(
         "strand-casting-2",
         "angels-iron-casting-2",
         "angels-nickel-smelting-2",
-        "angels-cobalt-smelting-1",
-        "angels-chrome-smelting-1"
+        "angels-cobalt-smelting-1"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "molten-iron-smelting-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "molten-iron-smelting-5"
         },
         {
           type = "unlock-recipe",
@@ -181,6 +176,32 @@ data:extend(
       },
       unit = {
         count = 200,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-iron-casting-4",
+      icon = "__angelssmelting__/graphics/technology/casting-iron-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      prerequisites = {
+        "angels-iron-casting-3",
+        "angels-chrome-smelting-1"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "molten-iron-smelting-5"
+        }
+      },
+      unit = {
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
