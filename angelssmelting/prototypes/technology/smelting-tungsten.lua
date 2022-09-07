@@ -99,6 +99,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
+        "ore-processing-5",
         "angels-tungsten-smelting-2"
       },
       effects = {
