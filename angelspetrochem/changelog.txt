@@ -18,6 +18,7 @@ Date: ???
       - Advanced chemistry 2
       - Flare stack tech
       - Rubber
+    - Split tech Advanced chemistry 3 (805)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 06.06.2022
