@@ -192,6 +192,7 @@ if mods["bobplates"] then
   if mods["angelsindustries"] then
     -- angels industries takes care of this with angels nuclear overhaul
   else
+    OV.add_prereq("thorium-processing", "ore-electro-whinning-cell")
     move_item("thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
 end
@@ -211,6 +212,18 @@ if mods["bobplates"] then
   OV.add_prereq("gold-processing", "ore-leaching")
   OV.add_prereq("titanium-processing", "ore-leaching")
   OV.add_prereq("tungsten-processing", "ore-refining")
+  OV.set_science_pack("tungsten-processing", "production-science-pack", 1)
+  if mods["bobwarfare"] then
+    OV.set_science_pack("bob-rocket", "production-science-pack", 1)
+  end
+  if mods["bobpower"] then
+    OV.set_science_pack("bob-boiler-4", "production-science-pack", 1)
+    OV.set_science_pack("burner-reactor-2", "production-science-pack", 1)
+    OV.set_science_pack("fluid-generator-3", "production-science-pack", 1)
+    OV.set_science_pack("fluid-reactor-2", "production-science-pack", 1)
+    OV.set_science_pack("bob-heat-exchanger-2", "production-science-pack", 1)
+    OV.set_science_pack("bob-oil-boiler-3", "production-science-pack", 1)
+  end
 end
 
 -------------------------------------------------------------------------------

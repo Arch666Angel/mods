@@ -22,6 +22,9 @@ if angelsmods.industries.tech == true then
   angelsmods.industries.blocks.warfare = true
   angelsmods.industries.blocks.enhancement5 = true
   angelsmods.industries.blocks.energy5 = true
+  if mods["bobtech"] then
+    bobmods.tech.advanced_logistic_science = false
+  end
 end
 
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries

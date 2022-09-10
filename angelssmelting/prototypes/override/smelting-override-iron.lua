@@ -33,7 +33,7 @@ end
 
 if angelsmods.trigger.smelting_products["chrome"].ingot then
 else
-  OV.remove_prereq("angels-iron-casting-3","angels-chrome-smelting-1")
+  OV.remove_prereq("angels-iron-casting-4","angels-chrome-smelting-1")
 end
 
 -------------------------------------------------------------------------------
@@ -68,7 +68,7 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
   if angelsmods.trigger.smelting_products["iron"].plate or
      angelsmods.trigger.smelting_products["iron"].rod   then
   else
-    OV.disable_technology({"angels-iron-casting-2", "angels-iron-casting-3"})
+    OV.disable_technology({"angels-iron-casting-2", "angels-iron-casting-3", "angels-iron-casting-4"})
     -- swap tech tier 1 to ingots
     for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
       data.raw.technology["angels-iron-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-iron-smelting-2"][property])

@@ -161,7 +161,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "water-treatment-3",
-        "thermal-water-processing"
+        "thermal-water-processing",
+        "production-science-pack"
       },
       effects = {
         {
@@ -178,7 +179,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 15
       },

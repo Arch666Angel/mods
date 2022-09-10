@@ -7,8 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-refining",
-        --"angels-metallurgy-3",
-        "powder-metallurgy-2",
+        "powder-metallurgy-3",
         "angels-cobalt-smelting-2",
         "chlorine-processing-2",
         "angels-sulfur-processing-2"
@@ -44,7 +43,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },
@@ -56,9 +56,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-4",
-        "ore-processing-3",
-        "powder-metallurgy-3",
+        "ore-processing-4",
+        "powder-metallurgy-4",
         "angels-tungsten-smelting-1",
         "angels-nickel-smelting-3",
         "angels-nitrogen-processing-2"
@@ -87,7 +86,8 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "production-science-pack", amount = 1},
+          {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 30
       },
@@ -99,8 +99,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-5",
-        "ore-processing-4",
+        "ore-processing-5",
         "angels-tungsten-smelting-2"
       },
       effects = {

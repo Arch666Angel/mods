@@ -12,7 +12,11 @@ Date: ???
       - Powder mixer
     - Removed Glowing hot iron plates
     - Disabled Solder mixture, unless using Component overhaul from Angel's Industries
-    - Made Advanced steel smelting and casting available at red science tech
+    - Changed the science pack tier of some techs
+      - Advanced steel smelting and casting 1 - 3
+      - Advanced tungsten smelting and casting 1 - 2
+    - Split techs Advanced iron casting 3 (805)
+    - Split tech Advanced steel casting 3
   Bugfixes:
     - Fixed tech prerequisites for Batteries 3 tech from bobplates (799)
     - Moved the silver oxide recipe to be used in a powder mixer

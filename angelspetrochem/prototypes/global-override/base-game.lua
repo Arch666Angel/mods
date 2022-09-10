@@ -58,6 +58,7 @@ OV.set_science_pack(
     "automation-science-pack",
     "logistic-science-pack",
     "chemical-science-pack",
+    "production-science-pack",
     "utility-science-pack"
   },
   1

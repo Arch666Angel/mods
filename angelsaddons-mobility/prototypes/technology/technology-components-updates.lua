@@ -17,6 +17,7 @@ if angelsmods.industries and angelsmods.industries.components then
   OV.add_prereq("angels-crawler-train-3", "angels-components-mechanical-3")
   OV.add_prereq("angels-crawler-train-3", "angels-components-cabling-3")
   OV.add_prereq("angels-crawler-train-3", "angels-components-construction-3")
+  OV.add_prereq("angels-crawler-train-3", "chemical-science-pack")
 
   OV.remove_prereq("angels-crawler-train-4", "speed-module-3")
   OV.remove_prereq("angels-crawler-train-4", "effectivity-module-3")
@@ -49,6 +50,7 @@ if angelsmods.industries and angelsmods.industries.components then
   OV.add_prereq("angels-petro-train-3", "angels-components-mechanical-3")
   OV.add_prereq("angels-petro-train-3", "angels-components-cabling-3")
   OV.add_prereq("angels-petro-train-3", "angels-components-construction-3")
+  OV.add_prereq("angels-petro-train-3", "chemical-science-pack")
 
   OV.remove_prereq("angels-petro-train-4", "speed-module-3")
   OV.remove_prereq("angels-petro-train-4", "effectivity-module-3")
@@ -81,6 +83,7 @@ if angelsmods.industries and angelsmods.industries.components then
   OV.add_prereq("angels-smelting-train-3", "angels-components-mechanical-3")
   OV.add_prereq("angels-smelting-train-3", "angels-components-cabling-3")
   OV.add_prereq("angels-smelting-train-3", "angels-components-construction-3")
+  OV.add_prereq("angels-smelting-train-3", "chemical-science-pack")
 
   OV.remove_prereq("angels-smelting-train-4", "speed-module-3")
   OV.remove_prereq("angels-smelting-train-4", "effectivity-module-3")

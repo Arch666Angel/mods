@@ -108,7 +108,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-4",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
@@ -141,7 +141,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-5",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
@@ -174,7 +174,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-6",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
@@ -207,7 +207,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-7",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
@@ -240,7 +240,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-8",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,
@@ -273,7 +273,7 @@ data:extend(
     {
       type = "recipe",
       name = "slag-processing-9",
-      category = "crystallizing",
+      category = "crystallizing-2",
       subgroup = "slag-processing-1",
       energy_required = 8,
       enabled = false,

@@ -4,6 +4,7 @@ if angelsmods.triggers.bio_rubber then
   OV.remove_prereq("rubbers", "rubber")
   OV.add_prereq("rubbers", "angels-oil-processing")
   OV.add_prereq("rubber", "rubbers")
+  OV.remove_science_pack("rubbers", "chemical-science-pack")
 else
   OV.disable_recipe({
     "desert-tree-generator-1",

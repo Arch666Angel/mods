@@ -22,4 +22,4 @@ OV.patch_recipes(
   }
 )
 
-OV.add_prereq("uranium-processing", "slag-processing-2")
+OV.add_prereq("uranium-processing", "ore-leaching")

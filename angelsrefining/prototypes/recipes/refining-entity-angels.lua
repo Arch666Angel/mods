@@ -479,10 +479,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "filter-2", amount = 1},
-          {type = "item", name = "t4-plate", amount = 2},
-          {type = "item", name = "t4-circuit", amount = 5},
-          {type = "item", name = "t4-pipe", amount = 8},
-          {type = "item", name = "t4-brick", amount = 5}
+          {type = "item", name = "t3-plate", amount = 2},
+          {type = "item", name = "t3-circuit", amount = 5},
+          {type = "item", name = "t3-pipe", amount = 8},
+          {type = "item", name = "t3-brick", amount = 5}
         },
         result = "filtration-unit-2"
       },
@@ -491,12 +491,40 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "filter-2", amount = 1},
+          {type = "item", name = "t3-plate", amount = 2 * buildingmulti},
+          {type = "item", name = "t3-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t3-pipe", amount = 8 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 5 * buildingmulti}
+        },
+        result = "filtration-unit-2"
+      }
+    },
+    {
+      type = "recipe",
+      name = "filtration-unit-3",
+      normal = {
+        energy_required = 5,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "filter-3", amount = 1},
+          {type = "item", name = "t4-plate", amount = 2},
+          {type = "item", name = "t4-circuit", amount = 5},
+          {type = "item", name = "t4-pipe", amount = 8},
+          {type = "item", name = "t4-brick", amount = 5}
+        },
+        result = "filtration-unit-3"
+      },
+      expensive = {
+        energy_required = 5 * buildingtime,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "filter-3", amount = 1},
           {type = "item", name = "t4-plate", amount = 2 * buildingmulti},
           {type = "item", name = "t4-circuit", amount = 5 * buildingmulti},
           {type = "item", name = "t4-pipe", amount = 8 * buildingmulti},
           {type = "item", name = "t4-brick", amount = 5 * buildingmulti}
         },
-        result = "filtration-unit-2"
+        result = "filtration-unit-3"
       }
     },
     --CRYSTALLIZER
@@ -536,10 +564,10 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "cryst-2", amount = 1},
-          {type = "item", name = "t4-plate", amount = 10},
-          {type = "item", name = "t4-circuit", amount = 5},
-          {type = "item", name = "t4-pipe", amount = 5},
-          {type = "item", name = "t4-brick", amount = 10}
+          {type = "item", name = "t3-plate", amount = 10},
+          {type = "item", name = "t3-circuit", amount = 5},
+          {type = "item", name = "t3-pipe", amount = 5},
+          {type = "item", name = "t3-brick", amount = 10}
         },
         result = "crystallizer-2"
       },
@@ -548,12 +576,40 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "cryst-2", amount = 1},
+          {type = "item", name = "t3-plate", amount = 10 * buildingmulti},
+          {type = "item", name = "t3-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t3-pipe", amount = 5 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 10 * buildingmulti}
+        },
+        result = "crystallizer-2"
+      }
+    },
+    {
+      type = "recipe",
+      name = "crystallizer-3",
+      normal = {
+        energy_required = 5,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "cryst-3", amount = 1},
+          {type = "item", name = "t4-plate", amount = 10},
+          {type = "item", name = "t4-circuit", amount = 5},
+          {type = "item", name = "t4-pipe", amount = 5},
+          {type = "item", name = "t4-brick", amount = 10}
+        },
+        result = "crystallizer-3"
+      },
+      expensive = {
+        energy_required = 5 * buildingtime,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "cryst-3", amount = 1},
           {type = "item", name = "t4-plate", amount = 10 * buildingmulti},
           {type = "item", name = "t4-circuit", amount = 5 * buildingmulti},
           {type = "item", name = "t4-pipe", amount = 5 * buildingmulti},
           {type = "item", name = "t4-brick", amount = 10 * buildingmulti}
         },
-        result = "crystallizer-2"
+        result = "crystallizer-3"
       }
     },
     --LIQUIFIER

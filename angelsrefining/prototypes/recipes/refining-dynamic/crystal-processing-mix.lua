@@ -172,7 +172,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore8-crystal-processing",
-      category = "ore-sorting-4",
+      category = "ore-sorting-3",
       subgroup = "ore-sorting-t4",
       energy_required = 1.5,
       allow_decomposition = false,
@@ -204,7 +204,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore9-crystal-processing",
-      category = "ore-sorting-4",
+      category = "ore-sorting-3",
       subgroup = "ore-sorting-t4",
       energy_required = 1.5,
       allow_decomposition = false,
@@ -237,7 +237,7 @@ data:extend(
     {
       type = "recipe",
       name = "angelsore-crystal-mix6-processing", --thorium
-      category = "ore-sorting-4",
+      category = "ore-sorting-3",
       subgroup = "ore-sorting-advanced",
       energy_required = 1.5,
       allow_decomposition = false,
@@ -246,7 +246,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "angels-ore8-crystal", amount = 2},
           {type = "item", name = "angels-ore9-crystal", amount = 2},
-          {type = "item", name = "catalysator-orange", amount = 1}
+          {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}
@@ -257,7 +257,7 @@ data:extend(
         ingredients = {
           {type = "item", name = "angels-ore8-crystal", amount = 3 * rawmulti},
           {type = "item", name = "angels-ore9-crystal", amount = 3 * rawmulti},
-          {type = "item", name = "catalysator-orange", amount = 1}
+          {type = "item", name = "catalysator-green", amount = 1}
         },
         results = {
           {type = "item", name = "angels-void", amount = 1}

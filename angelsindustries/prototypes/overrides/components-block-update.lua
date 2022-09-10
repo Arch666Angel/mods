@@ -307,7 +307,7 @@ if angelsmods.industries.components then
     )
     OV.add_prereq("ore-refining", "angels-advanced-blocks-1")
     OV.add_prereq("advanced-ore-refining-3", "angels-advanced-blocks-1")
-    OV.add_prereq("angels-advanced-chemistry-3", "angels-advanced-blocks-1")
+    OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-1")
     OV.add_prereq("angels-metallurgy-4", "angels-advanced-blocks-1")
     OV.remove_prereq("bio-refugium-biter-1", "stone-wall")
     OV.add_prereq("bio-processing-blue", "angels-advanced-blocks-1")
@@ -361,6 +361,7 @@ if angelsmods.industries.components then
               {type = "item", name = "automation-science-pack", amount = 1},
               {type = "item", name = "logistic-science-pack", amount = 1},
               {type = "item", name = "chemical-science-pack", amount = 1},
+              {type = "item", name = "production-science-pack", amount = 1},
               {type = "item", name = "utility-science-pack", amount = 1}
             },
             time = 60
@@ -371,7 +372,7 @@ if angelsmods.industries.components then
     )
     OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
     OV.set_science_pack("advanced-ore-refining-4", "utility-science-pack", 1)
-    OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-2")
+    OV.add_prereq("angels-advanced-chemistry-5", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
 
     -- Disable unused blocks
@@ -474,6 +475,7 @@ if angelsmods.industries.components then
         },
         "hidden"
       )
+      OV.remove_prereq("military-3", "angels-tungsten-smelting-1")
     end
     if angelsmods.industries.blocks.enhancement5 == false then
       OV.disable_recipe("block-enhancement-5")

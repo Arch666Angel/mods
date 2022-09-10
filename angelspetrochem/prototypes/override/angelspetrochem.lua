@@ -145,7 +145,7 @@ elseif mods["bobplates"] or angelsmods.industries and angelsmods.industries.over
     }
   )
   OV.add_prereq("angels-advanced-chemistry-3", "ore-leaching")
-  OV.add_prereq("angels-advanced-chemistry-4", "ore-refining")
+  OV.add_prereq("angels-advanced-chemistry-5", "ore-refining")
 else -- special vanilla
   OV.patch_recipes(
     {

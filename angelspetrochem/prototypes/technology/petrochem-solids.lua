@@ -59,7 +59,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "plastic-2",
-        "angels-advanced-chemistry-4"
+        "angels-advanced-chemistry-5"
       },
       effects = {
         {
@@ -73,6 +73,7 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 15
@@ -161,7 +162,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "resin-2",
-        "angels-advanced-chemistry-4",
+        "angels-advanced-chemistry-5",
         "chlorine-processing-3"
       },
       effects = {
@@ -176,6 +177,7 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 15
@@ -200,7 +202,8 @@ data:extend(
         count = 50,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 15
       },

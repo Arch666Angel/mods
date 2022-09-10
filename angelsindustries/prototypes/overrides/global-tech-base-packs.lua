@@ -135,16 +135,17 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-gold-smelting-1", "blue", "orange")
   AI.pack_replace("angels-manganese-smelting-2", "blue", "orange")
   AI.pack_replace("angels-silver-smelting-2", "blue", "orange")
-  AI.pack_replace("angels-steel-smelting-2", "green", "orange")
+  AI.pack_replace("angels-steel-smelting-3", "blue", "orange")
   AI.pack_replace("angels-zinc-smelting-2", "blue", "orange")
   AI.pack_replace("angels-copper-smelting-3", "blue", "orange")
+  AI.pack_replace("angels-copper-casting-3", "blue", "orange")
   AI.pack_replace("angels-lead-smelting-3", "blue", "orange")
   AI.pack_replace("angels-nickel-smelting-3", "blue", "orange")
   AI.pack_replace("angels-silicon-smelting-3", "blue", "orange")
   AI.pack_replace("angels-stone-smelting-3", "blue", "orange")
   AI.pack_replace("angels-tin-smelting-3", "blue", "orange")
   AI.pack_replace("angels-iron-smelting-3", "blue", "orange")
-  OV.remove_prereq("angels-iron-smelting-3", "angels-chrome-smelting-1")
+  AI.pack_replace("angels-iron-casting-3", "blue", "orange")
   --BIOPROCESSING
   AI.pack_replace("angels-bio-yield-module", "green", "orange")
   AI.pack_replace("bio-wood-processing-3", "green", "orange")
@@ -183,6 +184,8 @@ if angelsmods.industries.tech then
   AI.pack_replace("electric-energy-distribution-2", "orange", "blue")
   OV.remove_prereq("automation-3", "production-science-pack")
   OV.remove_prereq("kovarex-enrichment-process", "production-science-pack")
+  -- REFINING
+  OV.remove_prereq("ore-refining", "production-science-pack")
   -- PETROCHEM
   OV.remove_prereq("water-chemistry-1", "production-science-pack")
   -- SMELTING

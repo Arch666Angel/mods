@@ -12,8 +12,16 @@ Date: ???
       - Washing plant 1
     - Changed the science pack tier of some techs
       - Advanced ore refining 2
+      - Advanced ore refining 3
       - Advanced ore refining 4
       - Water treatment 3
+      - Water treatment 4
+    - Added Crystallizer 3 and Filtration unit 3 (805)
+      - Made thorium sorting recipe take crystal catalyst instead of hybrid catalyst
+      - Made gem crystallization recipes require Crystallizer 2
+      - Made some mineral sludge crystallization recipe require Crystallizer 2
+      - Made crystal catalyst recipe require Crystallizer 2
+      - Made hybrid catalyst recipe require Crystallizer 3
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.2
 Date: 06.06.2022

@@ -549,6 +549,8 @@ OV.patch_recipes(
 )
 
 if special_vanilla then
+  OV.remove_prereq("uranium-processing", "ore-leaching")
+  OV.add_prereq("uranium-processing", "slag-processing-2")
 else
   -- disable the nuggets and pebbles
   OV.disable_recipe(
@@ -579,7 +581,8 @@ else
       "ore-electro-whinning-cell"
     }
   )
-  
+  OV.remove_prereq("advanced-ore-refining-3", "ore-electro-whinning-cell")
+
   -- hide electro winning cells
   OV.hide_recipe({
     "electro-whinning-cell",
@@ -589,6 +592,8 @@ else
   angelsmods.functions.add_flag("electro-whinning-cell", "hidden")
   angelsmods.functions.add_flag("electro-whinning-cell-2", "hidden")
   angelsmods.functions.add_flag("electro-whinning-cell-3", "hidden")
+  OV.remove_unlock("advanced-ore-refining-3", "electro-whinning-cell-2")
+  OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-3")
 
   if angelsmods.bioprocessing then
   else
@@ -605,6 +610,7 @@ else
     angelsmods.functions.add_flag("ore-powderizer-3", "hidden")
     angelsmods.functions.add_flag("milling-drum", "hidden")
     angelsmods.functions.add_flag("milling-drum-used", "hidden")
+    OV.remove_unlock("advanced-ore-refining-3", "ore-powderizer-3")
   end
 end
 

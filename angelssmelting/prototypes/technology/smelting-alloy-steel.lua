@@ -93,18 +93,12 @@ data:extend(
         "strand-casting-2",
         "angels-steel-smelting-2",
         "angels-nickel-smelting-3",
-        --"angels-cobalt-smelting-1", -- prerequisite of tungsten
-        "angels-chrome-smelting-1",
-        "angels-tungsten-smelting-1"
+        "angels-cobalt-smelting-1"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "molten-steel-smelting-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "molten-steel-smelting-5"
         },
         {
           type = "unlock-recipe",
@@ -121,6 +115,35 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-steel-smelting-4",
+      localised_name = {"", {"technology-name.angels-steel-casting"}, " 4"},
+      icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+      icon_size = 256, icon_mipmaps = 4,
+      prerequisites = {
+        "angels-steel-smelting-3",
+        "angels-chrome-smelting-1",
+        "angels-tungsten-smelting-1"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "molten-steel-smelting-5"
+        }
+      },
+      unit = {
+        count = 200,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },

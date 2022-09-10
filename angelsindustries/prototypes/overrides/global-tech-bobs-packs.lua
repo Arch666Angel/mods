@@ -275,12 +275,11 @@ if angelsmods.industries.tech then
     end
     -- solar power
     if settings.startup["bobmods-power-solar"].value == true then
-      AI.pack_replace("bob-solar-energy-2", "green", "orange")
-      AI.pack_replace("bob-solar-energy-4", "blue", "yellow")
+      AI.pack_replace("bob-solar-energy-2", "blue", "orange")
     end
     if settings.startup["bobmods-power-accumulators"].value == true then
-      AI.pack_replace("bob-electric-energy-accumulators-2", "green", "orange")
-      AI.pack_replace("bob-electric-energy-accumulators-4", "blue", "yellow")
+      AI.pack_replace("electric-energy-accumulators", "orange", "green")
+      AI.pack_replace("bob-electric-energy-accumulators-2", "blue", "orange")
     end
     -- nuclar power
     if settings.startup["bobmods-power-steam"].value == true or
@@ -290,7 +289,7 @@ if angelsmods.industries.tech then
     end
     -- power distribution
     if settings.startup["bobmods-power-poles"].value == true then
-      AI.pack_replace("electric-pole-2", "blue", "orange")
+      AI.pack_replace("electric-pole-2", "green", "orange")
       AI.pack_replace("electric-pole-4", "blue", "yellow")
       AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
       AI.pack_replace("electric-substation-3", "blue", "yellow")
@@ -332,15 +331,6 @@ if angelsmods.industries.tech then
       OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
       OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
     end
-
-    --remove all advanced-logistics packs
-    OV.disable_recipe({"advanced-logistic-science-pack"})
-    angelsmods.functions.add_flag("advanced-logistic-science-pack", "hidden")
-    for rec_4tech in pairs(data.raw.technology) do
-      OV.remove_science_pack(rec_4tech, "advanced-logistic-science-pack")
-      OV.remove_prereq(rec_4tech, "advanced-logistic-science-pack")
-    end
-    OV.disable_technology({"advanced-logistic-science-pack"})
   end
 
   OV.execute()

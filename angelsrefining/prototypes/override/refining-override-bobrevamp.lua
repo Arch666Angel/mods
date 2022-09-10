@@ -24,7 +24,4 @@ if mods["bobrevamp"] then
       end
     end
   end
-  if mods["bobplates"] and settings.startup["bobmods-revamp-old-oil"] then
-    OV.hide_recipe({"sulfuric-acid","sulfur"})
-  end
 end

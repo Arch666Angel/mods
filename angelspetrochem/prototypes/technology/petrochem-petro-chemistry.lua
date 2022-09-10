@@ -326,45 +326,12 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-advanced-chemistry-2",
-        "advanced-electronics-2",
         "angels-advanced-gas-processing",
         "chlorine-processing-1",
         "oil-steam-cracking-2",
         "thermal-water-extraction"
       },
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electrolyser-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "separator-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-small-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "oil-refinery-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "advanced-chemical-plant-2"
-        },
         {
           type = "unlock-recipe",
           recipe = "condensates-refining"
@@ -408,6 +375,62 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-advanced-chemistry-3",
+        "advanced-electronics-2",
+        "production-science-pack"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-electrolyser-4"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-chemical-plant-4"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "separator-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-refinery-2"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "gas-refinery-small-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "oil-refinery-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "steam-cracker-3"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "advanced-chemical-plant-2"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
+        },
+        time = 15
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "angels-advanced-chemistry-5",
+      icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
+      icon_size = 128,
+      prerequisites = {
+        "angels-advanced-chemistry-4",
         "utility-science-pack"
       },
       effects = {
@@ -454,6 +477,7 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 15
@@ -726,7 +750,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-electric-boiler-2",
-        "angels-advanced-chemistry-4"
+        "angels-advanced-chemistry-5"
       },
       effects = {
         {
@@ -740,6 +764,7 @@ data:extend(
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
           {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1},
           {type = "item", name = "utility-science-pack", amount = 1}
         },
         time = 15
