@@ -202,6 +202,7 @@ if angelsmods.functions.is_special_vanilla() then
       "gas-ammonium-chloride"
     }
   )
+  OV.remove_prereq("angels-nitrogen-processing-2", "chlorine-processing-1")
   angelsmods.functions.add_flag({
     "solid-calcium-chloride",
     "gas-phosgene",
@@ -316,21 +317,6 @@ OV.disable_recipe(
 )
 
 -----------------------------------------------------------------------------
--- ACIDS --------------------------------------------------------------------
------------------------------------------------------------------------------
-if angelsmods.trigger.enableacids == false then
-  OV.disable_recipe(
-    {
-      "liquid-hydrofluoric-acid",
-      "liquid-hydrogen-fluoride"
-    }
-  )
-  angelsmods.functions.add_flag({
-    "liquid-hydrofluoric-acid"
-  }, "hidden")
-end
-
------------------------------------------------------------------------------
 -- SULFURIC ACID ------------------------------------------------------------
 -----------------------------------------------------------------------------
 if angelsmods.trigger.early_sulfuric_acid == true then
@@ -401,6 +387,12 @@ end
 -- HYDROGEN FLUORIDE GAS ----------------------------------------------------
 -----------------------------------------------------------------------------
 if angelsmods.trigger.gas_hydrogen_fluoride == false then
+  OV.disable_recipe(
+    {
+      "liquid-hydrofluoric-acid",
+      "liquid-hydrogen-fluoride"
+    }
+  )
   OV.patch_recipes(
     {
       {
@@ -411,6 +403,7 @@ if angelsmods.trigger.gas_hydrogen_fluoride == false then
     }
   )
   angelsmods.functions.add_flag({
-    "gas-hydrogen-fluoride"
+    "gas-hydrogen-fluoride",
+    "liquid-hydrofluoric-acid"
   }, "hidden")
 end

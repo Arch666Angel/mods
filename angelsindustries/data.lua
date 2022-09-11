@@ -31,6 +31,10 @@ angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].va
 if mods["bobplates"] or angelsmods.industries.components then
   angelsmods.industries.overhaul = true
 end
+if angelsmods.industries.overhaul then
+  angelsmods.trigger.water_greenyellow_waste = true
+  angelsmods.trigger.water_green_waste = true
+end
 
 angelsmods.industries.return_ingredients =
   angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false

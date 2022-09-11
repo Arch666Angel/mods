@@ -289,6 +289,47 @@ UnitTestConfiguration.addConfiguration("BA (regular)",
   }
 )
 
+UnitTestConfiguration.addConfiguration("BA (no acid in refining)",
+  [
+    "angelsrefining",
+    "angelspetrochem",
+    "angelssmelting",
+    "angelsbioprocessing",
+    #"angelsindustries",
+    #"angelsexploration",
+
+    "angelsaddons-storage",
+
+    "boblibrary",
+    "bobassembly",
+    "bobclasses",
+    "bobelectronics",
+    "bobenemies",
+    "bobequipment",
+    #"bobgreenhouse",
+    "bobinserters",
+    "boblogistics",
+    "bobmining",
+    "bobmodules",
+    "bobores",
+    "bobplates",
+    "bobpower",
+    "bobrevamp",
+    "bobtech",
+    "bobvehicleequipment",
+    "bobwarfare",
+  ],
+  {
+    "startup":
+    {
+      #"angels-enable-industries": False, # Angels overhaul
+      #"angels-enable-components": False, # Angels component mode
+      #"angels-enable-tech"      : False, # Angels technology mode
+      "angels-enable-acids"     : False
+    }
+  }
+)
+
 UnitTestConfiguration.addConfiguration("BA (extended)",
   [
     "angelsrefining",
