@@ -244,7 +244,7 @@ data:extend(
     {
       type = "recipe",
       name = "mold-non-expendable",
-      category = "sintering",
+      category = "sintering-2",
       subgroup = "angels-mold-casting",
       energy_required = 4,
       enabled = false,

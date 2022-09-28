@@ -37,33 +37,45 @@ if angelsmods.industries.components then
     local num
     local molten1
     local molten2
+    local category1
+    local category2
     if metal == "iron" then
       num = 1
       molten1 = {type = "fluid", name = "liquid-molten-iron", amount = 15}
       molten2 = {type = "fluid", name = "liquid-molten-iron", amount = 20}
+      category1 = "casting"
+      category2 = "casting-2"
     elseif metal == "steel" then
       num = 2
       molten1 = {type = "fluid", name = "liquid-molten-steel", amount = 15}
       molten2 = {type = "fluid", name = "liquid-molten-steel", amount = 20}
+      category1 = "casting"
+      category2 = "casting-3"
     elseif metal == "aluminium" then
       num = 3
       molten1 = {type = "fluid", name = "liquid-molten-aluminium", amount = 15}
       molten2 = {type = "fluid", name = "liquid-molten-aluminium", amount = 20}
+      category1 = "casting-2"
+      category2 = "casting-3"
     elseif metal == "titanium" then
       num = 4
       molten1 = {type = "fluid", name = "liquid-molten-titanium", amount = 15}
       molten2 = {type = "fluid", name = "liquid-molten-titanium", amount = 20}
+      category1 = "casting-3"
+      category2 = "casting-4"
     --[[elseif metal=="tungsten" then
-      num=5
+      num = 5
       molten1={type = "item", name = "casting-powder-tungsten", amount = 3}
-      molten2={type = "item", name = "casting-powder-tungsten", amount = 20}]]
+      molten2={type = "item", name = "casting-powder-tungsten", amount = 20}
+      category1 = "sintering-3"
+      category2 = "sintering-4"]]
     end
     data:extend(
       {
         {
           type = "recipe",
           name = "angels-casing-" .. metal .. "-1",
-          category = "casting",
+          category = category1,
           subgroup = "angels-" .. metal .. "-casting",
           localised_name = {"recipe-name.casing", metal, num, "expendable"},
           enabled = false,
@@ -94,7 +106,7 @@ if angelsmods.industries.components then
         {
           type = "recipe",
           name = "angels-casing-" .. metal .. "-2",
-          category = "casting-2",
+          category = category2,
           subgroup = "angels-" .. metal .. "-casting",
           localised_name = {"recipe-name.casing", metal, num, "reusable"},
           enabled = false,
@@ -131,7 +143,7 @@ if angelsmods.industries.components then
       {
         type = "recipe",
         name = "angels-casing-tungsten-1",
-        category = "sintering",
+        category = "sintering-3",
         subgroup = "angels-tungsten-casting",
         enabled = false,
         energy_required = 20,
@@ -190,7 +202,7 @@ if angelsmods.industries.components then
       {
         type = "recipe",
         name = "angels-casing-tungsten-2",
-        category = "sintering",
+        category = "sintering-4",
         subgroup = "angels-tungsten-casting",
         enabled = false,
         energy_required = 10,
