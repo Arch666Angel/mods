@@ -769,7 +769,7 @@ if angelsmods.industries.components then
       type = "recipe",
       name = "battery-frame-6",
       enabled = false,
-      category = "sintering",
+      category = "sintering-4",
       energy_required = 5,
       ingredients =
       {
