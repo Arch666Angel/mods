@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         {
           type = "recipe",
           name = "angels-nitinol-smelting-1",
-          category = "induction-smelting-3",
+          category = "induction-smelting-4",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         {
           type = "recipe",
           name = "angels-plate-nitinol",
-          category = "casting-3",
+          category = "casting-4",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -72,6 +72,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           icon = "__angelssmelting__/graphics/technology/casting-nitinol-tech.png",
           icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
+            "angels-metallurgy-4",
             "angels-titanium-smelting-1",
             "angels-nickel-smelting-3"
           },
@@ -90,7 +91,8 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
             ingredients = {
               {type = "item", name = "automation-science-pack", amount = 1},
               {type = "item", name = "logistic-science-pack", amount = 1},
-              {type = "item", name = "chemical-science-pack", amount = 1}
+              {type = "item", name = "chemical-science-pack", amount = 1},
+              {type = "item", name = "production-science-pack", amount = 1}
             },
             time = 30
           },
@@ -103,6 +105,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
     data.raw["item"]["nitinol-alloy"].icon_size = 32
     data.raw["item"]["nitinol-alloy"].icon_mipmaps = 1
     OV.add_prereq("nitinol-processing", "angels-nitinol-smelting-1")
+    OV.remove_prereq("nitinol-processing", "titanium-processing")
     OV.disable_recipe({"nitinol-alloy"})
     angelsmods.functions.allow_productivity("angels-plate-nitinol")
   end
