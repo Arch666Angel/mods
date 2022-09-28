@@ -157,7 +157,7 @@ data:extend(
         --"angels-metallurgy-3",
         "strand-casting-2",
         "angels-iron-casting-2",
-        "angels-nickel-smelting-2",
+        "angels-nickel-smelting-1",
         "angels-cobalt-smelting-1"
       },
       effects = {

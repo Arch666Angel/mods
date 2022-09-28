@@ -74,7 +74,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           prerequisites = {
             "angels-metallurgy-4",
             "angels-titanium-smelting-1",
-            "angels-nickel-smelting-3"
+            "angels-nickel-smelting-2"
           },
           effects = {
             {

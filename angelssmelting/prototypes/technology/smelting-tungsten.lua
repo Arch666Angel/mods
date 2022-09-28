@@ -59,7 +59,7 @@ data:extend(
         "ore-processing-4",
         "powder-metallurgy-4",
         "angels-tungsten-smelting-1",
-        "angels-nickel-smelting-3",
+        "angels-nickel-smelting-2",
         "angels-nitrogen-processing-2"
       },
       effects = {

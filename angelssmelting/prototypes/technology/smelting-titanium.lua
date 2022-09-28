@@ -92,7 +92,7 @@ data:extend(
         "strand-casting-3",
         "angels-titanium-smelting-1",
         "angels-manganese-smelting-2",
-        "angels-nickel-smelting-3"
+        "angels-nickel-smelting-2"
       },
       effects = {
         {

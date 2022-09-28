@@ -8,7 +8,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "angels-metallurgy-1",
+        "angels-metallurgy-2",
         "basic-chemistry-2"
       },
       effects = {
@@ -26,9 +26,10 @@ data:extend(
         }
       },
       unit = {
-        count = 100,
+        count = 150,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -40,8 +41,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-2",
-        "ore-processing-1",
+        --"angels-metallurgy-3",
+        "ore-processing-2",
         "angels-nickel-smelting-1",
         "angels-sulfur-processing-1"
       },
@@ -64,10 +65,11 @@ data:extend(
         }
       },
       unit = {
-        count = 150,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -79,8 +81,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-2",
-        "strand-casting-1",
+        --"angels-metallurgy-3",
+        "strand-casting-2",
         "angels-nickel-smelting-1",
       },
       effects = {
@@ -94,10 +96,11 @@ data:extend(
         }
       },
       unit = {
-        count = 150,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -109,8 +112,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "ore-processing-2",
+        --"angels-metallurgy-4",
+        "ore-processing-3",
         "angels-nickel-smelting-2",
         "angels-sulfur-processing-3"
       },
@@ -129,11 +132,12 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },
@@ -145,8 +149,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "strand-casting-2",
+        --"angels-metallurgy-4",
+        "strand-casting-3",
         "angels-nickel-casting-2"
       },
       effects = {
@@ -156,11 +160,12 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },

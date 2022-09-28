@@ -145,7 +145,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
           icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
-            "angels-metallurgy-2",
+            --"angels-metallurgy-2",
             "angels-bronze-smelting-1",
             "angels-nickel-smelting-1"
           },
