@@ -8,7 +8,7 @@ data:extend(
     {
       type = "recipe",
       name = "silver-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-silver",
       energy_required = 2,
       enabled = false,
@@ -24,7 +24,7 @@ data:extend(
     {
       type = "recipe",
       name = "silver-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-2",
       subgroup = "angels-silver",
       energy_required = 2,
       enabled = false,
@@ -56,7 +56,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-silver-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-silver",
       energy_required = 6,
       enabled = false,
@@ -76,7 +76,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-sodium-silver-cyanide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-silver",
       energy_required = 6,
       enabled = false,
@@ -92,7 +92,7 @@ data:extend(
     {
       type = "recipe",
       name = "silver-ore-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-silver",
       energy_required = 4,
       enabled = false,
@@ -110,7 +110,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-silver-nitrate-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-silver",
       energy_required = 4,
       enabled = false,
@@ -128,7 +128,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-silver-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-silver",
       energy_required = 4,
       enabled = false,
@@ -162,7 +162,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-silver-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-silver-casting",
       energy_required = 4,
       enabled = false,
@@ -178,7 +178,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-silver-casting",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,
@@ -211,7 +211,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-silver-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-3",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,
@@ -248,7 +248,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-silver-casting",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,
@@ -283,7 +283,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-silver-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-3",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,
@@ -323,7 +323,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-silver",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-silver-casting",
       normal = {
         enabled = false,

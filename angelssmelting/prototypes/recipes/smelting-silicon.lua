@@ -65,7 +65,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-silicon-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -130,7 +130,7 @@ data:extend(
     {
       type = "recipe",
       name = "gas-silane-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -271,7 +271,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-mono-silicon-2",
-      category = "casting",
+      category = "casting-3",
       subgroup = "angels-silicon-casting",
       normal = {
         enabled = false,

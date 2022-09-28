@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "bauxite-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-aluminium",
       energy_required = 2,
       enabled = false,
@@ -24,7 +24,7 @@ data:extend(
     {
       type = "recipe",
       name = "aluminium-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-2",
       subgroup = "angels-aluminium",
       energy_required = 2,
       enabled = false,
@@ -40,7 +40,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-aluminium-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-aluminium",
       energy_required = 6,
       enabled = false,
@@ -96,7 +96,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-aluminium-hydroxide-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-aluminium",
       energy_required = 4,
       enabled = false,
@@ -114,7 +114,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-sodium-aluminate-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-aluminium",
       energy_required = 4,
       enabled = false,
@@ -137,7 +137,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-aluminium-oxide-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-aluminium",
       energy_required = 4,
       enabled = false,
@@ -169,7 +169,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-aluminium-smelting-1",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-aluminium-casting",
       energy_required = 4,
       enabled = false,
@@ -188,7 +188,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-aluminium-smelting-2",
-      category = "induction-smelting-2",
+      category = "induction-smelting-3",
       subgroup = "angels-aluminium-casting",
       energy_required = 4,
       enabled = false,
@@ -208,7 +208,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-aluminium-smelting-3",
-      category = "induction-smelting-3",
+      category = "induction-smelting-4",
       subgroup = "angels-aluminium-casting",
       energy_required = 4,
       enabled = false,
@@ -229,7 +229,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-aluminium-casting",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-aluminium-casting",
       normal = {
         enabled = false,
@@ -262,7 +262,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-aluminium-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-3",
       subgroup = "angels-aluminium-casting",
       normal = {
         enabled = false,
@@ -300,7 +300,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-aluminium",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-aluminium-casting",
       normal = {
         enabled = false,

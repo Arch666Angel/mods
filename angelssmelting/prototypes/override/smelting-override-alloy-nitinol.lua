@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         {
           type = "recipe",
           name = "angels-nitinol-smelting-1",
-          category = "induction-smelting",
+          category = "induction-smelting-3",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         {
           type = "recipe",
           name = "angels-plate-nitinol",
-          category = "casting",
+          category = "casting-3",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,

@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "titanium-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-3",
       subgroup = "angels-titanium",
       energy_required = 2,
       enabled = false,
@@ -23,7 +23,7 @@ data:extend(
     {
       type = "recipe",
       name = "titanium-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-3",
       subgroup = "angels-titanium",
       energy_required = 2,
       enabled = false,
@@ -38,7 +38,7 @@ data:extend(
     {
       type = "recipe",
       name = "titanium-ore-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-titanium",
       energy_required = 8,
       enabled = false,
@@ -63,7 +63,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-titanium-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-titanium",
       energy_required = 8,
       enabled = false,
@@ -88,7 +88,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-titanium-tetrachloride-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-titanium",
       energy_required = 6,
       enabled = false,
@@ -105,7 +105,7 @@ data:extend(
     {
       type = "recipe",
       name = "sponge-titanium-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-titanium",
       energy_required = 4,
       enabled = false,
@@ -123,7 +123,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-titanium-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-titanium",
       energy_required = 6,
       enabled = false,
@@ -161,7 +161,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-1",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -180,7 +180,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-2",
-      category = "induction-smelting-2",
+      category = "induction-smelting-4",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -200,7 +200,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-3",
-      category = "induction-smelting-2",
+      category = "induction-smelting-4",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -220,7 +220,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-4",
-      category = "induction-smelting-3",
+      category = "induction-smelting-4",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -241,7 +241,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-titanium-smelting-5",
-      category = "induction-smelting-3",
+      category = "induction-smelting-4",
       subgroup = "angels-titanium-casting",
       energy_required = 4,
       enabled = false,
@@ -262,7 +262,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-titanium-casting",
-      category = "strand-casting",
+      category = "strand-casting-3",
       subgroup = "angels-titanium-casting",
       normal = {
         enabled = false,
@@ -295,7 +295,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-titanium-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-4",
       subgroup = "angels-titanium-casting",
       normal = {
         enabled = false,
@@ -332,7 +332,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-titanium",
-      category = "casting",
+      category = "casting-3",
       subgroup = "angels-titanium-casting",
       normal = {
         enabled = false,

@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "gold-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-3",
       subgroup = "angels-gold",
       energy_required = 2,
       enabled = false,
@@ -25,7 +25,7 @@ data:extend(
     {
       type = "recipe",
       name = "gold-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-3",
       subgroup = "angels-gold",
       energy_required = 2,
       enabled = false,
@@ -42,7 +42,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-gold-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-4",
       subgroup = "angels-gold",
       energy_required = 4,
       enabled = false,
@@ -83,7 +83,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-gold-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-gold",
       energy_required = 6,
       enabled = false,
@@ -102,7 +102,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-sodium-gold-cyanide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-4",
       subgroup = "angels-gold",
       energy_required = 6,
       enabled = false,
@@ -121,7 +121,7 @@ data:extend(
     {
       type = "recipe",
       name = "gold-ore-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-gold",
       energy_required = 4,
       enabled = false,
@@ -140,7 +140,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-gold-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-gold",
       energy_required = 4,
       enabled = false,
@@ -174,7 +174,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-gold-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-gold-casting",
       energy_required = 4,
       enabled = false,
@@ -192,7 +192,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-gold-casting",
-      category = "strand-casting",
+      category = "strand-casting-3",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -225,7 +225,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-gold-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-4",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -262,7 +262,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-gold-casting",
-      category = "strand-casting",
+      category = "strand-casting-3",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -297,7 +297,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-wire-coil-gold-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-4",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,
@@ -337,7 +337,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-gold",
-      category = "casting",
+      category = "casting-3",
       subgroup = "angels-gold-casting",
       normal = {
         enabled = false,

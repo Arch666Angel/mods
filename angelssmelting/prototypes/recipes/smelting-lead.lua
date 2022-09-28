@@ -38,7 +38,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-lead-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-lead",
       energy_required = 4,
       enabled = false,
@@ -56,7 +56,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-lead-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-lead",
       energy_required = 4,
       enabled = false,
@@ -123,7 +123,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-lead-oxide-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-lead",
       energy_required = 4,
       enabled = false,
@@ -143,7 +143,7 @@ data:extend(
     {
       type = "recipe",
       name = "anode-lead-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-lead",
       energy_required = 6,
       enabled = false,

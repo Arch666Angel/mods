@@ -119,7 +119,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-steel-smelting-5",
-      category = "induction-smelting-3",
+      category = "induction-smelting-4",
       subgroup = "angels-steel-casting",
       energy_required = 4,
       enabled = false,

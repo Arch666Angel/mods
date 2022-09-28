@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "recipe",
           name = "angels-brass-smelting-1",
-          category = "induction-smelting",
+          category = "induction-smelting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -55,7 +55,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "recipe",
           name = "angels-brass-smelting-2",
-          category = "induction-smelting",
+          category = "induction-smelting-3",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -76,7 +76,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "recipe",
           name = "angels-brass-smelting-3",
-          category = "induction-smelting",
+          category = "induction-smelting-4",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -98,7 +98,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         {
           type = "recipe",
           name = "angels-plate-brass",
-          category = "casting",
+          category = "casting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,

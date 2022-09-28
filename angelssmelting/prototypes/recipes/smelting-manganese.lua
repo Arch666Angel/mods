@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "manganese-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-manganese",
       energy_required = 2,
       enabled = false,
@@ -23,7 +23,7 @@ data:extend(
     {
       type = "recipe",
       name = "manganese-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-2",
       subgroup = "angels-manganese",
       energy_required = 2,
       enabled = false,
@@ -38,7 +38,7 @@ data:extend(
     {
       type = "recipe",
       name = "manganese-processed-processing-alt",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 2,
       enabled = false,
@@ -57,7 +57,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-manganese-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-manganese",
       energy_required = 4,
       enabled = false,
@@ -76,7 +76,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-manganese-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 6,
       enabled = false,
@@ -95,7 +95,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-manganese-oxide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-manganese",
       energy_required = 6,
       enabled = false,
@@ -118,7 +118,7 @@ data:extend(
     {
       type = "recipe",
       name = "manganese-ore-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 4,
       enabled = false,
@@ -137,7 +137,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-manganese-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-manganese",
       energy_required = 4,
       enabled = false,
@@ -171,7 +171,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-manganese-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-manganese-casting",
       energy_required = 4,
       enabled = false,
@@ -187,7 +187,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-manganese-casting",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-manganese-casting",
       normal = {
         enabled = false,
@@ -220,7 +220,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-manganese-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-3",
       subgroup = "angels-manganese-casting",
       normal = {
         enabled = false,
@@ -258,7 +258,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-manganese",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-manganese-casting",
       normal = {
         enabled = false,

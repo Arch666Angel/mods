@@ -38,7 +38,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         {
           type = "recipe",
           name = "angels-invar-smelting-1",
-          category = "induction-smelting",
+          category = "induction-smelting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -56,7 +56,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         {
           type = "recipe",
           name = "angels-plate-invar",
-          category = "casting",
+          category = "casting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,

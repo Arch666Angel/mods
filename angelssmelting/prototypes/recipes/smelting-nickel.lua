@@ -54,7 +54,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-nickel-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,
@@ -91,7 +91,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-nickel-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,
@@ -109,7 +109,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-nickel-carbonyl-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,

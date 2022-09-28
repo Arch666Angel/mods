@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "zinc-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-zinc",
       energy_required = 2,
       enabled = false,
@@ -24,7 +24,7 @@ data:extend(
     {
       type = "recipe",
       name = "zinc-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-2",
       subgroup = "angels-zinc",
       energy_required = 2,
       enabled = false,
@@ -61,7 +61,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-zinc-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-zinc",
       energy_required = 4,
       enabled = false,
@@ -82,7 +82,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-zinc-oxide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-zinc",
       energy_required = 6,
       enabled = false,
@@ -122,7 +122,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-zinc-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-zinc",
       energy_required = 4,
       enabled = false,
@@ -144,7 +144,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-zinc-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-zinc",
       energy_required = 4,
       enabled = false,
@@ -178,7 +178,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-zinc-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-zinc-casting",
       energy_required = 4,
       enabled = false,
@@ -194,7 +194,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-zinc-casting",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-zinc-casting",
       normal = {
         enabled = false,
@@ -227,7 +227,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-zinc-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-3",
       subgroup = "angels-zinc-casting",
       normal = {
         enabled = false,
@@ -264,7 +264,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-zinc",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-zinc-casting",
       normal = {
         enabled = false,
