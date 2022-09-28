@@ -141,14 +141,14 @@ data:extend(
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       },
     },
@@ -277,14 +277,14 @@ data:extend(
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       },
     },
@@ -413,14 +413,14 @@ data:extend(
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       },
     },
@@ -548,14 +548,14 @@ data:extend(
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       },
     }

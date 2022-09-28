@@ -102,21 +102,21 @@ data:extend(
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, -3}}}
+          pipe_connections = {{type = "output", position = {-2, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {0, -3}}}
+          pipe_connections = {{type = "output", position = {0, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, -3}}}
+          pipe_connections = {{type = "output", position = {2, -3}}}
         }
         --off_when_no_fluid_recipe = true
       },
@@ -228,21 +228,21 @@ data:extend(
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, -3}}}
+          pipe_connections = {{type = "output", position = {-2, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {0, -3}}}
+          pipe_connections = {{type = "output", position = {0, -3}}}
         },
         {
           production_type = "output",
           --pipe_picture = floatationpipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, -3}}}
+          pipe_connections = {{type = "output", position = {2, -3}}}
         }
         --off_when_no_fluid_recipe = true
       },

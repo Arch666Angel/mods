@@ -22,6 +22,8 @@ Date: ???
       - Made some mineral sludge crystallization recipe require Crystallizer 2
       - Made crystal catalyst recipe require Crystallizer 2
       - Made hybrid catalyst recipe require Crystallizer 3
+  Bugfixes:
+    - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.2
 Date: 06.06.2022

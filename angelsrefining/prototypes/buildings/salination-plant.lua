@@ -116,7 +116,7 @@ data:extend(
           --pipe_picture = salinationpipepictures2(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, 4}}}
+          pipe_connections = {{type = "output", position = {1, 4}}}
         }
       },
     },
@@ -235,7 +235,7 @@ data:extend(
           --pipe_picture = salinationpipepictures2(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, 4}}}
+          pipe_connections = {{type = "output", position = {1, 4}}}
         }
       },
     }

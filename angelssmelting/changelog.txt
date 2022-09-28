@@ -20,6 +20,7 @@ Date: ???
   Bugfixes:
     - Fixed tech prerequisites for Batteries 3 tech from bobplates (799)
     - Moved the silver oxide recipe to be used in a powder mixer
+    - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.19
 Date: 06.06.2022

@@ -62,7 +62,7 @@ data:extend(
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_level = 1,
-        pipe_connections = {{ position = {0, 2} }}
+        pipe_connections = {{type = "output", position = {0, 2}}}
       },
     },
   },

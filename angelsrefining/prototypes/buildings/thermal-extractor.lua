@@ -51,6 +51,7 @@ data:extend(
         pipe_connections =
         {
           {
+            type = "output",
             positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
           }
         }
@@ -220,6 +221,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           {
+            type = "output",
             position = {-3, 5}
           }
         }
