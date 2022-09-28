@@ -191,6 +191,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-iron-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
+        "angels-metallurgy-4",
         "angels-iron-casting-3",
         "angels-chrome-smelting-1"
       },
@@ -205,7 +206,8 @@ data:extend(
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },
