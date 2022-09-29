@@ -270,7 +270,7 @@ for _,centrifuge_name in pairs{
     local has_fluid_input_box = false
     local has_fluid_output_box = false
     if centrifuge.fluid_boxes then
-      for fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
+      for _, fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
         if fluid_box_prototype.production_type == "input" and fluid_box_prototype.filter == nil then
           has_fluid_input_box = true
         end
