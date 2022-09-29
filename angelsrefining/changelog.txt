@@ -24,6 +24,7 @@ Date: ???
       - Made hybrid catalyst recipe require Crystallizer 3
   Bugfixes:
     - Fixed machine output arrows (839)
+    - Fixed error when patching a recipe with variable result products (835)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.2
 Date: 06.06.2022
