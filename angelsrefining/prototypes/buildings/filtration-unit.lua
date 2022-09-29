@@ -87,14 +87,14 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       }
     },
@@ -185,14 +185,14 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       }
     },
@@ -282,14 +282,14 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           pipe_picture = angelsmods.refining.filtrationpipepictures(),
           base_level = 1,
-          pipe_connections = {{position = {-1, -3}}}
+          pipe_connections = {{type = "output", position = {-1, -3}}}
         }
       }
     }
