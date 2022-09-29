@@ -17,6 +17,7 @@ Date: ##.##.2022
     - Changed technologies Basic algae processing and Paper making 1 to ignore tech cost modifier (820)
   Bugfixes:
     - Fixed fishes prevented landfill from being blueprinted on water (815)
+    - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.22
 Date: 06.06.2022

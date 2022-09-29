@@ -116,14 +116,14 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, 2} }}
+        pipe_connections = {{type = "input", position = {0, 2}}}
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -247,14 +247,14 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, 2} }}
+        pipe_connections = {{type = "input", position = {0, 2}}}
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -378,14 +378,14 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        pipe_connections = {{type = "input", position = {0, -2}}}
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, 2} }}
+        pipe_connections = {{type = "input", position = {0, 2}}}
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -510,14 +510,14 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -3} }}
+        pipe_connections = {{type = "input", position = {0, -3}}}
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, 3} }}
+        pipe_connections = {{type = "input", position = {0, 3}}}
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },

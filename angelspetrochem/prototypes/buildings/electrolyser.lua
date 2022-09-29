@@ -115,14 +115,14 @@ data:extend(
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 3}}}
+          pipe_connections = {{type = "output", position = {-2, 3}}}
         },
         {
           production_type = "output",
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 3}}}
+          pipe_connections = {{type = "output", position = {2, 3}}}
         }
       },
     },
@@ -241,14 +241,14 @@ data:extend(
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 3}}}
+          pipe_connections = {{type = "output", position = {-2, 3}}}
         },
         {
           production_type = "output",
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 3}}}
+          pipe_connections = {{type = "output", position = {2, 3}}}
         }
       },
     },
@@ -367,14 +367,14 @@ data:extend(
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 3}}}
+          pipe_connections = {{type = "output", position = {-2, 3}}}
         },
         {
           production_type = "output",
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 3}}}
+          pipe_connections = {{type = "output", position = {2, 3}}}
         }
       },
     },
@@ -492,14 +492,14 @@ data:extend(
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 3}}}
+          pipe_connections = {{type = "output", position = {-2, 3}}}
         },
         {
           production_type = "output",
           pipe_picture = angelsmods.petrochem.electrolyserpictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 3}}}
+          pipe_connections = {{type = "output", position = {2, 3}}}
         }
       },
     }

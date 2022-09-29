@@ -300,7 +300,7 @@ for _,centrifuge_name in pairs{
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "input", position = {0, 2}}} -- assume 3x3 entity collision box
+        pipe_connections = {{type = "output", position = {0, 2}}} -- assume 3x3 entity collision box
       })
     end
 
