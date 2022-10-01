@@ -9,7 +9,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-leaching",
-        "angels-metallurgy-3",
+        --"angels-metallurgy-3",
+        "ore-processing-2",
         "angels-coal-processing",
         "water-washing-1"
       },
