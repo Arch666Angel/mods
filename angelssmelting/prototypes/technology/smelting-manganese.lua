@@ -8,8 +8,9 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-advanced-crushing",
-        "angels-metallurgy-2",
-        "angels-coal-processing"
+        "angels-metallurgy-1",
+        "angels-coal-processing",
+        "angels-iron-smelting-1"
       },
       effects = {
         {
@@ -23,13 +24,16 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "angels-plate-manganese"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "molten-iron-smelting-2"
         }
       },
       unit = {
-        count = 150,
+        count = 100,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1}
         },
         time = 30
       },
@@ -41,8 +45,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-manganese-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "ore-processing-2",
+        --"angels-metallurgy-2",
+        "ore-processing-1",
         "angels-manganese-smelting-1",
         "angels-sulfur-processing-1"
       },
@@ -57,10 +61,6 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "manganese-processed-processing-alt"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "cathode-manganese-smelting"
         },
         {
@@ -69,11 +69,10 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -85,8 +84,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "strand-casting-2",
+        --"angels-metallurgy-2",
+        "strand-casting-1",
         "angels-manganese-smelting-1",
       },
       effects = {
@@ -100,11 +99,10 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 150,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -116,8 +114,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-manganese-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-4",
-        "ore-processing-3",
+        --"angels-metallurgy-3",
+        "ore-processing-2",
         "angels-manganese-smelting-2",
         "angels-iron-smelting-3",
         "oil-gas-extraction"
@@ -126,6 +124,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "manganese-processed-processing"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "manganese-processed-processing-alt"
         },
         {
           type = "unlock-recipe",
@@ -141,12 +143,11 @@ data:extend(
         }
       },
       unit = {
-        count = 250,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -158,8 +159,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-4",
-        "strand-casting-3",
+        --"angels-metallurgy-3",
+        "strand-casting-2",
         "angels-manganese-casting-2",
       },
       effects = {
@@ -169,12 +170,11 @@ data:extend(
         }
       },
       unit = {
-        count = 250,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },

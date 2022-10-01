@@ -83,10 +83,6 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "molten-iron-smelting-2"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "molten-iron-smelting-3"
         },
         {
