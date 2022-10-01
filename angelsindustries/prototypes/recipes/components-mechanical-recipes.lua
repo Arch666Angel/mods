@@ -43,8 +43,8 @@ if angelsmods.industries.components then
       num = 1
       molten1 = {type = "fluid", name = "liquid-molten-iron", amount = 15}
       molten2 = {type = "fluid", name = "liquid-molten-iron", amount = 20}
-      category1 = "casting"
-      category2 = "casting-2"
+      category1 = "casting-2"
+      category2 = "casting-3"
     elseif metal == "steel" then
       num = 2
       molten1 = {type = "fluid", name = "liquid-molten-steel", amount = 15}
