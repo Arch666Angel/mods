@@ -48,7 +48,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
 
   if (not angelsmods.trigger.smelting_products["nickel"]      ) or 
      (not angelsmods.trigger.smelting_products["nickel"].ingot) then
-    OV.remove_prereq("angels-steel-smelting-3", "angels-nickel-smelting-2")
+    OV.remove_prereq("angels-steel-smelting-3", "angels-nickel-smelting-1")
   end
 
   if (not angelsmods.trigger.smelting_products["chrome"]      ) or 
