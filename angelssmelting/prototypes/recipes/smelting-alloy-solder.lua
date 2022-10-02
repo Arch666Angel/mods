@@ -56,8 +56,7 @@ data:extend(
       },
       icons = angelsmods.functions.add_number_icon_layer(
         angelsmods.functions.get_object_icons("liquid-molten-solder"),
-        angelsmods.trigger.smelting_products["solder"].mixture and 2 or 1,
-        angelsmods.smelting.number_tint),
+        2, angelsmods.smelting.number_tint),
       order = "b[liquid-molten-solder]-b",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
     },
@@ -77,8 +76,7 @@ data:extend(
       },
       icons = angelsmods.functions.add_number_icon_layer(
         angelsmods.functions.get_object_icons("liquid-molten-solder"),
-        angelsmods.trigger.smelting_products["solder"].mixture and 3 or 2,
-        angelsmods.smelting.number_tint),
+        3, angelsmods.smelting.number_tint),
       order = "b[liquid-molten-solder]-c",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
     },
@@ -99,8 +97,7 @@ data:extend(
       },
       icons = angelsmods.functions.add_number_icon_layer(
         angelsmods.functions.get_object_icons("liquid-molten-solder"),
-        angelsmods.trigger.smelting_products["solder"].mixture and 4 or 3,
-        angelsmods.smelting.number_tint),
+        4, angelsmods.smelting.number_tint),
       order = "b[liquid-molten-solder]-d",
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder")
     },
