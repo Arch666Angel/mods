@@ -8,7 +8,7 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/casting-silicon-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        "angels-metallurgy-1",
+        "angels-metallurgy-2",
         "angels-coal-processing",
         "angels-nitrogen-processing-1"
       },
@@ -35,9 +35,10 @@ data:extend(
         }
       },
       unit = {
-        count = 100,
+        count = 150,
         ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
+          {type = "item", name = "automation-science-pack", amount = 1},
+          {type = "item", name = "logistic-science-pack", amount = 1}
         },
         time = 30
       },
@@ -49,8 +50,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-2",
-        "ore-processing-1",
+        --"angels-metallurgy-3",
+        "ore-processing-2",
         "angels-silicon-smelting-1",
         "chlorine-processing-1"
       },
@@ -73,10 +74,11 @@ data:extend(
         }
       },
       unit = {
-        count = 150,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
+          {type = "item", name = "logistic-science-pack", amount = 1},
+          {type = "item", name = "chemical-science-pack", amount = 1}
         },
         time = 30
       },
@@ -88,10 +90,10 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
-        --"angels-metallurgy-3",
-        "ore-processing-2",
+        --"angels-metallurgy-4",
+        "ore-processing-3",
         "angels-silicon-smelting-2",
-        "angels-aluminium-smelting-1"
+        "angels-aluminium-smelting-2"
       },
       effects = {
         {
@@ -108,11 +110,12 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
+          {type = "item", name = "chemical-science-pack", amount = 1},
+          {type = "item", name = "production-science-pack", amount = 1}
         },
         time = 30
       },

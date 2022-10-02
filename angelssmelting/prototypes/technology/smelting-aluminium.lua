@@ -165,7 +165,7 @@ data:extend(
         "strand-casting-3",
         "angels-aluminium-casting-2",
         "angels-copper-smelting-3",
-        "angels-silicon-smelting-3"
+        "angels-silicon-smelting-2"
       },
       effects = {
         {
