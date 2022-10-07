@@ -28,7 +28,6 @@ else
   data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
   data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
   data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-  angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 end
 
 -- oil
