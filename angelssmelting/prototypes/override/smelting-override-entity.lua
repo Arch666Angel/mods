@@ -27,7 +27,12 @@ if not angelsmods.trigger.sintering_tech then
       tech.icon = "__angelssmelting__/graphics/technology/powder-mixer-tech.png"
     end
   end
+  OV.remove_prereq("powder-metallurgy-2", "powder-metallurgy-1")
   OV.disable_technology("powder-metallurgy-1")
+  -- update depending technologies accordingly
+  OV.remove_prereq("angels-stone-smelting-1", "powder-metallurgy-1")
+  OV.add_prereq("angels-stone-smelting-1", "angels-metallurgy-1")
+
   -- rename powder metallurgy techs
   data.raw.technology["powder-metallurgy-2"].localised_name = {"", {"technology-name.powder-metallurgy"}, " 1"}
   data.raw.technology["powder-metallurgy-3"].localised_name = {"", {"technology-name.powder-metallurgy"}, " 2"}
