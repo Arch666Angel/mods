@@ -215,7 +215,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-tungsten",
-      category = "sintering-3",
+      category = "sintering-4",
       subgroup = "angels-tungsten-casting",
       normal = {
         enabled = false,

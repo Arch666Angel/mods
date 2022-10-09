@@ -7,7 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-refining",
-        "powder-metallurgy-3",
+        "powder-metallurgy-4",
         "angels-cobalt-smelting-2",
         "chlorine-processing-2",
         "angels-sulfur-processing-2"
@@ -57,7 +57,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-processing-4",
-        "powder-metallurgy-4",
+        "powder-metallurgy-5",
         "angels-tungsten-smelting-1",
         "angels-nickel-smelting-2",
         "angels-nitrogen-processing-2"

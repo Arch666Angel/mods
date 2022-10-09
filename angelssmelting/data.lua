@@ -12,6 +12,7 @@ if angelsmods.trigger.ores["iron"] and angelsmods.trigger.ores["tin"] then -- no
   angelsmods.trigger.ores["chrome"] = true -- angels refining trigger
 end
 angelsmods.trigger.washing_tech = true -- angels refining trigger
+angelsmods.trigger.early_sintering_oven = false
 
 --create all the tables for smelting triggers ---------------------------------
 angelsmods.trigger.smelting_molds = false

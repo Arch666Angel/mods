@@ -67,8 +67,8 @@ if angelsmods.industries.components then
       num = 5
       molten1={type = "item", name = "casting-powder-tungsten", amount = 3}
       molten2={type = "item", name = "casting-powder-tungsten", amount = 20}
-      category1 = "sintering-3"
-      category2 = "sintering-4"]]
+      category1 = "sintering-4"
+      category2 = "sintering-5"]]
     end
     data:extend(
       {
@@ -143,7 +143,7 @@ if angelsmods.industries.components then
       {
         type = "recipe",
         name = "angels-casing-tungsten-1",
-        category = "sintering-3",
+        category = "sintering-4",
         subgroup = "angels-tungsten-casting",
         enabled = false,
         energy_required = 20,
@@ -202,7 +202,7 @@ if angelsmods.industries.components then
       {
         type = "recipe",
         name = "angels-casing-tungsten-2",
-        category = "sintering-4",
+        category = "sintering-5",
         subgroup = "angels-tungsten-casting",
         enabled = false,
         energy_required = 10,

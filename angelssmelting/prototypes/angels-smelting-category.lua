@@ -45,6 +45,7 @@ data:extend(
   { type = "recipe-category", name = "sintering-2" },
   { type = "recipe-category", name = "sintering-3" },
   { type = "recipe-category", name = "sintering-4" },
+  { type = "recipe-category", name = "sintering-5" },
 
   { type = "recipe-category", name = "cooling" },
 --SUBGROUPS

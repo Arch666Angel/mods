@@ -328,6 +328,16 @@ data:extend(
       },
       result = "sintering-oven-4"
     },
+    {
+      type = "recipe",
+      name = "sintering-oven-5",
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        {type = "item", name = "sintering-oven-4", amount = 1}
+      },
+      result = "sintering-oven-5"
+    },
     --STRAND CASTING MACHINE
     {
       type = "recipe",
