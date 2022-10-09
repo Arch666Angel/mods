@@ -127,7 +127,7 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = 1,
-          pipe_connections = {{position = {2, -1}}}
+          pipe_connections = {{type = "output", position = {2, -1}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -287,7 +287,7 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = 1,
-          pipe_connections = {{position = {2, -1}}}
+          pipe_connections = {{type = "output", position = {2, -1}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -447,7 +447,7 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = 1,
-          pipe_connections = {{position = {2, -1}}}
+          pipe_connections = {{type = "output", position = {2, -1}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -606,7 +606,7 @@ data:extend(
           pipe_covers = pipecoverspictures(),
           base_area = 10,
           base_level = 1,
-          pipe_connections = {{position = {2, -1}}}
+          pipe_connections = {{type = "output", position = {2, -1}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},

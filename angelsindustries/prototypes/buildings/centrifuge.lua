@@ -270,7 +270,7 @@ for _,centrifuge_name in pairs{
     local has_fluid_input_box = false
     local has_fluid_output_box = false
     if centrifuge.fluid_boxes then
-      for fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
+      for _, fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
         if fluid_box_prototype.production_type == "input" and fluid_box_prototype.filter == nil then
           has_fluid_input_box = true
         end
@@ -300,7 +300,7 @@ for _,centrifuge_name in pairs{
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "input", position = {0, 2}}} -- assume 3x3 entity collision box
+        pipe_connections = {{type = "output", position = {0, 2}}} -- assume 3x3 entity collision box
       })
     end
 

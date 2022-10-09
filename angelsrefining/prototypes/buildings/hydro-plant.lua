@@ -540,14 +540,14 @@ data:extend(
           pipe_picture = hydropipepictures2(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 4}}}
+          pipe_connections = {{type = "output", position = {2, 4}}}
         },
         {
           production_type = "output",
           pipe_picture = hydropipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 4}}}
+          pipe_connections = {{type = "output", position = {-2, 4}}}
         }
       },
     },
@@ -1025,14 +1025,14 @@ data:extend(
           pipe_picture = hydropipepictures2(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 4}}}
+          pipe_connections = {{type = "output", position = {2, 4}}}
         },
         {
           production_type = "output",
           pipe_picture = hydropipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 4}}}
+          pipe_connections = {{type = "output", position = {-2, 4}}}
         }
       },
     },
@@ -1509,14 +1509,14 @@ data:extend(
           pipe_picture = hydropipepictures2(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, 4}}}
+          pipe_connections = {{type = "output", position = {2, 4}}}
         },
         {
           production_type = "output",
           pipe_picture = hydropipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, 4}}}
+          pipe_connections = {{type = "output", position = {-2, 4}}}
         }
       },
     }

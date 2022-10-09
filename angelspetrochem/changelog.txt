@@ -19,6 +19,8 @@ Date: ???
       - Flare stack tech
       - Rubber
     - Split tech Advanced chemistry 3 (805)
+  Bugfixes:
+    - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 06.06.2022

@@ -166,8 +166,8 @@ data:extend(
     --pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      { position = {0, 1} },
-      { position = {0, -1}, type="input"}
+      { position = {0, 1}, type = "output"},
+      { position = {0, -1}, type = "input"}
     },
     },
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
@@ -296,8 +296,8 @@ data:extend(
     --pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      { position = {0, 1}, type="output"},
-      { position = {0, -1} }
+      { position = {0, 1}, type = "output"},
+      { position = {0, -1}, type = "input"}
     }
     },
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
@@ -426,8 +426,8 @@ data:extend(
     --pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      { position = {0, 1}, type="output"},
-      { position = {0, -1} }
+      { position = {0, 1}, type = "output"},
+      { position = {0, -1}, type = "input"}
     }
     },
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
@@ -563,13 +563,13 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -1} }}
+        pipe_connections = {{type = "input", position = {0, -1}}}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_level = 1,
-        pipe_connections = {{ position = {0, 1} }}
+        pipe_connections = {{type = "output", position = {0, 1}}}
       },
     },
     energy_source =

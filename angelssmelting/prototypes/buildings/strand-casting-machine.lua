@@ -81,7 +81,7 @@ data:extend(
           --pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -283,7 +283,7 @@ data:extend(
           --pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -485,7 +485,7 @@ data:extend(
           --pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -686,7 +686,7 @@ data:extend(
           --pipe_picture = assembler3pipepictures(),
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {1, -3}}}
+          pipe_connections = {{type = "output", position = {1, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},

@@ -49,7 +49,7 @@ data:extend(
         -- pipe_covers = pipecoverspictures(),
         -- base_area = 10,
         -- base_level = -1,
-        -- pipe_connections = {{ type="input", position = {0, 3} }}
+        -- pipe_connections = {{type = "input", position = {0, 3}}}
       -- },
     -- },
     energy_source =

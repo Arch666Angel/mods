@@ -484,19 +484,19 @@ data:extend(
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, -3}}}
+          pipe_connections = {{type = "output", position = {-2, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {0, -3}}}
+          pipe_connections = {{type = "output", position = {0, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, -3}}}
+          pipe_connections = {{type = "output", position = {2, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -990,19 +990,19 @@ data:extend(
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, -3}}}
+          pipe_connections = {{type = "output", position = {-2, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {0, -3}}}
+          pipe_connections = {{type = "output", position = {0, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, -3}}}
+          pipe_connections = {{type = "output", position = {2, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -1496,19 +1496,19 @@ data:extend(
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, -3}}}
+          pipe_connections = {{type = "output", position = {-2, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {0, -3}}}
+          pipe_connections = {{type = "output", position = {0, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, -3}}}
+          pipe_connections = {{type = "output", position = {2, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
@@ -2001,19 +2001,19 @@ data:extend(
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {-2, -3}}}
+          pipe_connections = {{type = "output", position = {-2, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {0, -3}}}
+          pipe_connections = {{type = "output", position = {0, -3}}}
         },
         {
           production_type = "output",
           pipe_covers = pipecoverspictures(),
           base_level = 1,
-          pipe_connections = {{position = {2, -3}}}
+          pipe_connections = {{type = "output", position = {2, -3}}}
         }
       },
       vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
