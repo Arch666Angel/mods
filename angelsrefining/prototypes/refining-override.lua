@@ -7,7 +7,6 @@ require("prototypes.override.refining-override-base")
 
 --OVERRIDE FOR BUILDINGS
 require("prototypes.recipes.refining-entity-angels")
-require("prototypes.override.refining-override-buildings")
 
 --OVERRIDE FOR REFINING/SORTING
 require("prototypes.override.refining-override-refining")
