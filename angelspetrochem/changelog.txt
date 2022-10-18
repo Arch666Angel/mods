@@ -19,6 +19,9 @@ Date: ???
       - Flare stack tech
       - Rubber
     - Split tech Advanced chemistry 3 (805)
+    - Added Air filter 3
+      - reduced module slots of air filter 1 -> 0 & and air filter 2 -> 1
+      - reduced speed of air filter 2 to 1.5
   Bugfixes:
     - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------

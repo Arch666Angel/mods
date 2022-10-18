@@ -558,6 +558,10 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "angels-air-filter-3"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "gas-melamine"
         },
         {
