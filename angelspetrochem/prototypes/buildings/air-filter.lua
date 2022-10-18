@@ -76,14 +76,14 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -3} }}
+        pipe_connections = {{type = "input", position = {0, -3}}}
       },
       {
         production_type = "output",
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         base_level = 1,
-        pipe_connections = {{ position = {0, 3} }}
+        pipe_connections = {{type = "output", position = {0, 3}}}
       },
     },
   },
@@ -162,14 +162,14 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -3} }}
+        pipe_connections = {{type = "input", position = {0, -3}}}
       },
       {
         production_type = "output",
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         base_level = 1,
-        pipe_connections = {{ position = {0, 3} }}
+        pipe_connections = {{type = "output", position = {0, 3}}}
       },
     },
   },

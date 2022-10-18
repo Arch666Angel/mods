@@ -426,7 +426,11 @@ local function p_merge_item_lists(base, patch)
       init()
       for _, item in pairs(base) do
          local n, t, a = item.name or item[1], item.type or "item", item.amount or item[2]
-         add(n, t, a)
+         if a == nil then
+            add2(n, t, item.amount_min or -1, item.amount_max or -1)
+         else
+            add(n, t, a)
+         end
          adjust_secondary_atts(n, t, item)
       end
       for _, item in pairs(patch) do
