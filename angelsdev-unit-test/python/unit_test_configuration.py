@@ -369,6 +369,7 @@ UnitTestConfiguration.addConfiguration("BA (extended)",
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
       "angels-enable-tech"      : False, # Angels technology mode
+      "angels-enable-acids"     : True   # Restore setting back to default
     }
   }
 )
