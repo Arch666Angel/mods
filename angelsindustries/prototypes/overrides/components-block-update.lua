@@ -12,12 +12,7 @@ if angelsmods.industries.components then
   OV.remove_prereq("angels-stone-smelting-2", "bio-arboretum-1")
   OV.add_prereq("angels-stone-smelting-1", "bio-arboretum-1")
   OV.add_prereq("angels-stone-smelting-1", "angels-components-mechanical-1")
-  OV.add_prereq("angels-stone-smelting-1", "powder-metallurgy-1")
   -- update depending technologies accordingly
-  OV.remove_science_pack("powder-metallurgy-1", "logistic-science-pack")
-  OV.remove_prereq("powder-metallurgy-1", "angels-metallurgy-2")
-  OV.add_prereq("powder-metallurgy-1", "angels-metallurgy-1")
-  OV.add_prereq("angels-aluminium-smelting-1", "angels-metallurgy-2")
   OV.remove_prereq("angels-iron-smelting-2", "angels-stone-smelting-2")
   OV.add_prereq("angels-iron-smelting-2", "angels-stone-smelting-1")
   OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")

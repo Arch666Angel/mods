@@ -150,7 +150,7 @@ if mods['bobplates'] then
     
   for _ , name in pairs(alloy_recipes) do
     if data.raw.recipe[name] then
-      data.raw.recipe[name].category = "sintering"
+      data.raw.recipe[name].category = "sintering-4"
     end
   end
 end

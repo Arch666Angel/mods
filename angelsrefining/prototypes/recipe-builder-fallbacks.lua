@@ -177,7 +177,7 @@
   angelsmods.functions.RB.set_fallback("item", "blastfur-4", { { "block-mprocessing-4", 3 }, { "blast-furnace-3" } } )
 
   angelsmods.functions.RB.set_fallback("item", "chemfur-1", { { "block-production-2", 3 } } )
-  angelsmods.functions.RB.set_fallback("item", "chemfur-2", { { "block-production-3", 3 }, { "angels-chemical-furnace" } } )
+  angelsmods.functions.RB.set_fallback("item", "chemfur-2", { { "block-production-3", 3 }, { "angels-chemical-furnace", 1, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.early_chemical_furnace or false end } } )
   angelsmods.functions.RB.set_fallback("item", "chemfur-3", { { "block-mprocessing-4", 3 }, { "angels-chemical-furnace-2" } } )
   angelsmods.functions.RB.set_fallback("item", "chemfur-4", { { "block-mprocessing-5", 3 }, { "angels-chemical-furnace-3" } } )
 
@@ -192,9 +192,10 @@
   angelsmods.functions.RB.set_fallback("item", "castingm-4", { { "block-mprocessing-4", 1 }, { "casting-machine-3" } } )
 
   angelsmods.functions.RB.set_fallback("item", "sinteringo-1", { { "block-production-1", 3 } } )
-  angelsmods.functions.RB.set_fallback("item", "sinteringo-2", { { "block-mprocessing-3", 3 }, { "sintering-oven" } } )
-  angelsmods.functions.RB.set_fallback("item", "sinteringo-3", { { "block-mprocessing-4", 3 }, { "sintering-oven-2" } } )
-  angelsmods.functions.RB.set_fallback("item", "sinteringo-4", { { "block-mprocessing-5", 3 }, { "sintering-oven-3" } } )
+  angelsmods.functions.RB.set_fallback("item", "sinteringo-2", { { "block-production-2", 3 }, { "sintering-oven" } } )
+  angelsmods.functions.RB.set_fallback("item", "sinteringo-3", { { "block-mprocessing-3", 3 }, { "sintering-oven-2" } } )
+  angelsmods.functions.RB.set_fallback("item", "sinteringo-4", { { "block-mprocessing-4", 3 }, { "sintering-oven-3", 1, function(t, n) return mods["angelssmelting"] and angelsmods.trigger.early_sintering_oven or false end } } )
+  angelsmods.functions.RB.set_fallback("item", "sinteringo-5", { { "block-mprocessing-5", 3 }, { "sintering-oven-4" } } )
 
   angelsmods.functions.RB.set_fallback("item", "strandcast-1", { { "block-production-2", 3 } } )
   angelsmods.functions.RB.set_fallback("item", "strandcast-2", { { "block-mprocessing-3", 3 }, { "strand-casting-machine" } } )

@@ -267,7 +267,8 @@ if angelsmods.industries.components then
             "sodium-processing",
             "angels-tungsten-smelting-1",
             "angels-silver-smelting-2",
-            "angels-components-batteries-5"
+            "angels-components-batteries-5",
+            "powder-metallurgy-5"
           },
           effects = {
             {

@@ -25,11 +25,11 @@ if angelsmods.trigger.sintering_tech and mods["bobrevamp"] then
     {
       {
         name = "heat-shield-tile",
-        category = "sintering-3"
+        category = "sintering-4"
       }
     }
   )
-  OV.add_prereq("heat-shield", "powder-metallurgy-3")
+  OV.add_prereq("heat-shield", "powder-metallurgy-4")
 else
   OV.add_prereq("heat-shield", "production-science-pack")
 end

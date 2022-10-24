@@ -23,7 +23,7 @@ end
 
 if angelsmods.trigger.smelting_products["nickel"].ingot then
 else
-  OV.remove_prereq("angels-iron-casting-3","angels-nickel-smelting-2")
+  OV.remove_prereq("angels-iron-casting-3","angels-nickel-smelting-1")
 end
 
 if angelsmods.trigger.smelting_products["cobalt"].ingot then

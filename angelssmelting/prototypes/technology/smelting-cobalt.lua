@@ -9,7 +9,8 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-leaching",
-        "angels-metallurgy-3",
+        --"angels-metallurgy-3",
+        "ore-processing-2",
         "angels-coal-processing",
         "water-washing-1"
       },
@@ -32,7 +33,7 @@ data:extend(
         }
       },
       unit = {
-        count = 150,
+        count = 200,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -71,7 +72,7 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -103,7 +104,7 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -140,7 +141,7 @@ data:extend(
         }
       },
       unit = {
-        count = 250,
+        count = 300,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -169,7 +170,7 @@ data:extend(
         }
       },
       unit = {
-        count = 250,
+        count = 300,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

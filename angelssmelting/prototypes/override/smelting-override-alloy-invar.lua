@@ -38,7 +38,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         {
           type = "recipe",
           name = "angels-invar-smelting-1",
-          category = "induction-smelting",
+          category = "induction-smelting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -56,7 +56,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         {
           type = "recipe",
           name = "angels-plate-invar",
-          category = "casting",
+          category = "casting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -75,7 +75,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           icon = "__angelssmelting__/graphics/technology/casting-invar-tech.png",
           icon_size = 256, icon_mipmaps = 4,
           prerequisites = {
-            "angels-metallurgy-2",
+            --"angels-metallurgy-2",
             "angels-steel-smelting-1",
             "angels-nickel-smelting-1"
           },
@@ -90,7 +90,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
             }
           },
           unit = {
-            count = 50,
+            count = 150,
             ingredients = {
               {type = "item", name = "automation-science-pack", amount = 1},
               {type = "item", name = "logistic-science-pack", amount = 1}

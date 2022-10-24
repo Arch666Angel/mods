@@ -6,7 +6,8 @@ data:extend(
       icon = "__angelssmelting__/graphics/technology/cement-tech.png",
       icon_size = 128,
       prerequisites = {
-        "angels-metallurgy-1",
+        --"angels-metallurgy-1",
+        "powder-metallurgy-1",
         "water-washing-1"
       },
       effects = {
@@ -39,7 +40,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         --"angels-metallurgy-2",
-        "powder-metallurgy-1",
+        "powder-metallurgy-2",
         "angels-stone-smelting-1",
         "concrete",
         "resins"
@@ -87,7 +88,7 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         --"angels-metallurgy-3",
-        "powder-metallurgy-2",
+        "powder-metallurgy-3",
         "angels-stone-smelting-2",
         "angels-aluminium-smelting-1",
         "angels-steel-smelting-1"

@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "silica-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-silicon",
       energy_required = 2,
       enabled = false,
@@ -24,7 +24,7 @@ data:extend(
     {
       type = "recipe",
       name = "silica-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-2",
       subgroup = "angels-silicon",
       energy_required = 2,
       enabled = false,
@@ -40,7 +40,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-silicon-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -65,7 +65,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-silicon-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -92,7 +92,7 @@ data:extend(
     {
       type = "recipe",
       name = "silicon-ore-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -111,7 +111,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-trichlorosilane-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -130,7 +130,7 @@ data:extend(
     {
       type = "recipe",
       name = "gas-silane-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-silicon",
       energy_required = 4,
       enabled = false,
@@ -165,7 +165,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-silicon-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-silicon-casting",
       energy_required = 4,
       enabled = false,
@@ -182,7 +182,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-mono-silicon-seed",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-silicon-casting",
       normal = {
         enabled = false,
@@ -239,7 +239,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-mono-silicon-1",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-silicon-casting",
       normal = {
         enabled = false,
@@ -271,7 +271,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-mono-silicon-2",
-      category = "casting",
+      category = "casting-3",
       subgroup = "angels-silicon-casting",
       normal = {
         enabled = false,

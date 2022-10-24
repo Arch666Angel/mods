@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         {
           type = "recipe",
           name = "angels-gunmetal-smelting-1",
-          category = "induction-smelting",
+          category = "induction-smelting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -54,7 +54,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         {
           type = "recipe",
           name = "angels-plate-gunmetal",
-          category = "casting",
+          category = "casting-2",
           subgroup = "angels-alloys-casting",
           energy_required = 4,
           enabled = false,
@@ -88,7 +88,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
             }
           },
           unit = {
-            count = 50,
+            count = 150,
             ingredients = {
               {type = "item", name = "automation-science-pack", amount = 1},
               {type = "item", name = "logistic-science-pack", amount = 1}

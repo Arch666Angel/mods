@@ -38,7 +38,7 @@ data:extend(
     {
       type = "recipe",
       name = "manganese-processed-processing-alt",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 2,
       enabled = false,
@@ -57,7 +57,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-manganese-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 4,
       enabled = false,
@@ -95,7 +95,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-manganese-oxide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 6,
       enabled = false,
@@ -137,7 +137,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-manganese-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-manganese",
       energy_required = 4,
       enabled = false,

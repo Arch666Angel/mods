@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "tungsten-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-4",
       subgroup = "angels-tungsten",
       energy_required = 2,
       enabled = false,
@@ -23,7 +23,7 @@ data:extend(
     {
       type = "recipe",
       name = "tungsten-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-4",
       subgroup = "angels-tungsten",
       energy_required = 2,
       enabled = false,
@@ -57,7 +57,7 @@ data:extend(
     {
       type = "recipe",
       name = "liquid-tungstic-acid-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-tungsten",
       energy_required = 4,
       enabled = false,
@@ -77,7 +77,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-tungsten-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-4",
       subgroup = "angels-tungsten",
       energy_required = 4,
       enabled = false,
@@ -119,7 +119,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-tungsten-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-4",
       subgroup = "angels-tungsten",
       energy_required = 4,
       enabled = false,
@@ -136,7 +136,7 @@ data:extend(
     {
       type = "recipe",
       name = "gas-tungsten-hexafluoride-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-tungsten",
       energy_required = 4,
       enabled = false,
@@ -156,7 +156,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-ammonium-paratungstate-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-tungsten",
       energy_required = 4,
       enabled = false,
@@ -176,7 +176,7 @@ data:extend(
     {
       type = "recipe",
       name = "casting-powder-tungsten-1",
-      category = "powder-mixing-2",
+      category = "powder-mixing-3",
       subgroup = "angels-tungsten-casting",
       energy_required = 4,
       enabled = false,
@@ -195,7 +195,7 @@ data:extend(
     {
       type = "recipe",
       name = "casting-powder-tungsten-2",
-      category = "powder-mixing-3",
+      category = "powder-mixing-4",
       subgroup = "angels-tungsten-casting",
       energy_required = 4,
       enabled = false,
@@ -215,7 +215,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-tungsten",
-      category = "sintering",
+      category = "sintering-4",
       subgroup = "angels-tungsten-casting",
       normal = {
         enabled = false,

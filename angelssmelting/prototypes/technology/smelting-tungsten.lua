@@ -7,7 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-refining",
-        "powder-metallurgy-3",
+        "powder-metallurgy-4",
         "angels-cobalt-smelting-2",
         "chlorine-processing-2",
         "angels-sulfur-processing-2"
@@ -39,7 +39,7 @@ data:extend(
         }
       },
       unit = {
-        count = 200,
+        count = 250,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -57,9 +57,9 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         "ore-processing-4",
-        "powder-metallurgy-4",
+        "powder-metallurgy-5",
         "angels-tungsten-smelting-1",
-        "angels-nickel-smelting-3",
+        "angels-nickel-smelting-2",
         "angels-nitrogen-processing-2"
       },
       effects = {
@@ -81,7 +81,7 @@ data:extend(
         }
       },
       unit = {
-        count = 250,
+        count = 300,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},
@@ -113,7 +113,7 @@ data:extend(
         }
       },
       unit = {
-        count = 300,
+        count = 350,
         ingredients = {
           {type = "item", name = "automation-science-pack", amount = 1},
           {type = "item", name = "logistic-science-pack", amount = 1},

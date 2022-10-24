@@ -87,7 +87,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-glass-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-glass-casting",
       energy_required = 4,
       enabled = false,
@@ -132,7 +132,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-glass-1",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-glass-casting",
       normal = {
         enabled = false,
@@ -162,7 +162,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-glass-2",
-      category = "casting",
+      category = "casting-3",
       subgroup = "angels-glass-casting",
       normal = {
         enabled = false,
@@ -198,7 +198,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-glass-3",
-      category = "casting",
+      category = "casting-4",
       subgroup = "angels-glass-casting",
       normal = {
         enabled = false,

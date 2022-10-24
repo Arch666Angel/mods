@@ -7,7 +7,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         --"angels-metallurgy-2",
-        "powder-metallurgy-1",
+        "powder-metallurgy-2",
         "strand-casting-1"
       },
       effects = {
@@ -41,7 +41,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         --"angels-metallurgy-3",
-        "powder-metallurgy-2",
+        "powder-metallurgy-3",
         "angels-glass-smelting-1",
         "angels-stone-smelting-2",
         "angels-lead-smelting-2" -- need this for the lead oxide processing
@@ -78,7 +78,7 @@ data:extend(
       icon_size = 256, icon_mipmaps = 4,
       prerequisites = {
         --"angels-metallurgy-4",
-        "powder-metallurgy-3",
+        "powder-metallurgy-4",
         --[["strand-casting-1",]]
         "angels-glass-smelting-2",
         "angels-aluminium-smelting-2",

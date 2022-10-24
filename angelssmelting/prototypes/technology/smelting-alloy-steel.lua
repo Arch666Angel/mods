@@ -40,7 +40,7 @@ data:extend(
       prerequisites = {
         --"angels-metallurgy-2",
         "angels-steel-smelting-1",
-        "angels-silicon-smelting-2",
+        "angels-silicon-smelting-1",
         "angels-manganese-smelting-1",
       },
       effects = {
@@ -92,7 +92,7 @@ data:extend(
       prerequisites = {
         "strand-casting-2",
         "angels-steel-smelting-2",
-        "angels-nickel-smelting-3",
+        "angels-nickel-smelting-1",
         "angels-cobalt-smelting-1"
       },
       effects = {

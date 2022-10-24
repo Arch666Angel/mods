@@ -58,7 +58,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-iron-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-iron",
       energy_required = 4,
       enabled = false,
@@ -77,7 +77,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-iron-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-iron",
       energy_required = 4,
       enabled = false,
@@ -97,7 +97,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-iron-hydroxide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-iron",
       energy_required = 4,
       enabled = false,
@@ -155,7 +155,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-2",
-      category = "induction-smelting-2",
+      category = "induction-smelting",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,
@@ -216,7 +216,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-iron-smelting-5",
-      category = "induction-smelting-3",
+      category = "induction-smelting-4",
       subgroup = "angels-iron-casting",
       energy_required = 4,
       enabled = false,

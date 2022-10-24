@@ -57,7 +57,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-tin-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-tin",
       energy_required = 4,
       enabled = false,
@@ -76,7 +76,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-tin-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-tin",
       energy_required = 4,
       enabled = false,

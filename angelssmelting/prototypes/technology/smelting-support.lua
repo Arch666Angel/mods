@@ -191,12 +191,37 @@ data:extend(
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
-        "angels-metallurgy-2"
+        "angels-metallurgy-1"
       },
       effects = {
         {
           type = "unlock-recipe",
           recipe = "sintering-oven"
+        }
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          {type = "item", name = "automation-science-pack", amount = 1}
+        },
+        time = 30
+      },
+      order = "c-a"
+    },
+    {
+      type = "technology",
+      name = "powder-metallurgy-2",
+      icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
+      icon_size = 256,
+      icon_mipmaps = 2,
+      prerequisites = {
+        "angels-metallurgy-2",
+        "powder-metallurgy-1"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "sintering-oven-2"
         },
         {
           type = "unlock-recipe",
@@ -215,18 +240,18 @@ data:extend(
     },
     {
       type = "technology",
-      name = "powder-metallurgy-2",
+      name = "powder-metallurgy-3",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
         "angels-metallurgy-3",
-        "powder-metallurgy-1"
+        "powder-metallurgy-2"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "sintering-oven-2"
+          recipe = "sintering-oven-3"
         },
         {
           type = "unlock-recipe",
@@ -246,18 +271,18 @@ data:extend(
     },
     {
       type = "technology",
-      name = "powder-metallurgy-3",
+      name = "powder-metallurgy-4",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
         "angels-metallurgy-4",
-        "powder-metallurgy-2"
+        "powder-metallurgy-3"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "sintering-oven-3"
+          recipe = "sintering-oven-4"
         },
         {
           type = "unlock-recipe",
@@ -278,18 +303,18 @@ data:extend(
     },
     {
       type = "technology",
-      name = "powder-metallurgy-4",
+      name = "powder-metallurgy-5",
       icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {
         "angels-metallurgy-5",
-        "powder-metallurgy-3"
+        "powder-metallurgy-4"
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "sintering-oven-4"
+          recipe = "sintering-oven-5"
         },
         {
           type = "unlock-recipe",

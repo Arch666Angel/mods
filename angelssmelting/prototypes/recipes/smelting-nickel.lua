@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "nickel-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-nickel",
       energy_required = 2,
       enabled = false,
@@ -23,7 +23,7 @@ data:extend(
     {
       type = "recipe",
       name = "nickel-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-2",
       subgroup = "angels-nickel",
       energy_required = 2,
       enabled = false,
@@ -38,7 +38,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-nickel-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-2",
       subgroup = "angels-nickel",
       energy_required = 6,
       enabled = false,
@@ -54,7 +54,7 @@ data:extend(
     {
       type = "recipe",
       name = "pellet-nickel-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,
@@ -72,7 +72,7 @@ data:extend(
     {
       type = "recipe",
       name = "nickel-ore-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-2",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,
@@ -91,7 +91,7 @@ data:extend(
     {
       type = "recipe",
       name = "cathode-nickel-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,
@@ -109,7 +109,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-nickel-carbonyl-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-nickel",
       energy_required = 4,
       enabled = false,
@@ -144,7 +144,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-nickel-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-2",
       subgroup = "angels-nickel-casting",
       energy_required = 4,
       enabled = false,
@@ -160,7 +160,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-nickel-casting",
-      category = "strand-casting",
+      category = "strand-casting-2",
       subgroup = "angels-nickel-casting",
       normal = {
         enabled = false,
@@ -193,7 +193,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-nickel-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-3",
       subgroup = "angels-nickel-casting",
       normal = {
         enabled = false,
@@ -231,7 +231,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-nickel",
-      category = "casting",
+      category = "casting-2",
       subgroup = "angels-nickel-casting",
       normal = {
         enabled = false,

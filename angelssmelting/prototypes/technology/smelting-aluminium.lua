@@ -10,7 +10,7 @@ data:extend(
       prerequisites = {
         "ore-floatation",
         --"angels-metallurgy-2",
-        "powder-metallurgy-1",
+        "powder-metallurgy-2",
         "chlorine-processing-1",
         --"angels-coal-processing"
       },
@@ -54,7 +54,7 @@ data:extend(
       prerequisites = {
         --"angels-metallurgy-3",
         "ore-processing-2",
-        "powder-metallurgy-2",
+        "powder-metallurgy-3",
         "angels-aluminium-smelting-1",
       },
       effects = {
@@ -91,7 +91,7 @@ data:extend(
         --"angels-metallurgy-3",
         "strand-casting-2",
         "angels-aluminium-smelting-1",
-        "angels-manganese-smelting-1",
+        "angels-manganese-smelting-2",
       },
       effects = {
         {
@@ -165,7 +165,7 @@ data:extend(
         "strand-casting-3",
         "angels-aluminium-casting-2",
         "angels-copper-smelting-3",
-        "angels-silicon-smelting-3"
+        "angels-silicon-smelting-2"
       },
       effects = {
         {

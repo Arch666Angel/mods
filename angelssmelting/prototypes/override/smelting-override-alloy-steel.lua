@@ -31,7 +31,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
 
   if (not angelsmods.trigger.smelting_products["silicon"]      ) or
      (not angelsmods.trigger.smelting_products["silicon"].ingot) then
-    OV.remove_prereq("angels-steel-smelting-2", "angels-silicon-smelting-2")
+    OV.remove_prereq("angels-steel-smelting-2", "angels-silicon-smelting-1")
     OV.add_prereq("angels-steel-smelting-2", "strand-casting-1")
   end
 
@@ -48,7 +48,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
 
   if (not angelsmods.trigger.smelting_products["nickel"]      ) or 
      (not angelsmods.trigger.smelting_products["nickel"].ingot) then
-    OV.remove_prereq("angels-steel-smelting-3", "angels-nickel-smelting-3")
+    OV.remove_prereq("angels-steel-smelting-3", "angels-nickel-smelting-1")
   end
 
   if (not angelsmods.trigger.smelting_products["chrome"]      ) or 

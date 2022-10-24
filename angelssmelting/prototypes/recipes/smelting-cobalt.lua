@@ -7,7 +7,7 @@ data:extend(
     {
       type = "recipe",
       name = "cobalt-ore-processing",
-      category = "ore-processing",
+      category = "ore-processing-3",
       subgroup = "angels-cobalt",
       energy_required = 2,
       enabled = false,
@@ -23,7 +23,7 @@ data:extend(
     {
       type = "recipe",
       name = "cobalt-processed-processing",
-      category = "pellet-pressing",
+      category = "pellet-pressing-3",
       subgroup = "angels-cobalt",
       energy_required = 2,
       enabled = false,
@@ -55,7 +55,7 @@ data:extend(
     {
       type = "recipe",
       name = "cobalt-ore-processing-alt",
-      category = "ore-processing",
+      category = "ore-processing-2",
       subgroup = "angels-cobalt",
       energy_required = 2,
       enabled = false,
@@ -74,7 +74,7 @@ data:extend(
     {
       type = "recipe",
       name = "processed-cobalt-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-3",
       subgroup = "angels-cobalt",
       energy_required = 4,
       enabled = false,
@@ -93,7 +93,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-cobalt-hydroxide-smelting",
-      category = "chemical-smelting",
+      category = "chemical-smelting-4",
       subgroup = "angels-cobalt",
       energy_required = 4,
       enabled = false,
@@ -113,7 +113,7 @@ data:extend(
     {
       type = "recipe",
       name = "cobalt-ore-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-3",
       subgroup = "angels-cobalt",
       energy_required = 4,
       enabled = false,
@@ -132,7 +132,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-cobalt-oxide-smelting",
-      category = "blast-smelting",
+      category = "blast-smelting-4",
       subgroup = "angels-cobalt",
       energy_required = 4,
       enabled = false,
@@ -167,7 +167,7 @@ data:extend(
     {
       type = "recipe",
       name = "molten-cobalt-smelting",
-      category = "induction-smelting",
+      category = "induction-smelting-3",
       subgroup = "angels-cobalt-casting",
       energy_required = 4,
       enabled = false,
@@ -183,7 +183,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-cobalt-casting",
-      category = "strand-casting",
+      category = "strand-casting-3",
       subgroup = "angels-cobalt-casting",
       normal = {
         enabled = false,
@@ -216,7 +216,7 @@ data:extend(
     {
       type = "recipe",
       name = "roll-cobalt-casting-fast",
-      category = "strand-casting-2",
+      category = "strand-casting-4",
       subgroup = "angels-cobalt-casting",
       normal = {
         enabled = false,
@@ -254,7 +254,7 @@ data:extend(
     {
       type = "recipe",
       name = "angels-plate-cobalt",
-      category = "casting",
+      category = "casting-3",
       subgroup = "angels-cobalt-casting",
       normal = {
         enabled = false,

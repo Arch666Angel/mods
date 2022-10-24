@@ -795,9 +795,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-1", amount = 1},
-          {type = "item", name = "t2-plate", amount = 8},
-          {type = "item", name = "t2-circuit", amount = 5},
-          {type = "item", name = "t2-brick", amount = 9}
+          {type = "item", name = "t1-plate", amount = 8},
+          {type = "item", name = "t1-circuit", amount = 5},
+          {type = "item", name = "t1-brick", amount = 9}
         },
         result = "sintering-oven"
       },
@@ -806,9 +806,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-1", amount = 1},
-          {type = "item", name = "t2-plate", amount = 8 * buildingmulti},
-          {type = "item", name = "t2-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t2-brick", amount = 9 * buildingmulti}
+          {type = "item", name = "t1-plate", amount = 8 * buildingmulti},
+          {type = "item", name = "t1-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t1-brick", amount = 9 * buildingmulti}
         },
         result = "sintering-oven"
       }
@@ -821,9 +821,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-2", amount = 1},
-          {type = "item", name = "t3-plate", amount = 8},
-          {type = "item", name = "t3-circuit", amount = 5},
-          {type = "item", name = "t3-brick", amount = 9}
+          {type = "item", name = "t2-plate", amount = 8},
+          {type = "item", name = "t2-circuit", amount = 5},
+          {type = "item", name = "t2-brick", amount = 9}
         },
         result = "sintering-oven-2"
       },
@@ -832,9 +832,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-2", amount = 1},
-          {type = "item", name = "t3-plate", amount = 8 * buildingmulti},
-          {type = "item", name = "t3-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t3-brick", amount = 9 * buildingmulti}
+          {type = "item", name = "t2-plate", amount = 8 * buildingmulti},
+          {type = "item", name = "t2-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t2-brick", amount = 9 * buildingmulti}
         },
         result = "sintering-oven-2"
       }
@@ -847,9 +847,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-3", amount = 1},
-          {type = "item", name = "t4-plate", amount = 8},
-          {type = "item", name = "t4-circuit", amount = 5},
-          {type = "item", name = "t4-brick", amount = 9}
+          {type = "item", name = "t3-plate", amount = 8},
+          {type = "item", name = "t3-circuit", amount = 5},
+          {type = "item", name = "t3-brick", amount = 9}
         },
         result = "sintering-oven-3"
       },
@@ -858,9 +858,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-3", amount = 1},
-          {type = "item", name = "t4-plate", amount = 8 * buildingmulti},
-          {type = "item", name = "t4-circuit", amount = 5 * buildingmulti},
-          {type = "item", name = "t4-brick", amount = 9 * buildingmulti}
+          {type = "item", name = "t3-plate", amount = 8 * buildingmulti},
+          {type = "item", name = "t3-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t3-brick", amount = 9 * buildingmulti}
         },
         result = "sintering-oven-3"
       }
@@ -873,9 +873,9 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-4", amount = 1},
-          {type = "item", name = "t5-plate", amount = 8},
-          {type = "item", name = "t5-circuit", amount = 5},
-          {type = "item", name = "t5-brick", amount = 9}
+          {type = "item", name = "t4-plate", amount = 8},
+          {type = "item", name = "t4-circuit", amount = 5},
+          {type = "item", name = "t4-brick", amount = 9}
         },
         result = "sintering-oven-4"
       },
@@ -884,11 +884,37 @@ angelsmods.functions.RB.build(
         enabled = false,
         ingredients = {
           {type = "item", name = "sinteringo-4", amount = 1},
+          {type = "item", name = "t4-plate", amount = 8 * buildingmulti},
+          {type = "item", name = "t4-circuit", amount = 5 * buildingmulti},
+          {type = "item", name = "t4-brick", amount = 9 * buildingmulti}
+        },
+        result = "sintering-oven-4"
+      }
+    },
+    {
+      type = "recipe",
+      name = "sintering-oven-5",
+      normal = {
+        energy_required = 5,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "sinteringo-5", amount = 1},
+          {type = "item", name = "t5-plate", amount = 8},
+          {type = "item", name = "t5-circuit", amount = 5},
+          {type = "item", name = "t5-brick", amount = 9}
+        },
+        result = "sintering-oven-5"
+      },
+      expensive = {
+        energy_required = 5 * buildingtime,
+        enabled = false,
+        ingredients = {
+          {type = "item", name = "sinteringo-5", amount = 1},
           {type = "item", name = "t5-plate", amount = 8 * buildingmulti},
           {type = "item", name = "t5-circuit", amount = 5 * buildingmulti},
           {type = "item", name = "t5-brick", amount = 9 * buildingmulti}
         },
-        result = "sintering-oven-4"
+        result = "sintering-oven-5"
       }
     },
     --STRAND CASTING MACHINE
