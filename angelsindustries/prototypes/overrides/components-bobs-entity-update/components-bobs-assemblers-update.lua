@@ -1,71 +1,70 @@
-
 if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
   -- CUSTOM FIXES FOR BOBS INSERTERS
-  
+
   if mods["bobassembly"] then
     -- regular assemblers ingredient count
-    if data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count and
-       data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count < 4
+    if
+      data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count
+      and data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count < 4
     then -- required for tier 1 block automation
       data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
     end
-  
-    if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count and
-       data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5
+
+    if
+      data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count
+      and data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5
     then -- required for tier 2 block automation
       data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
     end
-  
-    OV.patch_recipes(
+
+    OV.patch_recipes({
       {
-        {
-          name = "assembling-machine-2",
-          ingredients = {
-            {type = "item", name = "block-construction-1", amount = "block-construction-2"}
-          },
+        name = "assembling-machine-2",
+        ingredients = {
+          { type = "item", name = "block-construction-1", amount = "block-construction-2" },
         },
-        {
-          name = "assembling-machine-3",
-          ingredients = {
-            {type = "item", name = "block-construction-2", amount = "block-construction-4"},
-            {type = "item", name = "block-enhancement-2", amount = "block-enhancement-4"},
-            {type = "item", name = "block-mechanical-1", amount = "block-mechanical-2"},
-            {type = "item", name = "block-fluidbox-1", amount = "block-fluidbox-2"}
-          },
+      },
+      {
+        name = "assembling-machine-3",
+        ingredients = {
+          { type = "item", name = "block-construction-2", amount = "block-construction-4" },
+          { type = "item", name = "block-enhancement-2", amount = "block-enhancement-4" },
+          { type = "item", name = "block-mechanical-1", amount = "block-mechanical-2" },
+          { type = "item", name = "block-fluidbox-1", amount = "block-fluidbox-2" },
         },
-        {
-          name = "assembling-machine-4",
-          ingredients = {
-            {"!!"},
-            {type = "item", name = "block-construction-3", amount = 2},
-            {type = "item", name = "block-enhancement-3", amount = 3},
-            {type = "item", name = "block-mechanical-1", amount = 5},
-            {type = "item", name = "block-fluidbox-1", amount = 3}
-          },
+      },
+      {
+        name = "assembling-machine-4",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "block-construction-3", amount = 2 },
+          { type = "item", name = "block-enhancement-3", amount = 3 },
+          { type = "item", name = "block-mechanical-1", amount = 5 },
+          { type = "item", name = "block-fluidbox-1", amount = 3 },
         },
-        {
-          name = "assembling-machine-5",
-          ingredients = {
-            {"!!"},
-            {type = "item", name = "block-construction-4", amount = 2},
-            {type = "item", name = "block-enhancement-4", amount = 3},
-            {type = "item", name = "block-mechanical-2", amount = 5},
-            {type = "item", name = "block-fluidbox-2", amount = 3}
-          },
+      },
+      {
+        name = "assembling-machine-5",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "block-construction-4", amount = 2 },
+          { type = "item", name = "block-enhancement-4", amount = 3 },
+          { type = "item", name = "block-mechanical-2", amount = 5 },
+          { type = "item", name = "block-fluidbox-2", amount = 3 },
         },
-        {
-          name = "assembling-machine-6",
-          ingredients = {
-            {"!!"},
-            {type = "item", name = "block-construction-5", amount = 2},
-            {type = "item", name = "block-enhancement-5", amount = 3},
-            {type = "item", name = "block-mechanical-2", amount = 5},
-            {type = "item", name = "block-fluidbox-2", amount = 3}
-          },
+      },
+      {
+        name = "assembling-machine-6",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "block-construction-5", amount = 2 },
+          { type = "item", name = "block-enhancement-5", amount = 3 },
+          { type = "item", name = "block-mechanical-2", amount = 5 },
+          { type = "item", name = "block-fluidbox-2", amount = 3 },
         },
-      }
-    )
+      },
+    })
 
     angelsmods.industries.blocks.enhancement5 = true
 
@@ -90,39 +89,37 @@ if angelsmods.industries.components then
     end
 
     if settings.startup["bobmods-assembly-electronicmachines"].value then
-      OV.patch_recipes(
-        {
-          { -- corresponds to assembling machine 1.5
-            name = "electronics-machine-1",
-            ingredients = {
-              {"!!"},
-              {type = "item", name = "block-construction-2", amount = 2},
-              {type = "item", name = "block-enhancement-1", amount = 3},
-              {type = "item", name = "block-mechanical-1", amount = 2},
-            },
+      OV.patch_recipes({
+        { -- corresponds to assembling machine 1.5
+          name = "electronics-machine-1",
+          ingredients = {
+            { "!!" },
+            { type = "item", name = "block-construction-2", amount = 2 },
+            { type = "item", name = "block-enhancement-1", amount = 3 },
+            { type = "item", name = "block-mechanical-1", amount = 2 },
           },
-          { -- corresponds to assembling machine 2.5
-            name = "electronics-machine-2",
-            ingredients = {
-              {"!!"},
-              {type = "item", name = "block-construction-3", amount = 2},
-              {type = "item", name = "block-enhancement-2", amount = 3},
-              {type = "item", name = "block-mechanical-2", amount = 3},
-              {type = "item", name = "block-fluidbox-2", amount = 1},
-            },
+        },
+        { -- corresponds to assembling machine 2.5
+          name = "electronics-machine-2",
+          ingredients = {
+            { "!!" },
+            { type = "item", name = "block-construction-3", amount = 2 },
+            { type = "item", name = "block-enhancement-2", amount = 3 },
+            { type = "item", name = "block-mechanical-2", amount = 3 },
+            { type = "item", name = "block-fluidbox-2", amount = 1 },
           },
-          { -- corresponds to assembling machine 4.5
-            name = "electronics-machine-3",
-            ingredients = {
-              {"!!"},
-              {type = "item", name = "block-construction-5", amount = 2},
-              {type = "item", name = "block-enhancement-4", amount = 3},
-              {type = "item", name = "block-mechanical-2", amount = 5},
-              {type = "item", name = "block-fluidbox-2", amount = 3},
-            },
+        },
+        { -- corresponds to assembling machine 4.5
+          name = "electronics-machine-3",
+          ingredients = {
+            { "!!" },
+            { type = "item", name = "block-construction-5", amount = 2 },
+            { type = "item", name = "block-enhancement-4", amount = 3 },
+            { type = "item", name = "block-mechanical-2", amount = 5 },
+            { type = "item", name = "block-fluidbox-2", amount = 3 },
           },
-        }
-      )
+        },
+      })
 
       OV.add_prereq("electronics-machine-1", "angels-components-construction-2")
       OV.add_prereq("electronics-machine-1", "electronics")
@@ -140,9 +137,6 @@ if angelsmods.industries.components then
         OV.add_prereq("electronics-machine-2", "angels-basic-blocks-2")
         OV.add_prereq("electronics-machine-3", "angels-advanced-blocks-1")
       end
-
     end
-
   end
-
 end

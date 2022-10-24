@@ -4,31 +4,31 @@ local tech_unlocks = {}
 
 local function set_type(name)
   local train_type
-  if string.find(name,"crawler") then
-    train_type="crawlertrain" --angelsmods.addons.mobility.crawlertrain
-  elseif string.find(name,"petro") then
-    train_type="petrotrain" --angelsmods.addons.mobility.petrotrain
-  elseif string.find(name,"smelting") then
-    train_type="smeltingtrain" --angelsmods.addons.mobility.smeltingtrain
+  if string.find(name, "crawler") then
+    train_type = "crawlertrain" --angelsmods.addons.mobility.crawlertrain
+  elseif string.find(name, "petro") then
+    train_type = "petrotrain" --angelsmods.addons.mobility.petrotrain
+  elseif string.find(name, "smelting") then
+    train_type = "smeltingtrain" --angelsmods.addons.mobility.smeltingtrain
   else
-    log("wrong train finding string for: "..name)
+    log("wrong train finding string for: " .. name)
   end
   return train_type
 end
 
 local function add_speed_locale()
-  local parts = {"cargo-wagon","fluid-wagon","artillery-wagon"}
+  local parts = { "cargo-wagon", "fluid-wagon", "artillery-wagon" }
   for _, part in pairs(parts) do
-    for _,train in pairs(data.raw[part]) do
+    for _, train in pairs(data.raw[part]) do
       if train then
         if train.localised_description then --add to table
-          if type(train.localised_description) == 'string' then
-            train.localised_description = {"", train.localised_description}
+          if type(train.localised_description) == "string" then
+            train.localised_description = { "", train.localised_description }
           end
-          table.insert(train.localised_description,"\n") --ensure new line at start
-          table.insert(train.localised_description,{"speed-text.speed-cap", train.max_speed*216})
-        else-- add new table
-          train.localised_description={"speed-text.speed-cap", math.floor(train.max_speed*216*100)/100}--rounded tile/tick converted to km/h
+          table.insert(train.localised_description, "\n") --ensure new line at start
+          table.insert(train.localised_description, { "speed-text.speed-cap", train.max_speed * 216 })
+        else -- add new table
+          train.localised_description = { "speed-text.speed-cap", math.floor(train.max_speed * 216 * 100) / 100 } --rounded tile/tick converted to km/h
         end
       end
     end
@@ -37,7 +37,7 @@ end
 
 local function generate_additional_pastable_entities(name)
   local all_entity_names = {}
-  for _, entity_type_name in pairs{
+  for _, entity_type_name in pairs({
     "crawler-locomotive",
     "crawler-locomotive-wagon",
     "crawler-wagon",
@@ -49,8 +49,8 @@ local function generate_additional_pastable_entities(name)
 
     "smelting-locomotive-1",
     "smelting-locomotive-tender",
-    "smelting-wagon-1"
-  } do
+    "smelting-wagon-1",
+  }) do
     local entity_type_tiers = angelsmods.addons.mobility[set_type(entity_type_name)].tier_amount
     if entity_type_tiers > 1 then
       for entity_tier = 1, entity_type_tiers, 1 do
@@ -111,13 +111,10 @@ local function generate_tiered_ingredients(tier, ingredients)
     end
 
     if ingredient_amount > 0 then
-      table.insert(
-        generated_ingredients,
-        {
-          name = ingredient_name,
-          amount = ingredient_amount
-        }
-      )
+      table.insert(generated_ingredients, {
+        name = ingredient_name,
+        amount = ingredient_amount,
+      })
     end
   end
 
@@ -137,18 +134,15 @@ local function generate_train_recipe(item, add_unlock)
       if i > 1 then
         name = name .. "-" .. i
 
-        table.insert(
-          ingredients,
-          {
-            i == 2 and item.name or (item.name .. "-" .. (i - 1)),
-            1
-          }
-        )
+        table.insert(ingredients, {
+          i == 2 and item.name or (item.name .. "-" .. (i - 1)),
+          1,
+        })
       end
 
       copy.name = name
-      copy.localised_name = {"", {"recipe-name." .. item.name}, " MK" .. i}
-      copy.localised_description = {"recipe-description." .. item.name}
+      copy.localised_name = { "", { "recipe-name." .. item.name }, " MK" .. i }
+      copy.localised_description = { "recipe-description." .. item.name }
       copy.ingredients = ingredients
       copy.result = name
 
@@ -184,22 +178,23 @@ local function generate_train_recipe(item, add_unlock)
   data:extend(entries)
 end
 
-local add_tier_number = mods["angelsrefining"] and
-  angelsmods.functions.add_number_icon_layer or
-  function(icon_layers, number_tier, number_tint)
+local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_number_icon_layer
+  or function(icon_layers, number_tier, number_tint)
     local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
     local new_icon_layers = util.table.deepcopy(icon_layers)
     table.insert(new_icon_layers, {
-      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-"..number_tier.."-outline.png",
-      icon_size = 64, icon_mipmaps = 2,
-      tint = {0, 0, 0, 255},
-      scale = 0.5 * icon_size_scale
+      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
+      icon_size = 64,
+      icon_mipmaps = 2,
+      tint = { 0, 0, 0, 255 },
+      scale = 0.5 * icon_size_scale,
     })
     table.insert(new_icon_layers, {
-      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-"..number_tier..".png",
-      icon_size = 64, icon_mipmaps = 2,
+      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. ".png",
+      icon_size = 64,
+      icon_mipmaps = 2,
       tint = number_tint,
-      scale = 0.5 * icon_size_scale
+      scale = 0.5 * icon_size_scale,
     })
     return new_icon_layers
   end
@@ -217,16 +212,17 @@ local function generate_train_items(item)
 
       copy.order = copy.order .. "-" .. i
       copy.name = name
-      copy.localised_name = {"", {"item-name." .. item.name}, " MK" .. i}
-      copy.localised_description = {"item-description." .. item.name}
+      copy.localised_name = { "", { "item-name." .. item.name }, " MK" .. i }
+      copy.localised_description = { "item-description." .. item.name }
       copy.place_result = name
-      copy.icons = item.icons or {
-        {
-          icon = item.icon,
-          icon_size = item.icon_size,
-          icon_mipmaps = item.icon_mipmaps
+      copy.icons = item.icons
+        or {
+          {
+            icon = item.icon,
+            icon_size = item.icon_size,
+            icon_mipmaps = item.icon_mipmaps,
+          },
         }
-      }
       copy.icon = nil
       copy.icon_size = nil
       copy.icon_mipmaps = nil
@@ -257,14 +253,15 @@ local function generate_train_entities(item)
       local multiplier = math.pow(1.25, i - 1)
 
       copy.name = name
-      copy.localised_name = {"", {"entity-name." .. item.name}, " MK" .. i}
-      copy.icons = item.icons or {
-        {
-          icon = item.icon,
-          icon_size = item.icon_size,
-          icon_mipmaps = item.icon_mipmaps
+      copy.localised_name = { "", { "entity-name." .. item.name }, " MK" .. i }
+      copy.icons = item.icons
+        or {
+          {
+            icon = item.icon,
+            icon_size = item.icon_size,
+            icon_mipmaps = item.icon_mipmaps,
+          },
         }
-      }
       copy.icon = nil
       copy.icon_size = nil
       copy.icon_mipmaps = nil
@@ -298,13 +295,10 @@ end
 local function get_unlocks(tech, base_effects)
   if tech_unlocks[tech] then
     for name, _ in pairs(tech_unlocks[tech]) do
-      table.insert(
-        base_effects,
-        {
-          type = "unlock-recipe",
-          recipe = name
-        }
-      )
+      table.insert(base_effects, {
+        type = "unlock-recipe",
+        recipe = name,
+      })
     end
   end
 
@@ -323,9 +317,9 @@ local function generate_train_technology(item, tiers, extra_prereqs)
       if i > 1 then
         name = name .. "-" .. i
         if i == 2 then
-          prerequisites = {item.name}
+          prerequisites = { item.name }
         else
-          prerequisites = {item.name .. "-" .. (i - 1)}
+          prerequisites = { item.name .. "-" .. (i - 1) }
         end
       end
       for _, prereq in pairs(extra_prereqs and extra_prereqs[i] or {}) do
@@ -334,8 +328,8 @@ local function generate_train_technology(item, tiers, extra_prereqs)
 
       copy.order = copy.order .. "-" .. i
       copy.name = name
-      copy.localised_name = {"", {"technology-name." .. item.name}, " MK" .. i}
-      copy.localised_description = {"technology-description." .. item.name}
+      copy.localised_name = { "", { "technology-name." .. item.name }, " MK" .. i }
+      copy.localised_description = { "technology-description." .. item.name }
       copy.effects = get_unlocks(name, {})
       copy.unit = tiers[i]
       copy.prerequisites = prerequisites
@@ -359,10 +353,10 @@ local function update_equipment_grid(grid, add, remove)
     return new_t
   end
   if type(add) == "string" then
-    add = {add}
+    add = { add }
   end
   if type(remove) == "string" then
-    remove = {remove}
+    remove = { remove }
   end
 
   add = add or {}
@@ -383,19 +377,27 @@ local function update_equipment_grid(grid, add, remove)
 end
 
 local function update_equipment(equipment_type, equipment_name, categories_to_add)
-  if type(categories_to_add) == 'table' then
+  if type(categories_to_add) == "table" then
     for _, category_to_add in pairs(categories_to_add) do
       update_equipment(equipment_type, equipment_name, category_to_add)
     end
   end
 
-  if not data.raw[equipment_type] then return end
-  if not data.raw[equipment_type][equipment_name] then return end
-  if not data.raw["equipment-category"][categories_to_add] then return end
+  if not data.raw[equipment_type] then
+    return
+  end
+  if not data.raw[equipment_type][equipment_name] then
+    return
+  end
+  if not data.raw["equipment-category"][categories_to_add] then
+    return
+  end
 
   if data.raw[equipment_type][equipment_name].categories then
     for _, category in pairs(data.raw[equipment_type][equipment_name].categories) do
-      if category == categories_to_add then return end
+      if category == categories_to_add then
+        return
+      end
     end
   else
     data.raw[equipment_type][equipment_name].categories = {}
@@ -411,5 +413,5 @@ return {
   generate_train_technology = generate_train_technology,
   update_equipment_grid = update_equipment_grid,
   update_equipment = update_equipment,
-  add_speed_locale = add_speed_locale
+  add_speed_locale = add_speed_locale,
 }

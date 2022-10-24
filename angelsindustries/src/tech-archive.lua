@@ -17,7 +17,7 @@ tech_archive.main_lab = {
   [4] = "angels-main-lab-4",
   [5] = "angels-main-lab-5",
   [6] = "angels-main-lab-6",
-  [7] = "angels-main-lab-7"
+  [7] = "angels-main-lab-7",
 }
 
 -------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ function tech_archive:remove_lab_from_inv(inventory)
     local items = game.item_prototypes
     for key, lab in pairs(tech_archive.main_lab) do
       if items[lab] and inventory.get_item_count(lab) > 0 then
-        inventory.remove {name = lab}
+        inventory.remove({ name = lab })
         global.is_lab_given = false
         return true
       end
@@ -46,29 +46,34 @@ function tech_archive:remove_lab_from_inv(inventory)
 end
 
 function tech_archive:initialize_crash_site()
-  if game.entity_prototypes[tech_archive.main_lab[1]] and (not global.is_lab_given) then
+  if game.entity_prototypes[tech_archive.main_lab[1]] and not global.is_lab_given then
     -- angels science mode
     local surface = game.surfaces["nauvis"]
     if surface and surface.valid then
-      local crash_site_entity = surface.find_entities_filtered{
+      local crash_site_entity = surface.find_entities_filtered({
         type = "container",
         name = "crash-site-spaceship",
-        limit = 1
-      }[1]
+        limit = 1,
+      })[1]
       if crash_site_entity and crash_site_entity.valid then
-        local created_entity = surface.create_entity{
+        local created_entity = surface.create_entity({
           name = tech_archive.main_lab[0],
           position = surface.find_non_colliding_position(
-            --[[name]]tech_archive.main_lab[0],
-            --[[center]]{crash_site_entity.position.x - 15, crash_site_entity.position.y},
-            --[[radius]]15 + 15,
-            --[[precision]]0.5,
-            --[[force_to_tile_center]]true
+            --[[name]]
+            tech_archive.main_lab[0],
+            --[[center]]
+            { crash_site_entity.position.x - 15, crash_site_entity.position.y },
+            --[[radius]]
+            15 + 15,
+            --[[precision]]
+            0.5,
+            --[[force_to_tile_center]]
+            true
           ),
           force = "player",
           raise_build = false, -- I don't see why we should raise this?
-          create_build_effect_smoke = false
-        }
+          create_build_effect_smoke = false,
+        })
         if created_entity and created_entity.valid then
           created_entity.energy = game.item_prototypes["coal"].fuel_value
           global.is_lab_given = true
@@ -76,46 +81,50 @@ function tech_archive:initialize_crash_site()
           -- create explosions
           for k = 1, 3 do
             local bbox = created_entity.bounding_box
-            local explosions = surface.create_entity{
+            local explosions = surface.create_entity({
               name = "crash-site-explosion-smoke",
               position = {
-                x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
-                y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
-              }
-            }
-            explosions.time_to_live = math.random(60 * 20, 60 * 30) - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
+                x = (bbox.left_top.x + bbox.right_bottom.x) / 2
+                  + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
+                y = (bbox.left_top.y + bbox.right_bottom.y) / 2
+                  + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5),
+              },
+            })
+            explosions.time_to_live = math.random(60 * 20, 60 * 30)
+              - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
             explosions.time_to_next_effect = math.random(30)
           end
 
           -- create fires
           for k = 1, 2 do
             local bbox = created_entity.bounding_box
-            surface.create_entity{
+            surface.create_entity({
               name = "crash-site-fire-flame",
               position = {
-                x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
-                y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
-              }
-            }
-            local smoke = surface.create_entity{
+                x = (bbox.left_top.x + bbox.right_bottom.x) / 2
+                  + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
+                y = (bbox.left_top.y + bbox.right_bottom.y) / 2
+                  + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5),
+              },
+            })
+            local smoke = surface.create_entity({
               name = "crash-site-fire-smoke",
               position = {
-                x = (bbox.left_top.x + bbox.right_bottom.x) / 2 + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
-                y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
-              }
-            }
+                x = (bbox.left_top.x + bbox.right_bottom.x) / 2
+                  + (bbox.right_bottom.x - bbox.left_top.x) * (math.random() - 0.5),
+                y = (bbox.left_top.y + bbox.right_bottom.y) / 2
+                  + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5),
+              },
+            })
             smoke.time_to_live = math.random(60 * 20, 60 * 30) - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
             smoke.time_to_next_effect = math.random(30)
           end
-
         end
       end
     end
   end
   global.crash_site_created = true
 end
-
-
 
 -------------------------------------------------------------------------------
 -- Event handlers
@@ -131,13 +140,15 @@ function tech_archive:on_player_respawned(player_index)
 
   if player and player.valid then
     if not global.is_lab_given and game.entity_prototypes[tech_archive.main_lab[1]] then
-      global.is_lab_given = player.insert{name = tech_archive.main_lab[0], count = 1} > 0
+      global.is_lab_given = player.insert({ name = tech_archive.main_lab[0], count = 1 }) > 0
     end
   end
 
   local force = player and player.force
   if force then
-    local available = force.technologies["angels-hidden-ghosting"] and force.technologies["angels-hidden-ghosting"].researched or false
+    local available = force.technologies["angels-hidden-ghosting"]
+        and force.technologies["angels-hidden-ghosting"].researched
+      or false
     player.set_shortcut_available("toggle-ghosting", available)
     if available then
       player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
@@ -163,8 +174,6 @@ function tech_archive:on_pre_player_died(player_index)
     self:remove_lab_from_inv(game.players[player_index].get_main_inventory())
   end
 end
-
-
 
 -- Return class ---------------------------------------------------------------
 return tech_archive

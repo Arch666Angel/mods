@@ -1,20 +1,18 @@
 if not data.raw["equipment-category"]["angels-void"] then
-    data:extend(
+  data:extend({
     {
-      {
-        type = "equipment-category",
-        name = "angels-void",
-      },
-    })
+      type = "equipment-category",
+      name = "angels-void",
+    },
+  })
 end
 
-data:extend(
-{
+data:extend({
   --EQUIPMENT CATEGORY
   {
     type = "equipment-category",
-    name = "angels-cab"
-    },
+    name = "angels-cab",
+  },
   --AMMO CATEGORY
   {
     type = "ammo-category",

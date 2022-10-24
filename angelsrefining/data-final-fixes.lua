@@ -4,8 +4,8 @@ for _, fluid_n in pairs(data.raw.fluid) do
   end
 end
 
- --MODIFY BARRELING RECIPES
+--MODIFY BARRELING RECIPES
 angelsmods.functions.modify_barreling_recipes()
 angelsmods.functions.create_barreling_fluid_subgroup()
 
-require "prototypes.tips-and-tricks.tips-and-tricks"
+require("prototypes.tips-and-tricks.tips-and-tricks")

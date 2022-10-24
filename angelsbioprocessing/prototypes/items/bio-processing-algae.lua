@@ -1,6 +1,5 @@
-data:extend(
-{
---BROWN
+data:extend({
+  --BROWN
   {
     type = "item",
     name = "algae-brown",
@@ -8,7 +7,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-brown",
     order = "a[algae-brown]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -17,9 +16,9 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-brown",
     order = "b[solid-alginic-acid]",
-    stack_size = 200
+    stack_size = 200,
   },
---GREEN
+  --GREEN
   {
     type = "item",
     name = "algae-green",
@@ -27,7 +26,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-green",
     order = "a[algae-green]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -36,9 +35,9 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-green",
     order = "c[paste-cellulose]",
-    stack_size = 200
+    stack_size = 200,
   },
---BLUE
+  --BLUE
   {
     type = "item",
     name = "algae-blue",
@@ -46,7 +45,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-blue",
     order = "a[algae-blue]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -55,9 +54,9 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-blue",
     order = "b[blue-cellulose-fiber]",
-    stack_size = 200
+    stack_size = 200,
   },
---RED
+  --RED
   {
     type = "item",
     name = "algae-red",
@@ -65,7 +64,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-red",
     order = "a[algae-red]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -74,7 +73,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-red",
     order = "b[red-cellulose-fiber]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -83,7 +82,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-red",
     order = "c[solid-calcium-carbonate]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

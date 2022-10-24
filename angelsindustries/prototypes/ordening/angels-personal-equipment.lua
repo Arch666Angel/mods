@@ -45,16 +45,14 @@ end
 -- fusion reactor
 reorder("item", "fusion-reactor-equipment", "angels-personal-equipment-power-a", "b")
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-power-b",
-        group = "angels-logistics",
-        order = "d-b[equipment]-b"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-power-b",
+      group = "angels-logistics",
+      order = "d-b[equipment]-b",
+    },
+  })
   reorder("item", "fusion-reactor-equipment", "angels-personal-equipment-power-b", "a")
   reorder("item", "fusion-reactor-equipment-2", "angels-personal-equipment-power-b", "b")
   reorder("item", "fusion-reactor-equipment-3", "angels-personal-equipment-power-b", "c")
@@ -65,16 +63,14 @@ end
 reorder("item", "battery-equipment", "angels-personal-equipment-power-a", "c")
 reorder("item", "battery-mk2-equipment", "angels-personal-equipment-power-a", "d")
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-power-c",
-        group = "angels-logistics",
-        order = "d-b[equipment]-c"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-power-c",
+      group = "angels-logistics",
+      order = "d-b[equipment]-c",
+    },
+  })
   reorder("item", "battery-equipment", "angels-personal-equipment-power-c", "a")
   reorder("item", "battery-mk2-equipment", "angels-personal-equipment-power-c", "b")
   reorder("item", "battery-mk3-equipment", "angels-personal-equipment-power-c", "c")
@@ -87,16 +83,14 @@ end
 reorder("item", "night-vision-equipment", "angels-personal-equipment-power-a", "e")
 reorder("item", "belt-immunity-equipment", "angels-personal-equipment-power-a", "f")
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-power-d",
-        group = "angels-logistics",
-        order = "d-b[equipment]-d"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-power-d",
+      group = "angels-logistics",
+      order = "d-b[equipment]-d",
+    },
+  })
   reorder("item", "night-vision-equipment", "angels-personal-equipment-power-d", "a")
   reorder("item", "night-vision-equipment-2", "angels-personal-equipment-power-d", "b")
   reorder("item", "night-vision-equipment-3", "angels-personal-equipment-power-d", "c")
@@ -115,16 +109,14 @@ end
 
 -- chargepad
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-robot-b",
-        group = "angels-logistics",
-        order = "d-c[equipment]-b"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-robot-b",
+      group = "angels-logistics",
+      order = "d-c[equipment]-b",
+    },
+  })
   reorder("item", "personal-roboport-chargepad-equipment", "angels-personal-equipment-robot-b", "a")
   reorder("item", "personal-roboport-chargepad-equipment-2", "angels-personal-equipment-robot-b", "b")
   reorder("item", "personal-roboport-chargepad-equipment-3", "angels-personal-equipment-robot-b", "c")
@@ -133,16 +125,14 @@ end
 
 -- antenna
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-robot-c",
-        group = "angels-logistics",
-        order = "d-c[equipment]-c"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-robot-c",
+      group = "angels-logistics",
+      order = "d-c[equipment]-c",
+    },
+  })
   reorder("item", "personal-roboport-antenna-equipment", "angels-personal-equipment-robot-c", "a")
   reorder("item", "personal-roboport-antenna-equipment-2", "angels-personal-equipment-robot-c", "b")
   reorder("item", "personal-roboport-antenna-equipment-3", "angels-personal-equipment-robot-c", "c")
@@ -153,16 +143,14 @@ end
 reorder("item", "personal-roboport-equipment", "angels-personal-equipment-power-a", "g")
 reorder("item", "personal-roboport-mk2-equipment", "angels-personal-equipment-power-a", "h")
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-robot-d",
-        group = "angels-logistics",
-        order = "d-c[equipment]-d"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-robot-d",
+      group = "angels-logistics",
+      order = "d-c[equipment]-d",
+    },
+  })
   reorder("item", "personal-roboport-equipment", "angels-personal-equipment-robot-d", "a")
   reorder("item", "personal-roboport-mk2-equipment", "angels-personal-equipment-robot-d", "b")
   reorder("item", "personal-roboport-mk3-equipment", "angels-personal-equipment-robot-d", "c")
@@ -185,16 +173,14 @@ end
 -- laser
 reorder("item", "personal-laser-defense-equipment", "angels-personal-equipment-combat-a", "c")
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-combat-b",
-        group = "angels-logistics",
-        order = "d-d[equipment]-b"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-combat-b",
+      group = "angels-logistics",
+      order = "d-d[equipment]-b",
+    },
+  })
   reorder("item", "personal-laser-defense-equipment", "angels-personal-equipment-combat-b", "a")
   reorder("item", "personal-laser-defense-equipment-2", "angels-personal-equipment-combat-b", "b")
   reorder("item", "personal-laser-defense-equipment-3", "angels-personal-equipment-combat-b", "c")
@@ -206,16 +192,14 @@ end
 -- exoskeleton
 reorder("item", "exoskeleton-equipment", "angels-personal-equipment-combat-a", "d")
 if mods["bobequipment"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-personal-equipment-combat-c",
-        group = "angels-logistics",
-        order = "d-d[equipment]-c"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-personal-equipment-combat-c",
+      group = "angels-logistics",
+      order = "d-d[equipment]-c",
+    },
+  })
   reorder("item", "exoskeleton-equipment", "angels-personal-equipment-combat-c", "a")
   reorder("item", "exoskeleton-equipment-2", "angels-personal-equipment-combat-c", "b")
   reorder("item", "exoskeleton-equipment-3", "angels-personal-equipment-combat-c", "c")

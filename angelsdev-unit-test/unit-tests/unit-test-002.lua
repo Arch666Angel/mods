@@ -10,7 +10,9 @@ local function log_invalid_science_configuration(tech_name, tech_analysers, tech
       unit_test_functions.print_msg(string.format("                     %s", tech_analysers[i]))
     end
   end
-  unit_test_functions.print_msg(string.format("  Science datacores: %s", tech_datacore_T1[1] or tech_datacore_T2[1] or "None"))
+  unit_test_functions.print_msg(
+    string.format("  Science datacores: %s", tech_datacore_T1[1] or tech_datacore_T2[1] or "None")
+  )
   if #tech_datacore_T1 > 1 then
     for i = 2, #tech_datacore_T1 do
       unit_test_functions.print_msg(string.format("                     %s", tech_datacore_T1[i]))
@@ -26,9 +28,13 @@ end
 local unit_test_002 = function()
   local unit_test_result = unit_test_functions.test_successful
 
-  if not game.active_mods["angelsindustries"] then return true end -- skip test
+  if not game.active_mods["angelsindustries"] then
+    return true
+  end -- skip test
   local industries_tech_setting = settings.startup["angels-enable-tech"]
-  if (not industries_tech_setting) or (industries_tech_setting.value == false) then return true end -- skip test
+  if not industries_tech_setting or (industries_tech_setting.value == false) then
+    return true
+  end -- skip test
 
   local tech_prototypes = game.technology_prototypes
   for tech_name, tech_prototype in pairs(tech_prototypes) do

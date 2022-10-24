@@ -15,16 +15,14 @@ end
 
 reorder("ammo", "artillery-shell", "angels-artillery-a", "c[ammo]-a[basic-shell]")
 if mods["bobwarfare"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-artillery-b",
-        group = "combat",
-        order = "f-b"
-      },
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-artillery-b",
+      group = "combat",
+      order = "f-b",
+    },
+  })
   reorder("ammo", "artillery-shell", "angels-artillery-b", "c[ammo]-a[basic-shell]")
 
   reorder("ammo", "distractor-artillery-shell", "angels-artillery-b", "c[ammo]-b[distractor-shell]")

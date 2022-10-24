@@ -4,90 +4,84 @@ if angelsmods.industries.components then
 
   OV.remove_prereq("water-treatment", "angels-fluid-control")
 
-  OV.patch_recipes(
+  OV.patch_recipes({
     {
-      {
-        name = "offshore-pump",
-        ingredients = {
-          {"block-electronics-0", "block-electronics-1"}
-        }
+      name = "offshore-pump",
+      ingredients = {
+        { "block-electronics-0", "block-electronics-1" },
       },
-      {
-        name = "stone-wall",
-        ingredients = {
-          {type = "item", name = "block-construction-2", amount = 1}
-        }
+    },
+    {
+      name = "stone-wall",
+      ingredients = {
+        { type = "item", name = "block-construction-2", amount = 1 },
       },
-      {
-        name = "small-electric-pole",
-        ingredients = {
-          {type = "item", name = "wood", amount = 1},
-          {type = "item", name = "cable-harness-1", amount = 1}
-        },
-        results = {
-          {"!!"},
-          {type = "item", name = "small-electric-pole", amount = 1}
-        },
+    },
+    {
+      name = "small-electric-pole",
+      ingredients = {
+        { type = "item", name = "wood", amount = 1 },
+        { type = "item", name = "cable-harness-1", amount = 1 },
       },
-    }
-  )
+      results = {
+        { "!!" },
+        { type = "item", name = "small-electric-pole", amount = 1 },
+      },
+    },
+  })
 
   if not (mods["bobassembly"] or mods["bobelectronics"]) then
-    OV.patch_recipes(
+    OV.patch_recipes({
       {
-        {
-          name = "assembling-machine-1",
-          ingredients = {
-            {"block-electronics-0", "block-electronics-1"}
-          },
+        name = "assembling-machine-1",
+        ingredients = {
+          { "block-electronics-0", "block-electronics-1" },
         },
-        {
-          name = "lab",
-          ingredients = {
-            {"block-electronics-0", "block-electronics-1"}
-          },
+      },
+      {
+        name = "lab",
+        ingredients = {
+          { "block-electronics-0", "block-electronics-1" },
         },
-      }
-    )
+      },
+    })
   end
   OV.add_prereq("automation-2", "angels-components-construction-2")
 
   -------------------------------------------------------------------------------
   -- BASE GAME TRAIN ------------------------------------------------------------
   -------------------------------------------------------------------------------
-  OV.patch_recipes(
+  OV.patch_recipes({
     {
-      {
-        name = "locomotive",
-        ingredients = {
-          {"motor-1", "motor-2"},
-          {"mechanical-parts", "steel-plate"},
-        }
+      name = "locomotive",
+      ingredients = {
+        { "motor-1", "motor-2" },
+        { "mechanical-parts", "steel-plate" },
       },
-      {
-        name = "cargo-wagon",
-        ingredients = {
-          {"!!"},
-          {"construction-frame-1", 10},
-          {"angels-servo-motor-1", 15},
-          {"circuit-red-loaded", 5},
-          {"mechanical-parts", 5},
-          {"steel-chest", 1},
-        }
+    },
+    {
+      name = "cargo-wagon",
+      ingredients = {
+        { "!!" },
+        { "construction-frame-1", 10 },
+        { "angels-servo-motor-1", 15 },
+        { "circuit-red-loaded", 5 },
+        { "mechanical-parts", 5 },
+        { "steel-chest", 1 },
       },
-      {
-        name = "fluid-wagon",
-        ingredients = {
-          {"!!"},
-          {"construction-frame-1", 10},
-          {"angels-servo-motor-1", 15},
-          {"circuit-red-loaded", 5},
-          {"mechanical-parts", 5},
-          {"storage-tank", 1},
-        }
-      }
-    }
-  )
+    },
+    {
+      name = "fluid-wagon",
+      ingredients = {
+        { "!!" },
+        { "construction-frame-1", 10 },
+        { "angels-servo-motor-1", 15 },
+        { "circuit-red-loaded", 5 },
+        { "mechanical-parts", 5 },
+        { "storage-tank", 1 },
+      },
+    },
+  })
   if angelsmods.industries.tech then
   else
     OV.remove_prereq("railway", "engine")
@@ -109,25 +103,23 @@ if angelsmods.industries.components then
   end
   angelsmods.functions.remove_flag(rocket.name, "hidden")
 
-  OV.patch_recipes(
+  OV.patch_recipes({
     {
-      {
-        name = "rocket-part",
-        ingredients = {
-          {"!!"},
-          {"angels-rocket-hull", 30},
-          {"angels-rocket-ion-thruster", 05},
-          {"angels-rocket-ion-booster", 01},
-          {"angels-rocket-fusion-reactor", 02},
-          {"angels-rocket-shield-array", 03},
-          {"angels-rocket-laser-array", 03}
-        },
-        energy_required = 3 * 100,
-        enabled = false,
-        hidden = false
-      }
-    }
-  )
+      name = "rocket-part",
+      ingredients = {
+        { "!!" },
+        { "angels-rocket-hull", 30 },
+        { "angels-rocket-ion-thruster", 05 },
+        { "angels-rocket-ion-booster", 01 },
+        { "angels-rocket-fusion-reactor", 02 },
+        { "angels-rocket-shield-array", 03 },
+        { "angels-rocket-laser-array", 03 },
+      },
+      energy_required = 3 * 100,
+      enabled = false,
+      hidden = false,
+    },
+  })
   rocket = data.raw["rocket-silo"]["rocket-silo"]
   if rocket then
     rocket.rocket_parts_required = 1
@@ -142,5 +134,4 @@ if angelsmods.industries.components then
   OV.add_prereq("rocket-silo", "angels-rocket-fusion-reactor")
   OV.add_prereq("rocket-silo", "angels-rocket-shield-array")
   OV.set_science_pack("rocket-silo", "military-science-pack")
-
 end

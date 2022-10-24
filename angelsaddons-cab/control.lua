@@ -1,4 +1,4 @@
-local cab = require 'src.cab'
+local cab = require("src.cab")
 
 --[[-- DEBUG ONLY --
 script.on_event(defines.events.on_player_joined_game, function(event)
@@ -17,7 +17,8 @@ script.on_event(defines.events.on_player_joined_game, function(event)
     end
   end
 end)
---]]--
+--]]
+--
 
 script.on_init(function()
   cab.init()
@@ -32,9 +33,8 @@ function setOnTickState(status)
       script.on_event(defines.events.on_tick, cab.tick)
       global.vehicleData.onTickActive = true
     end
-
   else -- status == false -- deactivate onTick
-    if (not global.vehicleData.deployedCabs) or (not next(global.vehicleData.deployedCabs)) then
+    if not global.vehicleData.deployedCabs or (not next(global.vehicleData.deployedCabs)) then
       script.on_event(defines.events.on_tick, nil)
       global.vehicleData.onTickActive = false
     end
@@ -54,14 +54,12 @@ script.on_event(defines.events.on_trigger_created_entity, function(event)
         --game.print("Deployed")
         setOnTickState(true)
       end
-
     elseif event.entity.name == "angels-cab-undeploy-trigger" then
       -- vehicle wants to get undeployed
       if cab.undeploy(event.entity) then
         --game.print("Undeployed")
         setOnTickState(false)
       end
-
     end
   end
 end)
@@ -82,7 +80,8 @@ script.on_event(defines.events.on_built_entity, function(event)
      event.created_entity.name == global.vehicleData.entityName then
   end
 end)
-]]--
+]]
+--
 
 script.on_event(defines.events.on_gui_opened, function(event)
   if event.entity and event.entity.name == "angels-cab" then
@@ -99,12 +98,14 @@ script.on_event(defines.events.on_player_removed_equipment, function(event)
         -- remove the item from the player
         local equipment = game.equipment_prototypes[event.equipment]
         if player.clean_cursor() then
-          player.get_main_inventory().remove{name = equipment.take_result.name, count = event.count}
+          player.get_main_inventory().remove({ name = equipment.take_result.name, count = event.count })
         end
         -- put the item back
-        for _=1,event.count do event.grid.put{name = event.equipment} end
+        for _ = 1, event.count do
+          event.grid.put({ name = event.equipment })
+        end
         -- inform the player
-        player.print{"angels-cab-messages.grid-noEnergyInterfaceRemoval", equipment.localised_name}
+        player.print({ "angels-cab-messages.grid-noEnergyInterfaceRemoval", equipment.localised_name })
       end
     end
   end
@@ -114,24 +115,32 @@ script.on_event(defines.events.on_player_placed_equipment, function(event)
   local function invalidPlacement(localisedMessage)
     -- give item back to the player
     local player = game.get_player(event.player_index)
-    player.insert{name = event.equipment.prototype.take_result.name, count = 1}
+    player.insert({ name = event.equipment.prototype.take_result.name, count = 1 })
     -- remove the item from the grid
-    event.grid.take{equipment = event.equipment}
+    event.grid.take({ equipment = event.equipment })
     -- inform the player
     player.print(localisedMessage)
   end
 
   if event.equipment.name == "angels-cab-energy-interface-mk1" then
     if event.grid.get_contents()[event.equipment.name] > 1 then
-      return invalidPlacement{"angels-cab-messages.grid-noSecondEnergyInterfaceInsertion", event.equipment.prototype.localised_name}
+      return invalidPlacement({
+        "angels-cab-messages.grid-noSecondEnergyInterfaceInsertion",
+        event.equipment.prototype.localised_name,
+      })
     end
-
   elseif event.equipment.name == "angels-cab-energy-interface-mk2" then
     if event.grid.get_contents()[event.equipment.name] > 1 then
-      return invalidPlacement{"angels-cab-messages.grid-noSecondEnergyInterfaceInsertion", event.equipment.prototype.localised_name}
+      return invalidPlacement({
+        "angels-cab-messages.grid-noSecondEnergyInterfaceInsertion",
+        event.equipment.prototype.localised_name,
+      })
     elseif event.grid.get_contents()["angels-cab-energy-interface-mk1"] < 1 then
-      return invalidPlacement{"angels-cab-messages.grid-noPreviousEnergyInterfacePresent", event.equipment.prototype.localised_name}
-    -- TODO: check position of mk1 versus mk2
+      return invalidPlacement({
+        "angels-cab-messages.grid-noPreviousEnergyInterfacePresent",
+        event.equipment.prototype.localised_name,
+      })
+      -- TODO: check position of mk1 versus mk2
     end
   end
 end)

@@ -14,16 +14,14 @@ reorder("ammo", "atomic-bomb", "angels-explosion-a", "c[ammo]-c[atomic-rocket]")
 
 if mods["bobwarfare"] then
   -- rocket warhead
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-explosion-ba",
-        group = "combat",
-        order = "d-b-a"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-explosion-ba",
+      group = "combat",
+      order = "d-b-a",
+    },
+  })
 
   reorder("item", "rocket-warhead", "angels-explosion-ba", "a[regular]")
   reorder("item", "piercing-rocket-warhead", "angels-explosion-ba", "b[pierce]")
@@ -36,34 +34,30 @@ if mods["bobwarfare"] then
   -- reorder("item", "uranium-rocket-warhead", "angels-explosion-ba", "i[nuclear]")
   reorder("item", "rocket-engine", "angels-explosion-ba", "j[intermediate]")
 
-  OV.patch_recipes(
-    {
-      {name = "rocket-warhead", subgroup = "angels-explosion-ba", order = "a[regular]"},
-      {name = "piercing-rocket-warhead", subgroup = "angels-explosion-ba", order = "b[pierce]"},
-      {name = "explosive-rocket-warhead", subgroup = "angels-explosion-ba", order = "c[explosion]"},
-      {name = "flame-rocket-warhead", subgroup = "angels-explosion-ba", order = "d[fire]"},
-      {name = "acid-rocket-warhead", subgroup = "angels-explosion-ba", order = "e[acid]"},
-      {name = "poison-rocket-warhead", subgroup = "angels-explosion-ba", order = "f[poison]"},
-      {name = "electric-rocket-warhead", subgroup = "angels-explosion-ba", order = "g[electric]"},
-      {name = "plasma-rocket-warhead", subgroup = "angels-explosion-ba", order = "h[plasma]"},
-      --{ name = "uranium-rocket-warhead", subgroup = "angels-explosion-ba", order = "i[nuclear]" },
-      {name = "rocket-engine", subgroup = "angels-explosion-ba", order = "j[intermediate]"}
-    }
-  )
+  OV.patch_recipes({
+    { name = "rocket-warhead", subgroup = "angels-explosion-ba", order = "a[regular]" },
+    { name = "piercing-rocket-warhead", subgroup = "angels-explosion-ba", order = "b[pierce]" },
+    { name = "explosive-rocket-warhead", subgroup = "angels-explosion-ba", order = "c[explosion]" },
+    { name = "flame-rocket-warhead", subgroup = "angels-explosion-ba", order = "d[fire]" },
+    { name = "acid-rocket-warhead", subgroup = "angels-explosion-ba", order = "e[acid]" },
+    { name = "poison-rocket-warhead", subgroup = "angels-explosion-ba", order = "f[poison]" },
+    { name = "electric-rocket-warhead", subgroup = "angels-explosion-ba", order = "g[electric]" },
+    { name = "plasma-rocket-warhead", subgroup = "angels-explosion-ba", order = "h[plasma]" },
+    --{ name = "uranium-rocket-warhead", subgroup = "angels-explosion-ba", order = "i[nuclear]" },
+    { name = "rocket-engine", subgroup = "angels-explosion-ba", order = "j[intermediate]" },
+  })
 end
 
 if mods["bobwarfare"] then
   -- rockets
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-explosion-bb",
-        group = "combat",
-        order = "d-b-b"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-explosion-bb",
+      group = "combat",
+      order = "d-b-b",
+    },
+  })
 
   reorder("ammo", "bob-rocket", "angels-explosion-bb", "a[regular]")
   reorder("ammo", "bob-piercing-rocket", "angels-explosion-bb", "b[pierce]")
@@ -75,21 +69,19 @@ if mods["bobwarfare"] then
   reorder("ammo", "bob-plasma-rocket", "angels-explosion-bb", "h[plasma]")
   -- reorder("ammo", "bob-uranium-rocket", "angels-explosion-bb", "i[nuclear]")
   reorder("item", "rocket-body", "angels-explosion-bb", "j[intermediate]")
-  
-  OV.patch_recipes(
-    {
-      {name = "bob-rocket", subgroup = "angels-explosion-bb", order = "a[regular]"},
-      {name = "bob-piercing-rocket", subgroup = "angels-explosion-bb", order = "b[pierce]"},
-      {name = "bob-explosive-rocket", subgroup = "angels-explosion-bb", order = "c[explosion]"},
-      {name = "bob-flame-rocket", subgroup = "angels-explosion-bb", order = "d[fire]"},
-      {name = "bob-acid-rocket", subgroup = "angels-explosion-bb", order = "e[acid]"},
-      {name = "bob-poison-rocket", subgroup = "angels-explosion-bb", order = "f[poison]"},
-      {name = "bob-electric-rocket", subgroup = "angels-explosion-bb", order = "g[electric]"},
-      {name = "bob-plasma-rocket", subgroup = "angels-explosion-bb", order = "h[plasma]"},
-      --{ name = "bob-uranium-rocket", subgroup = "angels-explosion-bb", order = "i[nuclear]" },
-      {name = "rocket-body", subgroup = "angels-explosion-bb", order = "j[intermediate]"}
-    }
-  )
+
+  OV.patch_recipes({
+    { name = "bob-rocket", subgroup = "angels-explosion-bb", order = "a[regular]" },
+    { name = "bob-piercing-rocket", subgroup = "angels-explosion-bb", order = "b[pierce]" },
+    { name = "bob-explosive-rocket", subgroup = "angels-explosion-bb", order = "c[explosion]" },
+    { name = "bob-flame-rocket", subgroup = "angels-explosion-bb", order = "d[fire]" },
+    { name = "bob-acid-rocket", subgroup = "angels-explosion-bb", order = "e[acid]" },
+    { name = "bob-poison-rocket", subgroup = "angels-explosion-bb", order = "f[poison]" },
+    { name = "bob-electric-rocket", subgroup = "angels-explosion-bb", order = "g[electric]" },
+    { name = "bob-plasma-rocket", subgroup = "angels-explosion-bb", order = "h[plasma]" },
+    --{ name = "bob-uranium-rocket", subgroup = "angels-explosion-bb", order = "i[nuclear]" },
+    { name = "rocket-body", subgroup = "angels-explosion-bb", order = "j[intermediate]" },
+  })
 end
 
 -------------------------------------------------------------------------------

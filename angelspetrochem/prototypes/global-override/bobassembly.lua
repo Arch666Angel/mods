@@ -12,10 +12,10 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
   OV.disable_recipe("chemical-plant")
   angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant", {
     "chemistry",
-    "liquifying"
+    "liquifying",
   })
 else
-  OV.add_unlock("basic-chemistry-2","chemical-plant") --give the item a new home if still active
+  OV.add_unlock("basic-chemistry-2", "chemical-plant") --give the item a new home if still active
 end
 
 if mods["bobassembly"] then
@@ -29,10 +29,10 @@ if mods["bobassembly"] then
     OV.disable_technology("chemical-plant-2")
     angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant-2", {
       "chemistry",
-      "liquifying"
+      "liquifying",
     })
   end
-  
+
   -- Chemical plant 3
   move_item("chemical-plant-3", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-b")
   if angelsmods.trigger.disable_bobs_chemical_plants then
@@ -43,10 +43,10 @@ if mods["bobassembly"] then
     OV.disable_technology("chemical-plant-3")
     angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant-3", {
       "chemistry",
-      "liquifying"
+      "liquifying",
     })
   end
-  
+
   -- Chemical plant 4
   move_item("chemical-plant-4", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-c")
   if angelsmods.trigger.disable_bobs_chemical_plants then
@@ -57,7 +57,7 @@ if mods["bobassembly"] then
     OV.disable_technology("chemical-plant-4")
     angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant-4", {
       "chemistry",
-      "liquifying"
+      "liquifying",
     })
   end
 end
@@ -76,7 +76,7 @@ if mods["bobplates"] then
     OV.disable_recipe("electrolyser")
   else
     angelsmods.functions.add_crafting_category("assembling-machine", "electrolyser", "petrochem-electrolyser")
-    OV.add_unlock("basic-chemistry","electrolyser") --give the item a new home if still active
+    OV.add_unlock("basic-chemistry", "electrolyser") --give the item a new home if still active
   end
 
   -- Electrolyser 2

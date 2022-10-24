@@ -11,8 +11,8 @@ if not loaders_graphics then
         filename = "__angelsindustries__/graphics/entity/loader/loader-yellow.png",
         priority = "extra-high",
         width = 128,
-        height = 128
-      }
+        height = 128,
+      },
     },
     direction_out = {
       sheet = {
@@ -20,9 +20,9 @@ if not loaders_graphics then
         priority = "extra-high",
         width = 128,
         height = 128,
-        y = 128
-      }
-    }
+        y = 128,
+      },
+    },
   }
 
   data.raw["item"]["fast-loader"].icon = "__angelsindustries__/graphics/icons/loader-red-ico.png"
@@ -37,8 +37,8 @@ if not loaders_graphics then
         filename = "__angelsindustries__/graphics/entity/loader/loader-red.png",
         priority = "extra-high",
         width = 128,
-        height = 128
-      }
+        height = 128,
+      },
     },
     direction_out = {
       sheet = {
@@ -46,9 +46,9 @@ if not loaders_graphics then
         priority = "extra-high",
         width = 128,
         height = 128,
-        y = 128
-      }
-    }
+        y = 128,
+      },
+    },
   }
 
   data.raw["item"]["express-loader"].icon = "__angelsindustries__/graphics/icons/loader-blue-ico.png"
@@ -63,8 +63,8 @@ if not loaders_graphics then
         filename = "__angelsindustries__/graphics/entity/loader/loader-blue.png",
         priority = "extra-high",
         width = 128,
-        height = 128
-      }
+        height = 128,
+      },
     },
     direction_out = {
       sheet = {
@@ -72,9 +72,9 @@ if not loaders_graphics then
         priority = "extra-high",
         width = 128,
         height = 128,
-        y = 128
-      }
-    }
+        y = 128,
+      },
+    },
   }
 
   if data.raw["item"]["faster-loader"] then
@@ -88,8 +88,8 @@ if not loaders_graphics then
           filename = "__angelsindustries__/graphics/entity/loader/loader-green.png",
           priority = "extra-high",
           width = 128,
-          height = 128
-        }
+          height = 128,
+        },
       },
       direction_out = {
         sheet = {
@@ -97,9 +97,9 @@ if not loaders_graphics then
           priority = "extra-high",
           width = 128,
           height = 128,
-          y = 128
-        }
-      }
+          y = 128,
+        },
+      },
     }
   end
   if data.raw["item"]["extremely-fast-loader"] then
@@ -113,8 +113,8 @@ if not loaders_graphics then
           filename = "__angelsindustries__/graphics/entity/loader/loader-purple.png",
           priority = "extra-high",
           width = 128,
-          height = 128
-        }
+          height = 128,
+        },
       },
       direction_out = {
         sheet = {
@@ -122,9 +122,9 @@ if not loaders_graphics then
           priority = "extra-high",
           width = 128,
           height = 128,
-          y = 128
-        }
-      }
+          y = 128,
+        },
+      },
     }
   end
   if data.raw["technology"]["loader"] then
@@ -145,7 +145,7 @@ if not loaders_graphics then
   end
   if data.raw["technology"]["extremely-fast-loader"] then
     data.raw["technology"]["extremely-fast-loader"].icon =
-    "__angelsindustries__/graphics/technology/purple-loader-tech.png"
+      "__angelsindustries__/graphics/technology/purple-loader-tech.png"
     data.raw["technology"]["extremely-fast-loader"].icon_size = 128
   end
 end

@@ -3,7 +3,7 @@ local move_item = angelsmods.functions.move_item
 
 -- when angels exploration is not present, the warfare stuff is a mess
 -- so we try to organize it a bit to 'empty' some tabs
-if mods["bobwarfare"] and (not mods["angelsexploration"]) then
+if mods["bobwarfare"] and not mods["angelsexploration"] then
   local intermediate_subgroup = "bob-ammo-parts"
   data.raw["item-subgroup"][intermediate_subgroup].group = "combat"
   data.raw["item-subgroup"][intermediate_subgroup].order = "z"
@@ -41,7 +41,7 @@ if mods["bobwarfare"] and (not mods["angelsexploration"]) then
   --move_item("uranium-rocket-warhead", intermediate_subgroup, "c[warhead]-i[nuclear]")
   move_item("rocket-engine", intermediate_subgroup, "c[warhead]-y[engine]")
   move_item("rocket-body", intermediate_subgroup, "c[warhead]-z[body]")
-  
+
   move_item("magazine", intermediate_subgroup, "z[others]-a[magazine]")
   move_item("shot", intermediate_subgroup, "z[others]-b[shot]")
   move_item("shotgun-shell-casing", intermediate_subgroup, "z[others]-c[shothug-shell]")
@@ -63,19 +63,19 @@ if mods["bobwarfare"] then
       {
         name = "heavy-armor-2",
         ingredients = {
-          {name = "gunmetal-alloy", amount = "cobalt-steel-alloy"}
-        }
-      }
+          { name = "gunmetal-alloy", amount = "cobalt-steel-alloy" },
+        },
+      },
     })
-    data.raw.armor["heavy-armor-2"].localised_name = {"item-name.AB-heavy-armour-2"}
-    OV.remove_prereq("bob-armor-making-3","cobalt-processing")
+    data.raw.armor["heavy-armor-2"].localised_name = { "item-name.AB-heavy-armour-2" }
+    OV.remove_prereq("bob-armor-making-3", "cobalt-processing")
     if mods["angelssmelting"] then
       OV.add_prereq("bob-armor-making-3", "angels-gunmetal-smelting-1")
     else
       OV.add_prereq("bob-armor-making-3", "zinc-processing")
     end
   else
-    OV.add_prereq("bob-armor-making-3","logistic-science-pack")
-    OV.add_prereq("bob-armor-making-4","chemical-science-pack")
+    OV.add_prereq("bob-armor-making-3", "logistic-science-pack")
+    OV.add_prereq("bob-armor-making-4", "chemical-science-pack")
   end
 end

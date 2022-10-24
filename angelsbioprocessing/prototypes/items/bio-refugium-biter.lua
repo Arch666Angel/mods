@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   -----------------------------------------------------------------------------
   -- BITERS -------------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -14,13 +13,13 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/biter-crown.png",
         icon_size = 15,
         scale = 0.4,
-        shift = {7.3, -9.5}
-      }
+        shift = { 7.3, -9.5 },
+      },
     },
     icon_size = 32,
     subgroup = "bio-biter",
     order = "a[small]-b[biter]-b[queen]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -29,7 +28,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter",
     order = "a[small]-b[biter]-a[normal]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -42,13 +41,13 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/biter-crown.png",
         icon_size = 15,
         scale = 0.45,
-        shift = {8, -11}
-      }
+        shift = { 8, -11 },
+      },
     },
     icon_size = 32,
     subgroup = "bio-biter",
     order = "b[medium]-b[biter]-b[queen]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -57,7 +56,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter",
     order = "b[medium]-b[biter]-a[normal]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -70,13 +69,13 @@ data:extend(
         icon = "__angelsbioprocessing__/graphics/icons/biter-crown.png",
         icon_size = 15,
         scale = 0.5,
-        shift = {9, -12}
-      }
+        shift = { 9, -12 },
+      },
     },
     icon_size = 32,
     subgroup = "bio-biter",
     order = "c[big]-b[biter]-b[queen]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -85,7 +84,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter",
     order = "c[big]-b[biter]-a[normal]",
-    stack_size = 200
+    stack_size = 200,
   },
   -----------------------------------------------------------------------------
   -- EGGS ---------------------------------------------------------------------
@@ -97,7 +96,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter",
     order = "a[small]-a[egg]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -106,7 +105,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter",
     order = "b[medium]-a[egg]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -115,7 +114,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter",
     order = "c[big]-a[egg]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

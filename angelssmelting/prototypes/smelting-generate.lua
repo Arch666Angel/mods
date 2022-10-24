@@ -2,7 +2,7 @@ if angelsmods.refining then
   if bobmods and bobmods.plates then
     angelsmods.functions.make_converter("tungstic-acid", "liquid-tungstic-acid")
   end
-    
+
   --CREATE BARRELS
   angelsmods.functions.make_void("liquid-chlorauric-acid", "chemical")
   angelsmods.functions.make_void("liquid-hexachloroplatinic-acid", "chemical")

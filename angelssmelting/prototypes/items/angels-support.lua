@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   --COOLANT
   {
     type = "fluid",
@@ -10,8 +9,8 @@ data:extend(
     order = "fa",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
-    base_color = {r = 109/255, g = 136/255, b = 179/255},
-    flow_color = {r = 109/255, g = 136/255, b = 179/255},
+    base_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
+    flow_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
     max_temperature = 300,
   },
   {
@@ -23,10 +22,10 @@ data:extend(
     order = "fb",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
-    base_color = {r = 68/255, g = 85/255, b = 112/255},
-    flow_color = {r = 68/255, g = 85/255, b = 112/255},
+    base_color = { r = 68 / 255, g = 85 / 255, b = 112 / 255 },
+    flow_color = { r = 68 / 255, g = 85 / 255, b = 112 / 255 },
     max_temperature = 300,
-auto_barrel = false
+    auto_barrel = false,
   },
   --MOLDS
   {
@@ -45,7 +44,7 @@ auto_barrel = false
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "b[expendable]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -54,18 +53,17 @@ auto_barrel = false
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-a[new]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "spent-mold-non-expendable",
     icons = {
-      { icon = "__angelssmelting__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32},
+      { icon = "__angelssmelting__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32 },
       --{ icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
     },
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-b[used]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})
