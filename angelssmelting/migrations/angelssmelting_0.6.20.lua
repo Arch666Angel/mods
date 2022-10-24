@@ -17,12 +17,12 @@ for _, upgrade in pairs(
           surface.find_entities(chunk.area),
           {[upgrade.oldEntity] = upgrade.newEntity}
         )
-        local entities = surface.find_entities_filtered{area = chunk.area, type = "assembling-machine"}
-        angelsmods.migration.replace_recipes(
-          entities,
-          {{upgrade.oldEntity, nil}}
-        )
+        local entities = surface.find_entities_filtered({area = chunk.area, type = "assembling-machine"})
+        angelsmods.migration.replace_recipes(entities, {{upgrade.oldEntity, nil}})
       end
     end
   end
+  
+  angelsmods.migration.replace_quick_bar_slot({{upgrade.oldEntity, upgrade.newEntity}})
+  angelsmods.migration.clear_logistics_slot({upgrade.oldEntity})
 end
