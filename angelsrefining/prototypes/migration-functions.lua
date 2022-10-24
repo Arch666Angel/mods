@@ -320,6 +320,25 @@ function angelsmods.migration.replace_belt_content(entities_to_check, items_to_r
   end
 end
 
+function angelsmods.migration.replace_entity(entities_to_check, items_to_replace)
+  -- items_to_replace is a table where the keys are the old item, and
+  -- the values are the new item.
+  items_to_replace = items_to_replace or {}
+
+  for _, entity in pairs(entities_to_check) do
+    for oldItem, newItem in pairs(items_to_replace) do
+      local oldItemPrototype = game.item_prototypes[oldItem]
+      local oldEntityPrototype = oldItemPrototype and oldItemPrototype.place_result or nil
+      local newItemPrototype = game.item_prototypes[newItem]
+      local newEntityPrototype = newItemPrototype and newItemPrototype.place_result or nil
+      if oldEntityPrototype and newEntityPrototype and (entity.name == oldEntityPrototype.name) and (oldEntityPrototype.fast_replaceable_group == newEntityPrototype.fast_replaceable_group) then
+        entity.surface.create_entity({name = newEntityPrototype.name, position = entity.position, force = entity.force, fast_replace = true, spill = false})
+        break
+      end
+    end
+  end
+end
+
 function angelsmods.migration.replace_item(entities_to_check, items_to_replace)
   -- items_to_replace is a table where the keys are the old item, and
   -- the values are the new item.
@@ -327,6 +346,7 @@ function angelsmods.migration.replace_item(entities_to_check, items_to_replace)
   angelsmods.migration.replace_belt_content(entities_to_check, items_to_replace)
   angelsmods.migration.replace_inserter_content(entities_to_check, items_to_replace)
   angelsmods.migration.replace_signals(entities_to_check, items_to_replace)
+  angelsmods.migration.replace_entity(entities_to_check, items_to_replace)
 end
 
 return angelsmods
