@@ -374,6 +374,9 @@ function angelsmods.migration.clear_logistics_slot(items_to_clear)
   items_to_clear = items_to_clear or {}
 
   for _, player in pairs(game.players) do
+    if player.character == nil then
+      break
+    end
     -- find used slots
     local slots = {}
     for i = 1, 65536 do
