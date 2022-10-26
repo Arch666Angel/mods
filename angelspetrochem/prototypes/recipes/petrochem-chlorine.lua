@@ -107,7 +107,11 @@ data:extend({
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
     }, "ClHO"),
-    crafting_machine_tint = AF.get_recipe_tints({ "liquid-hydrochloric-acid", "gas-hydrogen-chloride", "water-purified" }),
+    crafting_machine_tint = AF.get_recipe_tints({
+      "liquid-hydrochloric-acid",
+      "gas-hydrogen-chloride",
+      "water-purified",
+    }),
     order = "f[liquid-hydrochloric-acid]",
   },
   {
@@ -233,7 +237,11 @@ data:extend({
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72 },
     }, "CClC"),
-    crafting_machine_tint = AF.get_recipe_tints({ "gas-epichlorhydrin", "gas-allylchlorid", "liquid-hydrochloric-acid" }),
+    crafting_machine_tint = AF.get_recipe_tints({
+      "gas-epichlorhydrin",
+      "gas-allylchlorid",
+      "liquid-hydrochloric-acid",
+    }),
     order = "i[gas-epichlorhydrin]",
   },
   {

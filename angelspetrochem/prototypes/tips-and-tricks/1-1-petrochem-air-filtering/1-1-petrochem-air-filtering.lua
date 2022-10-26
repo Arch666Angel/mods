@@ -8,7 +8,9 @@ data:extend({
     is_title = false,
     tag = "[item=angels-air-filter]",
     localised_name = { "tips-and-tricks-name.angels-air-filtering" },
-    localised_description = require("prototypes.tips-and-tricks.1-1-petrochem-air-filtering.1-1-petrochem-air-filtering-description"),
+    localised_description = require(
+      "prototypes.tips-and-tricks.1-1-petrochem-air-filtering.1-1-petrochem-air-filtering-description"
+    ),
 
     category = "angels-petrochem",
     order = "b[petrochem]-a[air-filtering]",

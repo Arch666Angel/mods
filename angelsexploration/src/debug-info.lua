@@ -26,8 +26,7 @@ function debug_info:init_global_data()
 end
 
 function debug_info:init_prototype_data()
-  return
-{
+  return {
     ["enemy_statistics"] = self:init_enemy_data(500),
   }
 end
@@ -222,8 +221,7 @@ function debug_info:create_enemy_spawn_order()
 end
 
 function debug_info:create_graph_colors()
-  return
-{
+  return {
     { r = 1, g = 0, b = 0 },
     { r = 0, g = 1, b = 0 },
     { r = 0, g = 0, b = 1 },

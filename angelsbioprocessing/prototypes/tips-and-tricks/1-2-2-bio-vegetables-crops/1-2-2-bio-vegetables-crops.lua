@@ -6,7 +6,9 @@ data:extend({
     is_title = false,
     tag = "[item=bio-processor]",
     localised_name = { "tips-and-tricks-name.bio-vegetables-1b" },
-    localised_description = require("prototypes.tips-and-tricks.1-2-2-bio-vegetables-crops.1-2-2-bio-vegetables-crops-description"),
+    localised_description = require(
+      "prototypes.tips-and-tricks.1-2-2-bio-vegetables-crops.1-2-2-bio-vegetables-crops-description"
+    ),
 
     category = "angelsbioprocessing",
     order = "a-b[vegetables]-b[crops]",

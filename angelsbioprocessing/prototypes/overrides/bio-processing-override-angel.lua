@@ -69,15 +69,12 @@ for _, item_name in pairs({ "solid-beans", "solid-corn", "solid-leafs", "solid-n
     local localised_origin_items = { "", { "item-description.crop-farm-processed" } }
     for origin_item_name in pairs(origin_items) do
       table.insert(localised_origin_items, localised_indentation)
-      table.insert(
-        localised_origin_items,
-        {
-          "",
-          string.format("[img=item/%s]", origin_item_name),
-          { "item-description.loc-space" },
-          { string.format("item-name.%s", origin_item_name) },
-        }
-      )
+      table.insert(localised_origin_items, {
+        "",
+        string.format("[img=item/%s]", origin_item_name),
+        { "item-description.loc-space" },
+        { string.format("item-name.%s", origin_item_name) },
+      })
     end
 
     item.localised_description = util.table.deepcopy(localised_origin_items)

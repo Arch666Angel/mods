@@ -236,7 +236,11 @@ data:extend({
       "CCOc"
     ),
     order = "b[carbon-separation-1]",
-    crafting_machine_tint = AF.get_recipe_tints({ "gas-carbon-monoxide", "water-purified", { r = 0, g = 0, b = 0, a = 1 } }),--[[{
+    crafting_machine_tint = AF.get_recipe_tints({
+      "gas-carbon-monoxide",
+      "water-purified",
+      { r = 0, g = 0, b = 0, a = 1 },
+    }),--[[{
         primary = {r = 0.7, g = 0.7, b = 1, a = 0},
         secondary = {r = 1, g = 0.4, b = 0.4, a = 0},
         tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}
@@ -314,7 +318,12 @@ data:extend({
       { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
     }, "WsHOi"),
     order = "f",
-    crafting_machine_tint = AF.get_recipe_tints({ "gas-carbon-dioxide", "steam", "gas-hydrogen", "gas-carbon-monoxide" }),--[[{
+    crafting_machine_tint = AF.get_recipe_tints({
+      "gas-carbon-dioxide",
+      "steam",
+      "gas-hydrogen",
+      "gas-carbon-monoxide",
+    }),--[[{
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
         secondary = {r = 1, g = 0.5, b = 0.5, a = 0},
         tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}

@@ -227,24 +227,18 @@ local function get_molecule_codes(molec_formula)
     --take first segment (or throw error) and trim each code off and repeat until empty or error
     local trim = 1 --always trim at least 1 per code
     if string.find(molec_formula, "^%u%l%d+") == 1 then --Two letter code with number
-      table.insert(
-        string_codes,
-        {
-          form = string.sub(molec_formula, 1, 2),
-          amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
-        }
-      )
+      table.insert(string_codes, {
+        form = string.sub(molec_formula, 1, 2),
+        amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
+      })
       trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
     elseif string.find(molec_formula, "^%u%l") == 1 then --Two letter code without number
       table.insert(string_codes, { form = string.sub(molec_formula, 1, 2), amount = 1 }) --no amount-default 1
     elseif string.find(molec_formula, "^%u%d+") == 1 then --One letter code with number
-      table.insert(
-        string_codes,
-        {
-          form = string.sub(molec_formula, 1, 1),
-          amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
-        }
-      )
+      table.insert(string_codes, {
+        form = string.sub(molec_formula, 1, 1),
+        amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
+      })
       trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
     elseif string.find(molec_formula, "^%u") == 1 then --One letter code without number
       table.insert(string_codes, { form = string.sub(molec_formula, 1, 1), amount = 1 }) --no amount-default 1
@@ -1545,16 +1539,13 @@ function angelsmods.functions.modify_barreling_icon()
           if item.icons then
             local icon_size = fluid.icon_size or 32
             if fluid.icon then
-              table.insert(
-                item.icons,
-                {
-                  icon = fluid.icon,
-                  icon_size = icon_size,
-                  icon_mipmaps = fluid.icon_mipmaps,
-                  shift = { 0, 5 },
-                  scale = 16 / icon_size,
-                }
-              )
+              table.insert(item.icons, {
+                icon = fluid.icon,
+                icon_size = icon_size,
+                icon_mipmaps = fluid.icon_mipmaps,
+                shift = { 0, 5 },
+                scale = 16 / icon_size,
+              })
             end
             if fluid.icons then
               item.icons = util.combine_icons(item.icons, fluid.icons, { scale = 16 / icon_size, shift = { 0, 5 } })

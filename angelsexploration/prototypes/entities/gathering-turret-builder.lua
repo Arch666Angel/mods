@@ -1,8 +1,7 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
 local function modify_shift(original, scale, shift)
-  return
-{
+  return {
     (original[1] or 0) * (scale or 1) + (shift and shift[1] or 0),
     (original[2] or 0) * (scale or 1) + (shift and shift[2] or 0),
   }
@@ -52,8 +51,7 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
   end
 
   if inputs.type == "gun" then
-    return
-{
+    return {
       layers = {
         {
           filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
@@ -114,8 +112,7 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
   end
 
   if inputs.type == "laser" then
-    return
-{
+    return {
       layers = {
         {
           filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
@@ -163,8 +160,7 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
     }
   end
 
-  return
-{
+  return {
     filename = "__core__/graphics/empty.png",
     priority = "very-low",
     width = 1,
@@ -177,8 +173,7 @@ end
 
 local function create_gathering_turret_extension(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-raising.png",
     priority = "medium",
     width = 66,
@@ -208,8 +203,7 @@ end
 
 local function create_gathering_turret_extension_shadow(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-raising-shadow.png",
     width = 92,
     height = 50,
@@ -239,8 +233,7 @@ end
 
 local function create_gathering_turret_extension_mask(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-raising-mask.png",
     flags = { "mask" },
     width = 44,
@@ -271,8 +264,7 @@ local function create_gathering_turret_extension_mask(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_extensions(inputs)
-  return
-{
+  return {
     layers = {
       create_gathering_turret_extension(inputs),
       create_gathering_turret_extension_shadow(inputs),
@@ -283,8 +275,7 @@ end
 
 local function create_gathering_turret_shooting(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting.png",
     line_length = 8,
     width = 64,
@@ -308,8 +299,7 @@ end
 
 local function create_gathering_turret_shooting_shadow(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting-shadow.png",
     line_length = 8,
     width = 86,
@@ -335,8 +325,7 @@ end
 
 local function create_gathering_turret_shooting_mask(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting-mask.png",
     flags = { "mask" },
     line_length = 8,
@@ -363,8 +352,7 @@ local function create_gathering_turret_shooting_mask(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_shootings(inputs)
-  return
-{
+  return {
     layers = {
       create_gathering_turret_shooting(inputs),
       create_gathering_turret_shooting_shadow(inputs),
@@ -375,8 +363,7 @@ end
 
 function angelsmods.functions.create_gathering_turret_shooting_glow(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     filename = "__angelsexploration__/graphics/entity/gathering-turret/gathering-turret-shooting-light.png",
     line_length = 8,
     width = 62,
@@ -402,8 +389,7 @@ end
 
 function angelsmods.functions.create_gathering_turret_water_reflection(inputs)
   inputs = inputs or {}
-  return
-{
+  return {
     pictures = {
       filename = "__base__/graphics/entity/laser-turret/laser-turret-reflection.png",
       priority = "extra-high",
@@ -419,8 +405,7 @@ function angelsmods.functions.create_gathering_turret_water_reflection(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_start(inputs)
-  return
-{
+  return {
     filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
     flags = inputs.flags,
     line_length = 4,
@@ -446,8 +431,7 @@ function angelsmods.functions.create_gathering_turret_beam_start(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_end(inputs)
-  return
-{
+  return {
     filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
     flags = inputs.flags,
     line_length = 4,
@@ -473,8 +457,7 @@ function angelsmods.functions.create_gathering_turret_beam_end(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_head(inputs)
-  return
-{
+  return {
     filename = "__base__/graphics/entity/beam/beam-head.png",
     flags = inputs.flags,
     line_length = 16,
@@ -488,8 +471,7 @@ function angelsmods.functions.create_gathering_turret_beam_head(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_tail(inputs)
-  return
-{
+  return {
     filename = "__base__/graphics/entity/beam/beam-tail.png",
     flags = inputs.flags,
     line_length = 16,
@@ -503,8 +485,7 @@ function angelsmods.functions.create_gathering_turret_beam_tail(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_body(inputs)
-  return
-{
+  return {
     {
       filename = "__base__/graphics/entity/beam/beam-body-1.png",
       flags = inputs.flags,
@@ -563,8 +544,7 @@ function angelsmods.functions.create_gathering_turret_beam_body(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_light(inputs)
-  return
-{
+  return {
     start = angelsmods.functions.create_gathering_turret_beam_start(inputs),
     ending = angelsmods.functions.create_gathering_turret_beam_end(inputs),
     head = angelsmods.functions.create_gathering_turret_beam_head(inputs),
@@ -574,8 +554,7 @@ function angelsmods.functions.create_gathering_turret_beam_light(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_beam_ground_light(inputs)
-  return
-{
+  return {
     head = {
       filename = "__base__/graphics/entity/laser-turret/laser-ground-light-head.png",
       line_length = 1,
@@ -616,8 +595,7 @@ function angelsmods.functions.create_gathering_turret_beam_source_offset(inputs)
 end
 
 function angelsmods.functions.create_gathering_turret_start_trigger(inputs)
-  return
-{
+  return {
     type = "nested-result",
     action = {
       type = "area",

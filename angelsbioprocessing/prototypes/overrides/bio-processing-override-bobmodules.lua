@@ -91,7 +91,10 @@ if mods["bobmodules"] then
     { name = "productivity-processor", ingredients = { { type = "item", name = "crystal-splinter-red", amount = 1 } } },
     { name = "productivity-processor-2", ingredients = { { type = "item", name = "crystal-shard-red", amount = 1 } } },
     { name = "productivity-processor-3", ingredients = { { type = "item", name = "crystal-full-red", amount = 1 } } },
-    { name = "effectivity-processor", ingredients = { { type = "item", name = "crystal-splinter-green", amount = 1 } } },
+    {
+      name = "effectivity-processor",
+      ingredients = { { type = "item", name = "crystal-splinter-green", amount = 1 } },
+    },
     { name = "effectivity-processor-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 1 } } },
     { name = "effectivity-processor-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 1 } } },
     {
@@ -102,7 +105,10 @@ if mods["bobmodules"] then
       name = "pollution-clean-processor-2",
       ingredients = { { type = "item", name = "crystal-shard-harmonic", amount = 1 } },
     },
-    { name = "pollution-clean-processor-3", ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } } },
+    {
+      name = "pollution-clean-processor-3",
+      ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } },
+    },
     {
       name = "pollution-create-processor",
       ingredients = { { type = "item", name = "crystal-splinter-harmonic", amount = 1 } },

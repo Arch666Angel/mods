@@ -281,7 +281,12 @@ data:extend({
       "liquid-naphtha",
       "liquid-mineral-oil",
     }, "OiOiOi"),
-    crafting_machine_tint = AF.get_recipe_tints({ "liquid-naphtha", "crude-oil", "liquid-fuel-oil", "liquid-mineral-oil" }),
+    crafting_machine_tint = AF.get_recipe_tints({
+      "liquid-naphtha",
+      "crude-oil",
+      "liquid-fuel-oil",
+      "liquid-mineral-oil",
+    }),
     order = "b[oil-refining]",
   },
   {

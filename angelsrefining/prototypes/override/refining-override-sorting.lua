@@ -155,38 +155,32 @@ local create_basic_sorting_localisation = function(localised_base_name, sorting_
     }
     if tier > 0 and localised_sorting_results[tier].sorting then
       for _, tier_result in pairs(tier_results) do
-        table.insert(
-          localised_sorting_results[tier].sorting,
+        table.insert(localised_sorting_results[tier].sorting, {
+          "",
+          string.format("[img=item/%s]", tier_result),
+          { "item-description.loc-space" },
           {
-            "",
-            string.format("[img=item/%s]", tier_result),
-            { "item-description.loc-space" },
-            {
-              string.format(
-                "item-description.loc-%s",
-                (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result
-              ),
-            },
-          }
-        )
+            string.format(
+              "item-description.loc-%s",
+              (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result
+            ),
+          },
+        })
       end
     end
     if localised_sorting_results[tier].refining then
       for _, tier_result in pairs(higher_tier_results) do
-        table.insert(
-          localised_sorting_results[tier].refining,
+        table.insert(localised_sorting_results[tier].refining, {
+          "",
+          string.format("[img=item/%s]", tier_result),
+          { "item-description.loc-space" },
           {
-            "",
-            string.format("[img=item/%s]", tier_result),
-            { "item-description.loc-space" },
-            {
-              string.format(
-                "item-description.loc-%s",
-                (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result
-              ),
-            },
-          }
-        )
+            string.format(
+              "item-description.loc-%s",
+              (special_vanilla and tier_result or nil) or get_trigger_name[tier_result] or tier_result
+            ),
+          },
+        })
       end
     end
   end

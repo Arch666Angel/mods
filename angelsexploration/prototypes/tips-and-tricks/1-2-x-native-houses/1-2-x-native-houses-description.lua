@@ -29,14 +29,11 @@ return function(spawner_name, spawn_data)
   -- BASIC INFO
   local _, unit_data = next(spawn_data)
   local _, first_evolution_factor = next(unit_data)
-  table.insert(
-    description,
-    {
-      "tips-and-tricks-description.angels-native-inhabitants-spawner-intro",
-      spawner_name,
-      tnt.number_to_string(first_evolution_factor * 100, 2) .. "%",
-    }
-  )
+  table.insert(description, {
+    "tips-and-tricks-description.angels-native-inhabitants-spawner-intro",
+    spawner_name,
+    tnt.number_to_string(first_evolution_factor * 100, 2) .. "%",
+  })
 
   -- SPAWN INFO
   local spawn_description = { "", { "tips-and-tricks-description.angels-native-inhabitants-spawner-spawning" } }
@@ -50,7 +47,8 @@ return function(spawner_name, spawn_data)
       table.insert(spawn_unit, "[img=entity." .. unit.name .. "]")
       table.insert(
         spawn_unit,
-        unit.localised_name or { "tips-and-tricks-name.angels-native-inhabitants-unit", "__ENTITY__" .. unit_name .. "__" }
+        unit.localised_name
+          or { "tips-and-tricks-name.angels-native-inhabitants-unit", "__ENTITY__" .. unit_name .. "__" }
       )
       table.insert(spawn_unit, tnt.number_to_string(evolution_factor * 100, 2) .. "%")
       table.insert(spawn_description, spawn_unit)
@@ -114,14 +112,10 @@ return function(spawner_name, spawn_data)
         end
       end
       table.insert(drop_description, "[img=item." .. drop.item .. "]")
-      table.insert(
-        drop_description,
-        (data.raw.item[drop.item] or {}).localised_name
-          or {
-            "tips-and-tricks-description.angels-native-inhabitants-spawner-loot-item-name",
-            "__ITEM__" .. drop.item .. "__",
-          }
-      )
+      table.insert(drop_description, (data.raw.item[drop.item] or {}).localised_name or {
+        "tips-and-tricks-description.angels-native-inhabitants-spawner-loot-item-name",
+        "__ITEM__" .. drop.item .. "__",
+      })
       table.insert(loot_description, drop_description)
     end
     table.insert(description, compress_localised_string(loot_description))

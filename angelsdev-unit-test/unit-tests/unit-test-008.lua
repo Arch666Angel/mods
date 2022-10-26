@@ -164,15 +164,12 @@ local unit_test_008 = function()
     if not items_to_ignore[item_name] then
       local recipe_filters = {}
       table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
-      table.insert(
-        recipe_filters,
-        {
-          filter = "has-product-item",
-          invert = false,
-          mode = "and",
-          elem_filters = { { filter = "name", name = item_name } },
-        }
-      )
+      table.insert(recipe_filters, {
+        filter = "has-product-item",
+        invert = false,
+        mode = "and",
+        elem_filters = { { filter = "name", name = item_name } },
+      })
 
       if not has_recipe(recipe_filters, item_recipes_to_ignore) then
         unit_test_functions.print_msg(string.format("No recipe is creating item %q as a product.", item_name))
@@ -191,15 +188,12 @@ local unit_test_008 = function()
     if not fluids_to_ignore[fluid_name] then
       local recipe_filters = {}
       table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
-      table.insert(
-        recipe_filters,
-        {
-          filter = "has-product-fluid",
-          invert = false,
-          mode = "and",
-          elem_filters = { { filter = "name", name = fluid_name } },
-        }
-      )
+      table.insert(recipe_filters, {
+        filter = "has-product-fluid",
+        invert = false,
+        mode = "and",
+        elem_filters = { { filter = "name", name = fluid_name } },
+      })
 
       if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
         unit_test_functions.print_msg(string.format("No recipe is creating fluid %q as a product.", fluid_name))

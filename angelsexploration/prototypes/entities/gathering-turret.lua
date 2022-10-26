@@ -115,7 +115,10 @@ data:extend({
     -- preparing state
     preparing_sound = sounds.laser_turret_activate,
     preparing_speed = 0.05,
-    preparing_animation = angelsmods.functions.create_gathering_turret_extensions({ shift = { 0, -0.46 }, scale = 0.78 }),
+    preparing_animation = angelsmods.functions.create_gathering_turret_extensions({
+      shift = { 0, -0.46 },
+      scale = 0.78,
+    }),
 
     -- ready to attack state
     rotation_speed = 0.01,
@@ -244,6 +247,8 @@ data:extend({
       flags = { "trilinear-filtering" },
       blend_mode = "additive-soft",
     }),
-    ground_light_animations = angelsmods.functions.create_gathering_turret_beam_ground_light({ tint = { 0.05, 0.5, 0.5 } }),
+    ground_light_animations = angelsmods.functions.create_gathering_turret_beam_ground_light({
+      tint = { 0.05, 0.5, 0.5 },
+    }),
   },
 })

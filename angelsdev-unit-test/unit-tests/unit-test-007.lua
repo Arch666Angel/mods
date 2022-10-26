@@ -90,18 +90,20 @@ local unit_test_007 = function()
 
   -- Populate fluid_recipes_to_ignore with voiding and barreling recipes
   local recipe_filters = {}
+  table.insert(recipe_filters, {
+    filter = "has-product-item",
+    invert = false,
+    mode = "or",
+    elem_filters = { { filter = "name", name = "chemical-void" } },
+  })
   table.insert(
     recipe_filters,
     {
       filter = "has-product-item",
       invert = false,
       mode = "or",
-      elem_filters = { { filter = "name", name = "chemical-void" } },
+      elem_filters = { { filter = "name", name = "water-void" } },
     }
-  )
-  table.insert(
-    recipe_filters,
-    { filter = "has-product-item", invert = false, mode = "or", elem_filters = { { filter = "name", name = "water-void" } } }
   )
 
   if #recipe_categories_to_ignore > 0 then
@@ -137,15 +139,12 @@ local unit_test_007 = function()
   for item_name, item in pairs(item_prototypes) do
     local recipe_filters = {}
     table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
-    table.insert(
-      recipe_filters,
-      {
-        filter = "has-ingredient-item",
-        invert = false,
-        mode = "and",
-        elem_filters = { { filter = "name", name = item_name } },
-      }
-    )
+    table.insert(recipe_filters, {
+      filter = "has-ingredient-item",
+      invert = false,
+      mode = "and",
+      elem_filters = { { filter = "name", name = item_name } },
+    })
 
     if not has_recipe(recipe_filters, item_recipes_to_ignore) then
       unit_test_functions.print_msg(string.format("No (useful) recipe is using item %q as an ingredient.", item_name))
@@ -163,15 +162,12 @@ local unit_test_007 = function()
   for fluid_name, fluid in pairs(fluid_prototypes) do
     local recipe_filters = {}
     table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
-    table.insert(
-      recipe_filters,
-      {
-        filter = "has-ingredient-fluid",
-        invert = false,
-        mode = "and",
-        elem_filters = { { filter = "name", name = fluid_name } },
-      }
-    )
+    table.insert(recipe_filters, {
+      filter = "has-ingredient-fluid",
+      invert = false,
+      mode = "and",
+      elem_filters = { { filter = "name", name = fluid_name } },
+    })
 
     if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
       unit_test_functions.print_msg(string.format("No (useful) recipe is using fluid %q as an ingredient.", fluid_name))

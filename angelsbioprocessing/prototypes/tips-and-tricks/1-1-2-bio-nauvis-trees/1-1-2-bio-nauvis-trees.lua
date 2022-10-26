@@ -6,7 +6,9 @@ data:extend({
     is_title = false,
     tag = "[item=bio-generator-swamp-1]",
     localised_name = { "tips-and-tricks-name.bio-nauvis-1b" },
-    localised_description = require("prototypes.tips-and-tricks.1-1-2-bio-nauvis-trees.1-1-2-bio-nauvis-trees-description"),
+    localised_description = require(
+      "prototypes.tips-and-tricks.1-1-2-bio-nauvis-trees.1-1-2-bio-nauvis-trees-description"
+    ),
 
     category = "angelsbioprocessing",
     order = "a-a[nauvis]-b[trees]",

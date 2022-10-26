@@ -75,13 +75,10 @@ if mods["bobores"] then
       )
     else
       if bobmods.ores.settings.LeadGivesNickel == true then
-        bobmods.lib.resource.add_result(
-          "infinite-lead-ore",
-          {
-            name = "cobalt-ore",
-            probability = bobmods.ores.settings.LeadNickelRatio * bobmods.ores.settings.NickelCobaltRatio,
-          }
-        )
+        bobmods.lib.resource.add_result("infinite-lead-ore", {
+          name = "cobalt-ore",
+          probability = bobmods.ores.settings.LeadNickelRatio * bobmods.ores.settings.NickelCobaltRatio,
+        })
       end
     end
   end

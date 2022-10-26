@@ -79,7 +79,10 @@ function welcome_dialog:create_welcome_dialog(player_index)
     caption = {
       "",
       "     ",
-      { "angels-welcome-message-settings.pollution-setting", { "angels-welcome-message-settings." .. pollutionSetting } },
+      {
+        "angels-welcome-message-settings.pollution-setting",
+        { "angels-welcome-message-settings." .. pollutionSetting },
+      },
       " [img=info]",
     },
     tooltip = { "angels-welcome-message-settings-tooltip.pollution-setting" },

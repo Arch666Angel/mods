@@ -32,15 +32,12 @@ return function(spawner_name, unit_name, evolution_factor)
   local description = { "" }
 
   -- BASIC INFO
-  table.insert(
-    description,
-    {
-      "tips-and-tricks-description.angels-native-inhabitants-unit-intro",
-      unit_name,
-      spawner_name,
-      tnt.number_to_string(evolution_factor * 100, 2) .. "%",
-    }
-  )
+  table.insert(description, {
+    "tips-and-tricks-description.angels-native-inhabitants-unit-intro",
+    unit_name,
+    spawner_name,
+    tnt.number_to_string(evolution_factor * 100, 2) .. "%",
+  })
 
   -- DAMAGE INFO
   local range = (unit.attack_parameters or {}).range
@@ -48,7 +45,8 @@ return function(spawner_name, unit_name, evolution_factor)
     local range_description = { "tips-and-tricks-description.angels-native-inhabitants-unit-attack" }
     table.insert(
       range_description,
-      unit.localised_name or { "tips-and-tricks-name.angels-native-inhabitants-unit", "__ENTITY__" .. unit_name .. "__" }
+      unit.localised_name
+        or { "tips-and-tricks-name.angels-native-inhabitants-unit", "__ENTITY__" .. unit_name .. "__" }
     )
     if range > 1 then
       table.insert(
@@ -129,7 +127,10 @@ return function(spawner_name, unit_name, evolution_factor)
       table.insert(
         drop_description,
         (data.raw.item[drop.item] or {}).localised_name
-          or { "tips-and-tricks-description.angels-native-inhabitants-unit-loot-item-name", "__ITEM__" .. drop.item .. "__" }
+          or {
+            "tips-and-tricks-description.angels-native-inhabitants-unit-loot-item-name",
+            "__ITEM__" .. drop.item .. "__",
+          }
       )
       table.insert(loot_description, compress_localised_string(drop_description))
     end

@@ -1,6 +1,5 @@
 function angelsmods.petrochem.electrolyserpictures()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -33,8 +32,7 @@ function angelsmods.petrochem.electrolyserpictures()
 end
 
 local function coverpictures()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -68,8 +66,7 @@ local function coverpictures()
 end
 
 local function polypictures1()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -106,8 +103,7 @@ local function polypictures1()
 end
 
 local function polypictures2()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -144,8 +140,7 @@ local function polypictures2()
 end
 
 local function polypictures3()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
