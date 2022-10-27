@@ -374,22 +374,24 @@ function angelsmods.migration.clear_logistics_slot(items_to_clear)
   items_to_clear = items_to_clear or {}
 
   for _, player in pairs(game.players) do
-    -- find used slots
-    local slots = {}
-    for i = 1, 65536 do
-      local slot = player.get_personal_logistic_slot(i)
-      if slot and slot.name then
-        slots[slot.name] = slots[slot.name] or {}
-        table.insert(slots[slot.name], i)
+    if player.character ~= nil then
+        -- find used slots
+        local slots = {}
+        for i = 1, 65536 do
+          local slot = player.get_personal_logistic_slot(i)
+          if slot and slot.name then
+          slots[slot.name] = slots[slot.name] or {}
+          table.insert(slots[slot.name], i)
+        end
       end
-    end
 
-    -- clear old slots
-    for _, item_name in pairs(items_to_clear) do
-      local oldSlots = slots[item_name]
-      if oldSlots then  
-        for name, i in pairs(oldSlots) do
-          player.clear_personal_logistic_slot(i)
+      -- clear old slots
+      for _, item_name in pairs(items_to_clear) do
+        local oldSlots = slots[item_name]
+        if oldSlots then  
+          for name, i in pairs(oldSlots) do
+            player.clear_personal_logistic_slot(i)
+          end
         end
       end
     end
