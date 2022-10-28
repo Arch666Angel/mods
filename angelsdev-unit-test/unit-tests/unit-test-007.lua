@@ -96,15 +96,12 @@ local unit_test_007 = function()
     mode = "or",
     elem_filters = { { filter = "name", name = "chemical-void" } },
   })
-  table.insert(
-    recipe_filters,
-    {
-      filter = "has-product-item",
-      invert = false,
-      mode = "or",
-      elem_filters = { { filter = "name", name = "water-void" } },
-    }
-  )
+  table.insert(recipe_filters, {
+    filter = "has-product-item",
+    invert = false,
+    mode = "or",
+    elem_filters = { { filter = "name", name = "water-void" } },
+  })
 
   if #recipe_categories_to_ignore > 0 then
     for _, category_name in pairs(recipe_categories_to_ignore) do
