@@ -864,6 +864,25 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
       end
     end
   end
+  -- Also remove disabled recipes from the expensive and normal results tables.
+  for _, mode in pairs({"expensive", "normal"}) do
+    if tech[mode] and tech[mode].effects then
+      for ek, effect in pairs(tech[mode].effects) do
+        if effect.type == "unlock-recipe" then
+          if disable_table.recipes[effect.recipe] or (modifications and modifications[effect.recipe] == false) then
+            to_remove[ek] = true
+          else
+            dup_table[effect.recipe] = true
+          end
+        end
+      end
+      for ek = #tech[mode].effects, 1, -1 do
+        if to_remove[ek] then
+          table.remove(tech[mode].effects, ek)
+        end
+      end
+    end
+  end
   if modifications then
     if not tech.effects then
       tech.effects = {}
