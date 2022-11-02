@@ -255,8 +255,6 @@ ov_functions.add_prereq = function(technology, prereq) --handles tech OR prereq 
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "prereqs")
-    guarantee_subtable(modify_table.technologies, technology)
-    guarantee_subtable(modify_table.technologies[technology], "prereqs")
     if type(prereq) == "table" then
       for pr,req in pairs(prereq) do
         modify_table.technologies[technology].prereqs[req] = true
@@ -821,6 +819,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
 end
 
 local function adjust_technology(tech, k) -- check a tech for basic adjustments based on tables and make any necessary changes
+  local difficulty = {"normal","expensive"} 
   local function override_subtable(subtable, o_subtable) -- handle special case changes (sort of a partial deep copy/overwrite)
     if type(o_subtable) == "string" then
       o_subtable = {o_subtable}
@@ -840,137 +839,223 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
       end
     end
   end
+  -- handle parent table data first
+
+  -- handle simple splittable table data
+  local t_single = { -- can be in regular, normal or expensive
+    upgrade = true, --bool
+    --enabled = true, --bool
+    hidden = true, --bool
+    visible_when_disabled = true, --bool
+    ignore_tech_cost_multiplier = true, --bool
+    max_level = true, --int
+    count_formula = true,--string
+  }
+
+  --handle disable separately as it also covers hidden
   if disable_table.technologies[k] or substitution_table.technologies[k] then
-    data.raw.technology[k].enabled = false
-    data.raw.technology[k].hidden = true
-  end
-  -- adjust effects
-  local dup_table = {}
-  local modifications = modify_table.technologies[k] and modify_table.technologies[k].unlocks or nil
-  local to_remove = {}
-  if tech.effects then
-    for ek, effect in pairs(tech.effects) do
-      if effect.type == "unlock-recipe" then
-        if disable_table.recipes[effect.recipe] or (modifications and modifications[effect.recipe] == false) then
-          to_remove[ek] = true
-        else
-          dup_table[effect.recipe] = true
-        end
+    local count = 0
+    for _, diff in pairs(difficulty) do
+      if data.raw.technology[k][diff] then
+        data.raw.technology[k][diff].enabled = false
+        data.raw.technology[k][diff].hidden = true
+        count = count + 1
       end
     end
-    for ek = #tech.effects, 1, -1 do
-      if to_remove[ek] then
-        table.remove(tech.effects, ek)
-      end
-    end
-  end
-  if modifications then
-    if not tech.effects then
-      tech.effects = {}
-    end
-    for name, add in pairs(modifications) do
-      if add and not dup_table[name] then
-        table.insert(tech.effects, {type = "unlock-recipe", recipe = name})
-      end
-    end
-  end
-  -- adjust prerequisites
-  dup_table = {}
-  modifications = modify_table.technologies[k] and modify_table.technologies[k].prereqs or nil
-  if tech.prerequisites then
-    to_remove = {}
-    for pk, prereq in pairs(tech.prerequisites) do
-      local new = substitution_table.technologies[prereq]
-      if new then
-        tech.prerequisites[pk] = new
-      end
-      if modifications and modifications[prereq] == false then
-        to_remove[pk] = true
-      end
-    end
-    local actual_remove = {}
-    for pk, prereq in pairs(tech.prerequisites) do
-      if to_remove[pk] then
-        table.insert(actual_remove, pk)
-      else
-        dup_table[tech.prerequisites[pk]] = true
-      end
-    end
-    for i = #actual_remove, 1, -1 do
-      table.remove(tech.prerequisites, actual_remove[i])
-    end
-  end
-  if modifications then
-    if not tech.prerequisites then
-      tech.prerequisites = {}
-    end
-    for name, add in pairs(modifications) do
-      if add and not dup_table[name] then
-        table.insert(tech.prerequisites, name)
-      end
-    end
-  end
-  local overrides = override_table.technologies[k]
-  if overrides then
-    if type(overrides) =="string" then
-      tech[overrides] = (not tech[overrides]) or true
-    else
-      override_subtable(tech, overrides)
+    if count == 0 then
+      data.raw.technology[k].enabled = false
+      data.raw.technology[k].hidden = true
     end
   end
   --adjust difficulty (time and amount of ingredients)
   if modify_table.technologies[k] then
-    modifications = modify_table.technologies[k].difficulty
+    local modifications = modify_table.technologies[k].difficulty --custom tag used here for time and amount updates
     if modifications then
       tech.unit.time = modifications.time
       tech.unit.count = modifications.amount
     end
   end
-  --adjust ingredient list
-  dup_table = {}
-  modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
-  to_remove = {}
-  tech.unit = tech.unit or {}
-  tech.unit.ingredients = tech.unit.ingredients or {}
-  for pk, pack in pairs(tech.unit.ingredients) do
-    local nk = pack.name and "name" or 1
-    if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
-      for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
-        to_remove[rem] = true
-      end
-    end
-  end
-  for i = #tech.unit.ingredients, 1, -1 do
-    local pack = tech.unit.ingredients[i]
-    local nk = pack.name and "name" or 1
-    local ak = pack.name and "amount" or 2
-    if to_remove[pack[nk]] then
-      table.remove(tech.unit.ingredients, i)
-    else
-      if substitution_table.science_packs[pack[nk]] then
-        pack[ak] = substitution_table.science_packs[pack[nk]].amount
-        pack[nk] = substitution_table.science_packs[pack[nk]].add
-      end
-      if modifications and modifications[pack[nk]] then
-        if modifications[pack[nk]] > 0 then
-          dup_table[pack[nk]] = true
-          pack[ak] = modifications[pack[nk]]
-        else
-          table.remove(tech.unit.ingredients, i)
+  -- adjust simple properties
+  if modify_table.technologies[k] then
+    local modifications = modify_table.technologies[k]
+    for _, prop in pairs(t_single) do
+      if modifications and modifications.prop then
+        local count = 0
+        for _,diff in pairs(difficulty) do
+          data.raw.technology[k][diff].prop = modifications[diff].prop
+          count = count + 1
         end
-      else
-        dup_table[pack[nk]] = true
+        if count == 0 then
+          data.raw.technology[k].prop = modifications.prop
+        end
       end
     end
-  end
-  if modifications then
-    for name, add in pairs(modifications) do
-      if add > 0 and not dup_table[name] then
-        table.insert(tech.unit.ingredients, {type = "item", name = name, amount = add})
+    
+    --handle deeper splittable table data
+    local t_complex = { -- can be in regular, normal or expensive
+      unit = true, --array --aka ingredients
+      prerequisites = true, --array
+      effects = true, --array
+    }
+    --sub-functions
+    local function effects_update(subtable,effects)
+      local dup_table = {}
+      local modifications_e = modify_table.technologies[k] and modify_table.technologies[k].unlocks or nil
+      local to_remove = {}
+      if subtable and subtable.effects then
+        for ek, effect in pairs(subtable.effects) do
+          if effect.type == "unlock-recipe" then
+            if disable_table.recipes[effect.recipe] or (modifications_e and modifications_e[effect.recipe] == false) then
+              to_remove[ek] = true
+            else
+              dup_table[effect.recipe] = true
+            end
+          end
+        end
+        for ek = #subtable.effects, 1, -1 do
+          if to_remove[ek] then
+            table.remove(subtable.effects, ek)
+          end
+        end
+      end
+      if not subtable.effects then
+        subtable.effects = {}
+      end
+      if modifications_e then
+        for name, add in pairs(modifications_e) do
+          if add and not dup_table[name] then
+            table.insert(subtable.effects, {type = "unlock-recipe", recipe = name})
+          end
+        end
       end
     end
+
+    local function prereq_update(subtable,prereqs)
+      local dup_table = {}
+      local modifications_p = modify_table.technologies[k] and modify_table.technologies[k].prereqs or nil
+      if subtable.prereqs then
+        to_remove = {}
+        for pk, prereq in pairs(subtable.prereqs) do
+          local new = substitution_table.technologies[prereq]
+          if new then
+            subtable.prereqs[pk] = new
+          end
+          if modifications_p and modifications_p[prereq] == false then
+            to_remove[pk] = true
+          end
+        end
+        local actual_remove = {}
+        for pk, prereq in pairs(subtable.prereqs) do
+          if to_remove[pk] then
+            table.insert(actual_remove, pk)
+          else
+            dup_table[subtable.prereqs[pk]] = true
+          end
+        end
+        for i = #actual_remove, 1, -1 do
+          table.remove(subtable.prereqs, actual_remove[i])
+        end
+      end
+      if modifications_p then
+        if not subtable.prereqs then
+          subtable.prereqs = {}
+        end
+        for name, add in pairs(modifications_p) do
+          if add and not dup_table[name] then
+            table.insert(subtable.prereqs, name)
+          end
+        end
+      end
+      local overrides = override_table.technologies[k]
+      if overrides then
+        if type(overrides) =="string" then
+          subtable[overrides] = (not subtable[overrides]) or true
+        else
+          override_subtable(tech, overrides)
+        end
+      end
+    end
+
+    local function unit_update(subtable,unit)
+      dup_table = {}
+      modifications_u = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
+      to_remove = {}
+      subtable.unit = subtable.unit or {}
+      subtable.unit.ingredients = subtable.unit.ingredients or {}
+      for pk, pack in pairs(subtable.unit.ingredients) do
+        local nk = pack.name and "name" or 1
+        if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
+          for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
+            to_remove[rem] = true
+          end
+        end
+      end
+      for i = #subtable.unit.ingredients, 1, -1 do
+        local pack = subtable.unit.ingredients[i]
+        local nk = pack.name and "name" or 1
+        local ak = pack.name and "amount" or 2
+        if to_remove[pack[nk]] then
+          table.remove(subtable.unit.ingredients, i)
+        else
+          if substitution_table.science_packs[pack[nk]] then
+            pack[ak] = substitution_table.science_packs[pack[nk]].amount
+            pack[nk] = substitution_table.science_packs[pack[nk]].add
+          end
+          if modifications_u and modifications_u[pack[nk]] then
+            if modifications_u[pack[nk]] > 0 then
+              dup_table[pack[nk]] = true
+              pack[ak] = modifications_u[pack[nk]]
+            else
+              table.remove(subtable.unit.ingredients, i)
+            end
+          else
+            dup_table[pack[nk]] = true
+          end
+        end
+      end
+      if modifications_u then
+        for name, add in pairs(modifications_u) do
+          if add > 0 and not dup_table[name] then
+            table.insert(subtable.unit.ingredients, {type = "item", name = name, amount = add})
+          end
+        end
+      end
+    end
+    --actually call functions
+    --local effect = 0
+    --local prereq = 0
+    local unites = 0
+    if modifications then
+      for _,diff in pairs(difficulty) do
+        if tech.diff and tech.diff.unlocks then
+          effects_update(tech.diff,tech.diff.unlocks)
+          --effect = effect + 1
+        end
+        if tech.diff and tech.diff.prereqs then
+          prereq_update(tech.diff,tech.diff.prereqs)
+          --prereq = prereq + 1
+        end
+        if tech.diff and tech.diff.unit then
+          unit_update(tech.diff,tech.diff.unit)
+          unites= unites+1
+        end
+      end
+      --call the "normal" ones if not split out
+      --if effect == 0 then
+        effects_update(tech,tech.unlocks)
+      --end
+      --if prereq == 0 then
+        prereq_update(tech,tech.prereqs)
+      --end
+      if unites == 0 then
+        unit_update(tech,tech.unit)
+      end
+    end
+    --count_forumla
+    --this is not updated
   end
 end
+
 
 ov_functions.execute = function()
   for k, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
