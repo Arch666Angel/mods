@@ -244,7 +244,7 @@ data:extend({
   },
   --RED
   {
-    type = "recipe",
+      type = 'recipe',
     name = "algae-red",
     category = "bio-processing-3",
     subgroup = "bio-processing-red",
