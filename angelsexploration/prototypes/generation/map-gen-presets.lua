@@ -21,11 +21,13 @@ end
 
 for _, unit_spawner in pairs(data.raw["unit-spawner"]) do
   if unit_spawner.pollution_absorption_absolute then
-    unit_spawner.pollution_absorption_absolute = unit_spawner.pollution_absorption_absolute * pollution_absorption_factor_multiplier
+    unit_spawner.pollution_absorption_absolute = unit_spawner.pollution_absorption_absolute
+      * pollution_absorption_factor_multiplier
   end
 
   if unit_spawner.pollution_absorption_proportional then
-    unit_spawner.pollution_absorption_proportional = unit_spawner.pollution_absorption_proportional * pollution_absorption_factor_multiplier
+    unit_spawner.pollution_absorption_proportional = unit_spawner.pollution_absorption_proportional
+      * pollution_absorption_factor_multiplier
   end
 end
 

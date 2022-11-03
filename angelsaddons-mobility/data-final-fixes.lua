@@ -16,14 +16,14 @@ local wagons = {
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 2 and "smelting-wagon-1-2" or nil,
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 3 and "smelting-wagon-1-3" or nil,
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 4 and "smelting-wagon-1-4" or nil,
-  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 5 and "smelting-wagon-1-5" or nil
+  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 5 and "smelting-wagon-1-5" or nil,
 }
 
-for _, prototype_type in pairs {
+for _, prototype_type in pairs({
   "train-stop",
   "locomotive",
-  "cargo-wagon"
-} do
+  "cargo-wagon",
+}) do
   -- add wagon to other prototypes
   for _, prototype in pairs(data.raw[prototype_type]) do
     local additional_pastable_entities = prototype.additional_pastable_entities or {}
@@ -33,7 +33,7 @@ for _, prototype_type in pairs {
     prototype.additional_pastable_entities = additional_pastable_entities
   end
   --fluid wagon updates
-  local wagon_prototypes = {data.raw["fluid-wagon"],data.raw["cargo-wagon"]}
+  local wagon_prototypes = { data.raw["fluid-wagon"], data.raw["cargo-wagon"] }
   -- add other prototypes to the wagons
   for _, wagon_name in pairs(wagons) do
     for _, wagon_proto in pairs(wagon_prototypes) do

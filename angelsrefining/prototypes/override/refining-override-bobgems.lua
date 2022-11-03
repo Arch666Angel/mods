@@ -5,20 +5,22 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores)
   for ore_index, ore_data in pairs(ores or {}) do
     local recipe = {
       name = string.format(recipe_bace_name, ore_index),
-      results = {{"!!"}},
-      subgroup = "bob-gems-crystallization"
+      results = { { "!!" } },
+      subgroup = "bob-gems-crystallization",
     }
     local recipe_used = false
     local ore_name = type(ore_data) == "table" and ore_data[1] or ore_data
     local ore_amount = type(ore_data) == "table" and ore_data[2] or 1
     if data.raw.item[ore_name] and ore_amount > 0 then
-      table.insert(recipe.results, {ore_name, ore_amount})
+      table.insert(recipe.results, { ore_name, ore_amount })
       recipe.order = type(ore_data) == "table" and ore_data[3] or nil
-      recipe.icons =
-        angelsmods.functions.create_liquid_recipe_icon({ore_name}, {{184, 231, 043}, {080, 172, 033}, {055, 126, 017}})
+      recipe.icons = angelsmods.functions.create_liquid_recipe_icon(
+        { ore_name },
+        { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } }
+      )
       recipe.localised_name = {
         string.format("recipe-name.%s", recipe.name),
-        {string.format("item-name.%s", ore_name)}
+        { string.format("item-name.%s", ore_name) },
       }
       recipe_used = true
     end
@@ -26,13 +28,13 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores)
       if not data.raw["item-subgroup"][recipe.subgroup] then
         local item_group = data.raw["item-subgroup"]["bob-gems-ore"]
         item_group.order = "2-2"
-        data:extend({{type = "item-subgroup", name = recipe.subgroup, group = item_group.group, order = "2-1"}})
+        data:extend({ { type = "item-subgroup", name = recipe.subgroup, group = item_group.group, order = "2-1" } })
       end
       data.raw.item[ore_name].subgroup = recipe.subgroup
       data.raw.item[ore_name].order = recipe.order
       table.insert(recipes, recipe)
     else
-      OV.disable_recipe({recipe.name})
+      OV.disable_recipe({ recipe.name })
     end
   end
   return recipes
@@ -43,7 +45,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   angelsmods.functions.move_item("gem-ore", "bob-gems-crystallization", "g")
-  angelsmods.functions.add_flag("gem-ore","hidden")
+  angelsmods.functions.add_flag("gem-ore", "hidden")
   --[[if mods["bobores"] and settings.startup["bobmods-ores-unsortedgemore"].value == true then
     data:extend(
       {
@@ -88,19 +90,14 @@ end
 --SINGLE GEM CRYSTALLIZATION --------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.patch_recipes(
-    create_single_gem_crystallization(
-      "angelsore7-crystallization-%i",
-      {
-        {"sapphire-ore", 1, "b"},
-        {"topaz-ore", 1, "e"},
-        {"ruby-ore", 1, "a"},
-        {"emerald-ore", 1, "c"},
-        {"amethyst-ore", 1, "d"},
-        {"diamond-ore", 1, "f"}
-      }
-    )
-  )
+  OV.patch_recipes(create_single_gem_crystallization("angelsore7-crystallization-%i", {
+    { "sapphire-ore", 1, "b" },
+    { "topaz-ore", 1, "e" },
+    { "ruby-ore", 1, "a" },
+    { "emerald-ore", 1, "c" },
+    { "amethyst-ore", 1, "d" },
+    { "diamond-ore", 1, "f" },
+  }))
 else
   OV.disable_recipe("angelsore7-crystallization-1")
   OV.disable_recipe("angelsore7-crystallization-2")
@@ -117,7 +114,7 @@ else
       "emerald-ore",
       "amethyst-ore",
       "topaz-ore",
-      "diamond-ore"
+      "diamond-ore",
     }, "hidden")
   end
 end

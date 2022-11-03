@@ -1,1 +1,1 @@
-return {"tips-and-tricks-description.angels-purification"} -- TODO
+return { "tips-and-tricks-description.angels-purification" } -- TODO

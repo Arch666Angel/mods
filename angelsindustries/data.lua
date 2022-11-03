@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.industries = angelsmods.industries or {}
-angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 1}
+angelsmods.industries.number_tint = { r = 1, g = 0, b = 1, a = 1 }
 angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or {}
 
 --TRIGGER CHECKS
@@ -32,8 +32,9 @@ if mods["bobplates"] or angelsmods.industries.components then
   angelsmods.industries.overhaul = true
 end
 
-angelsmods.industries.return_ingredients =
-  angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
+angelsmods.industries.return_ingredients = angelsmods.industries.components
+    and settings.startup["angels-return-ingredients"].value
+  or false
 angelsmods.industries.block_stack_size = settings.startup["angels-components-stack-size"].value
 
 -- set triggers for other angel mods

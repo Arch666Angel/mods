@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   -- ORE
   {
     type = "item",
@@ -8,26 +7,28 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-silver",
     order = "a",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING INTERMEDIATE
   {
     type = "item",
     name = "processed-silver",
     icon = "__angelssmelting__/graphics/icons/processed-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "b",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "pellet-silver",
     icon = "__angelssmelting__/graphics/icons/pellet-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "c",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -36,7 +37,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-silver",
     order = "d",
-    stack_size = 200
+    stack_size = 200,
   },
   -- e reserved for bob silver oxide (see silver override)
   {
@@ -46,7 +47,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-silver",
     order = "f",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -55,59 +56,64 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-silver",
     order = "g",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-silver",
     icon = "__angelssmelting__/graphics/icons/ingot-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "h",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "powder-silver",
     icon = "__angelssmelting__/graphics/icons/powder-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver",
     order = "i",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-silver",
     icon = "__angelssmelting__/graphics/icons/molten-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver-casting",
     order = "j",
     default_temperature = 961.8,
     heat_capacity = "0KJ",
-    base_color = {r = 59/255, g = 143/255, b = 179/255},
-    flow_color = {r = 59/255, g = 143/255, b = 179/255},
+    base_color = { r = 59 / 255, g = 143 / 255, b = 179 / 255 },
+    flow_color = { r = 59 / 255, g = 143 / 255, b = 179 / 255 },
     max_temperature = 961.8,
-auto_barrel = false
+    auto_barrel = false,
   },
   {
     type = "item",
     name = "angels-roll-silver",
     icon = "__angelssmelting__/graphics/icons/roll-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver-casting",
     order = "k",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "angels-wire-coil-silver",
     icon = "__angelssmelting__/graphics/icons/wire-coil-silver.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-silver-casting",
     order = "l",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING RESULT
   {
@@ -117,7 +123,7 @@ auto_barrel = false
     icon_size = 32,
     subgroup = "angels-silver-casting",
     order = "m",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -126,7 +132,6 @@ auto_barrel = false
     icon_size = 32,
     subgroup = "angels-silver-casting",
     order = "n",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

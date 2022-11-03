@@ -5,157 +5,153 @@ local resource_autoplace = require("resource-autoplace")
 if not angelsmods.functions.make_resource then
   --Create autoplace
   local function make_resautoplace(input)
-    data:extend(
+    data:extend({
       {
-        {
-          type = "autoplace-control",
-          name = input.name,
-          localised_name = {"", "[entity="..input.name.."] ", {"entity-name."..input.name}},
-          richness = true,
-          order = "b-" .. input.order,
-          category = "resource"
-        }
-      }
-    )
+        type = "autoplace-control",
+        name = input.name,
+        localised_name = { "", "[entity=" .. input.name .. "] ", { "entity-name." .. input.name } },
+        richness = true,
+        order = "b-" .. input.order,
+        category = "resource",
+      },
+    })
   end
 
   --Create particles
   local function make_particle(input)
     if not data.raw.particle[input.name .. "-particle"] then
-      data:extend(
+      data:extend({
         {
-          {
-            type = "optimized-particle",
-            name = input.name .. "-particle",
-            --flags = {"not-on-map"},
-            life_time = 180,
-            pictures = {
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-1.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 5,
-                height = 5,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-2.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 7,
-                height = 5,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-3.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 6,
-                height = 7,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-4.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 9,
-                height = 8,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-5.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 5,
-                height = 5,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-6.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 6,
-                height = 4,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-7.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 7,
-                height = 8,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-8.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 6,
-                height = 5,
-                frame_count = 1
-              }
+          type = "optimized-particle",
+          name = input.name .. "-particle",
+          --flags = {"not-on-map"},
+          life_time = 180,
+          pictures = {
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-1.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 5,
+              height = 5,
+              frame_count = 1,
             },
-            shadows = {
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
-                priority = "extra-high",
-                width = 5,
-                height = 5,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
-                priority = "extra-high",
-                width = 7,
-                height = 5,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
-                priority = "extra-high",
-                width = 6,
-                height = 7,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
-                priority = "extra-high",
-                width = 9,
-                height = 8,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
-                priority = "extra-high",
-                width = 5,
-                height = 5,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
-                priority = "extra-high",
-                width = 6,
-                height = 4,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
-                priority = "extra-high",
-                width = 7,
-                height = 8,
-                frame_count = 1
-              },
-              {
-                filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
-                priority = "extra-high",
-                width = 6,
-                height = 5,
-                frame_count = 1
-              }
-            }
-          }
-        }
-      )
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-2.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 7,
+              height = 5,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-3.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 6,
+              height = 7,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-4.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 9,
+              height = 8,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-5.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 5,
+              height = 5,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-6.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 6,
+              height = 4,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-7.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 7,
+              height = 8,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-8.png",
+              priority = "extra-high",
+              tint = input.tint,
+              width = 6,
+              height = 5,
+              frame_count = 1,
+            },
+          },
+          shadows = {
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
+              priority = "extra-high",
+              width = 5,
+              height = 5,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
+              priority = "extra-high",
+              width = 7,
+              height = 5,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
+              priority = "extra-high",
+              width = 6,
+              height = 7,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
+              priority = "extra-high",
+              width = 9,
+              height = 8,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
+              priority = "extra-high",
+              width = 5,
+              height = 5,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
+              priority = "extra-high",
+              width = 6,
+              height = 4,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
+              priority = "extra-high",
+              width = 7,
+              height = 8,
+              frame_count = 1,
+            },
+            {
+              filename = "__angelsinfiniteores__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
+              priority = "extra-high",
+              width = 6,
+              height = 5,
+              frame_count = 1,
+            },
+          },
+        },
+      })
     end
   end
 
@@ -194,9 +190,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for Coal
@@ -220,9 +216,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for Iron Ore, angels-ore4 (Crotinium)
@@ -246,9 +242,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for Uranium Ore, angels-ore2 (Jivolite)
@@ -272,9 +268,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for Stone
@@ -298,9 +294,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for Coal, angels-ore1 (Saphirite)
@@ -324,9 +320,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for angels-ore5 (Rubyte)
@@ -350,9 +346,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         --Sheet used for angels-ore6 (Bobmonium)
@@ -376,9 +372,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         if input.sheet == 9 then
@@ -406,9 +402,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         if input.sheet == 10 then
@@ -431,9 +427,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         if input.sheet == 11 then
@@ -456,9 +452,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         if input.sheet == 12 then
@@ -481,9 +477,9 @@ if not angelsmods.functions.make_resource then
                 line_length = 8,
                 frame_count = input.frame_count,
                 variation_count = input.variation_count,
-                scale = 0.5
-              }
-            }
+                scale = 0.5,
+              },
+            },
           }
         end
         if type(input.sheet) == "table" then
@@ -501,8 +497,8 @@ if not angelsmods.functions.make_resource then
             width = 256,
             height = 256,
             frame_count = 4,
-            variation_count = 1
-          }
+            variation_count = 1,
+          },
         }
       end
       if input.sheet == 2 then
@@ -514,8 +510,8 @@ if not angelsmods.functions.make_resource then
             width = 64,
             height = 64,
             frame_count = 4,
-            variation_count = 1
-          }
+            variation_count = 1,
+          },
         }
       end
       if input.sheet == 3 then
@@ -527,8 +523,8 @@ if not angelsmods.functions.make_resource then
             width = 75,
             height = 61,
             frame_count = 4,
-            variation_count = 1
-          }
+            variation_count = 1,
+          },
         }
       end
       if type(input.sheet) == "table" then
@@ -579,7 +575,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11-hr-glow.png",
                 priority = "extra-high",
@@ -591,9 +587,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 2 then
@@ -613,7 +609,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12-hr-glow.png",
                 priority = "extra-high",
@@ -625,9 +621,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 3 then
@@ -647,7 +643,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13-hr-glow.png",
                 priority = "extra-high",
@@ -659,9 +655,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 4 then
@@ -681,7 +677,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14-hr-glow.png",
                 priority = "extra-high",
@@ -693,9 +689,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 5 then
@@ -715,7 +711,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15-hr-glow.png",
                 priority = "extra-high",
@@ -727,9 +723,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 6 then
@@ -749,7 +745,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16-hr-glow.png",
                 priority = "extra-high",
@@ -761,9 +757,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 7 then
@@ -783,7 +779,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17-hr-glow.png",
                 priority = "extra-high",
@@ -795,9 +791,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
         if input.sheet == 8 then
@@ -817,7 +813,7 @@ if not angelsmods.functions.make_resource then
               frame_count = input.frame_count,
               variation_count = input.variation_count,
               blend_mode = "additive",
-              flags = {"light"},
+              flags = { "light" },
               hr_version = {
                 filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18-hr-glow.png",
                 priority = "extra-high",
@@ -829,9 +825,9 @@ if not angelsmods.functions.make_resource then
                 variation_count = input.variation_count,
                 scale = 0.5,
                 blend_mode = "additive",
-                flags = {"light"}
-              }
-            }
+                flags = { "light" },
+              },
+            },
           }
         end
       end
@@ -860,8 +856,8 @@ if not angelsmods.functions.make_resource then
               frame_count = 4,
               variation_count = 1,
               blend_mode = "additive-soft",
-              flags = {"light"}
-            }
+              flags = { "light" },
+            },
           }
         end
       end
@@ -876,16 +872,16 @@ if not angelsmods.functions.make_resource then
 
   local function generate_presets(resource)
     local presets = {
-      ["rich-resources"] = {richness = "very-good"},
+      ["rich-resources"] = { richness = "very-good" },
       ["rail-world"] = {
         frequency = 0.33333333333,
-        size = 3
+        size = 3,
       },
       ["ribbon-world"] = {
         frequency = 3,
         size = 0.5,
-        richness = 2
-      }
+        richness = 2,
+      },
     }
     -- if set and set.basic_settings and set.basic_settings.autoplace_controls then
     --   set.basic_settings.autoplace_controls = util.merge({set.basic_settings.autoplace_controls, resources})
@@ -893,9 +889,11 @@ if not angelsmods.functions.make_resource then
     for preset, conf in pairs(presets) do
       local set = data.raw["map-gen-presets"]["default"][preset]
       if
-        set and set.basic_settings and set.basic_settings.autoplace_controls and
-          not set.basic_settings.autoplace_controls[resource]
-       then
+        set
+        and set.basic_settings
+        and set.basic_settings.autoplace_controls
+        and not set.basic_settings.autoplace_controls[resource]
+      then
         set.basic_settings.autoplace_controls[resource] = conf
       end
     end
@@ -916,11 +914,11 @@ if not angelsmods.functions.make_resource then
     for r, input in pairs(angelsmods.functions.store.make) do
       ret_table = {
         type = "resource",
-        flags = {"placeable-neutral"},
+        flags = { "placeable-neutral" },
         tree_removal_probability = 0.8,
         tree_removal_max_distance = 32 * 32,
         infinite_depletion_amount = 10,
-        resource_patch_search_radius = 12
+        resource_patch_search_radius = 12,
       }
       autoplace_ret_table = {
         name = input.name,
@@ -935,7 +933,7 @@ if not angelsmods.functions.make_resource then
         random_spot_size_minimum = input.autoplace.random_spot_size_minimum,
         random_spot_size_maximum = input.autoplace.random_spot_size_maximum,
         additional_richness = input.autoplace.additional_richness,
-        richness_post_multiplier = input.autoplace.richness_post_multiplier or nil
+        richness_post_multiplier = input.autoplace.richness_post_multiplier or nil,
         -- richness_post_multiplier = 0.1 --Maybe make that an option?
       }
       if not data.raw.resource[input.name] then
@@ -975,12 +973,12 @@ if not angelsmods.functions.make_resource then
         --Set stages count according to resource type
         if input.type == "item" then
           if input.infinite == true then
-            stages_count = {1}
+            stages_count = { 1 }
           else
-            stages_count = {15000, 8000, 4000, 2000, 1000, 500, 200, 80}
+            stages_count = { 15000, 8000, 4000, 2000, 1000, 500, 200, 80 }
           end
         else
-          stages_count = {0}
+          stages_count = { 0 }
         end
         --Set if map grid will show
         if input.type == "item" then
@@ -994,27 +992,27 @@ if not angelsmods.functions.make_resource then
           input.order = "d-" .. input.order
           input.highlight = true
           if input.sheet == 1 then
-            input.collision_box = {{-4.4, -4.4}, {4.4, 4.4}}
-            input.selection_box = {{-2.5, -2.5}, {2.5, 2.5}}
+            input.collision_box = { { -4.4, -4.4 }, { 4.4, 4.4 } }
+            input.selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } }
           end
           if input.sheet == 2 or input.sheet == 3 then
-            input.collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
-            input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
+            input.collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } }
+            input.selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } }
           end
         else
           --Unset resource category if resource yields fluids
           input.category = nil
           input.order = "a-" .. input.order
           input.highlight = false
-          input.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
-          input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
+          input.collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } }
+          input.selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } }
         end
         --Add fluidrequirements according to mod options
         if
-          input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq or
-            (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
-              settings.startup["angels-keepuranacid"].value
-         then
+          input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq
+          or (input.name == "uranium-ore" or input.name == "infinite-uranium-ore")
+            and settings.startup["angels-keepuranacid"].value
+        then
           input.acid_amount = 10
         end
         --Get map_color and icon from the regular resource
@@ -1042,7 +1040,7 @@ if not angelsmods.functions.make_resource then
           if not input.icon_size then
             input.icon_size = 32
           end
-          ret_table.icons = {{icon = input.icon, icon_size = input.icon_size}}
+          ret_table.icons = { { icon = input.icon, icon_size = input.icon_size } }
         end
         ret_table.name = input.name
         ret_table.icon_size = input.icon_size
@@ -1065,9 +1063,9 @@ if not angelsmods.functions.make_resource then
               amount_min = input.output_min,
               amount_max = input.output_max,
               probability = input.output_probability,
-              temperature = input.temperature
-            }
-          }
+              temperature = input.temperature,
+            },
+          },
         }
         ret_table.collision_box = input.collision_box
         ret_table.selection_box = input.selection_box
@@ -1082,7 +1080,7 @@ if not angelsmods.functions.make_resource then
         ret_table.map_color = input.map_color
         ret_table.map_grid = input.map_grid
         ret_table.autoplace = resource_autoplace.resource_autoplace_settings(autoplace_ret_table)
-        data:extend({ret_table})
+        data:extend({ ret_table })
       end
     end
   end
@@ -1104,15 +1102,20 @@ if not angelsmods.functions.make_resource then
     -- Remove from presets
     for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
       if
-        preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
-          preset.basic_settings.autoplace_controls[resource]
-       then
+        preset
+        and preset.basic_settings
+        and preset.basic_settings.autoplace_controls
+        and preset.basic_settings.autoplace_controls[resource]
+      then
         preset.basic_settings.autoplace_controls[resource] = nil
       end
       if
-        infinite_resource and preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
-          preset.basic_settings.autoplace_controls[infinite_resource]
-       then
+        infinite_resource
+        and preset
+        and preset.basic_settings
+        and preset.basic_settings.autoplace_controls
+        and preset.basic_settings.autoplace_controls[infinite_resource]
+      then
         preset.basic_settings.autoplace_controls[infinite_resource] = nil
       end
     end
@@ -1160,10 +1163,10 @@ if not angelsmods.functions.make_resource then
           --Add autoplace to resource
           if data.raw.resource[input.name] then
             if
-              input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq) or
-                (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
-                  settings.startup["angels-keepuranacid"].value
-             then
+              input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq)
+              or (input.name == "uranium-ore" or input.name == "infinite-uranium-ore")
+                and settings.startup["angels-keepuranacid"].value
+            then
               if angelsmods.petrochem then
                 if angelsmods.trigger.enableacids then
                   input.acid_req = input.acid_to_mine
@@ -1178,8 +1181,8 @@ if not angelsmods.functions.make_resource then
                 end
               end
               data.raw.resource[input.name].minable.required_fluid = input.acid_req
-            -- log(serpent.block(input.acid_req))
-            -- log(serpent.block(data.raw.resource[input.name].minable.required_fluid))
+              -- log(serpent.block(input.acid_req))
+              -- log(serpent.block(data.raw.resource[input.name].minable.required_fluid))
             end
           end
         end

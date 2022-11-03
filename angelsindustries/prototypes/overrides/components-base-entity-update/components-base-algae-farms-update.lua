@@ -3,5 +3,4 @@ if angelsmods.industries.components then
   -- CUSTOM FIXES FOR BASE GAME ASSEMBLERS (+ ANGELS)
 
   OV.add_prereq("bio-processing-green", "tech-red-circuit")
-
 end

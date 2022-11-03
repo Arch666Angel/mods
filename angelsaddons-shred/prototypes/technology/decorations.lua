@@ -1,6 +1,4 @@
-
 if settings.startup["deco-shred-create-tech"].value then
-
   data:extend({
     {
       type = "technology",
@@ -15,8 +13,7 @@ if settings.startup["deco-shred-create-tech"].value then
 
       effects = {},
 
-      unit =
-      {
+      unit = {
         count = 2 * data.raw.technology["steel-processing"].unit.count,
         ingredients = util.table.deepcopy(data.raw.technology["steel-processing"].unit.ingredients),
         time = data.raw.technology["steel-processing"].unit.time,
@@ -24,27 +21,22 @@ if settings.startup["deco-shred-create-tech"].value then
     },
   })
 
-  for _,decoName in pairs({
+  for _, decoName in pairs({
     "shred",
     "santa",
     "inter",
     "voske",
     "east",
   }) do
-
-    for _,recipeName in pairs({
-      "deco-"..decoName.."-1",
-      "deco-"..decoName.."-2",
-      decoName.."-start",
+    for _, recipeName in pairs({
+      "deco-" .. decoName .. "-1",
+      "deco-" .. decoName .. "-2",
+      decoName .. "-start",
     }) do
-
       if data.raw.recipe[recipeName] then
-
         data.raw.recipe[recipeName].enabled = false
-        table.insert(data.raw.technology["deco-shred"].effects, {type = "unlock-recipe", recipe = recipeName})
-
+        table.insert(data.raw.technology["deco-shred"].effects, { type = "unlock-recipe", recipe = recipeName })
       end
     end
   end
-
 end

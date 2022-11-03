@@ -4,10 +4,10 @@
 local function copyGrid(name, tile_data)
   local grid = table.deepcopy(data.raw.tile["tutorial-grid"])
   grid.name = "tile-" .. name
-  grid.localised_name = {"tile-name."..name}
+  grid.localised_name = { "tile-name." .. name }
   grid.needs_correction = false
-  grid.minable = {mining_time = 0.1, result = name}
-  
+  grid.minable = { mining_time = 0.1, result = name }
+
   local concrete = data.raw.tile["concrete"]
   grid.build_sound = table.deepcopy(concrete.build_sound)
   grid.mined_sound = table.deepcopy(concrete.mined_sound)
@@ -19,20 +19,18 @@ local function copyGrid(name, tile_data)
   return grid
 end
 
-data:extend(
-  {
-    copyGrid("concrete-brick", {
-      walking_speed_modifier = 1.50,
-      decorative_removal_probability = 0.33, --0.25,
-      layer = 61
-    }),
-    copyGrid("reinforced-concrete-brick", {
-      walking_speed_modifier = 1.55,
-      decorative_removal_probability = 1.00, --0.25,
-      layer = 64
-    })
-  }
-)
+data:extend({
+  copyGrid("concrete-brick", {
+    walking_speed_modifier = 1.50,
+    decorative_removal_probability = 0.33, --0.25,
+    layer = 61,
+  }),
+  copyGrid("reinforced-concrete-brick", {
+    walking_speed_modifier = 1.55,
+    decorative_removal_probability = 1.00, --0.25,
+    layer = 64,
+  }),
+})
 
 --[[ EXAMPLE OF TUTORIAL GRID DEFINITION
 

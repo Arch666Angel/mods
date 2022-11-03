@@ -1,4 +1,4 @@
-require 'util'
+require("util")
 
 -- Create class ---------------------------------------------------------------
 local tips_and_tricks_triggers = {}
@@ -13,13 +13,11 @@ function tips_and_tricks_triggers:on_init()
 end
 
 function tips_and_tricks_triggers:init_global_data()
-  local TNT_data =
-  {
+  local TNT_data = {
     ["version"] = 1, -- version of the global data
 
-    ["prototype_data"] =
-    {
-      ["trigger_data"] = self:init_trigger_data() -- data storing info about the trigger prototypes
+    ["prototype_data"] = {
+      ["trigger_data"] = self:init_trigger_data(), -- data storing info about the trigger prototypes
     },
     ["force_data"] = {}, -- data storing info about the trigger state for each force
   }
@@ -30,12 +28,16 @@ function tips_and_tricks_triggers:init_trigger_data()
   -- init trigger data
   local trigger_data = {}
   local alien_data = game.get_filtered_entity_prototypes({
-    {mode = "or", filter = "type", type = "unit"},
-    {mode = "or", filter = "type", type = "unit-spawner"},
+    { mode = "or", filter = "type", type = "unit" },
+    { mode = "or", filter = "type", type = "unit-spawner" },
   })
   local technology_data = game.technology_prototypes
   for alien_name, alien_prototype_data in pairs(alien_data) do
-    local technology_name = "tips-and-tricks-trigger[angels-native-inhabitants-"..(alien_prototype_data.type == "unit" and "unit" or "spawner").."["..alien_name.."]]"
+    local technology_name = "tips-and-tricks-trigger[angels-native-inhabitants-"
+      .. (alien_prototype_data.type == "unit" and "unit" or "spawner")
+      .. "["
+      .. alien_name
+      .. "]]"
     trigger_data[alien_name] = technology_data[technology_name] and technology_name or nil
   end
   return trigger_data
@@ -57,11 +59,9 @@ function tips_and_tricks_triggers:init_force_data(force_name)
 
   -- store all force data
   global.TNT_data.force_data[force_name] = {
-    ["trigger_data"] = force_trigger_data
+    ["trigger_data"] = force_trigger_data,
   }
 end
-
-
 
 -------------------------------------------------------------------------------
 -- Setter functions to alter data into the data structure
@@ -70,18 +70,16 @@ function tips_and_tricks_triggers:remove_trigger(force_name, trigger_name)
   if force_name and global.TNT_data and global.TNT_data.force_data[force_name] then
     local force_triggers = global.TNT_data.force_data[force_name]["trigger_data"]
     local triggers_to_remove = {}
-    for trigger_key,trigger_value in pairs(force_triggers) do
+    for trigger_key, trigger_value in pairs(force_triggers) do
       if trigger_value == trigger_name then
         triggers_to_remove[trigger_key] = trigger_value
       end
     end
-    for trigger_key,_ in pairs(triggers_to_remove) do
+    for trigger_key, _ in pairs(triggers_to_remove) do
       force_triggers[trigger_key] = nil
     end
   end
 end
-
-
 
 -------------------------------------------------------------------------------
 -- Getter functions to extract data from the data structure
@@ -96,8 +94,6 @@ function tips_and_tricks_triggers:get_trigger_data(force_name)
     return global.TNT_data.prototype_data["trigger_data"]
   end
 end
-
-
 
 -------------------------------------------------------------------------------
 -- Behaviour functions, mostly event handlers
@@ -122,8 +118,6 @@ function tips_and_tricks_triggers:on_tech_research_reset(force_name)
     self:init_force_data(force_name) -- re-init all force data to reapply settings
   end
 end
-
-
 
 -- Return class ---------------------------------------------------------------
 return tips_and_tricks_triggers

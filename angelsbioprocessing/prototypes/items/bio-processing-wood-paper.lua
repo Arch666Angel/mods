@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   --[[{
     type = "item",
     name = "circuit-wood-fiber-board",
@@ -18,7 +17,7 @@ data:extend(
     order = "b[cellulose-fiber]",
     fuel_category = "chemical",
     fuel_value = "1MJ",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -29,7 +28,7 @@ data:extend(
     order = "d[wood-pellets]",
     fuel_category = "chemical",
     fuel_value = "8MJ",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -40,7 +39,7 @@ data:extend(
     order = "e[wood-bricks]",
     fuel_category = "chemical",
     fuel_value = "6MJ",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -51,7 +50,7 @@ data:extend(
     order = "e[wood-bricks]",
     fuel_category = "chemical",
     fuel_value = "20MJ",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -68,8 +67,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r = 218/255, g = 102/255, b = 000/255},
-    flow_color = {r = 255/255, g = 204/255, b = 000/255},
+    base_color = { r = 218 / 255, g = 102 / 255, b = 000 / 255 },
+    flow_color = { r = 255 / 255, g = 204 / 255, b = 000 / 255 },
     icon = "__angelsbioprocessing__/graphics/icons/liquid-pulping-liquor.png",
     icon_size = 32,
     subgroup = "bio-liquor",
@@ -81,8 +80,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r = 118/255, g = 037/255, b = 008/255},
-    flow_color = {r = 216/255, g = 129/255, b = 027/255},
+    base_color = { r = 118 / 255, g = 037 / 255, b = 008 / 255 },
+    flow_color = { r = 216 / 255, g = 129 / 255, b = 027 / 255 },
     icon = "__angelsbioprocessing__/graphics/icons/liquid-brown-liquor.png",
     icon_size = 32,
     subgroup = "bio-liquor",
@@ -94,8 +93,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r = 167/255, g = 167/255, b = 167/255},
-    flow_color = {r = 227/255, g = 227/255, b = 227/255},
+    base_color = { r = 167 / 255, g = 167 / 255, b = 167 / 255 },
+    flow_color = { r = 227 / 255, g = 227 / 255, b = 227 / 255 },
     icon = "__angelsbioprocessing__/graphics/icons/liquid-white-liquor.png",
     icon_size = 32,
     subgroup = "bio-liquor",
@@ -107,8 +106,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r = 030/255, g = 030/255, b = 030/255},
-    flow_color = {r = 097/255, g = 097/255, b = 097/255},
+    base_color = { r = 030 / 255, g = 030 / 255, b = 030 / 255 },
+    flow_color = { r = 097 / 255, g = 097 / 255, b = 097 / 255 },
     icon = "__angelsbioprocessing__/graphics/icons/liquid-black-liquor.png",
     icon_size = 32,
     subgroup = "bio-liquor",
@@ -120,8 +119,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r = 002/255, g = 102/255, b = 005/255},
-    flow_color = {r = 118/255, g = 195/255, b = 023/255},
+    base_color = { r = 002 / 255, g = 102 / 255, b = 005 / 255 },
+    flow_color = { r = 118 / 255, g = 195 / 255, b = 023 / 255 },
     icon = "__angelsbioprocessing__/graphics/icons/liquid-green-liquor.png",
     icon_size = 32,
     subgroup = "bio-liquor",
@@ -235,5 +234,4 @@ data:extend(
     order = "a",
     stack_size = 200,
   },
-}
-)
+})
