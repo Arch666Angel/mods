@@ -17,6 +17,8 @@ Date: ???
       - Advanced tungsten smelting and casting 1 - 2
     - Split techs Advanced iron casting 3 (805)
     - Split tech Advanced steel casting 3
+    - move ingot powders to ore powderizers
+    - add minimum tier requirements for ore powderizers
     - Changed smelting tech tiers (841)
       - Nitinol moved up
       - Nickel moved up

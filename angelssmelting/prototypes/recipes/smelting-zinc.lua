@@ -162,7 +162,7 @@ data:extend(
     {
       type = "recipe",
       name = "powder-zinc",
-      category = "advanced-crafting",
+      category = "powderizing-2",
       subgroup = "angels-zinc",
       energy_required = 0.5,
       enabled = false,

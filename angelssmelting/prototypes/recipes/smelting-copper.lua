@@ -113,7 +113,7 @@ data:extend(
     {
       type = "recipe",
       name = "powder-copper",
-      category = "advanced-crafting",
+      category = "powderizing-1",
       subgroup = "angels-copper",
       energy_required = 0.5,
       enabled = false,

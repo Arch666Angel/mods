@@ -132,7 +132,7 @@ data:extend(
     {
       type = "recipe",
       name = "powder-platinum",
-      category = "advanced-crafting",
+      category = "powderizing-3",
       subgroup = "angels-platinum",
       energy_required = 0.5,
       enabled = false,

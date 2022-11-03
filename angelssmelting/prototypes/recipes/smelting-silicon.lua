@@ -149,7 +149,7 @@ data:extend(
     {
       type = "recipe",
       name = "powder-silicon",
-      category = "advanced-crafting",
+      category = "powderizing-1",
       subgroup = "angels-silicon",
       energy_required = 0.5,
       enabled = false,
