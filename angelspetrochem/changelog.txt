@@ -20,7 +20,7 @@ Date: ???
       - Rubber
     - Split tech Advanced chemistry 3 (805)
     - Removed liquification category from chemplants & adv. chemplants
-    - Removed chemistry cagegory from adv. chemplants
+    - Removed chemistry category from adv. chemplants
   Bugfixes:
     - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------
