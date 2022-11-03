@@ -95,7 +95,10 @@ class UnitTestController:
       self.modlistController.enableMod("angelsdev-unit-test")
     self.modlistController.writeConfigurationFile()
 
-    # Configure settings
+    # Revert settings file (default prior to changing the settings file)
+    self.currentSettingsController.writeSettingsFile()
+    
+    # Configure new settings (default settings + custom settings for this setup)
     self.settingsController.readSettingsFile()
     for settingsStage in settingCustomisation.keys():
       for settingsName, settingsValue in settingCustomisation.get(settingsStage).items():
