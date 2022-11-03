@@ -18,7 +18,6 @@ script.on_event(defines.events.on_player_joined_game, function(event)
   end
 end)
 --]]
---
 
 script.on_init(function()
   cab.init()
