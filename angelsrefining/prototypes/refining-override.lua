@@ -45,7 +45,7 @@ if mods["bobplates"] then
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
     angelsmods.functions.disable_barreling_recipes("brine")
     angelsmods.functions.add_flag("brine", "hidden")
-    OV.disable_recipe({"brine-electrolysis"}) -- equivalent of angels recipe "water-saline-seperation"
+    OV.disable_recipe({ "brine-electrolysis" }) -- equivalent of angels recipe "water-saline-seperation"
     OV.global_replace_item("brine", "water-saline")
     OV.disable_recipe("brine")
   end
@@ -55,31 +55,29 @@ if mods["bobplates"] then
     data.raw.item["empty-canister"].order = "i"
     data.raw.item["gas-canister"].subgroup = "angels-fluid-control"
     data.raw.item["gas-canister"].order = "j"
-    data.raw.technology["gas-canisters"].prerequisites = {"fluid-canister-processing"}
+    data.raw.technology["gas-canisters"].prerequisites = { "fluid-canister-processing" }
     data.raw.technology["gas-canisters"].enabled = true
     OV.remove_prereq("fluid-canister-processing", "water-bore-1")
     OV.add_prereq("fluid-canister-processing", "fluid-barrel-processing")
     OV.remove_prereq("fluid-barrel-processing", "water-bore-1")
-    OV.patch_recipes(
+    OV.patch_recipes({
       {
-        {
-          name = "empty-canister",
-          ingredients = {
-            {name = "empty-barrel", amount = 5}
-          },
-          subgroup = "angels-fluid-control",
-          order = "i"
+        name = "empty-canister",
+        ingredients = {
+          { name = "empty-barrel", amount = 5 },
         },
-        {
-          name = "gas-canister",
-          ingredients = {
-            {name = "empty-canister", amount = 5}
-          },
-          subgroup = "angels-fluid-control",
-          order = "j"
-        }
-      }
-    )
+        subgroup = "angels-fluid-control",
+        order = "i",
+      },
+      {
+        name = "gas-canister",
+        ingredients = {
+          { name = "empty-canister", amount = 5 },
+        },
+        subgroup = "angels-fluid-control",
+        order = "j",
+      },
+    })
   end
   OV.remove_unlock("fluid-handling", "barreling-pump")
   OV.add_unlock("fluid-barrel-processing", "barreling-pump")
@@ -87,20 +85,18 @@ end
 --General barrelling fix
 for _, fluid_n in pairs(data.raw.fluid) do
   if not (fluid_n.auto_barrel == false) then
-    OV.patch_recipes(
+    OV.patch_recipes({
       {
-        {
-          name = "fill-" .. fluid_n.name .. "-barrel",
-          category = "barreling-pump",
-          hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling
-        },
-        {
-          name = "empty-" .. fluid_n.name .. "-barrel",
-          category = "barreling-pump",
-          hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling
-        },
-      }
-    )
+        name = "fill-" .. fluid_n.name .. "-barrel",
+        category = "barreling-pump",
+        hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling,
+      },
+      {
+        name = "empty-" .. fluid_n.name .. "-barrel",
+        category = "barreling-pump",
+        hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling,
+      },
+    })
 
     if mods["bobplates"] then
       if string.sub(fluid_n.name, 1, 3) == "gas" then
@@ -118,143 +114,137 @@ end
 
 --OVERRIDE FOR YUOKI
 if data.raw.item["y-res1"] then
-  OV.patch_recipes(
+  OV.patch_recipes({
+    --TIER 2
     {
-      --TIER 2
-      {
-        name = "angelsore1-chunk-processing",
-        ingredients = {{type = "item", name = "angels-ore1-chunk", amount = "+1"}},
-        results = {{type = "item", name = "y-res1", amount = 1}}
-      },
-      {
-        name = "angelsore3-chunk-processing",
-        ingredients = {{type = "item", name = "angels-ore3-chunk", amount = "+1"}},
-        results = {{type = "item", name = "y-res2", amount = 1}}
-      },
-      --TIER 3
-      {
-        name = "angelsore1-crystal-processing",
-        ingredients = {{type = "item", name = "angels-ore1-crystal", amount = "+1"}},
-        results = {{type = "item", name = "y-res1", amount = 1}}
-      },
-      {
-        name = "angelsore3-crystal-processing",
-        ingredients = {{type = "item", name = "angels-ore3-crystal", amount = "+1"}},
-        results = {{type = "item", name = "y-res2", amount = 1}}
-      },
-      --TIER 4
-      {
-        name = "angelsore1-pure-processing",
-        ingredients = {{type = "item", name = "angels-ore1-pure", amount = "+1"}},
-        results = {{type = "item", name = "y-res1", amount = 1}}
-      },
-      {
-        name = "angelsore3-pure-processing",
-        ingredients = {{type = "item", name = "angels-ore3-pure", amount = "+1"}},
-        results = {{type = "item", name = "y-res2", amount = 1}}
-      }
-    }
-  )
+      name = "angelsore1-chunk-processing",
+      ingredients = { { type = "item", name = "angels-ore1-chunk", amount = "+1" } },
+      results = { { type = "item", name = "y-res1", amount = 1 } },
+    },
+    {
+      name = "angelsore3-chunk-processing",
+      ingredients = { { type = "item", name = "angels-ore3-chunk", amount = "+1" } },
+      results = { { type = "item", name = "y-res2", amount = 1 } },
+    },
+    --TIER 3
+    {
+      name = "angelsore1-crystal-processing",
+      ingredients = { { type = "item", name = "angels-ore1-crystal", amount = "+1" } },
+      results = { { type = "item", name = "y-res1", amount = 1 } },
+    },
+    {
+      name = "angelsore3-crystal-processing",
+      ingredients = { { type = "item", name = "angels-ore3-crystal", amount = "+1" } },
+      results = { { type = "item", name = "y-res2", amount = 1 } },
+    },
+    --TIER 4
+    {
+      name = "angelsore1-pure-processing",
+      ingredients = { { type = "item", name = "angels-ore1-pure", amount = "+1" } },
+      results = { { type = "item", name = "y-res1", amount = 1 } },
+    },
+    {
+      name = "angelsore3-pure-processing",
+      ingredients = { { type = "item", name = "angels-ore3-pure", amount = "+1" } },
+      results = { { type = "item", name = "y-res2", amount = 1 } },
+    },
+  })
 
   --RECIPES
-  local slag_color = {{202, 099, 017}, {097, 052, 020}, {097, 052, 020}}
-  data:extend(
+  local slag_color = { { 202, 099, 017 }, { 097, 052, 020 }, { 097, 052, 020 } }
+  data:extend({
     {
-      {
-        type = "recipe",
-        name = "slag-processing-yi",
-        category = "crystallizing",
-        subgroup = "slag-processing-1",
-        energy_required = 8,
-        enabled = false,
-        ingredients = {
-          {type = "fluid", name = "mineral-sludge", amount = 50}
-        },
-        results = {
-          {type = "item", name = "y-res1", amount = 1, probability = 0.5},
-          {type = "item", name = "y-res2", amount = 1, probability = 0.5}
-        },
-        icons = angelsmods.functions.create_liquid_recipe_icon(
-          {
-            "y-res1",
-            "y-res2"
-          },
-          slag_color
-        ),
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
-        order = "a-a [slag-processing-yi]"
+      type = "recipe",
+      name = "slag-processing-yi",
+      category = "crystallizing",
+      subgroup = "slag-processing-1",
+      energy_required = 8,
+      enabled = false,
+      ingredients = {
+        { type = "fluid", name = "mineral-sludge", amount = 50 },
       },
-      {
-        type = "recipe",
-        name = "angelsore-chunk-mix-yi1-processing",
-        category = "ore-sorting",
-        subgroup = "ore-sorting-advanced",
-        energy_required = 1.5,
-        enabled = false,
-        ingredients = {
-          {type = "item", name = "angels-ore1-chunk", amount = 2},
-          {type = "item", name = "angels-ore3-chunk", amount = 2},
-          {type = "item", name = "catalysator-brown", amount = 1}
-        },
-        results = {
-          {type = "item", name = "y-res1", amount = 6}
-        },
-        icons = {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
-          {icon = "__Yuoki__/graphics/icons/uni-com-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
-        },
-        order = "c-i-g[angelsore-chunk-mix-yi1-processing]"
+      results = {
+        { type = "item", name = "y-res1", amount = 1, probability = 0.5 },
+        { type = "item", name = "y-res2", amount = 1, probability = 0.5 },
       },
-      {
-        type = "recipe",
-        name = "angelsore-chunk-mix-yi2-processing",
-        category = "ore-sorting",
-        subgroup = "ore-sorting-advanced",
-        energy_required = 1.5,
-        enabled = false,
-        ingredients = {
-          {type = "item", name = "angels-ore2-chunk", amount = 2},
-          {type = "item", name = "angels-ore4-chunk", amount = 2},
-          {type = "item", name = "catalysator-brown", amount = 1}
-        },
-        results = {
-          {type = "item", name = "y-res2", amount = 6}
-        },
-        icons = {
-          {icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32},
-          {icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = {10, 10}},
-        },
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
-        order = "c-i-g[angelsore-chunk-mix-yi2-processing]"
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "y-res1",
+        "y-res2",
+      }, slag_color),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
+      order = "a-a [slag-processing-yi]",
+    },
+    {
+      type = "recipe",
+      name = "angelsore-chunk-mix-yi1-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "angels-ore1-chunk", amount = 2 },
+        { type = "item", name = "angels-ore3-chunk", amount = 2 },
+        { type = "item", name = "catalysator-brown", amount = 1 },
       },
-      {
-        type = "recipe",
-        name = "yellow-waste-water-purification-yi",
-        category = "water-treatment",
-        subgroup = "water-treatment",
-        energy_required = 1,
-        enabled = false,
-        ingredients = {
-          {type = "fluid", name = "water-yellow-waste", amount = 100}
-        },
-        results = {
-          {type = "fluid", name = "y-con_water", amount = 20},
-          {type = "fluid", name = "water-purified", amount = 70},
-          {type = "item", name = "sulfur", amount = 1}
-        },
-        icons = angelsmods.functions.create_liquid_recipe_icon(
-          {
-            "y-con_water",
-            "water-purified",
-            mods["angelspetrochem"] and {"__angelspetrochem__/graphics/icons/solid-sulfur.png", 32} or "sulfur"
-          },
-          "WsSS"
-        ),--
-        order = "a[yellow-waste-water-purification-yi]",
-        crafting_machine_tint = angelsmods.functions.get_recipe_tints({"y-con_water","water-yellow-waste","water-purified"}),
-      }
-    }
-  )
+      results = {
+        { type = "item", name = "y-res1", amount = 6 },
+      },
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32 },
+        { icon = "__Yuoki__/graphics/icons/uni-com-pur.png", icon_size = 32, scale = 0.5, shift = { 10, 10 } },
+      },
+      order = "c-i-g[angelsore-chunk-mix-yi1-processing]",
+    },
+    {
+      type = "recipe",
+      name = "angelsore-chunk-mix-yi2-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "angels-ore2-chunk", amount = 2 },
+        { type = "item", name = "angels-ore4-chunk", amount = 2 },
+        { type = "item", name = "catalysator-brown", amount = 1 },
+      },
+      results = {
+        { type = "item", name = "y-res2", amount = 6 },
+      },
+      icons = {
+        { icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32 },
+        { icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = { 10, 10 } },
+      },
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
+      order = "c-i-g[angelsore-chunk-mix-yi2-processing]",
+    },
+    {
+      type = "recipe",
+      name = "yellow-waste-water-purification-yi",
+      category = "water-treatment",
+      subgroup = "water-treatment",
+      energy_required = 1,
+      enabled = false,
+      ingredients = {
+        { type = "fluid", name = "water-yellow-waste", amount = 100 },
+      },
+      results = {
+        { type = "fluid", name = "y-con_water", amount = 20 },
+        { type = "fluid", name = "water-purified", amount = 70 },
+        { type = "item", name = "sulfur", amount = 1 },
+      },
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+        "y-con_water",
+        "water-purified",
+        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 } or "sulfur",
+      }, "WsSS"), --
+      order = "a[yellow-waste-water-purification-yi]",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({
+        "y-con_water",
+        "water-yellow-waste",
+        "water-purified",
+      }),
+    },
+  })
 
   --INSERT RECIPES TO TECHNOLOGY
   OV.add_unlock("water-treatment", "yellow-waste-water-purification-yi")
@@ -265,117 +255,113 @@ end
 
 --OVERRIDE FOR URANIUM POWER
 if data.raw.item["uraninite"] then
-  OV.patch_recipes(
+  OV.patch_recipes({
+    --TIER 2
     {
-      --TIER 2
-      {
-        name = "angelsore2-chunk-processing",
-        ingredients = {{type = "item", name = "angels-ore2-chunk", amount = "+1"}},
-        results = {{type = "item", name = "uraninite", amount = 1}}
-      },
-      {
-        name = "angelsore4-chunk-processing",
-        ingredients = {{type = "item", name = "angels-ore4-chunk", amount = "+1"}},
-        results = {{type = "item", name = "fluorite", amount = 1}}
-      },
-      --TIER 3
-      {
-        name = "angelsore2-crystal-processing",
-        ingredients = {{type = "item", name = "angels-ore2-crystal", amount = "+1"}},
-        results = {{type = "item", name = "uraninite", amount = 1}}
-      },
-      {
-        name = "angelsore4-crystal-processing",
-        ingredients = {{type = "item", name = "angels-ore4-crystal", amount = "+1"}},
-        results = {{type = "item", name = "fluorite", amount = 1}}
-      },
-      --TIER 4
-      {
-        name = "angelsore2-pure-processing",
-        ingredients = {{type = "item", name = "angels-ore2-pure", amount = "+1"}},
-        results = {{type = "item", name = "uraninite", amount = 1}}
-      },
-      {
-        name = "angelsore4-pure-processing",
-        ingredients = {{type = "item", name = "angels-ore4-pure", amount = "+1"}},
-        results = {{type = "item", name = "fluorite", amount = 1}}
-      }
-    }
-  )
+      name = "angelsore2-chunk-processing",
+      ingredients = { { type = "item", name = "angels-ore2-chunk", amount = "+1" } },
+      results = { { type = "item", name = "uraninite", amount = 1 } },
+    },
+    {
+      name = "angelsore4-chunk-processing",
+      ingredients = { { type = "item", name = "angels-ore4-chunk", amount = "+1" } },
+      results = { { type = "item", name = "fluorite", amount = 1 } },
+    },
+    --TIER 3
+    {
+      name = "angelsore2-crystal-processing",
+      ingredients = { { type = "item", name = "angels-ore2-crystal", amount = "+1" } },
+      results = { { type = "item", name = "uraninite", amount = 1 } },
+    },
+    {
+      name = "angelsore4-crystal-processing",
+      ingredients = { { type = "item", name = "angels-ore4-crystal", amount = "+1" } },
+      results = { { type = "item", name = "fluorite", amount = 1 } },
+    },
+    --TIER 4
+    {
+      name = "angelsore2-pure-processing",
+      ingredients = { { type = "item", name = "angels-ore2-pure", amount = "+1" } },
+      results = { { type = "item", name = "uraninite", amount = 1 } },
+    },
+    {
+      name = "angelsore4-pure-processing",
+      ingredients = { { type = "item", name = "angels-ore4-pure", amount = "+1" } },
+      results = { { type = "item", name = "fluorite", amount = 1 } },
+    },
+  })
 
-  data:extend(
+  data:extend({
     {
-      {
-        type = "recipe",
-        name = "slag-processing-up",
-        category = "crystallizing",
-        subgroup = "slag-processing-1",
-        energy_required = 8,
-        enabled = false,
-        ingredients = {
-          {type = "fluid", name = "mineral-sludge", amount = 50}
-        },
-        results = {
-          {type = "item", name = "uraninite", amount_min = 1, amount_max = 5, probability = 0.05},
-          {type = "item", name = "fluorite", amount_min = 1, amount_max = 1, probability = 0.05}
-        },
-        icon = "__angelsrefining__/graphics/icons/slag-processing-up.png",
-        icon_size = 32,
-        order = "a-a [slag-processing-up]"
+      type = "recipe",
+      name = "slag-processing-up",
+      category = "crystallizing",
+      subgroup = "slag-processing-1",
+      energy_required = 8,
+      enabled = false,
+      ingredients = {
+        { type = "fluid", name = "mineral-sludge", amount = 50 },
       },
-      {
-        type = "recipe",
-        name = "angelsore-crystal-mix-up1-processing",
-        category = "ore-sorting",
-        subgroup = "ore-sorting-advanced",
-        energy_required = 1.5,
-        enabled = false,
-        ingredients = {
-          {type = "item", name = "angels-ore1-crystal", amount = 2},
-          {type = "item", name = "angels-ore5-crystal", amount = 2},
-          {type = "item", name = "angels-ore6-crystal", amount = 2},
-          {type = "item", name = "catalysator-brown", amount = 1}
-        },
-        results = {
-          {type = "item", name = "uraninite", amount_min = 1, amount_max = 1, probability = 0.46}
-        },
-        icon = "__angelsrefining__/graphics/icons/angels-ore-mix-up1-sorting.png",
-        icon_size = 32,
-        order = "c-i-g[angelsore-crystal-mix-up1-processing]"
+      results = {
+        { type = "item", name = "uraninite", amount_min = 1, amount_max = 5, probability = 0.05 },
+        { type = "item", name = "fluorite", amount_min = 1, amount_max = 1, probability = 0.05 },
       },
-      {
-        type = "recipe",
-        name = "angelsore-crystal-mix-up2-processing",
-        category = "ore-sorting",
-        subgroup = "ore-sorting-advanced",
-        energy_required = 1.5,
-        enabled = false,
-        ingredients = {
-          {type = "item", name = "angels-ore2-crystal", amount = 2},
-          {type = "item", name = "angels-ore3-crystal", amount = 2},
-          {type = "item", name = "angels-ore4-crystal", amount = 2},
-          {type = "item", name = "catalysator-brown", amount = 1}
-        },
-        results = {
-          {type = "item", name = "fluorite", amount_min = 1, amount_max = 1, probability = 0.1}
-        },
-        icon = "__angelsrefining__/graphics/icons/angels-ore-mix-up2-sorting.png",
-        icon_size = 32,
-        order = "c-i-g[angelsore-crystal-mix-up2-processing]"
-      }
-    }
-  )
+      icon = "__angelsrefining__/graphics/icons/slag-processing-up.png",
+      icon_size = 32,
+      order = "a-a [slag-processing-up]",
+    },
+    {
+      type = "recipe",
+      name = "angelsore-crystal-mix-up1-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "angels-ore1-crystal", amount = 2 },
+        { type = "item", name = "angels-ore5-crystal", amount = 2 },
+        { type = "item", name = "angels-ore6-crystal", amount = 2 },
+        { type = "item", name = "catalysator-brown", amount = 1 },
+      },
+      results = {
+        { type = "item", name = "uraninite", amount_min = 1, amount_max = 1, probability = 0.46 },
+      },
+      icon = "__angelsrefining__/graphics/icons/angels-ore-mix-up1-sorting.png",
+      icon_size = 32,
+      order = "c-i-g[angelsore-crystal-mix-up1-processing]",
+    },
+    {
+      type = "recipe",
+      name = "angelsore-crystal-mix-up2-processing",
+      category = "ore-sorting",
+      subgroup = "ore-sorting-advanced",
+      energy_required = 1.5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "angels-ore2-crystal", amount = 2 },
+        { type = "item", name = "angels-ore3-crystal", amount = 2 },
+        { type = "item", name = "angels-ore4-crystal", amount = 2 },
+        { type = "item", name = "catalysator-brown", amount = 1 },
+      },
+      results = {
+        { type = "item", name = "fluorite", amount_min = 1, amount_max = 1, probability = 0.1 },
+      },
+      icon = "__angelsrefining__/graphics/icons/angels-ore-mix-up2-sorting.png",
+      icon_size = 32,
+      order = "c-i-g[angelsore-crystal-mix-up2-processing]",
+    },
+  })
   table.insert(
     data.raw.technology["slag-processing-1"].effects,
-    {type = "unlock-recipe", recipe = "slag-processing-up"}
+    { type = "unlock-recipe", recipe = "slag-processing-up" }
   )
   table.insert(
     data.raw.technology["advanced-ore-refining-3"].effects,
-    {type = "unlock-recipe", recipe = "angelsore-crystal-mix-up1-processing"}
+    { type = "unlock-recipe", recipe = "angelsore-crystal-mix-up1-processing" }
   )
   table.insert(
     data.raw.technology["advanced-ore-refining-3"].effects,
-    {type = "unlock-recipe", recipe = "angelsore-crystal-mix-up2-processing"}
+    { type = "unlock-recipe", recipe = "angelsore-crystal-mix-up2-processing" }
   )
 end
 
@@ -442,7 +428,7 @@ end
 --OVERRIDE FOR THORIUM POWER
 if data.raw.item["thorium-ore"] then
   -- pure sorting
-  OV.modify_output("angelsore2-pure-processing", {"thorium-ore", "platinum-ore"})
+  OV.modify_output("angelsore2-pure-processing", { "thorium-ore", "platinum-ore" })
 end
 
 --ENABLE PRODUCTIVITY

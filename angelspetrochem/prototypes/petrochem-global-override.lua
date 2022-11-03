@@ -1,5 +1,6 @@
 local OV = angelsmods.functions.OV
-local unit_test_functions = mods["angelsdev-unit-test"] and require("__angelsdev-unit-test__/unit-test-functions") or nil
+local unit_test_functions = mods["angelsdev-unit-test"] and require("__angelsdev-unit-test__/unit-test-functions")
+  or nil
 
 --OVERRIDE FOR BASE
 require("prototypes.global-override.base-game")
@@ -25,23 +26,26 @@ OV.execute()
 
 --RECIPE TINTS
 local recipe_categories = -- a list of all crafting categories for which (petrochem) machines supporting recipe tints
-{
-  ["liquifying"] = true,
-  ["chemistry"] = true,
-  ["advanced-chemistry"] = true,
-}
+  {
+    ["liquifying"] = true,
+    ["chemistry"] = true,
+    ["advanced-chemistry"] = true,
+  }
 for _, recipe in pairs(data.raw.recipe) do
-  if (not recipe.crafting_machine_tint) and -- only recipes which do not have a crafting machine tint set
-     recipe_categories[recipe.category] and -- only recipes that can be crafting in machines that support recipe tints
-     recipe.hidden ~= true                  -- only recipes which are not hidden (explicitly set to false, or default=nil)
+  if
+    not recipe.crafting_machine_tint -- only recipes which do not have a crafting machine tint set
+    and recipe_categories[recipe.category] -- only recipes that can be crafting in machines that support recipe tints
+    and recipe.hidden ~= true -- only recipes which are not hidden (explicitly set to false, or default=nil)
   then
     if unit_test_functions then -- only log when unit testing is in progress
-      unit_test_functions.print_msg(string.format("Recipe '%s' does not have a crafting_machine_tint set!", recipe.name))
+      unit_test_functions.print_msg(
+        string.format("Recipe '%s' does not have a crafting_machine_tint set!", recipe.name)
+      )
     end
     recipe.crafting_machine_tint = {
-      primary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255},
-      secondary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255},
-      tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}
+      primary = { r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255 },
+      secondary = { r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255 },
+      tertiary = { r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255 },
     }
   end
 end

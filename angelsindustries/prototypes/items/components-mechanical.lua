@@ -1,6 +1,5 @@
 if angelsmods.industries.components then
-  data:extend(
-  {
+  data:extend({
     -----------------------------------------------------------------------------
     -- MOTOR CASINGS ------------------------------------------------------------
     -----------------------------------------------------------------------------
@@ -47,7 +46,7 @@ if angelsmods.industries.components then
       icons = {
         {
           icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
-          tint={r=0.7, g=0.7, b=0.7}
+          tint = { r = 0.7, g = 0.7, b = 0.7 },
         },
       },
       icon_size = 32,
@@ -220,6 +219,5 @@ if angelsmods.industries.components then
       order = "f",
       stack_size = 200,
     },
-  }
-  )
+  })
 end

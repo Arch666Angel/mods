@@ -39,4 +39,4 @@ require("prototypes.recipes.turret")
 require("prototypes.technology.exploration-technology")
 require("prototypes.technology.refined-biological")
 
-require('prototypes.generation.map-gen-presets')
+require("prototypes.generation.map-gen-presets")

@@ -1,6 +1,6 @@
 if angelsmods.industries and angelsmods.industries.components then
   local OV = angelsmods.functions.OV
-  
+
   --== CRAWLER ==--
   OV.remove_prereq("angels-crawler-train-2", "speed-module")
   OV.remove_prereq("angels-crawler-train-2", "effectivity-module")
@@ -33,7 +33,7 @@ if angelsmods.industries and angelsmods.industries.components then
   OV.add_prereq("angels-crawler-train-5", "angels-components-mechanical-5")
   OV.add_prereq("angels-crawler-train-5", "angels-components-cabling-5")
   OV.add_prereq("angels-crawler-train-5", "angels-components-construction-5")
-  
+
   --== PETRO ==--
   OV.remove_prereq("angels-petro-train-2", "speed-module")
   OV.remove_prereq("angels-petro-train-2", "effectivity-module")

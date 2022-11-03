@@ -5,25 +5,23 @@ st_wall.next_upgrade = st_wall.name
 st_wall.name = "wall-0"
 st_wall.minable.result = "wall-0"
 st_wall.max_health = st_wall.max_health * 2 / 3
-data:extend({st_wall})
+data:extend({ st_wall })
 --item:
 local st_wall = table.deepcopy(data.raw.item["stone-wall"])
 st_wall.name = "wall-0"
 st_wall.order = "a[stone-wall]-b[stone-wall]"
 st_wall.place_result = "wall-0"
-data:extend({st_wall})
+data:extend({ st_wall })
 --recipe:
-data:extend(
+data:extend({
   {
-    {
-      type = "recipe",
-      name = "wall-0",
-      enabled = true,
-      ingredients = {{type = "item", name = "stone", amount = 5}, {type = "item", name = "wood", amount = 1}},
-      result = "wall-0"
-    }
-  }
-)
+    type = "recipe",
+    name = "wall-0",
+    enabled = true,
+    ingredients = { { type = "item", name = "stone", amount = 5 }, { type = "item", name = "wood", amount = 1 } },
+    result = "wall-0",
+  },
+})
 -- STONE WALL TIER 1 -----------------------------------------------------------
 --functions for updates (TAKEN FROM LSLib on behalf of Lovely_Santa, NO COPY WITHOUT PRIOR PERMISSION)
 
@@ -40,7 +38,7 @@ local function addTintToSprite(sprite, tintToAdd)
       -- it has no effect, adding a tint to a shadow
       sprite.tint = util.table.deepcopy(tintToAdd)
     end
-    if sprite.hr_version and (not sprite.hr_version.draw_as_shadow) then
+    if sprite.hr_version and not sprite.hr_version.draw_as_shadow then
       sprite.hr_version.tint = util.table.deepcopy(tintToAdd)
     end
   end
@@ -96,4 +94,4 @@ local wall_sprite_tint_update = function(wall_entity, tint)
   end
 end
 --updates:
-wall_sprite_tint_update(data.raw["wall"]["wall-0"], {r = 0.75, g = 0.75, b = 0.75, a = 1})
+wall_sprite_tint_update(data.raw["wall"]["wall-0"], { r = 0.75, g = 0.75, b = 0.75, a = 1 })

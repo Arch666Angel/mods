@@ -1,22 +1,20 @@
 function angelsmods.functions.make_seed(plant)
   if data.raw.item[plant] and data.raw.item[plant .. "-seed"] then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "recipe",
-          name = plant .. "-seed",
-          category = "seed-extractor",
-          enabled = true,
-          energy_required = 0.5,
-          ingredients = {
-            {type = item, name = plant, amount = 1}
-          },
-          results = {
-            {type = "item", name = plant .. "-seed", amount = 1}
-          }
-        }
-      }
-    )
+        type = "recipe",
+        name = plant .. "-seed",
+        category = "seed-extractor",
+        enabled = true,
+        energy_required = 0.5,
+        ingredients = {
+          { type = item, name = plant, amount = 1 },
+        },
+        results = {
+          { type = "item", name = plant .. "-seed", amount = 1 },
+        },
+      },
+    })
   end
 end
 
@@ -35,7 +33,7 @@ function angelsmods.functions.modify_trees()
         tree.minable = {
           mining_particle = "wooden-particle",
           mining_time = 1.5,
-          results = {{type = "item", name = "wood", amount_min = 1, amount_max = 6}}
+          results = { { type = "item", name = "wood", amount_min = 1, amount_max = 6 } },
         }
       end
     else

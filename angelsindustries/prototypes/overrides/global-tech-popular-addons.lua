@@ -7,7 +7,7 @@ if angelsmods.industries.tech then
   -- WAREHOUSES -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["Warehousing"] then
-    AI.pack_replace("warehouse-logistics-research-1","green","orange")
+    AI.pack_replace("warehouse-logistics-research-1", "green", "orange")
   end
 
   -------------------------------------------------------------------------------

@@ -12,7 +12,7 @@ require("prototypes.overrides.global-tech-data")
 if angelsmods.industries.tech then
   OV.global_replace_science_packs(
     "space-science-pack",
-    {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "utility-science-pack"},
+    { "automation-science-pack", "logistic-science-pack", "chemical-science-pack", "utility-science-pack" },
     "angels-science-pack-white"
   )
   OV.execute()
@@ -22,49 +22,41 @@ if angelsmods.industries.tech then
 
   OV.global_replace_science_packs(
     "utility-science-pack",
-    {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"},
+    { "automation-science-pack", "logistic-science-pack", "chemical-science-pack" },
     "angels-science-pack-yellow"
   )
   OV.execute()
   OV.global_replace_item("utility-science-pack", "angels-science-pack-yellow")
   angelsmods.functions.add_flag("utility-science-pack", "hidden")
-  OV.disable_recipe({"utility-science-pack"})
+  OV.disable_recipe({ "utility-science-pack" })
   OV.global_replace_technology("utility-science-pack", "tech-yellow-packs")
   OV.execute()
 
   OV.global_replace_science_packs(
     "chemical-science-pack",
-    {"automation-science-pack", "logistic-science-pack"},
+    { "automation-science-pack", "logistic-science-pack" },
     "angels-science-pack-blue"
   )
   OV.execute()
   OV.global_replace_item("chemical-science-pack", "angels-science-pack-blue")
   angelsmods.functions.add_flag("chemical-science-pack", "hidden")
-  OV.disable_recipe({"chemical-science-pack"})
+  OV.disable_recipe({ "chemical-science-pack" })
   OV.global_replace_technology("chemical-science-pack", "tech-blue-packs")
   OV.execute()
 
-  OV.global_replace_science_packs(
-    "logistic-science-pack",
-    {"automation-science-pack"},
-    "angels-science-pack-green"
-  )
+  OV.global_replace_science_packs("logistic-science-pack", { "automation-science-pack" }, "angels-science-pack-green")
   OV.execute()
   OV.global_replace_item("logistic-science-pack", "angels-science-pack-green")
   angelsmods.functions.add_flag("logistic-science-pack", "hidden")
-  OV.disable_recipe({"logistic-science-pack"})
+  OV.disable_recipe({ "logistic-science-pack" })
   OV.global_replace_technology("logistic-science-pack", "tech-green-packs")
   OV.execute()
 
-  OV.global_replace_science_packs(
-    "automation-science-pack",
-    {},
-    "angels-science-pack-red"
-  )
+  OV.global_replace_science_packs("automation-science-pack", {}, "angels-science-pack-red")
   OV.execute()
   OV.global_replace_item("automation-science-pack", "angels-science-pack-red")
   angelsmods.functions.add_flag("automation-science-pack", "hidden")
-  OV.disable_recipe({"automation-science-pack"})
+  OV.disable_recipe({ "automation-science-pack" })
 end
 
 -- MANUAL OVERRIDES FOR ANGELS SCIENCE PACKS (no datacores in these files! Santa will kill you!)
@@ -83,27 +75,19 @@ end
 -------------------------------------------------------------------------------
 -- GLOBAL REPLACE ALL VANILLA PACKS WITH ANGELS CORES
 if angelsmods.industries.tech then
-  OV.global_replace_science_packs(
-    "military-science-pack",
-    {"production-science-pack"},
-    "datacore-war-1", 2
-  )
+  OV.global_replace_science_packs("military-science-pack", { "production-science-pack" }, "datacore-war-1", 2)
   OV.execute()
   OV.global_replace_item("military-science-pack", "angels-science-pack-green")
   angelsmods.functions.add_flag("military-science-pack", "hidden")
-  OV.disable_recipe({"military-science-pack"})
+  OV.disable_recipe({ "military-science-pack" })
   OV.global_replace_technology("military-science-pack", "tech-green-packs")
   OV.execute()
 
-  OV.global_replace_science_packs(
-    "production-science-pack",
-    {},
-    "datacore-processing-1", 2
-  )
+  OV.global_replace_science_packs("production-science-pack", {}, "datacore-processing-1", 2)
   OV.execute()
-  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow")  -- datacore replacement script needs to run first
+  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow") -- datacore replacement script needs to run first
   angelsmods.functions.add_flag("production-science-pack", "hidden")
-  OV.disable_recipe({"production-science-pack"})
+  OV.disable_recipe({ "production-science-pack" })
   OV.global_replace_technology("production-science-pack", "tech-yellow-packs")
   OV.execute()
 end

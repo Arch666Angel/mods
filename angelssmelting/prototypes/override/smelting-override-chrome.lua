@@ -24,10 +24,11 @@ if angelsmods.trigger.smelting_products["chrome"].ingot then
     -- no need for molten recipe
     angelsmods.functions.add_flag("liquid-molten-chrome", "hidden")
     OV.disable_recipe({ "molten-chrome-smelting" })
-    OV.disable_technology({"angels-chrome-casting-2", "angels-chrome-casting-3"})
+    OV.disable_technology({ "angels-chrome-casting-2", "angels-chrome-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
-      data.raw.technology["angels-chrome-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-chrome-smelting-2"][property])
+    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+      data.raw.technology["angels-chrome-smelting-1"][property] =
+        util.table.deepcopy(data.raw.technology["angels-chrome-smelting-2"][property])
     end
   end
 else
@@ -42,8 +43,8 @@ else
   OV.disable_recipe({ "solid-chromate-smelting", "solid-dichromate-smelting" })
   OV.disable_recipe({ "chrome-ore-smelting", "processed-chrome-smelting", "solid-chrome-oxide-smelting" })
   OV.disable_recipe({ "molten-chrome-smelting" })
-  OV.disable_technology({"angels-chrome-smelting-1", "angels-chrome-smelting-2", "angels-chrome-smelting-3"})
-  OV.disable_technology({"angels-chrome-casting-2", "angels-chrome-casting-3"})
+  OV.disable_technology({ "angels-chrome-smelting-1", "angels-chrome-smelting-2", "angels-chrome-smelting-3" })
+  OV.disable_technology({ "angels-chrome-casting-2", "angels-chrome-casting-3" })
 end
 
 -------------------------------------------------------------------------------

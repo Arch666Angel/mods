@@ -7,7 +7,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
     AI.core_replace("electrolysis-1", "basic", "processing")
-    OV.remove_prereq("electrolysis-1","tech-specialised-labs-basic")
+    OV.remove_prereq("electrolysis-1", "tech-specialised-labs-basic")
     OV.add_prereq("electrolysis-1", "tech-specialised-labs-basic-processing-1")
     AI.core_replace("electrolysis-2", "basic", "processing")
     AI.core_replace("grinding", "basic", "processing")
@@ -95,7 +95,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobclasses"] then
     --OV.set_science_pack("bodies", "datacore-enhance-2", 2)
-    AI.core_replace("bodies","basic","enhance")
+    AI.core_replace("bodies", "basic", "enhance")
   end
 
   -------------------------------------------------------------------------------
@@ -283,11 +283,11 @@ if angelsmods.industries.tech then
 
       table.insert(
         data.raw.recipe["science-pack-gold"].ingredients,
-        {type = "item", name = "datacore-processing-2", amount = 1}
+        { type = "item", name = "datacore-processing-2", amount = 1 }
       )
       table.insert(
         data.raw.recipe["science-pack-gold"].ingredients,
-        {type = "item", name = "datacore-enhance-2", amount = 1}
+        { type = "item", name = "datacore-enhance-2", amount = 1 }
       )
     end
 
