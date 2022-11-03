@@ -27,7 +27,7 @@ OV.disable_recipe({
   "hogger-butchery-2",
   "hogger-butchery-3",
   "hogger-butchery-4",
-  "hogger-butchery-5"
+  "hogger-butchery-5",
 })
 
 OV.execute()

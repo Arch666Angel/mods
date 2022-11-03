@@ -1,6 +1,5 @@
 if angelsmods.industries.components then
-  data:extend(
-  {
+  data:extend({
     -----------------------------------------------------------------------------
     -- CABLE SHIELDING ----------------------------------------------------------
     -----------------------------------------------------------------------------
@@ -157,6 +156,5 @@ if angelsmods.industries.components then
       order = "e",
       stack_size = 200,
     },
-  }
-  )
+  })
 end

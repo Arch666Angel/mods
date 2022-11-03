@@ -21,7 +21,7 @@ else
   OV.disable_technology({
     "bio-arboretum-desert-1",
     "bio-arboretum-desert-2",
-    "bio-arboretum-desert-3"
+    "bio-arboretum-desert-3",
   })
 end
 
@@ -47,7 +47,7 @@ else
   OV.disable_technology({
     "bio-arboretum-temperate-1",
     "bio-arboretum-temperate-2",
-    "bio-arboretum-temperate-3"
+    "bio-arboretum-temperate-3",
   })
 end
 
@@ -71,7 +71,7 @@ else
   OV.disable_technology({
     "bio-arboretum-swamp-1",
     "bio-arboretum-swamp-2",
-    "bio-arboretum-swamp-3"
+    "bio-arboretum-swamp-3",
   })
 end
 
@@ -89,7 +89,7 @@ else
     "kraft-cooking-washing",
     "kraft-recovery",
     "kraft-causting",
-    "solid-alginic-acid"
+    "solid-alginic-acid",
   })
   angelsmods.functions.add_flag({
     "pulping-liquor",
@@ -100,20 +100,20 @@ else
     "liquid-pulping-liquor",
     "solid-paper",
     "solid-wood-pulp",
-    "solid-alginic-acid"
-  },"hidden")
+    "solid-alginic-acid",
+  }, "hidden")
   OV.disable_technology({
     "bio-paper-1",
     "bio-paper-2",
-    "bio-paper-3"
+    "bio-paper-3",
   })
   OV.patch_recipes({
     {
       name = "garden-cultivating",
-      ingredients = {{name ="paste-cellulose", amount = "solid-wood-pulp"}}
-    }
+      ingredients = { { name = "paste-cellulose", amount = "solid-wood-pulp" } },
+    },
   })
   --rereq clean-out
-  OV.remove_prereq("gardens-2","bio-paper-1")
+  OV.remove_prereq("gardens-2", "bio-paper-1")
   OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end

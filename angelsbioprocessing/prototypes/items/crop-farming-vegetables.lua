@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   -----------------------------------------------------------------------------
   -- SUPPORT ------------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -10,7 +9,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-wood",
     order = "a[support]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -19,7 +18,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-wood",
     order = "a[support]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -28,7 +27,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-wood",
     order = "a[support]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -37,7 +36,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-wood",
     order = "a[support]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   --{
   --  type = "item",
@@ -58,7 +57,7 @@ data:extend(
     stack_size = 200,
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    durability_description_value = "description.science-pack-remaining-amount-value",
   },
   -----------------------------------------------------------------------------
   -- UPGRADES -----------------------------------------------------------------
@@ -70,7 +69,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-blocks",
     order = "aa",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -79,7 +78,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-blocks",
     order = "ab",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -88,7 +87,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-blocks",
     order = "ac",
-    stack_size = 200
+    stack_size = 200,
   },
   -----------------------------------------------------------------------------
   -- TEMPERATE SEEDS ----------------------------------------------------------
@@ -100,7 +99,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "a[seed]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -109,7 +108,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "a[seed]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -118,7 +117,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "a[seed]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -127,7 +126,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "b[seed-dormant]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -136,7 +135,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "a[seed]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -145,7 +144,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "b[seed-dormant]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -154,7 +153,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "a[seed]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -163,7 +162,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate-seed",
     order = "b[seed-dormant]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   -----------------------------------------------------------------------------
   -- TEMPERATE VEGETABLES -----------------------------------------------------
@@ -175,7 +174,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate",
     order = "a[vegetable]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -184,7 +183,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate",
     order = "a[vegetable]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -193,7 +192,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate",
     order = "a[vegetable]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -202,7 +201,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate",
     order = "a[vegetable]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -211,7 +210,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-temperate",
     order = "a[vegetable]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   -----------------------------------------------------------------------------
   -- DESERT SEEDS -------------------------------------------------------------
@@ -223,7 +222,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "a[seed]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -232,7 +231,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "a[seed]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -241,7 +240,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "a[seed]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -250,7 +249,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "b[seed-dormant]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -259,7 +258,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "a[seed]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -268,7 +267,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "b[seed-dormant]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -277,7 +276,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "a[seed]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -286,7 +285,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert-seed",
     order = "b[seed-dormant]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   -----------------------------------------------------------------------------
   -- DESERT VEGETABLES --------------------------------------------------------
@@ -298,7 +297,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert",
     order = "a[vegetable]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -307,7 +306,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert",
     order = "a[vegetable]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -316,7 +315,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert",
     order = "a[vegetable]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -325,7 +324,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert",
     order = "a[vegetable]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -334,7 +333,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-desert",
     order = "a[vegetable]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   -----------------------------------------------------------------------------
   -- SWAMP SEEDS --------------------------------------------------------------
@@ -346,7 +345,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "a[seed]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -355,7 +354,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "a[seed]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -364,7 +363,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "a[seed]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -373,7 +372,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "b[seed-dormant]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -382,7 +381,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "a[seed]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -391,7 +390,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "b[seed-dormant]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -400,7 +399,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "a[seed]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -409,7 +408,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp-seed",
     order = "b[seed-dormant]-e",
-    stack_size = 500
+    stack_size = 500,
   },
   -----------------------------------------------------------------------------
   -- SWAMP VEGETABLES ---------------------------------------------------------
@@ -421,7 +420,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp",
     order = "a[vegetable]-a",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -430,7 +429,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp",
     order = "a[vegetable]-b",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -439,7 +438,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp",
     order = "a[vegetable]-c",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -448,7 +447,7 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp",
     order = "a[vegetable]-d",
-    stack_size = 500
+    stack_size = 500,
   },
   {
     type = "item",
@@ -457,7 +456,6 @@ data:extend(
     icon_size = 32,
     subgroup = "farming-swamp",
     order = "a[vegetable]-e",
-    stack_size = 500
+    stack_size = 500,
   },
-}
-)
+})

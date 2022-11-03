@@ -32,7 +32,7 @@ if angelsmods.industries.tech then
 
     OV.remove_prereq("advanced-electronics-3", "production-science-pack")
 
-    AI.pack_replace("kovarex-enrichment-process","yellow","blue")
+    AI.pack_replace("kovarex-enrichment-process", "yellow", "blue")
   end
 
   -------------------------------------------------------------------------------
@@ -282,9 +282,11 @@ if angelsmods.industries.tech then
       AI.pack_replace("bob-electric-energy-accumulators-2", "blue", "orange")
     end
     -- nuclar power
-    if settings.startup["bobmods-power-steam"].value == true or
-       settings.startup["bobmods-power-nuclear"].value == true or
-       settings.startup["bobmods-power-heatsources"].value == true then
+    if
+      settings.startup["bobmods-power-steam"].value == true
+      or settings.startup["bobmods-power-nuclear"].value == true
+      or settings.startup["bobmods-power-heatsources"].value == true
+    then
       AI.pack_replace("bob-heat-pipe-2", "blue", "orange")
     end
     -- power distribution
@@ -314,7 +316,7 @@ if angelsmods.industries.tech then
   if mods["bobtech"] then
     if data.raw.tool["science-pack-gold"] and data.raw.recipe["science-pack-gold"] then
       data.raw.recipe["science-pack-gold"].ingredients = {
-        {type = "item", name = "angels-science-pack-blue", amount = 1}
+        { type = "item", name = "angels-science-pack-blue", amount = 1 },
       }
     end
 
@@ -324,7 +326,7 @@ if angelsmods.industries.tech then
         OV.remove_science_pack(tech, "automation-science-pack")
         OV.remove_prereq(tech, "automation-science-pack")
       end
-      OV.disable_technology({"automation-science-pack"})
+      OV.disable_technology({ "automation-science-pack" })
       OV.add_prereq("automation", "steam-automation")
 
       OV.set_science_pack("steam-automation", "angels-science-pack-grey", 1)

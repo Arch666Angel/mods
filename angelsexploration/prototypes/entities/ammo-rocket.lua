@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   --ROCKETS
   -- {
   -- type = "projectile",
@@ -107,5 +106,4 @@ data:extend(
   -- order = "d[rocket-launcher]-b[explosive]",
   -- stack_size = 200
   -- },
-}
-)
+})

@@ -20,26 +20,24 @@ if angelsmods.refining then
   angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant", "liquifying")
   angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant-2", "liquifying")
 
-  OV.patch_recipes(
+  OV.patch_recipes({
+    { name = "carbon-separation-1", category = "liquifying" },
+    { name = "carbon-separation-2", category = "liquifying" },
+    { name = "liquifier", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-a" },
+    { name = "liquifier-2", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-b" },
+    { name = "liquifier-3", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-c" },
+    { name = "liquifier-4", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-d" },
+    { name = "angelsore8-dust", ingredients = { { name = "solid-sodium-hydroxide", 2 } } },
+    { name = "angelsore9-dust", ingredients = { { name = "solid-sodium-hydroxide", 2 } } },
     {
-      {name = "carbon-separation-1", category = "liquifying"},
-      {name = "carbon-separation-2", category = "liquifying"},
-      {name = "liquifier", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-a"},
-      {name = "liquifier-2", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-b"},
-      {name = "liquifier-3", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-c"},
-      {name = "liquifier-4", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-d"},
-      {name = "angelsore8-dust", ingredients = {{name = "solid-sodium-hydroxide", 2}}},
-      {name = "angelsore9-dust", ingredients = {{name = "solid-sodium-hydroxide", 2}}},
-      {
-        name = "angelsore8-anode-sludge",
-        ingredients = {{name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10}}
-      },
-      {
-        name = "angelsore9-anode-sludge",
-        ingredients = {{name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10}}
-      }
-    }
-  )
+      name = "angelsore8-anode-sludge",
+      ingredients = { { name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10 } },
+    },
+    {
+      name = "angelsore9-anode-sludge",
+      ingredients = { { name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10 } },
+    },
+  })
 
   OV.remove_unlock("slag-processing-1", "liquifier")
   OV.add_unlock("basic-chemistry", "liquifier")

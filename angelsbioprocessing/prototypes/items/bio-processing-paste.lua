@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   --PASTE
   {
     type = "item",
@@ -8,7 +7,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-cobalt]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -17,7 +16,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-copper]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -26,7 +25,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-gold]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -35,7 +34,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-iron]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -44,7 +43,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-silver]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -53,7 +52,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-titanium]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -62,7 +61,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-tungsten]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -71,7 +70,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-zinc]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

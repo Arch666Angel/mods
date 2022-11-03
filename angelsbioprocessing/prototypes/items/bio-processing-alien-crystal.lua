@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "crystal-powder",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "d[powder]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   -- RAW
@@ -18,7 +17,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "a[raw]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -27,7 +26,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "a[raw]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -36,7 +35,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "a[raw]",
-    stack_size = 200
+    stack_size = 200,
   },
 
   -- CUT
@@ -47,7 +46,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "b[split]-a[blue]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -56,7 +55,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "b[split]-b[red]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -65,7 +64,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "b[split]-c[green]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -74,7 +73,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "b[split]-a[blue]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -83,7 +82,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "b[split]-b[red]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -92,7 +91,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "b[split]-c[green]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -101,7 +100,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "b[split]-a[blue]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -110,7 +109,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "b[split]-b[red]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -119,10 +118,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "b[split]-c[green]-a[cut]",
-    stack_size = 200
+    stack_size = 200,
   },
-
-
 
   -- CRYSTAL
   {
@@ -132,7 +129,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "b[split]-a[blue]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -141,7 +138,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "b[split]-b[red]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -150,7 +147,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "b[split]-c[green]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -159,7 +156,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-splinter",
     order = "c[harmonic]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -168,7 +165,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "b[split]-a[blue]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -177,7 +174,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "b[split]-b[red]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -186,7 +183,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "b[split]-c[green]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -195,7 +192,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-shard",
     order = "c[harmonic]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -204,7 +201,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "b[split]-a[blue]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -213,7 +210,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "b[split]-b[red]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -222,7 +219,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "b[split]-c[green]-b[polished]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -231,7 +228,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-biter-processing-crystal-full",
     order = "c[harmonic]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})
