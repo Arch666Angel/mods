@@ -1,5 +1,5 @@
 if mods["bobclasses"] then
-    local OV = angelsmods.functions.OV
+  local OV = angelsmods.functions.OV
 
   -----------------------------------------------------------------------------
   -- RUBBER -------------------------------------------------------------------

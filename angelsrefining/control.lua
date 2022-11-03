@@ -1,6 +1,6 @@
-local starting_items = require "src.starting_items"
-local welcome_dialog = require "src.welcome_dialog"
-local ground_water_pump = require "src.ground_water_pump"
+local starting_items = require("src.starting_items")
+local welcome_dialog = require("src.welcome_dialog")
+local ground_water_pump = require("src.ground_water_pump")
 
 script.on_init(function()
   starting_items:on_init()

@@ -1,5 +1,4 @@
-local unit_tests =
-{
+local unit_tests = {
   require("unit-tests.unit-test-001"), -- this is an example of a unit test, look at it for more details!
   require("unit-tests.unit-test-002"),
   require("unit-tests.unit-test-003"),
@@ -26,9 +25,14 @@ local execute_unit_tests = function()
       unit_test_functions.print_msg(string.format("Unit test %03d PASSED!", unit_test_index), 0)
     elseif unit_test_result == unit_test_functions.test_failed then -- soft failure
       unit_test_functions.print_msg(string.format("Unit test %03d FAILED!", unit_test_index), 0)
-      if unit_tests_result == unit_test_functions.test_successful then unit_tests_result = unit_test_functions.test_failed end
+      if unit_tests_result == unit_test_functions.test_successful then
+        unit_tests_result = unit_test_functions.test_failed
+      end
     elseif unit_test_result == unit_test_functions.test_invalid then -- hard failure
-      unit_test_functions.print_msg(string.format("Unit test %03d FAILED! Resolve issue(s) and rerun this test.", unit_test_index), 0)
+      unit_test_functions.print_msg(
+        string.format("Unit test %03d FAILED! Resolve issue(s) and rerun this test.", unit_test_index),
+        0
+      )
       unit_tests_result = unit_test_functions.test_invalid
       break
     else

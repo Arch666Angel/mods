@@ -1,1 +1,1 @@
-require "prototypes.overrides.infiniteores-override-bobplates"
+require("prototypes.overrides.infiniteores-override-bobplates")

@@ -1,17 +1,19 @@
-data:extend(
-{
+data:extend({
   {
     type = "fluid",
     name = "gas-puffer-atmosphere",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil, { {194,227,091}, {184,239,000}, {156,207,000} }),
+    icons = angelsmods.functions.create_gas_fluid_icon(
+      nil,
+      { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }
+    ),
     subgroup = "bio-puffer-1",
     order = "b",
     default_temperature = 25,
     gas_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=156/255, g=206/255, b=0/255},
-    flow_color = {r=156/255, g=206/255, b=0/255},
+    base_color = { r = 156 / 255, g = 206 / 255, b = 0 / 255 },
+    flow_color = { r = 156 / 255, g = 206 / 255, b = 0 / 255 },
   },
   {
     type = "item",
@@ -126,6 +128,5 @@ data:extend(
     subgroup = "bio-puffer-egg",
     order = "ae",
     stack_size = 200,
-  }
-}
-)
+  },
+})

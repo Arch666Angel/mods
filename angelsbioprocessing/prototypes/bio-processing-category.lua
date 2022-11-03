@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "recipe-category",
     name = "bio-processing", -- algae farm
@@ -113,8 +112,6 @@ data:extend(
     name = "bio-butchery",
   },
 
-
-
   --NAUVIS
   {
     type = "item-group",
@@ -124,15 +121,15 @@ data:extend(
       {
         icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
         icon_size = 128,
-        scale = 0.5
+        scale = 0.5,
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
-        shift = {20, -20}
-      }
-    }
+        shift = { 20, -20 },
+      },
+    },
   },
   {
     type = "item-subgroup",
@@ -214,8 +211,6 @@ data:extend(
     order = "z",
   },
 
-
-
   -- VEGETABILIS
   {
     type = "item-group",
@@ -225,15 +220,15 @@ data:extend(
       {
         icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
         icon_size = 128,
-        scale = 0.5
+        scale = 0.5,
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
-        shift = {20, -20}
-      }
-    }
+        shift = { 20, -20 },
+      },
+    },
   },
   {
     type = "item-subgroup",
@@ -320,8 +315,6 @@ data:extend(
     order = "z[buildings]-b",
   },
 
-
-
   -- ANIMALIS
   {
     type = "item-group",
@@ -331,15 +324,15 @@ data:extend(
       {
         icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
         icon_size = 128,
-        scale = 0.5
+        scale = 0.5,
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
-        shift = {20, -20}
-      }
-    }
+        shift = { 20, -20 },
+      },
+    },
   },
   {
     type = "item-subgroup",
@@ -503,7 +496,6 @@ data:extend(
     type = "item-subgroup",
     name = "angels-bio-void",
     group = "angels-void",
-    order = "a-c[bio]"
-  }
-}
-)
+    order = "a-c[bio]",
+  },
+})

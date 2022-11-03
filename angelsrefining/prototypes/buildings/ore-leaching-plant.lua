@@ -1,270 +1,262 @@
-data:extend(
+data:extend({
   {
-    {
-      type = "item",
-      name = "ore-leaching-plant",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        1, angelsmods.refining.number_tint),
-      subgroup = "ore-leaching",
-      order = "a[ore-leaching-plant]",
-      place_result = "ore-leaching-plant",
-      stack_size = 10
+    type = "item",
+    name = "ore-leaching-plant",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
+        icon_size = 32,
+        icon_mipmaps = 1,
+      },
+    }, 1, angelsmods.refining.number_tint),
+    subgroup = "ore-leaching",
+    order = "a[ore-leaching-plant]",
+    place_result = "ore-leaching-plant",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "ore-leaching-plant",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
+        icon_size = 32,
+        icon_mipmaps = 1,
+      },
+    }, 1, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "ore-leaching-plant" },
+    fast_replaceable_group = "ore-leaching-plant",
+    next_upgrade = "ore-leaching-plant-2",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
+    module_specification = {
+      module_slots = 1,
     },
-    {
-      type = "assembling-machine",
-      name = "ore-leaching-plant",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        1, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "ore-leaching-plant"},
-      fast_replaceable_group = "ore-leaching-plant",
-      next_upgrade = "ore-leaching-plant-2",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-      selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-      module_specification = {
-        module_slots = 1
-      },
-      allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-refining-t3"},
-      crafting_speed = 0.75,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.04 * 60
-      },
-      energy_usage = "200kW",
-      animation = {
-        filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
-        priority = "extra-high",
-        width = 192,
-        height = 192,
-        frame_count = 1,
-        shift = {0.4, -0.14}
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          pipe_picture = angelsmods.refining.leachingpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {1, 3}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = angelsmods.refining.leachingpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{type = "output", position = {-1, -3}}}
-        }
-      }
+    allowed_effects = { "consumption", "speed", "pollution", "productivity" },
+    crafting_categories = { "ore-refining-t3" },
+    crafting_speed = 0.75,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = 0.04 * 60,
     },
-    {
-      type = "item",
-      name = "ore-leaching-plant-2",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        2, angelsmods.refining.number_tint),
-      icon_size = 32,
-      subgroup = "ore-leaching",
-      order = "b[ore-leaching-plant-2]",
-      place_result = "ore-leaching-plant-2",
-      stack_size = 10
+    energy_usage = "200kW",
+    animation = {
+      filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
+      priority = "extra-high",
+      width = 192,
+      height = 192,
+      frame_count = 1,
+      shift = { 0.4, -0.14 },
     },
-    {
-      type = "assembling-machine",
-      name = "ore-leaching-plant-2",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        2, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "ore-leaching-plant-2"},
-      fast_replaceable_group = "ore-leaching-plant",
-      next_upgrade = "ore-leaching-plant-3",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-      selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-      module_specification = {
-        module_slots = 2
-      },
-      allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-refining-t3"},
-      crafting_speed = 1,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.05 * 60
-      },
-      energy_usage = "250kW",
-      animation = {
-        layers = {
-          {
-            filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            frame_count = 1,
-            shift = {0.4, -0.14}
-          },
-          {
-            filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
-            tint = {r = 0.2, g = 0.3, b = 0.45},
-            priority = "high",
-            width = 192,
-            height = 192,
-            frame_count = 1,
-            shift = {0.4, -0.14}
-          }
-        }
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          pipe_picture = angelsmods.refining.leachingpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {1, 3}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = angelsmods.refining.leachingpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{type = "output", position = {-1, -3}}}
-        }
-      }
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound = {
+      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      apparent_volume = 2.5,
     },
-    {
-      type = "item",
-      name = "ore-leaching-plant-3",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        3, angelsmods.refining.number_tint),
-      subgroup = "ore-leaching",
-      order = "c[ore-leaching-plant-3]",
-      place_result = "ore-leaching-plant-3",
-      stack_size = 10
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { 1, 3 } } },
+      },
+      {
+        production_type = "output",
+        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { -1, -3 } } },
+      },
     },
-    {
-      type = "assembling-machine",
-      name = "ore-leaching-plant-3",
-      icons = angelsmods.functions.add_number_icon_layer(
+  },
+  {
+    type = "item",
+    name = "ore-leaching-plant-2",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
+        icon_size = 32,
+        icon_mipmaps = 1,
+      },
+    }, 2, angelsmods.refining.number_tint),
+    icon_size = 32,
+    subgroup = "ore-leaching",
+    order = "b[ore-leaching-plant-2]",
+    place_result = "ore-leaching-plant-2",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "ore-leaching-plant-2",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
+        icon_size = 32,
+        icon_mipmaps = 1,
+      },
+    }, 2, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "ore-leaching-plant-2" },
+    fast_replaceable_group = "ore-leaching-plant",
+    next_upgrade = "ore-leaching-plant-3",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
+    module_specification = {
+      module_slots = 2,
+    },
+    allowed_effects = { "consumption", "speed", "pollution", "productivity" },
+    crafting_categories = { "ore-refining-t3" },
+    crafting_speed = 1,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = 0.05 * 60,
+    },
+    energy_usage = "250kW",
+    animation = {
+      layers = {
         {
-          {
-            icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        3, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "ore-leaching-plant-3"},
-      fast_replaceable_group = "ore-leaching-plant",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-      selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-      module_specification = {
-        module_slots = 3
-      },
-      allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-      crafting_categories = {"ore-refining-t3"},
-      crafting_speed = 1.5,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.06 * 60
-      },
-      energy_usage = "300kW",
-      animation = {
-        layers = {
-          {
-            filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            frame_count = 1,
-            shift = {0.4, -0.14}
-          },
-          {
-            filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
-            tint = {r = 0.50, g = 0.1, b = 0.05},
-            priority = "high",
-            width = 192,
-            height = 192,
-            frame_count = 1,
-            shift = {0.4, -0.14}
-          }
-        }
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          pipe_picture = angelsmods.refining.leachingpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {1, 3}}}
+          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
+          priority = "extra-high",
+          width = 192,
+          height = 192,
+          frame_count = 1,
+          shift = { 0.4, -0.14 },
         },
         {
-          production_type = "output",
-          pipe_picture = angelsmods.refining.leachingpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{type = "output", position = {-1, -3}}}
-        }
-      }
-    }
-  }
-)
+          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
+          tint = { r = 0.2, g = 0.3, b = 0.45 },
+          priority = "high",
+          width = 192,
+          height = 192,
+          frame_count = 1,
+          shift = { 0.4, -0.14 },
+        },
+      },
+    },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound = {
+      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      apparent_volume = 2.5,
+    },
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { 1, 3 } } },
+      },
+      {
+        production_type = "output",
+        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { -1, -3 } } },
+      },
+    },
+  },
+  {
+    type = "item",
+    name = "ore-leaching-plant-3",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
+        icon_size = 32,
+        icon_mipmaps = 1,
+      },
+    }, 3, angelsmods.refining.number_tint),
+    subgroup = "ore-leaching",
+    order = "c[ore-leaching-plant-3]",
+    place_result = "ore-leaching-plant-3",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "ore-leaching-plant-3",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
+        icon_size = 32,
+        icon_mipmaps = 1,
+      },
+    }, 3, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "ore-leaching-plant-3" },
+    fast_replaceable_group = "ore-leaching-plant",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
+    module_specification = {
+      module_slots = 3,
+    },
+    allowed_effects = { "consumption", "speed", "pollution", "productivity" },
+    crafting_categories = { "ore-refining-t3" },
+    crafting_speed = 1.5,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = 0.06 * 60,
+    },
+    energy_usage = "300kW",
+    animation = {
+      layers = {
+        {
+          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
+          priority = "extra-high",
+          width = 192,
+          height = 192,
+          frame_count = 1,
+          shift = { 0.4, -0.14 },
+        },
+        {
+          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
+          tint = { r = 0.50, g = 0.1, b = 0.05 },
+          priority = "high",
+          width = 192,
+          height = 192,
+          frame_count = 1,
+          shift = { 0.4, -0.14 },
+        },
+      },
+    },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound = {
+      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      apparent_volume = 2.5,
+    },
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { 1, 3 } } },
+      },
+      {
+        production_type = "output",
+        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { -1, -3 } } },
+      },
+    },
+  },
+})
