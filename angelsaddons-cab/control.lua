@@ -1,6 +1,6 @@
 local cab = require("src.cab")
 
---[[-- DEBUG ONLY --
+--[[ DEBUG ONLY --
 script.on_event(defines.events.on_player_joined_game, function(event)
   local player_index = event.player_index
   if player_index then
