@@ -81,7 +81,6 @@ script.on_event(defines.events.on_built_entity, function(event)
   end
 end)
 ]]
---
 
 script.on_event(defines.events.on_gui_opened, function(event)
   if event.entity and event.entity.name == "angels-cab" then
