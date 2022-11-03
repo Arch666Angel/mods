@@ -15,7 +15,7 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
     "chemistry",
   })
 else
-  OV.add_unlock("basic-chemistry-2","chemical-plant") --give the item a new home if still active
+  OV.add_unlock("basic-chemistry-2", "chemical-plant") --give the item a new home if still active
 end
 
 -------------------------------------------------------------------------------
@@ -35,11 +35,11 @@ OV.add_unlock("lubricant", "mineral-oil-lubricant")
 OV.global_replace_technology("oil-processing", "angels-oil-processing")
 OV.global_replace_technology("advanced-oil-processing", "angels-advanced-oil-processing")
 
-OV.disable_technology({"coal-liquefaction"})
-OV.disable_recipe({"coal-liquefaction"})
+OV.disable_technology({ "coal-liquefaction" })
+OV.disable_recipe({ "coal-liquefaction" })
 
 -- plastic
-OV.disable_recipe({"plastic-bar"})
+OV.disable_recipe({ "plastic-bar" })
 
 -- sulfur
 OV.converter_fluid("sulfuric-acid", "liquid-sulfuric-acid")
@@ -51,17 +51,13 @@ OV.disable_recipe("sulfur")
 OV.add_prereq("rocket-fuel", "angels-nitrogen-processing-4")
 OV.add_unlock("rocket-fuel", "rocket-oxidizer-capsule")
 OV.add_unlock("rocket-fuel", "rocket-fuel-capsule")
-OV.set_science_pack(
-  "rocket-fuel",
-  {
-    "automation-science-pack",
-    "logistic-science-pack",
-    "chemical-science-pack",
-    "production-science-pack",
-    "utility-science-pack"
-  },
-  1
-)
+OV.set_science_pack("rocket-fuel", {
+  "automation-science-pack",
+  "logistic-science-pack",
+  "chemical-science-pack",
+  "production-science-pack",
+  "utility-science-pack",
+}, 1)
 OV.set_research_difficulty("rocket-fuel", 15, 50)
 
 -- Update kovarex for nuclear fuel separation
