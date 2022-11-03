@@ -3,15 +3,15 @@ angelsmods = angelsmods or {}
 angelsmods.refining = angelsmods.refining or {}
 angelsmods.refining.disable_ore_override = false
 angelsmods.refining.productivity_exception = {}
-angelsmods.refining.number_tint = {r = 0.3, g = 1.0, b = 1.0, a = 1}
+angelsmods.refining.number_tint = { r = 0.3, g = 1.0, b = 1.0, a = 1 }
 angelsmods.refining.ore_tints = {
   --taken from the crystal pos 16,19
-  ore1 = {r = 69/255, g = 91/255, b = 125/255, a = 1},
-  ore2 = {r = 166/255, g = 165/255, b = 46/255, a = 1},
-  ore3 = {r = 98/255, g = 144/255, b = 180/255, a = 1},
-  ore4 = {r = 171/255, g = 171/255, b = 171/255, a = 1},
-  ore5 = {r = 120/255, g = 39/255, b = 37/255, a = 1},
-  ore6 = {r = 117/255, g = 76/255, b = 37/255, a = 1},
+  ore1 = { r = 69 / 255, g = 91 / 255, b = 125 / 255, a = 1 },
+  ore2 = { r = 166 / 255, g = 165 / 255, b = 46 / 255, a = 1 },
+  ore3 = { r = 98 / 255, g = 144 / 255, b = 180 / 255, a = 1 },
+  ore4 = { r = 171 / 255, g = 171 / 255, b = 171 / 255, a = 1 },
+  ore5 = { r = 120 / 255, g = 39 / 255, b = 37 / 255, a = 1 },
+  ore6 = { r = 117 / 255, g = 76 / 255, b = 37 / 255, a = 1 },
 }
 
 --LOAD FUNCTIONS
@@ -30,7 +30,6 @@ angelsmods.functions.RB = require("prototypes.recipe-builder")
 require("prototypes.generation.resource-builder")
 --Functions for tips and tricks
 angelsmods.functions.TNT = require("prototypes.tips-and-tricks-functions")
-
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
@@ -144,8 +143,7 @@ require("prototypes.technology.refining-technology")
 
 require("prototypes.technology.water-treatment-technology")
 
-require('prototypes.generation.map-gen-presets')
+require("prototypes.generation.map-gen-presets")
 
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()
-

@@ -14,26 +14,24 @@ if mods["boblogistics"] then
   data.raw["item-group"]["bob-logistics"].icons = {
     {
       icon = "__boblogistics__/graphics/icons/technology/logistics.png",
-      icon_size = 64
+      icon_size = 64,
     },
     {
       icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
       icon_size = 1080,
       scale = 64 / 1080 * 0.35,
-      shift = {20, -20}
-    }
+      shift = { 20, -20 },
+    },
   }
 end
 
 -------------------------------------------------------------------------------
 -- LOGISTIC CHESTS + REPAIR PACKS ---------------------------------------------
 -------------------------------------------------------------------------------
-data:extend(
-  {
-    {type = "item-subgroup", name = "angels-chests-small-a", group = "angels-logistics", order = "aa[chests-small]-a"},
-    {type = "item-subgroup", name = "angels-chests-small-b", group = "angels-logistics", order = "aa[chests-small]-b"}
-  }
-)
+data:extend({
+  { type = "item-subgroup", name = "angels-chests-small-a", group = "angels-logistics", order = "aa[chests-small]-a" },
+  { type = "item-subgroup", name = "angels-chests-small-b", group = "angels-logistics", order = "aa[chests-small]-b" },
+})
 -- pre-logistics chests (+ repair packs)
 move_item("wooden-chest", "angels-chests-small-a", "a[chest]-a[wood]")
 move_item("iron-chest", "angels-chests-small-a", "a[chest]-b[iron]")
@@ -47,28 +45,26 @@ move_item("logistic-chest-buffer", "angels-chests-small-b", "e")
 move_item("logistic-chest-requester", "angels-chests-small-b", "f")
 
 if mods["boblogistics"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-chests-small-c",
-        group = "angels-logistics",
-        order = "aa[chests-small]-b"
-      },
-      {
-        type = "item-subgroup",
-        name = "angels-chests-small-d",
-        group = "angels-logistics",
-        order = "aa[chests-small]-c"
-      }
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-chests-small-c",
+      group = "angels-logistics",
+      order = "aa[chests-small]-b",
+    },
+    {
+      type = "item-subgroup",
+      name = "angels-chests-small-d",
+      group = "angels-logistics",
+      order = "aa[chests-small]-c",
+    },
+  })
   -- repair packs
   move_item("repair-pack-2", "angels-chests-small-a", "b[repair-pack]-b", "repair-tool")
   move_item("repair-pack-3", "angels-chests-small-a", "b[repair-pack]-c", "repair-tool")
   move_item("repair-pack-4", "angels-chests-small-a", "b[repair-pack]-d", "repair-tool")
   move_item("repair-pack-5", "angels-chests-small-a", "b[repair-pack]-e", "repair-tool")
--- steel chests
+  -- steel chests
   if mods["bobplates"] then
     move_item("steel-chest", "angels-chests-small-b", "a")
   end
@@ -96,14 +92,12 @@ end
 move_item("roboport", "angels-cargo-ports", "a[roboport]-e")
 
 if mods["boblogistics"] then
-  data:extend(
-    {
-      {type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a"},
-      {type = "item-subgroup", name = "angels-roboport-b", group = "angels-logistics", order = "ba[roboport]-b"},
-      {type = "item-subgroup", name = "angels-roboport-c", group = "angels-logistics", order = "ba[roboport]-c"},
-      {type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d"}
-    }
-  )
+  data:extend({
+    { type = "item-subgroup", name = "angels-roboport-a", group = "angels-logistics", order = "ba[roboport]-a" },
+    { type = "item-subgroup", name = "angels-roboport-b", group = "angels-logistics", order = "ba[roboport]-b" },
+    { type = "item-subgroup", name = "angels-roboport-c", group = "angels-logistics", order = "ba[roboport]-c" },
+    { type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d" },
+  })
   -- roboport antenna
   move_item("roboport-antenna-1", "angels-roboport-a", "a[parts]-a[roboport-antenna]")
   move_item("roboport-antenna-2", "angels-roboport-b", "a[parts]-a[roboport-antenna]")
@@ -157,14 +151,12 @@ move_item("logistic-robot", "angels-cargo-ports", "b[robots]-b")
 move_item("flying-robot-frame", "angels-cargo-ports", "c[intermediates]-a")
 
 if mods["boblogistics"] then
-  data:extend(
-    {
-      {type = "item-subgroup", name = "angels-robot-a", group = "angels-logistics", order = "ca[robots]-a"},
-      {type = "item-subgroup", name = "angels-robot-b", group = "angels-logistics", order = "ca[robots]-b"},
-      {type = "item-subgroup", name = "angels-robot-c", group = "angels-logistics", order = "ca[robots]-c"},
-      {type = "item-subgroup", name = "angels-robot-d", group = "angels-logistics", order = "ca[robots]-d"}
-    }
-  )
+  data:extend({
+    { type = "item-subgroup", name = "angels-robot-a", group = "angels-logistics", order = "ca[robots]-a" },
+    { type = "item-subgroup", name = "angels-robot-b", group = "angels-logistics", order = "ca[robots]-b" },
+    { type = "item-subgroup", name = "angels-robot-c", group = "angels-logistics", order = "ca[robots]-c" },
+    { type = "item-subgroup", name = "angels-robot-d", group = "angels-logistics", order = "ca[robots]-d" },
+  })
   -- robot frames
   if settings.startup["bobmods-logistics-flyingrobotframes"].value then
     move_item("flying-robot-frame", "angels-robot-a", "a[frame]")
@@ -220,16 +212,14 @@ if mods["boblogistics"] then
   end
 else
   if mods["bobwarfare"] and settings.startup["bobmods-warfare-robotupdate"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-robot-brains",
-          group = "angels-logistics",
-          order = "cc[robot-parts]"
-        },
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-robot-brains",
+        group = "angels-logistics",
+        order = "cc[robot-parts]",
+      },
+    })
 
     move_item("robot-brain-combat", "angels-robot-brains", "a[brain]-a")
     move_item("robot-brain-combat-2", "angels-robot-brains", "[brain]-b")

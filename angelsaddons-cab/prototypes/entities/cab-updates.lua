@@ -13,7 +13,7 @@ if not mods["angelsindustries"] then
   end
 
   -- replace with vanilla stuff
-  for _, equipmentType in pairs {
+  for _, equipmentType in pairs({
     --"night-vision-equipment",
     --"energy-shield-equipment",
     "battery-equipment",
@@ -22,9 +22,9 @@ if not mods["angelsindustries"] then
     --"active-defense-equipment",
     --"active-defense-equipment",
     --"movement-bonus-equipment",
-    "roboport-equipment"
+    "roboport-equipment",
     --"belt-immunity-equipment",
-  } do
+  }) do
     for _, equipment in pairs(data.raw[equipmentType]) do
       table.insert(equipment.categories, "angels-void")
     end

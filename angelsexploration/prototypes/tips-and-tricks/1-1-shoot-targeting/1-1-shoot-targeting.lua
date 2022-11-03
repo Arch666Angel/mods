@@ -4,5 +4,5 @@ if shoot_targeting then
   shoot_targeting.order = "a[shoot-targeting]"
   shoot_targeting.indent = 1
 
-  shoot_targeting.dependencies = {"angelsexploration"}
+  shoot_targeting.dependencies = { "angelsexploration" }
 end

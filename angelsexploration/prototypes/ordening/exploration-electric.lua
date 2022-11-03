@@ -21,16 +21,14 @@ end
 
 if mods["bobwarfare"] then
   -- plasma turrets
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-electric-b",
-        group = "combat",
-        order = "e-b"
-      },
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-electric-b",
+      group = "combat",
+      order = "e-b",
+    },
+  })
 
   reorder("item", "bob-plasma-turret-1", "angels-electric-b", "b[turret]-a[plasma]")
   reorder("item", "bob-plasma-turret-2", "angels-electric-b", "b[turret]-b[plasma]")
@@ -41,16 +39,14 @@ end
 
 if mods["bobwarfare"] then
   -- laser ammo
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-electric-c",
-        group = "combat",
-        order = "e-c"
-      },
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-electric-c",
+      group = "combat",
+      order = "e-c",
+    },
+  })
 
   reorder("ammo", "laser-rifle-battery", "angels-electric-c", "a[regular]")
   reorder("ammo", "laser-rifle-battery-ruby", "angels-electric-c", "b[ruby]")
@@ -61,16 +57,14 @@ if mods["bobwarfare"] then
   reorder("ammo", "laser-rifle-battery-diamond", "angels-electric-c", "g[diamond]")
   reorder("item", "laser-rifle-battery-case", "angels-electric-c", "j[intermediate]")
 
-  OV.patch_recipes(
-    {
-      {name = "laser-rifle-battery", subgroup = "angels-electric-c", order = "a[regular]"},
-      {name = "laser-rifle-battery-ruby", subgroup = "angels-electric-c", order = "b[ruby]"},
-      {name = "laser-rifle-battery-sapphire", subgroup = "angels-electric-c", order = "c[sapphire]"},
-      {name = "laser-rifle-battery-emerald", subgroup = "angels-electric-c", order = "d[emerald]"},
-      {name = "laser-rifle-battery-amethyst", subgroup = "angels-electric-c", order = "e[amethyst]"},
-      {name = "laser-rifle-battery-topaz", subgroup = "angels-electric-c", order = "f[topaz]"},
-      {name = "laser-rifle-battery-diamond", subgroup = "angels-electric-c", order = "g[diamond]"},
-      {name = "laser-rifle-battery-case", subgroup = "angels-electric-c", order = "j[intermediate]"}
-    }
-  )
+  OV.patch_recipes({
+    { name = "laser-rifle-battery", subgroup = "angels-electric-c", order = "a[regular]" },
+    { name = "laser-rifle-battery-ruby", subgroup = "angels-electric-c", order = "b[ruby]" },
+    { name = "laser-rifle-battery-sapphire", subgroup = "angels-electric-c", order = "c[sapphire]" },
+    { name = "laser-rifle-battery-emerald", subgroup = "angels-electric-c", order = "d[emerald]" },
+    { name = "laser-rifle-battery-amethyst", subgroup = "angels-electric-c", order = "e[amethyst]" },
+    { name = "laser-rifle-battery-topaz", subgroup = "angels-electric-c", order = "f[topaz]" },
+    { name = "laser-rifle-battery-diamond", subgroup = "angels-electric-c", order = "g[diamond]" },
+    { name = "laser-rifle-battery-case", subgroup = "angels-electric-c", order = "j[intermediate]" },
+  })
 end

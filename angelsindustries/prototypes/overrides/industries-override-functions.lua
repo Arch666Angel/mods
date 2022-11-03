@@ -20,7 +20,7 @@ local building_types = {
   "reactor",
   "electric-pole",
   "wall",
-  "gate"
+  "gate",
 }
 
 function angelsmods.functions.AI.pack_replace(techname, old_c, new_c) --tech tier swapping script (for cleaner code)
@@ -59,7 +59,7 @@ end
 
 function angelsmods.functions.AI.set_core(techname, core_n)
   local has_core = false
-  for _, pack in pairs((data.raw.technology[techname] or {unit = {ingredients = {}}}).unit.ingredients) do
+  for _, pack in pairs((data.raw.technology[techname] or { unit = { ingredients = {} } }).unit.ingredients) do
     local packname = pack.name or pack[1]
     if string.find(packname, "datacore") ~= nil then
       if packname == core_n then
@@ -80,90 +80,99 @@ function angelsmods.functions.AI.core_builder()
     if angelsmods.functions.check_exception(rec_4tech, angelsmods.industries.tech_exceptions) then
       --personal-equipment and other enhancements take priority
       if
-        string.find(rec_4tech, "module") ~= nil or string.find(rec_4tech, "equipment") ~= nil or
-          string.find(rec_4tech, "armor") ~= nil or
-          string.find(rec_4tech, "axe") ~= nil or
-          string.find(rec_4tech, "personal") ~= nil
-       then
+        string.find(rec_4tech, "module") ~= nil
+        or string.find(rec_4tech, "equipment") ~= nil
+        or string.find(rec_4tech, "armor") ~= nil
+        or string.find(rec_4tech, "axe") ~= nil
+        or string.find(rec_4tech, "personal") ~= nil
+      then
         --war takes next priority
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-enhance-1", 2)
       elseif
-        string.find(rec_4tech, "military") ~= nil or string.find(rec_4tech, "laser") ~= nil or
-          string.find(rec_4tech, "combat") ~= nil or
-          string.find(rec_4tech, "damage") ~= nil or
-          string.find(rec_4tech, "shell") ~= nil or
-          string.find(rec_4tech, "flam") ~= nil or
-          string.find(rec_4tech, "bullet") ~= nil or
-          string.find(rec_4tech, "rocket") ~= nil
-       then
+        string.find(rec_4tech, "military") ~= nil
+        or string.find(rec_4tech, "laser") ~= nil
+        or string.find(rec_4tech, "combat") ~= nil
+        or string.find(rec_4tech, "damage") ~= nil
+        or string.find(rec_4tech, "shell") ~= nil
+        or string.find(rec_4tech, "flam") ~= nil
+        or string.find(rec_4tech, "bullet") ~= nil
+        or string.find(rec_4tech, "rocket") ~= nil
+      then
         --exploration is next
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-war-1", 2)
       elseif string.find(rec_4tech, "explor") ~= nil then
         --energy is next
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-exploration-1", 2)
       elseif
-        string.find(rec_4tech, "energy") ~= nil or string.find(rec_4tech, "power") ~= nil or
-          string.find(rec_4tech, "cabling") ~= nil or
-          string.find(rec_4tech, "steam-engine") ~= nil or
-          string.find(rec_4tech, "heat") ~= nil or
-          string.find(rec_4tech, "turbine") ~= nil or
-          string.find(rec_4tech, "reactor") ~= nil or
-          string.find(rec_4tech, "pole") ~= nil or
-          string.find(rec_4tech, "substation") ~= nil or
-          string.find(rec_4tech, "boiler") ~= nil
-       then
+        string.find(rec_4tech, "energy") ~= nil
+        or string.find(rec_4tech, "power") ~= nil
+        or string.find(rec_4tech, "cabling") ~= nil
+        or string.find(rec_4tech, "steam-engine") ~= nil
+        or string.find(rec_4tech, "heat") ~= nil
+        or string.find(rec_4tech, "turbine") ~= nil
+        or string.find(rec_4tech, "reactor") ~= nil
+        or string.find(rec_4tech, "pole") ~= nil
+        or string.find(rec_4tech, "substation") ~= nil
+        or string.find(rec_4tech, "boiler") ~= nil
+      then
         --logistics is next
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-energy-1", 2)
       elseif
-        string.find(rec_4tech, "insert") ~= nil or string.find(rec_4tech, "logistic") ~= nil or
-          string.find(rec_4tech, "rail") ~= nil or
-          string.find(rec_4tech, "train") ~= nil or
-          string.find(rec_4tech, "braking") ~= nil or
-          string.find(rec_4tech, "robot") ~= nil or
-          string.find(rec_4tech, "fluid") ~= nil or
-          string.find(rec_4tech, "warehouse") ~= nil
-       then
+        string.find(rec_4tech, "insert") ~= nil
+        or string.find(rec_4tech, "logistic") ~= nil
+        or string.find(rec_4tech, "rail") ~= nil
+        or string.find(rec_4tech, "train") ~= nil
+        or string.find(rec_4tech, "braking") ~= nil
+        or string.find(rec_4tech, "robot") ~= nil
+        or string.find(rec_4tech, "fluid") ~= nil
+        or string.find(rec_4tech, "warehouse") ~= nil
+      then
         --production is up next
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-logistic-1", 2)
       elseif
-        string.find(rec_4tech, "processing") ~= nil or string.find(rec_4tech, "automation") ~= nil or
-          string.find(rec_4tech, "plastic") ~= nil or
-          string.find(rec_4tech, "mining") ~= nil or
-          string.find(rec_4tech, "research") ~= nil or
-          string.find(rec_4tech, "battery") ~= nil or
-          string.find(rec_4tech, "electronic") ~= nil
-       then
+        string.find(rec_4tech, "processing") ~= nil
+        or string.find(rec_4tech, "automation") ~= nil
+        or string.find(rec_4tech, "plastic") ~= nil
+        or string.find(rec_4tech, "mining") ~= nil
+        or string.find(rec_4tech, "research") ~= nil
+        or string.find(rec_4tech, "battery") ~= nil
+        or string.find(rec_4tech, "electronic") ~= nil
+      then
         --smelting and metallurgy
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       elseif
-        string.find(rec_4tech, "smelting") ~= nil or string.find(rec_4tech, "casting") ~= nil or
-          string.find(rec_4tech, "metallurgy") ~= nil or
-          string.find(rec_4tech, "cool") ~= nil
-       then
+        string.find(rec_4tech, "smelting") ~= nil
+        or string.find(rec_4tech, "casting") ~= nil
+        or string.find(rec_4tech, "metallurgy") ~= nil
+        or string.find(rec_4tech, "cool") ~= nil
+      then
         --Bioprocessing updates
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       elseif
-        string.find(rec_4tech, "bio") ~= nil or string.find(rec_4tech, "farm") ~= nil or
-          string.find(rec_4tech, "arbor") ~= nil or
-          string.find(rec_4tech, "cool") ~= nil or
-          string.find(rec_4tech, "garden") ~= nil
-       then
+        string.find(rec_4tech, "bio") ~= nil
+        or string.find(rec_4tech, "farm") ~= nil
+        or string.find(rec_4tech, "arbor") ~= nil
+        or string.find(rec_4tech, "cool") ~= nil
+        or string.find(rec_4tech, "garden") ~= nil
+      then
         --more war updates
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       elseif
-        string.find(rec_4tech, "wall") ~= nil or string.find(rec_4tech, "gate") ~= nil or
-          string.find(rec_4tech, "shoot") ~= nil or
-          string.find(rec_4tech, "turret") ~= nil or
-          string.find(rec_4tech, "explo") ~= nil
-       then
+        string.find(rec_4tech, "wall") ~= nil
+        or string.find(rec_4tech, "gate") ~= nil
+        or string.find(rec_4tech, "shoot") ~= nil
+        or string.find(rec_4tech, "turret") ~= nil
+        or string.find(rec_4tech, "explo") ~= nil
+      then
         --petrochem and refining updates
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-war-1", 2)
       elseif
-        string.find(rec_4tech, "chemistry") ~= nil or string.find(rec_4tech, "ore") ~= nil or
-          string.find(rec_4tech, "crack") ~= nil or
-          string.find(rec_4tech, "science-pack") ~= nil or
-          string.find(rec_4tech, "water") ~= nil
-       then
+        string.find(rec_4tech, "chemistry") ~= nil
+        or string.find(rec_4tech, "ore") ~= nil
+        or string.find(rec_4tech, "crack") ~= nil
+        or string.find(rec_4tech, "science-pack") ~= nil
+        or string.find(rec_4tech, "water") ~= nil
+      then
         angelsmods.functions.AI.set_core(rec_4tech, "datacore-processing-1", 2)
       end
     end
@@ -177,13 +186,13 @@ end
 
 --MODIFY ALL TECHS ACCORDING TO TIERS
 angelsmods.industries.techtiers = {
-  grey = {amount = 16, time = 15}, --BURNER
-  red = {amount = 64, time = 30}, --AUTOMATION
-  green = {amount = 128, time = 45}, --TRAINS
-  orange = {amount = 256, time = 60}, --OIL
-  blue = {amount = 512, time = 75}, --ROBOTS
-  yellow = {amount = 1024, time = 90}, --ENDGAME
-  white = {amount = 2024, time = 120} --MEGABASE
+  grey = { amount = 16, time = 15 }, --BURNER
+  red = { amount = 64, time = 30 }, --AUTOMATION
+  green = { amount = 128, time = 45 }, --TRAINS
+  orange = { amount = 256, time = 60 }, --OIL
+  blue = { amount = 512, time = 75 }, --ROBOTS
+  yellow = { amount = 1024, time = 90 }, --ENDGAME
+  white = { amount = 2024, time = 120 }, --MEGABASE
 }
 
 angelsmods.marathon.tech_amount_multi = 1
@@ -293,19 +302,17 @@ function angelsmods.functions.AI.core_tier_upgrade()
             ["orange"] = "tech-specialised-labs-basic-%s-3",
             ["blue"] = "tech-specialised-labs-advanced-%s-1",
             ["yellow"] = "tech-specialised-labs-advanced-%s-2",
-            ["white"] = "tech-specialised-labs-advanced"
+            ["white"] = "tech-specialised-labs-advanced",
           }
-          for pack_color, tier_up in pairs(
-            {
-              ["white"] = true,
-              ["yellow"] = true,
-              ["blue"] = true,
-              ["orange"] = false,
-              ["green"] = false,
-              ["red"] = false,
-              --["grey"] = false
-            }
-          ) do
+          for pack_color, tier_up in pairs({
+            ["white"] = true,
+            ["yellow"] = true,
+            ["blue"] = true,
+            ["orange"] = false,
+            ["green"] = false,
+            ["red"] = false,
+            --["grey"] = false
+          }) do
             if pack_name == string.format("angels-science-pack-%s", pack_color) then
               if tier_up then
                 angelsmods.functions.AI.core_tier_up(techname, research_type)
@@ -350,7 +357,7 @@ function angelsmods.functions.AI.add_con_mats()
 end
 
 function angelsmods.functions.AI.add_minable_results()
-  for _,building_type in pairs(building_types) do
+  for _, building_type in pairs(building_types) do
     angelsmods.functions.AI.replace_minable_results(building_type)
   end
 end
@@ -362,7 +369,7 @@ function angelsmods.functions.AI.replace_blocks_list(ing_list) --specifically bu
   local existing = {}
   --run through each list first and check if it exists
   for ni, _ in pairs(ing_list) do
-    existing[ni] = {name = ing_list[ni].name, amount = ing_list[ni].amount}
+    existing[ni] = { name = ing_list[ni].name, amount = ing_list[ni].amount }
   end
   --now do the replacements -- id rather not have to do a double loop
   for n, _ in pairs(ing_list) do
@@ -385,7 +392,7 @@ function angelsmods.functions.AI.replace_blocks_list(ing_list) --specifically bu
         ing_list[n].name = block_replace[nme].new
         ing_list[n].amount = math.ceil((ing_list[n].amount or 1) * amt_multi)
       end
-    -- else not on the replacement list
+      -- else not on the replacement list
     end
   end
 end
@@ -397,7 +404,7 @@ function angelsmods.functions.AI.replace_gen_mats()
     if nme and data.raw.item[nme] then
       OV.global_replace_item(nme, info.new)
       data.raw.recipe[nme].hidden = true
-      OV.disable_recipe({nme})
+      OV.disable_recipe({ nme })
       --in case hiding is not enough
       angelsmods.functions.add_flag(nme, "hidden")
       if info.unlock_by then
@@ -460,9 +467,9 @@ function angelsmods.functions.AI.replace_minable_results(buildings)
   end
 end
 
-function angelsmods.functions.AI.rec_tab_replace(table,old,new,count)
+function angelsmods.functions.AI.rec_tab_replace(table, old, new, count)
   --iterate through table
-  for _,entry in pairs(table) do
+  for _, entry in pairs(table) do
     if entry.name == old then
       entry.name = new
       if count then
@@ -477,7 +484,7 @@ function angelsmods.functions.AI.rec_tab_replace(table,old,new,count)
   end
 end
 
-function angelsmods.functions.AI.replace_recipe_ing(recipe,old_ing,new_ing,new_count)
+function angelsmods.functions.AI.replace_recipe_ing(recipe, old_ing, new_ing, new_count)
   if type(recipe) ~= table then
     recipe = data.raw.recipe[recipe]
   end
@@ -488,13 +495,13 @@ function angelsmods.functions.AI.replace_recipe_ing(recipe,old_ing,new_ing,new_c
       end
     end
     if recipe.ingredients then
-      angelsmods.functions.AI.rec_tab_replace(recipe.ingredients,old_ing,new_ing,new_count)
+      angelsmods.functions.AI.rec_tab_replace(recipe.ingredients, old_ing, new_ing, new_count)
     end
     if recipe.normal and recipe.normal.ingredients then
-      angelsmods.functions.AI.rec_tab_replace(recipe.normal.ingredients,old_ing,new_ing,new_count)
+      angelsmods.functions.AI.rec_tab_replace(recipe.normal.ingredients, old_ing, new_ing, new_count)
     end
     if recipe.expensive and recipe.expensive.ingredients then
-      angelsmods.functions.AI.rec_tab_replace(recipe.expensive.ingredients,old_ing,new_ing,new_count)
+      angelsmods.functions.AI.rec_tab_replace(recipe.expensive.ingredients, old_ing, new_ing, new_count)
     end
   end
 end

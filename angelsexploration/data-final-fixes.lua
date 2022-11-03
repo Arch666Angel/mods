@@ -1,1 +1,1 @@
-require "prototypes.tips-and-tricks.tips-and-tricks"
+require("prototypes.tips-and-tricks.tips-and-tricks")

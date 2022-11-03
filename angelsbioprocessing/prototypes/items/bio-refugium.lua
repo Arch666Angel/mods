@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   -----------------------------------------------------------------------------
   -- PROCESSING ---------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -10,7 +9,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-fish",
     order = "ca",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -19,7 +18,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-d[processed-meat]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

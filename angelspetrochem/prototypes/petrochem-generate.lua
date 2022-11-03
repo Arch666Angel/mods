@@ -45,7 +45,7 @@ if angelsmods.refining then
       angelsmods.functions.disable_barreling_recipes("dinitrogen-tetroxide")
       angelsmods.functions.make_converter("hydrazine", "gas-hydrazine")
       angelsmods.functions.disable_barreling_recipes("hydrazine")
-    end 
+    end
   end
 
   --CREATE BARRELS
@@ -68,13 +68,13 @@ if angelsmods.refining then
   angelsmods.functions.make_void("gas-epichlorhydrin", "chemical")
   angelsmods.functions.make_void("gas-chlor-methane", "chemical")
   angelsmods.functions.make_void("liquid-perchloric-acid", "chemical")
-  angelsmods.functions.make_void("gas-phosgene","chemical")
+  angelsmods.functions.make_void("gas-phosgene", "chemical")
   if data.raw.fluid["ferric-chloride-solution"] then
-    angelsmods.functions.make_void("ferric-chloride-solution", "chemical") 
+    angelsmods.functions.make_void("ferric-chloride-solution", "chemical")
   end
-  angelsmods.functions.make_void("liquid-ferric-chloride-solution", "chemical") 
-  angelsmods.functions.make_void("liquid-cupric-chloride-solution", "chemical") 
-  
+  angelsmods.functions.make_void("liquid-ferric-chloride-solution", "chemical")
+  angelsmods.functions.make_void("liquid-cupric-chloride-solution", "chemical")
+
   angelsmods.functions.make_void("gas-nitrogen", "chemical")
   angelsmods.functions.make_void("gas-ammonia", "chemical")
   angelsmods.functions.make_void("gas-nitrogen-dioxide", "chemical")
@@ -98,7 +98,7 @@ if angelsmods.refining then
   angelsmods.functions.make_void("liquid-condensates", "chemical")
   angelsmods.functions.make_void("liquid-ngl", "chemical")
   angelsmods.functions.make_void("gas-residual", "chemical")
-  
+
   angelsmods.functions.make_void("gas-methane", "chemical")
   angelsmods.functions.make_void("gas-ethane", "chemical")
   angelsmods.functions.make_void("gas-butane", "chemical")
@@ -122,7 +122,7 @@ if angelsmods.refining then
   angelsmods.functions.make_void("gas-acetone", "chemical")
   angelsmods.functions.make_void("liquid-toluene", "chemical")
   angelsmods.functions.make_void("liquid-bisphenol-a", "chemical")
-  
+
   angelsmods.functions.make_void("gas-acid", "chemical")
   angelsmods.functions.make_void("gas-hydrogen-sulfide", "chemical")
   angelsmods.functions.make_void("gas-sulfur-dioxide", "chemical")

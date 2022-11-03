@@ -1,10 +1,9 @@
-data:extend(
-{
+data:extend({
   --CANNON TURRET SHELL 1
   {
     type = "projectile",
     name = "cannon-turret-projectile-1",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     --collision_box = {{-0.1, -1.1}, {0.1, 1.1}},
     acceleration = 0,
     piercing_damage = 10,
@@ -15,14 +14,14 @@ data:extend(
         target_effects = {
           {
             type = "damage",
-            damage = {amount = 40, type = "physical"}
+            damage = { amount = 40, type = "physical" },
           },
           {
             type = "damage",
-            damage = {amount = 10, type = "explosion"}
-          }
-        }
-      }
+            damage = { amount = 10, type = "explosion" },
+          },
+        },
+      },
     },
     final_action = {
       type = "direct",
@@ -32,10 +31,10 @@ data:extend(
           {
             type = "create-entity",
             entity_name = "small-scorchmark",
-            check_buildability = true
-          }
-        }
-      }
+            check_buildability = true,
+          },
+        },
+      },
     },
     animation = {
       filename = "__base__/graphics/entity/bullet/bullet.png",
@@ -43,8 +42,8 @@ data:extend(
       width = 3,
       height = 50,
       priority = "high",
-      shift = {0.0, 0.0}
-    }
+      shift = { 0.0, 0.0 },
+    },
   },
   {
     type = "ammo",
@@ -65,21 +64,21 @@ data:extend(
           max_range = 40,
           source_effects = {
             type = "create-explosion",
-            entity_name = "explosion-gunshot"
-          }
-        }
-      }
+            entity_name = "explosion-gunshot",
+          },
+        },
+      },
     },
     subgroup = "angels-physical-ba",
     order = "c[ammo]-d[regular-cannon-shells]",
     magazine_size = 4,
-    stack_size = 200
+    stack_size = 200,
   },
   --CANNON TURRET SHELL 2
   {
     type = "projectile",
     name = "cannon-turret-projectile-2",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     --collision_box = {{-0.1, -1.1}, {0.1, 1.1}},
     acceleration = 0,
     piercing_damage = 10,
@@ -90,14 +89,14 @@ data:extend(
         target_effects = {
           {
             type = "damage",
-            damage = {amount = 80, type = "physical"}
+            damage = { amount = 80, type = "physical" },
           },
           {
             type = "damage",
-            damage = {amount = 20, type = "explosion"}
-          }
-        }
-      }
+            damage = { amount = 20, type = "explosion" },
+          },
+        },
+      },
     },
     final_action = {
       type = "direct",
@@ -107,10 +106,10 @@ data:extend(
           {
             type = "create-entity",
             entity_name = "small-scorchmark",
-            check_buildability = true
-          }
-        }
-      }
+            check_buildability = true,
+          },
+        },
+      },
     },
     animation = {
       filename = "__base__/graphics/entity/bullet/bullet.png",
@@ -118,8 +117,8 @@ data:extend(
       width = 3,
       height = 50,
       priority = "high",
-      shift = {0.0, 0.0}
-    }
+      shift = { 0.0, 0.0 },
+    },
   },
   {
     type = "ammo",
@@ -140,21 +139,21 @@ data:extend(
           max_range = 40,
           source_effects = {
             type = "create-explosion",
-            entity_name = "explosion-gunshot"
-          }
-        }
-      }
+            entity_name = "explosion-gunshot",
+          },
+        },
+      },
     },
     subgroup = "angels-physical-ba",
     order = "c[ammo]-e[piercing-cannon-shells]",
     magazine_size = 4,
-    stack_size = 200
+    stack_size = 200,
   },
   --CANNON TURRET SHELL 3
   {
     type = "projectile",
     name = "cannon-turret-projectile-3",
-    flags = {"not-on-map"},
+    flags = { "not-on-map" },
     --collision_box = {{-0.1, -1.1}, {0.1, 1.1}},
     acceleration = 0,
     piercing_damage = 10,
@@ -165,14 +164,14 @@ data:extend(
         target_effects = {
           {
             type = "damage",
-            damage = {amount = 200, type = "physical"}
+            damage = { amount = 200, type = "physical" },
           },
           {
             type = "damage",
-            damage = {amount = 50, type = "explosion"}
-          }
-        }
-      }
+            damage = { amount = 50, type = "explosion" },
+          },
+        },
+      },
     },
     final_action = {
       type = "direct",
@@ -182,10 +181,10 @@ data:extend(
           {
             type = "create-entity",
             entity_name = "small-scorchmark",
-            check_buildability = true
-          }
-        }
-      }
+            check_buildability = true,
+          },
+        },
+      },
     },
     animation = {
       filename = "__base__/graphics/entity/bullet/bullet.png",
@@ -193,8 +192,8 @@ data:extend(
       width = 3,
       height = 50,
       priority = "high",
-      shift = {0.0, 0.0}
-    }
+      shift = { 0.0, 0.0 },
+    },
   },
   {
     type = "ammo",
@@ -215,15 +214,14 @@ data:extend(
           max_range = 40,
           source_effects = {
             type = "create-explosion",
-            entity_name = "explosion-gunshot"
-          }
-        }
-      }
+            entity_name = "explosion-gunshot",
+          },
+        },
+      },
     },
     subgroup = "angels-physical-ba",
     order = "c[ammo]-f[uranium-cannon-shells]",
     magazine_size = 4,
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})
