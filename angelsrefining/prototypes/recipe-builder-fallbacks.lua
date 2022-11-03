@@ -39,91 +39,71 @@ angelsmods.functions.RB.set_fallback(
 --PLATES
 angelsmods.functions.RB.set_fallback("item", "t0-plate", { { "block-construction-1" }, { "iron-plate", 3 } })
 angelsmods.functions.RB.set_fallback("item", "t1-plate", { { "block-construction-1" }, { "steel-plate", 3 } })
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "t2-plate",
+angelsmods.functions.RB.set_fallback("item", "t2-plate", {
+  { "block-construction-2" },
   {
-    { "block-construction-2" },
-    {
-      "bronze-alloy",
-      3,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["bronze"].plate or false
-      end,
-    },
-    { "steel-plate", 5 },
-  }
-)
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "t3-plate",
+    "bronze-alloy",
+    3,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["bronze"].plate or false
+    end,
+  },
+  { "steel-plate", 5 },
+})
+angelsmods.functions.RB.set_fallback("item", "t3-plate", {
+  { "block-construction-3" },
+  { "aluminium-plate", 4 },
   {
-    { "block-construction-3" },
-    { "aluminium-plate", 4 },
-    {
-      "angels-plate-aluminium",
-      4,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["aluminium"].plate or false
-      end,
-    },
-    { "steel-plate", 7 },
-  }
-)
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "t4-plate",
+    "angels-plate-aluminium",
+    4,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["aluminium"].plate or false
+    end,
+  },
+  { "steel-plate", 7 },
+})
+angelsmods.functions.RB.set_fallback("item", "t4-plate", {
+  { "block-construction-4" },
+  { "titanium-plate", 4 },
   {
-    { "block-construction-4" },
-    { "titanium-plate", 4 },
-    {
-      "angels-plate-titanium",
-      4,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["titanium"].plate or false
-      end,
-    },
-    { "steel-plate", 9 },
-  }
-)
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "t5-plate",
+    "angels-plate-titanium",
+    4,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["titanium"].plate or false
+    end,
+  },
+  { "steel-plate", 9 },
+})
+angelsmods.functions.RB.set_fallback("item", "t5-plate", {
+  { "block-construction-5" },
+  { "tungsten-plate", 4 },
   {
-    { "block-construction-5" },
-    { "tungsten-plate", 4 },
-    {
-      "angels-plate-tungsten",
-      4,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
-      end,
-    },
-    { "steel-plate", 11 },
-  }
-)
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "t6-plate",
+    "angels-plate-tungsten",
+    4,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
+    end,
+  },
+  { "steel-plate", 11 },
+})
+angelsmods.functions.RB.set_fallback("item", "t6-plate", {
+  { "block-construction-5" },
   {
-    { "block-construction-5" },
-    {
-      "tungsten-carbide",
-      4,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
-      end,
-    },
-    {
-      "angels-plate-tungsten",
-      4,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
-      end,
-    },
-    { "steel-plate", 13 },
-  }
-)
+    "tungsten-carbide",
+    4,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
+    end,
+  },
+  {
+    "angels-plate-tungsten",
+    4,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
+    end,
+  },
+  { "steel-plate", 13 },
+})
 
 --BRICK
 angelsmods.functions.RB.set_fallback("item", "t0-brick", { { "block-construction-1" }, { "stone-brick", 5 } })
@@ -371,20 +351,16 @@ angelsmods.functions.RB.set_fallback("item", "blastfur-3", { { "block-mprocessin
 angelsmods.functions.RB.set_fallback("item", "blastfur-4", { { "block-mprocessing-4", 3 }, { "blast-furnace-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "chemfur-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "chemfur-2",
+angelsmods.functions.RB.set_fallback("item", "chemfur-2", {
+  { "block-production-3", 3 },
   {
-    { "block-production-3", 3 },
-    {
-      "angels-chemical-furnace",
-      1,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.early_chemical_furnace or false
-      end,
-    },
-  }
-)
+    "angels-chemical-furnace",
+    1,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.early_chemical_furnace or false
+    end,
+  },
+})
 angelsmods.functions.RB.set_fallback(
   "item",
   "chemfur-3",
@@ -409,20 +385,16 @@ angelsmods.functions.RB.set_fallback("item", "castingm-4", { { "block-mprocessin
 angelsmods.functions.RB.set_fallback("item", "sinteringo-1", { { "block-production-1", 3 } })
 angelsmods.functions.RB.set_fallback("item", "sinteringo-2", { { "block-production-2", 3 }, { "sintering-oven" } })
 angelsmods.functions.RB.set_fallback("item", "sinteringo-3", { { "block-mprocessing-3", 3 }, { "sintering-oven-2" } })
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "sinteringo-4",
+angelsmods.functions.RB.set_fallback("item", "sinteringo-4", {
+  { "block-mprocessing-4", 3 },
   {
-    { "block-mprocessing-4", 3 },
-    {
-      "sintering-oven-3",
-      1,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.early_sintering_oven or false
-      end,
-    },
-  }
-)
+    "sintering-oven-3",
+    1,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.early_sintering_oven or false
+    end,
+  },
+})
 angelsmods.functions.RB.set_fallback("item", "sinteringo-5", { { "block-mprocessing-5", 3 }, { "sintering-oven-4" } })
 
 angelsmods.functions.RB.set_fallback("item", "strandcast-1", { { "block-production-2", 3 } })
@@ -468,55 +440,43 @@ angelsmods.functions.RB.set_fallback("item", "biopro-1", { { "block-production-1
 angelsmods.functions.RB.set_fallback("item", "nutrientex-1", { { "block-production-2", 1 } })
 --angelsmods.functions.RB.set_fallback("item", "nutrientex-2", { { "block-bprocessing-3", 3 }, { "nutrient-extractor" } } )
 
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "arboretum-1",
+angelsmods.functions.RB.set_fallback("item", "arboretum-1", {
+  { "block-production-1", 1 },
+  { "glass", 6 },
   {
-    { "block-production-1", 1 },
-    { "glass", 6 },
-    {
-      "angels-plate-glass",
-      6,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false
-      end,
-    },
-  }
-)
+    "angels-plate-glass",
+    6,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false
+    end,
+  },
+})
 --angelsmods.functions.RB.set_fallback("item", "arboretum-2", { { "block-bprocessing-3", 3 }, { "bio-arboretum-1" } } )
 
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "puffer-1",
+angelsmods.functions.RB.set_fallback("item", "puffer-1", {
+  { "block-bprocessing-3", 2 },
+  { "glass", 5 },
   {
-    { "block-bprocessing-3", 2 },
-    { "glass", 5 },
-    {
-      "angels-plate-glass",
-      5,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false
-      end,
-    },
-  }
-)
+    "angels-plate-glass",
+    5,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false
+    end,
+  },
+})
 --angelsmods.functions.RB.set_fallback("item", "puffer-2", { { "block-bprocessing-3", 3 }, { "bio-refugium-puffer" } } )
 
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "fish-1",
+angelsmods.functions.RB.set_fallback("item", "fish-1", {
+  { "block-production-2", 1 },
+  { "glass", 10 },
   {
-    { "block-production-2", 1 },
-    { "glass", 10 },
-    {
-      "angels-plate-glass",
-      10,
-      function(t, n)
-        return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false
-      end,
-    },
-  }
-)
+    "angels-plate-glass",
+    10,
+    function(t, n)
+      return mods["angelssmelting"] and angelsmods.trigger.smelting_products["glass"].plate or false
+    end,
+  },
+})
 --angelsmods.functions.RB.set_fallback("item", "fish-2", { { "block-bprocessing-3", 3 }, { "bio-refugium-fish" } } )
 
 angelsmods.functions.RB.set_fallback("item", "biter-1", { { "block-bprocessing-4", 3 }, { "stone-wall", 4 } })
