@@ -183,7 +183,7 @@ data:extend({
         icon_size = 32,
         icon_mipmaps = 1,
       },
-    }, 2, angelsmods.petrochem.number_tint),
+    }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "angels-air-filter-3" },
     fast_replaceable_group = "angels-air-filter",
