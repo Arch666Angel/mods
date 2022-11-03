@@ -38,11 +38,11 @@ data:extend(
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {230,191,163}, {230,191,163}, {086,112,192,0.8}, {092,218,079,0.8} }),
     subgroup = "angels-platinum",
     order = "d",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = {r = 242/255, g = 212/255, b = 194/255},
     flow_color = {r = 242/255, g = 212/255, b = 194/255},
-    max_temperature = 100,
+    max_temperature = 0,
   },
   {
     type = "item",

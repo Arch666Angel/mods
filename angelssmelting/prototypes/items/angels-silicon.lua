@@ -38,11 +38,11 @@ data:extend(
     icons = angelsmods.functions.create_liquid_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-trichlorosilane.png", 72 }, "SiHCl"),
     subgroup = "angels-silicon",
     order = "d",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = {r = 209/255, g = 209/255, b = 209/255},
     flow_color = {r = 209/255, g = 209/255, b = 209/255},
-    max_temperature = 100,
+    max_temperature = 0,
   },
   {
     type = "fluid",
@@ -51,11 +51,11 @@ data:extend(
     icons = angelsmods.functions.create_gas_fluid_icon({ "__angelssmelting__/graphics/icons/molecule-silane.png", 72 }, "SiHH"),
     subgroup = "angels-silicon",
     order = "e",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = {r = 209/255, g = 209/255, b = 209/255},
     flow_color = {r = 209/255, g = 209/255, b = 209/255},
-    max_temperature = 100,
+    max_temperature = 0,
   },
   -- SMELTING RESULTS
   {

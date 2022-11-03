@@ -515,11 +515,11 @@ data:extend(
       name = "angels-ore8-sludge",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {104,112,113}, {104,112,113}, {133,196,060}, {133,196,060} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
       flow_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -536,13 +536,13 @@ data:extend(
       name = "angels-ore9-sludge",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {095,106,090}, {095,106,090}, {254,110,022,0.8}, {254,110,022,0.8} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       --base_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
       base_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
       --flow_color = {r = 255 / 255, g = 119 / 255, b = 0 / 255},
       flow_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -619,11 +619,11 @@ data:extend(
       name = "angels-ore8-solution",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {104,112,113}, nil, {133,196,060} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
       flow_color = {r = 132 / 255, g = 176 / 255, b = 11 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -631,11 +631,11 @@ data:extend(
       name = "angels-ore8-anode-sludge",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {104,112,113}, {104,112,113}, {133,196,060,0.7}, {165,093,051} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 132 / 255, g = 116 / 255, b = 11 / 255},
       flow_color = {r = 132 / 255, g = 116 / 255, b = 11 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -643,13 +643,13 @@ data:extend(
       name = "angels-ore8-slime",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {133,196,060}, nil, {113,224,028,0.9} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       --base_color = {r = 133 / 255, g = 196 / 255, b = 60 / 255},
       base_color = {r = 133 / 255, g = 224 / 255, b = 28 / 255},
       --flow_color = {r = 133 / 255, g = 196 / 255, b = 60 / 255},
       flow_color = {r = 133 / 255, g = 224 / 255, b = 28 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -666,11 +666,11 @@ data:extend(
       name = "angels-ore9-solution",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {095,106,090}, nil, {254,110,022,0.8} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
       flow_color = {r = 254 / 255, g = 110 / 255, b = 22 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -678,11 +678,11 @@ data:extend(
       name = "angels-ore9-anode-sludge",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {095,106,090}, {095,106,090}, {254,110,022,0.7}, {165,093,051} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 186 / 255, g = 110 / 255, b = 22 / 255},
       flow_color = {r = 186 / 255, g = 110 / 255, b = 22 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -690,11 +690,11 @@ data:extend(
       name = "angels-ore9-slime",
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {254,110,022}, nil, {252,103,005,0.9} }),
       subgroup = "fluids-refining",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 252 / 255, g = 103 / 255, b = 5 / 255},
       flow_color = {r = 252 / 255, g = 103 / 255, b = 5 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -933,11 +933,11 @@ data:extend(
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {140,073,029} }),
       subgroup = "ore-sorting-fluid",
       order = "a[slag]-b[stone]",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 140 / 255, g = 73 / 255, b = 29 / 255},
       flow_color = {r = 140 / 255, g = 73 / 255, b = 29 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -946,11 +946,11 @@ data:extend(
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {230,116,017}, {135,071,028} }),
       subgroup = "ore-sorting-fluid",
       order = "b[mineral]",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 135 / 255, g = 71 / 255, b = 28 / 255},
       flow_color = {r = 135 / 255, g = 71 / 255, b = 28 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -995,11 +995,11 @@ data:extend(
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {105,237,038}, {211,255,052}, {100,255,000}, {147,207,47} }),
       subgroup = "ore-sorting-fluid",
       order = "c[crystal]-a",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 147 / 255, g = 207 / 255, b = 47 / 255},
       flow_color = {r = 100 / 255, g = 255 / 255, b = 0 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -1008,11 +1008,11 @@ data:extend(
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {105,237,038}, nil, {100,255,000} }),
       subgroup = "ore-sorting-fluid",
       order = "c[crystal]-b",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 105 / 255, g = 237 / 255, b = 38 / 255},
       flow_color = {r = 100 / 255, g = 255 / 255, b = 0 / 255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     {
@@ -1021,11 +1021,11 @@ data:extend(
       icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {105,237,038}, {135,071,028}, {100,255,000} }),
       subgroup = "ore-sorting-fluid",
       order = "c[crystal]-c",
-      default_temperature = 25,
+      default_temperature = 0,
       heat_capacity = "1KJ",
       base_color = {r = 153/255, g = 71/255, b = 28/255},
       flow_color = {r = 100/255, g = 255/255, b = 0/255},
-      max_temperature = 100,
+      max_temperature = 0,
 
     },
     ---------------------------------------------------------------------------
