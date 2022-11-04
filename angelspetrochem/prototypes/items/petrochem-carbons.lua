@@ -445,7 +445,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     base_color = angelsmods.functions.fluid_color("C3H4O3"), --{r = 1, g = 0.3, b = 0.3},
     flow_color = angelsmods.functions.flow_color("C3H4O3"), --{r = 1, g = 0.3, b = 0.3},
-    max_temperature = 240,
+    max_temperature = 0,
   },
 })
 
