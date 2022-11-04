@@ -187,7 +187,6 @@ data:extend({
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "angels-air-filter-3" },
     fast_replaceable_group = "angels-air-filter",
-    next_upgrade = "angels-air-filter-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
