@@ -232,12 +232,12 @@ data:extend({
     ),
     subgroup = "petrochem-basic-fluids",
     order = "i",
-    default_temperature = 25,
-    gas_temperature = 25,
+    default_temperature = 0,
+    gas_temperature = 0,
     heat_capacity = "0.1KJ",
     base_color = angelsmods.functions.fluid_color("Hd"), --{r = 196 / 255, g = 196 / 255, b = 156 / 255},
     flow_color = angelsmods.functions.flow_color("Hd"), --{r = 196 / 255, g = 196 / 255, b = 156 / 255},
-    max_temperature = 100,
+    max_temperature = 0,
   },
   --VOID
   {
