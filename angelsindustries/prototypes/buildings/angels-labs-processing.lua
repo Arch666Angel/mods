@@ -210,7 +210,6 @@ if angelsmods.industries.tech then
           create_rich_text_icons({
             "angels-science-pack-white",
             "datacore-processing-2",
-            "token-bio",
           }),
         },
       },
