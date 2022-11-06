@@ -23,7 +23,7 @@ angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
 angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
 angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"]
-  and settings.startup["angels-disable-bobs-chemical-plants"].value
+    and settings.startup["angels-disable-bobs-chemical-plants"].value
   or angelsmods.trigger.disable_bobs_chemical_plants
 
 --OVERRIDE FOR REFINING
@@ -33,9 +33,10 @@ angelsmods.trigger.salt_production = true
 angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids
   or (angelsmods.functions.is_special_vanilla() == false)
 angelsmods.trigger.water_green_waste = (
-    angelsmods.trigger.enableacids or
-    (mods["bobplates"] and data.raw.fluid["deuterium"])
-  ) and true or false
+  angelsmods.trigger.enableacids or (mods["bobplates"] and data.raw.fluid["deuterium"])
+)
+    and true
+  or false
 
 if mods["bobplates"] then
   angelsmods.trigger.ores["fluorite"] = true

@@ -356,21 +356,17 @@ end
 -- HYDROGEN FLUORIDE GAS ----------------------------------------------------
 -----------------------------------------------------------------------------
 if angelsmods.trigger.gas_hydrogen_fluoride == false then
-  OV.disable_recipe(
-    {
-      "liquid-hydrofluoric-acid",
-      "liquid-hydrogen-fluoride"
-    }
-  )
-  OV.patch_recipes(
-    {
-      name = "gas-acid-catalyst",
-      results = { { name = "gas-hydrogen-fluoride", type = "fluid", amount = 0 } },
-      category = "chemistry",
-    }
-  )
+  OV.disable_recipe({
+    "liquid-hydrofluoric-acid",
+    "liquid-hydrogen-fluoride",
+  })
+  OV.patch_recipes({
+    name = "gas-acid-catalyst",
+    results = { { name = "gas-hydrogen-fluoride", type = "fluid", amount = 0 } },
+    category = "chemistry",
+  })
   angelsmods.functions.add_flag({
     "gas-hydrogen-fluoride",
-    "liquid-hydrofluoric-acid"
+    "liquid-hydrofluoric-acid",
   }, "hidden")
 end
