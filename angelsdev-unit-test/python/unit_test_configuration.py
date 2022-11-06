@@ -32,6 +32,7 @@ class UnitTestConfiguration:
 # Angels petrochem
 UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-converter", False) # We do not test the converter valve as this is just there for compatibility
 UnitTestConfiguration.addDefaultSetting("startup", "angels-hide-converter", True)
+UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-acids", True)
 
 # Angels industries
 UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-industries", False)
@@ -62,7 +63,7 @@ UnitTestConfiguration.addDefaultSetting("startup", "bobmods-assembly-electronicm
 # BobLogistics
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-disableroboports", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-flyingrobotframes", True)
-UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-robotpoarts", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-robotparts", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-inserteroverhaul", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-logistics-beltoverhaul", True)
 
@@ -80,7 +81,7 @@ UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-hardmode", Tr
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-mining-miningaxes", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-plates-purewater", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-ores-unsortedgems", True)
-UnitTestConfiguration.addDefaultSetting("startup", "bobmods-tech-colorupdate", True)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-tech-colorupdate", False)
 
 ###############################################################################
 ### SPECIAL VANILLA                                                         ###
@@ -369,7 +370,6 @@ UnitTestConfiguration.addConfiguration("BA (extended)",
       "angels-enable-industries": False, # Angels overhaul
       "angels-enable-components": False, # Angels component mode
       "angels-enable-tech"      : False, # Angels technology mode
-      "angels-enable-acids"     : True   # Restore setting back to default
     }
   }
 )
@@ -859,7 +859,7 @@ UnitTestConfiguration.addConfiguration("BA (Bob other non-default + overhaul)",
       "bobmods-mining-miningaxes" : False, #defaults true
       "bobmods-plates-purewater" : False, #defaults true
       "bobmods-ores-unsortedgems" : False, #defaults true
-      "bobmods-tech-colorupdate" : False, #defaults true
+      "bobmods-tech-colorupdate" : True, #defaults false
     }
   }
 )
