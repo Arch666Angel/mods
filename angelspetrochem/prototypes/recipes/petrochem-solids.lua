@@ -376,7 +376,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-fuel-hydrazine",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = false,

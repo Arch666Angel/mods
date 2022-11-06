@@ -324,7 +324,7 @@ data:extend({
   {
     type = "recipe",
     name = "bio-plastic-2",
-    category = "advanced-chemistry",
+    category = "chemistry",
     subgroup = "bio-plastic",
     enabled = false,
     energy_required = 4,

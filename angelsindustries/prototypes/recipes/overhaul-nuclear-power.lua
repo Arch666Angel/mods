@@ -586,7 +586,7 @@ data:extend({
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
     enabled = false,
-    category = "chemistry",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 150, --1500
     ingredients = {

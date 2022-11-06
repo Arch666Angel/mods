@@ -91,7 +91,7 @@ data:extend({
     -- cyanide
     type = "recipe",
     name = "solid-sodium-cyanide",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "petrochem-sodium",
     energy_required = 2,
     enabled = false,
@@ -288,7 +288,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-sodium-perchlorate",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "petrochem-sodium",
     energy_required = 2,
     enabled = false,
