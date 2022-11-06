@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   -- ALIEN
   {
     type = "fluid",
@@ -7,8 +6,8 @@ data:extend(
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=0.572, g=0.392, b=0.894},
-    flow_color = {r=0.572, g=0.392, b=0.894},
+    base_color = { r = 0.572, g = 0.392, b = 0.894 },
+    flow_color = { r = 0.572, g = 0.392, b = 0.894 },
     icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
@@ -21,22 +20,23 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-b[bacteria]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "fluid",
     name = "alien-goo",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {168,035,194}, {168,035,194}, {241,050,238,0.9}, {241,050,238,0.9} }),
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
+      nil,
+      { { 168, 035, 194 }, { 168, 035, 194 }, { 241, 050, 238, 0.9 }, { 241, 050, 238, 0.9 } }
+    ),
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-c[goo]",
     default_temperature = 25,
     max_temperature = 100,
     heat_capacity = "1KJ",
-    base_color = {r=0.572, g=0.392, b=0.894},
-    flow_color = {r=0.572, g=0.392, b=0.894},
+    base_color = { r = 0.572, g = 0.392, b = 0.894 },
+    flow_color = { r = 0.572, g = 0.392, b = 0.894 },
   },
-
-
 
   -- DISH
   {
@@ -46,7 +46,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-a[petri]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -55,7 +55,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-b[substrate]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -64,7 +64,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-c[seeded]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -73,7 +73,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-d[seed]-a[crystal]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -82,10 +82,8 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-d[seed]-b[egg-shell]",
-    stack_size = 200
+    stack_size = 200,
   },
-
-
 
   -- DISH USAGE
   {
@@ -95,7 +93,7 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "c[crystal]-a[enhancer]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -104,7 +102,6 @@ data:extend(
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "c[crystal]-b[grindstone]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

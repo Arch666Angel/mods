@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   -- ORE
   -- order a reserved for ore
   -- SMELTING INTERMEDIATE
@@ -7,19 +6,21 @@ data:extend(
     type = "item",
     name = "processed-copper",
     icon = "__angelssmelting__/graphics/icons/processed-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "b",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "pellet-copper",
     icon = "__angelssmelting__/graphics/icons/pellet-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "c",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -28,59 +29,64 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-copper",
     order = "d",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING RESULTS
   {
     type = "item",
     name = "ingot-copper",
     icon = "__angelssmelting__/graphics/icons/ingot-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "e",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "powder-copper",
     icon = "__angelssmelting__/graphics/icons/powder-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper",
     order = "f",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
     name = "liquid-molten-copper",
     icon = "__angelssmelting__/graphics/icons/molten-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
     order = "g",
     default_temperature = 1085,
     heat_capacity = "0KJ",
-    base_color = {r = 154/255, g = 101/255, b = 86/255},
-    flow_color = {r = 154/255, g = 101/255, b = 86/255},
+    base_color = { r = 154 / 255, g = 101 / 255, b = 86 / 255 },
+    flow_color = { r = 154 / 255, g = 101 / 255, b = 86 / 255 },
     max_temperature = 1085,
-    auto_barrel = false
+    auto_barrel = false,
   },
   {
     type = "item",
     name = "angels-roll-copper",
     icon = "__angelssmelting__/graphics/icons/roll-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
     order = "h",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "angels-wire-coil-copper",
     icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
+    icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
     order = "i",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING RESULT
   {
@@ -90,7 +96,7 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "j",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
@@ -99,7 +105,6 @@ data:extend(
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "k",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

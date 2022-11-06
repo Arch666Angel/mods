@@ -40,7 +40,7 @@ for labs_n, labs in pairs(data.raw["lab"]) do
       end
     end
     --add it to all the labs
-    if (not found) and (not labs.inputs["token-bio"]) then
+    if not found and not labs.inputs["token-bio"] then
       table.insert(labs.inputs, "token-bio")
     end
   end
@@ -48,34 +48,30 @@ end
 
 --CONDITIONAL
 if angelsmods.trigger.smelting_products["glass"].plate then
-  OV.patch_recipes(
+  OV.patch_recipes({
     {
-      {
-        name = "petri-dish",
-        ingredients = {
-          {"!!"},
-          {type = "item", name = data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 1} -- bob glass
-        }
+      name = "petri-dish",
+      ingredients = {
+        { "!!" },
+        { type = "item", name = data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 1 }, -- bob glass
       },
-    }
-  )
+    },
+  })
   OV.remove_prereq("bio-processing-alien-1", "plastics")
 end
 
 if angelsmods.functions.is_special_vanilla() then
 else
-  OV.patch_recipes(
+  OV.patch_recipes({
     {
-      {
-        name = "crystal-enhancer",
-        category = "advanced-crafting",
-        ingredients = {
-          {name = "catalysator-green", amount = 1},
-          {name = "crystal-slurry", amount = 0, type = "fluid"}
-        }
-      }
-    }
-  )
+      name = "crystal-enhancer",
+      category = "advanced-crafting",
+      ingredients = {
+        { name = "catalysator-green", amount = 1 },
+        { name = "crystal-slurry", amount = 0, type = "fluid" },
+      },
+    },
+  })
 end
 
 if angelsmods.industries then
@@ -83,13 +79,11 @@ else
   OV.remove_unlock("bio-paper-1", "circuit-paper-board")
 
   if bobmods and bobmods.plates then
-    OV.patch_recipes(
-      {
-        {name = "algae-brown-burning", results = {{"!!"},{name = "solid-lithium", amount = 1, type = "item"}}}
-      }
-    )
+    OV.patch_recipes({
+      { name = "algae-brown-burning", results = { { "!!" }, { name = "solid-lithium", amount = 1, type = "item" } } },
+    })
   else
-    OV.modify_input("substrate-dish", {"paste-copper", "paste-silver"})
+    OV.modify_input("substrate-dish", { "paste-copper", "paste-silver" })
     OV.disable_recipe("algae-brown-burning")
   end
 end
@@ -97,46 +91,43 @@ end
 --ADD TILE RESTRICTION FOR ALIEN BIOMES
 if data.raw.tile["frozen-snow-0"] then
   data.raw.tree["temperate-garden"].autoplace.tile_restriction =
-    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), {"frozen", "volcanic"}))
+    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
   data.raw.tree["desert-garden"].autoplace.tile_restriction =
-    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), {"frozen", "volcanic"}))
+    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
   data.raw.tree["swamp-garden"].autoplace.tile_restriction =
-    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), {"frozen", "volcanic"}))
+    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
   data.raw.tree["temperate-tree"].autoplace.tile_restriction =
-    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), {"frozen", "volcanic"}))
+    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
   data.raw.tree["swamp-tree"].autoplace.tile_restriction =
-    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), {"frozen", "volcanic"}))
+    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
   data.raw.tree["desert-tree"].autoplace.tile_restriction =
-    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), {"frozen", "volcanic"}))
+    alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
 end
 
 --ADDED RECIPES BOBS
 if bobmods then
   if bobmods.electronics and angelsmods.triggers.paper then
-    data:extend(
+    data:extend({
+      --CIRCUIT BOARD
       {
-        --CIRCUIT BOARD
-        {
-          type = "recipe",
-          name = "wooden-board-paper",
-          category = "advanced-crafting",
-          subgroup = "bio-paper",
-          enabled = false,
-          energy_required = 4,
-          ingredients = {
-            {type = "item", name = "solid-paper", amount = 2}
-          },
-          results = {
-            {type = "item", name = "wooden-board", amount = 1}
-          },
-          icon_size = 32,
-          order = "m"
-        }
-      }
-    )
+        type = "recipe",
+        name = "wooden-board-paper",
+        category = "advanced-crafting",
+        subgroup = "bio-paper",
+        enabled = false,
+        energy_required = 4,
+        ingredients = {
+          { type = "item", name = "solid-paper", amount = 2 },
+        },
+        results = {
+          { type = "item", name = "wooden-board", amount = 1 },
+        },
+        icon_size = 32,
+        order = "m",
+      },
+    })
     OV.add_unlock("bio-paper-1", "wooden-board-paper")
   end
-
 end
 
 --ADDED RECIPES FOR BOBS ARTIFACTS
