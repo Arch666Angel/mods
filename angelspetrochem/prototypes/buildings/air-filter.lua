@@ -45,7 +45,6 @@ data:extend({
       emissions_per_minute = -0.1 * 60,
     },
     energy_usage = "150kW",
-    ingredient_count = 3,
     animation = {
       filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
       width = 256,
@@ -125,7 +124,6 @@ data:extend({
       emissions_per_minute = -0.12 * 60,
     },
     energy_usage = "175kW",
-    ingredient_count = 3,
     animation = {
       filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
       width = 256,
@@ -201,10 +199,9 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = -0.12 * 60,
+      emissions_per_minute = -0.14 * 60,
     },
     energy_usage = "225kW",
-    ingredient_count = 3,
     animation = {
       filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
       width = 256,
