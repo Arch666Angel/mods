@@ -296,7 +296,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-iron", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-roll-iron", amount = 4 },
@@ -309,7 +309,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-iron", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-roll-iron", amount = 4 },
@@ -370,7 +370,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-iron", amount = 110 },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-rod-stack-iron", amount = 2 },
@@ -383,7 +383,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-iron", amount = 150 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-rod-stack-iron", amount = 2 },
