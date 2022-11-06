@@ -181,7 +181,7 @@ script.on_event(defines.events.on_player_main_inventory_changed, function(event)
   if not (opened_entity and opened_entity.valid) then
     return
   end
-  if opened_entity.object_name == "LuaEquipmentGrid" or opened_entity.object_name == "LuaPlayer" then
+  if not (player.opened_gui_type == defines.gui_type.entity) then
     return
   end
   if not (opened_entity.type == "lab" or opened_entity.type == "mining-drill") then

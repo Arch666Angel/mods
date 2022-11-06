@@ -22,6 +22,7 @@ Date: ##.##.2022
   Bugfixes:
     - Fixed fishes prevented landfill from being blueprinted on water (815)
     - Fixed machine output arrows (839)
+    - Fixed error when opening tech tree from FNEI (858)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.22
 Date: 06.06.2022

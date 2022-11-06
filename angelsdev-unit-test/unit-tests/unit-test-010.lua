@@ -308,6 +308,7 @@ local function add_ignores()
   if game.active_mods["angelsrefining"] then
     ignore_building_recipes = true
     ignored_unlocks["ore-powderizer"] = { items = { "milling-drum-used" }, fluids = {} }
+    ignored_unlocks["water-treatment-2"] = { items = {}, fluids = { "water-greenyellow-waste", "water-green-waste", "water-red-waste" } }
   end
 
   if game.active_mods["angelssmelting"] then
