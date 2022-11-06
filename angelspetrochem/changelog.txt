@@ -20,7 +20,7 @@ Date: ???
       - Rubber
     - Split tech Advanced chemistry 3 (805)
     - Added Air filter 3 (853)
-      - Reduced module slots of Air filter 2 -> 0 and Air filter 2 -> 1
+      - Reduced module slots of Air filter 1 (2 -> 0) and Air filter 2 (2 -> 1)
       - Reduced speed of Air filter 2 to 1.5
   Bugfixes:
     - Fixed machine output arrows (839)
