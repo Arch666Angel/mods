@@ -11,6 +11,7 @@ Date: ##.##.2022
   Bugfixes:
     - Fixed error with modded centrifuges (836)
     - Fixed machine output arrows (839)
+    - Fixed science overhaul lab input descriptions (843)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.16
 Date: 06.06.2022

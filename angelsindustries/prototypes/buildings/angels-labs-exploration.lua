@@ -127,6 +127,7 @@ if angelsmods.industries.tech then
             "angels-science-pack-blue",
             "angels-science-pack-yellow",
             "datacore-exploration-2",
+            "token-bio",
           }),
         },
       },
