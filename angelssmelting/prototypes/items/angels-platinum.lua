@@ -45,11 +45,11 @@ data:extend({
     ),
     subgroup = "angels-platinum",
     order = "d",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 242 / 255, g = 212 / 255, b = 194 / 255 },
     flow_color = { r = 242 / 255, g = 212 / 255, b = 194 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
   },
   {
     type = "item",

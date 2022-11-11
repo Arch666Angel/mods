@@ -44,11 +44,11 @@ data:extend({
     ),
     subgroup = "angels-silicon",
     order = "d",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },
     flow_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
   },
   {
     type = "fluid",
@@ -62,11 +62,11 @@ data:extend({
     ),
     subgroup = "angels-silicon",
     order = "e",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },
     flow_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
   },
   -- SMELTING RESULTS
   {

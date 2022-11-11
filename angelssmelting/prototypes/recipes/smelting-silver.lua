@@ -209,7 +209,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-silver", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-roll-silver", amount = 4 },
@@ -222,7 +222,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-silver", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-roll-silver", amount = 4 },
@@ -282,7 +282,7 @@ data:extend({
       ingredients = {
         { type = "fluid", name = "liquid-molten-silver", amount = 70 },
         { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-wire-coil-silver", amount = 8 },
@@ -296,7 +296,7 @@ data:extend({
       ingredients = {
         { type = "fluid", name = "liquid-molten-silver", amount = 90 * intermediatemulti },
         { type = "fluid", name = "liquid-molten-copper", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-wire-coil-silver", amount = 8 },

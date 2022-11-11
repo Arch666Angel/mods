@@ -234,7 +234,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-cobalt", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-roll-cobalt", amount = 4 },
@@ -247,7 +247,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-cobalt", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-roll-cobalt", amount = 4 },

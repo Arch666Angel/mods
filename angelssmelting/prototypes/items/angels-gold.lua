@@ -53,11 +53,11 @@ data:extend({
     ),
     subgroup = "angels-gold",
     order = "e",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
     flow_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
   },
   {
     type = "item",
