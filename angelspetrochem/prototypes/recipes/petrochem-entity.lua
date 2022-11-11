@@ -405,6 +405,16 @@ data:extend({
     },
     result = "angels-air-filter-2",
   },
+  {
+    type = "recipe",
+    name = "angels-air-filter-3",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-air-filter-2", amount = 1 },
+    },
+    result = "angels-air-filter-3",
+  },
   --OIL REFINERY
   {
     type = "recipe",
