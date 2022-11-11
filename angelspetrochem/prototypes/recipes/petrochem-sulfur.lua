@@ -57,7 +57,7 @@ data:extend({
   {
     type = "recipe",
     name = "gas-sulfur-dioxide",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = false,
@@ -125,7 +125,7 @@ data:extend({
   {
     type = "recipe",
     name = "liquid-hydrofluoric-acid",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-sulfur",
     energy_required = 2,
     enabled = false,

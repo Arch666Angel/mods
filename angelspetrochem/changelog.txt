@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.23
-Date: ???
+Date: ##.##.2022
   Changes:
     - Changed the ingredient tier of some buildings (674)
       - Advance chemical plant 1
@@ -18,6 +18,18 @@ Date: ???
       - Advanced chemistry 2
       - Flare stack tech
       - Rubber
+    - Changed which building some recipes require (802)
+      - Atomic bomb moved from Assembling machine to Advanced chemical plant
+      - Cupric chloride solution moved from Chemical plant to Liquefier
+      - Ferric chloride solution moved from Chemical plant to Liquefier
+      - Hydrochloric acid from salt moved from Chemical plant to Liquefier
+      - Hydrofluoric acid synthesis moved from Chemical plant to Liquefier
+      - Monochloramine gas moved from Chemical plant to Liquefier
+      - Nitric acid from Sodium nitrate moved from Chemical plant to Liquefier
+      - Sodium cyanide moved from Liquefier to Chemical plant
+      - Sodium perchlorate moved from Liquefier to Chemical plant
+      - Solid fuel recipes moved from Liquefier to Chemical plant
+      - Sulfur dioxide gas moved from Chemical plant to Liquefier
     - Split tech Advanced chemistry 3 (805)
   Bugfixes:
     - Fixed machine output arrows (839)
@@ -97,7 +109,7 @@ Date: 16.11.2020
     - Fixed pipe and animation of gasses were showing liquids
     - Revised many inconsistencies in technology dependencies (428)
     - Moved Calcium chloride tech unlock from Basic chemistry 2 to Chlorine Processing 2 (428)
-    - Fixed Cupric chlorid solution did not have a voiding recipe (439)
+    - Fixed Cupric chloride solution did not have a voiding recipe (439)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 29.10.2020

@@ -117,7 +117,7 @@ data:extend({
   {
     type = "recipe",
     name = "liquid-hydrochloric-acid-solid-sodium-sulfate",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = false,
@@ -144,7 +144,7 @@ data:extend({
   {
     type = "recipe",
     name = "liquid-ferric-chloride-solution",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = false,
@@ -169,7 +169,7 @@ data:extend({
   {
     type = "recipe",
     name = "liquid-cupric-chloride-solution",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-chlorine",
     energy_required = 2,
     enabled = false,

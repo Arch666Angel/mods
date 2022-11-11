@@ -71,7 +71,7 @@ data:extend({
   {
     type = "recipe",
     name = "aerobic-fermentation",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "recipe",
     name = "anaerobic-fermentation",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
@@ -324,7 +324,7 @@ data:extend({
   {
     type = "recipe",
     name = "bio-plastic-2",
-    category = "advanced-chemistry",
+    category = "chemistry",
     subgroup = "bio-plastic",
     enabled = false,
     energy_required = 4,

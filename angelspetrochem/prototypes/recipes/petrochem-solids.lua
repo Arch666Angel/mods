@@ -284,7 +284,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-fuel-methane",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = false,
@@ -304,7 +304,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-fuel-naphtha",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = false,
@@ -328,7 +328,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-fuel-fuel-oil",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = false,
@@ -352,7 +352,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-fuel-synthesis",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "petrochem-fuel",
     energy_required = 4,
     enabled = false,
