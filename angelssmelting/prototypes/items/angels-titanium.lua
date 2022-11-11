@@ -89,11 +89,11 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "angels-titanium-casting",
     order = "h",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 126 / 255, g = 98 / 255, b = 123 / 255 },
     flow_color = { r = 126 / 255, g = 98 / 255, b = 123 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
     auto_barrel = false,
   },
   {

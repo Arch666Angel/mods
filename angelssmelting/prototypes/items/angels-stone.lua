@@ -53,11 +53,11 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "angels-stone-casting",
     order = "g",
-    default_temperature = 100,
+    default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 99 / 255, g = 99 / 255, b = 99 / 255 },
     flow_color = { r = 99 / 255, g = 99 / 255, b = 99 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
     auto_barrel = false,
   },
   -- CASTING RESULT

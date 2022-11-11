@@ -32,8 +32,11 @@ angelsmods.trigger.slag = true
 angelsmods.trigger.salt_production = true
 angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids
   or (angelsmods.functions.is_special_vanilla() == false)
-angelsmods.trigger.water_green_waste = angelsmods.trigger.enableacids
-angelsmods.trigger.water_red_waste = false
+angelsmods.trigger.water_green_waste = (
+  angelsmods.trigger.enableacids or (mods["bobplates"] and data.raw.fluid["deuterium"])
+)
+    and true
+  or false
 
 if mods["bobplates"] then
   angelsmods.trigger.ores["fluorite"] = true

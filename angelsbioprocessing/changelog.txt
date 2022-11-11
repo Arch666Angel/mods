@@ -4,20 +4,25 @@ Date: ##.##.2022
   Changes:
     - Special Vanilla: Removed paper and full harmonic crystal as they had no use (at this point)
     - Added blue science pack to techs (674)
+      - Butchery 2
+      - Desert farming 2
+      - Desert farming environment
       - Hatchery
       - Puffer refugium 1
-      - Butchery 2
-      - Temperate farming environment
-      - Temperate farming 2
-      - Desert farming environment
-      - Desert farming 2
-      - Swamp farming environment
       - Swamp farming 2
+      - Swamp farming environment
+      - Temperate farming 2
+      - Temperate farming environment
+    - Changed which building some recipes require (802)
+      - Acetic acid from Fermentation base moved from Chemical plant to Liquefier
+      - Ethanol gas from Fermentation base moved from Chemical plant to Liquefier
+      - Liquid plastic from Propionic acid moved from Advanced chemical plant to Chemical plant
     - Made Raw crystal shard recipes require Crystallizer 2 (805)
     - Changed technologies Basic algae processing and Paper making 1 to ignore tech cost modifier (820)
   Bugfixes:
     - Fixed fishes prevented landfill from being blueprinted on water (815)
     - Fixed machine output arrows (839)
+    - Fixed error when opening tech tree from FNEI (858)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.22
 Date: 06.06.2022

@@ -7,11 +7,9 @@ data:extend({
     icon_size = 32,
     subgroup = "water-treatment-fluid",
     order = "fa",
-    default_temperature = 25,
-    heat_capacity = "0.1KJ",
+    default_temperature = 0,
     base_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
     flow_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
-    max_temperature = 300,
   },
   {
     type = "fluid",

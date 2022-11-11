@@ -171,6 +171,7 @@ OV.patch_recipes({
     ingredients = {
       { type = "item", name = "rocket-booster", amount = 1 },
     },
+    category = "advanced-chemistry",
   },
 })
 OV.add_prereq("rocketry", "rocket-booster-1")

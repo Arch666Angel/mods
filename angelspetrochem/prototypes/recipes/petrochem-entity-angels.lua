@@ -892,6 +892,34 @@ angelsmods.functions.RB.build({
       result = "angels-air-filter-2",
     },
   },
+  {
+    type = "recipe",
+    name = "angels-air-filter-3",
+    normal = {
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "airfilter-3", amount = 1 },
+        { type = "item", name = "t3-plate", amount = 4 },
+        { type = "item", name = "t3-circuit", amount = 5 },
+        { type = "item", name = "t3-brick", amount = 5 },
+        { type = "item", name = "t3-pipe", amount = 8 },
+      },
+      result = "angels-air-filter-3",
+    },
+    expensive = {
+      energy_required = 5 * buildingtime,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "airfilter-3", amount = 1 },
+        { type = "item", name = "t3-plate", amount = 4 * buildingmulti },
+        { type = "item", name = "t3-circuit", amount = 5 * buildingmulti },
+        { type = "item", name = "t3-brick", amount = 5 * buildingmulti },
+        { type = "item", name = "t3-pipe", amount = 8 * buildingmulti },
+      },
+      result = "angels-air-filter-3",
+    },
+  },
   --OIL REFINERY
   {
     type = "recipe",

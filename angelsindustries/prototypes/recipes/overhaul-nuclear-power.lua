@@ -586,7 +586,7 @@ data:extend({
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
     enabled = false,
-    category = "chemistry",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 150, --1500
     ingredients = {
@@ -671,7 +671,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-deuterium-fuel-cell-reprocessing",
     enabled = false,
-    category = "centrifuging-3",
+    category = "advanced-chemistry",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients = {
@@ -767,6 +767,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-atomic-bomb",
+    category = "advanced-chemistry",
     enabled = false,
     energy_required = 50,
     icons = angelsmods.functions.add_number_icon_layer(

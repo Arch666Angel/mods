@@ -277,10 +277,10 @@ data:extend({
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 243, 135, 000 }, nil, { 247, 140, 003 } }),
     subgroup = "ore-sorting-fluid",
     order = "a[slag]-a[thermal]",
-    default_temperature = 25,
+    default_temperature = 0,
     heat_capacity = "0.2KJ",
     base_color = { r = 242 / 255, g = 135 / 255, b = 0 / 255 },
     flow_color = { r = 247 / 255, g = 140 / 255, b = 3 / 255 },
-    max_temperature = 100,
+    max_temperature = 0,
   },
 })

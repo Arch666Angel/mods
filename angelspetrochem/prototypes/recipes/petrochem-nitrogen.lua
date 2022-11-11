@@ -212,7 +212,7 @@ data:extend({
   {
     type = "recipe",
     name = "sodium-nitrate-acid-processing",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -266,7 +266,7 @@ data:extend({
   {
     type = "recipe",
     name = "gas-monochloramine",
-    category = "chemistry",
+    category = "liquifying",
     subgroup = "petrochem-rocket",
     energy_required = 4,
     enabled = false,

@@ -117,7 +117,7 @@ if angelsmods.industries.components then
           molten2,
           --{type = "fluid", name = "liquid-molten-steel", amount = 20},
           { type = "item", name = "mold-non-expendable", amount = 1 },
-          { type = "fluid", name = "liquid-coolant", amount = 10, maximum_temperature = 50 },
+          { type = "fluid", name = "liquid-coolant", amount = 10 },
         },
         results = {
           { type = "item", name = "motor-casing-" .. num, amount = 2 },

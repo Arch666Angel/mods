@@ -407,7 +407,6 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon("SSS"),
     prerequisites = {
       "angels-sulfur-processing-2",
-      "angels-nitrogen-processing-2",
       "slag-processing-1",
       "chemical-science-pack",
     },
@@ -554,6 +553,10 @@ data:extend({
       "sodium-processing",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-air-filter-3",
+      },
       {
         type = "unlock-recipe",
         recipe = "gas-melamine",
