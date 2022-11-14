@@ -41,7 +41,7 @@ data:extend({
     },
     energy_usage = "250kW",
     ingredient_count = 4,
-    crafting_categories = { "chemistry", "liquifying" },
+    crafting_categories = { "chemistry" },
     module_specification = {
       module_slots = 1,
     },
@@ -184,7 +184,7 @@ data:extend({
     },
     energy_usage = "300kW",
     ingredient_count = 4,
-    crafting_categories = { "chemistry", "liquifying" },
+    crafting_categories = { "chemistry" },
     module_specification = {
       module_slots = 2,
     },
@@ -327,7 +327,7 @@ data:extend({
     },
     energy_usage = "350kW",
     ingredient_count = 4,
-    crafting_categories = { "chemistry", "liquifying" },
+    crafting_categories = { "chemistry" },
     module_specification = {
       module_slots = 3,
     },
@@ -469,7 +469,7 @@ data:extend({
     },
     energy_usage = "400kW",
     ingredient_count = 4,
-    crafting_categories = { "chemistry", "liquifying" },
+    crafting_categories = { "chemistry" },
     module_specification = {
       module_slots = 4,
     },

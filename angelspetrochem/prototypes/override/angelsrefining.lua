@@ -17,9 +17,6 @@ if angelsmods.refining then
   move_item("liquifier-4", "petrochem-buildings-electrolyser", "c[liquifier]-d")
   data.raw["item"]["liquifier-4"].icons[3].tint = angelsmods.petrochem.number_tint
 
-  angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant", "liquifying")
-  angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant-2", "liquifying")
-
   OV.patch_recipes({
     { name = "carbon-separation-1", category = "liquifying" },
     { name = "carbon-separation-2", category = "liquifying" },

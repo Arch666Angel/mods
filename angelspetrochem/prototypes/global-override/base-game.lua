@@ -13,7 +13,6 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
   OV.disable_recipe("chemical-plant")
   angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant", {
     "chemistry",
-    "liquifying",
   })
 else
   OV.add_unlock("basic-chemistry-2", "chemical-plant") --give the item a new home if still active

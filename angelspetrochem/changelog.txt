@@ -18,6 +18,8 @@ Date: ##.##.2022
       - Advanced chemistry 2
       - Flare stack tech
       - Rubber
+    - Removed liquification category from chemplants & adv. chemplants (854)
+    - Removed chemistry category from adv. chemplants (854)
     - Changed which building some recipes require (802)
       - Atomic bomb moved from Assembling machine to Advanced chemical plant
       - Cupric chloride solution moved from Chemical plant to Liquefier
