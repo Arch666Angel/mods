@@ -465,7 +465,7 @@ function angelsmods.migration.clear_logistics_slot(items_to_clear)
     if player.character ~= nil then
       -- find used slots
       local slots = {}
-      for i = 1, 65536 do
+      for i = 1, player.character.request_slot_count do
         local slot = player.get_personal_logistic_slot(i)
         if slot and slot.name then
           slots[slot.name] = slots[slot.name] or {}
