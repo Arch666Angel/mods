@@ -1,6 +1,5 @@
 -- EXECUTE OVERRIDES
 if mods["bobplates"] then
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-oreoverride")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-groundwater")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-vanillabarrelling")
 
