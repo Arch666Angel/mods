@@ -1,6 +1,5 @@
 if mods["bobores"] then
   if angelsmods.ores.disable_ore_override or not angelsmods.refining then
-
     if settings.startup["bobmods-ores-enablebauxite"].value == true then
       if data.raw.resource["bauxite-ore"] then
         angelsmods.functions.add_resource("make", {
