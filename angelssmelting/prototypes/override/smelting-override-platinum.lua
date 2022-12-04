@@ -41,9 +41,8 @@ else
   angelsmods.functions.add_flag("solid-ammonium-chloroplatinate", "hidden")
   angelsmods.functions.add_flag("ingot-platinum", "hidden")
   angelsmods.functions.add_flag("liquid-molten-platinum", "hidden")
-  angelsmods.functions.add_flag("gas-ammonium-chloride", "hidden")
   OV.disable_recipe({ "platinum-ore-processing", "platinum-processed-processing" })
-  OV.disable_recipe({ "pellet-platinum-smelting", "liquid-hexachloroplatinic-acid-smelting", "gas-ammonium-chloride" })
+  OV.disable_recipe({ "pellet-platinum-smelting", "liquid-hexachloroplatinic-acid-smelting" })
   OV.disable_recipe({
     "platinum-ore-smelting",
     "processed-platinum-smelting",

@@ -154,7 +154,6 @@ if mods["bobrevamp"] then
       angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
 
       OV.disable_recipe({ "ammonium-chloride-recycling" })
-      OV.converter_fluid("ammonium-chloride", "gas-ammonium-chloride")
       angelsmods.functions.add_flag("ammonium-chloride", "hidden")
     end
   end

@@ -188,13 +188,11 @@ if angelsmods.functions.is_special_vanilla() then
     "solid-calcium-chloride",
     "cumene-process", -- "gas-acetone"
     "gas-phosgene",
-    "gas-ammonium-chloride",
   })
   OV.remove_prereq("angels-nitrogen-processing-2", "chlorine-processing-1")
   angelsmods.functions.add_flag({
     "solid-calcium-chloride",
     "gas-phosgene",
-    "gas-ammonium-chloride",
   }, "hidden")
 
   if angelsmods.bioprocessing then
@@ -271,6 +269,22 @@ else
   })
   OV.remove_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
   angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
+end
+
+if angelsmods.trigger.smelting_products["platinum"].ingot
+  or angelsmods.trigger.smelting_products["platinum"].plate
+  or angelsmods.trigger.smelting_products["platinum"].powder
+  or angelsmods.trigger.smelting_products["platinum"].wire
+then
+  angelsmods.trigger.gas_ammonium_chloride = true
+end
+if angelsmods.trigger.gas_ammonium_chloride then
+else
+  OV.disable_recipe({
+    "gas-ammonium-chloride",
+  })
+  OV.remove_unlock("angels-nitrogen-processing-2", "gas-ammonium-chloride")
+  angelsmods.functions.add_flag("gas-ammonium-chloride", "hidden")
 end
 
 -----------------------------------------------------------------------------

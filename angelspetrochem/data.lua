@@ -15,6 +15,7 @@ angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or not
 angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
 angelsmods.trigger.liquid_ferric_chloride_solution = mods["bobelectronics"] and true or false
 angelsmods.trigger.liquid_cupric_chloride_solution = false
+angelsmods.trigger.gas_ammonium_chloride = false
 angelsmods.trigger.early_sulfuric_acid = false
 angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids"].value
   or (mods["angelsbioprocessing"] and true or false)
