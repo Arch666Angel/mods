@@ -237,8 +237,10 @@ if mods["bobplates"] then
   OV.add_unlock("ore-crushing", "lead-plate")
   OV.add_unlock("ore-crushing", "quartz-glass")
   OV.add_unlock("lead-processing", "silver-plate")
-  OV.remove_unlock("electronics", "solder-alloy")
-  OV.add_unlock("lead-processing", "solder-alloy")
+  if data.raw.recipe["solder-alloy"] then
+    OV.remove_unlock("electronics", "solder-alloy")
+    OV.add_unlock("lead-processing", "solder-alloy")
+  end
   OV.add_prereq("battery-3", "lead-processing")
   OV.add_prereq("solar-panel-equipment-2", "lead-processing")
   OV.add_prereq("vehicle-solar-panel-equipment-2", "lead-processing")
