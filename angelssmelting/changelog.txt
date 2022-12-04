@@ -27,6 +27,7 @@ Date: ???
     - Hid Chemical furnace 1 in Special vanilla mode (841)
     - Hid Sintering overn 1 - 3 when not using Components overhaul (841)
     - Standardized science pack counts for smelting techs (841)
+    - Removed empty Chemical Processing techs from Bob's (550)
   Bugfixes:
     - Fixed tech prerequisites for Batteries 3 tech from bobplates (799)
     - Moved the silver oxide recipe to be used in a powder mixer
