@@ -95,4 +95,14 @@ if mods["bobplates"] then
     OV.disable_technology("electric-mixing-furnace")
     OV.disable_recipe("electric-mixing-furnace")
   end
+
+  -- Remove Chemical Processing techs
+  OV.global_replace_technology("chemical-processing-1", "basic-chemistry")
+  OV.global_replace_technology("chemical-processing-2", "basic-chemistry-3")
+  OV.disable_technology({ "chemical-processing-1", "chemical-processing-2" })
+
+  -- Clean up prerequisites
+  OV.remove_prereq("steel-processing", "chemical-processing-1")
+  OV.remove_prereq("electronics", "chemical-processing-1")
+  OV.remove_prereq("silicon-processing", "chemical-processing-2")
 end
