@@ -271,11 +271,14 @@ else
   angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
 end
 
-if angelsmods.trigger.smelting_products["platinum"]
-  and (angelsmods.trigger.smelting_products["platinum"].ingot
-  or angelsmods.trigger.smelting_products["platinum"].plate
-  or angelsmods.trigger.smelting_products["platinum"].powder
-  or angelsmods.trigger.smelting_products["platinum"].wire)
+if
+  angelsmods.trigger.smelting_products["platinum"]
+  and (
+    angelsmods.trigger.smelting_products["platinum"].ingot
+    or angelsmods.trigger.smelting_products["platinum"].plate
+    or angelsmods.trigger.smelting_products["platinum"].powder
+    or angelsmods.trigger.smelting_products["platinum"].wire
+  )
 then
   angelsmods.trigger.gas_ammonium_chloride = true
 end
