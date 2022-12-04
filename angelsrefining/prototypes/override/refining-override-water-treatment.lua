@@ -166,6 +166,7 @@ angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
 -- SALT -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_consumption == true) then
+  angelsmods.trigger.water_saline = true
   if mods["bobplates"] then
     angelsmods.functions.add_flag("salt", "hidden")
 
@@ -208,17 +209,11 @@ if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_cons
     end
   end
 else
-  angelsmods.functions.add_flag({ "solid-salt", "water-saline" }, "hidden")
-  OV.patch_recipes({
-    {
-      name = "water-purification",
-      results = { { name = "water-saline", type = "fluid", amount = 0 } },
-    },
-  })
+  angelsmods.functions.add_flag({ "solid-salt" }, "hidden")
 end
 
 if angelsmods.trigger.salt_production == false then
-  if angelsmods.trigger.smelting_products["lithium"].plate ~= true then
+  if (angelsmods.trigger.smelting_products["lithium"].plate == false) and (angelsmods.trigger.water_saline == false) then
     angelsmods.functions.add_flag({ "salination-plant", "salination-plant-2" }, "hidden")
     OV.disable_recipe({
       "salination-plant",
@@ -227,15 +222,23 @@ if angelsmods.trigger.salt_production == false then
     OV.disable_technology("water-treatment-4")
   end
   OV.disable_recipe({
-    "water-saline",
     "solid-salt-from-saline",
     "solid-salt",
   })
 end
 
 if angelsmods.trigger.salt_consumption == false then
-  OV.disable_recipe({
-    "solid-salt-dissolving",
+  OV.disable_recipe({ "solid-salt-dissolving" })
+end
+
+if angelsmods.trigger.water_saline == false then
+  OV.disable_recipe({ "water-saline" })
+  angelsmods.functions.add_flag({ "water-saline" }, "hidden")
+  OV.patch_recipes({
+    {
+      name = "water-purification",
+      results = { { name = "water-saline", type = "fluid", amount = 0 } },
+    },
   })
 end
 
