@@ -49,7 +49,9 @@ angelsmods.trigger.salt_consumption = angelsmods.trigger.salt_consumption or fal
 angelsmods.trigger.water_red_waste = angelsmods.trigger.water_red_waste or false
 angelsmods.trigger.water_green_waste = angelsmods.trigger.water_green_waste or false
 angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.water_greenyellow_waste or false
-angelsmods.trigger.water_saline = angelsmods.trigger.water_saline or (mods["bobplates"] and mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value == true and settings.startup["bobmods-revamp-hardmode"].value == true) or false
+angelsmods.trigger.water_saline = angelsmods.trigger.water_saline
+  or (mods["bobplates"] and mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value == true and settings.startup["bobmods-revamp-hardmode"].value == true)
+  or false
 angelsmods.trigger.smelting_products = angelsmods.trigger.smelting_products or {}
 
 --REFINERY SORTING TRIGGERS

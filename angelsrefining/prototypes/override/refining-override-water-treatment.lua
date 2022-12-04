@@ -213,7 +213,9 @@ else
 end
 
 if angelsmods.trigger.salt_production == false then
-  if (angelsmods.trigger.smelting_products["lithium"].plate == false) and (angelsmods.trigger.water_saline == false) then
+  if
+    (angelsmods.trigger.smelting_products["lithium"].plate == false) and (angelsmods.trigger.water_saline == false)
+  then
     angelsmods.functions.add_flag({ "salination-plant", "salination-plant-2" }, "hidden")
     OV.disable_recipe({
       "salination-plant",
