@@ -34,7 +34,6 @@ if mods["bobrevamp"] then
 
     --OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
 
-    OV.add_prereq("chemical-processing-3", "flammables")
     if mods["bobwarfare"] then
       OV.add_prereq("military-3", "flammables")
     end
