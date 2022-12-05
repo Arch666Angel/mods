@@ -95,7 +95,7 @@ script.on_event(defines.events.on_player_removed_equipment, function(event)
       if openedEntity and cab.is_deployed(openedEntity) then
         -- remove the item from the player
         local equipment = game.equipment_prototypes[event.equipment]
-        if player.clean_cursor() then
+        if player.clear_cursor() then
           player.get_main_inventory().remove({ name = equipment.take_result.name, count = event.count })
         end
         -- put the item back

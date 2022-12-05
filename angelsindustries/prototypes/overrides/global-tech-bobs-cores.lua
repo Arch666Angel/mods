@@ -6,10 +6,6 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    AI.core_replace("electrolysis-1", "basic", "processing")
-    OV.remove_prereq("electrolysis-1", "tech-specialised-labs-basic")
-    OV.add_prereq("electrolysis-1", "tech-specialised-labs-basic-processing-1")
-    AI.core_replace("electrolysis-2", "basic", "processing")
     AI.core_replace("grinding", "basic", "processing")
     AI.core_replace("polishing", "basic", "processing")
     AI.core_replace("mixing-furnace", "basic", "processing")
