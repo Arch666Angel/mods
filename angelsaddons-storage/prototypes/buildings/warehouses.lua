@@ -3,7 +3,7 @@ data:extend({
     type = "sprite",
     name = "angels-warehouse",
     filename = "__angelsaddons-storage__/graphics/icons/warehouse.png",
-    flags = {"icon"},
+    flags = { "icon" },
     size = 32,
   },
 })
