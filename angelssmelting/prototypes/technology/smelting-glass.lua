@@ -8,7 +8,6 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-2",
       "powder-metallurgy-2",
-      "strand-casting-1",
     },
     effects = {
       {
