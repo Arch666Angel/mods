@@ -10,7 +10,7 @@ data:extend({
     name = "angelsaddons-storage",
 
     is_title = true,
-    tag = "[item=angels-warehouse]",
+    tag = "[img=angels-warehouse]",
     localised_name = { "tips-and-tricks-name.angelsaddons-storage" },
     localised_description = require(
       "prototypes.tips-and-tricks.1-angelsaddons-storage.1-angelsaddons-storage-description"
