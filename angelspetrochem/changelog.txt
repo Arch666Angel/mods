@@ -36,6 +36,14 @@ Date: ##.##.2022
     - Added Air filter 3 (853)
       - Reduced module slots of Air filter 1 (2 -> 0) and Air filter 2 (2 -> 1)
       - Reduced speed of Air filter 2 to 1.5
+    - Aligned refining and fractioning inputs, outputs and icons (863)
+      - Oil Refining now only uses a single input pipe, the same pipe used in the advanced refining recipes
+        (Advanced light oil refining, Oil and condensates refining, Advanced heavy oil refining)
+      - Gas fractioning now only uses a single input pipe, the same pipe used in the advanced fractioning recipes
+        (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
+      - Gas fractioning now only uses the first three output pipes, the same pipes used in the advanced fractioning recipes
+        (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
+      - The oil refining and the gas fractioning recipe icons are slightly altered to reflect the fluid layout of their respective recipe.
   Bugfixes:
     - Fixed machine output arrows (839)
 ---------------------------------------------------------------------------------------------------

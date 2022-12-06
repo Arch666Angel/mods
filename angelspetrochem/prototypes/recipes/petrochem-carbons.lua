@@ -73,17 +73,17 @@ data:extend({
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-ngl", amount = 100 },
+      { type = "fluid", name = "liquid-ngl", amount = 100, fluidbox_index = 1 },
     },
     results = {
-      { type = "fluid", name = "gas-methane", amount = 50 },
-      { type = "fluid", name = "gas-ethane", amount = 30 },
-      { type = "fluid", name = "gas-butane", amount = 20 },
+      { type = "fluid", name = "gas-methane", amount = 50, fluidbox_index = 1 },
+      { type = "fluid", name = "gas-ethane", amount = 30, fluidbox_index = 2 },
+      { type = "fluid", name = "gas-butane", amount = 20, fluidbox_index = 3 },
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
       { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
+      { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
       { "__angelspetrochem__/graphics/icons/molecules/ethane.png", 72 },
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-methane", "liquid-ngl", "gas-butane" }),
@@ -109,8 +109,8 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
         { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
+        { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
         { "__angelspetrochem__/graphics/icons/molecules/ethane.png", 72 },
       },
       "CHH",
@@ -141,8 +141,8 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
         { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
+        { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
         { "__angelspetrochem__/graphics/icons/molecules/ethane.png", 72 },
       },
       "CHH",
@@ -173,8 +173,8 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
         { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
+        { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
         { "__angelspetrochem__/graphics/icons/molecules/ethane.png", 72 },
       },
       "CHH",
@@ -267,7 +267,7 @@ data:extend({
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { type = "fluid", name = "crude-oil", amount = 100 },
+      { type = "fluid", name = "crude-oil", amount = 100, fluidbox_index = 1 },
     },
     results = {
       { type = "fluid", name = "liquid-mineral-oil", amount = 20 },
@@ -277,9 +277,9 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      "liquid-fuel-oil",
       "liquid-naphtha",
       "liquid-mineral-oil",
+      "liquid-fuel-oil",
     }, "OiOiOi"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-naphtha",
@@ -309,9 +309,9 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
-        "liquid-fuel-oil",
         "liquid-naphtha",
         "liquid-mineral-oil",
+        "liquid-fuel-oil",
       },
       "OiOiOi",
       {
@@ -347,9 +347,9 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
-        "liquid-fuel-oil",
         "liquid-naphtha",
         "liquid-mineral-oil",
+        "liquid-fuel-oil",
       },
       "OiOiOi",
       {
@@ -385,9 +385,9 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
-        "liquid-fuel-oil",
         "liquid-naphtha",
         "liquid-mineral-oil",
+        "liquid-fuel-oil",
       },
       "OiOiOi",
       {
