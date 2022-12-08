@@ -203,6 +203,7 @@ if mods["bobplates"] then
   OV.add_prereq("titanium-processing", "ore-leaching")
   OV.add_prereq("tungsten-processing", "ore-refining")
   OV.set_science_pack("tungsten-processing", "production-science-pack", 1)
+  OV.add_prereq("chemical-processing-2", "ore-crushing")
   if mods["bobwarfare"] then
     OV.set_science_pack("bob-rocket", "production-science-pack", 1)
   end
@@ -236,7 +237,16 @@ if mods["bobplates"] then
   OV.add_unlock("ore-crushing", "lead-plate")
   OV.add_unlock("ore-crushing", "quartz-glass")
   OV.add_unlock("lead-processing", "silver-plate")
+  if data.raw.recipe["solder-alloy"] then
+    OV.remove_unlock("electronics", "solder-alloy")
+    OV.add_unlock("lead-processing", "solder-alloy")
+  end
   OV.add_prereq("battery-3", "lead-processing")
+  OV.add_prereq("solar-panel-equipment-2", "lead-processing")
+  OV.add_prereq("vehicle-solar-panel-equipment-2", "lead-processing")
+  if mods["bobmodules"] then
+    OV.add_prereq("advanced-electronics-2", "lead-processing")
+  end
   OV.patch_recipes({
     {
       name = "tin-plate",

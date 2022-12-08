@@ -864,6 +864,49 @@ UnitTestConfiguration.addConfiguration("BA (Bob other non-default + overhaul)",
   }
 )
 
+UnitTestConfiguration.addConfiguration("Angel's refining + full Bob's",
+  [
+    "angelsrefining",
+    #"angelspetrochem",
+    #"angelssmelting",
+    #"angelsbioprocessing",
+    #"angelsindustries",
+    #"angelsexploration",
+
+    #"angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
+
+    "boblibrary",
+    "bobassembly",
+    "bobclasses",
+    "bobelectronics",
+    "bobenemies",
+    "bobequipment",
+    "bobgreenhouse",
+    "bobinserters",
+    "boblogistics",
+    "bobmining",
+    "bobmodules",
+    "bobores",
+    "bobplates",
+    "bobpower",
+    "bobrevamp",
+    "bobtech",
+    "bobvehicleequipment",
+    "bobwarfare",
+  ],
+  {
+    "startup":
+    {
+      #"angels-enable-industries": False, # Angels overhaul
+      #"angels-enable-components": False, # Angels component mode
+      #"angels-enable-tech"      : False, # Angels technology mode
+    }
+  }
+)
+
 ###############################################################################
 ### PURE ANGELS                                                             ###
 ###############################################################################
