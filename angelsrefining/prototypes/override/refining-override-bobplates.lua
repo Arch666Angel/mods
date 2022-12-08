@@ -206,14 +206,6 @@ if mods["bobplates"] then
   if mods["bobwarfare"] then
     OV.set_science_pack("bob-rocket", "production-science-pack", 1)
   end
-  if mods["bobpower"] then
-    OV.set_science_pack("bob-boiler-4", "production-science-pack", 1)
-    OV.set_science_pack("burner-reactor-2", "production-science-pack", 1)
-    OV.set_science_pack("fluid-generator-3", "production-science-pack", 1)
-    OV.set_science_pack("fluid-reactor-2", "production-science-pack", 1)
-    OV.set_science_pack("bob-heat-exchanger-2", "production-science-pack", 1)
-    OV.set_science_pack("bob-oil-boiler-3", "production-science-pack", 1)
-  end
 end
 
 -------------------------------------------------------------------------------
