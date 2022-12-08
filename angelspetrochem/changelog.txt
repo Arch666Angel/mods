@@ -46,6 +46,7 @@ Date: ##.##.2022
       - The oil refining and the gas fractioning recipe icons are slightly altered to reflect the fluid layout of their respective recipe.
   Bugfixes:
     - Fixed machine output arrows (839)
+    - Make Oil refineries scale their recipe icons to match vanilla (874)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 06.06.2022

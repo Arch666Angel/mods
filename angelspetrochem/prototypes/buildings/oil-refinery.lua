@@ -47,6 +47,7 @@ data:extend({
     module_specification = {
       module_slots = 2,
     },
+    scale_entity_info_icon = true,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "oil-processing" },
     crafting_speed = 1.5,
@@ -201,6 +202,7 @@ data:extend({
     module_specification = {
       module_slots = 2,
     },
+    scale_entity_info_icon = true,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "oil-processing" },
     crafting_speed = 2,
@@ -354,6 +356,7 @@ data:extend({
     module_specification = {
       module_slots = 2,
     },
+    scale_entity_info_icon = true,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "oil-processing" },
     crafting_speed = 2.5,
