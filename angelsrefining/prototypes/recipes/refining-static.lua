@@ -1167,7 +1167,7 @@ data:extend({
     name = "slag-processing-filtering-2",
     category = "filtering-2",
     subgroup = "filtering",
-    energy_required = 2,
+    energy_required = 5.7,
     enabled = false,
     ingredients = {
       { type = "fluid", name = "slag-slurry", amount = 100 },
