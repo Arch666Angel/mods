@@ -32,6 +32,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_specification = {
       module_slots = 2,
@@ -112,8 +113,9 @@ data:extend({
     -- },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg" },
+      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {
@@ -182,6 +184,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_specification = {
       module_slots = 2,
@@ -246,8 +249,9 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg" },
+      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {
@@ -316,6 +320,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_specification = {
       module_slots = 2,
@@ -380,8 +385,9 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg" },
+      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {
@@ -449,6 +455,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_specification = {
       module_slots = 2,
@@ -513,8 +520,9 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg" },
+      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {

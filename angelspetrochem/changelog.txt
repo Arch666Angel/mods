@@ -44,6 +44,13 @@ Date: ##.##.2022
       - Gas fractioning now only uses the first three output pipes, the same pipes used in the advanced fractioning recipes
         (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
       - The oil refining and the gas fractioning recipe icons are slightly altered to reflect the fluid layout of their respective recipe.
+    - Updated sound volume of the following buildings: (482)
+      - Chemical plant, Advanced chemical plant
+      - Air filter
+      - Electric boiler
+      - Electrolyser
+      - Oil refinery
+      - Gas separator, Steam cracker
   Bugfixes:
     - Fixed machine output arrows (839)
     - Make Oil refineries scale their recipe icons to match vanilla (874)
