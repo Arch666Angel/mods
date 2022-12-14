@@ -115,17 +115,15 @@ data:extend({
       },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = 
-    {
-      sound =
-      {
+    working_sound = {
+      sound = {
         filename = "__base__/sound/boiler.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       --max_sounds_per_type = 3,
       audible_distance_modifier = 0.3,
       fade_in_ticks = 4,
-      fade_out_ticks = 20
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -271,17 +269,15 @@ data:extend({
       },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = 
-    {
-      sound =
-      {
+    working_sound = {
+      sound = {
         filename = "__base__/sound/boiler.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       --max_sounds_per_type = 3,
       audible_distance_modifier = 0.3,
       fade_in_ticks = 4,
-      fade_out_ticks = 20
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -423,17 +419,15 @@ data:extend({
       },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = 
-    {
-      sound =
-      {
+    working_sound = {
+      sound = {
         filename = "__base__/sound/boiler.ogg",
-        volume = 0.7
+        volume = 0.7,
       },
       --max_sounds_per_type = 3,
       audible_distance_modifier = 0.3,
       fade_in_ticks = 4,
-      fade_out_ticks = 20
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
