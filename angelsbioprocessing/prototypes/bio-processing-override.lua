@@ -125,8 +125,29 @@ if bobmods then
         icon_size = 32,
         order = "m",
       },
+      {
+        type = "recipe",
+        name = "phenolic-board-paper",
+        category = "electronics-machine",
+        subgroup = "bio-paper",
+        enabled = false,
+        energy_required = 1,
+        ingredients = {
+          { type = "item", name = "solid-paper", amount = 3 },
+          { type = "item", name = "resin", amount = 2 },
+        },
+        results = {
+          { type = "item", name = "phenolic-board", amount = 2 },
+        },
+        icon_size = 32,
+        order = "n",
+      },
     })
     OV.add_unlock("bio-paper-1", "wooden-board-paper")
+    OV.add_unlock("advanced-electronics-2", "phenolic-board-paper")
+    angelsmods.functions.remove_productivity("phenolic-board")
+    angelsmods.functions.allow_productivity("phenolic-board-paper")
+    OV.modify_output("phenolic-board",{"phenolic-board",1})
   end
 end
 
