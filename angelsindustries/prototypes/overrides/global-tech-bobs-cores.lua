@@ -124,19 +124,21 @@ if angelsmods.industries.tech then
   if mods["bobmodules"] then
     AI.core_replace("effect-transmission-2", "processing", "enhance")
     AI.core_replace("effect-transmission-3", "processing", "enhance")
-    OV.remove_science_pack("speed-module", "angels-science-pack-orange")
-    OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
-    OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
+    if bobmods.modules.ModulesLab then
+      OV.remove_science_pack("speed-module", "angels-science-pack-orange")
+      OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
+      OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
 
-    OV.remove_science_pack("speed-module", "datacore-enhance-1")
-    OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
-    OV.remove_science_pack("productivity-module", "datacore-enhance-1")
-    OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
+      OV.remove_science_pack("speed-module", "datacore-enhance-1")
+      OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
+      OV.remove_science_pack("productivity-module", "datacore-enhance-1")
+      OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
 
-    OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+    end
   end
 
   -------------------------------------------------------------------------------
