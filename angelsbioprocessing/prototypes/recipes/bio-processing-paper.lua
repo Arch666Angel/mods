@@ -304,11 +304,11 @@ data:extend({
     energy_required = 6,
     ingredients = {
       { type = "item", name = "cellulose-fiber", amount = 20 },
-      { type = "fluid", name = "liquid-white-liquor", amount = 40 },
+      { type = "fluid", name = "liquid-white-liquor", amount = 80 },
     },
     results = {
       { type = "item", name = "solid-wood-pulp", amount = 30 },
-      { type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40 },
+      { type = "fluid", name = "liquid-black-liquor", amount_min = 55, amount_max = 60 },
     },
     always_show_products = true,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-wood-pulp"), 3, angelsmods.bioprocessing.number_tint),
