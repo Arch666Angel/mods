@@ -163,17 +163,17 @@ data:extend({
   {
     type = "recipe",
     name = "brown-liquor-recovery",
-    category = "liquifying",
+    category = "chemistry",
     subgroup = "bio-liquor",
     enabled = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "liquid-brown-liquor", amount = 50 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
+      { type = "fluid", name = "purified-water", amount = 50 },
     },
     results = {
-      { type = "item", name = "solid-sodium-sulfate", amount = 1 },
-      { type = "fluid", name = "water-red-waste", amount = 50 },
+      { type = "item", name = "solid-sodium-hydroxide", amount = 3 },
+      { type = "fluid", name = "water-yellow-waste", amount = 100 },
     },
     icons = {
       {
@@ -327,7 +327,7 @@ data:extend({
     category = "crafting",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 3,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
     },
@@ -345,15 +345,15 @@ data:extend({
     category = "liquifying",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 3,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-chlorine", amount = 60 },
+      { type = "item", name = "solid-sodium-hydroxide", amount = 1 },
+      { type = "fluid", name = "gas-chlorine", amount = 40 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 5 },
-      { type = "item", name = "solid-sodium-hypochlorite", amount = 2 },
+      { type = "item", name = "solid-paper", amount = 6 },
+      { type = "fluid", name = "gas-hydrogen-chloride", amount = 60 },
     },
     --main_product = "solid-paper",
     allow_decomposition = false,
@@ -372,16 +372,16 @@ data:extend({
     category = "advanced-chemistry",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 3,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
+      { type = "fluid", name = "gas-oxygen", amount = 20 },
       { type = "fluid", name = "gas-sulfur-dioxide", amount = 40 },
       { type = "fluid", name = "water", amount = 100 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 6 },
+      { type = "item", name = "solid-paper", amount = 8 },
       { type = "item", name = "solid-sodium-carbonate", amount = 2 },
       { type = "fluid", name = "water-yellow-waste", amount = 100 },
     },
