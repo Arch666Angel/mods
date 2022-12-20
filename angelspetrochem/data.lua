@@ -12,7 +12,13 @@ angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].val
 --PETRO PRODUCS
 angelsmods.trigger.plastic = true
 angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
-angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
+angelsmods.trigger.rubber = (
+  (not angelsmods.functions.is_special_vanilla())
+  or mods["bobelectronics"]
+  or mods["bobplates"]
+)
+    and true
+  or false
 angelsmods.trigger.liquid_ferric_chloride_solution = mods["bobelectronics"] and true or false
 angelsmods.trigger.liquid_cupric_chloride_solution = false
 angelsmods.trigger.gas_ammonium_chloride = false

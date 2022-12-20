@@ -12,6 +12,7 @@ Date: ##.##.2022
       - Added Miniloader support (820)
       - Made Nanobots available sooner (820)
       - When Bob's Assemling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation  (820)
+      - Added support for Bob's steam power phase (864)
     - Updated power recipes for bobpower update
   Bugfixes:
     - Fixed error with modded centrifuges (836)

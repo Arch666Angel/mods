@@ -106,12 +106,23 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__base__/sound/chemical-plant.ogg",
-          volume = 0.8,
+          filename = "__base__/sound/chemical-plant-1.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-2.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-3.ogg",
+          volume = 0.5,
         },
       },
-      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      --max_sounds_per_type = 3,
+      --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
       apparent_volume = 1.5,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -249,12 +260,23 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__base__/sound/chemical-plant.ogg",
-          volume = 0.8,
+          filename = "__base__/sound/chemical-plant-1.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-2.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-3.ogg",
+          volume = 0.5,
         },
       },
-      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      --max_sounds_per_type = 3,
+      --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
       apparent_volume = 1.5,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -392,12 +414,23 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__base__/sound/chemical-plant.ogg",
-          volume = 0.8,
+          filename = "__base__/sound/chemical-plant-1.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-2.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-3.ogg",
+          volume = 0.5,
         },
       },
-      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      --max_sounds_per_type = 3,
+      --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
       apparent_volume = 1.5,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -534,12 +567,23 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__base__/sound/chemical-plant.ogg",
-          volume = 0.8,
+          filename = "__base__/sound/chemical-plant-1.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-2.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/chemical-plant-3.ogg",
+          volume = 0.5,
         },
       },
-      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      --max_sounds_per_type = 3,
+      --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
       apparent_volume = 1.5,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {

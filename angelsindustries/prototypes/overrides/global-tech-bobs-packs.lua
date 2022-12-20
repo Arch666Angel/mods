@@ -324,14 +324,39 @@ if angelsmods.industries.tech then
       --remove all re-added automation science packs
       for tech in pairs(data.raw.technology) do
         OV.remove_science_pack(tech, "automation-science-pack")
+        OV.remove_science_pack(tech, "steam-science-pack")
         OV.remove_prereq(tech, "automation-science-pack")
       end
+      OV.add_prereq("steam-power", "tech-specialised-labs")
+      OV.add_prereq("logistics-0", "tech-specialised-labs")
+      OV.add_prereq("basic-automation", "tech-specialised-labs")
+
+      OV.set_science_pack("steam-power", "angels-science-pack-grey", 1)
+      OV.set_science_pack("steam-automation", "angels-science-pack-grey", 1)
+      OV.set_science_pack("electricity", "angels-science-pack-grey", 1)
+      OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
+      OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
+
       OV.disable_technology({ "automation-science-pack" })
       OV.add_prereq("automation", "steam-automation")
 
-      OV.set_science_pack("steam-automation", "angels-science-pack-grey", 1)
-      OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
-      OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
+      local burner_lab = data.raw["lab"]["angels-basic-lab"]
+      if burner_lab then
+        burner_lab.energy_source = {
+          type = "burner",
+          fuel_category = "chemical",
+          effectivity = 0.65,
+          fuel_inventory_size = 1,
+          emissions_per_minute = 6,
+          smoke = {
+            {
+              name = "smoke",
+              deviation = { 0.1, 0.1 },
+              frequency = 3,
+            },
+          },
+        }
+      end
     end
   end
 

@@ -47,6 +47,7 @@ data:extend({
     module_specification = {
       module_slots = 2,
     },
+    scale_entity_info_icon = true,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "oil-processing" },
     crafting_speed = 1.5,
@@ -125,6 +126,7 @@ data:extend({
     working_sound = {
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {
@@ -201,6 +203,7 @@ data:extend({
     module_specification = {
       module_slots = 2,
     },
+    scale_entity_info_icon = true,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "oil-processing" },
     crafting_speed = 2,
@@ -279,6 +282,7 @@ data:extend({
     working_sound = {
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {
@@ -354,6 +358,7 @@ data:extend({
     module_specification = {
       module_slots = 2,
     },
+    scale_entity_info_icon = true,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "oil-processing" },
     crafting_speed = 2.5,
@@ -432,6 +437,7 @@ data:extend({
     working_sound = {
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
     },
     fluid_boxes = {

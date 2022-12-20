@@ -118,9 +118,12 @@ data:extend({
     working_sound = {
       sound = {
         filename = "__base__/sound/boiler.ogg",
-        volume = 0.8,
+        volume = 0.7,
       },
-      max_sounds_per_type = 3,
+      --max_sounds_per_type = 3,
+      audible_distance_modifier = 0.3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -269,9 +272,12 @@ data:extend({
     working_sound = {
       sound = {
         filename = "__base__/sound/boiler.ogg",
-        volume = 0.8,
+        volume = 0.7,
       },
-      max_sounds_per_type = 3,
+      --max_sounds_per_type = 3,
+      audible_distance_modifier = 0.3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {
@@ -416,9 +422,12 @@ data:extend({
     working_sound = {
       sound = {
         filename = "__base__/sound/boiler.ogg",
-        volume = 0.8,
+        volume = 0.7,
       },
-      max_sounds_per_type = 3,
+      --max_sounds_per_type = 3,
+      audible_distance_modifier = 0.3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     fluid_boxes = {
       {

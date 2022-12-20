@@ -344,7 +344,6 @@ data:extend({
     icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-2",
-      "angels-cooling",
     },
     effects = {
       {
