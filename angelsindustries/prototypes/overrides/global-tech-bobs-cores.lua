@@ -18,6 +18,8 @@ if angelsmods.industries.tech then
     AI.core_replace("gas-canisters", "basic", "processing")
     AI.core_replace("ceramics", "basic", "processing")
 
+    -- depending on settings and enabled mods, bobingabout-enrichment-process could be using either basic or processing core
+    AI.core_replace("bobingabout-enrichment-process", "basic", "energy")
     AI.core_replace("bobingabout-enrichment-process", "processing", "energy")
 
     if not mods["bobtech"] then
