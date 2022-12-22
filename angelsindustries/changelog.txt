@@ -14,6 +14,7 @@ Date: ##.##.2022
       - When Bob's Assemling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation  (820)
       - Added support for Bob's steam power phase (864)
     - Changed Atomic artillery shells from Bob's Warfare to take Plutonium instead of Uranium (881)
+    - Plutonium and Deuterium recipes require higher tiers of centrifuge when they are available from Bob's Assembling Machines mod (881)
   Bugfixes:
     - Fixed error with modded centrifuges (836)
     - Fixed machine output arrows (839)
