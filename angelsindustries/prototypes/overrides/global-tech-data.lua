@@ -50,7 +50,7 @@ if angelsmods.industries.tech then
   angelsmods.functions.add_exception("bio-swamp-farm")
 
   -- EXCLUDE BOBS MODULES
-  if mods["bobmodules"] then
+  if mods["bobmodules"] and bobmods.modules.ModulesLab then
     angelsmods.functions.add_exception("module-merging")
     --removes enhancement core from module techs (not modules)
     for rec_4tech in pairs(data.raw.technology) do

@@ -105,7 +105,7 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["bobmodules"] then
+  if game.active_mods["bobmodules"] and settings.startup["bobmods-modules-enable-modules-lab"].value then
     for pack_name, pack_level in pairs({
       -- bobs module science packs
       ["speed-processor"] = 50
