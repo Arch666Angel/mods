@@ -154,7 +154,7 @@ if angelsmods.industries.tech then
       AI.pack_replace("pollution-create-module-6", "blue", "yellow")
       AI.pack_replace("pollution-create-module-7", "blue", "yellow")
       AI.pack_replace("pollution-create-module-8", "blue", "yellow")
-      
+
       AI.pack_replace("module-merging", "green", "orange")
 
       AI.pack_replace("raw-speed-module-1", "green", "orange")
