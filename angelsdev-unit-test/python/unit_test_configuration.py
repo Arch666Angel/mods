@@ -82,6 +82,7 @@ UnitTestConfiguration.addDefaultSetting("startup", "bobmods-mining-miningaxes", 
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-plates-purewater", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-ores-unsortedgems", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-tech-colorupdate", False)
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-modules-enable-modules-lab", True)
 
 ###############################################################################
 ### SPECIAL VANILLA                                                         ###
@@ -460,7 +461,7 @@ UnitTestConfiguration.addConfiguration("BA (extended technology)",
   }
 )
 
-# none-default BA to test certain settings
+# non-default BA to test certain settings
 UnitTestConfiguration.addConfiguration("BA (BobEnemies non-default)",
   [
     "angelsrefining",
@@ -903,6 +904,96 @@ UnitTestConfiguration.addConfiguration("Angel's refining + full Bob's",
       #"angels-enable-industries": False, # Angels overhaul
       #"angels-enable-components": False, # Angels component mode
       #"angels-enable-tech"      : False, # Angels technology mode
+    }
+  }
+)
+
+UnitTestConfiguration.addConfiguration("BA (BobModules non-default)",
+  [
+    "angelsrefining",
+    "angelspetrochem",
+    "angelssmelting",
+    "angelsbioprocessing",
+    "angelsindustries",
+    #"angelsexploration",
+
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
+
+    "boblibrary",
+    "bobassembly",
+    "bobclasses",
+    "bobelectronics",
+    "bobenemies",
+    "bobequipment",
+    "bobgreenhouse",
+    "bobinserters",
+    "boblogistics",
+    "bobmining",
+    "bobmodules",
+    "bobores",
+    "bobplates",
+    "bobpower",
+    "bobrevamp",
+    "bobtech",
+    "bobvehicleequipment",
+    "bobwarfare",
+  ],
+  {
+    "startup":
+    {
+      #"angels-enable-industries": False, # Angels overhaul
+      #"angels-enable-components": False, # Angels component mode
+      #"angels-enable-tech"      : False, # Angels technology mode
+
+      "bobmods-modules-enable-modules-lab": False
+    }
+  }
+)
+
+UnitTestConfiguration.addConfiguration("BA (BobModules non-default + technology)",
+  [
+    "angelsrefining",
+    "angelspetrochem",
+    "angelssmelting",
+    "angelsbioprocessing",
+    "angelsindustries",
+    #"angelsexploration",
+
+    "angelsaddons-storage",
+    #"Bio-Industries",
+    #"Bio_Industries_NE_graphics",
+    #"eradicators-library",
+
+    "boblibrary",
+    "bobassembly",
+    "bobclasses",
+    "bobelectronics",
+    "bobenemies",
+    "bobequipment",
+    "bobgreenhouse",
+    "bobinserters",
+    "boblogistics",
+    "bobmining",
+    "bobmodules",
+    "bobores",
+    "bobplates",
+    "bobpower",
+    "bobrevamp",
+    "bobtech",
+    "bobvehicleequipment",
+    "bobwarfare",
+  ],
+  {
+    "startup":
+    {
+      "angels-enable-industries": True, # Angels overhaul
+      "angels-enable-components": True, # Angels component mode
+      "angels-enable-tech"      : True, # Angels technology mode
+
+      "bobmods-modules-enable-modules-lab": False
     }
   }
 )
