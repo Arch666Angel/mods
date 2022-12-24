@@ -163,11 +163,16 @@ if angelsmods.industries.overhaul then
     OV.disable_recipe("empty-nuclear-fuel-cell")
     angelsmods.functions.add_flag({ "plutonium-240", "empty-nuclear-fuel-cell" }, "hidden")
 
-
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
       if data.raw.recipe["bobingabout-enrichment-process"] then
-        OV.patch_recipes({{name = "bobingabout-enrichment-process", subgroup = "angels-power-nuclear-processing", order="b[AMOX]-c[duplication]"}})
+        OV.patch_recipes({
+          {
+            name = "bobingabout-enrichment-process",
+            subgroup = "angels-power-nuclear-processing",
+            order = "b[AMOX]-c[duplication]",
+          },
+        })
         OV.remove_prereq("rtg", "nuclear-fuel-reprocessing")
         OV.add_prereq("rtg", "bobingabout-enrichment-process")
         if mods["bobclasses"] then
