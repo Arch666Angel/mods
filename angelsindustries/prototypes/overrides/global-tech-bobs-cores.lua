@@ -218,6 +218,7 @@ if angelsmods.industries.tech then
   -- BOBS POWER -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
+    AI.core_replace("steam-power", "energy", "basic")
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
       AI.core_replace("fluid-generator-1", "logistic", "energy")
       AI.core_replace("fluid-generator-2", "logistic", "energy")
@@ -226,7 +227,7 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-power-steam"].value == true then
       AI.core_replace("bob-steam-engine-2", "basic", "energy")
       AI.core_replace("bob-steam-engine-3", "basic", "energy")
-      AI.core_replace("bob-steam-engine-4", "basic", "energy")
+      AI.core_replace("bob-steam-engine-4", "processing", "energy")
       AI.core_replace("bob-steam-engine-5", "processing", "energy")
     end
     if mods["bobrevamp"] then
