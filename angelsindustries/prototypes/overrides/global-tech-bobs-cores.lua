@@ -18,6 +18,8 @@ if angelsmods.industries.tech then
     AI.core_replace("gas-canisters", "basic", "processing")
     AI.core_replace("ceramics", "basic", "processing")
 
+    -- depending on settings and enabled mods, bobingabout-enrichment-process could be using either basic or processing core
+    AI.core_replace("bobingabout-enrichment-process", "basic", "energy")
     AI.core_replace("bobingabout-enrichment-process", "processing", "energy")
 
     if not mods["bobtech"] then
@@ -124,19 +126,21 @@ if angelsmods.industries.tech then
   if mods["bobmodules"] then
     AI.core_replace("effect-transmission-2", "processing", "enhance")
     AI.core_replace("effect-transmission-3", "processing", "enhance")
-    OV.remove_science_pack("speed-module", "angels-science-pack-orange")
-    OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
-    OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
+    if bobmods.modules.ModulesLab then
+      OV.remove_science_pack("speed-module", "angels-science-pack-orange")
+      OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
+      OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
 
-    OV.remove_science_pack("speed-module", "datacore-enhance-1")
-    OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
-    OV.remove_science_pack("productivity-module", "datacore-enhance-1")
-    OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
+      OV.remove_science_pack("speed-module", "datacore-enhance-1")
+      OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
+      OV.remove_science_pack("productivity-module", "datacore-enhance-1")
+      OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
 
-    OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+    end
   end
 
   -------------------------------------------------------------------------------

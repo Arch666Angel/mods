@@ -99,7 +99,7 @@ data:extend({
     fuel_top_speed_multiplier = 1.15,
     subgroup = "petrochem-fuel",
     order = "k",
-    stack_size = 1,
+    stack_size = 2,
   },
   {
     type = "item",
@@ -113,7 +113,7 @@ data:extend({
     fuel_top_speed_multiplier = 1.15,
     subgroup = "petrochem-fuel",
     order = "l",
-    stack_size = 1,
+    stack_size = 2,
   },
 })
 

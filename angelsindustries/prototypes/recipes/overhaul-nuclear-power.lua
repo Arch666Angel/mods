@@ -210,7 +210,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-uranium-reprocessing",
     enabled = false,
-    category = "advanced-chemistry",
+    category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80, --120
     ingredients = {
@@ -344,7 +344,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-mixed-oxide-reprocessing",
     enabled = false,
-    category = "advanced-chemistry",
+    category = "centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 260,
     ingredients = {
@@ -525,7 +525,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-thorium-fuel-cell-reprocessing",
     enabled = false,
-    category = "advanced-chemistry",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, -- 1000
     ingredients = {
@@ -671,7 +671,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-deuterium-fuel-cell-reprocessing",
     enabled = false,
-    category = "advanced-chemistry",
+    category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients = {

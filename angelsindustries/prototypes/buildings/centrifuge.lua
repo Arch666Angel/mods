@@ -306,7 +306,7 @@ for _, centrifuge_name in pairs({
 end
 
 -- add tiered crafting categories
-local bob_centrifuge_2 = mods["bobsassembly"] and data.raw["assembling-machine"]["centrifuge-2"] and true or false
+local bob_centrifuge_2 = mods["bobassembly"] and data.raw["assembling-machine"]["centrifuge-2"] and true or false
 local bob_centrifuge_3 = bob_centrifuge_2 and data.raw["assembling-machine"]["centrifuge-3"] and true or false
 for centrifuge_name, centrifuge_categegories in pairs({
   ["centrifuge"] = bob_centrifuge_2 and { "centrifuging" } or { "centrifuging", "centrifuging-2", "centrifuging-3" },
@@ -318,7 +318,7 @@ for centrifuge_name, centrifuge_categegories in pairs({
   if centrifuge then
     for _, centrifuge_category in pairs(centrifuge_categegories) do
       local centrifuge_category_present = false
-      for category in pairs(centrifuge.crafting_categories) do
+      for _, category in pairs(centrifuge.crafting_categories) do
         if category == centrifuge_category then
           centrifuge_category_present = true
         end

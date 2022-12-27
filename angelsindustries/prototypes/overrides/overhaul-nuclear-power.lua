@@ -165,22 +165,37 @@ if angelsmods.industries.overhaul then
 
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
-      -- patch rtg to use uranium 239 instead of plutonium
-      -- rtg needs to be available at blue science for bob's character bodies
-      -- plutonium isn't available until purple science
-      OV.patch_recipes({
-        { name = "rtg", ingredients = { { type = "item", name = "uranium-235", amount = "plutonium-239" } } },
-      })
-      OV.remove_prereq("rtg", "nuclear-fuel-reprocessing")
-      OV.add_prereq("rtg", "uranium-processing")
+      if data.raw.recipe["bobingabout-enrichment-process"] then
+        OV.patch_recipes({
+          {
+            name = "bobingabout-enrichment-process",
+            subgroup = "angels-power-nuclear-processing",
+            order = "b[AMOX]-c[duplication]",
+          },
+        })
+        OV.remove_prereq("rtg", "nuclear-fuel-reprocessing")
+        OV.add_prereq("rtg", "bobingabout-enrichment-process")
+        if mods["bobclasses"] then
+          -- rtg needs to be available at blue science for bob's character bodies
+          OV.remove_science_pack("bobingabout-enrichment-process", "production-science-pack")
+          OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
+        else
+          OV.set_science_pack("rtg", "production-science-pack", 1)
+          OV.add_prereq("bobingabout-enrichment-process", "angels-plutonium-power")
+          data.raw.recipe["bobingabout-enrichment-process"].category = "centrifuging-2"
+          if data.raw.recipe["plutonium-nucleosynthesis"] then
+            data.raw.recipe["plutonium-nucleosynthesis"].category = "centrifuging-2"
+          end
+        end
+      end
+    else
+      --if not rtg, remove bobingabout process
+      OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
+      OV.disable_recipe("bobingabout-enrichment-process")
+      OV.disable_recipe("plutonium-nucleosynthesis")
+      OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
+      OV.disable_technology("bobingabout-enrichment-process")
     end
-
-    -- remove bobingabout process
-    OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
-    OV.disable_recipe("bobingabout-enrichment-process")
-    OV.disable_recipe("plutonium-nucleosynthesis")
-    OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
-    OV.disable_technology("bobingabout-enrichment-process")
 
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
@@ -248,6 +263,18 @@ if angelsmods.industries.overhaul then
       OV.global_replace_technology("plutonium-fuel-cell", "angels-plutonium-power")
       OV.disable_technology("plutonium-fuel-cell")
     end
+
+    -- make atomic artillery shells use plutonium instead of uranium 235
+    if mods["bobwarfare"] then
+      OV.patch_recipes({
+        {
+          name = "atomic-artillery-shell",
+          ingredients = {
+            { type = "item", name = "plutonium-239", amount = "uranium-235" },
+          },
+        },
+      })
+    end
   end
 else
   -- disable all nuclear stuff
@@ -295,8 +322,7 @@ else
   angelsmods.functions.add_flag("angels-nuclear-fuel-2", "hidden")
   OV.disable_recipe({ "angels-nuclear-fuel", "angels-nuclear-fuel-2" })
   OV.disable_recipe({ "angels-atomic-bomb", "angels-atomic-bomb-2" })
-end
-if mods["bobpower"] or not angelsmods.industries.overhaul then
+  -- fast burner reactor
   OV.disable_recipe({ "angels-burner-reactor" })
   angelsmods.functions.add_flag("angels-burner-reactor", "hidden")
 end

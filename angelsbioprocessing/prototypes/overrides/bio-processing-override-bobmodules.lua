@@ -42,8 +42,12 @@ if mods["bobmodules"] then
         order = "f-0-c",
       },
     })
+    if bobmods.modules.ModulesLab then
+      data.raw["tool"]["module-circuit-board"].subgroup = "module-intermediates-3"
+    else
+      data.raw["item"]["module-circuit-board"].subgroup = "module-intermediates-3"
+    end
     data.raw["item"]["module-contact"].subgroup = "module-intermediates-2"
-    data.raw["tool"]["module-circuit-board"].subgroup = "module-intermediates-3"
     data.raw["item"]["module-processor-board-2"].subgroup = "module-intermediates-2"
     data.raw["item"]["module-processor-board-3"].subgroup = "module-intermediates-3"
     data.raw["item"]["speed-processor-2"].subgroup = "module-intermediates-2"
@@ -135,10 +139,12 @@ if mods["bobmodules"] then
       tech.upgrade = "false"
     end
   end
-  OV.remove_science_pack("module-merging", {
-    "module-case",
-    "module-circuit-board",
-  })
+  if bobmods.modules.ModulesLab then
+    OV.remove_science_pack("module-merging", {
+      "module-case",
+      "module-circuit-board",
+    })
+  end
   -- tier 2 modules
   data:extend({
     {
@@ -204,45 +210,51 @@ if mods["bobmodules"] then
     OV.set_research_difficulty(type .. "-module-3", 60, 100)
     OV.set_research_difficulty(type .. "-module-4", 60, 150)
     OV.set_research_difficulty(type .. "-module-5", 60, 200)
-    OV.set_science_pack({
-      type .. "-module-5",
-    }, {
-      "module-case",
-      "module-circuit-board",
-      type .. "-processor",
-    }, {
-      0, --module case
-      1, --module-circuit-board
-      2, --processor circuit board
-    })
+    if bobmods.modules.ModulesLab then
+      OV.set_science_pack({
+        type .. "-module-5",
+      }, {
+        "module-case",
+        "module-circuit-board",
+        type .. "-processor",
+      }, {
+        0, --module case
+        1, --module-circuit-board
+        2, --processor circuit board
+      })
+    end
   end
   for _, type in pairs({ "raw-speed", "green", "raw-productivity" }) do
     OV.set_research_difficulty(type .. "-module-3", 60, 100)
     OV.set_research_difficulty(type .. "-module-4", 60, 150)
     OV.set_research_difficulty(type .. "-module-5", 60, 200)
-    OV.set_science_pack({
-      type .. "-module-5",
-    }, {
-      "module-case",
-      "module-circuit-board",
-    }, {
-      0, --module case
-      1, --module-circuit-board
-    })
+    if bobmods.modules.ModulesLab then
+      OV.set_science_pack({
+        type .. "-module-5",
+      }, {
+        "module-case",
+        "module-circuit-board",
+      }, {
+        0, --module case
+        1, --module-circuit-board
+      })
+    end
   end
-  OV.set_science_pack("raw-speed-module-5", {
-    "speed-processor",
-    "effectivity-processor",
-  }, 2)
-  OV.set_science_pack("green-module-5", {
-    "pollution-clean-processor",
-    "effectivity-processor",
-  }, 2)
-  OV.set_science_pack("raw-productivity-module-5", {
-    "pollution-clean-processor",
-    "effectivity-processor",
-    "productivity-processor",
-  }, 2)
+  if bobmods.modules.ModulesLab then
+    OV.set_science_pack("raw-speed-module-5", {
+      "speed-processor",
+      "effectivity-processor",
+    }, 2)
+    OV.set_science_pack("green-module-5", {
+      "pollution-clean-processor",
+      "effectivity-processor",
+    }, 2)
+    OV.set_science_pack("raw-productivity-module-5", {
+      "pollution-clean-processor",
+      "effectivity-processor",
+      "productivity-processor",
+    }, 2)
+  end
 
   -- tier 3 modules
   data:extend({
@@ -541,7 +553,9 @@ if mods["bobmodules"] then
     }
   end
 
-  table.insert(data.raw.lab["lab-module"].inputs, "token-bio")
+  if bobmods.modules.ModulesLab then
+    table.insert(data.raw.lab["lab-module"].inputs, "token-bio")
+  end
 
   -----------------------------------------------------------------------------
   -- BEACONS ------------------------------------------------------------------
