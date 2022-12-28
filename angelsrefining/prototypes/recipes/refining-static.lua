@@ -1477,7 +1477,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "crystal-slurry", amount = 35 },
-      { type = "fluid", name = "water-mineralized", amount = 100 },
+      { type = "fluid", name = "water-mineralized", amount = 70 },
       { type = "item", name = "filter-ceramic", amount = 1 },
     },
     results = {
