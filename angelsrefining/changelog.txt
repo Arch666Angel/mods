@@ -22,6 +22,7 @@ Date: ???
       - Made some mineral sludge crystallization recipe require Crystallizer 2
       - Made crystal catalyst recipe require Crystallizer 2
       - Made hybrid catalyst recipe require Crystallizer 3
+    - Reduces crystal-slurry-filtering-conversion-2 min water requirements
   Bugfixes:
     - Fixed machine output arrows (839)
     - Fixed error when patching a recipe with variable result products (835)
