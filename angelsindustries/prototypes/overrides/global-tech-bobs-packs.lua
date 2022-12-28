@@ -329,12 +329,20 @@ if angelsmods.industries.tech then
   -- BOBS POWER -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
+    AI.pack_replace("steam-power", "red", "grey")
     --adds bob power stuffs
     OV.remove_science_pack("electric-engine", "angels-science-pack-green")
     -- steam power
     if settings.startup["bobmods-power-steam"].value == true then
       AI.pack_replace("bob-steam-turbine-1", "blue", "orange")
       AI.pack_replace("bob-steam-turbine-3", "blue", "yellow")
+      AI.pack_replace("bob-steam-engine-3", "blue", "orange")
+      AI.pack_replace("bob-boiler-3", "blue", "orange")
+      AI.pack_replace("bob-oil-boiler-2", "blue", "orange")
+      AI.pack_replace("bob-heat-exchanger-2", "blue", "orange")
+    end
+    if settings.startup["bobmods-power-fluidgenerator"].value == true then
+      AI.pack_replace("fluid-generator-2", "blue", "orange")
     end
     -- solar power
     if settings.startup["bobmods-power-solar"].value == true then

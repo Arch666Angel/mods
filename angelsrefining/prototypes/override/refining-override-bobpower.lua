@@ -7,7 +7,6 @@ local move_item = angelsmods.functions.move_item
 if mods["bobpower"] then
   if mods["bobplates"] then
     --update to blue science level
-    OV.set_science_pack("bob-steam-turbine-1", "chemical-science-pack", 1)
     OV.patch_recipes({
       {
         name = "steam-engine-3",
