@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.17
-Date: ##.##.2022
+Date: 01.01.2023
   Changes:
     - Changed which building some recipes require (802)
       - Atomic bomb 1 & 2 moved from Assembling machine to Advanced chemical plant
@@ -10,7 +10,7 @@ Date: ##.##.2022
       - Removed Alien plant-life sample from technologies Fermentation processes and Temperate arboretum 1 (820)
       - Added Miniloader support (820)
       - Made Nanobots available sooner (820)
-      - When Bob's Assemling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation  (820)
+      - When Bob's Assembling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation (820)
       - Added support for Bob's steam power phase (864)
     - Changed Atomic artillery shells from Bob's Warfare to take Plutonium instead of Uranium (881)
     - Plutonium and Deuterium recipes require higher tiers of centrifuge when they are available from Bob's Assembling Machines mod (881)

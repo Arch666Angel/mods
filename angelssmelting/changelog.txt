@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.20
-Date: ???
+Date: 01.01.2023
   Changes:
     - Changed the ingredient tier of some buildings (674)
       - Blast furnace 1, 2
