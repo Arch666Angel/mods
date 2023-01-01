@@ -1,24 +1,44 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.industries = angelsmods.industries or {}
-angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 1}
+angelsmods.industries.number_tint = { r = 1, g = 0, b = 1, a = 1 }
 angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or {}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
+angelsmods.industries.blocks = angelsmods.industries.blocks or {}
+angelsmods.industries.blocks.exploration = false
+angelsmods.industries.blocks.logistic = false
+angelsmods.industries.blocks.warfare = false
+angelsmods.industries.blocks.enhancement5 = false
+angelsmods.industries.blocks.energy5 = false
+
 if angelsmods.industries.tech == true then
   angelsmods.industries.components = true
+  angelsmods.industries.blocks.exploration = true
+  angelsmods.industries.blocks.logistic = true
+  angelsmods.industries.blocks.warfare = true
+  angelsmods.industries.blocks.enhancement5 = true
+  angelsmods.industries.blocks.energy5 = true
+  if mods["bobtech"] then
+    bobmods.tech.advanced_logistic_science = false
+  end
 end
 
 angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
 if mods["bobplates"] or angelsmods.industries.components then
   angelsmods.industries.overhaul = true
 end
+if angelsmods.industries.overhaul then
+  angelsmods.trigger.water_greenyellow_waste = true
+  angelsmods.trigger.water_green_waste = true
+end
 
-angelsmods.industries.return_ingredients =
-  angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
+angelsmods.industries.return_ingredients = angelsmods.industries.components
+    and settings.startup["angels-return-ingredients"].value
+  or false
 angelsmods.industries.block_stack_size = settings.startup["angels-components-stack-size"].value
 
 -- set triggers for other angel mods

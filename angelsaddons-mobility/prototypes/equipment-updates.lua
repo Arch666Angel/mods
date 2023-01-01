@@ -68,8 +68,8 @@ if angelsmods.petrochem then
     for i = 1, angelsmods.addons.mobility.petrotrain.tier_amount, 1 do
       local tank1 = i == 1 and "petro-tank1" or "petro-tank1-" .. i
       local tank2 = i == 1 and "petro-tank2" or "petro-tank2-" .. i
-      OV.modify_input(tank1, {"angels-storage-tank-1", "storage-tank"})
-      OV.modify_input(tank2, {"angels-storage-tank-2", "storage-tank"})
+      OV.modify_input(tank1, { "angels-storage-tank-1", "storage-tank" })
+      OV.modify_input(tank2, { "angels-storage-tank-2", "storage-tank" })
     end
   end
   OV.execute()
@@ -77,42 +77,42 @@ end
 
 --equipment grid groupings
 local default = "angels-void" --remove with vanilla adds
-local vanilla = {--vanilla adds/gets removed with bobs
+local vanilla = { --vanilla adds/gets removed with bobs
   loco = {
     "angels-basegame-energy",
     "angels-basegame-defense",
     "angels-basegame-attack",
-    "angels-basegame-movement"
+    "angels-basegame-movement",
   },
   wagon = { --vanilla adds/gets removed with bobs
     "angels-basegame-energy",
     "angels-basegame-defense",
-    "angels-basegame-attack"
-  }
+    "angels-basegame-attack",
+  },
 }
 local industries = {
   loco = {
     "angels-energy",
     "angels-heavy-defense",
-    "angels-movement"
+    "angels-movement",
   },
   wagon = {
     "angels-energy",
     "angels-heavy-defense",
     "angels-movement",
-    "angels-repair"
-  }
+    "angels-repair",
+  },
 }
 local bobs = {
   loco = {
     "train",
     "vehicle",
-    "locomotive"
+    "locomotive",
   },
   wagon = {
     "train",
-    "vehicle"
-  }
+    "vehicle",
+  },
 }
 
 local trains = {
@@ -121,15 +121,15 @@ local trains = {
     "angels-smelting-locomotive",
     "angels-smelting-locomotive-tender",
     "angels-crawler-locomotive",
-    "angels-crawler-loco-wagon"
+    "angels-crawler-loco-wagon",
   },
   wagon = {
     "angels-petro-tank1",
     "angels-petro-tank2",
     "angels-smelting-wagon",
     "angels-crawler-wagon",
-    "angels-crawler-bot-wagon"
-  }
+    "angels-crawler-bot-wagon",
+  },
 }
 --NOTE "angels-crawler-bot-wagon" also needs the construction categories added (can be done at the end i guess...)
 

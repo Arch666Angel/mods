@@ -34,12 +34,17 @@ if angelsmods.industries.tech then
   OV.set_science_pack("tech-orange-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-blue-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-yellow-circuit", "datacore-basic", 2)
+  OV.remove_science_pack("tech-yellow-circuit", "datacore-processing-1")
   -- DECORATION ADDONS
-  if mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]] then
+  if
+    mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]]
+  then
     --if angelsmods.addons.decorations then
     OV.set_science_pack("nilaus", "datacore-basic", 2)
   end
-  if mods["angelsaddons-shred"] --[[angelsmods.addons.decorations]] then
+  if
+    mods["angelsaddons-shred"] --[[angelsmods.addons.decorations]]
+  then
     OV.set_science_pack("deco-shred", "datacore-basic", 2)
   end
 
@@ -70,11 +75,15 @@ if angelsmods.industries.tech then
   -- EXPLORATION
   OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
   -- CAB ADDONS
-  if mods["angelsaddons-cab"] --[[angelsmods.addons.cab]] then
+  if
+    mods["angelsaddons-cab"] --[[angelsmods.addons.cab]]
+  then
     OV.set_science_pack("angels-cab", "datacore-exploration-1", 2)
   end
   -- DECORATION ADDONS
-  if mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]] then
+  if
+    mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]]
+  then
     OV.set_science_pack("nilaus-truck", "datacore-exploration-1", 2)
   end
 
@@ -114,6 +123,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-components-batteries-3", "datacore-energy-1", 2)
   OV.set_science_pack("angels-components-batteries-4", "datacore-energy-1", 2)
   OV.set_science_pack("angels-components-batteries-5", "datacore-energy-1", 2)
+  AI.core_replace("angels-components-batteries-6", "processing", "energy")
   AI.core_replace("angels-rocket-fusion-reactor", "war", "energy")
 
   -------------------------------------------------------------------------------
@@ -194,7 +204,7 @@ if angelsmods.industries.tech then
   -- now upgrade the cores to tier 2 and let them depend on the correct technology
   AI.core_tier_upgrade()
   OV.execute()
-  
+
   -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
   AI.tech_unlock_reset()
   OV.execute()

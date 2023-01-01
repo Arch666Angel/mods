@@ -7,7 +7,7 @@ import time
 
 class FactorioController:
 
-  def __init__(self, factorioInstallDir:Optional[str]=None, log:Optional[Callable[[str], None]]=None):
+  def __init__(self, factorioInstallDir:Optional[str]=None, log:Optional[Callable[[str], None]]=None, factorioModDir:Optional[str]=None):
     if factorioInstallDir is None:
       self.factorioExe:str = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
     else:
@@ -16,7 +16,7 @@ class FactorioController:
       self.log:Callable[[str], None] = lambda msg : print(f"angelsdev-unit-test: {msg}")
     else:
       self.log:Callable[[str], None] = log
-    self.factorioArgs:list = self.__createFactorioArgs()
+    self.factorioArgs:list = self.__createFactorioArgs(factorioModDir)
     self.factorioProcess:Optional[subprocess.Popen] = None
 
   def launchGame(self) -> None:
@@ -137,7 +137,7 @@ class FactorioController:
 
     return steamGameFolder
 
-  def __createFactorioArgs(self) -> list:
+  def __createFactorioArgs(self, factorioModDir:Optional[str]=None) -> list:
     def convert_to_arglist(arg:str) -> list:
       return arg.split(' ')
 
@@ -145,7 +145,9 @@ class FactorioController:
     args.append(self.factorioExe) # because factorio expects the exe as first arg...
     #args.extend(convert_to_arglist("--verbose"))
     args.extend(convert_to_arglist(f"--load-scenario base/freeplay"))
-    #args.extend(convert_to_arglist(f"--mod-directory {os.path.abspath(os.getenv('APPDATA'))}/Factorio/mods/".replace("\\", "/")))
+    if factorioModDir != None:
+      args.append("--mod-directory")
+      args.append(factorioModDir)
     
     return args
 

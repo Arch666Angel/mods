@@ -1,13 +1,13 @@
 -- add runtime tints to centrifuge animation
-for _,centrifuge_name in pairs{
+for _, centrifuge_name in pairs({
   "centrifuge",
   "centrifuge-2",
   "centrifuge-3",
-} do
+}) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then
     centrifuge.animation = nil
-    
+
     centrifuge.idle_animation = {
       layers = {
         -- Centrifuge C
@@ -27,8 +27,8 @@ for _,centrifuge_name in pairs{
             width = 237,
             height = 214,
             frame_count = 64,
-            shift = util.by_pixel(-0.25, -26.5)
-          }
+            shift = util.by_pixel(-0.25, -26.5),
+          },
         },
         {
           filename = "__base__/graphics/entity/centrifuge/centrifuge-C-shadow.png",
@@ -48,8 +48,8 @@ for _,centrifuge_name in pairs{
             width = 279,
             height = 152,
             frame_count = 64,
-            shift = util.by_pixel(16.75, -10)
-          }
+            shift = util.by_pixel(16.75, -10),
+          },
         },
         -- Centrifuge B
         {
@@ -68,8 +68,8 @@ for _,centrifuge_name in pairs{
             width = 156,
             height = 234,
             frame_count = 64,
-            shift = util.by_pixel(23, 6.5)
-          }
+            shift = util.by_pixel(23, 6.5),
+          },
         },
         {
           filename = "__base__/graphics/entity/centrifuge/centrifuge-B-shadow.png",
@@ -89,8 +89,8 @@ for _,centrifuge_name in pairs{
             width = 251,
             height = 149,
             frame_count = 64,
-            shift = util.by_pixel(63.25, 15.25)
-          }
+            shift = util.by_pixel(63.25, 15.25),
+          },
         },
         -- Centrifuge A
         {
@@ -109,8 +109,8 @@ for _,centrifuge_name in pairs{
             width = 139,
             height = 246,
             frame_count = 64,
-            shift = util.by_pixel(-26.25, 3.5)
-          }
+            shift = util.by_pixel(-26.25, 3.5),
+          },
         },
         {
           filename = "__base__/graphics/entity/centrifuge/centrifuge-A-shadow.png",
@@ -130,12 +130,12 @@ for _,centrifuge_name in pairs{
             width = 230,
             height = 124,
             frame_count = 64,
-            shift = util.by_pixel(8.5, 23.5)
-          }
-        }
-      }
+            shift = util.by_pixel(8.5, 23.5),
+          },
+        },
+      },
     }
-    
+
     centrifuge.working_visualisations = {
       -- WORKING LIGHTS
       -- Centrifuge A (Front Left)
@@ -164,7 +164,7 @@ for _,centrifuge_name in pairs{
             frame_count = 64,
             shift = util.by_pixel(-23.5, -1.75),
             draw_as_glow = true,
-          }
+          },
         },
       },
       -- Centrifuge B (Front Right)
@@ -193,7 +193,7 @@ for _,centrifuge_name in pairs{
             frame_count = 64,
             shift = util.by_pixel(16.75, 0.5),
             draw_as_glow = true,
-          }
+          },
         },
       },
       -- Centrifuge C (Rear)
@@ -222,55 +222,54 @@ for _,centrifuge_name in pairs{
             frame_count = 64,
             shift = util.by_pixel(0, -27.25),
             draw_as_glow = true,
-          }
-        }
+          },
+        },
       },
-      
+
       -- AREA LIGHT
       -- Centrifuge A (Front Left)
       {
         effect = "uranium-glow",
         apply_recipe_tint = "primary",
         fadeout = true,
-        light = {intensity = 0.066, size = 8.9, shift = {-1, 0.5}}
+        light = { intensity = 0.066, size = 8.9, shift = { -1, 0.5 } },
       },
       -- Centrifuge B (Front Right)
       {
         effect = "uranium-glow",
         apply_recipe_tint = "secondary",
         fadeout = true,
-        light = {intensity = 0.066, size = 8.9, shift = {1, 0.5}}
+        light = { intensity = 0.066, size = 8.9, shift = { 1, 0.5 } },
       },
       -- Centrifuge C (Rear)
       {
         effect = "uranium-glow",
         apply_recipe_tint = "tertiary",
         fadeout = true,
-        light = {intensity = 0.066, size = 8.9, shift = {0, -1.2}}
+        light = { intensity = 0.066, size = 8.9, shift = { 0, -1.2 } },
       },
     }
 
     centrifuge.default_recipe_tint = {
-      primary = {r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1}, -- green
-      secondary = {r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1}, -- green
-      tertiary = {r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1}, -- green
+      primary = { r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1 }, -- green
+      secondary = { r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1 }, -- green
+      tertiary = { r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1 }, -- green
     }
   end
 end
 
 -- add pipe input to the centrifuge
-for _,centrifuge_name in pairs{
+for _, centrifuge_name in pairs({
   "centrifuge",
   "centrifuge-2",
   "centrifuge-3",
-} do
+}) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then
-
     local has_fluid_input_box = false
     local has_fluid_output_box = false
     if centrifuge.fluid_boxes then
-      for fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
+      for _, fluid_box_prototype in pairs(centrifuge.fluid_boxes) do
         if fluid_box_prototype.production_type == "input" and fluid_box_prototype.filter == nil then
           has_fluid_input_box = true
         end
@@ -289,7 +288,7 @@ for _,centrifuge_name in pairs{
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{type = "input", position = {0, -2}}} -- assume 3x3 entity collision box
+        pipe_connections = { { type = "input", position = { 0, -2 } } }, -- assume 3x3 entity collision box
       })
     end
 
@@ -300,26 +299,26 @@ for _,centrifuge_name in pairs{
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
-        pipe_connections = {{type = "input", position = {0, 2}}} -- assume 3x3 entity collision box
+        pipe_connections = { { type = "output", position = { 0, 2 } } }, -- assume 3x3 entity collision box
       })
     end
-
   end
 end
 
 -- add tiered crafting categories
-local bob_centrifuge_2 = mods["bobsassembly"] and data.raw["assembling-machine"]["centrifuge-2"] and true or false
+local bob_centrifuge_2 = mods["bobassembly"] and data.raw["assembling-machine"]["centrifuge-2"] and true or false
 local bob_centrifuge_3 = bob_centrifuge_2 and data.raw["assembling-machine"]["centrifuge-3"] and true or false
-for centrifuge_name,centrifuge_categegories in pairs{
-  ["centrifuge"] = bob_centrifuge_2 and {"centrifuging"} or {"centrifuging", "centrifuging-2", "centrifuging-3"},
-  ["centrifuge-2"] = bob_centrifuge_3 and {"centrifuging", "centrifuging-2"} or {"centrifuging", "centrifuging-2", "centrifuging-3"},
-  ["centrifuge-3"] = {"centrifuging", "centrifuging-2", "centrifuging-3"},
-} do
+for centrifuge_name, centrifuge_categegories in pairs({
+  ["centrifuge"] = bob_centrifuge_2 and { "centrifuging" } or { "centrifuging", "centrifuging-2", "centrifuging-3" },
+  ["centrifuge-2"] = bob_centrifuge_3 and { "centrifuging", "centrifuging-2" }
+    or { "centrifuging", "centrifuging-2", "centrifuging-3" },
+  ["centrifuge-3"] = { "centrifuging", "centrifuging-2", "centrifuging-3" },
+}) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then
-    for _,centrifuge_category in pairs(centrifuge_categegories) do
+    for _, centrifuge_category in pairs(centrifuge_categegories) do
       local centrifuge_category_present = false
-      for category in pairs(centrifuge.crafting_categories) do
+      for _, category in pairs(centrifuge.crafting_categories) do
         if category == centrifuge_category then
           centrifuge_category_present = true
         end

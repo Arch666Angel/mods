@@ -49,8 +49,10 @@ if angelsmods.industries.components then
   --PETROCHEM TRIGGERS
   angelsmods.trigger.resin = true
   angelsmods.trigger.rubber = true
+  angelsmods.trigger.early_sulfuric_acid = true
 
   --SMELTING TRIGGERS
+  angelsmods.trigger.smelting_products["solder"].mixture = true
   angelsmods.trigger.smelting_molds = true
   angelsmods.trigger.smelting_products["glass"].fibre = true
   angelsmods.trigger.smelting_products["iron"].rod = true
@@ -59,6 +61,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.smelting_products["steel"].rod = true
   angelsmods.trigger.smelting_products["nickel"].plate = true
   angelsmods.trigger.smelting_products["lithium"].plate = true
+  angelsmods.trigger.early_sintering_oven = true
 
   --BIOPROCESSING TRIGGERS
   angelsmods.triggers.bio_plastic = true

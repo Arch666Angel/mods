@@ -12,7 +12,7 @@ from unit_test_logger import UnitTestLogger
 
 class UnitTestController:
 
-  def __init__(self:UnitTestController, updateMods:bool=True, factorioInstallDir:Optional[str]=None, factorioFolderDir:Optional[str]=None, logToFile:bool=False):
+  def __init__(self:UnitTestController, updateMods:bool=True, factorioInstallDir:Optional[str]=None, factorioFolderDir:Optional[str]=None, logToFile:bool=False, factorioModDir:Optional[str]=None):
     if factorioFolderDir is None:
       self.factorioFolderDir:str = os.path.abspath(f"{os.getenv('APPDATA')}/Factorio/")
     else:
@@ -23,18 +23,18 @@ class UnitTestController:
       self.__buildBobsMods()
 
     # Backup the current mod config and mod settings
-    self.currentModlistController = ModlistController(self.factorioFolderDir)
+    self.currentModlistController = ModlistController(self.factorioFolderDir, factorioModDir)
     self.currentModlistController.readConfigurationFile()
-    self.currentSettingsController = SettingsController(self.factorioFolderDir)
+    self.currentSettingsController = SettingsController(self.factorioFolderDir, factorioModDir)
     self.currentSettingsController.readSettingsFile()
 
     # Logger for unit test output
     self.logger = UnitTestLogger(logToFile)
 
     # New controllers for the unit tests
-    self.modlistController = ModlistController(self.factorioFolderDir)
-    self.settingsController = SettingsController(self.factorioFolderDir)
-    self.factorioController = FactorioController(factorioInstallDir, self.logger)
+    self.modlistController = ModlistController(self.factorioFolderDir, factorioModDir)
+    self.settingsController = SettingsController(self.factorioFolderDir, factorioModDir)
+    self.factorioController = FactorioController(factorioInstallDir, self.logger, factorioModDir)
     
 
   def __del__(self:UnitTestController):
@@ -95,7 +95,10 @@ class UnitTestController:
       self.modlistController.enableMod("angelsdev-unit-test")
     self.modlistController.writeConfigurationFile()
 
-    # Configure settings
+    # Revert settings file (default prior to changing the settings file)
+    self.currentSettingsController.writeSettingsFile()
+    
+    # Configure new settings (default settings + custom settings for this setup)
     self.settingsController.readSettingsFile()
     for settingsStage in settingCustomisation.keys():
       for settingsName, settingsValue in settingCustomisation.get(settingsStage).items():
@@ -112,9 +115,10 @@ class UnitTestController:
 if __name__ == "__main__":
   factorioFolderDir:Optional[str]=None
   factorioInstallDir:Optional[str]=None
+  factorioModDir:Optional[str]=None
   logToFile:bool=False
 
-  opts, args = getopt.getopt(sys.argv[1:], "f:i:l:", ['factoriodir=', 'installdir='])
+  opts, args = getopt.getopt(sys.argv[1:], "f:i:l:m:", ['factoriodir=', 'installdir=', 'mod-directory='])
   for opt, arg in opts:
     if opt in ('-f', '--factoriodir'):
       factorioFolderDir = os.path.realpath(arg.strip())
@@ -122,5 +126,7 @@ if __name__ == "__main__":
       factorioInstallDir = os.path.realpath(arg.strip())
     if opt in ('-l'):
       logToFile = True
+    if opt in ('-m', '--mod-directory'):
+      factorioModDir = os.path.realpath(arg.strip())
 
-  UnitTestController(updateMods=False, factorioInstallDir=factorioInstallDir, factorioFolderDir=factorioFolderDir, logToFile=logToFile).TestConfiguations(UnitTestConfiguration())
+  UnitTestController(updateMods=False, factorioInstallDir=factorioInstallDir, factorioFolderDir=factorioFolderDir, logToFile=logToFile, factorioModDir=factorioModDir).TestConfiguations(UnitTestConfiguration())

@@ -37,28 +37,26 @@ if mods["bobpower"] then
   -----------------------------------------------------------------------------
   -- power poles
   if settings.startup["bobmods-power-poles"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-medium-power-poles",
-          group = "angels-power",
-          order = "e[power-poles]-b[medium]"
-        },
-        {
-          type = "item-subgroup",
-          name = "angels-big-power-poles",
-          group = "angels-power",
-          order = "e[power-poles]-c[big]"
-        },
-        {
-          type = "item-subgroup",
-          name = "angels-sub-power-poles",
-          group = "angels-power",
-          order = "e[power-poles]-d[substation]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-medium-power-poles",
+        group = "angels-power",
+        order = "e[power-poles]-b[medium]",
+      },
+      {
+        type = "item-subgroup",
+        name = "angels-big-power-poles",
+        group = "angels-power",
+        order = "e[power-poles]-c[big]",
+      },
+      {
+        type = "item-subgroup",
+        name = "angels-sub-power-poles",
+        group = "angels-power",
+        order = "e[power-poles]-d[substation]",
+      },
+    })
 
     move_item("medium-electric-pole", "angels-medium-power-poles", "a")
     move_item("medium-electric-pole-2", "angels-medium-power-poles", "b")
@@ -81,22 +79,20 @@ if mods["bobpower"] then
   -----------------------------------------------------------------------------
   -- steam boilers and engines/turbines
   if settings.startup["bobmods-power-steam"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-steam-boiler",
-          group = "angels-power",
-          order = "a[steam]-b[boiler]"
-        },
-        {
-          type = "item-subgroup",
-          name = "angels-power-steam-generator",
-          group = "angels-power",
-          order = "a[steam]-c[steam-generator]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-steam-boiler",
+        group = "angels-power",
+        order = "a[steam]-b[boiler]",
+      },
+      {
+        type = "item-subgroup",
+        name = "angels-power-steam-generator",
+        group = "angels-power",
+        order = "a[steam]-c[steam-generator]",
+      },
+    })
 
     move_item("boiler", "angels-power-steam-boiler", "a")
     move_item("boiler-2", "angels-power-steam-boiler", "b")
@@ -115,9 +111,10 @@ if mods["bobpower"] then
     move_item("boiler-4-from-oil-boiler-3", "angels-power-steam-boiler", "db", "recipe")
     move_item("boiler-5-from-oil-boiler-4", "angels-power-steam-boiler", "eb", "recipe")
 
-    move_item("boiler-3-from-heat-exchanger", "angels-power-steam-boiler", "cc", "recipe")
-    move_item("boiler-4-from-heat-exchanger-2", "angels-power-steam-boiler", "dc", "recipe")
-    move_item("boiler-5-from-heat-exchanger-3", "angels-power-steam-boiler", "ec", "recipe")
+    move_item("boiler-2-from-heat-exchanger", "angels-power-steam-boiler", "cc", "recipe")
+    move_item("boiler-3-from-heat-exchanger-2", "angels-power-steam-boiler", "dc", "recipe")
+    move_item("boiler-4-from-heat-exchanger-3", "angels-power-steam-boiler", "ec", "recipe")
+    move_item("boiler-5-from-heat-exchanger-4", "angels-power-steam-boiler", "fc", "recipe")
 
     move_item("oil-boiler", "angels-power-steam-boiler", "f")
     move_item("oil-boiler-2", "angels-power-steam-boiler", "g")
@@ -146,16 +143,14 @@ if mods["bobpower"] then
 
   -- fluid generators
   if settings.startup["bobmods-power-fluidgenerator"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-fluid-generator",
-          group = "angels-power",
-          order = "a[steam]-d[fluid-generator]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-fluid-generator",
+        group = "angels-power",
+        order = "a[steam]-d[fluid-generator]",
+      },
+    })
 
     if settings.startup["bobmods-power-burnergenerator"].value then
       move_item("bob-burner-generator", "angels-power-fluid-generator", "a")
@@ -179,16 +174,14 @@ if mods["bobpower"] then
   -----------------------------------------------------------------------------
   -- solar panels
   if settings.startup["bobmods-power-solar"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-solar-panel",
-          group = "angels-power",
-          order = "b[solar]-b[panel]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-solar-panel",
+        group = "angels-power",
+        order = "b[solar]-b[panel]",
+      },
+    })
 
     move_item("solar-panel-small", "angels-power-solar-panel", "a[solar-panel]-a[small]-a")
     move_item("solar-panel-small-2", "angels-power-solar-panel", "a[solar-panel]-a[small]-b")
@@ -205,30 +198,26 @@ if mods["bobpower"] then
 
   -- accumulators
   if settings.startup["bobmods-power-accumulators"].value then
-    data:extend(
-        {
-          {
-            type = "item-subgroup",
-            name = "angels-power-accumulator",
-            group = "angels-power",
-            order = "b[solar]-c[accumulator]"
-          }
-        }
-      )
+    data:extend({
+      {
+        type = "item-subgroup",
+        name = "angels-power-accumulator",
+        group = "angels-power",
+        order = "b[solar]-c[accumulator]",
+      },
+    })
 
-      move_item("accumulator", "angels-power-accumulator", "a[capacity]-a")
+    move_item("accumulator", "angels-power-accumulator", "a[capacity]-a")
+    move_item("large-accumulator-2", "angels-power-accumulator", "a[capacity]-b")
+    move_item("large-accumulator-3", "angels-power-accumulator", "a[capacity]-c")
 
-      move_item("large-accumulator", "angels-power-accumulator", "a[capacity]-b")
-      move_item("large-accumulator-2", "angels-power-accumulator", "a[capacity]-c")
-      move_item("large-accumulator-3", "angels-power-accumulator", "a[capacity]-d")
+    move_item("slow-accumulator", "angels-power-accumulator", "b[slow]-a")
+    move_item("slow-accumulator-2", "angels-power-accumulator", "b[slow]-b")
+    move_item("slow-accumulator-3", "angels-power-accumulator", "b[slow]-c")
 
-      move_item("slow-accumulator", "angels-power-accumulator", "b[slow]-b")
-      move_item("slow-accumulator-2", "angels-power-accumulator", "b[slow]-c")
-      move_item("slow-accumulator-3", "angels-power-accumulator", "b[slow]-d")
-
-      move_item("fast-accumulator", "angels-power-accumulator", "c[fast]-b")
-      move_item("fast-accumulator-2", "angels-power-accumulator", "c[fast]-c")
-      move_item("fast-accumulator-3", "angels-power-accumulator", "c[fast]-d")
+    move_item("fast-accumulator", "angels-power-accumulator", "c[fast]-a")
+    move_item("fast-accumulator-2", "angels-power-accumulator", "c[fast]-b")
+    move_item("fast-accumulator-3", "angels-power-accumulator", "c[fast]-c")
   end
 
   -----------------------------------------------------------------------------
@@ -236,24 +225,20 @@ if mods["bobpower"] then
   -----------------------------------------------------------------------------
   -- burner reactor
   if settings.startup["bobmods-power-heatsources"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-nuclear-reactor-a",
-          group = "angels-power",
-          order = "c[nuclear]-b[angels-burner-reactor]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-nuclear-reactor-a",
+        group = "angels-power",
+        order = "c[nuclear]-b[angels-burner-reactor]",
+      },
+    })
 
     move_item("burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
     move_item("burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
-    move_item("burner-reactor-3", "angels-power-nuclear-reactor-a", "a[fuel-burner]-c")
 
     move_item("fluid-reactor", "angels-power-nuclear-reactor-a", "b[fluid-burner]-a")
     move_item("fluid-reactor-2", "angels-power-nuclear-reactor-a", "b[fluid-burner]-b")
-    move_item("fluid-reactor-3", "angels-power-nuclear-reactor-a", "b[fluid-burner]-c")
   end
 
   -- nuclear fuel
@@ -261,16 +246,14 @@ if mods["bobpower"] then
 
   -- nuclear reactor
   if settings.startup["bobmods-power-nuclear"].value then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-nuclear-reactor-b",
-          group = "angels-power",
-          order = "c[nuclear]-c[nuclear-reactor]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-nuclear-reactor-b",
+        group = "angels-power",
+        order = "c[nuclear]-c[nuclear-reactor]",
+      },
+    })
 
     move_item("nuclear-reactor", "angels-power-nuclear-reactor-b", "a")
     move_item("nuclear-reactor-2", "angels-power-nuclear-reactor-b", "b")
@@ -278,38 +261,36 @@ if mods["bobpower"] then
   end
 
   -- heat pipes
-  if settings.startup["bobmods-power-steam"].value or
-     settings.startup["bobmods-power-nuclear"].value or
-     settings.startup["bobmods-power-heatsources"].value
+  if
+    settings.startup["bobmods-power-steam"].value
+    or settings.startup["bobmods-power-nuclear"].value
+    or settings.startup["bobmods-power-heatsources"].value
   then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-nuclear-heat-pipe",
-          group = "angels-power",
-          order = "c[nuclear]-d[heat-pipe]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-nuclear-heat-pipe",
+        group = "angels-power",
+        order = "c[nuclear]-d[heat-pipe]",
+      },
+    })
 
     move_item("heat-pipe", "angels-power-nuclear-heat-pipe", "a")
     move_item("heat-pipe-2", "angels-power-nuclear-heat-pipe", "b")
     move_item("heat-pipe-3", "angels-power-nuclear-heat-pipe", "c")
+    move_item("heat-pipe-4", "angels-power-nuclear-heat-pipe", "d")
   end
 
   -- heat exchanger
   if settings.startup["bobmods-power-steam"].value == true then
-    data:extend(
+    data:extend({
       {
-        {
-          type = "item-subgroup",
-          name = "angels-power-nuclear-heat-exchanger",
-          group = "angels-power",
-          order = "c[nuclear]-e[heat-exchanger]"
-        }
-      }
-    )
+        type = "item-subgroup",
+        name = "angels-power-nuclear-heat-exchanger",
+        group = "angels-power",
+        order = "c[nuclear]-e[heat-exchanger]",
+      },
+    })
 
     move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "a")
     move_item("heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "b")
@@ -318,9 +299,10 @@ if mods["bobpower"] then
     move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "aa", "recipe")
     move_item("heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "ba", "recipe")
     move_item("heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "ca", "recipe")
+    move_item("heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "da", "recipe")
 
-    move_item("heat-exchanger-2-from-boiler-4", "angels-power-nuclear-heat-exchanger", "bb", "recipe")
-    move_item("heat-exchanger-3-from-boiler-5", "angels-power-nuclear-heat-exchanger", "cb", "recipe")
+    move_item("heat-exchanger-2-from-boiler-3", "angels-power-nuclear-heat-exchanger", "bb", "recipe")
+    move_item("heat-exchanger-3-from-boiler-4", "angels-power-nuclear-heat-exchanger", "cb", "recipe")
+    move_item("heat-exchanger-4-from-boiler-5", "angels-power-nuclear-heat-exchanger", "db", "recipe")
   end
-
 end

@@ -1,6 +1,6 @@
 local energyInterfaceName = "angels-cab-energy-interface%s"
 
-data:extend {
+data:extend({
   {
     type = "technology",
     name = "angels-cab",
@@ -8,37 +8,39 @@ data:extend {
     icon_size = 128,
     prerequisites = {
       "automobilism",
-      "electric-energy-distribution-1"
+      "electric-energy-distribution-1",
+      "circuit-network",
+      "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-cab"
+        recipe = "angels-cab",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cab-deploy-charge"
+        recipe = "angels-cab-deploy-charge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cab-undeploy-charge"
+        recipe = "angels-cab-undeploy-charge",
       },
       {
         type = "unlock-recipe",
-        recipe = string.format(energyInterfaceName, "-mk1")
-      }
+        recipe = string.format(energyInterfaceName, "-mk1"),
+      },
     },
     unit = {
       count = 60,
       ingredients = {
-        {type = "item", name = "automation-science-pack", amount = 1},
-        {type = "item", name = "logistic-science-pack", amount = 1},
-        {type = "item", name = "chemical-science-pack", amount = 1}
+        { type = "item", name = "automation-science-pack", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
       },
-      time = 15
+      time = 15,
     },
-    order = "c-a"
-  }
+    order = "c-a",
+  },
   --[[{
     type = "technology",
     name = "angels-cab-energy-transfer",
@@ -68,4 +70,4 @@ data:extend {
     },
     order = "c-a"
   },]]
-}
+})

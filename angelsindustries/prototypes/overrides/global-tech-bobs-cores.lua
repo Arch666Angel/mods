@@ -6,10 +6,6 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    AI.core_replace("electrolysis-1", "basic", "processing")
-    OV.remove_prereq("electrolysis-1","tech-specialised-labs-basic")
-    OV.add_prereq("electrolysis-1", "tech-specialised-labs-basic-processing-1")
-    AI.core_replace("electrolysis-2", "basic", "processing")
     AI.core_replace("grinding", "basic", "processing")
     AI.core_replace("polishing", "basic", "processing")
     AI.core_replace("mixing-furnace", "basic", "processing")
@@ -22,6 +18,8 @@ if angelsmods.industries.tech then
     AI.core_replace("gas-canisters", "basic", "processing")
     AI.core_replace("ceramics", "basic", "processing")
 
+    -- depending on settings and enabled mods, bobingabout-enrichment-process could be using either basic or processing core
+    AI.core_replace("bobingabout-enrichment-process", "basic", "energy")
     AI.core_replace("bobingabout-enrichment-process", "processing", "energy")
 
     if not mods["bobtech"] then
@@ -95,7 +93,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobclasses"] then
     --OV.set_science_pack("bodies", "datacore-enhance-2", 2)
-    AI.core_replace("bodies","basic","enhance")
+    AI.core_replace("bodies", "basic", "enhance")
   end
 
   -------------------------------------------------------------------------------
@@ -128,19 +126,21 @@ if angelsmods.industries.tech then
   if mods["bobmodules"] then
     AI.core_replace("effect-transmission-2", "processing", "enhance")
     AI.core_replace("effect-transmission-3", "processing", "enhance")
-    OV.remove_science_pack("speed-module", "angels-science-pack-orange")
-    OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
-    OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
+    if bobmods.modules.ModulesLab then
+      OV.remove_science_pack("speed-module", "angels-science-pack-orange")
+      OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
+      OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
 
-    OV.remove_science_pack("speed-module", "datacore-enhance-1")
-    OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
-    OV.remove_science_pack("productivity-module", "datacore-enhance-1")
-    OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
+      OV.remove_science_pack("speed-module", "datacore-enhance-1")
+      OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
+      OV.remove_science_pack("productivity-module", "datacore-enhance-1")
+      OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
 
-    OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
+      OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+    end
   end
 
   -------------------------------------------------------------------------------
@@ -151,14 +151,14 @@ if angelsmods.industries.tech then
     AI.core_replace("logistics", "basic", "logistic")
     -- toolbelts
     AI.core_replace("toolbelt-2", "basic", "enhance")
-    AI.core_replace("toolbelt-3", "basic", "enhance")
-    AI.core_replace("toolbelt-4", "basic", "enhance")
-    AI.core_replace("toolbelt-5", "basic", "enhance")
+    AI.core_replace("toolbelt-3", "processing", "enhance")
+    AI.core_replace("toolbelt-4", "processing", "enhance")
+    AI.core_replace("toolbelt-5", "processing", "enhance")
     -- modular roboports
     AI.core_replace("bob-robo-modular-1", "basic", "logistic")
     AI.core_replace("bob-robo-modular-2", "basic", "logistic")
     AI.core_replace("bob-robo-modular-3", "basic", "logistic")
-    AI.core_replace("bob-robo-modular-4", "processing", "logistic")
+    AI.core_replace("bob-robo-modular-4", "basic", "logistic")
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
@@ -218,6 +218,7 @@ if angelsmods.industries.tech then
   -- BOBS POWER -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
+    AI.core_replace("steam-power", "energy", "basic")
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
       AI.core_replace("fluid-generator-1", "logistic", "energy")
       AI.core_replace("fluid-generator-2", "logistic", "energy")
@@ -226,7 +227,7 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-power-steam"].value == true then
       AI.core_replace("bob-steam-engine-2", "basic", "energy")
       AI.core_replace("bob-steam-engine-3", "basic", "energy")
-      AI.core_replace("bob-steam-engine-4", "basic", "energy")
+      AI.core_replace("bob-steam-engine-4", "processing", "energy")
       AI.core_replace("bob-steam-engine-5", "processing", "energy")
     end
     if mods["bobrevamp"] then
@@ -283,11 +284,11 @@ if angelsmods.industries.tech then
 
       table.insert(
         data.raw.recipe["science-pack-gold"].ingredients,
-        {type = "item", name = "datacore-processing-2", amount = 1}
+        { type = "item", name = "datacore-processing-2", amount = 1 }
       )
       table.insert(
         data.raw.recipe["science-pack-gold"].ingredients,
-        {type = "item", name = "datacore-enhance-2", amount = 1}
+        { type = "item", name = "datacore-enhance-2", amount = 1 }
       )
     end
 

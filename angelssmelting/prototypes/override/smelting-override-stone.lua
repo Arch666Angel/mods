@@ -8,7 +8,7 @@ angelsmods.functions.override_item_conditions({
   value = 200,
   list = {
     "stone",
-  }
+  },
 })
 
 angelsmods.functions.move_item("stone", "slag-processing-1", "c")
@@ -24,22 +24,21 @@ OV.patch_recipes({
   { name = "stone-brick", subgroup = "angels-stone", order = "f[stone-brick]" },
   {
     name = "concrete",
-    icons = angelsmods.functions.add_number_icon_layer(
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__base__/graphics/icons/concrete.png",
-          icon_size = 64, icon_mipmaps = 4,
-          scale = 0.5
-        }
+        icon = "__base__/graphics/icons/concrete.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 0.5,
       },
-      1, angelsmods.smelting.number_tint),
+    }, 1, angelsmods.smelting.number_tint),
     subgroup = "angels-stone-casting",
-    order = "h[concrete]-a" },
+    order = "h[concrete]-a",
+  },
   { name = "hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-c" },
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
   { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
-OV.add_prereq("concrete", "ore-crushing")
 
 -------------------------------------------------------------------------------
 -- ANGEL OVERRIDES ------------------------------------------------------------
@@ -49,30 +48,27 @@ if angelsmods.refining then
     {
       name = "angelsore3-crushed-smelting",
       subgroup = "angels-copper-casting",
-      order = "j[angels-plate-copper]-a"
+      order = "j[angels-plate-copper]-a",
     },
   })
 end
 
-if not (angelsmods.trigger.smelting_products["lead"].plate or
-        angelsmods.trigger.smelting_products["tin"].plate) then
+if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate) then
   -- special vanilla
   OV.patch_recipes({
-    { 
+    {
       name = "cement-mixture-1",
-      ingredients =
-      {
+      ingredients = {
         { name = "stone-crushed", type = "item", amount = "quartz" },
       },
     },
-    { 
+    {
       name = "cement-mixture-2",
-      ingredients =
-      {
+      ingredients = {
         { name = "stone-crushed", type = "item", amount = "quartz" },
         { name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
       },
-    }
+    },
   })
 end
 
@@ -81,17 +77,16 @@ if angelsmods.trigger.smelting_products["steel"].rod then
   OV.patch_recipes({
     {
       name = "angels-reinforced-concrete-brick",
-      ingredients =
-      {
+      ingredients = {
         { name = "steel-plate", type = "item", amount = 0 }, -- was 4 plates
         { name = "angels-plate-steel", type = "item", amount = 0 }, -- was 4 plates
         { name = "angels-rod-steel", type = "item", amount = 2 }, -- replaced with 2 rods (equal to 4 plates)
-      }
-    }
+      },
+    },
   })
 end
 
 if angelsmods.trigger.smelting_products["aluminium"].ingot then
 else
-  OV.remove_prereq("angels-stone-smelting-3","angels-aluminium-smelting-1")
+  OV.remove_prereq("angels-stone-smelting-3", "angels-aluminium-smelting-1")
 end

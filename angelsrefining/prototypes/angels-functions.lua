@@ -2,7 +2,7 @@
 -- GET ICON/ICONS FROM FLUID/ITEM ---------------------------------------------
 -------------------------------------------------------------------------------
 local function get_icons(object_name)
-  for _, prototype in pairs({"item", "fluid", "ammo", "capsule"}) do
+  for _, prototype in pairs({ "item", "fluid", "ammo", "capsule" }) do
     local object = data.raw[prototype][object_name]
     if object then
       if object.icons then -- icons has precedence over icon
@@ -15,8 +15,8 @@ local function get_icons(object_name)
             icon = object.icon,
             icon_size = object.icon_size or 32,
             icon_mipmaps = object.icon_mipmaps ~= 1 and object.icon_mipmaps or nil,
-            scale = 32 / (object.icon_size or 32)
-          }
+            scale = 32 / (object.icon_size or 32),
+          },
         }
       end
     end
@@ -31,36 +31,34 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
 
   if layers_to_add[1] then
     for _, layer_to_add in pairs(layers_to_add) do
-      table.insert(icon_layers,
-        {
-          icon = layer_to_add.icon,
-          icon_size = layer_to_add.icon_size,
-          icon_mipmaps = layer_to_add.icon_mipmaps,
-          tint = layer_to_add.tint,
-          scale = (layer_to_add.scale or 1) * (layer_scale or 1),
-          shift =
-          {
-            (layer_to_add.shift and (layer_to_add.shift[1] or layer_to_add.shift.x) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
-            (layer_to_add.shift and (layer_to_add.shift[2] or layer_to_add.shift.y) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
-          }
-        }
-      )
+      table.insert(icon_layers, {
+        icon = layer_to_add.icon,
+        icon_size = layer_to_add.icon_size,
+        icon_mipmaps = layer_to_add.icon_mipmaps,
+        tint = layer_to_add.tint,
+        scale = (layer_to_add.scale or 1) * (layer_scale or 1),
+        shift = {
+          (layer_to_add.shift and (layer_to_add.shift[1] or layer_to_add.shift.x) or 0) * (layer_scale or 1)
+            + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
+          (layer_to_add.shift and (layer_to_add.shift[2] or layer_to_add.shift.y) or 0) * (layer_scale or 1)
+            + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
+        },
+      })
     end
   else
-    table.insert(icon_layers,
-      {
-        icon = layers_to_add.icon,
-        icon_size = layers_to_add.icon_size,
-        icon_mipmaps = layers_to_add.icon_mipmaps,
-        tint = layers_to_add.tint,
-        scale = (layers_to_add.scale or 1) * (layer_scale or 1),
-        shift =
-        {
-            (layers_to_add.shift and (layers_to_add.shift[1] or layers_to_add.shift.x) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
-            (layers_to_add.shift and (layers_to_add.shift[2] or layers_to_add.shift.y) or 0) * (layer_scale or 1) + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
-        }
-      }
-    )
+    table.insert(icon_layers, {
+      icon = layers_to_add.icon,
+      icon_size = layers_to_add.icon_size,
+      icon_mipmaps = layers_to_add.icon_mipmaps,
+      tint = layers_to_add.tint,
+      scale = (layers_to_add.scale or 1) * (layer_scale or 1),
+      shift = {
+        (layers_to_add.shift and (layers_to_add.shift[1] or layers_to_add.shift.x) or 0) * (layer_scale or 1)
+          + (layer_shift and (layer_shift[1] or layer_shift.x) or 0),
+        (layers_to_add.shift and (layers_to_add.shift[2] or layers_to_add.shift.y) or 0) * (layer_scale or 1)
+          + (layer_shift and (layer_shift[2] or layer_shift.y) or 0),
+      },
+    })
   end
 
   return icon_layers
@@ -98,13 +96,15 @@ end
 
 local function clean_table(t)
   -- removes nil values from a table so it becomes a table without holes
-  if type(t) ~= "table" then return t end
+  if type(t) ~= "table" then
+    return t
+  end
   local clone = {}
-  for k,v in pairs(t or {}) do
+  for k, v in pairs(t or {}) do
     t[k] = nil
     table.insert(clone, v)
   end
-  for i,v in ipairs(clone) do
+  for i, v in ipairs(clone) do
     t[i] = v
   end
   return t
@@ -116,34 +116,36 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
   -- adds a new layer to icon_layers to show the tier number (with a color)
   -- outline_tint is optional
   local icon_size_scale = 1
-  local icon_size_shift = {0, 0}
+  local icon_size_shift = { 0, 0 }
 
   icon_layers = icon_layers or {}
   if #icon_layers == 0 then
     -- if the icon_layer is empty, we make sure it will be a full sized number after usage in the recipe functions
     icon_size_scale = 32 / 10.24
-    icon_size_shift = {11.5 * icon_size_scale, 12 * icon_size_scale}
-  elseif type(icon_layers)=="string" then --to deal with errors passing the void icon as a string
-    icon_layers={{icon=icon_layers, icon_size = 32}}
+    icon_size_shift = { 11.5 * icon_size_scale, 12 * icon_size_scale }
+  elseif type(icon_layers) == "string" then --to deal with errors passing the void icon as a string
+    icon_layers = { { icon = icon_layers, icon_size = 32 } }
   elseif icon_layers[1].scale then
-    icon_size_scale = (icon_layers[1].icon_size or 32) * (icon_layers[1].scale) / 32
+    icon_size_scale = (icon_layers[1].icon_size or 32) * icon_layers[1].scale / 32
   end
 
   return angelsmods.functions.add_icon_layer(icon_layers, {
     {
-      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier.."-outline.png",
-      icon_size = 64, icon_mipmaps = 2,
-      tint = unify_tint(outline_tint or {0, 0, 0, 1}),
+      icon = "__angelsrefining__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
+      icon_size = 64,
+      icon_mipmaps = 2,
+      tint = unify_tint(outline_tint or { 0, 0, 0, 1 }),
       scale = 0.5 * icon_size_scale,
-      shift = icon_size_shift
+      shift = icon_size_shift,
     },
     {
-      icon = "__angelsrefining__/graphics/icons/numerals/num-"..number_tier..".png",
-      icon_size = 64, icon_mipmaps = 2,
+      icon = "__angelsrefining__/graphics/icons/numerals/num-" .. number_tier .. ".png",
+      icon_size = 64,
+      icon_mipmaps = 2,
       tint = unify_tint(number_tint),
       scale = 0.5 * icon_size_scale,
-      shift = icon_size_shift
-    }
+      shift = icon_size_shift,
+    },
   })
 end
 
@@ -154,58 +156,58 @@ local icon_tints_table = {
   --Sourced from:
   --https://sciencenotes.org/molecule-atom-colors-cpk-colors/
   -- Sorted by periodic atomic number
-  H  = {{255, 255, 255}, {243, 243, 243}, {242, 242, 242}}, --Hydrogen
-  Hd = {{255, 255, 192}, {206, 206, 173}, {196, 196, 156}}, --Deuterium
-  Li = {{204, 128, 255}},                                   --Lithium
-  C  = {{044, 044, 044}, {064, 064, 064}, {090, 090, 090}}, --Carbon -- but darkened
-  N  = {{048, 080, 248}, {045, 076, 175}, {038, 063, 150}}, --Nitrogen
-  O  = {{255, 013, 013}, {214, 012, 012}, {198, 011, 011}}, --Oxygen
-  F  = {{144, 224, 080}, {181, 208, 000}, {181, 208, 000}}, --Fluorine
-  Na = {{171, 092, 242}},                                   --Sodium
-  Mg = {{138, 255, 000}},                                   --Magnesium
-  Al = {{191, 166, 166}},                                   --Aluminium
-  Si = {{240, 200, 160}},                                   --Silicon
-  P  = {{255, 128, 000}},                                   --Phosphorus
-  S  = {{255, 255, 048}, {216, 196, 017}, {210, 187, 030}}, --Sulfur
-  Cl = {{031, 240, 031}, {057, 211, 040}, {075, 195, 045}}, --Chlorine
-  K  = {{143, 064, 212}},                                   --Potassium
-  Ca = {{061, 255, 000}},                                   --Calcium
-  Ti = {{191, 194, 199}},                                   --Titanium
-  Cr = {{138, 153, 199}},                                   --Chrome
-  Mn = {{156, 122, 199}},                                   --Manganese
-  Fe = {{224, 102, 051}},                                   --Iron
-  Co = {{240, 144, 160}},                                   --Cobalt
-  Ni = {{080, 208, 080}},                                   --Nickel
-  Cu = {{200, 128, 051}},                                   --Copper
-  Zn = {{125, 128, 176}},                                   --Zinc
-  Ag = {{192, 192, 192}},                                   --Silver
-  Sn = {{102, 128, 128}},                                   --Tin
-  Cs = {{087, 023, 143}},                                   --Cesium
-  W  = {{033, 148, 214}},                                   --Tungsten (Wolfram)
-  Os = {{038, 102, 150}},                                   --Osmium
-  Pt = {{208, 208, 224}},                                   --Platium
-  Au = {{255, 209, 035}},                                   --Gold
-  Hg = {{184, 184, 208}},                                   --Mercury
-  Pb = {{087, 089, 097}},                                   --Lead
-  Po = {{171, 092, 000}},                                   --Polonium
-  Th = {{000, 186, 255}},                                   --Thorium
-  Pa = {{000, 161, 255}},                                   --Protactinium
-  U  = {{000, 143, 255}},                                   --Uranium
-  Np = {{000, 128, 255}},                                   --Neptunium
-  Pu = {{000, 107, 255}},                                   --Plutonium
-  Am = {{084, 092, 242}},                                   --Americium
-  Cm = {{120, 092, 227}},                                   --Curium
+  H = { { 255, 255, 255 }, { 243, 243, 243 }, { 242, 242, 242 } }, --Hydrogen
+  Hd = { { 255, 255, 192 }, { 206, 206, 173 }, { 196, 196, 156 } }, --Deuterium
+  Li = { { 204, 128, 255 } }, --Lithium
+  C = { { 044, 044, 044 }, { 064, 064, 064 }, { 090, 090, 090 } }, --Carbon -- but darkened
+  N = { { 048, 080, 248 }, { 045, 076, 175 }, { 038, 063, 150 } }, --Nitrogen
+  O = { { 255, 013, 013 }, { 214, 012, 012 }, { 198, 011, 011 } }, --Oxygen
+  F = { { 144, 224, 080 }, { 181, 208, 000 }, { 181, 208, 000 } }, --Fluorine
+  Na = { { 171, 092, 242 } }, --Sodium
+  Mg = { { 138, 255, 000 } }, --Magnesium
+  Al = { { 191, 166, 166 } }, --Aluminium
+  Si = { { 240, 200, 160 } }, --Silicon
+  P = { { 255, 128, 000 } }, --Phosphorus
+  S = { { 255, 255, 048 }, { 216, 196, 017 }, { 210, 187, 030 } }, --Sulfur
+  Cl = { { 031, 240, 031 }, { 057, 211, 040 }, { 075, 195, 045 } }, --Chlorine
+  K = { { 143, 064, 212 } }, --Potassium
+  Ca = { { 061, 255, 000 } }, --Calcium
+  Ti = { { 191, 194, 199 } }, --Titanium
+  Cr = { { 138, 153, 199 } }, --Chrome
+  Mn = { { 156, 122, 199 } }, --Manganese
+  Fe = { { 224, 102, 051 } }, --Iron
+  Co = { { 240, 144, 160 } }, --Cobalt
+  Ni = { { 080, 208, 080 } }, --Nickel
+  Cu = { { 200, 128, 051 } }, --Copper
+  Zn = { { 125, 128, 176 } }, --Zinc
+  Ag = { { 192, 192, 192 } }, --Silver
+  Sn = { { 102, 128, 128 } }, --Tin
+  Cs = { { 087, 023, 143 } }, --Cesium
+  W = { { 033, 148, 214 } }, --Tungsten (Wolfram)
+  Os = { { 038, 102, 150 } }, --Osmium
+  Pt = { { 208, 208, 224 } }, --Platium
+  Au = { { 255, 209, 035 } }, --Gold
+  Hg = { { 184, 184, 208 } }, --Mercury
+  Pb = { { 087, 089, 097 } }, --Lead
+  Po = { { 171, 092, 000 } }, --Polonium
+  Th = { { 000, 186, 255 } }, --Thorium
+  Pa = { { 000, 161, 255 } }, --Protactinium
+  U = { { 000, 143, 255 } }, --Uranium
+  Np = { { 000, 128, 255 } }, --Neptunium
+  Pu = { { 000, 107, 255 } }, --Plutonium
+  Am = { { 084, 092, 242 } }, --Americium
+  Cm = { { 120, 092, 227 } }, --Curium
   --fake/compicated/custom tints
-  Tw = {{243, 135, 000}},                                   --Thermal water
-  Oi = {{069, 069, 069}, {054, 054, 054}, {036, 036, 036}}, --Coal/Oil
-  Xx = {{041, 041, 180}},                                   --Complex (really strange materials)
-  Ws = {{094, 114, 174}, {088, 104, 163}, {088, 101, 155}}, --Water/Steam
-  Sg = {{255, 105, 180}},                                   --Syngas
-  Ng = {{105, 135, 090}, {096, 122, 082}, {088, 113, 075}}, --Natural Gas
-  Cb = {{015, 015, 015}},                                   --Other Carbon Solids
-  Ax = {{241, 050, 238}},                                   --Alien Stuffs
-  Aw = {{194, 227, 091}, {184, 239, 000}, {156, 207, 000}},  --Alien Feed (gas/water)
-  Oc = {{044, 044, 044}, {140, 000, 000}, {140, 000, 000}}, -- Carbon (oxides) darker for less contrast
+  Tw = { { 243, 135, 000 } }, --Thermal water
+  Oi = { { 069, 069, 069 }, { 054, 054, 054 }, { 036, 036, 036 } }, --Coal/Oil
+  Xx = { { 041, 041, 180 } }, --Complex (really strange materials)
+  Ws = { { 094, 114, 174 }, { 088, 104, 163 }, { 088, 101, 155 } }, --Water/Steam
+  Sg = { { 255, 105, 180 } }, --Syngas
+  Ng = { { 105, 135, 090 }, { 096, 122, 082 }, { 088, 113, 075 } }, --Natural Gas
+  Cb = { { 015, 015, 015 } }, --Other Carbon Solids
+  Ax = { { 241, 050, 238 } }, --Alien Stuffs
+  Aw = { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }, --Alien Feed (gas/water)
+  Oc = { { 044, 044, 044 }, { 140, 000, 000 }, { 140, 000, 000 } }, -- Carbon (oxides) darker for less contrast
 }
 --[[{ unused materials
   Ne = {{179, 227, 245}}, Ar = {{128, 209, 227}}, Sc = {{230, 230, 230}}, V  = {{166, 166, 171}}, Ga = {{194, 143, 143}}, Ge = {{102, 143, 143}}, As = {{189, 128, 227}}, Se = {{255, 161, 000}}, 
@@ -224,18 +226,30 @@ local function get_molecule_codes(molec_formula)
   while string.len(molec_formula) > 0 do
     --take first segment (or throw error) and trim each code off and repeat until empty or error
     local trim = 1 --always trim at least 1 per code
-    if string.find(molec_formula,"^%u%l%d+") == 1 then --Two letter code with number
-      table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
-      trim = string.len(tostring(string_codes[#string_codes].amount)) + 1 
-    elseif string.find(molec_formula,"^%u%l") == 1 then --Two letter code without number
-      table.insert(string_codes, {form = string.sub(molec_formula, 1, 2), amount = 1}) --no amount-default 1
-    elseif string.find(molec_formula,"^%u%d+") == 1 then --One letter code with number
-      table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = tonumber(string.sub(molec_formula, string.find(molec_formula,"%d+")))})
+    if string.find(molec_formula, "^%u%l%d+") == 1 then --Two letter code with number
+      table.insert(string_codes, {
+        form = string.sub(molec_formula, 1, 2),
+        amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
+      })
       trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
-    elseif string.find(molec_formula,"^%u") == 1 then --One letter code without number
-      table.insert(string_codes, {form = string.sub(molec_formula, 1, 1), amount = 1}) --no amount-default 1
+    elseif string.find(molec_formula, "^%u%l") == 1 then --Two letter code without number
+      table.insert(string_codes, { form = string.sub(molec_formula, 1, 2), amount = 1 }) --no amount-default 1
+    elseif string.find(molec_formula, "^%u%d+") == 1 then --One letter code with number
+      table.insert(string_codes, {
+        form = string.sub(molec_formula, 1, 1),
+        amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
+      })
+      trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
+    elseif string.find(molec_formula, "^%u") == 1 then --One letter code without number
+      table.insert(string_codes, { form = string.sub(molec_formula, 1, 1), amount = 1 }) --no amount-default 1
     else --none of the above segments
-      error("Cannot determine next string code in '"..(molec_formula or "").." of original code "..orig.."'. Please report this to the Angel's dev team.")
+      error(
+        "Cannot determine next string code in '"
+          .. (molec_formula or "")
+          .. " of original code "
+          .. orig
+          .. "'. Please report this to the Angel's dev team."
+      )
     end
     --trim string correctly
     local symbol = string_codes[#string_codes].form
@@ -247,7 +261,7 @@ end
 
 local function create_recipe_molecule_icons(molecules_icon, molecules_shift, molecules_scale)
   molecules_icon = clean_table(molecules_icon) or {}
-  molecules_shift = molecules_shift or {{-11.5, 12}, {11.5, 12}, {0, 12}}
+  molecules_shift = molecules_shift or { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }
   molecules_scale = molecules_scale or (10.24 / 32) -- assume base 32 size
 
   for molecule_index, molecule_icon in pairs(molecules_icon) do
@@ -261,8 +275,8 @@ local function create_recipe_molecule_icons(molecules_icon, molecules_shift, mol
       molecules_icon[molecule_index] = {
         {
           icon = molecule_icon,
-          icon_size = 32
-        }
+          icon_size = 32,
+        },
       }
     elseif type(molecule_icon[1]) ~= "table" then
       local mi = util.table.deepcopy(molecule_icon)
@@ -271,22 +285,23 @@ local function create_recipe_molecule_icons(molecules_icon, molecules_shift, mol
           icon = mi.icon or mi[1] or nil,
           shift = mi.shift or mi[3] or nil,
           scale = mi.scale or mi[4] or nil,
-          tint = mi.tint or mi[5] or nil
-        }
+          tint = mi.tint or mi[5] or nil,
+        },
       }
       if molecules_icon[molecule_index][1].icon then
         molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
         if molecules_icon[molecule_index][1].icon_size ~= 32 then
-          molecules_icon[molecule_index][1].scale =
-            (molecules_icon[molecule_index][1].scale or 1) * 32 / molecules_icon[molecule_index][1].icon_size
+          molecules_icon[molecule_index][1].scale = (molecules_icon[molecule_index][1].scale or 1)
+            * 32
+            / molecules_icon[molecule_index][1].icon_size
         end
       else
         --something is wrong here but we need to return something
         molecules_icon[molecule_index] = {
           {
             icon = "__angelsrefining__/graphics/icons/void.png",
-            icon_size = 32
-          }
+            icon_size = 32,
+          },
         }
       end
     else
@@ -299,15 +314,15 @@ local function create_recipe_molecule_icons(molecules_icon, molecules_shift, mol
     molecule_icon = molecules_icon[molecule_index]
 
     -- now shift this icon to its correct position
-    molecule_shift = molecules_shift[molecule_index] or {0, 0}
-    molecule_scale = molecules_scale
+    local molecule_shift = molecules_shift[molecule_index] or { 0, 0 }
+    local molecule_scale = molecules_scale
     for layer_index, layer in pairs(molecule_icon) do
       layer.scale = layer.scale or 1
-      layer.shift = {(layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0}
+      layer.shift = { (layer.shift or {})[1] or 0, (layer.shift or {})[2] or 0 }
 
       layer.shift = {
         layer.shift[1] * molecule_scale + molecule_shift[1],
-        layer.shift[2] * molecule_scale + molecule_shift[2]
+        layer.shift[2] * molecule_scale + molecule_shift[2],
       }
       layer.scale = layer.scale * molecule_scale
 
@@ -328,7 +343,7 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
     if type(molecule_icon) ~= "table" then
       molecule_icon = {
         icon = molecule_icon,
-        icon_size = 32
+        icon_size = 32,
       }
     else
       molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
@@ -341,7 +356,7 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
       end
     end
 
-    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or { -10, -10 }
     molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15 / molecule_icon.icon_size
 
     molecule_icon[1] = nil
@@ -358,9 +373,9 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
-        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
-        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or { form = "unknown" }).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or { form = "unknown" }).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or { form = "unknown" }).form][3] or {}),
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -377,31 +392,31 @@ function angelsmods.functions.create_gas_fluid_icon(molecule_icon, tints)
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-base.png",
       icon_size = 596,
       scale = 32 / 596,
-      tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7},
-      shift = (not molecule_icon) and {-3.5, 0} or nil
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+      shift = not molecule_icon and { -3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-top.png",
       icon_size = 596,
       scale = 32 / 596,
       tint = tints.top,
-      shift = (not molecule_icon) and {-3.5, 0} or nil
+      shift = not molecule_icon and { -3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-mid.png",
       icon_size = 596,
       scale = 32 / 596,
       tint = tints.mid,
-      shift = (not molecule_icon) and {-3.5, 0} or nil
+      shift = not molecule_icon and { -3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-item-bot.png",
       icon_size = 596,
       scale = 32 / 596,
       tint = tints.bot,
-      shift = (not molecule_icon) and {-3.5, 0} or nil
+      shift = not molecule_icon and { -3.5, 0 } or nil,
     },
-    molecule_icon
+    molecule_icon,
   }
 end
 
@@ -409,8 +424,10 @@ end
 function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
-  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
+  bot_molecules_icon =
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+  top_molecules_icon =
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
   -- uses the get_molecule_codes for default tints
@@ -418,9 +435,9 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
-        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
-        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or { form = "unknown" }).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or { form = "unknown" }).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or { form = "unknown" }).form][3] or {}),
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -437,26 +454,26 @@ function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, 
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-base.png",
       icon_size = 750,
       scale = 32 / 750,
-      tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7}
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-top.png",
       icon_size = 750,
       scale = 32 / 750,
-      tint = tints.top
+      tint = tints.top,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-mid.png",
       icon_size = 750,
       scale = 32 / 750,
-      tint = tints.mid
+      tint = tints.mid,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-bot.png",
       icon_size = 750,
       scale = 32 / 750,
-      tint = tints.bot
-    }
+      tint = tints.bot,
+    },
   }
   for _, bot_molecule_icon in pairs(bot_molecules_icon) do
     for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do
@@ -479,9 +496,9 @@ function angelsmods.functions.create_gas_tech_icon(tints)
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
-        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
-        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or { form = "unknown" }).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or { form = "unknown" }).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or { form = "unknown" }).form][3] or {}),
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -498,26 +515,26 @@ function angelsmods.functions.create_gas_tech_icon(tints)
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-base.png",
       icon_size = 604,
       scale = 32 / 604,
-      tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7}
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-top.png",
       icon_size = 604,
       scale = 32 / 604,
-      tint = tints.top
+      tint = tints.top,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-mid.png",
       icon_size = 604,
       scale = 32 / 604,
-      tint = tints.mid
+      tint = tints.mid,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-gas/gas-tech-bot.png",
       icon_size = 604,
       scale = 32 / 604,
-      tint = tints.bot
-    }
+      tint = tints.bot,
+    },
   }
 end
 
@@ -529,7 +546,7 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
     if type(molecule_icon) ~= "table" then
       molecule_icon = {
         icon = molecule_icon,
-        icon_size = 32
+        icon_size = 32,
       }
     else
       molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
@@ -542,7 +559,7 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
       end
     end
 
-    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or { -10, -10 }
     molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15 / molecule_icon.icon_size
     molecule_icon.tint = molecule_icon.tint or molecule_icon[5] or nil
 
@@ -561,9 +578,9 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
-        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
-        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or { form = "unknown" }).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or { form = "unknown" }).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or { form = "unknown" }).form][3] or {}),
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -580,31 +597,31 @@ function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-base.png",
       icon_size = 330,
       scale = 32 / 330,
-      tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7},
-      shift = molecule_icon and {3.5, 0} or nil
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+      shift = molecule_icon and { 3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-top.png",
       icon_size = 330,
       scale = 32 / 330,
       tint = tints.top,
-      shift = molecule_icon and {3.5, 0} or nil
+      shift = molecule_icon and { 3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-mid.png",
       icon_size = 330,
       scale = 32 / 330,
       tint = tints.mid,
-      shift = molecule_icon and {3.5, 0} or nil
+      shift = molecule_icon and { 3.5, 0 } or nil,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-item-bot.png",
       icon_size = 330,
       scale = 32 / 330,
       tint = tints.bot,
-      shift = molecule_icon and {3.5, 0} or nil
+      shift = molecule_icon and { 3.5, 0 } or nil,
     },
-    molecule_icon
+    molecule_icon,
   }
 end
 
@@ -612,8 +629,10 @@ end
 function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
-  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
+  bot_molecules_icon =
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+  top_molecules_icon =
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
   -- uses the get_molecule_codes for default tints
@@ -621,9 +640,9 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
     if type(tints) ~= "table" then
       local reference = get_molecule_codes(tints)
       tints = {
-        top = unify_tint(icon_tints_table[(reference[1] or {form="unknown"}).form][1] or {}),
-        mid = unify_tint(icon_tints_table[(reference[2] or {form="unknown"}).form][2] or {}),
-        bot = unify_tint(icon_tints_table[(reference[3] or {form="unknown"}).form][3] or {})
+        top = unify_tint(icon_tints_table[(reference[1] or { form = "unknown" }).form][1] or {}),
+        mid = unify_tint(icon_tints_table[(reference[2] or { form = "unknown" }).form][2] or {}),
+        bot = unify_tint(icon_tints_table[(reference[3] or { form = "unknown" }).form][3] or {}),
       }
     else
       tints.top = unify_tint(tints.top or tints[1] or nil)
@@ -640,26 +659,26 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-base.png",
       icon_size = 600,
       scale = 32 / 600,
-      tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7}
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-top.png",
       icon_size = 600,
       scale = 32 / 600,
-      tint = tints.top
+      tint = tints.top,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
       icon_size = 600,
       scale = 32 / 600,
-      tint = tints.mid
+      tint = tints.mid,
     },
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
       icon_size = 600,
       scale = 32 / 600,
-      tint = tints.bot
-    }
+      tint = tints.bot,
+    },
   }
   for _, bot_molecule_icon in pairs(bot_molecules_icon) do
     for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do
@@ -682,7 +701,7 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
     if type(molecule_icon) ~= "table" then
       molecule_icon = {
         icon = molecule_icon,
-        icon_size = 32
+        icon_size = 32,
       }
     else
       molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
@@ -695,7 +714,7 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
       end
     end
 
-    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or {-10, -10}
+    molecule_icon.shift = molecule_icon.shift or molecule_icon[3] or { -10, -10 }
     molecule_icon.scale = molecule_icon.scale or molecule_icon[4] or 15 / molecule_icon.icon_size
 
     molecule_icon[1] = nil
@@ -732,79 +751,71 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
     tints = {}
   end
 
-  return clean_table {
-    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and
-      {
-        -- base layer required for background shadow
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7},
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot_left and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot_left,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot_left and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot_right,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot_mask and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot_mask,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
+  return clean_table({
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask)
+        and {
+          -- base layer required for background shadow
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+          shift = molecule_icon and { 3.5, 0 } or nil,
+        }
+      or nil,
+    tints.bot and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = tints.bot,
+      shift = molecule_icon and { 3.5, 0 } or nil,
+    } or nil,
+    tints.bot_left and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = tints.bot_left,
+      shift = molecule_icon and { 3.5, 0 } or nil,
+    } or nil,
+    tints.bot_left and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = tints.bot_right,
+      shift = molecule_icon and { 3.5, 0 } or nil,
+    } or nil,
+    tints.bot_mask and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = tints.bot_mask,
+      shift = molecule_icon and { 3.5, 0 } or nil,
+    } or nil,
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.top,
-      shift = molecule_icon and {3.5, 0} or nil
+      shift = molecule_icon and { 3.5, 0 } or nil,
     },
-    tints.top_mask and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.top_mask,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    molecule_icon
-  }
+    tints.top_mask and {
+      icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = tints.top_mask,
+      shift = molecule_icon and { 3.5, 0 } or nil,
+    } or nil,
+    molecule_icon,
+  })
 end
 
 -- CREATE VISCOUS LIQUID RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
-  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
+  bot_molecules_icon =
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+  top_molecules_icon =
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
 
   -- tints is a table of 5 tints, for the top, bot_left top_mask, bot_mask, bot_right,
   -- if bot_left is present, but not bot_right (nil), then both bottom sides will have
@@ -833,68 +844,68 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
   end
 
   local recipe_icons = {
-    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and
-      {
-        -- base layer required for background shadow
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = {r = 0.25, g = 0.25, b = 0.25, a = 0.7},
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot_left and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot_left,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot_left and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot_right,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
-    tints.bot_mask and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.bot_mask,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil,
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask)
+        and {
+          -- base layer required for background shadow
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+          --shift = top_molecules_icon and {3.5, 0} or nil
+        }
+      or nil,
+    tints.bot
+        and {
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = tints.bot,
+          --shift = top_molecules_icon and {3.5, 0} or nil
+        }
+      or nil,
+    tints.bot_left
+        and {
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = tints.bot_left,
+          --shift = top_molecules_icon and {3.5, 0} or nil
+        }
+      or nil,
+    tints.bot_left
+        and {
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = tints.bot_right,
+          --shift = top_molecules_icon and {3.5, 0} or nil
+        }
+      or nil,
+    tints.bot_mask
+        and {
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = tints.bot_mask,
+          --shift = top_molecules_icon and {3.5, 0} or nil
+        }
+      or nil,
     {
       icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.top,
-      shift = molecule_icon and {3.5, 0} or nil
+      --shift = top_molecules_icon and {3.5, 0} or nil
     },
-    tints.top_mask and
-      {
-        icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
-        icon_size = 256,
-        scale = 32 / 256,
-        tint = tints.top_mask,
-        shift = molecule_icon and {3.5, 0} or nil
-      } or
-      nil
+    tints.top_mask
+        and {
+          icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
+          icon_size = 256,
+          scale = 32 / 256,
+          tint = tints.top_mask,
+          --shift = top_molecules_icon and {3.5, 0} or nil
+        }
+      or nil,
   }
   for _, bot_molecule_icon in pairs(bot_molecules_icon) do
     for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do
@@ -910,11 +921,18 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
 end
 
 -- CREATE VISCOUS LIQUID FILTERING RECIPE ICONS (NOT FOR FLUIDS)
-function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(filter_type, tints, bot_molecules_icon, top_molecules_icon)
+function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
+  filter_type,
+  tints,
+  bot_molecules_icon,
+  top_molecules_icon
+)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
-  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
+  bot_molecules_icon =
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+  top_molecules_icon =
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
 
   -- filter_type is a string, can be "coal" or "ceramic"
   local valid_filter_type = {
@@ -932,7 +950,7 @@ function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(filter
       icon_size = 32,
       scale = 32 / 32 * 0.85,
       --shift = {0, -2},
-    }
+    },
   }
   viscous_liquid_fluid_icon[1] = nil
   viscous_liquid_fluid_icon = clean_table(viscous_liquid_fluid_icon)
@@ -962,8 +980,10 @@ end
 function angelsmods.functions.create_solid_recipe_icon(bot_molecules_icon, solid_item_name, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
   -- (assumes icon_size 32) or be a table with size defined
-  bot_molecules_icon = create_recipe_molecule_icons(bot_molecules_icon, {{-11.5,  12}, {11.5,  12}, {0,  12}}, 10.24 / 32)
-  top_molecules_icon = create_recipe_molecule_icons(top_molecules_icon, {{-11.5, -12}, {11.5, -12}, {0, -12}}, 10.24 / 32)
+  bot_molecules_icon =
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+  top_molecules_icon =
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
 
   local recipe_icons = get_icons(solid_item_name)
 
@@ -983,48 +1003,53 @@ end
 function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
   -- returns a crafting_machine_tint depending on the fluid color
   local fluid = data.raw.fluid[fluid_name]
-  return fluid and
-    {
-      primary = {
-        r = fluid.base_color.r or 0,
-        g = fluid.base_color.g or 0,
-        b = fluid.base_color.b or 0,
-        a = 185 / 255
-      },
-      secondary = {
-        r = fluid.flow_color.r or 0,
-        g = fluid.flow_color.g or 0,
-        b = fluid.flow_color.b or 0,
-        a = 185 / 255
-      },
-    } or
-    nil
+  return fluid
+      and {
+        primary = {
+          r = fluid.base_color.r or 0,
+          g = fluid.base_color.g or 0,
+          b = fluid.base_color.b or 0,
+          a = 185 / 255,
+        },
+        secondary = {
+          r = fluid.flow_color.r or 0,
+          g = fluid.flow_color.g or 0,
+          b = fluid.flow_color.b or 0,
+          a = 185 / 255,
+        },
+      }
+    or nil
 end
 
 function angelsmods.functions.get_recipe_tints(layers, opacity)
   --can parse direct colours or search for items (currently only works for multiple fluids)
-  local tints={}
-  local opacity = opacity or 185/255
-  local alpha = opacity > 1 and opacity/255 or opacity
+  local tints = {}
+  local opacity = opacity or 185 / 255
+  local alpha = opacity > 1 and opacity / 255 or opacity
   for index, name in pairs(layers) do
-    if type(name)== "table" then
+    if type(name) == "table" then
       tints[index] = name
       --ammend alpha
-      tints[index].a = opacity or (tints[index].a and tints[index].a --if alpha, maintain
-        or ((tints[index].r < 1 and tints[index].g <1) and alpha or alpha*255))
+      tints[index].a = opacity
+        or (
+          tints[index].a and tints[index].a --if alpha, maintain
+          or ((tints[index].r < 1 and tints[index].g < 1) and alpha or alpha * 255)
+        )
     elseif name == nil then --skip
-    elseif type(name)== "string" then
+    elseif type(name) == "string" then
       --search through items and fluids
       local found = ""
-      for _, type in pairs({"fluid"--[[,"item"]]}) do
+      for _, type in pairs({
+        "fluid",--[[,"item"]]
+      }) do
         if data.raw[type][name] then
           local base = data.raw[type][name]
           tints[index] = {
             r = base.base_color.r or 0,
             g = base.base_color.g or 0,
             b = base.base_color.b or 0,
-            a = base.base_color.a or --if alpha, maintain
-              ((base.base_color.r < 1 and base.base_color.g < 1 ) and alpha or alpha*255)
+            a = base.base_color.a --if alpha, maintain
+              or ((base.base_color.r < 1 and base.base_color.g < 1) and alpha or alpha * 255),
           }
           break
         end
@@ -1067,22 +1092,22 @@ local function isColor(input)
     return nil
   end
   local is_small = true
-  for _,v in pairs(input) do 
+  for _, v in pairs(input) do
     if v > 1 then
       is_small = false
       break
     end
   end
   if not is_small then
-    for k,v in pairs(input) do
-      input[k] = v/255
+    for k, v in pairs(input) do
+      input[k] = v / 255
     end
   end
   local color = {
     r = input.r or input[1],
     g = input.g or input[2],
     b = input.b or input[3],
-    a = input.a or input[4] or 1
+    a = input.a or input[4] or 1,
   }
   return color
 end
@@ -1091,7 +1116,7 @@ local function findRGB(inputString)
   if type(inputString) ~= "string" then
     return nil
   end
-  if inputString:find("%a") then  
+  if inputString:find("%a") then
     return nil
   end
   local rawColor = util.split(inputString:gsub("%D", " "), " ")
@@ -1099,14 +1124,14 @@ local function findRGB(inputString)
     return nil
   end
   local color = {}
-  for k,v in pairs(rawColor) do
+  for k, v in pairs(rawColor) do
     color[k] = v / 255
   end
   return {
     r = color[1],
     g = color[2],
     b = color[3],
-    a = color[4] or 1
+    a = color[4] or 1,
   }
 end
 
@@ -1115,79 +1140,79 @@ local function findHex(hex)
   if type(hex) ~= "string" then
     return nil
   end
-  if hex:find("%X") or #hex > 8  or #hex == 5 or #hex == 7 then
+  if hex:find("%X") or #hex > 8 or #hex == 5 or #hex == 7 then
     return nil
   end
 
-  local function h(i,j)
-    return j and tonumber("0x"..hex:sub(i,j)) / 255 or tonumber("0x"..hex:sub(i,i)) / 15
+  local function h(i, j)
+    return j and tonumber("0x" .. hex:sub(i, j)) / 255 or tonumber("0x" .. hex:sub(i, i)) / 15
   end
 
-  hex = hex:gsub("#","")
-  return #hex == 6 and {r = h(1,2), g = h(3,4), b = h(5,6)}
-    or #hex == 3 and {r = h(1), g = h(2), b = h(3)}
-    or #hex == 8 and {r = h(1,2), g = h(3,4), b = h(5,6), a = h(7,8)}
-    or #hex == 4 and {r = h(1), g = h(2), b = h(3), a = h(4)}
-    or #hex == 2 and {r = h(1,2), g = h(1,2), b = h(1,2)}
-    or #hex == 1 and {r = h(1), g = h(1), b = h(1)}
-    or {r = 1, g = 1, b = 1}
+  hex = hex:gsub("#", "")
+  return #hex == 6 and { r = h(1, 2), g = h(3, 4), b = h(5, 6) }
+    or #hex == 3 and { r = h(1), g = h(2), b = h(3) }
+    or #hex == 8 and { r = h(1, 2), g = h(3, 4), b = h(5, 6), a = h(7, 8) }
+    or #hex == 4 and { r = h(1), g = h(2), b = h(3), a = h(4) }
+    or #hex == 2 and { r = h(1, 2), g = h(1, 2), b = h(1, 2) }
+    or #hex == 1 and { r = h(1), g = h(1), b = h(1) }
+    or { r = 1, g = 1, b = 1 }
 end
 
 local function toColor(color)
-  return isColor(color) or findHex(color) or findRGB(color) or {r = 0, g = 0, b = 0, a = 1}
+  return isColor(color) or findHex(color) or findRGB(color) or { r = 0, g = 0, b = 0, a = 1 }
 end
 local function RGBtoHSV(color)
   color = toColor(color)
-  local r,g,b = color.r, color.g, color.b
-  local max = math.max(r,g,b)
-  local min = math.min(r,g,b)
+  local r, g, b = color.r, color.g, color.b
+  local max = math.max(r, g, b)
+  local min = math.min(r, g, b)
   local range = max - min
   local h
   if range == 0 then
     h = 0
   elseif max == r then
-    h = (g-b)/range*60
+    h = (g - b) / range * 60
   elseif max == g then
-    h = (2+(b-r)/range)*60
+    h = (2 + (b - r) / range) * 60
   elseif max == b then
-    h = (4+(r-g)/range)*60
+    h = (4 + (r - g) / range) * 60
   end
   if h < 0 then
     h = h + 360
   end
   local v = max
-  local s = range/max
-  return{
+  local s = range / max
+  return {
     h = h,
     s = s,
     v = v,
-    a = color.a or 1
+    a = color.a or 1,
   }
 end
 
 local function HSVtoRGB(color)
-  local h,s,v,a = color.h, color.s, color.v, color.a
+  local h, s, v, a = color.h, color.s, color.v, color.a
   local function f(n)
-    local k = (n + h/60) % 6
-    return v - v*s*math.max(math.min(k,4-k,1),0)
+    local k = (n + h / 60) % 6
+    return v - v * s * math.max(math.min(k, 4 - k, 1), 0)
   end
   return {
     r = f(5),
     g = f(3),
     b = f(1),
-    a = color.a or 1
+    a = color.a or 1,
   }
 end
 
 local function rgb_fetch(chemical_formula)
   local rgb = {}
   local codes = get_molecule_codes(chemical_formula)
-  for i=1, #codes do 
+  for i = 1, #codes do
     local tint_table = icon_tints_table[codes[i].form]
     if tint_table then
       rgb[i] = #tint_table <= i and tint_table[i] or tint_table[1]
     else
-      rgb[i] = {0,0,0}
+      rgb[i] = { 0, 0, 0 }
     end
   end
   return rgb
@@ -1196,7 +1221,7 @@ end
 local function total_shade(chemical_formula)
   local change = 0
   local array = get_molecule_codes(chemical_formula)
-  for i=1, #array do
+  for i = 1, #array do
     change = change + array[i].amount
   end
   return change
@@ -1205,8 +1230,8 @@ end
 function angelsmods.functions.fluid_color(chemical_formula) --color blending based on a general chemical formula
   local color = {}
   local arrays = get_molecule_codes(chemical_formula)
-  local lettering,multi,rgb = {},{},{}
-  for i=1, #arrays do
+  local lettering, multi, rgb = {}, {}, {}
+  for i = 1, #arrays do
     table.insert(lettering, arrays[i].form)
     table.insert(multi, arrays[i].amount)
     --table.insert(rgb, arrays[i].rgb)
@@ -1215,39 +1240,47 @@ function angelsmods.functions.fluid_color(chemical_formula) --color blending bas
   --local rgb = formula_extraction_1a(chemical_formula)--formula_extraction_1(chemical_formula)
   --local multi = formula_extraction_2(chemical_formula)
   --should only consist of the first 3 items, with an optional 4th
-  local red, green, blue, alpha, comb = 0,0,0,0,0
+  local red, green, blue, alpha, comb = 0, 0, 0, 0, 0
   local ave_denom = #rgb
-  if ave_denom == 2 and ((rgb[1]==icon_tints_table["C"][1] and rgb[2]==icon_tints_table["H"][1]) or (rgb[1]==icon_tints_table["H"][1] and rgb[2]==icon_tints_table["C"][1])) then
+  if
+    ave_denom == 2
+    and (
+      (rgb[1] == icon_tints_table["C"][1] and rgb[2] == icon_tints_table["H"][1])
+      or (rgb[1] == icon_tints_table["H"][1] and rgb[2] == icon_tints_table["C"][1])
+    )
+  then
     -- Hydrocarbon only
-    local m_c = tonumber(multi[1])/8
-    local m_h = tonumber(multi[2])/12
+    local m_c = tonumber(multi[1]) / 8
+    local m_h = tonumber(multi[2]) / 12
     local value = ((m_h / m_c / 4) ^ 2.2) / 0.41
     local function sigmoid(x, b, c) --more maxreader madness :D
-      return 1 / (1 + 2 ^ (-b * (x +c)))
+      return 1 / (1 + 2 ^ (-b * (x + c)))
     end
     value = sigmoid(value, 20, -0.25)
-    for i, j in pairs({"r", "g", "b"}) do color[j] = value end
-  else --everything else
-    for i,colour in pairs(rgb) do
-      alpha = colour[4] or 1
-      red = red + ((colour[1]/255)^2 * tonumber(multi[i])*alpha)
-      green = green + ((colour[2]/255)^2 * tonumber(multi[i])*alpha)
-      blue = blue + ((colour[3]/255)^2 * tonumber(multi[i])*alpha)
-      comb = comb + tonumber(multi[i]*alpha)
+    for i, j in pairs({ "r", "g", "b" }) do
+      color[j] = value
     end
-    color = {r = math.sqrt(red/comb), g = math.sqrt(green/comb), b = math.sqrt(blue/comb), a = 1}
-      --normalise
+  else --everything else
+    for i, colour in pairs(rgb) do
+      alpha = colour[4] or 1
+      red = red + ((colour[1] / 255) ^ 2 * tonumber(multi[i]) * alpha)
+      green = green + ((colour[2] / 255) ^ 2 * tonumber(multi[i]) * alpha)
+      blue = blue + ((colour[3] / 255) ^ 2 * tonumber(multi[i]) * alpha)
+      comb = comb + tonumber(multi[i] * alpha)
+    end
+    color = { r = math.sqrt(red / comb), g = math.sqrt(green / comb), b = math.sqrt(blue / comb), a = 1 }
+    --normalise
     local HSV = RGBtoHSV(color)
-    HSV.v = 0.8*HSV.v
-    HSV.s = 1-0.60*(1-HSV.s)
+    HSV.v = 0.8 * HSV.v
+    HSV.s = 1 - 0.60 * (1 - HSV.s)
     color = HSVtoRGB(HSV)
   end
   return color
 end
 
 function angelsmods.functions.flow_color(chemical_formula) --makes it lighter by some margin
-  change = total_shade(chemical_formula)*6
-  chemical_formula = chemical_formula.."H"..change--table.insert(chemical_formula,"H"..change)
+  local change = total_shade(chemical_formula) * 6
+  local chemical_formula = chemical_formula .. "H" .. change --table.insert(chemical_formula,"H"..change)
   local color = angelsmods.functions.fluid_color(chemical_formula)
   return color
 end
@@ -1257,7 +1290,8 @@ end
 -------------------------------------------------------------------------------
 function angelsmods.functions.add_exception(to_add)
   if --type(to_add) == string and
-    angelsmods.industries and angelsmods.industries.tech_exceptions then
+    angelsmods.industries and angelsmods.industries.tech_exceptions
+  then
     table.insert(angelsmods.industries.tech_exceptions, to_add)
   end
 end
@@ -1272,7 +1306,7 @@ function angelsmods.functions.allow_productivity(recipe_name)
       for i, module_except in pairs(angelsmods.refining.productivity_exception) do
         module_exception = module_exception or (module.name == module_except)
       end
-      if (not module_exception) and module.limitation and module.effect.productivity then
+      if not module_exception and module.limitation and module.effect.productivity then
         table.insert(module.limitation, recipe_name)
       end
     end
@@ -1286,7 +1320,7 @@ function angelsmods.functions.remove_productivity(recipe_name)
       for i, module_except in pairs(angelsmods.refining.productivity_exception) do
         module_exception = module_exception or (module.name == module_except)
       end
-      if (not module_exception) and module.limitation and module.effect.productivity then
+      if not module_exception and module.limitation and module.effect.productivity then
         for limitationIndex, limitationRecipeName in pairs(module.limitation) do
           if limitationRecipeName == recipe_name then
             table.remove(module.limitation, limitationIndex)
@@ -1299,7 +1333,8 @@ end
 
 function angelsmods.functions.add_bio_productivity_module(to_add)
   if --type(to_add) == string and
-    angelsmods.refining and angelsmods.refining.productivity_exception then
+    angelsmods.refining and angelsmods.refining.productivity_exception
+  then
     table.insert(angelsmods.refining.productivity_exception, to_add)
   end
 end
@@ -1353,20 +1388,28 @@ end
 -- MODIFY FLAGS ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 local building_types = {
-  "assembling-machine", "furnace",
+  "assembling-machine",
+  "furnace",
   "mining-drill",
   "lab",
   "offshore-pump",
-  "pump", "pipe", "pipe-to-ground",
+  "pump",
+  "pipe",
+  "pipe-to-ground",
   "rocket-silo",
   "radar",
   "beacon",
-  "boiler", "generator",
-  "solar-panel", "accumulator",
-  "reactor", "heat-pipe",
+  "boiler",
+  "generator",
+  "solar-panel",
+  "accumulator",
+  "reactor",
+  "heat-pipe",
   "electric-pole",
-  "wall", "gate",
-  "container", "storage-tank",
+  "wall",
+  "gate",
+  "container",
+  "storage-tank",
 }
 function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
@@ -1381,38 +1424,41 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
     end
   end
 
-  for _,type in pairs({"item","tool","item-with-entity-data","fluid"}) do --list of things to hide
+  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do --list of things to hide
     local to_add = data.raw[type][entity] or nil
     if to_add then
       if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
         to_add.hidden = true
         angelsmods.functions.disable_barreling_recipes(entity)
-        for _,void_category in pairs({"water", "chemical"}) do
+        for _, void_category in pairs({ "water", "chemical" }) do
           angelsmods.functions.OV.disable_recipe("angels-" .. void_category .. "-void-" .. entity)
         end
       else
         if to_add.flags then
           table.insert(to_add.flags, flag)
         else
-          to_add.flags = {flag}
+          to_add.flags = { flag }
         end
       end
 
       --hide actual (building) entity if not not just an item
       if flag == "hidden" and to_add.place_result == entity then
-        for _,type in pairs(building_types) do
+        for _, type in pairs(building_types) do
           to_add = data.raw[type][entity] --entity-types...
-          if to_add and (not to_add.autoplace) then -- do not hide entities that are autoplaced (required for editor mode)
+          if to_add and not to_add.autoplace then -- do not hide entities that are autoplaced (required for editor mode)
             if to_add.flags then
               table.insert(to_add.flags, flag)
             else
-              to_add.flags = {flag}
+              to_add.flags = { flag }
             end
             -- also have to make sure next_upgrade is not set to this (hidden) entity
             if to_add.fast_replaceable_group then
-              for _,type in pairs(building_types) do
-                for _,entity in pairs(data.raw[type]) do
-                  if entity.fast_replaceable_group == to_add.fast_replaceable_group and entity.next_upgrade == to_add.name then
+              for _, type in pairs(building_types) do
+                for _, entity in pairs(data.raw[type]) do
+                  if
+                    entity.fast_replaceable_group == to_add.fast_replaceable_group
+                    and entity.next_upgrade == to_add.name
+                  then
                     entity.next_upgrade = to_add.next_upgrade
                   end
                 end
@@ -1421,10 +1467,8 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
           end
         end
       end
-
     end
   end
-
 end
 
 function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
@@ -1435,7 +1479,7 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     return
   end
 
-  for _,type in pairs({"item", "tool", "item-with-entity-data", "fluid"}) do
+  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do
     local to_remove = data.raw[type][entity]
     if to_remove then
       if type == "fluid" and flag_to_remove == "hidden" then
@@ -1452,8 +1496,8 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     end
   end
   --actual entity if not not just an item
-  for _,type in pairs(building_types) do
-    to_remove = data.raw[type][entity] --entity-types...
+  for _, type in pairs(building_types) do
+    local to_remove = data.raw[type][entity] --entity-types...
     if to_remove then
       for flag_index, flag in pairs(to_remove.flags or {}) do
         if flag == flag_to_remove then
@@ -1495,10 +1539,16 @@ function angelsmods.functions.modify_barreling_icon()
           if item.icons then
             local icon_size = fluid.icon_size or 32
             if fluid.icon then
-              table.insert(item.icons, {icon = fluid.icon, icon_size = icon_size, icon_mipmaps = fluid.icon_mipmaps, shift = {0, 5}, scale = 16 / icon_size})
+              table.insert(item.icons, {
+                icon = fluid.icon,
+                icon_size = icon_size,
+                icon_mipmaps = fluid.icon_mipmaps,
+                shift = { 0, 5 },
+                scale = 16 / icon_size,
+              })
             end
             if fluid.icons then
-              item.icons = util.combine_icons(item.icons, fluid.icons, {scale = 16 / icon_size, shift = {0, 5}})
+              item.icons = util.combine_icons(item.icons, fluid.icons, { scale = 16 / icon_size, shift = { 0, 5 } })
             end
           end
         end
@@ -1513,15 +1563,15 @@ function angelsmods.functions.modify_barreling_recipes()
     local items = data.raw.item
     local recipes = data.raw.recipe
 
-    for fn,_ in pairs(data.raw.fluid) do
+    for fn, _ in pairs(data.raw.fluid) do
       if data.raw.item[fn .. "-barrel"] then
-        if recipes["fill-"..fn.."-barrel"] then
-          recipes["fill-"..fn.."-barrel"].hidden = true
-          recipes["fill-"..fn.."-barrel"].category = "barreling-pump"
+        if recipes["fill-" .. fn .. "-barrel"] then
+          recipes["fill-" .. fn .. "-barrel"].hidden = true
+          recipes["fill-" .. fn .. "-barrel"].category = "barreling-pump"
         end
-        if recipes["empty-"..fn.."-barrel"] then
-          recipes["empty-"..fn.."-barrel"].hidden = true
-          recipes["empty-"..fn.."-barrel"].category = "barreling-pump"
+        if recipes["empty-" .. fn .. "-barrel"] then
+          recipes["empty-" .. fn .. "-barrel"].hidden = true
+          recipes["empty-" .. fn .. "-barrel"].category = "barreling-pump"
         end
       end
     end
@@ -1568,16 +1618,14 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
       barrel.order = fd.order or (recipe and recipe.order) or "z"
 
       if not data.raw["item-subgroup"][barrel.subgroup] then
-        data:extend(
+        data:extend({
           {
-            {
-              type = "item-subgroup",
-              name = barrel.subgroup,
-              group = "angels-fluid-control",
-              order = "z-" .. group_order .. "-" .. subgroup_order
-            }
-          }
-        )
+            type = "item-subgroup",
+            name = barrel.subgroup,
+            group = "angels-fluid-control",
+            order = "z-" .. group_order .. "-" .. subgroup_order,
+          },
+        })
       end
 
       if recipes["fill-" .. fn .. "-barrel"] then
@@ -1595,8 +1643,16 @@ end
 -------------------------------------------------------------------------------
 function angelsmods.functions.make_void(fluid_name, void_category, void_amount) -- categories: chemical (fluid, flare-stack)
   --LOCAL DEFINITIONS                                                           --             water (fluild, clarifier)
-  local recipe = {}                                                             --             bio (item, compost)
-                                                                                -- amount(optional): amount of input/output, default 1
+  local recipe = {} --             bio (item, compost)
+  local void_input_amount -- amount(optional): amount of input/output, default 1
+  local void_input_type
+  local void_input_subgroup
+  local void_process_time
+  local void_output_item
+  local void_output_amount
+  local void_output_probability
+  local void_tint
+
   if data.raw.fluid[fluid_name] then -- fluid voids
     if void_category == "water" then
       void_amount = void_amount or 400
@@ -1621,7 +1677,6 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     else
       recipe = nil -- no valid void category found
     end
-
   elseif data.raw.item[fluid_name] then -- item voids
     if void_category == "bio" then
       void_amount = void_amount or 1
@@ -1635,7 +1690,6 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     else
       recipe = nil -- no valid void category found
     end
-
   else
     recipe = nil -- no valid void object found
   end
@@ -1651,16 +1705,16 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       {
         type = void_input_type,
         name = fluid_name,
-        amount = void_input_amount
-      }
+        amount = void_input_amount,
+      },
     }
     recipe.results = {
       {
         type = "item",
         name = void_output_item,
         amount = void_output_amount,
-        probability = void_output_probability ~= 1 and void_output_probability or nil
-      }
+        probability = void_output_probability ~= 1 and void_output_probability or nil,
+      },
     }
     recipe.main_product = void_output_item
     recipe.show_amount_in_title = false
@@ -1681,23 +1735,24 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     --recipe.order = recipe.order .. "[" .. fluid_name .. "]"
     recipe.order = string.len(recipe.order) <= 200 and recipe.order or recipe.order:sub(1, 200) -- order limited to 200 characters
 
-    recipe.icons = util.table.deepcopy(get_icons(void_output_item) or {{icon="__angelsrefining__/graphics/icons/void.png"}})
+    recipe.icons =
+      util.table.deepcopy(get_icons(void_output_item) or { { icon = "__angelsrefining__/graphics/icons/void.png" } })
     recipe.icon_size = 32
     local fluid_icon = util.table.deepcopy(get_icons(fluid_name) or {})
-    for _,iconLayer in pairs(fluid_icon) do
+    for _, iconLayer in pairs(fluid_icon) do
       table.insert(recipe.icons, {
         icon = iconLayer.icon,
         icon_size = iconLayer.icon_size and iconLayer.icon_size ~= 32 and iconLayer.icon_size or nil,
-        scale = (iconLayer.scale or recipe.icon_size/(iconLayer.icon_size or 32)) * 0.5,
+        scale = (iconLayer.scale or recipe.icon_size / (iconLayer.icon_size or 32)) * 0.5,
         shift = {
-          ((iconLayer.shift or {})[1] or (iconLayer.shift or {})['x'] or 0) * 0.5 - 8,
-          ((iconLayer.shift or {})[2] or (iconLayer.shift or {})['y'] or 0) * 0.5 - 8,
+          ((iconLayer.shift or {})[1] or (iconLayer.shift or {})["x"] or 0) * 0.5 - 8,
+          ((iconLayer.shift or {})[2] or (iconLayer.shift or {})["y"] or 0) * 0.5 - 8,
         },
-        tint = iconLayer.tint
+        tint = iconLayer.tint,
       })
     end
 
-    data:extend({recipe})
+    data:extend({ recipe })
   end
 end
 
@@ -1716,58 +1771,57 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
       end
       angelsmods.functions.converter_counter = angelsmods.functions.converter_counter + 1
 
-      data:extend(
+      data:extend({
         {
-          {
-            type = "recipe",
-            name = "converter-other-" .. fluid_name_other,
-            localised_name = {
-              "recipe-name.converter-angels",
-              {"fluid-name." .. fluid_name_other},
-              {"fluid-name." .. fluid_name_angels}
-            },
-            category = "angels-converter",
-            subgroup = "angels-converter",
-            energy_required = 0.5,
-            enabled = true,
-            hidden = hide_converter,
-            ingredients = {
-              {type = "fluid", name = fluid_name_angels, amount = 50}
-            },
-            results = {
-              {type = "fluid", name = fluid_name_other, amount = 50}
-            },
-            icon_size = 32,
-            order = "a" .. angelsmods.functions.converter_counter
+          type = "recipe",
+          name = "converter-other-" .. fluid_name_other,
+          localised_name = {
+            "recipe-name.converter-angels",
+            { "fluid-name." .. fluid_name_other },
+            { "fluid-name." .. fluid_name_angels },
           },
-          {
-            type = "recipe",
-            name = "converter-angels-" .. fluid_name_angels,
-            localised_name = {
-              "recipe-name.converter-angels",
-              {"fluid-name." .. fluid_name_other},
-              {"fluid-name." .. fluid_name_angels}
-            },
-            category = "angels-converter",
-            subgroup = "angels-converter",
-            energy_required = 0.5,
-            enabled = true,
-            hidden = hide_converter,
-            ingredients = {
-              {type = "fluid", name = fluid_name_other, amount = 50}
-            },
-            results = {
-              {type = "fluid", name = fluid_name_angels, amount = 50}
-            },
-            icon_size = 32,
-            order = "b" .. angelsmods.functions.converter_counter
-          }
-        }
-      )
+          category = "angels-converter",
+          subgroup = "angels-converter",
+          energy_required = 0.5,
+          enabled = true,
+          hidden = hide_converter,
+          ingredients = {
+            { type = "fluid", name = fluid_name_angels, amount = 50 },
+          },
+          results = {
+            { type = "fluid", name = fluid_name_other, amount = 50 },
+          },
+          icon_size = 32,
+          order = "a" .. angelsmods.functions.converter_counter,
+        },
+        {
+          type = "recipe",
+          name = "converter-angels-" .. fluid_name_angels,
+          localised_name = {
+            "recipe-name.converter-angels",
+            { "fluid-name." .. fluid_name_other },
+            { "fluid-name." .. fluid_name_angels },
+          },
+          category = "angels-converter",
+          subgroup = "angels-converter",
+          energy_required = 0.5,
+          enabled = true,
+          hidden = hide_converter,
+          ingredients = {
+            { type = "fluid", name = fluid_name_other, amount = 50 },
+          },
+          results = {
+            { type = "fluid", name = fluid_name_angels, amount = 50 },
+          },
+          icon_size = 32,
+          order = "b" .. angelsmods.functions.converter_counter,
+        },
+      })
       if hide_converter then
-        angelsmods.functions.OV.hide_recipe(
-          {"converter-other-" .. fluid_name_other, "converter-angels-" .. fluid_name_angels}
-        )
+        angelsmods.functions.OV.hide_recipe({
+          "converter-other-" .. fluid_name_other,
+          "converter-angels-" .. fluid_name_angels,
+        })
       end
       if angelsmods.trigger.enableconverter then
       else -- hide the unused other fluid
@@ -1787,11 +1841,11 @@ end
 local is_vanilla_ore = {
   ["iron"] = true,
   ["copper"] = true,
-  ["uranium"] = true
+  ["uranium"] = true,
 }
 function angelsmods.functions.is_special_vanilla()
   for ore_name, ore_enabled in pairs(angelsmods.trigger.ores or {}) do
-    if ore_enabled and (not is_vanilla_ore[ore_name]) then
+    if ore_enabled and not is_vanilla_ore[ore_name] then
       return false
     end
   end
@@ -1831,7 +1885,7 @@ function angelsmods.functions.get_trigger_names()
     ["tungsten-ore"] = "tungsten",
     ["thorium-ore"] = "thorium",
     ["chrome-ore"] = "chrome",
-    ["platinum-ore"] = "platinum"
+    ["platinum-ore"] = "platinum",
   }
 end
 
@@ -1849,15 +1903,21 @@ end
 -- MODIFY CRAFTING_CATEGORY ---------------------------------------------------
 -------------------------------------------------------------------------------
 function angelsmods.functions.add_crafting_category(crafting_machine_type, crafting_machine_name, crafting_category)
-  if not data.raw[crafting_machine_type] then return end
-  if not data.raw[crafting_machine_type][crafting_machine_name] then return end
+  if not data.raw[crafting_machine_type] then
+    return
+  end
+  if not data.raw[crafting_machine_type][crafting_machine_name] then
+    return
+  end
 
   if type(crafting_category) == "table" then
     for _, category in pairs(crafting_category) do
       angelsmods.functions.add_crafting_category(crafting_machine_type, crafting_machine_name, category)
     end
   end
-  if not data.raw["recipe-category"][crafting_category] then return end
+  if not data.raw["recipe-category"][crafting_category] then
+    return
+  end
 
   local crafting_machine_prototype = data.raw[crafting_machine_type][crafting_machine_name]
   crafting_machine_prototype.crafting_categories = crafting_machine_prototype.crafting_categories or {}
@@ -1876,11 +1936,17 @@ function angelsmods.functions.add_crafting_category(crafting_machine_type, craft
 end
 
 function angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, crafting_category)
-  if not data.raw[crafting_machine_type] then return end
-  if not data.raw[crafting_machine_type][crafting_machine_name] then return end
+  if not data.raw[crafting_machine_type] then
+    return
+  end
+  if not data.raw[crafting_machine_type][crafting_machine_name] then
+    return
+  end
 
   local crafting_machine_categories = data.raw[crafting_machine_type][crafting_machine_name].crafting_categories
-  if not crafting_machine_categories then return end
+  if not crafting_machine_categories then
+    return
+  end
 
   if type(crafting_category) == "table" then
     for _, category in pairs(crafting_category) do
@@ -1895,22 +1961,31 @@ function angelsmods.functions.remove_crafting_category(crafting_machine_type, cr
       if next(crafting_machine_categories) then
         return
       else
-        angelsmods.functions.add_crafting_category(crafting_machine_type, crafting_machine_name, "angels-unused-machine")
+        angelsmods.functions.add_crafting_category(
+          crafting_machine_type,
+          crafting_machine_name,
+          "angels-unused-machine"
+        )
       end
-
     end
   end
 end
 
 local function box_equal(b1, b2)
-  if not (b1 and b2) then return false end
+  if not (b1 and b2) then
+    return false
+  end
 
   local function pos_equal(p1, p2)
-    if not (p1 and p2) then return false end
+    if not (p1 and p2) then
+      return false
+    end
 
     local p1x = p1.x or p1[1] or nil
     local p2x = p2.x or p2[1] or nil
-    if not (p1x and p1x == p2x) then return false end
+    if not (p1x and p1x == p2x) then
+      return false
+    end
 
     local p1y = p1.y or p1[2] or nil
     local p2y = p2.y or p2[2] or nil
@@ -1918,7 +1993,9 @@ local function box_equal(b1, b2)
     return (p1y and p1y == p2y)
   end
 
-  if not pos_equal(b1.left_top or b1[1], b2.left_top or b2[1]) then return false end
+  if not pos_equal(b1.left_top or b1[1], b2.left_top or b2[1]) then
+    return false
+  end
   return pos_equal(b1.right_bottom or b1[2], b2.right_bottom or b2[2])
 end
 -------------------------------------------------------------------------------
@@ -1926,20 +2003,32 @@ end
 -------------------------------------------------------------------------------
 function angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine_name, next_upgrade)
   --search for new category (if needed), skip if identical
-  if not data.raw[crafting_machine_type] then return end
+  if not data.raw[crafting_machine_type] then
+    return
+  end
   local crafting_machine1 = crafting_machine_name and data.raw[crafting_machine_type][crafting_machine_name]
-  if not crafting_machine1 then return end
+  if not crafting_machine1 then
+    return
+  end
   local crafting_machine2 = next_upgrade and data.raw[crafting_machine_type][next_upgrade]
-  if not crafting_machine2 then return end
+  if not crafting_machine2 then
+    return
+  end
   --get current FRC
   local FRC1 = crafting_machine1.fast_replaceable_group
   local FRC2 = crafting_machine2.fast_replaceable_group
-  if FRC1 == FRC2 then return end
+  if FRC1 == FRC2 then
+    return
+  end
 
   if FRC2 then --change it
     if box_equal(crafting_machine1.collision_box, crafting_machine2.collision_box) then
       crafting_machine1.fast_replaceable_group = FRC2
-      angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine1.next_upgrade, crafting_machine1.name)
+      angelsmods.functions.set_fast_replace_category(
+        crafting_machine_type,
+        crafting_machine1.next_upgrade,
+        crafting_machine1.name
+      )
     else
       --boxes don't match... nil out the properties
       crafting_machine1.fast_replaceable_group = nil
@@ -1948,7 +2037,11 @@ function angelsmods.functions.set_fast_replace_category(crafting_machine_type, c
     end
   else -- FRC2==nil
     crafting_machine2.fast_replaceable_group = FRC1 --transition 2 to 1?
-    angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine2.next_upgrade, crafting_machine2.name)
+    angelsmods.functions.set_fast_replace_category(
+      crafting_machine_type,
+      crafting_machine2.next_upgrade,
+      crafting_machine2.name
+    )
   end
 end
 
@@ -1956,14 +2049,21 @@ end
 -- MODIFY NEXT_UPGRADE --------------------------------------------------------
 -------------------------------------------------------------------------------
 function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_machine_name, next_upgrade)
-  if not data.raw[crafting_machine_type] then return end
+  if not data.raw[crafting_machine_type] then
+    return
+  end
   local crafting_machine = data.raw[crafting_machine_type][crafting_machine_name]
 
-  if not crafting_machine then return end
+  if not crafting_machine then
+    return
+  end
 
   crafting_machine.next_upgrade = next_upgrade
   if next_upgrade then
-    angelsmods.functions.remove_flag(crafting_machine.minable and crafting_machine.minable.result or crafting_machine_name, "not-upgradable")
+    angelsmods.functions.remove_flag(
+      crafting_machine.minable and crafting_machine.minable.result or crafting_machine_name,
+      "not-upgradable"
+    )
   end
   --check upgrade_category
   angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine_name, next_upgrade)
