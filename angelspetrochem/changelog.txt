@@ -42,7 +42,7 @@ Date: 01.01.2023
       - Gas fractioning now only uses a single input pipe, the same pipe used in the advanced fractioning recipes
         (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
       - Gas fractioning now only uses the first three output pipes, the same pipes used in the advanced fractioning recipes
-        (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
+        (Advanced heavy gas refining, Advanced light gas refining, Advanced medium gas refining)
       - The oil refining and the gas fractioning recipe icons are slightly altered to reflect the fluid layout of their respective recipe.
     - Updated sound volume of the following buildings: (482)
       - Chemical plant, Advanced chemical plant
