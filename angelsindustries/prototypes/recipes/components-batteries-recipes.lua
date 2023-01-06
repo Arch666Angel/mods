@@ -106,6 +106,7 @@ if angelsmods.industries.components then
       energy_required = 10,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
+        { type = "item", name = "battery-frame-6", amount = 1 },
         { type = "item", name = "battery-anode-6", amount = 3 },
         { type = "item", name = "battery-cathode-6", amount = 3 },
         { type = "fluid", name = "battery-electrolyte-6", amount = 10 },
