@@ -295,6 +295,7 @@ if mods["bobpower"] then
     move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "a")
     move_item("heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "b")
     move_item("heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "c")
+    move_item("heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "d")
 
     move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "aa", "recipe")
     move_item("heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "ba", "recipe")
