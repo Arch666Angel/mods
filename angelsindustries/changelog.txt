@@ -2,6 +2,8 @@
 Version: 0.4.18
 Date: xx.xx.xxxx
   Bugfixes:
+    - Regular mode:
+      - Fixed Item Subgroup of Heat Exchanger 4 from Bob's Power (887)
     - Component mode:
       - Fixed the silver-zinc battery did not require a battery casing (886)
 ---------------------------------------------------------------------------------------------------
