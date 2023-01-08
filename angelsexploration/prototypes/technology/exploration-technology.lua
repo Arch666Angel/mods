@@ -10,17 +10,17 @@ data:extend({
     },
     effects = {
       {
-         recipe = "angels-turbo-bike",
-         type = "unlock-recipe"
+        recipe = "angels-turbo-bike",
+        type = "unlock-recipe",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        {"automation-science-pack", 1 },
+        { "automation-science-pack", 1 },
       },
-      time = 30
-    }
+      time = 30,
+    },
   },
   {
     type = "technology",

@@ -6,9 +6,9 @@ data:extend({
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { type = "item", name = "iron-plate", amount = 10},
-      { type = "item", name = "iron-gear-wheel", amount = 5},
-      { type = "item", name = "steel-plate", amount = 3},
+      { type = "item", name = "iron-plate", amount = 10 },
+      { type = "item", name = "iron-gear-wheel", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 3 },
     },
     result = "angels-turbo-bike",
   },

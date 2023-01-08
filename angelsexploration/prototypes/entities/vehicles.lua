@@ -17,23 +17,22 @@ data:extend({
     type = "car",
     name = "angels-turbo-bike",
     icon = "__angelsexploration__/graphics/icons/turbo-bike.png",
-    icon_size = 64;
+    icon_size = 64,
     flags = {
       "placeable-neutral",
       "player-creation",
       "placeable-off-grid",
-      "not-flammable"
+      "not-flammable",
     },
-    minable = {mining_time = 1, result = "angels-turbo-bike"},
+    minable = { mining_time = 1, result = "angels-turbo-bike" },
     max_health = 250,
     corpse = "medium-remnants",
     dying_explosion = "car-explosion",
     energy_per_hit_point = 1,
-    resistances =
-    {
+    resistances = {
       {
         type = "fire",
-        percent = 50
+        percent = 50,
       },
       {
         type = "physical",
@@ -51,14 +50,13 @@ data:extend({
       {
         type = "acid",
         percent = 40,
-      }
+      },
     },
-    collision_box = {{-0.5, -1}, {0.5, 1}},
-    selection_box = {{-0.5, -1}, {0.5, 1}},
+    collision_box = { { -0.5, -1 }, { 0.5, 1 } },
+    selection_box = { { -0.5, -1 }, { 0.5, 1 } },
     effectivity = 0.06,
     braking_power = "350W",
-    burner =
-    {
+    burner = {
       effectivity = 0.5,
       fuel_inventory_size = 1,
       --smoke =
@@ -87,7 +85,7 @@ data:extend({
         picture = {
           filename = "__core__/graphics/light-cone.png",
           flags = {
-            "light"
+            "light",
           },
           priority = "extra-high",
           scale = 2,
@@ -96,27 +94,25 @@ data:extend({
         },
         shift = {
           0,
-          -13
+          -13,
         },
         size = 2,
         intensity = 0.6,
         color = {
           b = 0.3,
           g = 0.77000000000000002,
-          r = 0.92000000000000011
+          r = 0.92000000000000011,
         },
-      }
+      },
     },
-    animation =
-    {
-      layers =
-      {
+    animation = {
+      layers = {
         {
           width = 120,
           height = 96,
           frame_count = 1,
           direction_count = 64,
-          shift = {0, 0},
+          shift = { 0, 0 },
           animation_speed = 8,
           max_advance = 0.2,
           axially_symmetrical = false,
@@ -124,21 +120,21 @@ data:extend({
             {
               filename = "__angelsexploration__/graphics/entity/bike/turbo-bike.png",
               height_in_frames = 8,
-              width_in_frames = 8
+              width_in_frames = 8,
             },
             {
               filename = "__angelsexploration__/graphics/entity/bike/turbo-bike.png",
               height_in_frames = 8,
-              width_in_frames = 8
+              width_in_frames = 8,
             },
             {
               filename = "__angelsexploration__/graphics/entity/bike/turbo-bike.png",
               height_in_frames = 8,
-              width_in_frames = 8
-            }
-          }
-        }
-      }
+              width_in_frames = 8,
+            },
+          },
+        },
+      },
     },
     --sound_no_fuel = {
     --  {
@@ -160,7 +156,7 @@ data:extend({
     --},
     sound_minimum_speed = 1 / 60,
     sound_scaling_ratio = 0.005,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       --activate_sound = {
       --  filename = "__base__/sound/car-engine-start.ogg",
@@ -174,17 +170,17 @@ data:extend({
       use_doppler_shift = false,
       sound = {
         filename = "__angelsexploration__/sound/bicycle-squeaky.ogg",
-        volume = 0.15
+        volume = 0.15,
       },
     },
-    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 },
     close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
     rotation_speed = 0.015,
     weight = 10,
     inventory_size = 10,
     alert_icon_shift = {
       0,
-      -0.40625
+      -0.40625,
     },
     damaged_trigger_effect = {
       damage_type_filters = "fire",
@@ -192,24 +188,24 @@ data:extend({
       offset_deviation = {
         {
           -0.5,
-          -0.5
+          -0.5,
         },
         {
           0.5,
-          0.5
-        }
+          0.5,
+        },
       },
       offsets = {
         {
           0,
-          1
-        }
+          1,
+        },
       },
-      type = "create-entity"
+      type = "create-entity",
     },
     mined_sound = {
       filename = "__core__/sound/deconstruct-medium.ogg",
-      volume = 0.8
+      volume = 0.8,
     },
   },
   --HEAVY TANK
