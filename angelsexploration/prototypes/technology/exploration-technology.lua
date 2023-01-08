@@ -2,6 +2,28 @@ data:extend({
   --VEHICLES
   {
     type = "technology",
+    name = "angels-turbo-bike",
+    icon = "__angelsexploration__/graphics/technology/turbo-bike-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "steel-processing",
+    },
+    effects = {
+      {
+         recipe = "angels-turbo-bike",
+         type = "unlock-recipe"
+      },
+    },
+    unit = {
+      count = 250,
+      ingredients = {
+        {"automation-science-pack", 1 },
+      },
+      time = 30
+    }
+  },
+  {
+    type = "technology",
     name = "angels-heavy-tank",
     icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
     icon_size = 128,
