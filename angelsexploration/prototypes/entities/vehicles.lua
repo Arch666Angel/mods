@@ -191,7 +191,7 @@ data:extend({
         offsets = {
           { 0, 1 },
         },
-      }
+      },
     },
     mined_sound = {
       filename = "__core__/sound/deconstruct-medium.ogg",

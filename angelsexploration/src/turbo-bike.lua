@@ -47,7 +47,11 @@ end
 -- Behaviour functions, mostly event handlers
 -------------------------------------------------------------------------------
 function turbo_bike:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealth)
-  if damaged_entity.name == self:get_bike_name() and damaging_entity and damaging_entity.name == self:get_bike_name() then
+  if
+    damaged_entity.name == self:get_bike_name()
+    and damaging_entity
+    and damaging_entity.name == self:get_bike_name()
+  then
     -- drove against something
     local damage_multiplier = 50
 
@@ -72,7 +76,11 @@ function turbo_bike:on_damaged_entity(damaged_entity, damaging_entity, raw_damag
     -- damage vehicle (more)
     local bike_damage_reduction = 15
     if damage_multiplier - 1 - bike_damage_reduction > 0 then
-      damaged_entity.damage(raw_damage_dealth * (damage_multiplier - 1 - bike_damage_reduction), damaged_entity.force, "impact")
+      damaged_entity.damage(
+        raw_damage_dealth * (damage_multiplier - 1 - bike_damage_reduction),
+        damaged_entity.force,
+        "impact"
+      )
     end
   end
 end
