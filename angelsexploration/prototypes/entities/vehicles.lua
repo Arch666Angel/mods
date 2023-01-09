@@ -38,11 +38,11 @@ data:extend({
         type = "physical",
         percent = 40,
       },
-      {
-        type = "impact",
-        decrease = 10,
-        percent = 20,
-      },
+      --{
+      --  type = "impact",
+      --  decrease = 10,
+      --  percent = 20,
+      --},
       {
         type = "explosion",
         percent = 20,
@@ -55,7 +55,7 @@ data:extend({
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
     effectivity = 0.06,
-    braking_power = "350W",
+    braking_power = "100W",
     burner = {
       effectivity = 0.5,
       fuel_inventory_size = 1,
@@ -178,30 +178,20 @@ data:extend({
     rotation_speed = 0.015,
     weight = 10,
     inventory_size = 10,
-    alert_icon_shift = {
-      0,
-      -0.40625,
-    },
+    alert_icon_shift = { 0, -0.40625 },
     damaged_trigger_effect = {
-      damage_type_filters = "fire",
-      entity_name = "spark-explosion",
-      offset_deviation = {
-        {
-          -0.5,
-          -0.5,
+      {
+        type = "create-entity",
+        entity_name = "spark-explosion",
+        damage_type_filters = "fire",
+        offset_deviation = {
+          { -0.5, -0.5 },
+          { 0.5, 0.5 },
         },
-        {
-          0.5,
-          0.5,
+        offsets = {
+          { 0, 1 },
         },
-      },
-      offsets = {
-        {
-          0,
-          1,
-        },
-      },
-      type = "create-entity",
+      }
     },
     mined_sound = {
       filename = "__core__/sound/deconstruct-medium.ogg",

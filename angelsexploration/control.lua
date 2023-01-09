@@ -1,4 +1,5 @@
 local gathering_turret = require("src.gathering-turret")
+local turbo_bike = require("src.turbo-bike")
 local tips_and_tricks_triggers = require("src.tips-and-tricks-triggers")
 local debug_info = require("src.debug-info")
 
@@ -9,6 +10,7 @@ script.on_configuration_changed(on_configuration_changed)
 -- initialisation
 script.on_init(function()
   gathering_turret:on_init()
+  turbo_bike:on_init()
   tips_and_tricks_triggers:on_init()
   debug_info:on_init()
 end)
@@ -35,6 +37,7 @@ end)
 -- destroy events
 script.on_event(defines.events.on_entity_damaged, function(event)
   gathering_turret:on_damaged_entity(event.entity, event.cause, event.original_damage_amount)
+  turbo_bike:on_damaged_entity(event.entity, event.cause, event.original_damage_amount)
 end, {
   -- Event raise filter 1: damage to (inactive) gathering turret with 0 health remaining
   { mode = "or", filter = "name", name = "angels-gathering-turret" },
@@ -42,6 +45,10 @@ end, {
   -- Event raise filter 2: gathering damage to a potential gathering target
   { mode = "or", filter = "type", type = "land-mine" },
   { mode = "and", filter = "damage-type", type = "gathering" },
+  -- Event raise filter 3: turbo-bike taking damamge
+  { mode = "or", filter = "type", type = "car" },
+  { mode = "and", filter = "name", name = "angels-turbo-bike" },
+  { mode = "and", filter = "damage-type", type = "impact" },
 })
 script.on_event(defines.events.on_entity_died, function(event)
   gathering_turret:on_entity_died(event.entity, event.loot)
