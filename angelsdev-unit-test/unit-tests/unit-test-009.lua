@@ -89,13 +89,45 @@ local function try_find_entity_for(recipe)
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
-
+  
   for entity_name, entity in pairs(entity_prototypes) do
     if
       (not entity.fixed_recipe or (entity.fixed_recipe == recipe.name))
       and (entity.ingredient_count >= item_ingredient_count)
     then
-      return true
+      if (fluid_ingredient_count == 0) and (fluid_product_count == 0) then
+        return true
+      end
+
+      local fluid_ingredient_capacity = 0
+      local fluid_product_capacity = 0
+      local fluid_input_product_capacity = 0
+      for _, fluidbox_prototype in pairs(entity.fluidbox_prototypes) do
+        if fluidbox_prototype.production_type == "input" then
+          fluid_ingredient_capacity = fluid_ingredient_capacity + 1
+        elseif fluidbox_prototype.production_type == "output" then
+          fluid_product_capacity = fluid_product_capacity + 1
+        elseif fluidbox_prototype.production_type == "input-output" then
+          fluid_input_product_capacity = fluid_input_product_capacity + 1
+        end
+      end
+
+      if (fluid_ingredient_count <= fluid_ingredient_capacity) and (fluid_product_count <= fluid_product_capacity) then
+        return true
+      end
+
+      local fluid_input_product_capacity_ingredient_required = 0
+      local fluid_input_product_capacity_product_required = 0
+      if fluid_ingredient_count > fluid_ingredient_capacity then
+        fluid_input_product_capacity_ingredient_required = fluid_ingredient_count - fluid_ingredient_capacity
+      end
+      if fluid_product_count > fluid_product_capacity then
+        fluid_input_product_capacity_product_required = fluid_product_count - fluid_product_capacity
+      end
+
+      if (fluid_input_product_capacity_ingredient_required + fluid_input_product_capacity_ingredient_required <= fluid_input_product_capacity) then
+        return true
+      end
     end
   end
 
