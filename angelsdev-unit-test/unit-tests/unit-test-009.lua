@@ -89,7 +89,7 @@ local function try_find_entity_for(recipe)
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
   local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
-  
+
   for entity_name, entity in pairs(entity_prototypes) do
     if
       (not entity.fixed_recipe or (entity.fixed_recipe == recipe.name))
@@ -125,7 +125,10 @@ local function try_find_entity_for(recipe)
         fluid_input_product_capacity_product_required = fluid_product_count - fluid_product_capacity
       end
 
-      if (fluid_input_product_capacity_ingredient_required + fluid_input_product_capacity_ingredient_required <= fluid_input_product_capacity) then
+      if
+        fluid_input_product_capacity_ingredient_required + fluid_input_product_capacity_ingredient_required
+        <= fluid_input_product_capacity
+      then
         return true
       end
     end
