@@ -209,9 +209,9 @@ biter_definitions.small_spitter = {
     cooldown = 100,
     min_attack_distance = 10,
     creation_distance = 1.9,
-    damage_modifier = 1,
     warmup = 30,
-    damage = 10,
+    damage = 7, -- damage/second
+    damage_modifier = 12, -- direct hit damage
   },
   resistance = {
     { type = "physical", decrease = 0, percent = 0 },
@@ -239,9 +239,9 @@ biter_definitions.medium_spitter = {
     cooldown = 100,
     min_attack_distance = 10,
     creation_distance = 1.9,
-    damage_modifier = 1,
     warmup = 30,
-    damage = 20,
+    damage = 15, -- damage/second
+    damage_modifier = 25, -- direct hit damage
   },
   resistance = {
     { type = "physical", decrease = 5, percent = 20 },
@@ -269,9 +269,9 @@ biter_definitions.big_spitter = {
     cooldown = 100,
     min_attack_distance = 10,
     creation_distance = 1.9,
-    damage_modifier = 1,
     warmup = 30,
-    damage = 30,
+    damage = 30, -- damage/second
+    damage_modifier = 50, -- direct hit damage
   },
   resistance = {
     { type = "physical", decrease = 10, percent = 30 },
@@ -299,9 +299,9 @@ biter_definitions.behemoth_spitter = {
     cooldown = 100,
     min_attack_distance = 10,
     creation_distance = 1.9,
-    damage_modifier = 1,
     warmup = 30,
-    damage = 40,
+    damage = 60, -- damage/second
+    damage_modifier = 100, -- direct hit damage
   },
   resistance = {
     { type = "physical", decrease = 15, percent = 40 },
@@ -331,9 +331,9 @@ biter_definitions.colossal_spitter = {
     cooldown = 100,
     min_attack_distance = 10,
     creation_distance = 1.9,
-    damage_modifier = 1,
     warmup = 30,
-    damage = 50,
+    damage = 120, -- damage/second
+    damage_modifier = 200, -- direct hit damage
   },
   resistance = {
     { type = "physical", decrease = 10, percent = 30 },
