@@ -4,7 +4,7 @@ if mods["bobenemies"] then
   local base_spawner = data.raw["unit-spawner"]["spitter-spawner"]
   for _, bob_spawner in pairs({
     data.raw["unit-spawner"]["bob-spitter-spawner"],
-    data.raw["unit-spawner"]["bob-super-spawner"]
+    data.raw["unit-spawner"]["bob-super-spawner"],
   }) do
     if base_spawner and bob_spawner then
       for unit, unit_correction in pairs({
@@ -39,7 +39,7 @@ if mods["bobenemies"] then
       end
     end
   end
-  
+
   local super_spawner = data.raw["unit-spawner"]["bob-super-spawner"]
   if super_spawner then
     for _, super_spawner_data in pairs(super_spawner.result_units) do
