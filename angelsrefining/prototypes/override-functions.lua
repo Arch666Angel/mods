@@ -321,16 +321,15 @@ ov_functions.global_replace_technology = function(old, new)
   substitution_table.technologies[old] = new
 end
 
-ov_functions.disable_technology =
-  function(technology) -- disable technology (may be a table containing a list of technologies)
-    if type(technology) == "table" then
-      for tk, tech in pairs(technology) do
-        disable_table.technologies[tech] = true
-      end
-    else
-      disable_table.technologies[technology] = true
+ov_functions.disable_technology = function(technology) -- disable technology (may be a table containing a list of technologies)
+  if type(technology) == "table" then
+    for tk, tech in pairs(technology) do
+      disable_table.technologies[tech] = true
     end
+  else
+    disable_table.technologies[technology] = true
   end
+end
 
 ov_functions.set_special_technology_override = function(technology, t)
   if type(technology) == "table" then
@@ -426,16 +425,15 @@ ov_functions.modify_output = function(recipe, i_data)
   end
 end
 
-ov_functions.remove_normal_input =
-  function(recipe, item) -- remove item from input of recipe (item may be a table containing a list of items to remove)
-    if type(item) == "table" then
-      for _, it in pairs(item) do
-        ov_functions.modify_normal_input(recipe, { it, 0 })
-      end
-    else
-      ov_functions.modify_normal_input(recipe, { item, 0 })
+ov_functions.remove_normal_input = function(recipe, item) -- remove item from input of recipe (item may be a table containing a list of items to remove)
+  if type(item) == "table" then
+    for _, it in pairs(item) do
+      ov_functions.modify_normal_input(recipe, { it, 0 })
     end
+  else
+    ov_functions.modify_normal_input(recipe, { item, 0 })
   end
+end
 
 ov_functions.remove_hard_input = function(recipe, item)
   if type(item) == "table" then
@@ -457,16 +455,15 @@ ov_functions.remove_input = function(recipe, item)
   end
 end
 
-ov_functions.remove_normal_output =
-  function(recipe, item) -- remove item from output of recipe (item may be a table containing a list of items to remove)
-    if type(item) == "table" then
-      for _, it in pairs(item) do
-        ov_functions.modify_normal_output(recipe, { it, 0 })
-      end
-    else
-      ov_functions.modify_normal_output(recipe, { item, 0 })
+ov_functions.remove_normal_output = function(recipe, item) -- remove item from output of recipe (item may be a table containing a list of items to remove)
+  if type(item) == "table" then
+    for _, it in pairs(item) do
+      ov_functions.modify_normal_output(recipe, { it, 0 })
     end
+  else
+    ov_functions.modify_normal_output(recipe, { item, 0 })
   end
+end
 
 ov_functions.remove_hard_output = function(recipe, item)
   if type(item) == "table" then
@@ -488,25 +485,24 @@ ov_functions.remove_output = function(recipe, item)
   end
 end
 
-ov_functions.global_replace_item =
-  function(old, new) -- replace all occurrences of old in recipes with new (old may be a table containing a list of items)
-    if type(old) == "table" then
-      for ik, item in pairs(old) do
-        substitution_table.recipe_items[item] = new
-      end
-    else
-      substitution_table.recipe_items[old] = new
-      for _, type in pairs(building_types) do
-        for name, entity in pairs(data.raw[type]) do
-          if entity and entity.next_upgrade then
-            if entity.next_upgrade == old then
-              angelsmods.functions.set_next_upgrade(type, name, new)
-            end
+ov_functions.global_replace_item = function(old, new) -- replace all occurrences of old in recipes with new (old may be a table containing a list of items)
+  if type(old) == "table" then
+    for ik, item in pairs(old) do
+      substitution_table.recipe_items[item] = new
+    end
+  else
+    substitution_table.recipe_items[old] = new
+    for _, type in pairs(building_types) do
+      for name, entity in pairs(data.raw[type]) do
+        if entity and entity.next_upgrade then
+          if entity.next_upgrade == old then
+            angelsmods.functions.set_next_upgrade(type, name, new)
           end
         end
       end
     end
   end
+end
 
 ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   local new_fluid = data.raw.fluid[new_fluid_name]
@@ -683,108 +679,107 @@ ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_tem
   end
 end
 
-ov_functions.barrel_overrides =
-  function(fluid, style) --Bottling override functions for icons, localisation and tech unlocks
-    if data.raw.fluid[fluid] then
-      --declare variables moving forward
-      local fluid_s = data.raw.fluid[fluid]
-      local fluid_i
-      local F_Fill
-      local F_Empty
-      --check that the barrel actually exists
-      if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
-        --define local function variables
-        F_Fill = data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] --define F_Fill
-        F_Empty = data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"] --define F_Empty
-        fluid_i = data.raw.item[fluid .. "-barrel"] --define barrel name
-        --set common properties
-        F_Fill.icons = generate_fill_barrel_icons(fluid_s, style)
-        F_Empty.icons = generate_empty_barrel_icons(fluid_s, style)
-        fluid_i.icons = generate_barrel_icons(fluid_s, style)
-        --results are generic for filled barrels
-        F_Fill.results = {
-          { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
-        }
-        --ingredients are common for emptying recipes
-        F_Empty.ingredients = {
-          { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
-        }
+ov_functions.barrel_overrides = function(fluid, style) --Bottling override functions for icons, localisation and tech unlocks
+  if data.raw.fluid[fluid] then
+    --declare variables moving forward
+    local fluid_s = data.raw.fluid[fluid]
+    local fluid_i
+    local F_Fill
+    local F_Empty
+    --check that the barrel actually exists
+    if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
+      --define local function variables
+      F_Fill = data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] --define F_Fill
+      F_Empty = data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"] --define F_Empty
+      fluid_i = data.raw.item[fluid .. "-barrel"] --define barrel name
+      --set common properties
+      F_Fill.icons = generate_fill_barrel_icons(fluid_s, style)
+      F_Empty.icons = generate_empty_barrel_icons(fluid_s, style)
+      fluid_i.icons = generate_barrel_icons(fluid_s, style)
+      --results are generic for filled barrels
+      F_Fill.results = {
+        { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
+      }
+      --ingredients are common for emptying recipes
+      F_Empty.ingredients = {
+        { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
+      }
 
-        if style == "gas" then -- Gas Bottles
-          F_Fill.localised_name = {
-            "recipe-name.fill-gas-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          F_Fill.ingredients = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "gas-canister", amount = 1 },
-          }
-          F_Empty.results = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "gas-canister", amount = 1 },
-          }
-          F_Empty.localised_name = {
-            "recipe-name.empty-filled-gas-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          fluid_i.localised_name = {
-            "item-name.filled-gas-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
-        elseif style == "acid" then -- Liquid Fuel Canisters
-          F_Fill.localised_name = {
-            "recipe-name.fill-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          F_Fill.ingredients = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-canister", amount = 1 },
-          }
-          F_Empty.results = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-canister", amount = 1 },
-          }
-          F_Empty.localised_name = {
-            "recipe-name.empty-filled-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          fluid_i.localised_name = {
-            "item-name.filled-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("fluid-canister-processing", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
-        else -- Vanilla Barrel
-          F_Fill.localised_name = {
-            "recipe-name.fill-barrel",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          F_Fill.ingredients = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-barrel", amount = 1 },
-          }
-          F_Empty.results = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-barrel", amount = 1 },
-          }
-          F_Empty.localised_name = {
-            "recipe-name.empty-filled-barrel",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          fluid_i.localised_name = {
-            "item-name.filled-barrel",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-        end
+      if style == "gas" then -- Gas Bottles
+        F_Fill.localised_name = {
+          "recipe-name.fill-gas-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        F_Fill.ingredients = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "gas-canister", amount = 1 },
+        }
+        F_Empty.results = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "gas-canister", amount = 1 },
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-gas-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-gas-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
+      elseif style == "acid" then -- Liquid Fuel Canisters
+        F_Fill.localised_name = {
+          "recipe-name.fill-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        F_Fill.ingredients = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "empty-canister", amount = 1 },
+        }
+        F_Empty.results = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "empty-canister", amount = 1 },
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("fluid-canister-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
+      else -- Vanilla Barrel
+        F_Fill.localised_name = {
+          "recipe-name.fill-barrel",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        F_Fill.ingredients = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "empty-barrel", amount = 1 },
+        }
+        F_Empty.results = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "empty-barrel", amount = 1 },
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-barrel",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-barrel",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
       end
     end
   end
+end
 
 -------------------------------------------------------------------------------
 -- OVERRIDE EXECUTION FUNCTIONS -----------------------------------------------

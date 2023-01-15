@@ -31,33 +31,32 @@ local function check_raw_for(i_type, i_name)
   end
 end
 
-RB.set_fallback =
-  function(i_type, i_name, fb_list, i_condition) -- i_type either "item" or "fluid", i_name the name of the item, fb_list a table containing subtables { name, multiplier, condition } where item_name is a string, multiplier is a positive number (defaults to 1), and condition is a function taking i_type and i_name as arguments and returning a boolean (defaults to return true) can also be formatted { name = name, multiplier = multiplier, condition = condition }, condition (optional) is like the condition field in a subtable of fb_list but for i_name
-    local parent = fallbacks[i_type]
-    if parent then
-      if check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
-        parent[i_name] = nil
-      else
-        local sentinel = true
-        for _, fb in pairs(fb_list) do
-          local n, m, c
-          if fb[1] then
-            n, m, c = fb[1], fb[2] or 1, fb[3]
-          else
-            n, m, c = fb.name, fb.multiplier or 1, fb.condition
-          end
-          if check_raw_for(i_type, n) and (not c or c(i_type, n)) then
-            parent[i_name] = { n, m }
-            sentinel = false
-            break
-          end
+RB.set_fallback = function(i_type, i_name, fb_list, i_condition) -- i_type either "item" or "fluid", i_name the name of the item, fb_list a table containing subtables { name, multiplier, condition } where item_name is a string, multiplier is a positive number (defaults to 1), and condition is a function taking i_type and i_name as arguments and returning a boolean (defaults to return true) can also be formatted { name = name, multiplier = multiplier, condition = condition }, condition (optional) is like the condition field in a subtable of fb_list but for i_name
+  local parent = fallbacks[i_type]
+  if parent then
+    if check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
+      parent[i_name] = nil
+    else
+      local sentinel = true
+      for _, fb in pairs(fb_list) do
+        local n, m, c
+        if fb[1] then
+          n, m, c = fb[1], fb[2] or 1, fb[3]
+        else
+          n, m, c = fb.name, fb.multiplier or 1, fb.condition
         end
-        if sentinel then
-          parent[i_name] = { "fallback-sentinel", 0 }
+        if check_raw_for(i_type, n) and (not c or c(i_type, n)) then
+          parent[i_name] = { n, m }
+          sentinel = false
+          break
         end
+      end
+      if sentinel then
+        parent[i_name] = { "fallback-sentinel", 0 }
       end
     end
   end
+end
 
 local function get_fallback(i_type, i_name)
   local parent = fallbacks[i_type]

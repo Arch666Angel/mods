@@ -22,10 +22,9 @@ function turbo_bike:init_global_data()
 end
 
 function turbo_bike:init_prototype_data()
-  return
-    {
-      ["turbo_bike_name"] = "angels-turbo-bike", -- the bike name
-    }
+  return {
+    ["turbo_bike_name"] = "angels-turbo-bike", -- the bike name
+  }
 end
 
 -------------------------------------------------------------------------------
