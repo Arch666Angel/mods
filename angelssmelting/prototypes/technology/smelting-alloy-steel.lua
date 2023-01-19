@@ -40,6 +40,7 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
+      "strand-casting-1",
       "angels-steel-smelting-1",
       "angels-silicon-smelting-1",
       "angels-manganese-smelting-1",
