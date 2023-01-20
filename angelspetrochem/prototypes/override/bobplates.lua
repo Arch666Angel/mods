@@ -113,7 +113,6 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- electronics tech patch ---------------------------------------------------
-  OV.remove_prereq("electronics", "alloy-processing")
   if mods["bobelectronics"] then
     OV.add_prereq("electronics", "angels-coal-processing")
   end
