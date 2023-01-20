@@ -110,7 +110,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coil-glass-fiber",
-    category = "strand-casting",
+    category = "strand-casting-2",
     subgroup = "angels-glass-casting",
     normal = {
       enabled = false,
