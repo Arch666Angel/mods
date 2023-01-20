@@ -460,6 +460,10 @@ local function add_ignores()
         ["plutonium-239"] = true,
         ["plutonium-240"] = true,
         ["thorium-232"] = true,
+      },
+      categories = {
+        ["centrifuging-2"] = true,
+        ["centrifuging-3"] = true,
       }
     }
     ignored_unlocks["atomic-bomb"] = {
