@@ -172,7 +172,7 @@ data:extend({
       },
     }, 2, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-electrolyser",
-    order = "b[angels-air-filter]-b",
+    order = "b[angels-air-filter]-c",
     place_result = "angels-air-filter-3",
     stack_size = 10,
   },
