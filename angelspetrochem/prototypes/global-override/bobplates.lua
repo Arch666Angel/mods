@@ -258,7 +258,7 @@ if mods["bobplates"] then
     OV.add_unlock("circuit-network", "insulated-cable")
     OV.add_unlock("circuit-network", "bob-rubber")
     if mods["angelsbioprocessing"] then
-      OV.add_prereq("circuit-network", "bio-wood-processing")
+      OV.add_prereq("circuit-network", "bio-arboretum-1")
     end
     OV.add_prereq("rubbers", "circuit-network")
     OV.add_prereq("advanced-electronics-2", "rubbers")
