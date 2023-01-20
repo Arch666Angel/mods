@@ -46,6 +46,10 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "liquifier",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "ground-water-pump",
       },
       {
