@@ -375,10 +375,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "bio-plastic",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-plastic",
-      },
     },
     unit = {
       count = 50,
