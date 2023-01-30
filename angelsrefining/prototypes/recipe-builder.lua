@@ -84,7 +84,7 @@ local function check_ingredients(ingredients)
       i_name = item[1]
       i_count = item[2]
     else
-      i_type = item.type
+      i_type = item.type or "item"
       i_name = item.name
       i_count = item.amount
     end
