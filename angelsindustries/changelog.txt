@@ -6,6 +6,7 @@ Date: xx.xx.xxxx
       - Fixed Item Subgroup of Heat Exchanger 4 from Bob's Power (887)
     - Component mode:
       - Fixed the silver-zinc battery did not require a battery casing (886)
+      - Fixed ingredients and tech prerequisites of radar from Bob's Warfare (889)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.17
 Date: 01.01.2023

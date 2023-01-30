@@ -184,10 +184,11 @@ if angelsmods.industries.tech then
   if mods["bobwarfare"] then
     AI.core_replace("bob-robot-gun-1", "logistic", "war")
     --radars
-    AI.core_replace("radars", "basic", "exploration")
+    AI.core_replace("radars-1", "basic", "exploration")
     AI.core_replace("radars-2", "basic", "exploration")
     AI.core_replace("radars-3", "basic", "exploration")
     AI.core_replace("radars-4", "processing", "exploration")
+    AI.core_replace("radars-5", "processing", "exploration")
     --mines
     AI.core_replace("poison-mine", "basic", "war")
     AI.core_replace("slowdown-mine", "basic", "war")

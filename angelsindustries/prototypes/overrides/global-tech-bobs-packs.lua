@@ -288,7 +288,8 @@ if angelsmods.industries.tech then
     AI.pre_req_replace("bob-rocket", "military-3", "angels-components-weapons-advanced")
     AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
-    AI.pack_replace("radars-4", "blue", "yellow")
+    AI.pack_replace("radars-3", "blue", "orange")
+    OV.remove_prereq("radars-4", "production-science-pack")
     --small fixes
     AI.pack_replace("follower-robot-count-1", "green", "orange")
     AI.pack_replace("follower-robot-count-2", "green", "orange")
