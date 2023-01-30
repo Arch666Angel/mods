@@ -39,7 +39,7 @@ local function process_tech(tech)
         for _, product in pairs(recipe.products) do
           if product.type == "item" then
             recipes[recipe.name].products.items[product.name] = true
-            
+
             -- Check for entity. Add crafting categories
             local entity = game.item_prototypes[product.name].place_result
             if entity then
@@ -348,16 +348,16 @@ local function add_ignores()
   -- base game exception
   ignored_unlocks["artillery"] = {
     items = {
-      ["concrete"] = true
-    }
+      ["concrete"] = true,
+    },
   }
 
   if game.active_mods["angelsrefining"] then
     ignore_building_recipes = true
     ignored_unlocks["ore-powderizer"] = {
       items = {
-        ["milling-drum-used"] = true
-      }
+        ["milling-drum-used"] = true,
+      },
     }
     ignored_unlocks["water-treatment-2"] = {
       items = {},
@@ -365,33 +365,33 @@ local function add_ignores()
         ["water-greenyellow-waste"] = true,
         ["water-green-waste"] = true,
         ["water-red-waste"] = true,
-      }
+      },
     }
   end
 
   if game.active_mods["angelssmelting"] then
     ignored_unlocks["angels-coolant-1"] = {
       fluids = {
-        ["liquid-coolant-used"] = true
-      }
+        ["liquid-coolant-used"] = true,
+      },
     }
   end
 
   if game.active_mods["angelsbioprocessing"] then
     ignored_unlocks["plastics"] = {
       fluids = {
-        ["liquid-plastic"] = true
-      }
+        ["liquid-plastic"] = true,
+      },
     }
     ignored_unlocks["rubbers"] = {
       fluids = {
-        ["liquid-rubber"] = true
-      }
+        ["liquid-rubber"] = true,
+      },
     }
     ignored_unlocks["resins"] = {
       fluids = {
-        ["liquid-resin"] = true
-      }
+        ["liquid-resin"] = true,
+      },
     }
     ignored_unlocks["bio-processing-paste"] = {
       items = {
@@ -402,7 +402,7 @@ local function add_ignores()
         ["powder-titanium"] = true,
         ["powdered-tungsten"] = true,
         ["powder-zinc"] = true,
-      }
+      },
     }
     -- TODO: Tidy up puffer / crop prerequisites
     ignored_unlocks["bio-refugium-hatchery"] = {
@@ -410,14 +410,14 @@ local function add_ignores()
         ["bio-puffer-egg-2"] = true,
         ["bio-puffer-egg-3"] = true,
         ["bio-puffer-egg-4"] = true,
-        ["bio-puffer-egg-5"] = true
-      }
+        ["bio-puffer-egg-5"] = true,
+      },
     }
     ignored_unlocks["bio-fermentation"] = {
       items = {
         ["solid-corn"] = true,
-        ["solid-fruit"] = true
-      }
+        ["solid-fruit"] = true,
+      },
     }
     ignored_unlocks["bio-nutrient-paste"] = {
       items = {
@@ -426,31 +426,31 @@ local function add_ignores()
         ["solid-leafs"] = true,
         ["solid-nuts"] = true,
         ["solid-pips"] = true,
-        ["solid-fruit"] = true
-      }
+        ["solid-fruit"] = true,
+      },
     }
     ignored_unlocks["bio-pressing-1"] = {
       items = {
         ["solid-nuts"] = true,
         ["solid-pips"] = true,
-        ["solid-beans"] = true
-      }
+        ["solid-beans"] = true,
+      },
     }
     -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
     ignored_unlocks["angels-bio-yield-module"] = {
       items = {
-        ["crystal-splinter-green"] = true
-      }
+        ["crystal-splinter-green"] = true,
+      },
     }
     ignored_unlocks["angels-bio-yield-module-2"] = {
       items = {
-        ["crystal-shard-green"] = true
-      }
+        ["crystal-shard-green"] = true,
+      },
     }
     ignored_unlocks["angels-bio-yield-module-3"] = {
       items = {
-        ["crystal-full-green"] = true
-      }
+        ["crystal-full-green"] = true,
+      },
     }
   end
 
@@ -464,7 +464,7 @@ local function add_ignores()
       categories = {
         ["centrifuging-2"] = true,
         ["centrifuging-3"] = true,
-      }
+      },
     }
     ignored_unlocks["atomic-bomb"] = {
       items = {
@@ -474,7 +474,7 @@ local function add_ignores()
       },
       fluids = {
         ["gas-deuterium"] = true,
-      }
+      },
     }
   end
 
@@ -492,11 +492,11 @@ local function add_ignores()
         ["wooden-board"] = true,
       },
       fluids = {
-        ["water"] = true
-      }
+        ["water"] = true,
+      },
     }
   end
-  
+
   for _, player in pairs(game.players) do
     if player.character and player.character.prototype and player.character.prototype.crafting_categories then
       local crafting_categories = player.character.prototype.crafting_categories
@@ -504,7 +504,7 @@ local function add_ignores()
         ignored_unlocks["starting"] = ignored_unlocks["starting"] or {}
         ignored_unlocks["starting"].categories = ignored_unlocks["starting"].categories or {}
         ignored_unlocks["starting"].categories[category_name] = true
-      end      
+      end
     end
   end
 end
