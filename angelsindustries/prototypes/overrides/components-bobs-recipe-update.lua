@@ -113,6 +113,37 @@ if angelsmods.industries.components then
   end
 
   -----------------------------------------------------------------------------
+  -- BOB LOGISTICS ------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["boblogistics"] then
+    -- splitters
+    if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+      OV.patch_recipes({
+        {
+          name = "basic-splitter",
+          ingredients = {
+            { type = "item", name = "circuit-grey", amount = "copper-cable" },
+          },
+        },
+        {
+          name = "splitter",
+          ingredients = {
+            { type = "item", name = "circuit-red-loaded", amount = "circuit-grey" },
+          },
+        },
+      })
+    end
+    OV.patch_recipes({
+      {
+        name = "express-splitter",
+        ingredients = {
+          { type = "item", name = "circuit-orange-loaded", amount = "circuit-blue-loaded" },
+        },
+      },
+    })
+  end
+
+  -----------------------------------------------------------------------------
   -- BOB REVAMP ---------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobrevamp"] then

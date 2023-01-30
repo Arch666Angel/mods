@@ -147,8 +147,10 @@ if angelsmods.industries.tech then
   -- BOBS LOGISTICS -------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["boblogistics"] then
-    AI.core_replace("logistics-0", "logistic", "basic")
-    AI.core_replace("logistics", "basic", "logistic")
+    if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+      AI.core_replace("logistics-0", "logistic", "basic")
+      AI.core_replace("logistics", "basic", "logistic")
+    end
     -- toolbelts
     AI.core_replace("toolbelt-2", "basic", "enhance")
     AI.core_replace("toolbelt-3", "processing", "enhance")
@@ -184,10 +186,11 @@ if angelsmods.industries.tech then
   if mods["bobwarfare"] then
     AI.core_replace("bob-robot-gun-1", "logistic", "war")
     --radars
-    AI.core_replace("radars", "basic", "exploration")
+    AI.core_replace("radars-1", "basic", "exploration")
     AI.core_replace("radars-2", "basic", "exploration")
     AI.core_replace("radars-3", "basic", "exploration")
     AI.core_replace("radars-4", "processing", "exploration")
+    AI.core_replace("radars-5", "processing", "exploration")
     --mines
     AI.core_replace("poison-mine", "basic", "war")
     AI.core_replace("slowdown-mine", "basic", "war")
