@@ -201,9 +201,11 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["boblogistics"] then
     --adds bob logistics stuffs
-    -- basic logistics
-    AI.pack_replace("logistics-0", "red", "grey")
-    AI.pack_replace("logistics", "grey", "red")
+    if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+      -- basic logistics
+      AI.pack_replace("logistics-0", "red", "grey")
+      AI.pack_replace("logistics", "grey", "red")
+    end
     -- toolbelts
     AI.pack_replace("toolbelt-2", "blue", "orange")
     OV.remove_prereq("toolbelt-2", "tech-blue-packs")

@@ -147,8 +147,10 @@ if angelsmods.industries.tech then
   -- BOBS LOGISTICS -------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["boblogistics"] then
-    AI.core_replace("logistics-0", "logistic", "basic")
-    AI.core_replace("logistics", "basic", "logistic")
+    if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+      AI.core_replace("logistics-0", "logistic", "basic")
+      AI.core_replace("logistics", "basic", "logistic")
+    end
     -- toolbelts
     AI.core_replace("toolbelt-2", "basic", "enhance")
     AI.core_replace("toolbelt-3", "processing", "enhance")

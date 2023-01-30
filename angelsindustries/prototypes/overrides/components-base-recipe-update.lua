@@ -155,6 +155,22 @@ if angelsmods.industries.components then
     OV.add_prereq("productivity-module-2", "tech-blue-circuit")
     OV.add_prereq("productivity-module-3", "tech-yellow-circuit")
   end
+
+  -- splitters
+  OV.patch_recipes({
+    {
+      name = "fast-splitter",
+      ingredients = {
+        { type = "item", name = "circuit-green-loaded", amount = "circuit-red-loaded" },
+      },
+    },
+    {
+      name = "express-splitter",
+      ingredients = {
+        { type = "item", name = "circuit-blue-loaded", amount = "circuit-orange-loaded" },
+      },
+    },
+  })
 end
 
 if angelsmods.industries.components then
