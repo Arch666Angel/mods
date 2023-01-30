@@ -289,6 +289,7 @@ data:extend({
       "bio-processing-crystal-splinter-1",
       "ore-powderizer",
       "geode-processing-2",
+      "slag-processing-2",
     },
     effects = {
       {

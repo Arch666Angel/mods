@@ -17,4 +17,5 @@ then
     { name = "lithium-cobalt-oxide", subgroup = "angels-alloys", order = "b[lithium]-c" },
     { name = "lithium-water-electrolysis", subgroup = "angels-alloys", order = "b[lithium]-d" },
   })
+  OV.add_prereq("lithium-processing", "angels-metallurgy-2")
 end

@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.21
+Date: ???
+  Changes:
+    - Glass fiber now requires Strand Casting Machine 2 (unless Angel's Industries Components Overhaul is enabled) (890)
+    - Added missing prerequisites. Some recipes could be researched before a machine for it was unlocked (890)
+    - Changed recipes to require Crystallizer rather than Crystallizer 2 (890)
+      - Crystal catalyst
+      - Gem ores
+      - Raw crystal splinter
+  Bugfixes:
+    - Fixed Air Filter 3's sort order and icon numeral (893)
+    - Fixed Bob's Oil Processing recipe not being correctly hidden in some configurations (894)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.20
 Date: 01.01.2023
   Changes:

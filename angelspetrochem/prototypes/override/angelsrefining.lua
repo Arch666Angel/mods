@@ -36,7 +36,7 @@ if angelsmods.refining then
     },
   })
 
-  OV.remove_unlock("slag-processing-1", "liquifier")
+  OV.remove_unlock("water-treatment", "liquifier")
   OV.add_unlock("basic-chemistry", "liquifier")
   OV.remove_prereq("slag-processing-1", "water-treatment")
   OV.remove_prereq("slag-processing-1", "ore-crushing")

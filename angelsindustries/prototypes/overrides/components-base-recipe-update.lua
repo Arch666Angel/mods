@@ -8,7 +8,15 @@ if angelsmods.industries.components then
 
   --battery requirements
   OV.remove_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber")
+  OV.remove_prereq("angels-glass-smelting-2", "strand-casting-2")
   OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
+  OV.add_prereq("angels-glass-smelting-1", "strand-casting-1")
+  OV.patch_recipes({
+    {
+      name = "angels-coil-glass-fiber",
+      category = "strand-casting",
+    },
+  })
   --battery usage
   --vanilla replacements
   AI.replace_recipe_ing("accumulator", "battery-1", "battery-2")

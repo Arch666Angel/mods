@@ -123,8 +123,8 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
-      "angels-metallurgy-5",
-      "ore-processing-3",
+      --"angels-metallurgy-5",
+      "ore-processing-4",
       "angels-cobalt-smelting-2",
       "angels-sulfur-processing-1",
       "chlorine-processing-2",
