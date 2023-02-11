@@ -10,6 +10,7 @@ if mods["bobgreenhouse"] then
         { name = "gas-nitrogen", type = "fluid", amount = 0 },
       },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-urea", "gas-methane", "gas-nitrogen" }),
+      category = "advanced-chemistry" or nil,
     },
   })
 
