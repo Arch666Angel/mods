@@ -8,6 +8,8 @@ Date: ???
       - Crystal catalyst
       - Gem ores
       - Raw crystal splinter
+    - Used coolant coal filtering now requires Filtration Unit 2 (903)
+    - Used cooland ceramic filtering now requires Filtration Unit 3 (903)
   Bugfixes:
     - Fixed Air Filter 3's sort order and icon numeral (893)
     - Fixed Bob's Oil Processing recipe not being correctly hidden in some configurations (894)

@@ -156,6 +156,7 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",
+      "angels-coolant-1",
       "angels-lead-casting-2",
     },
     effects = {

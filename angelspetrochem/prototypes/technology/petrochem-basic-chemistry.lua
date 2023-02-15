@@ -123,7 +123,7 @@ data:extend({
       "angels-sulfur-processing-2",
       "water-treatment-4",
       "angels-advanced-chemistry-4",
-      mods["angelssmelting"] and "angels-coolant-1" or "basic-chemistry-2",
+      mods["angelssmelting"] and "angels-cooling" or "basic-chemistry-2",
     },
     effects = {
       {
