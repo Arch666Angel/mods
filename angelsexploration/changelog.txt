@@ -4,6 +4,7 @@ Date: xx.xx.2023
   Changes:
     - Added "Thorvin" bicycle; credits to the TurboBike mod for the graphics (790)
     - Spitters are back doing acid splash instead of their bio splash
+    - First (partial) rework on artifact drop rates (748)
   Bugfixes:
     - Fixed the native inhabitants tips and tricks could not become visible
     - Fixed incomplete tips and tricks localisation for the enemy spawners
