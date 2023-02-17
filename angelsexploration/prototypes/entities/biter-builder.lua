@@ -1512,6 +1512,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
   return stream.name
 end
 local function make_attack_parameter(data_app, data_dmg)
+  if data_app == nil or data_dmg == nil then return nil end
   if data_app.type == "biter" then
     data_dmg.type = "projectile"
     data_dmg.category = "melee"
@@ -1639,14 +1640,16 @@ local function make_loot(loot_data)
   loot_proto = {}
   for _, loot_item in pairs(loot_data) do
     local item_found = false
-    for _, item_type in pairs({ "item", "tool", "item-with-entity-data" }) do
-      if data.raw[item_type][loot_item.item] then
-        item_found = true
+    if loot_item.item then
+      for _, item_type in pairs({ "item", "tool", "item-with-entity-data" }) do
+        if data.raw[item_type][loot_item.item] then
+          item_found = true
+        end
       end
     end
     if item_found then
-      local min = (loot_item.avg_amount or 1) - (loot_item.variation or 0) / 2
-      local max = (loot_item.avg_amount or 1) + (loot_item.variation or 0) / 2
+      local min = (loot_item.avg_amount or 1) - ((loot_item.variation or 0) / 2)
+      local max = (loot_item.avg_amount or 1) + ((loot_item.variation or 0) / 2)
       if max < min then
         min, max = max, min
       end
@@ -1656,7 +1659,7 @@ local function make_loot(loot_data)
           min, max = min / max, 1
         end
         table.insert(loot_proto, {
-          item = loot_data.item,
+          item = loot_item.item,
           probability = prob < 1 and prob or nil,
           count_min = min,
           count_max = max,
@@ -1669,87 +1672,87 @@ end
 
 -- public functions
 function angelsmods.functions.make_alien(def_data)
-  if def_data ~= nil then
-    local c_name = def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
-    --utilise the vanilla script to add the death animation and corpses in one go
-    local corpse_base = {
-      type = "corpse",
-      name = c_name,
-      icons = {
-        {
-          icon = "__base__/graphics/icons/big-biter-corpse.png",
-          icon_size = 64,
-          icon_mipmaps = 4,
-          tint = def_data.appearance.tint1,
-        },
-      },
-      selection_box = { { -1, -1 }, { 1, 1 } },
-      selectable_in_game = false,
-      subgroup = "corpses",
-      order = "c[corpse]-a[" .. def_data.appearance.type .. "]-a[" .. def_data.appearance.name .. "]",
-      flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
-    }
-    data:extend({ corpse_base })
-    if def_data.appearance.type == "scarab" then
-      data.raw.corpse[c_name].animation = make_die_animation(def_data.appearance)
-    elseif def_data.appearance.type == "biter" then
-      --both share biter animations
-      add_biter_die_animation(
-        def_data.appearance.scale,
-        def_data.appearance.tint1,
-        def_data.appearance.tint2,
-        corpse_base
-      )
-    else --psyker and spitter share spitter ones, any custom ones would have to be isolated or paired with these
-      add_spitter_die_animation(
-        def_data.appearance.scale,
-        def_data.appearance.tint1,
-        def_data.appearance.tint2,
-        corpse_base
-      )
-    end
-    local box_scale = def_data.appearance.box_scale or 1
-    data:extend({
+  if def_data == nil then return end
+  local c_name = def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
+  --utilise the vanilla script to add the death animation and corpses in one go
+  local corpse_base = {
+    type = "corpse",
+    name = c_name,
+    icons = {
       {
-        type = "unit",
-        name = def_data.appearance.name .. "-" .. def_data.appearance.type,
-        icons = make_icon(def_data.appearance),
-        icon_size = 32,
-        flags = {
-          "placeable-player",
-          "placeable-enemy",
-          "placeable-off-grid",
-          "not-repairable",
-          "breaths-air",
-          "hidden",
-        },
-        max_health = def_data.appearance.health,
-        resistances = def_data.resistance,
-        order = def_data.appearance.order or "b-z-a",
-        subgroup = "enemies",
-        healing_per_tick = 0.01,
-        collision_box = { { -0.4 * box_scale, -0.4 * box_scale }, { 0.4 * box_scale, 0.4 * box_scale } },
-        selection_box = { { -0.7 * box_scale, -1.5 * box_scale }, { 0.7 * box_scale, 0.3 * box_scale } },
-        attack_parameters = make_attack_parameter(def_data.appearance, def_data.attack),
-        vision_distance = 30,
-        movement_speed = def_data.appearance.speed,
-        distance_per_frame = 0.1,
-        pollution_to_join_attack = 200,
-        distraction_cooldown = 300,
-        min_pursue_time = 10 * 60,
-        max_pursue_distance = 50,
-        corpse = c_name,
-        loot = make_loot(def_data.loot),
-        dying_explosion = "blood-explosion-big",
-        dying_sound = make_die_sound(def_data.appearance.type, 0.4),
-        working_sound = make_call_sounds(0.3),
-        run_animation = make_run_animation(def_data.appearance),
+        icon = "__base__/graphics/icons/big-biter-corpse.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        tint = def_data.appearance.tint1,
       },
-    })
+    },
+    selection_box = { { -1, -1 }, { 1, 1 } },
+    selectable_in_game = false,
+    subgroup = "corpses",
+    order = "c[corpse]-a[" .. def_data.appearance.type .. "]-a[" .. def_data.appearance.name .. "]",
+    flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },
+  }
+  data:extend({ corpse_base })
+  if def_data.appearance.type == "scarab" then
+    data.raw.corpse[c_name].animation = make_die_animation(def_data.appearance)
+  elseif def_data.appearance.type == "biter" then
+    --both share biter animations
+    add_biter_die_animation(
+      def_data.appearance.scale,
+      def_data.appearance.tint1,
+      def_data.appearance.tint2,
+      corpse_base
+    )
+  else --psyker and spitter share spitter ones, any custom ones would have to be isolated or paired with these
+    add_spitter_die_animation(
+      def_data.appearance.scale,
+      def_data.appearance.tint1,
+      def_data.appearance.tint2,
+      corpse_base
+    )
   end
+  local box_scale = def_data.appearance.box_scale or 1
+  data:extend({
+    {
+      type = "unit",
+      name = def_data.appearance.name .. "-" .. def_data.appearance.type,
+      icons = make_icon(def_data.appearance),
+      icon_size = 32,
+      flags = {
+        "placeable-player",
+        "placeable-enemy",
+        "placeable-off-grid",
+        "not-repairable",
+        "breaths-air",
+        "hidden",
+      },
+      max_health = def_data.appearance.health,
+      resistances = def_data.resistance,
+      order = def_data.appearance.order or "b-z-a",
+      subgroup = "enemies",
+      healing_per_tick = 0.01,
+      collision_box = { { -0.4 * box_scale, -0.4 * box_scale }, { 0.4 * box_scale, 0.4 * box_scale } },
+      selection_box = { { -0.7 * box_scale, -1.5 * box_scale }, { 0.7 * box_scale, 0.3 * box_scale } },
+      attack_parameters = make_attack_parameter(def_data.appearance, def_data.attack),
+      vision_distance = 30,
+      movement_speed = def_data.appearance.speed,
+      distance_per_frame = 0.1,
+      pollution_to_join_attack = 200,
+      distraction_cooldown = 300,
+      min_pursue_time = 10 * 60,
+      max_pursue_distance = 50,
+      corpse = c_name,
+      loot = make_loot(def_data.loot),
+      dying_explosion = "blood-explosion-big",
+      dying_sound = make_die_sound(def_data.appearance.type, 0.4),
+      working_sound = make_call_sounds(0.3),
+      run_animation = make_run_animation(def_data.appearance),
+    },
+  })
 end
 
 function angelsmods.functions.make_alien_spawner(spawn_data)
+  if spawn_data == nil then return end
   data:extend({
     {
       type = "unit-spawner",
@@ -1829,22 +1832,22 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
       },
     },
   })
-  -- log(serpent.block(data.raw["unit-spawner"][spawn_data.appearance.type.."-spawner"].autoplace))
 end
 
 function angelsmods.functions.update_alien(ua_data)
-  local u_name = ua_data.appearance.full_name or (ua_data.appearance.name .. "-" .. ua_data.appearance.type)
-  if data.raw.unit[u_name] then
-    local unit = data.raw.unit[u_name]
-    unit.resistances = ua_data.resistance
-    unit.max_health = ua_data.appearance.health
-    unit.movement_speed = ua_data.appearance.speed
-    unit.attack_parameters = make_attack_parameter(ua_data.appearance, ua_data.attack)
+  if ua_data == nil then return end
+  local unit = data.raw.unit[ua_data.appearance.full_name or (ua_data.appearance.name .. "-" .. ua_data.appearance.type) or ""]
+  if unit then
+    unit.resistances = ua_data.resistance or unit.resistances
+    unit.max_health = ua_data.appearance.health or unit.max_health
+    unit.movement_speed = ua_data.appearance.speed or unit.movement_speed
+    unit.attack_parameters = make_attack_parameter(ua_data.appearance, ua_data.attack) or unit.attack_parameters
     unit.loot = ua_data.loot and make_loot(ua_data.loot) or unit.loot
   end
 end
 
 function angelsmods.functions.update_spawner(us_data)
+  if us_data == nil then return end
   local s_name = us_data.appearance.type .. "-spawner"
   if data.raw["unit-spawner"][s_name] then
     local spawner = data.raw["unit-spawner"][s_name]
