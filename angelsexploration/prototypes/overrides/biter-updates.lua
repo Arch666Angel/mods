@@ -20,13 +20,15 @@ if mods["bobenemies"] then
                     for base_point_idx, base_point_data in pairs(base_spawn_data.spawn_points or base_spawn_data[2]) do
                       if first_spawn and (base_point_data.spawn_weight or base_point_data[2]) > 0 then
                         local base_point = (base_spawn_data.spawn_points or base_spawn_data[2])[base_point_idx > 1 and (base_point_idx - 1) or 1]
-                        bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] =
-                          base_point[base_point.evolution_factor and "evolution_factor" or 1] + unit_correction -- marginally larger point (required for tips and tricks 1-2-x behaviour)
-                        
-                        if (bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1] <
-                              base_point[base_point.evolution_factor and "evolution_factor" or 1] + unit_correction) then
-                          bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1] =
-                            base_point[base_point.evolution_factor and "evolution_factor" or 1] + 2 * unit_correction -- marginally larger point than the previous point
+                        bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] = base_point[base_point.evolution_factor and "evolution_factor" or 1]
+                          + unit_correction -- marginally larger point (required for tips and tricks 1-2-x behaviour)
+
+                        if
+                          bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1]
+                          < base_point[base_point.evolution_factor and "evolution_factor" or 1] + unit_correction
+                        then
+                          bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1] = base_point[base_point.evolution_factor and "evolution_factor" or 1]
+                            + 2 * unit_correction -- marginally larger point than the previous point
                         end
                         first_spawn = false
                       end
@@ -35,8 +37,8 @@ if mods["bobenemies"] then
                 end
 
                 if first_spawn and unit_correction ~= 0 then -- not found in base spawner (only adding correction factor)
-                  bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] =
-                    bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] + unit_correction
+                  bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] = bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1]
+                    + unit_correction
                 end
               end
             end
@@ -45,7 +47,7 @@ if mods["bobenemies"] then
       end
     end
   end
-  
+
   base_spawner = data.raw["unit-spawner"]["spitter-spawner"]
   for _, bob_spawner in pairs({
     data.raw["unit-spawner"]["bob-spitter-spawner"],
@@ -67,13 +69,15 @@ if mods["bobenemies"] then
                     for base_point_idx, base_point_data in pairs(base_spawn_data.spawn_points or base_spawn_data[2]) do
                       if first_spawn and (base_point_data.spawn_weight or base_point_data[2]) > 0 then
                         local base_point = (base_spawn_data.spawn_points or base_spawn_data[2])[base_point_idx > 1 and (base_point_idx - 1) or 1]
-                        bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] =
-                          base_point[base_point.evolution_factor and "evolution_factor" or 1] + unit_correction -- marginally larger point (required for tips and tricks 1-2-x behaviour)
-                        
-                        if (bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1] <
-                              base_point[base_point.evolution_factor and "evolution_factor" or 1] + unit_correction) then
-                          bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1] =
-                            base_point[base_point.evolution_factor and "evolution_factor" or 1] + 2 * unit_correction -- marginally larger point than the previous point
+                        bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] = base_point[base_point.evolution_factor and "evolution_factor" or 1]
+                          + unit_correction -- marginally larger point (required for tips and tricks 1-2-x behaviour)
+
+                        if
+                          bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1]
+                          < base_point[base_point.evolution_factor and "evolution_factor" or 1] + unit_correction
+                        then
+                          bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][(bob_point_idx > 1 and (bob_point_idx - 1) or 1) + 1][bob_point_data.evolution_factor and "evolution_factor" or 1] = base_point[base_point.evolution_factor and "evolution_factor" or 1]
+                            + 2 * unit_correction -- marginally larger point than the previous point
                         end
                         first_spawn = false
                       end
@@ -82,8 +86,8 @@ if mods["bobenemies"] then
                 end
 
                 if first_spawn and unit_correction ~= 0 then -- not found in base spawner (only adding correction factor)
-                  bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] =
-                    bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] + unit_correction
+                  bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1] = bob_spawner.result_units[bob_spawn_idx][bob_spawn_data.spawn_points and "spawn_points" or 2][bob_point_idx > 1 and (bob_point_idx - 1) or 1][bob_point_data.evolution_factor and "evolution_factor" or 1]
+                    + unit_correction
                 end
               end
             end

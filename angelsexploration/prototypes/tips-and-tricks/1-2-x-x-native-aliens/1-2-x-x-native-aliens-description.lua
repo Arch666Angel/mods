@@ -124,10 +124,14 @@ return function(spawner_name, unit_name, evolution_factor)
         end
       end
       table.insert(drop_description, "[img=item." .. (drop.item or "angels-void") .. "]")
-      table.insert(drop_description, (drop.item and data.raw.item[drop.item] or {localised_name = false}).localised_name or {
-        "tips-and-tricks-description.angels-native-inhabitants-unit-loot-item-name",
-        "__ITEM__" .. (drop.item or "angels-void") .. "__",
-      })
+      table.insert(
+        drop_description,
+        (drop.item and data.raw.item[drop.item] or { localised_name = false }).localised_name
+          or {
+            "tips-and-tricks-description.angels-native-inhabitants-unit-loot-item-name",
+            "__ITEM__" .. (drop.item or "angels-void") .. "__",
+          }
+      )
       table.insert(loot_description, compress_localised_string(drop_description))
     end
     table.insert(description, loot_description)

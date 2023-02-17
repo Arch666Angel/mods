@@ -1512,7 +1512,9 @@ local function make_projectile_stream(pro_app, pro_dmg)
   return stream.name
 end
 local function make_attack_parameter(data_app, data_dmg)
-  if data_app == nil or data_dmg == nil then return nil end
+  if data_app == nil or data_dmg == nil then
+    return nil
+  end
   if data_app.type == "biter" then
     data_dmg.type = "projectile"
     data_dmg.category = "melee"
@@ -1672,7 +1674,9 @@ end
 
 -- public functions
 function angelsmods.functions.make_alien(def_data)
-  if def_data == nil then return end
+  if def_data == nil then
+    return
+  end
   local c_name = def_data.appearance.name .. "-" .. def_data.appearance.type .. "-corpse"
   --utilise the vanilla script to add the death animation and corpses in one go
   local corpse_base = {
@@ -1752,7 +1756,9 @@ function angelsmods.functions.make_alien(def_data)
 end
 
 function angelsmods.functions.make_alien_spawner(spawn_data)
-  if spawn_data == nil then return end
+  if spawn_data == nil then
+    return
+  end
   data:extend({
     {
       type = "unit-spawner",
@@ -1835,8 +1841,11 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
 end
 
 function angelsmods.functions.update_alien(ua_data)
-  if ua_data == nil then return end
-  local unit = data.raw.unit[ua_data.appearance.full_name or (ua_data.appearance.name .. "-" .. ua_data.appearance.type) or ""]
+  if ua_data == nil then
+    return
+  end
+  local unit =
+    data.raw.unit[ua_data.appearance.full_name or (ua_data.appearance.name .. "-" .. ua_data.appearance.type) or ""]
   if unit then
     unit.resistances = ua_data.resistance or unit.resistances
     unit.max_health = ua_data.appearance.health or unit.max_health
@@ -1847,7 +1856,9 @@ function angelsmods.functions.update_alien(ua_data)
 end
 
 function angelsmods.functions.update_spawner(us_data)
-  if us_data == nil then return end
+  if us_data == nil then
+    return
+  end
   local s_name = us_data.appearance.type .. "-spawner"
   if data.raw["unit-spawner"][s_name] then
     local spawner = data.raw["unit-spawner"][s_name]

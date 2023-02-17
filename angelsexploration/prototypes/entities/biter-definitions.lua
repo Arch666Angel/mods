@@ -1,14 +1,16 @@
 local bob_biters = mods["bobenemies"] and true or false
 
 local function create_loot_definition(color, avg_amount, variation)
-  if not angelsmods.triggers.artifacts[color] then return nil end
+  if not angelsmods.triggers.artifacts[color] then
+    return nil
+  end
 
-  local item =  "small-alien-artifact"
+  local item = "small-alien-artifact"
   if color ~= "base" then
     item = item .. "-" .. color
   end
 
-  return {item = item, avg_amount = avg_amount, variation = variation}
+  return { item = item, avg_amount = avg_amount, variation = variation }
 end
 
 local biter_definitions = {}
