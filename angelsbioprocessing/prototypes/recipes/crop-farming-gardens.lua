@@ -40,7 +40,7 @@ data:extend({
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "temperate-garden", amount = 1 },
+      { type = "item", name = "temperate-garden", amount = 1, catalyst_amount = 1 },
       { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
       { type = "item", name = "token-bio", amount = 30 },
       { type = "fluid", name = "water-mineralized", amount = 50 },
@@ -202,7 +202,7 @@ data:extend({
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "desert-garden", amount = 1 },
+      { type = "item", name = "desert-garden", amount = 1, catalyst_amount = 1 },
       { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
       { type = "item", name = "token-bio", amount = 30 },
       { type = "fluid", name = "water-mineralized", amount = 50 },
@@ -364,7 +364,7 @@ data:extend({
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "swamp-garden", amount = 1 },
+      { type = "item", name = "swamp-garden", amount = 1, catalyst_amount = 1 },
       { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
       { type = "item", name = "token-bio", amount = 30 },
       { type = "fluid", name = "water-mineralized", amount = 50 },

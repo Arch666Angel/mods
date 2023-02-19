@@ -3,6 +3,7 @@ Version: 0.7.24
 Date: xx.xx.2023
   Bugfixes:
     - Fixed info about pollution absorbtion rate was incorrect for the biologically active tile.
+    - Fixed production statistics of garden duplication.
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.23
 Date: 01.01.2023
