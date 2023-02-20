@@ -102,7 +102,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-iron-hydroxide-smelting",
-    localised_name = {"recipe-name.solid-iron-hydroxide-smelting"},
+    localised_name = { "recipe-name.solid-iron-hydroxide-smelting" },
     category = "chemical-smelting-2",
     subgroup = "angels-iron",
     energy_required = 4,
@@ -124,7 +124,8 @@ data:extend({
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("ingot-iron"),
       angelsmods.functions.get_object_icons("solid-iron-hydroxide"),
-      { -11.5, -12 }, 10.24 / 32
+      { -11.5, -12 },
+      10.24 / 32
     ),
     order = "e[ingot-iron]-d",
   },
