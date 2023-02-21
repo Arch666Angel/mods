@@ -64,6 +64,7 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
       "molten-iron-smelting-4",
       "molten-iron-smelting-5",
     })
+    OV.disable_technology("angels-iron-casting-4")
   end
 
   if angelsmods.trigger.smelting_products["iron"].plate or angelsmods.trigger.smelting_products["iron"].rod then

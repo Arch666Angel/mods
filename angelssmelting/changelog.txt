@@ -13,6 +13,7 @@ Date: ???
     - Fixed Air Filter 3's sort order and icon numeral (893)
     - Fixed Bob's Oil Processing recipe not being correctly hidden in some configurations (894)
     - Fixed the recipe icon of the manganese oxide recipe in case there is only one recipe to make oxide
+    - Disabled unused iron casting 4 technology in special vanilla mode
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.20
 Date: 01.01.2023
