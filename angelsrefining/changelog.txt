@@ -1,12 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.4
-Date: ???
+Date: 23.02.2023
   Bugfixes:
     - Fixed Fluoric waste water purification recipe icon (897)
     - Quick fixed the base game tips and tricks "low power" and "entity transfer" (792)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.3
-Date: 01.01.203
+Date: 01.01.2023
   Changes:
     - Changed the ingredient tier of some buildings (674)
       - Crystallizer 1

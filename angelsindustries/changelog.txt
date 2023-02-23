@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.18
-Date: xx.xx.xxxx
+Date: 23.02.2023
   Bugfixes:
     - Regular mode:
       - Fixed Item Subgroup of Heat Exchanger 4 from Bob's Power (887)

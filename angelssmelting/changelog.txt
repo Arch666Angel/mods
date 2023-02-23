@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.21
-Date: ???
+Date: 23.02.2023
   Changes:
     - Glass fiber now requires Strand Casting Machine 2 (unless Angel's Industries Components Overhaul is enabled) (890)
     - Added missing prerequisites. Some recipes could be researched before a machine for it was unlocked (890)
