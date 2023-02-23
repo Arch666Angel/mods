@@ -119,6 +119,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("geode-processing-2", "green", "orange")
   AI.pack_replace("advanced-ore-refining-2", "blue", "orange")
   AI.pack_replace("water-treatment-3", "blue", "orange")
+  AI.pack_replace("slag-processing-2", "blue", "orange")
   --SMELTING
   AI.pack_replace("angels-metallurgy-3", "blue", "orange")
   OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
@@ -153,6 +154,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-tin-casting-3", "blue", "orange")
   AI.pack_replace("angels-iron-smelting-3", "blue", "orange")
   AI.pack_replace("angels-iron-casting-3", "blue", "orange")
+  AI.pack_replace("angels-solder-smelting-3", "blue", "orange")
   --BIOPROCESSING
   AI.pack_replace("angels-bio-yield-module", "green", "orange")
   AI.pack_replace("bio-wood-processing-3", "green", "orange")

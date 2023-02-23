@@ -90,9 +90,7 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
-      "oil-processing",
-      "gas-steam-cracking-1",
-      "chemical-science-pack",
+      "angels-advanced-chemistry-2",
     },
     effects = {
       {

@@ -636,10 +636,9 @@ data:extend({
     icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "angels-metallurgy-3",
       "angels-cooling",
       "angels-oil-processing",
-      "slag-processing-1",
+      "slag-processing-2",
     },
     effects = {
       {
@@ -680,9 +679,8 @@ data:extend({
     icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "angels-metallurgy-4",
       "angels-coolant-1",
-      "slag-processing-2",
+      "slag-processing-3",
     },
     effects = {
       {
