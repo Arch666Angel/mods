@@ -186,10 +186,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquifier",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "liquifier-2",
       },
       {
@@ -451,7 +447,7 @@ data:extend({
     icon_size = 64,
     prerequisites = {
       "slag-processing-1",
-      "ore-leaching",
+      "chemical-science-pack",
     },
     effects = {
       {
@@ -1084,6 +1080,7 @@ data:extend({
     prerequisites = {
       "ore-advanced-floatation",
       "geode-processing-3",
+      "ore-leaching",
     },
     effects = {
       {

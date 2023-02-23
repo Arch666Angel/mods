@@ -37,23 +37,22 @@ function gathering_turret:init_global_data()
 end
 
 function gathering_turret:init_prototype_data()
-  return
-    {
-      ["gathering_turret_name"] = "angels-gathering-turret", -- the actual turret
-      ["gathering_turret_range"] = 60, -- the max range of the turret (defined in prototype)
-      ["gathering_turret_base_speed"] = 2, -- the gathering of the turret (defined in prototype)
-      ["gathering_turret_chest"] = "angels-gathering-turret-base", -- the chest storing the loot
-      -- a complete list of possible items to loot and the technology name to unlock it
-      ["gathering_items"] = { -- technology "angels-void" unlocks the technology from the start
-        ["small-alien-artifact"] = "angels-gathering-turret",
-        ["small-alien-artifact-green"] = "angels-gathering-turret-target[small-alien-artifact-green]",
-        ["small-alien-artifact-purple"] = "angels-gathering-turret-target[small-alien-artifact-purple]",
-        ["small-alien-artifact-blue"] = "angels-gathering-turret-target[small-alien-artifact-blue]",
-        ["small-alien-artifact-orange"] = "angels-gathering-turret-target[small-alien-artifact-orange]",
-        ["small-alien-artifact-yellow"] = "angels-gathering-turret-target[small-alien-artifact-yellow]",
-        ["small-alien-artifact-red"] = "angels-gathering-turret-target[small-alien-artifact-red]",
-      },
-    }
+  return {
+    ["gathering_turret_name"] = "angels-gathering-turret", -- the actual turret
+    ["gathering_turret_range"] = 60, -- the max range of the turret (defined in prototype)
+    ["gathering_turret_base_speed"] = 2, -- the gathering of the turret (defined in prototype)
+    ["gathering_turret_chest"] = "angels-gathering-turret-base", -- the chest storing the loot
+    -- a complete list of possible items to loot and the technology name to unlock it
+    ["gathering_items"] = { -- technology "angels-void" unlocks the technology from the start
+      ["small-alien-artifact"] = "angels-gathering-turret",
+      ["small-alien-artifact-green"] = "angels-gathering-turret-target[small-alien-artifact-green]",
+      ["small-alien-artifact-purple"] = "angels-gathering-turret-target[small-alien-artifact-purple]",
+      ["small-alien-artifact-blue"] = "angels-gathering-turret-target[small-alien-artifact-blue]",
+      ["small-alien-artifact-orange"] = "angels-gathering-turret-target[small-alien-artifact-orange]",
+      ["small-alien-artifact-yellow"] = "angels-gathering-turret-target[small-alien-artifact-yellow]",
+      ["small-alien-artifact-red"] = "angels-gathering-turret-target[small-alien-artifact-red]",
+    },
+  }
 end
 
 function gathering_turret:init_force_data(force_name)
@@ -509,15 +508,14 @@ function gathering_turret:get_turret_chest_data_index()
 end
 
 function gathering_turret:get_hidden_entity_data(turret_position)
-  return
-    {
-      -- chest for the gathered loot
-      [self:get_turret_chest_data_index()] = {
-        name = self:get_turret_chest_name(),
-        position = turret_position,
-        direction = nil,
-      },
-    }
+  return {
+    -- chest for the gathered loot
+    [self:get_turret_chest_data_index()] = {
+      name = self:get_turret_chest_name(),
+      position = turret_position,
+      direction = nil,
+    },
+  }
 end
 
 function gathering_turret:get_whitelisted_gathering_items(force_name)

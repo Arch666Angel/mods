@@ -8,7 +8,15 @@ if angelsmods.industries.components then
 
   --battery requirements
   OV.remove_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber")
+  OV.remove_prereq("angels-glass-smelting-2", "strand-casting-2")
   OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
+  OV.add_prereq("angels-glass-smelting-1", "strand-casting-1")
+  OV.patch_recipes({
+    {
+      name = "angels-coil-glass-fiber",
+      category = "strand-casting",
+    },
+  })
   --battery usage
   --vanilla replacements
   AI.replace_recipe_ing("accumulator", "battery-1", "battery-2")
@@ -155,6 +163,22 @@ if angelsmods.industries.components then
     OV.add_prereq("productivity-module-2", "tech-blue-circuit")
     OV.add_prereq("productivity-module-3", "tech-yellow-circuit")
   end
+
+  -- splitters
+  OV.patch_recipes({
+    {
+      name = "fast-splitter",
+      ingredients = {
+        { type = "item", name = "circuit-green-loaded", amount = "circuit-red-loaded" },
+      },
+    },
+    {
+      name = "express-splitter",
+      ingredients = {
+        { type = "item", name = "circuit-blue-loaded", amount = "circuit-orange-loaded" },
+      },
+    },
+  })
 end
 
 if angelsmods.industries.components then

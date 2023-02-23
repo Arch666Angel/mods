@@ -13,10 +13,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "wood-pellets",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing",
-      },
     },
     unit = {
       count = 50,
@@ -131,6 +127,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "solid-saw",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-resin-wood-reprocessing",
       },
     },
     unit = {
@@ -374,10 +374,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "bio-plastic",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-plastic",
       },
     },
     unit = {

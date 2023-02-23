@@ -52,7 +52,7 @@ if mods["bobwarfare"] then
             { type = "fluid", name = "liquid-nitric-acid", amount = 15 },
           }
         or nil,
-      crafting_category = hide_sulfuric_nitric_acid_mixture and "advanced-chemistry" or nil,
+      category = hide_sulfuric_nitric_acid_mixture and "advanced-chemistry" or nil,
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "liquid-glycerol",
         "liquid-sulfuric-acid",

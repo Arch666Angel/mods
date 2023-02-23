@@ -1,4 +1,5 @@
 local gathering_turret = require("src.gathering-turret")
+local turbo_bike = require("src.turbo-bike")
 local tips_and_tricks_triggers = require("src.tips-and-tricks-triggers")
 
 return function(configuration_data)
@@ -18,6 +19,14 @@ return function(configuration_data)
     if not global.GT_data then
       log("Updating gathering turret from version 0 to version 1.")
       gathering_turret:on_init()
+    end
+
+    --------------------------------------------------
+    -- Turbo bike script                            --
+    --------------------------------------------------
+    if not global.TB_data then
+      log("Updating turbo bike from version 0 to version 1.")
+      turbo_bike:on_init()
     end
 
     --------------------------------------------------

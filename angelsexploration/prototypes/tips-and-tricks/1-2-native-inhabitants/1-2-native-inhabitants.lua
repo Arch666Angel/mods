@@ -15,7 +15,7 @@ data:extend({
     indent = 1,
 
     starting_status = "dependencies-not-met", -- no additional trigger
-    dependencies = { "angels-native-inhabitants" },
+    dependencies = { "shoot-targeting" },
     --trigger =
     --{
     --  type = "research",

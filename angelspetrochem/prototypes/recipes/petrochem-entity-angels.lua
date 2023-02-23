@@ -1049,33 +1049,30 @@ angelsmods.functions.RB.build({
       },
       result = "angels-chemical-plant",
     },
-    expensive = angelsmods.industries
-        and angelsmods.industries.tech
-        and {
-          energy_required = 5 * buildingtime,
-          enabled = false,
-          ingredients = {
-            { type = "item", name = "chem-1", amount = 1 },
-            { type = "item", name = "t0-plate", amount = 2 * buildingmulti },
-            { type = "item", name = "t0-gears", amount = 1 * buildingmulti },
-            { type = "item", name = "t0-circuit", amount = 1 * buildingmulti },
-            { type = "item", name = "t0-pipe", amount = 4 * buildingmulti },
-          },
-          result = "angels-chemical-plant",
-        }
-      or {
-        -- chem plant required for science, excluding it from marathon effects
-        energy_required = 5,
-        enabled = false,
-        ingredients = {
-          { type = "item", name = "chem-1", amount = 1 },
-          { type = "item", name = "t0-plate", amount = 2 },
-          { type = "item", name = "t0-gears", amount = 1 },
-          { type = "item", name = "t0-circuit", amount = 1 },
-          { type = "item", name = "t0-pipe", amount = 4 },
-        },
-        result = "angels-chemical-plant",
+    expensive = angelsmods.industries and angelsmods.industries.tech and {
+      energy_required = 5 * buildingtime,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "chem-1", amount = 1 },
+        { type = "item", name = "t0-plate", amount = 2 * buildingmulti },
+        { type = "item", name = "t0-gears", amount = 1 * buildingmulti },
+        { type = "item", name = "t0-circuit", amount = 1 * buildingmulti },
+        { type = "item", name = "t0-pipe", amount = 4 * buildingmulti },
       },
+      result = "angels-chemical-plant",
+    } or {
+      -- chem plant required for science, excluding it from marathon effects
+      energy_required = 5,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "chem-1", amount = 1 },
+        { type = "item", name = "t0-plate", amount = 2 },
+        { type = "item", name = "t0-gears", amount = 1 },
+        { type = "item", name = "t0-circuit", amount = 1 },
+        { type = "item", name = "t0-pipe", amount = 4 },
+      },
+      result = "angels-chemical-plant",
+    },
   },
   {
     type = "recipe",

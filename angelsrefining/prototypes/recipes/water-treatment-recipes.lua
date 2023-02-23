@@ -17,7 +17,7 @@ data:extend({
     always_show_products = true,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "water",--[[,"stone-crushed"]]
-      "water-mineralised",
+      "water-mineralized",
     }), --get_fluid_recipe_tint("water-mineralized"),
     order = "a[water-water-mineralized]",
   },
@@ -87,7 +87,7 @@ data:extend({
       mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 } or "sulfur",
     }, "WsSS"),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "water-mineralised",
+      "water-mineralized",
       "water-yellow-waste",
       "water-purified",
     }),
@@ -114,7 +114,7 @@ data:extend({
       mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png", 32 } or nil,
     }, "WsOO"),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "water-mineralised",
+      "water-mineralized",
       "water-red-waste",
       "water-purified",
     }),
@@ -164,12 +164,12 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      "water-saline",
+      "water-mineralized",
       "water-purified",
       mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/ore-fluorite.png", 32 } or nil,
     }, "WsFF"),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "water-mineralised",
+      "water-mineralized",
       "water-greenyellow-waste",
       "water-purified",
     }),

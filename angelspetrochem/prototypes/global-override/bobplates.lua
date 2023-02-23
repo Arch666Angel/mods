@@ -131,8 +131,10 @@ if mods["bobplates"] then
   angelsmods.functions.add_flag("calcium-chloride", "hidden")
   OV.disable_recipe("calcium-chloride")
   OV.remove_unlock("chemical-processing-2", "calcium-chloride")
-  OV.add_prereq("silicon-processing", "chlorine-processing-2")
-  OV.add_prereq("titanium-processing", "chlorine-processing-2")
+  if not mods["angelssmelting"] then
+    OV.add_prereq("silicon-processing", "chlorine-processing-2")
+    OV.add_prereq("titanium-processing", "chlorine-processing-2")
+  end
 
   OV.converter_fluid("ferric-chloride-solution", "liquid-ferric-chloride-solution")
   OV.disable_recipe({ "ferric-chloride-solution" })
@@ -258,7 +260,7 @@ if mods["bobplates"] then
     OV.add_unlock("circuit-network", "insulated-cable")
     OV.add_unlock("circuit-network", "bob-rubber")
     if mods["angelsbioprocessing"] then
-      OV.add_prereq("circuit-network", "bio-wood-processing")
+      OV.add_prereq("circuit-network", "bio-arboretum-1")
     end
     OV.add_prereq("rubbers", "circuit-network")
     OV.add_prereq("advanced-electronics-2", "rubbers")

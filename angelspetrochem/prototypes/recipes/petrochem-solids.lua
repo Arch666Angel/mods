@@ -529,7 +529,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-nitroglycerin",
-    category = "chemistry",
+    category = "advanced-chemistry",
     subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = false,
@@ -555,7 +555,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-trinitrotoluene",
-    category = "chemistry",
+    category = "advanced-chemistry",
     subgroup = "petrochem-solids-2",
     energy_required = 2,
     enabled = false,

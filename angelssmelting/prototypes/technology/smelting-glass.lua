@@ -45,6 +45,7 @@ data:extend({
       "angels-glass-smelting-1",
       "angels-stone-smelting-2",
       "angels-lead-smelting-2", -- need this for the lead oxide processing
+      "strand-casting-2",
     },
     effects = {
       {

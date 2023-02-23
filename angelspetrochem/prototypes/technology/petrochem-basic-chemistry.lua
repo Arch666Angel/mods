@@ -123,7 +123,7 @@ data:extend({
       "angels-sulfur-processing-2",
       "water-treatment-4",
       "angels-advanced-chemistry-4",
-      mods["angelssmelting"] and "angels-coolant-1" or "basic-chemistry-2",
+      mods["angelssmelting"] and "angels-cooling" or "basic-chemistry-2",
     },
     effects = {
       {
@@ -407,6 +407,7 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon("SSS"),
     prerequisites = {
       "angels-sulfur-processing-2",
+      "angels-nitrogen-processing-1",
       "slag-processing-1",
       "chemical-science-pack",
     },

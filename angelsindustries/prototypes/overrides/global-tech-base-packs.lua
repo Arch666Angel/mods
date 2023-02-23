@@ -15,7 +15,6 @@ if angelsmods.industries.tech then
     "logistics",
     "turrets",
     -- REFINING
-    "water-treatment",
     -- SMELTING
     "angels-solder-smelting-basic",
     -- BIO PROCESSING
@@ -113,11 +112,14 @@ if angelsmods.industries.tech then
   AI.pack_replace("automated-construction", "blue", "orange")
   AI.pack_replace("construction-robotics", "blue", "orange")
   AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
+  AI.pack_replace("advanced-material-processing-2", "blue", "orange")
   --REFINING
   AI.pack_replace("ore-leaching", "blue", "orange")
   OV.remove_prereq("ore-leaching", "tech-blue-packs")
   AI.pack_replace("geode-processing-2", "green", "orange")
   AI.pack_replace("advanced-ore-refining-2", "blue", "orange")
+  AI.pack_replace("water-treatment-3", "blue", "orange")
+  AI.pack_replace("slag-processing-2", "blue", "orange")
   --SMELTING
   AI.pack_replace("angels-metallurgy-3", "blue", "orange")
   OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
@@ -152,6 +154,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-tin-casting-3", "blue", "orange")
   AI.pack_replace("angels-iron-smelting-3", "blue", "orange")
   AI.pack_replace("angels-iron-casting-3", "blue", "orange")
+  AI.pack_replace("angels-solder-smelting-3", "blue", "orange")
   --BIOPROCESSING
   AI.pack_replace("angels-bio-yield-module", "green", "orange")
   AI.pack_replace("bio-wood-processing-3", "green", "orange")
@@ -192,8 +195,11 @@ if angelsmods.industries.tech then
   OV.remove_prereq("kovarex-enrichment-process", "production-science-pack")
   -- REFINING
   OV.remove_prereq("ore-refining", "production-science-pack")
+  OV.remove_prereq("water-treatment-4", "production-science-pack")
   -- PETROCHEM
   OV.remove_prereq("water-chemistry-1", "production-science-pack")
+  OV.remove_prereq("angels-advanced-chemistry-4", "production-science-pack")
+  OV.remove_prereq("slag-processing-3", "production-science-pack")
   -- SMELTING
   OV.remove_prereq("angels-metallurgy-4", "production-science-pack")
   OV.remove_science_pack("angels-tungsten-smelting-2", "production-science-pack")
