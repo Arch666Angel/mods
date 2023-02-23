@@ -105,7 +105,6 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",
-      "angels-coolant-1",
       "angels-solder-smelting-2",
       "angels-copper-smelting-2",
       "angels-silver-smelting-1",

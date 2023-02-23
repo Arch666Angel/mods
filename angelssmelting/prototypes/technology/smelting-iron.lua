@@ -156,7 +156,6 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",
-      "angels-coolant-1",
       "angels-iron-casting-2",
       "angels-nickel-smelting-1",
       "angels-cobalt-smelting-1",

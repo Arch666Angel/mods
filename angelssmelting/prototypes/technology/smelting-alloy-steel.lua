@@ -94,7 +94,6 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       "strand-casting-2",
-      "angels-coolant-1",
       "angels-steel-smelting-2",
       "angels-nickel-smelting-1",
       "angels-cobalt-smelting-1",

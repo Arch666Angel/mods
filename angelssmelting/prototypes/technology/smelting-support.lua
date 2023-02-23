@@ -370,6 +370,7 @@ data:extend({
     prerequisites = {
       "angels-metallurgy-3",
       "strand-casting-1",
+      "angels-coolant-1",
     },
     effects = {
       {
@@ -397,7 +398,6 @@ data:extend({
     prerequisites = {
       "angels-metallurgy-4",
       "strand-casting-2",
-      "angels-coolant-1",
     },
     effects = {
       {
