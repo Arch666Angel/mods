@@ -1,3 +1,18 @@
+local bob_biters = mods["bobenemies"] and true or false
+
+local function create_loot_definition(color, avg_amount, variation)
+  if not angelsmods.triggers.artifacts[color] then
+    return nil
+  end
+
+  local item = "small-alien-artifact"
+  if color ~= "base" then
+    item = item .. "-" .. color
+  end
+
+  return { item = item, avg_amount = avg_amount, variation = variation }
+end
+
 local biter_definitions = {}
 
 --HEALTH:
@@ -54,9 +69,9 @@ biter_definitions.small_biter = {
     { type = "laser", decrease = 5, percent = 20 },
     { type = "plasma", decrease = 0, percent = 0 },
   },
-  --loot = {
-  --  angelsmods.triggers.artifacts["base"] and {item = "small-alien-artifact", avg_amount = 0.25, variation = 0.1} or nil,
-  --}
+  loot = {
+    create_loot_definition("base", 0.25, 0.5), -- 0.0 - 0.5
+  },
 }
 
 biter_definitions.medium_biter = {
@@ -88,6 +103,9 @@ biter_definitions.medium_biter = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
     { type = "plasma", decrease = 5, percent = 20 },
+  },
+  loot = {
+    create_loot_definition("base", 0.5, 1), -- 0-1
   },
 }
 
@@ -121,6 +139,10 @@ biter_definitions.big_biter = {
     { type = "laser", decrease = 5, percent = 20 },
     { type = "plasma", decrease = 10, percent = 30 },
   },
+  loot = {
+    create_loot_definition("base", 1, 2), -- 0-2
+    (not bob_biters) and create_loot_definition("yellow", 0.5, 1) or nil, -- 0-1
+  },
 }
 
 biter_definitions.behemoth_biter = {
@@ -152,6 +174,11 @@ biter_definitions.behemoth_biter = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
     { type = "plasma", decrease = 15, percent = 40 },
+  },
+  loot = {
+    create_loot_definition("base", 1.5, 1), -- 1-2
+    (not bob_biters) and create_loot_definition("yellow", 1.5, 1) or nil, -- 1-2
+    (not bob_biters) and create_loot_definition("red", 1.5, 1) or nil, -- 1-2
   },
 }
 
@@ -187,6 +214,11 @@ biter_definitions.colossal_biter = {
     { type = "laser", decrease = 5, percent = 30 },
     { type = "plasma", decrease = 10, percent = 30 },
   },
+  loot = {
+    create_loot_definition("base", 2, 2), -- 1-3
+    (not bob_biters) and create_loot_definition("yellow", 2, 2) or nil, -- 1-3
+    (not bob_biters) and create_loot_definition("red", 2, 2) or nil, -- 1-3
+  },
 }
 
 -------------------------------------------------------------------------------
@@ -220,6 +252,9 @@ biter_definitions.small_spitter = {
     { type = "laser", decrease = 5, percent = 20 },
     { type = "plasma", decrease = 0, percent = 0 },
   },
+  loot = {
+    create_loot_definition("orange", 0.25, 0.5), -- 0.0-0.5
+  },
 }
 
 biter_definitions.medium_spitter = {
@@ -249,6 +284,9 @@ biter_definitions.medium_spitter = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
     { type = "plasma", decrease = 5, percent = 20 },
+  },
+  loot = {
+    create_loot_definition("orange", 0.5, 1), -- 0-1
   },
 }
 
@@ -280,6 +318,9 @@ biter_definitions.big_spitter = {
     { type = "laser", decrease = 5, percent = 20 },
     { type = "plasma", decrease = 10, percent = 30 },
   },
+  loot = {
+    create_loot_definition("orange", 1, 2), -- 0-2
+  },
 }
 
 biter_definitions.behemoth_spitter = {
@@ -309,6 +350,10 @@ biter_definitions.behemoth_spitter = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
     { type = "plasma", decrease = 15, percent = 40 },
+  },
+  loot = {
+    create_loot_definition("orange", 1.5, 1), -- 1-2
+    (not bob_biters) and create_loot_definition("green", 1.5, 1) or nil, -- 1-2
   },
 }
 
@@ -341,6 +386,10 @@ biter_definitions.colossal_spitter = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 30 },
     { type = "plasma", decrease = 10, percent = 30 },
+  },
+  loot = {
+    create_loot_definition("orange", 2, 2), -- 1-3
+    (not bob_biters) and create_loot_definition("green", 2, 2) or nil, -- 1-3
   },
 }
 
@@ -375,6 +424,9 @@ biter_definitions.small_scarab = {
     { type = "laser", decrease = 7.5, percent = 40 },
     { type = "plasma", decrease = 2.5, percent = 20 },
   },
+  loot = {
+    create_loot_definition("base", 0.5, 1), -- 0-1
+  },
 }
 
 biter_definitions.medium_scarab = {
@@ -404,6 +456,9 @@ biter_definitions.medium_scarab = {
     { type = "explosion", decrease = 7.5, percent = 30 },
     { type = "laser", decrease = 2.5, percent = 30 },
     { type = "plasma", decrease = 7.5, percent = 40 },
+  },
+  loot = {
+    create_loot_definition("blue", 0.5, 1), -- 0-1
   },
 }
 
@@ -435,6 +490,9 @@ biter_definitions.big_scarab = {
     { type = "laser", decrease = 7.5, percent = 40 },
     { type = "plasma", decrease = 12.5, percent = 50 },
   },
+  loot = {
+    create_loot_definition("blue", 1, 2), -- 0-2
+  },
 }
 
 biter_definitions.behemoth_scarab = {
@@ -465,6 +523,9 @@ biter_definitions.behemoth_scarab = {
     { type = "laser", decrease = 12.5, percent = 30 },
     { type = "plasma", decrease = 17.5, percent = 60 },
   },
+  loot = {
+    create_loot_definition("blue", 1.5, 1), -- 1-2
+  },
 }
 
 biter_definitions.colossal_scarab = {
@@ -494,6 +555,9 @@ biter_definitions.colossal_scarab = {
     { type = "explosion", decrease = 7.5, percent = 30 },
     { type = "laser", decrease = 7.5, percent = 50 },
     { type = "plasma", decrease = 12.5, percent = 50 },
+  },
+  loot = {
+    create_loot_definition("blue", 2, 2), -- 1-3
   },
 }
 
@@ -528,6 +592,9 @@ biter_definitions.small_psyker = {
     { type = "laser", decrease = 5, percent = 20 },
     { type = "plasma", decrease = 0, percent = 0 },
   },
+  loot = {
+    create_loot_definition("blue", 0.5, 1), -- 0-1
+  },
 }
 
 biter_definitions.medium_psyker = {
@@ -557,6 +624,9 @@ biter_definitions.medium_psyker = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
     { type = "plasma", decrease = 5, percent = 20 },
+  },
+  loot = {
+    create_loot_definition("purple", 0.5, 1.0), -- 0-1
   },
 }
 
@@ -588,6 +658,9 @@ biter_definitions.big_psyker = {
     { type = "laser", decrease = 5, percent = 20 },
     { type = "plasma", decrease = 10, percent = 30 },
   },
+  loot = {
+    create_loot_definition("purple", 1, 2), -- 0-2
+  },
 }
 
 biter_definitions.behemoth_psyker = {
@@ -618,6 +691,10 @@ biter_definitions.behemoth_psyker = {
     { type = "laser", decrease = 0, percent = 10 },
     { type = "plasma", decrease = 15, percent = 40 },
   },
+  loot = {
+    create_loot_definition("purple", 1.5, 1), -- 1-2
+    (not bob_biters) and create_loot_definition("red", 1.5, 1) or nil, -- 1-2
+  },
 }
 
 biter_definitions.colossal_psyker = {
@@ -647,6 +724,106 @@ biter_definitions.colossal_psyker = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 30 },
     { type = "plasma", decrease = 10, percent = 30 },
+  },
+  loot = {
+    create_loot_definition("purple", 2, 2), -- 1-3
+    (not bob_biters) and create_loot_definition("red", 2, 2) or nil, -- 1-3
+  },
+}
+
+-------------------------------------------------------------------------------
+-- BOB ELEMENTAL BITER DEFINITIONS --------------------------------------------
+-------------------------------------------------------------------------------
+biter_definitions.bob_big_piercing_biter = {
+  appearance = {
+    full_name = "bob-big-piercing-biter",
+  },
+  loot = {
+    create_loot_definition("blue", 1, 2), -- 0-2
+  },
+}
+
+biter_definitions.bob_huge_acid_biter = {
+  appearance = {
+    full_name = "bob-huge-acid-biter",
+  },
+  loot = {
+    create_loot_definition("yellow", 1.5, 1), -- 1-2
+  },
+}
+
+biter_definitions.bob_huge_explosive_biter = {
+  appearance = {
+    full_name = "bob-huge-explosive-biter",
+  },
+  loot = {
+    create_loot_definition("yellow", 2, 2), -- 1-3
+  },
+}
+
+biter_definitions.bob_giant_fire_biter = {
+  appearance = {
+    full_name = "bob-giant-fire-biter",
+  },
+  loot = {
+    create_loot_definition("red", 3, 2), -- 2-4
+  },
+}
+
+biter_definitions.bob_giant_poison_biter = {
+  appearance = {
+    full_name = "bob-giant-poison-biter",
+  },
+  loot = {
+    create_loot_definition("green", 3, 2), -- 2-4
+  },
+}
+
+-------------------------------------------------------------------------------
+-- BOB ELEMENTAL SPITTER DEFINITIONS ------------------------------------------
+-------------------------------------------------------------------------------
+biter_definitions.bob_big_electric_spitter = {
+  appearance = {
+    full_name = "bob-big-electric-spitter",
+  },
+  loot = {
+    create_loot_definition("purple", 1, 2), -- 0-2
+  },
+}
+
+biter_definitions.bob_huge_acid_spitter = {
+  appearance = {
+    full_name = "bob-huge-acid-spitter",
+  },
+  loot = {
+    create_loot_definition("yellow", 1.5, 1), -- 1-2
+  },
+}
+
+biter_definitions.bob_huge_explosive_spitter = {
+  appearance = {
+    full_name = "bob-huge-explosive-spitter",
+  },
+  loot = {
+    create_loot_definition("yellow", 2, 2), -- 1-3
+  },
+}
+
+biter_definitions.bob_giant_fire_spitter = {
+  appearance = {
+    full_name = "bob-giant-fire-spitter",
+  },
+  loot = {
+    create_loot_definition("red", 3, 2), -- 2-4
+  },
+}
+
+biter_definitions.bob_giant_poison_spitter = {
+  appearance = {
+    full_name = "bob-giant-poison-spitter",
+  },
+  loot = {
+    create_loot_definition("green", 3, 2), -- 2-4
   },
 }
 

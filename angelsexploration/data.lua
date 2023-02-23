@@ -4,6 +4,13 @@ angelsmods.exploration = angelsmods.exploration or {}
 angelsmods.functions = angelsmods.functions or {}
 
 --TRIGGER CHECKS
+angelsmods.triggers.artifacts["red"] = true
+angelsmods.triggers.artifacts["yellow"] = true
+angelsmods.triggers.artifacts["orange"] = true
+angelsmods.triggers.artifacts["blue"] = true
+angelsmods.triggers.artifacts["purple"] = true
+angelsmods.triggers.artifacts["green"] = true
+angelsmods.triggers.artifacts["base"] = true -- pink
 
 --LOAD PROTOTYPES
 require("prototypes.exploration-category")
