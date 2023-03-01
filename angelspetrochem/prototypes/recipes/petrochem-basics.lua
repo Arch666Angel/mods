@@ -487,7 +487,7 @@ data:extend({
       { type = "item", name = "solid-carbon", amount = 3 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-carbon"), 1, angelsmods.petrochem.number_tint),
-    order = "d[coke-purification]",
+    order = "d[coke-purification]-a",
     crafting_machine_tint = AF.get_recipe_tints({ { r = 1, g = 1, b = 1 }, { r = 1, g = 1, b = 1 }, "steam" }),--[[{
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
         secondary = {r = 1, g = 0.5, b = 0.5, a = 0},
@@ -512,7 +512,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 10 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-carbon"), 2, angelsmods.petrochem.number_tint),
-    order = "d[coke-purification]",
+    order = "d[coke-purification]-b",
     crafting_machine_tint = AF.get_recipe_tints({
       { r = 1, g = 1, b = 1 },
       "gas-nitrogen",
@@ -539,7 +539,7 @@ data:extend({
     },
     icon = "__angelspetrochem__/graphics/icons/coal-crushed.png",
     icon_size = 32,
-    order = "a[coal-crushed]",
+    order = "b[coal-crushed]",
   },
   {
     type = "recipe",
@@ -555,7 +555,7 @@ data:extend({
       { type = "item", name = "solid-coke", amount = 2 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-coke"), 1, angelsmods.petrochem.number_tint),
-    order = "b[coal-crushed]",
+    order = "c[coke]-a",
   },
   {
     type = "recipe",
@@ -573,7 +573,7 @@ data:extend({
       { type = "fluid", name = "water-yellow-waste", amount = 50 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-coke"), 2, angelsmods.petrochem.number_tint),
-    order = "c[solid-coke-sulfur]",
+    order = "c[coke]-b",
     crafting_machine_tint = AF.get_recipe_tints({ "water-yellow-waste", "water-purified" }),--[[{
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
         secondary = {r = 0.9, g = 0.9, b = 0.4, a = 0},
