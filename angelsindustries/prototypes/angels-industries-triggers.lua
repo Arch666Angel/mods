@@ -55,6 +55,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.smelting_products["solder"].mixture = true
   angelsmods.trigger.smelting_molds = true
   angelsmods.trigger.smelting_products["glass"].fibre = true
+  angelsmods.trigger.smelting_products["glass"].board = false
   angelsmods.trigger.smelting_products["iron"].rod = true
   angelsmods.trigger.smelting_products["platinum"].plate = true
   angelsmods.trigger.smelting_products["platinum"].wire = true
