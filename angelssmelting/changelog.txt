@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.22
 Date: xx.xx.xxxx
+  Changes:
+    - Increased the tech and required machine tier of Chrome and Platinum (909)
   Bugfixes:
     - Another attempt at fixed smoke on the blast furnace
 ---------------------------------------------------------------------------------------------------

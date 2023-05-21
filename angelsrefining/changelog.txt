@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.5
+Date: xx.xx.xxxx
+  Changes:
+    - Moved Thorium catalyst sorting recipe to Advanced Ore Refining 3. Replaced Crystal catalyst with Hybrid catalyst (909)
+---------------------------------------------------------------------------------------------------
 Version: 0.12.4
 Date: 23.02.2023
   Bugfixes:
