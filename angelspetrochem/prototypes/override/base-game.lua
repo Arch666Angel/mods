@@ -81,11 +81,8 @@ end
 move_item("steam", "petrochem-basic-fluids", "a", "fluid")
 move_item("solid-fuel", "petrochem-fuel", "a[solid-fuel]-a")
 
-OV.remove_unlock("angels-oil-processing", "solid-fuel-naphtha")
 OV.add_unlock("flammables", "solid-fuel-naphtha")
-OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")
 OV.add_unlock("flammables", "solid-fuel-fuel-oil")
-OV.remove_unlock("gas-processing", "solid-fuel-methane")
 OV.add_unlock("flammables", "solid-fuel-methane")
 OV.add_prereq("flammables", "gas-processing")
 

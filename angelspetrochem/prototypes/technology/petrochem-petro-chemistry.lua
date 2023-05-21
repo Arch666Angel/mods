@@ -64,14 +64,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "condensates-oil-refining",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-fuel-naphtha",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-fuel-fuel-oil",
-      },
     },
     unit = {
       count = 50,
@@ -138,10 +130,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "gas-fractioning",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-fuel-methane",
       },
     },
     unit = {

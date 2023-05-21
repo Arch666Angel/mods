@@ -22,9 +22,7 @@ if mods["bobrevamp"] then
 
   OV.add_unlock("flammables", "solid-fuel-fuel-oil")
   OV.add_unlock("flammables", "solid-fuel-naphtha")
-  OV.add_unlock("angels-advanced-gas-processing", "solid-fuel-methane")
 
-  OV.add_prereq("angels-advanced-gas-processing", "flammables")
   OV.add_prereq("gas-synthesis", "flammables")
   OV.add_prereq("angels-nitrogen-processing-3", "flammables")
 
