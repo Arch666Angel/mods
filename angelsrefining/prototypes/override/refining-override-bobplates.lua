@@ -182,7 +182,7 @@ if mods["bobplates"] then
   if mods["angelsindustries"] then
     -- angels industries takes care of this with angels nuclear overhaul
   else
-    OV.add_prereq("thorium-processing", "ore-electro-whinning-cell")
+    OV.add_prereq("thorium-processing", "advanced-ore-refining-3")
     move_item("thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
 end
