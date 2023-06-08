@@ -1,5 +1,6 @@
 --UPDATE BOB SPAWNERS
 if mods["bobenemies"] then
+  unit_correction_offset = 1 / 100000000
   -- update the earliest spawn point of spitter on bobs spawner to the same evolution point of the base game spawner (with a small correction factor)
   local base_spawner = data.raw["unit-spawner"]["biter-spawner"]
   for _, bob_spawner in pairs({
@@ -8,7 +9,7 @@ if mods["bobenemies"] then
   }) do
     if base_spawner and bob_spawner then
       for unit, unit_correction in pairs({
-        ["big-biter"] = 1 / 100000000,
+        ["big-biter"] = unit_correction_offset,
       }) do
         for bob_spawn_idx, bob_spawn_data in pairs(bob_spawner.result_units) do
           if (bob_spawn_data.unit or bob_spawn_data[1]) == unit then
@@ -55,9 +56,9 @@ if mods["bobenemies"] then
   }) do
     if base_spawner and bob_spawner then
       for unit, unit_correction in pairs({
-        ["small-spitter"] = 1 / 100000000,
-        ["medium-spitter"] = 1 / 100000000,
-        ["big-spitter"] = 1 / 100000000,
+        ["small-spitter"] = unit_correction_offset,
+        ["medium-spitter"] = unit_correction_offset,
+        ["big-spitter"] = unit_correction_offset,
       }) do
         for bob_spawn_idx, bob_spawn_data in pairs(bob_spawner.result_units) do
           if (bob_spawn_data.unit or bob_spawn_data[1]) == unit then
@@ -93,6 +94,26 @@ if mods["bobenemies"] then
             end
           end
         end
+      end
+    end
+  end
+
+  local elemental_biter_spawner = data.raw["unit-spawner"]["bob-biter-spawner"]
+  if elemental_biter_spawner then
+    for _, elemental_biter_spawner_data in pairs(elemental_biter_spawner.result_units) do
+      local elemental_biter_spawner_biter = elemental_biter_spawner_data[1]
+      if elemental_biter_spawner_biter == "bob-huge-acid-biter" then
+        elemental_biter_spawner_data[2][1][1] = 0.45
+      end
+    end
+  end
+
+  local elemental_spitter_spawner = data.raw["unit-spawner"]["bob-spitter-spawner"]
+  if elemental_spitter_spawner then
+    for _, elemental_spitter_spawner_data in pairs(elemental_spitter_spawner.result_units) do
+      local elemental_spitter_spawner_spitter = elemental_spitter_spawner_data[1]
+      if elemental_spitter_spawner_spitter == "bob-huge-acid-spitter" then
+        elemental_spitter_spawner_data[2][1][1] = 0.45 + unit_correction_offset
       end
     end
   end
