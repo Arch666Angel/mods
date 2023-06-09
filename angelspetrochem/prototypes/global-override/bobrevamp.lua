@@ -16,25 +16,9 @@ if mods["bobrevamp"] then
 
   OV.disable_technology({ "solid-fuel" })
 
-  OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")
-  OV.remove_unlock("angels-oil-processing", "solid-fuel-naphtha")
-  OV.remove_unlock("gas-processing", "solid-fuel-methane")
-
-  OV.add_unlock("flammables", "solid-fuel-fuel-oil")
-  OV.add_unlock("flammables", "solid-fuel-naphtha")
-
-  OV.add_prereq("gas-synthesis", "flammables")
-  OV.add_prereq("angels-nitrogen-processing-3", "flammables")
-
-  if mods["bobplates"] then
-    OV.remove_unlock("angels-oil-processing", "liquid-fuel")
-    OV.remove_unlock("angels-oil-processing", "solid-fuel-from-hydrogen")
-
-    --OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
-
-    if mods["bobwarfare"] then
-      OV.add_prereq("military-3", "flammables")
-    end
+  if mods["bobplates"] and mods["bobwarfare"] then
+    -- Napalm capsules require Liquid fuel
+    OV.add_prereq("military-3", "flammables")
   end
 
   -----------------------------------------------------------------------------

@@ -552,6 +552,7 @@ data:extend({
       "angels-nitrogen-processing-2",
       "angels-advanced-chemistry-3",
       "sodium-processing",
+      "flammables",
     },
     effects = {
       {
