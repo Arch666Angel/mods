@@ -15,6 +15,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
     AI.pack_replace("gem-processing-2", "green", "orange")
+    AI.pack_replace("gem-processing-3", "green", "orange")
     AI.pack_replace("electric-mixing-furnace", "blue", "orange")
 
     if not mods["bobtech"] then --alien resources
