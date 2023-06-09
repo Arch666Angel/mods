@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.25
 Date: ??.??.????
+  Changes:
+    - Compatibility with Bob's changes (911)
   Bugfixes:
     - Fixed recipe order of carbon products to correctly display in helmod
 ---------------------------------------------------------------------------------------------------
