@@ -64,14 +64,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "condensates-oil-refining",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-fuel-naphtha",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-fuel-fuel-oil",
-      },
     },
     unit = {
       count = 50,
@@ -138,10 +130,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "gas-fractioning",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-fuel-methane",
       },
     },
     unit = {
@@ -490,6 +478,7 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon({ { 210, 120, 210 }, { 175, 100, 175 }, { 140, 080, 140 } }),
     prerequisites = {
       "angels-advanced-chemistry-3",
+      "flammables",
     },
     effects = {
       {
