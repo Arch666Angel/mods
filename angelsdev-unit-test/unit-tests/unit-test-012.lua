@@ -62,7 +62,6 @@ local function make_starting_unlocks()
 end
 
 local unit_test_012 = function()
-
   -- Build lists recipes unlocked at the start of the game
   make_starting_unlocks()
 
