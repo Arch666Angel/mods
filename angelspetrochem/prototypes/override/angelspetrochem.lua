@@ -19,7 +19,11 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.disable_technology("deuterium-processing")
   OV.add_prereq("water-chemistry-2", "nuclear-fuel-reprocessing")
 
-  OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+  if mods["bobrevamp"] and mods["bobpower"] and settings.startup["bobmods-revamp-nuclear"].value == true then
+    -- deuterium-fuel-cell will be unlocked by bob-nuclear-power-3
+  else
+    OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+  end
   OV.set_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)
   OV.set_science_pack("deuterium-fuel-cell-2", "utility-science-pack", 1)
 elseif angelsmods.industries and angelsmods.industries.overhaul then
