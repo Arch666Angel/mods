@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.25
-Date: ??.??.????
+Date: xx.xx.xxxx
   Changes:
+    - Added support for alien artifacts outside of bob enemies
     - Compatibility with Bob's changes (911)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
