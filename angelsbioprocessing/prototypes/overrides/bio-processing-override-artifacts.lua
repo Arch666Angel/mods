@@ -138,7 +138,7 @@ if angelsmods.triggers.artifacts["red"] then
       },
     })
   end
-    
+
   if angelsmods.exploration then
   else
     OV.disable_technology("angels-alien-artifact-red")
@@ -285,7 +285,7 @@ if angelsmods.triggers.artifacts["yellow"] then
       },
     })
   end
-    
+
   if angelsmods.exploration then
   else
     OV.disable_technology("angels-alien-artifact-yellow")
@@ -579,7 +579,7 @@ if angelsmods.triggers.artifacts["blue"] then
       },
     })
   end
-    
+
   if angelsmods.exploration then
   else
     OV.disable_technology("angels-alien-artifact-blue")
@@ -726,7 +726,7 @@ if angelsmods.triggers.artifacts["purple"] then
       },
     })
   end
-    
+
   if angelsmods.exploration then
   else
     OV.disable_technology("angels-alien-artifact-purple")
@@ -873,7 +873,7 @@ if angelsmods.triggers.artifacts["green"] then
       },
     })
   end
-    
+
   if angelsmods.exploration then
   else
     OV.disable_technology("angels-alien-artifact-green")
@@ -993,7 +993,7 @@ if angelsmods.triggers.artifacts["base"] then -- pink
       },
     })
   end
-    
+
   if angelsmods.exploration then
   else
     OV.disable_technology("angels-alien-artifact")
