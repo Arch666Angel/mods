@@ -1,13 +1,13 @@
 local OV = angelsmods.functions.OV
 
-local contais_artifacts = false
+local contais_artifact_creation = false
 
 -------------------------------------------------------------------------------
 -- RED ARTIFACTS --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["red"] then
   if angelsmods.triggers.bio_pastes["copper"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -76,6 +76,12 @@ if angelsmods.triggers.artifacts["red"] then
     OV.patch_recipes({
       { name = "alien-artifact-red-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-red-from-small", enabled = false },
+        { name = "alien-artifact-red-from-basic", enabled = false },
+      })
+    end
   else
     data:extend({
       -- SMALL ARTIFACT
@@ -102,7 +108,7 @@ if angelsmods.triggers.artifacts["red"] then
         type = "recipe",
         name = "alien-artifact-red-from-small",
         category = "crafting",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "small-alien-artifact-red", amount = 25 },
@@ -118,7 +124,7 @@ if angelsmods.triggers.artifacts["red"] then
         name = "alien-artifact-red-from-basic",
         category = "crafting",
         subgroup = "bio-processing-alien-large-convert",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-red", amount = 1 },
@@ -132,6 +138,15 @@ if angelsmods.triggers.artifacts["red"] then
       },
     })
   end
+    
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact-red")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact-red", "alien-artifact-red-from-small")
+  OV.remove_unlock("angels-alien-artifact-red", "alien-artifact-red-from-basic")
+  OV.disable_technology("angels-alien-artifact-red")
 end
 
 -------------------------------------------------------------------------------
@@ -139,7 +154,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["yellow"] then
   if angelsmods.triggers.bio_pastes["gold"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -208,6 +223,12 @@ if angelsmods.triggers.artifacts["yellow"] then
     OV.patch_recipes({
       { name = "alien-artifact-yellow-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-yellow-from-small", enabled = false },
+        { name = "alien-artifact-yellow-from-basic", enabled = false },
+      })
+    end
   else
     data:extend({
       -- SMALL ARTIFACT
@@ -234,7 +255,7 @@ if angelsmods.triggers.artifacts["yellow"] then
         type = "recipe",
         name = "alien-artifact-yellow-from-small",
         category = "crafting",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "small-alien-artifact-yellow", amount = 25 },
@@ -250,7 +271,7 @@ if angelsmods.triggers.artifacts["yellow"] then
         name = "alien-artifact-yellow-from-basic",
         category = "crafting",
         subgroup = "bio-processing-alien-large-convert",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-yellow", amount = 1 },
@@ -264,6 +285,15 @@ if angelsmods.triggers.artifacts["yellow"] then
       },
     })
   end
+    
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact-yellow")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact-yellow", "alien-artifact-yellow-from-small")
+  OV.remove_unlock("angels-alien-artifact-yellow", "alien-artifact-yellow-from-basic")
+  OV.disable_technology("angels-alien-artifact-yellow")
 end
 
 -------------------------------------------------------------------------------
@@ -271,7 +301,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["orange"] then
   if angelsmods.triggers.bio_pastes["tungsten"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -340,6 +370,12 @@ if angelsmods.triggers.artifacts["orange"] then
     OV.patch_recipes({
       { name = "alien-artifact-orange-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-orange-from-small", enabled = false },
+        { name = "alien-artifact-orange-from-basic", enabled = false },
+      })
+    end
   else
     data:extend({
       -- SMALL ARTIFACT
@@ -366,7 +402,7 @@ if angelsmods.triggers.artifacts["orange"] then
         type = "recipe",
         name = "alien-artifact-orange-from-small",
         category = "crafting",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "small-alien-artifact-orange", amount = 25 },
@@ -382,7 +418,7 @@ if angelsmods.triggers.artifacts["orange"] then
         name = "alien-artifact-orange-from-basic",
         category = "crafting",
         subgroup = "bio-processing-alien-large-convert",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-orange", amount = 1 },
@@ -396,6 +432,15 @@ if angelsmods.triggers.artifacts["orange"] then
       },
     })
   end
+
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact-orange")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact-orange", "alien-artifact-orange-from-small")
+  OV.remove_unlock("angels-alien-artifact-orange", "alien-artifact-orange-from-basic")
+  OV.disable_technology("angels-alien-artifact-orange")
 end
 
 -------------------------------------------------------------------------------
@@ -403,7 +448,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["blue"] then
   if angelsmods.triggers.bio_pastes["cobalt"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -472,6 +517,12 @@ if angelsmods.triggers.artifacts["blue"] then
     OV.patch_recipes({
       { name = "alien-artifact-blue-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-blue-from-small", enabled = false },
+        { name = "alien-artifact-blue-from-basic", enabled = false },
+      })
+    end
   else
     data:extend({
       -- SMALL ARTIFACT
@@ -498,7 +549,7 @@ if angelsmods.triggers.artifacts["blue"] then
         type = "recipe",
         name = "alien-artifact-blue-from-small",
         category = "crafting",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "small-alien-artifact-blue", amount = 25 },
@@ -514,7 +565,7 @@ if angelsmods.triggers.artifacts["blue"] then
         name = "alien-artifact-blue-from-basic",
         category = "crafting",
         subgroup = "bio-processing-alien-large-convert",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-blue", amount = 1 },
@@ -528,6 +579,15 @@ if angelsmods.triggers.artifacts["blue"] then
       },
     })
   end
+    
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact-blue")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact-blue", "alien-artifact-blue-from-small")
+  OV.remove_unlock("angels-alien-artifact-blue", "alien-artifact-blue-from-basic")
+  OV.disable_technology("angels-alien-artifact-blue")
 end
 
 -------------------------------------------------------------------------------
@@ -535,7 +595,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["purple"] then
   if angelsmods.triggers.bio_pastes["titanium"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -604,6 +664,12 @@ if angelsmods.triggers.artifacts["purple"] then
     OV.patch_recipes({
       { name = "alien-artifact-purple-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-purple-from-small", enabled = false },
+        { name = "alien-artifact-purple-from-basic", enabled = false },
+      })
+    end
   else
     data:extend({
       -- SMALL ARTIFACT
@@ -630,7 +696,7 @@ if angelsmods.triggers.artifacts["purple"] then
         type = "recipe",
         name = "alien-artifact-purple-from-small",
         category = "crafting",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "small-alien-artifact-purple", amount = 25 },
@@ -646,7 +712,7 @@ if angelsmods.triggers.artifacts["purple"] then
         name = "alien-artifact-purple-from-basic",
         category = "crafting",
         subgroup = "bio-processing-alien-large-convert",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-purple", amount = 1 },
@@ -660,6 +726,15 @@ if angelsmods.triggers.artifacts["purple"] then
       },
     })
   end
+    
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact-purple")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact-purple", "alien-artifact-purple-from-small")
+  OV.remove_unlock("angels-alien-artifact-purple", "alien-artifact-purple-from-basic")
+  OV.disable_technology("angels-alien-artifact-purple")
 end
 
 -------------------------------------------------------------------------------
@@ -667,7 +742,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["green"] then
   if angelsmods.triggers.bio_pastes["zinc"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -736,6 +811,12 @@ if angelsmods.triggers.artifacts["green"] then
     OV.patch_recipes({
       { name = "alien-artifact-green-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-green-from-small", enabled = false },
+        { name = "alien-artifact-green-from-basic", enabled = false },
+      })
+    end
   else
     data:extend({
       -- SMALL ARTIFACT
@@ -762,7 +843,7 @@ if angelsmods.triggers.artifacts["green"] then
         type = "recipe",
         name = "alien-artifact-green-from-small",
         category = "crafting",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "small-alien-artifact-green", amount = 25 },
@@ -778,7 +859,7 @@ if angelsmods.triggers.artifacts["green"] then
         name = "alien-artifact-green-from-basic",
         category = "crafting",
         subgroup = "bio-processing-alien-large-convert",
-        enabled = true,
+        enabled = false,
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-green", amount = 1 },
@@ -792,6 +873,15 @@ if angelsmods.triggers.artifacts["green"] then
       },
     })
   end
+    
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact-green")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact-green", "alien-artifact-green-from-small")
+  OV.remove_unlock("angels-alien-artifact-green", "alien-artifact-green-from-basic")
+  OV.disable_technology("angels-alien-artifact-green")
 end
 
 -------------------------------------------------------------------------------
@@ -799,7 +889,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.triggers.artifacts["base"] then -- pink
   if angelsmods.triggers.bio_pastes["iron"] then
-    contais_artifacts = true
+    contais_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -851,6 +941,7 @@ if angelsmods.triggers.artifacts["base"] then -- pink
 
     OV.add_unlock("bio-processing-alien-3", "alien-pre-artifact-base")
     OV.add_unlock("bio-processing-alien-3", "small-alien-artifact")
+    OV.add_prereq("bio-processing-alien-3", "angels-alien-artifact")
   end
 
   if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
@@ -858,8 +949,23 @@ if angelsmods.triggers.artifacts["base"] then -- pink
       angelsmods.functions.move_item("small-alien-artifact", "bio-processing-alien-small", "g[base]")
     end
     angelsmods.functions.move_item("alien-artifact", "bio-processing-alien-large", "g[base]")
+    if angelsmods.exploration then
+      OV.patch_recipes({
+        { name = "alien-artifact-from-small", enabled = false },
+      })
+    end
   else
     data:extend({
+      -- SMALL ARTIFACT
+      {
+        type = "item",
+        name = "small-alien-artifact",
+        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-small.png",
+        icon_size = 32,
+        subgroup = "bio-processing-alien-small",
+        order = "g[base]",
+        stack_size = 200,
+      },
       -- LARGE ARTIFACT
       {
         type = "item",
@@ -870,12 +976,35 @@ if angelsmods.triggers.artifacts["base"] then -- pink
         order = "g[base]",
         stack_size = 200,
       },
+      {
+        type = "recipe",
+        name = "alien-artifact-from-small",
+        category = "crafting",
+        enabled = false,
+        energy_required = 5,
+        ingredients = {
+          { type = "item", name = "small-alien-artifact", amount = 25 },
+        },
+        results = {
+          { type = "item", name = "alien-artifact", amount = 1 },
+        },
+        icon_size = 32,
+        order = "g[base]",
+      },
     })
   end
+    
+  if angelsmods.exploration then
+  else
+    OV.disable_technology("angels-alien-artifact")
+  end
+else
+  OV.remove_unlock("angels-alien-artifact", "alien-artifact-from-small")
+  OV.disable_technology("angels-alien-artifact")
 end
 
 -------------------------------------------------------------------------------
-if contais_artifacts then
+if contais_artifact_creation then
 else
   OV.disable_technology("bio-processing-alien-3")
 end

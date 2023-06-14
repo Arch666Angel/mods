@@ -12,6 +12,16 @@ angelsmods.triggers.artifacts["purple"] = true
 angelsmods.triggers.artifacts["green"] = true
 angelsmods.triggers.artifacts["base"] = true -- pink
 
+--angelsmods.triggers.bio_pastes["copper"] = true
+--angelsmods.triggers.bio_pastes["gold"] = true
+--angelsmods.triggers.bio_pastes["tungsten"] = true
+--angelsmods.triggers.bio_pastes["cobalt"] = true
+--angelsmods.triggers.bio_pastes["titanium"] = true
+--angelsmods.triggers.bio_pastes["zinc"] = true
+--angelsmods.triggers.bio_pastes["iron"] = true
+
+--angelsmods.trigger.smelting_products["iron"].powder = true
+
 --LOAD PROTOTYPES
 require("prototypes.exploration-category")
 require("prototypes.exploration-debug")

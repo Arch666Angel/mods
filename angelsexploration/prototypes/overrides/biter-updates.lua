@@ -149,6 +149,18 @@ angelsmods.functions.update_alien(biter_definitions.big_spitter)
 angelsmods.functions.update_alien(biter_definitions.behemoth_spitter)
 angelsmods.functions.update_alien(biter_definitions.colossal_spitter)
 
+angelsmods.functions.update_alien(biter_definitions.small_scarab)
+angelsmods.functions.update_alien(biter_definitions.medium_scarab)
+angelsmods.functions.update_alien(biter_definitions.big_scarab)
+angelsmods.functions.update_alien(biter_definitions.behemoth_scarab)
+angelsmods.functions.update_alien(biter_definitions.colossal_scarab)
+
+angelsmods.functions.update_alien(biter_definitions.small_psyker)
+angelsmods.functions.update_alien(biter_definitions.medium_psyker)
+angelsmods.functions.update_alien(biter_definitions.big_psyker)
+angelsmods.functions.update_alien(biter_definitions.behemoth_psyker)
+angelsmods.functions.update_alien(biter_definitions.colossal_psyker)
+
 angelsmods.functions.update_alien(biter_definitions.bob_big_piercing_biter)
 angelsmods.functions.update_alien(biter_definitions.bob_huge_acid_biter)
 angelsmods.functions.update_alien(biter_definitions.bob_huge_explosive_biter)
@@ -163,6 +175,8 @@ angelsmods.functions.update_alien(biter_definitions.bob_giant_poison_spitter)
 
 angelsmods.functions.update_spawner(biter_definitions.spitter_spawner)
 angelsmods.functions.update_spawner(biter_definitions.biter_spawner)
+angelsmods.functions.update_spawner(biter_definitions.scarab_spawner)
+angelsmods.functions.update_spawner(biter_definitions.psyker_spawner)
 
 --SHOW RESISTANCES
 for _, unit in pairs(data.raw.unit) do
