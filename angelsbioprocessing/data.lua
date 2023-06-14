@@ -125,6 +125,7 @@ require("prototypes.recipes.bio-refugium-hogger")
 require("prototypes.recipes.bio-module")
 
 require("prototypes.technology.bio-processing-algae")
+require("prototypes.technology.bio-processing-artifacts")
 require("prototypes.technology.bio-processing-wood-paper")
 require("prototypes.technology.bio-processing-alien")
 require("prototypes.technology.crop-farming")

@@ -2,6 +2,7 @@ require("prototypes.overrides.bio-processing-override-special-vanilla")
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
 --UPDATE BIO PRODUCT RECIPES
+require("prototypes.overrides.bio-processing-override-artifacts")
 require("prototypes.overrides.bio-processing-override-arboretum")
 require("prototypes.overrides.bio-processing-override-paste")
 -- UPDATE OTHER STUFF
@@ -129,9 +130,6 @@ if bobmods then
     OV.add_unlock("bio-paper-1", "wooden-board-paper")
   end
 end
-
---ADDED RECIPES FOR BOBS ARTIFACTS
-require("prototypes.overrides.bio-processing-override-bob-artifacts")
 
 --OTHER BOB OVERRIDES
 require("prototypes.overrides.bio-processing-override-bob")

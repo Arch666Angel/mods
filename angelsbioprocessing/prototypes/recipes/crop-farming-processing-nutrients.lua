@@ -13,9 +13,13 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 80 },
     },
     always_show_products = true,
-    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "solid-beans",
-    }),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      nil,
+      { { 214, 135, 010 }, nil, { 239, 168, 044 } },
+      {
+        "solid-beans",
+      }
+    ),
     order = "a[nutrient-extraction]-a",
   },
   {
@@ -32,9 +36,13 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 70 },
     },
     always_show_products = true,
-    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "solid-corn",
-    }),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      nil,
+      { { 214, 135, 010 }, nil, { 239, 168, 044 } },
+      {
+        "solid-corn",
+      }
+    ),
     order = "a[nutrient-extraction]-b",
   },
   {
@@ -51,9 +59,13 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 10 },
     },
     always_show_products = true,
-    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "solid-leafs",
-    }),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      nil,
+      { { 214, 135, 010 }, nil, { 239, 168, 044 } },
+      {
+        "solid-leafs",
+      }
+    ),
     order = "a[nutrient-extraction]-c",
   },
   {
@@ -70,9 +82,13 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 40 },
     },
     always_show_products = true,
-    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "solid-nuts",
-    }),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      nil,
+      { { 214, 135, 010 }, nil, { 239, 168, 044 } },
+      {
+        "solid-nuts",
+      }
+    ),
     order = "a[nutrient-extraction]-d",
   },
   {
@@ -89,9 +105,13 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
     },
     always_show_products = true,
-    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "solid-pips",
-    }),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      nil,
+      { { 214, 135, 010 }, nil, { 239, 168, 044 } },
+      {
+        "solid-pips",
+      }
+    ),
     order = "a[nutrient-extraction]-e",
   },
   {
@@ -108,9 +128,13 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 60 },
     },
     always_show_products = true,
-    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "solid-fruit",
-    }),
+    icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
+      nil,
+      { { 214, 135, 010 }, nil, { 239, 168, 044 } },
+      {
+        "solid-fruit",
+      }
+    ),
     order = "a[nutrient-extraction]-f",
   },
   -- REFINING
