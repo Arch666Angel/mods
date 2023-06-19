@@ -140,6 +140,7 @@ if angelsmods.triggers.artifacts["red"] then
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact-red")
   end
@@ -287,6 +288,7 @@ if angelsmods.triggers.artifacts["yellow"] then
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact-yellow")
   end
@@ -434,6 +436,7 @@ if angelsmods.triggers.artifacts["orange"] then
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact-orange")
   end
@@ -581,6 +584,7 @@ if angelsmods.triggers.artifacts["blue"] then
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact-blue")
   end
@@ -728,6 +732,7 @@ if angelsmods.triggers.artifacts["purple"] then
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact-purple")
   end
@@ -875,6 +880,7 @@ if angelsmods.triggers.artifacts["green"] then
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact-green")
   end
@@ -995,6 +1001,7 @@ if angelsmods.triggers.artifacts["base"] then -- pink
   end
 
   if angelsmods.exploration then
+    -- responsibility of angels exploration to handle the tech progress
   else
     OV.disable_technology("angels-alien-artifact")
   end

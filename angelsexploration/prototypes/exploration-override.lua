@@ -205,6 +205,7 @@ if mods["bobvehicleequipment"] then
   data.raw.car["angels-heavy-tank"].equipment_grid = "angels-heavy-tank"
 end
 
+require("prototypes.overrides.artifacts-updates")
 require("prototypes.overrides.biter-updates")
 require("prototypes.overrides.gathering-turret-updates")
 require("prototypes.overrides.vehicle-updates")
