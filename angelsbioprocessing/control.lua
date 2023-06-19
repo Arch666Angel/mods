@@ -214,10 +214,12 @@ script.on_event(defines.events.on_player_main_inventory_changed, function(event)
   end
 end)
 
-script.on_event(defines.events.on_entity_died , function(event)
+script.on_event(defines.events.on_entity_died, function(event)
   local loot = event.loot
   local killing_force = event.force
-  if (not killing_force) or loot.is_empty() then return end
+  if (not killing_force) or loot.is_empty() then
+    return
+  end
   loot = loot.get_contents()
   for loot_item_name, loot_technology_to_research in pairs({
     ["small-alien-artifact"] = "angels-alien-artifact",
