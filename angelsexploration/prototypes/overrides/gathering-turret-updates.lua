@@ -118,7 +118,7 @@ if angelsmods.triggers.artifacts["green"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-green",
     require_tech_unlock = true,
-    additional_tech_prerequisites =  {
+    additional_tech_prerequisites = {
       "angels-gathering-turret",
       "angels-alien-artifact-green",
     },
