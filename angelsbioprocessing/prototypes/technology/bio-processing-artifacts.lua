@@ -5,8 +5,8 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-red-tool",
-    localised_name = {"item-name.small-alien-artifact-red"},
-    localised_description = {"item-description.alien-artifact-tool"},
+    localised_name = { "item-name.small-alien-artifact-red" },
+    localised_description = { "item-description.alien-artifact-tool" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-red-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -17,7 +17,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact-red",
-    localised_name = {"item-name.alien-artifact-red"},
+    localised_name = { "item-name.alien-artifact-red" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
@@ -49,8 +49,8 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-yellow-tool",
-    localised_name = {"item-name.small-alien-artifact-yellow"},
-    localised_description = {"item-description.alien-artifact-tool"},
+    localised_name = { "item-name.small-alien-artifact-yellow" },
+    localised_description = { "item-description.alien-artifact-tool" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-yellow-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -61,7 +61,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact-yellow",
-    localised_name = {"item-name.alien-artifact-yellow"},
+    localised_name = { "item-name.alien-artifact-yellow" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
@@ -93,8 +93,8 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-orange-tool",
-    localised_name = {"item-name.small-alien-artifact-orange"},
-    localised_description = {"item-description.alien-artifact-tool"},
+    localised_name = { "item-name.small-alien-artifact-orange" },
+    localised_description = { "item-description.alien-artifact-tool" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-orange-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -105,7 +105,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact-orange",
-    localised_name = {"item-name.alien-artifact-orange"},
+    localised_name = { "item-name.alien-artifact-orange" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
@@ -136,8 +136,8 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-blue-tool",
-    localised_name = {"item-name.small-alien-artifact-blue"},
-    localised_description = {"item-description.alien-artifact-tool"},
+    localised_name = { "item-name.small-alien-artifact-blue" },
+    localised_description = { "item-description.alien-artifact-tool" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-blue-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -148,7 +148,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact-blue",
-    localised_name = {"item-name.alien-artifact-blue"},
+    localised_name = { "item-name.alien-artifact-blue" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
@@ -179,8 +179,8 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-purple-tool",
-    localised_name = {"item-name.small-alien-artifact-purple"},
-    localised_description = {"item-description.alien-artifact-tool"},
+    localised_name = { "item-name.small-alien-artifact-purple" },
+    localised_description = { "item-description.alien-artifact-tool" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-purple-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -191,7 +191,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact-purple",
-    localised_name = {"item-name.alien-artifact-purple"},
+    localised_name = { "item-name.alien-artifact-purple" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
@@ -223,8 +223,8 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-green-tool",
-    localised_name = {"item-name.small-alien-artifact-green"},
-    localised_description = {"item-description.alien-artifact-tool"},
+    localised_name = { "item-name.small-alien-artifact-green" },
+    localised_description = { "item-description.alien-artifact-tool" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-green-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -235,7 +235,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact-green",
-    localised_name = {"item-name.alien-artifact-green"},
+    localised_name = { "item-name.alien-artifact-green" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
@@ -267,7 +267,7 @@ data:extend({
   {
     type = "tool",
     name = "alien-artifact-tool",
-    localised_name = {"item-name.small-alien-artifact"},
+    localised_name = { "item-name.small-alien-artifact" },
     icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-small.png",
     icon_size = 32,
     flags = { "hidden" },
@@ -278,7 +278,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-alien-artifact",
-    localised_name = {"item-name.alien-artifact"},
+    localised_name = { "item-name.alien-artifact" },
     icon = "__angelsbioprocessing__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
