@@ -68,41 +68,59 @@ if angelsmods.triggers.artifacts["red"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-red",
     require_tech_unlock = true,
-    additional_tech_prerequisites = "angels-gathering-turret",
+    additional_tech_prerequisites = {
+      "angels-gathering-turret",
+      "angels-alien-artifact-red",
+    },
   })
 end
 if angelsmods.triggers.artifacts["yellow"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-yellow",
     require_tech_unlock = true,
-    additional_tech_prerequisites = "angels-gathering-turret",
+    additional_tech_prerequisites = {
+      "angels-gathering-turret",
+      "angels-alien-artifact-yellow",
+    },
   })
 end
 if angelsmods.triggers.artifacts["orange"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-orange",
     require_tech_unlock = true,
-    additional_tech_prerequisites = "angels-gathering-turret",
+    additional_tech_prerequisites = {
+      "angels-gathering-turret",
+      "angels-alien-artifact-orange",
+    },
   })
 end
 if angelsmods.triggers.artifacts["blue"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-blue",
     require_tech_unlock = true,
-    additional_tech_prerequisites = "angels-gathering-turret",
+    additional_tech_prerequisites = {
+      "angels-gathering-turret",
+      "angels-alien-artifact-blue",
+    },
   })
 end
 if angelsmods.triggers.artifacts["purple"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-purple",
     require_tech_unlock = true,
-    additional_tech_prerequisites = "angels-gathering-turret",
+    additional_tech_prerequisites = {
+      "angels-gathering-turret",
+      "angels-alien-artifact-purple",
+    },
   })
 end
 if angelsmods.triggers.artifacts["green"] then
   angelsmods.functions.create_gathering_turret_target({
     name = "small-alien-artifact-green",
     require_tech_unlock = true,
-    additional_tech_prerequisites = "angels-gathering-turret",
+    additional_tech_prerequisites = {
+      "angels-gathering-turret",
+      "angels-alien-artifact-green",
+    },
   })
 end
