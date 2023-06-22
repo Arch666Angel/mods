@@ -4,6 +4,9 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.ores["aluminium"] = true
   angelsmods.trigger.ores["chrome"] = true
   angelsmods.trigger.ores["cobalt"] = true
+  if mods["bobores"] then
+    bobmods.ores.cobalt.enabled = true
+  end
   angelsmods.trigger.ores["copper"] = true
   angelsmods.trigger.ores["gold"] = true
   angelsmods.trigger.ores["iron"] = true

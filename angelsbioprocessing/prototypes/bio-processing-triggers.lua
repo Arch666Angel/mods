@@ -2,6 +2,9 @@
 
 if angelsmods.triggers.bio_pastes["cobalt"] then
   angelsmods.trigger.ores["cobalt"] = true
+  if mods["bobores"] then
+    bobmods.ores.cobalt.enabled = true
+  end
   angelsmods.trigger.smelting_products["cobalt"].powder = true
 end
 
