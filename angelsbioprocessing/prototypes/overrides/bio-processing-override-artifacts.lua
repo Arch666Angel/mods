@@ -1003,6 +1003,7 @@ if angelsmods.triggers.artifacts["base"] then -- pink
   if angelsmods.exploration then
     -- responsibility of angels exploration to handle the tech progress
   else
+    OV.remove_prereq("bio-processing-alien-3", "angels-alien-artifact")
     OV.disable_technology("angels-alien-artifact")
   end
 else
