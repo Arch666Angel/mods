@@ -256,6 +256,7 @@ if mods["bobplates"] then
       },
     })
 
+    OV.remove_unlock("bob-wood-processing", "bob-rubber")
     OV.remove_unlock("electronics", "insulated-cable")
     OV.add_unlock("circuit-network", "insulated-cable")
     OV.add_unlock("circuit-network", "bob-rubber")

@@ -126,6 +126,7 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       "military-science-pack",
+      "angels-alien-artifact",
     },
     effects = {
       {

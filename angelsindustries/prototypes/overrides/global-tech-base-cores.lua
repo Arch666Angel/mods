@@ -185,7 +185,6 @@ if angelsmods.industries.tech then
   OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
   -- REFINING
   OV.set_science_pack("geode-crystallization-1", "datacore-processing-1", 2)
-  OV.set_science_pack("geode-crystallization-2", "datacore-processing-1", 2)
   OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)

@@ -218,6 +218,12 @@ if mods["bobplates"] then
 
     if mods["angelsbioprocessing"] then
       OV.disable_recipe({ "bob-resin-wood" })
+      OV.disable_technology({ "bob-wood-processing" })
+      OV.remove_prereq({
+        "bodies",
+        "electronics",
+        "walking-vehicle",
+      }, "bob-wood-processing")
     end
 
     OV.remove_unlock("plastics", "synthetic-wood")
@@ -246,7 +252,6 @@ if mods["bobplates"] then
       OV.patch_recipes({
         {
           name = "bob-rubber",
-          enabled = false,
           ingredients = {
             { "!!" },
             { type = "item", name = "resin", amount = 3 },
