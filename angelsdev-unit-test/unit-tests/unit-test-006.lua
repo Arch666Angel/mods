@@ -92,21 +92,21 @@ local function calculate_science_pack_level()
       -- bobs alien science packs
       for pack_name, pack_level in pairs({
         ["science-pack-gold"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-blue"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-orange"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-purple"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-yellow"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-green"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-red"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
       }) do
         science_pack_level[pack_name] = pack_level
       end

@@ -1,4 +1,9 @@
 -- EXECUTE OVERRIDES
+if mods["boblibrary"] then
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-library-recipe-cleanup", true)
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-library-technology-cleanup", true)
+end
+
 if mods["bobplates"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-groundwater")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-vanillabarrelling")
@@ -35,6 +40,8 @@ if mods["bobores"] then
   angelsmods.settings.hide_setting("double-setting", "bobmods-ores-leadnickelratio")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-nickelgivescobalt")
   angelsmods.settings.hide_setting("double-setting", "bobmods-ores-nickelcobaltratio")
+
+  angelsmods.settings.hide_setting("double-setting", "bobmods-ores-infiniteore", false)
 
   --gems
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-unsortedgemore", false)
