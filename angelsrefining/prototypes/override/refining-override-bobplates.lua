@@ -106,53 +106,10 @@ if mods["bobplates"] then
       },
       order = "a-a-a1",
     },
-    {
-      type = "technology",
-      name = "geode-crystallization-2",
-      icon = "__angelsrefining__/graphics/technology/geode-processing-blue.png",
-      icon_size = 256,
-      icon_mipmaps = 2,
-      prerequisites = {
-        "geode-crystallization-1",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "bob-ruby-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-sapphire-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-emerald-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-amethyst-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-topaz-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-diamond-3",
-        },
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-        },
-        time = 30,
-      },
-      order = "a-a-a1",
-    },
   })
-  OV.add_prereq("gem-processing-1", "geode-crystallization-2")
+  OV.add_prereq("gem-processing-1", "geode-crystallization-1")
+  OV.set_science_pack("gem-processing-1", "logistic-science-pack", 1)
+  OV.set_research_difficulty("gem-processing-1", 30, 50)
   for _, recipeName in pairs({
     "bob-ruby-3",
     "bob-sapphire-3",
