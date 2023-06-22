@@ -400,6 +400,7 @@ local function add_ignores()
         ["powder-gold"] = true,
         ["powder-iron"] = true,
         ["powder-titanium"] = true,
+        ["powder-tungsten"] = true,
         ["powdered-tungsten"] = true,
         ["powder-zinc"] = true,
       },
