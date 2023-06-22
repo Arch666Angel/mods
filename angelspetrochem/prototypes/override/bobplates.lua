@@ -223,8 +223,7 @@ if mods["bobplates"] then
         "bodies",
         "electronics",
         "walking-vehicle",
-      },
-      "bob-wood-processing")
+      }, "bob-wood-processing")
     end
 
     OV.remove_unlock("plastics", "synthetic-wood")
