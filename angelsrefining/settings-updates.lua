@@ -41,7 +41,7 @@ if mods["bobores"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-nickelgivescobalt")
   angelsmods.settings.hide_setting("double-setting", "bobmods-ores-nickelcobaltratio")
 
-  angelsmods.settings.hide_setting("double-setting", "bobmods-ores-infiniteore", false)
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-infiniteore", false)
 
   --gems
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-unsortedgemore", false)
