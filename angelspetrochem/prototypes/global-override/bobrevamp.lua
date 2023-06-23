@@ -16,8 +16,8 @@ if mods["bobrevamp"] then
 
   OV.disable_technology({ "solid-fuel" })
 
-  if mods["bobplates"] and mods["bobwarfare"] then
-    -- Napalm capsules require Liquid fuel
+  if mods["bobwarfare"] then
+    -- Napalm capsules require Liquid fuel / Fuel oil
     OV.add_prereq("military-3", "flammables")
   end
 
