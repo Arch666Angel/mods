@@ -242,7 +242,7 @@ end
 -------------------------------------------------------------------------------
 -- RUBBER HANDLING ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then
+if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.rubber then
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
@@ -260,7 +260,7 @@ if mods["bobplates"] then
           order = "b[rubber]-b[solid]-a",
           icons = angelsmods.functions.add_number_icon_layer({
             {
-              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon = "__bobelectronics__/graphics/icons/rubber.png",
               icon_size = 32,
               icon_mipmaps = 1,
             },
@@ -272,7 +272,7 @@ if mods["bobplates"] then
           order = "b[rubber]-b[solid]-a",
           icons = angelsmods.functions.add_number_icon_layer({
             {
-              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon = "__bobelectronics__/graphics/icons/rubber.png",
               icon_size = 32,
               icon_mipmaps = 1,
             },
