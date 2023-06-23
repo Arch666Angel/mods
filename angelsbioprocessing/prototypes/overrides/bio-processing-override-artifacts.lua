@@ -959,7 +959,7 @@ if angelsmods.triggers.artifacts["base"] then -- pink
       OV.patch_recipes({
         { name = "alien-artifact-from-small", enabled = false },
       })
-      if mods["bobclasses"] and (not data.raw.item["rtg"]) then
+      if mods["bobclasses"] and not data.raw.item["rtg"] then
         OV.add_prereq("bodies", "angels-alien-artifact")
       end
     end

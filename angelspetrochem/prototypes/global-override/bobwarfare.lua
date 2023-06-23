@@ -102,5 +102,4 @@ if mods["bobwarfare"] then
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-residual" }),
     },
   })
-
 end
