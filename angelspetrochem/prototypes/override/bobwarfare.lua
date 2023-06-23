@@ -39,16 +39,4 @@ if mods["bobwarfare"] then
     OV.add_prereq("walking-vehicle", "rubbers")
   end
 
-  -----------------------------------------------------------------------------
-  -- PETROLEUM JELLY ----------------------------------------------------------
-  -----------------------------------------------------------------------------
-  OV.patch_recipes({
-    {
-      name = "petroleum-jelly",
-      ingredients = {
-        { name = "gas-residual", type = "fluid", amount = "liquid-naphtha" },
-      },
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-residual" }),
-    },
-  })
 end
