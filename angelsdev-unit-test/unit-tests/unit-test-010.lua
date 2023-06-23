@@ -400,6 +400,7 @@ local function add_ignores()
         ["powder-gold"] = true,
         ["powder-iron"] = true,
         ["powder-titanium"] = true,
+        ["powder-tungsten"] = true,
         ["powdered-tungsten"] = true,
         ["powder-zinc"] = true,
       },
@@ -551,8 +552,13 @@ local unit_test_010 = function()
   end
 
   if escape == true then
-    unit_test_functions.print_msg("Not all techs were checked. Possibly due to hidden prerequisites")
+    unit_test_functions.print_msg("The following techs were not checked. Possibly due to hidden prerequisites")
     unit_test_result = unit_test_functions.test_failed
+    for tech_name, tech in pairs(tech_prototypes) do
+      if not processed_techs[tech_name] then
+        unit_test_functions.print_msg(tech_name)
+      end
+    end
   end
 
   return unit_test_result

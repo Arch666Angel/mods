@@ -160,7 +160,9 @@ if angelsmods.industries.tech then
     AI.core_replace("bob-robo-modular-1", "basic", "logistic")
     AI.core_replace("bob-robo-modular-2", "basic", "logistic")
     AI.core_replace("bob-robo-modular-3", "basic", "logistic")
+    -- "bob-robo-modular-4" could be using basic or processing core, depending on which of Bob's mods are enabled
     AI.core_replace("bob-robo-modular-4", "basic", "logistic")
+    AI.core_replace("bob-robo-modular-4", "processing", "logistic")
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
