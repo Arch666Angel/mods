@@ -214,6 +214,7 @@ if angelsmods.industries.tech then
     --AI.pack_replace("bob-robo-modular-1", "green", "orange")
     AI.pack_replace("bob-robo-modular-2", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-2", "tech-blue-packs")
+    AI.pack_replace("bob-robo-modular-3", "yellow", "blue")
     -- robots
     OV.remove_science_pack("construction-robotics", "angels-science-pack-orange")
     AI.pack_replace("logistic-robotics", "blue", "orange")

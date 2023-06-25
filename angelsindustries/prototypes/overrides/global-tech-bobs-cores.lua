@@ -160,7 +160,9 @@ if angelsmods.industries.tech then
     AI.core_replace("bob-robo-modular-1", "basic", "logistic")
     AI.core_replace("bob-robo-modular-2", "basic", "logistic")
     AI.core_replace("bob-robo-modular-3", "basic", "logistic")
+    -- "bob-robo-modular-4" could be using basic or processing core, depending on which of Bob's mods are enabled
     AI.core_replace("bob-robo-modular-4", "basic", "logistic")
+    AI.core_replace("bob-robo-modular-4", "processing", "logistic")
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
@@ -252,6 +254,12 @@ if angelsmods.industries.tech then
   if mods["bobtech"] then
     --Remove cores associated with advanced alien technologies
     if data.raw.tool["science-pack-gold"] then
+      OV.remove_science_pack("alien-research-blue", "datacore-processing-1")
+      OV.remove_science_pack("alien-research-orange", "datacore-processing-1")
+      OV.remove_science_pack("alien-research-purple", "datacore-processing-1")
+      OV.remove_science_pack("alien-research-yellow", "datacore-processing-1")
+      OV.remove_science_pack("alien-research-green", "datacore-processing-1")
+      OV.remove_science_pack("alien-research-red", "datacore-processing-1")
       --blue tier
       OV.remove_science_pack("bob-battery-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("bob-battery-equipment-5", "datacore-enhance-1")
@@ -284,6 +292,7 @@ if angelsmods.industries.tech then
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-5", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-6", "datacore-enhance-1")
+      OV.remove_science_pack("personal-laser-defense-equipment-6", "datacore-enhance-1")
 
       table.insert(
         data.raw.recipe["science-pack-gold"].ingredients,

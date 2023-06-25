@@ -146,6 +146,7 @@ if alien_technology then
   for _, tech_name in pairs({
     bobmods.warfare and "bob-power-armor-3" or nil,
     -- personal equipment
+    bobmods.equipment and "fusion-reactor-equipment-2" or nil,
     bobmods.equipment and "bob-battery-equipment-4" or nil,
     bobmods.equipment and "bob-energy-shield-equipment-4" or nil,
     -- vehicle equipment
@@ -158,11 +159,6 @@ if alien_technology then
     OV.remove_prereq(tech_name, "alien-research")
     OV.add_prereq(tech_name, "alien-research-blue")
     OV.add_prereq(tech_name, "alien-research-orange")
-  end
-
-  if mods["bobtech"] and mods["bobequipment"] then
-    OV.add_prereq("fusion-reactor-equipment-2", "angels-alien-artifact-blue")
-    OV.add_prereq("fusion-reactor-equipment-2", "angels-alien-artifact-orange")
   end
 end
 
@@ -290,13 +286,6 @@ if alien_technology then
     OV.add_prereq(tech_name, "alien-research-purple")
     OV.add_prereq(tech_name, "alien-research-yellow")
   end
-
-  if mods["bobtech"] and mods["bobequipment"] then
-    OV.remove_science_pack("fusion-reactor-equipment-3", "alien-science-pack-blue")
-    OV.remove_science_pack("fusion-reactor-equipment-3", "alien-science-pack-orange")
-    OV.set_science_pack("fusion-reactor-equipment-3", "alien-science-pack-purple", 1)
-    OV.set_science_pack("fusion-reactor-equipment-3", "alien-science-pack-yellow", 1)
-  end
 end
 
 -------------------------------------------------------------------------------
@@ -414,13 +403,6 @@ if alien_technology then
     OV.remove_prereq(tech_name, "alien-research")
     OV.add_prereq(tech_name, "alien-research-green")
     OV.add_prereq(tech_name, "alien-research-red")
-  end
-
-  if mods["bobtech"] and mods["bobequipment"] then
-    OV.remove_science_pack("fusion-reactor-equipment-4", "alien-science-pack-purple")
-    OV.remove_science_pack("fusion-reactor-equipment-4", "alien-science-pack-yellow")
-    OV.set_science_pack("fusion-reactor-equipment-4", "alien-science-pack-green", 1)
-    OV.set_science_pack("fusion-reactor-equipment-4", "alien-science-pack-red", 1)
   end
 end
 

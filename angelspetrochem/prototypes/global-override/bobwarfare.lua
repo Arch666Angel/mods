@@ -89,4 +89,17 @@ if mods["bobwarfare"] then
       },
     },
   })
+
+  -----------------------------------------------------------------------------
+  -- PETROLEUM JELLY ----------------------------------------------------------
+  -----------------------------------------------------------------------------
+  OV.patch_recipes({
+    {
+      name = "petroleum-jelly",
+      ingredients = {
+        { name = "gas-residual", type = "fluid", amount = "liquid-naphtha" },
+      },
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-residual" }),
+    },
+  })
 end
