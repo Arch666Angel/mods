@@ -9,7 +9,6 @@ if angelsmods.refining and angelsmods.functions.is_special_vanilla() then
   OV.add_prereq("advanced-ore-refining-3", "ore-advanced-floatation")
 
   OV.disable_recipe({
-    --"angelsore-crystal-mix6-processing",
     "electro-whinning-cell",
     "electro-whinning-cell-2",
     "electro-whinning-cell-3",

@@ -173,7 +173,7 @@ data:extend({
       "angels-titanium-casting-2",
       "angels-tin-smelting-3",
       "angels-aluminium-smelting-3",
-      "angels-chrome-smelting-2",
+      "angels-chrome-smelting-1",
       "angels-cobalt-smelting-2",
     },
     effects = {

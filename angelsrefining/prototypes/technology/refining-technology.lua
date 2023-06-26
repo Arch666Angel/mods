@@ -761,6 +761,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angelsore-crystal-mix5-processing",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angelsore-crystal-mix6-processing",
+      },
     },
     unit = {
       count = 50,
@@ -1126,10 +1130,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angelsore9-crystal-processing",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix6-processing",
       },
     },
     unit = {

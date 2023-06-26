@@ -600,7 +600,7 @@ end
 
 if ore_enabled("ferrous") and ore_enabled("cupric") then
 else
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
+  OV.remove_unlock("advanced-ore-refining-3", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
 end
 if not ore_enabled("ferrous") then --I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!

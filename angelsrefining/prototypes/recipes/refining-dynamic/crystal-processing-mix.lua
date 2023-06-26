@@ -232,11 +232,11 @@ data:extend({
     icon_size = 32,
     order = "h",
   },
-  -- TIER 3.5 MIX
+  -- TIER 4 MIX
   {
     type = "recipe",
     name = "angelsore-crystal-mix6-processing", --thorium
-    category = "ore-sorting-3",
+    category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
     allow_decomposition = false,
@@ -245,7 +245,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "angels-ore8-crystal", amount = 2 },
         { type = "item", name = "angels-ore9-crystal", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "item", name = "catalysator-orange", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
