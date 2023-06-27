@@ -1013,5 +1013,4 @@ biter_definitions.bob_spitter_spawner = {
   },
 }
 
-
 return biter_definitions
