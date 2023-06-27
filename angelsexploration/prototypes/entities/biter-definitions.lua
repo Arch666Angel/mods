@@ -779,6 +779,37 @@ biter_definitions.bob_giant_poison_biter = {
   },
 }
 
+biter_definitions.bob_titan_biter = {
+  appearance = {
+    full_name = "bob-titan-biter",
+  },
+  loot = {
+    create_loot_definition("yellow", 1.5, 1), -- 1-2
+    create_loot_definition("green", 2.5, 1), -- 2-3
+  },
+}
+
+biter_definitions.bob_behemoth_biter = {
+  appearance = {
+    full_name = "bob-behemoth-biter",
+  },
+  loot = {
+    create_loot_definition("green", 2, 1), -- 2-3
+    create_loot_definition("red", 2, 1), -- 2-3
+  },
+}
+
+biter_definitions.bob_leviathan_biter = {
+  appearance = {
+    full_name = "bob-leviathan-biter",
+  },
+  loot = {
+    create_loot_definition("yellow", 2, 0), -- 2
+    create_loot_definition("green", 3, 0), -- 3
+    create_loot_definition("red", 3, 0), -- 3
+  },
+}
+
 -------------------------------------------------------------------------------
 -- BOB ELEMENTAL SPITTER DEFINITIONS ------------------------------------------
 -------------------------------------------------------------------------------
@@ -827,6 +858,37 @@ biter_definitions.bob_giant_poison_spitter = {
   },
 }
 
+biter_definitions.bob_titan_spitter = {
+  appearance = {
+    full_name = "bob-titan-spitter",
+  },
+  loot = {
+    create_loot_definition("yellow", 1.5, 1), -- 1-2
+    create_loot_definition("red", 2.5, 1), -- 2-3
+  },
+}
+
+biter_definitions.bob_behemoth_spitter = {
+  appearance = {
+    full_name = "bob-behemoth-spitter",
+  },
+  loot = {
+    create_loot_definition("green", 2, 1), -- 2-3
+    create_loot_definition("red", 2, 1), -- 2-3
+  },
+}
+
+biter_definitions.bob_leviathan_spitter = {
+  appearance = {
+    full_name = "bob-leviathan-spitter",
+  },
+  loot = {
+    create_loot_definition("yellow", 2, 0), -- 2
+    create_loot_definition("green", 3, 0), -- 3
+    create_loot_definition("red", 3, 0), -- 3
+  },
+}
+
 -------------------------------------------------------------------------------
 -- SPAWNER DEFINITIONS --------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -848,6 +910,9 @@ biter_definitions.biter_spawner = {
     {type = "laser", decrease = 5, percent = 10},]]
     { type = "plasma", decrease = 5, percent = 10 },
   },
+  loot = {
+    create_loot_definition("base", 15, 10), -- 10-20
+  },
 }
 
 biter_definitions.spitter_spawner = {
@@ -867,6 +932,9 @@ biter_definitions.spitter_spawner = {
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
     { type = "plasma", decrease = 5, percent = 10 },
+  },
+  loot = {
+    create_loot_definition("base", 15, 10), -- 10-20
   },
 }
 
@@ -892,6 +960,9 @@ biter_definitions.scarab_spawner = {
     { type = "fire", decrease = 30, percent = 60 },
     { type = "laser", decrease = 5, percent = 10 },
     { type = "plasma", decrease = 5, percent = 10 },
+  },
+  loot = {
+    create_loot_definition("base", 21, 8), -- 17-25
   },
 }
 
@@ -919,6 +990,28 @@ biter_definitions.psyker_spawner = {
     { type = "laser", decrease = 5, percent = 10 },
     { type = "plasma", decrease = 5, percent = 10 },
   },
+  loot = {
+    create_loot_definition("base", 21, 8), -- 17-25
+  },
 }
+
+biter_definitions.bob_biter_spawner = {
+  appearance = {
+    full_name = "bob-biter-spawner",
+  },
+  loot = {
+    create_loot_definition("base", 27, 6), -- 24-30
+  },
+}
+
+biter_definitions.bob_spitter_spawner = {
+  appearance = {
+    full_name = "bob-spitter-spawner",
+  },
+  loot = {
+    create_loot_definition("base", 27, 6), -- 24-30
+  },
+}
+
 
 return biter_definitions
