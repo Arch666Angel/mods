@@ -1,7 +1,12 @@
 if mods["bobores"] then
-  if bobmods.ores.settings.UnsortedGemOre == true then
+  if not bobmods.ores.gems.enabled then
+    -- Do nothing
+  elseif bobmods.ores.settings.UnsortedGemOre == true then
     bobmods.lib.resource.add_result("infinite-gem-ore", { name = "gem-ore" })
   else
+    -- remove unsorted gem ore
+    bobmods.lib.resource.remove_result("infinite-gem-ore", "gem-ore")
+
     bobmods.lib.resource.add_result(
       "infinite-gem-ore",
       { name = "diamond-ore", probability = bobmods.gems.DiamondRatio }
@@ -20,8 +25,6 @@ if mods["bobores"] then
       { name = "sapphire-ore", probability = bobmods.gems.SapphireRatio }
     )
     bobmods.lib.resource.add_result("infinite-gem-ore", { name = "topaz-ore", probability = bobmods.gems.TopazRatio })
-    --remove regular gems
-    bobmods.lib.resource.remove_result("infinite-gem-ore", "gem-ore")
   end
 
   if bobmods.ores.settings.GemsFromOtherOres == true then
