@@ -200,7 +200,19 @@ if angelsmods.industries.components then
 
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")
-    OV.add_unlock("angels-components-batteries-6", "silver-oxide")
+    
+    OV.disable_recipe("silver-oxide")
+    OV.disable_recipe("lithium")
+    OV.disable_recipe("lithium-water-electrolysis")
+    OV.disable_recipe("lithium-chloride")
+    OV.disable_recipe("water-thermal-lithia")
+    OV.disable_recipe("angels-water-void-lithia-water")
+    angelsmods.functions.add_flag("silver-oxide", "hidden")
+    angelsmods.functions.add_flag("lithium", "hidden")
+    angelsmods.functions.add_flag("lithium-perchlorate", "hidden")
+    data.raw.fluid["lithia-water"].hidden = true
+    angelsmods.functions.disable_barreling_recipes("lithia-water")
+    OV.disable_technology("lithium-processing")
   end
 
   -----------------------------------------------------------------------------
