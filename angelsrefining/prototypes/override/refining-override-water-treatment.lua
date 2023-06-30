@@ -306,8 +306,7 @@ if mods["bobplates"] then
   if data.raw.fluid["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
-    data.raw.fluid["pure-water"].hidden = true
-    angelsmods.functions.disable_barreling_recipes("pure-water")
+    angelsmods.functions.add_flag("pure-water", "hidden")
   end
 
   -- lithium processing -------------------------------------------------------
