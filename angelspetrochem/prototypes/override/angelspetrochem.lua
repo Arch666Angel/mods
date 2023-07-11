@@ -34,17 +34,11 @@ elseif angelsmods.industries and angelsmods.industries.overhaul then
   -- not bobs mods, should we do something, usual thing is to do nothing...
 else -- no deuterium required, disabling it...
   angelsmods.functions.add_flag("gas-enriched-hydrogen-sulfide", "hidden")
-  angelsmods.functions.disable_barreling_recipes("gas-enriched-hydrogen-sulfide")
   angelsmods.functions.add_flag("liquid-water-semiheavy-1", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-1")
   angelsmods.functions.add_flag("liquid-water-semiheavy-2", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-2")
   angelsmods.functions.add_flag("liquid-water-semiheavy-3", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-3")
   angelsmods.functions.add_flag("liquid-water-heavy", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-heavy")
   angelsmods.functions.add_flag("gas-deuterium", "hidden")
-  angelsmods.functions.disable_barreling_recipes("gas-deuterium")
 
   OV.disable_recipe({
     "angels-hydrogen-sulfide-enrichment",
