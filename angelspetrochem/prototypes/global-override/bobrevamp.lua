@@ -42,9 +42,8 @@ if mods["bobrevamp"] then
   end
   if settings.startup["bobmods-revamp-oil"] then
     OV.hide_recipe("solid-fuel-from-sour-gas")
-    if mods["bobelectronics"] then
-      OV.hide_recipe("bob-oil-processing")
-    end
+    OV.remove_unlock("flammables", "solid-fuel-from-sour-gas")
+    OV.remove_unlock("flammables", "solid-fuel-from-petroleum-gas")
   end
 
   if angelsmods.trigger.disable_bobs_chemical_plants then
