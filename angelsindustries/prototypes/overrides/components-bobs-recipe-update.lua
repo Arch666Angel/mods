@@ -200,7 +200,7 @@ if angelsmods.industries.components then
 
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")
-    
+
     OV.disable_recipe("silver-oxide")
     OV.disable_recipe("lithium")
     OV.disable_recipe("lithium-water-electrolysis")
