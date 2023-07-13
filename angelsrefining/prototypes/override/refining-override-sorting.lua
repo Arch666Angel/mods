@@ -578,6 +578,10 @@ else
   OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-2")
 
   if angelsmods.bioprocessing then
+    OV.add_unlock("advanced-ore-refining-1", "ore-powderizer")
+    OV.add_unlock("advanced-ore-refining-2", "ore-powderizer-2")
+    OV.add_unlock("advanced-ore-refining-1", "milling-drum")
+    OV.add_unlock("advanced-ore-refining-1", "milling-drum-used")
   else
     -- hide milling drums
     OV.hide_recipe({
