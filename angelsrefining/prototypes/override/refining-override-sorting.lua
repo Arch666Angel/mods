@@ -565,6 +565,7 @@ else
     "ore-advanced-floatation",
     "ore-electro-whinning-cell",
   })
+   OV.remove_prereq("advanced-ore-refining-3", "ore-advanced-floatation")
    OV.remove_prereq("advanced-ore-refining-4", "ore-electro-whinning-cell")
 
   -- hide electro winning cells

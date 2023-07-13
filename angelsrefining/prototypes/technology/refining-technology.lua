@@ -718,6 +718,7 @@ data:extend({
       "ore-leaching",
       "advanced-ore-refining-2",
       "slag-processing-3",
+      "ore-advanced-floatation",
     },
     effects = {
       {
@@ -1074,7 +1075,6 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/electro-whinning-cell-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-advanced-floatation",
       "ore-leaching",
       "advanced-ore-refining-3",
     },
