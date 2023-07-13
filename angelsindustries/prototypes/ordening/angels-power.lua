@@ -152,10 +152,7 @@ if mods["bobpower"] then
       },
     })
 
-    if settings.startup["bobmods-power-burnergenerator"].value then
-      move_item("bob-burner-generator", "angels-power-fluid-generator", "a")
-    end
-
+    move_item("bob-burner-generator", "angels-power-fluid-generator", "a")
     move_item("fluid-generator", "angels-power-fluid-generator", "b")
     move_item("fluid-generator-2", "angels-power-fluid-generator", "c")
     move_item("fluid-generator-3", "angels-power-fluid-generator", "d")
@@ -164,9 +161,7 @@ if mods["bobpower"] then
       move_item("hydrazine-generator", "angels-power-fluid-generator", "e")
     end
   else
-    if settings.startup["bobmods-power-burnergenerator"].value then
-      move_item("bob-burner-generator", "angels-power-steam", "a")
-    end
+    move_item("bob-burner-generator", "angels-power-steam", "a")
   end
 
   -----------------------------------------------------------------------------
