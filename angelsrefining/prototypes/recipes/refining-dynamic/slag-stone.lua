@@ -239,7 +239,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-8",
-    category = "crystallizing-2",
+    category = "crystallizing-3",
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
@@ -272,7 +272,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-9",
-    category = "crystallizing-2",
+    category = "crystallizing-3",
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,

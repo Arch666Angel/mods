@@ -480,14 +480,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-8",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-9",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "filter-ceramic",
       },
       {
@@ -536,6 +528,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "catalysator-orange",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "slag-processing-8",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "slag-processing-9",
       },
     },
     unit = {
