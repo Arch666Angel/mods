@@ -251,16 +251,11 @@ angelsmods.functions.RB.set_fallback("item", "orepowder-1", { { "block-productio
 angelsmods.functions.RB.set_fallback("item", "orepowder-2", { { "block-mprocessing-3", 1 }, { "ore-powderizer" } })
 angelsmods.functions.RB.set_fallback("item", "orepowder-3", { { "block-mprocessing-4", 1 }, { "ore-powderizer-2" } })
 
-angelsmods.functions.RB.set_fallback("item", "oreelectro-1", { { "block-mprocessing-3", 3 } })
+angelsmods.functions.RB.set_fallback("item", "oreelectro-1", { { "block-mprocessing-4", 3 } })
 angelsmods.functions.RB.set_fallback(
   "item",
   "oreelectro-2",
-  { { "block-mprocessing-4", 3 }, { "electro-whinning-cell" } }
-)
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "oreelectro-3",
-  { { "block-mprocessing-5", 3 }, { "electro-whinning-cell-2" } }
+  { { "block-mprocessing-5", 3 }, { "electro-whinning-cell" } }
 )
 
 --PETROCHEM

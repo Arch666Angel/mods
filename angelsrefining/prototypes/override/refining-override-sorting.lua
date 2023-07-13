@@ -565,19 +565,16 @@ else
     "ore-advanced-floatation",
     "ore-electro-whinning-cell",
   })
-  OV.remove_prereq("advanced-ore-refining-3", "ore-electro-whinning-cell")
+   OV.remove_prereq("advanced-ore-refining-4", "ore-electro-whinning-cell")
 
   -- hide electro winning cells
   OV.hide_recipe({
     "electro-whinning-cell",
     "electro-whinning-cell-2",
-    "electro-whinning-cell-3",
   })
   angelsmods.functions.add_flag("electro-whinning-cell", "hidden")
   angelsmods.functions.add_flag("electro-whinning-cell-2", "hidden")
-  angelsmods.functions.add_flag("electro-whinning-cell-3", "hidden")
-  OV.remove_unlock("advanced-ore-refining-3", "electro-whinning-cell-2")
-  OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-3")
+  OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-2")
 
   if angelsmods.bioprocessing then
   else

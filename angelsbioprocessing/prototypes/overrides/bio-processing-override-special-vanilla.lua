@@ -11,7 +11,6 @@ if angelsmods.refining and angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
     "electro-whinning-cell",
     "electro-whinning-cell-2",
-    "electro-whinning-cell-3",
   })
 
   OV.remove_prereq("ore-powderizer", "ore-advanced-crushing")
