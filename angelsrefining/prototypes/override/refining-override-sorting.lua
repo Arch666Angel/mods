@@ -539,6 +539,14 @@ OV.patch_recipes(merge_table_of_tables({
 if special_vanilla then
   OV.remove_prereq("uranium-processing", "ore-leaching")
   OV.add_prereq("uranium-processing", "slag-processing-2")
+  OV.remove_unlock("slag-processing-3", "slag-processing-9")
+  OV.add_unlock("slag-processing-2", "slag-processing-9")
+  OV.patch_recipes({
+    {
+      name = "slag-processing-9",
+      category = "crystallizing-2",
+    },
+  })
 else
   -- disable the nuggets and pebbles
   OV.disable_recipe({
@@ -578,10 +586,6 @@ else
   OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-2")
 
   if angelsmods.bioprocessing then
-    OV.add_unlock("advanced-ore-refining-1", "ore-powderizer")
-    OV.add_unlock("advanced-ore-refining-2", "ore-powderizer-2")
-    OV.add_unlock("advanced-ore-refining-1", "milling-drum")
-    OV.add_unlock("advanced-ore-refining-1", "milling-drum-used")
   else
     -- hide milling drums
     OV.hide_recipe({

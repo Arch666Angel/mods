@@ -1025,7 +1025,6 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "ore-powderizer",
-      "advanced-ore-refining-2",
       "thermal-water-extraction-2",
     },
     effects = {
