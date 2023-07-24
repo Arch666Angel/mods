@@ -200,6 +200,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         order = "c-a",
       },
     })
+    OV.add_prereq("alloy-processing-1", "angels-bronze-smelting-1")
     angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
     data.raw["item"]["bronze-alloy"].icon = "__angelssmelting__/graphics/icons/plate-bronze.png"
     data.raw["item"]["bronze-alloy"].icon_size = 32
@@ -208,16 +209,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------
     OV.add_prereq("alloy-processing", "angels-bronze-smelting-1")
-    OV.add_prereq("logistics-2", "angels-bronze-smelting-1")
-    OV.remove_prereq("chemical-science-pack", "alloy-processing")
-    OV.remove_prereq("cobalt-processing", "alloy-processing")
-    OV.remove_prereq("logistics-2", "alloy-processing")
-    OV.remove_prereq("nitinol-processing", "alloy-processing")
-    OV.remove_prereq("tungsten-processing", "alloy-processing")
-    OV.remove_prereq("tungsten-alloy-processing", "alloy-processing")
-    OV.remove_prereq("zinc-processing", "alloy-processing")
     if mods["bobpower"] then
-      OV.remove_prereq("fluid-generator-1", "alloy-processing")
       OV.add_prereq("fluid-generator-1", "angels-bronze-smelting-1")
     end
   end
