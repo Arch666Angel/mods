@@ -4,6 +4,7 @@ Date: xx.xx.xxxx
   Changes:
     - Added support for alien artifacts outside of bob enemies
     - Compatibility with Bob's changes (911)
+    - Recipes that consume Gardens will now only buffer enough ingredients for 1 craft (918)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023
