@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 
 if angelsmods.triggers.bio_rubber then
   OV.remove_prereq("rubbers", "rubber")
-  OV.add_prereq("rubbers", "automation-2")
+  OV.add_prereq("rubbers", "angels-oil-processing")
   OV.add_prereq("rubber", "rubbers")
   OV.remove_science_pack("rubbers", "chemical-science-pack")
 else
