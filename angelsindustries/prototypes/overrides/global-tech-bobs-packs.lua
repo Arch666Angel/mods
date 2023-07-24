@@ -363,7 +363,6 @@ if angelsmods.industries.tech then
   -- BOBS POWER -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
-    AI.pack_replace("steam-power", "red", "grey")
     --adds bob power stuffs
     OV.remove_science_pack("electric-engine", "angels-science-pack-green")
     -- steam power
