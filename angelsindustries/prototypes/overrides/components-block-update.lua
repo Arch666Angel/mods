@@ -231,7 +231,6 @@ if angelsmods.industries.components then
     OV.add_unlock("military-science-pack", "block-mechanical-2")
     OV.add_prereq("ore-leaching", "angels-basic-blocks-3")
     OV.add_prereq("advanced-ore-refining-2", "angels-basic-blocks-3")
-    OV.add_prereq("ore-electro-whinning-cell", "angels-basic-blocks-3")
     OV.add_prereq("angels-advanced-chemistry-2", "angels-basic-blocks-3")
     OV.add_prereq("angels-metallurgy-3", "angels-basic-blocks-3")
 
