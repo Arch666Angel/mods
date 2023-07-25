@@ -11,10 +11,14 @@ if angelsmods.refining and angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
     "electro-whinning-cell",
     "electro-whinning-cell-2",
-    "electro-whinning-cell-3",
   })
 
   OV.remove_prereq("ore-powderizer", "ore-advanced-crushing")
+  OV.remove_prereq("ore-powderizer", "advanced-ore-refining-1")
+
+  OV.remove_prereq("ore-advanced-floatation", "chlorine-processing-1")
+  OV.remove_prereq("ore-advanced-floatation", "thermal-water-extraction-2")
+  OV.add_prereq("ore-advanced-floatation", "chemical-science-pack")
 
   OV.execute()
 end

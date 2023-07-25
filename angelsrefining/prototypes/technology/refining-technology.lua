@@ -480,14 +480,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-8",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-9",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "filter-ceramic",
       },
       {
@@ -536,6 +528,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "catalysator-orange",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "slag-processing-8",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "slag-processing-9",
       },
     },
     unit = {
@@ -717,8 +717,8 @@ data:extend({
     prerequisites = {
       "ore-leaching",
       "advanced-ore-refining-2",
-      "ore-electro-whinning-cell",
       "slag-processing-3",
+      "ore-advanced-floatation",
     },
     effects = {
       {
@@ -739,10 +739,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "electro-whinning-cell-2",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "angelsore-crystal-mix1-processing",
       },
       {
@@ -760,10 +756,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angelsore-crystal-mix5-processing",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix6-processing",
       },
     },
     unit = {
@@ -897,6 +889,7 @@ data:extend({
     prerequisites = {
       "ore-refining",
       "advanced-ore-refining-3",
+      "ore-electro-whinning-cell",
       "utility-science-pack",
     },
     effects = {
@@ -910,7 +903,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "electro-whinning-cell-3",
+        recipe = "electro-whinning-cell-2",
       },
       {
         type = "unlock-recipe",
@@ -1032,7 +1025,6 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "ore-powderizer",
-      "advanced-ore-refining-2",
       "thermal-water-extraction-2",
     },
     effects = {
@@ -1082,9 +1074,8 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/electro-whinning-cell-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-advanced-floatation",
-      "geode-processing-3",
       "ore-leaching",
+      "advanced-ore-refining-3",
     },
     effects = {
       {
@@ -1131,6 +1122,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angelsore9-crystal-processing",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angelsore-crystal-mix6-processing",
+      },
     },
     unit = {
       count = 75,
@@ -1138,6 +1133,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
       },
       time = 15,
     },
