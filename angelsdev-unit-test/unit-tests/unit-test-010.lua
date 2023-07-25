@@ -453,6 +453,17 @@ local function add_ignores()
         ["crystal-full-green"] = true,
       },
     }
+
+    ignored_unlocks["bio-swamp-farm"] = {
+      items = {
+        ["bronze-pipe"] = true
+      }
+    }
+    ignored_unlocks["bio-temperate-farm"] = {
+      items = {
+        ["bronze-pipe"] = true
+      }
+    }
   end
 
   if game.active_mods["angelsindustries"] then
