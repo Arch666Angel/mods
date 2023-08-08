@@ -150,14 +150,15 @@ if angelsmods.trigger.smelting_products["glass"].board then
     -- disable bob variant
     OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
     OV.disable_recipe({ "fibreglass-board" })
-    if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-      OV.patch_recipes({
-        {
-          name = "angels-glass-fiber-board",
-          category = "electronics-with-fluid",
-        }
-      })
-    end
+  end
+
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
+    OV.patch_recipes({
+      {
+        name = "angels-glass-fiber-board",
+        category = "electronics-with-fluid",
+      }
+    })
   end
 else
   OV.disable_recipe({ "angels-glass-fiber-board" })
