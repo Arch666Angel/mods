@@ -154,7 +154,7 @@ if angelsmods.trigger.smelting_products["tin"].wire then
       "__angelssmelting__/graphics/icons/wire-tin.png"
     )
 
-    if mods["bobassembly"] then
+    if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
       OV.patch_recipes({
         {
           name = "basic-tinned-copper-wire",
