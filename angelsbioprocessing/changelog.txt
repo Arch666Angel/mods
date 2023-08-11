@@ -5,7 +5,7 @@ Date: xx.xx.xxxx
     - Added support for alien artifacts outside of bob enemies
     - Compatibility with Bob's changes (911)
     - Recipes that consume Gardens will now only buffer enough ingredients for 1 craft (918)
-    - Adjusted techs and added a new recipe (Sodium hypochlorite decomposition) to make Paper 2 viable when it is unlocked
+    - Adjusted techs and added a new recipe (Sodium hypochlorite decomposition) to make Paper 2 viable when it is unlocked (922)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023
