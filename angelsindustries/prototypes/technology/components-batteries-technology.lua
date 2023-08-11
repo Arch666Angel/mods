@@ -261,7 +261,7 @@ if angelsmods.industries.components then
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
-          "sodium-processing",
+          "sodium-processing-2",
           "angels-tungsten-smelting-1",
           "angels-silver-smelting-2",
           "angels-components-batteries-5",

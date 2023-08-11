@@ -34,4 +34,6 @@ else
     "solid-sodium-hydroxide-solid-sodium-sulfate",
   })
   angelsmods.functions.add_flag("solid-sodium-cyanide", "hidden")
+  OV.remove_unlock("sodium-processing-1", "solid-sodium-sulfate-separation")
+  OV.add_unlock("sodium-processing-2", "solid-sodium-sulfate-separation")
 end

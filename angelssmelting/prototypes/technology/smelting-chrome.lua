@@ -120,8 +120,7 @@ data:extend({
       --"angels-metallurgy-5",
       "ore-processing-5",
       "angels-chrome-smelting-2",
-      --"angels-sulfur-processing-1", -- it seems rediculous adding this prerequisite to yellow...
-      "sodium-processing",
+      "sodium-processing-2",
     },
     effects = {
       {

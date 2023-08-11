@@ -130,7 +130,7 @@ data:extend({
       --"angels-metallurgy-4",
       "ore-processing-3",
       "angels-aluminium-smelting-2",
-      "sodium-processing",
+      "sodium-processing-2",
     },
     effects = {
       {

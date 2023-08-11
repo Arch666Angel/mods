@@ -60,6 +60,7 @@ angelsmods.triggers.bio_plastic = angelsmods.triggers.bio_plastic
 angelsmods.triggers.paper = not angelsmods.functions.is_special_vanilla()
 if angelsmods.triggers.paper then
   angelsmods.trigger.water_red_waste = true
+  angelsmods.trigger.early_chemical_furnace = true
 end
 angelsmods.triggers.crystals_full = (not angelsmods.functions.is_special_vanilla())
   or (mods["bobmodules"] and true or false)
