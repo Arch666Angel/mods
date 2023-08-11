@@ -9,7 +9,7 @@
   "description": "Adds ways to recycle and process waste products through biological means and make use of biological processes and farming.",
   "dependencies": [
     "angelsrefining >= 0.12.1",
-    "angelspetrochem >= 0.9.21",
+    "angelspetrochem >= 0.9.25",
     "angelssmelting >= 0.6.17",
     "? bobenemies >= 1.1.5"
   ]
