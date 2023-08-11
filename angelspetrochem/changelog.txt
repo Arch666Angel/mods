@@ -3,6 +3,7 @@ Version: 0.9.25
 Date: ??.??.????
   Changes:
     - Compatibility with Bob's changes (911)
+    - Split tech Sodium processing into Sodium processing 1 and Sodium processing 2 (922)
   Bugfixes:
     - Fixed recipe order of carbon products to correctly display in helmod
 ---------------------------------------------------------------------------------------------------
