@@ -370,6 +370,7 @@ data:extend({
   {
     type = "recipe",
     name = "solid-sodium-hypochlorite-decomposition",
+    localised_name = { "recipe-name.solid-sodium-hypochlorite-decomposition" },
     category = "chemical-smelting",
     subgroup = "petrochem-sodium",
     energy_required = 2,
