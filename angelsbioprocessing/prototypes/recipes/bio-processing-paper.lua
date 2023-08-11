@@ -375,11 +375,11 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-sodium-hypochlorite", amount = 5 },
+      { type = "item", name = "solid-sodium-hypochlorite", amount = 10 },
     },
     results = {
-      { type = "item", name = "solid-salt", amount = 10 },
-      { type = "fluid", name = "gas-oxygen", amount = 50 },
+      { type = "item", name = "solid-salt", amount = 20 },
+      { type = "fluid", name = "gas-oxygen", amount = 100 },
     },
     main_product = "solid-salt",
     icon_size = 32,
