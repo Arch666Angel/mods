@@ -6,6 +6,7 @@ Date: xx.xx.xxxx
     - Compatibility with Bob's changes (911)
     - Recipes that consume Gardens will now only buffer enough ingredients for 1 craft (918)
     - Adjusted techs and added a new recipe (Sodium hypochlorite decomposition) to make Paper 2 viable when it is unlocked (922)
+    - Rebalanced paper and pulp recipes to make each tier feel like a significant upgrade (923)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023
