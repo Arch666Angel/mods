@@ -578,9 +578,14 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "basic-chemistry",
       "bio-processing-brown",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "solid-alginic-acid",
+      },
       {
         type = "unlock-recipe",
         recipe = "solid-wood-pulp",

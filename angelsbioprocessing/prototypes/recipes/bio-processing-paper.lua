@@ -120,18 +120,22 @@ data:extend({
   {
     type = "recipe",
     name = "solid-wood-pulp",
-    category = "crafting",
+    category = "liquifying",
     subgroup = "bio-paper",
     enabled = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "cellulose-fiber", amount = 20 },
       { type = "item", name = "solid-alginic-acid", amount = 5 },
+      { type = "fluid", name = "water", amount = 20 },
     },
     results = {
       { type = "item", name = "solid-wood-pulp", amount = 20 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-wood-pulp"), 1, angelsmods.bioprocessing.number_tint),
+    crafting_machine_tint = AF.get_recipe_tints({
+      "water",
+    }),
     order = "aa",
   },
   --T2 SULFITE PROCESS
