@@ -123,7 +123,7 @@ data:extend({
     category = "liquifying",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "cellulose-fiber", amount = 20 },
       { type = "item", name = "solid-alginic-acid", amount = 5 },
@@ -311,7 +311,7 @@ data:extend({
       { type = "fluid", name = "liquid-white-liquor", amount = 40 },
     },
     results = {
-      { type = "item", name = "solid-wood-pulp", amount = 30 },
+      { type = "item", name = "solid-wood-pulp", amount = 40 },
       { type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40 },
     },
     always_show_products = true,
@@ -336,7 +336,7 @@ data:extend({
       { type = "item", name = "solid-wood-pulp", amount = 2 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 4 },
+      { type = "item", name = "solid-paper", amount = 3 },
     },
     --main_product = "solid-paper",
     allow_decomposition = false,
@@ -349,14 +349,14 @@ data:extend({
     category = "liquifying",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
       { type = "fluid", name = "gas-chlorine", amount = 80 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 5 },
+      { type = "item", name = "solid-paper", amount = 4 },
       { type = "item", name = "solid-sodium-hypochlorite", amount = 2 },
     },
     --main_product = "solid-paper",
@@ -394,20 +394,20 @@ data:extend({
   {
     type = "recipe",
     name = "paper-bleaching-3",
-    category = "advanced-chemistry",
+    category = "chemistry",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
       { type = "fluid", name = "gas-sulfur-dioxide", amount = 40 },
       { type = "fluid", name = "water", amount = 100 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 6 },
+      { type = "item", name = "solid-paper", amount = 10 },
       { type = "item", name = "solid-sodium-carbonate", amount = 2 },
+      { type = "fluid", name = "gas-oxygen", amount = 40 },
       { type = "fluid", name = "water-yellow-waste", amount = 100 },
     },
     --main_product = "solid-paper",
