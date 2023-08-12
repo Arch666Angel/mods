@@ -353,7 +353,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-chlorine", amount = 60 },
+      { type = "fluid", name = "gas-chlorine", amount = 80 },
     },
     results = {
       { type = "item", name = "solid-paper", amount = 5 },
