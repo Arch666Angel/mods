@@ -90,6 +90,7 @@ else
     "kraft-recovery",
     "kraft-causting",
     "solid-alginic-acid",
+    "solid-sodium-hypochlorite-decomposition",
   })
   angelsmods.functions.add_flag({
     "pulping-liquor",

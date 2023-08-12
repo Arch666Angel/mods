@@ -366,6 +366,27 @@ data:extend({
     }),
     order = "bb",
   },
+  -- SOLID SOIDUM HYPOCHLORITE DECOMPOSITION
+  {
+    type = "recipe",
+    name = "solid-sodium-hypochlorite-decomposition",
+    localised_name = { "recipe-name.solid-sodium-hypochlorite-decomposition" },
+    category = "chemical-smelting",
+    subgroup = "petrochem-sodium",
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "solid-sodium-hypochlorite", amount = 10 },
+    },
+    results = {
+      { type = "item", name = "solid-salt", amount = 20 },
+      { type = "fluid", name = "gas-oxygen", amount = 100 },
+    },
+    main_product = "solid-salt",
+    icon_size = 32,
+    crafting_machine_tint = AF.get_recipe_tints({ "gas-oxygen", AF.fluid_color("NaOCl") }),
+    order = "g[solid-sodium-hypochlorite-decomposition]",
+  },
   {
     type = "recipe",
     name = "paper-bleaching-3",
