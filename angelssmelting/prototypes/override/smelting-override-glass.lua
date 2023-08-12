@@ -144,7 +144,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
       {
         name = "angels-glass-fiber-board",
         category = "electronics-with-fluid",
-      }
+      },
     })
   end
 else
