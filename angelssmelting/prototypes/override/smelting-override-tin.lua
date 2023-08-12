@@ -153,19 +153,19 @@ if angelsmods.trigger.smelting_products["tin"].wire then
       "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
       "__angelssmelting__/graphics/icons/wire-tin.png"
     )
+  end
 
-    if mods["bobassembly"] then
-      OV.patch_recipes({
-        {
-          name = "basic-tinned-copper-wire",
-          category = "electronics",
-        },
-        {
-          name = "angels-wire-coil-tin-converting",
-          category = "electronics-machine",
-        },
-      })
-    end
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
+    OV.patch_recipes({
+      {
+        name = "basic-tinned-copper-wire",
+        category = "electronics",
+      },
+      {
+        name = "angels-wire-coil-tin-converting",
+        category = "electronics-machine",
+      },
+    })
   end
 else
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")

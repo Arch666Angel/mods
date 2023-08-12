@@ -17,52 +17,6 @@ if angelsmods.industries.components then
   OV.remove_prereq("angels-components-mechanical-2", "angels-stone-smelting-2")
   OV.add_prereq("angels-components-mechanical-2", "angels-stone-smelting-1")
 
-  -----------------------------------------------------------------------------
-  -- ADD ELECTRONIC RECIPES TO ELECTRONIC ASSMBLY -----------------------------
-  -----------------------------------------------------------------------------
-  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value == true then
-    --create list of recipes to add to the electronicmachines
-    for _, elec in pairs({
-      -- todo: move cables and coils to smelting!
-      "copper-cable",
-      "angels-wire-coil-copper-converting",
-      "angels-wire-gold",
-      "angels-wire-coil-gold-converting",
-      "basic-platinated-copper-wire",
-      "angels-wire-coil-platinum-converting",
-      "basic-silvered-copper-wire",
-      "angels-wire-coil-silver-converting",
-      "basic-tinned-copper-wire",
-      "angels-wire-coil-tin-converting",
-      "angels-roll-solder-converting",
-      "circuit-red-board",
-      "circuit-green-board",
-      "circuit-orange-board",
-      "circuit-blue-board",
-      --"circuit-yellow-board" --crafted with 2 fluids
-      "circuit-grey-board",
-      "circuit-grey-board-alternative",
-      "circuit-red",
-      "circuit-green",
-      "circuit-orange",
-      "circuit-blue",
-      "circuit-yellow",
-      "circuit-grey",
-      "circuit-red-loaded",
-      "circuit-green-loaded",
-      "circuit-orange-loaded",
-      "circuit-blue-loaded",
-      "circuit-yellow-loaded",
-      "circuit-resistor",
-      "circuit-transistor",
-      "circuit-microchip",
-      "circuit-transformer",
-      "circuit-cpu",
-    }) do
-      data.raw.recipe[elec].category = "electronics"
-    end
-  end
-
   if angelsmods.industries.tech then
   else
     -----------------------------------------------------------------------------

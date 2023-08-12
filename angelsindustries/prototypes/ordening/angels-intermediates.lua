@@ -69,6 +69,7 @@ if angelsmods.industries.overhaul then
     move_item("wooden-board", "angels-board", "z[bob]-a")
     move_item("phenolic-board", "angels-board", "z[bob]-b")
     move_item("fibreglass-board", "angels-board", "z[bob]-c")
+    move_item("angels-glass-fiber-board", "angels-board", "z[bob]-c", "recipe")
 
     move_item("basic-circuit-board", "angels-circuit-board", "z[bob]-a")
     move_item("circuit-board", "angels-circuit-board", "z[bob]-b")

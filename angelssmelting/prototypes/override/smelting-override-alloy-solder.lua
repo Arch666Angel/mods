@@ -34,7 +34,9 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     else
       OV.add_prereq("electronics", "angels-solder-smelting-1")
     end
+  end
 
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
     OV.patch_recipes({ { name = "angels-roll-solder-converting", category = "electronics-machine" } })
   end
 
