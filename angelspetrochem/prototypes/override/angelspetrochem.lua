@@ -184,31 +184,25 @@ end
 if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
     "solid-calcium-chloride",
+    "cumene-process", -- "gas-acetone"
+    "gas-phosgene",
   })
   OV.remove_prereq("angels-nitrogen-processing-2", "chlorine-processing-1")
   angelsmods.functions.add_flag({
     "solid-calcium-chloride",
+    "gas-phosgene",
   }, "hidden")
-end
 
-if angelsmods.trigger.gas_acetone then
-else
-  OV.disable_recipe({
-    "cumene-process",
-  })
-  angelsmods.functions.add_flag({
-    "gas-acetone",
-  }, "hidden")
-end
-
-if angelsmods.trigger.gas_urea then
-else
-  OV.disable_recipe({
-    "gas-urea",
-  })
-  angelsmods.functions.add_flag({
-    "gas-urea",
-  }, "hidden")
+  if angelsmods.bioprocessing then
+  else
+    OV.disable_recipe({
+      "gas-urea",
+    })
+    angelsmods.functions.add_flag({
+      "gas-urea",
+      "gas-acetone",
+    }, "hidden")
+  end
 end
 
 if angelsmods.trigger.resin then
