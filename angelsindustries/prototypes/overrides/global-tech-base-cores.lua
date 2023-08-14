@@ -22,8 +22,6 @@ if angelsmods.industries.tech then
   AI.core_replace("turrets", "war", "basic")
   AI.core_replace("flammables", "war", "enhance")
   -- REFINING
-  -- PETROCHEM
-  AI.core_replace("basic-chemistry", "processing", "basic")
   -- SMELTING
   AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
