@@ -25,6 +25,8 @@ angelsmods.trigger.gas_ammonium_chloride = false
 angelsmods.trigger.early_sulfuric_acid = false
 angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids"].value
   or (mods["angelsbioprocessing"] and true or false)
+angelsmods.trigger.gas_acetone = angelsmods.trigger.resin
+angelsmods.trigger.gas_urea = (mods["bobgreenhouse"] or angelsmods.trigger.resin) and true or false
 
 --HIDE UNUSED BUILDINGS
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value

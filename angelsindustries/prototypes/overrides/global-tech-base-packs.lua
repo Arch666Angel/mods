@@ -15,6 +15,8 @@ if angelsmods.industries.tech then
     "logistics",
     "turrets",
     -- REFINING
+    -- PETROCHEM
+    "basic-chemistry",
     -- SMELTING
     "angels-solder-smelting-basic",
     -- BIO PROCESSING
