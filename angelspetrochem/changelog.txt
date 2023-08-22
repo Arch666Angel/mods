@@ -6,6 +6,7 @@ Date: ??.??.????
     - Split tech Sodium processing into Sodium processing 1 and Sodium processing 2 (922)
   Bugfixes:
     - Fixed recipe order of carbon products to correctly display in helmod
+    - Fixed fertiliser not being craftable in mod configurations (924)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.24
 Date: 23.02.2023
