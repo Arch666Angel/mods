@@ -178,11 +178,11 @@ data:extend({
       energy_required = 3,
       ingredients = {
         { type = "fluid", name = "liquid-molten-glass", amount = 40 },
-        { type = "fluid", name = "liquid-molten-lead", amount = 20 },
+        { type = "fluid", name = "liquid-molten-lead", amount = 20, catalyst_amount = 20 },
       },
       results = {
         { type = "item", name = "angels-plate-glass", amount = 4 },
-        { type = "item", name = "solid-lead-oxide", amount = 2 },
+        { type = "item", name = "solid-lead-oxide", amount = 2, catalyst_amount = 2 },
       },
       main_product = "angels-plate-glass",
     },
@@ -191,11 +191,11 @@ data:extend({
       energy_required = 3,
       ingredients = {
         { type = "fluid", name = "liquid-molten-glass", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-lead", amount = 20 },
+        { type = "fluid", name = "liquid-molten-lead", amount = 20, catalyst_amount = 20 },
       },
       results = {
         { type = "item", name = "angels-plate-glass", amount = 4 },
-        { type = "item", name = "solid-lead-oxide", amount = 2 },
+        { type = "item", name = "solid-lead-oxide", amount = 2, catalyst_amount = 2 },
       },
       main_product = "angels-plate-glass",
     },
@@ -216,12 +216,12 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-glass", amount = 40 },
-        { type = "fluid", name = "liquid-molten-tin", amount = 20 },
+        { type = "fluid", name = "liquid-molten-tin", amount = 20, catalyst_amount = 20 },
         { type = "fluid", name = "gas-nitrogen", amount = 20 },
       },
       results = {
         { type = "item", name = "angels-plate-glass", amount = 5 },
-        { type = "item", name = "ingot-tin", amount = 2 },
+        { type = "item", name = "ingot-tin", amount = 2, catalyst_amount = 2 },
       },
       main_product = "angels-plate-glass",
     },
@@ -230,12 +230,12 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-glass", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-tin", amount = 20 },
+        { type = "fluid", name = "liquid-molten-tin", amount = 20, catalyst_amount = 20 },
         { type = "fluid", name = "gas-nitrogen", amount = 20 },
       },
       results = {
         { type = "item", name = "angels-plate-glass", amount = 5 },
-        { type = "item", name = "ingot-tin", amount = 2 },
+        { type = "item", name = "ingot-tin", amount = 2, catalyst_amount = 2 },
       },
       main_product = "angels-plate-glass",
     },
