@@ -4,6 +4,7 @@ Date: xx.xx.xxxx
   Changes:
     - Increased the tech and required machine tier of Chrome and Platinum (909)
     - Allow Fibreglass boards to be made in Bob's Electronics assembling machines (921)
+    - Enabled productivity modules for Glass, Glass fiber, and Fibreglass recipes (929)
   Bugfixes:
     - Another attempt at fixed smoke on the blast furnace
 ---------------------------------------------------------------------------------------------------
