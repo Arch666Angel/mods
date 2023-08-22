@@ -15,10 +15,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-alginic-acid",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "algae-green-simple",
       },
       {

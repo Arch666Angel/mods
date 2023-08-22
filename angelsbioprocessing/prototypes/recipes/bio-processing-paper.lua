@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "cellulose-fiber-raw-wood",
+    localised_name = { "recipe-name.cellulose-fiber-raw-wood" },
     category = "crafting",
     subgroup = "bio-processing-wood",
     enabled = true,
@@ -13,6 +14,8 @@ data:extend({
     results = {
       { type = "item", name = "cellulose-fiber", amount = 4 },
     },
+    always_show_products = true,
+    show_amount_in_title = false,
     icon = "__angelsbioprocessing__/graphics/icons/cellulose-fiber-raw-wood.png",
     icon_size = 32,
     order = "b",
@@ -54,6 +57,7 @@ data:extend({
   {
     type = "recipe",
     name = "gas-carbon-dioxide-from-wood",
+    localised_name = { "recipe-name.gas-carbon-dioxide-from-wood" },
     category = "liquifying",
     subgroup = "bio-processing-wood",
     enabled = false,
@@ -65,6 +69,7 @@ data:extend({
       { type = "fluid", name = "gas-carbon-dioxide", amount = 70 },
     },
     always_show_products = true,
+    show_amount_in_title = false,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
     }, "COcOc"),
@@ -120,18 +125,22 @@ data:extend({
   {
     type = "recipe",
     name = "solid-wood-pulp",
-    category = "crafting",
+    category = "liquifying",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 20,
     ingredients = {
       { type = "item", name = "cellulose-fiber", amount = 20 },
       { type = "item", name = "solid-alginic-acid", amount = 5 },
+      { type = "fluid", name = "water", amount = 20 },
     },
     results = {
       { type = "item", name = "solid-wood-pulp", amount = 20 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-wood-pulp"), 1, angelsmods.bioprocessing.number_tint),
+    crafting_machine_tint = AF.get_recipe_tints({
+      "water",
+    }),
     order = "aa",
   },
   --T2 SULFITE PROCESS
@@ -249,6 +258,7 @@ data:extend({
   {
     type = "recipe",
     name = "kraft-recovery",
+    localised_name = { "recipe-name.kraft-recovery" },
     category = "liquifying",
     subgroup = "bio-liquor",
     enabled = false,
@@ -261,6 +271,7 @@ data:extend({
     },
     main_product = "liquid-green-liquor",
     always_show_products = true,
+    show_amount_in_title = false,
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-green-liquor",
       "liquid-black-liquor",
@@ -272,6 +283,7 @@ data:extend({
   {
     type = "recipe",
     name = "kraft-causting",
+    localised_name = { "recipe-name.kraft-causting" },
     category = "chemistry",
     subgroup = "bio-liquor",
     enabled = false,
@@ -307,7 +319,7 @@ data:extend({
       { type = "fluid", name = "liquid-white-liquor", amount = 40 },
     },
     results = {
-      { type = "item", name = "solid-wood-pulp", amount = 30 },
+      { type = "item", name = "solid-wood-pulp", amount = 40 },
       { type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40 },
     },
     always_show_products = true,
@@ -324,6 +336,7 @@ data:extend({
   {
     type = "recipe",
     name = "paper-bleaching-1",
+    localised_name = { "recipe-name.paper-bleaching-1" },
     category = "crafting",
     subgroup = "bio-paper",
     enabled = false,
@@ -332,9 +345,10 @@ data:extend({
       { type = "item", name = "solid-wood-pulp", amount = 2 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 4 },
+      { type = "item", name = "solid-paper", amount = 3 },
     },
-    --main_product = "solid-paper",
+    always_show_products = true,
+    show_amount_in_title = false,
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-paper"), 1, angelsmods.bioprocessing.number_tint),
     order = "ba",
@@ -345,17 +359,16 @@ data:extend({
     category = "liquifying",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-chlorine", amount = 60 },
+      { type = "fluid", name = "gas-chlorine", amount = 80 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 5 },
+      { type = "item", name = "solid-paper", amount = 4 },
       { type = "item", name = "solid-sodium-hypochlorite", amount = 2 },
     },
-    --main_product = "solid-paper",
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-paper"), 2, angelsmods.bioprocessing.number_tint),
     crafting_machine_tint = AF.get_recipe_tints({
@@ -390,23 +403,22 @@ data:extend({
   {
     type = "recipe",
     name = "paper-bleaching-3",
-    category = "advanced-chemistry",
+    category = "chemistry",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
       { type = "fluid", name = "gas-sulfur-dioxide", amount = 40 },
       { type = "fluid", name = "water", amount = 100 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 6 },
+      { type = "item", name = "solid-paper", amount = 10 },
       { type = "item", name = "solid-sodium-carbonate", amount = 2 },
+      { type = "fluid", name = "gas-oxygen", amount = 40 },
       { type = "fluid", name = "water-yellow-waste", amount = 100 },
     },
-    --main_product = "solid-paper",
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-paper"), 3, angelsmods.bioprocessing.number_tint),
     crafting_machine_tint = AF.get_recipe_tints({ "water-yellow-waste", "water", "gas-oxygen", "gas-sulfur-dioxide" }),
