@@ -110,7 +110,6 @@ if angelsmods.industries.overhaul then
   -- Productivity
   -------------------------------------------------------------------------------
   angelsmods.functions.allow_productivity("angels-thorium-processing")
-  angelsmods.functions.allow_productivity("angelsore-crystal-mix6-processing") --thorium ore
   angelsmods.functions.allow_productivity("angels-uranium-fuel-cell")
   angelsmods.functions.allow_productivity("angels-mixed-oxide-cell")
   angelsmods.functions.allow_productivity("angels-thorium-fuel-cell")
