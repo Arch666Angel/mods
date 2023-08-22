@@ -187,6 +187,15 @@ if angelsmods.industries.overhaul then
           end
         end
       end
+      if data.raw.recipe["plutonium-nucleosynthesis"] then
+        OV.patch_recipes({
+          {
+            name = "plutonium-nucleosynthesis",
+            subgroup = "angels-power-nuclear-processing",
+            order = "b[AMOX]-d[synthesis]",
+          },
+        })
+      end
     else
       --if not rtg, remove bobingabout process
       OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
