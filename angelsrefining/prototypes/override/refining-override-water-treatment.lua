@@ -155,6 +155,7 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   -- disable technology
   OV.disable_technology({ "water-washing-1", "water-washing-2" })
   OV.remove_prereq("geode-processing-1", "water-washing-2")
+  OV.add_unlock("water-treatment", "clarifier")
 else
   angelsmods.trigger.geode_red = true
   angelsmods.trigger.geode_cyan = true

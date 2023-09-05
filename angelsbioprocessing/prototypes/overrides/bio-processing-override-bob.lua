@@ -61,4 +61,6 @@ end
 if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
   OV.remove_prereq("bio-processing-brown", "automation")
   OV.add_prereq("bio-processing-brown", "basic-automation")
+  OV.remove_prereq("basic-chemistry", "automation")
+  OV.add_prereq("basic-chemistry", "basic-automation")
 end

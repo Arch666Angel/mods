@@ -102,6 +102,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "bio-arboretum-1",
       "gardens",
       "water-washing-1",
     },
@@ -112,15 +113,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "composter",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "bio-processor",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-soil",
       },
     },
     unit = {

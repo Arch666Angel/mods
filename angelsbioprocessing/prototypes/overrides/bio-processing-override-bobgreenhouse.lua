@@ -219,5 +219,5 @@ if mods["bobgreenhouse"] then
   -- update tech
   OV.add_prereq("bob-greenhouse", "gardens")
   OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
-  OV.add_prereq("bio-arboretum-1", "bob-greenhouse")
+  OV.add_prereq("bob-greenhouse", "bio-arboretum-1")
 end
