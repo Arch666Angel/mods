@@ -117,6 +117,14 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "composter",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-soil",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "tree-generator-1",
       },
       {
