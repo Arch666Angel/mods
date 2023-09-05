@@ -7,6 +7,9 @@ Date: xx.xx.xxxx
     - Recipes that consume Gardens will now only buffer enough ingredients for 1 craft (918)
     - Adjusted techs and added a new recipe (Sodium hypochlorite decomposition) to make Paper 2 viable when it is unlocked (922)
     - Rebalanced paper and pulp recipes to make each tier feel like a significant upgrade (923)
+    - Made wood production available earlier (932)
+      - Recipe changes for Tree seed generators, Arboretum, and Composter
+      - Tech tree changes
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023
