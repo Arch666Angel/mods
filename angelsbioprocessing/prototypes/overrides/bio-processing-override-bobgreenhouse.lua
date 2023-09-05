@@ -202,9 +202,6 @@ if mods["bobgreenhouse"] then
 
   -- alter angels wood production to require seedlings
   OV.patch_recipes({
-    { name = "tree-generator-1", ingredients = { { type = "item", name = "seedling", amount = 4 } } },
-    { name = "tree-generator-2", ingredients = { { type = "item", name = "seedling", amount = 6 } } },
-    { name = "tree-generator-3", ingredients = { { type = "item", name = "seedling", amount = 8 } } },
     { name = "temperate-tree-generator-1", ingredients = { { type = "item", name = "seedling", amount = 4 } } },
     { name = "temperate-tree-generator-2", ingredients = { { type = "item", name = "seedling", amount = 6 } } },
     { name = "temperate-tree-generator-3", ingredients = { { type = "item", name = "seedling", amount = 8 } } },
@@ -220,4 +217,7 @@ if mods["bobgreenhouse"] then
   OV.add_prereq("bob-greenhouse", "gardens")
   OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
   OV.add_prereq("bob-greenhouse", "bio-arboretum-1")
+  OV.add_prereq("bio-arboretum-desert-1", "bob-greenhouse")
+  OV.add_prereq("bio-arboretum-swamp-1", "bob-greenhouse")
+  OV.add_prereq("bio-arboretum-temperate-1", "bob-greenhouse")
 end
