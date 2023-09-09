@@ -78,7 +78,7 @@ if mods["bobgreenhouse"] then
           shift = { -12, 12 },
           scale = 0.35,
         },
-      }, 1, angelsmods.bioprocessing.number_tint),
+      }, 2, angelsmods.bioprocessing.number_tint),
     },
   })
   -- manually patch the result as the recipe builder is failing
