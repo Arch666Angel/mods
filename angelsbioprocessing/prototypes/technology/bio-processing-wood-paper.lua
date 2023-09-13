@@ -95,8 +95,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-composting",
       "bio-processing-brown",
-      "water-washing-1",
     },
     effects = {
       {
@@ -114,14 +114,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "bio-arboretum-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "composter",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-soil",
       },
       {
         type = "unlock-recipe",

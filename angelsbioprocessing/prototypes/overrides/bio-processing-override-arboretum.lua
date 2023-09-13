@@ -49,6 +49,7 @@ else
     "bio-arboretum-temperate-2",
     "bio-arboretum-temperate-3",
   })
+  OV.remove_prereq("bio-wood-processing-2", "bio-farm-1")
 end
 
 if angelsmods.triggers.bio_plastic then
