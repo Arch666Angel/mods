@@ -126,7 +126,9 @@ if angelsmods.industries.components then
       OV.add_prereq("electronics-machine-2", "angels-components-construction-3")
       OV.add_prereq("electronics-machine-2", "advanced-electronics")
       OV.add_prereq("electronics-machine-3", "angels-components-construction-5")
-      OV.add_prereq("electronics-machine-3", "advanced-electronics-3")
+      if data.raw.technology["advanced-electronics-3"] then
+        OV.add_prereq("electronics-machine-3", "advanced-electronics-3")
+      end
       OV.set_science_pack("electronics-machine-3", "utility-science-pack")
       if angelsmods.industries.tech then
         OV.add_prereq("electronics-machine-1", "tech-specialised-labs-basic-enhance-1")
