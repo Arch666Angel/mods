@@ -29,9 +29,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "bio-farm-1",
       "bio-wood-processing",
-      "angels-coal-processing",
-      "advanced-material-processing",
     },
     effects = {
       {
@@ -40,18 +39,13 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon-from-charcoal",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "gas-carbon-dioxide-from-wood",
+        recipe = "bio-resin-wood-reprocessing",
       },
     },
     unit = {
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -63,13 +57,22 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-coal-processing",
       "bio-wood-processing-2",
-      "angels-coal-processing-3",
+      "logistic-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "wood-bricks",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "carbon-from-charcoal",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "gas-carbon-dioxide-from-wood",
       },
     },
     unit = {
@@ -92,8 +95,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-wood-processing",
-      "bio-farm-1",
+      "angels-composting",
+      "bio-processing-brown",
     },
     effects = {
       {
@@ -110,15 +113,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-arboretum-1",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "bio-arboretum-1",
       },
       {
         type = "unlock-recipe",
         recipe = "tree-generator-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "tree-arboretum-1",
       },
       {
         type = "unlock-recipe",
@@ -128,18 +131,15 @@ data:extend({
         type = "unlock-recipe",
         recipe = "solid-saw",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing",
-      },
     },
     unit = {
-      count = 50,
+      count = 10,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
       },
-      time = 30,
+      time = 15,
     },
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",

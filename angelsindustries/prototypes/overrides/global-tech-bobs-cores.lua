@@ -40,8 +40,6 @@ if angelsmods.industries.tech then
     if settings.startup["bobmods-assembly-burner"].value == true then
       AI.core_replace("basic-automation", "processing", "basic")
       AI.core_replace("automation", "basic", "processing")
-    else
-      AI.core_replace("automation", "processing", "basic")
     end
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then

@@ -9,7 +9,7 @@ if angelsmods.industries.components then
   OV.remove_unlock("angels-stone-smelting-2", "mold-expendable")
   OV.add_unlock("angels-stone-smelting-1", "mold-expendable")
   OV.remove_prereq("angels-stone-smelting-2", "bio-arboretum-1")
-  OV.add_prereq("angels-stone-smelting-1", "bio-arboretum-1")
+  OV.add_prereq("angels-stone-smelting-1", "bio-wood-processing-2")
   OV.add_prereq("angels-stone-smelting-1", "angels-components-mechanical-1")
   -- update depending technologies accordingly
   OV.remove_prereq("angels-iron-smelting-2", "angels-stone-smelting-2")

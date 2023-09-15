@@ -1,6 +1,38 @@
 data:extend({
   {
     type = "technology",
+    name = "angels-composting",
+    icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "bio-processing-brown",
+      "water-washing-1",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "composter",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-soil",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-soil-alternative",
+      },
+    },
+    unit = {
+      count = 10,
+      ingredients = {
+        { type = "item", name = "automation-science-pack", amount = 1 },
+      },
+      time = 15,
+    },
+  },
+  {
+    type = "technology",
     name = "gardens",
     icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
     icon_size = 128,
@@ -102,8 +134,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-composting",
       "gardens",
-      "water-washing-1",
     },
     effects = {
       {
@@ -112,15 +144,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "composter",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "bio-processor",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-soil",
       },
     },
     unit = {
@@ -143,10 +167,6 @@ data:extend({
       "angels-stone-smelting-2",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "solid-soil-alternative",
-      },
       {
         type = "unlock-recipe",
         recipe = "solid-fertilizer",
