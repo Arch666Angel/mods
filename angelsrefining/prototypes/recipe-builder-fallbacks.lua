@@ -421,7 +421,7 @@ angelsmods.functions.RB.set_fallback("item", "cropfarm-1", { { "block-production
 angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-bprocessing-3", 3 }, { "crop-farm" } })
 
 if angelsmods.industries and angelsmods.industries.components then
-  angelsmods.functions.RB.set_fallback("item", "compo-1", { })
+  angelsmods.functions.RB.set_fallback("item", "compo-1", {})
 else
   angelsmods.functions.RB.set_fallback("item", "compo-1", { { "wooden-chest", 1 } })
 end
@@ -429,7 +429,7 @@ angelsmods.functions.RB.set_fallback("item", "seedex-1", { { "block-production-1
 angelsmods.functions.RB.set_fallback("item", "biopress-1", { { "block-production-2", 1 } })
 angelsmods.functions.RB.set_fallback("item", "biopro-1", { { "block-production-1", 1 } })
 angelsmods.functions.RB.set_fallback("item", "nutrientex-1", { { "block-production-2", 1 } })
-angelsmods.functions.RB.set_fallback("item", "arboretum-1", { })
+angelsmods.functions.RB.set_fallback("item", "arboretum-1", {})
 
 angelsmods.functions.RB.set_fallback("item", "puffer-1", {
   { "block-bprocessing-3", 2 },
