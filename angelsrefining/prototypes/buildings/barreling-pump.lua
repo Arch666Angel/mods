@@ -117,6 +117,7 @@ if angelsmods.trigger.enable_auto_barreling then
   barreling_pump.result_inventory_size = 1
   barreling_pump.source_inventory_size = 1
   barreling_pump.ingredient_count = nil
+  barreling_pump.cant_insert_at_source_message_key = "cant_insert.angels-barreling-pump-limitation",
 end
 
 data:extend({ barreling_pump })
