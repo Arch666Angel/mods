@@ -22,6 +22,7 @@ data:extend({
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_categories = { "angels-bio-void" },
+    cant_insert_at_source_message_key = "cant_insert.angels-composter-limitation",
     module_specification = {
       module_slots = 2,
     },
