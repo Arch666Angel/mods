@@ -10,6 +10,7 @@ Date: xx.xx.xxxx
     - Made wood production available earlier (932)
       - Recipe changes for Tree seed generators, Arboretum, and Composter
       - Tech tree changes
+    - Added custom error message for when trying to insert invalid items into butchery, composter, or hatchery (933)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023

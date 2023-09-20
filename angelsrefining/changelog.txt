@@ -5,6 +5,7 @@ Date: xx.xx.xxxx
     - Moved Electro-refining to purple science. Replaced Crystal catalyst with Hybrid catalyst in Thorium sorting recipe (909)
     - Compatibility with Bob's changes (911)
     - Enabled productivity modules for Thorium Ore sorting recipe (929)
+    - Added custom error message for when trying to insert invalid items into a barreling pump (933)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.4
 Date: 23.02.2023
