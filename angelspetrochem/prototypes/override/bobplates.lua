@@ -180,7 +180,8 @@ if mods["bobplates"] or mods["bobelectronics"] then
     OV.global_replace_item({ "solid-resin" }, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
     move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
-    local resin_icon = mods["bobplates"] and "__bobplates__/graphics/icons/resin.png" or "__bobelectronics__/graphics/icons/resin.png"
+    local resin_icon = mods["bobplates"] and "__bobplates__/graphics/icons/resin.png"
+      or "__bobelectronics__/graphics/icons/resin.png"
 
     OV.patch_recipes({
       {
