@@ -11,7 +11,7 @@ angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"]
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
 --PETRO PRODUCS
 angelsmods.trigger.plastic = true
-angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
+angelsmods.trigger.resin = (not angelsmods.functions.is_special_vanilla()) or (mods["bobelectronics"] and true or false)
 angelsmods.trigger.rubber = (
   (not angelsmods.functions.is_special_vanilla())
   or mods["bobelectronics"]

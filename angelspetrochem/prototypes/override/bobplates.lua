@@ -175,11 +175,12 @@ end
 -------------------------------------------------------------------------------
 -- RESIN HANDLING -------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then
+if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.resin then
     OV.global_replace_item({ "solid-resin" }, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
     move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
+    local resin_icon = mods["bobplates"] and "__bobplates__/graphics/icons/resin.png" or "__bobelectronics__/graphics/icons/resin.png"
 
     OV.patch_recipes({
       {
@@ -191,7 +192,7 @@ if mods["bobplates"] then
         order = "b[resin]-b[solid]-a",
         icons = angelsmods.functions.add_number_icon_layer({
           {
-            icon = "__bobplates__/graphics/icons/resin.png",
+            icon = resin_icon,
             icon_size = 32,
             icon_mipmaps = 1,
           },
@@ -202,13 +203,13 @@ if mods["bobplates"] then
         order = "b[resin]-b[solid]-b",
         icons = mods["angelsbioprocessing"] and {
           {
-            icon = "__bobplates__/graphics/icons/resin.png",
+            icon = resin_icon,
             icon_size = 32,
             icon_mipmaps = 1,
           },
         } or angelsmods.functions.add_number_icon_layer({
           {
-            icon = "__bobplates__/graphics/icons/resin.png",
+            icon = resin_icon,
             icon_size = 32,
             icon_mipmaps = 1,
           },
@@ -224,17 +225,22 @@ if mods["bobplates"] then
         "electronics",
         "walking-vehicle",
       }, "bob-wood-processing")
+      OV.add_prereq("electronics", "automation")
+    else
+      OV.add_prereq("resins", "bob-wood-processing")
     end
-
-    OV.remove_unlock("plastics", "synthetic-wood")
-    OV.disable_recipe({ "synthetic-wood" })
   else
     angelsmods.functions.add_flag("resin", "hidden")
     OV.disable_recipe({
       "bob-resin-wood",
       "solid-resin",
     })
-    OV.remove_unlock("plastics", "synthetic-wood")
+  end
+
+  OV.remove_unlock("plastics", "synthetic-wood")
+  if mods["angelsbioprocessing"] then
+    OV.disable_recipe({ "synthetic-wood" })
+  else
     OV.add_unlock("plastic-1", "synthetic-wood")
   end
 end
