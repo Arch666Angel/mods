@@ -11,6 +11,9 @@ Date: xx.xx.xxxx
       - Recipe changes for Tree seed generators, Arboretum, and Composter
       - Tech tree changes
     - Added custom error message for when trying to insert invalid items into butchery, composter, or hatchery (933)
+    - Reworked recipes for Bob's circuit boards (936)
+      - Removed recipe paper to wooden boards
+      - Modified phenolic board recipe to require paper + liquid resin
     - Prevent Bob's mods from enabling Agriculture Modules for non bio recipes (937)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
