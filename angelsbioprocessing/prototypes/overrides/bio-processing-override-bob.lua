@@ -79,5 +79,4 @@ if mods["bobelectronics"] then
   })
   OV.add_prereq("advanced-electronics", "bio-paper-1")
   OV.add_prereq("advanced-electronics", "resins")
-  OV.execute()
 end
