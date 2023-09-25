@@ -51,7 +51,7 @@ if mods["boblibrary"] then
     "angels-bio-yield-module-5",
     "angels-bio-yield-module-6",
     "angels-bio-yield-module-7",
-    "angels-bio-yield-module-8"
+    "angels-bio-yield-module-8",
   }) do
     bobmods.lib.module.exclude_productivity_module(module_name)
   end
