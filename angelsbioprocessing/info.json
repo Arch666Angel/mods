@@ -11,6 +11,7 @@
     "angelsrefining >= 0.12.1",
     "angelspetrochem >= 0.9.25",
     "angelssmelting >= 0.6.17",
-    "? bobenemies >= 1.1.5"
+    "? bobenemies >= 1.1.5",
+    "? boblibrary >= 1.2.0"
   ]
 }
