@@ -117,6 +117,7 @@ data:extend({
       energy_required = 4,
       ingredients = {
         { type = "fluid", name = "liquid-molten-glass", amount = 80 },
+        { type = "fluid", name = "water", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-coil-glass-fiber", amount = 4 },
@@ -127,12 +128,57 @@ data:extend({
       energy_required = 4,
       ingredients = {
         { type = "fluid", name = "liquid-molten-glass", amount = 100 * intermediatemulti },
+        { type = "fluid", name = "water", amount = 40 },
       },
       results = {
         { type = "item", name = "angels-coil-glass-fiber", amount = 4 },
       },
     },
-    order = "c[angels-coil-glass-fiber]",
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-coil-glass-fiber"),
+      1,
+      angelsmods.smelting.number_tint
+    ),
+    order = "c[angels-coil-glass-fiber]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-glass"),
+  },
+  {
+    type = "recipe",
+    name = "angels-coil-glass-fiber-fast",
+    category = "strand-casting-3",
+    subgroup = "angels-glass-casting",
+    normal = {
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        { type = "fluid", name = "liquid-molten-glass", amount = 140 },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
+      },
+      results = {
+        { type = "item", name = "angels-coil-glass-fiber", amount = 8 },
+        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      },
+      main_product = "angels-coil-glass-fiber",
+    },
+    expensive = {
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        { type = "fluid", name = "liquid-molten-glass", amount = 180 * intermediatemulti },
+        { type = "fluid", name = "liquid-coolant", amount = 40 },
+      },
+      results = {
+        { type = "item", name = "angels-coil-glass-fiber", amount = 8 },
+        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      },
+      main_product = "angels-coil-glass-fiber",
+    },
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-coil-glass-fiber"),
+      2,
+      angelsmods.smelting.number_tint
+    ),
+    order = "c[angels-coil-glass-fiber]-b",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-glass"),
   },
   -- CASTING RESULT

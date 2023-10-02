@@ -97,6 +97,7 @@ if angelsmods.trigger.smelting_products["glass"].fibre then
 else
   angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
   OV.disable_recipe({ "angels-coil-glass-fiber" })
+  OV.disable_recipe({ "angels-coil-glass-fiber-fast" })
 end
 
 -------------------------------------------------------------------------------

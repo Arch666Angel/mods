@@ -45,6 +45,7 @@ angelsmods.functions.allow_productivity("angels-plate-glass-1")
 angelsmods.functions.allow_productivity("angels-plate-glass-2")
 angelsmods.functions.allow_productivity("angels-plate-glass-3")
 angelsmods.functions.allow_productivity("angels-coil-glass-fiber")
+angelsmods.functions.allow_productivity("angels-coil-glass-fiber-fast")
 angelsmods.functions.allow_productivity("angels-glass-fiber-board")
 
 angelsmods.functions.allow_productivity("angels-plate-silver")
