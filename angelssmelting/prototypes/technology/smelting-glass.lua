@@ -81,7 +81,7 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-4",
       "powder-metallurgy-4",
-      --[["strand-casting-1",]]
+      "strand-casting-3",
       "angels-glass-smelting-2",
       "angels-aluminium-smelting-2",
       "angels-tin-casting-3",
@@ -101,10 +101,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-plate-glass-3",
       },
-      --[[{
+      {
         type = "unlock-recipe",
-        recipe = "angels-coil-glass-fiber"
-      },]]
+        recipe = "angels-coil-glass-fiber-fast",
+      },
     },
     unit = {
       count = 250,

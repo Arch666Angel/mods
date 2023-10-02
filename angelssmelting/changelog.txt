@@ -5,6 +5,7 @@ Date: xx.xx.xxxx
     - Increased the tech and required machine tier of Chrome and Platinum (909)
     - Allow Fibreglass boards to be made in Bob's Electronics assembling machines (921)
     - Enabled productivity modules for Glass, Glass fiber, and Fibreglass recipes (929)
+    - Added water to recipe Glass fiber casting 1. Added new recipe Glass fiber casting 2 (939)
   Bugfixes:
     - Another attempt at fixed smoke on the blast furnace
     - Fixed names and descriptions of Bronze processing and Brass processing techs from Bob's MCI mod (926)

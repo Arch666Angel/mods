@@ -7,14 +7,20 @@ if angelsmods.industries.components then
   OV.add_unlock("angels-components-weapons-basic", "submachine-gun")
 
   --battery requirements
+  OV.remove_prereq("angels-glass-smelting-3", "strand-casting-3")
   OV.remove_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber")
-  OV.remove_prereq("angels-glass-smelting-2", "strand-casting-2")
+  OV.remove_unlock("angels-glass-smelting-3", "angels-coil-glass-fiber-fast")
   OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
+  OV.add_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber-fast")
   OV.add_prereq("angels-glass-smelting-1", "strand-casting-1")
   OV.patch_recipes({
     {
       name = "angels-coil-glass-fiber",
       category = "strand-casting",
+    },
+    {
+      name = "angels-coil-glass-fiber-fast",
+      category = "strand-casting-2",
     },
   })
   --battery usage
