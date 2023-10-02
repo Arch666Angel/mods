@@ -156,7 +156,7 @@ data:extend({
       },
       results = {
         { type = "item", name = "angels-coil-glass-fiber", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+        { type = "fluid", name = "liquid-coolant-used", amount = 40, catalyst_amount = 40, temperature = 300 },
       },
       main_product = "angels-coil-glass-fiber",
     },
@@ -169,7 +169,7 @@ data:extend({
       },
       results = {
         { type = "item", name = "angels-coil-glass-fiber", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+        { type = "fluid", name = "liquid-coolant-used", amount = 40, catalyst_amount = 40, temperature = 300 },
       },
       main_product = "angels-coil-glass-fiber",
     },
