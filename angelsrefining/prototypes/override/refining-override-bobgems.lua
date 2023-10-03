@@ -12,7 +12,7 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores)
     local ore_name = type(ore_data) == "table" and ore_data[1] or ore_data
     local ore_amount = type(ore_data) == "table" and ore_data[2] or 1
     if data.raw.item[ore_name] and ore_amount > 0 then
-      table.insert(recipe.results, { ore_name, ore_amount })
+      table.insert(recipe.results, { name = ore_name, amount = ore_amount })
       recipe.order = type(ore_data) == "table" and ore_data[3] or nil
       recipe.icons = angelsmods.functions.create_liquid_recipe_icon(
         { ore_name },

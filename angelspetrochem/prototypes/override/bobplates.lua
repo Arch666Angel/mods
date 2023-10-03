@@ -143,6 +143,7 @@ if mods["bobplates"] then
   data.raw.fluid["tungstic-acid"].icon = nil
   data.raw.fluid["tungstic-acid"].icon_size = nil
   data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
+  data.raw.recipe["tungstic-acid"].icon = nil
   OV.patch_recipes({
     {
       name = "liquid-fuel",
