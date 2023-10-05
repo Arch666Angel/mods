@@ -375,7 +375,7 @@ data:extend({
       AF.fluid_color("NaOCl"),
       "gas-chlorine",
       AF.fluid_color("NaOH"),
-      { 1, 1, 1, 1 },--[[paper]]
+      { r = 1, g = 1, b = 1, a = 1 },--[[paper]]
     }),
     order = "bb",
   },

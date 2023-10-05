@@ -285,8 +285,12 @@ data:extend({
     results = {
       { type = "item", name = "solid-calcium-chloride", amount = 3 },
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-calcium-chloride.png",
-    icon_size = 32,
+    icons = {
+      {
+        icon = "__angelspetrochem__/graphics/icons/solid-calcium-chloride.png",
+        icon_size = 32,
+      },
+    },
     order = "e[solid-calcium-chloride]",
     crafting_machine_tint = AF.get_recipe_tints({
       { r = 168 / 255, g = 203 / 255, b = 105 / 255, a = 0 / 255 },

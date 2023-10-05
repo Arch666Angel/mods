@@ -12,6 +12,5 @@ data.raw["gui-style"]["default"]["enemy_statistics_graph_label"] = {
   parent = "label",
   minimal_width = 100,
   height = 2,
-  scalable = true,
   font = "enemy_statistics_graph_font",
 }

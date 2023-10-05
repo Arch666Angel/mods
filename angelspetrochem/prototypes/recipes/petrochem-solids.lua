@@ -120,8 +120,12 @@ data:extend({
         { type = "item", name = "solid-resin", amount = 4 },
       },
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
-    icon_size = 32,
+    icons = {
+      {
+        icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
+        icon_size = 32,
+      },
+    },
     crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-resin"),
     order = "b[resin]-b[solid]",
   },
@@ -214,8 +218,12 @@ data:extend({
         { type = "item", name = "solid-rubber", amount = 4 },
       },
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
-    icon_size = 32,
+    icons = {
+      {
+        icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
+        icon_size = 32,
+      },
+    },
     crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-rubber"),
     order = "b[rubber]-b[solid]",
   },
