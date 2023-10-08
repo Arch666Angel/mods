@@ -580,6 +580,7 @@ data:extend({
     prerequisites = {
       "basic-chemistry",
       "bio-processing-brown",
+      "logistic-science-pack",
     },
     effects = {
       {
@@ -599,6 +600,7 @@ data:extend({
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -614,6 +616,7 @@ data:extend({
       "angels-nitrogen-processing-2",
       "bio-paper-1",
       "sodium-processing-1",
+      "chemical-science-pack",
     },
     effects = {
       {
@@ -642,6 +645,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -655,6 +659,7 @@ data:extend({
     prerequisites = {
       "bio-paper-2",
       "sodium-processing-2",
+      "production-science-pack",
     },
     effects = {
       {
@@ -684,6 +689,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
       },
       time = 30,
     },

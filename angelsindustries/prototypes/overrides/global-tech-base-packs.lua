@@ -73,6 +73,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("lubricant", "blue", "green")
   -- BIO PROCESSING
   OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")
+  AI.pack_replace("bio-paper-2", "blue", "green")
   -- INDUSTRIES
   OV.remove_prereq("tech-orange-circuit", "angels-components-batteries-3")
   OV.add_prereq("tech-orange-circuit", "angels-components-batteries-2")
@@ -204,6 +205,8 @@ if angelsmods.industries.tech then
   -- SMELTING
   OV.remove_prereq("angels-metallurgy-4", "production-science-pack")
   OV.remove_science_pack("angels-tungsten-smelting-2", "production-science-pack")
+  -- BIOPROCESSING
+  OV.remove_prereq("bio-paper-3", "production-science-pack")
   -- INDUSTRIES
   AI.pack_replace("tech-yellow-circuit", "yellow", "blue")
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")

@@ -199,6 +199,8 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rubber", "datacore-processing-1", 2)
   AI.core_replace("rocket-booster-1", "war", "processing")
   AI.core_replace("rocket-booster-2", "war", "processing")
+  -- BIOPROCESSING
+  AI.core_replace("angels-composting", "basic", "processing")
   OV.execute() ------------------------------------------------------------------
 
   -- now upgrade the cores to tier 2 and let them depend on the correct technology
