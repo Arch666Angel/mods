@@ -185,7 +185,6 @@ if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
     "solid-calcium-chloride",
   })
-  OV.remove_prereq("angels-nitrogen-processing-2", "chlorine-processing-1")
   angelsmods.functions.add_flag({
     "solid-calcium-chloride",
   }, "hidden")
