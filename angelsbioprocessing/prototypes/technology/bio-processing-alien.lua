@@ -67,8 +67,7 @@ data:extend({
     prerequisites = {
       "bio-refugium-fish-1",
       "bio-processing-red",
-      "bio-processing-paste",
-      "plastics",
+      "chlorine-processing-1",
     },
     effects = {
       {
@@ -79,25 +78,12 @@ data:extend({
         type = "unlock-recipe",
         recipe = "alien-bacteria",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "petri-dish",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "substrate-dish",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "seeded-dish",
-      },
     },
     unit = {
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
-        --{"chemical-science-pack", amount = 1},
       },
       time = 30,
     },
@@ -110,10 +96,24 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-alien-1",
+      "bio-processing-paste",
+      "plastics",
       "geode-processing-2",
       "ore-powderizer",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "petri-dish",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "substrate-dish",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "seeded-dish",
+      },
       {
         type = "unlock-recipe",
         recipe = "crystal-powder-from-dust",
@@ -214,7 +214,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-crystal-splinter-1",
-      "bio-processing-alien-1",
+      "bio-processing-alien-2",
     },
     effects = {
       {
@@ -282,7 +282,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-alien-1",
+      "bio-processing-alien-2",
       --"bio-refugium-hatchery",
       "bio-refugium-puffer-2",
       "bio-processing-crystal-splinter-1",
