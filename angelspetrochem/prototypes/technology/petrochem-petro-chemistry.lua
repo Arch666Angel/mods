@@ -216,6 +216,10 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "liquifier-2",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-electrolyser-2",
       },
       {
@@ -263,6 +267,10 @@ data:extend({
       "angels-sulfur-processing-2",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "liquifier-3",
+      },
       {
         type = "unlock-recipe",
         recipe = "angels-electrolyser-3",
@@ -367,6 +375,10 @@ data:extend({
       "production-science-pack",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "liquifier-4",
+      },
       {
         type = "unlock-recipe",
         recipe = "angels-electrolyser-4",

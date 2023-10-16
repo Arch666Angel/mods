@@ -10,6 +10,10 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "liquifier",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-electrolyser",
       },
       {

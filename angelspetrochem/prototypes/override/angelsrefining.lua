@@ -37,16 +37,12 @@ if angelsmods.refining then
   })
 
   OV.remove_unlock("water-treatment", "liquifier")
-  OV.add_unlock("basic-chemistry", "liquifier")
   OV.remove_prereq("slag-processing-1", "water-treatment")
   OV.remove_prereq("slag-processing-1", "ore-crushing")
   OV.add_prereq("advanced-ore-refining-1", "ore-crushing")
   OV.remove_unlock("slag-processing-1", "liquifier-2")
   OV.remove_unlock("slag-processing-2", "liquifier-3")
   OV.remove_unlock("slag-processing-3", "liquifier-4")
-  OV.add_unlock("angels-advanced-chemistry-1", "liquifier-2")
-  OV.add_unlock("angels-advanced-chemistry-2", "liquifier-3")
-  OV.add_unlock("angels-advanced-chemistry-4", "liquifier-4")
   OV.add_prereq("ore-advanced-floatation", "chlorine-processing-1")
 end
 
