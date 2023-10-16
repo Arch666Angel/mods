@@ -1,24 +1,6 @@
 data:extend({
   --ALIEN ARTIFACTS
   --PRE
-  --{
-  --  type = "recipe",
-  --  name = "alien-air-filtering",
-  --  category = "petrochem-air-filtering",
-  --  subgroup = "bio-processing-alien-intermediate",
-  --  enabled = false,
-  --  energy_required = 20,
-  --  ingredients ={
-  --    {type="fluid", name="water-purified", amount=50},
-  --  },
-  --  results=
-  --  {
-  --    {type="fluid", name="alien-spores", amount=50},
-  --  },
-  --  icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
-  --  icon_size = 32,
-  --  order = "a",
-  --},
   {
     type = "recipe",
     name = "alien-spores",

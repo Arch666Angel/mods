@@ -73,7 +73,6 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        --recipe = "alien-air-filtering"
         recipe = "alien-spores",
       },
       {
