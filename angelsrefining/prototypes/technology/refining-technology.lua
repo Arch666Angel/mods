@@ -510,6 +510,7 @@ data:extend({
     prerequisites = {
       "advanced-electronics-2",
       "production-science-pack",
+      "slag-processing-2",
     },
     effects = {
       {
