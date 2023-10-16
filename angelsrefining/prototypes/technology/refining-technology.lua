@@ -329,9 +329,9 @@ data:extend({
     prerequisites = {
       --"ore-floatation",
       "advanced-ore-refining-1",
-      "geode-processing-2",
       "chemical-science-pack",
       "ore-powderizer",
+      "slag-processing-2",
     },
     effects = {
       {
@@ -424,10 +424,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "crystal-slurry-filtering-1",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "catalysator-green",
-      },
     },
     unit = {
       count = 75,
@@ -447,6 +443,7 @@ data:extend({
     prerequisites = {
       "slag-processing-1",
       "chemical-science-pack",
+      "geode-processing-2",
     },
     effects = {
       {
@@ -460,6 +457,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "liquifier-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "catalysator-green",
       },
       {
         type = "unlock-recipe",
@@ -507,7 +508,6 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
-      "geode-processing-3",
       "advanced-electronics-2",
       "production-science-pack",
     },
