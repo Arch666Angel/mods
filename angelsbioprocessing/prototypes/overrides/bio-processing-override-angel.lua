@@ -1,8 +1,8 @@
 local OV = angelsmods.functions.OV
 
-if angelsmods.trigger.smelting_products["glass"].board then --only change it if glass is actually active
+if angelsmods.trigger.smelting_products["glass"].mixture then --only change it if glass is actually active
   OV.modify_input("bio-tile", { type = "item", name = "solid-glass-mixture", amount = 1 })
-  OV.add_prereq("bio-farm-2", "angels-glass-smelting-1")
+  OV.add_prereq("gardens-3", "angels-glass-smelting-1")
 end
 
 if angelsmods.industries and angelsmods.industries.overhaul then
@@ -38,7 +38,6 @@ else
   OV.modify_input("bio-tile", { type = "item", name = "steel-plate", amount = 1 })
   OV.disable_recipe("algae-brown-burning")
 end
-OV.add_unlock("bio-farm-2", "bio-tile")
 
 -- FARMING TOOLTIPS
 for _, item_name in pairs({ "solid-beans", "solid-corn", "solid-leafs", "solid-nuts", "solid-pips", "solid-fruit" }) do

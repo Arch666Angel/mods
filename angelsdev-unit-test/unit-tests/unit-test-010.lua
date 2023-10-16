@@ -454,6 +454,11 @@ local function add_ignores()
       },
     }
 
+    ignored_unlocks["bio-desert-farm"] = {
+      items = {
+        ["clay-brick"] = true,
+      },
+    }
     ignored_unlocks["bio-swamp-farm"] = {
       items = {
         ["bronze-pipe"] = true,
@@ -462,6 +467,7 @@ local function add_ignores()
     ignored_unlocks["bio-temperate-farm"] = {
       items = {
         ["bronze-pipe"] = true,
+        ["clay-brick"] = true,
       },
     }
   end

@@ -106,6 +106,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-stone-smelting-2",
       "bio-farm-alien",
       "bio-paper-1",
       "chemical-science-pack",
@@ -114,6 +115,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "garden-cultivating",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-tile",
       },
     },
     unit = {
@@ -164,7 +169,6 @@ data:extend({
     prerequisites = {
       "bio-farm-1",
       "angels-nitrogen-processing-2",
-      "angels-stone-smelting-2",
     },
     effects = {
       {
