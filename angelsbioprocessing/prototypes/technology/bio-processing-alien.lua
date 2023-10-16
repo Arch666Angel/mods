@@ -98,8 +98,6 @@ data:extend({
       "bio-processing-alien-1",
       "bio-processing-paste",
       "plastics",
-      "geode-processing-2",
-      "ore-powderizer",
     },
     effects = {
       {
@@ -113,18 +111,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "seeded-dish",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-powder-from-dust",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-powder-slurry",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-enhancer",
       },
     },
     unit = {
@@ -249,6 +235,7 @@ data:extend({
     prerequisites = {
       "bio-processing-crystal-splinter-2",
       "bio-processing-alien-2",
+      "ore-powderizer",
     },
     effects = {
       {
@@ -262,6 +249,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "crystal-powder-splinter-green",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-powder-from-dust",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-powder-slurry",
       },
     },
     unit = {
@@ -283,11 +278,9 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-alien-2",
-      --"bio-refugium-hatchery",
       "bio-refugium-puffer-2",
       "bio-processing-crystal-splinter-1",
       "ore-powderizer",
-      "geode-processing-2",
       "slag-processing-2",
     },
     effects = {
@@ -341,8 +334,13 @@ data:extend({
       "bio-processing-alien-2",
       "bio-processing-crystal-shard-1",
       "bio-processing-crystal-splinter-2",
+      "geode-processing-2",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-enhancer",
+      },
       {
         type = "unlock-recipe",
         recipe = "crystal-shard-crystalization-2",
