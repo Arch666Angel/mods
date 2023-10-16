@@ -190,14 +190,9 @@ data:extend({
     prerequisites = {
       "bio-farm-2",
       "bio-processing-alien-1",
-      "bio-refugium-butchery-1",
       "gardens-2",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-polluted-fish-atmosphere",
-      },
       {
         type = "unlock-recipe",
         recipe = "alien-goo",
