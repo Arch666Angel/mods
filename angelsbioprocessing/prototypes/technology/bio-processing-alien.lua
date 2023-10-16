@@ -169,7 +169,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-refugium-fish-1",
-      "geode-processing-2",
+      "geode-processing-1",
     },
     effects = {
       {

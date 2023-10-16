@@ -127,6 +127,7 @@ data:extend({
     prerequisites = {
       --"ore-crushing",
       "ore-floatation",
+      "slag-processing-1",
       "water-washing-2",
     },
     effects = {
@@ -153,6 +154,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "geode-yellow-processing",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-dust-liquify",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-slurry-filtering-conversion-1",
       },
     },
     unit = {
@@ -384,9 +393,7 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
-      --"ore-crushing",
       "geode-processing-1",
-      "slag-processing-1",
     },
     effects = {
       {
@@ -415,15 +422,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-dust-liquify",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "crystal-slurry-filtering-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-slurry-filtering-conversion-1",
       },
       {
         type = "unlock-recipe",
