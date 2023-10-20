@@ -214,7 +214,7 @@ data:extend({
       { type = "item", name = "bio-puffer-3", amount = 2 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-acid", amount = 100 },
+      { type = "fluid", name = "gas-acid", amount = 100, catalyst_amount = 20 },
     },
     results = {
       { type = "item", name = "bio-puffer-2", amount = 1, catalyst_amount = 1 },
