@@ -556,8 +556,7 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
     icon_size = 128,
     prerequisites = {
-      --"slag-processing-1",
-      "advanced-ore-refining-1",
+      "water-treatment-2",
     },
     effects = {
       {
