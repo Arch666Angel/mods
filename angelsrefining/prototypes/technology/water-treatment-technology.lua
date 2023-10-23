@@ -38,15 +38,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "ground-water-pump",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "hydro-plant",
       },
       {
         type = "unlock-recipe",
         recipe = "liquifier",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "ground-water-pump",
       },
       {
         type = "unlock-recipe",
@@ -120,6 +120,10 @@ data:extend({
       "chemical-science-pack",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "sea-pump",
+      },
       {
         type = "unlock-recipe",
         recipe = "hydro-plant-3",
