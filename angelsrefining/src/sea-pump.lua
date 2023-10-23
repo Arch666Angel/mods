@@ -84,47 +84,45 @@ function sea_pump:on_build_entity(created_entity, entity_tags)
     local direction = created_entity.direction
 
     -- remove the sea pump placeable
-    created_entity.destroy{raise_destroy = true}
+    created_entity.destroy({ raise_destroy = true })
 
     -- create the resource to be mined by the sea pump (miner)
-    surface.create_entity{
+    surface.create_entity({
       name = self:get_resource_name(),
       position = position,
       force = "neutral",
-    }
+    })
 
     -- create the actual sea pump
-    local created_entity_2 = surface.create_entity{
+    local created_entity_2 = surface.create_entity({
       name = self:get_pump_name(),
       position = position,
       direction = direction,
       force = force,
       create_build_effect_smoke = true,
       raise_built = true,
-    }
+    })
 
     local requested_modules = entity_tags[self:get_ghost_tag_name()]
     if requested_modules then
-      local created_entity_2_proxy = surface.create_entity{
+      local created_entity_2_proxy = surface.create_entity({
         name = "item-request-proxy",
         position = position,
         force = force,
         target = created_entity_2,
-        modules = requested_modules
-      }
+        modules = requested_modules,
+      })
     end
-
   elseif created_entity.name == self:get_pump_name() then
     -- make sure the sea pump (miner) cannot be rotated
     created_entity.rotatable = false
-
   elseif created_entity.name == "entity-ghost" then
     if created_entity.ghost_name == self:get_placeable_name() then
       local modules = {}
       local has_modules = false
-      local module_prototypes = game.get_filtered_item_prototypes{
-        {filter = "type", type = "module"}
-      }
+      local module_prototypes = game.get_filtered_item_prototypes({
+        { filter = "type", type = "module" },
+      })
       for module_name, module_count in pairs(created_entity.item_requests) do
         if module_prototypes[module_name] then
           modules[module_name] = module_count
@@ -136,7 +134,6 @@ function sea_pump:on_build_entity(created_entity, entity_tags)
         created_entity_tags[self:get_ghost_tag_name()] = modules
         created_entity.tags = created_entity_tags
       end
-
     elseif created_entity.ghost_name == self:get_pump_name() then
       local surface = created_entity.surface
       local position = created_entity.position
@@ -146,10 +143,10 @@ function sea_pump:on_build_entity(created_entity, entity_tags)
       local item_requests = created_entity.item_requests
 
       -- remove the sea pump (miner) ghost
-      created_entity.destroy{raise_destroy = true}
+      created_entity.destroy({ raise_destroy = true })
 
       -- create the sea pump (placeable) ghost
-      created_entity_2 = surface.create_entity{
+      created_entity_2 = surface.create_entity({
         name = "entity-ghost",
         inner_name = self:get_placeable_name(),
         position = position,
@@ -158,7 +155,7 @@ function sea_pump:on_build_entity(created_entity, entity_tags)
         expires = time_to_live,
         create_build_effect_smoke = false,
         raise_built = false, -- raise manually after adding the item requests
-      }
+      })
       created_entity_2.item_requests = item_requests
       script.raise_event(defines.events.script_raised_built, { entity = created_entity_2 })
     end
@@ -178,7 +175,7 @@ function sea_pump:on_remove_entity(removed_entity)
   local position = removed_entity.position
   local resource_entity = surface.find_entity(self:get_resource_name(), position)
   if resource_entity ~= nil then
-    resource_entity.destroy{raise_destroy = false}
+    resource_entity.destroy({ raise_destroy = false })
   end
 end
 
@@ -197,7 +194,7 @@ function sea_pump:on_blueprint_setup(player_index)
     end
   end
 
-  while (blueprint.type == "blueprint-book") do
+  while blueprint.type == "blueprint-book" do
     local blueprint_inventory = blueprint.get_inventory(defines.inventory.item_main)
     if blueprint_inventory then
       blueprint = blueprint_inventory[blueprint.active_index]

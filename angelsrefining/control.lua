@@ -62,4 +62,3 @@ end)
 script.on_event(defines.events.on_gui_click, function(event)
   welcome_dialog:on_gui_click(event.element.name, event.player_index)
 end)
-

@@ -1,5 +1,5 @@
-local sounds = require ("__base__.prototypes.entity.sounds")
-local hit_effects = require ("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 data:extend({
   {
@@ -15,8 +15,8 @@ data:extend({
   {
     type = "offshore-pump",
     name = "sea-pump-placeable",
-    localised_name = {"entity-name.sea-pump"},
-    localised_description = {"entity-description.sea-pump"},
+    localised_name = { "entity-name.sea-pump" },
+    localised_description = { "entity-description.sea-pump" },
     icon = "__angelsrefining__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
@@ -102,18 +102,19 @@ data:extend({
   },
   {
     type = "resource-category",
-    name = "sea-pump"
+    name = "sea-pump",
   },
   {
     type = "resource",
     name = "sea-pump-resource",
     icon = "__angelsrefining__/graphics/entity/sea-pump/empty.png",
-    icon_size = 1, icon_mipmaps = 1,
-    flags = {"placeable-neutral", "not-on-map"},
+    icon_size = 1,
+    icon_mipmaps = 1,
+    flags = { "placeable-neutral", "not-on-map" },
     selectable_in_game = false,
     category = "sea-pump",
     subgroup = "raw-resource",
-    order="a-b-a",
+    order = "a-b-a",
     infinite = true,
     highlight = false,
     minimum = 100000,
@@ -122,23 +123,21 @@ data:extend({
     resource_patch_search_radius = 1,
     --tree_removal_probability = 0.7,
     --tree_removal_max_distance = 32 * 32,
-    minable =
-    {
+    minable = {
       mining_time = 1, -- how long it takes to 'tick'
-      results =
-      {
+      results = {
         {
           type = "fluid",
           name = "water",
           amount_min = 1500, -- amount of water it produces each 'tick'
           amount_max = 1500,
-          probability = 1
-        }
-      }
+          probability = 1,
+        },
+      },
     },
     walking_sound = sounds.oil,
-    collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     --autoplace = resource_autoplace.resource_autoplace_settings
     --{
     --  name = "crude-oil",
@@ -152,11 +151,9 @@ data:extend({
     --  has_starting_area_placement = false,
     --  regular_rq_factor_multiplier = 1
     --},
-    stage_counts = {0},
-    stages =
-    {
-      sheet =
-      {
+    stage_counts = { 0 },
+    stages = {
+      sheet = {
         filename = "__angelsrefining__/graphics/entity/sea-pump/empty.png",
         priority = "extra-high",
         width = 1,
@@ -164,8 +161,7 @@ data:extend({
         frame_count = 1,
         variation_count = 1,
         shift = util.by_pixel(0, 0),
-        hr_version =
-        {
+        hr_version = {
           filename = "__angelsrefining__/graphics/entity/sea-pump/empty.png",
           priority = "extra-high",
           width = 1,
@@ -173,9 +169,9 @@ data:extend({
           frame_count = 1,
           variation_count = 1,
           shift = util.by_pixel(0, 0),
-          scale = 1
-        }
-      }
+          scale = 1,
+        },
+      },
     },
     --map_color = {0.78, 0.2, 0.77},
     --map_grid = false
@@ -183,62 +179,57 @@ data:extend({
   {
     type = "mining-drill",
     name = "sea-pump",
-    localised_name = {"entity-name.sea-pump"},
-    localised_description = {"entity-description.sea-pump"},
+    localised_name = { "entity-name.sea-pump" },
+    localised_description = { "entity-description.sea-pump" },
     icon = "__angelsrefining__/graphics/icons/sea-pump-ico.png",
-    icon_size = 32, icon_mipmaps = 1,
-    flags = {"placeable-neutral", "player-creation", "hidden"},
-    minable = {mining_time = 0.5, result = "sea-pump"},
-    placeable_by = {item = "sea-pump", count = 1},
-    resource_categories = {"sea-pump"},
+    icon_size = 32,
+    icon_mipmaps = 1,
+    flags = { "placeable-neutral", "player-creation", "hidden" },
+    minable = { mining_time = 0.5, result = "sea-pump" },
+    placeable_by = { item = "sea-pump", count = 1 },
+    resource_categories = { "sea-pump" },
     max_health = 200,
     corpse = "small-remnants",
     dying_explosion = "pumpjack-explosion",
     collision_box = { { -1.4, -2.45 }, { 1.4, 0.3 } },
     selection_box = { { -1.6, -2.49 }, { 1.6, 0.49 } },
-    drawing_box = { {-1.6, -2.5}, { 1.5, 1.6 } },
+    drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
     damaged_trigger_effect = hit_effects.entity(),
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       emissions_per_minute = 10,
-      usage_priority = "secondary-input"
+      usage_priority = "secondary-input",
     },
-    output_fluid_box =
-    {
+    output_fluid_box = {
       filter = "water",
       base_area = 50, -- box size = area * level * height * 100 = 10 000
       base_level = 1,
       height = 2,
       pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
+      pipe_connections = {
         {
           position = { 0, 1 },
-          type = "output"
-        }
-      }
+          type = "output",
+        },
+      },
     },
     energy_usage = "250kW",
     mining_speed = 1, -- how fast it 'ticks'
     base_productivity = -1, -- disable productivity
     resource_searching_radius = 0.49,
-    vector_to_place_result = {0, 0},
-    module_specification =
-    {
-      module_slots = 2
+    vector_to_place_result = { 0, 0 },
+    module_specification = {
+      module_slots = 2,
     },
-    allowed_effects = {"speed", "consumption", "pollution"}, -- disallow productivity such that mining bonus does not apply
-    radius_visualisation_picture =
-    {
+    allowed_effects = { "speed", "consumption", "pollution" }, -- disallow productivity such that mining bonus does not apply
+    radius_visualisation_picture = {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
       width = 12,
-      height = 12
+      height = 12,
     },
     --monitor_visualization_tint = {r=78, g=173, b=255},
     --base_render_layer = "lower-object-above-shadow",
-    base_picture =
-    {
+    base_picture = {
       north = {
         filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
@@ -352,5 +343,5 @@ data:extend({
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-  }
+  },
 })
