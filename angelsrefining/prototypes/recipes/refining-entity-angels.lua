@@ -1008,6 +1008,35 @@ angelsmods.functions.RB.build({
       result = "seafloor-pump",
     },
   },
+  --SEA PUMP
+  {
+    type = "recipe",
+    name = "sea-pump",
+    normal = {
+      energy_required = 2,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "waterpump-2", amount = 1 },
+        { type = "item", name = "t3-plate", amount = 2 },
+        { type = "item", name = "t3-circuit", amount = 5 },
+        { type = "item", name = "t3-brick", amount = 6 },
+        { type = "item", name = "t3-pipe", amount = 4 },
+      },
+      result = "sea-pump",
+    },
+    expensive = {
+      energy_required = 2 * buildingtime,
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "waterpump-2", amount = 1 },
+        { type = "item", name = "t3-plate", amount = 2 * buildingmulti },
+        { type = "item", name = "t3-circuit", amount = 5 * buildingmulti },
+        { type = "item", name = "t3-brick", amount = 6 * buildingmulti },
+        { type = "item", name = "t3-pipe", amount = 4 * buildingmulti },
+      },
+      result = "sea-pump",
+    },
+  },
   --LAND PUMP
   {
     type = "recipe",
