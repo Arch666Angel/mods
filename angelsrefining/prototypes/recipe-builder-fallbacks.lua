@@ -258,6 +258,8 @@ angelsmods.functions.RB.set_fallback(
   { { "block-mprocessing-5", 3 }, { "electro-whinning-cell" } }
 )
 
+angelsmods.functions.RB.set_fallback("item", "waterpump-2", { { "block-production-2", 3 }, { "offshore-pump", 1 } })
+
 --PETROCHEM
 angelsmods.functions.RB.set_fallback("item", "ogseparat-1", { { "block-production-2", 3 } })
 angelsmods.functions.RB.set_fallback("item", "ogseparat-2", { { "block-cprocessing-3", 3 }, { "separator" } })

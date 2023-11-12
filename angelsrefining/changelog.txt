@@ -2,6 +2,7 @@
 Version: 0.12.5
 Date: xx.xx.xxxx
   Changes:
+    - Added an beaconable electric offshore waterpump
     - Moved Electro-refining to purple science. Replaced Crystal catalyst with Hybrid catalyst in Thorium sorting recipe (909)
     - Compatibility with Bob's changes (911)
     - Enabled productivity modules for Thorium Ore sorting recipe (929)

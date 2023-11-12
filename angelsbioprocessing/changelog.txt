@@ -13,6 +13,8 @@ Date: xx.xx.xxxx
     - Added custom error message for when trying to insert invalid items into butchery, composter, or hatchery (933)
     - Prevent Bob's mods from enabling Agriculture Modules for non bio recipes (937)
     - Remove unnecessary prerequisites from Alien Farming (943)
+  Bugfixes:
+    - Fixed Gaseous atmosphere puffing recipe missing product Acid gas (942)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023
