@@ -115,7 +115,8 @@ else
       ingredients = { { name = "paste-cellulose", amount = "solid-wood-pulp" } },
     },
   })
-  --rereq clean-out
-  OV.remove_prereq("gardens-2", "bio-paper-1")
+  --prereq clean-out
+  OV.remove_prereq("gardens-3", "bio-paper-1")
+  OV.add_prereq("gardens-3", "bio-processing-paste")
   OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end

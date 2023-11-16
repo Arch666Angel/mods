@@ -74,7 +74,6 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
-      "bio-paper-1",
       "logistic-science-pack",
     },
     effects = {
@@ -107,13 +106,19 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-stone-smelting-2",
       "bio-farm-alien",
+      "bio-paper-1",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "garden-cultivating",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-tile",
       },
     },
     unit = {
@@ -164,7 +169,6 @@ data:extend({
     prerequisites = {
       "bio-farm-1",
       "angels-nitrogen-processing-2",
-      "angels-stone-smelting-2",
     },
     effects = {
       {
@@ -190,14 +194,9 @@ data:extend({
     prerequisites = {
       "bio-farm-2",
       "bio-processing-alien-1",
-      "bio-refugium-butchery-1",
       "gardens-2",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-polluted-fish-atmosphere",
-      },
       {
         type = "unlock-recipe",
         recipe = "alien-goo",

@@ -7,6 +7,8 @@ Date: xx.xx.xxxx
     - Compatibility with Bob's changes (911)
     - Enabled productivity modules for Thorium Ore sorting recipe (929)
     - Added custom error message for when trying to insert invalid items into a barreling pump (933)
+    - Changed Crystal catalyst recipe to require Crystallizer 2 (943)
+    - Removed Crystal catalyst from Bob's gem ore crystallization recipes (943)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.4
 Date: 23.02.2023

@@ -58,7 +58,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
       },
     },
   })
-  OV.remove_prereq("bio-processing-alien-1", "plastics")
+  OV.remove_prereq("bio-processing-alien-2", "plastics")
 end
 
 if angelsmods.functions.is_special_vanilla() then
