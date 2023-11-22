@@ -320,7 +320,7 @@ data:extend({
       },
     },
     unit = {
-      count = 32,
+      count = 64,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -356,7 +356,7 @@ data:extend({
       },
     },
     unit = {
-      count = 64,
+      count = 32,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -459,7 +459,7 @@ data:extend({
       },
     },
     unit = {
-      count = 32,
+      count = 64,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -495,7 +495,7 @@ data:extend({
       },
     },
     unit = {
-      count = 64,
+      count = 32,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -598,7 +598,7 @@ data:extend({
       },
     },
     unit = {
-      count = 32,
+      count = 64,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -634,7 +634,7 @@ data:extend({
       },
     },
     unit = {
-      count = 64,
+      count = 32,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
