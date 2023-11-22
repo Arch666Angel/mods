@@ -34,7 +34,9 @@ end
 RB.set_fallback = function(i_type, i_name, fb_list, i_condition) -- i_type either "item" or "fluid", i_name the name of the item, fb_list a table containing subtables { name, multiplier, condition } where item_name is a string, multiplier is a positive number (defaults to 1), and condition is a function taking i_type and i_name as arguments and returning a boolean (defaults to return true) can also be formatted { name = name, multiplier = multiplier, condition = condition }, condition (optional) is like the condition field in a subtable of fb_list but for i_name
   local parent = fallbacks[i_type]
   if parent then
-    if check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
+    if parent[i_name] ~= nil then
+      -- fallback already exists
+    elseif check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
       parent[i_name] = nil
     else
       local sentinel = true
