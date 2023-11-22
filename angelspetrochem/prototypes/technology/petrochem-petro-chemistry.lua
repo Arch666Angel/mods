@@ -344,14 +344,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "catalyst-metal-blue",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-toluene-from-benzene",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-toluene-from-naphtha",
-      },
     },
     unit = {
       count = 50,

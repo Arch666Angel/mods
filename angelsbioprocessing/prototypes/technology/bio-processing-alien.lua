@@ -8,8 +8,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-brown",
-      "bio-nutrient-paste",
-      "chlorine-processing-1",
+      "chlorine-processing-2",
     },
     effects = {
       {

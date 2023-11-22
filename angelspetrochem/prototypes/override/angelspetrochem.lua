@@ -290,8 +290,9 @@ else
   OV.disable_recipe({
     "gas-ammonium-chloride",
   })
-  OV.remove_unlock("angels-nitrogen-processing-2", "gas-ammonium-chloride")
+  OV.remove_unlock("angels-nitrogen-processing-3", "gas-ammonium-chloride")
   angelsmods.functions.add_flag("gas-ammonium-chloride", "hidden")
+  OV.remove_prereq("angels-nitrogen-processing-3", "chlorine-processing-2")
 end
 
 -----------------------------------------------------------------------------

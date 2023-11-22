@@ -316,7 +316,6 @@ if angelsmods.industries.tech then
     --small fixes
     AI.pack_replace("follower-robot-count-1", "green", "orange")
     AI.pack_replace("follower-robot-count-2", "green", "orange")
-    OV.remove_prereq("nitroglycerin-processing", "chlorine-processing-2") -- no clue why it works nowhere else...
     OV.remove_prereq("walking-vehicle", "production-science-pack")
   end
 
