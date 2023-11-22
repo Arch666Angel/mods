@@ -675,7 +675,7 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
       "chlorine-processing-1",
-      "gas-steam-cracking-1",
+      "steam-cracking-1",
     },
     effects = {
       {
