@@ -9,6 +9,7 @@ Date: xx.xx.xxxx
     - Added custom error message for when trying to insert invalid items into a barreling pump (933)
     - Changed Crystal catalyst recipe to require Crystallizer 2 (943)
     - Removed Crystal catalyst from Bob's gem ore crystallization recipes (943)
+    - Changed the Recipe Builder to make it easier for other mods to add their own materials (950)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.4
 Date: 23.02.2023
