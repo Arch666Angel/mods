@@ -77,6 +77,11 @@ else
 end
 
 if angelsmods.triggers.paper then
+  OV.add_unlock("sodium-processing-1", "solid-sodium-hypochlorite-decomposition")
+  OV.remove_unlock("chlorine-processing-3", "solid-salt-separation")
+  OV.add_unlock("sodium-processing-1", "solid-salt-separation")
+  OV.add_prereq("sodium-processing-1", "angels-metallurgy-2")
+  OV.add_prereq("sodium-processing-1", "bio-paper-2")
 else
   OV.hide_recipe({
     "solid-wood-pulp",
