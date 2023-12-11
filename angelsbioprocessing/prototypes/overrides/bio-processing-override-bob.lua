@@ -68,6 +68,14 @@ end
 if mods["bobelectronics"] then
   OV.patch_recipes({
     {
+      name = "wooden-board",
+      result_count = 1,
+    }
+  })
+  angelsmods.functions.remove_productivity("wooden-board")
+
+  OV.patch_recipes({
+    {
       name = "phenolic-board",
       energy_required = 2,
       ingredients = {
@@ -79,4 +87,5 @@ if mods["bobelectronics"] then
   })
   OV.add_prereq("advanced-electronics", "bio-paper-1")
   OV.add_prereq("advanced-electronics", "resins")
+  angelsmods.functions.remove_productivity("phenolic-board")
 end
