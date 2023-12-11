@@ -1514,7 +1514,7 @@ data:extend({
   {
     type = "recipe",
     name = "catalysator-green",
-    category = "crystallizing",
+    category = "crystallizing-2",
     subgroup = "geode-crystallization",
     energy_required = 0.5,
     enabled = false,

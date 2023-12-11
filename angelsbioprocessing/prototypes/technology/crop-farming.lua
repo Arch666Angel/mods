@@ -107,6 +107,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-stone-smelting-2",
       "bio-farm-alien",
       "bio-paper-1",
       "chemical-science-pack",
@@ -115,6 +116,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "garden-cultivating",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-tile",
       },
     },
     unit = {
@@ -165,7 +170,6 @@ data:extend({
     prerequisites = {
       "bio-farm-1",
       "angels-nitrogen-processing-2",
-      "angels-stone-smelting-2",
     },
     effects = {
       {
@@ -191,14 +195,9 @@ data:extend({
     prerequisites = {
       "bio-farm-2",
       "bio-processing-alien-1",
-      "bio-refugium-butchery-1",
       "gardens-2",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-polluted-fish-atmosphere",
-      },
       {
         type = "unlock-recipe",
         recipe = "alien-goo",
@@ -324,7 +323,7 @@ data:extend({
       },
     },
     unit = {
-      count = 32,
+      count = 64,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -360,7 +359,7 @@ data:extend({
       },
     },
     unit = {
-      count = 64,
+      count = 32,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -465,7 +464,7 @@ data:extend({
       },
     },
     unit = {
-      count = 32,
+      count = 64,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -501,7 +500,7 @@ data:extend({
       },
     },
     unit = {
-      count = 64,
+      count = 32,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -606,7 +605,7 @@ data:extend({
       },
     },
     unit = {
-      count = 32,
+      count = 64,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },
@@ -642,7 +641,7 @@ data:extend({
       },
     },
     unit = {
-      count = 64,
+      count = 32,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "logistic-science-pack", amount = 4 },

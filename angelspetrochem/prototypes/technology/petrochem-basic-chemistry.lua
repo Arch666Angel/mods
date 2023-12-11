@@ -10,6 +10,10 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "liquifier",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-electrolyser",
       },
       {
@@ -493,7 +497,6 @@ data:extend({
       "angels-nitrogen-processing-1",
       "angels-sulfur-processing-1",
       "angels-advanced-chemistry-1",
-      "chlorine-processing-1",
       "water-treatment-2",
     },
     effects = {

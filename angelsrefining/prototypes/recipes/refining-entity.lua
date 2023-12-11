@@ -372,6 +372,17 @@ data:extend({
     },
     result = "seafloor-pump",
   },
+  --SEA PUMP
+  {
+    type = "recipe",
+    name = "sea-pump",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-void", amount = 1 },
+    },
+    result = "sea-pump",
+  },
   --LAND PUMP
   {
     type = "recipe",
