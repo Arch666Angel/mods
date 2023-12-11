@@ -117,5 +117,6 @@ else
   })
   --prereq clean-out
   OV.remove_prereq("gardens-3", "bio-paper-1")
+  OV.add_prereq("gardens-3", "bio-processing-paste")
   OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end
