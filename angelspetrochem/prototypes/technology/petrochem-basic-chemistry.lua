@@ -606,6 +606,10 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "gas-refinery-4",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "gas-dinitrogen-tetroxide",
       },
       {
@@ -622,7 +626,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-refinery-4",
+        recipe = "gas-ammonium-chloride",
       },
     },
     unit = {
