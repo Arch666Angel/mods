@@ -565,10 +565,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-ammonium-chloride",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "solid-sodium-hypochlorite",
       },
       {
