@@ -614,6 +614,7 @@ data:extend({
     prerequisites = {
       "angels-nitrogen-processing-2",
       "bio-paper-1",
+      "chemical-science-pack",
       "chlorine-processing-1",
     },
     effects = {

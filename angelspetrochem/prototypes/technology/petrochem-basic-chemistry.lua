@@ -784,6 +784,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "angels-sulfur-processing-1",
+      "chemical-science-pack",
       "chlorine-processing-1",
     },
     effects = {
@@ -805,6 +806,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
       },
       time = 15,
     },
