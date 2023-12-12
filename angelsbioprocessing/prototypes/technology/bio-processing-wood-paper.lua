@@ -612,11 +612,9 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "angels-metallurgy-2",
       "angels-nitrogen-processing-2",
       "bio-paper-1",
-      "sodium-processing-1",
-      "chemical-science-pack",
+      "chlorine-processing-1",
     },
     effects = {
       {
@@ -634,10 +632,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "liquid-pulping-liquor",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-sodium-hypochlorite-decomposition",
       },
     },
     unit = {

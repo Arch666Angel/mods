@@ -113,7 +113,7 @@ if angelsmods.industries.components then
         "thermal-water-extraction",
         "bio-processing-green",
         "angels-components-batteries-2",
-        "gas-steam-cracking-1",
+        "steam-cracking-1",
       },
       effects = {
         {
