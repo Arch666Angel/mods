@@ -51,7 +51,6 @@ if angelsmods.industries.components then
   -- BOB ELECTRONICS ----------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobelectronics"] then
-    OV.disable_recipe("wooden-board-paper")
     OV.disable_recipe("superior-circuit-board")
   end
 

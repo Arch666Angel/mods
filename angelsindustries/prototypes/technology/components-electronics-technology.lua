@@ -1,6 +1,8 @@
 local OV = angelsmods.functions.OV
 if angelsmods.industries.components then
   OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
+  OV.remove_science_pack("bio-paper-1", "logistic-science-pack")
+  OV.remove_prereq("bio-paper-1", "logistic-science-pack")
   OV.execute()
 
   data:extend({

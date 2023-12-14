@@ -30,6 +30,7 @@ data:extend({
       },
       time = 15,
     },
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
@@ -236,6 +237,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
+      "logistic-science-pack",
     },
     effects = {
       {
@@ -280,6 +282,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "token-bio", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 4 },
       },
       time = 30,
     },
@@ -375,6 +378,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
+      "logistic-science-pack",
     },
     effects = {
       {
@@ -419,6 +423,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "token-bio", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 4 },
       },
       time = 30,
     },
@@ -514,6 +519,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
+      "logistic-science-pack",
     },
     effects = {
       {
@@ -558,6 +564,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 4 },
         { type = "item", name = "token-bio", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 4 },
       },
       time = 30,
     },

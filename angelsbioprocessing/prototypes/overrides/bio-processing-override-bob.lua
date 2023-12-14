@@ -64,3 +64,28 @@ if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == 
   OV.remove_prereq("basic-chemistry", "automation")
   OV.add_prereq("basic-chemistry", "basic-automation")
 end
+
+if mods["bobelectronics"] then
+  OV.patch_recipes({
+    {
+      name = "wooden-board",
+      result_count = 1,
+    }
+  })
+  angelsmods.functions.remove_productivity("wooden-board")
+
+  OV.patch_recipes({
+    {
+      name = "phenolic-board",
+      energy_required = 2,
+      ingredients = {
+        { "!!" },
+        { type = "fluid", name = "liquid-resin", amount = 10 },
+        { type = "item", name = "solid-paper", amount = 10 },
+      }
+    },
+  })
+  OV.add_prereq("advanced-electronics", "bio-paper-1")
+  OV.add_prereq("advanced-electronics", "resins")
+  angelsmods.functions.remove_productivity("phenolic-board")
+end

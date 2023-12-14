@@ -551,7 +551,7 @@ data:extend({
       "angels-nitrogen-processing-2",
       "angels-advanced-chemistry-3",
       "chlorine-processing-2",
-      "sodium-processing-2",
+      "sodium-processing-1",
       "flammables",
     },
     effects = {
@@ -749,7 +749,7 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
       "chlorine-processing-3",
-      "sodium-processing-2",
+      "sodium-processing-1",
       "angels-advanced-chemistry-3",
     },
     effects = {
@@ -784,6 +784,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "angels-sulfur-processing-1",
+      "chemical-science-pack",
       "chlorine-processing-1",
     },
     effects = {
@@ -799,12 +800,17 @@ data:extend({
         type = "unlock-recipe",
         recipe = "solid-sodium-hydroxide",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "liquid-aqueous-sodium-hydroxide",
+      },
     },
     unit = {
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
       },
       time = 15,
     },
@@ -819,13 +825,10 @@ data:extend({
       "chlorine-processing-3",
       "angels-coal-processing-3",
       "angels-nitrogen-processing-2",
+      "production-science-pack",
       "sodium-processing-1",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-aqueous-sodium-hydroxide",
-      },
       {
         type = "unlock-recipe",
         recipe = "liquid-aqueous-sodium-hydroxide-reverse",
@@ -853,6 +856,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
       },
       time = 15,
     },
