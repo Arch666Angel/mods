@@ -2,7 +2,6 @@
 Version: 0.12.5
 Date: xx.xx.xxxx
   Changes:
-    - Added an beaconable electric offshore waterpump
     - Moved Electro-refining to purple science. Replaced Crystal catalyst with Hybrid catalyst in Thorium sorting recipe (909)
     - Compatibility with Bob's changes (911)
     - Enabled productivity modules for Thorium Ore sorting recipe (929)
@@ -10,6 +9,7 @@ Date: xx.xx.xxxx
     - Changed Crystal catalyst recipe to require Crystallizer 2 (943)
     - Removed Crystal catalyst from Bob's gem ore crystallization recipes (943)
     - Changed the Recipe Builder to make it easier for other mods to add their own materials (950)
+    - Added a beaconable electric offshore waterpump (952)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.4
 Date: 23.02.2023
