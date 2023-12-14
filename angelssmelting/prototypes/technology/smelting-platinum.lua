@@ -133,8 +133,7 @@ data:extend({
       --"angels-metallurgy-5",
       "ore-processing-5",
       "angels-platinum-smelting-2",
-      "chlorine-processing-1", -- it seems rediculous adding this prerequisite to yellow...
-      "angels-nitrogen-processing-2", -- it seems rediculous adding this prerequisite to yellow...
+      "angels-nitrogen-processing-4",
     },
     effects = {
       {

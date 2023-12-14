@@ -167,6 +167,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "automation-2",
       "bio-farm-1",
       "angels-nitrogen-processing-2",
     },

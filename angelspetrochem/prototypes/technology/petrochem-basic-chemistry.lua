@@ -522,10 +522,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-ammonium-chloride",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "gas-urea",
       },
       {
@@ -554,6 +550,7 @@ data:extend({
     prerequisites = {
       "angels-nitrogen-processing-2",
       "angels-advanced-chemistry-3",
+      "chlorine-processing-2",
       "sodium-processing-2",
       "flammables",
     },
@@ -605,6 +602,10 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "gas-refinery-4",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "gas-dinitrogen-tetroxide",
       },
       {
@@ -621,7 +622,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-refinery-4",
+        recipe = "gas-ammonium-chloride",
       },
     },
     unit = {
@@ -642,22 +643,12 @@ data:extend({
     name = "chlorine-processing-1",
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
-      "gas-processing",
-      "ore-crushing",
-      "water-treatment-2",
+      "basic-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "water-saline-separation",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-salt-separation",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "gas-chlor-methane",
       },
       {
         type = "unlock-recipe",
@@ -684,9 +675,13 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
       "chlorine-processing-1",
-      "gas-steam-cracking-1",
+      "steam-cracking-1",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "gas-chlor-methane",
+      },
       {
         type = "unlock-recipe",
         recipe = "gas-allylchlorid",
@@ -694,10 +689,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "gas-epichlorhydrin",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-glycerol",
       },
       {
         type = "unlock-recipe",
@@ -722,9 +713,12 @@ data:extend({
     prerequisites = {
       "chlorine-processing-2",
       "water-treatment-3",
-      "chemical-science-pack",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "solid-salt-separation",
+      },
       {
         type = "unlock-recipe",
         recipe = "gas-hydrogen-chloride-separation",

@@ -149,7 +149,7 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
-      "gas-steam-cracking-2",
+      "steam-cracking-2",
     },
     effects = {
       {
@@ -261,8 +261,7 @@ data:extend({
     prerequisites = {
       "angels-advanced-chemistry-1",
       "advanced-electronics",
-      "gas-steam-cracking-1",
-      "oil-steam-cracking-1",
+      "steam-cracking-1",
       "chemical-science-pack",
       "angels-sulfur-processing-2",
     },
@@ -324,7 +323,7 @@ data:extend({
       "angels-advanced-chemistry-2",
       "angels-advanced-gas-processing",
       "chlorine-processing-1",
-      "oil-steam-cracking-2",
+      "steam-cracking-2",
       "thermal-water-extraction",
     },
     effects = {
@@ -343,14 +342,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "catalyst-metal-blue",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-toluene-from-benzene",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "liquid-toluene-from-naphtha",
       },
     },
     unit = {
@@ -531,16 +522,26 @@ data:extend({
   },
   {
     type = "technology",
-    name = "gas-steam-cracking-1",
+    name = "steam-cracking-1",
     icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
     icon_size = 128,
     prerequisites = {
+      "angels-advanced-chemistry-1",
       "gas-processing",
+      "oil-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "steam-cracker",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "catalyst-steam-cracking-butane",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "catalyst-steam-cracking-naphtha",
       },
       {
         type = "unlock-recipe",
@@ -579,77 +580,12 @@ data:extend({
   },
   {
     type = "technology",
-    name = "gas-steam-cracking-2",
+    name = "steam-cracking-2",
     icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
     icon_size = 128,
     prerequisites = {
-      "gas-steam-cracking-1",
       "angels-advanced-chemistry-2",
-      "chemical-science-pack",
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "steam-cracker-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "steam-cracking-gas-residual",
-      },
-    },
-    unit = {
-      count = 50,
-      ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-      },
-      time = 15,
-    },
-    order = "c-a",
-  },
-  {
-    type = "technology",
-    name = "oil-steam-cracking-1",
-    icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
-    icon_size = 128,
-    prerequisites = {
-      "oil-processing",
-      "angels-advanced-chemistry-1",
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "steam-cracker",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "catalyst-steam-cracking-butane",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "catalyst-steam-cracking-naphtha",
-      },
-    },
-    unit = {
-      count = 50,
-      ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-      },
-      time = 15,
-    },
-    order = "c-a",
-  },
-  {
-    type = "technology",
-    name = "oil-steam-cracking-2",
-    icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
-    icon_size = 128,
-    prerequisites = {
-      "oil-steam-cracking-1",
-      "angels-advanced-chemistry-2",
-      "chemical-science-pack",
+      "steam-cracking-1",
     },
     effects = {
       {
@@ -672,6 +608,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "steam-cracking-oil-residual",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-cracking-gas-residual",
+      },
     },
     unit = {
       count = 50,
@@ -690,8 +630,7 @@ data:extend({
     icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
     icon_size = 128,
     prerequisites = {
-      "oil-steam-cracking-1",
-      "gas-steam-cracking-1",
+      "steam-cracking-1",
     },
     effects = {
       {
@@ -720,8 +659,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "angels-electric-boiler",
-      "oil-steam-cracking-2",
-      "gas-steam-cracking-2",
+      "steam-cracking-2",
     },
     effects = {
       {
