@@ -39,5 +39,5 @@ else
   OV.add_unlock("sodium-processing-2", "solid-sodium-hydroxide")
   OV.add_unlock("sodium-processing-2", "solid-sodium-sulfate-separation")
   OV.remove_prereq("sodium-processing-2", "sodium-processing-1")
-  OV.disable_technology({"sodium-processing-1"})
+  OV.disable_technology({ "sodium-processing-1" })
 end
