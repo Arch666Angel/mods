@@ -70,7 +70,7 @@ if mods["bobelectronics"] then
     {
       name = "wooden-board",
       result_count = 1,
-    }
+    },
   })
   angelsmods.functions.remove_productivity("wooden-board")
 
@@ -82,7 +82,7 @@ if mods["bobelectronics"] then
         { "!!" },
         { type = "fluid", name = "liquid-resin", amount = 10 },
         { type = "item", name = "solid-paper", amount = 10 },
-      }
+      },
     },
   })
   OV.add_prereq("advanced-electronics", "bio-paper-1")
