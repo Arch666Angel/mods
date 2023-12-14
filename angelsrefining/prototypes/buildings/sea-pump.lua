@@ -107,9 +107,10 @@ data:extend({
   {
     type = "resource",
     name = "sea-pump-resource",
-    icon = "__angelsrefining__/graphics/entity/sea-pump/empty.png",
-    icon_size = 1,
-    icon_mipmaps = 1,
+    localised_name = { "fluid-name.water" },
+    icon = "__base__/graphics/icons/fluid/water.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
     flags = { "placeable-neutral", "not-on-map" },
     selectable_in_game = false,
     category = "sea-pump",
@@ -184,7 +185,7 @@ data:extend({
     icon = "__angelsrefining__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     icon_mipmaps = 1,
-    flags = { "placeable-neutral", "player-creation", "hidden" },
+    flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.5, result = "sea-pump" },
     placeable_by = { item = "sea-pump", count = 1 },
     resource_categories = { "sea-pump" },
@@ -215,13 +216,13 @@ data:extend({
     },
     energy_usage = "250kW",
     mining_speed = 1, -- how fast it 'ticks'
-    base_productivity = -1, -- disable productivity
+    base_productivity = -0.8, -- partially disable mining productivity. Setting this more negative seems to have no effect
     resource_searching_radius = 0.49,
     vector_to_place_result = { 0, 0 },
     module_specification = {
       module_slots = 2,
     },
-    allowed_effects = { "speed", "consumption", "pollution" }, -- disallow productivity such that mining bonus does not apply
+    allowed_effects = { "speed", "consumption", "pollution" }, -- disallow productivity modules
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
       width = 12,
