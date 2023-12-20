@@ -301,10 +301,17 @@ if angelsmods.industries.tech then
     OV.add_prereq("bob-laser-rifle-ammo-3", "military-3")
     --Drones/CombatBots
     AI.pack_replace("bob-robot-gun-1", "green", "orange")
-    AI.pack_replace("bob-robot-gun-drones", "green", "orange")
-    AI.pack_replace("bob-robot-plasma-drones", "green", "orange")
-    AI.pack_replace("bob-robot-laser-drones", "green", "orange")
-    AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
+    if mods["boblogistics"] then
+      AI.pack_replace("bob-robot-gun-drones", "green", "orange")
+      AI.pack_replace("bob-robot-plasma-drones", "green", "orange")
+      AI.pack_replace("bob-robot-laser-drones", "green", "orange")
+      AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
+    else
+      AI.pack_replace("bob-robot-gun-drones", "blue", "orange")
+      AI.pack_replace("bob-robot-plasma-drones", "blue", "orange")
+      AI.pack_replace("bob-robot-laser-drones", "blue", "orange")
+      AI.pack_replace("bob-robot-flamethrower-drones", "blue", "orange")
+    end
     AI.pack_replace("bob-laser-robot", "blue", "yellow")
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")

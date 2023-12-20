@@ -56,6 +56,8 @@ if angelsmods.industries.components then
       },
     })
 
+    angelsmods.industries.blocks.enhancement5 = true
+
     if angelsmods.industries.tech then
       OV.add_prereq("radars-2", "tech-specialised-labs-basic-enhance-2")
       OV.add_prereq("radars-3", "tech-specialised-labs-basic-enhance-3")
