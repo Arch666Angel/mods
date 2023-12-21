@@ -83,6 +83,7 @@ if mods["bobelectronics"] then
         { type = "fluid", name = "liquid-resin", amount = 10 },
         { type = "item", name = "solid-paper", amount = 10 },
       },
+      category = "electronics-with-fluid",
     },
   })
   OV.add_prereq("advanced-electronics", "bio-paper-1")
