@@ -271,7 +271,7 @@ data:extend({
       { type = "fluid", name = "liquid-nitric-acid", amount = 20 },
     },
     results = {
-      { type = "item", name = "mold-non-expendable", amount = 1, probability = 0.90, catalyst_amount = 1 },
+      { type = "item", name = "mold-non-expendable", amount = 1, probability = 0.975, catalyst_amount = 1 },
       { type = "fluid", name = "water-red-waste", amount = 20 },
     },
     icons = angelsmods.functions.add_number_icon_layer({
