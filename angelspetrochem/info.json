@@ -1,6 +1,6 @@
 {
   "name": "angelspetrochem",
-  "version": "0.9.24",
+  "version": "0.9.25",
   "factorio_version": "1.1",
   "title": "Angel's Petrochemical Processing",
   "author": "Arch666Angel",
@@ -11,6 +11,7 @@
     "angelsrefining >= 0.12.3",
     "? bobplates >= 1.1.6",
     "? bobassembly >= 1.1.5",
-    "? bobrevamp >= 1.1.5"
+    "? bobrevamp >= 1.1.5",
+    "? bobelectronics >= 1.1.6"
   ]
 }

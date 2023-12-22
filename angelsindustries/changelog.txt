@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.19
+Date: 22.12.2023
+  Changes:
+    - Compatibility with Bob's changes (911)
+  Bugfixes:
+    - Component mode:
+      - Fixed the regular recipe for fiber board was still available when playing with bobs mods
+---------------------------------------------------------------------------------------------------
 Version: 0.4.18
 Date: 23.02.2023
   Bugfixes:

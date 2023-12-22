@@ -7,7 +7,7 @@ data:extend({
   {
     type = "recipe",
     name = "chrome-ore-processing",
-    category = "ore-processing-3",
+    category = "ore-processing-4",
     subgroup = "angels-chrome",
     energy_required = 2,
     enabled = false,
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "recipe",
     name = "chrome-processed-processing",
-    category = "pellet-pressing-3",
+    category = "pellet-pressing-4",
     subgroup = "angels-chrome",
     energy_required = 2,
     enabled = false,
@@ -100,7 +100,7 @@ data:extend({
   {
     type = "recipe",
     name = "chrome-ore-smelting",
-    category = "chemical-smelting-2",
+    category = "chemical-smelting-3",
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
@@ -173,7 +173,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-chrome-smelting",
-    category = "induction-smelting-3",
+    category = "induction-smelting-4",
     subgroup = "angels-chrome-casting",
     energy_required = 4,
     enabled = false,
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "recipe",
     name = "roll-chrome-casting",
-    category = "strand-casting-3",
+    category = "strand-casting-4",
     subgroup = "angels-chrome-casting",
     normal = {
       enabled = false,
@@ -256,7 +256,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plate-chrome",
-    category = "casting-3",
+    category = "casting-4",
     subgroup = "angels-chrome-casting",
     normal = {
       enabled = false,

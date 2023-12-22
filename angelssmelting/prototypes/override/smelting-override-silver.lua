@@ -167,7 +167,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   end
   OV.add_prereq("advanced-electronics", "angels-silver-smelting-1")
 
-  if mods["bobassembly"] and mods["bobelectronics"] then
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
     OV.patch_recipes({
       {
         name = "basic-silvered-copper-wire",

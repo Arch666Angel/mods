@@ -1,7 +1,7 @@
 local AF = angelsmods.functions
 local tints = {
-  ["solid-sodium-carbonate"] = { AF.fluid_color("Na2CO3") },
-  ["solid-alginic-acid"] = { AF.fluid_color("C6H8O6") },
+  ["solid-sodium-carbonate"] = AF.fluid_color("Na2CO3"),
+  ["solid-alginic-acid"] = AF.fluid_color("C6H8O6"),
   ["algae-brown"] = { r = 225 / 255, g = 160 / 255, b = 106 / 255 },
   ["algae-green"] = { r = 84 / 255, g = 118 / 255, b = 76 / 255 },
   ["algae-blue"] = { r = 89 / 255, g = 89 / 255, b = 188 / 255 },

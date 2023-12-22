@@ -38,19 +38,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "ground-water-pump",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "hydro-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "clarifier",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "liquifier",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "ground-water-pump",
       },
       {
         type = "unlock-recipe",
@@ -126,6 +122,10 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "sea-pump",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "hydro-plant-3",
       },
       {
@@ -199,7 +199,7 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "water-treatment",
+      "automation",
     },
     effects = {
       {
@@ -212,7 +212,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "water-viscous-mud",
+        recipe = "clarifier",
       },
       {
         type = "unlock-recipe",
@@ -248,12 +248,13 @@ data:extend({
       },
     },
     unit = {
-      count = 30,
+      count = 10,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
       },
       time = 15,
     },
+    ignore_tech_cost_multiplier = true,
     order = "c-a",
   },
   {
@@ -270,6 +271,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "washing-plant-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "water-viscous-mud",
       },
       {
         type = "unlock-recipe",

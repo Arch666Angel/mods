@@ -9,17 +9,17 @@ if angelsmods.industries.components then
       { name = "circuit-grey-board", category = "electronics" },
       { name = "circuit-grey-board-alternative", category = "electronics" },
       { name = "circuit-red-board", category = "electronics" },
-      { name = "circuit-green-board", category = "electronics-machine" },
-      { name = "circuit-orange-board", category = "electronics-machine" },
-      { name = "circuit-blue-board", category = "electronics-machine" },
-      --{ name = "circuit-yellow-board", category = "electronics-machine" },
+      { name = "circuit-green-board", category = "electronics-with-fluid" },
+      { name = "circuit-orange-board", category = "electronics-with-fluid" },
+      { name = "circuit-blue-board", category = "electronics-with-fluid" },
+      --{ name = "circuit-yellow-board", category = "electronics-with-fluid" }, --crafted with 2 fluids
 
       { name = "circuit-grey", category = "electronics" },
       { name = "circuit-red", category = "electronics" },
       { name = "circuit-green", category = "electronics-machine" },
-      { name = "circuit-orange", category = "electronics-machine" },
-      { name = "circuit-blue", category = "electronics-machine" },
-      { name = "circuit-yellow", category = "electronics-machine" },
+      { name = "circuit-orange", category = "electronics-with-fluid" },
+      { name = "circuit-blue", category = "electronics-with-fluid" },
+      { name = "circuit-yellow", category = "electronics-with-fluid" },
 
       { name = "circuit-red-loaded", category = "electronics" },
       { name = "circuit-green-loaded", category = "electronics-machine" },
@@ -29,9 +29,9 @@ if angelsmods.industries.components then
 
       { name = "circuit-resistor", category = "electronics" },
       { name = "circuit-transistor", category = "electronics-machine" },
-      { name = "circuit-microchip", category = "electronics-machine" },
+      { name = "circuit-microchip", category = "electronics-with-fluid" },
       { name = "circuit-transformer", category = "electronics-machine" },
-      { name = "circuit-cpu", category = "electronics-machine" },
+      { name = "circuit-cpu", category = "electronics-with-fluid" },
       { name = "electronic-parts-resistor", category = "electronics-machine" },
       { name = "electronic-parts-transistor", category = "electronics-machine" },
       { name = "electronic-parts-microchip", category = "electronics-machine" },
@@ -51,7 +51,6 @@ if angelsmods.industries.components then
   -- BOB ELECTRONICS ----------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobelectronics"] then
-    OV.disable_recipe("wooden-board-paper")
     OV.disable_recipe("superior-circuit-board")
   end
 
@@ -200,7 +199,17 @@ if angelsmods.industries.components then
 
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")
-    OV.add_unlock("angels-components-batteries-6", "silver-oxide")
+
+    OV.disable_recipe("silver-oxide")
+    OV.disable_recipe("lithium")
+    OV.disable_recipe("lithium-water-electrolysis")
+    OV.disable_recipe("lithium-chloride")
+    OV.disable_recipe("water-thermal-lithia")
+    angelsmods.functions.add_flag("silver-oxide", "hidden")
+    angelsmods.functions.add_flag("lithium", "hidden")
+    angelsmods.functions.add_flag("lithium-perchlorate", "hidden")
+    angelsmods.functions.add_flag("lithia-water", "hidden")
+    OV.disable_technology("lithium-processing")
   end
 
   -----------------------------------------------------------------------------

@@ -44,8 +44,7 @@ if mods["bobplates"] then
   end
 
   -- GEMS
-  OV.add_prereq("gem-processing-1", "geode-crystallization-1")
-  OV.add_prereq("bio-processing-alien-3", "gem-processing-1")
+  OV.add_prereq("bio-processing-alien-3", "gem-processing-2")
 
   -- CRYSTALS
   OV.modify_input("crystal-grindstone", { "grinding-wheel", "iron-plate" })
@@ -62,4 +61,32 @@ end
 if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
   OV.remove_prereq("bio-processing-brown", "automation")
   OV.add_prereq("bio-processing-brown", "basic-automation")
+  OV.remove_prereq("basic-chemistry", "automation")
+  OV.add_prereq("basic-chemistry", "basic-automation")
+end
+
+if mods["bobelectronics"] then
+  OV.patch_recipes({
+    {
+      name = "wooden-board",
+      result_count = 1,
+    },
+  })
+  angelsmods.functions.remove_productivity("wooden-board")
+
+  OV.patch_recipes({
+    {
+      name = "phenolic-board",
+      energy_required = 2,
+      ingredients = {
+        { "!!" },
+        { type = "fluid", name = "liquid-resin", amount = 10 },
+        { type = "item", name = "solid-paper", amount = 10 },
+      },
+      category = "electronics-with-fluid",
+    },
+  })
+  OV.add_prereq("advanced-electronics", "bio-paper-1")
+  OV.add_prereq("advanced-electronics", "resins")
+  angelsmods.functions.remove_productivity("phenolic-board")
 end

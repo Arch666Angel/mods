@@ -127,6 +127,7 @@ data:extend({
     prerequisites = {
       --"ore-crushing",
       "ore-floatation",
+      "slag-processing-1",
       "water-washing-2",
     },
     effects = {
@@ -153,6 +154,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "geode-yellow-processing",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-dust-liquify",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "crystal-slurry-filtering-conversion-1",
       },
     },
     unit = {
@@ -320,9 +329,9 @@ data:extend({
     prerequisites = {
       --"ore-floatation",
       "advanced-ore-refining-1",
-      "geode-processing-2",
       "chemical-science-pack",
       "ore-powderizer",
+      "slag-processing-2",
     },
     effects = {
       {
@@ -384,9 +393,7 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
-      --"ore-crushing",
       "geode-processing-1",
-      "slag-processing-1",
     },
     effects = {
       {
@@ -415,19 +422,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-dust-liquify",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "crystal-slurry-filtering-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "crystal-slurry-filtering-conversion-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "catalysator-green",
       },
     },
     unit = {
@@ -448,6 +443,7 @@ data:extend({
     prerequisites = {
       "slag-processing-1",
       "chemical-science-pack",
+      "geode-processing-2",
     },
     effects = {
       {
@@ -464,6 +460,10 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "catalysator-green",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "slag-processing-4",
       },
       {
@@ -477,14 +477,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "slag-processing-7",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-8",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-9",
       },
       {
         type = "unlock-recipe",
@@ -516,9 +508,9 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
-      "geode-processing-3",
       "advanced-electronics-2",
       "production-science-pack",
+      "slag-processing-2",
     },
     effects = {
       {
@@ -536,6 +528,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "catalysator-orange",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "slag-processing-8",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "slag-processing-9",
       },
     },
     unit = {
@@ -556,8 +556,7 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
     icon_size = 128,
     prerequisites = {
-      --"slag-processing-1",
-      "advanced-ore-refining-1",
+      "water-treatment-2",
     },
     effects = {
       {
@@ -717,8 +716,8 @@ data:extend({
     prerequisites = {
       "ore-leaching",
       "advanced-ore-refining-2",
-      "ore-electro-whinning-cell",
       "slag-processing-3",
+      "ore-advanced-floatation",
     },
     effects = {
       {
@@ -736,10 +735,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ore-powderizer-3",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "electro-whinning-cell-2",
       },
       {
         type = "unlock-recipe",
@@ -893,6 +888,7 @@ data:extend({
     prerequisites = {
       "ore-refining",
       "advanced-ore-refining-3",
+      "ore-electro-whinning-cell",
       "utility-science-pack",
     },
     effects = {
@@ -906,7 +902,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "electro-whinning-cell-3",
+        recipe = "electro-whinning-cell-2",
       },
       {
         type = "unlock-recipe",
@@ -1028,7 +1024,6 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "ore-powderizer",
-      "advanced-ore-refining-2",
       "thermal-water-extraction-2",
     },
     effects = {
@@ -1078,9 +1073,8 @@ data:extend({
     icon = "__angelsrefining__/graphics/technology/electro-whinning-cell-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-advanced-floatation",
-      "geode-processing-3",
       "ore-leaching",
+      "advanced-ore-refining-3",
     },
     effects = {
       {
@@ -1138,6 +1132,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
       },
       time = 15,
     },

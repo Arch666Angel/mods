@@ -41,6 +41,11 @@ angelsmods.functions.allow_productivity("angels-roll-platinum-converting")
 
 angelsmods.functions.allow_productivity("angels-mono-silicon-1")
 angelsmods.functions.allow_productivity("angels-mono-silicon-2")
+angelsmods.functions.allow_productivity("angels-plate-glass-1")
+angelsmods.functions.allow_productivity("angels-plate-glass-2")
+angelsmods.functions.allow_productivity("angels-plate-glass-3")
+angelsmods.functions.allow_productivity("angels-coil-glass-fiber")
+angelsmods.functions.allow_productivity("angels-coil-glass-fiber-fast")
 
 angelsmods.functions.allow_productivity("angels-plate-silver")
 angelsmods.functions.allow_productivity("angels-wire-coil-silver-converting")

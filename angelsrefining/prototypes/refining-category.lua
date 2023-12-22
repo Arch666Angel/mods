@@ -10,6 +10,7 @@ data:extend({
   { type = "recipe-category", name = "ore-refining-t1-5" }, -- powderizer
   { type = "recipe-category", name = "ore-refining-t2" }, -- flotation
   { type = "recipe-category", name = "ore-refining-t3" }, -- leaching
+  { type = "recipe-category", name = "ore-refining-t3b" }, -- leaching 2
   { type = "recipe-category", name = "ore-refining-t3-5" }, -- electrowinning
   { type = "recipe-category", name = "ore-refining-t4" }, -- refinery
 

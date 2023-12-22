@@ -669,12 +669,6 @@ ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_tem
           end
         end
       end
-      if temp then
-        fill_barrel.temperature = temp
-      else
-        fill_barrel.minimum_temperature = min_temp
-        fill_barrel.maximum_temperature = max_temp
-      end
     end
   end
 end

@@ -28,11 +28,6 @@ if mods["bobwarfare"] then
       angelsmods.functions.add_flag("sulfuric-nitric-acid", "hidden")
       OV.disable_recipe({ "sulfuric-nitric-acid" })
     end
-
-    OV.add_prereq("nitroglycerin-processing", "angels-sulfur-processing-2")
-    OV.add_prereq("nitroglycerin-processing", "angels-nitrogen-processing-2")
-  else
-    OV.add_prereq("cordite-processing", "angels-nitrogen-processing-2")
   end
 
   -----------------------------------------------------------------------------
@@ -63,7 +58,7 @@ if mods["bobwarfare"] then
   data.raw["recipe"]["nitroglycerin"].always_show_products = true
 
   OV.remove_unlock("nitroglycerin-processing", "glycerol")
-  OV.add_prereq("nitroglycerin-processing", "chlorine-processing-2")
+  OV.add_prereq("nitroglycerin-processing", "angels-explosives-1")
 
   -----------------------------------------------------------------------------
   -- GLYCEROL -----------------------------------------------------------------
@@ -87,6 +82,19 @@ if mods["bobwarfare"] then
       ingredients = {
         { name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid" },
       },
+    },
+  })
+
+  -----------------------------------------------------------------------------
+  -- PETROLEUM JELLY ----------------------------------------------------------
+  -----------------------------------------------------------------------------
+  OV.patch_recipes({
+    {
+      name = "petroleum-jelly",
+      ingredients = {
+        { name = "gas-residual", type = "fluid", amount = "liquid-naphtha" },
+      },
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-residual" }),
     },
   })
 end

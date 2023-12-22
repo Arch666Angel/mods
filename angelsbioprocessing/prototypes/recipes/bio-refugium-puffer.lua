@@ -237,7 +237,7 @@ data:extend({
       },
       {
         type = "fluid",
-        name = "gas-puffer-atmosphere",
+        name = "gas-acid",
         amount = 20,
         catalyst_amount = 20,
         show_details_in_recipe_tooltip = false,

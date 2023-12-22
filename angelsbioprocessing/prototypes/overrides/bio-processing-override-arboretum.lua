@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 
 if angelsmods.triggers.bio_rubber then
   OV.remove_prereq("rubbers", "rubber")
-  OV.add_prereq("rubbers", "angels-oil-processing")
+  OV.add_prereq("rubbers", "automation-2")
   OV.add_prereq("rubber", "rubbers")
   OV.remove_science_pack("rubbers", "chemical-science-pack")
 else
@@ -49,6 +49,7 @@ else
     "bio-arboretum-temperate-2",
     "bio-arboretum-temperate-3",
   })
+  OV.remove_prereq("bio-wood-processing-2", "bio-farm-1")
 end
 
 if angelsmods.triggers.bio_plastic then
@@ -76,6 +77,11 @@ else
 end
 
 if angelsmods.triggers.paper then
+  OV.add_unlock("sodium-processing-1", "solid-sodium-hypochlorite-decomposition")
+  OV.remove_unlock("chlorine-processing-3", "solid-salt-separation")
+  OV.add_unlock("sodium-processing-1", "solid-salt-separation")
+  OV.add_prereq("sodium-processing-1", "angels-metallurgy-2")
+  OV.add_prereq("sodium-processing-1", "bio-paper-2")
 else
   OV.hide_recipe({
     "solid-wood-pulp",
@@ -90,6 +96,7 @@ else
     "kraft-recovery",
     "kraft-causting",
     "solid-alginic-acid",
+    "solid-sodium-hypochlorite-decomposition",
   })
   angelsmods.functions.add_flag({
     "pulping-liquor",
@@ -113,7 +120,8 @@ else
       ingredients = { { name = "paste-cellulose", amount = "solid-wood-pulp" } },
     },
   })
-  --rereq clean-out
-  OV.remove_prereq("gardens-2", "bio-paper-1")
+  --prereq clean-out
+  OV.remove_prereq("gardens-3", "bio-paper-1")
+  OV.add_prereq("gardens-3", "bio-processing-paste")
   OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end

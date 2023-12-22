@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.25
+Date: 22.12.2023
+  Changes:
+    - Added support for alien artifacts outside of bob enemies
+    - Compatibility with Bob's changes (911)
+    - Recipes that consume Gardens will now only buffer enough ingredients for 1 craft (918)
+    - Adjusted techs and added a new recipe (Sodium hypochlorite decomposition) to make Paper 2 viable when it is unlocked (922)
+    - Rebalanced paper and pulp recipes to make each tier feel like a significant upgrade (923)
+    - Made wood production available earlier (932)
+      - Recipe changes for Tree seed generators, Arboretum, and Composter
+      - Tech tree changes
+    - Added custom error message for when trying to insert invalid items into butchery, composter, or hatchery (933)
+    - Reworked recipes for Bob's circuit boards (936)
+      - Removed recipe paper to wooden boards
+      - Modified phenolic board recipe to require paper + liquid resin
+    - Prevent Bob's mods from enabling Agriculture Modules for non bio recipes (937)
+    - Remove unnecessary prerequisites from Alien Farming (943)
+  Bugfixes:
+    - Fixed Gaseous atmosphere puffing recipe missing product Acid gas (942)
+---------------------------------------------------------------------------------------------------
 Version: 0.7.24
 Date: 23.02.2023
   Bugfixes:

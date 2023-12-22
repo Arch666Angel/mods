@@ -1,7 +1,7 @@
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 data:extend({
-  --CHROME
+  --TUNGSTEN
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",

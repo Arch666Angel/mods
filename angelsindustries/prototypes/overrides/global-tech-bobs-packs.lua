@@ -15,6 +15,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
     AI.pack_replace("gem-processing-2", "green", "orange")
+    AI.pack_replace("gem-processing-3", "green", "orange")
     AI.pack_replace("electric-mixing-furnace", "blue", "orange")
 
     if not mods["bobtech"] then --alien resources
@@ -213,6 +214,7 @@ if angelsmods.industries.tech then
     --AI.pack_replace("bob-robo-modular-1", "green", "orange")
     AI.pack_replace("bob-robo-modular-2", "blue", "orange")
     OV.remove_prereq("bob-robo-modular-2", "tech-blue-packs")
+    AI.pack_replace("bob-robo-modular-3", "yellow", "blue")
     -- robots
     OV.remove_science_pack("construction-robotics", "angels-science-pack-orange")
     AI.pack_replace("logistic-robotics", "blue", "orange")
@@ -299,10 +301,17 @@ if angelsmods.industries.tech then
     OV.add_prereq("bob-laser-rifle-ammo-3", "military-3")
     --Drones/CombatBots
     AI.pack_replace("bob-robot-gun-1", "green", "orange")
-    AI.pack_replace("bob-robot-gun-drones", "green", "orange")
-    AI.pack_replace("bob-robot-plasma-drones", "green", "orange")
-    AI.pack_replace("bob-robot-laser-drones", "green", "orange")
-    AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
+    if mods["boblogistics"] then
+      AI.pack_replace("bob-robot-gun-drones", "green", "orange")
+      AI.pack_replace("bob-robot-plasma-drones", "green", "orange")
+      AI.pack_replace("bob-robot-laser-drones", "green", "orange")
+      AI.pack_replace("bob-robot-flamethrower-drones", "green", "orange")
+    else
+      AI.pack_replace("bob-robot-gun-drones", "blue", "orange")
+      AI.pack_replace("bob-robot-plasma-drones", "blue", "orange")
+      AI.pack_replace("bob-robot-laser-drones", "blue", "orange")
+      AI.pack_replace("bob-robot-flamethrower-drones", "blue", "orange")
+    end
     AI.pack_replace("bob-laser-robot", "blue", "yellow")
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")
@@ -314,7 +323,6 @@ if angelsmods.industries.tech then
     --small fixes
     AI.pack_replace("follower-robot-count-1", "green", "orange")
     AI.pack_replace("follower-robot-count-2", "green", "orange")
-    OV.remove_prereq("nitroglycerin-processing", "chlorine-processing-2") -- no clue why it works nowhere else...
     OV.remove_prereq("walking-vehicle", "production-science-pack")
   end
 
@@ -361,7 +369,6 @@ if angelsmods.industries.tech then
   -- BOBS POWER -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
-    AI.pack_replace("steam-power", "red", "grey")
     --adds bob power stuffs
     OV.remove_science_pack("electric-engine", "angels-science-pack-green")
     -- steam power

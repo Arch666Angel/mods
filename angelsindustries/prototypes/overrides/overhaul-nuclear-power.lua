@@ -110,7 +110,6 @@ if angelsmods.industries.overhaul then
   -- Productivity
   -------------------------------------------------------------------------------
   angelsmods.functions.allow_productivity("angels-thorium-processing")
-  angelsmods.functions.allow_productivity("angelsore-crystal-mix6-processing") --thorium ore
   angelsmods.functions.allow_productivity("angels-uranium-fuel-cell")
   angelsmods.functions.allow_productivity("angels-mixed-oxide-cell")
   angelsmods.functions.allow_productivity("angels-thorium-fuel-cell")
@@ -187,6 +186,15 @@ if angelsmods.industries.overhaul then
             data.raw.recipe["plutonium-nucleosynthesis"].category = "centrifuging-2"
           end
         end
+      end
+      if data.raw.recipe["plutonium-nucleosynthesis"] then
+        OV.patch_recipes({
+          {
+            name = "plutonium-nucleosynthesis",
+            subgroup = "angels-power-nuclear-processing",
+            order = "b[AMOX]-d[synthesis]",
+          },
+        })
       end
     else
       --if not rtg, remove bobingabout process

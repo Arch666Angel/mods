@@ -100,7 +100,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
           {
             type = "item",
             name = angelsmods.trigger.smelting_products["platinum"].wire and "gilded-copper-cable" or "insulated-cable",
-            amount = "tinned-copper-cable" or 2,
+            amount = "tinned-copper-cable",
           },
         },
       },
@@ -117,7 +117,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     OV.add_prereq("advanced-electronics-2", "angels-gold-smelting-1")
   end
 
-  if mods["bobassembly"] and mods["bobelectronics"] then
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
     OV.patch_recipes({
       {
         name = "angels-wire-gold",

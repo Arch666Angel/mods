@@ -4,6 +4,9 @@ if angelsmods.industries.overhaul then
   angelsmods.trigger.ores["aluminium"] = true
   angelsmods.trigger.ores["chrome"] = true
   angelsmods.trigger.ores["cobalt"] = true
+  if mods["bobores"] then
+    bobmods.ores.cobalt.enabled = true
+  end
   angelsmods.trigger.ores["copper"] = true
   angelsmods.trigger.ores["gold"] = true
   angelsmods.trigger.ores["iron"] = true
@@ -55,6 +58,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.smelting_products["solder"].mixture = true
   angelsmods.trigger.smelting_molds = true
   angelsmods.trigger.smelting_products["glass"].fibre = true
+  angelsmods.trigger.smelting_products["glass"].board = false
   angelsmods.trigger.smelting_products["iron"].rod = true
   angelsmods.trigger.smelting_products["platinum"].plate = true
   angelsmods.trigger.smelting_products["platinum"].wire = true

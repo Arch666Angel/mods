@@ -2,6 +2,7 @@ require("prototypes.overrides.bio-processing-override-special-vanilla")
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
 --UPDATE BIO PRODUCT RECIPES
+require("prototypes.overrides.bio-processing-override-artifacts")
 require("prototypes.overrides.bio-processing-override-arboretum")
 require("prototypes.overrides.bio-processing-override-paste")
 -- UPDATE OTHER STUFF
@@ -57,7 +58,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
       },
     },
   })
-  OV.remove_prereq("bio-processing-alien-1", "plastics")
+  OV.remove_prereq("bio-processing-alien-2", "plastics")
 end
 
 if angelsmods.functions.is_special_vanilla() then
@@ -103,35 +104,6 @@ if data.raw.tile["frozen-snow-0"] then
   data.raw.tree["desert-tree"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
 end
-
---ADDED RECIPES BOBS
-if bobmods then
-  if bobmods.electronics and angelsmods.triggers.paper then
-    data:extend({
-      --CIRCUIT BOARD
-      {
-        type = "recipe",
-        name = "wooden-board-paper",
-        category = "advanced-crafting",
-        subgroup = "bio-paper",
-        enabled = false,
-        energy_required = 4,
-        ingredients = {
-          { type = "item", name = "solid-paper", amount = 2 },
-        },
-        results = {
-          { type = "item", name = "wooden-board", amount = 1 },
-        },
-        icon_size = 32,
-        order = "m",
-      },
-    })
-    OV.add_unlock("bio-paper-1", "wooden-board-paper")
-  end
-end
-
---ADDED RECIPES FOR BOBS ARTIFACTS
-require("prototypes.overrides.bio-processing-override-bob-artifacts")
 
 --OTHER BOB OVERRIDES
 require("prototypes.overrides.bio-processing-override-bob")

@@ -11,7 +11,7 @@ angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"]
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
 --PETRO PRODUCS
 angelsmods.trigger.plastic = true
-angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
+angelsmods.trigger.resin = (not angelsmods.functions.is_special_vanilla()) or (mods["bobelectronics"] and true or false)
 angelsmods.trigger.rubber = (
   (not angelsmods.functions.is_special_vanilla())
   or mods["bobelectronics"]
@@ -25,6 +25,8 @@ angelsmods.trigger.gas_ammonium_chloride = false
 angelsmods.trigger.early_sulfuric_acid = false
 angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids"].value
   or (mods["angelsbioprocessing"] and true or false)
+angelsmods.trigger.gas_acetone = angelsmods.trigger.resin
+angelsmods.trigger.gas_urea = (mods["bobgreenhouse"] or angelsmods.trigger.resin) and true or false
 
 --HIDE UNUSED BUILDINGS
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value

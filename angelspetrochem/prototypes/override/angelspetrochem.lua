@@ -19,7 +19,11 @@ if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
   OV.disable_technology("deuterium-processing")
   OV.add_prereq("water-chemistry-2", "nuclear-fuel-reprocessing")
 
-  OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+  if mods["bobrevamp"] and mods["bobpower"] and settings.startup["bobmods-revamp-nuclear"].value == true then
+    -- deuterium-fuel-cell will be unlocked by bob-nuclear-power-3
+  else
+    OV.add_unlock("water-chemistry-2", "deuterium-fuel-cell")
+  end
   OV.set_science_pack("deuterium-fuel-reprocessing", "utility-science-pack", 1)
   OV.set_science_pack("deuterium-fuel-cell-2", "utility-science-pack", 1)
 elseif angelsmods.industries and angelsmods.industries.overhaul then
@@ -30,17 +34,11 @@ elseif angelsmods.industries and angelsmods.industries.overhaul then
   -- not bobs mods, should we do something, usual thing is to do nothing...
 else -- no deuterium required, disabling it...
   angelsmods.functions.add_flag("gas-enriched-hydrogen-sulfide", "hidden")
-  angelsmods.functions.disable_barreling_recipes("gas-enriched-hydrogen-sulfide")
   angelsmods.functions.add_flag("liquid-water-semiheavy-1", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-1")
   angelsmods.functions.add_flag("liquid-water-semiheavy-2", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-2")
   angelsmods.functions.add_flag("liquid-water-semiheavy-3", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-semiheavy-3")
   angelsmods.functions.add_flag("liquid-water-heavy", "hidden")
-  angelsmods.functions.disable_barreling_recipes("liquid-water-heavy")
   angelsmods.functions.add_flag("gas-deuterium", "hidden")
-  angelsmods.functions.disable_barreling_recipes("gas-deuterium")
 
   OV.disable_recipe({
     "angels-hydrogen-sulfide-enrichment",
@@ -186,25 +184,30 @@ end
 if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
     "solid-calcium-chloride",
-    "cumene-process", -- "gas-acetone"
-    "gas-phosgene",
   })
-  OV.remove_prereq("angels-nitrogen-processing-2", "chlorine-processing-1")
   angelsmods.functions.add_flag({
     "solid-calcium-chloride",
-    "gas-phosgene",
   }, "hidden")
+end
 
-  if angelsmods.bioprocessing then
-  else
-    OV.disable_recipe({
-      "gas-urea",
-    })
-    angelsmods.functions.add_flag({
-      "gas-urea",
-      "gas-acetone",
-    }, "hidden")
-  end
+if angelsmods.trigger.gas_acetone then
+else
+  OV.disable_recipe({
+    "cumene-process",
+  })
+  angelsmods.functions.add_flag({
+    "gas-acetone",
+  }, "hidden")
+end
+
+if angelsmods.trigger.gas_urea then
+else
+  OV.disable_recipe({
+    "gas-urea",
+  })
+  angelsmods.functions.add_flag({
+    "gas-urea",
+  }, "hidden")
 end
 
 if angelsmods.trigger.resin then
@@ -287,8 +290,9 @@ else
   OV.disable_recipe({
     "gas-ammonium-chloride",
   })
-  OV.remove_unlock("angels-nitrogen-processing-2", "gas-ammonium-chloride")
+  OV.remove_unlock("angels-nitrogen-processing-4", "gas-ammonium-chloride")
   angelsmods.functions.add_flag("gas-ammonium-chloride", "hidden")
+  OV.remove_prereq("angels-nitrogen-processing-3", "chlorine-processing-2")
 end
 
 -----------------------------------------------------------------------------

@@ -68,6 +68,14 @@ local function calculate_science_pack_level()
   if game.active_mods["angelsbioprocessing"] then
     science_pack_level["token-bio"] = science_pack_level["angels-science-pack-red"]
       or science_pack_level["automation-science-pack"]
+
+    science_pack_level["alien-artifact-tool"] = 0
+    science_pack_level["alien-artifact-red-tool"] = 0
+    science_pack_level["alien-artifact-yellow-tool"] = 0
+    science_pack_level["alien-artifact-orange-tool"] = 0
+    science_pack_level["alien-artifact-blue-tool"] = 0
+    science_pack_level["alien-artifact-purple-tool"] = 0
+    science_pack_level["alien-artifact-green-tool"] = 0
   end
 
   if game.active_mods["bobtech"] then
@@ -84,21 +92,21 @@ local function calculate_science_pack_level()
       -- bobs alien science packs
       for pack_name, pack_level in pairs({
         ["science-pack-gold"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-blue"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-orange"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-purple"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-yellow"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-green"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
         ["alien-science-pack-red"] = 50
-          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["utility-science-pack"]),
+          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
       }) do
         science_pack_level[pack_name] = pack_level
       end

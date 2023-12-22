@@ -143,6 +143,7 @@ if mods["bobplates"] then
   data.raw.fluid["tungstic-acid"].icon = nil
   data.raw.fluid["tungstic-acid"].icon_size = nil
   data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
+  data.raw.recipe["tungstic-acid"].icon = nil
   OV.patch_recipes({
     {
       name = "liquid-fuel",
@@ -169,17 +170,19 @@ if mods["bobplates"] then
   OV.add_unlock("flammables", "liquid-fuel")
   OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
   OV.remove_prereq("flammables", "gas-processing")
-  OV.add_prereq("flammables", "gas-steam-cracking-1")
+  OV.add_prereq("flammables", "steam-cracking-1")
 end
 
 -------------------------------------------------------------------------------
 -- RESIN HANDLING -------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then
+if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.resin then
     OV.global_replace_item({ "solid-resin" }, "resin")
     angelsmods.functions.add_flag("solid-resin", "hidden")
     move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
+    local resin_icon = mods["bobplates"] and "__bobplates__/graphics/icons/resin.png"
+      or "__bobelectronics__/graphics/icons/resin.png"
 
     OV.patch_recipes({
       {
@@ -191,7 +194,7 @@ if mods["bobplates"] then
         order = "b[resin]-b[solid]-a",
         icons = angelsmods.functions.add_number_icon_layer({
           {
-            icon = "__bobplates__/graphics/icons/resin.png",
+            icon = resin_icon,
             icon_size = 32,
             icon_mipmaps = 1,
           },
@@ -202,13 +205,13 @@ if mods["bobplates"] then
         order = "b[resin]-b[solid]-b",
         icons = mods["angelsbioprocessing"] and {
           {
-            icon = "__bobplates__/graphics/icons/resin.png",
+            icon = resin_icon,
             icon_size = 32,
             icon_mipmaps = 1,
           },
         } or angelsmods.functions.add_number_icon_layer({
           {
-            icon = "__bobplates__/graphics/icons/resin.png",
+            icon = resin_icon,
             icon_size = 32,
             icon_mipmaps = 1,
           },
@@ -218,17 +221,28 @@ if mods["bobplates"] then
 
     if mods["angelsbioprocessing"] then
       OV.disable_recipe({ "bob-resin-wood" })
+      OV.disable_technology({ "bob-wood-processing" })
+      OV.remove_prereq({
+        "bodies",
+        "electronics",
+        "walking-vehicle",
+      }, "bob-wood-processing")
+      OV.add_prereq("electronics", "automation")
+    else
+      OV.add_prereq("resins", "bob-wood-processing")
     end
-
-    OV.remove_unlock("plastics", "synthetic-wood")
-    OV.disable_recipe({ "synthetic-wood" })
   else
     angelsmods.functions.add_flag("resin", "hidden")
     OV.disable_recipe({
       "bob-resin-wood",
       "solid-resin",
     })
-    OV.remove_unlock("plastics", "synthetic-wood")
+  end
+
+  OV.remove_unlock("plastics", "synthetic-wood")
+  if mods["angelsbioprocessing"] then
+    OV.disable_recipe({ "synthetic-wood" })
+  else
     OV.add_unlock("plastic-1", "synthetic-wood")
   end
 end
@@ -236,7 +250,7 @@ end
 -------------------------------------------------------------------------------
 -- RUBBER HANDLING ------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] then
+if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.rubber then
     OV.global_replace_item("solid-rubber", "rubber")
     angelsmods.functions.add_flag("solid-rubber", "hidden")
@@ -246,7 +260,6 @@ if mods["bobplates"] then
       OV.patch_recipes({
         {
           name = "bob-rubber",
-          enabled = false,
           ingredients = {
             { "!!" },
             { type = "item", name = "resin", amount = 3 },
@@ -255,7 +268,7 @@ if mods["bobplates"] then
           order = "b[rubber]-b[solid]-a",
           icons = angelsmods.functions.add_number_icon_layer({
             {
-              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon = "__bobelectronics__/graphics/icons/rubber.png",
               icon_size = 32,
               icon_mipmaps = 1,
             },
@@ -267,7 +280,7 @@ if mods["bobplates"] then
           order = "b[rubber]-b[solid]-a",
           icons = angelsmods.functions.add_number_icon_layer({
             {
-              icon = "__bobplates__/graphics/icons/rubber.png",
+              icon = "__bobelectronics__/graphics/icons/rubber.png",
               icon_size = 32,
               icon_mipmaps = 1,
             },

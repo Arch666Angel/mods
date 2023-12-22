@@ -34,4 +34,6 @@ else
     "solid-sodium-hydroxide-solid-sodium-sulfate",
   })
   angelsmods.functions.add_flag("solid-sodium-cyanide", "hidden")
+  OV.remove_prereq("sodium-processing-1", "chlorine-processing-1")
+  OV.add_prereq("sodium-processing-1", "chlorine-processing-3")
 end

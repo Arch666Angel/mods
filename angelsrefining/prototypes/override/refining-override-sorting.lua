@@ -539,6 +539,14 @@ OV.patch_recipes(merge_table_of_tables({
 if special_vanilla then
   OV.remove_prereq("uranium-processing", "ore-leaching")
   OV.add_prereq("uranium-processing", "slag-processing-2")
+  OV.remove_unlock("slag-processing-3", "slag-processing-9")
+  OV.add_unlock("slag-processing-2", "slag-processing-9")
+  OV.patch_recipes({
+    {
+      name = "slag-processing-9",
+      category = "crystallizing-2",
+    },
+  })
 else
   -- disable the nuggets and pebbles
   OV.disable_recipe({
@@ -565,19 +573,17 @@ else
     "ore-advanced-floatation",
     "ore-electro-whinning-cell",
   })
-  OV.remove_prereq("advanced-ore-refining-3", "ore-electro-whinning-cell")
+  OV.remove_prereq("advanced-ore-refining-3", "ore-advanced-floatation")
+  OV.remove_prereq("advanced-ore-refining-4", "ore-electro-whinning-cell")
 
   -- hide electro winning cells
   OV.hide_recipe({
     "electro-whinning-cell",
     "electro-whinning-cell-2",
-    "electro-whinning-cell-3",
   })
   angelsmods.functions.add_flag("electro-whinning-cell", "hidden")
   angelsmods.functions.add_flag("electro-whinning-cell-2", "hidden")
-  angelsmods.functions.add_flag("electro-whinning-cell-3", "hidden")
-  OV.remove_unlock("advanced-ore-refining-3", "electro-whinning-cell-2")
-  OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-3")
+  OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-2")
 
   if angelsmods.bioprocessing then
   else
@@ -600,7 +606,7 @@ end
 
 if ore_enabled("ferrous") and ore_enabled("cupric") then
 else
-  OV.remove_unlock("ore-electro-whinning-cell", "angelsore-crystal-mix6-processing")
+  OV.remove_unlock("advanced-ore-refining-3", "angelsore-crystal-mix6-processing")
   OV.disable_recipe("angelsore-crystal-mix6-processing")
 end
 if not ore_enabled("ferrous") then --I DON'T KNOW WHY THIS IS STILL GETTING THROUGH!!!

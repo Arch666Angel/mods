@@ -22,6 +22,8 @@ if angelsmods.industries.tech then
   AI.core_replace("turrets", "war", "basic")
   AI.core_replace("flammables", "war", "enhance")
   -- REFINING
+  -- PETROCHEM
+  AI.core_replace("basic-chemistry", "processing", "basic")
   -- SMELTING
   AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
@@ -185,7 +187,6 @@ if angelsmods.industries.tech then
   OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
   -- REFINING
   OV.set_science_pack("geode-crystallization-1", "datacore-processing-1", 2)
-  OV.set_science_pack("geode-crystallization-2", "datacore-processing-1", 2)
   OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
@@ -198,6 +199,8 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rubber", "datacore-processing-1", 2)
   AI.core_replace("rocket-booster-1", "war", "processing")
   AI.core_replace("rocket-booster-2", "war", "processing")
+  -- BIOPROCESSING
+  AI.core_replace("angels-composting", "basic", "processing")
   OV.execute() ------------------------------------------------------------------
 
   -- now upgrade the cores to tier 2 and let them depend on the correct technology

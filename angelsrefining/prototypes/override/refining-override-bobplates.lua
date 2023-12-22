@@ -106,53 +106,10 @@ if mods["bobplates"] then
       },
       order = "a-a-a1",
     },
-    {
-      type = "technology",
-      name = "geode-crystallization-2",
-      icon = "__angelsrefining__/graphics/technology/geode-processing-blue.png",
-      icon_size = 256,
-      icon_mipmaps = 2,
-      prerequisites = {
-        "geode-crystallization-1",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "bob-ruby-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-sapphire-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-emerald-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-amethyst-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-topaz-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bob-diamond-3",
-        },
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-        },
-        time = 30,
-      },
-      order = "a-a-a1",
-    },
   })
-  OV.add_prereq("gem-processing-1", "geode-crystallization-2")
+  OV.add_prereq("gem-processing-1", "geode-crystallization-1")
+  OV.set_science_pack("gem-processing-1", "logistic-science-pack", 1)
+  OV.set_research_difficulty("gem-processing-1", 30, 50)
   for _, recipeName in pairs({
     "bob-ruby-3",
     "bob-sapphire-3",
@@ -183,6 +140,7 @@ if mods["bobplates"] then
     -- angels industries takes care of this with angels nuclear overhaul
   else
     OV.add_prereq("thorium-processing", "ore-electro-whinning-cell")
+    OV.set_science_pack("thorium-processing", "production-science-pack", 1)
     move_item("thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
 end
@@ -206,6 +164,19 @@ if mods["bobplates"] then
   OV.add_prereq("chemical-processing-2", "ore-crushing")
   if mods["bobwarfare"] then
     OV.set_science_pack("bob-rocket", "production-science-pack", 1)
+    if
+      not settings.startup["bobmods-enemies-enableartifacts"]
+      or settings.startup["bobmods-enemies-enableartifacts"].value == false
+    then
+      OV.set_science_pack("bob-ap-bullets", "production-science-pack", 1)
+      OV.set_science_pack("bob-shotgun-ap-shells", "production-science-pack", 1)
+      OV.set_science_pack("bob-piercing-rocket", "production-science-pack", 1)
+      OV.set_science_pack("bob-electric-rocket", "production-science-pack", 1)
+      OV.set_science_pack("bob-explosive-rocket", "production-science-pack", 1)
+      OV.set_science_pack("bob-acid-rocket", "production-science-pack", 1)
+      OV.set_science_pack("bob-flame-rocket", "production-science-pack", 1)
+      OV.set_science_pack("bob-poison-rocket", "production-science-pack", 1)
+    end
   end
 end
 

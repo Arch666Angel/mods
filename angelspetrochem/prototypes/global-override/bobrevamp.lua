@@ -16,27 +16,9 @@ if mods["bobrevamp"] then
 
   OV.disable_technology({ "solid-fuel" })
 
-  OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")
-  OV.remove_unlock("angels-oil-processing", "solid-fuel-naphtha")
-  OV.remove_unlock("gas-processing", "solid-fuel-methane")
-
-  OV.add_unlock("flammables", "solid-fuel-fuel-oil")
-  OV.add_unlock("flammables", "solid-fuel-naphtha")
-  OV.add_unlock("angels-advanced-gas-processing", "solid-fuel-methane")
-
-  OV.add_prereq("angels-advanced-gas-processing", "flammables")
-  OV.add_prereq("gas-synthesis", "flammables")
-  OV.add_prereq("angels-nitrogen-processing-3", "flammables")
-
-  if mods["bobplates"] then
-    OV.remove_unlock("angels-oil-processing", "liquid-fuel")
-    OV.remove_unlock("angels-oil-processing", "solid-fuel-from-hydrogen")
-
-    --OV.add_unlock("flammables", "solid-fuel-from-hydrogen")
-
-    if mods["bobwarfare"] then
-      OV.add_prereq("military-3", "flammables")
-    end
+  if mods["bobwarfare"] then
+    -- Napalm capsules require Liquid fuel / Fuel oil
+    OV.add_prereq("military-3", "flammables")
   end
 
   -----------------------------------------------------------------------------
@@ -45,7 +27,6 @@ if mods["bobrevamp"] then
   OV.disable_recipe("petroleum-gas-sweetening")
 
   angelsmods.functions.add_flag("sour-gas", "hidden")
-  angelsmods.functions.disable_barreling_recipes("sour-gas")
 
   OV.hide_recipe("ammonia")
   OV.converter_fluid("ammonia", "gas-ammonia")
@@ -61,9 +42,8 @@ if mods["bobrevamp"] then
   end
   if settings.startup["bobmods-revamp-oil"] then
     OV.hide_recipe("solid-fuel-from-sour-gas")
-    if mods["bobelectronics"] then
-      OV.hide_recipe("bob-oil-processing")
-    end
+    OV.remove_unlock("flammables", "solid-fuel-from-sour-gas")
+    OV.remove_unlock("flammables", "solid-fuel-from-petroleum-gas")
   end
 
   if angelsmods.trigger.disable_bobs_chemical_plants then
@@ -104,7 +84,6 @@ if mods["bobrevamp"] then
 
     OV.converter_fluid("carbon-dioxide", "gas-carbon-dioxide")
     angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
-    --OV.remove_unlock("chemical-processing-2", "carbon-dioxide")
 
     OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
     angelsmods.functions.add_flag("sodium-carbonate", "hidden")
@@ -142,7 +121,6 @@ if mods["bobrevamp"] then
       })
 
       angelsmods.functions.add_flag("ammoniated-brine", "hidden")
-      angelsmods.functions.disable_barreling_recipes("ammoniated-brine")
 
       angelsmods.functions.add_flag("sodium-bicarbonate", "hidden")
 

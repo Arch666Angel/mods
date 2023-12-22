@@ -56,12 +56,21 @@ if angelsmods.industries.components then
       },
     })
 
-    OV.add_prereq("radars-1", "angels-basic-blocks-1")
-    OV.add_prereq("radars-2", "angels-basic-blocks-2")
-    OV.add_prereq("radars-3", "angels-components-weapons-advanced")
-    OV.add_prereq("radars-4", "military-3")
-    OV.add_prereq("radars-4", "angels-advanced-blocks-1")
-    OV.add_prereq("radars-5", "angels-advanced-blocks-2")
+    angelsmods.industries.blocks.enhancement5 = true
+
+    if angelsmods.industries.tech then
+      OV.add_prereq("radars-2", "tech-specialised-labs-basic-enhance-2")
+      OV.add_prereq("radars-3", "tech-specialised-labs-basic-enhance-3")
+      OV.add_prereq("radars-4", "tech-specialised-labs-advanced-enhance-1")
+      OV.add_prereq("radars-5", "tech-specialised-labs-advanced-enhance-2")
+    else
+      OV.add_prereq("radars-1", "angels-basic-blocks-1")
+      OV.add_prereq("radars-2", "angels-basic-blocks-2")
+      OV.add_prereq("radars-3", "angels-components-weapons-advanced")
+      OV.add_prereq("radars-4", "military-3")
+      OV.add_prereq("radars-4", "angels-advanced-blocks-1")
+      OV.add_prereq("radars-5", "angels-advanced-blocks-2")
+    end
 
     OV.remove_prereq("radars-2", "electronics")
     OV.remove_prereq("radars-3", "military-3")

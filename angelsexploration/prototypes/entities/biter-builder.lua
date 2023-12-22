@@ -1728,7 +1728,6 @@ function angelsmods.functions.make_alien(def_data)
         "placeable-off-grid",
         "not-repairable",
         "breaths-air",
-        "hidden",
       },
       max_health = def_data.appearance.health,
       resistances = def_data.resistance,
@@ -1859,10 +1858,8 @@ function angelsmods.functions.update_spawner(us_data)
   if us_data == nil then
     return
   end
-  local s_name = us_data.appearance.type .. "-spawner"
-  if data.raw["unit-spawner"][s_name] then
-    local spawner = data.raw["unit-spawner"][s_name]
-    --log(serpent.block(spawner))
+  local spawner = data.raw["unit-spawner"][us_data.appearance.full_name or (us_data.appearance.type .. "-spawner")]
+  if spawner then
     spawner.resistances = spawner.resistances or {}
     for _, new_resistance_data in pairs(us_data.resistance or {}) do
       local existing_resistance = false
@@ -1877,8 +1874,8 @@ function angelsmods.functions.update_spawner(us_data)
         table.insert(spawner.resistances, new_resistance_data)
       end
     end
-    spawner.max_health = us_data.appearance.health
-    spawner.spawning_cooldown = us_data.appearance.spawn_cooldown
+    spawner.max_health = us_data.appearance.health or spawner.max_health
+    spawner.spawning_cooldown = us_data.appearance.spawn_cooldown or spawner.spawning_cooldown
     spawner.result_units = spawner.result_units or {}
     for _, new_result_unit_data in pairs(us_data.results or {}) do
       local existing_result_unit = false

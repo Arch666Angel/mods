@@ -94,23 +94,10 @@ end
 -- FIBREGLASS -----------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["glass"].fibre then
-  if mods["bobelectronics"] then
-  else
-    --[[OV.patch_recipes(
-      {
-        {
-          name = "angels-glass-fiber-board",
-          results = {
-            {"!!"},
-            {name = "angels-glass-fiber-board", type = "item", amount = 4}
-          },
-        }
-      }
-    )]]
-  end
 else
   angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
   OV.disable_recipe({ "angels-coil-glass-fiber" })
+  OV.disable_recipe({ "angels-coil-glass-fiber-fast" })
 end
 
 -------------------------------------------------------------------------------
@@ -140,6 +127,8 @@ if angelsmods.trigger.smelting_products["glass"].board then
           },
         },
         icon_size = 32,
+        subgroup = "bob-boards",
+        order = "c-a3[fibreglass-board]",
       },
     })
     OV.add_unlock("angels-glass-smelting-2", "angels-glass-fiber-board")
@@ -149,6 +138,15 @@ if angelsmods.trigger.smelting_products["glass"].board then
     -- disable bob variant
     OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
     OV.disable_recipe({ "fibreglass-board" })
+  end
+
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
+    OV.patch_recipes({
+      {
+        name = "angels-glass-fiber-board",
+        category = "electronics-with-fluid",
+      },
+    })
   end
 else
   OV.disable_recipe({ "angels-glass-fiber-board" })

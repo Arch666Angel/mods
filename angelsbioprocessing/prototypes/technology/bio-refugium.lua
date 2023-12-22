@@ -325,7 +325,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-alien",
-      --"bio-refugium-butchery-2",
+      "bio-refugium-butchery-2",
       "bio-refugium-puffer-2",
       "bio-processing-crystal-splinter-2",
       "stone-wall",
@@ -587,6 +587,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "fish-butchery-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "liquid-polluted-fish-atmosphere",
       },
     },
     unit = {

@@ -11,8 +11,7 @@ data:extend({
     enabled = false,
     normal = {
       ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 50 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "fluid", name = "crystal-seedling", amount = 75 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -21,7 +20,6 @@ data:extend({
     expensive = {
       ingredients = {
         { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -39,8 +37,7 @@ data:extend({
     enabled = false,
     normal = {
       ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 50 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "fluid", name = "crystal-seedling", amount = 75 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -49,7 +46,6 @@ data:extend({
     expensive = {
       ingredients = {
         { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -67,8 +63,7 @@ data:extend({
     enabled = false,
     normal = {
       ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 50 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "fluid", name = "crystal-seedling", amount = 75 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -77,7 +72,6 @@ data:extend({
     expensive = {
       ingredients = {
         { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -95,8 +89,7 @@ data:extend({
     enabled = false,
     normal = {
       ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 50 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "fluid", name = "crystal-seedling", amount = 75 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -105,7 +98,6 @@ data:extend({
     expensive = {
       ingredients = {
         { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -123,8 +115,7 @@ data:extend({
     enabled = false,
     normal = {
       ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 50 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "fluid", name = "crystal-seedling", amount = 75 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -133,7 +124,6 @@ data:extend({
     expensive = {
       ingredients = {
         { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -151,8 +141,7 @@ data:extend({
     enabled = false,
     normal = {
       ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 50 },
-        { type = "item", name = "catalysator-green", amount = 1 },
+        { type = "fluid", name = "crystal-seedling", amount = 75 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },
@@ -161,7 +150,6 @@ data:extend({
     expensive = {
       ingredients = {
         { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
       },
       results = {
         { type = "item", name = "angels-void", amount = 1 },

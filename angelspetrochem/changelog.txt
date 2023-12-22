@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.25
+Date: 22.12.2023
+  Changes:
+    - Compatibility with Bob's changes (911)
+    - Split tech Sodium processing into Sodium processing 1 and Sodium processing 2 (922)
+    - Combined techs Oil Steam cracking and Gas Steam Cracking (951)
+  Bugfixes:
+    - Fixed recipe order of carbon products to correctly display in helmod
+    - Fixed fertiliser not being craftable in mod configurations (924)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.24
 Date: 23.02.2023
   Bugfixes:
