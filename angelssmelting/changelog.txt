@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.22
-Date: xx.xx.xxxx
+Date: 22.12.2023
   Changes:
     - Increased the tech and required machine tier of Chrome and Platinum (909)
     - Allow Fibreglass boards to be made in Bob's Electronics assembling machines (921)

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.25
-Date: ??.??.????
+Date: 22.12.2023
   Changes:
     - Compatibility with Bob's changes (911)
     - Split tech Sodium processing into Sodium processing 1 and Sodium processing 2 (922)

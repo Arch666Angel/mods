@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.5
-Date: xx.xx.xxxx
+Date: 22.12.2023
   Changes:
     - Moved Electro-refining to purple science. Replaced Crystal catalyst with Hybrid catalyst in Thorium sorting recipe (909)
     - Compatibility with Bob's changes (911)

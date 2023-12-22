@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.15
-Date: xx.xx.2023
+Date: 22.12.2023
   Changes:
     - Added "Thorvin" bicycle; credits to the TurboBike mod for the graphics (790)
     - Spitters are back doing acid splash instead of their bio splash

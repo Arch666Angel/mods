@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.19
-Date: xx.xx.xxxx
+Date: 22.12.2023
   Changes:
     - Compatibility with Bob's changes (911)
   Bugfixes:
