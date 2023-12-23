@@ -58,7 +58,7 @@ if bobmods then
   })
 end
 
-if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
+if data.raw.technology["basic-automation"] then -- From Bob's Assembling machines, depending on settings
   OV.remove_prereq("bio-processing-brown", "automation")
   OV.add_prereq("bio-processing-brown", "basic-automation")
   OV.remove_prereq("basic-chemistry", "automation")
