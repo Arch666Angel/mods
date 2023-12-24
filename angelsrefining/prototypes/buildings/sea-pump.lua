@@ -174,7 +174,7 @@ data:extend({
         },
       },
     },
-    map_color = {0, 0, 0, 0},
+    map_color = { 0, 0, 0, 0 },
     --map_grid = false
   },
   {
