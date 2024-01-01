@@ -43,7 +43,7 @@ if angelsmods.industries.tech then
   if mods["bobassembly"] then
     --adds bobassembly stuffs
     -- burner assemblers and/ore tier 1 electric
-    if settings.startup["bobmods-assembly-burner"].value == true then
+    if data.raw.technology["basic-automation"] then
       AI.pack_replace("basic-automation", "red", "grey")
       AI.pack_replace("automation", "grey", "red")
     end

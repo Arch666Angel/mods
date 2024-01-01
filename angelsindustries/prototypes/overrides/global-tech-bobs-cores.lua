@@ -37,7 +37,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobassembly"] then
     --assemblers
-    if settings.startup["bobmods-assembly-burner"].value == true then
+    if data.raw.technology["basic-automation"] then
       AI.core_replace("basic-automation", "processing", "basic")
       AI.core_replace("automation", "basic", "processing")
     end
