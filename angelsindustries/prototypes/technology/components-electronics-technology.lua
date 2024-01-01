@@ -11,7 +11,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "fluid", name = "water", amount = 0 },
       },
-    }
+    },
   })
   OV.execute()
 
