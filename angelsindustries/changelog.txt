@@ -2,6 +2,7 @@
 Version: 0.4.20
 Date: ???
   Bugfixes:
+    - Fixed soft lock when using Components Overhaul (955)
     - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.19
