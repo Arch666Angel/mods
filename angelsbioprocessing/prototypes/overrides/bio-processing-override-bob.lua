@@ -81,7 +81,7 @@ if mods["bobelectronics"] then
       ingredients = {
         { "!!" },
         { type = "fluid", name = "liquid-resin", amount = 10 },
-        { type = "item", name = "solid-paper", amount = 10 },
+        { type = "item", name = "solid-paper", amount = 5 },
       },
       category = "electronics-with-fluid",
     },
