@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.21
+Date: ???
+  Bugfixes:
+    - Science mode:
+      - Sodium Processing 1 tech now uses green analyzers rather than blue so Paper making 2 can be used (966)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.20
 Date: 04.01.2024
   Changes:
