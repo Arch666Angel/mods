@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.6
-Date: ???
+Date: 04.01.2024
   Bugfixes:
     - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
     - Fixed compatibility issue with Transport Drones mod (961)
