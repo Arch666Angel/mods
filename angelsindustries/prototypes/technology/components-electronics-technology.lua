@@ -3,6 +3,16 @@ if angelsmods.industries.components then
   OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
   OV.remove_science_pack("bio-paper-1", "logistic-science-pack")
   OV.remove_prereq("bio-paper-1", "logistic-science-pack")
+  OV.remove_prereq("bio-paper-1", "basic-chemistry")
+  OV.patch_recipes({
+    {
+      name = "solid-wood-pulp",
+      category = "crafting",
+      ingredients = {
+        { type = "fluid", name = "water", amount = 0 },
+      },
+    },
+  })
   OV.execute()
 
   data:extend({

@@ -81,6 +81,12 @@ if angelsmods.industries.tech then
     "datacore-processing-6",
   })
   OV.execute()
+
+  -- Populate table of starting items for YAFC to read
+  if data.data_crawler then
+    data.script_enabled = data.script_enabled or {}
+    table.insert(data.script_enabled, { type = "item", name = "angels-main-lab-0" })
+  end
 end
 
 --tech updates part 1
@@ -99,6 +105,12 @@ if angelsmods.industries.components then
     angelsmods.functions.AI.add_minable_results()
   end
   OV.execute()
+
+  -- Populate table of starting items for YAFC to read
+  if data.data_crawler then
+    data.script_enabled = data.script_enabled or {}
+    table.insert(data.script_enabled, { type = "item", name = "stone-furnace" })
+  end
 end
 
 --OTHER OVERRIDES

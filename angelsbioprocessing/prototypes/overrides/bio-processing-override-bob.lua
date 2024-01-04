@@ -58,7 +58,7 @@ if bobmods then
   })
 end
 
-if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
+if mods["bobassembly"] and data.raw.technology["basic-automation"] then
   OV.remove_prereq("bio-processing-brown", "automation")
   OV.add_prereq("bio-processing-brown", "basic-automation")
   OV.remove_prereq("basic-chemistry", "automation")
@@ -81,7 +81,7 @@ if mods["bobelectronics"] then
       ingredients = {
         { "!!" },
         { type = "fluid", name = "liquid-resin", amount = 10 },
-        { type = "item", name = "solid-paper", amount = 10 },
+        { type = "item", name = "solid-paper", amount = 5 },
       },
       category = "electronics-with-fluid",
     },

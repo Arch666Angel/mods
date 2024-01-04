@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.26
+Date: 04.01.2024
+  Changes:
+    - Adjust paper volume (964):
+      - Halve the output of the paper recipes
+      - Halve the amount of paper required for Phenolic boards
+  Bugfixes:
+    - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
+---------------------------------------------------------------------------------------------------
 Version: 0.7.25
 Date: 22.12.2023
   Changes:

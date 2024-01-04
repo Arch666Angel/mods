@@ -340,9 +340,9 @@ data:extend({
     category = "crafting",
     subgroup = "bio-paper",
     enabled = false,
-    energy_required = 4,
+    energy_required = 8,
     ingredients = {
-      { type = "item", name = "solid-wood-pulp", amount = 2 },
+      { type = "item", name = "solid-wood-pulp", amount = 4 },
     },
     results = {
       { type = "item", name = "solid-paper", amount = 3 },
@@ -366,7 +366,7 @@ data:extend({
       { type = "fluid", name = "gas-chlorine", amount = 80 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 4 },
+      { type = "item", name = "solid-paper", amount = 2 },
       { type = "item", name = "solid-sodium-hypochlorite", amount = 2 },
     },
     allow_decomposition = false,
@@ -414,7 +414,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 100 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 10 },
+      { type = "item", name = "solid-paper", amount = 5 },
       { type = "item", name = "solid-sodium-carbonate", amount = 2 },
       { type = "fluid", name = "gas-oxygen", amount = 40 },
       { type = "fluid", name = "water-yellow-waste", amount = 100 },

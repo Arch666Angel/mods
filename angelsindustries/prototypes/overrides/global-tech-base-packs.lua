@@ -56,6 +56,9 @@ if angelsmods.industries.tech then
   OV.remove_prereq("bio-arboretum-temperate-1", "resins")
   OV.remove_science_pack("bio-arboretum-temperate-1", "token-bio")
   OV.add_prereq("bio-arboretum-temperate-2", "resins")
+  AI.pack_replace("bio-desert-farming-1", "green", "red")
+  AI.pack_replace("bio-swamp-farming-1", "green", "red")
+  AI.pack_replace("bio-temperate-farming-1", "green", "red")
   -- INDUSTRIES
   AI.pack_replace("tech-green-circuit", "green", "red")
   OV.remove_prereq("tech-green-circuit", "resins")

@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.20
+Date: 04.01.2024
+  Changes:
+    - Compatibility changes for YAFC when Components or Technology Overhauls are enabled (962)
+    - Science mode:
+      - Added AAI Loaders compatibility #963
+  Bugfixes:
+    - Fixed soft lock when using Components Overhaul (955)
+    - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.19
 Date: 22.12.2023
   Changes:
