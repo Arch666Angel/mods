@@ -1,8 +1,6 @@
 local RB = require("prototypes.recipe-builder")
 require("prototypes.angels-functions")
 
-local Test = {}
-
 local ov_functions = {}
 -- OVERRIDE DATA TABLES
 local substitution_table, disable_table, modify_table, override_table, patch_table
