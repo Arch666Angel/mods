@@ -969,6 +969,7 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   end
   for i = #tech.unit.ingredients, 1, -1 do
     local pack = tech.unit.ingredients[i]
+    if not pack then return end
     local nk = pack.name and "name" or 1
     local ak = pack.name and "amount" or 2
     if to_remove[pack[nk]] then
