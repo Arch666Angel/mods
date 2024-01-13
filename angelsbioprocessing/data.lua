@@ -58,8 +58,7 @@ angelsmods.trigger.bio_plastic = angelsmods.trigger.bio_plastic
   or (angelsmods.trigger.plastic and (angelsmods.trigger.bio_resin or angelsmods.trigger.bio_rubber))
   or false
 
-angelsmods.trigger.paper = (not angelsmods.functions.is_special_vanilla())
-  or (mods["bobelectronics"] and true or false)
+angelsmods.trigger.paper = (not angelsmods.functions.is_special_vanilla()) or (mods["bobelectronics"] and true or false)
 if angelsmods.trigger.paper then
   angelsmods.trigger.water_red_waste = true
   angelsmods.trigger.early_chemical_furnace = true
