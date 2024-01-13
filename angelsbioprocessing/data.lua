@@ -4,66 +4,67 @@ angelsmods.bioprocessing = angelsmods.bioprocessing or {}
 angelsmods.bioprocessing.number_tint = { r = 0.2, g = 1, b = 0.2, a = 1 }
 
 --TRIGGER CHECKS
-angelsmods.triggers = angelsmods.triggers or {}
+angelsmods.trigger = angelsmods.trigger or {}
+angelsmods.triggers = angelsmods.trigger
 --BIO TOKEN
-angelsmods.triggers.lab_ignore_token = angelsmods.triggers.lab_ignore_token or {}
-angelsmods.triggers.lab_ignore_token["lab-alien"] = true
-angelsmods.triggers.lab_ignore_token["lab-module"] = true
+angelsmods.trigger.lab_ignore_token = angelsmods.trigger.lab_ignore_token or {}
+angelsmods.trigger.lab_ignore_token["lab-alien"] = true
+angelsmods.trigger.lab_ignore_token["lab-module"] = true
 --ARTIFACTS
-angelsmods.triggers.artifacts = angelsmods.triggers.artifacts or {}
+angelsmods.trigger.artifacts = angelsmods.trigger.artifacts or {}
 if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
-  angelsmods.triggers.artifacts["red"] = true
-  angelsmods.triggers.artifacts["yellow"] = true
-  angelsmods.triggers.artifacts["orange"] = true
-  angelsmods.triggers.artifacts["blue"] = true
-  angelsmods.triggers.artifacts["purple"] = true
-  angelsmods.triggers.artifacts["green"] = true
-  angelsmods.triggers.artifacts["base"] = true -- pink
+  angelsmods.trigger.artifacts["red"] = true
+  angelsmods.trigger.artifacts["yellow"] = true
+  angelsmods.trigger.artifacts["orange"] = true
+  angelsmods.trigger.artifacts["blue"] = true
+  angelsmods.trigger.artifacts["purple"] = true
+  angelsmods.trigger.artifacts["green"] = true
+  angelsmods.trigger.artifacts["base"] = true -- pink
   bobmods.enemies.small_alien_artifacts = true
 end
 --BIO PASTES
-angelsmods.triggers.bio_pastes = angelsmods.triggers.bio_pastes or {}
-angelsmods.triggers.bio_pastes["cellulose"] = true -- required for petri dish
+angelsmods.trigger.bio_pastes = angelsmods.trigger.bio_pastes or {}
+angelsmods.trigger.bio_pastes["cellulose"] = true -- required for petri dish
 
 if angelsmods.functions.is_special_vanilla() then
 else
-  if angelsmods.triggers.artifacts["red"] then
-    angelsmods.triggers.bio_pastes["copper"] = true
+  if angelsmods.trigger.artifacts["red"] then
+    angelsmods.trigger.bio_pastes["copper"] = true
   end
-  if angelsmods.triggers.artifacts["yellow"] then
-    angelsmods.triggers.bio_pastes["gold"] = true
+  if angelsmods.trigger.artifacts["yellow"] then
+    angelsmods.trigger.bio_pastes["gold"] = true
   end
-  if angelsmods.triggers.artifacts["orange"] then
-    angelsmods.triggers.bio_pastes["tungsten"] = true
+  if angelsmods.trigger.artifacts["orange"] then
+    angelsmods.trigger.bio_pastes["tungsten"] = true
   end
-  if angelsmods.triggers.artifacts["blue"] then
-    angelsmods.triggers.bio_pastes["cobalt"] = true
+  if angelsmods.trigger.artifacts["blue"] then
+    angelsmods.trigger.bio_pastes["cobalt"] = true
   end
-  if angelsmods.triggers.artifacts["purple"] then
-    angelsmods.triggers.bio_pastes["titanium"] = true
+  if angelsmods.trigger.artifacts["purple"] then
+    angelsmods.trigger.bio_pastes["titanium"] = true
   end
-  if angelsmods.triggers.artifacts["green"] then
-    angelsmods.triggers.bio_pastes["zinc"] = true
+  if angelsmods.trigger.artifacts["green"] then
+    angelsmods.trigger.bio_pastes["zinc"] = true
   end
-  if angelsmods.triggers.artifacts["base"] then
-    angelsmods.triggers.bio_pastes["iron"] = true
+  if angelsmods.trigger.artifacts["base"] then
+    angelsmods.trigger.bio_pastes["iron"] = true
   end
-  --angelsmods.triggers.bio_pastes["silver"] = true --unused
+  --angelsmods.trigger.bio_pastes["silver"] = true --unused
 end
 --BIO ALTERNATIVES FOR PETRO
-angelsmods.triggers.bio_rubber = angelsmods.triggers.bio_rubber or angelsmods.trigger.rubber or false
-angelsmods.triggers.bio_resin = angelsmods.triggers.bio_resin or angelsmods.trigger.resin or false
-angelsmods.triggers.bio_plastic = angelsmods.triggers.bio_plastic
-  or (angelsmods.trigger.plastic and (angelsmods.triggers.bio_resin or angelsmods.triggers.bio_rubber))
+angelsmods.trigger.bio_rubber = angelsmods.trigger.bio_rubber or angelsmods.trigger.rubber or false
+angelsmods.trigger.bio_resin = angelsmods.trigger.bio_resin or angelsmods.trigger.resin or false
+angelsmods.trigger.bio_plastic = angelsmods.trigger.bio_plastic
+  or (angelsmods.trigger.plastic and (angelsmods.trigger.bio_resin or angelsmods.trigger.bio_rubber))
   or false
 
-angelsmods.triggers.paper = (not angelsmods.functions.is_special_vanilla())
+angelsmods.trigger.paper = (not angelsmods.functions.is_special_vanilla())
   or (mods["bobelectronics"] and true or false)
-if angelsmods.triggers.paper then
+if angelsmods.trigger.paper then
   angelsmods.trigger.water_red_waste = true
   angelsmods.trigger.early_chemical_furnace = true
 end
-angelsmods.triggers.crystals_full = (not angelsmods.functions.is_special_vanilla())
+angelsmods.trigger.crystals_full = (not angelsmods.functions.is_special_vanilla())
   or (mods["bobmodules"] and true or false)
 
 -- set triggers for other angel mods

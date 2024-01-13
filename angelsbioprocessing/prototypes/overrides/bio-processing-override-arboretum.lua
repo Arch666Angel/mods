@@ -1,6 +1,6 @@
 local OV = angelsmods.functions.OV
 
-if angelsmods.triggers.bio_rubber then
+if angelsmods.trigger.bio_rubber then
   OV.remove_prereq("rubbers", "rubber")
   OV.add_prereq("rubbers", "automation-2")
   OV.add_prereq("rubber", "rubbers")
@@ -25,7 +25,7 @@ else
   })
 end
 
-if angelsmods.triggers.bio_resin then
+if angelsmods.trigger.bio_resin then
   OV.remove_prereq("resins", "resin-1")
   OV.add_prereq("resins", "basic-chemistry-3")
   OV.add_prereq("resin-1", "resins")
@@ -52,7 +52,7 @@ else
   OV.remove_prereq("bio-wood-processing-2", "bio-farm-1")
 end
 
-if angelsmods.triggers.bio_plastic then
+if angelsmods.trigger.bio_plastic then
   OV.remove_prereq("plastics", "plastic-1")
   OV.add_prereq("plastics", "angels-advanced-chemistry-1")
   OV.add_prereq("plastic-1", "plastics")
@@ -76,7 +76,7 @@ else
   })
 end
 
-if angelsmods.triggers.paper then
+if angelsmods.trigger.paper then
   OV.add_unlock("sodium-processing-1", "solid-sodium-hypochlorite-decomposition")
   OV.remove_unlock("chlorine-processing-3", "solid-salt-separation")
   OV.add_unlock("sodium-processing-1", "solid-salt-separation")

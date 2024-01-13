@@ -68,7 +68,7 @@ if angelsmods.industries.components then
   angelsmods.trigger.early_sintering_oven = true
 
   --BIOPROCESSING TRIGGERS
-  angelsmods.triggers.bio_plastic = true
-  angelsmods.triggers.bio_resin = true
-  angelsmods.triggers.bio_rubber = true
+  angelsmods.trigger.bio_plastic = true
+  angelsmods.trigger.bio_resin = true
+  angelsmods.trigger.bio_rubber = true
 end
