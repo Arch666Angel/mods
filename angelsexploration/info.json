@@ -12,8 +12,6 @@
     "angelspetrochem >= 0.9.21",
     "angelssmelting >= 0.6.18",
     "angelsbioprocessing >= 0.7.25",
-    "angelsindustries >= 0.4.15",
-    "? bobenemies >= 1.1.5",
-    "? bobwarfare >= 1.1.5"
+    "angelsindustries >= 0.4.15"
   ]
 }

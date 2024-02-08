@@ -3,6 +3,8 @@ Version: 0.12.7
 Date: ???
   Changes:
     - Changed library function to handle bad input data (968)
+  Bugfixes:
+    - Added dependencies on more of Bob's mods to fix issue where Bob's techs were not being correctly replaced (975)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.6
 Date: 04.01.2024

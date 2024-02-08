@@ -12,10 +12,6 @@
     "angelspetrochem >= 0.9.25",
     "angelssmelting >= 0.6.17",
     "angelsbioprocessing >= 0.7.21",
-    "(?) bobassembly >= 1.1.5",
-    "(?) boblogistics >= 1.1.5",
-    "(?) bobtech >= 1.1.5",
-    "(?) bobrevamp >= 1.1.5",
     "(?) aai-industry >= 0.4.12"
   ]
 }
