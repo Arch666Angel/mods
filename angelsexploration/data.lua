@@ -4,21 +4,21 @@ angelsmods.exploration = angelsmods.exploration or {}
 angelsmods.functions = angelsmods.functions or {}
 
 --TRIGGER CHECKS
-angelsmods.triggers.artifacts["red"] = true
-angelsmods.triggers.artifacts["yellow"] = true
-angelsmods.triggers.artifacts["orange"] = true
-angelsmods.triggers.artifacts["blue"] = true
-angelsmods.triggers.artifacts["purple"] = true
-angelsmods.triggers.artifacts["green"] = true
-angelsmods.triggers.artifacts["base"] = true -- pink
+angelsmods.trigger.artifacts["red"] = true
+angelsmods.trigger.artifacts["yellow"] = true
+angelsmods.trigger.artifacts["orange"] = true
+angelsmods.trigger.artifacts["blue"] = true
+angelsmods.trigger.artifacts["purple"] = true
+angelsmods.trigger.artifacts["green"] = true
+angelsmods.trigger.artifacts["base"] = true -- pink
 
---angelsmods.triggers.bio_pastes["copper"] = true
---angelsmods.triggers.bio_pastes["gold"] = true
---angelsmods.triggers.bio_pastes["tungsten"] = true
---angelsmods.triggers.bio_pastes["cobalt"] = true
---angelsmods.triggers.bio_pastes["titanium"] = true
---angelsmods.triggers.bio_pastes["zinc"] = true
---angelsmods.triggers.bio_pastes["iron"] = true
+--angelsmods.trigger.bio_pastes["copper"] = true
+--angelsmods.trigger.bio_pastes["gold"] = true
+--angelsmods.trigger.bio_pastes["tungsten"] = true
+--angelsmods.trigger.bio_pastes["cobalt"] = true
+--angelsmods.trigger.bio_pastes["titanium"] = true
+--angelsmods.trigger.bio_pastes["zinc"] = true
+--angelsmods.trigger.bio_pastes["iron"] = true
 
 --angelsmods.trigger.smelting_products["iron"].powder = true
 

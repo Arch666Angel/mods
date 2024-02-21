@@ -83,7 +83,7 @@ end
 -- Puffer nests cannot be created
 angelsmods.functions.add_flag("puffer-nest", "hidden")
 
-if angelsmods.triggers.crystals_full == true then
+if angelsmods.trigger.crystals_full == true then
 else
   OV.disable_recipe({
     "crystal-full-harmonic",

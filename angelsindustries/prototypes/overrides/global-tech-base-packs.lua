@@ -74,6 +74,8 @@ if angelsmods.industries.tech then
   -- BASE GAME
   AI.pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   AI.pack_replace("lubricant", "blue", "green")
+  -- PETROCHEM
+  AI.pack_replace("sodium-processing-1", "blue", "green")
   -- BIO PROCESSING
   OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")
   AI.pack_replace("bio-paper-2", "blue", "green")

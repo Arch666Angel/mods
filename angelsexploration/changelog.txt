@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.16
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+---------------------------------------------------------------------------------------------------
 Version: 0.3.15
 Date: 22.12.2023
   Changes:

@@ -969,24 +969,26 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   end
   for i = #tech.unit.ingredients, 1, -1 do
     local pack = tech.unit.ingredients[i]
-    local nk = pack.name and "name" or 1
-    local ak = pack.name and "amount" or 2
-    if to_remove[pack[nk]] then
-      table.remove(tech.unit.ingredients, i)
-    else
-      if substitution_table.science_packs[pack[nk]] then
-        pack[ak] = substitution_table.science_packs[pack[nk]].amount
-        pack[nk] = substitution_table.science_packs[pack[nk]].add
-      end
-      if modifications and modifications[pack[nk]] then
-        if modifications[pack[nk]] > 0 then
-          dup_table[pack[nk]] = true
-          pack[ak] = modifications[pack[nk]]
-        else
-          table.remove(tech.unit.ingredients, i)
-        end
+    if pack then
+      local nk = pack.name and "name" or 1
+      local ak = pack.name and "amount" or 2
+      if to_remove[pack[nk]] then
+        table.remove(tech.unit.ingredients, i)
       else
-        dup_table[pack[nk]] = true
+        if substitution_table.science_packs[pack[nk]] then
+          pack[ak] = substitution_table.science_packs[pack[nk]].amount
+          pack[nk] = substitution_table.science_packs[pack[nk]].add
+        end
+        if modifications and modifications[pack[nk]] then
+          if modifications[pack[nk]] > 0 then
+            dup_table[pack[nk]] = true
+            pack[ak] = modifications[pack[nk]]
+          else
+            table.remove(tech.unit.ingredients, i)
+          end
+        else
+          dup_table[pack[nk]] = true
+        end
       end
     end
   end

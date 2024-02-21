@@ -1,7 +1,7 @@
 local bob_biters = mods["bobenemies"] and true or false
 
 local function create_loot_definition(color, avg_amount, variation)
-  if not angelsmods.triggers.artifacts[color] then
+  if not angelsmods.trigger.artifacts[color] then
     return nil
   end
 

@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.21
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+  Bugfixes:
+    - Science mode:
+      - Sodium Processing 1 tech now uses green analyzers rather than blue so Paper making 2 can be used (966)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.20
 Date: 04.01.2024
   Changes:

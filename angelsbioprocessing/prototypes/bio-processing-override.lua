@@ -10,7 +10,7 @@ require("prototypes.overrides.bio-processing-override-angel")
 
 -- body
 local OV = angelsmods.functions.OV
-local lab_ignore = angelsmods.triggers.lab_ignore_token
+local lab_ignore = angelsmods.trigger.lab_ignore_token
 
 --OVERRIDE FOR BASE
 require("prototypes.overrides.bio-processing-override-base-game")
