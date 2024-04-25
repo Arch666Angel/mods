@@ -38,7 +38,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-sorting" },
-    crafting_speed = 0.75,
+    crafting_speed = 0.5,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -143,7 +143,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-sorting", "ore-sorting-2" },
-    crafting_speed = 1,
+    crafting_speed = 0.75,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -248,7 +248,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-sorting", "ore-sorting-2", "ore-sorting-3" },
-    crafting_speed = 1.5,
+    crafting_speed = 1,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -342,6 +342,7 @@ data:extend({
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "ore-sorting-facility-4" },
     fast_replaceable_group = "ore-sorting-facility",
+    next_upgrade = "ore-sorting-facility-5",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -352,7 +353,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-sorting", "ore-sorting-2", "ore-sorting-3", "ore-sorting-4" },
-    crafting_speed = 2,
+    crafting_speed = 1.5,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -360,6 +361,109 @@ data:extend({
     },
     energy_usage = "300kW",
     --ingredient_count = 6,
+    animation = {
+      layers = {
+        {
+          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          priority = "extra-high",
+          width = 224,
+          height = 230,
+          frame_count = 40,
+          line_length = 10,
+          shift = util.by_pixel(0, -2),
+          animation_speed = 0.5,
+          hr_version = angelsmods.trigger.enable_hq_graphics
+              and {
+                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                priority = "extra-high",
+                width = 449,
+                height = 458,
+                frame_count = 40,
+                line_length = 10,
+                shift = util.by_pixel(0, -2.5),
+                animation_speed = 0.5,
+                scale = 0.5,
+              }
+            or nil,
+        },
+        {
+          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          priority = "extra-high",
+          width = 265,
+          height = 179,
+          repeat_count = 40,
+          shift = util.by_pixel(21, 25),
+          animation_speed = 0.5,
+          draw_as_shadow = true,
+          hr_version = angelsmods.trigger.enable_hq_graphics
+              and {
+                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                priority = "extra-high",
+                width = 528,
+                height = 356,
+                repeat_count = 40,
+                shift = util.by_pixel(21.5, 24.5),
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+                scale = 0.5,
+              }
+            or nil,
+        },
+      },
+    },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound = {
+      sound = { filename = "__angelsrefining__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+      audible_distance_modifier = 0.5,
+      apparent_volume = 2.5,
+    },
+  },
+  {
+    type = "item",
+    name = "ore-sorting-facility-5",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+    }, 5, angelsmods.refining.number_tint),
+    subgroup = "ore-sorter",
+    order = "e[ore-sorting-facility-5]",
+    place_result = "ore-sorting-facility-5",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "ore-sorting-facility-5",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+    }, 5, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "ore-sorting-facility-5" },
+    fast_replaceable_group = "ore-sorting-facility",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    module_specification = {
+      module_slots = 3,
+    },
+    allowed_effects = { "consumption", "speed", "pollution", "productivity" },
+    crafting_categories = { "ore-sorting", "ore-sorting-2", "ore-sorting-3", "ore-sorting-4", "ore-sorting-5" },
+    crafting_speed = 2,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = 0.07 * 60,
+    },
+    energy_usage = "350kW",
     animation = {
       layers = {
         {

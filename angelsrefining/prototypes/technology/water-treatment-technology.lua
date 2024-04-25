@@ -74,7 +74,7 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       "water-treatment",
-      "ore-floatation",
+      "angels-coal-processing-2",
     },
     effects = {
       {

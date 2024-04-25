@@ -164,6 +164,16 @@ data:extend({
     },
     result = "ore-sorting-facility-4",
   },
+  {
+    type = "recipe",
+    name = "ore-sorting-facility-5",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "ore-sorting-facility-4", amount = 1 },
+    },
+    result = "ore-sorting-facility-5",
+  },
   --FILTRATION UNIT
   {
     type = "recipe",

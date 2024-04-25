@@ -248,8 +248,7 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon({ { 067, 067, 067 }, { 056, 056, 056 }, { 045, 045, 045 } }),
     prerequisites = {
       "angels-coal-processing",
-      --"basic-chemistry-3",
-      "water-treatment-2",
+      "basic-chemistry-3",
     },
     effects = {
       {

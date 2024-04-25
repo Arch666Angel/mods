@@ -252,6 +252,7 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
+      "advanced-ore-refining-1",
       "ore-crushing",
       "water-treatment",
       "automation-2",
@@ -638,7 +639,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "ore-floatation",
-      "advanced-ore-refining-1",
+      "advanced-ore-refining-2",
       "advanced-electronics",
       "chemical-science-pack",
     },
@@ -809,7 +810,7 @@ data:extend({
     icon_mipmaps = 4,
     prerequisites = {
       "ore-leaching",
-      "advanced-ore-refining-2",
+      "advanced-ore-refining-3",
       "advanced-electronics-2",
       "production-science-pack",
     },
@@ -899,6 +900,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ore-refinery-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ore-sorting-facility-5",
       },
       {
         type = "unlock-recipe",

@@ -5,7 +5,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore1-chunk-processing",
-    category = "ore-sorting",
+    category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
     enabled = false,
@@ -32,7 +32,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore2-chunk-processing",
-    category = "ore-sorting",
+    category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
     enabled = false,
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore3-chunk-processing",
-    category = "ore-sorting",
+    category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
     enabled = false,
@@ -86,7 +86,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore4-chunk-processing",
-    category = "ore-sorting",
+    category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
     enabled = false,
@@ -113,7 +113,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore5-chunk-processing",
-    category = "ore-sorting",
+    category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
     enabled = false,
@@ -140,7 +140,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore6-chunk-processing",
-    category = "ore-sorting",
+    category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
     enabled = false,
