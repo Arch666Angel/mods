@@ -69,6 +69,7 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.remove_prereq("battery", "sulfur-processing")
   OV.add_prereq("battery", "angels-sulfur-processing-2")
 end
+OV.remove_prereq("sulfur-processing", "oil-processing")
 
 move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
 if angelsmods.trigger.early_sulfuric_acid == true then
