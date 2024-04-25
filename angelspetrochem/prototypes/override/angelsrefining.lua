@@ -55,6 +55,8 @@ if angelsmods.refining then
   OV.remove_prereq("ore-floatation", "automation-2")
   OV.remove_prereq("ore-floatation", "water-treatment")
   OV.add_prereq("ore-floatation", "basic-chemistry-3")
+  OV.remove_prereq("water-treatment-2", "slag-processing-1")
+  OV.add_prereq("water-treatment-2", "angels-coal-processing-2")
 end
 
 -------------------------------------------------------------------------------
