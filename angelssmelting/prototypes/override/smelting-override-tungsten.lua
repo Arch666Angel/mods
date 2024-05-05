@@ -29,7 +29,7 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
   if mods["bobplates"] then
     OV.global_replace_item("solid-tungsten-oxide", "tungsten-oxide")
     angelsmods.functions.add_flag("solid-tungsten-oxide", "hidden")
-    angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "e")
+    angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "d")
     data.raw["item"]["tungsten-oxide"].icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png"
     data.raw["item"]["tungsten-oxide"].icon_size = 32
     data.raw["item"]["tungsten-oxide"].icon_mipmaps = 1
