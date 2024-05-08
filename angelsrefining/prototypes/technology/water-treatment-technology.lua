@@ -73,8 +73,8 @@ data:extend({
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
+      "slag-processing-1",
       "water-treatment",
-      "ore-floatation",
     },
     effects = {
       {

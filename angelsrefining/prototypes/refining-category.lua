@@ -18,6 +18,7 @@ data:extend({
   { type = "recipe-category", name = "ore-sorting-2" },
   { type = "recipe-category", name = "ore-sorting-3" },
   { type = "recipe-category", name = "ore-sorting-4" },
+  { type = "recipe-category", name = "ore-sorting-5" },
 
   { type = "recipe-category", name = "filtering" },
   { type = "recipe-category", name = "filtering-2" },

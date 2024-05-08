@@ -221,6 +221,7 @@ angelsmods.functions.RB.set_fallback("item", "sorter-1", { { "block-production-1
 angelsmods.functions.RB.set_fallback("item", "sorter-2", { { "block-production-2", 5 }, { "ore-sorting-facility" } })
 angelsmods.functions.RB.set_fallback("item", "sorter-3", { { "block-mprocessing-3", 5 }, { "ore-sorting-facility-2" } })
 angelsmods.functions.RB.set_fallback("item", "sorter-4", { { "block-mprocessing-4", 5 }, { "ore-sorting-facility-3" } })
+angelsmods.functions.RB.set_fallback("item", "sorter-5", { { "block-mprocessing-5", 5 }, { "ore-sorting-facility-4" } })
 
 angelsmods.functions.RB.set_fallback("item", "filter-1", { { "block-production-2", 3 } })
 angelsmods.functions.RB.set_fallback("item", "filter-2", { { "block-production-3", 3 }, { "filtration-unit" } })

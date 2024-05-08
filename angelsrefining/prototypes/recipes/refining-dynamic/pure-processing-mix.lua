@@ -5,7 +5,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-pure-mix1-processing", --tungsten
-    category = "ore-sorting-4",
+    category = "ore-sorting-5",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -38,7 +38,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-pure-mix2-processing", --platinum
-    category = "ore-sorting-4",
+    category = "ore-sorting-5",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-pure-mix3-processing",
-    category = "ore-sorting-4",
+    category = "ore-sorting-5",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
