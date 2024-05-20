@@ -48,11 +48,11 @@ if angelsmods.industries.tech then
       AI.pack_replace("automation", "grey", "red")
     end
     -- assemblers tier 2+
-    AI.pack_replace("automation-4", "blue", "orange")
-    OV.remove_prereq("automation-4", "tech-blue-packs")
+    AI.pack_replace("automation-2", "red", "green")
+    AI.pack_replace("automation-3", "blue", "orange")
+    OV.remove_prereq("automation-4", "production-science-pack")
     if settings.startup["bobmods-assembly-electronicmachines"].value == true then
-      AI.pack_replace("electronics-machine-3", "yellow", "blue")
-      OV.remove_prereq("electronics-machine-3", "production-science-pack")
+      AI.pack_replace("electronics-machine-2", "blue", "orange")
     end
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then
