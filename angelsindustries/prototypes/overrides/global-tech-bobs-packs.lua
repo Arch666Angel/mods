@@ -461,7 +461,7 @@ if angelsmods.industries.tech then
       OV.disable_technology({ "automation-science-pack" })
       OV.add_prereq("automation", "steam-automation")
 
-      for _, lab_name in pairs({"angels-main-lab-1", "angels-basic-lab"}) do
+      for _, lab_name in pairs({ "angels-main-lab-1", "angels-basic-lab" }) do
         local burner_lab = data.raw["lab"][lab_name]
         if burner_lab then
           burner_lab.energy_source = {
