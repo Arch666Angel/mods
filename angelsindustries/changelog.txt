@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Added item description to Gravitational analyzer (984)
     - Adjusted the recipes and science packs for Bob's Assembling Machines when Components or Technology Overhauls are enabled (985)
+    - Tech Overhaul: Hid Steam science pack from Bob's Technology mod (986)
   Bugfixes:
     - Fixed potential softlock with Tech Overhaul and Bob's Technology mod (986)
 ---------------------------------------------------------------------------------------------------

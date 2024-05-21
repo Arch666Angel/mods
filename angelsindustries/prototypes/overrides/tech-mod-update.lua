@@ -19,11 +19,9 @@ if angelsmods.industries.tech then
       angelsmods.functions.add_flag("burner-lab", "hidden")
       OV.global_replace_item("lab", "angels-basic-lab")
 
-      -- Allow steam science in basic lab
-      local lab = data.raw.lab["angels-basic-lab"]
-      if lab then
-        table.insert(lab.inputs, 1, "steam-science-pack")
-      end
+      -- hide steam science pack
+      OV.disable_recipe("steam-science-pack")
+      angelsmods.functions.add_flag("steam-science-pack", "hidden")
     end
   else
     OV.global_replace_item("lab", "angels-basic-lab")
