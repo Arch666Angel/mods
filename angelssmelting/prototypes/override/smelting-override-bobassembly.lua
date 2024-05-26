@@ -2,15 +2,30 @@ local OV = angelsmods.functions.OV
 local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if mods["bobassembly"] then
-
   -- ASSEMBLING MACHINES
 
   angelsmods.functions.RB.set_fallback("item", "assmach-1", { { "block-production-1", 1 } })
   angelsmods.functions.RB.set_fallback("item", "assmach-2", { { "block-production-2", 1 }, { "assembling-machine-1" } })
-  angelsmods.functions.RB.set_fallback("item", "assmach-3", { { "block-mprocessing-3", 1 }, { "assembling-machine-2" } })
-  angelsmods.functions.RB.set_fallback("item", "assmach-4", { { "block-mprocessing-4", 1 }, { "assembling-machine-3" } })
-  angelsmods.functions.RB.set_fallback("item", "assmach-5", { { "block-mprocessing-5", 1 }, { "assembling-machine-4" } })
-  angelsmods.functions.RB.set_fallback("item", "assmach-6", { { "block-mprocessing-5", 5 }, { "assembling-machine-5" } })
+  angelsmods.functions.RB.set_fallback(
+    "item",
+    "assmach-3",
+    { { "block-mprocessing-3", 1 }, { "assembling-machine-2" } }
+  )
+  angelsmods.functions.RB.set_fallback(
+    "item",
+    "assmach-4",
+    { { "block-mprocessing-4", 1 }, { "assembling-machine-3" } }
+  )
+  angelsmods.functions.RB.set_fallback(
+    "item",
+    "assmach-5",
+    { { "block-mprocessing-5", 1 }, { "assembling-machine-4" } }
+  )
+  angelsmods.functions.RB.set_fallback(
+    "item",
+    "assmach-6",
+    { { "block-mprocessing-5", 5 }, { "assembling-machine-5" } }
+  )
 
   OV.patch_recipes({
     {
@@ -84,8 +99,16 @@ if mods["bobassembly"] then
 
   if settings.startup["bobmods-assembly-electronicmachines"].value then
     angelsmods.functions.RB.set_fallback("item", "elecmach-1", { { "block-production-1", 1 } })
-    angelsmods.functions.RB.set_fallback("item", "elecmach-2", { { "block-mprocessing-3", 1 }, { "electronics-machine-1" } })
-    angelsmods.functions.RB.set_fallback("item", "elecmach-3", { { "block-mprocessing-5", 1 }, { "electronics-machine-2" } })
+    angelsmods.functions.RB.set_fallback(
+      "item",
+      "elecmach-2",
+      { { "block-mprocessing-3", 1 }, { "electronics-machine-1" } }
+    )
+    angelsmods.functions.RB.set_fallback(
+      "item",
+      "elecmach-3",
+      { { "block-mprocessing-5", 1 }, { "electronics-machine-2" } }
+    )
 
     OV.patch_recipes({
       {
@@ -120,6 +143,6 @@ if mods["bobassembly"] then
           { type = "item", name = "t5-pipe", amount = 1 },
         },
       },
-    })  
+    })
   end
 end
