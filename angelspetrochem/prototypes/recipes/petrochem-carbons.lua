@@ -92,7 +92,7 @@ data:extend({
   {
     type = "recipe",
     name = "gas-fractioning-synthesis",
-    category = "gas-refining",
+    category = "advanced-gas-refining",
     subgroup = "petrochem-carbon-gas-feed",
     energy_required = 6,
     enabled = false,
@@ -124,7 +124,7 @@ data:extend({
   {
     type = "recipe",
     name = "gas-fractioning-condensates",
-    category = "gas-refining",
+    category = "advanced-gas-refining",
     subgroup = "petrochem-carbon-gas-feed",
     energy_required = 6,
     enabled = false,
@@ -156,7 +156,7 @@ data:extend({
   {
     type = "recipe",
     name = "gas-fractioning-residual",
-    category = "gas-refining",
+    category = "advanced-gas-refining",
     subgroup = "petrochem-carbon-gas-feed",
     energy_required = 6,
     enabled = false,

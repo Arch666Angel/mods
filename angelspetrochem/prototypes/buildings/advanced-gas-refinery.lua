@@ -39,7 +39,7 @@ data:extend({
       module_slots = 2,
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -547,7 +547,7 @@ data:extend({
       module_slots = 2,
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -1055,7 +1055,7 @@ data:extend({
       module_slots = 2,
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -1562,7 +1562,7 @@ data:extend({
       module_slots = 2,
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",

@@ -10,6 +10,10 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "advanced-gas-refining",
+  },
+  {
+    type = "recipe-category",
     name = "steam-cracking",
   },
   {
