@@ -67,5 +67,7 @@ require("prototypes.override.smelting-override-titanium")
 require("prototypes.override.smelting-override-tungsten")
 require("prototypes.override.smelting-override-zinc")
 
+require("prototypes.override.smelting-override-bobassembly")
+
 --ENABLE PRODUCTIVITY
 require("prototypes.override.smelting-override-productivity")
