@@ -19,10 +19,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-tungstic-acid-smelting",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "solid-tungsten-oxide-smelting",
       },
       {
@@ -112,6 +108,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "pellet-tungsten-smelting",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "liquid-tungstic-acid-smelting",
       },
     },
     unit = {

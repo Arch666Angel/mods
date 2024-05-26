@@ -44,7 +44,7 @@ data:extend({
       { { 235, 235, 240 }, { 235, 235, 240 }, { 135, 090, 023, 0.75 }, { 135, 090, 023, 0.75 } }
     ),
     subgroup = "angels-tungsten",
-    order = "d",
+    order = "f",
     default_temperature = 3422,
     heat_capacity = "0KJ",
     base_color = { r = 136 / 255, g = 98 / 255, b = 65 / 255 },
@@ -57,7 +57,7 @@ data:extend({
     icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
-    order = "e",
+    order = "d",
     stack_size = 200,
   },
   {
@@ -71,7 +71,7 @@ data:extend({
       "WFF"
     ),
     subgroup = "angels-tungsten",
-    order = "f",
+    order = "g",
     default_temperature = 0,
     heat_capacity = "0KJ",
     base_color = { r = 136 / 255, g = 98 / 255, b = 65 / 255 },
@@ -84,7 +84,7 @@ data:extend({
     icon = "__angelssmelting__/graphics/icons/solid-ammonium-paratungstate.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
-    order = "g",
+    order = "e",
     stack_size = 200,
   },
   -- SMELTING RESULTS
