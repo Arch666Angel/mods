@@ -70,6 +70,7 @@ data:extend({
         },
       },
     },
+    match_animation_speed_to_activity = false,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = { filename = "__angelsbioprocessing__/sound/aquarium.ogg", volume = 0.8 },
@@ -161,6 +162,7 @@ data:extend({
         },
       },
     },
+    match_animation_speed_to_activity = false,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
@@ -274,6 +276,7 @@ data:extend({
         },
       },
     },
+    match_animation_speed_to_activity = false,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = { filename = "__base__/sound/chemical-plant.ogg" },
@@ -355,6 +358,7 @@ data:extend({
     -- shift = {0, -0.5},
     -- animation_speed = 0.5,
     -- },
+    match_animation_speed_to_activity = false,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = { filename = "__base__/sound/chemical-plant.ogg" },
