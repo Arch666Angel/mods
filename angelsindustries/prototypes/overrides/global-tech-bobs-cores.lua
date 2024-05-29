@@ -302,9 +302,11 @@ if angelsmods.industries.tech then
     end
 
     if settings.startup["bobmods-burnerphase"].value then
-      AI.core_replace("automation", "basic", "processing")
       AI.core_replace("steam-power", "energy", "basic")
-      AI.core_replace("steam-automation", "processing", "basic")
+      if data.raw.technology["basic-automation"] then
+        AI.core_replace("automation", "basic", "processing")
+        AI.core_replace("steam-automation", "processing", "basic")
+      end
     end
   end
 
