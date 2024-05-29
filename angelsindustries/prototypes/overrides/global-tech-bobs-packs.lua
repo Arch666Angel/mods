@@ -358,8 +358,8 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobequipment"] then
     --adds bob personal equipment stuffs
-    AI.pack_replace("personal-roboport-equipment", "blue", "orange")
-    AI.pack_replace("personal-roboport-modular-equipment-1", "blue", "orange")
+    AI.pack_replace("personal-roboport-equipment", "green", "orange")
+    AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
     AI.pack_replace("exoskeleton-equipment", "blue", "green")
     AI.pack_replace("exoskeleton-equipment-2", "blue", "orange")
     OV.remove_prereq("exoskeleton-equipment-2", "advanced-electronics-2")
