@@ -2068,3 +2068,25 @@ function angelsmods.functions.set_next_upgrade(crafting_machine_type, crafting_m
   --check upgrade_category
   angelsmods.functions.set_fast_replace_category(crafting_machine_type, crafting_machine_name, next_upgrade)
 end
+
+-------------------------------------------------------------------------------
+-- CHECK IF TECH USES SCIENCE PACK --------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.tech_uses_science_pack(tech_name, pack)
+  if type(tech_name) == "string" then
+    local technology = data.raw.technology[tech_name]
+    if technology then
+      technology = technology.normal or technology.expensive or technology
+      if technology.unit and technology.unit.ingredients then
+        local addit = true
+        for i, ingredient in pairs(technology.unit.ingredients) do
+          if ingredient[1] == pack or ingredient.name == pack then
+            return true
+          end
+        end
+      end
+    end
+  end
+
+  return false
+end
