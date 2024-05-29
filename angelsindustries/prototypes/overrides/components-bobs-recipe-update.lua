@@ -108,6 +108,7 @@ if angelsmods.industries.components then
     })
     OV.remove_prereq("exoskeleton-equipment", "electric-engine")
     OV.add_prereq("exoskeleton-equipment", "angels-components-mechanical-3")
+    OV.remove_science_pack("exoskeleton-equipment", "chemical-science-pack")
   end
 
   -----------------------------------------------------------------------------

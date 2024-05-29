@@ -327,6 +327,7 @@ if angelsmods.industries.tech then
     --Modular/Power Armor
     AI.pack_replace("modular-armor", "orange", "red")
     AI.pack_replace("power-armor-mk2", "blue", "orange")
+    OV.remove_prereq("power-armor-mk2", "military-3")
   end
 
   -------------------------------------------------------------------------------
