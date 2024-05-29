@@ -219,5 +219,15 @@ if angelsmods.industries.components then
     OV.add_prereq("bob-boiler-2", "angels-components-construction-2")
   end
 
+  -----------------------------------------------------------------------------
+  -- BOB WARFARE --------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobwarfare"] then
+    if angelsmods.industries.tech then
+      OV.remove_prereq("power-armor-mk2", "low-density-structure")
+      OV.remove_input("power-armor-mk2", "low-density-structure")
+    end
+  end
+
   OV.execute()
 end
