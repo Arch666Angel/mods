@@ -223,6 +223,14 @@ if angelsmods.industries.components then
   -- BOB WARFARE --------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobwarfare"] then
+    OV.patch_recipes({
+      {
+        name = "power-armor", 
+        ingredients = {
+          { type = "item", name = "circuit-green-loaded", amount = "circuit-orange-loaded" },
+        },
+      },
+    })
     if angelsmods.industries.tech then
       OV.remove_prereq("power-armor-mk2", "low-density-structure")
       OV.remove_input("power-armor-mk2", "low-density-structure")

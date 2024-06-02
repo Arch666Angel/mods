@@ -325,7 +325,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("follower-robot-count-2", "green", "orange")
     OV.remove_prereq("walking-vehicle", "production-science-pack")
     --Modular/Power Armor
-    AI.pack_replace("modular-armor", "orange", "red")
+    AI.pack_replace("modular-armor", "orange", "green")
     AI.pack_replace("power-armor-mk2", "blue", "orange")
     OV.remove_prereq("power-armor-mk2", "military-3")
   end
