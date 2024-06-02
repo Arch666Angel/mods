@@ -324,6 +324,10 @@ if angelsmods.industries.tech then
     AI.pack_replace("follower-robot-count-1", "green", "orange")
     AI.pack_replace("follower-robot-count-2", "green", "orange")
     OV.remove_prereq("walking-vehicle", "production-science-pack")
+    --Modular/Power Armor
+    AI.pack_replace("modular-armor", "orange", "green")
+    AI.pack_replace("power-armor-mk2", "blue", "orange")
+    OV.remove_prereq("power-armor-mk2", "military-3")
   end
 
   -------------------------------------------------------------------------------
@@ -356,13 +360,18 @@ if angelsmods.industries.tech then
     --adds bob personal equipment stuffs
     AI.pack_replace("personal-roboport-equipment", "green", "orange")
     AI.pack_replace("personal-roboport-modular-equipment-1", "green", "orange")
-    AI.pack_replace("exoskeleton-equipment", "green", "orange")
-    AI.pack_replace("solar-panel-equipment-2", "green", "orange")
+    AI.pack_replace("exoskeleton-equipment", "blue", "green")
+    AI.pack_replace("exoskeleton-equipment-2", "blue", "orange")
+    OV.remove_prereq("exoskeleton-equipment-2", "advanced-electronics-2")
+    OV.remove_prereq("exoskeleton-equipment-3", "production-science-pack")
+    AI.pack_replace("solar-panel-equipment", "orange", "green")
+    AI.pack_replace("solar-panel-equipment-2", "blue", "orange")
     AI.pack_replace("solar-panel-equipment-4", "blue", "yellow")
     OV.remove_prereq("bob-energy-shield-equipment-3", "production-science-pack")
     OV.remove_prereq("bob-battery-equipment-4", "production-science-pack")
     OV.remove_prereq("bob-battery-equipment-6", "tech-yellow-packs")
     OV.remove_prereq("personal-laser-defense-equipment-3", "production-science-pack")
+    OV.remove_prereq("night-vision-3", "production-science-pack")
   end
 
   -------------------------------------------------------------------------------

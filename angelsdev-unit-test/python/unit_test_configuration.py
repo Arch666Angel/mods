@@ -40,8 +40,6 @@ UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-components", F
 UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-tech", False)
 
 # BobPower
-UnitTestConfiguration.addDefaultSetting("startup", "bobmods-burnerphase", False) # TODO: add testing cases if we want to support this
-UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-rtg", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-poles", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-steam", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-power-fluid-generator", True)
@@ -78,6 +76,7 @@ UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-old-oil", Tru
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-revamp-hardmode", True)
 
 # BobOther
+UnitTestConfiguration.addDefaultSetting("startup", "bobmods-burnerphase", False) # TODO: add testing cases if we want to support this
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-mining-miningaxes", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-plates-purewater", True)
 UnitTestConfiguration.addDefaultSetting("startup", "bobmods-ores-unsortedgems", True)

@@ -108,7 +108,7 @@ if angelsmods.industries.components then
     })
     OV.remove_prereq("exoskeleton-equipment", "electric-engine")
     OV.add_prereq("exoskeleton-equipment", "angels-components-mechanical-3")
-    OV.add_prereq("exoskeleton-equipment", "tech-orange-circuit")
+    OV.remove_science_pack("exoskeleton-equipment", "chemical-science-pack")
   end
 
   -----------------------------------------------------------------------------
@@ -217,6 +217,24 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobpower"] then
     OV.add_prereq("bob-boiler-2", "angels-components-construction-2")
+  end
+
+  -----------------------------------------------------------------------------
+  -- BOB WARFARE --------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobwarfare"] then
+    OV.patch_recipes({
+      {
+        name = "power-armor", 
+        ingredients = {
+          { type = "item", name = "circuit-green-loaded", amount = "circuit-orange-loaded" },
+        },
+      },
+    })
+    if angelsmods.industries.tech then
+      OV.remove_prereq("power-armor-mk2", "low-density-structure")
+      OV.remove_input("power-armor-mk2", "low-density-structure")
+    end
   end
 
   OV.execute()
