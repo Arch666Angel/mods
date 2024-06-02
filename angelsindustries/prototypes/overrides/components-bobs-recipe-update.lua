@@ -225,7 +225,7 @@ if angelsmods.industries.components then
   if mods["bobwarfare"] then
     OV.patch_recipes({
       {
-        name = "power-armor", 
+        name = "power-armor",
         ingredients = {
           { type = "item", name = "circuit-green-loaded", amount = "circuit-orange-loaded" },
         },

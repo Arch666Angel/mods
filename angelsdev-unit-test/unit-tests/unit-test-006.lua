@@ -116,13 +116,27 @@ local function calculate_science_pack_level()
   if game.active_mods["bobmodules"] and settings.startup["bobmods-modules-enable-modules-lab"].value then
     for pack_name, pack_level in pairs({
       -- bobs module science packs
-      ["speed-processor"]            = (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["effectivity-processor"]      = (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["productivity-processor"]     = (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["pollution-clean-processor"]  = (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["pollution-create-processor"] = (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["module-circuit-board"]       = (science_pack_level["angels-science-pack-blue"]   or science_pack_level["chemical-science-pack"]),
-      ["module-case"]                = (science_pack_level["angels-science-pack-yellow"] or science_pack_level["production-science-pack"]),
+      ["speed-processor"] = (
+        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
+      ),
+      ["effectivity-processor"] = (
+        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
+      ),
+      ["productivity-processor"] = (
+        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
+      ),
+      ["pollution-clean-processor"] = (
+        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
+      ),
+      ["pollution-create-processor"] = (
+        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
+      ),
+      ["module-circuit-board"] = (
+        science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]
+      ),
+      ["module-case"] = (
+        science_pack_level["angels-science-pack-yellow"] or science_pack_level["production-science-pack"]
+      ),
     }) do
       science_pack_level[pack_name] = pack_level
     end
