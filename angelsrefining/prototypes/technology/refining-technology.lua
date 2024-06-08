@@ -1030,6 +1030,7 @@ data:extend({
     prerequisites = {
       "ore-powderizer",
       "thermal-water-extraction-2",
+      "ore-leaching",
     },
     effects = {
       {
