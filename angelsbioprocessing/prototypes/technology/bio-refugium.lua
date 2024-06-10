@@ -280,7 +280,6 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-refugium-puffer-3",
-      "production-science-pack",
     },
     effects = {
       {
@@ -310,7 +309,6 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
       },
       time = 30,
@@ -328,6 +326,7 @@ data:extend({
       "bio-refugium-butchery-2",
       "bio-refugium-puffer-2",
       "bio-processing-crystal-splinter-2",
+      "production-science-pack",
       "stone-wall",
     },
     effects = {
@@ -370,6 +369,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
       },
       time = 30,
@@ -417,6 +417,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
       },
       time = 30,

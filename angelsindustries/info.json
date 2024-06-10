@@ -9,9 +9,9 @@
   "description": "Adds industrial equipment as well as the tools you need to expand and grow your base. Adds extra components [BETA] and a tech [ALPHA] overhaul.",
   "dependencies": [
     "angelsrefining >= 0.12.8",
-    "angelspetrochem >= 0.9.25",
-    "angelssmelting >= 0.6.17",
-    "angelsbioprocessing >= 0.7.21",
+    "angelspetrochem >= 0.9.27",
+    "angelssmelting >= 0.6.24",
+    "angelsbioprocessing >= 0.7.28",
     "(?) aai-industry >= 0.4.12"
   ]
 }

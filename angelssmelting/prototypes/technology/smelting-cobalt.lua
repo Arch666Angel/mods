@@ -12,7 +12,7 @@ data:extend({
       --"angels-metallurgy-3",
       "ore-processing-2",
       "angels-coal-processing",
-      "water-washing-1",
+      "angels-stone-smelting-1",
     },
     effects = {
       {

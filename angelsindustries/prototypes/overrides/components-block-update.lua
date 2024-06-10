@@ -3,11 +3,7 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   -- PREREQUISITES FOR COMPONENTS TO WORK CORRECTLY ---------------------------
   -----------------------------------------------------------------------------
-  -- move molds from stone 2 to stone 1 to be at red science
-  OV.remove_unlock("angels-stone-smelting-2", "angels-casing-resin-mold")
-  OV.add_unlock("angels-stone-smelting-1", "angels-casing-resin-mold")
-  OV.remove_unlock("angels-stone-smelting-2", "mold-expendable")
-  OV.add_unlock("angels-stone-smelting-1", "mold-expendable")
+  -- move molds from stone 2 to stone 1 to be at green science
   OV.remove_prereq("angels-stone-smelting-2", "bio-arboretum-1")
   OV.add_prereq("angels-stone-smelting-1", "bio-wood-processing-2")
   OV.add_prereq("angels-stone-smelting-1", "angels-components-mechanical-1")

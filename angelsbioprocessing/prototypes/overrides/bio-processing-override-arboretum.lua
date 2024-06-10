@@ -50,6 +50,7 @@ else
     "bio-arboretum-temperate-3",
   })
   OV.remove_prereq("bio-wood-processing-2", "bio-farm-1")
+  OV.remove_unlock("bio-wood-processing-2", "bio-processor")
 end
 
 if angelsmods.trigger.bio_plastic then

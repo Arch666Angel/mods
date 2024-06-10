@@ -234,18 +234,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "washing-5",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-clay",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-limestone",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-sand",
-      },
     },
     unit = {
       count = 10,

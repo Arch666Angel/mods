@@ -3,6 +3,10 @@ Version: 0.7.28
 Date: ???
   Changes:
     - Limited animation speed of fish, puffer, and biter refugiums (987)
+    - Tech tree changes: (991)
+      - Moved Garden Processing and Farming 1 techs from Red Science to Green Science
+      - Reduced the tier of Algae farm 2's ingredients
+      - Made Biters require Purple Science
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.27
 Date: 21.02.2024

@@ -86,6 +86,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobgreenhouse"] then
     --adds bob greenhouse stuffs
+    AI.pack_replace("bob-greenhouse", "green", "red")
   end
 
   -------------------------------------------------------------------------------

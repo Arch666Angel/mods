@@ -66,8 +66,8 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
         ),
       },
     })
-    OV.remove_prereq("angels-cobalt-smelting-1", "water-washing-1")
-    OV.add_prereq("angels-cobalt-smelting-2", "water-washing-1")
+    OV.remove_prereq("angels-cobalt-smelting-1", "angels-stone-smelting-1")
+    OV.add_prereq("angels-cobalt-smelting-2", "angels-stone-smelting-1")
     OV.remove_prereq("angels-cobalt-smelting-1", "ore-processing-2")
     OV.add_prereq("angels-cobalt-smelting-1", "angels-metallurgy-3")
   end

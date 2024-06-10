@@ -6,10 +6,23 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       --"angels-metallurgy-1",
+      "logistic-science-pack",
       "powder-metallurgy-1",
       "water-washing-1",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "solid-clay",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-limestone",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-sand",
+      },
       {
         type = "unlock-recipe",
         recipe = "solid-lime",
@@ -22,11 +35,20 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-clay-brick",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-casing-resin-mold",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-expendable",
+      },
     },
     unit = {
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -39,6 +61,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       --"angels-metallurgy-2",
+      "chemical-science-pack",
       "powder-metallurgy-2",
       "angels-stone-smelting-1",
       "concrete",
@@ -63,11 +86,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-casing-resin-mold",
+        recipe = "mold-non-expendable",
       },
       {
         type = "unlock-recipe",
-        recipe = "mold-expendable",
+        recipe = "mold-non-expendable-wash",
       },
     },
     unit = {
@@ -75,6 +98,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -91,6 +115,7 @@ data:extend({
       "angels-stone-smelting-2",
       "angels-aluminium-smelting-1",
       "angels-steel-smelting-1",
+      "production-science-pack",
     },
     effects = {
       {
@@ -105,14 +130,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-reinforced-concrete-brick",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-non-expendable",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-non-expendable-wash",
-      },
     },
     unit = {
       count = 50,
@@ -120,6 +137,7 @@ data:extend({
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
       },
       time = 30,
     },

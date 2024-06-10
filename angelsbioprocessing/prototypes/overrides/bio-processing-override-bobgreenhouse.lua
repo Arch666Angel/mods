@@ -214,6 +214,7 @@ if mods["bobgreenhouse"] then
   })
 
   -- update tech
+  OV.set_science_pack("bob-greenhouse", "logistic-science-pack", 1)
   OV.add_prereq("bob-greenhouse", "gardens")
   OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
   OV.add_prereq("bob-greenhouse", "bio-arboretum-1")

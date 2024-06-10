@@ -116,7 +116,7 @@ data:extend({
       "ore-processing-2",
       "angels-lead-smelting-2",
       "angels-sulfur-processing-2",
-      "water-washing-1",
+      "angels-stone-smelting-1",
     },
     effects = {
       {

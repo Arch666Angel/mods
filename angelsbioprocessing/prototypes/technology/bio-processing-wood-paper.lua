@@ -29,10 +29,13 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-farm-1",
       "bio-wood-processing",
     },
     effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "bio-processor",
+      },
       {
         type = "unlock-recipe",
         recipe = "wood-charcoal",

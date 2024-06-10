@@ -47,10 +47,10 @@ if angelsmods.industries.components then
 
   OV.add_unlock("angels-iron-smelting-2", "angels-casing-iron-1")
   OV.add_prereq("angels-iron-smelting-2", "angels-components-mechanical-1")
-  OV.add_prereq("angels-iron-smelting-2", "angels-stone-smelting-2")
+  OV.add_prereq("angels-iron-smelting-2", "angels-stone-smelting-1")
 
   OV.add_unlock("angels-iron-smelting-3", "angels-casing-iron-2")
-  OV.add_prereq("angels-iron-smelting-3", "angels-stone-smelting-3")
+  OV.add_prereq("angels-iron-smelting-3", "angels-stone-smelting-2")
 
   -------------------------------------------------------------------------------
   -- MECHANICAL PARTS 2 ---------------------------------------------------------
@@ -64,7 +64,7 @@ if angelsmods.industries.components then
       icon_mipmaps = 4,
       prerequisites = {
         "angels-components-mechanical-1",
-        "angels-stone-smelting-2",
+        "angels-stone-smelting-1",
         "logistic-science-pack",
         "steel-processing",
         "angels-iron-smelting-1",
@@ -105,7 +105,7 @@ if angelsmods.industries.components then
 
   OV.add_unlock("angels-steel-smelting-3", "angels-casing-steel-2")
   OV.add_prereq("angels-steel-smelting-3", "angels-components-mechanical-2")
-  OV.add_prereq("angels-steel-smelting-3", "angels-stone-smelting-3")
+  OV.add_prereq("angels-steel-smelting-3", "angels-stone-smelting-2")
 
   -------------------------------------------------------------------------------
   -- MECHANICAL PARTS 3 ---------------------------------------------------------
@@ -119,7 +119,7 @@ if angelsmods.industries.components then
       icon_mipmaps = 4,
       prerequisites = {
         "angels-components-mechanical-2",
-        --"angels-stone-smelting-2",
+        --"angels-stone-smelting-1",
         "angels-aluminium-smelting-1",
       },
       effects = {
@@ -158,7 +158,7 @@ if angelsmods.industries.components then
 
   OV.add_unlock("angels-aluminium-smelting-2", "angels-casing-aluminium-2")
   OV.add_prereq("angels-aluminium-smelting-2", "angels-components-mechanical-3")
-  OV.add_prereq("angels-aluminium-smelting-2", "angels-stone-smelting-3")
+  OV.add_prereq("angels-aluminium-smelting-2", "angels-stone-smelting-2")
 
   -------------------------------------------------------------------------------
   -- MECHANICAL PARTS 4 ---------------------------------------------------------
@@ -172,7 +172,7 @@ if angelsmods.industries.components then
       icon_mipmaps = 4,
       prerequisites = {
         "angels-components-mechanical-3",
-        --"angels-stone-smelting-2",
+        --"angels-stone-smelting-1",
         "angels-titanium-smelting-1",
         "lubricant",
       },
@@ -213,7 +213,7 @@ if angelsmods.industries.components then
 
   OV.add_unlock("angels-titanium-smelting-2", "angels-casing-titanium-2")
   OV.add_prereq("angels-titanium-smelting-2", "angels-components-mechanical-4")
-  OV.add_prereq("angels-titanium-smelting-2", "angels-stone-smelting-3")
+  OV.add_prereq("angels-titanium-smelting-2", "angels-stone-smelting-2")
 
   -------------------------------------------------------------------------------
   -- MECHANICAL PARTS 5 ---------------------------------------------------------
@@ -227,7 +227,7 @@ if angelsmods.industries.components then
       icon_mipmaps = 4,
       prerequisites = {
         "angels-components-mechanical-4",
-        --"angels-stone-smelting-2",
+        --"angels-stone-smelting-1",
         "angels-tungsten-smelting-1",
       },
       effects = {
@@ -269,5 +269,5 @@ if angelsmods.industries.components then
   OV.add_unlock("angels-tungsten-smelting-2", "angels-casing-tungsten-green")
   OV.add_unlock("angels-tungsten-smelting-2", "angels-casing-tungsten-2")
   OV.add_prereq("angels-tungsten-smelting-2", "angels-components-mechanical-5")
-  OV.add_prereq("angels-tungsten-smelting-2", "angels-stone-smelting-3")
+  OV.add_prereq("angels-tungsten-smelting-2", "angels-stone-smelting-2")
 end

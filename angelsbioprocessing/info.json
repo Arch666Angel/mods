@@ -8,8 +8,8 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds ways to recycle and process waste products through biological means and make use of biological processes and farming.",
   "dependencies": [
-    "angelsrefining >= 0.12.1",
-    "angelspetrochem >= 0.9.25",
-    "angelssmelting >= 0.6.17"
+    "angelsrefining >= 0.12.8",
+    "angelspetrochem >= 0.9.27",
+    "angelssmelting >= 0.6.24"
   ]
 }

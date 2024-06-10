@@ -49,9 +49,6 @@ if angelsmods.industries.components then
   AI.replace_recipe_ing("battery-mk2-equipment", "battery-equipment", "battery-4")
   OV.add_prereq("battery-mk2-equipment", "angels-components-batteries-4")
 
-  OV.add_prereq("angels-cobalt-smelting-1", "water-washing-1")
-  OV.remove_prereq("angels-cobalt-smelting-2", "water-washing-1")
-
   -- roboports
   AI.replace_recipe_ing("personal-roboport-equipment", "battery-1", "battery-4")
   AI.replace_recipe_ing("personal-roboport-mk2-equipment", "battery-1", "battery-5")
