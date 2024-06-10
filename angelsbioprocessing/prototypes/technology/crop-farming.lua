@@ -43,7 +43,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "logistic-science-pack"
+      "logistic-science-pack",
     },
     effects = {
       {
