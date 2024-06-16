@@ -204,7 +204,7 @@ function sea_pump:on_blueprint_setup(player_index)
   end
 
   -- type may be 'upgrade-item'
-  if blueprint.type ~= 'blueprint' then
+  if blueprint.type ~= "blueprint" then
     return
   end
 
