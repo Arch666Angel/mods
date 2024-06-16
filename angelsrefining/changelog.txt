@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed when placing an electric offshore waterpump over its ghost, the module request would be forgotten (973)
     - Fixed crash when upgrading blueprints (978)
+    - Fixed crash when removing 'angelspump' mod (test mod, merged into Angel's Refining) (992)
   Changes:
     - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
 ---------------------------------------------------------------------------------------------------
