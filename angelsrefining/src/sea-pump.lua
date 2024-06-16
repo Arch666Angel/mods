@@ -203,6 +203,11 @@ function sea_pump:on_blueprint_setup(player_index)
     end
   end
 
+  -- type may be 'upgrade-item'
+  if blueprint.type ~= 'blueprint' then
+    return
+  end
+
   -- obtain all blueprint entitites
   local entities = blueprint.get_blueprint_entities()
   if entities == nil then
