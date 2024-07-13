@@ -5,7 +5,6 @@ angelsmods.bioprocessing.number_tint = { r = 0.2, g = 1, b = 0.2, a = 1 }
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
-angelsmods.triggers = angelsmods.trigger
 --BIO TOKEN
 angelsmods.trigger.lab_ignore_token = angelsmods.trigger.lab_ignore_token or {}
 angelsmods.trigger.lab_ignore_token["lab-alien"] = true
