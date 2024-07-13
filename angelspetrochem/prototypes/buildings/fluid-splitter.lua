@@ -26,7 +26,6 @@ data:extend({
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_categories = { "angels-fluid-splitter" },
     result_inventory_size = 1,
-    result_count = 2,
     crafting_speed = 4,
     source_inventory_size = 1,
     resistances = {
@@ -153,7 +152,6 @@ data:extend({
     --crafting_categories = {"angels-fluid-splitter-3-way"},
     crafting_categories = { "angels-fluid-splitter" },
     result_inventory_size = 1,
-    result_count = 3,
     crafting_speed = 4,
     source_inventory_size = 1,
     resistances = {

@@ -6,6 +6,7 @@ Date: ???
     - Rebalance Tungsten Smelting Recipes (980)
     - Adjusted the recipes for Bob's Assembling Machines (985)
     - Moved Cement Processing techs up a science pack tier so Clay Bricks are not available so early in the game (991)
+    - Updated for Factorio 2.0 (994)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.23
 Date: 21.02.2024

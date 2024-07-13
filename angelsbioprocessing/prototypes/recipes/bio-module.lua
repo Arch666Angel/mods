@@ -10,7 +10,7 @@ data:extend({
       { type = "item", name = "token-bio", amount = 1 },
     },
     energy_required = 15,
-    result = "angels-bio-yield-module",
+    results = {{ type = "item", name = "angels-bio-yield-module", amount = 1 }},
   },
   {
     type = "recipe",
@@ -24,7 +24,7 @@ data:extend({
       { type = "item", name = "token-bio", amount = 2 },
     },
     energy_required = 30,
-    result = "angels-bio-yield-module-2",
+    results = {{ type = "item", name = "angels-bio-yield-module-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -38,7 +38,7 @@ data:extend({
       { type = "item", name = "token-bio", amount = 3 },
     },
     energy_required = 60,
-    result = "angels-bio-yield-module-3",
+    results = {{ type = "item", name = "angels-bio-yield-module-3", amount = 1 }},
   },
 })
 

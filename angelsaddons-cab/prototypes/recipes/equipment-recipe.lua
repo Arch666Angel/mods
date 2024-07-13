@@ -12,7 +12,7 @@ data:extend({
       { type = "item", name = "green-wire", amount = 10 },
       { type = "item", name = "electronic-circuit", amount = 20 },
     },
-    result = string.format(energyInterfaceName, "-mk1"),
+    results = {{ type = "item", name = string.format(energyInterfaceName, "-mk1"), amount = 1, }},
   },
   --[[{
     type = "recipe",
@@ -22,6 +22,6 @@ data:extend({
     ingredients ={
       {string.format(energyInterfaceName, "-mk1"), 10},
     },
-    result = string.format(energyInterfaceName, "-mk2"),
+    results = {{ type = "item", name = string.format(energyInterfaceName, "-mk2"), amount = 1, }},
   },]]
 })

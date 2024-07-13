@@ -8,6 +8,7 @@ Date: ???
       - Moved Garden Processing and Farming 1 techs from Red Science to Green Science
       - Reduced the tier of Algae farm 2's ingredients
       - Made Biters require Purple Science
+    - Updated for Factorio 2.0 (994)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.27
 Date: 21.02.2024

@@ -10,7 +10,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 1 },
       { type = "item", name = "t2-pipe", amount = 1 },
     },
-    result = "temperate-upgrade",
+    results = {{ type = "item", name = "temperate-upgrade", amount = 1 }},
   },
   {
     type = "recipe",
@@ -22,7 +22,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-circuit", amount = 1 },
       { type = "item", name = "t2-brick", amount = 2 },
     },
-    result = "desert-upgrade",
+    results = {{ type = "item", name = "desert-upgrade", amount = 1 }},
   },
   {
     type = "recipe",
@@ -34,7 +34,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-circuit", amount = 1 },
       { type = "item", name = "t2-pipe", amount = 2 },
     },
-    result = "swamp-upgrade",
+    results = {{ type = "item", name = "swamp-upgrade", amount = 1 }},
   },
   --ALGAE FARM
   {
@@ -49,7 +49,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 6 },
       { type = "item", name = "t0-pipe", amount = 9 },
     },
-    result = "algae-farm",
+    results = {{ type = "item", name = "algae-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -63,7 +63,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 11 },
       { type = "item", name = "t0-pipe", amount = 18 },
     },
-    result = "algae-farm-2",
+    results = {{ type = "item", name = "algae-farm-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -77,7 +77,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 11 },
       { type = "item", name = "t2-pipe", amount = 18 },
     },
-    result = "algae-farm-3",
+    results = {{ type = "item", name = "algae-farm-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -91,7 +91,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 11 },
       { type = "item", name = "t3-pipe", amount = 18 },
     },
-    result = "algae-farm-4",
+    results = {{ type = "item", name = "algae-farm-4", amount = 1 }},
   },
   --CROP FARM
   {
@@ -106,7 +106,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 9 },
       { type = "item", name = "t1-pipe", amount = 3 },
     },
-    result = "crop-farm",
+    results = {{ type = "item", name = "crop-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -121,7 +121,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 9 },
       { type = "item", name = "t3-pipe", amount = 3 },
     },
-    result = "temperate-farm",
+    results = {{ type = "item", name = "temperate-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -136,7 +136,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 9 },
       { type = "item", name = "t3-pipe", amount = 3 },
     },
-    result = "desert-farm",
+    results = {{ type = "item", name = "desert-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -151,7 +151,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 9 },
       { type = "item", name = "t3-pipe", amount = 3 },
     },
-    result = "swamp-farm",
+    results = {{ type = "item", name = "swamp-farm", amount = 1 }},
   },
   --COMPOSTER
   {
@@ -166,7 +166,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 2 },
       { type = "item", name = "t0-gears", amount = 2 },
     },
-    result = "composter",
+    results = {{ type = "item", name = "composter", amount = 1 }},
   },
   --SEED EXTRACTOR
   {
@@ -181,7 +181,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 1 },
       { type = "item", name = "t1-gears", amount = 2 },
     },
-    result = "seed-extractor",
+    results = {{ type = "item", name = "seed-extractor", amount = 1 }},
   },
   --PRESS
   {
@@ -197,7 +197,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 1 },
       { type = "item", name = "t2-gears", amount = 2 },
     },
-    result = "bio-press",
+    results = {{ type = "item", name = "bio-press", amount = 1 }},
   },
   --PROCESSOR
   {
@@ -212,7 +212,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 5 },
       { type = "item", name = "t1-gears", amount = 4 },
     },
-    result = "bio-processor",
+    results = {{ type = "item", name = "bio-processor", amount = 1 }},
   },
   --NUTRIENT EXTRACTOR
   {
@@ -228,7 +228,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 2 },
       { type = "item", name = "t2-gears", amount = 2 },
     },
-    result = "nutrient-extractor",
+    results = {{ type = "item", name = "nutrient-extractor", amount = 1 }},
   },
   --ABORETUM
   {
@@ -243,7 +243,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 1 },
       { type = "item", name = "t0-pipe", amount = 3 },
     },
-    result = "bio-generator-temperate-1",
+    results = {{ type = "item", name = "bio-generator-temperate-1", amount = 1 }},
   },
   {
     type = "recipe",
@@ -257,7 +257,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 1 },
       { type = "item", name = "t0-pipe", amount = 3 },
     },
-    result = "bio-generator-swamp-1",
+    results = {{ type = "item", name = "bio-generator-swamp-1", amount = 1 }},
   },
   {
     type = "recipe",
@@ -271,7 +271,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 1 },
       { type = "item", name = "t0-pipe", amount = 3 },
     },
-    result = "bio-generator-desert-1",
+    results = {{ type = "item", name = "bio-generator-desert-1", amount = 1 }},
   },
   --ARBORETUM
   {
@@ -286,7 +286,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 6 },
       { type = "item", name = "t0-pipe", amount = 8 },
     },
-    result = "bio-arboretum-1",
+    results = {{ type = "item", name = "bio-arboretum-1", amount = 1 }},
   },
   --REFUGIUM
   {
@@ -301,7 +301,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 3 },
       { type = "item", name = "t3-pipe", amount = 11 },
     },
-    result = "bio-refugium-puffer",
+    results = {{ type = "item", name = "bio-refugium-puffer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -315,7 +315,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 3 },
       { type = "item", name = "t1-pipe", amount = 11 },
     },
-    result = "bio-refugium-hogger",
+    results = {{ type = "item", name = "bio-refugium-hogger", amount = 1 }},
   },
   {
     type = "recipe",
@@ -329,7 +329,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 4 },
       { type = "item", name = "t2-pipe", amount = 25 },
     },
-    result = "bio-refugium-fish",
+    results = {{ type = "item", name = "bio-refugium-fish", amount = 1 }},
   },
   {
     type = "recipe",
@@ -343,7 +343,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 19 },
       { type = "item", name = "t4-pipe", amount = 11 },
     },
-    result = "bio-refugium-biter",
+    results = {{ type = "item", name = "bio-refugium-biter", amount = 1 }},
   },
   --PROCESSING
   {
@@ -357,7 +357,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-circuit", amount = 4 },
       { type = "item", name = "t3-brick", amount = 2 },
     },
-    result = "bio-hatchery",
+    results = {{ type = "item", name = "bio-hatchery", amount = 1 }},
   },
   {
     type = "recipe",
@@ -371,6 +371,6 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 2 },
       { type = "item", name = "t2-gears", amount = 2 },
     },
-    result = "bio-butchery",
+    results = {{ type = "item", name = "bio-butchery", amount = 1 }},
   },
 })

@@ -12,7 +12,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "copper-plate", amount = 1 },
       },
-      result = "cable-shielding-1",
+      results = {{ type = "item", name = "cable-shielding-1", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -25,7 +25,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-tin", amount = 1 },
       },
-      result = "cable-shielding-2",
+      results = {{ type = "item", name = "cable-shielding-2", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -37,7 +37,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-silver", amount = 1 },
       },
-      result = "cable-shielding-3",
+      results = {{ type = "item", name = "cable-shielding-3", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -49,7 +49,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-gold", amount = 1 },
       },
-      result = "cable-shielding-4",
+      results = {{ type = "item", name = "cable-shielding-4", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -61,7 +61,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-platinum", amount = 1 },
       },
-      result = "cable-shielding-5",
+      results = {{ type = "item", name = "cable-shielding-5", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -78,7 +78,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-1", amount = 1 },
         { type = "item", name = "cellulose-fiber", amount = 1 },
       },
-      result = "cable-harness-1",
+      results = {{ type = "item", name = "cable-harness-1", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -93,7 +93,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-2", amount = 1 },
         { type = "item", name = "cellulose-fiber", amount = 1 },
       },
-      result = "cable-harness-2",
+      results = {{ type = "item", name = "cable-harness-2", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -107,7 +107,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-3", amount = 1 },
         { type = "fluid", name = "liquid-rubber", amount = 1 },
       },
-      result = "cable-harness-3",
+      results = {{ type = "item", name = "cable-harness-3", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -121,7 +121,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-4", amount = 1 },
         { type = "fluid", name = "liquid-plastic", amount = 1 },
       },
-      result = "cable-harness-4",
+      results = {{ type = "item", name = "cable-harness-4", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -135,7 +135,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-5", amount = 1 },
         { type = "fluid", name = "liquid-plastic", amount = 1 },
       },
-      result = "cable-harness-5",
+      results = {{ type = "item", name = "cable-harness-5", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -286,7 +286,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-1", amount = 1 },
         { type = "item", name = "angels-cabling", amount = 1 },
       },
-      result = "angels-servo-motor-1",
+      results = {{ type = "item", name = "angels-servo-motor-1", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -301,7 +301,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-2", amount = 1 },
         { type = "item", name = "angels-cabling", amount = 1 },
       },
-      result = "angels-servo-motor-2",
+      results = {{ type = "item", name = "angels-servo-motor-2", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -315,7 +315,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
         { type = "item", name = "cable-shielding-3", amount = 1 },
       },
-      result = "angels-servo-motor-3",
+      results = {{ type = "item", name = "angels-servo-motor-3", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -329,7 +329,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
         { type = "item", name = "cable-shielding-4", amount = 1 },
       },
-      result = "angels-servo-motor-4",
+      results = {{ type = "item", name = "angels-servo-motor-4", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -343,7 +343,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
         { type = "item", name = "cable-shielding-5", amount = 1 },
       },
-      result = "angels-servo-motor-5",
+      results = {{ type = "item", name = "angels-servo-motor-5", amount = 1 }},
       icon_size = 32,
     },
   })

@@ -12,7 +12,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t0-plate", amount = 1 },
         { type = "item", name = "t0-gears", amount = 1 },
       },
-      result = "angels-assembling-machine-0",
+      results = {{ type = "item", name = "angels-assembling-machine-0", amount = 1 }},
     },
     --ASSEMBLER 1
     {
@@ -26,7 +26,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t1-plate", amount = 1 },
         { type = "item", name = "t1-gears", amount = 1 },
       },
-      result = "angels-assembling-machine-small-1",
+      results = {{ type = "item", name = "angels-assembling-machine-small-1", amount = 1 }},
     },
     {
       type = "recipe",
@@ -39,7 +39,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t1-plate", amount = 5 },
         { type = "item", name = "t1-gears", amount = 6 },
       },
-      result = "angels-assembling-machine-big-1",
+      results = {{ type = "item", name = "angels-assembling-machine-big-1", amount = 1 }},
     },
     --ASSEMBLER 2
     {
@@ -53,7 +53,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t1-plate", amount = 1 },
         { type = "item", name = "t1-gears", amount = 2 },
       },
-      result = "angels-assembling-machine-small-2",
+      results = {{ type = "item", name = "angels-assembling-machine-small-2", amount = 1 }},
     },
     {
       type = "recipe",
@@ -66,7 +66,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t1-plate", amount = 6 },
         { type = "item", name = "t1-gears", amount = 6 },
       },
-      result = "angels-assembling-machine-big-2",
+      results = {{ type = "item", name = "angels-assembling-machine-big-2", amount = 1 }},
     },
     --ASSEMBLER 3
     {
@@ -80,7 +80,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t2-plate", amount = 1 },
         { type = "item", name = "t2-gears", amount = 2 },
       },
-      result = "angels-assembling-machine-small-3",
+      results = {{ type = "item", name = "angels-assembling-machine-small-3", amount = 1 }},
     },
     {
       type = "recipe",
@@ -93,7 +93,7 @@ if angelsmods.industries.components then
         { type = "item", name = "t2-plate", amount = 6 },
         { type = "item", name = "t2-gears", amount = 6 },
       },
-      result = "angels-assembling-machine-big-3",
+      results = {{ type = "item", name = "angels-assembling-machine-big-3", amount = 1 }},
     },
   })
 end

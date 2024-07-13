@@ -8,7 +8,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "burner-ore-crusher",
+    results = {{ type = "item", name = "burner-ore-crusher", amount = 1 }},
   },
   {
     type = "recipe",
@@ -18,7 +18,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "burner-ore-crusher", amount = 1 },
     },
-    result = "ore-crusher",
+    results = {{ type = "item", name = "ore-crusher", amount = 1 }},
   },
   {
     type = "recipe",
@@ -28,7 +28,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-crusher", amount = 1 },
     },
-    result = "ore-crusher-2",
+    results = {{ type = "item", name = "ore-crusher-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -38,7 +38,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-crusher-2", amount = 1 },
     },
-    result = "ore-crusher-3",
+    results = {{ type = "item", name = "ore-crusher-3", amount = 1 }},
   },
   --ORE FLOATATION CELL
   {
@@ -49,7 +49,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-floatation-cell",
+    results = {{ type = "item", name = "ore-floatation-cell", amount = 1 }},
   },
   {
     type = "recipe",
@@ -59,7 +59,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-floatation-cell", amount = 1 },
     },
-    result = "ore-floatation-cell-2",
+    results = {{ type = "item", name = "ore-floatation-cell-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -69,7 +69,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-floatation-cell-2", amount = 1 },
     },
-    result = "ore-floatation-cell-3",
+    results = {{ type = "item", name = "ore-floatation-cell-3", amount = 1 }},
   },
   --ORE LEACHING PLANT
   {
@@ -80,7 +80,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-leaching-plant",
+    results = {{ type = "item", name = "ore-leaching-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -90,7 +90,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-leaching-plant", amount = 1 },
     },
-    result = "ore-leaching-plant-2",
+    results = {{ type = "item", name = "ore-leaching-plant-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -100,7 +100,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-leaching-plant-2", amount = 1 },
     },
-    result = "ore-leaching-plant-3",
+    results = {{ type = "item", name = "ore-leaching-plant-3", amount = 1 }},
   },
   --ORE REFINERY
   {
@@ -111,7 +111,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-refinery",
+    results = {{ type = "item", name = "ore-refinery", amount = 1 }},
   },
   {
     type = "recipe",
@@ -121,7 +121,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-refinery", amount = 1 },
     },
-    result = "ore-refinery-2",
+    results = {{ type = "item", name = "ore-refinery-2", amount = 1 }},
   },
   --ORE SORTING FACILITY
   {
@@ -132,7 +132,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-sorting-facility",
+    results = {{ type = "item", name = "ore-sorting-facility", amount = 1 }},
   },
   {
     type = "recipe",
@@ -142,7 +142,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-sorting-facility", amount = 1 },
     },
-    result = "ore-sorting-facility-2",
+    results = {{ type = "item", name = "ore-sorting-facility-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -152,7 +152,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-sorting-facility-2", amount = 1 },
     },
-    result = "ore-sorting-facility-3",
+    results = {{ type = "item", name = "ore-sorting-facility-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -162,7 +162,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-sorting-facility-3", amount = 1 },
     },
-    result = "ore-sorting-facility-4",
+    results = {{ type = "item", name = "ore-sorting-facility-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -172,7 +172,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-sorting-facility-4", amount = 1 },
     },
-    result = "ore-sorting-facility-5",
+    results = {{ type = "item", name = "ore-sorting-facility-5", amount = 1 }},
   },
   --FILTRATION UNIT
   {
@@ -183,7 +183,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "filtration-unit",
+    results = {{ type = "item", name = "filtration-unit", amount = 1 }},
   },
   {
     type = "recipe",
@@ -193,7 +193,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "filtration-unit", amount = 1 },
     },
-    result = "filtration-unit-2",
+    results = {{ type = "item", name = "filtration-unit-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -203,7 +203,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "filtration-unit-2", amount = 1 },
     },
-    result = "filtration-unit-3",
+    results = {{ type = "item", name = "filtration-unit-3", amount = 1 }},
   },
   --CRYSTALLIZER
   {
@@ -214,7 +214,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "crystallizer",
+    results = {{ type = "item", name = "crystallizer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -224,7 +224,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystallizer", amount = 1 },
     },
-    result = "crystallizer-2",
+    results = {{ type = "item", name = "crystallizer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -234,7 +234,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystallizer-2", amount = 1 },
     },
-    result = "crystallizer-3",
+    results = {{ type = "item", name = "crystallizer-3", amount = 1 }},
   },
   --LIQUIFIER
   {
@@ -255,7 +255,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "liquifier", amount = 1 },
     },
-    result = "liquifier-2",
+    results = {{ type = "item", name = "liquifier-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -265,7 +265,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "liquifier-2", amount = 1 },
     },
-    result = "liquifier-3",
+    results = {{ type = "item", name = "liquifier-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -275,7 +275,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "liquifier-3", amount = 1 },
     },
-    result = "liquifier-4",
+    results = {{ type = "item", name = "liquifier-4", amount = 1 }},
   },
   --THERMAL EXTRACTOR
   {
@@ -286,7 +286,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "thermal-bore",
+    results = {{ type = "item", name = "thermal-bore", amount = 1 }},
   },
   {
     type = "recipe",
@@ -296,7 +296,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "thermal-extractor",
+    results = {{ type = "item", name = "thermal-extractor", amount = 1 }},
   },
   --HYDRO PLANT
   {
@@ -307,7 +307,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "hydro-plant",
+    results = {{ type = "item", name = "hydro-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -317,7 +317,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "hydro-plant", amount = 1 },
     },
-    result = "hydro-plant-2",
+    results = {{ type = "item", name = "hydro-plant-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -327,7 +327,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "hydro-plant-2", amount = 1 },
     },
-    result = "hydro-plant-3",
+    results = {{ type = "item", name = "hydro-plant-3", amount = 1 }},
   },
   --SALINATION PLANT
   {
@@ -338,7 +338,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "salination-plant",
+    results = {{ type = "item", name = "salination-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -348,7 +348,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "salination-plant", amount = 1 },
     },
-    result = "salination-plant-2",
+    results = {{ type = "item", name = "salination-plant-2", amount = 1 }},
   },
   --WASHING PLANT
   {
@@ -359,7 +359,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "washing-plant",
+    results = {{ type = "item", name = "washing-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -369,7 +369,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "washing-plant", amount = 1 },
     },
-    result = "washing-plant-2",
+    results = {{ type = "item", name = "washing-plant-2", amount = 1 }},
   },
   --SEAFLOOR PUMP
   {
@@ -380,7 +380,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "seafloor-pump",
+    results = {{ type = "item", name = "seafloor-pump", amount = 1 }},
   },
   --SEA PUMP
   {
@@ -391,7 +391,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "sea-pump",
+    results = {{ type = "item", name = "sea-pump", amount = 1 }},
   },
   --LAND PUMP
   {
@@ -402,7 +402,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ground-water-pump",
+    results = {{ type = "item", name = "ground-water-pump", amount = 1 }},
   },
   --CLARIFIER
   {
@@ -413,7 +413,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "clarifier",
+    results = {{ type = "item", name = "clarifier", amount = 1 }},
   },
   --BARRELING PUMP
   {
@@ -424,7 +424,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "barreling-pump",
+    results = {{ type = "item", name = "barreling-pump", amount = 1 }},
   },
   --ORE POWDERIZER
   {
@@ -435,7 +435,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-powderizer",
+    results = {{ type = "item", name = "ore-powderizer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -445,7 +445,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-powderizer-2",
+    results = {{ type = "item", name = "ore-powderizer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -455,7 +455,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "ore-powderizer-3",
+    results = {{ type = "item", name = "ore-powderizer-3", amount = 1 }},
   },
   --ELECTRO WHINNING CELL
   {
@@ -466,7 +466,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "electro-whinning-cell",
+    results = {{ type = "item", name = "electro-whinning-cell", amount = 1 }},
   },
   {
     type = "recipe",
@@ -476,6 +476,6 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    result = "electro-whinning-cell-2",
+    results = {{ type = "item", name = "electro-whinning-cell-2", amount = 1 }},
   },
 })

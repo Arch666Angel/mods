@@ -10,7 +10,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "stone-furnace", amount = 1 },
       { type = "item", name = "t0-gears", amount = 1 },
     },
-    result = "burner-ore-crusher",
+    results = {{ type = "item", name = "burner-ore-crusher", amount = 1 }},
   },
   {
     type = "recipe",
@@ -23,7 +23,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 3 },
       { type = "item", name = "t0-gears", amount = 2 },
     },
-    result = "ore-crusher",
+    results = {{ type = "item", name = "ore-crusher", amount = 1 }},
   },
   {
     type = "recipe",
@@ -36,7 +36,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 3 },
       { type = "item", name = "t1-gears", amount = 2 },
     },
-    result = "ore-crusher-2",
+    results = {{ type = "item", name = "ore-crusher-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -49,7 +49,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 3 },
       { type = "item", name = "t3-gears", amount = 2 },
     },
-    result = "ore-crusher-3",
+    results = {{ type = "item", name = "ore-crusher-3", amount = 1 }},
   },
   --ORE FLOATATION CELL
   {
@@ -64,7 +64,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 4 },
       { type = "item", name = "t2-brick", amount = 8 },
     },
-    result = "ore-floatation-cell",
+    results = {{ type = "item", name = "ore-floatation-cell", amount = 1 }},
   },
   {
     type = "recipe",
@@ -78,7 +78,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 4 },
       { type = "item", name = "t3-brick", amount = 8 },
     },
-    result = "ore-floatation-cell-2",
+    results = {{ type = "item", name = "ore-floatation-cell-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -92,7 +92,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 4 },
       { type = "item", name = "t4-brick", amount = 8 },
     },
-    result = "ore-floatation-cell-3",
+    results = {{ type = "item", name = "ore-floatation-cell-3", amount = 1 }},
   },
   --ORE LEACHING PLANT
   {
@@ -107,7 +107,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 4 },
       { type = "item", name = "t3-brick", amount = 8 },
     },
-    result = "ore-leaching-plant",
+    results = {{ type = "item", name = "ore-leaching-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -121,7 +121,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 4 },
       { type = "item", name = "t4-brick", amount = 8 },
     },
-    result = "ore-leaching-plant-2",
+    results = {{ type = "item", name = "ore-leaching-plant-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -135,7 +135,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-pipe", amount = 4 },
       { type = "item", name = "t5-brick", amount = 8 },
     },
-    result = "ore-leaching-plant-3",
+    results = {{ type = "item", name = "ore-leaching-plant-3", amount = 1 }},
   },
   --ORE REFINERY
   {
@@ -149,7 +149,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-circuit", amount = 12 },
       { type = "item", name = "t4-brick", amount = 20 },
     },
-    result = "ore-refinery",
+    results = {{ type = "item", name = "ore-refinery", amount = 1 }},
   },
   {
     type = "recipe",
@@ -162,7 +162,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-circuit", amount = 12 },
       { type = "item", name = "t5-brick", amount = 20 },
     },
-    result = "ore-refinery-2",
+    results = {{ type = "item", name = "ore-refinery-2", amount = 1 }},
   },
   --ORE SORTING FACILITY
   {
@@ -177,7 +177,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 12 },
       { type = "item", name = "t0-gears", amount = 8 },
     },
-    result = "ore-sorting-facility",
+    results = {{ type = "item", name = "ore-sorting-facility", amount = 1 }},
   },
   {
     type = "recipe",
@@ -191,7 +191,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 12 },
       { type = "item", name = "t1-gears", amount = 8 },
     },
-    result = "ore-sorting-facility-2",
+    results = {{ type = "item", name = "ore-sorting-facility-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -205,7 +205,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 12 },
       { type = "item", name = "t3-gears", amount = 8 },
     },
-    result = "ore-sorting-facility-3",
+    results = {{ type = "item", name = "ore-sorting-facility-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -219,7 +219,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 12 },
       { type = "item", name = "t4-gears", amount = 8 },
     },
-    result = "ore-sorting-facility-4",
+    results = {{ type = "item", name = "ore-sorting-facility-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -233,7 +233,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 12 },
       { type = "item", name = "t5-gears", amount = 8 },
     },
-    result = "ore-sorting-facility-5",
+    results = {{ type = "item", name = "ore-sorting-facility-5", amount = 1 }},
   },
   --FILTRATION UNIT
   {
@@ -248,7 +248,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-pipe", amount = 8 },
       { type = "item", name = "t1-brick", amount = 5 },
     },
-    result = "filtration-unit",
+    results = {{ type = "item", name = "filtration-unit", amount = 1 }},
   },
   {
     type = "recipe",
@@ -262,7 +262,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 8 },
       { type = "item", name = "t3-brick", amount = 5 },
     },
-    result = "filtration-unit-2",
+    results = {{ type = "item", name = "filtration-unit-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -276,7 +276,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 8 },
       { type = "item", name = "t4-brick", amount = 5 },
     },
-    result = "filtration-unit-3",
+    results = {{ type = "item", name = "filtration-unit-3", amount = 1 }},
   },
   --CRYSTALLIZER
   {
@@ -291,7 +291,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-pipe", amount = 5 },
       { type = "item", name = "t1-brick", amount = 10 },
     },
-    result = "crystallizer",
+    results = {{ type = "item", name = "crystallizer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -305,7 +305,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 5 },
       { type = "item", name = "t3-brick", amount = 10 },
     },
-    result = "crystallizer-2",
+    results = {{ type = "item", name = "crystallizer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -319,7 +319,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 5 },
       { type = "item", name = "t4-brick", amount = 10 },
     },
-    result = "crystallizer-3",
+    results = {{ type = "item", name = "crystallizer-3", amount = 1 }},
   },
   --LIQUIFIER
   {
@@ -334,7 +334,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-pipe", amount = 2 },
       { type = "item", name = "t0-brick", amount = 2 },
     },
-    result = "liquifier",
+    results = {{ type = "item", name = "liquifier", amount = 1 }},
   },
   {
     type = "recipe",
@@ -348,7 +348,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 2 },
       { type = "item", name = "t2-brick", amount = 2 },
     },
-    result = "liquifier-2",
+    results = {{ type = "item", name = "liquifier-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -362,7 +362,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 2 },
       { type = "item", name = "t3-brick", amount = 2 },
     },
-    result = "liquifier-3",
+    results = {{ type = "item", name = "liquifier-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -376,7 +376,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 2 },
       { type = "item", name = "t4-brick", amount = 2 },
     },
-    result = "liquifier-4",
+    results = {{ type = "item", name = "liquifier-4", amount = 1 }},
   },
   --THERMAL EXTRACTOR
   {
@@ -392,7 +392,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 4 },
       { type = "item", name = "t2-gears", amount = 4 },
     },
-    result = "thermal-bore",
+    results = {{ type = "item", name = "thermal-bore", amount = 1 }},
   },
   {
     type = "recipe",
@@ -407,7 +407,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 4 },
       { type = "item", name = "t3-gears", amount = 4 },
     },
-    result = "thermal-extractor",
+    results = {{ type = "item", name = "thermal-extractor", amount = 1 }},
   },
   --HYDRO PLANT
   {
@@ -421,7 +421,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-pipe", amount = 16 },
       { type = "item", name = "t0-brick", amount = 12 },
     },
-    result = "hydro-plant",
+    results = {{ type = "item", name = "hydro-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -435,7 +435,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-pipe", amount = 16 },
       { type = "item", name = "t1-brick", amount = 12 },
     },
-    result = "hydro-plant-2",
+    results = {{ type = "item", name = "hydro-plant-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -449,7 +449,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 16 },
       { type = "item", name = "t3-brick", amount = 12 },
     },
-    result = "hydro-plant-3",
+    results = {{ type = "item", name = "hydro-plant-3", amount = 1 }},
   },
   --SALINATION PLANT
   {
@@ -464,7 +464,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 8 },
       { type = "item", name = "t3-brick", amount = 15 },
     },
-    result = "salination-plant",
+    results = {{ type = "item", name = "salination-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -478,7 +478,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 8 },
       { type = "item", name = "t4-brick", amount = 15 },
     },
-    result = "salination-plant-2",
+    results = {{ type = "item", name = "salination-plant-2", amount = 1 }},
   },
   --WASHING PLANT
   {
@@ -493,7 +493,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-pipe", amount = 9 },
       { type = "item", name = "t0-brick", amount = 5 },
     },
-    result = "washing-plant",
+    results = {{ type = "item", name = "washing-plant", amount = 1 }},
   },
   {
     type = "recipe",
@@ -507,7 +507,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 9 },
       { type = "item", name = "t2-brick", amount = 5 },
     },
-    result = "washing-plant-2",
+    results = {{ type = "item", name = "washing-plant-2", amount = 1 }},
   },
   --SEAFLOOR PUMP
   {
@@ -520,7 +520,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-circuit", amount = 2 },
       { type = "item", name = "t0-pipe", amount = 2 },
     },
-    result = "seafloor-pump",
+    results = {{ type = "item", name = "seafloor-pump", amount = 1 }},
   },
   --SEA PUMP
   {
@@ -535,7 +535,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 6 },
       { type = "item", name = "t3-pipe", amount = 4 },
     },
-    result = "sea-pump",
+    results = {{ type = "item", name = "sea-pump", amount = 1 }},
   },
   --LAND PUMP
   {
@@ -548,7 +548,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-circuit", amount = 2 },
       { type = "item", name = "t0-pipe", amount = 2 },
     },
-    result = "ground-water-pump",
+    results = {{ type = "item", name = "ground-water-pump", amount = 1 }},
   },
   --CLARIFIER
   {
@@ -562,7 +562,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-pipe", amount = 11 },
       { type = "item", name = "t0-brick", amount = 6 },
     },
-    result = "clarifier",
+    results = {{ type = "item", name = "clarifier", amount = 1 }},
   },
   --BARRELING PUMP
   {
@@ -576,7 +576,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-pipe", amount = 2 },
       { type = "item", name = "t1-gears", amount = 3 },
     },
-    result = "barreling-pump",
+    results = {{ type = "item", name = "barreling-pump", amount = 1 }},
   },
   --ORE POWDERIZER
   {
@@ -590,7 +590,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 1 },
       { type = "item", name = "t2-gears", amount = 1 },
     },
-    result = "ore-powderizer",
+    results = {{ type = "item", name = "ore-powderizer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -603,7 +603,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 1 },
       { type = "item", name = "t3-brick", amount = 1 },
     },
-    result = "ore-powderizer-2",
+    results = {{ type = "item", name = "ore-powderizer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -616,7 +616,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 1 },
       { type = "item", name = "t4-brick", amount = 1 },
     },
-    result = "ore-powderizer-3",
+    results = {{ type = "item", name = "ore-powderizer-3", amount = 1 }},
   },
   --ELECTRO WHINNING CELL
   {
@@ -631,7 +631,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 4 },
       { type = "item", name = "t4-pipe", amount = 6 },
     },
-    result = "electro-whinning-cell",
+    results = {{ type = "item", name = "electro-whinning-cell", amount = 1 }},
   },
   {
     type = "recipe",
@@ -645,6 +645,6 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 4 },
       { type = "item", name = "t5-pipe", amount = 6 },
     },
-    result = "electro-whinning-cell-2",
+    results = {{ type = "item", name = "electro-whinning-cell-2", amount = 1 }},
   },
 })

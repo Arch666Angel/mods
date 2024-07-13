@@ -78,12 +78,14 @@ end
 --GEM PROCESSING ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  data.raw.recipe["bob-ruby-3"].result_count = 1
-  data.raw.recipe["bob-sapphire-3"].result_count = 1
-  data.raw.recipe["bob-emerald-3"].result_count = 1
-  data.raw.recipe["bob-amethyst-3"].result_count = 1
-  data.raw.recipe["bob-topaz-3"].result_count = 1
-  data.raw.recipe["bob-diamond-3"].result_count = 1
+  OV.patch_recipes({
+    { name = "bob-ruby-3", results = {{ type = "item", name = "ruby-3", amount = 1 }}},
+    { name = "bob-sapphire-3", results = {{ type = "item", name = "sapphire-3", amount = 1 }}},
+    { name = "bob-emerald-3", results = {{ type = "item", name = "emerald-3", amount = 1 }}},
+    { name = "bob-amethyst-3", results = {{ type = "item", name = "amethyst-3", amount = 1 }}},
+    { name = "bob-topaz-3", results = {{ type = "item", name = "topaz-3", amount = 1 }}},
+    { name = "bob-diamond-3", results = {{ type = "item", name = "diamond-3", amount = 1 }}},
+  })
 end
 
 -------------------------------------------------------------------------------

@@ -8,7 +8,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "algae-farm",
+    results = {{ type = "item", name = "algae-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -18,7 +18,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "algae-farm", amount = 1 },
     },
-    result = "algae-farm-2",
+    results = {{ type = "item", name = "algae-farm-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -28,7 +28,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "algae-farm-2", amount = 1 },
     },
-    result = "algae-farm-3",
+    results = {{ type = "item", name = "algae-farm-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -38,7 +38,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "algae-farm-3", amount = 1 },
     },
-    result = "algae-farm-4",
+    results = {{ type = "item", name = "algae-farm-4", amount = 1 }},
   },
   --CROP FARM
   {
@@ -49,7 +49,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "crop-farm",
+    results = {{ type = "item", name = "crop-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -59,7 +59,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "temperate-farm",
+    results = {{ type = "item", name = "temperate-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -69,7 +69,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "desert-farm",
+    results = {{ type = "item", name = "desert-farm", amount = 1 }},
   },
   {
     type = "recipe",
@@ -79,7 +79,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "swamp-farm",
+    results = {{ type = "item", name = "swamp-farm", amount = 1 }},
   },
   --COMPOSTER
   {
@@ -90,7 +90,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "composter",
+    results = {{ type = "item", name = "composter", amount = 1 }},
   },
   --SEED EXTRACTOR
   {
@@ -101,7 +101,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "seed-extractor",
+    results = {{ type = "item", name = "seed-extractor", amount = 1 }},
   },
   --PRESS
   {
@@ -112,7 +112,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-press",
+    results = {{ type = "item", name = "bio-press", amount = 1 }},
   },
   --PROCESSOR
   {
@@ -123,7 +123,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-processor",
+    results = {{ type = "item", name = "bio-processor", amount = 1 }},
   },
   --NUTRIENT EXTRACTOR
   {
@@ -134,7 +134,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "nutrient-extractor",
+    results = {{ type = "item", name = "nutrient-extractor", amount = 1 }},
   },
   --TREE GENERATOR
   {
@@ -145,7 +145,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "temperate-tree", amount = 1 },
     },
-    result = "bio-generator-temperate-1",
+    results = {{ type = "item", name = "bio-generator-temperate-1", amount = 1 }},
   },
   {
     type = "recipe",
@@ -155,7 +155,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "swamp-tree", amount = 1 },
     },
-    result = "bio-generator-swamp-1",
+    results = {{ type = "item", name = "bio-generator-swamp-1", amount = 1 }},
   },
   {
     type = "recipe",
@@ -165,7 +165,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "desert-tree", amount = 1 },
     },
-    result = "bio-generator-desert-1",
+    results = {{ type = "item", name = "bio-generator-desert-1", amount = 1 }},
   },
   --ARBORETUM
   {
@@ -176,7 +176,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-arboretum-1",
+    results = {{ type = "item", name = "bio-arboretum-1", amount = 1 }},
   },
   --REFUGIUM
   {
@@ -187,7 +187,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-refugium-puffer",
+    results = {{ type = "item", name = "bio-refugium-puffer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -197,7 +197,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-refugium-hogger",
+    results = {{ type = "item", name = "bio-refugium-hogger", amount = 1 }},
   },
   {
     type = "recipe",
@@ -207,7 +207,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-refugium-fish",
+    results = {{ type = "item", name = "bio-refugium-fish", amount = 1 }},
   },
   {
     type = "recipe",
@@ -217,7 +217,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-refugium-biter",
+    results = {{ type = "item", name = "bio-refugium-biter", amount = 1 }},
   },
   --PROCESSING
   {
@@ -228,7 +228,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-hatchery",
+    results = {{ type = "item", name = "bio-hatchery", amount = 1 }},
   },
   {
     type = "recipe",
@@ -238,7 +238,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    result = "bio-butchery",
+    results = {{ type = "item", name = "bio-butchery", amount = 1 }},
   },
   {
     type = "recipe",

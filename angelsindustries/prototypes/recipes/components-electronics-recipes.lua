@@ -13,7 +13,7 @@ if angelsmods.industries.components then
         { type = "item", name = "solid-paper", amount = 1 },
         { type = "item", name = "copper-cable", amount = 1 },
       },
-      result = "circuit-resistor",
+      results = {{ type = "item", name = "circuit-resistor", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -30,7 +30,7 @@ if angelsmods.industries.components then
     --    {type = "item", name = "solid-carbon", amount = 1},
     --    {type = "item", name = "copper-cable", amount = 1},
     --  },
-    --  result = "circuit-resistor",
+    --  results = {{ type = "item", name = "circuit-resistor", amount = 1 }},
     --  icon_size = 32,
     --  order = "b",
     --},
@@ -44,7 +44,7 @@ if angelsmods.industries.components then
         { type = "item", name = "iron-plate", amount = 1 },
         { type = "item", name = "angels-wire-tin", amount = 1 },
       },
-      result = "circuit-transistor",
+      results = {{ type = "item", name = "circuit-transistor", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -58,7 +58,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-silver", amount = 1 },
         { type = "fluid", name = "liquid-sulfuric-acid", amount = 1 },
       },
-      result = "circuit-microchip",
+      results = {{ type = "item", name = "circuit-microchip", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -71,7 +71,7 @@ if angelsmods.industries.components then
         { type = "item", name = "iron-plate", amount = 1 },
         { type = "item", name = "angels-wire-gold", amount = 1 },
       },
-      result = "circuit-transformer",
+      results = {{ type = "item", name = "circuit-transformer", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -85,7 +85,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-platinum", amount = 1 },
         { type = "fluid", name = "liquid-sulfuric-acid", amount = 1 },
       },
-      result = "circuit-cpu",
+      results = {{ type = "item", name = "circuit-cpu", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -233,7 +233,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "wood", amount = 1 },
       },
-      result = "circuit-grey-board",
+      results = {{ type = "item", name = "circuit-grey-board", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -264,7 +264,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "solid-paper", amount = 1 },
       },
-      result = "circuit-red-board",
+      results = {{ type = "item", name = "circuit-red-board", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -278,7 +278,7 @@ if angelsmods.industries.components then
         { type = "item", name = "solid-paper", amount = 1 },
         { type = "fluid", name = "liquid-resin", amount = 2 },
       },
-      result = "circuit-green-board",
+      results = {{ type = "item", name = "circuit-green-board", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -291,7 +291,7 @@ if angelsmods.industries.components then
         { type = "item", name = "cellulose-fiber", amount = 1 },
         { type = "fluid", name = "liquid-plastic", amount = 2 },
       },
-      result = "circuit-orange-board",
+      results = {{ type = "item", name = "circuit-orange-board", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -304,7 +304,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-coil-glass-fiber", amount = 2 },
         { type = "fluid", name = "liquid-resin", amount = 2 },
       },
-      result = "circuit-blue-board",
+      results = {{ type = "item", name = "circuit-blue-board", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -319,7 +319,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "liquid-plastic", amount = 2 },
       },
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-resin"),
-      result = "circuit-yellow-board",
+      results = {{ type = "item", name = "circuit-yellow-board", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -335,7 +335,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-grey-board", amount = 1 },
         { type = "item", name = "angels-wire-copper", amount = 3 },
       },
-      result = "circuit-grey",
+      results = {{ type = "item", name = "circuit-grey", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -349,7 +349,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-red-board", amount = 1 },
         { type = "item", name = "angels-wire-copper", amount = 3 },
       },
-      result = "circuit-red",
+      results = {{ type = "item", name = "circuit-red", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -363,7 +363,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-green-board", amount = 1 },
         { type = "item", name = "angels-wire-tin", amount = 3 },
       },
-      result = "circuit-green",
+      results = {{ type = "item", name = "circuit-green", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -377,7 +377,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-silver", amount = 3 },
         { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
       },
-      result = "circuit-orange",
+      results = {{ type = "item", name = "circuit-orange", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -391,7 +391,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-gold", amount = 3 },
         { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
       },
-      result = "circuit-blue",
+      results = {{ type = "item", name = "circuit-blue", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -405,7 +405,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-platinum", amount = 3 },
         { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
       },
-      result = "circuit-yellow",
+      results = {{ type = "item", name = "circuit-yellow", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -422,7 +422,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-resistor", amount = 1 },
         { type = "item", name = "angels-solder", amount = 1 },
       },
-      result = "circuit-red-loaded",
+      results = {{ type = "item", name = "circuit-red-loaded", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -438,7 +438,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-transistor", amount = 1 },
         { type = "item", name = "angels-solder", amount = 2 },
       },
-      result = "circuit-green-loaded",
+      results = {{ type = "item", name = "circuit-green-loaded", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -454,7 +454,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-microchip", amount = 1 },
         { type = "item", name = "angels-solder", amount = 3 },
       },
-      result = "circuit-orange-loaded",
+      results = {{ type = "item", name = "circuit-orange-loaded", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -471,7 +471,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-transformer", amount = 1 },
         { type = "item", name = "angels-solder", amount = 4 },
       },
-      result = "circuit-blue-loaded",
+      results = {{ type = "item", name = "circuit-blue-loaded", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -489,7 +489,7 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-cpu", amount = 1 },
         { type = "item", name = "angels-solder", amount = 5 },
       },
-      result = "circuit-yellow-loaded",
+      results = {{ type = "item", name = "circuit-yellow-loaded", amount = 1 }},
       icon_size = 32,
     },
   })

@@ -8,7 +8,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "ore-processing-machine",
+    results = {{ type = "item", name = "ore-processing-machine", amount = 1 }},
   },
   {
     type = "recipe",
@@ -18,7 +18,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-processing-machine", amount = 1 },
     },
-    result = "ore-processing-machine-2",
+    results = {{ type = "item", name = "ore-processing-machine-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -28,7 +28,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-processing-machine-2", amount = 1 },
     },
-    result = "ore-processing-machine-3",
+    results = {{ type = "item", name = "ore-processing-machine-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -38,7 +38,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "ore-processing-machine-3", amount = 1 },
     },
-    result = "ore-processing-machine-4",
+    results = {{ type = "item", name = "ore-processing-machine-4", amount = 1 }},
   },
   --PELLET PRESS
   {
@@ -49,7 +49,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "pellet-press",
+    results = {{ type = "item", name = "pellet-press", amount = 1 }},
   },
   {
     type = "recipe",
@@ -59,7 +59,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "pellet-press", amount = 1 },
     },
-    result = "pellet-press-2",
+    results = {{ type = "item", name = "pellet-press-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -69,7 +69,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "pellet-press-2", amount = 1 },
     },
-    result = "pellet-press-3",
+    results = {{ type = "item", name = "pellet-press-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -79,7 +79,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "pellet-press-3", amount = 1 },
     },
-    result = "pellet-press-4",
+    results = {{ type = "item", name = "pellet-press-4", amount = 1 }},
   },
   --POWDER MIXER
   {
@@ -90,7 +90,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "powder-mixer",
+    results = {{ type = "item", name = "powder-mixer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -100,7 +100,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "powder-mixer", amount = 1 },
     },
-    result = "powder-mixer-2",
+    results = {{ type = "item", name = "powder-mixer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -110,7 +110,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "powder-mixer-2", amount = 1 },
     },
-    result = "powder-mixer-3",
+    results = {{ type = "item", name = "powder-mixer-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -120,7 +120,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "powder-mixer-3", amount = 1 },
     },
-    result = "powder-mixer-4",
+    results = {{ type = "item", name = "powder-mixer-4", amount = 1 }},
   },
   --BLAST FURNACE
   {
@@ -131,7 +131,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    result = "blast-furnace",
+    results = {{ type = "item", name = "blast-furnace", amount = 1 }},
   },
   {
     type = "recipe",
@@ -141,7 +141,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "blast-furnace", amount = 1 },
     },
-    result = "blast-furnace-2",
+    results = {{ type = "item", name = "blast-furnace-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -151,7 +151,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "blast-furnace-2", amount = 1 },
     },
-    result = "blast-furnace-3",
+    results = {{ type = "item", name = "blast-furnace-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -161,7 +161,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "blast-furnace-3", amount = 1 },
     },
-    result = "blast-furnace-4",
+    results = {{ type = "item", name = "blast-furnace-4", amount = 1 }},
   },
   --CHEMICAL FURNACE
   {
@@ -172,7 +172,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "steel-plate", amount = 10 },
     },
-    result = "angels-chemical-furnace",
+    results = {{ type = "item", name = "angels-chemical-furnace", amount = 1 }},
   },
   {
     type = "recipe",
@@ -182,7 +182,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-chemical-furnace", amount = 1 },
     },
-    result = "angels-chemical-furnace-2",
+    results = {{ type = "item", name = "angels-chemical-furnace-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -192,7 +192,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-chemical-furnace-2", amount = 1 },
     },
-    result = "angels-chemical-furnace-3",
+    results = {{ type = "item", name = "angels-chemical-furnace-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -202,7 +202,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-chemical-furnace-3", amount = 1 },
     },
-    result = "angels-chemical-furnace-4",
+    results = {{ type = "item", name = "angels-chemical-furnace-4", amount = 1 }},
   },
   --ARC FURNACE
   {
@@ -213,7 +213,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "induction-furnace",
+    results = {{ type = "item", name = "induction-furnace", amount = 1 }},
   },
   {
     type = "recipe",
@@ -223,7 +223,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "induction-furnace", amount = 1 },
     },
-    result = "induction-furnace-2",
+    results = {{ type = "item", name = "induction-furnace-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -233,7 +233,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "induction-furnace-2", amount = 1 },
     },
-    result = "induction-furnace-3",
+    results = {{ type = "item", name = "induction-furnace-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -243,7 +243,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "induction-furnace-3", amount = 1 },
     },
-    result = "induction-furnace-4",
+    results = {{ type = "item", name = "induction-furnace-4", amount = 1 }},
   },
   --CASTING MACHINE
   {
@@ -254,7 +254,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "casting-machine",
+    results = {{ type = "item", name = "casting-machine", amount = 1 }},
   },
   {
     type = "recipe",
@@ -264,7 +264,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "casting-machine", amount = 1 },
     },
-    result = "casting-machine-2",
+    results = {{ type = "item", name = "casting-machine-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -274,7 +274,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "casting-machine-2", amount = 1 },
     },
-    result = "casting-machine-3",
+    results = {{ type = "item", name = "casting-machine-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -284,7 +284,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "casting-machine-3", amount = 1 },
     },
-    result = "casting-machine-4",
+    results = {{ type = "item", name = "casting-machine-4", amount = 1 }},
   },
   --SINTERING OVEN
   {
@@ -295,7 +295,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "sintering-oven",
+    results = {{ type = "item", name = "sintering-oven", amount = 1 }},
   },
   {
     type = "recipe",
@@ -305,7 +305,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "sintering-oven", amount = 1 },
     },
-    result = "sintering-oven-2",
+    results = {{ type = "item", name = "sintering-oven-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -315,7 +315,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "sintering-oven-2", amount = 1 },
     },
-    result = "sintering-oven-3",
+    results = {{ type = "item", name = "sintering-oven-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -325,7 +325,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "sintering-oven-3", amount = 1 },
     },
-    result = "sintering-oven-4",
+    results = {{ type = "item", name = "sintering-oven-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -335,7 +335,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "sintering-oven-4", amount = 1 },
     },
-    result = "sintering-oven-5",
+    results = {{ type = "item", name = "sintering-oven-5", amount = 1 }},
   },
   --STRAND CASTING MACHINE
   {
@@ -346,7 +346,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "strand-casting-machine",
+    results = {{ type = "item", name = "strand-casting-machine", amount = 1 }},
   },
   {
     type = "recipe",
@@ -356,7 +356,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "strand-casting-machine", amount = 1 },
     },
-    result = "strand-casting-machine-2",
+    results = {{ type = "item", name = "strand-casting-machine-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -366,7 +366,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "strand-casting-machine-2", amount = 1 },
     },
-    result = "strand-casting-machine-3",
+    results = {{ type = "item", name = "strand-casting-machine-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -376,7 +376,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "strand-casting-machine-3", amount = 1 },
     },
-    result = "strand-casting-machine-4",
+    results = {{ type = "item", name = "strand-casting-machine-4", amount = 1 }},
   },
   --COOLING TOWER
   {
@@ -387,6 +387,6 @@ data:extend({
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    result = "cooling-tower",
+    results = {{ type = "item", name = "cooling-tower", amount = 1 }},
   },
 })

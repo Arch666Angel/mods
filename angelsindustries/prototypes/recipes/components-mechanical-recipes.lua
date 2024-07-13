@@ -321,7 +321,7 @@ if angelsmods.industries.components then
         { type = "item", name = "motor-block-1", amount = 1 },
         { type = "item", name = "angels-gear", amount = 1 },
       },
-      result = "motor-1",
+      results = {{ type = "item", name = "motor-1", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -336,7 +336,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-gear", amount = 1 },
         { type = "item", name = "angels-axle", amount = 1 },
       },
-      result = "motor-2",
+      results = {{ type = "item", name = "motor-2", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -351,7 +351,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-axle", amount = 1 },
         { type = "item", name = "angels-roller-chain", amount = 1 },
       },
-      result = "motor-3",
+      results = {{ type = "item", name = "motor-3", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -367,7 +367,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-roller-chain", amount = 1 },
         { type = "item", name = "angels-spring", amount = 1 },
       },
-      result = "motor-4",
+      results = {{ type = "item", name = "motor-4", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -384,7 +384,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-spring", amount = 1 },
         { type = "item", name = "angels-bearing", amount = 1 },
       },
-      result = "motor-5",
+      results = {{ type = "item", name = "motor-5", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -414,7 +414,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-rod-steel", amount = 1 },
       },
-      result = "angels-axle",
+      results = {{ type = "item", name = "angels-axle", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -426,7 +426,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-aluminium", amount = 1 },
       },
-      result = "angels-roller-chain",
+      results = {{ type = "item", name = "angels-roller-chain", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -438,7 +438,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-titanium", amount = 1 },
       },
-      result = "angels-spring",
+      results = {{ type = "item", name = "angels-spring", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -452,7 +452,7 @@ if angelsmods.industries.components then
         { type = "item", name = "steel-plate", amount = 1 },
         { type = "fluid", name = "lubricant", amount = 1 },
       },
-      result = "angels-bearing",
+      results = {{ type = "item", name = "angels-bearing", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------

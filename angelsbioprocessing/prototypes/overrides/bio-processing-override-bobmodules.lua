@@ -502,7 +502,7 @@ if mods["bobmodules"] then
           { type = "item", name = "token-bio", amount = 1 },
         },
         energy_required = 15,
-        result = "angels-bio-yield-module-" .. i,
+        results = {{ type = "item", name = "angels-bio-yield-module-" .. i, amount = 1 }},
       },
       {
         type = "technology",

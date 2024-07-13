@@ -9,7 +9,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-0",
+      results = {{ type = "item", name = "angels-assembling-machine-0", amount = 1 }},
     },
     --ASSEMBLER 1
     {
@@ -20,7 +20,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-small-1",
+      results = {{ type = "item", name = "angels-assembling-machine-small-1", amount = 1 }},
     },
     {
       type = "recipe",
@@ -30,7 +30,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-big-1",
+      results = {{ type = "item", name = "angels-assembling-machine-big-1", amount = 1 }},
     },
     --ASSEMBLER 2
     {
@@ -41,7 +41,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-small-2",
+      results = {{ type = "item", name = "angels-assembling-machine-small-2", amount = 1 }},
     },
     {
       type = "recipe",
@@ -51,7 +51,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-big-2",
+      results = {{ type = "item", name = "angels-assembling-machine-big-2", amount = 1 }},
     },
     --ASSEMBLER 3
     {
@@ -62,7 +62,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-small-3",
+      results = {{ type = "item", name = "angels-assembling-machine-small-3", amount = 1 }},
     },
     {
       type = "recipe",
@@ -72,7 +72,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-void", amount = 1 },
       },
-      result = "angels-assembling-machine-big-3",
+      results = {{ type = "item", name = "angels-assembling-machine-big-3", amount = 1 }},
     },
   })
 end

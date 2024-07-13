@@ -11,7 +11,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-gears", amount = 2 },
       { type = "item", name = "t2-brick", amount = 4 },
     },
-    result = "ore-processing-machine",
+    results = {{ type = "item", name = "ore-processing-machine", amount = 1 }},
   },
   {
     type = "recipe",
@@ -24,7 +24,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 2 },
       { type = "item", name = "t3-brick", amount = 4 },
     },
-    result = "ore-processing-machine-2",
+    results = {{ type = "item", name = "ore-processing-machine-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -37,7 +37,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 2 },
       { type = "item", name = "t4-brick", amount = 4 },
     },
-    result = "ore-processing-machine-3",
+    results = {{ type = "item", name = "ore-processing-machine-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -50,7 +50,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 2 },
       { type = "item", name = "t5-brick", amount = 4 },
     },
-    result = "ore-processing-machine-4",
+    results = {{ type = "item", name = "ore-processing-machine-4", amount = 1 }},
   },
   --PELLET PRESS
   {
@@ -64,7 +64,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 4 },
       { type = "item", name = "t3-brick", amount = 2 },
     },
-    result = "pellet-press",
+    results = {{ type = "item", name = "pellet-press", amount = 1 }},
   },
   {
     type = "recipe",
@@ -77,7 +77,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 4 },
       { type = "item", name = "t4-brick", amount = 2 },
     },
-    result = "pellet-press-2",
+    results = {{ type = "item", name = "pellet-press-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -90,7 +90,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 4 },
       { type = "item", name = "t5-brick", amount = 2 },
     },
-    result = "pellet-press-3",
+    results = {{ type = "item", name = "pellet-press-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -103,7 +103,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t6-gears", amount = 4 },
       { type = "item", name = "t6-brick", amount = 2 },
     },
-    result = "pellet-press-4",
+    results = {{ type = "item", name = "pellet-press-4", amount = 1 }},
   },
   --POWDER MIXER
   {
@@ -117,7 +117,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-gears", amount = 1 },
       { type = "item", name = "t2-brick", amount = 1 },
     },
-    result = "powder-mixer",
+    results = {{ type = "item", name = "powder-mixer", amount = 1 }},
   },
   {
     type = "recipe",
@@ -130,7 +130,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 1 },
       { type = "item", name = "t3-brick", amount = 1 },
     },
-    result = "powder-mixer-2",
+    results = {{ type = "item", name = "powder-mixer-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -143,7 +143,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 1 },
       { type = "item", name = "t4-brick", amount = 1 },
     },
-    result = "powder-mixer-3",
+    results = {{ type = "item", name = "powder-mixer-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -156,7 +156,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 1 },
       { type = "item", name = "t5-brick", amount = 1 },
     },
-    result = "powder-mixer-4",
+    results = {{ type = "item", name = "powder-mixer-4", amount = 1 }},
   },
   --BLAST FURNACE
   {
@@ -171,7 +171,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 10 },
       { type = "item", name = "t0-pipe", amount = 5 },
     },
-    result = "blast-furnace",
+    results = {{ type = "item", name = "blast-furnace", amount = 1 }},
   },
   {
     type = "recipe",
@@ -185,7 +185,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 10 },
       { type = "item", name = "t1-pipe", amount = 5 },
     },
-    result = "blast-furnace-2",
+    results = {{ type = "item", name = "blast-furnace-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -199,7 +199,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 10 },
       { type = "item", name = "t3-pipe", amount = 5 },
     },
-    result = "blast-furnace-3",
+    results = {{ type = "item", name = "blast-furnace-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -213,7 +213,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 10 },
       { type = "item", name = "t4-pipe", amount = 5 },
     },
-    result = "blast-furnace-4",
+    results = {{ type = "item", name = "blast-furnace-4", amount = 1 }},
   },
   --CHEMICAL FURNACE
   {
@@ -228,7 +228,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 5 },
       { type = "item", name = "t1-pipe", amount = 10 },
     },
-    result = "angels-chemical-furnace",
+    results = {{ type = "item", name = "angels-chemical-furnace", amount = 1 }},
   },
   {
     type = "recipe",
@@ -242,7 +242,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 5 },
       { type = "item", name = "t3-pipe", amount = 10 },
     },
-    result = "angels-chemical-furnace-2",
+    results = {{ type = "item", name = "angels-chemical-furnace-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -256,7 +256,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 5 },
       { type = "item", name = "t4-pipe", amount = 10 },
     },
-    result = "angels-chemical-furnace-3",
+    results = {{ type = "item", name = "angels-chemical-furnace-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -270,7 +270,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 5 },
       { type = "item", name = "t5-pipe", amount = 10 },
     },
-    result = "angels-chemical-furnace-4",
+    results = {{ type = "item", name = "angels-chemical-furnace-4", amount = 1 }},
   },
   --INDUCTION FURNACE
   {
@@ -286,7 +286,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-gears", amount = 3 },
       { type = "item", name = "t0-pipe", amount = 4 },
     },
-    result = "induction-furnace",
+    results = {{ type = "item", name = "induction-furnace", amount = 1 }},
   },
   {
     type = "recipe",
@@ -301,7 +301,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-gears", amount = 3 },
       { type = "item", name = "t1-pipe", amount = 4 },
     },
-    result = "induction-furnace-2",
+    results = {{ type = "item", name = "induction-furnace-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -316,7 +316,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 3 },
       { type = "item", name = "t3-pipe", amount = 4 },
     },
-    result = "induction-furnace-3",
+    results = {{ type = "item", name = "induction-furnace-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -331,7 +331,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 3 },
       { type = "item", name = "t4-pipe", amount = 4 },
     },
-    result = "induction-furnace-4",
+    results = {{ type = "item", name = "induction-furnace-4", amount = 1 }},
   },
   --CASTING MACHINE
   {
@@ -347,7 +347,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 1 },
       { type = "item", name = "t0-pipe", amount = 2 },
     },
-    result = "casting-machine",
+    results = {{ type = "item", name = "casting-machine", amount = 1 }},
   },
   {
     type = "recipe",
@@ -362,7 +362,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 1 },
       { type = "item", name = "t1-pipe", amount = 2 },
     },
-    result = "casting-machine-2",
+    results = {{ type = "item", name = "casting-machine-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -377,7 +377,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 1 },
       { type = "item", name = "t3-pipe", amount = 2 },
     },
-    result = "casting-machine-3",
+    results = {{ type = "item", name = "casting-machine-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -392,7 +392,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 1 },
       { type = "item", name = "t4-pipe", amount = 2 },
     },
-    result = "casting-machine-4",
+    results = {{ type = "item", name = "casting-machine-4", amount = 1 }},
   },
   --SINTERING OVEN
   {
@@ -406,7 +406,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-circuit", amount = 5 },
       { type = "item", name = "t1-brick", amount = 9 },
     },
-    result = "sintering-oven",
+    results = {{ type = "item", name = "sintering-oven", amount = 1 }},
   },
   {
     type = "recipe",
@@ -419,7 +419,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-circuit", amount = 5 },
       { type = "item", name = "t2-brick", amount = 9 },
     },
-    result = "sintering-oven-2",
+    results = {{ type = "item", name = "sintering-oven-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -432,7 +432,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-circuit", amount = 5 },
       { type = "item", name = "t3-brick", amount = 9 },
     },
-    result = "sintering-oven-3",
+    results = {{ type = "item", name = "sintering-oven-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -445,7 +445,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-circuit", amount = 5 },
       { type = "item", name = "t4-brick", amount = 9 },
     },
-    result = "sintering-oven-4",
+    results = {{ type = "item", name = "sintering-oven-4", amount = 1 }},
   },
   {
     type = "recipe",
@@ -458,7 +458,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-circuit", amount = 5 },
       { type = "item", name = "t5-brick", amount = 9 },
     },
-    result = "sintering-oven-5",
+    results = {{ type = "item", name = "sintering-oven-5", amount = 1 }},
   },
   --STRAND CASTING MACHINE
   {
@@ -474,7 +474,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 6 },
       { type = "item", name = "t2-gears", amount = 4 },
     },
-    result = "strand-casting-machine",
+    results = {{ type = "item", name = "strand-casting-machine", amount = 1 }},
   },
   {
     type = "recipe",
@@ -489,7 +489,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 6 },
       { type = "item", name = "t3-gears", amount = 4 },
     },
-    result = "strand-casting-machine-2",
+    results = {{ type = "item", name = "strand-casting-machine-2", amount = 1 }},
   },
   {
     type = "recipe",
@@ -504,7 +504,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 6 },
       { type = "item", name = "t4-gears", amount = 4 },
     },
-    result = "strand-casting-machine-3",
+    results = {{ type = "item", name = "strand-casting-machine-3", amount = 1 }},
   },
   {
     type = "recipe",
@@ -519,7 +519,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-pipe", amount = 6 },
       { type = "item", name = "t5-gears", amount = 4 },
     },
-    result = "strand-casting-machine-4",
+    results = {{ type = "item", name = "strand-casting-machine-4", amount = 1 }},
   },
   --COOLING TOWER
   {
@@ -534,6 +534,6 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 5 },
       { type = "item", name = "t2-brick", amount = 10 },
     },
-    result = "cooling-tower",
+    results = {{ type = "item", name = "cooling-tower", amount = 1 }},
   },
 })

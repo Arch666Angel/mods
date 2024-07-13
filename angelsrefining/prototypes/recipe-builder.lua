@@ -118,8 +118,6 @@ end
 local p_blocked = {
   type = true,
   name = true,
-  result = true,
-  result_count = true,
   results = true,
   amount = true,
   amount_min = true,
@@ -452,24 +450,16 @@ local function p_merge(base, patch, k)
 end
 
 local function p_result_merge(target, base, patch)
-  local b, bc, bs
-  local p, pc, ps
-  b, bc, bs = base.result, base.result_count, base.results
-  p, pc, ps = patch.result, patch.result_count, patch.results
+  local bs = base.results
+  local ps = patch.results
   if ps then
-    local rs = p_merge_item_lists(bs or { { name = b, type = "item", amount = bc or 1 } }, ps)
+    local rs = p_merge_item_lists(bs, ps)
     if not next(rs) then
       rs[1] = { "angels-void", 1 }
     end
     target.results = rs
-  elseif p then
-    target.result = p
-    target.result_count = prioritize(pc, bc)
   elseif bs then
     target.results = bs
-  else
-    target.result = b
-    target.result_count = prioritize(pc, bc)
   end
 end
 

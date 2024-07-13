@@ -10,7 +10,7 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 20 },
       { type = "item", name = "iron-gear-wheel", amount = 25 },
     },
-    result = "angels-cab",
+    results = {{ type = "item", name = "angels-cab", amount = 1 }},
   },
   {
     type = "recipe",
@@ -23,7 +23,7 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 1 },
       { type = "item", name = "iron-gear-wheel", amount = 1 },
     },
-    result = "angels-cab-deploy-charge",
+    results = {{ type = "item", name = "angels-cab-deploy-charge", amount = 1 }},
   },
   {
     type = "recipe",
@@ -36,6 +36,6 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 1 },
       { type = "item", name = "iron-gear-wheel", amount = 1 },
     },
-    result = "angels-cab-undeploy-charge",
+    results = {{ type = "item", name = "angels-cab-undeploy-charge", amount = 1 }},
   },
 })

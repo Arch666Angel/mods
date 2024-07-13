@@ -30,7 +30,7 @@ if angelsmods.industries.components then
         { type = "item", name = "low-density-structure", amount = 25 },
         { type = "item", name = "rocket-control-unit", amount = 01 },
       },
-      result = "angels-rocket-hull",
+      results = {{ type = "item", name = "angels-rocket-hull", amount = 1 }},
     },
     {
       type = "recipe",
@@ -43,7 +43,7 @@ if angelsmods.industries.components then
         { type = "item", name = "rocket-fuel", amount = 75 },
         { type = "item", name = "rocket-control-unit", amount = 60 },
       },
-      result = "angels-rocket-ion-thruster",
+      results = {{ type = "item", name = "angels-rocket-ion-thruster", amount = 1 }},
     },
     {
       type = "recipe",
@@ -57,7 +57,7 @@ if angelsmods.industries.components then
         { type = "item", name = "rocket-fuel", amount = 250 },
         { type = "item", name = "rocket-control-unit", amount = 40 },
       },
-      result = "angels-rocket-ion-booster",
+      results = {{ type = "item", name = "angels-rocket-ion-booster", amount = 1 }},
     },
     {
       type = "recipe",
@@ -70,7 +70,7 @@ if angelsmods.industries.components then
         { type = "item", name = "rocket-control-unit", amount = 15 },
         { type = "item", name = "angels-deuterium-fuel-cell", amount = 1 },
       },
-      result = "angels-rocket-fusion-reactor",
+      results = {{ type = "item", name = "angels-rocket-fusion-reactor", amount = 1 }},
     },
     {
       type = "recipe",
@@ -84,7 +84,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-heavy-energy-shield-vequip", amount = 5 },
         { type = "item", name = "radar", amount = 10 },
       },
-      result = "angels-rocket-shield-array",
+      results = {{ type = "item", name = "angels-rocket-shield-array", amount = 1 }},
     },
     {
       type = "recipe",
@@ -98,7 +98,7 @@ if angelsmods.industries.components then
         { type = "item", name = "discharge-defense-equipment", amount = 5 },
         { type = "item", name = "radar", amount = 10 },
       },
-      result = "angels-rocket-laser-array",
+      results = {{ type = "item", name = "angels-rocket-laser-array", amount = 1 }},
     },
   })
 end

@@ -9,7 +9,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 20 },
       { type = "item", name = "electronic-circuit", amount = 20 },
     },
-    result = "angels-burner-generator-vequip",
+    results = {{ type = "item", name = "angels-burner-generator-vequip", amount = 1 }},
     icon_size = 32,
   },
   {
@@ -22,7 +22,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
     },
-    result = "angels-fusion-reactor-vequip",
+    results = {{ type = "item", name = "angels-fusion-reactor-vequip", amount = 1 }},
     icon_size = 32,
   },
   {
@@ -35,7 +35,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
     },
-    result = "angels-repair-roboport-vequip",
+    results = {{ type = "item", name = "angels-repair-roboport-vequip", amount = 1 }},
     icon_size = 32,
   },
   {
@@ -47,7 +47,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 20 },
       { type = "item", name = "electronic-circuit", amount = 20 },
     },
-    result = "angels-construction-roboport-vequip",
+    results = {{ type = "item", name = "angels-construction-roboport-vequip", amount = 1 }},
     icon_size = 32,
   },
   {
@@ -60,7 +60,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
     },
-    result = "angels-heavy-energy-shield-vequip",
+    results = {{ type = "item", name = "angels-heavy-energy-shield-vequip", amount = 1 }},
     icon_size = 32,
   },
   {
@@ -73,7 +73,7 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "advanced-circuit", amount = 20 },
     },
-    result = "angels-rocket-defense-equipment-vequip",
+    results = {{ type = "item", name = "angels-rocket-defense-equipment-vequip", amount = 1 }},
     icon_size = 32,
   },
 })

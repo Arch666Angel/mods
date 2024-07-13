@@ -87,7 +87,7 @@ if angelsmods.industries.components then
         { type = "item", name = "body-1", amount = 1 },
         { type = "item", name = "angels-trigger", amount = 1 },
       },
-      result = "weapon-1",
+      results = {{ type = "item", name = "weapon-1", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -102,7 +102,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-trigger", amount = 1 },
         { type = "item", name = "angels-explosionchamber", amount = 1 },
       },
-      result = "weapon-2",
+      results = {{ type = "item", name = "weapon-2", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -117,7 +117,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-explosionchamber", amount = 1 },
         { type = "item", name = "angels-fluidchamber", amount = 1 },
       },
-      result = "weapon-3",
+      results = {{ type = "item", name = "weapon-3", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -133,7 +133,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-fluidchamber", amount = 1 },
         { type = "item", name = "angels-energycrystal", amount = 1 },
       },
-      result = "weapon-4",
+      results = {{ type = "item", name = "weapon-4", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -150,7 +150,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-energycrystal", amount = 1 },
         { type = "item", name = "angels-acceleratorcoil", amount = 1 },
       },
-      result = "weapon-5",
+      results = {{ type = "item", name = "weapon-5", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -165,7 +165,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "iron-plate", amount = 1 },
       },
-      result = "angels-trigger",
+      results = {{ type = "item", name = "angels-trigger", amount = 1 }},
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -178,7 +178,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "steel-plate", amount = 1 },
       },
-      result = "angels-explosionchamber",
+      results = {{ type = "item", name = "angels-explosionchamber", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -190,7 +190,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-aluminium", amount = 1 },
       },
-      result = "angels-fluidchamber",
+      results = {{ type = "item", name = "angels-fluidchamber", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -202,7 +202,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-plate-titanium", amount = 1 },
       },
-      result = "angels-energycrystal",
+      results = {{ type = "item", name = "angels-energycrystal", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -216,7 +216,7 @@ if angelsmods.industries.components then
         { type = "item", name = "steel-plate", amount = 1 },
         { type = "fluid", name = "lubricant", amount = 1 },
       },
-      result = "angels-acceleratorcoil",
+      results = {{ type = "item", name = "angels-acceleratorcoil", amount = 1 }},
       icon_size = 32,
     },
     -----------------------------------------------------------------------------

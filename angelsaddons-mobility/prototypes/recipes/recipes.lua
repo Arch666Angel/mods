@@ -21,7 +21,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
       { "steel-plate", { 40, "+10", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 50, "+25", "+25" } },
     },
-    result = "crawler-locomotive",
+    results = {{ type = "item" name = "crawler-locomotive", amount = 1, }},
   }, "angels-crawler-train")
 
   funcs.generate_train_recipe({
@@ -44,7 +44,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
       { "steel-plate", { 35, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 40, "+20", "+20" } },
     },
-    result = "crawler-locomotive-wagon",
+    results = {{ type = "item" name = "crawler-locomotive-wagon", amount = 1, }},
   }, "angels-crawler-train")
 
   funcs.generate_train_recipe({
@@ -64,7 +64,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
       { "steel-plate", { 20, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 25, "+10", "+15" } },
     },
-    result = "crawler-wagon",
+    results = {{ type = "item" name = "crawler-wagon", amount = 1, }},
   }, "angels-crawler-train")
 
   funcs.generate_train_recipe({
@@ -87,7 +87,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
       { "steel-plate", { 20, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 25, "+10", "+15" } },
     },
-    result = "crawler-bot-wagon",
+    results = {{ type = "item" name = "crawler-bot-wagon", amount = 1, }},
   }, "angels-crawler-train")
 end
 
@@ -110,7 +110,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
       { "steel-plate", { 40, "+10", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 50, "+25", "+25" } },
     },
-    result = "petro-locomotive-1",
+    results = {{ type = "item" name = "petro-locomotive-1", amount = 1, }},
   }, "angels-petro-train")
 
   funcs.generate_train_recipe({
@@ -129,7 +129,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
       { "steel-plate", { 20, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 25, "+10", "+15" } },
     },
-    result = "petro-tank1",
+    results = {{ type = "item" name = "petro-tank1", amount = 1, }},
   }, "angels-petro-train")
 
   funcs.generate_train_recipe({
@@ -148,7 +148,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
       { "steel-plate", { 20, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 25, "+10", "+15" } },
     },
-    result = "petro-tank2",
+    results = {{ type = "item" name = "petro-tank2", amount = 1, }},
   }, "angels-petro-train")
 end
 
@@ -171,7 +171,7 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
       { "steel-plate", { 40, "+10", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 50, "+25", "+25" } },
     },
-    result = "smelting-locomotive-1",
+    results = {{ type = "item" name = "smelting-locomotive-1", amount = 1, }},
   }, "angels-smelting-train")
 
   funcs.generate_train_recipe({
@@ -194,7 +194,7 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
       { "steel-plate", { 35, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 40, "+20", "+20" } },
     },
-    result = "smelting-locomotive-tender",
+    results = {{ type = "item" name = "smelting-locomotive-tender", amound = 1, }},
   }, "angels-smelting-train")
 
   funcs.generate_train_recipe({
@@ -214,6 +214,6 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
       { "steel-plate", { 20, "+5", 0, 0, 0 } },
       { "low-density-structure", { 0, 0, 25, "+10", "+15" } },
     },
-    result = "smelting-wagon-1",
+    results = {{ type = "item" name = "smelting-wagon-1", amount = 1, }},
   }, "angels-smelting-train")
 end

@@ -11,7 +11,7 @@ if angelsmods.industries.tech then
         { type = "item", name = "science-data-analyzer", amount = 1 },
         { type = "item", name = "circuit-grey", amount = 1 },
       },
-      result = "angels-science-pack-grey",
+      results = {{ type = "item", name = "angels-science-pack-grey", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -25,7 +25,7 @@ if angelsmods.industries.tech then
         --{type="item", name="science-force-analyzer", amount = 1},
         { type = "item", name = "circuit-red-loaded", amount = 1 },
       },
-      result = "angels-science-pack-red",
+      results = {{ type = "item", name = "angels-science-pack-red", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -39,7 +39,7 @@ if angelsmods.industries.tech then
         --{type="item", name="science-harmonics-analyzer", amount = 1},
         { type = "item", name = "circuit-green-loaded", amount = 1 },
       },
-      result = "angels-science-pack-green",
+      results = {{ type = "item", name = "angels-science-pack-green", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -53,7 +53,7 @@ if angelsmods.industries.tech then
         --addition
         { type = "item", name = "circuit-orange-loaded", amount = 1 },
       },
-      result = "angels-science-pack-orange",
+      results = {{ type = "item", name = "angels-science-pack-orange", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -67,7 +67,7 @@ if angelsmods.industries.tech then
         --addition
         { type = "item", name = "circuit-blue-loaded", amount = 1 },
       },
-      result = "angels-science-pack-blue",
+      results = {{ type = "item", name = "angels-science-pack-blue", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -81,7 +81,7 @@ if angelsmods.industries.tech then
         --addition
         { type = "item", name = "circuit-yellow-loaded", amount = 1 },
       },
-      result = "angels-science-pack-yellow",
+      results = {{ type = "item", name = "angels-science-pack-yellow", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -95,7 +95,7 @@ if angelsmods.industries.tech then
         --addition
         --{type="item", name="circuit-yellow-loaded", amount = 1},
       },
-      result = "angels-science-pack-white",
+      results = {{ type = "item", name = "angels-science-pack-white", amount = 1 }},
       icon_size = 32,
     },
     --SCIENCE PACKS COMPONENTS
@@ -122,7 +122,7 @@ if angelsmods.industries.tech then
         { type = "item", name = "angels-solder", amount = 1 },
         { type = "item", name = "steel-plate", amount = 1 },
       },
-      result = "science-force-analyzer",
+      results = {{ type = "item", name = "science-force-analyzer", amount = 1 }},
       icon_size = 32,
     },
     {
@@ -134,7 +134,7 @@ if angelsmods.industries.tech then
         { type = "item", name = "angels-plate-silver", amount = 1 },
         { type = "item", name = "angels-plate-aluminium", amount = 1 },
       },
-      result = "science-harmonics-analyzer",
+      results = {{ type = "item", name = "science-harmonics-analyzer", amount = 1 }},
       icon_size = 32,
     },
   })

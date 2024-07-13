@@ -14,7 +14,7 @@ if angelsmods.industries.overhaul then
         { type = "item", name = "t5-plate", amount = 100 },
         { type = "item", name = data.raw.item["lead-plate"] and "lead-plate" or "angels-plate-lead", amount = 350 },
       },
-      result = "angels-burner-reactor",
+      results = {{ type = "item", name = "angels-burner-reactor", amount = 1 }},
     },
   })
 end
