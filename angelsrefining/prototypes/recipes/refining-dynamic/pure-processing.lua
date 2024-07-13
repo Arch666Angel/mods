@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --TIER 4
   {
@@ -10,17 +8,9 @@ data:extend({
     energy_required = 2,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore1-pure", amount = 9 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore1-pure", amount = 13 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore1-pure", amount = 9 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -37,17 +27,9 @@ data:extend({
     energy_required = 2,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore2-pure", amount = 9 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore2-pure", amount = 13 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore2-pure", amount = 9 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -64,17 +46,9 @@ data:extend({
     energy_required = 2,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore3-pure", amount = 9 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore3-pure", amount = 13 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore3-pure", amount = 9 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -94,17 +68,9 @@ data:extend({
     energy_required = 2,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore4-pure", amount = 9 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore4-pure", amount = 13 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore4-pure", amount = 9 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -121,17 +87,9 @@ data:extend({
     energy_required = 2,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore5-pure", amount = 9 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore5-pure", amount = 13 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore5-pure", amount = 9 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -148,17 +106,9 @@ data:extend({
     energy_required = 2,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore6-pure", amount = 9 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore6-pure", amount = 13 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore6-pure", amount = 9 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },

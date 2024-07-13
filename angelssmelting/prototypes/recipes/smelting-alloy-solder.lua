@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
@@ -113,27 +111,14 @@ data:extend({
     name = "roll-solder-casting",
     category = "strand-casting",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-solder", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-solder", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-solder"),
@@ -148,32 +133,17 @@ data:extend({
     name = "roll-solder-casting-fast",
     category = "strand-casting-2",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-solder",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-solder", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-solder",
+    results = {
+      { type = "item", name = "angels-roll-solder", amount = 8 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-solder",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-solder"),
       2,
@@ -188,25 +158,13 @@ data:extend({
     name = "angels-solder-mixture-smelting",
     category = "smelting",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "angels-solder-mixture", amount = 2 },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "angels-solder-mixture", amount = 2 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "angels-solder-mixture", amount = 3 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-solder", amount = 2 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-solder"),
@@ -221,25 +179,13 @@ data:extend({
     name = "angels-solder",
     category = "casting",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 6 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-solder", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 6 },
-      },
+    results = {
+      { type = "item", name = "angels-solder", amount = 6 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-solder"),

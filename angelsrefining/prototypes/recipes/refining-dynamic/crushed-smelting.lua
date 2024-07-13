@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --Tier 0
   {
@@ -7,20 +5,11 @@ data:extend({
     name = "angelsore1-crushed-smelting",
     category = "smelting",
     subgroup = "raw-material",
-    normal = {
-      energy_required = 7,
-      ingredients = { { type = "item", name = "angels-ore1-crushed", amount = 3 } },
-      results = { { type = "item", name = "iron-plate", amount = 2 } },
-      enabled = true,
-      allow_decomposition = false,
-    },
-    expensive = {
-      energy_required = 3.5,
-      ingredients = { { type = "item", name = "angels-ore1-crushed", amount = 5 * rawmulti } },
-      results = { { type = "item", name = "iron-plate", amount = 1 } },
-      enabled = true,
-      allow_decomposition = false,
-    },
+    energy_required = 7,
+    ingredients = { { type = "item", name = "angels-ore1-crushed", amount = 3 } },
+    results = { { type = "item", name = "iron-plate", amount = 2 } },
+    enabled = true,
+    allow_decomposition = false,
     icons = {
       mods["angelssmelting"] and {
         icon = "__angelssmelting__/graphics/icons/plate-iron.png",
@@ -43,20 +32,11 @@ data:extend({
     name = "angelsore3-crushed-smelting",
     category = "smelting",
     subgroup = "raw-material",
-    normal = {
-      energy_required = 7,
-      ingredients = { { type = "item", name = "angels-ore3-crushed", amount = 3 } },
-      results = { { type = "item", name = "copper-plate", amount = 2 } },
-      enabled = true,
-      allow_decomposition = false,
-    },
-    expensive = {
-      energy_required = 3.5,
-      ingredients = { { type = "item", name = "angels-ore3-crushed", amount = 5 * rawmulti } },
-      results = { { type = "item", name = "copper-plate", amount = 1 } },
-      enabled = true,
-      allow_decomposition = false,
-    },
+    energy_required = 7,
+    ingredients = { { type = "item", name = "angels-ore3-crushed", amount = 3 } },
+    results = { { type = "item", name = "copper-plate", amount = 2 } },
+    enabled = true,
+    allow_decomposition = false,
     icons = {
       mods["angelssmelting"] and {
         icon = "__angelssmelting__/graphics/icons/plate-copper.png",
@@ -79,21 +59,10 @@ data:extend({
     name = "angelsore5-crushed-smelting",
     category = "smelting",
     subgroup = "raw-material",
-    normal = {
-      energy_required = 7,
-      ingredients = { { type = "item", name = "angels-ore5-crushed", amount = 3 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-      enabled = true,
-      allow_decomposition = false,
-    },
-    expensive = {
-      energy_required = 3.5,
-      ingredients = { { type = "item", name = "angels-ore5-crushed", amount = 5 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    energy_required = 7,
+    ingredients = { { type = "item", name = "angels-ore5-crushed", amount = 3 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     enabled = true,
     allow_decomposition = false,
@@ -105,24 +74,13 @@ data:extend({
     name = "angelsore6-crushed-smelting",
     category = "smelting",
     subgroup = "raw-material",
-    normal = {
-      energy_required = 7,
-      ingredients = { { type = "item", name = "angels-ore6-crushed", amount = 3 } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-      enabled = true,
-      allow_decomposition = false,
+    energy_required = 7,
+    ingredients = { { type = "item", name = "angels-ore6-crushed", amount = 3 } },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
-    expensive = {
-      energy_required = 3.5,
-      ingredients = { { type = "item", name = "angels-ore6-crushed", amount = 5 * rawmulti } },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-      enabled = true,
-      allow_decomposition = false,
-    },
+    enabled = true,
+    allow_decomposition = false,
     icon_size = 32,
     order = "a-a [angelsore6-crushed-smelting]",
   },

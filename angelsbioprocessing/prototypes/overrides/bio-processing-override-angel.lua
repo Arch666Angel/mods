@@ -47,14 +47,12 @@ for _, item_name in pairs({ "solid-beans", "solid-corn", "solid-leafs", "solid-n
     for _, biome_name in pairs({ "temperate", "desert", "swamp" }) do
       for tier_number = 1, 5 do
         local recipe = data.raw["recipe"][string.format("sorting-%s-%d", biome_name, tier_number)]
-        for _, recipe_difficulty in pairs({ recipe, recipe.normal, recipe.expensive }) do
-          if recipe_difficulty.result == item_name then
+        if recipe.result == item_name then
+          origin_items[string.format("%s-%d", biome_name, tier_number)] = true
+        end
+        for _, recipe_result in pairs(recipe.results) do
+          if (recipe_result[1] or recipe_result.name) == item_name then
             origin_items[string.format("%s-%d", biome_name, tier_number)] = true
-          end
-          for _, recipe_difficulty_result in pairs(recipe_difficulty.results) do
-            if (recipe_difficulty_result[1] or recipe_difficulty_result.name) == item_name then
-              origin_items[string.format("%s-%d", biome_name, tier_number)] = true
-            end
           end
         end
       end

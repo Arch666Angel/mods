@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --TIER 2 MIX
   {
@@ -10,25 +8,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore5-chunk", amount = 2 },
-        { type = "item", name = "angels-ore6-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore5-chunk", amount = 2 },
+      { type = "item", name = "angels-ore6-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore5-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore6-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "e[angelsore-chunk-mix1-processing]",
@@ -41,25 +27,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-chunk", amount = 2 },
-        { type = "item", name = "angels-ore5-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore1-chunk", amount = 2 },
+      { type = "item", name = "angels-ore5-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore5-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "f[angelsore-chunk-mix2-processing]",
@@ -72,25 +46,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-chunk", amount = 2 },
-        { type = "item", name = "angels-ore4-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore2-chunk", amount = 2 },
+      { type = "item", name = "angels-ore4-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore4-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "g[angelsore-chunk-mix3-processing]",
@@ -103,25 +65,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-chunk", amount = 2 },
-        { type = "item", name = "angels-ore6-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore2-chunk", amount = 2 },
+      { type = "item", name = "angels-ore6-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore6-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "h[angelsore-chunk-mix4-processing]",
@@ -134,25 +84,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore3-chunk", amount = 2 },
-        { type = "item", name = "angels-ore6-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore3-chunk", amount = 2 },
+      { type = "item", name = "angels-ore6-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore3-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore6-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "i[angelsore-chunk-mix5-processing]",
@@ -165,25 +103,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore8-powder", amount = 2 },
-        { type = "item", name = "angels-ore2-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore8-powder", amount = 2 },
+      { type = "item", name = "angels-ore2-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore4-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore2-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "j",
@@ -196,25 +122,13 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-chunk", amount = 2 },
-        { type = "item", name = "angels-ore2-chunk", amount = 2 },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore1-chunk", amount = 2 },
+      { type = "item", name = "angels-ore2-chunk", amount = 2 },
+      { type = "item", name = "catalysator-green", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore2-chunk", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "j",
@@ -227,23 +141,12 @@ data:extend({
     subgroup = "ore-sorting-t3",
     energy_required = 1.5,
     allow_decomposition = false,
-    normal = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore8-dust", amount = 8 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-ore8-dust", amount = 8 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore8-dust", amount = 9 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -259,23 +162,12 @@ data:extend({
     subgroup = "ore-sorting-t3",
     energy_required = 1.5,
     allow_decomposition = false,
-    normal = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore9-dust", amount = 8 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-ore9-dust", amount = 8 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore9-dust", amount = 9 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },

@@ -1,4 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 local AF = angelsmods.functions
 
 data:extend({
@@ -159,27 +158,14 @@ data:extend({
     name = "roll-platinum-casting",
     category = "strand-casting-4",
     subgroup = "angels-platinum-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-platinum", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-platinum", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-platinum", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-platinum", amount = 2 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-platinum"), 1, angelsmods.smelting.number_tint),
     order = "i[angels-roll-platinum]-a",
@@ -190,32 +176,17 @@ data:extend({
     name = "roll-platinum-casting-fast",
     category = "strand-casting-4",
     subgroup = "angels-platinum-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-platinum", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-platinum",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-platinum", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-platinum", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-platinum",
+    results = {
+      { type = "item", name = "angels-roll-platinum", amount = 4 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-platinum",
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-platinum"), 2, angelsmods.smelting.number_tint),
     order = "i[angels-roll-platinum]-b",
     crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
@@ -225,29 +196,15 @@ data:extend({
     name = "angels-wire-coil-platinum-casting",
     category = "strand-casting-4",
     subgroup = "angels-platinum-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 40 },
-        { type = "fluid", name = "liquid-molten-copper", amount = 40 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-platinum", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-platinum", amount = 40 },
+      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-copper", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-platinum", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-wire-coil-platinum", amount = 4 },
     },
     icons = AF.add_number_icon_layer(
       AF.get_object_icons("angels-wire-coil-platinum"),
@@ -262,34 +219,18 @@ data:extend({
     name = "angels-wire-coil-platinum-casting-fast",
     category = "strand-casting-4",
     subgroup = "angels-platinum-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 70 },
-        { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-platinum", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-wire-coil-platinum",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-platinum", amount = 70 },
+      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-copper", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-platinum", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-wire-coil-platinum",
+    results = {
+      { type = "item", name = "angels-wire-coil-platinum", amount = 8 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-wire-coil-platinum",
     icons = AF.add_number_icon_layer(
       AF.get_object_icons("angels-wire-coil-platinum"),
       2,
@@ -304,25 +245,13 @@ data:extend({
     name = "angels-plate-platinum",
     category = "casting-4",
     subgroup = "angels-platinum-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-platinum", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-platinum", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-platinum", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-platinum", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-platinum", amount = 4 },
     },
     icons = AF.add_icon_layer(
       AF.get_object_icons("angels-plate-platinum"),

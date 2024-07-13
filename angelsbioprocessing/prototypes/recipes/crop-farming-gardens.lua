@@ -1,4 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 local seed_icon_shift = 12
 
 data:extend({

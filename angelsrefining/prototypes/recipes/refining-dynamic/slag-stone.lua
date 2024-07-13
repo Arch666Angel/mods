@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --STONE & SLAG
   {
@@ -9,27 +7,11 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -45,27 +27,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -78,27 +47,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -111,27 +67,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -144,27 +87,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -177,27 +107,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -210,27 +127,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -243,27 +147,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -276,27 +167,14 @@ data:extend({
     subgroup = "slag-processing-1",
     energy_required = 8,
     enabled = false,
-    normal = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    allow_decomposition = false,
+    show_amount_in_title = false,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "mineral-sludge", amount = 50 },
     },
-    expensive = {
-      allow_decomposition = false,
-      show_amount_in_title = false,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "mineral-sludge", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("mineral-sludge"),
     icon_size = 32,
@@ -324,26 +202,14 @@ data:extend({
     name = "stone-crushed",
     category = "crafting",
     subgroup = "processing-crafting",
-    normal = {
-      ingredients = {
-        { type = "item", name = "stone-crushed", amount = 2 },
-      },
-      results = {
-        { type = "item", name = "stone", amount = 1 },
-      },
-      energy_required = 0.5,
-      enabled = true,
+    ingredients = {
+      { type = "item", name = "stone-crushed", amount = 2 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "stone-crushed", amount = 3 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "stone", amount = 1 },
-      },
-      energy_required = 1,
-      enabled = true,
+    results = {
+      { type = "item", name = "stone", amount = 1 },
     },
+    energy_required = 0.5,
+    enabled = true,
     icon_size = 32,
     order = "d[stone-crushed]",
   },

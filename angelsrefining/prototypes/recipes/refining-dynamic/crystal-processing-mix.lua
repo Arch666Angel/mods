@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --TIER 3 MIX
   {
@@ -10,27 +8,14 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-crystal", amount = 2 },
-        { type = "item", name = "angels-ore4-crystal", amount = 2 },
-        { type = "item", name = "angels-ore5-crystal", amount = 2 },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore1-crystal", amount = 2 },
+      { type = "item", name = "angels-ore4-crystal", amount = 2 },
+      { type = "item", name = "angels-ore5-crystal", amount = 2 },
+      { type = "item", name = "catalysator-orange", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore4-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore5-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "k",
@@ -43,27 +28,14 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-crystal", amount = 2 },
-        { type = "item", name = "angels-ore6-crystal", amount = 2 },
-        { type = "item", name = "angels-ore5-crystal", amount = 2 },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore1-crystal", amount = 2 },
+      { type = "item", name = "angels-ore6-crystal", amount = 2 },
+      { type = "item", name = "angels-ore5-crystal", amount = 2 },
+      { type = "item", name = "catalysator-orange", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore6-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore5-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "l",
@@ -76,27 +48,11 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-crystal", amount = 2 },
-        { type = "item", name = "angels-ore4-crystal", amount = 2 },
-        { type = "item", name = "angels-ore6-crystal", amount = 2 },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore4-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore6-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore2-crystal", amount = 2 },
+      { type = "item", name = "angels-ore4-crystal", amount = 2 },
+      { type = "item", name = "angels-ore6-crystal", amount = 2 },
+      { type = "item", name = "catalysator-orange", amount = 1 },
     },
     icon_size = 32,
     order = "m",
@@ -109,27 +65,14 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-crystal", amount = 2 },
-        { type = "item", name = "angels-ore4-crystal", amount = 2 },
-        { type = "item", name = "angels-ore5-crystal", amount = 2 },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore2-crystal", amount = 2 },
+      { type = "item", name = "angels-ore4-crystal", amount = 2 },
+      { type = "item", name = "angels-ore5-crystal", amount = 2 },
+      { type = "item", name = "catalysator-orange", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore2-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore4-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore5-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "n",
@@ -142,27 +85,14 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-crystal", amount = 2 },
-        { type = "item", name = "angels-ore3-crystal", amount = 2 },
-        { type = "item", name = "angels-ore5-crystal", amount = 2 },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "item", name = "angels-ore1-crystal", amount = 2 },
+      { type = "item", name = "angels-ore3-crystal", amount = 2 },
+      { type = "item", name = "angels-ore5-crystal", amount = 2 },
+      { type = "item", name = "catalysator-orange", amount = 1 },
     },
-    expensive = {
-      ingredients = {
-        { type = "item", name = "angels-ore1-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore3-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore5-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "o",
@@ -175,23 +105,12 @@ data:extend({
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
     allow_decomposition = false,
-    normal = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore8-crystal", amount = 9 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-ore8-crystal", amount = 9 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore8-crystal", amount = 10 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -207,23 +126,12 @@ data:extend({
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
     allow_decomposition = false,
-    normal = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore9-crystal", amount = 9 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-ore9-crystal", amount = 9 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore9-crystal", amount = 10 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -240,27 +148,14 @@ data:extend({
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
     allow_decomposition = false,
-    normal = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore8-crystal", amount = 2 },
-        { type = "item", name = "angels-ore9-crystal", amount = 2 },
-        { type = "item", name = "catalysator-orange", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-ore8-crystal", amount = 2 },
+      { type = "item", name = "angels-ore9-crystal", amount = 2 },
+      { type = "item", name = "catalysator-orange", amount = 1 },
     },
-    expensive = {
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "angels-ore8-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "angels-ore9-crystal", amount = 3 * rawmulti },
-        { type = "item", name = "catalysator-green", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "p",

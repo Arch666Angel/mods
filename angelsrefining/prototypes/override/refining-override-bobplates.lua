@@ -119,12 +119,6 @@ if mods["bobplates"] then
     "bob-diamond-3",
   }) do
     data.raw.recipe[recipeName].enabled = false
-    if data.raw.recipe[recipeName].normal then
-      data.raw.recipe[recipeName].normal.enabled = false
-    end
-    if data.raw.recipe[recipeName].expensive then
-      data.raw.recipe[recipeName].expensive.enabled = false
-    end
   end
   move_item("grinding-wheel", "bob-gems-cut", "g-4")
   move_item("polishing-wheel", "bob-gems-polished", "g-5-a")

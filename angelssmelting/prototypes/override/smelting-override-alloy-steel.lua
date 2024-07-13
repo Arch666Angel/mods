@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 local special_vanilla = angelsmods.functions.is_special_vanilla()
 
 if angelsmods.trigger.smelting_products["enable-all"] then

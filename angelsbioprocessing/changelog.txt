@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.7.28
+Version: 1.0.0
 Date: ???
   Changes:
+    - Removed references to normal / expensive recipes (945)
     - Limited animation speed of fish, puffer, and biter refugiums (987)
     - Tech tree changes: (991)
       - Moved Garden Processing and Farming 1 techs from Red Science to Green Science

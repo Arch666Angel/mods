@@ -1,4 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 local AF = angelsmods.functions
 
 data:extend({
@@ -8,25 +7,13 @@ data:extend({
     name = "solid-plastic",
     category = "crafting-with-fluid",
     subgroup = "petrochem-solids",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-plastic", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "plastic-bar", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-plastic", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-plastic", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "plastic-bar", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "plastic-bar", amount = 4 },
     },
     icon_size = 32,
     crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-plastic"),
@@ -100,25 +87,13 @@ data:extend({
     name = "solid-resin",
     category = "crafting-with-fluid",
     subgroup = "petrochem-solids",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-resin", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "solid-resin", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-resin", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-resin", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "solid-resin", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "solid-resin", amount = 4 },
     },
     icons = {
       {
@@ -198,25 +173,13 @@ data:extend({
     name = "solid-rubber",
     category = "crafting-with-fluid",
     subgroup = "petrochem-solids-2",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-rubber", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "solid-rubber", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-rubber", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-rubber", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "solid-rubber", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "solid-rubber", amount = 4 },
     },
     icons = {
       {
@@ -254,35 +217,17 @@ data:extend({
   -- name = "solid-glass",
   -- category = "chemistry",
   -- subgroup = "petrochem-solids",
-  -- normal =
-  -- {
   -- enabled = false,
   -- energy_required = 2,
   -- ingredients =
   -- {
-  -- {type="fluid", name="liquid-bisphenol-a", amount=20},
-  -- {type="fluid", name="gas-phosgene", amount=20},
-  -- {type="item", name="solid-sodium-hydroxide", amount=1},
+  --   {type="fluid", name="liquid-bisphenol-a", amount=20},
+  --   {type="fluid", name="gas-phosgene", amount=20},
+  --   {type="item", name="solid-sodium-hydroxide", amount=1},
   -- },
   -- results=
   -- {
-  -- {type="item", name="solid-glas", amount=4}},
-  -- },
-  -- },
-  -- expensive =
-  -- {
-  -- enabled = false,
-  -- energy_required = 2,
-  -- ingredients =
-  -- {
-  -- {type="fluid", name="liquid-bisphenol-a", amount=25 * intermediatemulti},
-  -- {type="fluid", name="gas-phosgene", amount=25 * intermediatemulti},
-  -- {type="item", name="solid-sodium-hydroxide", amount=1 * intermediatemulti},
-  -- },
-  -- results=
-  -- {
-  -- {type="item", name="solid-glas", amount=4}},
-  -- },
+  --   {type="item", name="solid-glas", amount=4},
   -- },
   -- icon = "__angelspetrochem__/graphics/icons/solid-glas.png",
   -- icon_size = 32,

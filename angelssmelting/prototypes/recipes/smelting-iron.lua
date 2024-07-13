@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --IRON
   -- SMELTING INTERMEDIATE
@@ -263,27 +261,14 @@ data:extend({
     name = "roll-iron-casting",
     category = "strand-casting",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-iron", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-iron", amount = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-iron"),
@@ -298,32 +283,17 @@ data:extend({
     name = "roll-iron-casting-fast",
     category = "strand-casting-2",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-iron",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-iron", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-iron",
+    results = {
+      { type = "item", name = "angels-roll-iron", amount = 4 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-iron",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-iron"),
       2,
@@ -337,27 +307,14 @@ data:extend({
     name = "rod-stack-iron-casting",
     category = "strand-casting",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 60 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 1 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-iron", amount = 60 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 80 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-rod-stack-iron", amount = 1 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
@@ -372,32 +329,17 @@ data:extend({
     name = "rod-stack-iron-casting-fast",
     category = "strand-casting-2",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 110 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 2 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-rod-stack-iron",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-iron", amount = 110 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 150 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 2 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-rod-stack-iron",
+    results = {
+      { type = "item", name = "angels-rod-stack-iron", amount = 2 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-rod-stack-iron",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
       2,
@@ -412,25 +354,13 @@ data:extend({
     name = "angels-plate-iron",
     category = "casting",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-iron", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-iron", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-iron", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-iron", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-iron"),

@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --BAUXITE/ALUMINIUM
   -- SMELTING INTERMEDIATE
@@ -244,27 +242,14 @@ data:extend({
     name = "roll-aluminium-casting",
     category = "strand-casting-2",
     subgroup = "angels-aluminium-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-aluminium", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-aluminium", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-aluminium", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-aluminium", amount = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-aluminium"),
@@ -279,32 +264,17 @@ data:extend({
     name = "roll-aluminium-casting-fast",
     category = "strand-casting-3",
     subgroup = "angels-aluminium-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-aluminium", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-aluminium",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-aluminium", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-aluminium", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-aluminium",
+    results = {
+      { type = "item", name = "angels-roll-aluminium", amount = 4 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-aluminium",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-aluminium"),
       2,
@@ -319,25 +289,13 @@ data:extend({
     name = "angels-plate-aluminium",
     category = "casting-2",
     subgroup = "angels-aluminium-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-aluminium", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-aluminium", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-aluminium", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-aluminium", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-aluminium"),

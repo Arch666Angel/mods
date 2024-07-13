@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["glass"].mixture = true
@@ -43,31 +42,18 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     data.raw["item"]["glass"].icon_size = 32
     data.raw["item"]["glass"].icon_mipmaps = 1
 
-    data.raw["recipe"]["angels-plate-glass-2"].normal.main_product = "glass"
-    data.raw["recipe"]["angels-plate-glass-2"].expensive.main_product = "glass"
-    data.raw["recipe"]["angels-plate-glass-3"].normal.main_product = "glass"
-    data.raw["recipe"]["angels-plate-glass-3"].expensive.main_product = "glass"
+    data.raw["recipe"]["angels-plate-glass-2"].main_product = "glass"
+    data.raw["recipe"]["angels-plate-glass-3"].main_product = "glass"
 
     OV.patch_recipes({
       {
         name = "quartz-glass",
         energy_required = 10.5,
-        normal = {
-          ingredients = {
-            { name = "quartz", type = "item", amount = "+3" },
-          },
-          results = {
-            { name = "glass", type = "item", amount = "+2" },
-          },
+        ingredients = {
+          { name = "quartz", type = "item", amount = "+3" },
         },
-        expensive = {
-          ingredients = {
-            { "!!" },
-            { name = "quartz", type = "item", amount = 5 * intermediatemulti },
-          },
-          results = {
-            { name = "glass", type = "item", amount = "+2" },
-          },
+        results = {
+          { name = "glass", type = "item", amount = "+2" },
         },
         icons = {
           {

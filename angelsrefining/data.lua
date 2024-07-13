@@ -98,13 +98,6 @@ angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or false
 angelsmods.trigger.smelting_products["lithium"] = angelsmods.trigger.smelting_products["lithium"] or {}
 angelsmods.trigger.smelting_products["lithium"].plate = mods["bobplates"] and true or false
 
--- MARATHON MODE
-angelsmods.marathon = angelsmods.marathon or {}
-angelsmods.marathon.buildingmulti = settings.startup["angels-marathon-buildingmulti"].value
-angelsmods.marathon.buildingtime = settings.startup["angels-marathon-buildingtime"].value
-angelsmods.marathon.rawmulti = settings.startup["angels-marathon-rawmulti"].value
-angelsmods.marathon.intermediatemulti = settings.startup["angels-marathon-intermediatemulti"].value
-
 --LOAD PROTOTYPES
 require("prototypes.refining-category")
 

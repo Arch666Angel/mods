@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --ADVANCED GEMs
   {
@@ -9,21 +7,11 @@ data:extend({
     subgroup = "geode-crystallization",
     energy_required = 4,
     enabled = false,
-    normal = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "fluid", name = "crystal-seedling", amount = 75 },
     },
-    expensive = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "a[angelsore7-crystallization-1]",
@@ -35,21 +23,11 @@ data:extend({
     subgroup = "geode-crystallization",
     energy_required = 4,
     enabled = false,
-    normal = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "fluid", name = "crystal-seedling", amount = 75 },
     },
-    expensive = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "b[angelsore7-crystallization-2]",
@@ -61,21 +39,11 @@ data:extend({
     subgroup = "geode-crystallization",
     energy_required = 4,
     enabled = false,
-    normal = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "fluid", name = "crystal-seedling", amount = 75 },
     },
-    expensive = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "c[angelsore7-crystallization-3]",
@@ -87,21 +55,11 @@ data:extend({
     subgroup = "geode-crystallization",
     energy_required = 4,
     enabled = false,
-    normal = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "fluid", name = "crystal-seedling", amount = 75 },
     },
-    expensive = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "d[angelsore7-crystallization-4]",
@@ -113,21 +71,11 @@ data:extend({
     subgroup = "geode-crystallization",
     energy_required = 4,
     enabled = false,
-    normal = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "fluid", name = "crystal-seedling", amount = 75 },
     },
-    expensive = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "e[angelsore7-crystallization-5]",
@@ -139,21 +87,11 @@ data:extend({
     subgroup = "geode-crystallization",
     energy_required = 4,
     enabled = false,
-    normal = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    ingredients = {
+      { type = "fluid", name = "crystal-seedling", amount = 75 },
     },
-    expensive = {
-      ingredients = {
-        { type = "fluid", name = "crystal-seedling", amount = 75 * rawmulti },
-      },
-      results = {
-        { type = "item", name = "angels-void", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
     order = "f[angelsore7-crystallization-6]",

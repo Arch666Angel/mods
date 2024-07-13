@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.27
+Version: 1.0.0
 Date: ???
   Changes:
+    - Removed references to normal / expensive recipes (945)
     - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.26

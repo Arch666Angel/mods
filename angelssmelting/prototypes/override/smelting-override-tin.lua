@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["tin"].ingot = true
@@ -74,26 +73,13 @@ if angelsmods.trigger.smelting_products["tin"].plate then
       {
         name = "tin-plate",
         energy_required = 10.5,
-        normal = {
-          enabled = false,
-          hidden = true,
-          ingredients = {
-            { name = "tin-ore", type = "item", amount = "+3" },
-          },
-          results = {
-            { name = "tin-plate", type = "item", amount = "+2" },
-          },
+        enabled = false,
+        hidden = true,
+        ingredients = {
+          { name = "tin-ore", type = "item", amount = "+3" },
         },
-        expensive = {
-          enabled = false,
-          hidden = true,
-          ingredients = {
-            { "!!" },
-            { name = "tin-ore", type = "item", amount = 5 * intermediatemulti },
-          },
-          results = {
-            { name = "tin-plate", type = "item", amount = "+2" },
-          },
+        results = {
+          { name = "tin-plate", type = "item", amount = "+2" },
         },
         icons = {
           {

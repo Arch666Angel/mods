@@ -1,4 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 local AF = angelsmods.functions
 
 data:extend({
@@ -191,27 +190,14 @@ data:extend({
     name = "roll-chrome-casting",
     category = "strand-casting-4",
     subgroup = "angels-chrome-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-chrome", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-chrome", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-chrome", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-chrome", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-chrome", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-chrome", amount = 2 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-chrome"), 1, angelsmods.smelting.number_tint),
     order = "j[angels-roll-chrome]-a",
@@ -222,32 +208,17 @@ data:extend({
     name = "roll-chrome-casting-fast",
     category = "strand-casting-4",
     subgroup = "angels-chrome-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-chrome", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-chrome", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-chrome",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-chrome", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-chrome", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-chrome", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-chrome",
+    results = {
+      { type = "item", name = "angels-roll-chrome", amount = 4 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-chrome",
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-chrome"), 2, angelsmods.smelting.number_tint),
     order = "j[angels-roll-chrome]-b",
     crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-chrome"),
@@ -258,25 +229,13 @@ data:extend({
     name = "angels-plate-chrome",
     category = "casting-4",
     subgroup = "angels-chrome-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-chrome", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-chrome", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-chrome", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-chrome", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-chrome", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-chrome", amount = 4 },
     },
     icons = AF.add_icon_layer(
       AF.get_object_icons("angels-plate-chrome"),

@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --STONE
   -- SMELTING INTERMEDIATE

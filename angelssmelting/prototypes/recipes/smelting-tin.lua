@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --TIN
   -- SMELTING INTERMEDIATE
@@ -135,27 +133,14 @@ data:extend({
     name = "roll-tin-casting",
     category = "strand-casting",
     subgroup = "angels-tin-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-tin", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-tin", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-tin", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-tin", amount = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-tin"),
@@ -170,32 +155,17 @@ data:extend({
     name = "roll-tin-casting-fast",
     category = "strand-casting-2",
     subgroup = "angels-tin-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-tin", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-tin",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-tin", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-tin", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-tin",
+    results = {
+      { type = "item", name = "angels-roll-tin", amount = 4 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-tin",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-tin"),
       2,
@@ -209,29 +179,15 @@ data:extend({
     name = "angels-wire-coil-tin-casting",
     category = "strand-casting",
     subgroup = "angels-tin-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 40 },
-        { type = "fluid", name = "liquid-molten-copper", amount = 40 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-tin", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-tin", amount = 40 },
+      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-copper", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-tin", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-wire-coil-tin", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-wire-coil-tin"),
@@ -246,34 +202,18 @@ data:extend({
     name = "angels-wire-coil-tin-casting-fast",
     category = "strand-casting-2",
     subgroup = "angels-tin-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 70 },
-        { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-tin", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-wire-coil-tin",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-tin", amount = 70 },
+      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-copper", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-tin", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-wire-coil-tin",
+    results = {
+      { type = "item", name = "angels-wire-coil-tin", amount = 8 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-wire-coil-tin",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-wire-coil-tin"),
       2,
@@ -288,25 +228,13 @@ data:extend({
     name = "angels-plate-tin",
     category = "casting",
     subgroup = "angels-tin-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-tin", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-tin", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-tin", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-tin", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-tin", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-tin"),

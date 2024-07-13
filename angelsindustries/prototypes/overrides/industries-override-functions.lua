@@ -195,9 +195,6 @@ angelsmods.industries.techtiers = {
   white = { amount = 2024, time = 120 }, --MEGABASE
 }
 
-angelsmods.marathon.tech_amount_multi = 1
-angelsmods.marathon.tech_time_multi = 1
-
 local function set_research_tiers(tech_name, tech_time, tech_amount)
   if data.raw.technology[tech_name] and (data.raw.technology[tech_name].unit or {}).count then
     OV.set_research_difficulty(tech_name, tech_time, tech_amount)
@@ -216,56 +213,56 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-specialised-labs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.grey.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.grey.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.grey.time
+              angelsmods.industries.techtiers.grey.amount
             )
           end
           if ingredients == "angels-science-pack-red" then
             OV.add_prereq(techname, "tech-red-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.red.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.red.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.red.time
+              angelsmods.industries.techtiers.red.amount
             )
           end
           if ingredients == "angels-science-pack-green" then
             OV.add_prereq(techname, "tech-green-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.green.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.green.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.green.time
+              angelsmods.industries.techtiers.green.amount
             )
           end
           if ingredients == "angels-science-pack-orange" then
             OV.add_prereq(techname, "tech-orange-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.orange.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.orange.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.orange.time
+              angelsmods.industries.techtiers.orange.amount
             )
           end
           if ingredients == "angels-science-pack-blue" then
             OV.add_prereq(techname, "tech-blue-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.blue.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.blue.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.blue.time
+              angelsmods.industries.techtiers.blue.amount
             )
           end
           if ingredients == "angels-science-pack-yellow" then
             OV.add_prereq(techname, "tech-yellow-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.yellow.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.yellow.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.yellow.time
+              angelsmods.industries.techtiers.yellow.amount
             )
           end
           if ingredients == "angels-science-pack-white" then
             OV.add_prereq(techname, "space-science-pack")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.white.time * angelsmods.marathon.tech_time_multi,
-              angelsmods.industries.techtiers.white.amount * angelsmods.marathon.tech_amount_multi
+              angelsmods.industries.techtiers.white.time
+              angelsmods.industries.techtiers.white.amount
             )
           end
         end
@@ -426,22 +423,9 @@ function angelsmods.functions.AI.replace_con_mats(buildings)
   for assembly_check, build in pairs(data.raw[buildings]) do
     if data.raw[buildings][assembly_check] and data.raw.recipe[assembly_check] then
       local rec_check = data.raw.recipe[assembly_check]
-      if rec_check.normal or rec_check.expensive then
-        if rec_check.normal then
-          local ing_list = rec_check.normal.ingredients
-          angelsmods.functions.AI.replace_blocks_list(ing_list)
-          rec_check.normal.energy_required = 0.5
-        end
-        if rec_check.expensive then
-          local ing_list = rec_check.expensive.ingredients
-          angelsmods.functions.AI.replace_blocks_list(ing_list)
-          rec_check.expensive.energy_required = 0.5
-        end
-      else
-        local ing_list = rec_check.ingredients
-        angelsmods.functions.AI.replace_blocks_list(ing_list)
-        rec_check.energy_required = 0.5
-      end
+      local ing_list = rec_check.ingredients
+      angelsmods.functions.AI.replace_blocks_list(ing_list)
+      rec_check.energy_required = 0.5
     end
   end
 end
@@ -452,13 +436,7 @@ function angelsmods.functions.AI.replace_minable_results(buildings)
     if data.raw.recipe[build.name] then
       local rec_check = data.raw.recipe[build.name]
       local ing_list = nil
-      if rec_check.normal then
-        ing_list = rec_check.normal.ingredients
-      elseif rec_check.expensive then
-        ing_list = rec_check.expensive.ingredients
-      else
-        ing_list = rec_check.ingredients
-      end
+      ing_list = rec_check.ingredients
       if ing_list and data.raw[build.type][build.name].minable then
         data.raw[build.type][build.name].minable.results = ing_list
         data.raw[build.type][build.name].minable.result = nil
@@ -496,12 +474,6 @@ function angelsmods.functions.AI.replace_recipe_ing(recipe, old_ing, new_ing, ne
     end
     if recipe.ingredients then
       angelsmods.functions.AI.rec_tab_replace(recipe.ingredients, old_ing, new_ing, new_count)
-    end
-    if recipe.normal and recipe.normal.ingredients then
-      angelsmods.functions.AI.rec_tab_replace(recipe.normal.ingredients, old_ing, new_ing, new_count)
-    end
-    if recipe.expensive and recipe.expensive.ingredients then
-      angelsmods.functions.AI.rec_tab_replace(recipe.expensive.ingredients, old_ing, new_ing, new_count)
     end
   end
 end

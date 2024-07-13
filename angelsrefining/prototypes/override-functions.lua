@@ -67,38 +67,6 @@ local function d_c(t)
   end
 end
 
-local splittable_keys = {
-  ingredients = true,
-  enabled = true,
-  energy_required = true,
-  result = true,
-  result_count = true,
-  results = true,
-  main_product = true,
-}
-local function has_splittable_key(recipe)
-  for k in pairs(splittable_keys) do
-    if recipe[k] ~= nil then
-      return true
-    end
-  end
-  return false
-end
-
-local function split_patch_difficulty(patch)
-  if has_splittable_key(patch) then
-    guarantee_subtable(patch, "normal")
-    guarantee_subtable(patch, "expensive")
-    for k in splittable_keys do
-      if patch[k] ~= nil then
-        patch.normal[k] = patch.normal[k] or d_c(patch[k])
-        patch.expensive[k] = patch.expensive[k] or patch[k]
-        patch[k] = nil
-      end
-    end
-  end
-end
-
 local function merge_ops(old, new)
   local i = #old + 1
   for j = 1, #new do
@@ -108,22 +76,10 @@ local function merge_ops(old, new)
 end
 
 local function merge_patches(old, new)
-  if new.normal or new.expensive then
-    split_patch_difficulty(old)
-    split_patch_difficulty(new)
-  elseif old.normal or old.expensive then
-    split_patch_difficulty(new)
-  end
   for k, v in pairs(new) do
     if k == "ingredients" or k == "results" then
       if old[k] then
         merge_ops(old[k], v)
-      else
-        old[k] = v
-      end
-    elseif k == "normal" or k == "expensive" then
-      if old[k] then
-        merge_patches(old[k], v)
       else
         old[k] = v
       end
@@ -357,92 +313,18 @@ ov_functions.patch_recipes = function(patch_list)
   end
 end
 
-ov_functions.modify_normal_input = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.normal then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "normal")
-  end
-  guarantee_subtable(patch.normal, "ingredients")
-  table.insert(patch.normal.ingredients, i_data)
-end
-
-ov_functions.modify_hard_input = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.expensive then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "expensive")
-  end
-  guarantee_subtable(patch.expensive, "ingredients")
-  table.insert(patch.expensive.ingredients, i_data)
-end
-
 ov_functions.modify_input = function(recipe, i_data)
   guarantee_subtable(patch_table, recipe)
   local patch = patch_table[recipe]
-  if patch.normal or patch.expensive then
-    set_normal_input(recipe, d_c(i_data))
-    set_hard_input(recipe, i_data)
-  else
-    guarantee_subtable(patch, "ingredients")
-    table.insert(patch.ingredients, i_data)
-  end
-end
-
-ov_functions.modify_normal_output = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.normal then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "normal")
-  end
-  guarantee_subtable(patch.normal, "results")
-  table.insert(patch.normal.results, i_data)
-end
-
-ov_functions.modify_hard_output = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.expensive then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "expensive")
-  end
-  guarantee_subtable(patch.expensive, "results")
-  table.insert(patch.expensive.results, i_data)
+  guarantee_subtable(patch, "ingredients")
+  table.insert(patch.ingredients, i_data)
 end
 
 ov_functions.modify_output = function(recipe, i_data)
   guarantee_subtable(patch_table, recipe)
   local patch = patch_table[recipe]
-  if patch.normal or patch.expensive then
-    ov_functions.modify_normal_output(recipe, d_c(i_data))
-    ov_functions.modify_hard_output(recipe, i_data)
-  else
-    guarantee_subtable(patch, "results")
-    table.insert(patch.results, i_data)
-  end
-end
-
-ov_functions.remove_normal_input = function(recipe, item) -- remove item from input of recipe (item may be a table containing a list of items to remove)
-  if type(item) == "table" then
-    for _, it in pairs(item) do
-      ov_functions.modify_normal_input(recipe, { it, 0 })
-    end
-  else
-    ov_functions.modify_normal_input(recipe, { item, 0 })
-  end
-end
-
-ov_functions.remove_hard_input = function(recipe, item)
-  if type(item) == "table" then
-    for _, it in pairs(item) do
-      ov_functions.modify_hard_input(recipe, { it, 0 })
-    end
-  else
-    ov_functions.modify_hard_input(recipe, { item, 0 })
-  end
+  guarantee_subtable(patch, "results")
+  table.insert(patch.results, i_data)
 end
 
 ov_functions.remove_input = function(recipe, item)
@@ -452,26 +334,6 @@ ov_functions.remove_input = function(recipe, item)
     end
   else
     ov_functions.modify_input(recipe, { item, 0 })
-  end
-end
-
-ov_functions.remove_normal_output = function(recipe, item) -- remove item from output of recipe (item may be a table containing a list of items to remove)
-  if type(item) == "table" then
-    for _, it in pairs(item) do
-      ov_functions.modify_normal_output(recipe, { it, 0 })
-    end
-  else
-    ov_functions.modify_normal_output(recipe, { item, 0 })
-  end
-end
-
-ov_functions.remove_hard_output = function(recipe, item)
-  if type(item) == "table" then
-    for _, it in pairs(item) do
-      ov_functions.modify_hard_output(recipe, { it, 0 })
-    end
-  else
-    ov_functions.modify_hard_output(recipe, { item, 0 })
   end
 end
 
@@ -559,24 +421,14 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
     for _, rec in pairs(recipe) do
       guarantee_subtable(patch_table, rec)
       local patch = patch_table[rec]
-      if patch.normal or patch.expensive then
-        disable_normal_recipe(rec)
-        disable_hard_recipe(rec)
-      else
-        patch.enabled = false
-      end
+      patch.enabled = false
       disable_table.recipes[rec] = true
       ov_functions.hide_recipe(rec)
     end
   else
     guarantee_subtable(patch_table, recipe)
     local patch = patch_table[recipe]
-    if patch.normal or patch.expensive then
-      disable_normal_recipe(recipe)
-      disable_hard_recipe(recipe)
-    else
-      patch.enabled = false
-    end
+    patch.enabled = false
     disable_table.recipes[recipe] = true
     ov_functions.hide_recipe(recipe)
   end
@@ -833,16 +685,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
     adjust_member(path, "main_product", "recipe_items")
   end
   if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
-    if recipe.normal or recipe.expensive then
-      if recipe.normal then
-        adjust_difficulty(recipe.normal)
-      end
-      if recipe.expensive then
-        adjust_difficulty(recipe.expensive)
-      end
-    else
-      adjust_difficulty(recipe)
-    end
+    adjust_difficulty(recipe)
     adjust_member(recipe, "icon", "recipe_icons")
   end
 end

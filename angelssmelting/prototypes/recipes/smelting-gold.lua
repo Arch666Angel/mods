@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --GOLD
   -- SMELTING INTERMEDIATE
@@ -204,27 +202,14 @@ data:extend({
     name = "roll-gold-casting",
     category = "strand-casting-3",
     subgroup = "angels-gold-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-gold", amount = 2 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-gold", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-gold", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-gold", amount = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-gold"),
@@ -239,32 +224,17 @@ data:extend({
     name = "roll-gold-casting-fast",
     category = "strand-casting-4",
     subgroup = "angels-gold-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-gold", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-gold",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-gold", amount = 140 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-gold", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-gold",
+    results = {
+      { type = "item", name = "angels-roll-gold", amount = 4 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-gold",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-gold"),
       2,
@@ -278,29 +248,15 @@ data:extend({
     name = "angels-wire-coil-gold-casting",
     category = "strand-casting-3",
     subgroup = "angels-gold-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 40 },
-        { type = "fluid", name = "liquid-molten-copper", amount = 40 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-gold", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-gold", amount = 40 },
+      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-copper", amount = 50 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-gold", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-wire-coil-gold", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-wire-coil-gold"),
@@ -315,34 +271,18 @@ data:extend({
     name = "angels-wire-coil-gold-casting-fast",
     category = "strand-casting-4",
     subgroup = "angels-gold-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 70 },
-        { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-gold", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-wire-coil-gold",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-gold", amount = 70 },
+      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "liquid-coolant", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-molten-copper", amount = 90 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-wire-coil-gold", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-wire-coil-gold",
+    results = {
+      { type = "item", name = "angels-wire-coil-gold", amount = 8 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-wire-coil-gold",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-wire-coil-gold"),
       2,
@@ -357,25 +297,13 @@ data:extend({
     name = "angels-plate-gold",
     category = "casting-3",
     subgroup = "angels-gold-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-gold", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-gold", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-gold", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-gold", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-gold", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-gold"),

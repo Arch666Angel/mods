@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --TUNGSTEN
   -- SMELTING INTERMEDIATE
@@ -234,25 +232,13 @@ data:extend({
     name = "angels-plate-tungsten",
     category = "sintering-4",
     subgroup = "angels-tungsten-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "casting-powder-tungsten", amount = 12 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-tungsten", amount = 12 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "casting-powder-tungsten", amount = 12 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "casting-powder-tungsten", amount = 15 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-tungsten", amount = 12 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-tungsten", amount = 12 },
     },
     order = "j[angels-plate-tungsten]",
   },

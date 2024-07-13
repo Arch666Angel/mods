@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 -------------------------------------------------------------------------------
 -- BOB OVERRIDES --------------------------------------------------------------

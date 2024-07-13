@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["lead"].ingot = true
@@ -91,26 +90,13 @@ if angelsmods.trigger.smelting_products["lead"].plate then
       {
         name = "lead-plate",
         energy_required = 10.5,
-        normal = {
-          enabled = false,
-          hidden = true,
-          ingredients = {
-            { name = "lead-ore", type = "item", amount = "+3" },
-          },
-          results = {
-            { name = "lead-plate", type = "item", amount = "+2" },
-          },
+        enabled = false,
+        hidden = true,
+        ingredients = {
+          { name = "lead-ore", type = "item", amount = "+3" },
         },
-        expensive = {
-          enabled = false,
-          hidden = true,
-          ingredients = {
-            { "!!" },
-            { name = "lead-ore", type = "item", amount = 5 * intermediatemulti },
-          },
-          results = {
-            { name = "lead-plate", type = "item", amount = "+2" },
-          },
+        results = {
+          { name = "lead-plate", type = "item", amount = "+2" },
         },
         icons = {
           {

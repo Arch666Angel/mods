@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --SILICON
   -- SMELTING INTERMEDIATE
@@ -183,27 +181,14 @@ data:extend({
     name = "angels-mono-silicon-seed",
     category = "casting-2",
     subgroup = "angels-silicon-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-silicon", amount = 5 },
-        { type = "fluid", name = "gas-nitrogen", amount = 10 },
-      },
-      results = {
-        { type = "item", name = "angels-mono-silicon-seed", amount = 5 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-silicon", amount = 5 },
+      { type = "fluid", name = "gas-nitrogen", amount = 10 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-silicon", amount = 6 * intermediatemulti },
-        { type = "fluid", name = "gas-nitrogen", amount = 10 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-mono-silicon-seed", amount = 5 },
-      },
+    results = {
+      { type = "item", name = "angels-mono-silicon-seed", amount = 5 },
     },
     order = "i[angels-mono-silicon-seed]",
   },
@@ -212,25 +197,13 @@ data:extend({
     name = "angels-quartz-crucible",
     category = "crafting",
     subgroup = "angels-silicon-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "quartz", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-quartz-crucible", amount = 1 },
-      },
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "quartz", amount = 1 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "quartz", amount = 1 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-quartz-crucible", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-quartz-crucible", amount = 1 },
     },
     order = "j[angels-quartz-crucible]",
   },
@@ -240,27 +213,14 @@ data:extend({
     name = "angels-mono-silicon-1",
     category = "casting-2",
     subgroup = "angels-silicon-casting",
-    normal = {
-      enabled = false,
-      energy_required = 6,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
-        { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-mono-silicon", amount = 4 },
-      },
+    enabled = false,
+    energy_required = 6,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
+      { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 6,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-silicon", amount = 40 * intermediatemulti },
-        { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-mono-silicon", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-mono-silicon", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-mono-silicon"),
@@ -274,34 +234,18 @@ data:extend({
     name = "angels-mono-silicon-2",
     category = "casting-3",
     subgroup = "angels-silicon-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
-        { type = "item", name = "angels-quartz-crucible", amount = 1 },
-        { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-mono-silicon", amount = 6 },
-        { type = "item", name = "angels-quartz-crucible", amount = 1, catalyst_amount = 1, probability = 0.80 },
-      },
-      main_product = "angels-mono-silicon",
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
+      { type = "item", name = "angels-quartz-crucible", amount = 1 },
+      { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-silicon", amount = 50 * intermediatemulti },
-        { type = "item", name = "angels-quartz-crucible", amount = 1 },
-        { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "angels-mono-silicon", amount = 6 },
-        { type = "item", name = "angels-quartz-crucible", amount = 1, catalyst_amount = 1, probability = 0.80 },
-      },
-      main_product = "angels-mono-silicon",
+    results = {
+      { type = "item", name = "angels-mono-silicon", amount = 6 },
+      { type = "item", name = "angels-quartz-crucible", amount = 1, catalyst_amount = 1, probability = 0.80 },
     },
+    main_product = "angels-mono-silicon",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-mono-silicon"),
       2,

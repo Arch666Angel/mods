@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 data:extend({
   --TIER 2
   {
@@ -10,17 +8,9 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore1-chunk", amount = 6 } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore1-chunk", amount = 9 * rawmulti } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore1-chunk", amount = 6 } },
+    results = {
+      { type = "item", name = "slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -37,17 +27,9 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore2-chunk", amount = 6 } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore2-chunk", amount = 9 * rawmulti } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore2-chunk", amount = 6 } },
+    results = {
+      { type = "item", name = "slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -64,17 +46,9 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore3-chunk", amount = 6 } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore3-chunk", amount = 9 * rawmulti } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore3-chunk", amount = 6 } },
+    results = {
+      { type = "item", name = "slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -91,17 +65,9 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore4-chunk", amount = 6 } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore4-chunk", amount = 9 * rawmulti } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore4-chunk", amount = 6 } },
+    results = {
+      { type = "item", name = "slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -118,17 +84,9 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore5-chunk", amount = 6 } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore5-chunk", amount = 9 * rawmulti } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore5-chunk", amount = 6 } },
+    results = {
+      { type = "item", name = "slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
@@ -145,17 +103,9 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
-    normal = {
-      ingredients = { { type = "item", name = "angels-ore6-chunk", amount = 6 } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
-    },
-    expensive = {
-      ingredients = { { type = "item", name = "angels-ore6-chunk", amount = 9 * rawmulti } },
-      results = {
-        { type = "item", name = "slag", amount = 1 },
-      },
+    ingredients = { { type = "item", name = "angels-ore6-chunk", amount = 6 } },
+    results = {
+      { type = "item", name = "slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },

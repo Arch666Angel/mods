@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.22
+Version: 1.0.0
 Date: ???
   Changes:
+    - Removed references to normal / expensive recipes (945)
     - Added item description to Gravitational analyzer (984)
     - Adjusted the recipes and science packs for Bob's Assembling Machines when Components or Technology Overhauls are enabled (985)
     - Tech Overhaul: Hid Steam science pack from Bob's Technology mod (986)

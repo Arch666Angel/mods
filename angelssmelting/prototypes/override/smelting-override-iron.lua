@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["iron"].ingot = true
@@ -88,26 +87,13 @@ if angelsmods.trigger.smelting_products["iron"].plate then
     {
       name = "iron-plate",
       energy_required = 10.5,
-      normal = {
-        enabled = false,
-        hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
-        ingredients = {
-          { name = "iron-ore", type = "item", amount = "+3" },
-        },
-        results = {
-          { name = "iron-plate", type = "item", amount = "+2" },
-        },
+      enabled = false,
+      hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
+      ingredients = {
+        { name = "iron-ore", type = "item", amount = "+3" },
       },
-      expensive = {
-        enabled = false,
-        hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
-        ingredients = {
-          { "!!" },
-          { name = "iron-ore", type = "item", amount = 5 * intermediatemulti },
-        },
-        results = {
-          { name = "iron-plate", type = "item", amount = "+2" },
-        },
+      results = {
+        { name = "iron-plate", type = "item", amount = "+2" },
       },
       icons = {
         {

@@ -2075,14 +2075,11 @@ end
 function angelsmods.functions.tech_uses_science_pack(tech_name, pack)
   if type(tech_name) == "string" then
     local technology = data.raw.technology[tech_name]
-    if technology then
-      technology = technology.normal or technology.expensive or technology
-      if technology.unit and technology.unit.ingredients then
-        local addit = true
-        for i, ingredient in pairs(technology.unit.ingredients) do
-          if ingredient[1] == pack or ingredient.name == pack then
-            return true
-          end
+    if technology and technology.unit and technology.unit.ingredients then
+      local addit = true
+      for i, ingredient in pairs(technology.unit.ingredients) do
+        if ingredient[1] == pack or ingredient.name == pack then
+          return true
         end
       end
     end

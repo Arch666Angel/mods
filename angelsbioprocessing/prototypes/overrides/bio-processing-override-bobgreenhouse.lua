@@ -82,21 +82,13 @@ if mods["bobgreenhouse"] then
     },
   })
   -- manually patch the result as the recipe builder is failing
-  data.raw.recipe["bob-basic-greenhouse-cycle"].normal.result = nil
-  data.raw.recipe["bob-basic-greenhouse-cycle"].normal.results = {
+  data.raw.recipe["bob-basic-greenhouse-cycle"].result = nil
+  data.raw.recipe["bob-basic-greenhouse-cycle"].results = {
     { type = "item", name = "solid-tree", amount_min = 2, amount_max = 4 },
   }
-  data.raw.recipe["bob-basic-greenhouse-cycle"].expensive.result = nil
-  data.raw.recipe["bob-basic-greenhouse-cycle"].expensive.results = {
-    { type = "item", name = "solid-tree", amount = 2 },
-  }
-  data.raw.recipe["bob-advanced-greenhouse-cycle"].normal.result = nil
-  data.raw.recipe["bob-advanced-greenhouse-cycle"].normal.results = {
+  data.raw.recipe["bob-advanced-greenhouse-cycle"].result = nil
+  data.raw.recipe["bob-advanced-greenhouse-cycle"].results = {
     { type = "item", name = "solid-tree", amount_min = 4, amount_max = 8 },
-  }
-  data.raw.recipe["bob-advanced-greenhouse-cycle"].expensive.result = nil
-  data.raw.recipe["bob-advanced-greenhouse-cycle"].expensive.results = {
-    { type = "item", name = "solid-tree", amount = 4 },
   }
 
   -- also update the other tree icons

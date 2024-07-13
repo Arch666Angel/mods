@@ -1,4 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
 local AF = angelsmods.functions
 
 data:extend({
@@ -9,32 +8,17 @@ data:extend({
     name = "gas-separation",
     category = "petrochem-separation",
     subgroup = "petrochem-carbon-gas-feed",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "gas-natural-1", amount = 100 },
-      },
-      results = {
-        { type = "fluid", name = "gas-raw-1", amount = 60 },
-        { type = "fluid", name = "liquid-condensates", amount = 30 },
-        { type = "fluid", name = "water-yellow-waste", amount = 10 },
-      },
-      always_show_products = true,
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "gas-natural-1", amount = 100 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "gas-natural-1", amount = 120 * rawmulti },
-      },
-      results = {
-        { type = "fluid", name = "gas-raw-1", amount = 60 },
-        { type = "fluid", name = "liquid-condensates", amount = 30 },
-        { type = "fluid", name = "water-yellow-waste", amount = 10 },
-      },
-      always_show_products = true,
+    results = {
+      { type = "fluid", name = "gas-raw-1", amount = 60 },
+      { type = "fluid", name = "liquid-condensates", amount = 30 },
+      { type = "fluid", name = "water-yellow-waste", amount = 10 },
     },
+    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "liquid-condensates",
       "gas-raw-1",
@@ -221,31 +205,16 @@ data:extend({
     name = "oil-separation",
     category = "petrochem-separation",
     subgroup = "petrochem-carbon-oil-feed",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "liquid-multi-phase-oil", amount = 100 },
-      },
-      results = {
-        { type = "fluid", name = "gas-raw-1", amount = 20 },
-        { type = "fluid", name = "crude-oil", amount = 70 },
-        { type = "fluid", name = "water-yellow-waste", amount = 10 },
-      },
+    enabled = false,
+    energy_required = 2,
+    always_show_products = true,
+    ingredients = {
+      { type = "fluid", name = "liquid-multi-phase-oil", amount = 100 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      always_show_products = true,
-      ingredients = {
-        { type = "fluid", name = "liquid-multi-phase-oil", amount = 120 * rawmulti },
-      },
-      results = {
-        { type = "fluid", name = "gas-raw-1", amount = 20 },
-        { type = "fluid", name = "crude-oil", amount = 70 },
-        { type = "fluid", name = "water-yellow-waste", amount = 10 },
-      },
+    results = {
+      { type = "fluid", name = "gas-raw-1", amount = 20 },
+      { type = "fluid", name = "crude-oil", amount = 70 },
+      { type = "fluid", name = "water-yellow-waste", amount = 10 },
     },
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "crude-oil",
