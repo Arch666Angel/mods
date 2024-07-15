@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.12
+Date: ???
+  Bugfixes:
+    - Fixed log file spam with Angel's Refining and Bob's Metals, Chemicals and Intermediates mod (996)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 22.12.2023
   Bugfixes:
