@@ -1,5 +1,5 @@
 if mods["bobores"] then
-  if (not bobmods.ores.gems.enabled) or (not data.raw.resource["infinite-gem-ore"]) then
+  if (not bobmods.ores.gems.enabled) or not data.raw.resource["infinite-gem-ore"] then
     -- Do nothing
   elseif bobmods.ores.settings.UnsortedGemOre == true then
     bobmods.lib.resource.add_result("infinite-gem-ore", { name = "gem-ore" })
