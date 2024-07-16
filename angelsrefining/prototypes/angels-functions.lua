@@ -1548,7 +1548,8 @@ function angelsmods.functions.modify_barreling_icon()
               })
             end
             if fluid.icons then
-              item.icons = util.combine_icons(item.icons, fluid.icons, { scale = 16 / icon_size, shift = { 0, 5 } }, icon_size)
+              item.icons =
+                util.combine_icons(item.icons, fluid.icons, { scale = 16 / icon_size, shift = { 0, 5 } }, icon_size)
             end
           end
         end
